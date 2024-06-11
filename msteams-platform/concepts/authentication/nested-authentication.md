@@ -93,29 +93,29 @@ You need to initialize MSAL and get an instance of the public client application
 
 ```javascript
 import {
-Accountlnfo,
-IPublicClientApplication
-createNestablePublicClientApplication,
+  AccountInfo,
+  IPublicClientApplication,
+  createNestablePublicClientApplication,
 } from "@azure/msal-browser";
 
 const msalConfig = {
-    auth: {
-        clientId: "your_client_id",
-        authority: "https://login.microsoftonline.com/{your_tenant_id}",
-    },
+  auth: {
+    clientId: "your_client_id",
+    authority: "https://login.microsoftonline.com/{your_tenant_id}",
+  },
 };
 
 let pca: IPublicClientApplication;
 
-export function initializepub1icC1ient(): {
-console.log("Starting initializePub1icC1ient");
-return createNestablePublicClientApplication(msalConfig).then(
-(result) => {
-console.log(Client app created");
-pca = result;
-return pca;
-}
-);
+export function initializePublicClient() {
+  console.log("Starting initializePublicClient");
+  return createNestablePublicClientApplication(msalConfig).then(
+    (result) => {
+      console.log("Client app created");
+      pca = result;
+      return pca;
+    }
+  );
 }
 ```
 
