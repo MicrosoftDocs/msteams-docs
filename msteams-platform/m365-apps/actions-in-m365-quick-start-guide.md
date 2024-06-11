@@ -4,7 +4,7 @@ description: In this article, learn how to create Actions in Microsoft 365, func
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
-ms.topic: Conceptual
+ms.topic: quickstart
 ms.subservice: m365apps
 ---
 # Actions in Microsoft 365 Quick start guide
