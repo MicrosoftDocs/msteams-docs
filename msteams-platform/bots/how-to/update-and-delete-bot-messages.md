@@ -1,5 +1,5 @@
 ---
-title: Update & delete messages from bot
+title: Update & Delete Messages from Bot
 author: WashingtonKayaker
 description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview

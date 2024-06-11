@@ -1,5 +1,5 @@
 ---
-title: Microsoft Adaptive Card Previewer Visual Studio
+title: Preview Adaptive Card in VS
 author: v-ganr
 description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, limitations.
 ms.localizationpriority: medium
