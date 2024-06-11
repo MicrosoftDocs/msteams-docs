@@ -92,7 +92,7 @@ The following images are an example of flat list and grouped intents in a contex
 
 ### Validation guidelines
 
-It’s recommended to review the validation guidelines to assist your app in passing the Teams Store submission process. For more information, see [Actions in Microsoft 365](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#actions-in-microsoft-365).
+We recommend you to review the validation guidelines for your app to pass the Teams Store submission process. For more information, see [Actions in Microsoft 365](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#actions-in-microsoft-365).
 
 ## Next step
 
