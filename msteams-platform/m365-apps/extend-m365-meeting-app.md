@@ -187,4 +187,4 @@ To remove or configure your app in the scheduling window, select the dropdown me
 
 ## See also
 
-* [Support and feedback](~/feedback.md)
+[Support and feedback](~/feedback.md)
