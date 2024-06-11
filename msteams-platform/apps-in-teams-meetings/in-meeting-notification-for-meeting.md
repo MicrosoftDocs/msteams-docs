@@ -1,5 +1,5 @@
 ---
-title: Build in-meeting notification for Teams meeting
+title: Build in-meeting Notification
 author: v-sdhakshina
 description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples.
 ms.topic: conceptual
