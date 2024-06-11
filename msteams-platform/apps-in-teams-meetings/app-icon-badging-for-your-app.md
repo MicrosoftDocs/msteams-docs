@@ -1,5 +1,5 @@
 ---
-title: Enable app icon badging for your Teams app
+title: App Icon Badges in Meetings
 author: v-sdhakshina
 description: In this article, learn how to enable app icon badging for your Microsoft Teams app in meeting.
 ms.topic: conceptual
