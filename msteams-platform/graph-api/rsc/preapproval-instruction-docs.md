@@ -141,8 +141,8 @@ New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 After creating your preapproval policies, change your organization's RSC settings to use the new policy. This setting is more restrictive and might cause some apps not to function for your end users. To make this change, change the state of your organization's RSC settings. The following example shows the required PowerShell cmdlets:
 
 ```powershell
-Set-MgBetaTeamRscConfiguration -State ApprovedForPreApprovedAppsOnly
-Set-MgBetaChatRscConfiguration -State ApprovedForPreApprovedAppsOnly
+Set-MgBetaTeamRscConfiguration -State EnabledForPreApprovedAppsOnly
+Set-MgBetaChatRscConfiguration -State EnabledForPreApprovedAppsOnly
 ```
 
 ## Manage the existing preapproval policies
