@@ -129,6 +129,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 
 ## See also
 
-* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
 * [Enable SSO for your bot app](../../../bots/how-to/authentication/bot-sso-overview.md)
 * [Update app manifest for SSO and preview your app](../../../bots/how-to/authentication/bot-sso-manifest.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+
