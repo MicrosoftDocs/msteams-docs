@@ -925,7 +925,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for the chat and provide related information about the chat's roster, such as name and meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for the chat and provide access related information about the chat's roster, such as name and meeting role, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
     |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|
