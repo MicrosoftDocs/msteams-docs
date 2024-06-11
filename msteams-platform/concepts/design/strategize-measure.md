@@ -92,7 +92,7 @@ User retention measures how frequent users come back to use the product. It esse
 
 > [!TIP]
 >
-> - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
+> - Users using multiple Teams platform capabilities are 20 to 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
