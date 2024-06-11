@@ -10,19 +10,19 @@ ms.localizationpriority: medium
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered with the following conditions:
+After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
+This document guides you on how to respond to user requests in the form of cards and previews and the conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
 | Property name | Purpose |
 |---|---|
-| `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
-| `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
+| `commandId` | The name of the command invoked by the user matches one of the commands declared in the app manifest. |
+| `parameters` | Array of parameters. Each parameter object contains the parameter name along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
@@ -78,9 +78,9 @@ The following JSON is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookups or any other business logic needed to serve the request.
 
-Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
+Your service must respond with results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
 |Property name|Purpose|
 |---|---|
@@ -93,12 +93,12 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-Configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. `config` response is used when a user configures the message extension for the first time. 
+The configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. A `config` response is used when a user configures the message extension for the first time. 
 It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
 
-If message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
+If a message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
 
-The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the message extension.
+The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. The `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the message extension.
 
 The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
 
@@ -139,7 +139,7 @@ The following image shows the `config` command workflow:
 
 :::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
 
-The following code is an example for message extension configuration:
+The following code is an example of message extension configuration:
 
 ```json
 {
@@ -243,27 +243,27 @@ return new MessagingExtensionResponse
 
 ### Response card types for `result` and previews
 
-Teams supports the following card types:
+Teams support the following card types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).
+To have a better understanding and overview of cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).
 
 To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 For more information about the connector card for Microsoft 365 Groups, see [Using connector cards for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
-The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
+The result list is displayed in the Microsoft Teams UI, with a preview of each item. The preview is generated in one of two ways:
 
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
+* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a hero or a thumbnail card.
 * Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
 
-For Hero or Thumbnail card, except the invoke action other actions such as button and tap aren't supported in the preview card.
+For the hero or thumbnail card, except for the invoke action, other actions such as button and tap aren't supported in the preview card.
 
-To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a Hero or Thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
+To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a hero or thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
 
 For Hero and Thumbnail cards, you don't need to specify a preview property, a preview is generated by default.
 
@@ -541,7 +541,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of prepopulated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
-The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
+The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and the `value` set to `true`, as shown in the following object:
 
 ```json
 {
