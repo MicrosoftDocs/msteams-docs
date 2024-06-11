@@ -43,7 +43,7 @@ In a meeting, users can select **More** :::image type="icon" source="../../asset
 
 ## Before a meeting
 
-Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
+Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people can answer during the meeting.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." lightbox="../../assets/images/apps-in-meetings/before-meeting-tab.png":::
 

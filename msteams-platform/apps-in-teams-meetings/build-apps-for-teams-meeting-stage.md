@@ -50,7 +50,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
 
-1. For a video streaming app, a user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
+1. For a video streaming app, a user might want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
 To help users in such scenarios, we released APIs within the Microsoft Teams JavaScript client library (TeamsJS) that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
