@@ -965,7 +965,7 @@ After the API-based message extension gets a request header with token, perform 
 
 Open Authorization (OAuth) enables a client application to obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP), It uses access tokens to prove your identity and allow it to interact with another service on your behalf.
 
-OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can only grant access to the specific data you need, and the user must consent before the application can access their data which is useful for apps that need to access individual items for a user.
+OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can only grant access to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
 
 :::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
 
@@ -1004,8 +1004,8 @@ To register OAuth for your API-based message extensions, follow these steps:
 
       |Option   |When to use  | Description|
       |---------|---------|----------------|
-      |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
-      |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
+      |**My organization only**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
+      |**Any Microsoft 365 organization**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
 
@@ -1034,6 +1034,27 @@ To register OAuth for your API-based message extensions, follow these steps:
    1. **Scope**: The scope defines the permissions your app requests from the user. *[Optional]*
 
 1. Select **Save**.
+
+   An **OAuth client registration ID** is generated.
+
+**Add **OAuth client registration ID** in API-based message extension**
+
+To update **OAuth client registration ID** in API-based message extension, follow these steps:
+
+1. Go to Teams Developer Portal.
+
+1. From the left pane, select **Apps**. 
+
+1. Select the message extension app that you've created.
+
+1. From the left pane, under **Configure**, select **App features** > **Message extension**.
+
+1. Under **Authentication and authorization**, select **OAuth** and enter the **OAuth client registration ID**.
+
+1.  Select **Save**.
+
+Your API-based message extension is configured with OAuth authentication.
+
 
 ### Update the Manifest Schema
 
@@ -1076,7 +1097,7 @@ Update your Teams app manifest schema to include the new auth type: `oAuth` and 
 
 ### Implement the OAuth Flow
 
-When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke with the app ID being used to check if there is a valid token/trigger the sign-in flow. If the token acquisition fails, then trigger the sign-in flow. The Teams client then renders the OAuth card in a pop-up. The end-user signs into the 3P service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback url on TGS. TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS then saves.
+When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke with the app ID being used to check if there's a valid token/trigger the sign-in flow. If the token acquisition fails, then trigger the sign-in flow. The Teams client then renders the OAuth card in a pop-up. The end-user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback url on TGS. TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS then saves.
 
 ### Handle Error Cases
 
@@ -1086,9 +1107,9 @@ Ensure your implementation can handle error cases such as missing token, expired
 
 * After an OAuth configuration is saved, it becomes read-only except for updating the allowed app Id/allowed tenant and the description and domain.
 * Developers shouldn't be updating the OAuth configuration frequently even during the initial development process.
-* If a developer wants to make any changes to configuration such as adding scopes or the authorization url, they will need to register a new OAuth configuration which will generate a new unique ID.
+* If a developer wants to make any changes to configuration such as adding scopes or the authorization url, they need to register a new OAuth configuration, which generates a new unique ID.
 
-For more information, refer to the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
+For more information, see the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
 
 ## Conclusion
 
