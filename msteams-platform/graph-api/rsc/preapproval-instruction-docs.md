@@ -12,21 +12,21 @@ ms.date: 08/29/2023
 
 Preapproval of Resource-Specific Consent (RSC) permission allows admins with detailed control over the RSC permissions an app can request during installation. App receives RSC permissions only at the time of installation. However, with preapproval policies, admins can predetermine the maximum permissions an app can request from the end user and obtain consent during installation.
 
-To sucesfully create and use a preapproval policy for an app, admins must ensure the app can be installed in their organization. For more information, see [managing apps in Teams Admin Center](/microsoftteams/apps-in-teams). Preapproval policies do not affect apps blocked via Teams Admin Center.
+To successfully create and use a preapproval policy for an app, admins must ensure the app can be installed in their organization. For more information, see [managing apps in Teams Admin Center](/microsoftteams/apps-in-teams). Preapproval policies do not affect apps blocked via Teams Admin Center.
 
 Admins can create a detailed preapproval policy, based on the app ID, permissions, and the sensitivity of the accessed data. Preapproval of RSC permissions are designed for admins seeking to create advanced custom policies for their organization.
 
 By default, the preapproval policies are managed by Microsoft, and we recommend that organizations maintain `ManagedByMicrosoft` state. This state allows Microsoft's security team to deliver the best security for your organization.
 
 > [!NOTE]
-> Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Preapproval of RSC permissions are available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > Preapproval of RSC permissions and its operating procedures are subject to change.
 
 ## Set up PowerShell to manage preapproval of RSC permissions
 
-Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/powershell/microsoftgraph/get-started).
+Preapproval of RSC permissions are managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/powershell/microsoftgraph/get-started).
 
-Before you can create and manage preapproval policies, use `Connect-MgGraph` cmdlet to connect PowerShell to your tenant using Microsoft Graph. To create, manage, and delete RSC preapproval policies, add the following permissions: You will need Global admin level privleges to connect Graph with your organization for the first time.
+Before you can create and manage preapproval policies, use `Connect-MgGraph` cmdlet to connect PowerShell to your tenant using Microsoft Graph. To create, manage, and delete RSC preapproval policies, add the following permissions: You will need Global admin level privileges to connect Graph with your organization for the first time.
 
 * `TeamworkAppSettings.ReadWrite.All`
 * `Policy.ReadWrite.Authorization`
@@ -53,7 +53,7 @@ The following are different states that allow and disallow RSC permission in you
 |---|---|
 |`ManagedByMicrosoft`|A dynamic policy administered by Microsoft. It might be updated based on best security practices. By default, this state enables RSC for all unblocked apps in the organization. |
 |`EnabledForAllApps`|Users can consent to RSC permissions for any unblocked app in the organization. |
-|`EnabledForPreApprovedAppsOnly`| Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option should be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis. |
+|`EnabledForPreApprovedAppsOnly`| Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option must be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis. |
 |`DisabledForAllApps`| Users can't consent to the RSC permissions required by any app even if the app is unblocked in the organization. **Warning:** This state won't allow installation for apps that need RSC permissions. |
 
    >[!WARNING]
@@ -86,8 +86,8 @@ You can use PowerShell cmdlets to create a preapproval policy. To create the cmd
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option, when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option, when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 **Preapprove an app with team RSC permissions**
 
@@ -125,8 +125,8 @@ You can use PowerShell cmdlets to create a preapproval policy. To create the cmd
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration, when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration, when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 You can use the `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to.
 
