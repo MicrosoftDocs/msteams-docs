@@ -175,7 +175,7 @@ The following response is the configuration response that appears when the user 
 ### Response card types and previews
 
 > [!NOTE]
-> The message extension search results don't support padding.
+> Message extension search results don't support padding.
 
 Teams supports the following card types:
 
