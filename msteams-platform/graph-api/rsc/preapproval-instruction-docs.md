@@ -86,8 +86,8 @@ You can use PowerShell cmdlets to create a preapproval policy. To create the cmd
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option, when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](resource-specific-consent).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option, when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](resource-specific-consent).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option, when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option, when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 **Preapprove an app with team RSC permissions**
 
@@ -125,8 +125,8 @@ You can use PowerShell cmdlets to create a preapproval policy. To create the cmd
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration, when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration, when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](resource-specific-consent).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration, when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration, when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 You can use the `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to.
 
@@ -159,8 +159,8 @@ The following RSC configurations are available to manage an existing preapproval
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`| Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`| Use this configuration when you create a preapproval policy for RSC permissions for a team, use this configuration. For the list of all permissions, see [RSC permissions](resource-specific-consent).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`| Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`| Use this configuration when you create a preapproval policy for RSC permissions for a team, use this configuration. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 #### Update the preapproval policy for chat RSC
 
