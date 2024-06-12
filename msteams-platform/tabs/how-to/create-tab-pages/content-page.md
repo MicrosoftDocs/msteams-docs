@@ -28,7 +28,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
+To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
