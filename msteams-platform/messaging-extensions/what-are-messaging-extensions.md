@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios.
+description: Learn how message extensions are used, its types, scenarios, and view code samples of action and search based commands.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -14,7 +14,7 @@ Message extensions enable users to engage with your web service through buttons 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-This document provides an overview of message extensions and link unfurling including their use cases and functionality.
+This document provides an overview of message extensions, use cases, functionality, action and search commands, and link unfurling.
 
 The following image displays the locations from where message extensions can be invoked:
 
@@ -101,7 +101,7 @@ The following table helps you select a message extension type to get started:
 
 * Simpler and faster to create and maintain.
 * Message extension uses an API.
-* No additional code or resources for bot logic are required.
+* No extra code or resource is required for bot logic.
 * Ideal for scenarios where the message extension only needs to communicate with a web service and doesn't need any complex logic or state management.
 * Traffic is privatized as they don’t depend on Azure bot infrastructure.
 * Supports search commands.
