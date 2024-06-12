@@ -1,7 +1,7 @@
 ---
 title: Dialogs
 author: surbhigupta
-description: In this module, learn how to add modal pop-up experiences (surveys, videos) to collect or display information to your users from your Microsoft Teams apps.
+description: Learn how to add modal pop-up experiences (surveys, videos) to collect or display information to your users from your Microsoft Teams apps.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
