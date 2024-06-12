@@ -4,7 +4,7 @@ author: MuyangAmigo
 description: Learn how toolkit allows bootstrap sample access to existing APIs and the list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
-ms.topic: Overview
+ms.topic: overview
 ms.date: 05/20/2022
 ---
 

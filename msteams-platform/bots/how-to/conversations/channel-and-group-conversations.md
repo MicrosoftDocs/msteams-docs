@@ -18,7 +18,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 > * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
-> * Posting a message or Adaptive Card to a private channel is currently not supported.
+> * Posting a message or Adaptive Card to a private channel isn't supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
@@ -40,7 +40,7 @@ Next, you can retrieve mentions using the `entities` object and add mentions to 
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
+Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
 
 You must also strip out the @mentions from the content of the message your bot receives.
 
