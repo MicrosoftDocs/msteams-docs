@@ -80,7 +80,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members&preserve-view=true)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members&preserve-view=true)
 
 ```python
 async def _show_members(
