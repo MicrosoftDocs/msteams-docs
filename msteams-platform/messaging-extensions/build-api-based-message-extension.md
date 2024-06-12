@@ -981,7 +981,7 @@ OAuth 2.0 in your Teams app provides a secure way to access user data from third
 
 Before you start, you need to have a Microsoft Teams app with API Message Extensions or Plugins. You also need to have an OAuth 2.0 client ID and client secret from the third-party authorization server.
 
-### Configure OAuth in Teams Developer Portal
+### Configure OAuth in Developer Portal
 
 You can register OAuth client configurations for your API-based message extensions and Copilot plugins in Teams Developer Portal.
 
@@ -1056,7 +1056,7 @@ To update **OAuth client registration ID** in API-based message extension, follo
 Your API-based message extension is configured with OAuth authentication.
 
 
-### Update the Manifest Schema
+### Update app manifest
 
 Update your Teams app manifest schema to include the new auth type: `oAuth` and the `oAuthConfigurationId` you received from the dev portal.
 
@@ -1095,15 +1095,15 @@ Update your Teams app manifest schema to include the new auth type: `oAuth` and 
 }
 ```
 
-### Implement the OAuth Flow
+### Implement OAuth
 
 When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke with the app ID being used to check if there's a valid token/trigger the sign-in flow. If the token acquisition fails, then trigger the sign-in flow. The Teams client then renders the OAuth card in a pop-up. The end-user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback url on TGS. TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS then saves.
 
-### Handle Error Cases
+### Handle errors
 
 Ensure your implementation can handle error cases such as missing token, expired token, invalid token, user fails to log-in/does not grant permissions, user closes out of the dialog box, invoke fails due to network issue/service being down/unable to fetch app/endpoint returning anything other than 401/403, resource server returns 401 or 403.
 
-## Limitations and Best Practices
+## Limitations and best practices
 
 * After an OAuth configuration is saved, it becomes read-only except for updating the allowed app Id/allowed tenant and the description and domain.
 * Developers shouldn't be updating the OAuth configuration frequently even during the initial development process.
