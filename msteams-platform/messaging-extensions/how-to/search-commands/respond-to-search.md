@@ -174,6 +174,9 @@ The following response is the configuration response that appears when the user 
 
 ### Response card types and previews
 
+> [!NOTE]
+> The Messaging Extension search results don't support padding.
+
 Teams supports the following card types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
