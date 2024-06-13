@@ -1070,9 +1070,9 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
 |`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must be configured if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
 |`fixedControls.id`| String | 64 characters | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
-|`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in.<br>Supported values: `button` |
+|`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. Currently, only the `button` type is supported. |
 |`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the button of a spam-reporting add-in. |
-|`fixedControls.enabled`| Boolean | | ✔️ | While this property must be specified in the manifest, it doesn't affect the functionality of a spam-reporting add-in. |
+|`fixedControls.enabled`| Boolean | | ✔️ | While this property must be specified in a `fixedControls` object, it doesn't affect the functionality of a spam-reporting add-in. |
 |`fixedControls.icons`| Array | | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`fixedControls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, and `80`.<br>Required image sizes: `16`, `32`, `80` |
 |`fixedControls.icons.url`| URL | | | Specifies the absolute URL to the icon. |
