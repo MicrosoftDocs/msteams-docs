@@ -1,6 +1,6 @@
 ---
 title: Partner apps for Moodle
-description: Learn partner apps for Moodle, key benefits of partner apps for Moodle, SaaS offerings and mConnect. Enable singe-sign-on SSO for users of Teams.
+description: Learn partner apps for Moodle, key benefits of partner apps for Moodle, SaaS offerings, and mConnect. Enable singe-sign-on SSO for users of Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
