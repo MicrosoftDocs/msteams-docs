@@ -31,5 +31,4 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 ## See also
 
-* [Customize apps in the Teams admin center](/microsoftteams/customize-apps)
-* [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
+[Customize apps in the Teams admin center](/microsoftteams/customize-apps)
