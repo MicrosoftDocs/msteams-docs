@@ -202,7 +202,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
 ```javascript
 // Invoked when a Messaging Extension Fetch activity is received from the connector.
