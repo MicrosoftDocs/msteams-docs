@@ -1,5 +1,5 @@
 ---
-title: Send tenant ID and conversation ID to the request headers of the bot
+title: Route Bot Traffic using Request Headers
 description: Learn how to route the bot traffic without unpacking the entire payload using tenant ID and conversation ID present in request headers of the bot in Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium

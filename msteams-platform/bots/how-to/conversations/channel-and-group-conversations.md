@@ -1,5 +1,5 @@
 ---
-title: Create conversation bots for channel or group chat
+title: Channel / Group Conversation Chat Bot
 author: surbhigupta
 description: Learn how to create new conversation threads, work on user and tag mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: conceptual
