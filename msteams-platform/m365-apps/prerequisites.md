@@ -37,15 +37,15 @@ You also need to enable custom app upload for your tenant:
 
  1. In the upper-right corner of the Manage apps page, select **Actions** dropdown menu > **Org-wide app settings**.
 
- 1. Under Custom apps, turn on the **Let users interact with custom apps in preview** toggle and select **Save**.
+ 1. Under **Custom apps**, turn on the **Let users interact with custom apps in preview** toggle and select **Save**.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Screenshot shows enabling custom app upload option from Teams Admin Center.":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Screenshot shows how to enable custom app upload option from Teams admin center.":::
 
- 1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+    Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
- 1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
+ 1. Go to **Teams apps** > **Setup policies** and select **Global (Org-wide default)** policy.
 
- 1. Turn on **Upload custom apps**, and select **Save**.
+ 1. Turn on **Upload custom apps** and select **Save**.
 
 ## Enroll your developer tenant for Microsoft 365 Targeted Releases (Optional)
 
