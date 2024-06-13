@@ -19,7 +19,7 @@ In this stage in the app growth lifecycle, you use the learnings from previous a
 
 Once transact SaaS enabled, listing the SaaS subscriptions for your app on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. You can instead get to market faster, and at exponential scale, compared to selling solely through your own sales motions.
 
-To scale your app, become CSP channel ready (see [CSP Channel Readiness Guide for Teams app ISVs](https://aka.ms/TeamsMonetization/CSPChannelReadyGuide)). After that, your app appears on [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook. Apps successful on the marketplace may have an opportunity to get featured on this frequently promoted public [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app).
+To scale your app, become CSP channel ready (see [CSP Channel Readiness Guide for Teams app ISVs](https://aka.ms/TeamsMonetization/CSPChannelReadyGuide)). After that, your app appears on [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook. Apps successful on the marketplace might have an opportunity to get featured on this frequently promoted public [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app).
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -72,9 +72,9 @@ Generate interest from new customer accounts and drive traffic to your collabora
 <details>
 <summary>Publish customer demand and app’s impact story</summary>
 
-Share real customer stories using a four to five-minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages.
+Share real customer stories using a four to five-minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns, or showcase on public pages.
 
-After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app.  Promote it via paid, earned media, or social media posts to highlight the success of the app.
+After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app. Promote it via paid, earned media, or social media posts to highlight the success of the app.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -82,7 +82,7 @@ After developing it, host these customer stories on the landing page of the Team
 <details>
 <summary>Showcase Teams app in leading industry events</summary>
 
-While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
+While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you have a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation center stage. Doing so is bound to attract both existing and new prospective customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
