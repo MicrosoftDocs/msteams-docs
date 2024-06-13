@@ -82,9 +82,9 @@ Preapproval policies allow users in your organization to consent to RSC permissi
 
 To create a preapproval policy without a sensitivity label, ensure that you have the following information:
 
-1. Teams App ID.
-1. The RSC permissions associated with the app.
-1. Team or Global admin privilege in your tenant.
+* Teams App ID.
+* The RSC permissions associated with the app.
+* Team or Global admin privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
@@ -120,10 +120,10 @@ Preapproval policies can be created to preapprove RSC permissions against certai
 
 You can also create a preapproval policy for specific permissions in addition to specific sensitivity labels. You can allow all RSC consent requests to be approved for a particular permission. To create a preapproval policy, ensure that you have the following information:
 
-1. Teams App ID.
-1. The RSC permissions associated with the app.
-1. The sensitivity label ID associated with the sensitivity label. This isn't required if you want the policy to apply to all sensitivity labels or if you preapprove only chat RSC permissions.
-1. Team or Global admin privilege in your tenant.
+* Teams App ID.
+* The RSC permissions associated with the app.
+* The sensitivity label ID associated with the sensitivity label. This isn't required if you want the policy to apply to all sensitivity labels or if you preapprove only chat RSC permissions.
+* Team or Global admin privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
