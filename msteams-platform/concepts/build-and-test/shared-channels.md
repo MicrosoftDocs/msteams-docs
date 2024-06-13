@@ -100,10 +100,10 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Apps in group chats with external users
 
-Teams supports the use of apps in group chats that include external users. These external users aren't permitted to add, update, or remove apps from the group chat. This permission is reserved for the host of the group chat. However, all members of the chat, including external users, can use these apps. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
+Teams supports the use of apps in group chats that include external users. External users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use these apps. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
 
 > [!NOTE]
-> If you’re developing an app for use in group chats that include external users, register your app in Microsoft Entra ID as a multitenant app to allow users from multiple organizations to use it.
+> If you’re developing an app for use in group chats that include external users, register your app as a multitenant app in Microsoft Entra ID. This allows users across multiple organizations to access your app.
 
 ### Handling external users in a single tenant app
 
@@ -122,9 +122,9 @@ placeholderFunction();
 
 ### Handling external users in a multitenant app
 
-If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs can’t be resolved in your own directory. You must ask for additional permissions from the external user to resolve their Microsoft Entra object ID, or ask for consent to access the user’s email address for authentication.
+If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs can’t be resolved in your own directory. You must ask for additional permissions from the external user to resolve their Microsoft Entra object ID, or obtain consent to access the user’s email address for authentication.
 
-To learn how to retrieve the details of a user's Microsoft Entra Object ID for a bot, see [get single member details](../../bots/how-to/get-teams-context.md#get-single-member-details). To learn how to retrieve the details of a user's Microsoft Entra Object ID for a tab, see [Get context by using the Microsoft Teams JavaScript library](../../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). If you're unable to authenticate a user or resolve their Microsoft Entra object ID, provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
+To learn how to retrieve the details of a user's Microsoft Entra Object ID for a bot, see [get single member details](../../bots/how-to/get-teams-context.md#get-single-member-details). To learn how to retrieve the details of a user's Microsoft Entra Object ID for a tab, see [Get context by using the Microsoft Teams JavaScript library](../../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). If you're unable to authenticate a user or resolve their Microsoft Entra object ID, provide a fallback experience, such as a guest experience or other types of unauthenticated experiences.
 
 The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for users in the home tenant and external users:
 
