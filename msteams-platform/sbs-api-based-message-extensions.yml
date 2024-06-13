@@ -334,7 +334,7 @@ items:
     ```json
        "previewCardTemplate": {
             "title": "${if(name, name, 'N/A')}",
-            "subtitle": "$${if(price, price, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}"
         } 
     ```
     Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
@@ -343,7 +343,7 @@ items:
 
    ### Response rendering template
 
-    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
     To create a response rendering template, follow these steps:
 
@@ -351,8 +351,8 @@ items:
 
        ```json
        { 
-         "version": "1.0.0", 
-         "$schema": "<URL_REFERENCE_TO_SCHEMA>", 
+         "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
+         "version": "1.0", 
          "jsonPath": "", 
          "responseLayout": "", 
          "responseCardTemplate": { 
@@ -363,8 +363,11 @@ items:
         ```
     1. Update the properties in the response rendering template as follows:
 
-       1. `"version"`: `"1.0.0"`
-       1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
+       1. `"$schema"`: `"https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json"`
+       1. `"version"`: `"1.0"`
+
+          `version` is the version of the rendering template to use
+       
        1. `"jsonPath"`: `"tools"`
 
           `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
@@ -389,70 +392,69 @@ items:
 
     ```json
     {
-            "version": "devPreview",
-            "jsonPath": "tools",
-            "responseLayout": "list",
-            "responseCardTemplate": {
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-        "type": "AdaptiveCard",
-        "version": "1.4",
-        "body": [
-            {
-            "type": "TextBlock",
-            "text": "AI Music Generator",
-            "weight": "Bolder",
-            "size": "Large"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Categories",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Music Generation, AI Detection",
-            "wrap": true
-            },
-            {
-            "type": "TextBlock",
-            "text": "Description",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
-            "wrap": true
-            },
-            {
-            "type": "TextBlock",
-            "text": "Platform",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Web, App, API",
-            "wrap": true
-            }
-        ],
-        "actions": [
-            {
-            "type": "Action.OpenUrl",
-            "title": "Learn More",
-            "url": "https://goto.opentools.ai/ai-music-generator"
-            },
-            {
-            "type": "Action.OpenUrl",
-            "title": "Try It",
-            "url": "https://goto.opentools.ai/c/ai-music-generator"
-            }
-        ]
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
+        "version": "1.0",
+        "jsonPath": "tools",
+        "responseLayout": "list",
+        "responseCardTemplate": {
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                "type": "TextBlock",
+                "text": "AI Music Generator",
+                "weight": "Bolder",
+                "size": "Large"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Categories",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Music Generation, AI Detection",
+                "wrap": true
+                },
+                {
+                "type": "TextBlock",
+                "text": "Description",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+                "wrap": true
+                },
+                {
+                "type": "TextBlock",
+                "text": "Platform",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Web, App, API",
+                "wrap": true
+                }
+            ],
+            "actions": [
+                {
+                "type": "Action.OpenUrl",
+                "title": "Learn More",
+                "url": "https://goto.opentools.ai/ai-music-generator"
+                },
+                {
+                "type": "Action.OpenUrl",
+                "title": "Try It",
+                "url": "https://goto.opentools.ai/c/ai-music-generator"
+                }
+            ]
         },
         "previewCardTemplate": {
             "title": "${if(name, name, 'N/A')}",
-            "subtitle": "$${if(price, price, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}"
         } 
-        }
-
+    }
     ```
 
     </details>
@@ -467,7 +469,7 @@ items:
     
     To create the manifest, follow these steps: 
     
-    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [public developer preview app manifest schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json).
+    1. Create a new JSON file. Your app manifest must conform to the 1.17 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
     1. Add the following code to the JSON file:
 
@@ -475,8 +477,8 @@ items:
 
        ```json
        {
-        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-        "manifestVersion": "devPreview",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.17",
         "version": "1.0.3",
         "id": "<<YOUR-MICROSOFT-APP-ID>>",
         "packageName": "com.microsoft.teams.extension",
