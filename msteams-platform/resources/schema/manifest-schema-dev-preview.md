@@ -1079,14 +1079,14 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`fixedControls.supertip`| Object | | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
 |`fixedControls.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. |
 |`fixedControls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip. |
-|`fixedControls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that's taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
+|`fixedControls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
 |`spamPreProcessingDialog`| Object | | | Configures the preprocessing dialog of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. |
 |`spamPreProcessingDialog.title`| String | 128 characters | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. |
 |`spamPreProcessingDialog.description`| String | 250 characters | ✔️ | Specifies the custom text that appears in the preprocessing dialog of a spam-reporting add-in. |
 |`spamPreProcessingDialog.spamReportingOptions`| Object | | | Lists up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message. |
 |`spamPreProcessingDialog.spamReportingOptions.title`| String | 128 characters | ✔️ | Specifies the custom text or title to describe the reporting options provided in the preprocessing dialog. |
 |`spamPreProcessingDialog.spamReportingOptions.options`| Array of strings | 5 options<br><br>128 characters per option | ✔️ | Specifies a custom option with a checkbox that a user can select from the preprocessing dialog to provide a reason for reporting a message. At least one option must be specified. A maximum of five options can be included.|
-|`spamPreProcessingDialog.spamFreeTextSectionTitle`| String | 128 characters | | Adds a text box to the preprocessing dialog for users to provide additional information on the message the're reporting. The string provided in this property appears above the text box. |
+|`spamPreProcessingDialog.spamFreeTextSectionTitle`| String | 128 characters | | Adds a text box to the preprocessing dialog for users to provide additional information on the message they're reporting. The string provided in this property appears above the text box. |
 |`spamPreProcessingDialog.spamMoreInfo`| Object | | | Configures a link to provide informational resources to a user. In the preprocessing dialog, the link appears below the text provided in `spamPreProcessingDialog.description`.|
 |`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
 |`spamPreProcessingDialog.spamMoreInfo.url`| String | 2,048 characters | ✔️ | Specifies the HTTPS URL of a site containing informational resources. |
