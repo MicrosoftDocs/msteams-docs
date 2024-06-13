@@ -1,5 +1,5 @@
 ---
-title: The scale stage for your collaborative app
+title: Scale Stage for Collaborative App
 author: heath-hamilton
 description: Learn what you can do during the scale stage of your app to grow your app.
 ms.topic: conceptual

@@ -1,5 +1,5 @@
 ---
-title: The traction stage for your collaborative app
+title: Accelerate Market Traction for App
 author: heath-hamilton
 description: Learn what you can do during the traction stage of your app to grow your app.
 ms.topic: conceptual

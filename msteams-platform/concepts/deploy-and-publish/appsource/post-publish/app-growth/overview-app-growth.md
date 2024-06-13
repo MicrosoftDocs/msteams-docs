@@ -1,5 +1,5 @@
 ---
-title: Overview for planning, strategizing, and executing growth for your app
+title: Strategies for Boosting App Growth 
 author: heath-hamilton
 description: Learn to plan, strategize and execute growth for your app.
 ms.topic: conceptual

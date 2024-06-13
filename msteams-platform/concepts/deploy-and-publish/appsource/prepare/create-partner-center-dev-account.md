@@ -1,5 +1,5 @@
 ---
-title: Create your Partner Center developer account  
+title: Managing Partner Center Account
 description: FAQs for creating a Partner Center developer account for publishing your app to the Microsoft Teams Store.
 ms.topic: how-to
 author: heath-hamilton
