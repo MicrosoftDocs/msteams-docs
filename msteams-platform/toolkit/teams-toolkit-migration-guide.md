@@ -16,23 +16,21 @@ Learn in detail to create a new project folder, move configuration files, adjust
 
 ## Prerequisites
 
-The new structure requires Visual Studio 17.10 Preview 3 or later and also necessitates the activation of the multiple startups feature.
-
 Before starting the migration process, ensure that you have the following:
 
 * Visual Studio 17.10 Preview 3 or later.
-* The multiple startups feature enabled. This can be done by navigating to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
+* Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
 ## Migration process
 
 Perform the following steps to migrate to the new project structure:
 
-1. Create a new folder under the solution folder. The new folder name can be **TeamsApp**.
+1. Create a new folder under the solution folder.
 
       > [!NOTE]
       > You can provide any name to the new folder but must be meaningful. We recommend that you use the name **TeamsApp**.
 
-1. Create a file under the new folder and name it as **TeamsApp.ttkproj**. Add the following content to the file:
+1. Create a file under the new folder and name it as **TeamsApp.ttkproj**. Add the following code to the file:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -54,7 +52,7 @@ Perform the following steps to migrate to the new project structure:
     > [!NOTE]
     > These folders and files are automatically included and you needn't add them to the `.ttkproj` manually.
 
-1. According to the earlier `launchSettings.json`, move the launching browser or test tool capability to `launchSettings.json` of the new project.
+1. According to the old `launchSettings.json`, move the launching browser or test tool capability to `launchSettings.json` of the new project.
 
     * Create a `launchSettings.json` under the new project.
     * Copy the C# `launchSettings.json` to the new created one.
@@ -68,7 +66,7 @@ Perform the following steps to migrate to the new project structure:
     > * The `launchSettings.json` under the TeamsApp is configured to launch the browser or the test tool app that communicates with the C# project.
     > * The profile names specified is used in the subsequent steps.
 
-1. Open the solution using Visual Studio (version 17.10 Preview 3 or later). Add the new project to the solution, maybe `TeamsApp/TeamsApp.ttkproj`.
+1. Open the solution using Visual Studio (version 17.10 Preview 3 or later) and add the new project to the solution, `TeamsApp/TeamsApp.ttkproj`.
 
 1. Remove `<ProjectCapability Include="TeamsFx"/>` in the old C# project.
 
