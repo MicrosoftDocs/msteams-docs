@@ -117,7 +117,7 @@ In channels and group chats, a tour should open in a modal (also known as a [dia
 
 ## Chat with a bot
 
-Bots integrate directly into Team’s messaging framework. Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks. Bots can proactively notify users about changes or updates to your app via chat.
+Bots integrate directly into Team’s messaging framework. Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks. Bots can proactively notify users about changes or updates to your app through chat.
 
 ### Chat with a bot in different contexts
 
