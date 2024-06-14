@@ -392,5 +392,4 @@ ms.date: 12/15/2022
 
 ## See also
 
-* [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
-* [Resource-specific consent](resource-specific-consent.md)
+[Resource-specific consent](resource-specific-consent.md)
