@@ -106,4 +106,3 @@ Following code snippet is an example of calling the API from the Teams app built
 
 > [!div class="nextstepaction"]
 > [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
-
