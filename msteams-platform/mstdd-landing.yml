@@ -59,7 +59,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Preapproval of RSC permissions
+      - text: Preapproval of RSC permissions (Developer preview)
         url: graph-api/rsc/preapproval-instruction-docs.md
       - text: 32x32 color icon for your app running in Outlook and Microsoft 365
         url: concepts/build-and-test/apps-package.md#outline-icon
