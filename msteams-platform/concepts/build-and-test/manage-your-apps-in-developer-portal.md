@@ -1,5 +1,5 @@
 ---
-title: Manage Apps in Developer Portal
+title: Manage Apps with Developer Portal
 description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
