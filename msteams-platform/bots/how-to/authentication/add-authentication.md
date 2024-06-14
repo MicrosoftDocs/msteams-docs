@@ -153,7 +153,7 @@ You need an identity provider for authentication. In this procedure, you use a M
 
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Microsoft Entra ID**.
     > [!TIP]
-    > * You must create and register this Microsoft Entra resource in a tenant in which you can consent to delegate permissions requested by an application. For instructions on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+    > You must create and register this Microsoft Entra resource in a tenant in which you can consent to delegate permissions requested by an application. For instructions on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 1. In the left panel, select **App registrations**.
 1. In the right panel, select the **New registration** tab, in the upper left.
 1. Provide the following information:
@@ -359,7 +359,7 @@ Once the user does so, the provider generates a user token and sends it to the b
 
 ### Test the bot locally
 
-After you've configured the authentication mechanism, you can perform the actual bot testing.  
+After you configure the authentication mechanism, you can perform the actual bot testing.
 
 1. Run the bot sample locally on your machine, via Visual Studio for example.
 1. Start the Emulator.
