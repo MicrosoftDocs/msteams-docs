@@ -36,7 +36,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
-1. Select **Basic AI hatbot**.
+1. Select **Basic AI Chatbot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
@@ -51,8 +51,6 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 1. Enter your **OpenAI** or **Azure OpenAI** credentials based on the service you select. Select **Enter**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
-
-1. Select **Enter**.
 
 1. Select **Default folder**.
 
@@ -151,9 +149,9 @@ Teams AI library provides a flow to build an intelligent chatbot with AI capabil
     1. [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
     1. [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system. 
 
-1. **AfterTurn handler**: After the activity handler or AI system is executed, Teams AI library executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
+* **AfterTurn handler**: After the activity handler or AI system is executed, Teams AI library executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
 
-1. **Respond to user**: Teams AI library saves the state and the bot can send the responses to the user.
+* **Respond to user**: Teams AI library saves the state and the bot can send the responses to the user.
 
 ## Customize basic AI chatbot
 
@@ -374,7 +372,7 @@ You can add customizations on top of the basic app to build complex scenarios as
     | Whisper | Not supported |
     | TTS | Not supported |
 
-1. Customize model parameters:
+1. **Customize model parameters**:
 
     In the `src/prompts/chat/config.json` file, configure the model parameters under completion as follows:
 

@@ -11,7 +11,7 @@ ms.date: 05/24/2023
 
 Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or large language model (LLM) available in the AI library.
+Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
 
 Teams AI library supports the following capabilities:
 
@@ -47,9 +47,9 @@ You can send and receive messages using the Bot Framework. The app listens for t
 
 # [JavaScript](#tab/javascript6)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L83)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.getting-started/a.echoBot/src/index.ts#L74)
 
 ```typescript
 // Listen for user to say '/reset' and then delete conversation state
@@ -145,9 +145,9 @@ Now, the app class has `messageExtensions` features to simplify creating the
 * `state`: `TurnState`
 * `query`: The data passed from message extension interaction
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L79)
 
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
@@ -261,9 +261,9 @@ You can register Adaptive Card action handlers using the `app.adaptiveCards` p
 
 # [JavaScript](#tab/javascript4)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L95)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
 
 ```javascript
 // Listen for messages that trigger returning an adaptive card
@@ -458,9 +458,9 @@ builder.Services.AddTransient<IBot>(sp =>
 
 # [JavaScript](#tab/javascript3)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L93)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L87)
 
 ```typescript
 
@@ -566,9 +566,9 @@ The following is an example of how you can structure their code to handle a mess
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
+* [Search actions sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+* [Search results sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
 
 ```csharp
 // Listen for search actions
@@ -609,9 +609,9 @@ The following is an example of how you can structure their code to handle a mess
 
 # [JavaScript](#tab/javascript2)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L78)
 
 ```typescript
 
@@ -821,9 +821,9 @@ All entities are required parameters to actions.
 
 # [JavaScript](#tab/javascript1)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L154)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
 
 ```typescript
     app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
