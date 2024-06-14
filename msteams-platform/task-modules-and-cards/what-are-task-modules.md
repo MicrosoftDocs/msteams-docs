@@ -1,7 +1,7 @@
 ---
 title: Dialogs
 author: surbhigupta
-description: In this module, learn how to add modal pop-up experiences to collect or display information to your users from your Microsoft Teams apps.
+description: Learn how to add modal to embed a webpage to display surveys, videos to collect or display information to your users from Teams apps
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -13,7 +13,7 @@ ms.date: 12/16/2022
 Dialogs (referred as task modules in TeamsJS v1.x) permit you to create modal pop-up experiences in your Teams application. In the pop-up, you can:
 
 * Run your own custom HTML or JavaScript code.
-* Show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video.
+* Show an `<iframe>`-based widget such as surveys, YouTube video, or Microsoft Stream video.
 * Display an [Adaptive Card](/adaptive-cards/).
 
 Dialogs are useful for initiating and completing tasks or displaying rich information, such as videos or Power Business Intelligence (BI) dashboards. A pop-up experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
