@@ -246,7 +246,6 @@ By default, only global admins or Teams service admins can upload the custom app
 
 ## See also
 
-* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
