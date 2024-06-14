@@ -26,7 +26,7 @@ In this article you'll learn:
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
-- The current versions of Microsoft Visual Studio and Git.
+- The latest versions of Microsoft Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
 - The following sample:
 
@@ -153,9 +153,7 @@ You need an identity provider for authentication. In this procedure, you use a M
 
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Microsoft Entra ID**.
     > [!TIP]
-    > You'll need to create and register this Microsoft Entra resource in a tenant
-    > in which you can consent to delegate permissions requested by an application.
-    > For instruction on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+    > * You must create and register this Microsoft Entra resource in a tenant in which you can consent to delegate permissions requested by an application. For instructions on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 1. In the left panel, select **App registrations**.
 1. In the right panel, select the **New registration** tab, in the upper left.
 1. Provide the following information:
@@ -208,7 +206,7 @@ You need an identity provider for authentication. In this procedure, you use a M
 
         - If you selected **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)** enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
-    h. For **Resource URL**, enter `https://graph.microsoft.com/`. This URL isn't used in the current code sample.  
+    h. For **Resource URL**, enter `https://graph.microsoft.com/`. This URL isn't used in the code sample.  
     i. Leave **Scopes** blank. The following image is an example:
 
     :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="Screenshot shows how to add Teams bot auth bot identity connection adv1.":::
