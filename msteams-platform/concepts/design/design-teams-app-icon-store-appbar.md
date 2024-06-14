@@ -1,5 +1,5 @@
 ---
-title: Design your app - App icon for Microsoft Teams Store and app bar
+title: Design your app - App Icon for Store & App Bar
 description: Learn about the app icons for Microsoft Teams Store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium

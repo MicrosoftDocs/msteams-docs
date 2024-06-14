@@ -1,5 +1,5 @@
 ---
-title: Design your app - App artwork for Microsoft Teams Store
+title: Design App artwork - Best Practices
 description: Learn about guidelines and templates for displaying the app artwork.
 author: heath-hamilton
 ms.localizationpriority: medium
