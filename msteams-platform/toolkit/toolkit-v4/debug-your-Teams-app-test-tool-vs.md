@@ -3,7 +3,7 @@ title: Debug bot using Teams App Test Tool Visual Studio
 author: v-ganr
 description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool in Visual Studio.
 ms.localizationpriority: medium
-ms.topic: Teams App Test Tool overview
+ms.topic: overview
 ms.author: surbhigupta
 ms.date: 02/13/2024
 ---
@@ -14,7 +14,7 @@ Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You c
 
 The following image shows a sample app displaying a response in Test Tool:
 
- :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png"::: 
+ :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png":::
 
 The following are the advantages of Test Tool:
 
@@ -68,7 +68,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
    > [!NOTE]
    > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
 
     A GettingStarted window appears.
 
@@ -78,18 +78,18 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     # [OpenAI](#tab/openai)
     
-    * Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
+    Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
     
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
     # [Azure OpenAI](#tab/azureopenai)
     
     1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
-    
+
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
     
     1. Replace model name with Azure OpenAI model deployment name in `Program.cs` file.
-    
+   
          :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployement name updated.":::
     ---
 
@@ -99,7 +99,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png"::: 
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png":::
 
 ## Activity triggers
 
@@ -128,15 +128,14 @@ Predefined activity triggers are available in the **Mock an Activity** menu in T
 1. Select the **Program.cs** file.
 1. In the **Program.cs** file, under `builder.Services.AddTransient<IBot>(sp =>` add the following code:
 
-    
-    ```csharp 
+    ```csharp
     app.OnConversationUpdate("membersAdded", async (context, state, cancellationToken) =>
     {
        await context.SendActivityAsync($"new member added", cancellationToken: cancellationToken);
     });
     ```
 
-    The `OnConversationUpdate` handler recognizes the members who join the conversation as described by the Add user activity. 
+    The `OnConversationUpdate` handler recognizes the members who join the conversation as described by the Add user activity.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
 
@@ -156,7 +155,7 @@ Predefined activity triggers are available in the **Mock an Activity** menu in T
 
 ### Custom activity triggers
 
-You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, and `reactionsremoved`. 
+You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, and `reactionsremoved`.
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select the **Program.cs** file.
@@ -170,7 +169,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
     ```
 
     The `OnMessageReactionsAdded` handler identifies the reaction to append by using the `ReplyToId` property of the earlier conversation.
- 
+
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
 
 1. Go to the Test Tool webpage and select the latest response from Log Panel to copy `replyToId`.
@@ -214,7 +213,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
   * [Typeahead](../../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-entra-object-id-and-upn-in-user-mention)
-  * [Stage View](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Stageview](../../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width Adaptive Card](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Test Tool doesn't support the following experiences:

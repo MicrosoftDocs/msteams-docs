@@ -42,31 +42,43 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
+- title: Microsoft Build 2024
+  linkLists:
+    - linkListType: whats-new
+      links:
+      - text: Copilot handoff
+        url: bots/how-to/conversations/bot-copilot-handoff.md
+      - text: Assistants API to create powerful AI assistants
+        url: bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api
+      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md
+      - text: Build a custom copilot to chat with your data
+        url: teams-ai-library-tutorial.yml
 
 - title: What's new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.
-        url: concepts/build-and-test/adaptive-card-previewer-vs.md
-      - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.
-        url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-      - text: Extend a Teams meeting app to Outlook
-        url: m365-apps/extend-m365-meeting-app.md
-      - text: Share to Teams from personal app or tab for Teams mobile clients
-        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
-      - text: Build API-based message extension using Developer Portal for Teams
-        url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
-        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
-      - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
-        url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
-      - text: Build Adaptive Card-based Loop components
-        url: m365-apps/cards-loop-component.md
-      - text: Application RSC permissions for chat scope are now generally available
-        url: graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting
-      - text: Micro-capabilities for website links
-        url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
+      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
+        url: concepts/build-and-test/apps-package.md#outline-icon
+      - text: Authentication in API-based message extension
+        url: messaging-extensions/build-api-based-message-extension.md#authentication
+      - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
+        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
+      - text: Bot configuration experience
+        url: bots/how-to/bot-configuration-experience.md
+      - text: The stageView API with the openmode property allows you to open your app content in different Stageview experience
+        url: tabs/open-content-in-stageview.md
+      - text: Sample prompts for message extension plugins
+        url: messaging-extensions/high-quality-message-extension.md#sample-prompts
+      - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
+        url: m365-apps/overview.md#outlook-add-ins
+      - text: Added support for python in Teams AI library
+        url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
+      - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
+        url: tabs/open-content-in-stageview.md
+      - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
+        url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 
     - linkListType: reference
       links:

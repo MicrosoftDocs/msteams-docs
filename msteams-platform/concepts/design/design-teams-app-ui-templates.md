@@ -22,6 +22,8 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 > [!div class="nextstepaction"]
 > [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
+The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
+
 ### Microsoft Teams UI Library
 
 View and test individual Teams UI templates and related components in your browser.
@@ -166,7 +168,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Top use case
 
-* Authenticate users
+Authenticate users
 
 ### Mobile
 
@@ -185,7 +187,7 @@ Settings screens are where users can configure their preferences with your app.
 
 ### Top use case
 
-* Manage app features
+Manage app features
 
 :::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." lightbox="../../assets/images/ui-templates/settings.png":::
 

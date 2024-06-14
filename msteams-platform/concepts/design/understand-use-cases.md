@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Learn about Microsoft Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
+description: Learn Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -147,7 +147,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that help you to create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app. The notification APIs provides a simple way to send notifications from your app to the Teams activity.
 
    :::column-end:::
 
