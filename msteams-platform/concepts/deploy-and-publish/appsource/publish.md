@@ -1,5 +1,5 @@
 ---
-title: Overview - Publish App on Store
+title: Publish App on Teams Store
 description: Publish your app to Microsoft Teams Store or AppSource. What to expect after you submit, tips for rapid approval and publishing apps linked to a SaaS offer.
 ms.topic: overview
 author: heath-hamilton

@@ -1,5 +1,5 @@
 ---
-title: Enable Your App in Teams iOS platform
+title: Enable App for Teams iOS platform
 description: Update your Apple Developer Program Team ID in the Microsoft Partner Center to enable end-users to search and acquire your app on the Teams iOS platform.
 ms.topic: how-to
 ms.localizationpriority: medium

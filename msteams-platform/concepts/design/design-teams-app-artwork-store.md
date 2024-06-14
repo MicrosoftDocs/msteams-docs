@@ -1,5 +1,5 @@
 ---
-title: Design App artwork - Best Practices
+title: Best Practices to Design App artwork
 description: Learn about guidelines and templates for displaying the app artwork.
 author: heath-hamilton
 ms.localizationpriority: medium
