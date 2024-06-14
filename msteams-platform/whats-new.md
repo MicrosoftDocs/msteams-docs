@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 12, 2024***: [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md).
+***June 14, 2024***: [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md).
 
 :::column-end:::
 :::row-end:::
