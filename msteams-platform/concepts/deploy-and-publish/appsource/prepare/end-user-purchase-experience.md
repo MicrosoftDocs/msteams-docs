@@ -1,5 +1,5 @@
 ---
-title: App Subscriptions & Licenses - Pay & Manage
+title: Buy & Manage App Subscription & License
 description: Learn how to purchase, assign, and manage licenses for third-party apps in Microsoft Teams.
 author: heath-hamilton
 ms.author: surbhigupta

@@ -1,5 +1,5 @@
 ---
-title: Implement In-app Purchases
+title: In-app Purchases for App Monetization
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
 author: v-npaladugu
 ms.author: surbhigupta
