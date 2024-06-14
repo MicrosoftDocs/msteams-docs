@@ -67,7 +67,7 @@ if(appInstallDialog.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about the `appInstallDialog` module, see [appInstallDialog module](/javascript/api/@microsoft/teams-js/appinstalldialog#@microsoft-teams-js-appinstalldialog-openappinstalldialog).
+For more information about the `appInstallDialog` module, see [appInstallDialog module](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-appinstalldialog-openappinstalldialog).
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
