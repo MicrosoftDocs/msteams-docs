@@ -10,7 +10,7 @@ ms.date: 08/29/2023
 
 # Preapproval of RSC permissions
 
-Resource-Specific Consent (RSC) permissions preapproval provides admins with granular control over the RSC permissions an app can request upon installation. Today, RSC permissions are granted to an app at the time the app gets installed. Through the use of pre-approval policies, admins can declare ahead of time the max permissions an app can request from the end user and be consented to during installation time.
+Resource-Specific Consent (RSC) permissions preapproval provides admins with granular control over the RSC permissions an app can request upon installation. RSC permissions are granted to an app at the time the app gets installed. Through the use of pre-approval policies, admins can declare ahead of time the max permissions an app can request from the end user and be consented to during installation time.
 
 For an RSC permission pre-approval policy to take effect for an app, the admin must ensure that the app is enabled (installable) in their organization. If the app is not installable, then the permission pre-approval for that specific app becomes irrelevant. For more information on enabling apps in Teams Admin Center, see [managing apps in Teams Admin Center](/microsoftteams/apps-in-teams).
 
