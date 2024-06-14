@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build a message extension from an OpenAPI description document (OAD) using using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
+description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear

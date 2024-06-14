@@ -81,4 +81,6 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## See also
 
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 - [Power Platform Connectors overview](/connectors/connectors)
+
