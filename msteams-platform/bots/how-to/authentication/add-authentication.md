@@ -380,9 +380,9 @@ After you configure the authentication mechanism, you can perform the actual bot
     1. **Using authentication tokens**.  
       &#x2713; You're signed in based on your credentials.
 
-    The following image is an example of the bot UI after you've logged in:
+    The following image is an example of the bot UI after you sign in:
 
-    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="Screenshot shows an example of the bot UI after you've logged in.":::
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="Screenshot shows an example of the bot UI after you sign in.":::
 
 1. If you select **Yes** when the bot asks *Would you like to view your token?*, you get the following response:
 
@@ -408,9 +408,9 @@ and when for these, and just reference that from here, along with the set of ste
 1. A pop-up dialog appears to **Confirm Open URL** to authenticate the bot's user (you).  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-    The following image is an example of the bot UI after you've logged in:
+    The following image is an example of the bot UI after you sign in:
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="Screenshot shows an example of the Teams bot UI after you've logged in.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="Screenshot shows an example of the Teams bot UI after you sign in.":::
 
 1. Select the **Yes** button to display your authentication token. The following image is an example:
 
@@ -607,10 +607,7 @@ The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is 
 
 **dialogs/main_dialog.py**
 
-Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
-
-- If the user is already signed in, it generates a token response event, without prompting the user.
-- Otherwise, it prompts the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
+Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in. If the user is already signed in, it generates a token response event, without prompting the user. Otherwise, it prompts the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
 [!code-python[Add OAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/dialogs/main_dialog.py?range=48-49)]
 
