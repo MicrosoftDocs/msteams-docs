@@ -93,8 +93,7 @@ By adopting these methods, you can observe an increase in app installations, sus
 
 ## See also
 
-- [Strategize and execute growth for your app](overview-app-growth.md)
-- [Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
+[Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
 
 <!--
 ### Building your collaborative app
