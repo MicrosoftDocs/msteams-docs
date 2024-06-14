@@ -1,5 +1,5 @@
 ---
-title: Prepare for Teams Store Submission
+title: Prepare your Microsoft Teams Store submission  
 description: Final steps before you submit your Microsoft Teams app to be listed on the Microsoft Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
