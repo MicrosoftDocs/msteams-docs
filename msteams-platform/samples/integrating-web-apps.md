@@ -122,9 +122,7 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 ## See also
 
-* [Integrate web apps](integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)
