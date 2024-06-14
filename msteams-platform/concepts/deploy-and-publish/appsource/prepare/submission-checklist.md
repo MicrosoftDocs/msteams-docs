@@ -278,6 +278,4 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-* [Publish your app to the Microsoft Teams Store](../publish.md)
-* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
-* [Resolve issues if your Microsoft Teams Store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
