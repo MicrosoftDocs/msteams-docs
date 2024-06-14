@@ -73,6 +73,3 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 > [!div class="nextstepaction"]
 > [Create your app package](~/concepts/build-and-test/apps-package.md)
 
-## See also
-
-[Distribute your Microsoft Teams app](apps-publish-overview.md)
