@@ -423,7 +423,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png":::
 
         > [!Note]
-        > The Sync to Teams process can take a few minutes. You'll see a message in the browser indicating that the app has been successfully synchronized to Teams.
+        > The Sync to Teams process can take a few minutes. You will see a message in the browser indicating that the app has been successfully synchronized to Teams.
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
     1. Select the triple-dot on the sidebar, then select **All apps**.  
