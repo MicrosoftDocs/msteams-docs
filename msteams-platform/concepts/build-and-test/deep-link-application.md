@@ -159,7 +159,7 @@ You can configure deep links in your app through TeamsJS to allow the app users 
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
+You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
 
 ```javascript
 if (pages.isSupported()) {
@@ -171,7 +171,7 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-openlink) function.
+For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -202,7 +202,7 @@ You can share deep links to entities in Teams apps to navigate to the content an
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-sharedeeplink) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -214,7 +214,7 @@ You need to replace the following parameters with the appropriate information:
 * `subPageLabel`: A label for the item to use for displaying the deep link.
 * `subPageWebUrl`: A fallback URL to use if the client can't render the page.
 
-For more information, see [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-sharedeeplink).
+For more information, see [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-sharedeeplink).
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
