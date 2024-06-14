@@ -585,3 +585,5 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 
 * [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Book-a-room](app-templates.md#app-template-code-samples)
+* [Microsoft Teams bot](../bots/what-are-bots.md)
+
