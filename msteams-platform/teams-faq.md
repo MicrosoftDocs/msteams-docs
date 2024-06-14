@@ -125,7 +125,7 @@ Live Share supports scheduled meetings, one-on-one calls, group calls, and meet 
 <details>
 <summary>Will Live Share's media package work with DRM content?</summary>
 
-Live Share's media package doesn't work with DRM content. Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
 
 For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
@@ -334,7 +334,7 @@ After the app passes the proactive validation, developers of both existing and n
 
 <summary> How are new plugins certified?</summary>
 
-Developers are be encouraged to certify their new plugin after successfully completing validation.
+Developers will be encouraged to certify their new plugin after successfully completing validation.
 </details>
 <details>
 <summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
@@ -978,7 +978,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there's a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 <br>
 &nbsp;
 </details>
