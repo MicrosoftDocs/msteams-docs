@@ -1,7 +1,7 @@
 ---
 title: Integrate web apps
 author: Rajeshwari-v
-description: In this article, you get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
+description: Learn to integrate device capabilities. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
