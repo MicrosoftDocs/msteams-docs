@@ -49,7 +49,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. **Resource group**. Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
     1. From the **Region** dropdown menu, select *West US*, or a region close to your applications.
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
-    1. Select the **Create** button. It may take a few minutes to create the resource group.
+    1. Select the **Create** button. It might take a few minutes to create the resource group.
 
 > [!TIP]
 > As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to do so, select the pin icon &#128204; in the upper right of the dashboard.
@@ -67,7 +67,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. **Region**. Select *West US* or a region close to your applications.
     1. **Pricing Tier**. Select *Standard S1*, which is the default value.
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
-    1. Select **Create**. It may take a few minutes to create the app service plan. The plan is listed in the resource group.
+    1. Select **Create**. It might take a few minutes to create the app service plan. The plan is listed in the resource group.
 
 ## Create Azure Bot resource registration
 
@@ -164,10 +164,10 @@ You need an identity provider for authentication. In this procedure, you use a M
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
    1. Select **Register**.
 
-1. After it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
+1. After Azure creates the app, it displays the **Overview** page for the app. Copy and save the following information to a file:
 
     1. The **Application (client) ID** value. Use this value later as the *Client ID* when you register this Azure identity application with your bot.
-    1. The **Directory (tenant) ID** value. Use this value later as the *Tenant ID* to register this Azure identity application with your bot.
+    1. The **Directory (tenant) ID** value. Use this value later as the *Tenant ID* when you register this Azure identity application with your bot.
 
 1. In the left panel, select **Certificates & secrets** to create a client secret for your application.
 
@@ -270,7 +270,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
 
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
 
@@ -288,7 +288,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
     - Set the `connectionName` to the name of the identity provider connection.
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/.env)]
 
@@ -302,7 +302,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
     - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
 
-      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
+      Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
       [!code-python[config](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/config.py?range=14-16)]
 
