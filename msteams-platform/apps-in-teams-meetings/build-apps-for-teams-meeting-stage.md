@@ -225,6 +225,19 @@ async function fetchContentDetails() {
 }
 ```
 
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+| `appId` | String | Yes | The ID of the app to be shared. |
+| `title` | String | Yes | The title of the shared content. |
+| `contentReference` | String | Yes | The content reference link of the shared content. |
+| `threadId` | String | Yes | The conversation ID where the content was shared. |
+| `author` | String | Yes | The ID of the user who shared the content. |
+| `contentType` | String | Yes | The type of the content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
+
 ### Response codes
 
 The following table provides the response codes:
