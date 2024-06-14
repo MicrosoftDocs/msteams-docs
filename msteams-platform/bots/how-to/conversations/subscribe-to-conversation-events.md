@@ -1,7 +1,7 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: In this module, learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
+description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
