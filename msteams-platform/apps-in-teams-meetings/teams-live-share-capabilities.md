@@ -1,7 +1,7 @@
 ---
 title: Live Share getting started
 author: surbhigupta
-description: In this module, learn more about live share SDK capabilities, RSC permissions and live data structures.
+description: Learn more about Live Share SDK capabilities, RSC permissions, and live data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -25,7 +25,7 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.23.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
-#### npm
+#### NPM
 
 ```bash
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
@@ -33,7 +33,7 @@ npm install @microsoft/teams-js --save
 npm install @fluidframework/test-client-utils start-server-and-test --save-dev
 ```
 
-#### yarn
+#### Yarn
 
 ```bash
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
@@ -182,7 +182,7 @@ const LiveShareLoading = () => {
 
 ---
 
-That's all it took to setup your container and join the session mapped to the meeting, chat, or channel. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
+That's all it took to set up your container and join the session mapped to the meeting, chat, or channel. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
 > Ensure that the Teams Client SDK is initialized before calling `LiveShareHost.create()`.
@@ -389,7 +389,7 @@ The following are a few examples in which `LiveState` can be used in your applic
 - Keeping a scroll position in sync for a **follow me** feature.
 
 > [!NOTE]
-> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
+> Unlike `SharedMap`, the `state` value in `LiveState` is reset after all the users disconnect from a session.
 
 Example:
 
@@ -888,7 +888,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-      // Update app to reflect that the user is not currently following anyone and there is no presenter.
+      // Update app to reflect that the user isn't following anyone and there is no presenter.
       infoText.innerHTML = "";
       // Show a "Start presenting" button in your app.
       button.innerHTML = "Start presenting";
@@ -1060,7 +1060,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        // Update app to reflect that the user isn't following anyone and there is no presenter.
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
@@ -1311,7 +1311,7 @@ export const MyLiveFollowMode = () => {
 
 ---
 
-In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it is best to let users opt into realtime collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
+In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it's best to let users opt into real-time collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
 
 Example:
 
@@ -1392,7 +1392,7 @@ const context: app.Context = await app.getContext();
 if (context.page?.frameContext === FrameContexts.meetingStage) {
   // Check if user is initial presenter
   meeting.getAppContentStageSharingState((error, state) => {
-    // isShareInitiator is not currently declared in the typedocs in the SDK, so we cast as any
+    // isShareInitiator isn't declared in the typedocs in the SDK, so we cast as any
     const isShareInitiator = (state as any)?.isShareInitiator;
     if (!isShareInitiator) return;
     // The user is the initial presenter, so we "take control"
@@ -1430,7 +1430,7 @@ export const MyLiveFollowMode = () => {
       .then(async (context: app.Context) => {
         if (context.page?.frameContext !== FrameContexts.meetingStage) return;
         meeting.getAppContentStageSharingState((error, state) => {
-          // isShareInitiator is not currently declared in the typedocs in the SDK, so we cast as any
+          // isShareInitiator isn't declared in the typedocs in the SDK, so we cast as any
           const isShareInitiator = (state as any)?.isShareInitiator;
           if (!isShareInitiator) return;
           setIsShareInitiator(true);
