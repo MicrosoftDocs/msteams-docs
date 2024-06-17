@@ -43,7 +43,7 @@ Anonymous users can't be authenticated through Microsoft Entra authentication or
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If your app needs to be accessed by anonymous users, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users must access your app, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
@@ -134,7 +134,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
 | `tenantId` | Tenant ID of the meeting organizer. |
-| `userRole` | `anonymous`, represents anonymous user. |
+| `userRole` | `anonymous` represents anonymous user. |
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
