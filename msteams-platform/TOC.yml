@@ -677,7 +677,7 @@
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, Adaptive Card, command bot
-    - name: Starter cards
+    - name: Adaptive Card templates
       href: task-modules-and-cards/cards/starter-cards.md
       displayName: Adaptive Card samples, hero card, list card
     - name: Format cards in Teams

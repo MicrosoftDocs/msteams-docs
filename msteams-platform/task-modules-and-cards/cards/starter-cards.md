@@ -1,14 +1,14 @@
 ---
-title: Starter cards in Microsoft Teams
-description: Learn about the different Adaptive Card templates for Microsoft Teams that serve as an inspiration to design your own Adaptive Card.
+title: Adaptive Card templates for Teams
+description: Learn about the different Adaptive Card templates for Microsoft Teams to design your own Adaptive Card.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 05/02/2024
+ms.date: 06/17/2024
 ---
 
 # Teams Adaptive Card starter collection
 
-This article presents a curated set of nine Adaptive Card samples for Microsoft Teams. These samples serve as a practical starting point to inspire you to design your own Adaptive Card. They help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
+This article presents a curated set of nine Adaptive Card templates for Microsoft Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. They help you understand [Microsoft’s design principles for Adaptive Cards](/adaptive-cards/resources/principles), offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
 
 * [Recipe hero](#recipe-hero)
 * [Work item thumbnail](#work-item-thumbnail)
@@ -21,11 +21,11 @@ This article presents a curated set of nine Adaptive Card samples for Microsoft 
 * [Account details](#account-details)
 
 > [!NOTE]
-> Download Adaptive Card samples with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
+> Download Adaptive Card templates with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
 
 ## Recipe hero
 
-Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal additional details.
+Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details.
 
 # [Desktop](#tab/desktop1)
 
@@ -81,7 +81,7 @@ This card is designed for communication and social interaction. Whether it's com
 
 ## Author highlight video
 
-Use this sample to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users.
+Use this template to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users.
 
 # [Desktop](#tab/desktop5)
 
@@ -95,7 +95,7 @@ Use this sample to showcase a variety of short video content, such as tutorials,
 
 ## Course video
 
-This card sample serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users.
+This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users.
 
 # [Desktop](#tab/desktop6)
 
@@ -109,7 +109,7 @@ This card sample serves as a comprehensive learning hub filled with video conten
 
 ## Standard video
 
-Use this card sample to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content.
+Use this card template to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content.
 
 # [Desktop](#tab/desktop7)
 
@@ -123,7 +123,7 @@ Use this card sample to share a variety of content, ranging from tech updates to
 
 ## Issue status
 
-The sample issue card is designed to highlight a specific issue, providing key details including the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
+The issue card template is designed to highlight a specific issue, providing key details including the status and owner. You can customize the card with other relevant information, such as priority or due date.
 
 # [Desktop](#tab/desktop8)
 
