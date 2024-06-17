@@ -93,9 +93,9 @@ The platform provides the component header and includes standard elements such a
 |3     |  Shared locations (Loop control)       |
 |4     |  Copy component      |
 
-**App name** is drawn from the component contract. We recommend to use a concise name for your app.
+**App name** is drawn from app manifest. We recommend to use a concise name for your app.
 
-**App logo** is drawn from the component contract. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Microsoft Teams.
+**App logo** is drawn from app manifest. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Microsoft Teams.
 
 ## Loop component border
 
