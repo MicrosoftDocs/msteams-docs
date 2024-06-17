@@ -108,3 +108,8 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 * [Monetize your app](monetize-overview.md)
 * [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
 * [RSC permissions](../../../../graph-api/rsc/resource-specific-consent.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)

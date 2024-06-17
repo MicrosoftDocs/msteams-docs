@@ -124,6 +124,7 @@ Upon successful testing, you can push the offer to Go live where app validations
 
 ## See also
 
+* [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Preview and subscribe](/partner-center/marketplace/test-saas-preview-offer)
 * [Unsubscribe from a test plan](/partner-center/marketplace/test-saas-unsubscribe)

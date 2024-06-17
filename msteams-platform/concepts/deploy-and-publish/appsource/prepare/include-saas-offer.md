@@ -162,3 +162,5 @@ For comprehensive guidance on planning the offer, see [how to plan a SaaS offer 
 * [Plan a SaaS offer](/partner-center/marketplace/plan-saas-offer)
 * [Marketplace categories and industries](/partner-center/marketplace/marketplace-categories-industries)
 * [Plans and pricing for commercial marketplace offers](/partner-center/marketplace/plans-pricing)
+* [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
