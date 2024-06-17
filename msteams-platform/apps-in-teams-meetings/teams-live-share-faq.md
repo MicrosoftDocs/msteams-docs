@@ -107,7 +107,7 @@ Live Share only supports having one container using our provided Azure Fluid Rel
 <details>
 <summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
 
-Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. As Live Share sessions are short-lived, issues most commonly arise during development, particularly after adding new features to your app.
+Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. As Live Share sessions are short-lived, this issue commonly arises during development, particularly after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.

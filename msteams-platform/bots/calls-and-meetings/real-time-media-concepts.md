@@ -44,7 +44,7 @@ The next section provides details about which meeting participants are speaking 
 
 ## Active and dominant speakers
 
-When joined to a Teams meeting consisting of multiple participants, a bot can identify which meeting participants are speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are most active or dominant in the group conversation, though their voice isn't heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
+In a Teams meeting with multiple participants, a bot can identify which meeting participants are speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are most active or dominant in the group conversation, though their voice isn't heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
 
 The next section provides details about video subscription requests made by a bot.
 

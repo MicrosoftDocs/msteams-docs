@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a die with a button to roll it. When the dice are rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown a die with a button to roll it. When the die is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -99,7 +99,7 @@ async function joinContainer() {
 }
 ```
 
-When you test locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
+When you're testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
 
 ## Write the Stageview
 
