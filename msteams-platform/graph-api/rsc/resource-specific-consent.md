@@ -108,7 +108,7 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
 |`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.| Supported | NA |
 |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.| Supported | NA |
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|`LiveShareSession.ReadWrite.Group`| Allows the app to create and synchronize Live Share sessions for the team and get access related information, such as name and role, about the team's roster and any associated meetings. | Supported | NA |
 |`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.| Supported | NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
@@ -143,7 +143,7 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `OnlineMeetingRecording.Read.Chat` | Read the recordings of the meetings associated with this chat. |NA |Supported |
 | `OnlineMeetingNotification.Send.Chat` | Send notifications in the meetings associated with this chat. |NA |Supported |
 | `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |Supported |NA |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |Supported |NA |
+| `LiveShareSession.ReadWrite.Chat` | Allows the app to create and synchronize Live Share sessions for the chat and get access related information, such as name and role, about the chat's roster and any associated meetings. |Supported |NA |
 | `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |Supported |NA |
 | `MeetingParticipantReaction.Read.Chat` | Read the reactions of participants in meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |Supported |NA |

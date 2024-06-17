@@ -2679,5 +2679,4 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 
 - [Extend Teams apps across Microsoft 365](./overview.md)
 - [Extend a Teams personal tab across Microsoft 365 app](./extend-m365-teams-personal-tab.md)
-- [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
 - [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)
