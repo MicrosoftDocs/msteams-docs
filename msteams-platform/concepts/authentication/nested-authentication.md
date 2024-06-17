@@ -121,7 +121,7 @@ export function initializePublicClient() {
 
 ### Acquire your first token
 
-The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. The MSAL.js handles token acquisition for user authentication. It tries to get an access token silently, and if that fails, it prompts the user interactively.  The token is then used to call the Microsoft Graph API.
+The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. The MSAL.js handles token acquisition for user authentication. It tries to get an access token silently, and if that fails, it prompts the user interactively. The token is then used to call the Microsoft Graph API.
 
 To acquire a token, follow these steps:
 
