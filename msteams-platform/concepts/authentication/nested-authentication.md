@@ -15,7 +15,6 @@ ms.localizationpriority: medium
 > * Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Nested app authentication is only supported in tabs.
 
-Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process and
 Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across applications nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow.
 
 * You only need to use the MSAL.js library and don’t need the getAuthToken function in TeamsJS.
@@ -121,7 +120,7 @@ export function initializePublicClient() {
 
 ### Acquire your first token
 
-The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. The MSAL.js handles token acquisition for user authentication. It tries to get an access token silently, and if that fails, it prompts the user interactively.  The token is then used to call the Microsoft Graph API.
+The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. The MSAL.js handles token acquisition for user authentication. It tries to get an access token silently, and if that fails, it prompts the user interactively.  The token is then used to call the Microsoft Graph API or other Entra ID protected resources.
 
 To acquire a token, follow these steps:
 
