@@ -194,7 +194,3 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 > [!div class="nextstepaction"]
 > [Publish Teams apps for Outlook and Microsoft 365 app](publish.md)
-
-## See also
-
-[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)

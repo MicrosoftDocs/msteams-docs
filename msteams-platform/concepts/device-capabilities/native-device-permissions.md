@@ -1,7 +1,7 @@
 ---
 title: Request device permissions for your Microsoft Teams app
 author: surbhigupta
-description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
+description: Learn to update your app manifest to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities.
 ms.localizationpriority: high
 ms.topic: how-to
 ms.author: surbhigupta
@@ -61,6 +61,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your desired settings.
 
     :::image type="content" source="../../assets/images/tabs/device-permissions-new.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new.png":::
+
 ---
 
 ## Specify permissions
@@ -118,7 +119,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 > [!IMPORTANT]
 >
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams.media#functions) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API isn't fully supported on the Teams desktop client.
 
 For example:
 
