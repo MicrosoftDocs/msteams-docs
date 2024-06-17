@@ -170,7 +170,7 @@ diceState.on("stateChanged", updateDice);
 
 ### Initialize LiveState
 
-Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state that was sent by other users.
+Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state sent by other users.
 
 After you initialize `LiveState`, the `stateChanged` event you registered earlier starts to trigger whenever a change is made. However, to update the UI within the initial value, call `updateDice()`.
 
