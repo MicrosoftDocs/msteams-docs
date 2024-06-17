@@ -18,11 +18,11 @@ Get answers to common questions when using Live Share.<br>
 
 <details>
 
-<summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
+<summary><b>Can I use my own Azure Fluid Relay (AFR) service?</b></summary>
 
 Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, chats, or channels, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
-While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
+While most of you find it beneficial to use our free hosted service, there might still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
 
 - Require storage of data in Fluid containers beyond six hours after the container is first created.
 - Transmit sensitive data through the service that requires a custom security policy.
@@ -114,7 +114,7 @@ Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSc
 
 To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
-If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDataObject` instances, you must consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session must not be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
+If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDataObject` instances, you must consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session must not be impacted, but users joining that session after you deployed a breaking change might have issues connecting to the session. To mitigate this risk, you might consider some of the following solutions:
 
 - Use our experimental [Live Share Turbo](https://aka.ms/liveshareturbo) or [Live Share for React](https://aka.ms/livesharereact) packages.
 - Deploy schema changes for your web application outside of normal business hours.
