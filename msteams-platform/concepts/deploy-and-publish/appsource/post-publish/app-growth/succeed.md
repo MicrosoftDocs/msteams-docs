@@ -1,5 +1,5 @@
 ---
-title: The succeed stage for your collaborative app
+title: Succeed Stage for Collaborative App
 author: heath-hamilton
 description: Learn what you can do during the final stage of your app to grow your app.
 ms.topic: conceptual
