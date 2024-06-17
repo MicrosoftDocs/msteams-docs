@@ -20,7 +20,7 @@ Nested app authentication (NAA) is a new authentication protocol for single page
 * You only need to use the MSAL.js library and don’t need the getAuthToken function in TeamsJS.
 * You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
 * You can use incremental and dynamic consent for scopes.
-* You don't need to preauthorize your hosts (For example, Teams, Office) to call your endpoints.
+* You don't need to preauthorize your hosts (for example, Teams, Office) to call your endpoints.
 
 The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-Ins and Teams Tabs and Personal apps.
 
