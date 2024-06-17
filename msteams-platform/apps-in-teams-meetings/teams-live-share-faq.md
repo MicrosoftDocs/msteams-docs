@@ -18,11 +18,11 @@ Get answers to common questions when using Live Share.<br>
 
 <details>
 
-<summary><b>Can I use my own Azure Fluid Relay (AFR) service?</b></summary>
+<summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
 Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, chats, or channels, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
-While most of you find it beneficial to use our free hosted service, there might still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
+While most of you find it beneficial to use our free hosted service, there might still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom Azure Fluid Relay service connection if you:
 
 - Require storage of data in Fluid containers beyond six hours after the container is first created.
 - Transmit sensitive data through the service that requires a custom security policy.
@@ -71,7 +71,7 @@ Yes! Live Share supports chat and channel content contexts, including configurab
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. It's not supported in Teams classic. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
+Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. The classic Teams client doesn't support DRM. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
 
 <br>
 
@@ -80,7 +80,7 @@ Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. I
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share supports a maximum of 100 attendees per session. If you're interested in Live Share, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -89,7 +89,7 @@ Live Share supports a maximum of 100 attendees per session. If this is something
 <details>
 <summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
 
-Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If you're interested in Live Share, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -107,7 +107,7 @@ Live Share only supports having one container using our provided Azure Fluid Rel
 <details>
 <summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
 
-Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. As Live Share sessions are short-lived, issues most commonly arise during development, particularly after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
@@ -130,7 +130,7 @@ If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDa
 <details>
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
-While there aren't any enforced limits, you must be mindful of how many messages you send. For optimal performance, you must debounce changes emitted through Live Share to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+While there aren't any enforced limits, you must be mindful of how many messages you send. For optimal performance, you must debounce changes emitted through Live Share to one message per 50 milliseconds or more. This action is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
 <br>
 
