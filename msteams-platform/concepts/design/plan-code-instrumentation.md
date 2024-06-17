@@ -1,5 +1,5 @@
 ---
-title: Plan code instrumentation using analytics service
+title: Analytics for App Instrumentation
 author: heath-hamilton
 description: Learn about planning code instrumentation using an analytics service.
 ms.topic: conceptual
