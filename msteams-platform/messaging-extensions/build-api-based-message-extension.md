@@ -632,7 +632,6 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
-* The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
