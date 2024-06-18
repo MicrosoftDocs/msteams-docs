@@ -23,11 +23,17 @@ There are two ways of invoking dialogs:
 When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object, which Teams uses to display the dialog (referred as task module in TeamsJS v1.x).
 
 > [!WARNING]
-> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the *cloud.microsoft* domain. Perform the following steps before September 2024 to ensure your app continues to render on the Teams web client:
+> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains are migrating to the *cloud.microsoft* domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
 >
 > 1. Update TeamsJS SDK to v.2.19.0 or later. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the **_*.cloud.microsoft_** domain.
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ****.cloud.microsoft*** domain. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers while also adding the **_*.cloud.microsoft_** domains. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
+
+Use the following list of `frame-ancestors` in your app's CSP headers:
+
+```http
+https://*.cloud.microsoft https://teams.microsoft.com https://*.teams.microsoft.com https://*.microsoft365.com https://*.office.com
+```
 
 :::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="task/fetch request or response":::
 
