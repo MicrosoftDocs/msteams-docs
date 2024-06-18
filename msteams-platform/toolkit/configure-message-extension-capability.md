@@ -1,18 +1,18 @@
 ---
 title: Configure message extension capability
 author: surbhigupta
-description: Learn how to configure message extension capability within your Teams app.
+description: Learn how to configure message extension capability within Teams app.
 ms.author: v-vanv
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 03/01/2024
 ---
 
-# Configure message extension capability within your Teams app
+# Configure message extension capability within Teams app
 
 Message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
-Message extensions are implemented on top of the bot support architecture within Teams. For more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+Message extensions are built on the bot support architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ To configure message extension as an additional capability, ensure the following
 
 # [Add message extension to tab app](#tab/tabapp)
 
-The following steps help you to add message extension to a tab app:
+To add a message extension tab app to Teams follow these steps:
 
 1. [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
 1. [Configure message extension within your Teams app](#configure-message-extension-in-app-manifest)
@@ -40,7 +40,7 @@ To create tab app with Teams Toolkit, see [create new tab app with Teams Toolkit
 
 ## Configure message extension in app manifest
 
-You can configure message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure message extension in the `appPackage/manifest.json` file. The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +128,7 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
 
 ## Add message extension code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app code, use the previously created message extension app project and copy the source code into your current project. We suggest you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure looks like:
+1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you copy them into the `bot/` folder. The following folder structure is an example of how your project's folder structure must looks like:
 
    ```yml
    |--.vscode/
@@ -154,7 +154,7 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
    |--teamsapp.yml
    ```
 
-   You can create a root `package.json` using command `npm init -y`. We recommend you reorganize the folder structure and create a root `package.json` as given in the following folder structure:
+   Use the command `npm init -y` to create a root `package.json` file. We recommend you reorganize the folder structure as follows:
 
    ```yml
    |--.vscode/
@@ -201,7 +201,7 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
    ```
 
    > [!NOTE]
-   > If you're working on a JavaScript project, the bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > If you're working on a JavaScript project, you don't need a `build` folderthe bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
@@ -499,7 +499,7 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
 
 You can add message extension to a bot app more easily than adding it to a tab app as message extension use the bot support framework.
 
-The following steps help you to add message extension to a bot app:
+To add a message extension bot app to Teams follow these steps:
 
 1. [Create a bot app using Teams Toolkit](#create-a-bot-app-using-teams-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
