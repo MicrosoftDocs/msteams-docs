@@ -1030,7 +1030,7 @@ You've completed the tutorial to build a tab app with Blazor.
 >
 > To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat, channels, and meetings. In static tabs, the configuration dialog is optional, enabling users to pin the tab instantly. You have the option to add a configuration dialog to the tab at any point after it's pinned, as the `setConfig` APIs allows you to modify the `contentUrl`. You can update your existing configurable tab to a static tab and add different scopes to the static tab.
+Static tab capability is extended to support group chat, channels, and meetings. In static tabs, the configuration dialog is optional, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. You can update your existing configurable tab to a static tab and add different scopes to the static tab.
 
 To change your configurable tab to static tab:
 
