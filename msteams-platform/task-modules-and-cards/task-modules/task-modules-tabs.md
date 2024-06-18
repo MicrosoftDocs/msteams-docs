@@ -75,17 +75,17 @@ You can invoke either an HTML or Adaptive Card dialog from a tab.
 The value of `UrlDialogInfo.url` is set to the location of the content of your dialog. The dialog window opens and `UrlDialogInfo.url` is loaded as an `<iframe>` inside it. JavaScript in the dialog page calls `microsoftTeams.app.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.dialog.url.open()`, then `submitHandler` is invoked with `err` set to the error string indicating the same.
 
 > [!WARNING]
-> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains are migrating to the *cloud.microsoft* domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
+> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains, are migrating to the `*.cloud.microsoft` domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
 >
-> 1. Update TeamsJS SDK to v.2.19.0 or later. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
+> 1. Update TeamsJS library to v.2.19.0 or later. For more information about the latest release of TeamsJS, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ****.cloud.microsoft*** domain. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers while also adding the **_*.cloud.microsoft_** domains. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
-
-Use the following list of `frame-ancestors` in your app's CSP headers:
-
-```http
-https://*.cloud.microsoft https://teams.microsoft.com https://*.teams.microsoft.com https://*.microsoft365.com https://*.office.com
-```
+> 2. Update your Teams app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) header [*frame-ancestors*](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive to allow your app to be hosted by the `*.cloud.microsoft` domain. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers while also adding the `*.cloud.microsoft` domains. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
+>
+> Update the following list of domains in `frame-ancestors` in your app's CSP headers:
+>
+> ```http
+> https://*.cloud.microsoft https://teams.microsoft.com https://*.teams.microsoft.com https://*.microsoft365.com https://*.office.com;
+> ```
 
 ### Adaptive Card dialog
 
