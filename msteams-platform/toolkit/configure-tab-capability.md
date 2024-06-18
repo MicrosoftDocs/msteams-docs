@@ -2,7 +2,7 @@
 title: Configure-tab-capability
 author: surbhigupta
 description: Learn to configure tab capability within Teams app.
-ms.author: v-vanv
+ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 02/19/2024
