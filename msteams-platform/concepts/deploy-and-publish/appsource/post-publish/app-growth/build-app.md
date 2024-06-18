@@ -31,7 +31,3 @@ Let’s briefly go over what initiatives are the most impactful during the build
 
 > [!div class="nextstepaction"]
 > [Launching your collaborative app](launch-app.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)
