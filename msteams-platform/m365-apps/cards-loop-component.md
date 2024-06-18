@@ -72,7 +72,9 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 | `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.| No |
 
 > [!NOTE]
-> Adding the `metadata.webUrl` property doesn't automatically turn an Adaptive Card into a Loop component.
+>
+> * Adding the `metadata.webUrl` property doesn't automatically turn an Adaptive Card into a Loop component.
+> * When you copy an Adaptive Card-based loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based loop component.
 
 ## Test your Loop component
 
@@ -80,7 +82,7 @@ You can test the Loop component in the developer environments of Teams and Outlo
 
 ### Test in Microsoft Teams
 
-To configure, distribute, and manage your application use the [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in the Developer Portal using the following options:
+To configure, distribute, and manage your application use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
 
 * **Overview page**: On the **Overview page**, under **Teams store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Microsoft Teams Store test cases.
 * **Preview in Teams**: The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
