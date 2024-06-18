@@ -1,16 +1,16 @@
 ---
 title: Configure-tab-capability
 author: surbhigupta
-description: Learn to configure tab capability within your Teams app.
+description: Learn to configure tab capability within Teams app.
 ms.author: v-vanv
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 02/19/2024
 ---
 
-# Configure tab capability within your Teams app
+# Configure tab capability within Teams app
 
-Tabs are webpages embedded in Microsoft Teams. Tabs functions as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Build tabs for Teams](../tabs/what-are-tabs.md).
+Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
 ## Prerequisites
 
@@ -20,7 +20,8 @@ Ensure the following prerequisites are met to configure a tab in Teams app:
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
 
-Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
+> [!Tip]
+> Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
 
 ## Configure tab in Teams app
 
@@ -30,7 +31,7 @@ The following steps help you to configure the tab in a Teams app:
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Provision app to Azure](#provision-app-to-azure)
 
-This how-to guide describes how to configure the tab for a client-side tab app. If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update app manifest in Teams Toolkit.
+If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update app manifest in Teams Toolkit.
 
 For a complete example on how to configure a tab in Teams bot app, see [Hello World bot with tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
@@ -65,7 +66,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
      ],
    ```
 
-1. Update the `manifest.json`file with tab domain to the `validDomains` field:
+1. Update the `manifest.json` file with tab domain to the `validDomains` field:
 
    ```JSON
    "validDomains": [
@@ -77,7 +78,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
 
 ### Setup local debug environment
 
-1. To begin, bring your tab app code into your project in Microsoft Visual Studio Code. If you don't have one, you can create a new tab app project with Teams Toolkit and copy the source code into your current project. For example, your folder structure looks like:
+1. Update your tab app code into your project in Microsoft Visual Studio Code. If you don't have one, you can create a new tab app project with Teams Toolkit and copy the source code into your current project. For example, your folder structure as follows:
 
    ```yml
        .
@@ -93,7 +94,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
        |-- teamsapp.yml
    ```
 
-   We recommend you to reorganize the folder structure as given in the following folder structure:
+   We recommend you to reorganize the folder structure as follows:
 
    ```yml
        .
@@ -120,7 +121,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
              workingDirectory: ./bot
    ```
 
-1. To configure the debug profile for your new tab project, add the following section to the `tasks.json` file:
+1. To configure the debug profile for your new tab project, add the following code to the `tasks.json` file:
 
    ```json
    {
@@ -302,10 +303,13 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
          resourceId: ${{TAB_AZURE_STORAGE_RESOURCE_ID}}
    ```
 
-1. Run `Teams: Deploy` command in Visual Studio Code to deploy your tab app code to Azure.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 
-1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
-1. Select the F5 key to debug and preview your Teams app.
+1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+
+1. Select **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+
+1. Press **F5** to debug and preview your Teams app.
 
 ## See also
 
