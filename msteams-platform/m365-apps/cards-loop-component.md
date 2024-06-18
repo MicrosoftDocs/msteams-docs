@@ -29,13 +29,13 @@ To build the Adaptive Card-based Loop component, follow these steps:
 
 1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the message extension.
 
-1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensures that the card is always up to date. For more information, see [Up to date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
+1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensure that the card is always up to date. For more information, see [up to date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
 
-1. [Extend your Teams message extension across Microsoft 365](extend-m365-teams-message-extension.md).
+1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md).
 
 1. Ensure that the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
 
-1. To enable Loop component, add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the Copy button present in the Loop component header.
+1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the Copy button present in the Loop component header.
 
 ### Example
 
@@ -72,9 +72,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 | `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.| No |
 
 > [!NOTE]
->
-> * Adding the `metadata.webUrl` property doesn't automatically turn an Adaptive Card into a Loop component.
-> * When you copy an Adaptive Card-based loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based loop component.
+> When you copy an Adaptive Card-based loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based loop component.
 
 ## Test your Loop component
 
