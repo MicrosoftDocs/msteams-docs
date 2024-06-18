@@ -59,7 +59,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introduced Teams Adaptive Card samples
+      - text: Introduced Adaptive Card templates
         url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
       - text: Preapproval of RSC permissions (Developer preview)
         url: graph-api/rsc/preapproval-instruction-docs.md

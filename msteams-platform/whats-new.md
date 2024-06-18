@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-* ***June 18, 2024***: [Introduced Teams Adaptive Card samples.](task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards)
+* ***June 18, 2024***: [Introduced Adaptive Card templates.](task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards)
 
 :::column-end:::
 :::row-end:::
