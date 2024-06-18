@@ -290,7 +290,6 @@ Congratulations! You've completed the app configuration in Microsoft Entra ID re
 ## See also
 
 - [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multi-tenant-apps)
-- [Extend tab app with Microsoft Graph permissions and scope](tab-sso-graph-api.md)
 - [Quickstart - Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
