@@ -13,6 +13,9 @@ ms.author: anclear
 
 Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
+> [!NOTE]
+> A bot can't update or delete messages sent by the user in Microsoft Teams.
+
 ## Update messages
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
