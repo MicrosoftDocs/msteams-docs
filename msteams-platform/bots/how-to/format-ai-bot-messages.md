@@ -91,66 +91,7 @@ Citations to your bot message include in-text citations, details to citation ref
 
 ### Add citations
 
-For bots built using **Teams AI library**, citations are added to an AI bot message automatically through `PredictedSayCommand` action. You can also modify the `PredictedSayCommand` action to add citations to your bot message. Following is an example code snippet:
-
-```javascript
-export function sayCommand<TState extends TurnState = TurnState>(feedbackLoopEnabled: boolean = false) {
-    return async (context: TurnContext, _state: TState, data: PredictedSayCommand) => {
-        if (!data.response?.content) {
-            return '';
-        }
-
-        let content = data.response.content;
-        const isTeamsChannel = context.activity.channelId === Channels.Msteams;
-
-        if (isTeamsChannel) {
-            content = content.split('\n').join('<br>');
-        }
-
-        // If the response from AI includes citations, those citations are parsed and added to the SAY command.
-        let citations: ClientCitation[] | undefined = undefined;
-
-        if (data.response.context && data.response.context.citations.length > 0) {
-            citations = data.response.context!.citations.map((citation, i) => {
-                return {
-                    '@type': 'Claim',
-                    position: `${i + 1}`,
-                    appearance: {
-                        '@type': 'DigitalDocument',
-                        name: citation.title,
-                        abstract: Utilities.snippet(citation.content, 500)
-                    }
-                } as ClientCitation;
-            });
-        }
-
-        // If there are citations, modify the content so that the sources are numbers instead of [doc1], [doc2], etc.
-        const contentText = !citations ? content : Utilities.formatCitationsResponse(content);
-
-        // If there are citations, filter out the citations unused in the content.
-        const referencedCitations = citations ? Utilities.getUsedCitations(contentText, citations) : undefined;
-
-        await context.sendActivity({
-            type: ActivityTypes.Message,
-            text: contentText,
-            ...(isTeamsChannel ? { channelData: { feedbackLoopEnabled } } : {}),
-            entities: [
-                {
-                    type: 'https://schema.org/Message',
-                    '@type': 'Message',
-                    '@context': 'https://schema.org',
-                    additionalType: ['AIGeneratedContent'],
-                    ...(referencedCitations ? { citation: referencedCitations } : {})
-                }
-            ] as AIEntity[]
-        });
-
-        return '';
-    };
-}
-```
-
-For more information, see [ClientCitation interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/actions/SayCommand.ts#L46).
+For bots built using **Teams AI library**, citations are added to an AI bot message automatically through `PredictedSayCommand` action. You can also modify the `PredictedSayCommand` action to add citations to your bot message. For more information, see [ClientCitation interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/actions/SayCommand.ts#L46).
 
 If you're using **Bot Framework SDK** to build your bot, include `citation` under the `entities` array. Following is an example code snippet:
 
@@ -185,12 +126,12 @@ await context.sendActivity({
 |--|--|--|--|
 | `citation` | Object | Yes | Details of the citation. |
 | `citation.@type` | String | Yes | Object of the citation. The only allowed value is `Claim`. |
-| `citation.position` | Integer | Yes | Citation number. |
+| `citation.position` | Integer | Yes | Displays the citation number. The values are limited to less than eight.  |
 | `citation.appearance` | Object | Yes | Information about the appearance of the citation. |
 | `citation.appearance.@type` | String | Yes | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
 | `citation.appearance.name` | String | Yes | Title of the referenced content. |
 | `citation.appearance.url` | String | No | URL of the referenced content. |
-| `citation.appearance.abstract` | String | No | Extract of the referenced content. |
+| `citation.appearance.abstract` | String | No | Extract of the referenced content and is limited to less than 1000 characters. |
 | `citation.appearance.keywords` | Array | No | Keywords from the referenced content. You can't add more than three keywords. |
 
 After you enable citations, the bot message includes in-text citations and references. The in-text citations display the reference details when users hover over the citation.
@@ -326,7 +267,7 @@ For bots built using **Teams AI library**, sensitivity labels can be added throu
 
 For bots built using **Bot Framework SDK**, add a sensitivity label to your bot message by modifying the message to include `usageInfo` in the `entities` object.
 
-The following code snippet shows how to add sensitivity labels to both bot messages and citations:
+The following code snippet shows how to add sensitivity labels to both bot messages and citation reference:
 
 # [Bot message](#tab/botmessage)
 
@@ -349,7 +290,7 @@ await context.sendActivity({
 });
 ```
 
-# [Citation](#tab/citation)
+# [Citation reference](#tab/citationref)
 
 ```javascript
 await context.sendActivity({
@@ -362,7 +303,8 @@ await context.sendActivity({
       "@context": "https://schema.org",
       usageInfo: {
         "@type": "CreativeWork",
-        "@id": "sensitivity1"
+        name: "Sensitivity title",
+        description: "Sensitivity description",
       },
       citation: [
         {
@@ -391,7 +333,7 @@ await context.sendActivity({
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `usageInfo.@type` | String | Yes | Enables the sensitivity label in the bot message. |
-| `usageInfo.@id` | String | Yes | Enables referencing the sensitivity label in the citation. |
+| `citation.usageInfo.@id` | String | Yes | Enables the sensitivity label in the citation reference. It's required when adding sensitivity label to citation reference. |
 | `usageInfo.name` | String | Yes | Specifies the title of the sensitivity label. |
 | `usageInfo.description` | String | No | Specifies the pop-up window message that appears when a user hovers over the sensitivity label. |
 
