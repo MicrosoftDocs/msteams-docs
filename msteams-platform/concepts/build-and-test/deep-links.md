@@ -67,7 +67,4 @@ Teams deep links support two types of protocol handlers:
 
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
-* [Deep link to an application](deep-link-application.md)
-* [Deep link to Teams chat](deep-link-teams.md)
-* [Deep link to a workflow in Teams](deep-link-workflow.md)
+[Integrate web apps](../../samples/integrate-web-apps-overview.md)
