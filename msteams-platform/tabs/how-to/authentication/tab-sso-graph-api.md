@@ -1,5 +1,5 @@
 ---
-title: Extend tab app with Microsoft Graph permissions
+title: Microsoft Graph Permissions for Tab App
 description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high

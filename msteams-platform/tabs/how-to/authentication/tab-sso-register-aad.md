@@ -1,5 +1,5 @@
 ---
-title: Register your tab app with Microsoft Entra ID
+title: Register Tab App in Microsoft Entra ID
 description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high

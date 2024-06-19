@@ -1,5 +1,5 @@
 ---
-title: Configure third party OAuth authentication
+title: Add OAuth IdP Authentication to Tab App
 description: Learn Teams authentication tabs Microsoft Entra ID, authentication in Teams and how to use it in tabs.
 ms.topic: how-to
 ms.localizationpriority: medium
