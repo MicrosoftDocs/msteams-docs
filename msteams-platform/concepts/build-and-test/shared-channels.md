@@ -152,6 +152,12 @@ placeholderFunction();
 
 ---
 
+## Code sample
+
+| Sample name | Description | Node.js |
+|-------------|-------------|------|----|
+| Teams Conversation Bot | This sample displays the names of the members in a group chat. It proactively sends a welcome message when a new user is added to the group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+
 ## See also
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
