@@ -137,9 +137,9 @@ While there aren't any enforced limits, you must be mindful of how many messages
 </details>
 
 <details>
-<summary><b>Is Live Share supported for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) tenants?</b></summary>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet environment?</b></summary>
 
-Live Share is only supported in Government Community Cloud (GCC) tenants.
+Live Share is only supported in Government Community Cloud (GCC) environment.
 
 <br>
 

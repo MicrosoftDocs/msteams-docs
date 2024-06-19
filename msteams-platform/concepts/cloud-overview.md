@@ -42,6 +42,7 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 | Apps built by Microsoft | ✔️ | ✔️ | ✔️ | ✔️ |
 | Third-party apps built by external developers | ✔️ | ❌ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific organization | ✔️ | ✔️ | ✔️ | ✔️ |
+| upload a custom app | ✔️ | ✔️ | ✔️ | ✔️ |
 | **App capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ | ✔️ |
 | Bots and message extensions | ✔️ | ✔️ | ✔️ | ✔️ |

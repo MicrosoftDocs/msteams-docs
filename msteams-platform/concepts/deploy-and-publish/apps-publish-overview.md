@@ -29,7 +29,7 @@ To distribute your Teams app, you must have a valid app package.  An app package
 Upload a custom app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
 > [!IMPORTANT]
-> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High and Department of Defense (DOD).
+> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DOD), and Teams operated by 21Vianet.
 
 For more information, see [upload your app in Teams](apps-upload.md).
 
@@ -64,4 +64,3 @@ For more information, see [publish to the Teams Store](~/concepts/deploy-and-pub
 * [Publish to org](/microsoftteams/upload-custom-apps)
 * [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
 * [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
-

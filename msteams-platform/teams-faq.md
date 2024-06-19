@@ -182,9 +182,9 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 </details>
 
 <details>
-<summary>Is Live Share supported for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) tenants?</summary>
+<summary>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet environments?</summary>
 
-Live Share isn't supported for GCC, GCC High, and DOD tenants.
+Live Share isn't supported for GCC, GCC High, DOD, and Teams operated by 21Vianet environments.
 
 <br>
 
