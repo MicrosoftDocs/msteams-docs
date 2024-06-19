@@ -1,5 +1,5 @@
 ---
-title: Configure Tasks for external clients in Collaboration control app
+title: Create Tasks in Colloboration Controls
 author: surbhigupta
 description: In this module, learn how to configure Tasks for external clients in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
