@@ -1,5 +1,5 @@
 ---
-title: Bots in Real-time Media Calls & Meeting
+title: Real-time Media Call & Meeting for Bots
 description: Learn how bot interacts with Teams calls and online meetings. Explore media sessions, frame rate, audio and video format, active speakers, and video subscription. 
 ms.topic: conceptual
 ms.localizationpriority: medium
