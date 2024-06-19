@@ -43,7 +43,7 @@ Anonymous users can't be authenticated through Microsoft Entra authentication or
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users must access your app, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
@@ -231,7 +231,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * Apps for anonymous users aren't supported in Teams channel meetings.
 
-* The `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
+* The `getContext` API doesn't return a user ID for the anonymous user, though the bot APIs do, and it's not possible to correlate the anonymous user between these two APIs.
 
 * Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 

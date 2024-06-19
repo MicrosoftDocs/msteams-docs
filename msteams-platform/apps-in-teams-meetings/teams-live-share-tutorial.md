@@ -1,7 +1,7 @@
 ---
 title: Live Share code tutorial
 author: surbhigupta
-description: Learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK.
+description: In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a die with a button to roll it. When the die is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown dice with a button to roll it. When the dice are rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)

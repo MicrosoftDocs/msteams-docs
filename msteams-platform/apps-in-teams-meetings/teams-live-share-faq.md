@@ -80,7 +80,7 @@ Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. T
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Live Share supports a maximum of 100 attendees per session. If you're interested in Live Share, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share supports a maximum of 100 attendees per session. If you're interested in the same, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -89,7 +89,7 @@ Live Share supports a maximum of 100 attendees per session. If you're interested
 <details>
 <summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
 
-Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If you're interested in Live Share, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If you're interested in the same, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
