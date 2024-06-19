@@ -163,7 +163,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Top use case
 
-* Authenticate users
+Authenticate users
 
 ### Mobile
 
@@ -182,7 +182,7 @@ Settings screens are where users can configure their preferences with your app.
 
 ### Top use case
 
-* Manage app features
+Manage app features
 
 :::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." lightbox="../../assets/images/ui-templates/settings.png":::
 

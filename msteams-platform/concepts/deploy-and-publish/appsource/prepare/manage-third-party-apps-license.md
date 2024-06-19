@@ -128,7 +128,3 @@ To determine if the tenant for the Microsoft Entra app is part of the Partner Ce
 1. Sign in to [Partner Center](https://partner.microsoft.com/).
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
 1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
-
-## See also
-
-[Monetize your app](monetize-overview.md)

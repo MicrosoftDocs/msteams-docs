@@ -188,7 +188,6 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
-* [Device capabilities](device-capabilities-overview.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate location capabilities](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
