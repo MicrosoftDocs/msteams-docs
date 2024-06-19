@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 18, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
+***June 19, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
