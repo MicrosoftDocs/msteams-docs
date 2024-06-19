@@ -70,7 +70,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 | `webUrl` | String | A URL that uniquely identifies the card, serving as a browser fallback usable by certain hosts. | No |
 
 > [!NOTE]
-> When you copy an Adaptive Card-based loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based loop component.
+> When you copy an Adaptive Card-based Loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
 
 ## Test your Loop component
 

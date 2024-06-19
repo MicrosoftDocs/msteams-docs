@@ -51,15 +51,15 @@ An Adaptive Card-based Loop component comprises a body, a header, and a border.
 
 |Loop component element  |Developer provides  |Platform provides  |
 |---------|---------|---------|
-|**Body**    | Contents fully controlled by you | Rendering and styling of controls based on your code.        |
-| **Header**   |  Icon and name   |  Elements and layout are standard and provided by platform       |
-|**Border**     |     NA    |   Standard border for all Loop components.      |
+|**Body**    | Contents fully controlled by you | Rendering and styling of controls based on your code        |
+| **Header**   |  Icon and name   | Elements and layout are standard and provided by platform       |
+|**Border**     |     NA    | Standard border for all Loop components      |
 
 ## Loop component body
 
 The Loop component body makes your component unique. You can give your users a positive experience and grow usage and retention by building a component that embodies the Loop component attributes and provides customer value.
 
-Your users’ needs and scenarios determined by the specifics of the component body.
+Your users’ needs and scenarios determine the specifics of the component body.
 
 :::image type="content" source="../assets/images/adaptive-cards/loop-component-body.png" alt-text="Infographic shows the UX elements of a Loop component body.":::
 
@@ -84,7 +84,7 @@ All Loop components have a standard header and border. Ensure that your Adaptive
 
 ## Loop component header
 
-The platform provides the component header and includes standard elements such as app logo, app name, shared location, and copy.
+The platform provides the component header, which includes standard elements such as the app logo, app name, and a copy button.
 
 :::image type="content" source="../assets/images/adaptive-cards/loop-component-header.png" alt-text="Infographic shows the UX elements in a Loop component header.":::
 
@@ -92,8 +92,7 @@ The platform provides the component header and includes standard elements such a
 |---------|---------|
 |1     |  App logo: Full color app logo of your app.       |
 |2     |  App name: Full name of your app.       |
-|3     |  Shared locations (Loop control)       |
-|4     |  Copy component      |
+|3     |  Copy component      |
 
 **App name** is drawn from app manifest. We recommend using a concise name for your app.
 
