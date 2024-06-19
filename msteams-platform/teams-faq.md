@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions for Teams developer document
+title: Teams Developer Documentation - FAQs
 description: Frequently asked questions for Teams developer document
 ms.topic: reference
 ms.localizationpriority: high

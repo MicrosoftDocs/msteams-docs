@@ -1,5 +1,5 @@
 ---
-title: Add code to enable SSO for Adaptive Cards Universal Actions
+title: Code to Enable SSO for Adaptive Cards
 description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual

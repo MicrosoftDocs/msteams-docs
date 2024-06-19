@@ -1,5 +1,5 @@
 ---
-title: Collaborate on TeamsFx Project using Teams Toolkit
+title: Colloborate on Projects using Teams Toolkit
 author: surbhigupta
 description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
 ms.author: surbhigupta
