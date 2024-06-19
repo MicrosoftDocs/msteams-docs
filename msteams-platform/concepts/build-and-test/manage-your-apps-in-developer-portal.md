@@ -128,7 +128,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
     If your app fails any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
 
     > [!NOTE]
-    > App validation is supported only for the apps with bot capability.
+    > App validation is only supported for the apps with bot capability.
 
     <br>
     <details>
@@ -145,9 +145,9 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the App validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
 
-    > [!NOTE]
-    > * Before you start the validation, ensure to resolve any manifest errors that exist.
-    > * You can start validation for only one app at a time.
+        > [!NOTE]
+        > * Before you start the validation, ensure to resolve any manifest errors that exist.
+        > * You can start validation for only one app at a time.
 
         Teams Developer Portal now starts to validate your app package:
 
