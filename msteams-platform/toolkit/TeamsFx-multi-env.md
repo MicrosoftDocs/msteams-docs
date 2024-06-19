@@ -1,5 +1,5 @@
 ---
-title: TeamsFX multiple environments in Teams Toolkit    
+title: TeamsFx Environments in Teams Toolkit
 author: surbhigupta
 description: In this module, learn about TeamsFX multi environment such as, create a new environment, select target environment and more.
 ms.author: surbhigupta
