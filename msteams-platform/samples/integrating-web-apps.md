@@ -1,6 +1,6 @@
 ---
 author: heath-hamilton
-description: Learn best practices or considerations for integrating existing web apps with Microsoft Teams. It gives information on API requirements, authentication, and deep-linking of your app with Teams.
+description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep-linking of your app with Teams.
 ms.author: surbhigupta
 ms.date: 04/02/2023
 ms.localizationpriority: medium
@@ -124,7 +124,6 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 * [Integrate web apps](integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)

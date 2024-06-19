@@ -63,7 +63,3 @@ You can try your Actions in the Microsoft 365 home page, right-click a Word, Exc
 
 If you want to run Actions in the Microsoft 365 on Azure, see [sample.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/m365-actions-preview/nodejs/README.md#optional-deploy-the-app-to-azure)
 
-## See also
-
-* [Actions in Microsoft 365](actions-in-m365.md)
-* [Build Actions in Microsoft 365](build-actions-in-m365.md)

@@ -1,6 +1,6 @@
 ---
 title: Register calls and meetings bot for Microsoft Teams
-description: Learn how to register a new audio/video calling bot for Microsoft Teams, create new bot or add calling capability, add graph permissions. Sample to create call, join meeting and transfer call.
+description: Learn to register audio and video call bot, create a bot or add calling capability, and add graph permissions. Sample to create call, join meeting and transfer call.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/23/2022
