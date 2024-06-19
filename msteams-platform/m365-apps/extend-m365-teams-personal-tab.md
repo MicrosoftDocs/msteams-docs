@@ -1,5 +1,5 @@
 ---
-title: Extend a Teams personal tab app across Microsoft 365
+title: Enable Teams Personal Tab
 description: Learn how to update your personal tab app to run in Outlook and Microsoft 365 app, in addition to Microsoft Teams.
 ms.date: 02/28/2023
 ms.author: mosdevdocs
