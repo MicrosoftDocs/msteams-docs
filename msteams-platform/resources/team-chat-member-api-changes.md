@@ -1,5 +1,5 @@
 ---
-title: Bot API changes for team and chat members
+title: Bot API Changes for Team/Chat Members
 author: ojasvichoudhary 
 description: In this module, learn upcoming and in-progress changes to the Bot APIs used for retrieving members of teams and chats
 ms.localizationpriority: medium
