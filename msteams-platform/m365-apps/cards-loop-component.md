@@ -13,8 +13,6 @@ ms.date: 01/26/2024
 
 Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook.
 
-[Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. Loop components allow users to collaborate and share live content with others in the chat, email, meeting, Whiteboard, or Loop app. Loop components stay in sync across different Microsoft 365 apps and enable users to coauthor content and make real-time updates on their content. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
-
 Following is an example of an Adaptive Card-based Loop component:
 
 :::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Screenshot shows an Adaptive-based Loop component.":::
@@ -69,7 +67,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 |Property|Type|Description|Required|
 |---|---|---|---|
 | `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
-| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.| No |
+| `webUrl` | String | A URL that uniquely identifies the card, serving as a browser fallback usable by certain hosts. | No |
 
 > [!NOTE]
 > When you copy an Adaptive Card-based loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based loop component.
@@ -82,7 +80,7 @@ You can test the Loop component in the developer environments of Teams and Outlo
 
 To configure, distribute, and manage your application use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
 
-* **Overview page**: On the **Overview page**, under **Teams store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Microsoft Teams Store test cases.
+* **Overview page**: On the **Overview page**, under **Teams Store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Microsoft Teams Store test cases.
 * **Preview in Teams**: The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
 
 :::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted. " lightbox="../assets/images/developer-portal-overview.png" :::

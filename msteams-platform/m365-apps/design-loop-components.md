@@ -10,7 +10,9 @@ ms.localizationpriority: medium
 
 # Loop component design guidelines
 
-Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for you to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
+Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. They allow users to collaborate and share live content with others in Microsoft Teams chats, meetings, emails, Microsoft Whiteboard, or Loop app. You can create Loop components by either evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
+
+[Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
 
 ## Loop component key features
 
@@ -18,7 +20,7 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 
 **Embedded**: Adaptive Cards are embedded, so there's nothing specific needed from you.
 
-**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, as this is a core card element to delight users. Ensure that an Adaptive Card with view-only experience doesn't change to a Loop component, in this case, it must remain an Adaptive Card only.
+**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, consider looking for opportunities to make it actionable, since interactive elements are a core feature that can delight users. Ensure that an Adaptive Card with view-only experience doesn't change to a Loop component, in this case, it must remain an Adaptive Card only.
 
    > [!NOTE]
    > Certain user permissions or modes of your component might not be actionable, but the common cases must be actionable.
@@ -43,7 +45,7 @@ You can make your Adaptive Card actionable by including any of the following act
 
 ## Loop component elements
 
-An Adaptive Card-based Loop component comprises of the body, header, and border.
+An Adaptive Card-based Loop component comprises a body, a header, and a border.
 
 :::image type="content" source="~/assets/images/loop-element-overview.png" alt-text="The screenshot graphic of highlighting the spacing on a card and which belongs to the body, header, and border.":::
 
@@ -57,13 +59,13 @@ An Adaptive Card-based Loop component comprises of the body, header, and border.
 
 The Loop component body makes your component unique. You can give your users a positive experience and grow usage and retention by building a component that embodies the Loop component attributes and provides customer value.
 
-The details of the component body are determined by the specifics of your users’ needs and scenarios.
+Your users’ needs and scenarios determined by the specifics of the component body.
 
 :::image type="content" source="../assets/images/adaptive-cards/loop-component-body.png" alt-text="Infographic shows the UX elements of a Loop component body.":::
 
 The following are the best practices for a Loop component body:
 
-* Go to [Adaptive Cards Home](https://adaptivecards.io) and review the [Adaptive Cards overview](/adaptive-cards/) article to understand the basics and core design principles of Adaptive Cards.
+* To understand the basics and core design principles of Adaptive Cards, go to [Adaptive Cards Home](https://adaptivecards.io) and review the [Adaptive Cards overview](/adaptive-cards/) article.
 * Follow the [Adaptive Card design guidelines](../task-modules-and-cards/cards/design-effective-cards.md), which include tools, examples, notes about responsive design, and pixel density.
 * The following list provides the Loop component specific considerations:
   * Ensure that your component is true to the Loop components attributes such as, live, actionable, embedded, and portable.
@@ -93,7 +95,7 @@ The platform provides the component header and includes standard elements such a
 |3     |  Shared locations (Loop control)       |
 |4     |  Copy component      |
 
-**App name** is drawn from app manifest. We recommend to use a concise name for your app.
+**App name** is drawn from app manifest. We recommend using a concise name for your app.
 
 **App logo** is drawn from app manifest. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Microsoft Teams.
 
