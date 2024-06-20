@@ -1,5 +1,5 @@
 ---
-title: Add Third Party Idp Authentication
+title: Add Third Party IdP Authentication
 description: In this module, learn how to add third party authentication to your Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual

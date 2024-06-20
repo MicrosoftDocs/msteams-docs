@@ -1,5 +1,5 @@
 ---
-title: Add OAuth IdP Authentication to Tab App
+title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
