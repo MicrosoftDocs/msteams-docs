@@ -1,5 +1,5 @@
 ---
-title: Facilitate Customer Adoption of Apps
+title: Facilitate App Adoption
 author: ashishguptaiitb
 ms.author: guptaashish
 manager: prkosh

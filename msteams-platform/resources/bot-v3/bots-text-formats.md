@@ -1,5 +1,5 @@
 ---
-title: Formatting Bot Messages & Text Content
+title: Format Bot Messages & Text
 description: In this module, learn text formatting support in bot conversations and formatting text content in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
