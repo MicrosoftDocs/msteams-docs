@@ -1,7 +1,7 @@
 ---
 title: Debug background processes using Visual Studio
 author: surbhigupta
-description: Learn how Microsoft Visual Studio and Teams Toolkit work during local debug process. Learn how to register and configure your Teams app in Teams Toolkit v4.
+description: Learn how Microsoft Visual Studio and Teams Toolkit work during local debug process. Learn how to register and configure your Teams app in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
