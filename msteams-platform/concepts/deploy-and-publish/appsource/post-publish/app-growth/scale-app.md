@@ -9,7 +9,7 @@ ms.date: 02/21/2023
 ---
 # Scale your collaborative app
 
-In this stage in the app growth lifecycle, you use the learnings from previous ad-hoc, pilot motions to programmatically activate existing customers and sell to new customers via all possible initiatives. The following growth levers are pertinent at this stage:
+In this stage in the app growth lifecycle, you use the learnings from previous ad-hoc, pilot motions to programmatically activate existing customers and sell to new customers through all possible initiatives. The following growth levers are pertinent at this stage:
 
 ## What should you do during the Scale stage?
 
@@ -39,7 +39,7 @@ You can find detailed partner profile information in the Partner Center or using
 
 Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, prenegotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
 
-Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers via the Teams marketplace, leaving tax remittance, payments, and subscription billing to Microsoft.
+Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers through the Teams marketplace, leaving tax remittance, payments, and subscription billing to Microsoft.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -74,7 +74,7 @@ Generate interest from new customer accounts and drive traffic to your collabora
 
 Share real customer stories using a four to five-minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages.
 
-After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app. Promote it via paid, earned media, or social media posts to highlight the success of the app.
+After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app. Promote it though paid, earned media, or social media posts to highlight the success of the app.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -110,7 +110,7 @@ To plan and support the rollout of your Teams app in your customers’ organizat
 </details>
 <br>
 <details>
-<summary>Growth hacking via in-product scenario experimentation</summary>
+<summary>Growth hacking though in-product scenario experimentation</summary>
 
 Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics, such as number of app installs, activation rate, task completion, new user retention and churn, referrals, and so on, a rapid, always-on experimentation work stream allows byte-sized tweaks to your app experience. It results in more control and less risk compared to large changes spaced far apart.
 

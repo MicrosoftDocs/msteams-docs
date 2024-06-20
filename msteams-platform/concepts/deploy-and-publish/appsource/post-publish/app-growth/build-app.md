@@ -1,5 +1,5 @@
 ---
-title: Build Stage of Collaborative Apps
+title: Build Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the build stage of your app to grow your app.
 ms.topic: conceptual
