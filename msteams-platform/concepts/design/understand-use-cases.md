@@ -1,5 +1,5 @@
 ---
-title: Understand App's Usecases & Features
+title: Understand App's Use Cases & Features
 author: heath-hamilton
 description: Learn Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
 ms.topic: conceptual

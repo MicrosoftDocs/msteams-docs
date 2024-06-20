@@ -1,5 +1,5 @@
 ---
-title: Basic Fluent UI Components for Apps
+title: Basic App Design Fundementals
 description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
 author: heath-hamilton
 ms.localizationpriority: medium
