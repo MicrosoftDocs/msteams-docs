@@ -250,7 +250,7 @@ If a user uninstalls your bot and still has access to the bot chat, Teams remove
 
 | Error code | Description |
 | --- | --- |
-| 400 | `submit/messageAction` invoke response isn't empty. |
+| 400 | `message/submitAction` invoke response isn't empty. |
 
 ## Sensitivity label
 
