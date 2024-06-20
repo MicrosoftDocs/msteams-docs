@@ -1,7 +1,7 @@
 ---
 title: Live Share quick start
 author: surbhigupta
-description:  In this module, learn how to quickly try the Dice Roller sample
+description: Learn how to build and run the Dice Roller sample using Microsoft Live Share SDK with development environment such as Node.js, Microsoft Visual Studio Code, and Git.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
