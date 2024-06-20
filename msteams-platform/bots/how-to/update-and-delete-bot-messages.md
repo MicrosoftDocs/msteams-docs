@@ -1,5 +1,5 @@
 ---
-title: Update & Delete Bot Message Dynamically
+title: Update & Delete Bot Message
 author: WashingtonKayaker
 description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview
