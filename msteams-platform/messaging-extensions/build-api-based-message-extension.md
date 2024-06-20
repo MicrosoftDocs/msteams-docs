@@ -15,7 +15,56 @@ ms.date: 10/19/2023
 
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
+
+|Traditional Bot-Based Message Extensions  |2.API-based Message Extensions  |
+|---------|---------|
+|Developers need to build, deploy, and maintain a service to handle invoke commands from the Teams client.     | If the end-service's APIs can be described using the Open API specification, developers can eliminate the need for the middle-layer handling service.         |
+|This service processes the incoming query and makes a call to the developer’s end-service.     | Teams can directly use the [Open API specification](https://swagger.io/resources/open-api/) to build requests and communicate with the developer's end-service.        |
+
+<br>
+
 :::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagra also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
+*User query flow using Traditional Message Extensions. The developer must maintain a custom bot handler service which handles the requests from a Teams bot. The handler service sends a request to the developer’s service when a query is invoked.*
+
+<br>
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow-2.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagra also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow-2.png":::
+*User query flow using API Message Extensions. There is no need for a developer maintained handler service as long as the interaction is clearly outlined in the Open API specification in the App Package.*
+
+<br>
+<br>
+
+The app definition package contains several interesting artifacts which help facilitate this feature:
+
+1. Open API specification: Contains details to communicate with the developer’s service.
+
+1. App Manifest: Contains query command definition.
+
+1. Response Rendering Template: Contains details to convert the response from developer’s service back to UI for end-user.
+
+<br>
+<br>
+
+Here is a high-level sequence of events that occur during a query command invocation:
+
+1. When a user invokes a query command, the parameters of the query command are received by the Teams Bot Service.
+
+1. The query command is defined inside the app manifest file. The command definition contains a reference to the operation_id inside the Open API specification file along with the details of the parameters that need to be rendered by the Teams client for that command. For reference, the operation_id inside the Open API specification file is unique to a particular HTTP operation.
+
+1. The Teams Bot Service then uses the parameters supplied by the user along with the copy of the Open API specification for the associated operation_id to build an HTTP request for the developer’s endpoint.
+
+1. If authentication is required and is configured in the manifest, it is resolved to the appropriate token or key. This token or key is used as part of the outgoing request. *[Optionally]*
+
+1. The Teams Bot Service performs the HTTP request to the developer’s service.
+
+1. The developer’s service should respond in accordance with the schema outlined in the Open API specification. This is in JSON format.
+
+1. The Teams client needs to show the results back to the user. To convert the JSON results from the previous step to UI, the Teams Bot Service uses the Response Rendering Template to build an adaptive card for each result.
+
+1. The adaptive cards are sent to the client which renders them in the UI.
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-query-sequence-diagram.png" alt-text="Diagram shows the high-level sequence flow when a query is invoked in an API-based message extension.":::
+
 
 Before you get started, ensure that you meet the following requirements:
 
