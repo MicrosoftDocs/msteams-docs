@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams App Test Tool to Debug Chat Bot
+title: Debug your AI chat bot using Teams App Test Tool
 metadata:
-  title: Debug your AI chat bot using Teams App Test Tool
+  title: Teams App Test Tool to Debug AI Chatbot
   description: With this learning module, you learn how to emulate the Teams experience for your AI chat bot in Teams App Test Tool.
   audience: Developer
   level: Advanced

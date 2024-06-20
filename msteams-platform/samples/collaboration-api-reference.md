@@ -1,5 +1,5 @@
 ---
-title: Collaboration Control & Settings - API
+title: Collaboration Control & Settings API
 author: surbhigupta
 description: In this module, learn about Collaboration controls and Settings REST API reference to manage settings, start, map, and retrieve collaboration activities.
 ms.localizationpriority: medium
