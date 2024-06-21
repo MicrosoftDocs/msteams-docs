@@ -105,7 +105,7 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who is currently signed in.
+When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who's signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 

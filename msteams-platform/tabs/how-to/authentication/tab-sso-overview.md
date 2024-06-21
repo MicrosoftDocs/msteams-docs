@@ -9,7 +9,7 @@ ms.date: 01/17/2023
 
 With single sign-on (SSO) in Teams, app users have the advantage of using Teams to access tab apps. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with the access granted through Microsoft Entra ID.
 
-Here's what you'll learn in this section:
+Here's what you learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. The app users can use your app without signing in again.
 2. **SSO in Teams at runtime**: Your tab app interacts with Microsoft Entra ID at runtime for one-time authentication and authorization for your app users.
@@ -38,7 +38,7 @@ Here's what your app users get with SSO experience:
 - An app user needs to consent only in a multitenant environment. If the app user and the app reside in the same tenant, the app user doesn't need to give consent for using the app.
 - After consenting to Teams the first time, the app user can use your app with no further need of consent, even on any other device. For this reason, it offers a better user experience.
   - Alternatively, the tenant administrator can grant consent on behalf of the app users. In this scenario, when the tenant administrator consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
-- The access token is pre-fetched by Teams to improve performance and load time of the app in the Teams environment.
+- The access token is prefetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
@@ -98,7 +98,7 @@ To enable SSO for a Teams tab app:
 
 ## Third-party cookies on iOS
 
-After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all apps by default. Therefore, the apps that use third-party cookies for authentication in their Channel or Chat tabs and Personal apps won't be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all apps by default. Therefore, the apps that use third-party cookies for authentication in their Channel or Chat tabs and Personal apps can't complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
 
 ### Teams mobile client support
 
@@ -129,7 +129,7 @@ Here's a list of best practices:
 
 - SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
 - Multiple domains per app aren't supported. For more information, see [custom apps built for your org (LOB apps)](tab-sso-register-aad.md#before-you-configure-your-app).
-- Redirects aren't supported for iframed or brokered apps. Ensure that you use MSAL.js in the top frame of the window if you use the redirect APIs or use the popup API `(window.parent!==window) => true`.
+- Redirects aren't supported for iframes or brokered apps. Ensure that you use MSAL.js in the top frame of the window if you use the redirect APIs or use the popup API `(window.parent!==window) => true`.
 
 ## Next step
 

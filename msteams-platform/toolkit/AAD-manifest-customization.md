@@ -70,7 +70,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <details>
 
-    <summary>Pre-authorize a client application</summary>
+    <summary>Preauthorize a client application</summary>
 
      You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls exposed API. You can see the following example for this property:
 
@@ -172,9 +172,9 @@ Microsoft Entra manifest template in Teams Toolkit also supports user readable s
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Screenshot shows the add resource to required resource access.":::
 
-### Pre-authorized applications CodeLens
+### Preauthorized applications CodeLens
 
-CodeLens shows the application name for the pre-authorized application ID for the `preAuthorizedApplications` property.
+CodeLens shows the application name for the preauthorized application ID for the `preAuthorizedApplications` property.
 
 <a name='view-azure-ad-application-on-the-azure-portal'></a>
 
