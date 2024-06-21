@@ -1505,7 +1505,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Graphic shows an example of continuous loading screen in an app.":::
 
-* App mustn't open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
+* App mustn't open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the active Teams instance. [*Mandatory Fix*]
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
 

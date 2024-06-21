@@ -90,7 +90,7 @@ The design is done and you’re ready to start building. The following tools can
 
 If you used UI templates in your design, you can implement these templates with the Microsoft Teams UI Library (a React component library based on Fluent UI).
 
-Currently, not all templates listed in the UI kit are available in the library.
+All templates listed are not in the UI kit are available in the library.
 
 > [!div class="nextstepaction"]
 > [Get the library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
