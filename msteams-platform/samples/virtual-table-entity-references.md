@@ -13,7 +13,7 @@ ms.date: 09/30/2022
 Collaboration controls virtual entities and their attributes have a one-to-one mapping with a specific Microsoft Graph resource type. For example, the Graph Planner Task entities maps to the [Microsoft Graph Planner Task resource type](/graph/api/resources/plannertask). The virtual entity shares the same attributes as the resource type.
 
 > [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Collaboration controls virtual entities
 
@@ -57,7 +57,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 | `m365_id` | String | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_orderhint` | String | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_percentcomplete` | Int32 | Percentage of task completion. When set to 100, the task is considered completed. |
-| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
+| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
 | `m365_planid` | String | Plan ID to which the task belongs. |
 | `m365_previewtype` | String | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
 | `m365_referencecount` | Int32 | Number of external references that exist on the task.|
