@@ -38,7 +38,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session record is associated with multiple collaboration sessions. This will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session record is associated with multiple collaboration sessions. This is returned as a comma delimited string. This attribute isn't returned when retrieving multiple records. |
 | `m365_activechecklistitemcount` | Int32 | Number of checklist items with value set to false, representing incomplete items. |
 | `m365_graphplannertaskId` | Guid | Unique identifier of the graph planner task. |
 | `m365_appliedcategories` | String | Number of checklist items with value set to false, representing incomplete items. |
@@ -53,11 +53,11 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 | `m365_createdby` | String | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTime | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
 | `m365_duedatetime` | DateTime | Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
-| `m365_hasdescription` | Boolean | Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. |
+| `m365_hasdescription` | Boolean | Read-only. Value is true if the details object of the task has a nonempty description and false otherwise. |
 | `m365_id` | String | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_orderhint` | String | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_percentcomplete` | Int32 | Percentage of task completion. When set to 100, the task is considered completed. |
-| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
+| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
 | `m365_planid` | String | Plan ID to which the task belongs. |
 | `m365_previewtype` | String | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
 | `m365_referencecount` | Int32 | Number of external references that exist on the task.|
@@ -76,7 +76,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute is returned when retrieving multiple records.|
 | `m365_graphplannerplanid` |Guid |Unique identifier of the graph planner plan.|
 | `m365_createdby` | String | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTime | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
@@ -117,7 +117,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 | Column |Dataverse Type |Details |
 |---|---|---|
-|`m365_collaborationrootid` |String |Collaboration root of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_collaborationrootid` |String |Collaboration root of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute isn't returned when retrieving multiple records. |
 |`m365_allownewtimeproposals` |Boolean |True, if the meeting organizer allows invitees to propose a new time when responding. Otherwise false, which is optional. Default is true. |
 |`m365_attendees` |String |The collection of attendees for the event. This attribute is a JSON encoded string, 15000 max in length. For example, [{{\"type\":\"required\",\"status\":{{\"response\":\"none\",\"time\":\"0001-01-01T00:00:00Z\"}},\"emailAddress\":\"test@contoso.com\"}}] |
 |`m365_body` |String |The body of the message associated with the event. It can be in HTML or text format. This attribute is a JSON encoded string, 15000 max in length. For example {\"contentType\":\"html\",\"content\":\"html/html\"} |
@@ -140,7 +140,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_lastmodifieddatetime`|DateTime|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z|
 |`m365_location`|String|The location of the event. JSON encoded string, max 4000 in length. For example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}|
 |`m365_locations`|String|The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value. JSON encoded string, max 4000 in length.for example[{\"address\":null,\"coordinates\":null,\"displayName\":\"Harry\'s Bar\",\"locationEmailAddress\":null,\"locationType\":\"default\",\"locationUri\":null,\"uniqueId\":\"Harry\'s Bar\",\"uniqueIdType\":\"private\"}]|
-|`m365_onlinemeeting`|String|Details for an attendee to join the meeting online. Default is null. Read-only.After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again. JSON encoded string, max 4000 in length.for example{\"conferenceId\": \"String\",\"joinUrl\": \"String\",\"phones\": [{\"@odata.type\": \"microsoft.graph.phone\"}],\"quickDial\": \"String\",\"tollFreeNumbers\": [\"String\"],\"tollNumber\": \"String\"}|
+|`m365_onlinemeeting`|String|Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again. JSON encoded string, max 4000 in length.for example{\"conferenceId\": \"String\",\"joinUrl\": \"String\",\"phones\": [{\"@odata.type\": \"microsoft.graph.phone\"}],\"quickDial\": \"String\",\"tollFreeNumbers\": [\"String\"],\"tollNumber\": \"String\"}|
 |`m365_onlinemeetingprovider`|String|Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and `onlineMeetingProvider` properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, `onlineMeetingProvider`, and onlneMeeting properties again.|
 |`m365_onlinemeetingurl`|String|A URL for an online meeting. The property is set only when an organizer specifies in Outlook that an event is an online meeting such as Skype. Read-only. To access the URL to join an online meeting, use `joinUrl`, which is exposed via the `onlineMeeting` property of the event. The `onlineMeetingUrl` property will be deprecated in the future.|
 |`m365_organizer`|String|The organizer of the event.JSON encoded string, max 4000 in length. {\"emailAddress\":{\"@odata.type\":\"microsoft.graph.emailAddress\"}}|
@@ -181,17 +181,17 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid`| String| Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records.|
+| `m365_collaborationrootid`| String| Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. This attribute isn't returned when retrieving multiple records.|
 | `m365_graphbookingappointmentid` | Guid | Unique Identifier of the graph booking appointment.|
 | `m365_bookingbusinessid` | String | The unique Identifier of the booking business the appointment is scheduled under.|
 | `m365_additionalinformation` | String | Extra information that is sent to the customer when an appointment is confirmed.|
-| `m365_customers` | String| It lists down the customer properties for an appointment. appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional[{\"customerID\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" },\"name\":\"Jordan Miller\",\"notes\",\"phone\",\"timeZone\",\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
+| `m365_customers` | String| It lists down the customer properties for an appointment. Appointment contains a list of customer information and each unit indicates the properties of a customer who is part of that appointment. Optional[{\"customerID\":\"d243c77b-f1ff-4615-a01f-1660b5cb0e79\",\"customQuestionAnswers\":[],\"emailAddress\":\"jordanm@contoso.com\",\"location\":{\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" },\"name\":\"Jordan Miller\",\"notes\",\"phone\",\"timeZone\",\"@odata.type\":\"#microsoft.graph.bookingCustomerInformation\"}] |
 | `m365_customertimezone` | String | The time zone of the customer. For a list of possible values, see [dateTimeTimeZone resource type](/graph/api/resources/datetimetimezone). |
 | `m365_duration` | String | The length of the appointment, denoted in ISO8601 format.|
 | `m365_enddatetime` | DateTime | The date, time, and time zone that the appointment ends.|
 | `m365_filledattendeescount` | Int32 | The current number of customers in the appointment.|
 | `m365_id` | String | The ID of the bookingAppointment. Read-only.|
-| `m365_islocationonline` | Boolean | True indicates that the appointment will be held online. Default value is false.|
+| `m365_islocationonline` | Boolean | True indicates that the appointment is held online. Default value is false.|
 | `m365_joinweburl` | String | The URL of the online meeting for the appointment.|
 | `m365_maximumattendeescount` | Int32 | The maximum number of customers allowed in an appointment.|
 | `m365_optoutofcustomeremail` | Boolean | True indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.|
@@ -205,7 +205,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 | `m365_servicelocation` | String | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
 | `m365_servicename` | String | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
 | `m365_servicenotes` |String | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
-| `m365_smsnotificationsenabled` | Boolean | True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.|
+| `m365_smsnotificationsenabled` | Boolean | True indicates SMS notifications is sent to the customers for the appointment. Default value is false.|
 | `m365_staffmemberids` | String | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
 | `m365_startdatetime` | DateTime | The date, time, and time zone that the appointment begins.|
 
@@ -221,11 +221,11 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 |Column |Dataverse Type |Details |
 |---|---|---|
-|`m365_collaborationrootid` |String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_collaborationrootid` |String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute isn't returned when retrieving multiple records. |
 |`m365_createdby` |String |Identity of the user, device, or application that created the item. Read-only. This attribute is a JSON encoded string for example { "user": { "displayName": "System Account" } } |
 |`m365_createddatetime` |DateTime |Date and time of item creation. Read-only. |
 |`m365_description` |String |Provide a user-visible description of the drive. Read-only. |
-|`m365_drivetype` |String |Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. |
+|`m365_drivetype` |String |Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only. |
 |`m365_graphdriveid` |Guid |Unique Identifier of the graph drive. |
 |`m365_id` |String |The unique Identifier of the drive. Read-only. |
 |`m365_lastmodifiedby` | String |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string for example { "user": { "email": “user@contoso.com”,  "ID": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
@@ -254,7 +254,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |---|---|---|
 |`m365_audio` |String |Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. This attribute is a JSON encoded string. { "album": "string",  "albumArtist": "string", artist": "string", bitrate": 128, "composers": "string", copyright": "string", "disc": 0, "discCount": 0, "duration": 567, "genre": "string", "hasDrm": false, "isVariableBitrate": false, "title": "string", "track": 1, "trackCount": 16, "year": 2014 }|
 |`M365_bundle` |String |Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. For example, { "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
-|`m365_collaborationrootid` |String |Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
+|`m365_collaborationrootid` |String |Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute isn't returned when retrieving multiple records. |
 |`m365_copy` |String |If present in the request then a copy operation is performed. |
 |`m365_createdby` |String |Identity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. For example, {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
 |`m365_createddatetime` |DateTime |Date and time of item creation. Read-only. |
@@ -288,7 +288,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_siteid` |String |The Identifier for the site that contains the document library. |
 |`m365_size` |IntType |Size of the item in bytes. Read-only. |
 |`m365_specialfolder` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, { "name": "documents" } |
-|`m365_thumbnail` |String |If present in the request then the drive item thumbnails will be retrieved. |
+|`m365_thumbnail` |String |If present in the request then the drive item thumbnails retrieve. |
 |`m365_video` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, {"bitrate": 10646968, "duration": 1050683, "height": 720,  "width": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
 |`m365_webdavurl` |String | WebDAV compatible URL for the item. |
 |`m365_weburl` |String |URL that displays the resource in the browser. Read-only. |
