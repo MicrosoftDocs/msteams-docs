@@ -26,6 +26,8 @@ See the video to learn more about building an API-based message extension using 
 
 > [!VIDEO https://www.youtube.com/embed/jSYNHz6hz4Y?si=htmfWtlY9bYH_RT2]
 
+<br>
+
 ## Prerequisites
 
 Before you get started, ensure that you adhere to the following requirements:

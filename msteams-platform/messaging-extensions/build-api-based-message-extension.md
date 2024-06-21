@@ -16,7 +16,7 @@ ms.date: 10/19/2023
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
 
-|Traditional Bot-Based Message Extensions  |2.API-based Message Extensions  |
+|Traditional bot-based message extensions  |API-based message extensions  |
 |---------|---------|
 |Developers need to build, deploy, and maintain a service to handle invoke commands from the Teams client.     | If the end-service's APIs can be described using the Open API specification, developers can eliminate the need for the middle-layer handling service.         |
 |This service processes the incoming query and makes a call to the developer’s end-service.     | Teams can directly use the [Open API specification](https://swagger.io/resources/open-api/) to build requests and communicate with the developer's end-service.        |
