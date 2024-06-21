@@ -17,7 +17,7 @@ ms.date: 11/14/2023
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
@@ -650,6 +650,16 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+
+## Security best practices
+
+If your message extension uses URL-based dialogs (task modules), be aware that web browsers are moving toward [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). Best practice is to prepare now for third-party cookie deprecation by taking the following measures:
+
+1. Move away from third-party cookies.
+
+2. If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies.
+
+3. Remove any fallbacks you may have put in place for TeamsJS initialization failures. If your URL-based dialog fails upon `app.initialize`, don't fall back to opening it as a regular web app, as this exposes it to third-party cookie attack vectors.
 
 ## Technical requirements
 
