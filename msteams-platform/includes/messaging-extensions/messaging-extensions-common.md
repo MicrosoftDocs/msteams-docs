@@ -30,6 +30,9 @@ The extension definition is an object that has the following structure:
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
 | `commands` | Array of commands that this message extension supports. You're limited to 10 commands. | Yes |
 
+> [!Note]
+> If you set the `canUpdateConfiguration` property to `true` in the app manifest, you can display the **Settings** menu item for your message extension. To enable **Settings**, you must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
+
 #### Define commands
 
 Your message extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
