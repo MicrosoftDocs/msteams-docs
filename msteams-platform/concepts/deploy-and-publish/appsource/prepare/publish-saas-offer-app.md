@@ -28,17 +28,17 @@ ms.date: 07/11/2023
    :::column-end:::
 :::row-end:::
 
-The SaaS offer created must be published live in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
+The SaaS offer created must be published in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
 
 ## Go live
 
-Upon successful testing, your can submit the offer to [Go live](/partner-center/marketplace/test-publish-saas-offer) that publishes the offer in the marketplace. The following are the phases in the go live stage:
+Upon successful testing, your can submit the offer to [Go live](/partner-center/marketplace/test-publish-saas-offer) that publishes the offer in the marketplace. The following are the phases in the Go live stage:
 
-* Select **Go live** to initiate the validation checks before publishing.
-* Keep track of the publishing status on the **Offer overview** page.
-* If there are validation errors, rectify them and resubmit your offer for publishing. These errors could range from missing information to noncompliance with marketplace standards.
-* Upon successful validation, the offer is published live in the marketplace.
-* Post-publication, link the live SaaS offer to your SaaS app and publish the subscription to Teams Store.
+1. Select **Go live** to initiate the validation checks before publishing.
+1. Keep track of the publishing status on the **Offer overview** page.
+1. If there are validation errors, rectify them and resubmit your offer for publishing. The errors might range from missing information to noncompliance with marketplace standards.
+1. Upon successful validation, the offer is published live in the marketplace.
+1. Post-publication, link the live SaaS offer to your SaaS app and publish the subscription to Teams Store.
 
 :::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="The screenshot shows the go live and offer publishing phase.":::
 
