@@ -653,7 +653,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Security best practices
 
-If your message extension uses URL-based dialogs (task modules), be aware that web browsers are moving toward [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). Best practice is to prepare now for third-party cookie deprecation by taking the following measures:
+If your message extension plugin uses URL-based dialogs (task modules), be aware that web browsers are moving toward [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). Best practice is to prepare now for third-party cookie deprecation by taking the following measures:
 
 1. Move away from third-party cookies.
 
