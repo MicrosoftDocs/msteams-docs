@@ -1,23 +1,65 @@
 ---
-title: Create a channel tab or group tab
-description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams and build your first app using Blazor.
+title: Create a configurable tab
+description: Create configuration page and tab to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
 ms.date: 02/27/2023
 ---
 
-# Create a channel tab or group tab
+# Create a configurable tab
 
-Channel or group tabs deliver content to channels and group chats, which help to create collaborative spaces around dedicated web-based content.
+Configurable tab deliver content to channels and group chats, which help to create collaborative spaces around dedicated web-based content.
 
-Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
+## Migrate your configurable tab to static tab
+
+> [!NOTE]
+>
+> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
+
+Static tabs behave more like apps as they are pinnable and unified with optional configuration. Static tabs also support group chat, channels, and meetings. By migrating your configurable tab to static tab, you can build a single tab that works across different scopes, providing a consistent and focused experience. If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default. For more information, see [tabs](~/tabs/what-are-tabs.md).
+
+You can update your existing configurable tab to static tab and add different scopes to the static tab. To change your configurable tab to static tab:
+
+1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
+1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+
+   ```json
+   "staticTabs": [ 
+     { 
+     "entityId": "homeTab", 
+     "scopes": [ 
+       "personal",  
+       "groupChat",
+       "team"
+      ], 
+     "context": [ 
+       "personalTab", 
+       "privateChatTab", 
+       "meetingChatTab", 
+       "meetingDetailsTab", 
+       "meetingSidePanel", 
+       "meetingStage" 
+      ], 
+      "name": "Contoso", 
+      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
+     }
+   ],
+   ```
+
+    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings)
+
+If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it's important that previous configurable tabs continue to be supported.
+
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your configurable tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
-## Create a custom channel or group tab with Node.js
+## Create a custom configurable tab with Node.js
 
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
@@ -31,9 +73,9 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
     npm install generator-teams --global
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
-1. At the command prompt, create a new directory for your channel or group tab.
+1. At the command prompt, create a new directory for your configurable tab.
 
 1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
@@ -199,18 +241,18 @@ gulp ngrok-serve
    "composeExtensions": [],
    ```
 
-1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There's a custom configuration dialog for your configurable tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-uploaded.png" alt-text="Screenshot shows the uploaded channel tab in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="razor-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core
+## Create a custom configurable tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -220,7 +262,7 @@ gulp ngrok-serve
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -420,13 +462,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core MVC
+## Create a custom configurable tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -436,7 +478,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -635,7 +677,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
@@ -1024,54 +1066,326 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
-## Migrate your configurable tab to static tab
+## Create a configuration page
 
-> [!NOTE]
+A configuration page is a special type of [content page](~/tabs/how-to/create-tab-pages/content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
+
+* A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
+* A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
+* A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
+## Configuration page for tabs
+
+The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+
+### Example
+
+An example of a configuration page is shown in the following image:
+
+:::image type="content" source="~/assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page." lightbox="~/assets/images/tab-images/configuration-page.png":::
+
+The following code is an example of corresponding code for the configuration page:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<head>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
+<body>
+    <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+    <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+    <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+
+    <script>
+        await microsoftTeams.app.initialize();
+        let saveGray = () => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/gray",
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess()}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
+            });
+        }
+
+        let saveRed = () => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/red",
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess();}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
+            });
+        }
+
+        let gr = document.getElementById("gray").style;
+        let rd = document.getElementById("red").style;
+
+        const colorClickGray = () => {
+            gr.display = "block";
+            rd.display = "none";
+            microsoftTeams.pages.config.setValidityState(true);
+            saveGray()
+        }
+
+        const colorClickRed = () => {
+            rd.display = "block";
+            gr.display = "none";
+            microsoftTeams.pages.config.setValidityState(true);
+            saveRed();
+        }
+    </script>
+    ...
+</body>
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+```html
+<head>
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+</head>
+<body>
+    <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+    <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+    <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+
+    <script>
+        microsoftTeams.initialize();
+        let saveGray = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/gray",
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+        let saveRed = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/red",
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+
+        let gr = document.getElementById("gray").style;
+        let rd = document.getElementById("red").style;
+
+        const colorClickGray = () => {
+            gr.display = "block";
+            rd.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveGray()
+        }
+
+        const colorClickRed = () => {
+            rd.display = "block";
+            gr.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveRed();
+        }
+    </script>
+    ...
+</body>
+```
+
+***
+Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon.
+
+The following image displays the tab content with **Gray** icon selected:
+
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot shows the configure tab with select gray." lightbox="~/assets/images/tab-images/configure-tab-with-gray.png":::
+
+The following image displays the tab content with **Red** icon selected:
+
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the configure tab with select red." lightbox="~/assets/images/tab-images/configure-tab-with-red.png":::
+
+Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
+
+* Set `pages.config.setValidityState(true)` to true.
+* The `pages.config.registerOnSaveHandler()` event handler is triggered.
+* **Save** on the app's configuration page, is enabled.
+
+The configuration page code informs Teams that the configuration requirements are met and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+
+>[!NOTE]
 >
-> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * Migrating your configurable tab to static tab is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md). 
-> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
+>* You have 30 seconds to complete the save operation (the callback to `registerOnSaveHandler`) before the timeout. After the timeout, a generic error message appears.
+>* If you register a save handler using `registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
+>* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
+>* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
-Static tab capability is extended to support group chat, channels, and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab. 
+### Get context data for your tab settings
 
-To change your configurable tab to static tab:
+Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
-1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
-   ```json
-   "staticTabs": [ 
-     { 
-     "entityId": "homeTab", 
-     "scopes": [ 
-       "personal",  
-       "groupChat",
-       "team"
-      ], 
-     "context": [ 
-       "personalTab",
-       "channelTab", 
-       "privateChatTab", 
-       "meetingChatTab", 
-       "meetingDetailsTab", 
-       "meetingSidePanel", 
-       "meetingStage" 
-      ], 
-      "name": "Contoso", 
-      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
-      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
-     }
-   ],
-   ```
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](~/resources/schema/manifest-schema.md#configurabletabs).
 
-    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings)
+* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
-If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it's important that previous configurable tabs continue to be supported.
+#### Insert placeholders in the `configurationUrl`
 
-## Next step
+Add context interface placeholders to your base `configurationUrl`. For example:
 
-> [!div class="nextstepaction"]
-> [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+##### Base URL
+
+```json
+...
+"configurationUrl": "https://yourWebsite/config",
+...
+```
+
+#### Base URL with query strings
+
+```json
+...
+"configurationUrl": "https://yourWebsite/config?team={teamId}&channel={channelId}&{locale}"
+...
+```
+
+After your page uploads, Teams updates the query string placeholders with relevant values. Include logic in the configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. The following code example provides the way to extract a value from the `configurationUrl` property:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<script>
+   await microsoftTeams.app.initialize();
+   const getId = () => {
+        let urlParams = new URLSearchParams(document.location.search.substring(1));
+        let blueTeamId = urlParams.get('team');
+        return blueTeamId
+    }
+//For testing, you can invoke the following to view the pertinent value:
+document.write(getId());
+</script>
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+```html
+<script>
+   microsoftTeams.initialize();
+   const getId = () => {
+        let urlParams = new URLSearchParams(document.location.search.substring(1));
+        let blueTeamId = urlParams.get('team');
+        return blueTeamId
+    }
+//For testing, you can invoke the following to view the pertinent value:
+document.write(getId());
+</script>
+```
+
+***
+
+### Use the `getContext()` function to retrieve context
+
+The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) object.
+
+The following code provides an example of adding this function to the configuration page to retrieve context values:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
+
+<span id="user"></span>
+...
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    const contextPromise = app.getContext();
+    contextPromise.
+        then((context) => {
+            let userId = document.getElementById('user');
+            userId.innerHTML = context.user.userPrincipalName;
+        }).
+        catch((error) => {/*Unsuccessful operation*/});
+</script>
+...
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
+
+<span id="user"></span>
+...
+<script>
+    microsoftTeams.getContext((context) =>{
+        let userId = document.getElementById('user');
+        userId.innerHTML = context.userPrincipalName;
+    });
+</script>
+...
+```
+
+***
+
+## Context and authentication
+
+Authenticate before allowing a user to configure your app. Otherwise, your content might include sources that have their authentication protocols. For more information, see [authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Use context information to construct the authentication requests and authorization page URLs. Ensure that all domains used in your tab pages are listed in the `manifest.json` and `validDomains` array.
+
+## Modify or remove a tab
+
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall static tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+
+Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+import { pages } from "@microsoft/teams-js";
+const configPromise = pages.config.setConfig({
+    contentUrl: "add content page URL here",
+    entityId: "add a unique identifier here",
+    suggestedDisplayName: "add name to display on tab here",
+    websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
+    removeUrl: "add removal page URL here"
+});
+configPromise.
+    then((result) => {/*Successful operation*/}).
+    catch((error) => {/*Unsuccessful operation*/});
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+```javascript
+microsoftTeams.settings.setSettings({
+    contentUrl: "add content page URL here",
+    entityId: "add a unique identifier here",
+    suggestedDisplayName: "add name to display on tab here",
+    websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
+    removeUrl: "add removal page URL here"
+});
+```
+
+***
+
+## Mobile clients
+
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setConfig()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 ## See also
 

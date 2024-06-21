@@ -85,7 +85,7 @@ The following code is an example of how your page and the Teams client communica
 
 ***
 
-For more information on how to create and add a content page to a personal tab, see [add a content page to personal tab](../create-personal-tab.md#add-a-content-page-to-the-personal-tab).
+For more information on how to create and add a content page to a personal tab, see [add a content page to personal tab](../create-personal-tab.md#add-a-content-page-to-the-static-tab).
 
 The following images show the configuration of an HTML content page and the output of content page in tab:
 
