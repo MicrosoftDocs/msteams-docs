@@ -45,10 +45,10 @@ Before you start work merging your two existing extensions, get a sense of how t
 When you are ready to merge your actual add-in and Teams app, we recommend the following:
 
 - If the add-in uses an XML manifest, convert it to use the unified manifest for Microsoft 365 as described in [Convert an add-in to use the unified manifest for Microsoft 365](/office/dev/add-ins/develop/convert-xml-to-json-manifest) before you combine it with a Teams app.
-- Use the Teams app project as the starting point for the merged application.
+- Use the Teams app project as the base project for the merged application.
 - Keep configuration files that are applicable to both the add-in and Teams app in the root of the project.
-- Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project. 
-- Use the same base domain for the built files of both the add-in and Teams app.
+- Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project.
+- Use the same base domain for the built files of both the add-in and Teams app, for example contoso.com.
 - Merge the two manifests into a single manifest. Use the process you went through in step 1 as a guide.
 
 ## See also
