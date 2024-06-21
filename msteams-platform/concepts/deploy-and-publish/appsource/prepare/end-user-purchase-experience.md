@@ -27,7 +27,7 @@ To purchase a subscription plan for a Teams app, follow these steps:
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
-1. In the **Choose a subscription plan** dialog, select **Start trail** for the plan you want to purchase.
+1. In the **Choose a subscription plan** dialog, select **Buy** for the plan you want to purchase.
 
     > [!NOTE]
     > Private plans are visible only to users of the organization you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
@@ -35,12 +35,20 @@ To purchase a subscription plan for a Teams app, follow these steps:
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan.":::
 
 1. In the **Checkout** dialog, enter the following information:
-    * Under **Basic plan** > **Quantity**, select the number of plans.
-    * Under **Sold to**, add the name and address. For **Sold-to address**, enter the address of the legal entity responsible for payment and identified on the invoice (business or residence). The **Sold-to address** determines the estimated tax rate for your purchase.
-    * Under **Payment method**, add the payment details.
-1. Select **Place order**.
+
+    1. In the **Subscription details**, select **Quantity** and **Subscription length**.
+
+    1. In the **Billing account**, enter the name and billing details.
+
+    1. In the **Verify your address**, select the suitable address and select **Next**.
+
+    1. In the **Add a credit card or debit card**, add the required details and select **Next**.
+
+    1. In the **Review**, verify the details and select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+
+    1. Under **Purchase Authentication**, enter the code and select **Submit**.
 
 1. When prompted, select **Set up now** to activate your subscription.
 
