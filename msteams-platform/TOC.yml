@@ -1135,7 +1135,7 @@
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
   - name: Use Fluid with Teams
-    href: tabs/how-to/using-fluid-msteam
+    href: tabs/how-to/using-fluid-msteam.md
     displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
 - name: Resources
   items:
