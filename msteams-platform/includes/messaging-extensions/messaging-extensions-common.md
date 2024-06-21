@@ -6,9 +6,9 @@ A message extension is a cloud-hosted service that listens to user requests and 
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+You must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, is used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
-Take note of your bot app ID and app password, you'll need to provide the app ID in your app manifest.
+Take note of your bot app ID and app password, you need to provide the app ID in your app manifest.
 
 ### Update your app manifest
 
@@ -43,7 +43,7 @@ In the app manifest, your command item is an object with the following structure
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
+| `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | Set the type of command. Possible values include `query` and `action`. If not present, the default value is set to `query`. | No | 1.4 |
