@@ -44,8 +44,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 
 The following Teams features aren't currently supported in the new Teams client:
 
-* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
-
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
 * [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.

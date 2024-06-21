@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 May**
 
-***May 17, 2024***: [Deploy Teams app to container service.](toolkit/deploy-Teams-app-to-container-service.md)
+***June 21, 2024***: [DevTools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
 :::column-end:::
 :::row-end:::
 <br/>
@@ -48,6 +48,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 17/05/2024 | Deploy Teams app to container service. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio > Prepare to build apps using Teams Toolkit > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md) |
 |12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
 |12/04/2024|Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards.|[App manifest](resources/schema/manifest-schema.md)|
 |12/04/2024|Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.|App manifest > [extensions.requirements](resources/schema/manifest-schema.md#extensionsrequirements)|
