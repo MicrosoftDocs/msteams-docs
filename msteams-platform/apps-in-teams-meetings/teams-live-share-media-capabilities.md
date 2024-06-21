@@ -532,7 +532,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 ```
 
 > [!NOTE]
-> The `registerSpeakingStateChangeHandler` API used for audio ducking currently only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
+> The `registerSpeakingStateChangeHandler` API used for audio ducking only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
 
 ## Code samples
 

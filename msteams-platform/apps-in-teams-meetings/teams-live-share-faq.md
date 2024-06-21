@@ -80,7 +80,7 @@ Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. I
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -89,7 +89,7 @@ Currently, Live Share supports a maximum of 100 attendees per session. If this i
 <details>
 <summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
 
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -98,7 +98,7 @@ Currently, Live Share packages require the Teams Client SDK to function properly
 <details>
 <summary><b>Can I use multiple Fluid containers?</b></summary>
 
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 
 <br>
 
@@ -107,7 +107,7 @@ Currently, Live Share only supports having one container using our provided Azur
 <details>
 <summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
 
-Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
