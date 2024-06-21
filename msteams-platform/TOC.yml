@@ -1134,6 +1134,8 @@
       displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
+  - name: Use Fluid with Teams
+    href: tabs/how-to/using-fluid-msteam
 - name: Resources
   items:
   - name: Localization
