@@ -167,6 +167,135 @@ Admins can manage the app subscriptions and licenses in the Teams admin center. 
 1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
 1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
 
+## FAQs
+
+</br>
+
+<details>
+
+<summary>Do we support in-app purchases?</summary>
+
+Yes, we support in-app purchases. For more information, see in-app purchases.
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>How the flow is handles by CSP who makes the purchase for enterprise?</summary>
+
+CSP flow
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>What's the percentage fee which is taken by Microsoft?</summary>
+
+Microsoft charges a 3% transaction fee whenever a payment is processed. So, if it's a monthly subscription, then the 3% is applied on a monthly basis. This charge applies for both credit card transactions and invoice billing.
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>Can I test the offer before publishing?</summary>
+
+Yes, you can test the offer before publishing. For more information, see [test your SaaS offer](Test-preview-for-monetized-apps.md).
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>Do I have to mandatory link existing Teams app to my monetization module listed on App source?</summary>
+
+It's not mandatory but a good practice to implement it.
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>If the app is transactable on Azure marketplace will it be also available in Appsource or Teams by default </summary>
+
+No. The Azure Marketplace is different than AppSource (and by extension Teams app store). In order to show up in the Teams app store, Teams apps need to be submitted in Partner Center for AppSource, have a linked transactable offer, and update their Teams app manifest to include their publisher and offer IDs. Once complete, they need to resubmit to Partner Center for validation before they will appear in the Teams app store with a **Buy** button.
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>What are the additional steps to get **Buy a subscription** on Teams?</summary>
+
+Adding the IDs to the manifest (and uploading through PC to validate) is what brings the **Buy a subscription** button to Teams. Partners can continue to have apps available in Teams and require customers to purchase through AppSource. Going through a few additional steps brings the purchase option into the Teams app store.​
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>Can ISV set different pricing per country per region?</summary>
+
+Yes. For mor information, see [In-app purchase flow for the monetization of apps](in-app-purchase-flow.md).
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>What are the possible scenarios my partner my face when submitting their Teams app for validation?</summary>
+
+* Scenario 1: Partner has an existing Teams app and an existing transactable SaaS offer​.
+* Scenario 2: Partner has an existing Teams app and NO existing transactable SaaS offer
+* Scenario 3: Partner has NO existing Teams app and an existing transactable SaaS offer
+* Scenario 4: Partner has NO existing Teams app and NO existing transactable SaaS offer
+
+</br>
+
+</details>
+
+</br>
+
+<details>
+
+<summary>What are CSPs looking for when matching with ISVs?</summary>
+
+Being Channel Ready places ISVs in the best position to be successful matched as CSPs look for:​
+
+1. Complementary apps to add to their bundles solutions and services​
+1. An attractive margin, balancing their effort with potential revenue​
+1. Materials which are easy to consume and ready to use with customers
+
+</br>
+
+</details>
+
 ## See also
 
 [Monetize your app](monetize-overview.md)
