@@ -1,5 +1,5 @@
 ---
-title: The launch stage for your collaborative app
+title: Launch Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the launch stage of your app to grow your app.
 ms.topic: conceptual
