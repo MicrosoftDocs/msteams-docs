@@ -6,7 +6,7 @@ summary: "Get documentation, sample code, tutorials, and more to help you build 
 brand: teams
 
 metadata:
-  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams Platform Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.topic: hub-page # Required
