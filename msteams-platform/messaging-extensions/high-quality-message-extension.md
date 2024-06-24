@@ -651,6 +651,8 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
+Ensure that you design Adaptive Cards, which provide a seamless and engaging user experience. We recommend you to follow the best practices listed in [designing Adaptive Cards for your Microsoft Teams apps](../task-modules-and-cards/cards/design-effective-cards.md#best-practices) to optimize your card designs.
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
