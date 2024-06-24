@@ -1,5 +1,5 @@
 ---
-title: Publish your Teams apps using Developer Portal
+title: Publish App using Developer Portal
 author: zyxiaoyuer
 description: Learn how to integrate with Developer Portal in Teams Toolkit.
 ms.author: zhany
