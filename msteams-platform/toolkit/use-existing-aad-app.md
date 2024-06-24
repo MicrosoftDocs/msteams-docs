@@ -140,7 +140,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 ## Upload Microsoft Entra app manifest to Azure portal
 
-If Teams Toolkit failed to update Microsoft Entra app, there will be an error that says:
+If Teams Toolkit fails to update Microsoft Entra app, an error message appears:
 
 ```yml
 Insufficient privileges to complete the operation.
