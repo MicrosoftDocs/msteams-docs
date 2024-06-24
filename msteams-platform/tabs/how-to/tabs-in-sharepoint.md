@@ -8,14 +8,14 @@ ms.date: 06/08/2023
 
 # Add Teams tab to SharePoint
 
-Get a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to take a tab from a Microsoft Teams sample app and use it in SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
+Experience a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to take a tab from a Microsoft Teams sample app and use it in SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
 
 - [Teams tabs in SharePoint](#teams-tabs-in-sharepoint)
 - [SharePoint web parts in Teams](#sharepoint-web-parts-in-teams)
 
 ## Teams tabs in SharePoint
 
-You can host your Teams tabs in SharePoint with SPFx. Tabs hosted in SharePoint get a full-page experience, with the features of Teams tabs visible, while retaining the context and familiarity of a SharePoint site.
+You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint, Teams tabs provide a full-page experience. They retain the features of Teams tabs while maintaining the context and familiarity of a SharePoint site.
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows a Teams tab in SharePoint view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image084.png":::
 
@@ -23,20 +23,18 @@ You can host your Teams tabs in SharePoint with SPFx. Tabs hosted in SharePoint 
 
 - Reach SharePoint users with your existing Teams tab.
 - Upload your app manifest directly to your SharePoint App Catalog. SharePoint supports [Teams application packages](~/concepts/build-and-test/apps-package.md).
-- Users can configure the tab on a page just like any other SharePoint web part.
-- Your tab can access its [context](~/tabs/how-to/access-teams-context.md) same as it can when running in Teams.
+- Configure the tab on a page just like any other SharePoint web part.
+- Access the [context](~/tabs/how-to/access-teams-context.md) of your tab the same way it does when running in Teams.
 
 ## SharePoint web parts in Teams
 
 SharePoint hosts SPFx web parts without the need for external services like Azure. For SharePoint developers, this feature simplifies the development process for Teams tabs. For more information on SPFx in Teams, see [how to use the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a Teams tab."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png":::
+:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a Teams tab." lightbox="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png":::
 
 ## Test the sample app
 
-1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-HR-talent/csharp/src/demo-manifest).
-
-   It's a talent management app that manages the hiring process of candidates for open positions in a team.
+1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
 2. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -44,19 +42,17 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-4. Select the sample app manifest and select **Open**.
+4. Select the sample app manifest zip and select **Open**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png" alt-text="Screenshot shows the Downloads folder.":::
-
-5. A dialog box opens to let you add the custom app to Teams. Under **Add** dropdown, select **Add to a team**.
+5. A dialog box opens to add the custom app to Teams. Under **Add** dropdown, select **Add to a team**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
 
-6. Select the team you where you want to install the app and select **Set up**.
+6. Select the team where you want to install the app and select **Set up**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set-up a tab in a team.":::
 
-7. A new **Candidates** static tab is added to your team's channels. You can experiment with the app and test its various features including configurable tabs and a chatbot.
+7. A new static tab is added to your team's channels. You can experiment with the app and test its various features including configurable tabs and a chatbot.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
 
@@ -67,9 +63,9 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
 1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`.
 
-1. When prompted, enable **Make this solution available to all sites in the organization**.
+    - When prompted, enable **Make this solution available to all sites in the organization**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image065.png" alt-text="Screenshot shows the deploy dialog.":::
+        :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image065.png" alt-text="Screenshot shows the deploy dialog.":::
 
 1. Create a new page in your site. Select the gear button and then select **Add a page**.
 
@@ -77,7 +73,7 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
 1. Set up your page and give an appropriate name such as **My Teams Tab**.
 
-2. Open the web part toolbox by selecting the `+` button and select **Contoso Talent** from the list. This action creates a web part in the canvas that contains your Teams tab.
+2. Open the web part toolbox by selecting the `+` button and select the app you uploaded from the list. This action creates a web part in the canvas that contains your Teams tab.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image071.png":::
 
@@ -97,7 +93,7 @@ After you publish your page, explore [Single Part App Pages in SharePoint](/shar
 
 | **Sample name** | **Description** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-HR-talent/csharp) |
+| SPFx web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
 
 ## See also
 
