@@ -651,6 +651,66 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
+
+  * **ColumnSets**
+
+    * Don't define `ColumnSets` with more than three columns.
+    * Don’t use explicit pixel width on more than one column in the set.
+    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+    * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+  * **Sizing images**
+
+    * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
+    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+    * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+
+## Extend your plugin to Copilot in Bing
+
+Copilot for Microsoft 365 is available in Bing. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+
+* **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.18.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. *[Mandatory fix]*
+
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works similarly for Teams, Outlook, and Bing. However, you must add client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: *[Optional]*
+
+   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
+   1. Select **App registrations**.
+   1. Search for your app and select the app name.
+   1. Go to **Manage** > **Expose an API**.
+   1. In the Authorized client applications section, ensure that the following Client ID values are listed:
+
+      | Microsoft 365 client application | Client ID |
+      | --- | --- |
+      | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+      | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+
+* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers: *[Mandatory fix]*
+
+   | Microsoft 365 app host | frame-ancestor permission |
+   | --- | --- |
+   | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
+
+* Validate that network connectivity to your application endpoints is available.
+
+* Configure [app setup policies](/microsoftteams/teams-app-setup-policies#assign-a-custom-policy-in-app-setup-policy-to-users-and-groups) to allow custom apps upload. *[Optional]*.
+
+* Create a [Teams app package](../concepts/build-and-test/apps-package.md), which consists  an app manifest and app icons.
+
+* Upload the app package for a single developer or for the tenant.
+
+* If you're publishing the app to the tenant, configure an [app permissions policy](/microsoftteams/teams-app-permission-policies) to limit access to specific users.
+
+* Validate that the app works as expected across Microsoft 365 apps such as Teams, Outlook, office.com, mobile, and Microsoft Copilot for Microsoft 365 in Teams and copilot.microsoft.com.
+
+* Complete organization’s formal publishing process for production.
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
