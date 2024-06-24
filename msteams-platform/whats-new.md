@@ -1,5 +1,5 @@
 ---
-title: What is new and updated for developers in Teams
+title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
 ms.localizationpriority: high
@@ -35,7 +35,10 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 24, 2024***: [Debug message extension app in Test Tool.](toolkit/debug-message-extension-app-in-test-tool.md)
+* ***June 24, 2024***: [Debug message extension app in Test Tool.](toolkit/debug-message-extension-app-in-test-tool.md)
+
+* ***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
+
 :::column-end:::
 :::row-end:::
 <br/>
