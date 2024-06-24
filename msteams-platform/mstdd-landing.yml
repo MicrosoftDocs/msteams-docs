@@ -71,8 +71,6 @@ landingContent:
         url: bots/how-to/bot-configuration-experience.md
       - text: The stageView API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
-      - text: Sample prompts for message extension plugins
-        url: messaging-extensions/high-quality-message-extension.md#sample-prompts
       - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
         url: m365-apps/overview.md#outlook-add-ins
       - text: Added support for python in Teams AI library
