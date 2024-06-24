@@ -1,5 +1,5 @@
 ---
-title: Prerequisites for Creating Teams App
+title: Prerequisites to Create Teams App
 author: zyxiaoyuer
 description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit.
 ms.author: surbhigupta
