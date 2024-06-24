@@ -128,7 +128,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
 ## Add message extension code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you copy them into the `bot/` folder. The following folder structure is an example of how your project's folder structure must looks like:
+1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must looks like:
 
    ```yml
    |--.vscode/
@@ -154,7 +154,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    |--teamsapp.yml
    ```
 
-   Use the command `npm init -y` to create a root `package.json` file. We recommend you reorganize the folder structure as follows:
+   Use the command `npm init -y` to create a root `package.json` file. We recommend you to reorganize the folder structure as follows:
 
    ```yml
    |--.vscode/
@@ -201,17 +201,11 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ```
 
    > [!NOTE]
-   > If you're working on a JavaScript project, you don't need a `build` folderthe bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, a `build` folder is not required to run the projec. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
-1. Add the following new tasks in `.vscode/task.json`:
-
-   * `Start local tunnel`
-   * `Start bot`
-   * `Start frontend`.
-
-    Add `Start bot` and `Start frontend` to `dependOn` in the `Start application`task. Configure `Start bot` and `cwd` option of `Start frontend` as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to `dependOn` in the `Start Teams App Locally` task. For example:
+1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the `Start application` task's dependOn to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's dependOn.
 
    ```json
    "tasks":[
