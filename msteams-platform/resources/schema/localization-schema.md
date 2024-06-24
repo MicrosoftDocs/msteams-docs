@@ -56,7 +56,7 @@ The schema defines the following properties:
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
 |`meetingExtensionDefinition.scenes\\[[0-9]\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest. ||
-|`extensions\\[[0]\\]\\.audienceClaimUrl$`|String|2048|Replaces the corresponding string from the app manifest with the value provided here.||
+|`extensions\\[[0]\\]\\.audienceClaimUrl$`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.ribbons\\[[0-9]\\]\\.tabs\\[[1]?[0-9]\\]\\.label`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.ribbons\\[[0-9]\\]\\.tabs\\[[1]?[0-9]\\]\\.customMobileRibbonGroups\\[[0-9]\\]\\.label`|String|32|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.ribbons\\[[0-9]\\]\\.tabs\\[[1]?[0-9]\\]\\.customMobileRibbonGroups\\[[0-9]\\]\\.controls\\[[1]?[0-9]\\]\\.icons\\[[0-8]\\]\\.url`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
