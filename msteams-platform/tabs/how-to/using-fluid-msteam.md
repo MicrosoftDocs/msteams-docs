@@ -307,7 +307,7 @@ npx @fluidframework/azure-local-service@latest
 To run and start the Teams application, open another terminal, and follow the [instructions to run the application server](create-channel-group-tab.md#upload-your-application-to-teams).
 
 > [!WARNING]
-> HostNames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. When a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, see [use AzureClient with Azure Fluid Relay](#use-azureclient-with-azure-fluid-relay).
+> HostNames with `ngrok`'s free tunnels are not preserved. Each run generates a different URL. When a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, see [use AzureClient with Azure Fluid Relay](#use-azureclient-with-azure-fluid-relay).
 
 > [!NOTE]
 > Install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.

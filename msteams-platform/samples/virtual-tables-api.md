@@ -25,7 +25,7 @@ With the virtual tables, you can use the OData $orderby query parameter to set c
 * Graph Event
 
 > [!NOTE]
-> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
+> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, the result set maintains its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
 
 Examples:
 
@@ -80,7 +80,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
 
 Examples:
 
-* GET [Organization URI]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq ‘ContosoBank@Contoso.onmicrosoft.com’ and m365_price eq 100.0
+* GET [Organization URI]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq ‘<ContosoBank@Contoso.onmicrosoft.com>’ and m365_price eq 100.0
 * GET [Organization URI]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq ‘00000000-0000-0000-0000-000000000000’ and m365_name eq ‘Meeting Notes.docx’
 * GET [Organization URI]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq ‘00000000-0000-0000-0000-000000000000’ and m365_subject eq ‘Monthly Sync’
 
