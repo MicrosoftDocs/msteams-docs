@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios where it's used on the Teams platform. Samples on action and search based message extension.
+description: Learn how message extensions are used, its types, and scenarios. Samples on action and search based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -14,7 +14,7 @@ Message extensions enable users to engage with your web service through buttons 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-This document provides an overview of message extensions, tasks executed in various scenarios, the functioning of message extensions, action and search commands, and link unfurling.
+The article provides an overview of message extensions, tasks executed in various scenarios, the functioning of message extensions, action and search commands, and link unfurling.
 
 The following image displays the locations from where message extensions can be invoked:
 
@@ -54,7 +54,7 @@ There are two types of message extension commands, action command and search com
 
 ### Action commands
 
-Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Subsequently, the user can submit the message.  For more complex workflows, you can link multiple forms together.
+Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message.  For more complex workflows, you can link multiple forms together.
 
 Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v1.x):
 
