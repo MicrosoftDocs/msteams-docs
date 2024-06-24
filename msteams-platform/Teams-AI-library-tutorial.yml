@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit
 metadata:
-  title: Build Bot with Teams AI Library
+  title: Tutorial - Build Custom Copilot
   description: In this module, learn how to quickly try the Teams AI library.
   audience: Developer
   level: Beginner
