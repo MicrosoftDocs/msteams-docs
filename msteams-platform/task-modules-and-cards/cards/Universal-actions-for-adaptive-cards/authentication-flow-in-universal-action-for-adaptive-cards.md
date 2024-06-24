@@ -1,5 +1,5 @@
 ---
-title: Add third party authentication to Adaptive Cards Universal Actions
+title: Add Third Party Authentication
 description: In this module, learn how to add third party authentication to your Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual
