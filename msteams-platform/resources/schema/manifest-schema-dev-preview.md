@@ -325,7 +325,7 @@ The version of the app manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the Microsoft Teams Store, the new app manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated app manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the Microsoft Teams Store, the new app manifest has to be resubmitted and revalidated. Then, users of this app receive the new updated app manifest automatically within a few hours, after it's approved.
 
 If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
 
@@ -642,7 +642,7 @@ Specifies the native features on a user's device that your app may request acces
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 > [!NOTE]
-> Office Add-ins, configured with an `extensions` property in the manifest, disregard domains containing a wildcard. If your app incorporates an Office Add-in, specify the full domain name for the domains that the add-in will access.
+> Office Add-ins, configured with an `extensions` property in the manifest, disregard domains containing a wildcard. If your app incorporates an Office Add-in, specify the full domain name for the domains that the add-in accesses.
 
 It's **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
