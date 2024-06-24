@@ -1,5 +1,5 @@
 ---
-title: Overview to authentication using SSO in Teams with Microsoft Entra ID
+title: Enable SSO with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension.
 ms.topic: conceptual
 ms.localizationpriority: high
