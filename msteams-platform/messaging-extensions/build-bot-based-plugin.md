@@ -350,7 +350,7 @@ A bot-based search message extension is created.
 
 To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You are redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
@@ -386,7 +386,7 @@ To enable message extension as a plugin for Copilot for Teams meetings, follow t
 
    :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the copilot pane in a Teams meeting.":::
 
-Meeting Copilot helps your meetings to be better and more productive. You can meetings more interactive, which helps users by giving them a smoother and more interesting experience.
+Meeting Copilot helps your meetings to be better and more productive. You can make meetings more interactive, which helps users by giving them a smoother and more interesting experience.
 
 ## Step-by-step guide
 
