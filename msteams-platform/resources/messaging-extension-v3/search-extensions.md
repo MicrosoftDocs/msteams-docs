@@ -223,7 +223,7 @@ Once you've added the domain to listen on to the app manifest, you need to chang
 }
 ```
 
-If your app returns multiple items, only the first will be used.
+If your app returns multiple items, only the first is used.
 
 ### Respond to user requests
 
