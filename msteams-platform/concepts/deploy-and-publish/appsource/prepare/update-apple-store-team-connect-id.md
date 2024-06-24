@@ -1,5 +1,5 @@
 ---
-title: Update Apple Developer Program Team ID Team ID on Partner center
+title: Enable App for Teams iOS Platform
 description: Update your Apple Developer Program Team ID in the Microsoft Partner Center to enable end-users to search and acquire your app on the Teams iOS platform.
 ms.topic: how-to
 ms.localizationpriority: medium
