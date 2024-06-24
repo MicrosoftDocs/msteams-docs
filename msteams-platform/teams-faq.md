@@ -978,7 +978,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
 <br>
 &nbsp;
 </details>
