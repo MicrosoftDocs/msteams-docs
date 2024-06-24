@@ -1,5 +1,5 @@
 ---
-title: Requirements and considerations for application-hosted media bots
+title: Build Application-hosted Media Bots
 description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for different remote and local media scenarios. 
 ms.topic: conceptual
 ms.localizationpriority: medium
