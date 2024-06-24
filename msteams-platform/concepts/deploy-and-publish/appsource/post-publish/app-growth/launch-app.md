@@ -280,7 +280,3 @@ Contact your Microsoft field, account, or engineering representatives to request
 
 > [!div class="nextstepaction"]
 > [Gaining traction for your collaborative app in the market](gain-traction.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)

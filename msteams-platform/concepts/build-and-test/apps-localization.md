@@ -161,8 +161,6 @@ If you provide localized versions of your application, the users respond with th
 
 ## See also
 
-* [Microsoft Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * [Create a Partner Center developer account](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
 * [Prepare your Teams Store submission](../deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Update Apple App Store Connect Team ID on Partner Center](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)
-* [App manifest](../../resources/schema/manifest-schema.md)
