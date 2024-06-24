@@ -84,7 +84,3 @@ The following examples show the recommended app type for different scenarios bas
 | Synchronize a signature across devices. | Outlook add-in |
 | Enable administrator management of signatures for an organization. | Outlook add-in |
 
-## See also
-
-* [Extend Teams apps across Microsoft 365](overview.md)
-* [Extend a Teams message extension across Microsoft 365](extend-m365-teams-message-extension.md)
