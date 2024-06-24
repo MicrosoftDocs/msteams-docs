@@ -1,5 +1,5 @@
 ---
-title: Introducing the new Microsoft Teams client
+title: The New Microsoft Teams Client
 description: Learn about the latest updates to Microsoft Teams.
 author: v-ypalikila
 ms.author: lajanuar
