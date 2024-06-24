@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 18, 2024***: [Debug message extension app in Test Tool.](toolkit/debug-message-extension-app-in-test-tool.md)
+***June 24, 2024***: [Debug message extension app in Test Tool.](toolkit/debug-message-extension-app-in-test-tool.md)
 :::column-end:::
 :::row-end:::
 <br/>
