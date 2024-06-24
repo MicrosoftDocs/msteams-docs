@@ -416,7 +416,6 @@ ngrok http 3978 --host-header=localhost
 
    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
-
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
@@ -863,7 +862,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -998,7 +997,8 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
+>
+> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Extending static tab to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
 > * To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
