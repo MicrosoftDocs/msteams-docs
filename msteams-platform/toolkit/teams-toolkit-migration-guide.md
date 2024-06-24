@@ -1,5 +1,5 @@
 ---
-title: Migrate to new project structure
+title: Migrate project from 17.9 to 17.10+ version
 author: v-preethah
 description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
 ms.author: v-preethah
@@ -8,9 +8,11 @@ ms.topic: overview
 ms.date: 06/05/2024
 ---
 
-# Migrate to Microsoft Teams new project structure
+# Migrate project from 17.9 to 17.10+ version
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to leverage the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications.
+
+`.ttkproj` suffix to represent the new project type. In the new version of 17.10, a Teams solution will contian two projects. One is Teams project, another one is your source code. Teams project contians the Teams app package and Teams Toolkit configuration files, your source code project is the business logic for your tab or bot or other. By separating the concept of Teams app and C# project, we can address the scenario where you already have your existing web or bot solutions and want to embed your web app to Teams or integrate their bot to Teams client. The Teams project makes it easier for you to integrate with any existing project or solution.
 
 Learn in detail to create a new project folder, move configuration files, adjust launch settings, and more.
 
@@ -18,7 +20,7 @@ Learn in detail to create a new project folder, move configuration files, adjust
 
 Before starting the migration process, ensure that you have the following:
 
-* Visual Studio 17.10 Preview 3 or later.
+* A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
 ## Migration process
