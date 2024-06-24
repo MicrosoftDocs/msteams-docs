@@ -3,6 +3,7 @@ title: Types of cards
 description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 06/13/2023
 ---
 
 # Types of cards
@@ -55,7 +56,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
+| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v1.x) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
@@ -69,7 +70,7 @@ You can identify and use different types of cards based on your application requ
 >
 > * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
-> * Adaptive Card supports only Incoming Webhook O365 Connector type and not any other O365 Connector types.
+> * Adaptive Card supports only Incoming Webhook connectors for Microsoft 365 groups type. For these connectors, you can send the Adaptive Card using the following [format](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
 
 ## Common properties for all cards
 
@@ -84,7 +85,7 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+Images must be at most 1024 × 1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 The following table provides the properties of inline card images:
 
@@ -123,10 +124,11 @@ The following table provides the features that support Adaptive Cards:
 > [!NOTE]
 >
 > * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
-> * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+> * Adaptive Cards within Teams don't provide support for file or image uploads.
+> * The `isEnabled` property for `Action.Submit` type in an Adaptive Card isn't supported in Teams.
 
 ### Example of Adaptive Card
 
@@ -269,6 +271,9 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+> [!Note]
+> The `speak` property in an Adaptive Card for Teams bots is supported for immersive readers only.
+
 You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
 
 Example:
@@ -291,6 +296,8 @@ Bot Framework reference:
 To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
+
+Your bot can mention tags in an Adaptive Card posted into channels. For more information, see [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
 
 ## Hero card
 
@@ -496,9 +503,9 @@ For all other details about connector card properties, see [actionable message c
 * `originator`
 * `correlationId`
 
-### Example of an connector card for Microsoft 365 Groups
+### Example of a connector card for Microsoft 365 Groups
 
-The following code shows an example of an connector card for Microsoft 365 Groups:
+The following code shows an example of a connector card for Microsoft 365 Groups:
 
 ```json
 {
@@ -635,13 +642,13 @@ Bot Framework reference:
 
 ## Sign in card
 
-The sign in card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Teams is similar to the sign in card in the Bot Framework except that the sign in card in Teams only supports two actions `signin` and `openUrl`.
 
 The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for login cards
 
-The following table provides the features that support sign-in cards:
+The following table provides the features that support sign in cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -966,11 +973,18 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * Audio cards
 * Video cards
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|Manifest
+|--|--|--------------------------------------------------------|-----|-----|
+|1|This sample shows how user can send different types of cards using bot which are supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
+
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](cards-actions.md#form-completion-feedback)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

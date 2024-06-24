@@ -1,10 +1,12 @@
 ---
+author: joshuapartlow
 title: Tab app navigation
-description: Learn about the options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
-ms.date: 10/26/2022
+description: Learn about options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
+ms.author: joshuapa
 ---
 
 # Navigate within a tab app
@@ -21,19 +23,25 @@ The [pages](/javascript/api/@microsoft/teams-js/pages) capability of the TeamsJS
 
 The following code illustrates how to navigate to a specific page:
 
-```js
+```typescript
 if (pages.currentApp.isSupported()) {
-    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId:<subPageId>});
+    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId: <subPageId>});
     navPromise.
         then((result) => {/*Successful navigation*/}).
         catch((error) => {/*Failed navigation*/});
 }
-else {/*Handle situation where capability isn't supported*/}
+else {/*Handle situation where capability isn't supported*/
+    const navPromise = pages.navigateToApp({appId: <appId>, pageId: <pageId>});
+    navPromise.
+        then((result) => {/*Successful navigation*/}).
+        catch((error) => {/*Failed navigation*/});
+}
 ```
 
 The following code illustrates how to navigate to the app's default tab:
 
-```js
+```typescript
+
 if (pages.currentApp.isSupported()) {
     const navPromise = pages.currentApp.navigateToDefaultPage();
     navPromise.
@@ -43,7 +51,10 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
+> [!NOTE]
+> The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
+
+Use the [pages.navigateToApp()](/javascript/api/%40microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function or [deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs) for tab app navigation.
 
 ## Configure back button navigation
 
@@ -54,6 +65,12 @@ After you register the handler, it helps you to address the navigational request
 ## Return focus to host app
 
 After the user starts using elements within a tab, by default, the focus remains with the elements of your iFrame until the user selects outside of it. If the iFrame is a part of the user navigating with keyboard shortcuts (the Tab key or the F6 key), you can focus on the host app. You can focus on the host app by using the [`pages.returnFocus()`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-returnfocus) function. The `returnFocus()` function accepts a Boolean indicating the direction to advance focus within the host app; `true` for forward and `false` for backwards. Generally, forward highlights the search bar and backwards highlights the app bar.
+
+## Code sample
+
+|**Sample name** | **Description** |**Node.js**|
+|----------------|-----------------|-----------|
+|Tab app navigation | Sample code shows how to navigate between tabs within the app. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs)
 
 ## See also
 

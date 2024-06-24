@@ -24,8 +24,7 @@ A bot behaves differently depending on the conversation it's involved in:
 
 * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to your bot.
 
-  > [!NOTE]
-  > Bots can receive all channel and chat messages in a team without being @mentioned using resource-specific consent (RSC) permissions. RSC for all *chat* messages is only available in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md). For more information, see [receive all conversation messages with RSC](channel-messages-with-rsc.md).
+Bots can receive all channel and chat messages in a team without being @mentioned using resource-specific consent (RSC) permissions. RSC for all *chat* messages is only available in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md). For more information, see [receive all conversation messages with RSC](channel-messages-with-rsc.md).
 
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
@@ -44,7 +43,7 @@ The workflow bot is a type of conversation bot, which interacts with the users i
 You can add single sign-on authentication to your conversation bot using the following steps:
 
 * [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
-* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
+* [Configure your bot app in Microsoft Entra ID](~/bots/how-to/authentication/bot-sso-register-aad.md)
 
 ## Next step
 

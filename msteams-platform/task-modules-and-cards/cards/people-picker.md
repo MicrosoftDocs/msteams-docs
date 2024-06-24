@@ -5,11 +5,12 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
+ms.date: 01/19/2023
 ---
 
 # People Picker in Adaptive Cards
 
-People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:
+People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, dialogs (referred as task modules in TeamsJS v1.x), and tabs. People Picker supports the following features:
 
 * Searches single or multiple users.
 * Selects single or multiple users.
@@ -150,8 +151,8 @@ To enable search within a list of conversation members, use the appropriate data
 
 ### Data Submission
 
-You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Azure Active Directory (Azure AD) IDs or the IDs provided in static list.
-In People Picker, when a user is selected in the control, the `Azure AD ID` of the user is the value sent back. The `Azure AD ID` is a string and uniquely identifies a user in the directory.
+You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Entra IDs or the IDs provided in static list.
+In People Picker, when a user is selected in the control, the `Microsoft Entra ID` of the user is the value sent back. The `Microsoft Entra ID` is a string and uniquely identifies a user in the directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
 
@@ -160,15 +161,15 @@ The format of the value submitted to the bot depends on the value of the `isMult
 |false _(single select)_|<selected_Azure_AD_ID>|
 |true _(multi select)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-With the `Azure AD ID`, People Picker preselects the corresponding user.
+With the `Microsoft Entra ID`, People Picker preselects the corresponding user.
 
 ## Preselection of user
 
 People Picker supports preselection of user in the control, when creating and sending an Adaptive Card. `Input.ChoiceSet` supports the `value` property that is used to preselect a user. The format of this `value` property is the same as the submitted value format in [data submission](#data-submission).  
 The following list provides the information to preselect users:
 
-* For single user in the control, specify the `Azure AD ID` of the user as the `value`.
-* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `Azure AD ID`s.  
+* For single user in the control, specify the `Microsoft Entra ID` of the user as the `value`.
+* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `Microsoft Entra ID`s.  
 
 The following example describes preselection of a single user:
 
@@ -190,7 +191,7 @@ The following example describes preselection of a single user:
     "dataset": "graph.microsoft.com/users"
    },
    "id": "people-picker",
-   "value": "<Azure AD ID 1>"
+   "value": "<Microsoft Entra ID 1>"
   }
  ],
  "actions": [
@@ -225,7 +226,7 @@ The following example describes preselection of multiple users:
    },
    "id": "people-picker",
    "isMultiSelect": true,
-   "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
+   "value": "<Microsoft Entra ID 1>,<Microsoft Entra ID 2>,<Microsoft Entra ID 3>"
   }
  ],
  "actions": [
@@ -294,13 +295,13 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 :::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
-You can implement People Picker for efficient task management in different scenarios.  
+You can implement People Picker for efficient task management in different scenarios.
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|People picker control in Adaptive Cards| This sample demonstrates how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |
+| Sample Name           | Description | .NET    | Node.js   | Manifest
+|:---------------------|:--------------|:---------|:--------|:--------|
+|People picker control in Adaptive Cards| This sample shows how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
 
 ## See also
 
@@ -308,3 +309,5 @@ You can implement People Picker for efficient task management in different scena
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
+* [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)

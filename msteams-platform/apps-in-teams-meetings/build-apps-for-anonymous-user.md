@@ -5,34 +5,41 @@ description: Learn how to build apps for anonymous users and test the experience
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.date: 02/07/2023
 ---
 
 # Build apps for anonymous users
 
-Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
 
-For anonymous users to interact with the apps in Teams meetings, ensure the following:
+> [!NOTE]
+>
+> * Apps for anonymous users are supported in the new Teams desktop and mobile clients for Windows and Mac.
+> * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
+
+For anonymous users to interact with the apps in Teams meetings, ensure to:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
 
 ## App manifest update for anonymous users
 
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
+
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
 
 ```json
-
- "meetingExtensionDefinition": {
-  "supportsAnonymousGuestUsers": true
- }
-
+"meetingExtensionDefinition": {
+    "supportsAnonymousGuestUsers": true
+}
 ```
 
 For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
 
 ## Anonymous user authentication flow
 
-Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. `getAuthToken` fails for anonymous users by returning the error `useGetAuthToken: Failed with error - User is not authenticated`. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
+Anonymous users can't be authenticated through Microsoft Entra authentication or `getAuthToken` from the client SDK as they aren't Microsoft Entra accounts. `getAuthToken` fails for anonymous users by returning the error `useGetAuthToken: Failed with error - User is not authenticated`. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## Admin setting for anonymous user app interaction
 
@@ -44,26 +51,21 @@ To test your apps experience for anonymous users, select the URL in the meeting 
 
 Apps receive the following information for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
-> [!NOTE]
-> The Live Share SDK isn't supported for anonymous users.
-
 # [JavaScript](#tab/javascript)
 
 ```javascript
+import * as microsoftTeams from "@microsoft/teams-js";
 
 microsoftTeams.app.getContext().then((context) => {
-    if (context.user.licenseType === "Anonymous")
-        {
-            // Add your custom logic here
-        }
+    if (context.user.licenseType === "Anonymous") {
+        // Add your custom logic here
+    }
 });
-
 ```
 
 # [JSON](#tab/json)
 
 ```json
-
 {
    "app": {
     "locale": "en-us",
@@ -97,7 +99,6 @@ microsoftTeams.app.getContext().then((context) => {
       "id": "MCMxOTptZWV0aW5nX1ptTXlOV1pqTXpFdE1XVTBNaTAwTkRObUxXSmhNbVl0TmpNNE9UWTBZbU0wTldNMkB0aHJlYWQudjIjMA=="
     }
 }
-
 ```
 
 ---
@@ -132,7 +133,6 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | --- | --- |
 | `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
-| `userRole` | `Anonymous` represents anonymous user. |
 | `tenantId` | Tenant ID of the meeting organizer. |
 | `userRole` | `anonymous`, represents anonymous user. |
 
@@ -182,7 +182,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccou
 
 ### Create Conversation API
 
-Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it receives a `400` Bad Request status code and the following error response:
 
 ```csharp
 var conversationParameters = new ConversationParameters
@@ -225,19 +225,23 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* Side panel tabs and content bubbles aren't available for anonymous users. Anonymous users can still see app content shared to the meeting stage.
+* Apps for anonymous users aren't supported on live event, Virtual desktop infrastructure (VDI), and Linux platforms.
 
-* For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
+* Apps for anonymous users aren't supported on Firefox and Safari browsers.
 
-* Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
+* Apps for anonymous users aren't supported in Teams channel meetings.
+
+* Currently, the `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
+
+* Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
 
 ## Code sample
 
-|Sample name | Description | .NET |
+|Sample name | Description | .NET |Node.js|
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) |
+| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
 
 ## Next step
 

@@ -5,13 +5,14 @@ description: Learn about deciding what to measure using instrumentation data for
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 12/09/2022
 ---
 
 # Strategize and decide what to measure
 
 <!--Design instrumentation data for your Teams app-->
 
-After an app is distributed in an organization or in Teams public app store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
+After an app is distributed in an organization or in Microsoft Teams Store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 
 It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 :::row:::
@@ -48,7 +49,7 @@ Instrumentation designed to improve adoption should aim at improving discoverabi
 
 | Measure | Insights |
 | --- | --- |
-| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant and org name. |
+| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Microsoft Entra profile. <br> • Segment by tenant and org name. |
 | • Average time taken to first use (click on tab, bot, Adaptive Card, and meeting). | • Report at a feature or platform capability level to measure feature level adoption. |
 | • Extensibility point of first discovery. <br> • Scope of first discovery. | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users. |
 | • % of link unfurls leading to app installation. | • Users interested in installing app, post-discovery. |
@@ -72,11 +73,11 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 | Measure | Comments |
 | --- | --- |
-| • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Azure AD profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
+| • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Microsoft Entra profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
 | • % of users using key features in Teams app vs. using the same feature in a web or native app. | • Indicates discoverability, ease of use, and value of using the feature within Teams app. <br> • Report at app feature level. |
 | • #, % users using the app across different scopes (R28). | • Engagement penetration. <br> • Report by scope. <br> • Ability to drill down by capability. |
-| • #, % users using the app in different platform capabilities (R28). <br> • #, % Interacting with tab. <br> • #, % Interacting with Messaging extension. <br> • #, % Interacting with bot. <br> • #, % Interacting with side panel in a meeting. <br> • #, % Interacting with Stage view. | • Engagement and value prop of app capabilities. <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use and value add. |
-| **Task Success** |  |
+| • #, % users using the app in different platform capabilities (R28). <br> • #, % Interacting with tab. <br> • #, % Interacting with Messaging extension. <br> • #, % Interacting with bot. <br> • #, % Interacting with side panel in a meeting. <br> • #, % Interacting with Stageview. | • Engagement and value prop of app capabilities. <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use and value add. |
+| **Task success** |  |
 | • % of users completing core action. | • Ease of performing core task. <br> • Report at a week level. |
 | • User journey in a Teams app – Funnel view with user drop offs. | • Friction points in user journey. <br> • Drill down at a tenant level. |
 | • Lostness Score for core action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different and unique steps performed while performing core action. <br> **S** = The total number of steps performed while performing core action including repeat steps. <br> **R** = The minimum number of steps required to complete core action. | • Ease of use with regional drill provides insights on need for locale. <br> • Drill down at region and tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
@@ -91,7 +92,7 @@ User retention measures how frequent users come back to use the product. It esse
 
 > [!TIP]
 >
-> - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
+> - Users using multiple Teams platform capabilities are 20 to 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
@@ -120,7 +121,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 
 | Measure | Insight |
 | --- | --- |
-| • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Azure AD and tenant information. |
+| • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Microsoft Entra ID and tenant information. |
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
 | • % users using Teams app vs. web, or mobile app. | • Report month over month. |
 | • User feedback on experience after completing core action. | • Introduce product led way for collecting feedback after completing core action (for example, in-app message to submit feedback). |

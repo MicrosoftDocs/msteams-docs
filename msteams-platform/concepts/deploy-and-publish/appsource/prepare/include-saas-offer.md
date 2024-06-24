@@ -1,10 +1,11 @@
 ---
 title: Include a SaaS offer with your app
-description: Learn to monetize your Microsoft Teams app by selling subscription plans directly from your Teams store listing. Understand publish app, end-user, admin purchase experience. 
+description: Learn to monetize your Teams app by selling subscription plans directly from your Teams Store listing. Understand publish app, end-user, admin purchase experience. 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 03/21/2023
 ---
 
 # Include a SaaS offer with your Teams app
@@ -12,7 +13,7 @@ ms.localizationpriority: high
 :::row:::
    :::column span="3":::
 
-With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
+With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Microsoft Teams Store listing. For example, say you have a free app anyone can get in the Teams Store. Now you can offer premium and enterprise plans for users who want more features.
 
 Here's a general idea of how to monetize your app:
 
@@ -26,7 +27,7 @@ Here's a general idea of how to monetize your app:
 
 1. [Configure your app for the SaaS offer](#configure-your-app-for-the-saas-offer).
 
-1. [Publish your app to the Teams store](#publish-your-app).
+1. [Publish your app to the Teams Store](#publish-your-app).
 
    :::column-end:::
    :::column span="1":::
@@ -43,10 +44,10 @@ For comprehensive guidance, see [how to plan a SaaS offer for the Microsoft comm
 When planning how to monetize your Teams app, here are some things to consider:
 
 * Decide on your subscription model. A transactable SaaS offer can include multiple subscription plans. Public subscription plans available to anyone are most common, but you may also want to target specific customers with deals only for them. For more information, see [private plans in the Microsoft commercial marketplace](/azure/marketplace/private-plans).
-* Read about the [*Sell through Microsoft* listing option](/azure/marketplace/plan-saas-offer#listing-options) for your SaaS offer, which is required if you want users to purchase subscription plans for your app directly through the Teams store.
-* Learn how [Azure Active Directory single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Azure Active Directory (Azure AD) SSO is required for Teams apps with SaaS offers.)
+* Read about the [*Sell through Microsoft* listing option](/azure/marketplace/plan-saas-offer#listing-options) for your SaaS offer, which is required if you want users to purchase subscription plans for your app directly through the Teams Store.
+* Learn how [Microsoft Entra single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Entra SSO is required for Teams apps with SaaS offers.)
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
-* Plan for mobile. To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related [commercial marketplace certification policies](/legal/marketplace/certification-policies#114048-mobile-experience).
+* Plan for mobile. To avoid violating third-party Teams Store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related [commercial marketplace certification policies](/legal/marketplace/certification-policies#114048-mobile-experience).
 
 ## Integrate with the SaaS Fulfillment APIs
 
@@ -68,15 +69,15 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 
 ## Build a landing page for subscription management
 
-When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
+When someone finishes buying a subscription plan for your app in the Teams Store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
 ### Best practices for landing pages
 
-Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
+Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [End-user purchase experience](end-user-purchase-experience.md).
 
-* Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Users must be able to sign in to your landing page with the same Microsoft Entra credentials they used to buy the subscription. For more information, see [Microsoft Entra ID and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
 * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.
@@ -113,7 +114,7 @@ See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete
 We recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can verify by creating a separate offer just for testing. For complete information, see [test offer overview](/azure/marketplace/plan-saas-offer#test-offer), [create a test offer](/azure/marketplace/create-saas-dev-test-offer), and [preview your offer](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> You can test an end-to-end transaction in Teams using the [Test preview for monetized apps](Test-preview-for-monetized-apps.md) feature. For live offers you must complete the app store validation process.
+> You can test an end-to-end transaction in Teams using the [Test preview for monetized apps](Test-preview-for-monetized-apps.md) feature. For live offers you must complete the Teams Store validation process.
 
 From a Teams standpoint, these tests must verify that the number of licenses and assignments match what’s in the Teams admin center when users:
 
@@ -127,7 +128,7 @@ Once you finish testing, [publish your offer live](/azure/marketplace/test-publi
 
 ## Configure your app for the SaaS offer
 
-You’ve published your SaaS offer, but you still must link it to your Teams app for users to see your subscription plans in the Teams store.
+You’ve published your SaaS offer, but you still must link it to your Teams app for users to see your subscription plans in the Teams Store.
 
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.
@@ -148,60 +149,33 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
 
 ## Publish your app
 
-You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
+You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams Store. For complete instructions, see [publish your app to the Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
 
 > [!IMPORTANT]
 >
-> * Even if your app is already listed on the Teams store, you still must go through the store validation process again to include your SaaS offer.
+> * Even if your app is already listed on the Teams Store, you still must go through the Teams Store validation process again to include your SaaS offer.
 > * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 
 Once published, users will see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
-## End-user purchasing experience
-
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*.
-
-1. In the Teams store, find and select the *Recloud* app.
-
-1. In the app details dialog, select **Buy a subscription**.
-
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
-
-1. Select your country to see subscription plans for your location.
-
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
-
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
-
-1. In the **Checkout** dialog, provide any required information and select **Place order**.
-
-    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
-
-1. When prompted, select **Set up now** to set up your subscription.
-
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
-
-1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](#build-a-landing-page-for-subscription-management)).
-
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
-
-## Admin purchasing experience
-
-Admins can purchase app subscription plans in the [Teams admin center](/microsoftteams/purchase-third-party-apps).
-
 ## Remove a SaaS offer from your app
 
-If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
+If you unlink a SaaS offer included in your Teams Store listing, you must republish your app to see the change in the Teams Store.
 
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
-1. Once the offer's unlinked, do the following to update your store listing:
+1. After the offer is unlinked, do the following to update your Teams Store listing:
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Tab App Monetization | This is an sample tab application which shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+
 ## See also
 
-* [Monetize your app](monetize-overview.md)
-* [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)

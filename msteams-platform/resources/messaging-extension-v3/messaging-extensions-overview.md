@@ -3,6 +3,7 @@ title: Develop message extensions
 description: In this module, learn how to get started with message extensions in Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
+ms.date: 04/02/2023
 ---
 # Develop message extensions for Microsoft Teams
 
@@ -24,7 +25,7 @@ How would you use message extensions? Here are a few possibilities:
 
 ## Types of message extensions
 
-There's primarily two kinds of message extensions you can create for Teams today. The following topics will guide you through the process of creating them:
+There's primarily two kinds of message extensions you can create for Teams today. The following topics guide you through the process of creating them:
 
-* [Search based message extensions](~/resources/messaging-extension-v3/search-extensions.md): Query your service for information and insert that into a message. Example: Lookup a work item
-* [Action-based message extensions](~/resources/messaging-extension-v3/create-extensions.md): Collect information from the user and post to a 3rd party service. Example: Create a work item
+* [Search based message extensions](~/resources/messaging-extension-v3/search-extensions.md): Query your service for information and insert that into a message. Example: Look up a work item
+* [Action-based message extensions](~/resources/messaging-extension-v3/create-extensions.md): Collect information from the user and post to a third party service. Example: Create a work item

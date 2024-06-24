@@ -14,7 +14,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
 # [Desktop](#tab/desktop)
 
@@ -235,3 +235,4 @@ Following are the command menu best practices:
 * [Build bots for Teams](../what-are-bots.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Messages in bot conversations](conversations/conversation-messages.md)
+* [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

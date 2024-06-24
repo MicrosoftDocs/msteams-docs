@@ -1,8 +1,9 @@
 ---
 title: Share to Teams from personal app or tab
-description: Learn how to enable the Share to Teams button on your personal app or tab, limitations and end user experience.
+description: Learn how to enable the Share to Teams button on your personal app or tab, limitations, and end user experience.
 ms.topic: reference
 ms.localizationpriority: medium
+ms.date: 12/13/2022
 ---
 # Share to Teams from personal app or tab
 
@@ -10,7 +11,15 @@ Share to Teams allows users to share the content from personal app or tab to oth
 
 The following image shows the Share to Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Screenshot shows you the share-to-teams-pop-up in personal app." lightbox="../../assets/images/share-to-teams/share-to-teams.PNG":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams mobile client." lightbox="../../assets/images/share-to-teams-mobile.png":::
+
+---
 
 ## Enable Share to Teams button
 
@@ -53,6 +62,11 @@ The following image shows the Share to Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
+Share to Teams button can be hosted or embedded in an app running inside Teams. You can add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
+
+> [!NOTE]
+> Share to Teams isn't supported inside a [modal dialog](~/task-modules-and-cards/what-are-task-modules.md) (referred as task modules in TeamsJS v1.x) or [Stageview](../../tabs/tabs-link-unfurling.md) in Teams web client. You can't open a modal on top of another modal.
+
 ## Response codes
 
 The following table provides the response codes:
@@ -72,18 +86,11 @@ The following table provides the response codes:
 | **7000** | Platform throttled the request because of API was invoked too frequently. |
 | **8000** | User aborted the operation. |
 | **9000** | Platform code is old and doesn't implement this API. |
-| **10000** | The return value is too big and has exceeded our size boundaries. |
-
-## Limitations
-
-The limitations to add Share to Teams button:
-
-* The Share to Teams button can be hosted or embedded in an app running inside Teams.
-* You can add Share to Teams button to the app created by using **Teams Javascript client library**.
+| **10000** | The return value is too large and has exceeded our size boundaries. |
 
 ## End user Share to Teams experience
 
-After you enable share to teams button on personal app or tab, you can share the content. To access, follow the steps:
+After you enable Share to Teams button on personal app or tab, you can share the content. To access, follow the steps:
 
 1. Open a personal app or tab and select **Share to Teams**.
 

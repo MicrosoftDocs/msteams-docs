@@ -4,6 +4,7 @@ description: Learn how to configure, distribute, and manage your apps using the 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 02/28/2023
 ---
 
 # Manage your apps in Developer Portal
@@ -13,8 +14,8 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Overview](#overview)
 * [Configure](#configure)
 * [Advanced](#advanced)
+* [Develop](#develop)
 * [Publish](#publish)
-* [Manage rollouts](#manage-rollouts)
 
 ## Overview
 
@@ -55,9 +56,11 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Currently, connector is not available for Government Community Cloud (GCC) tenants.
+  > Connector isn't available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
-* **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+  > [!NOTE]
+  > The maximum limit for RSC permissions is 16.
+* **Single sign-on**: Bot registered on Microsoft Entra ID supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Microsoft Entra ID to support SSO. For a bot registered on Microsoft Entra ID, add the **Application ID URI**. To get **Application ID URI** from Microsoft Entra ID, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
@@ -67,22 +70,22 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **Owners**
 
-    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app.
+    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app. If there are no active owners for an app, Tenant admins can own the apps by entering the app ID in Teams Developer Portal.
 
     To add an owner:
 
     1. In the **Advanced** section, select **Owners**.
     1. Select **Add owners**.
-    1. Enter a name and select a user ID from the drop-down list.
+    1. Enter a name and select a user ID from the dropdown list.
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
 * **App content**: You can configure your app with the following features:
   
-  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Task modules) is loading.
+  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Dialogs (referred as task modules in TeamsJS v1.x)) is loading.
   * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
   * **Supported channel types**: Lists the non-standard channel types that the app supports.
-  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the store.
+  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the Microsoft Teams Store.
 
 * **Environments**
 
@@ -103,16 +106,20 @@ In the **Advanced** section, you can see the following components to manage your
       Use the variable names instead of hard-coded values to set your app configurations.
 
       1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-      1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
+      1. Before downloading your app package (for example, when getting ready to publish to the Teams Store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 * **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
   * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
   * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
 
+## Develop
+
+In the **Develop** section, you can open and develop your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Teams Toolkit](develop-your-apps-with-teams-toolkit.md).
+
 ## Publish
 
-In the **Publish** section, you can publish your app to your org or to the Teams store.
+In the **Publish** section, you can publish your app to your org or to the Teams Store.
 
 * **Publish to org**:
 
@@ -131,26 +138,13 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
    You can download the app package by selecting **Download app package** button from the **Publish to store** page.
 
-* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
-
-## Manage rollouts
-
-In the **Manage rollouts** section, you can see the following components to manage your app in Developer Portal:
-
-* **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
-
-* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience. You can distribute your app to non-GA rings or GA rings. It's recommended to not distribute to several rings simultaneously. Instead, roll out gradually to higher order rings. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
-
-* **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
-
-   > [!NOTE]
-   > DevX team is allowed to withdraw your app from **Ring 4**.
+* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
 
-* On the **Overview** page, you can see a snapshot whether your app is configured and is validated against Teams store test cases.
+* On the **Overview** page, you can see a snapshot whether your app is configured and is validated against Teams Store test cases.
 * The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
 
 ## Use tools to create app features
@@ -159,7 +153,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
-* **Identity platform management (Preview)**: Register your apps with Azure AD to help users sign in and provide access to APIs.
+* **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app.
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
@@ -176,6 +170,9 @@ To add a bot:
     :::image type="content" source="../../assets/images/tdp/Add_new_bot.PNG" alt-text="Add a new bot by using bot management option." lightbox="../../assets/images/tdp/Add_new_bot.PNG":::
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
+
+  > [!NOTE]
+  > Bot ID doesn't support environment variables.
 
 ## See also
 

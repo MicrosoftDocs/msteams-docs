@@ -1,61 +1,94 @@
 ---
-title: Invoke and dismiss task modules
-description: Learn about invoking and dismissing task modules, task info object, task module sizing, task module deep link syntax using Code samples
+title: Invoke and dismiss dialogs
+description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/29/2023
 ---
 
-# Invoke and dismiss task modules
+# Invoke and dismiss dialogs
 
-Task modules can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how task modules are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works:
+Dialogs (referred as task modules in TeamsJS v1.x) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works.
 
-| Invoked using | Task module with HTML or JavaScript | Task module with Adaptive Card |
+> [!NOTE]
+> The `task` capability is replaced with `dialog` capability in both HTML-based dialogs (starting with TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0). For more information, see [dialog](./../../m365-apps/teamsjs-support-m365.md#dialog).
+
+| Invoked using | Dialog with HTML or JavaScript | Dialog with Adaptive Card |
 | --- | --- | --- |
-| JavaScript in a tab | 1. Use the Teams client SDK function `tasks.startTask()` with an optional `submitHandler(err, result)` callback function. <br/><br/> 2. In the task module code, when the user has performed the actions, call the Teams SDK function `tasks.submitTask()` with a `result` object as a parameter. If a `submitHandler` callback was specified in `tasks.startTask()`, Teams calls it with `result` as a parameter. If there was an error when invoking `tasks.startTask()`, the `submitHandler` function is called with an `err` string instead. <br/><br/> 3. You can also specify a `completionBotId` when calling `teams.startTask()`. Then the `result` is sent to the bot instead. | 1. Call the Teams client SDK function `tasks.startTask()` with a [TaskInfo object](#the-taskinfo-object) and `TaskInfo.card` containing the JSON for the Adaptive Card to show in the task module pop-up. <br/><br/> 2. If a `submitHandler` callback was specified in `tasks.startTask()`, Teams calls it with an `err` string, if there was an error when invoking `tasks.startTask()` or if the user closes the task module pop-up using the X at the upper right. <br/><br/> 3. If the user presses an `Action.Submit` button then its `data` object is returned as the value of `result`. |
-| Bot card button | 1. Bot card buttons, depending on the type of button, can invoke task modules in two ways, a deep link URL or by sending a `task/fetch` message. <br/><br/> 2. If the button's action `type` is `task/fetch` that is `Action.Submit` button type for Adaptive Cards, a `task/fetch invoke` event that is an HTTP POST is sent to the bot. The bot responds to the POST with HTTP 200 and the response body containing a wrapper around the [TaskInfo object](#the-taskinfo-object). For more information, see [invoking a task module using `task/fetch`](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch). Teams displays the task module. <br/><br/> 3. After the user has performed the actions, call the Teams SDK function `tasks.submitTask()` with a `result` object as a parameter. The bot receives a `task/submit invoke` message that contains the `result` object. <br/><br/> 4. You have three different ways to respond to the `task/submit` message, by doing nothing that is the task completed successfully, by displaying a message to the user in a pop-up window, or by invoking another task module window. For more information, see [detailed discussion on `task/submit`](task-modules-bots.md#responds-to-the-tasksubmit-messages). | <ul><li> Like buttons on Bot Framework cards, buttons on Adaptive Cards support two ways of invoking task modules, deep link URLs with `Action.openUrl` buttons, and `task/fetch` using `Action.Submit` buttons. </li></ul> <br/><br/> <ul><li> Task modules with Adaptive Cards work similarly to the HTML or JavaScript case. The major difference is that since there's no JavaScript when you're using Adaptive Cards, there's no way to call `tasks.submitTask()`. Instead, Teams takes the `data` object from `Action.Submit` and returns it as the payload of the `task/submit` event. For more information, see [responds to the `task/submit`messages](task-modules-bots.md#responds-to-the-tasksubmit-messages). </li></ul> |
-| Deep link URL <br/>[URL syntax](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module) | 1. Teams invokes the task module that is the URL that appears inside the `<iframe>` specified in the `url` parameter of the deep link. There's no `submitHandler` callback. <br/><br/> 2. Within the JavaScript of the page in the task module, call `tasks.submitTask()` to close it with a `result` object as a parameter, the same as when invoking it from a tab or a bot card button. However, completion logic is slightly different. If your completion logic resides on the client that is if there's no bot, there's no `submitHandler` callback, so any completion logic must be in the code preceding the call to `tasks.submitTask()`. Invocation errors are only reported through the console. If you have a bot, then you can specify a `completionBotId` parameter in the deep link to send the `result` object through a `task/submit` event. | 1. Teams invokes the task module that is the JSON card body of the Adaptive Card that is specified as a URL-encoded value of the `card` parameter of the deep link. <br/><br/> 2. The user closes the task module by selecting the X at the upper right of the task module or by pressing an `Action.Submit` button on the card. Since there's no `submitHandler` to call, the user must have a bot to send the value of the Adaptive Card fields. The user must use the `completionBotId` parameter in the deep link to specify the bot to send the data to using a `task/submit invoke` event. |
+| JavaScript in a tab | 1. Use the Teams client library function `dialog.url.open()` with optional `submitHandler(err, result)` and `messageFromChildHandler(postMessageChannel)` callback functions. <br/><br/> 2. In the dialog code, when the user has performed the actions, call the TeamsJS library function `dialog.url.submit()` with (optionally) a `result` object as a parameter. If a `submitHandler` callback was specified in `dialog.open()`, Teams calls it with `result` as a parameter. If there was an error when invoking `dialog.open()`, the `submitHandler` function is called with an `err` string instead. | 1. Call the Teams client library function `dialog.adaptiveCard.open()` with a [AdaptiveCardDialogInfo object](#adaptivecarddialoginfo-object) specifying the JSON for the Adaptive Card (`AdaptiveCardDialogInfo.card`)  to show in the modal dialog. <br/><br/> 2. If a `submitHandler` callback was specified in `dialog.adaptiveCard.open()`, Teams calls it with an `err` string if there was an error when invoking the dialog or if the user closes the modal dialog. <br/><br/> 3. If the user presses an `Action.Submit` button then its `data` object is returned as the value of `result`. |
+| Bot card button | 1. Bot card buttons, depending on the type of button, can invoke dialogs from either a deep link URL, or by sending a `task/fetch` message. <br/><br/> 2. If the button's action `type` is [`task/fetch`](task-modules-bots.md#invoke-a-dialog-using-taskfetch) or `Action.Submit` button type for Adaptive Cards, a `task/fetch invoke` event that is an HTTP POST is sent to the bot. The bot responds to the POST with HTTP 200 and the response body containing a wrapper around the [DialogInfo object](#dialoginfo-object). Teams displays the dialog. <br/><br/> 3. After the user has performed the actions, call the `Actions.Submit` Adaptive Card action with the result. The bot receives a `task/submit invoke` message that contains the result. <br/><br/> 4. You have three different ways to respond to the `task/submit` message: do nothing (if the task completed successfully), display a message to the user in the dialog, or invoke another dialog. For more information, see [detailed discussion on `task/submit`](task-modules-bots.md#responds-to-the-tasksubmit-messages). | <ul><li> Like buttons on Bot Framework cards, buttons on Adaptive Cards support two ways of invoking dialogs: deep link URLs with `Action.openUrl` buttons, and `task/fetch` using `Action.Submit` buttons. </li></ul> <br/><br/> <ul><li> Dialogs with Adaptive Cards work similarly to the HTML or JavaScript case. The major difference is that, because there's no JavaScript when you're using Adaptive Cards, there's no way to call *submit()*. Instead, Teams takes the `data` object from `Action.Submit` and returns it as the payload of the `task/submit` event. For more information, see [Responds to the `task/submit` messages](task-modules-bots.md#responds-to-the-tasksubmit-messages). </li></ul> |
+|  Deep link URL*<br/><br/>*\*Deprecated; supported for backwards compability*| 1. Teams invokes the dialog that is the URL that appears inside the `<iframe>` specified in the `url` parameter of the deep link. There's no `submitHandler` callback. <br/><br/> 2. Within the JavaScript of the page in the dialog, call `tasks.submitTask()` to close it with a `result` object as a parameter, the same as when invoking it from a tab or a bot card button. However, completion logic is slightly different. If your completion logic resides on the client that is if there's no bot, there's no `submitHandler` callback, so any completion logic must be in the code preceding the call to `tasks.submitTask()`. Invocation errors are only reported through the console. If you have a bot, then you can specify a `completionBotId` parameter in the deep link to send the `result` object through a `task/submit` event. | 1. Teams invokes the dialog that is the JSON card body of the Adaptive Card that is specified as a URL-encoded value of the `card` parameter of the deep link. <br/><br/> 2. The user closes the dialog by selecting the X at the upper right of the dialog or by pressing an `Action.Submit` button on the card. Since there's no `submitHandler` to call, the user must have a bot to send the value of the Adaptive Card fields. The user must use the `completionBotId` parameter in the deep link to specify the bot to send the data to using a `task/submit invoke` event. |
 
-The next section specifies the `TaskInfo` object that defines certain attributes for a task module.
+The next section specifies the `DialogInfo` object that defines certain attributes for a dialog.
 
-## The TaskInfo object
+## DialogInfo object
 
-The `TaskInfo` object contains the metadata for a task module. Define the `url` for an embedded iFrame or `card` for an Adaptive Card. The following table provides the object definition:
+The base `DialogInfo` object contains basic metadata for a dialog:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
 | `title` | string | This attribute appears below the app name and to the right of the app icon. |
-| `height` | number or string | This attribute can be a number representing the task module's height in pixels, or `small`, `medium`, or `large`. For more information, see [task module sizing](#task-module-sizing). |
-| `width` | number or string | This attribute can be a number representing the task module's width in pixels, or `small`, `medium`, or `large`. For more information, see [task module sizing](#task-module-sizing). |
-| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the task module. The URL's domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
-| `card` | Adaptive Card or Adaptive Card bot card attachment | This attribute is the JSON for the Adaptive Card to appear in the task module. If the user is invoking from a bot, use the Adaptive Card JSON in a Bot Framework `attachment` object. From a tab, the user must use an Adaptive Card. For more information, see [Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | This attribute opens the URL in a browser tab, if a client doesn't support the task module feature. |
-| `completionBotId` | string | This attribute specifies a bot App ID to send the result of the user's interaction with the task module. If specified, the bot receives a `task/submit invoke` event with a JSON object in the event payload. |
+| `height` | number or string | This attribute can be a number representing the dialog's height in pixels, or `small`, `medium`, or `large`. |
+| `width` | number or string | This attribute can be a number representing the dialog's width in pixels, or `small`, `medium`, or `large`. |
+
+### UrlDialogInfo object
+
+The `UrlDialogInfo` object for HTML-based dialogs extends the `DialogInfo` object and also includes:
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
+
+### AdaptiveCardDialogInfo object
+
+The `AdaptiveCardDialogInfo` object for Adaptive Card-based dialogs extends the *DialogInfo* object and also includes:
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| `card` | Adaptive Card or Adaptive Card bot card attachment | This attribute is the JSON for the Adaptive Card to appear in the dialog. If the user is invoking from a bot, use the Adaptive Card JSON in a Bot Framework `attachment` object. From a tab, the user must use an Adaptive Card. For more information, see [Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
+
+### BotAdaptiveCardDialogInfo object
+
+The `BotAdaptiveCardDialogInfo` object for bot-based Adaptive Card dialogs extends the *AdaptiveCardDialogInfo* object and also includes:
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| `completionBotId` | string | This attribute specifies a bot App ID to send the result of the user's interaction with the dialog. If specified, the bot receives a `task/submit invoke` event with a JSON object in the event payload. |
 
 > [!NOTE]
-> The task module feature requires that the domains of any URLs you want to load are included in the `validDomains` array in your app's manifest.
+> The dialog feature requires that the domains of any URLs you want to load are included in the `validDomains` array in your app's manifest.
 
-The next section specifies task module sizing that enables the user to set the height and width of the task module.
+The next section specifies dialog sizing that enables the user to set the height and width of the dialog.
 
-## Task module sizing
+## Dialog sizing
 
-Using integers for `TaskInfo.width` and `TaskInfo.height`, sets the height and width of the task module in pixels. However, depending on the size of the Team's window and screen resolution they're reduced proportionally while maintaining the aspect ratio that is width or height.
+The values of `DialogInfo.width` and `DialogInfo.height` set the height and width of the dialog in pixels. Depending on the size of the Teams window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
 
-If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
+If `DialogInfo.width` and `DialogInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 
-:::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="task module example":::
+:::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="dialog sizing example":::
 
-Task modules invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`.
+Dialogs invoked from a tab can be dynamically resized. After calling `dialog.*.open()` you can call `dialog.update.resize(newSize)` where height and width properties on the newSize object conform to the [DialogSize](/javascript/api/@microsoft/teams-js/dialogsize) specification, for example `{ height: 'medium', width: 'medium' }`.
 
-The next section provides examples of embedding task modules in a YouTube video and a PowerApp.
+The next section provides examples of embedding dialogs in a YouTube video and a PowerApp.
 
-## Task module CSS for HTML or JavaScript task modules
+## CSS for HTML or JavaScript dialogs
 
-HTML or JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, the user must provide the right CSS. The next sections provide some examples for a few use cases.
+HTML or JavaScript-based dialogs have access to the entire area of the dialog below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, you must specify the CSS.
+
+> [!WARNING]
+> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the *cloud.microsoft* domain. Perform the following steps before June 2024 to ensure your app continues to render on the Teams web client:
+>
+> 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
+>
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ***teams.cloud.microsoft*** domain. If your Teams app extends across Outlook and Microsoft 365, ensure you allow your app to access ***teams.cloud.microsoft***, ***outlook.cloud.microsoft***, and ***m365.cloud.microsoft*** domains.
+
+Here are a few examples of common use cases.
 
 ### Example 1: YouTube video
 
-YouTube offers the ability to embed videos on web pages. It's easy to embed videos on web pages in a task module using a simple stub web page.
+YouTube offers the ability to embed videos on web pages. It's easy to embed videos on web pages in a dialog using a simple stub web page.
 
 :::image type="content" source="../../assets/images/task-module/youtube-example.png" alt-text="Youtube example":::
 
@@ -94,7 +127,7 @@ The following code provides an example of the CSS:
 
 ### Example 2: PowerApp
 
-The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height, and width to achieve the desired presentation.
+You can use the same approach to embed a PowerApp. As the height or width of any individual PowerApp is customizable, you can adjust the height, and width to achieve the desired presentation.
 
 :::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="powerapp":::
 
@@ -125,11 +158,9 @@ The next section provides details on invoking your card using Adaptive Card or A
 
 ## Adaptive Card or Adaptive Card bot card attachment
 
-Depending on how you're invoking your `card`, you must use either an Adaptive Card or an Adaptive Card bot card attachment, which is an Adaptive Card wrapped in an attachment object.
+Depending on how you're invoking your card, you'll need to use either an Adaptive Card or an Adaptive Card bot card attachment (an Adaptive Card wrapped in an `attachment` object).
 
-When you're invoking from a tab, the user must use an Adaptive Card.
-
-The following code provides an example of an Adaptive Card:
+If you're invoking from a tab, use an Adaptive Card:
 
 ```json
 {
@@ -149,7 +180,7 @@ The following code provides an example of an Adaptive Card:
 }
 ```
 
-The following code provides an example of an Adaptive Card bot card attachment when you're invoking from a bot:
+If you're invoking from a bot, use an Adaptive Card bot card attachment:
 
 ```json
 {
@@ -172,14 +203,14 @@ The following code provides an example of an Adaptive Card bot card attachment w
 }
 ```
 
-The next section provides details on using a keyboard with your app's task module.
+The next section provides details on dialog accessibility.
 
 ## Keyboard and accessibility guidelines
 
-With HTML or JavaScript-based task modules, you must ensure your app's task module can be used with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. This includes the following two things:
+With HTML or JavaScript-based dialogs, you must ensure that users can interact with your dialog with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. Following are the important considerations:
 
 * Using the [tabindex attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
-* Handling the <kbd>Esc</kbd> key in the JavaScript for your task module. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
+* Handling the <kbd>Esc</kbd> key in the JavaScript for your dialog. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
 
     ```javascript
     // Handle the Esc key
@@ -190,23 +221,22 @@ With HTML or JavaScript-based task modules, you must ensure your app's task modu
     }
     ```
 
-Microsoft Teams ensures that keyboard navigation works properly from the task module header into your HTML and vice-versa.
+Microsoft Teams ensures that keyboard navigation works properly from the dialog header into your HTML and vice-versa.
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
-|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+> [Use dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)

@@ -1,125 +1,258 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
+description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-zone_pivot_groups: teams-app-platform
 ---
 
-# Deploy Teams app to the cloud
+# Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio Code
 
-Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+Microsoft Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
-::: zone pivot="visual-studio-code"
+You can deploy to the following types of cloud resources:
 
-## Deploy Teams app to the cloud using Microsoft Visual Studio Code
+* Azure App Services
+* Azure Functions
+* Azure Storage (as static website)
+* SharePoint
 
-You can deploy the following to the cloud:
-
-* The tab, such as front-end apps are deployed to Azure Storage and configured for static web hosting or a SharePoint site.
-* The back-end APIs are deployed to Azure Functions.
-* The bot or message extension is deployed to Azure App Service.
-
-  > [!NOTE]
-  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
+> [!NOTE]
+> Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
 
 ## Deploy Teams apps using Teams Toolkit
 
 The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
-* [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
-* [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
+### Sign in to your Azure account
 
-## Details on Teams app workload
+Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app. Before deploying your app to Azure App Service, Azure Functions, or Azure Storage, you must sign in to your Azure account.
 
-| Teams app workload | Source code | Build artifact| Target resource |
-|-------------|----------|---------------|---------------|
-|Tabs with React </br> The front-end workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
-|Tabs with SharePoint </br> The front-end workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
-|APIs on Azure Functions </br> The back-end workload | `yourProjectFolder/api`| Not applicable |Azure Functions |
-|Bots and message extensions </br> The back-end workload | `yourProjectFolder/bot` | Not applicable | Azure App Service |
+1. Open Visual Studio Code.
+1. Open the project folder in which you created app.
+1. Select the Teams Toolkit icon in the sidebar.
+1. Select **Sign in to Azure**.
 
-> [!NOTE]
-> When you include Azure API Management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API Management service.
+    > [!TIP]
+    > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
-::: zone-end
+    Your default web browser opens to let you sign in to the account.
 
-::: zone pivot="visual-studio"
+1. Sign in to your Azure account using your credentials.
+1. Close the browser when prompted and return to Visual Studio Code.
 
-## Deploy Teams app to the cloud using Visual Studio
+The ACCOUNTS section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-You can deploy the following to the cloud:
+Now you're ready to deploy your app to Azure!
 
-* The tab app, such as front-end apps are deployed to Azure Storage, configured for static web hosting.
-* The notification bot app with Azure Functions triggers can be deployed to Azure Functions.
-* The bot app or message extension is deployed to Azure App Services.
+Congratulations, you've created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
-After deploying, you can preview the app in Teams client or the web browser before you start using it.
+## Deploy to Azure
 
-## Deploy Teams app using Teams Toolkit
+1. Select **Deploy** from the **LIFECYCLE** section in the left pane.
 
-1. Open **Visual Studio**.
-1. Select **Create a new project** or open an existing project from the list.
-1. Right-click on your project **MyTeamsApp4** > **Teams Toolkit** > **Deploy to the cloud...**.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud_1.png" alt-text="deploy to cloud":::
+1. Select an environment. (If there's only one environment, this step is skipped.)
+1. Select **Deploy**.
 
-   > [!NOTE]
-   > In this scenario the project name is MyTeamsApp4.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
 
-1. In the pop-up window that appears, select **Deploy**.
+1. Select the Teams Toolkit icon in the sidebar.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
+### Customize deploy lifecycle in Teams
 
-   After the deploy process completes, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+To customize the deployment process, you can edit the deploy sections in 'teamsapp.yml'.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
+#### cli/runNpmCommand
 
-### Preview your app
+This action executes npm commands under specified directory with parameters.
 
-To preview your app, you need to create a **Zip App Package** and sideload into the Teams client.
+**Sample**
 
-1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
-1. Select **For Local** or **For Azure** to generate Teams app package.
+```yaml
+  - uses: cli/runNpmCommand
+    with:
+      workingDirectory: ./src
+      args: install
+```
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Generate teams app package":::
+**Parameters**
 
-**To preview your app in Teams client**
+| Parameter        | Description                                                                                                                             | Required | Default value |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| workingDirectory | Represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. | No       | Project root  |
+| args             | Command arguments                                                                                                                       | Yes      |               |
 
-1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+#### cli/runDotnetCommand
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Preview Teams app in teams client":::
+This action executes dotnet commands under specified directory with parameters.
 
-   Now your app is sideloaded into Teams.
+**Sample**
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams_1.png" alt-text="Sideload Teams app in teams client":::
+```yaml
+  - uses: cli/runDotnetCommand
+    with:
+      workingDirectory: ./src
+      execPath: /YOU_DOTNET_INSTALL_PATH
+      args: publish --configuration Release --runtime win-x86 --self-contained
+```
 
-The other way to preview your app:
+**Parameters**
 
-1. Right-click on your project **MyTeamsApp4** under **Solution Explorer**.
-1. Select **Teams Toolkit** > **Preview in Teams** to launch the Teams app in web browser.
+| Parameter        | Description                                                                                                                             | Required | Default value |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| workingDirectory | Represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. | No       | Project root  |
+| args             | npm Command arguments                                                                                                                   | Yes      |               |
+| execPath         | Executor path                                                                                                                           | No       | System PATH   |
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams_2.png" alt-text="Preview teams app in web browser":::
+#### cli/runNpxCommand
 
-   > [!NOTE]
-   > The same menu options are available in Project menu.
+**Sample**
 
-   Now your app is sideloaded into Teams.
+```yaml
+  - uses: cli/runNpxCommand
+    with:
+      workingDirectory: ./src
+      args: gulp package-solution --ship --no-color
+```
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams_1.png" alt-text="Sideload Teams app in teams client":::
+**Parameters**
 
-::: zone-end
+| Parameter        | Description                                                                                                                             | Required | Default value |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| workingDirectory | Represents the folder where you want to run the command. If your input value is a relative path, it's relative to the workingDirectory. | No       | Project root  |
+| args             | Command arguments                                                                                                                       | Yes      |               |
+
+#### azureAppService/zipDeploy
+
+**Sample**
+
+```yaml
+  - uses: azureAppService/zipDeploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+      dryRun: false
+      outputZipFile: ./.deployment/deployment.zip
+```
+
+**Parameters**
+
+| Parameter        | Description                                                                                                                                                                                                                                                       | Required | Default value                |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------- |
+| workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root.                                                                                                                           | No       | Project root                 |
+| artifactFolder   | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.                                                                                                                       | Yes      |                              |
+| ignoreFile       | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore.                                                                       | No       | null                         |
+| resourceId       | Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/)  | Yes      |                              |
+| dryRun           | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct.                                                                      | No       | false                        |
+| outputZipFile    | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any nonexistent files or folders. | No       | ./.deployment/deployment.zip |
+
+#### azureFunctions/zipDeploy
+
+This action upload and deploy the project to Azure Functions using the [zip deploy feature](/azure/azure-functions/deployment-zip-push).
+
+**Sample**
+
+```yaml
+  - uses: azureFunctions/zipDeploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+      dryRun: false
+      outputZipFile: ./.deployment/deployment.zip
+```
+
+**Parameters**
+
+| Parameter        | Description                                                                                                                                                                                                                                                                       | Required | Default value                |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------- |
+| workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root.                                                                                                                                           | No       | Project root                 |
+| artifactFolder   | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.                                                                                                                                       | Yes      |                              |
+| ignoreFile       | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore.                                                                                       | No       | null                         |
+| resourceId       | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) in the Azure portal. | Yes      |                              |
+| dryRun           | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct.                                                                                      | No       | false                        |
+| outputZipFile    | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. This file is reconstructed during deployment, reflecting all folders and files in your artifactFolder, and removing any nonexistent files or folders.                 | No       | ./.deployment/deployment.zip |
+
+#### azureStorage/deploy
+
+This action uploads and deploys the project to Azure Storage.
+
+**Sample**
+
+```yaml
+  - uses: azureStorage/deploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}} 
+```
+
+**Parameters**
+
+| Parameter        | Description                                                                                                                                                                                                                                                                       | Required | Default value |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root.                                                                                                                                           | No       | Project root  |
+| artifactFolder   | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.                                                                                                                                       | Yes      |               |
+| ignoreFile       | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore.                                                                                       | No       | null          |
+| resourceId       | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) in the Azure portal. | Yes      |               |
+
+#### azureStorage/deploy
+
+This action uploads and deploys the project to Azure Storage.
+
+**Sample**
+
+```yaml
+  - uses: azureStorage/deploy
+    with:
+      workingDirectory: ./src
+      artifactFolder: .
+      ignoreFile: ./.webappignore
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}} 
+```
+
+**Parameters**
+
+| Parameter        | Description                                                                                                                                                                                                                                                                       | Required | Default value |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| workingDirectory | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the project root.                                                                                                                                           | No       | Project root  |
+| artifactFolder   | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory.                                                                                                                                       | Yes      |               |
+| ignoreFile       | Specifies the file path of ignoreFile used during upload. This file can be utilized to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore.                                                                                       | No       | null          |
+| resourceId       | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its [resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) in the Azure portal. | Yes      |               |
+
+#### spfx/deploy
+
+This action upload and deploys generated sppkg to SharePoint app catalog. You can create tenant app catalog manually or by setting createAppCatalogIfNotExist to true if you don't have one in current M365 tenant.
+
+**Sample**
+
+```yaml
+- uses: spfx/deploy
+    with:
+      createAppCatalogIfNotExist: false
+      packageSolutionPath: ./src/config/package-solution.json
+```
+
+**Parameters**
+
+| Parameter                  | Description                                                                                              | Required | Default value |
+| -------------------------- | -------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| createAppCatalogIfNotExist | If the value is true, this action creates tenant app catalog first if not exist.                         | No       | False         |
+| packageSolutionPath        | Path to package-solution.json in SPFx project. This action honors the configuration to get target sppkg. | Yes      |               |
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Create multi-capability Teams apps](add-capability.md)
-* [Add cloud resources to Microsoft Teams app](add-resource.md)
-* [Create new Teams app in Visual Studio](create-new-project.md#create-new-teams-app-in-visual-studio)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Debug your Teams app locally using Visual Studio](debug-local.md#debug-your-teams-app-locally-using-visual-studio)
+* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add cloud resources to Teams app](add-resource.md)
+* [Provision cloud resources](provision.md)
+* [Edit app manifest](TeamsFx-preview-and-customize-app-manifest.md)

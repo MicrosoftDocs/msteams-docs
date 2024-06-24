@@ -3,7 +3,7 @@ title: Create a bot
 description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 12/07/2018
+ms.date: 04/02/2023
 ---
 # Create a bot
 
@@ -17,7 +17,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 **Teams Developer Portal for Teams** is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
 
-1. Create the bot using [Bot Framework](https://dev.botframework.com/bots/new). **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to re-use any Microsoft App ID you generated if you've already created your app package/manifest.
+1. Create the bot using [Bot Framework](https://dev.botframework.com/bots/new). **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to reuse any Microsoft App ID you generated if you've already created your app package/manifest.
 
    ![Bot Framework registration page](~/assets/images/bots/bfregister.png)
 
@@ -28,7 +28,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 3. Test the bot using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
-4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok.io/api/messages`.
+4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok-free.app/api/messages`.
 
 > [!NOTE]
 >

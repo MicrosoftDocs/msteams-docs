@@ -5,6 +5,7 @@ description: In this article, learn about tools and Bot Framework SDKs(C#, Pytho
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 12/05/2022
 ---
 
 # Bots and SDKs
@@ -12,11 +13,12 @@ ms.author: anclear
 You can create a bot that works in Microsoft Teams with one of the following tools or capabilities:
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
-* [Azure Active Directory](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
+* [Microsoft Entra ID](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
 * [Developer Portal](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks and connectors](#bots-with-webhooks-and-connectors)
+* [Bot Framework Composer](/composer/introduction)
 
 ## Bots with the Microsoft Bot Framework
 
@@ -29,21 +31,20 @@ Your Teams bot consists of the following:
 > [!TIP]
 > Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
+The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
 * Use specialized card types like the connector card for Microsoft 365 Groups.
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
-> [!IMPORTANT]
-> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
 ## Bots with Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
 
 >[!NOTE]
->You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
 ## Bots with webhooks and connectors
 
@@ -61,7 +62,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
@@ -114,9 +115,30 @@ As there are only six visible commands in the current bot menu, anything more is
 
 One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
+## Limitations and known issues
+
+If you're unable to create a bot in Developer Portal, ensure the following:
+
+* **App registration is enabled for users**: When an app registration is disabled org-wide, users (other than users with Microsoft Entra admin access) can't register new apps. To allow users to register apps, admins must toggle **Users can register applications** to **Yes** in the [Microsoft Entra admin center](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions).
+
+* **Give permissions to specific users to register new apps**:
+
+  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the tenant admin adds Microsoft Entra ID to a user with the following roles:
+
+    * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
+    * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
+    * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+
+    For information about how to assign roles, see [Assign Microsoft Entra roles to users](/azure/active-directory/roles/manage-roles-portal).
+
+  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the tenant admin adds Microsoft Entra ID  to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+
+    * `microsoft.directory/applications/create`
+    * `microsoft.directory/applications/createAsOwner`
+
 ## Code snippets
 
-The following code provides an example of bot activity for a channel team scope:
+The following code provides an example of a bot activity for a channel team scope:
 
 # [C#](#tab/dotnet)
 
@@ -199,6 +221,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [Node.js](#tab/nodejs)
+
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
 
@@ -214,10 +237,10 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python|
-|----------------|-----------------|--------------|----------------|-------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
-| Bot samples | Set of bot samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+|Sample name | Description | .NETCore | Node.js | Python| Manifest
+|----------------|-----------------|--------------|----------------|-------|-------|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
+| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 

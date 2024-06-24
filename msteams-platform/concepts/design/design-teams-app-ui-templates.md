@@ -5,6 +5,7 @@ description: Learn to design your app faster with standardized UI components, la
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
+ms.date: 12/27/2022
 ---
 # Designing your Microsoft Teams app with UI templates
 
@@ -20,6 +21,8 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 
 > [!div class="nextstepaction"]
 > [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
 ### Microsoft Teams UI Library
 
@@ -52,7 +55,7 @@ In Teams, a calendar is where a user views, schedules, and manages upcoming and 
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Example shows a calendar UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="Example shows a calendar UI template on desktop." lightbox="../../assets/images/ui-templates/desktop-calendar.png":::
 
 ## Dashboard
 
@@ -70,7 +73,7 @@ A dashboard displays different types of content in a central location (such as a
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop." lightbox="../../assets/images/ui-templates/dashboard.png":::
 
 ## Data visualization
 
@@ -106,7 +109,7 @@ The empty state template can be used for many scenarios, including sign in, firs
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop." lightbox="../../assets/images/ui-templates/empty-state.png":::
 
 ## Filter
 
@@ -140,7 +143,7 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 
 ### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop.":::
+:::image type="content" source="../../assets/form.png" alt-text="Example shows a form UI template on desktop." lightbox="../../assets/form.png":::
 
 ## List
 
@@ -157,7 +160,7 @@ You can use a list to display related items in a scannable format and allow user
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop." lightbox="../../assets/images/ui-templates/list.png":::
 
 ## Sign in
 
@@ -165,7 +168,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Top use case
 
-* Authenticate users
+Authenticate users
 
 ### Mobile
 
@@ -173,7 +176,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop." lightbox="../../assets/images/ui-templates/sign-in.png":::
 
 ## Settings
 
@@ -184,9 +187,9 @@ Settings screens are where users can configure their preferences with your app.
 
 ### Top use case
 
-* Manage app features
+Manage app features
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template.":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." lightbox="../../assets/images/ui-templates/settings.png":::
 
 ## Task board
 
@@ -204,7 +207,7 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop." lightbox="../../assets/images/ui-templates/task-board.png":::
 
 ## Wizard
 
@@ -222,7 +225,7 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop.":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." lightbox="../../assets/images/ui-templates/wizard.png":::
 
 ## See also
 

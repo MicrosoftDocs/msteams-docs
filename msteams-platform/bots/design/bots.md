@@ -4,14 +4,14 @@ description: In this module, learn how to design and add a Teams bot and its use
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: lajanuar
+ms.date: 04/13/2023
 ---
 # Designing your Microsoft Teams bot
 
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
-> Bots are available in Government Community Cloud (GCC) and GCC High environments but not in Department of Defense (DoD) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
@@ -36,11 +36,11 @@ Users can access bots that were added on desktop with an @mention.
 
 Users can add a bot one of the following ways:
 
-* From the Teams store.
+* From the Microsoft Teams Store.
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
-    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention.":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." lightbox="../../assets/images/bots/add-bot-chat-at-mention.png":::
 
 ## Introduce a bot
 
@@ -56,7 +56,7 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app.":::
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." lightbox="../../assets/images/bots/bot-personal-welcome.png":::
 
 ### Welcome message in channels and group chats
 
@@ -68,7 +68,7 @@ Your bot's introduction should be slightly different in channels and group chats
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context.":::
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context."lightbox="../../assets/images/bots/bot-group-welcome.png":::
 
 ### Bot authentication with single sign-on
 
@@ -82,7 +82,7 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Example shows a bot with a sign-in button.":::
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Example shows a bot with a sign-in button." lightbox="../../assets/images/bots/bot-sso-example.png":::
 
 ### Tours
 
@@ -101,11 +101,11 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat.":::
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat." lightbox="../../assets/images/bots/bot-tour-personal.png":::
 
 ### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 #### Mobile
 
@@ -113,11 +113,11 @@ In channels and group chats, a tour should open in a modal (also known as a [tas
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel.":::
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel." lightbox="../../assets/images/bots/bot-tour-channel.png":::
 
 ## Chat with a bot
 
-Bots integrate directly into Team’s messaging framework. Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks. Bots can proactively notify users about changes or updates to your app via chat.
+Bots integrate directly into Team’s messaging framework. Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks. Bots can proactively notify users about changes or updates to your app through chat.
 
 ### Chat with a bot in different contexts
 
@@ -139,12 +139,13 @@ You can use bots in the following contexts:
 |1|**App name and icon**|
 |2|**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).|
 |3|**Custom tabs**: Opens other content related to your app.|
-|4|**Chat bubble**: Bot conversations use the Teams messaging framework.|
-|5|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+|4|**About tab**: Displays basic information about your app.|
+|5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
+|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Example shows a bot's structural anatomy.":::
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Example shows a bot's structural anatomy." lightbox="../../assets/images/bots/bot-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -164,7 +165,7 @@ The list of commands should be brief. The menu is only meant to highlight your b
 
 The command menu must always be available regardless of the state of the conversation.
 
-:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu.":::
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu." lightbox="../../assets/images/bots/bot-command-menu.png":::
 
 ## Understand what people are saying
 
@@ -219,7 +220,7 @@ Bots can deliver an exact match to a query or a group of related matches to help
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot." lightbox="../../assets/images/bots/bot-simple-query.png":::
 
 ### Multi-turn interactions
 
@@ -233,7 +234,7 @@ In the following examples, the bot responds to each message with options for wha
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." lightbox="../../assets/images/bots/bot-multi-turn.png":::
 
 ### Reach out to users
 
@@ -253,11 +254,11 @@ Now in that channel, the user can read their message from the bot.
 
 In the following example, the user gets a toast notification that a bot messaged them in another channel.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel.":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." lightbox="../../assets/images/bots/bot-proactive-message-toast.png":::
 
 Now in that channel, the user can read their message from the bot.
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message.":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." lightbox="../../assets/images/bots/bot-proactive-message.png":::
 
 ### Use tabs with bots
 
@@ -269,13 +270,13 @@ In personal apps, a tab can complement what your bot can do. For example, if you
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content.":::
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." lightbox="../../assets/images/bots/bot-with-tab.png":::
 
 ## Manage a bot
 
-Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
+Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
 
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings.":::
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a dialog for configuring a bot's settings." lightbox="../../assets/images/bots/manage-bot-task-module.png":::
 
 ## Best practices
 
@@ -354,11 +355,11 @@ People will quickly abandon your bot if they can’t troubleshoot issues.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use task modules or tabs with your bot for complex interactions.":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use modal dialogs or tabs with your bot for complex interactions.":::
 
-#### Do: Use task modules or tabs
+#### Do: Use dialogs or tabs
 
-If your bot provides an answer that requires a few more steps, you can link to a task module or tab to complete the task or flow.
+If your bot provides an answer that requires a few more steps, you can link to a modal dialog or tab to complete the task or flow.
 
    :::column-end:::
    :::column span="":::
@@ -379,7 +380,7 @@ An extensive conversation to complete a single task is slow and overly complex. 
 
 #### Do: Only show sensitive info in a personal context
 
-If your bot is in a group chat or channel, we recommend directing users to a private location (such as a task module, tab, or browser) to view sensitive information.
+If your bot is in a group chat or channel, we recommend directing users to a private location (such as a modal dialog, tab, or browser) to view sensitive information.
 
    :::column-end:::
    :::column span="":::
@@ -398,4 +399,4 @@ These other guidelines may help with your bot design:
 
 * [Designing your personal app](../../concepts/design/personal-apps.md)
 * [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-* [Designing task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)

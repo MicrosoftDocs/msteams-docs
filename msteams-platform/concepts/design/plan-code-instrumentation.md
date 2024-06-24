@@ -5,6 +5,7 @@ description: Learn about planning code instrumentation using an analytics servic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 11/28/2022
 ---
 
 # Plan code instrumentation using analytics service
@@ -22,7 +23,7 @@ Azure Applications Insights does auto-instrumentation to automatically collect p
 - The [retention workbook](/azure/azure-monitor/app/usage-retention) provides user retention analysis out of box. The workbook allows measuring retention by pre-defined custom events.
 - [User Flows](/azure/azure-monitor/app/usage-flows) provides useful insight on how your users navigate through the app and can be used for tracking custom events as well.
 
-## Telemetry as an Investment
+## Telemetry as an investment
 
 Collecting instrumentation data using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using instrumentation goes beyond the solution. It provides a window into your user’s mind and collects behavior patterns that can help you find the crucial product market fit.
 
@@ -36,5 +37,5 @@ Analyzing your solution usage and insights on features that your end users value
 - [Get context for your tab](../../tabs/how-to/access-teams-context.md)
 - [Get Teams specific context for your bot](../../bots/how-to/get-teams-context.md)
 - [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-- [Build Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+- [Build dialogs](../../task-modules-and-cards/what-are-task-modules.md)
 - [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)

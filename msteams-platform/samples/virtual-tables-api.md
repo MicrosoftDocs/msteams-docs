@@ -5,6 +5,7 @@ description: In this module, learn about Virtual Tables web API for Collaboratio
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Virtual tables Web API

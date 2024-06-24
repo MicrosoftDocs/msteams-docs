@@ -2,9 +2,10 @@
 title: App design process
 author: heath-hamilton
 description: Learn how and when you might use Microsoft tools and resources to design an effective Microsoft Teams app.
-ms.localizationpriority: mediums
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+ms.date: 01/07/2024
 ---
 # Design process for Microsoft Teams apps
 
@@ -33,7 +34,7 @@ Microsoft provides tools to make it easier to design your Teams app. At minimum,
 
 The Microsoft Teams UI Kit can help you develop an effective Teams app in the shortest amount of time. The UI kit has everything you see in these docs related to Teams app design and much more, including extensive examples and variations.
 
-The UI kit also has pre-built templates and components that you can copy and modify as needed, so you can spend more time designing the best user experience instead worrying about what a button should look like.
+The UI kit also has prebuilt templates and components that you can copy and modify as needed, so you can spend more time designing the best user experience instead worrying about what a button should look like.
 
 > [!TIP]
 > **Is the UI kit for me?** If you have any part in creating a Teams app, yes. Understanding how to craft a Teams app is not only helpful to designers but product managers, developers using IDEs, and makers building with low-code tools (such as the Microsoft Power Platform).
@@ -56,7 +57,7 @@ Read in depth about or at least familiarize yourself with the [fundamentals of T
 
 After the planning phase, you can determine which Teams capabilities fit your app’s use cases. For example, if you want to proactively notify people, a bot might be the right capability.
 
-The UI kit has pre built designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
+The UI kit has prebuilt designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
 
 1. In the UI kit’s left nav, go to **App capabilities** and select the capability you want for your app.
 1. Copy what you need from that page to design your app.<br />
@@ -96,18 +97,19 @@ Currently, not all templates listed in the UI kit are available in the library.
 
 ### Build with basic UI components
 
-Not unlike the design phase, you can use these Fluent UI components in your app project if a UI template is missing something you need, or you just want to build the app from scratch. 
+Not unlike the design phase, you can use these Fluent UI components in your app project if a UI template is missing something you need, or you just want to build the app from scratch.
 
-(Note: If you notice something missing or have an idea for a template, consider contributing to the Teams UI Library repo.)
+> [!NOTE]
+> If you notice something missing or have an idea for a template, consider contributing to the Teams UI Library repo.
 
 > [!div class="nextstepaction"]
-> [Get the library (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Get the library (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
 
 ## Review design resources
 
 Whether you’re just starting on your app or close to a production-ready app, we recommend that you periodically review the following resources:
 
-* **Microsoft Teams store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Microsoft Teams Store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the Teams Store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
 
 ## See also

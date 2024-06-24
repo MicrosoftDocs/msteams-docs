@@ -35,18 +35,18 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample Node.js app repo from GitHub. |
     | &nbsp; |  [gulp](https://gulpjs.com/docs/en/getting-started/quick-start) | Open-source JavaScript toolkit. Install version 4.0.0 or later. |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. | 
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place. | 
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Browser tools for tabs development with JavaScript. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
@@ -56,7 +56,7 @@ items:
     Use the following commands to verify that the installed versions for the tools are as needed.
 
     > [!NOTE]
-    > Use the terminal window that you're most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts will run on most platforms.
+    > Use the terminal window that you're most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts can run on most platforms.
 
     To verify the version numbers of tools installed:
 
@@ -113,24 +113,24 @@ items:
     ## Set up your Teams development tenant
 
     A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings.
-    This space is also where you sideload and test your app. 
+    This space is also where you upload and test your custom app. 
     
     Let's verify if you're ready to develop with the tenant.
 
-    ### Enable sideloading option
+    ### Enable custom app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can sideload apps in Teams:
+    Verify if you can upload a custom apps in Teams:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of illustration shows the option to upload a custom app in Teams.":::
 
@@ -256,7 +256,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Screenshot of image showing ngrok tunnel.":::
 
-        *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
+        *Ngrok* listens to requests from the internet and routes them to your app running on port 3333.
 
     To verify the app's local deployment:
 
@@ -279,10 +279,10 @@ items:
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
         
         > [!TIP]
-        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
+        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session returns useful debugging information in this window. The paid version of *ngrok* allows persistent names.
 
         >[!IMPORTANT] 
-        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
+        > If you use the free version of ngrok, your app is available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
     <a name="DeployToTeams"></a>
 
@@ -324,7 +324,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams Store!
 
     After you build and test your Teams app, you can configure and preview it using Developer Portal.
 
@@ -642,10 +642,10 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Screenshot of image showing Preview button.":::
 
-        The Developer Portal informs you that your app is sideloaded successfully.
+        The Developer Portal informs you that your custom app is uploaded successfully.
 
     1. Select **Manage your apps**.
-       Your app is listed in the sideloaded apps. 
+       Your app is listed in the uploaded apps. 
     1. Find your app using the search box, select the three-dots in its row.
     1. Select the **View** option.
         The **Add** page appears for your app.

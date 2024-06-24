@@ -1,76 +1,80 @@
 ---
 title: Apps for Teams meetings
 author: surbhigupta
-description: Learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
+description: In this article, learn how apps works in Microsoft Teams meeting based on participant and user role and app extensibility.
 ms.topic: overview
-ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
 
-# Apps for Teams meetings and calls
+# Build apps for Teams meetings and calls
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle.
 
-:::image type="content" source="../assets/images/apps-in-meetings/meeting-app-extensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
-
 <!--
+:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+-->
+
 :::row:::
     :::column span="":::
-           &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
-    :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::  :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
     :::column-end:::
-        :::column span="":::
-           &nbsp;
-        :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
+    :::column-end:::
+    :::column span="":::
+    :::column-end:::
 :::row-end:::
 :::row:::
-
-        :::column span="":::
-        &nbsp; 
-    :::column-end:::
-
     :::column span="":::
-
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
-        <br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
-        <br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
-
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
+    :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/0-app-extensibility.png" border="false":::
     :::column-end:::
-
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
-        <br><br><br><br>
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="build-extensible-conversation-for-meeting-chat.md":::
-        <br><br><br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
     :::column-end:::
-
     :::column span="":::
-        &nbsp; 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
-        &nbsp;
     :::column-end:::
-    :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::      :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
-        :::column span="":::
-        &nbsp;
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#receive-meeting-start-and-end-events":::
+    :::column-end:::
+    :::column span="":::
     :::column-end:::
 :::row-end:::
--->
 
-You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
+<br>
+You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
+
+Custom apps built for your org (LOB apps) built for meetings and calls are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
+
+Third-party apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
+
+You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
 ## Supported meeting types in Teams
 
@@ -86,16 +90,24 @@ Teams supports access to apps during meeting for the following meeting types:
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps for scheduled public channel meetings are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-> * Apps aren't supported in the following:
->   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
->   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
->   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
->   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+> Apps aren't supported in the following:
+>
+> * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+> * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+> * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+> * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
 
 ## Meeting lifecycle
 
 A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the user type and user's role in a Teams meeting.
+
+### App caching for tab app in Teams meeting
+
+You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [app caching for your tab app](../tabs/how-to/app-caching.md).
+
+### Default theme for meeting apps
+
+By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api). Earlier versions of Teams clients only support dark and contrast theme for apps in Teams meetings.
 
 ## User types in Teams
 
@@ -107,14 +119,14 @@ Teams supports user types, such as in-tenant, guest, federated or external, and 
 
 The following list details the various user types along with their accessibility:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Entra ID for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Microsoft Entra ID and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your Teams or other shared resources from your organization. Guest access is a better option for external users to have access to Teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization will be in effect.
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
+* **Anonymous**: Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -140,21 +152,10 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 > * Presenter role isn't available in one-on-one calls.
 > * A user who starts the group call from a chat is considered as an organizer.
 
-> [!IMPORTANT]
->
-> * Currently, third-party apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
-> * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
-
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
-* [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
-* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
-* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
-* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
-* [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [Integrate Teams meetings and calls in external apps](../get-started/b2c-apps.md)

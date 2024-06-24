@@ -4,6 +4,7 @@ description: In this article, learn how to use Teams JavaScript client library t
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/24/2023
 ---
 
 # Integrate People Picker
@@ -14,7 +15,7 @@ You can use [Microsoft Teams JavaScript client library](/javascript/api/overview
 
 ## Advantages of using People Picker
 
-* Works on all Teams capabilities, such as task module, chat, channel, meeting tab, and personal app.
+* Works on all Teams capabilities, such as dialog (referred as task module in TeamsJS v1.x), chat, channel, meeting tab, and personal app.
 * Allows the user to search and select people in a chat, channel, or the entire organization within Teams.
 * Helps in scenarios involving task assignment, tagging, and notifying user.
 * Saves significant time and effort in comparison to building any similar control.
@@ -35,7 +36,7 @@ The `selectPeople` API comes with the following input configurations:
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`|String| It's an optional parameter and sets the title for the People Picker control.|`selectPeople`|
-|`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
+|`setSelected`|String| It's an optional parameter. You must pass Microsoft Entra IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|**False**|
 |`singleSelect`|Boolean|It's an optional parameter and when set to true, it launches the People Picker and restricts the selection to only one user.|**False**|
 
@@ -48,7 +49,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker Picker on mobile.":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -57,7 +58,7 @@ The People Picker control on web or desktop is launched in a modal window on top
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name desktop":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Screenshot shows the People Picker by name on desktop.":::
 
 ---
 
@@ -111,9 +112,14 @@ The following table lists the error codes and their descriptions:
 | **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
 
+## Code sample
+
+| Sample name           | Description | .NET |Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|:---------|
+|Tab people picker | This sample shows the feature of people picker using teams js client sdk inside tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
+
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

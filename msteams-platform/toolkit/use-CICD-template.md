@@ -1,7 +1,7 @@
 ---
 title: CI/CD templates
 author: MuyangAmigo
-description:  In this module, learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates
+description:  In this module, learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates.
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,237 +10,368 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with Teams Toolkit. A Teams app CI/CD pipeline consists of three parts:
 
-|Tools and Templates | Description |
-|---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
-|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
-|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
+1. Build the project.
 
-## Set up pipelines
+1. Deploy the project to cloud resources.
 
-You can set up pipelines with the following platforms:
-
-1. [Set up pipelines with GitHub](#set-up-pipelines-with-github)
-1. [Set up pipelines with Azure DevOps](#set-up-pipelines-with-azure-devops)
-1. [Set up pipelines with Jenkins](#set-up-pipelines-with-jenkins)
-1. [Set up pipelines for other platforms](#set-up-pipelines-for-other-platforms)
-
-## Set up pipelines with GitHub
-
-To set up pipelines with GitHub for CI/CD:
-
-* Create workflow templates.
-
-  * Visual Studio Code
-  * TeamsFx CLI
-
-* Customize CI/CD workflow.
-
-### Create workflow templates
-
-You can create the following workflow templates with GitHub:
-
-**Teams Toolkit in Visual Studio Code**
-
-1. Create a new Teams app project using Teams Toolkit.
-
-1. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
-
-1. Select **Add features**
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="Adding feature":::
-
-1. Select **Add CI/CD Workflows**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="Select CI/CD workflow":::
-
-1. Select an environment from the command prompt.
-1. Select **GitHub** as the CI/CD provider.
-1. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
-1. Open the template and customize the workflows that fit into your scenarios.
-1. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
-
-**TeamsFx CLI**
-
-1. Enter `cd` to your Teams app project directory.
-2. Enter `teamsfx add cicd` command to start the interactive command process.
-3. Select an environment from the command prompt.
-4. Select **GitHub** as the CI/CD provider.
-5. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
-7. Open the template and customize the workflows that fit into your scenarios.
-8. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
+1. Generate Teams app package.
 
 > [!NOTE]
-> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in Visual Studio Code or TeamsFx CLI.
+> To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
 
-### Customize CI/CD workflow
+To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
 
-You can change or remove the test scripts to customize CI/CD workflow:
+* [Set up CI/CD pipelines with Teams Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli). *[Recommended]*
 
-1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
-1. Change the build scripts if necessary.
-1. Remove the test scripts as required.
+* [Set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow). *[Optional]*
 
-## Set up pipelines with Azure DevOps
-
-To set up pipelines with Azure DevOps for CI/CD:
-
-* Create workflow templates.
-
-  * Visual Studio Code
-  * TeamsFx CLI
-
-* Customize CI/CD workflow.
-
-### Create workflow templates
-
-You can create the following workflow templates with Azure DevOps:
-
-**Teams Toolkit in Visual Studio Code**
-
-1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
-1. Select **Add CI/CD Workflows**.
-1. Select an environment from the command prompt.
-1. Select **Azure DevOps** as CI/CD provider.
-1. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
-1. Open the template and customize the workflows that fit into your scenarios.
-1. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
-
-**TeamsFx CLI**
-
-1. Enter `cd` to your Teams app project directory.
-2. Enter `teamsfx add cicd` command to start the interactive command process.
-3. Select an environment from the command prompt.
-4. Select **Azure DevOps** as CI/CD provider.
-5. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
-7. Open the template and customize the workflows that fit into your scenarios.
-8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
+## Set up CI/CD pipelines with Teams Toolkit CLI
 
 > [!NOTE]
-> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in Visual Studio Code or TeamsFx CLI.
+> Use Teams Toolkit version 5.6.0 or a later.
 
-### Customize CI workflow
+You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
 
-You can make the following changes for the script or workflow definition:
+### Prerequisites
 
-1. Use npm build script or customize the way you build in the automation code.
-1. Use npm test script, which returns zero for success, and change the test commands.
+| **Item** | **Description** |
+| --- | --- |
+| Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | • Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> • Automatically generate to run the `Provision` command in Teams Toolkit. |
+| Configure Azure resources |• Manually prepare the resources by examining the bicep files under the `infra` folder. <br> • Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
+| Ensure that you've a service principal and its access policies on resources are properly configured. Set up a service principal as follows:| • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). <br> • The `Teamsapp` command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret.":::|
 
-### Customize CD workflow
+After you've completed the prerequisites, let's set up a pipeline:
 
-You can make the following changes for the script or workflow definition:
+* [Set up pipeline with GitHub](#set-up-pipeline-with-github).
 
-1. Ensure you have an npm build script or customize the way you build in the automation code.
-1. Ensure you have an npm test script, which returns zero for success or change the test commands.
+* [Set up pipeline with Azure DevOps](#set-up-pipeline-with-azure-devops).
 
-## Set up pipelines with Jenkins
+### Set up pipeline with GitHub
 
-To set up pipelines with Jenkins for CI/CD:
+To set up the pipeline with GitHub, follow these steps:
 
-* Create workflow templates.
+1. Open Visual Studio Code.
 
-  * Visual Studio Code
-  * TeamsFx CLI
+1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
 
-* Customize CI/CD workflow.
+    ```yaml
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        env:
+          TEAMSAPP_CLI_VERSION: "3.0.0"
+          # Add extra environment variables here so that teamsapp cli can use them.
+    
+        steps:
+          - name: "Checkout GitHub Action"
+            uses: actions/checkout@v4
+    
+          - name: Setup Node 20.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: "20.x"
+    
+          - name: install cli
+            run: |
+              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+    
+          - name: Login Azure by service principal
+            run: |
+              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              --service-principal true \
+              --tenant ${{vars.AZURE_TENANT_ID}} \
+              --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
+              --interactive false
+    
+          - name: Deploy to hosting environment
+            run: |
+              npx teamsapp deploy --ignore-env-file true \
+              --interactive false
+    
+          - name: Package app
+            run: |
+              npx teamsapp package
+    
+          - name: upload appPackage
+            uses: actions/upload-artifact@v4
+            with:
+              name: artifact
+              path: appPackage/build/appPackage.zip
+    ```
 
-### Create workflow templates
+    > [!NOTE]
+    > The default pipeline triggers when push events occur on the main branch. You've the option to modify it to suit your specific requirements.
 
-You can create the following workflow templates with Jenkins:
+1. Go to GitHub.
 
-**Teams Toolkit in Visual Studio Code**
+1. Update the following variables and secrets you created during the prerequisites:
 
-1. Create a new Teams app project using Teams Toolkit.
-2. Select **Teams Toolkit** icon :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: from the left pane.
-3. Select **Add CI/CD Workflows**.
-4. Select an environment from the command prompt.
-5. Select **Jenkins** as CI/CD provider.
-6. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
-7. Open the template and customize the workflows that fit into your scenarios.
-8. Follow the README files under `.jenkins/pipelines` to set up the workflow with Jenkins.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
-**TeamsFx CLI**
+      :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
 
-1. Enter `cd` to your Teams app project directory.
-2. Enter `teamsfx add cicd` command to start the interactive command process.
-3. Select an environment from the command prompt.
-4. Select **Jenkins** as CI/CD provider.
-5. Select at least one template from these options: CI, CD, Provision, or Publish to Teams.
-7. Open the template and customize the workflows that fit into your scenarios.
-8. Follow the README files under `.jenkins/pipelines` to set up the workflow with Jenkins.
+      > [!NOTE]
+      > The `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET` variable must be set as secret.
+      > Utilize the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) to use different sets of variables.
+
+    * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      Set the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` as a repository variable:
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+
+    * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      Set the `TEAMS_APP_ID` as a repository variable:
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
+
+1. In the GitHub, navigate to your repository’s **Settings** and select **Secrets and variables** > **Actions**.
+
+    Update the variable keys that you've gathered for the following variables:
+
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`
+    * `TEAMS_APP_ID`
+
+    Add the variables defined in your repo directly into your yml file, excluding the following three variables:
+
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/modification.png" alt-text="Screenshot shows the modified pipeline yml.":::
+
+1. Run the pipeline.
+
+    Push code to the repo to trigger pipeline.
+
+    > [!NOTE]
+    > You don't need to commit env files under env folder to the repo. The env variables required for executing the CI/CD pipeline are already set in the repo variables.
+
+    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/artifact.png" alt-text="Screenshot shows the `appPackage` is generated in the artifacts.":::
+
+### Set up pipeline with Azure DevOps
+
+To set up the pipeline with Azure DevOps, follow these steps:
+
+1. Open Visual Studio Code.
+
+1. Create a `cd.yml` file in your project and add the following code in the file:
+
+    ```yaml
+    trigger:
+      - main
+    
+    pool:
+      vmImage: ubuntu-latest
+    
+    variables:
+      TEAMSAPP_CLI_VERSION: 3.0.0
+    
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: "20"
+          checkLatest: true
+    
+      - script: |
+          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+        displayName: "Install CLI"
+    
+      - script: |
+          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+        displayName: "Login Azure by service principal"
+    
+      - script: |
+          npx teamsapp deploy --ignore-env-file true --interactive false
+        displayName: "Deploy to Azure"
+        workingDirectory: $(System.DefaultWorkingDirectory)
+    
+      - script: |
+          npx teamsapp package
+        displayName: "Package app"
+        workingDirectory: $(System.DefaultWorkingDirectory)
+    
+      - publish: $(System.DefaultWorkingDirectory)/appPackage/build/appPackage.zip
+        artifact: artifact
+    ```
+
+    > [!NOTE]
+    > The default pipeline triggers when push events occur on the main branch. You can modify it to meet your specific requirements.
+
+1. Push the code to the repo.
+
+1. Setup Azure pipeline.
+
+    After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
+
+1. Update the following variables and secrets you created during the prerequisites:
+
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+
+    * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      Set the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` as a repository variable:
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+
+    * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      Set the `TEAMS_APP_ID` as a repository variable:
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
+
+    You need to set the following key name variables in the repo:
+
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`
+    * `TEAMS_APP_ID`
+
+    To set variables in your pipeline, go to your pipeline and select **Edit** > **Variables**.
+
+    > [!NOTE]
+    > For security purposes, select the **Keep this value secret** checkbox if it's necessary.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/secret.png" alt-text="Screenshot shows the keep this value secret in new variable page.":::
+
+1. Run the pipeline.
+
+    Push code to the repo to trigger pipeline.
+
+    > [!NOTE]
+    > There's no need to commit env files under env/ folder to the repo. The env variables required for executing the CI/CD pipeline are already established in the pipeline variables.
+
+    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/published.png" alt-text="Screenshot shows the pipeline runs successfully.":::
+
+## Set up CI/CD pipelines using your own workflow
+
+If the Teams App CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.
 
 > [!NOTE]
-> If you need to add additional workflow templates, you can follow the same procedure to create workflow template in Visual Studio Code or TeamsFx CLI.
+> If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate Teams app package](#generate-teams-app-package).
 
-### Customize CI workflow
+The `teamsapp deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
 
-You can make the following changes to your project:
+As an example, a basic bot TypeScript project has the following deploy stage in its `teamsapp.yml`:
 
-1. Change how the CI flow is triggered. The default is to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
-1. Ensure you have an npm build script or customize the way you build in the automation code.
-1. Ensure you have an npm test script, which returns zero for success or change the test commands.
+```yaml
+deploy:
+  # Run npm command
+  - uses: cli/runNpmCommand
+    name: install dependencies
+    with:
+      args: install
+  - uses: cli/runNpmCommand
+    name: build app
+    with:
+      args: run build --if-present
+  # Deploy your application to Azure App Service using the zip deploy feature.
+  # For additional details, refer to this link.
+  - uses: azureAppService/zipDeploy
+    with:
+      # Deploy base folder
+      artifactFolder: .
+      # Ignore file location, leave blank will ignore nothing
+      ignoreFile: .webappignore
+      # The resource id of the cloud resource to be deployed to.
+      # This key will be generated by arm/deploy action automatically.
+      # You can replace it with your existing Azure Resource id
+      # or add it to your environment variable file.
+      resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
+```
 
-### Customize CD workflow
+These actions perform the following tasks:
 
-Perform the following steps to customize the CD pipeline:
+* Run `npm install` and `npm build` to build the project.
+* Deploy code to Azure app service.
 
-1. Change the CD flow. The default is to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
-1. Change the build scripts if necessary.
-1. Remove the test scripts if you don't have tests.
+You can customize these actions in your CI/CD pipeline. Here's an example that utilizes GitHub's actions:
 
-## Set up pipelines for other platforms
+```yaml
+# build
+- name: Setup Node 20.x
+  uses: actions/setup-node@v1
+  with:
+    node-version: '20.x'
+- name: 'npm install, build'
+  run: |
+    npm install
+    npm run build --if-present
 
-You can follow the predefined listed example bash scripts to build and customize CI/CD pipelines on the other platforms:
+- name: 'zip artifact for deployment'
+  run: |
+    zip -r deploy.zip . --include 'node_modules/*' 'lib/*' 'web.config'
 
-* [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
-* [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
+# deploy
+- name: 'Login via Azure CLI'
+  uses: azure/login@v1
+  with:
+    client-id: ${{ vars.CLIENT_ID }}
+    tenant-id: ${{ vars.TENANT_ID }}
+    subscription-id: ${{ vars.SUBSCRIPTION_ID }}
 
-The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
+- name: 'Run Azure webapp deploy action using azure RBAC'
+  uses: azure/webapps-deploy@v2
+  with:
+    app-name: ${{ vars.AZURE_WEBAPP_NAME }}
+    package: deploy.zip
+```
 
-> [!NOTE]
->
-> * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
-> * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` does not prompt for inputs.
+The Teams Toolkit supports Teams app projects, written in various programming languages and designed for hosting on different Azure services. The following actions for building and deploying. Use these actions when setting CI/CD deployment pipelines.
 
-Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you're using GitHub as your source code repository, see [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Build:
 
-## Provision and deploy resources
+| Language | GitHub | Azure Pipeline |
+|---|---|---|
+|JS or TS |[actions/setup-node](https://github.com/actions/setup-node) |[NodeTool@0](/azure/devops/pipelines/tasks/reference/node-tool-v0) |
+|C# |[actions/setup-dotnet](https://github.com/actions/setup-dotnet) |[DotNetCoreCLI@2](/azure/devops/pipelines/tasks/reference/dotnet-core-cli-v2) |
 
-To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
+Deploy:
 
-Perform the following steps to create Azure service principals:
+| Resource | GitHub | Azure Pipeline |
+|---|---|---|
+|Azure App Service |[azure/webapps-deploy](https://github.com/Azure/webapps-deploy) |[AzureWebApp@1](/azure/devops/pipelines/tasks/reference/azure-web-app-v1) |
+|Azure Functions |[Azure/functions-action](https://github.com/Azure/functions-action) |[AzureFunctionApp@2](/azure/devops/pipelines/tasks/reference/azure-function-app-v2) |
+|Azure Static Web Apps |[Azure/static-web-apps-deploy](https://github.com/Azure/static-web-apps-deploy)|[AzureStaticWebApp@0](/azure/devops/pipelines/tasks/reference/azure-static-web-app-v0) |
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+### Credential needed for login to Azure
 
-> [!TIP]
-> Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.
+When you deploy app code to Azure App Service, Azure Functions, or Azure Container App through CI/CD, you need a service principal for Azure login. You can log in to Azure using a service principal in two ways:
 
-For more information, see [Azure service principals guidelines](/azure/active-directory/develop/howto-create-service-principal-portal). The following are the three ways to create service principals:
+* OpenID Connect (OIDC):
 
-* [Microsoft Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
-* [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
-* [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
+  * For GitHub action, see how to [use the Azure login action with OpenID Connect](/azure/developer/github/connect-from-azure#use-the-azure-login-action-with-openid-connect).
 
-## Publish Teams app using Teams Developer Portal
+  * For Azure pipeline, see how to [create an Azure Resource Manager service connection that uses workload identity federation](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+* Secret: The TeamsApp CLI supports sign-in using a service principal with a secret. For more information, see how to [create a new client secret](/entra/identity-platform/howto-create-service-principal-portal).
 
-Perform the following steps to publish your app:
+## Generate Teams app package
 
-1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-2. Import your app package in zip, select `App -> Import app -> Replace`.
-3. Select the target app in app list.
-4. Publish your app, select `Publish -> Publish to your org`.
+To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
+
+1. Prepare a `appPackage` folder.
+1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
+1. Place your app icons in the `appPackage` folder. To prepare your app icon, see [app icons](../concepts/build-and-test/apps-package.md#app-icons).
+1. Zip the files in the `appPackage` folder.
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)

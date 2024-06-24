@@ -5,6 +5,7 @@ description: In this module, learn about virtual tables entity reference and the
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Virtual tables entity reference
