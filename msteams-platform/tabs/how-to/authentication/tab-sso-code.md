@@ -101,7 +101,7 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 > As a best practice for security of access token:
 >
 > - Always call `getAuthToken()` only when you need an access token.
-> - Teams will cache the access token for you. Don't cache or store it in your app's code.
+> - Teams automatically caches the access token, so there's no need to cache or store it within your app's code.
 
 ### Consent dialog for getting access token
 

@@ -225,7 +225,7 @@ This code parses the key-value pairs received from Microsoft Entra ID in `window
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
 
-Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
+Your app can set its own session cookie so that the user needs not to sign in again when they return to your tab on the current device.
 
 > [!NOTE]
 >
