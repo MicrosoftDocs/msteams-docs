@@ -1,5 +1,5 @@
 ---
-title: Authentication Issues for Tabs with SSO
+title: Troubleshoot SSO Authentication
 description: Troubleshoot Single sign-on (SSO) authentication issues in Teams and how to use it in tab app.
 ms.topic: how-to
 ms.localizationpriority: high
