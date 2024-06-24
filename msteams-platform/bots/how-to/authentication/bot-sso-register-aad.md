@@ -1,6 +1,6 @@
 ---
 title: Configure your app in Microsoft Entra ID
-description: Describes configuring your bot or message extension app with Microsoft Entra ID for enabling SSO.
+description: Learn to configure your bot or message extension app with Microsoft Entra ID for enabling SSO. Learn to configure messaging endpoint and OAuth connection.
 ms.topic: how-to
 ms.localizationpriority: high
 ---

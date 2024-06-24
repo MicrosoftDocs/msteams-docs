@@ -1,6 +1,6 @@
 ---
 title: Code configuration for enabling SSO for bots
-description: Describes code configuration for enabling SSO for bots.
+description: Learn how to add code configuration, handle an access token, receive token, and handle app user log out for enabling in Teams bots. Sample (C#, Node.js).
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
