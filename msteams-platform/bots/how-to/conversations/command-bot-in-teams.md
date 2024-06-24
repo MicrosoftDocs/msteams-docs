@@ -42,7 +42,8 @@ You need to create `ConversationBot` to respond to the command in a chat. You ca
 
 # [JavaScript/TypeScript](#tab/jsts1)
 
-```JavaScript / TypeScript
+```javascript / typescript
+
 /** JavaScript/TypeScript: src/internal/initialize.js(ts) **/
 const commandApp = new ConversationBot({
   // The bot id and password to create CloudAdapter.
