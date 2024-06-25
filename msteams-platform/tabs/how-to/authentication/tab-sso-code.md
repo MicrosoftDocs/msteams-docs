@@ -1,5 +1,5 @@
 ---
-title: Code configuration for enabling SSO for tabs
+title: Add Code to Enable SSO for Tabs
 description: Update code in your tab app for requesting and receiving access token using app user's Teams identity for enabling Single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high

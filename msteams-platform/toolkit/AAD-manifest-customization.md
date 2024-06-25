@@ -1,5 +1,5 @@
 ---
-title: Edit Microsoft Entra manifest in Teams Toolkit
+title: Customize Microsoft Entra Manifest
 author: zyxiaoyuer
 description: In this module, learn how to edit, customize, and preview the Microsoft Entra manifest with CodeLens in Teams Toolkit.
 ms.author: surbhigupta

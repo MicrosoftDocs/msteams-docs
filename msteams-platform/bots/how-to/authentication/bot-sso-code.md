@@ -1,5 +1,5 @@
 ---
-title: Code configuration for enabling SSO for bots
+title: Update App Manifest to Enable SSO
 description: Describes code configuration for enabling SSO for bots.
 ms.topic: how-to
 ms.localizationpriority: high

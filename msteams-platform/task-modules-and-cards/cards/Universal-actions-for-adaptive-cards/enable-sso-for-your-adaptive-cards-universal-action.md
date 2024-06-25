@@ -1,5 +1,5 @@
 ---
-title: Overview of SSO for Adaptive Cards Universal Actions in your bot
+title: SSO for Adaptive Cards Universal Action
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in Adaptive Cards Universal Action in bots.
 author: v-sdhakshina
 ms.topic: conceptual
