@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams developer community support and feedback
-description: Learn Developer community and raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
+description: Learn about developer community help, raise issues, and general questions. Questions related to SDK and samples, documentation feedback, and feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 09/28/2022
