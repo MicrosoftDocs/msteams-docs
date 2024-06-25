@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, scenarios, and view code samples of action and search-based commands.
+description: Learn how message extensions are used, its types, and scenarios where it's used on the Teams platform. Samples on action and search based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear

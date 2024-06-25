@@ -1,5 +1,5 @@
 ---
-title: Design your app with advanced UI components
+title: Design App with Advanced UI Components
 author: heath-hamilton
 description: Learn about the Teams UI components, such as breadcrumbs, notification bar, Stageview along with relevant use cases. 
 ms.author: surbhigupta
