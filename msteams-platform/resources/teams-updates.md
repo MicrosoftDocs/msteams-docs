@@ -11,7 +11,7 @@ ms.topic: reference
 > [!IMPORTANT]
 > The Classic Teams client is expected to be deprecated by March 31, 2024.
 
-[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
+[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside Classic Teams, the app likely runs in the new Teams client without any issues.
 
 The following are the advantages of the new Teams client:
 
@@ -50,7 +50,7 @@ The following Teams features aren't currently supported in the new Teams client:
 
 * [Generating a deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) isn't supported in the new Teams client.
 
-The following Teams features are deprecated and will not be supported in the new Teams client:
+The following Teams features are deprecated and are not supported in the new Teams client:
 
 * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 

@@ -279,7 +279,7 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
 #### Don't: Hard code color values
 
-If you don't use Teams color tokens, your designs will be less scalable and take more time to manage.
+If you don't use Teams color tokens, your designs scale less and take more time to manage.
 
    :::column-end:::
 :::row-end:::
