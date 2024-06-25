@@ -1,5 +1,5 @@
 ---
-title: Create bot based Message extension plugin
+title: Message Extension as Plugin for Copilot
 author: v-ypalikila
 description: Learn how to build a bot-based message extension plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats using Teams Developer Portal and Teams Toolkit.
 ms.localizationpriority: medium
