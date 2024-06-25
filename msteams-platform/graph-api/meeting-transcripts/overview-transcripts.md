@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Graph to fetch transcripts and recordings for a Teams meeting
+title: Fetch Meeting Transcripts & Recordings
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
