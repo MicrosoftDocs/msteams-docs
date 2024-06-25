@@ -1,6 +1,6 @@
 ---
-title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
+title: What's New for Developers in Teams
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -35,7 +35,8 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 20, 2024***: [Use app validation tool to validate your Teams app in Teams Developer Portal.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
+***June 26, 2024***: [Use app validation tool to validate your Teams app in Teams Developer Portal.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
+***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
@@ -49,7 +50,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|17/05/2024|Deploy Teams app to container service.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio > Prepare to build apps using Teams Toolkit > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md)|
+| 17/05/2024 | Deploy Teams app to container service. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio > Prepare to build apps using Teams Toolkit > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md) |
 |12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
 |12/04/2024|Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards.|[App manifest](resources/schema/manifest-schema.md)|
 |12/04/2024|Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.|App manifest > [extensions.requirements](resources/schema/manifest-schema.md#extensionsrequirements)|
