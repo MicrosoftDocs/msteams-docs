@@ -1,5 +1,5 @@
 ---
-title: Introducing the new Microsoft Teams client
+title: The New Microsoft Teams Client
 description: Learn about the latest updates to Microsoft Teams.
 author: v-ypalikila
 ms.author: lajanuar
@@ -45,8 +45,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 The following Teams features aren't currently supported in the new Teams client:
 
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
-
-* [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.
 
 * [Generating a deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) isn't supported in the new Teams client.
 

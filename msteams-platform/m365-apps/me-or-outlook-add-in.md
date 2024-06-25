@@ -1,5 +1,5 @@
 ---
-title: Decide between creating a message extension or an Outlook add-in
+title: Message Extension vs. Outlook Add-in
 description: Learn how to decide whether your Microsoft 365 app should be message extension or an Outlook add-in.
 ms.date: 01/05/2023
 ms.topic: conceptual
