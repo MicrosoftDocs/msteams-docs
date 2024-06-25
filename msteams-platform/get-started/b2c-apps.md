@@ -1,5 +1,5 @@
 ---
-title: Integrate Teams meetings and calls in an external app
+title: Integrate Teams Meetings & Calls
 description: In this module, learn how to integrate Teams meetings and calls in an external business-to-consumer (B2C) app.
 ms.localizationpriority: high
 ms.date: 03/01/2024
