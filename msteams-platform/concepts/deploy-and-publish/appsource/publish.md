@@ -37,7 +37,7 @@ If your app is production ready, you can begin the process of getting it listed 
 * **Deep functional and experience tests**
 
   Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies).
-  There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
+  There is a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 
@@ -63,7 +63,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   If there are issues remaining or regression issues observed in your app, the validation team shares an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams Store.
 
-  After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams Store.
+  After all reported issues are closed and final submission is made in the Partner Center, the validation team approves and publish your app. Allow at least one business day for the app to be available in the Teams Store.
 
 * **Analyze app usage**
 
