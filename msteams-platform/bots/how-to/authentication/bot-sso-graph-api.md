@@ -1,6 +1,6 @@
 ---
 title: Extend your app with Microsoft Graph permissions
-description: Learn to configure API permissions with Microsoft Graph for Teams bot and messaging extension apps, which allow app users view user profile, to read mail, and more.
+description: Learn to configure API permissions with Microsoft Graph for Teams bot and messaging extension apps, which allow app users view user profile, and to read mail.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
