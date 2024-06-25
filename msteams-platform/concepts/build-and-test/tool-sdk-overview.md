@@ -1,7 +1,7 @@
 ---
 title: Tools and SDKs
 author: v-sdhakshina
-description: In this article, learn more about the tools and SDKs available for building your Microsoft Teams app.
+description: Learn more about the tools such as Teams Toolkit, Yeoman generator for Teams, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
