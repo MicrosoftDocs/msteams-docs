@@ -326,7 +326,7 @@ You need to create `ConversationBot` to send notification.
 
 # [JavaScript/TypeScript](#tab/jsts)
 
-```javaScript / typeScript
+```JavaScript / TypeScript
 /** Javascript/Typescript: src/internal/initialize.*s **/
 const notificationApp = new ConversationBot({
     // The bot id and password to create CloudAdapter.

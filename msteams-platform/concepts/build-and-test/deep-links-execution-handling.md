@@ -19,7 +19,7 @@ It's possible to navigate within an app using TeamsJS. The following code demons
 
 You can trigger the navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
 
-```typeScript / javaScript
+```TypeScript / JavaScript
 if (pages.isSupported()) {
   const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
   navPromise.
