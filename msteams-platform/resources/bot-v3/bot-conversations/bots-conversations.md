@@ -35,7 +35,7 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech is not supported.
+Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech isn't supported.
 
 Messages are usually the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes, which you need to know about.
 
