@@ -76,7 +76,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 
 | Column  | Dataverse Type | Details |
 |---|---|---|
-| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute is returned when retrieving multiple records.|
+| `m365_collaborationrootid` | String | Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this is returned as a comma delimited string. This attribute isn't returned when retrieving multiple records.|
 | `m365_graphplannerplanid` |Guid |Unique identifier of the graph planner plan.|
 | `m365_createdby` | String | Identity of the user that created the task. This attribute is a JSON encoded string, for example {\"user\": {\"displayName\",\"ID\":\"d55...\"}} |
 | `m365_createddatetime` | DateTime | Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z |
@@ -205,7 +205,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 | `m365_servicelocation` | String | The location where the service is delivered. {\"address\":{\"city\":\"\",\"countryOrRegion\":\"\",\"postalCode\":\"\",\"postOfficeBox\",\"state\":\"\",\"street\":\"\",\"type\" },\"coordinates\":{\"accuracy\",\"altitude\",\"altitudeAccuracy\",\"latitude\",\"longitude\" },\"displayName\":\"Our office address\",\"locationEmailAddress\",\"locationType\",\"locationUri\":\"\",\"uniqueID\",\"uniqueIDType\" } |
 | `m365_servicename` | String | The name of the bookingService associated with this appointment. This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceID property. |
 | `m365_servicenotes` |String | Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.|
-| `m365_smsnotificationsenabled` | Boolean | True indicates SMS notifications is sent to the customers for the appointment. Default value is false.|
+| `m365_smsnotificationsenabled` | Boolean | True indicates SMS notifications are sent to the customers for the appointment. Default value is false.|
 | `m365_staffmemberids` | String | The ID of each bookingStaffMember who is scheduled in this appointment. Stored as a comma separated string.[\”string\”] |
 | `m365_startdatetime` | DateTime | The date, time, and time zone that the appointment begins.|
 
@@ -288,7 +288,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_siteid` |String |The Identifier for the site that contains the document library. |
 |`m365_size` |IntType |Size of the item in bytes. Read-only. |
 |`m365_specialfolder` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, { "name": "documents" } |
-|`m365_thumbnail` |String |If present in the request then the drive item thumbnails retrieve. |
+|`m365_thumbnail` |String |If present in the request then the drive item thumbnails are retrieved. |
 |`m365_video` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, {"bitrate": 10646968, "duration": 1050683, "height": 720,  "width": 1280,  "audioBitsPerSample": 16, "audioChannels": 1, "audioFormat": "PCM", "audioSamplesPerSecond": 32000, "fourCC": "H264", "frameRate": 60} |
 |`m365_webdavurl` |String | WebDAV compatible URL for the item. |
 |`m365_weburl` |String |URL that displays the resource in the browser. Read-only. |
