@@ -357,7 +357,7 @@ HTTP/1.1 204 No Content
 * If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
-> The inline images are the only type of media supported by the import message API schema.
+> Inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
 
