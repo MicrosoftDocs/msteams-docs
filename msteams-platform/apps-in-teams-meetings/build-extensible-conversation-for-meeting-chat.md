@@ -1,5 +1,5 @@
 ---
-title: Build extensible conversation for meeting chat
+title: Build Extensible Conversations
 author: v-sdhakshina
 description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
 ms.topic: conceptual
