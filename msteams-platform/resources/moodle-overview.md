@@ -50,5 +50,3 @@ The following scenarios describe the accelerated learning potential combining Mi
 
 * [Integrate web apps](../samples/integrate-web-apps-overview.md)
 * [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md)
-* [Partner apps for Moodle](partner-apps-for-moodle.md)
-* [Moodle FAQ](faqs.md)

@@ -1,5 +1,5 @@
 ---
-title: Choosing a setup to test and debug your app
+title: Test & Debug App Locally or on Cloud
 description: In this module, learn options for testing and debugging Microsoft Teams apps in local and cloud-hosted environment.
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -77,7 +77,6 @@ To load and run your experience within Teams, you need to create a package and u
 
 ## See also
 
-* [Test your app](test-app-overview.md)
 * [Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
 * [DevTools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)
 * [Test app behavior in different environment](../../toolkit/test-app-behavior.md)

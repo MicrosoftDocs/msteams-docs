@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams developer documentation- Glossary
+title: Teams Developer Documentation Glossary
 description: Learn about the common terms, meanings, and definitions used in Microsoft Teams developer documentation.
 ms.localizationpriority: high
 ms.topic: reference
@@ -76,7 +76,9 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Content URL](../resources/schema/manifest-schema.md#statictabs)| An app manifest property (`contentUrl`) where the HTTPS URL points to the entity UI to be displayed in the Teams canvas. <br> **See also**: [App manifest](#a)|
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and dialogs. <br>**See also** [Chat bot](#c); [Standalone app](#s) |
-| [Copilot](../messaging-extensions/build-bot-based-plugin.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. |
+| [Copilot](../messaging-extensions/build-bot-based-plugin.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to turn your words into the most powerful productivity tool. |
+| [Copilot handoff](../bots/how-to/conversations/bot-copilot-handoff.md) | Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Copilot for Microsoft 365 to your bot service. |
+| [Custom engine copilot](/microsoft-365-copilot/extensibility/overview-custom-engine-copilot) | Custom engine copilots are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. These advanced bots mark a significant departure from traditional bots, offering an extensive range of features that elevate the overall user experience. |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [LOB apps](#l); [Personal tab](#p); [Shared apps](#s) |
 | Custom app built for your org (LOB app) | An app created only for Teams by you or your organization.  |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
@@ -257,7 +259,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Task info](../task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) | The `TaskInfo` object contains the metadata for a dialogs (referred as task modules in TeamsJS v.1.0).|
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
-| [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) | A Teams-centric interface to GPT-based common language models and user intent engines. You can take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).|
+| [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) | A Teams-centric interface to GPT-based common language models and user intent engines. You can take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs).|
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to log in to Teams client, web, or mobile app. |
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to sign in to Teams client, web, or mobile app. |
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the VS Code environment.  |

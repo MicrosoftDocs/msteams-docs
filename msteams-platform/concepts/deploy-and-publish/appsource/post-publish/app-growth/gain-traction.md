@@ -1,5 +1,5 @@
 ---
-title: The traction stage for your collaborative app
+title: Accelerate Market Traction for App
 author: heath-hamilton
 description: Learn what you can do during the traction stage of your app to grow your app.
 ms.topic: conceptual
@@ -205,7 +205,3 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 
 > [!div class="nextstepaction"]
 > [Scaling your collaborative app](scale-app.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)

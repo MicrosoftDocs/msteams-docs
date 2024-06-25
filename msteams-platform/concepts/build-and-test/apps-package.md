@@ -1,6 +1,6 @@
 ---
 title: Package your app
-description: Learn how to package your Microsoft Teams app and upload it to Teams. Create app package, enable custom uploading, ensure your app is running and accessible using HTTPs.
+description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 09/28/2022
@@ -17,7 +17,7 @@ To distribute your Microsoft Teams app, you need to zip the files in the app pac
 
 ## Teams doesn't host your app
 
-When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
+When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Microsoft Azure for production. Teams accesses these resources via HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
 
@@ -127,7 +127,5 @@ Choose how you plan to distribute your app:
 
 ## See also
 
-* [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
-* [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Understand the Microsoft Teams app structure](../design/app-structure.md)
 * [Icons](../design/design-teams-app-fundamentals.md#icons)
