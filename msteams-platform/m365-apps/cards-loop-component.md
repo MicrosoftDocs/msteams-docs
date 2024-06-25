@@ -11,7 +11,7 @@ ms.date: 01/26/2024
 > [!NOTE]
 > Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
 
-Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook.
+Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Microsoft Outlook.
 
 Following is an example of an Adaptive Card-based Loop component:
 
@@ -21,7 +21,7 @@ This article provides an overview of how to build and test your Adaptive Card-ba
 
 ## Build Adaptive Card-based Loop component
 
-To build the Adaptive Card-based Loop component, follow these steps:
+To build an Adaptive Card-based Loop component, follow these steps:
 
 1. [Build a message extension with a search command](../messaging-extensions/what-are-messaging-extensions.md).
 
@@ -67,10 +67,10 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 |Property|Type|Description|Required|
 |---|---|---|---|
 | `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
-| `webUrl` | String | A URL that uniquely identifies the card, serving as a browser fallback usable by certain hosts. | No |
+| `webUrl` | String | URL that uniquely identifies the card, serving as a browser fallback usable by certain hosts. | No |
 
 > [!NOTE]
-> When you copy an Adaptive Card-based Loop component, the `webURL` of the component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
+> When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
 
 ## Test your Loop component
 

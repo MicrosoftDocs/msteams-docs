@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Loop component design guidelines
 
-Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. They allow users to collaborate and share live content with others in Microsoft Teams chats, meetings, emails, Microsoft Whiteboard, or Loop app. You can create Loop components by either evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
+Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. They allow users to share live content and collaborate with others in Microsoft Teams chats and meetings, Microsoft Outlook emails, Microsoft Whiteboard, or Loop app. You can create Loop components by either evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
 [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
 
@@ -20,7 +20,7 @@ Microsoft Loop components are live, actionable units of productivity that stay i
 
 **Embedded**: Adaptive Cards are embedded, so there's nothing specific needed from you.
 
-**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, consider looking for opportunities to make it actionable, since interactive elements are a core feature that can delight users. Ensure that an Adaptive Card with view-only experience doesn't change to a Loop component, in this case, it must remain an Adaptive Card only.
+**Actionable**: Loop components allow the user to take action to complete a flow within the component itself; beyond simply viewing information or opening a browser. If your Adaptive Card is a view-only experience, look for opportunities to make it actionable, since interactive elements are a core feature to delight users. Ensure that an Adaptive Card with view-only experience doesn't change to a Loop component, in this case, it must remain an Adaptive Card only.
 
    > [!NOTE]
    > Certain user permissions or modes of your component might not be actionable, but the common cases must be actionable.
