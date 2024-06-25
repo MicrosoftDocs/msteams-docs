@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams Store validation guidelines
+title: Teams Store Validation Guidelines
 description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the mandatory and suggested fixes, and validation guidelines.
 author: heath-hamilton
 ms.author: surbhigupta
