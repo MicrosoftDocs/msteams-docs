@@ -953,9 +953,9 @@ After the API-based message extension gets a request header with token, perform 
   > [!NOTE]
   > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
-For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+For more information on how to validate an access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are several libraries to handle JWT validation. For basic validation, ensure to check the following:
+There are several libraries to validate JSON Web Token (JWT). For basic validation, ensure that you check the following:
 
 * The token is well-formed.
 * The token was issued by the intended authority.
@@ -964,7 +964,7 @@ There are several libraries to handle JWT validation. For basic validation, ensu
 Ensure the following when validating the token:
 
 * Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
-* The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+* The `aud1` parameter in the token must match the app ID from Microsoft Entra app registration.
 * The token's `scp` parameter is set to `access_as_user`.
 
 </details>
