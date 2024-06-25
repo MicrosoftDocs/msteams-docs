@@ -1,5 +1,5 @@
 ---
-title: The succeed stage for your collaborative app
+title: Succeed Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the final stage of your app to grow your app.
 ms.topic: conceptual
@@ -127,5 +127,4 @@ Each app in the Teams ecosystem undertakes this journey, in all likelihood, star
 
 ## See also
 
-- [Plan, strategize and execute growth for your app](overview-app-growth.md)
-- [Growth lifecycle for your app](app-growth-lifecycle.md)
+[Growth lifecycle for your app](app-growth-lifecycle.md)

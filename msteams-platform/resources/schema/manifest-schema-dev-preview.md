@@ -1,5 +1,5 @@
 ---
-title: Public developer preview manifest schema reference
+title: Developer Preview App Manifest Schema
 description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
@@ -28,9 +28,9 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     ],
     "developer": {
         "name": "Publisher Name",
-        "websiteUrl": "https://website.com/",
-        "privacyUrl": "https://website.com/privacy",
-        "termsOfUseUrl": "https://website.com/app-tos",
+        "websiteUrl": "https://example.com/",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/app-tos",
         "mpnId": "1234567890"
     },
     "localizationInfo": {
@@ -458,7 +458,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 **Optional** &ndash; Array
 
-Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
+Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope aren't supported.
 
 Render tabs with Adaptive Cards by specifying `contentBotId` instead of `contentUrl` in the **staticTabs** block.
 
@@ -914,7 +914,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingAudioVideo.Stream.Group`| Allows the app to stream audio-video content from channel meetings associated with the team. |
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in the team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with the team, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with the team. Provide access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for the team and get access related information, such as name and role, about the team's roster and any associated meetings, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Group`| Allows the app to read reactions of participants in channel meetings associated with the team.|
 
 * **RSC delegated permissions for chats or meetings**
@@ -925,7 +925,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat. Provide access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for the chat and get access related information, such as name and role, about the chat's roster and any associated meetings, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
     |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|

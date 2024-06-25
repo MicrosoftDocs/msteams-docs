@@ -1,6 +1,6 @@
 ---
 title: Manifest schema reference
-description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema and sample full manifest.
+description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
 ms.date: 02/09/2023
@@ -293,7 +293,7 @@ The following is the sample app manifest schema:
         ]
     },
     "defaultBlockUntilAdminAction": true,
-    "publisherDocsUrl": "https://website.com/app-info",
+    "publisherDocsUrl": "https://example.com/app-info",
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
         "meetings": "tab",
@@ -398,7 +398,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`short`|30 characters|✔️|The short display name for the app. Use `short` property where the space is limited, such as the app header.|
-|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there is more space, such as the app catalog or the app details page.|
+|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there's more space, such as the app catalog or the app details page.|
 
 > [!NOTE]
 >
@@ -680,6 +680,9 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 ## webApplicationInfo
 
+> [!NOTE]
+> The `webApplicationInfo` property is related to a single domain and isn't supported for multiple domains. Therefore, if you've two apps hosted on different domains, you need to create separate app manifests for each app.
+
 **Optional** &ndash; Object
 
 Provide your Microsoft Entra App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Entra ID, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
@@ -938,7 +941,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingAudioVideo.Stream.Group`| Allows the app to stream audio-video content from channel meetings associated with the team. |
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in the team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with the team, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with the team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for the team and get access related information, such as name and role, about the team's roster and any associated meetings, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Group`| Allows the app to read reactions of participants in channel meetings associated with the team.|
 
 * **RSC delegated permissions for chats or meetings**
@@ -949,7 +952,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for the chat and get access related information, such as name and role, about the chat's roster and any associated meetings, on behalf of the signed-in user.|
     |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
     |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
     |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|
@@ -1066,7 +1069,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with `runtime.actions.id`. |
 |`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
-|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
@@ -1076,9 +1079,9 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`tabs.groups.controls.actionId`| String | 64 characters | | Required if the control type is `button`. Do not use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`tabs.groups.controls.actionId`| String | 64 characters | | Required if the control type is `button`. Don't use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
-|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.|
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
@@ -1088,10 +1091,10 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.type` | String enum |  | ✔️ | Specifies the type of control. Currently only "MobileButton" is supported.|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
-|`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
-|`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
+|`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
+|`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
-|`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
+|`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons `size` property. |
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
@@ -1173,7 +1176,7 @@ Defines the icon properties of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
-|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* is not specified. |
+|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* isn't specified. |
 
 ### dashboardCards.dashboardCard.contentSource
 

@@ -1,5 +1,5 @@
 ---
-title: Copilot for Microsoft 365 extension guidelines
+title: Guidelines to Create Copilot Extensions
 description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
@@ -37,7 +37,6 @@ The requirements for building message extension plugins for Copilot for Microsof
 >
 > * [Define app, command, and parameter descriptions](#define-descriptions)
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
-> * [Define sample prompts](#sample-prompts)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
 ## Define descriptions
@@ -520,68 +519,6 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
-
-## Sample prompts
-
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
-
-* First Run Experience (FRE): When a user first installs or enables a plugin.
-* Prompt library or Copilot Lab: When a user seeks help with prompts.
-* Plugin suggestions: To guide users towards better utterances.
-
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
-
-> [!NOTE]
->
-> * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
-> * The `samplePrompts` property is mandatory for app validation during the app submission process.
-> * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
-
-We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
-
-* A plugin must have at least three prompts and maximum of five prompts for each command.
-* Each prompt must not exceed 128 characters.
-* Two commands within the same plugin must not have identical prompts.
-* Sample prompts must be generic in nature and not include custom references. For example, project names and task name.
-* All sample prompts must be functional and return responses.
-* Prompt must be relevant to the commands.
-
-The following code is an example of the `samplePrompts` property in app manifest:
-
-```json
-"composeExtensions": [
- {
-  "canUpdateConfiguration": true,
-  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-  "commands": [
-   {
-    "id": "orders",
-    "title": "Orders",
-    "context": [
-     "Commandbox",
-     "Compose"
-    ],
-    "description": "Search for orders",
-    "semanticDescription": "Search for orders",
-    "samplePrompts": [
-     {
-      "text": "Search for all orders"
-     },
-     {
-      "text": "Search for orders related to Contoso"
-     },
-     {
-      "text": "Search for all pending orders"
-     },
-     {
-      "text": "Search for all completed ordered for Fabrikam"
-     }
-    ]
-   }
-  ]
- }
-]
-```
 
 ## Adaptive Card response
 
