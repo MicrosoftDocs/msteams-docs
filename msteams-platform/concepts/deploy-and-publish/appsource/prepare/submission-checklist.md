@@ -1,6 +1,6 @@
 ---
-title: Prepare your Microsoft Teams Store submission  
-description: Final steps before you submit your Microsoft Teams app to be listed on the Microsoft Teams Store. Validate app package and complete publisher verification and attestation.
+title: Prepare for Teams Store Submission
+description: Learn final steps before you submit your Teams app to be listed on the Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
@@ -278,6 +278,4 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-* [Publish your app to the Microsoft Teams Store](../publish.md)
-* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
-* [Resolve issues if your Microsoft Teams Store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
