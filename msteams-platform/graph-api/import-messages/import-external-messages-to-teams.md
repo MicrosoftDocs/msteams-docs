@@ -28,7 +28,7 @@ At a high level, the import process consists of the following:
 
 ### Analyze and prepare message data
 
-* Review the third-party data to decide what to migrate.  
+* Review the third-party data to decide what is migrate.  
 * Extract the selected data from the third-party chat system.  
 * Map the third-party chat structure to the Teams structure.  
 * Convert import data into format needed for migration.  
