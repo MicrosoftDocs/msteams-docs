@@ -80,7 +80,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
 
 Examples:
 
-* GET [Organization URI]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq ‘<ContosoBank@Contoso.onmicrosoft.com>’ and m365_price eq 100.0
+* GET [Organization URI]/api/data/v9.2/m365_graphbookingappointments?$filter=m365_bookingbusinessid eq ‘ContosoBank@Contoso.onmicrosoft.com’ and m365_price eq 100.0
 * GET [Organization URI]/api/data/v9.2/m365_graphdriveitems?$filter=m365_collaborationrootid eq ‘00000000-0000-0000-0000-000000000000’ and m365_name eq ‘Meeting Notes.docx’
 * GET [Organization URI]/api/data/v9.2/m365_graphevents?$filter=m365_groupid eq ‘00000000-0000-0000-0000-000000000000’ and m365_subject eq ‘Monthly Sync’
 
