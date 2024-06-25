@@ -1,5 +1,5 @@
 ---
-title: Facilitate adoption of your app and help customers promote your app
+title: Facilitate App Adoption
 author: ashishguptaiitb
 ms.author: guptaashish
 manager: prkosh
