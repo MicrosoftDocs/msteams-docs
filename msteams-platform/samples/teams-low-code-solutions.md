@@ -1,5 +1,5 @@
 ---
-title: Create low-code custom apps for Microsoft Teams
+title: Create Low-code & No-code Custom Apps
 description: Learn about the available Microsoft low and no code solutions and how to create an app with Teams and Microsoft Power Platform.
 ms.localizationpriority: medium
 ms.topic: conceptual

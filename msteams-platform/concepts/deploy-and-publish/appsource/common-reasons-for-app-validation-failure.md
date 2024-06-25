@@ -1,5 +1,5 @@
 ---
-title: Common reasons for app validation failure
+title: Reasons for App Validation Failure
 description: Learn the common reasons for app validation failure such as inadequate app description, improper screenshots, mismatch between Partner Center and app manifest, valid domains guidelines violation, or broken app functionality.
 ms.topic: overview
 author: v-ypalikila
