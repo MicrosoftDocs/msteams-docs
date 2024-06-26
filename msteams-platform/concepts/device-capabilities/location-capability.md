@@ -89,7 +89,7 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 > [!IMPORTANT]
 > When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at [go.microsoft.com](https://go.microsoft.com/?linkid=9710837) and the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=248686).</br>
-> Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
+> Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you comply with Microsoft's reasonable instructions in doing so. You won't encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
 ### Code snippets
 
@@ -188,7 +188,6 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
-* [Device capabilities](device-capabilities-overview.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate location capabilities](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)

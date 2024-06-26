@@ -189,6 +189,8 @@
           - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
+          - name: Debug message extension app in Test Tool
+            href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
@@ -813,9 +815,12 @@
     items:
     - name: Overview
       href: graph-api/rsc/resource-specific-consent.md
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
-    displayName: Permissions, delegated, user, team, chat, application
+      displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
