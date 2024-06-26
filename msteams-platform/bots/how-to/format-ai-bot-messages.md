@@ -170,7 +170,7 @@ export const app = new Application<ApplicationTurnState>({
     },
 ```
 
-For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L69).
+For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L42).
 
 After you enable feedback buttons, all SAY commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
 
@@ -202,7 +202,7 @@ app.feedbackLoop(async (context, state, feedbackLoopData) => {
 });
 ```
 
-For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L42).
+For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L95).
 
 For a bot built using **Bot Framework SDK**, you must have an `onInvokeActivity` handler to process the feedback. Ensure that you return a status code 200 with an empty JSON object as a response.
 
