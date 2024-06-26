@@ -179,7 +179,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. Return to the plugins administration page, **Site administration** > **Plugins** > **Microsoft 365 Integration**, and select the **Teams Settings** page.
 
-1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration by clicking the **Check Moodle settings** link will update all required configurations for the Teams integration to work.
+1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration. Click the **Check Moodle settings** link to update all required configurations for the Teams integration to work.
 
 ## Deploy the Moodle Assistant Bot to Azure
 
