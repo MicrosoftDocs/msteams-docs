@@ -1,5 +1,5 @@
 ---
-title: Prepare to build apps with Teams Toolkit
+title: Build Apps with Teams Toolkit - Prepare
 author: surbhigupta
 description: Learn about build environments such as SPFx of Teams Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta

@@ -1,6 +1,6 @@
 ---
 title: Teams AI library capabilities
-description: In this article, learn more about Teams AI library capabilities, bot logic and message extension query.
+description: In this article, learn more about Teams AI library capabilities, bot logic, Adaptive Cards capabilities, and message extension query.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
