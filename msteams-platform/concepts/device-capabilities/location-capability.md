@@ -97,73 +97,75 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 * **Call `getLocation` API to retrieve the location:**
 
-```javascript
-import {location} from "@microsoft/teams-js"
+  ```javascript
+  import {location} from "@microsoft/teams-js"
 
-let locationProps = {"allowChooseLocation":true,"showMap":true};
-if(location.isSupported()) {
-  microsoftTeams.location.getLocation(locationProps, (error, location) => {
-  // If there's any error, an alert shows the error message/code
-  if (error) {
-     if (error.message) {
+  let locationProps = {"allowChooseLocation":true,"showMap":true};
+  if(location.isSupported()) {
+    microsoftTeams.location.getLocation(locationProps, (error, location) => {
+      // If there's any error, an alert shows the error message/code
+       if (error) {
+         if (error.message) {
         alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
+      } else {
         alert(" ErrorCode: " + error.errorCode);
      }
   }
   console.log(JSON.stringify(location));
   })
-}
-else {/*Handle case where capability isn't supported */}
+  }
+  else {/*Handle case where capability isn't supported */}
 ```
 
 * **Call `showLocation` API to display the location:**
 
-```javascript
-import {location} from "@microsoft/teams-js"
+  ```javascript
+  import {location} from "@microsoft/teams-js"
 
-let location = {"latitude":17,"longitude":17};
-if(location.isSupported()) {
-  microsoftTeams.location.showLocation(location, (error, result) => {
-   if (error) {
-     if (error.message) {
-        alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-        alert(" ErrorCode: " + error.errorCode);
-     }
-   }
-  });
-}
-else {/*Handle case where capability isn't supported */}
-```
+  let location = {"latitude":17,"longitude":17};
+  if(location.isSupported()) {
+    microsoftTeams.location.showLocation(location, (error, result) => {
+     if (error) {
+         if (error.message) {
+           alert(" ErrorCode: " + error.errorCode + error.message);
+         } else {
+          alert(" ErrorCode: " + error.errorCode);
+      }
+    }
+   });
+  }
+  else {/*Handle case where capability isn't supported */}
+  ```
+
+---
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
 * **Call `getLocation` API to retrieve the location:**
 
-```javascript
-let locationProps = {"allowChooseLocation":true,"showMap":true};
-microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+  ```javascript
+  let locationProps = {"allowChooseLocation":true,"showMap":true};
+  microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
           if (err) {
             output(err);
             return;
           }
           output(JSON.stringify(location));
-});
-```
+  });
+  ```
 
 * **Call `showLocation` API to display the location:**
 
-```javascript
-let location = {"latitude":17,"longitude":17};
-microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
+  ```javascript
+  let location = {"latitude":17,"longitude":17};
+  microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
           if (err) {
             output(err);
             return;
           }
      output(result);
-});
-```
+  });
+  ```
 
 ---
 
