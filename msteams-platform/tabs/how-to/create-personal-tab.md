@@ -69,7 +69,7 @@ Following are the steps to create a personal tab:
 
     * **Where do you want to place the files?**
 
-      You're currently in your project directory. Select **Enter**.
+      You're in your project directory. Select **Enter**.
 
     * **Title of your Microsoft Teams app project?**
 
@@ -415,7 +415,6 @@ ngrok http 3978 --host-header=localhost
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
-
 
 ::: zone-end
 
@@ -863,7 +862,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <details>
