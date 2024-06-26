@@ -1,5 +1,5 @@
 ---
-title: Register your tab app with Microsoft Entra ID
+title: Register Tab with Microsoft Entra ID
 description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high
@@ -227,16 +227,7 @@ To configure scope and authorize trusted client applications, you need:
 
     1. Select one of the following client IDs:
 
-       | Use client ID | For authorizing... |
-       | --- | --- |
-       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-       | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-       | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
-       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
-       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
-       | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+        [!INCLUDE [Microsoft 365 client application IDs](~/includes/tabs/microsoft-365-client-application-ids.md)]
 
     1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -290,7 +281,6 @@ Congratulations! You've completed the app configuration in Microsoft Entra ID re
 ## See also
 
 - [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multi-tenant-apps)
-- [Extend tab app with Microsoft Graph permissions and scope](tab-sso-graph-api.md)
 - [Quickstart - Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

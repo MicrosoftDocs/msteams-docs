@@ -1,5 +1,5 @@
 ---
-title: Overview to authentication for tabs using SSO in Teams with Microsoft Entra ID
+title: SSO in Tab with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -138,5 +138,4 @@ Here's a list of best practices:
 
 ## See also
 
-- [Configure code to enable SSO in a tab app](tab-sso-code.md)
-- [Glossary](../../../get-started/glossary.md)
+[Glossary](../../../get-started/glossary.md)
