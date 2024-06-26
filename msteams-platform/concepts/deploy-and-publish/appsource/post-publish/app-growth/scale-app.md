@@ -131,7 +131,7 @@ Microsoft evaluates coactivation opportunities in large customer accounts. The e
 <details>
 <summary>Support joint customer success story development</summary>
 
-Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team ensures your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team ensures that your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>
