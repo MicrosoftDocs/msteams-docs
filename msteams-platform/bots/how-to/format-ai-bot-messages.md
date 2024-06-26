@@ -28,9 +28,9 @@ The following screenshots show how bot messages can be enhanced with AI labels, 
 
 > [!NOTE]
 >
-> * AI label, sensitivity label, citations, and feedback buttons are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
-> * AI label, sensitivity label, citations, and feedback buttons are available only in Teams web and desktop clients.
-> * AI label, sensitivity label, citations, and feedback buttons are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * AI label, citations, feedback buttons, and sensitivity labels are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
+> * AI label, citations, feedback buttons, and sensitivity labels are available only in Teams web and desktop clients.
+> * AI label, citations, feedback buttons, and sensitivity labels are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 ## AI label
 
@@ -350,7 +350,7 @@ After the sensitivity label is added, your bot message contains a shield icon. U
 
 ## Modify `PredictedSayCommand`
 
-For a bot built using Teams AI library, the `PredictedSayCommand` provides control on how AI label, sensitivity label, citations, and feedback buttons are added to the bot's activity. Following is the code snippet to modify `PredictedSayCommand`:
+For a bot built using Teams AI library, the `PredictedSayCommand` provides control on how AI label, citations, feedback buttons, and sensitivity labels are added to the bot's activity. Following is the code snippet to modify `PredictedSayCommand`:
 
 ```JavaScript
 app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, state, data, action) => {
@@ -366,8 +366,8 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 
 | Sample name | Description | Node.js | C# |
 |:--|--|--|
-| Teams conversation bot | This sample app displays the AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | |
-| TeamsAzureOpenAI | This sample conversational bot uses Teams AI library and contains the AI label, feedback buttons, sensitivity label, and citations in its generated messages. | | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
+| Teams conversation bot | This sample app displays the AI label, citations, feedback buttons, and sensitivity labels in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | |
+| TeamsAzureOpenAI | This conversational bot uses Teams AI library and contains the AI label, feedback buttons, sensitivity label, and citations in its generated messages. | | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
 
 ## See also
 
