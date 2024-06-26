@@ -1,6 +1,6 @@
 ---
-title: Analyze your app's usage in Developer Portal
-description: In this module, learn how to analyze your app's usage in Developer Portal
+title: Analyze App Usage in Developer Portal
+description: Learn how to analyze your app's usage in Developer Portal for Teams such as usage by time period, platform and OS, retention state, and intensity.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta

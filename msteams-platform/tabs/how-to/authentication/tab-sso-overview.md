@@ -1,5 +1,5 @@
 ---
-title: Overview to authentication for tabs using SSO in Teams with Microsoft Entra ID
+title: SSO in Tab with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -67,7 +67,7 @@ For more information, see [Add code to enable SSO in a tab app](tab-sso-code.md)
 > - The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 > - The `getAuthToken` fails for anonymous users as they aren't Microsoft Entra accounts.
 
-Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams JavaScript client library](/javascript/api/overview/msteams-client?) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
+Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 
 ### Use cases for enabling SSO
 

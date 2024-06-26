@@ -1,5 +1,5 @@
 ---
-title: Build message extensions using Bot Framework
+title: Build Bot-based Message Extensions
 author: v-ypalikila
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
@@ -91,7 +91,7 @@ You must add the following search parameter details that define the text visible
 |`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
