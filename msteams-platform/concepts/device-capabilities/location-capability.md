@@ -115,7 +115,7 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
   })
   }
   else {/*Handle case where capability isn't supported */}
-```
+  ```
 
 * **Call `showLocation` API to display the location:**
 
@@ -136,8 +136,6 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
   }
   else {/*Handle case where capability isn't supported */}
   ```
-
----
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
