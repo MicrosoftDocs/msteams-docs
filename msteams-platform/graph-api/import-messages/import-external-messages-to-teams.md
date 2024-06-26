@@ -357,13 +357,13 @@ HTTP/1.1 204 No Content
 * If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
-> Currently, inline images are the only type of media supported by the import message API schema.
+> Inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
 
 The following table provides the content scope:
 
-|In-scope | Currently out-of-scope|
+|In-scope | Out-of-scope|
 |----------|--------------------------|
 |Team and channel messages|1:1 and group chat messages|
 |Created time of the original message|Private channels|
