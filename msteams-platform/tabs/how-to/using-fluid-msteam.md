@@ -24,7 +24,7 @@ For more information on building complex applications, see [FluidExamples](https
 
 This tutorial requires familiarity with the following concepts and resources:
 
-- [Fluid Framework Overview](https://fluidframework.com/docs/)
+- [Fluid Framework Overview](https://fluidframework.com/docs)
 - [Fluid Framework QuickStart](https://fluidframework.com/docs/start/quick-start/)
 - The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - How to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs)
@@ -362,5 +362,5 @@ tokenProvider: new InsecureTokenProvider(JSON.parse(process.env.REACT_APP_TENANT
 
 - [Azure Fluid Relay documentation](/azure/azure-fluid-relay)
 
-- [Fluid Framework documentation](https://fluidframework.com/docs/)
+- [Fluid Framework documentation](https://fluidframework.com/docs)
 - [Fluid examples GitHub Repo](https://github.com/microsoft/FluidExamples)
