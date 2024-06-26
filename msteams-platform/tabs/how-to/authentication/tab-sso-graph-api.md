@@ -204,7 +204,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > [!IMPORTANT]
 >
 > - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
-> - Two separate apps registered in Microsoft Entra ID will require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
+> - Two separate apps registered in Microsoft Entra ID require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Obtain consent

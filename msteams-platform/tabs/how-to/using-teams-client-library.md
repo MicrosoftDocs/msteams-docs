@@ -1,6 +1,6 @@
 ---
 title: Teams JavaScript client library SDK
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (previously called Office), and Outlook.
+description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.author: mosdevdocs
 author: erikadoyle
@@ -274,7 +274,7 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
@@ -358,7 +358,7 @@ To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm pa
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
-After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility updates your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` are updated with:
 
 > [!div class="checklist"]
 >
@@ -369,7 +369,7 @@ After completion, the utility will have updated your `package.json` file with th
 > * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code inside html files is not supported by the upgrade tooling and will require manual changes.
+> Code inside html files is not supported by the upgrade tooling and requires manual changes.
 
 ### 3. Update the app manifest (optional)
 
