@@ -124,14 +124,14 @@ Ensure that you [instrument code and track analytics](../../../../design/overvie
 <details>
 <summary>Coactivation in mutually identified existing customers</summary>
 
-Microsoft will evaluate coactivation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
+Microsoft evaluates coactivation opportunities in large customer accounts. The evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
 </details>
 <br>
 <details>
 <summary>Support joint customer success story development</summary>
 
-Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. Microsoft team ensures your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>
