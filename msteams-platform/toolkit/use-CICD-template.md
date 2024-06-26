@@ -70,7 +70,7 @@ To set up the pipeline with GitHub, follow these steps:
     
         steps:
           - name: "Checkout GitHub Action"
-            uses: actions/checkout@master
+            uses: actions/checkout@v4
     
           - name: Setup Node 20.x
             uses: actions/setup-node@v1
