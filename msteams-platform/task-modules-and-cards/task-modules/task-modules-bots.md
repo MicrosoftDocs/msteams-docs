@@ -22,18 +22,7 @@ There are two ways of invoking dialogs:
 
 When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object, which Teams uses to display the dialog (referred as task module in TeamsJS v1.x).
 
-> [!WARNING]
-> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains, are migrating to the `*.cloud.microsoft` domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
->
-> 1. Update TeamsJS library to v.2.19.0 or later. For more information about the latest release of TeamsJS, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
->
-> 2. Update your Teams app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) header [*frame-ancestors*](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive to allow your app to be hosted by the `*.cloud.microsoft` domain. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers while also adding the `*.cloud.microsoft` domains. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
->
-> Update the following list of domains in `frame-ancestors` in your app's CSP headers:
->
-> ```http
-> https://*.cloud.microsoft https://teams.microsoft.com https://*.teams.microsoft.com https://*.microsoft365.com https://*.office.com;
-> ```
+[!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
 :::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="task/fetch request or response":::
 
