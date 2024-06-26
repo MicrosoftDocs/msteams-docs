@@ -1,7 +1,7 @@
 ---
 title: Custom Together Mode Scenes
 author: surbhigupta
-description: Work with custom Together Mode scenes
+description: Learn how to work with custom Together Mode scenes in Microsoft Teams, build scene using Scene studio, share scene using Scene studio and its sample.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
