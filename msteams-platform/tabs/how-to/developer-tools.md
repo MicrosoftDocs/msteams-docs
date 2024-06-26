@@ -32,7 +32,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 
       :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
 
-The following example shows DevTools open and inspecting a tab configuration dialog:
+The following example shows DevTools:
 
    :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools." lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
 
