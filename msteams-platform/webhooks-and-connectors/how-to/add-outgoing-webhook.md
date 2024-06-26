@@ -65,7 +65,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
     * **Description**: A detailed string that appears in the profile card and the team-level app dashboard.
     * **Profile picture**: An app icon for your webhook, which is optional.
 
-1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
+1. Select **Create**. The Outgoing Webhook is added to the team's channel.
 
     :::image type="content" source="../../assets/images/create-outgoingwebhook.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
 

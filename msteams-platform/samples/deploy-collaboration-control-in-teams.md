@@ -12,7 +12,7 @@ ms.date: 10/04/2022
 
 [!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
-Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+Collaboration controls work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Configure the app for Teams
 
