@@ -22,7 +22,7 @@ Ensure that you enable the SSO for your bot before you enable SSO for your Adapt
 
 ## SSO in Teams at runtime
 
-SSO for Adaptive Cards Universal Actions in a bot can be enabled by obtaining access token of the signed in Teams app user. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
+SSO for Adaptive Cards Universal Actions in a bot can be enabled by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the Adaptive Cards Universal Actions in a bot:
 
