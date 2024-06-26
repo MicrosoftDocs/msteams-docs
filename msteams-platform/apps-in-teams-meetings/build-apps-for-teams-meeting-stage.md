@@ -210,7 +210,7 @@ Screen share content to the meeting Stage simplifies app content sharing during 
 |**Coordinated Content Presentation**: You can now showcase coordinated content to multiple participants on a larger stage, moving beyond the fixed-width Side Panel. This expanded visibility attracts more attention and integrates closely with the meeting lifecycle.     | **Contextual Tool Usage**: Users can seamlessly use their favorite tools within the ongoing communication context. This minimizes context switching and enhances meeting outcomes.        |
 |**Out-of-the-Box App Sharing**: Basic sharing of the entire app is available out-of-the-box, requiring no additional investment from you. This streamlined approach simplifies the content sharing process.     | **Inline Content Display**: Content appears inline within the meeting window, ensuring easy access for all participants. No need to navigate away from the conversation.        |
 |**Enhanced APIs for Specific Content Sharing**: Existing Share to Stage APIs are enhanced to enable sharing of specific content via the Screen Sharing protocol. You can now tailor content sharing to meet specific use cases.     |**Sharing Button on Meeting Side Panels**: Users with these roles can initiate content sharing directly from the meeting side panels. This empowers presenters to engage with the audience effectively.          |
-|**Deep Link and "Share in Meeting" Button Support**: Use the Screen Sharing protocol to share content via deep links or by using the "Share in Meeting" button. This flexibility ensures a seamless experience for users.     |  Participants can start sharing content via a deeplink or by using the "Share in Meeting" button. Both options are exposed by you, allowing for a seamless experience.       |
+|**Deep Link and "Share in Meeting" Button Support**: Use the Screen Sharing protocol to share content via deep links or by using the "Share in Meeting" button. This flexibility ensures a seamless experience for users.     |  Participants can start sharing content through a deep link or by using the "Share in Meeting" button. Both options are exposed by you, allowing for a seamless experience.       |
 
 Users can screen share content to the meeting stage in the following scenarios:
 
@@ -266,7 +266,7 @@ Users can screen share content to the meeting stage in the following scenarios:
   | Value | Type | Required | Description |
   | --- | --- | --- | --- |
   |`callback` | String | Yes| Callback contains two parameters, error and result. The error can contain either an error of type SdkError or null when share is successful. The result can contain either a true value if there's a successful share or null when the share fails.|
-  |`appContentURL`| String |Yes |The URL that will be shared on to the stage.|
+  |`appContentURL`| String |Yes |The URL that is shared on to the stage.|
   | `shareOptions`| Object | No | Defines additional sharing options.|
   |shareOptions.sharingProtocol | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
 
@@ -303,7 +303,7 @@ The participants can review and sign documents, such as purchase agreements and 
 
 :::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows an in-meeting document signing app":::
 
-The following participant roles may be involved during the meeting:
+The following participant roles might be involved during the meeting:
 
 * **Document creator**: This role can add their own documents to be reviewed and signed.
 * **Signer**: This role can sign reviewed documents.
