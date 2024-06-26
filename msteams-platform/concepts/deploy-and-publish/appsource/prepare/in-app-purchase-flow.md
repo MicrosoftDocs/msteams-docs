@@ -57,7 +57,7 @@ Following code snippet is an example of calling the API from the Teams app built
 
 # [TeamsJS v1](#tab/jsonV11)
 
-```javascript
+```json
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
