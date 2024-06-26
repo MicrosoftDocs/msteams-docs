@@ -23,9 +23,9 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and dialogs (referred as task modules in TeamsJS v1.x).
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text." lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards."lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards." lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
 :::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using dialog." lightbox="../assets/images/task-module-example-expanded.png":::
 
@@ -48,6 +48,49 @@ Rate limiting is used to optimize bots used for your Teams application. To prote
 With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video. See [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+
+You can add or update the bot icon for the Teams apps as follows:
+
+* [Microsoft Teams Store app](~/concepts/deploy-and-publish/appsource/publish.md): For Teams Store apps, bot icons are fetched from the app manifest (previously called Teams app manifest). You can update the bot profile icon by updating it through the app manifest and republishing the app.
+    
+    ```json
+    
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+      "manifestVersion": "1.17",
+      "version": "1.0.0",
+      "id": "%MICROSOFT-APP-ID%",
+      "icons": {
+         "outline": "A relative path to a transparent .png icon — 32px X 32px", // This icon is used for bot profile.
+         "color": "A relative path to a full color .png icon — 192px X 192px"
+      },
+      "bots": [
+      {
+        "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
+        "scopes": [
+          "team",
+          "personal",
+          "groupChat"
+        ]
+      }
+      ]
+    ...
+    }
+
+    ```
+
+* [Uploading a custom app](~/concepts/deploy-and-publish/apps-upload.md) in Teams or [custom apps built for your org (LOB apps)](/microsoftteams/teams-custom-app-policies-and-settings): </br>
+  
+  * [**Azure portal**](https://ms.portal.azure.com/#home): You can change your bot icon by navigating to [Azure portal.](/azure/bot-service/bot-service-manage-overview#settings)
+
+    :::image type="content" source="~/assets/images/bots/bot-icon-update.png" alt-text="Screenshot of the Azure portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-update.png":::
+</br>
+  * [**Bot Framework Portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal, you can update the bot icon in the settings page.
+
+    :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
+
+> [!NOTE]
+> The bot icon is cached until the user signs out and signs back in Teams.
 
 You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
 
