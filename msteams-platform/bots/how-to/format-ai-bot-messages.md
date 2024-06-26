@@ -367,7 +367,7 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 | Sample name | Description | Node.js | C# |
 |:--|--|--|
 | Teams conversation bot | This sample app displays the AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | |
-|T eamsAzureOpenAI | This sample conversational bot uses Teams AI library and contains the AI label, feedback buttons, sensitivity label, and citations in its generated messages. | | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
+| TeamsAzureOpenAI | This sample conversational bot uses Teams AI library and contains the AI label, feedback buttons, sensitivity label, and citations in its generated messages. | | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
 
 ## See also
 
