@@ -27,7 +27,7 @@ The remainder of this article walks you through the structure and latest updates
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -274,7 +274,7 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
