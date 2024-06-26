@@ -1,5 +1,5 @@
 ---
-title: Code configuration for enabling SSO for bots
+title: Update App Manifest to Enable SSO
 description: Learn how to add code configuration, handle an access token, receive token, and handle app user log out for enabling in Teams bots. Sample (C#, Node.js).
 ms.topic: how-to
 ms.localizationpriority: high
