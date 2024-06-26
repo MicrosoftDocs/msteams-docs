@@ -13,7 +13,7 @@ Ensure that you register your app with Microsoft Entra ID before you add code to
 > [!div class="nextstepaction"]
 > [Register with Microsoft Entra ID](tab-sso-register-aad.md)
 
-You need to configure your tab app's client-side code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the tab app. If your tab app requires more Microsoft Graph permissions, you need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
+You need to configure your tab app's client-side code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token":::
 
