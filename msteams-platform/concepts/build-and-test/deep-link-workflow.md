@@ -1,7 +1,7 @@
 ---
 title: Deep link to a workflow in Teams
 author: v-npaladugu
-description: Learn how to create deep links to a specific task in Microsoft Teams and navigate using them in your Teams.
+description: Learn how to create deep links to a specific task in Microsoft Teams and navigate using them in your Teams. Code sample (.NET, Node.js).
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
