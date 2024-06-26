@@ -46,9 +46,9 @@ To share an app to the meeting stage, you must configure the context and resourc
 
 There are many scenarios where sharing the entire app to the meeting stage isn't as useful as sharing specific parts of the app:  
 
-1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting versus the entire app with all the boards.  
+1. For a brainstorming or whiteboard app, a user might want to share a specific board in a meeting versus the entire app with all the boards.  
 
-1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
+1. For a medical app, a doctor might want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
 
 1. For a video streaming app, a user might want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
@@ -75,6 +75,7 @@ Use the following APIs to share specific part of the app:
 |[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
+|[**Get app content in meeting side panel**](#get-app-content-in-meeting-side-panel)| Fetch the app content shared to display in the meeting side panel. | [TeamsJS library](/javascript/api/@microsoft/teams-js/sharing.history) |
 
 ## Share app content to stage API
 
@@ -204,6 +205,49 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have permissions to allow share to stage.|
 
+## Get app content in meeting side panel
+
+The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
+
+When the meeting starts, the app’s side panel automatically opens for the user who has shared content in the meeting. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+
+### Example
+
+```javascript
+// Define an async function
+async function fetchContentDetails() {
+    // Fetches a list of content details that was shared in the meeting
+    const contentDetails = await microsoftTeams.sharing.history.getContent();
+
+    // Above content details can be used to hydrate the meeting side panel 
+    // to share to meeting stage
+
+}
+```
+
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+| `appId` | String | Yes | The ID of the app to be shared. |
+| `title` | String | Yes | The title of the shared content. |
+| `contentReference` | String | Yes | The content reference link of the shared content. |
+| `threadId` | String | Yes | The conversation ID where the content was shared. |
+| `author` | String | Yes | The ID of the user who shared the content. |
+| `contentType` | String | Yes | The type of the content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
+
+### Response codes
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| **200** | Meeting content details successfully retrieved. |
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+
 ## Build an in-meeting document signing app
 
 You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
@@ -218,7 +262,7 @@ The participants can review and sign documents, such as purchase agreements and 
 
 :::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows an in-meeting document signing app":::
 
-The following participant roles may be involved during the meeting:
+The following participant roles might be involved during the meeting:
 
 * **Document creator**: This role can add their own documents to be reviewed and signed.
 * **Signer**: This role can sign reviewed documents.
