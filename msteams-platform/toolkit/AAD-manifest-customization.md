@@ -144,7 +144,7 @@ The Microsoft Entra manifest file contains placeholder arguments with {{...}} st
 
 ### Reference environment variable in Microsoft Entra manifest template
 
-You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
+You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the environment variable values.
 
 <a name='edit-and-preview-azure-ad-manifest-with-codelens'></a>
 
