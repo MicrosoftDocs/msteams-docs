@@ -1,5 +1,5 @@
 ---
-title: Create low-code custom apps for Microsoft Teams
+title: Create Low-code & No-code Custom Apps
 description: Learn about the available Microsoft low and no code solutions and how to create an app with Teams and Microsoft Power Platform.
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -81,4 +81,6 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## See also
 
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 - [Power Platform Connectors overview](/connectors/connectors)
+

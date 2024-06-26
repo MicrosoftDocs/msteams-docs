@@ -1,7 +1,7 @@
 ---
-title: Define message extension action commands
+title: Create Action Commands for App
 author: surbhigupta
-description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create dialog (task module), and respond to dialog (task module) submit action.
+description: Learn to define message extension action commands with app manifest in Teams. Sample (.NET, Node.js), create dialog (task module), respond to dialog submit action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
