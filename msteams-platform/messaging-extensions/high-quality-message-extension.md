@@ -12,12 +12,12 @@ ms.date: 11/14/2023
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams and Office.com.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
@@ -31,7 +31,7 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 ## Mandatory requirements
 
-The requirements for building message extension plugins for Copilot for Microsoft 365 include:
+The requirements for building plugins for Copilot for Microsoft 365 and Office.com include:
 
 > [!div class="checklist"]
 >
@@ -59,7 +59,7 @@ Ensure that you adhere to the description guidelines listed in the following tab
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -72,9 +72,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.13",
+  "manifestVersion": "1.17",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "Tasks",
@@ -94,9 +94,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.13",
+  "manifestVersion": "1.17",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "Survey",
@@ -116,9 +116,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.13",
+  "manifestVersion": "1.17",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "CRM",
@@ -138,9 +138,9 @@ The following table lists the short description examples for each category:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "version": "1.0.0",
-  "manifestVersion": "1.13",
+  "manifestVersion": "1.17",
   "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
   "name": {
     "short": "General",
@@ -163,13 +163,13 @@ Command description maps user intent and utterance to search command inside a pl
 
 #### Semantic description
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid instructional phrases such as “if the user says X,” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
 * Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
 * Avoid grammar and punctuation errors. *[Mandatory fix]*
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
@@ -190,14 +190,16 @@ The following table lists the command and semantic description examples for each
           "type": "query",
           "title": "Tasks",
           "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
-          "SemanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
+          "semanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
             "commandBox",
             "compose",
             "message"
-          ],
+          ]
+        }
+      ]
 ```
 
 # [Surveys](#tab/surveys)
@@ -213,14 +215,16 @@ The following table lists the command and semantic description examples for each
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
-          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents."
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
             "commandBox",
             "compose",
             "message"
-          ],
+          ]
+        }
+      ]
 ```
 
 # [CRM](#tab/crm)
@@ -259,6 +263,7 @@ The following table lists the command and semantic description examples for each
           "type": "query",
           "title": "General",
           "description": "Find number of stocks or listed equities using keywords, key ratios, and index.",
+          "semanticDescription": "This command allows you to search for specific stocks or listed equities. You can use keywords, key ratios, and index information to refine your search and find the most relevant results.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -272,9 +277,9 @@ The following table lists the command and semantic description examples for each
 
 ### Parameter description
 
-Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters` property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -291,6 +296,7 @@ Advanced search: Search for high priority tasks related to Northwind that are du
         "name": "Name",
         "title": "Project or Task Name",
         "description": "Project name or task name as keyword.",
+        "SemanticDescription": "Search for a specific project or task by its name. The name acts as a keyword for the search."
         "inputType": "text"
     },
     {
@@ -322,12 +328,14 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
     "name": "SurveyName",
     "title": "Name of Survey",
     "description": "Survey name or related keyword",
+    "semanticDescription": "Search for a survey using its name or a related keyword. Output: Survey Name",
     "inputType": "text"
   },
   {
     "name": "Tags",
     "title": "Tags",
     "description": "Product name or keywords related pertaining to a question",
+    "semanticDescription": "Search for a product or question using its name or related keywords. Output: Tags",
     "inputType": "text"
   },
   {
@@ -367,7 +375,7 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
     "name": "Time",
     "title": "Time",
     "description": "Number of days to search for leads with given status.",
-    "semanticIndex": "Number of days to search for leads with given status. Output: Number",
+    "semanticDescription": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -427,8 +435,159 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 
 * A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
-<br>
-<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
+# [Single parameter](#tab/single-parameter)
+
+The following code is an example of a single parameter defined in app manifest:
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+# [Two parameters](#tab/two-parameter)
+
+The following code is an example of two parameters defined in app manifest:
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category of the product",
+                            "inputType": "text"
+                        }
+                        {
+                            "name": "supplierCity",
+                            "title": "Supplier city",
+                            "description": "Enter the supplier city of product",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "inventoryStatus",
+                            "title": "Inventory status",
+                            "description": "Enter what status of the product inventory. Possible values are 'in stock', 'low stock', 'on order', or 'out of stock'",
+                            "inputType": "text"
+                        },
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "stockQuery",
+                            "title": "Stock level",
+                            "description": "Enter a range of integers such as 0-42 or 100- (for >100 items). Only use if you need an exact numeric range.",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+# [Multiple parameters](#tab/multiple-parameters)
+
+The following code is an example of multiple parameters defined in app manifest:
 
 ```json
 "commands": [
@@ -513,7 +672,7 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
             ]
 ```
 
-</details>
+---
 <br>
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
@@ -651,19 +810,79 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
+## Extend your plugin to Copilot and Office.com
+
+To enable your message extensions as a plugin in Copilot for Microsoft 365 or Office.com, we recommend you to implement the following best practices:
+
+* **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. [*Mandatory*]
+
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works similarly for Teams, Outlook, and Bing. However, you must add client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: [*Optional*]
+
+   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
+   1. Select **App registrations**.
+   1. Search for your app and select the app name.
+   1. Go to **Manage** > **Expose an API**.
+   1. In the Authorized client applications section, ensure that the following Client ID values are listed:
+
+      | Microsoft 365 client application | Client ID |
+      | --- | --- |
+      | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+      | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+      | OfficeAIAppChatCopilotExt | 3068386c-7a16-4f6a-a664-043b6b232816 |
+      |Teams desktop and mobile| 1fec8e78-bce4-4aaf-ab1b-5451cc387264|
+      |Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346|
+      |Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca|
+      |Microsoft 365 desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c|
+      |Microsoft 365 mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+      |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
+
+* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers: [*Mandatory*]
+
+   | Microsoft 365 app host | frame-ancestor permission |
+   | --- | --- |
+   | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
+   |OneDrive and Sharepoint | .sharepoint.com, .sharepoint-df.com |
+   | WXP Web Internal Infrastructure | officeapps.live.com, .officeapps.live-int.com, officeapps-df.live.com |
+   | WXP M365 Copilot Domains | fa000000124.resources.office.net, fa000000124.resources.office.net, fa000000128.resources.office.net, fa000000129.resources.office.net |
+   |App Copilots| microsoftonline.com <br> sharepoint-df.com <br> sharepoint.com<br>sharepointonline.com<br>spgrid.com<br>spolabs.com<br>spoppe.com<br>sposites.com<br>partner.microsoftonline.cn<br>sharepoint.cn<br>sharepoint.de<br>myus.msftsptest.com<br>my.microsoftpersonalcontentppe.com<br>wopi.onedrive.com<br>wopi.onedrive-tst.com<br>outlook.office.com<br>outlook-sdf.office.com<br>outlook.live.com<br>outlook-sdf.live.com<br>outlook-tdf.live.com<br>sdfpilot.live.com<br>outlook.office365.us<br>outlook.office365.com<br>exchangelabs.live-int.com<br>office-int.com<br>officeapps.live-int.com<br>officeapps.live.com<br>officeapps.live-int.com<br>officeapps-df.live.com<br>fa000000125.resources.office.net<br>fa000000129.resources.office.net<br>fa000000124.resources.office.net<br>fa000000128.resources.office.net |
+
+* **Ensure that your registered bot is connected to Microsoft 365 channel**: [*Mandatory*].
+  1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
+  1. Select **Bot Services**.
+  1. Search and select the name of your bot.
+  1. In bot overview page, go to **Settings** > **Channels**.
+  1. Under **Available Channels**, select **Microsoft 365**.
+  1. Select **Apply**.
+
+* Validate that network connectivity to your application endpoints is available.
+
+* Configure [app setup policies](/microsoftteams/teams-app-setup-policies#assign-a-custom-policy-in-app-setup-policy-to-users-and-groups) to allow custom apps upload. *[Optional]*.
+
+* Create a [Teams app package](../concepts/build-and-test/apps-package.md), which consists  an app manifest and app icons.
+
+* Upload the app package for a single developer or for the tenant.
+
+* If you're publishing the app to the tenant, configure an [app permissions policy](/microsoftteams/teams-app-permission-policies) to limit access to specific users.
+
+* Validate that the app works as expected across Microsoft 365 apps such as Teams, Outlook, office.com, mobile, and Microsoft Copilot for Microsoft 365 in Teams and copilot.microsoft.com.
+
+* Complete organization’s formal publishing process for production.
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
+| Manifest version | App manifest version must be 1.17 or later. [*Mandatory*] |
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+| Content Security Policy |If applicable, modify your Content Security Policy (CSP) headers. [*Recommended*] |
 
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).

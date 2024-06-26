@@ -184,7 +184,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).  
 
 ## Next step
 
@@ -192,6 +192,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 > [Define message extension action commands](how-to/action-commands/define-action-command.md)
 
 ---
+
 
 ## See also
 
