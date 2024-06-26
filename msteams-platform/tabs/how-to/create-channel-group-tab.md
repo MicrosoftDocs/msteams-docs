@@ -1,6 +1,6 @@
 ---
 title: Create a channel tab or group tab
-description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams and build your first app using Blazor.
+description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
@@ -54,7 +54,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Where do you want to place the files?**
 
-    You're currently in your project directory. Select **Enter**.
+    You're in your project directory. Select **Enter**.
 
 * **Title of your Microsoft Teams app project?**
 
@@ -1028,11 +1028,9 @@ You've completed the tutorial to build a tab app with Blazor.
 
 > [!NOTE]
 >
-> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * Migrating your configurable tab to static tab is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md). 
-> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
+> To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat, channels, and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab. 
+Static tab capability is extended to support group chat, channels, and meetings. In static tabs, there is no configuration dialog, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. You can update your existing configurable tab to a static tab and add different scopes to the static tab.
 
 To change your configurable tab to static tab:
 

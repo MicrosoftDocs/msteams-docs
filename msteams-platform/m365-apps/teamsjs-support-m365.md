@@ -1,8 +1,8 @@
 ---
-title: The Teams JavaScript client library support across Microsoft 365
+title: TeamsJS Support across Microsoft 365
 author: erikadoyle
 ms.author: mosdevdocs
-description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app.
+description: Learn the level of support for different TeamsJS library capabilities across different hosts for Teams apps, including Teams, Outlook, and Microsoft 365 app.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
@@ -12,7 +12,7 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 
 # TeamsJS capability support across Microsoft 365
 
-Starting with version 2.0.0, Microsoft Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
+Starting with version 2.0.0, Microsoft Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Microsoft 365 applications that can host Teams apps (Microsoft 365 app and Outlook) support only a subset of the application types and capabilities you can build for the Teams platform. This support expands over time.
 
 This article details the level of support of TeamsJS version 2.x capabilities across various host applications. For more information on what's changed between TeamsJS versions 1.x and 2.x, see [What's new in TeamsJS version 2.x.x](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
@@ -2679,5 +2679,4 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 
 - [Extend Teams apps across Microsoft 365](./overview.md)
 - [Extend a Teams personal tab across Microsoft 365 app](./extend-m365-teams-personal-tab.md)
-- [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
 - [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)

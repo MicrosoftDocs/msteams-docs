@@ -80,7 +80,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members&preserve-view=true)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members&preserve-view=true)
 
 ```python
 async def _show_members(
@@ -133,7 +133,7 @@ Response body
 
 * * *
 
-After you fetch the roster or user profile, you can get details of a single member. Currently, to retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.
+After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.
 
 ## Get single member details
 
@@ -233,7 +233,7 @@ Response body
 
 * * *
 
-After you get details of a single member, you can get details of the team. Currently, to retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
+After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
 
 ## Get team's details
 
@@ -331,7 +331,7 @@ Response body
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. Currently, to retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
+After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
 
 ## Get the list of channels in a team
 

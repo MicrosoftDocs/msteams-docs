@@ -1,5 +1,5 @@
 ---
-title: The build stage for your collaborative app
+title: Build Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the build stage of your app to grow your app.
 ms.topic: conceptual
@@ -31,7 +31,3 @@ Let’s briefly go over what initiatives are the most impactful during the build
 
 > [!div class="nextstepaction"]
 > [Launching your collaborative app](launch-app.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)
