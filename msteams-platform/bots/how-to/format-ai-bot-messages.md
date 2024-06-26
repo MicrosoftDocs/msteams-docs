@@ -126,12 +126,12 @@ await context.sendActivity({
 |--|--|--|--|
 | `citation` | Object | Yes | Details of the citation. |
 | `citation.@type` | String | Yes | Object of the citation. The only allowed value is `Claim`. |
-| `citation.position` | Integer | Yes | Displays the citation number. The values are limited to less than eight.  |
+| `citation.position` | Integer | Yes | Displays the citation number. The values are limited to less than eight. |
 | `citation.appearance` | Object | Yes | Information about the appearance of the citation. |
 | `citation.appearance.@type` | String | Yes | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
 | `citation.appearance.name` | String | Yes | Title of the referenced content. |
 | `citation.appearance.url` | String | No | URL of the referenced content. |
-| `citation.appearance.abstract` | String | No | Extract of the referenced content and is limited to less than 1000 characters. |
+| `citation.appearance.abstract` | String | No | Extract of the referenced content and is limited to less than 1,000 characters. |
 | `citation.appearance.keywords` | Array | No | Keywords from the referenced content. You can't add more than three keywords. |
 
 After you enable citations, the bot message includes in-text citations and references. The in-text citations display the reference details when users hover over the citation.
@@ -364,9 +364,10 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 
 ## Code sample
 
-| Sample name | Description | Node.js |
+| Sample name | Description | Node.js | C# |
 |:--|--|--|
-| Teams conversation bot | This sample app provides a bot with an AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) |
+| Teams conversation bot | This sample app displays the AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | |
+|T eamsAzureOpenAI | This sample conversational bot uses Teams AI library and contains the AI label, feedback buttons, sensitivity label, and citations in its generated messages. | | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
 
 ## See also
 
