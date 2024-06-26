@@ -1,5 +1,5 @@
 ---
-title: Initiate actions with message extensions
+title: Action-based Message Extensions
 description: In this module, learn create Action-based message extensions to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to

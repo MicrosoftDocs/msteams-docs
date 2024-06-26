@@ -1,5 +1,5 @@
 ---
-title: Universal actions for search based message extensions
+title: Universal Actions for Message Extension
 author: v-ypalikila
 description: In this article, learn about Universal Actions and automatic refresh for Adaptive Cards in search based message extensions.
 ms.topic: conceptual
