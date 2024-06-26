@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions for Teams developer document
+title: Teams Developer Documentation - FAQs
 description: Frequently asked questions for Teams developer document
 ms.topic: reference
 ms.localizationpriority: high
@@ -924,28 +924,28 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 <details>
 <summary>What does the Teams AI library do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
+Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
 
 <details>
-<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+<summary>Can we use the AI library with other Large Language Models (LLMs) apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other large language model (LLM)s.
+Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of large language model (LLM)s in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
 <br>
 </details>
 
@@ -978,7 +978,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
 <br>
 &nbsp;
 </details>

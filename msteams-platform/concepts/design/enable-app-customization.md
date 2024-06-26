@@ -1,5 +1,5 @@
 ---
-title: Enable customization for your Microsoft Teams app allows
+title: Enable Customization for App
 author: heath-hamilton
 description: In this module, understand how Teams admins can customize your Teams app for their org.
 ms.localizationpriority: medium
@@ -31,5 +31,4 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 ## See also
 
-* [Customize apps in the Teams admin center](/microsoftteams/customize-apps)
-* [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
+[Customize apps in the Teams admin center](/microsoftteams/customize-apps)

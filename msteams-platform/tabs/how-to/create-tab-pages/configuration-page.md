@@ -47,8 +47,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveGray = () => {
             microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/gray",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/gray",
                     entityId: "grayIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -61,8 +61,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveRed = () => {
             microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/red",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/red",
                     entityId: "redIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -109,8 +109,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveGray = () => {
             microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/gray",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/gray",
                     entityId: "grayIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -120,8 +120,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveRed = () => {
             microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/red",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://exampe.com/red",
                     entityId: "redIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
