@@ -232,7 +232,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 1. Under Incoming Webhook, select **1 Configured**.
 
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your connectors.":::
 
 1. Select **Manage**.
 
@@ -260,7 +260,7 @@ The webhook is now removed from the Teams channel.
 1. In the left pane, select **Configured**.
 1. Under Incoming Webhook, select **1 Configured**.
 
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your connectors.":::
 
 1. Select **Manage**.
 
