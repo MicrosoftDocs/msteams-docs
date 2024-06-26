@@ -128,7 +128,7 @@ For teachers using the Share to Teams button, there's an additional option to `C
 
 `options` (optional): `{ elements?: HTMLElement[] }`
 
-Currently, all share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
+All share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
 
 ### Set default form values
 
