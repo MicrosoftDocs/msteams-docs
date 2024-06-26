@@ -202,7 +202,7 @@ app.feedbackLoop(async (context, state, feedbackLoopData) => {
 });
 ```
 
-For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L120).
+For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L42).
 
 For a bot built using **Bot Framework SDK**, you must have an `onInvokeActivity` handler to process the feedback. Ensure that you return a status code 200 with an empty JSON object as a response.
 
