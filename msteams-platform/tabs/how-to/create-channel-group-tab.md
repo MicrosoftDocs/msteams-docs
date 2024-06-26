@@ -54,7 +54,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Where do you want to place the files?**
 
-    You're currently in your project directory. Select **Enter**.
+    You're in your project directory. Select **Enter**.
 
 * **Title of your Microsoft Teams app project?**
 

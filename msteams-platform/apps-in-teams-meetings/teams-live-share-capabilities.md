@@ -1,7 +1,7 @@
 ---
 title: Live Share getting started
 author: surbhigupta
-description: Learn more about Live Share SDK capabilities, RSC permissions, and live data structures.
+description: Learn about Live Share SDK capabilities, data structure, join a session, RSC permissions, role verification for live Share and fluid distribution data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
