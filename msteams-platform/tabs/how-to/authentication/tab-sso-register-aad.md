@@ -31,7 +31,7 @@ Microsoft Entra configuration enables SSO for your tab app in Teams. It responds
 It's helpful if you learn about the configuration for registering your app on Microsoft Entra ID beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
-- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. Currently, multiple domains per app aren't supported.
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. The multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
