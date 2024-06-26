@@ -8,7 +8,7 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share a link directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When the **Share to Teams** button is selected, it opens the **Share to Teams** dialog, prompting the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share a link directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When **Share to Teams** is selected, it opens a dialog and prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 
@@ -43,7 +43,7 @@ The following video provides the basic steps on how to embed Share to Teams:
 
 There are two methods by which you can embed Share to Teams on your webpage. Based on the control you want on the Share to Teams button, you can use one of the following methods:
 
-# [Method 1](#tab/method-1)
+# [Method 1](#tab/method1)
 
 This method shows the simple and basic way to embed Share to Teams where you can customize the button and its functionality based on your requirements.
 
@@ -95,19 +95,35 @@ This method shows the simple and basic way to embed Share to Teams where you can
           </div>
          ```
 
-# [Method 2](#tab/method-2)
+# [Method 2](#tab/method2)
 
-This method allows you to have some control over which button is dynamically rendered or when the script is executed. The script only runs when `shareToMicrosoftTeams.renderButtons(options)` is invoked.
+This method allows you to have some control over which button is dynamically rendered or when the script is executed. The script only runs when `window.shareToMicrosoftTeams.renderButtons()` is invoked. You can pass specific HTML elements through the `renderButtons({elements: []})` API. You can customize the button styles, size, and languages.
 
-Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger and render all share buttons that have the class name `teams-share-button` on the page.
-
-*Procedure placeholder*
+The async `shareToMicrosoftTeams.renderButtons(options)` API renders all share buttons that have the class name `teams-share-button` on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons.
 
 ```javascript
 `options` (optional): `{ elements?: HTMLElement[] }`
 ```
 
-Currently, all share buttons are rendered on the page. If an `options (optional)` object is supplied with a list of elements, then only those elements are rendered into the **Share** buttons.
+1. Add the launcher.js script on your webpage.
+
+    ```html
+    <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
+    ```
+
+2. Create an HTML element and specify the required attributes. After the launcher script is fully loaded, ensure that the rendering logic is executed.
+
+   ```javascript
+   async function onLoadComplete() {
+       const shareButton = document.createElement("div");
+       shareButton.setAttribute("data-app-id", "<app-id>");
+       shareButton.textContent = "Share Test App"
+       shareButton.setAttribute("data-href", "<app-content-url>");
+       shareButton.setAttribute("data-preview", "false");
+       shareButton.setAttribute("data-msg-text", "<default-message-to-be-populated-in-compose-box>");
+       await window.shareToMicrosoftTeams.renderButtons({elements: [shareButton]});
+   }
+   ```
 
 ---
 
@@ -125,7 +141,7 @@ Before you enable share content to meetings, you must ensure the following:
 
 2. To display the content on the meeting stage, the meeting app must support [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) with two primary requirements:
 
-    * The [app manifest](../../resources/schema/manifest-schema.md) that supports both the meeting stage and meeting side panel. You must configure `meetingStage` and `meetingSidePanel` as frame contexts in the app manifest. If not configured, meeting participants might not be able to view the content on stage.
+    * The [app manifest](../../resources/schema/manifest-schema.md) that supports both `meetingStage` and `meetingSidePanel` configured as frame contexts. If not configured, meeting participants might not be able to view the content on stage.
     * The app that supports `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
 
 > [!NOTE]
