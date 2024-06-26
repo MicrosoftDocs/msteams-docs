@@ -132,7 +132,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-When you select the back button in a Teams app, you will return to the Teams platform without navigating inside the app.
+When you select the back button in a Teams app, you return to the Teams platform without navigating inside the app.
 
 To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app.
 

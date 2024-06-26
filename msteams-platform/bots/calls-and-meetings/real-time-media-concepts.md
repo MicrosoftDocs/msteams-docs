@@ -50,7 +50,7 @@ The next section provides details about video subscription requests made by a bo
 
 ## Video subscription
 
-In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant’s main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is sharing screen.
+In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant’s main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is screen sharing.
 
 The next section provides details about what you must install and the requirements to develop an application-hosted media bot.
 
