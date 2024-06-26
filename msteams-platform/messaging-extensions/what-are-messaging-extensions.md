@@ -20,7 +20,7 @@ The following image displays the locations from where message extensions can be 
 
 > [!NOTE]
 > * @mentioning message extensions in the compose box isn't supported.
-> * Message extension isn't supported for group chats with external users.
+> * Message extension options aren't supported for group chats with external users.
 
 # [Desktop](#tab/desktop)
 
