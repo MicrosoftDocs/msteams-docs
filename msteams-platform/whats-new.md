@@ -413,6 +413,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 June**
 
+***June 26, 2024**: [Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings).
+
 ***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
 
 :::column-end:::
