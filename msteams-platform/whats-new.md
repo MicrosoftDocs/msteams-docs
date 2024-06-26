@@ -35,7 +35,8 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
-***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
+* ***June 26, 2024***: [Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages.](bots/how-to/format-ai-bot-messages.md)
+* ***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
