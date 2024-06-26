@@ -1,5 +1,5 @@
 ---
-title: Create connectors for Microsoft 365 Groups
+title: Connectors for Microsoft 365 Groups
 author: laujan
 description: Get started with connectors for Microsoft 365 Groups. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) connector for Microsoft 365 Groups generating notifications to Teams channel.
 ms.localizationpriority: medium

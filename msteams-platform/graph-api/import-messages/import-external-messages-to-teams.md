@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Graph to import external platform messages to Teams
+title: Import External Platform Messages
 description: Describes how to use Microsoft Graph to import messages from an external platform to Teams.
 ms.localizationpriority: high
 author: "akjo"
@@ -45,7 +45,7 @@ Since you're migrating existing data, maintaining the original message timestamp
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
 > [!NOTE]
-> The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
+> The `createdDateTime` field is only populated for instances of a team or channel that have been migrated.
 
 <!-- markdownlint-disable MD001 -->
 

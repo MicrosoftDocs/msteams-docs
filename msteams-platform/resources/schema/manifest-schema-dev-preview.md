@@ -1,5 +1,5 @@
 ---
-title: Public developer preview manifest schema reference
+title: Developer Preview App Manifest Schema
 description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
