@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams tabs
-description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Microsoft Teams JavaScript client library (TeamsJS). It includes code samples.
+description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 02/22/2023

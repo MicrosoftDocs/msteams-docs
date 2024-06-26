@@ -1,6 +1,6 @@
 ---
 title: Teams JavaScript client library SDK
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (previously called Office), and Outlook.
+description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.author: mosdevdocs
 author: erikadoyle
@@ -19,7 +19,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
-Here's the current versioning guidance for various app scenarios:
+Here's the versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
@@ -27,7 +27,7 @@ The remainder of this article walks you through the structure and latest updates
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -274,7 +274,7 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 

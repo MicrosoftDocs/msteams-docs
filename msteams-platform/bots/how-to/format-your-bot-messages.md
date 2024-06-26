@@ -27,7 +27,7 @@ Microsoft Teams supports the following formatting options:
 
 Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
-Currently, the following limitations apply to formatting:
+The following limitations apply to formatting:
 
 * Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
