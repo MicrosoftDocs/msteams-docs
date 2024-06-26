@@ -160,7 +160,7 @@ If there's no invocation error and the user doesn't select **X** to dismiss the 
 
 After validating user input, call `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to close the dialog, or you can pass an object or string `result` back to your app as the first parameter, and an `appId` of the app that opened the dialog as the second parameter. If you call `submit()` with a `result` parameter, you must pass an `appId` (or an array of `appId` strings of apps authorized to receive the result of the dialog). This action enables Teams to validate that the app sending the result is the same as the invoked dialog.
 
-Teams will then invoke your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
+Teams then invokes your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
 
 ### Adaptive Card dialogs
 
