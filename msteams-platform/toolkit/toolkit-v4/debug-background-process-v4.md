@@ -32,7 +32,7 @@ The tunnel creation dialog opens.
 * From the dropdown, select the  required public authentication in **Access**.
 * Select **OK**. Visual Studio displays confirmation of tunnel creation.
 
-The tunnel you have created will be under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
+The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
 
