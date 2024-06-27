@@ -1,5 +1,5 @@
 ---
-title: Update and delete messages sent from your bot
+title: Update & Delete Bot Messages
 author: WashingtonKayaker
 description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview
@@ -12,6 +12,9 @@ ms.author: anclear
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+
+> [!NOTE]
+> A bot can't update or delete messages sent by the user in Microsoft Teams.
 
 ## Update messages
 

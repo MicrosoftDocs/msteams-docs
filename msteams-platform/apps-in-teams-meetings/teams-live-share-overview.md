@@ -1,7 +1,7 @@
 ---
 title: Live Share overview
 author: surbhigupta
-description: In this module, learn what is Microsoft Live Share SDK and its user scenarios.
+description: Learn about Live Share SDK, Live share core, Live share media, and Live share canva, apps with Live Share, Live Share collaborative contexts, and React integration.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -39,7 +39,7 @@ Features supported by the Live Share core package include:
 - Synchronize a countdown timer with `LiveTimer`.
 - Send real-time events to other clients in the session with `LiveEvent`.
 - Present to and follow other users with `LiveFollowMode`.
-- Leverage any feature of Fluid Framework, such as `SharedMap` and `SharedString`.
+- Use any feature of Fluid Framework, such as `SharedMap` and `SharedString`.
 
 You can find more information about this package on the [core capabilities page](./teams-live-share-capabilities.md).
 
@@ -65,7 +65,7 @@ You can find more information about this package on the [Live Share media page](
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Screenshots shows an example of multiple users drawing on a canvas during a meeting.":::
 
-When collaborating in realtime, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
+When collaborating in real time, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
 
 Features supported by Live Share canvas include:
 
@@ -157,7 +157,7 @@ const { container } = await liveShare.joinContainer(schema);
 
 #### Using a custom Azure Fluid Relay service
 
-While most of you find it preferable to use our free hosted service, there are still situations where it is beneficial to use your own Azure Fluid Relay service for your Live Share app.
+While most of you find it preferable to use our free hosted service, there are still situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
 Consider using a custom service if you:
 
@@ -280,11 +280,11 @@ switch(context.page?.frameContext) {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-meetings-overview-full.png" alt-text="Screenshot showing meeting side panel and stage.":::
 
-As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `sidePanel`. In the following section, we'll explore how to optimize these contexts to enhance the user experience.
+As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `sidePanel`. In the following section, explore how to optimize these contexts to enhance the user experience.
 
 #### Meeting stage
 
-The `meetingStage` context allows users to share your app content to the meeting stage for participants in the meeting. In this context, users typically expect to collaborate in realtime. Unlike when loading a collaborative app like Microsoft Loop or Word in a web browser, presenters usually expect to have more control of the experience. For example, in PowerPoint Live, presenters expect to have control over which PowerPoint slide is visible to attendees by default, even if attendees can choose to stop following them temporarily.
+The `meetingStage` context allows users to share your app content to the meeting stage for participants in the meeting. In this context, users typically expect to collaborate in real time. Unlike when loading a collaborative app like Microsoft Loop or Word in a web browser, presenters usually expect to have more control of the experience. For example, in PowerPoint Live, presenters expect to have control over which PowerPoint slide is visible to attendees by default, even if attendees can choose to stop following them temporarily.
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-meeting-stage.png" alt-text="Overview of unique use cases for Live Share in meeting stage.":::
 
@@ -304,7 +304,7 @@ The meeting `sidePanel` context allows users to pin your app as a tab in a meeti
 Consider making the following optimizations for your `sidePanel` app:
 
 - Companion experiences to the meeting stage, such as collaborative video or audio playlists.
-- Configuration settings prior to sharing content to the meeting stage, such as disabling the "take control" feature.
+- Configuration settings before sharing content to the meeting stage, such as disabling the "take control" feature.
 - Performance optimizations, such as broadcasting new content once while sharing has already started, rather than reloading the application.
 
 ### Content contexts
@@ -319,23 +319,23 @@ The `content` context is designed for asynchronous consumption of your app's con
 
 #### Chat and channel tabs
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-chat-channel-full.png" alt-text="Screenshot of Live Share in chat and channel tabs, with list of task boards and avatars indicating which tasks people are currently viewing.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-chat-channel-full.png" alt-text="Screenshot of Live Share in chat and channel tabs, with list of task boards and avatars indicating which tasks people are viewing.":::
 
-Chat and channel tabs allow users to pin your application to a chat or channel. A tab that supports both `sidePanel` and `content` will feature the same pinned URL, but the use cases are usually fairly different. For starters, chat and channel tabs generally have more horizontal space to work with. As a best practice, allow users to search for content to "pin" to the tab. For example, teachers using a note app may pin notes containing educational resources for their students.
+Chat and channel tabs allow users to pin your application to a chat or channel. A tab that supports both `sidePanel` and `content` features the same pinned URL, but the use cases are fairly different. For starters, chat and channel tabs generally have more horizontal space to work with. As a best practice, allow users to search for content to "pin" to the tab. For example, teachers using a note app may pin notes containing educational resources for their students.
 
-While chat and channel tabs are most commonly used for asynchronous consumption, it is possible for your users to have the same content at the same time. When this happens, it is useful to keep content in sync to prevent data conflicts or duplication of work. Live Share allows you to show what content each user is viewing, what they are doing, and more. This can provide social incentives that draw users into app content, increasing engagement and collaboration. We call this "coincidental collaboration."
+While chat and channel tabs are most commonly used for asynchronous consumption, it's possible for your users to have the same content at the same time. When this happens, it's useful to keep content in sync to prevent data conflicts or duplication of work. Live Share allows you to show what content each user is viewing, what they're doing, and more. This can provide social incentives that draw users into app content, increasing engagement and collaboration. We call this "coincidental collaboration."
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-chat-and-channel-tabs.png" alt-text="Overview of unique use cases for Live Share in chat and channel tabs.":::
 
 Consider making the following optimizations for your `content` chat and channel tab:
 
-- Show which users are currently viewing content pinned to the tab, such as users actively viewing each whiteboard.
+- Show which users are viewing content pinned to the tab, such as users actively viewing each whiteboard.
 - Nudge users to join an ongoing collaboration session, such as displaying a toast to join an ongoing standup for a task app.
 - Allow users to follow a specific user or group of users, such as by clicking on the avatar of another connected user they'd like to follow.
 
 #### Collaborative stageview
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-collab-stage-full.png" alt-text="Screenshot showing Live Share in collaborative stageview, where a video player is open with avatars indicating where in the video each user is viewing..":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-collab-stage-full.png" alt-text="Screenshot shows Live Share in Collaborative Stageview, where a video player is open, and avatars indicate specific points in the video each user is viewing.":::
 
 When users share your app's content with their colleagues in Teams, we recommend using [collaborative stageview](../tabs/open-content-in-stageview.md#collaborative-stageview). In this scenario, users open content that was shared in a popout window with chat on the side, allowing users to engage with your content while continuing the conversation flow. Similar to chat and channel tabs, this content is primarily consumed asynchronously. However, if users share the content through an Adaptive Card, users are more likely to view the content and chat with one another, increasing the need for collaborative features.
 
@@ -343,13 +343,13 @@ When users share your app's content with their colleagues in Teams, we recommend
 
 Consider making the following optimizations for your collaborative stageview apps:
 
-- Show which users are currently viewing the content and what they are doing, such as displaying a user's avatar at the position they are at in a video.
+- Show which users are viewing the content and what they're doing, such as displaying a user's avatar at the position they are at in a video.
 - Allow users to follow a specific user or group of users, such as by clicking on the avatar of another connected user they'd like to follow.
 - Facilitate ad-hoc communication, such as by enabling inking tools and laser pointers while in follow mode.
 
 ## React integration
 
-Live Share has a dedicated React integration, making Live Share features even easier to integrate into React apps. Rather than using `LiveShareClient` directly, you can use the `LiveShareProvider` component to join a Live Share session when the component first mounts. Each `LiveDataObject` has a corresponding React hook, designed to make using Live Share incredibly easy. For more information, see Live Share for React [GitHub page](https://aka.ms/livesharereact) for more information.
+Live Share has a dedicated React integration, making Live Share features even easier to integrate into React apps. Rather than using `LiveShareClient` directly, you can use the `LiveShareProvider` component to join a Live Share session when the component first mounts. Each `LiveDataObject` has a corresponding React hook, designed to make using Live Share incredibly easy. For more information, see Live Share for React [GitHub page](https://aka.ms/livesharereact).
 
 ## User scenarios
 

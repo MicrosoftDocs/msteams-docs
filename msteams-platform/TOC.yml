@@ -93,6 +93,7 @@
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
+      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
       displayName: commands      
@@ -125,7 +126,7 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Tools 
-    items:					  
+    items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
@@ -174,6 +175,8 @@
           - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
+          - name: Debug message extension app in Test Tool
+            href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
@@ -428,12 +431,15 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId 
+      displayName: conversationId, send message, bot framework
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
+    - name: Bot messages with AI-generated content
+      href: bots/how-to/format-ai-bot-messages.md
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md      
+      href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams
@@ -536,7 +542,7 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
-      - name: Guidelines to extend bot-based message extension as plugin
+      - name: Guidelines for Copilot extensions
         href: messaging-extensions/high-quality-message-extension.md
         displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
@@ -644,7 +650,7 @@
     displayName: HMAC security token, message in channel, Teams message
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message
+    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
@@ -798,9 +804,12 @@
     items:
     - name: Overview
       href: graph-api/rsc/resource-specific-consent.md
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
-    displayName: Permissions, delegated, user, team, chat, application
+      displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api

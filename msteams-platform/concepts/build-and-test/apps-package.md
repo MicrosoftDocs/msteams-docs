@@ -1,6 +1,6 @@
 ---
 title: Package your app
-description: Learn how to package your Microsoft Teams app and upload it to Teams. Create app package, enable custom uploading, ensure your app is running and accessible using HTTPs.
+description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 09/28/2022
@@ -127,7 +127,5 @@ Choose how you plan to distribute your app:
 
 ## See also
 
-* [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
-* [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Understand the Microsoft Teams app structure](../design/app-structure.md)
 * [Icons](../design/design-teams-app-fundamentals.md#icons)
