@@ -38,8 +38,10 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
 
 - name: Build Teams app
-  expanded: false 
+  expanded: false
+  items:
   - name: Plan analytics for your Teams app
+    expanded: false
     items:
       - name: Overview
         href: concepts/design/overview-analytics.md
