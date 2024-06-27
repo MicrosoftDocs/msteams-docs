@@ -211,26 +211,26 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
-# [TeamsJS v2](#tab/teamsjs-v2)
-
-```JavaScript
-     function getLocation() {
-        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
-            let currentLocation = JSON.stringify(location);
-     }).catch((error) => { /*Error getting location*/ })} 
-```
-
-# [TeamsJS v1](#tab/teamsjs-v1)
-
-```JavaScript
-     function getLocation() {
-     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-         let currentLocation = JSON.stringify(location);
-     });
-     } 
-```
-
-***
+  # [TeamsJS v2](#tab/teamsjs-v2)
+    
+  ```JavaScript
+  function getLocation() {
+    location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+        let currentLocation = JSON.stringify(location);
+    }).catch((error) => { /*Error getting location*/ })} 
+  ```
+    
+  # [TeamsJS v1](#tab/teamsjs-v1)
+    
+  ```JavaScript
+  function getLocation() {
+  microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+     let currentLocation = JSON.stringify(location);
+  });
+  } 
+  ```
+    
+ ---
 
 Here's how the device permissions prompts appear to users on mobile and desktop.
 

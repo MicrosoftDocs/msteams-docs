@@ -25,7 +25,7 @@ With the virtual tables, you can use the OData $orderby query parameter to set c
 * Graph Event
 
 > [!NOTE]
-> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
+> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, the result set maintains its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
 
 Examples:
 
