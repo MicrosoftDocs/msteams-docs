@@ -1,7 +1,7 @@
 ---
 title: Specify Microsoft 365 host runtime requirements in your app manifest
 description: Specify your app's runtime requirements in the app manifest to provide a deliberate experience on supported Microsoft 365 hosts. 
-ms.date: 6/21/2024
+ms.date: 7/10/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -23,7 +23,7 @@ To ensure intentional and deliberate customer experiences with your app, you can
 Specifying your app's runtime requirements is useful in scenarios such as:
 
 
-- **One-way dependencies**: If your app includes a message extension component with an action command that requires bot-sent Adaptive Card functionality, you can ensure that particular command isn't available in message extension hosts that don't support bots, such as Outlook.
+- **One-way dependencies**: If your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can ensure that your settings tab doesn't load in hosts that don't support your message extension.
 
 - **Mutual dependencies:** When your app has specific app components that must be loaded together in order to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all components.  
 
