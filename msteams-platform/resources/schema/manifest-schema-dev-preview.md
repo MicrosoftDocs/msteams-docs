@@ -63,7 +63,7 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
-            ]
+          ]
         }
       ],
       "mutualDependencies" : [
@@ -480,8 +480,19 @@ Describes relationships among individual app components, including as `staticTab
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object)|
-| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` object)|
+| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object with *dependent* (`element`) and *depended on* (`dependsOn`) [`element` objects](#element-object))|
+| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object))|
+
+### element object
+
+Describes an app component (`element`) in an elementRelationshipSet.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+| `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only for message extension (`"name" : "composeExtensions"`) component elements in relationship sets.|
+
 
 ### elementRelationshipSet.oneWayDependency
 
@@ -491,22 +502,42 @@ Describes a unidirectional dependency of one app component (X) to another (Y). I
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `element`| Object||✔️| Represents an individual app component that has a one-way runtime dependency on another component being loaded |
-| `element.name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
-| `element.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
-| `element.commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only if the dependent `element` is a message extension (`"name" : "composeExtensions"`).|
-| `dependsOn`| Array|| ✔️| Denotes one or more app components required for the specified `element` to load|
+| `element`| Object||✔️| Represents an individual app component (represented by [`element` object](#element-object)) that has a one-way runtime dependency on another component being loaded |
+| `dependsOn`| Array|| ✔️| Denotes one or more app components (each represented by [`element` object](#element-object)) required for the specified `element` to load|
+
+```json
+ "elementRelationshipSet": {
+      "oneWayDependencies" : [
+        {
+          "element" : {
+            "name" : "composeExtensions",
+            "id" : "composeExtension-id",
+            "commandIds": ["command-1-id", "command-2-id"]  // Developers can add more commands.
+          },
+          "dependsOn" : [
+              {"name" : "bots", "id" : "bot-id"}
+            ]
+        }
+      ]
+    }
+```
 
 ### elementRelationshipSet.mutualDependencies
 
 Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components in order for any of those components to be available for end-users in that host.
 
-**Optional** &ndash; Array
+**Optional** &ndash; Array of [`element` objects](#element-object)
 
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-| `name`|String|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
-| `id`|String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+```json
+"elementRelationshipSet": {
+    "mutualDependencies" : [
+                {"name" : "bots", "id" : "bot-id"}, 
+                {"name" : "staticTabs", "id" : "staticTab-id"},
+                {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
+    ]
+},
+```
 
 ## configurableTabs
 

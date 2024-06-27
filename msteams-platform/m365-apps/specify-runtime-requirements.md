@@ -90,8 +90,9 @@ Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.m
     "elementRelationshipSet": {
       "mutualDependencies" : [
                 {"name" : "bots", "id" : "bot-id"}, 
-                {"name" : "staticTabs", "id" : "static-Tab-id"},
+                {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
       ]
     },
 ```
