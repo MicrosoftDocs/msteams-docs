@@ -40,7 +40,7 @@ Currently, a subset of Microsoft 365 host applications support the ability to sp
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
-You can specify relationships among the individual components of your app by including a `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
+You can specify relationships among the individual components of your app by including a [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
 > [!NOTE]
 > A given pair of app components can only be grouped once, by either a `oneWayDependency` or `mutualDependency`.  Similarly, cyclical `oneWayDependencies` (where for example, components *A* and *B* mutually declare each other as one-way dependency) are not allowed and will not pass manifest validation.
@@ -61,7 +61,7 @@ Each app element is denoted by an `id`, which maps to `botId` for bots, `entityI
 
 ### One-way dependencies
 
-Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). For example:
+Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetonewaydependency) array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). For example:
 
 ```json
     "elementRelationshipSet": {
@@ -84,7 +84,7 @@ For message extensions, you can optionally specify individual commands that requ
 
 ### Mutual dependencies
 
-Use the `mutualDependencies` array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. For example:
+Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetmutualdependencies) array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. For example:
 
 ```json
     "elementRelationshipSet": {
@@ -98,7 +98,7 @@ Use the `mutualDependencies` array to group app components that must load togeth
 
 ## Specify runtime capability requirements for specific app components (`requirementSet`)
 
-When you're defining an individual app component, you can specify it's specific TeamsJS runtime requirements using a `requirementSet`. This will ensure the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
+When you're defining an individual app component, you can specify it's specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This will ensure the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
 
 ```json
     "staticTabs": [
@@ -121,7 +121,7 @@ When you're defining an individual app component, you can specify it's specific 
     ],
 ```
 
-Currently, a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for `staticTabs`, `composeExtensions`, and `bots`:
+Currently, a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
 - HTML-based dialogs (`dialog.url`)
 - HTML-based dialogs for Bot Framework (`dialog.url.bot`)
