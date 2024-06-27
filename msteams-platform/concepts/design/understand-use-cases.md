@@ -177,60 +177,6 @@ An app can exist across different scopes. For example:
 
 A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
-#### App install experience
-
-App installation in the personal, channel, chat, and meeting scopes are quick and simple. The following procedure provides the user install scope of personal and shared scope when app is installed from Store.
-
-# [Personal scope only](#tab/personal)
-
-If the app is configured with personal scope, the user needs to follow these steps to add the app in the personal scope:
-
-1. Go to Apps and search for a required app to install.
-
-1. Select **Add**. When the app is added, the following dialog appears.
-
-1. Select **Open app**. The app gets added in the personal scope.
-
-If the app requires sign in, the following dialog appears within the personal scope.
-
-# [Personal and other scopes](#tab/personalandother)
-
-If the app is configured with personal and shared scope, the user needs to follow these steps to add the app in the required scope:
-
-1. Go to Apps and search for a required app to install.
-
-1. Select **Add**. When the app is added, the following dialog appears with the option to add in personal or shared space.
-
-1. Select **Open app** to add in the personal scope.
-
-    Alternatively, select from the list of shared scopes.
-
-    >[!NOTE]
-    >
-    > * **Recommended** button indicates the scope where the app has the best usage (where the app provides best usage experience).
-    > * **View more** option lists the respective channel, chat and meetings scopes available for the user.
-
-The app gets added in the selected scope.
-
-# [Other scopes](#tab/other)
-
-If the app is configured only with shared scope, the user needs to follow these steps to add the app in the required scope:
-
-1. Go to Apps and search for a required app to install.
-
-1. Select **Add**. When the app is added, the following dialog appears with the option to add in personal or shared space.
-
-1. Select from the list of shared scopes.
-
-    >[!NOTE]
-    >
-    > * **Recommended** button indicates the scope where the app has the best usage (where the app provides best usage experience).
-    > * **View more** option lists the respective channel, chat, and meetings scopes available for the user.
-
-The app gets added in the selected scope.
-
----
-
 ## Next step
 
 > [!div class="nextstepaction"]
