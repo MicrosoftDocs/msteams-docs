@@ -68,12 +68,14 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
       ],
       "mutualDependencies" : [
                 {"name" : "bots", "id" : "bot-id"}, 
-                {"name" : "staticTabs", "id" : "static-Tab-id"},
+                {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
       ]
     },
     "configurableTabs": [
         {
+            "id": "configurableTab-id", // Use for including configurableTab in elementRelationshipSet
             "configurationUrl": "https://contoso.com/teamstab/configure",
             "canUpdateConfiguration": true,
             "scopes": [
@@ -166,6 +168,7 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     "composeExtensions": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
+            "id": "composeExtension-id", // Use for including composeExtension in elementRelationshipSet
             "canUpdateConfiguration": true,
             "commands": [
                 {
@@ -482,7 +485,7 @@ Describes relationships among individual app components, including as `staticTab
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes a unidirectional dependency of one app component to another. If a Microsoft 365 runtime host doesn't support a required component, that component will not load or otherwise surface to the end-user.
+Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) will not load or otherwise surface to the end-user.
 
 **Optional** &ndash; Object
 
@@ -491,7 +494,7 @@ Describes a unidirectional dependency of one app component to another. If a Micr
 | `element`| Object||✔️| Represents an individual app component that has a one-way runtime dependency on another component being loaded |
 | `element.name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
 | `element.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
-| `element.commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only if the `element` is a message extension (`composeExtensions`).|
+| `element.commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only if the dependent `element` is a message extension (`"name" : "composeExtensions"`).|
 | `dependsOn`| Array|| ✔️| Denotes one or more app components required for the specified `element` to load|
 
 ### elementRelationshipSet.mutualDependencies
