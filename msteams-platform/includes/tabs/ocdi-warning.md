@@ -1,11 +1,3 @@
-| **Microsoft 365 app host** | **frame-ancestor permission** |
-| --- | --- |
-| All hosts (New) | `*.cloud.microsoft` |
-| Teams | `teams.microsoft.com`, `*.teams.microsoft.com` |
-| Microsoft 365 app | `*.microsoft365.com`, `*.office.com`,  |
-| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
-| Copilot | `copilot.microsoft.com` |
-
 > [!WARNING]
 > Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains, are migrating to the `*.cloud.microsoft` domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
 >
