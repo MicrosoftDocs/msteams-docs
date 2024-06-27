@@ -140,7 +140,7 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Tools 
-    items:					  
+    items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
