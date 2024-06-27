@@ -1,7 +1,7 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, the backend is powered by a bot. Explore invoke activities and handle submits. 
+description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, backend is powered by a bot. Explore invoke activities and handle submits. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -54,9 +54,9 @@ Following is a sample Adaptive Card tab manifest:
   "version": "0.0.1",
   "developer": {
     "name": "Contoso",
-    "websiteUrl": "https://contoso.yourwebsite.com",
-    "privacyUrl": "https://contoso.yourwebsite.com/privacy.html",
-    "termsOfUseUrl": "https://contoso.yourwebsite.com/terms.html"
+    "websiteUrl": "https://contoso.example.com",
+    "privacyUrl": "https://contoso.example.com/privacy.html",
+    "termsOfUseUrl": "https://contoso.example.com/terms.html"
   },
   "name": {
     "short": "Contoso",
@@ -90,7 +90,7 @@ Following is a sample Adaptive Card tab manifest:
   "composeExtensions": [],
   "permissions": ["identity", "messageTeamMembers"],
   "validDomains": [
-    "contoso.yourwebsite.com",
+    "contoso.example.com",
     "token.botframework.com"
   ]
 }
