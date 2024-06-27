@@ -1045,10 +1045,6 @@
         "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
       },
       {
-        "source_path": "msteams-platform/get-started/build-notification-bot.md",
-        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
-      },
-      {
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
         "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
       },
