@@ -1,5 +1,5 @@
 ---
-title: Create a new Teams app using Teams Toolkit
+title: Create Teams App with Teams Toolkit
 author: zyxiaoyuer
 description: In this module, learn how to create a new Teams app using Teams Toolkit.
 ms.author: surbhigupta
