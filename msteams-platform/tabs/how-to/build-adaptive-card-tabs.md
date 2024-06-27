@@ -1,7 +1,7 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, the backend is powered by a bot. Explore invoke activities and handle submits. 
+description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, backend is powered by a bot. Explore invoke activities and handle submits. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
