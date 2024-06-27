@@ -496,7 +496,7 @@ Describes an app component (`element`) in an elementRelationshipSet.
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) will not load or otherwise surface to the end-user.
+Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) won't load or otherwise surface to the end-user.
 
 **Optional** &ndash; Object
 
@@ -580,11 +580,11 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
 |`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. <br>Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
-|`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the tab.|
+|`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab.|
 
 ### staticTabs.requirementSet
 
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the tab. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
@@ -594,7 +594,7 @@ Describes the runtime requirements for the tab to function properly in the Micro
 
 #### staticTabs.requirementSet.hostMustSupportFunctionalities
 
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the tab. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
+Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
 
 **Optional** &ndash; Array
 
@@ -620,7 +620,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
 |`requiresSecurityEnabledGroup`|Boolean|||A value indicating whether the team's Office group needs to be security enabled. <br>Default value: `false`|
-|`requirementSet`|Object|||Runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the bot.|
+|`requirementSet`|Object|||Runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot.|
 
 ### bots.configuration
 
@@ -649,7 +649,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ### bots.requirementSet
 
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the bot. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
@@ -659,7 +659,7 @@ Describes the runtime requirements for the bot to function properly in the Micro
 
 #### bots.requirementSet.hostMustSupportFunctionalities
 
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the bot. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
+Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
 
 **Optional** &ndash; Array
 
@@ -711,7 +711,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 |`type`     |  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
-|`requirementSet`|Object|||Runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the message extension.|
+|`requirementSet`|Object|||Runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension.|
 
 ### composeExtensions.commands
 
@@ -750,7 +750,7 @@ Each command item is an object with the following structure:
 
 ### composeExtensions.requirementSet
 
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the message extension. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
@@ -760,7 +760,7 @@ Describes the runtime requirements for the message extension to function properl
 
 #### composeExtensions.requirementSet.hostMustSupportFunctionalities
 
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the message extension. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
+Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
 
 **Optional** &ndash; Array
 
