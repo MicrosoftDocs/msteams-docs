@@ -31,7 +31,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 |[Authentication](../concepts/authentication/authentication.md)|The process to validate a user's identity to access your app. <br> **See also**: [Identity providers](#i); [SSO](#s); [authentication](../m365-apps/teamsjs-support-m365.md#authentication)|
 | [Authentication flow](../concepts/authentication/authentication.md) | The way a user is authenticated to use your app. For Teams apps, we recommend using Single Sign-on (SSO) using Microsoft Entra ID; but an alternative is to use a third-party IdP. <br> **See also**: [SSO](#s); [Identity provider](#i) |
 | [Authorization](../resources/schema/manifest-schema.md#authorization)| An app manifest property (`authorization`) that specifies and consolidates authorization related information for the app. <br> **See also**: [Permission](#p)|
-| [Microsoft Entra ID](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external resources. <br> **See also**: [System for Cross-Domain Identity Management (SCIM)](/azure/active-directory/architecture/sync-scim)|
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
 
 ## B
