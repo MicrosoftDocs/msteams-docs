@@ -57,7 +57,8 @@ Following code snippet is an example of calling the API from the Teams app built
 
 # [TeamsJS v1](#tab/jsonV11)
 
-```json
+```javascript
+
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
@@ -82,7 +83,7 @@ Following code snippet is an example of calling the API from the Teams app built
 
 # [TeamsJS V2](#tab/jsonV2)
 
-```json
+```javascript
 <div>
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
