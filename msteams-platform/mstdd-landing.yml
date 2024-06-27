@@ -63,7 +63,6 @@ landingContent:
       links:
       - text: Introduced Adaptive Card templates
         url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
-      - text: Static tabs are generally available for chats, channels, and meetings.
       - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
