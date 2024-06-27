@@ -102,7 +102,7 @@ Perform the following steps to migrate to the new project structure:
    >
    > The `{{solutionName}}.slnLaunch.user` file specifies which projects to launch and their respective startup configurations. You can define groups of projects that you want to start simultaneously. Ensure that the `DebugTarget` corresponds exactly to the profile names in the `launchSettings.json`.
 
-   ---
+    ---
 
 1. Modify the `teamsapp.local.yml` and `teamsapp.yml` files in the **TeamsApp** folder.
 1. Every action that changes your project must be updated because the path is updated. Focus on the following actions:
