@@ -16,7 +16,7 @@ Bot-based message extension takes advantage of the Bot Framework's messaging sch
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the the way for a developer to select between action commands and search commands.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands.":::
 
 # [Search commands](#tab/search-commands)
 
