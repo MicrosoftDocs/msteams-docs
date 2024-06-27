@@ -1,7 +1,7 @@
 ---
 title: Open content in multi-window
 author: Rajeshwari-v
-description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
+description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high

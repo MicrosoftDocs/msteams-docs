@@ -2,7 +2,7 @@
 title:  Build API-based message extension
 metadata:
   title: Build API-based message extension
-  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
+  description: In this learn module, learn to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
   ms.date: 10/16/2023
@@ -48,11 +48,11 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can upload a custom app in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
@@ -105,7 +105,7 @@ items:
     * Only one required parameter without a default value is allowed.
     * Only POST and GET HTTP methods are supported.
     * The OpenAPI Description document must have an `operationId`.
-    * The operation must not have required Header or Cookie parameters without default values.
+    * The operation mustn't have required Header or Cookie parameters without default values.
     * A command must have exactly one parameter.
     * Ensure that there are no remote references in the OpenAPI Description document.
     * A required parameter with a default value is considered optional.
@@ -313,9 +313,9 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. At the upper-left, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
-       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
+       1. Go to **Select host app** and from the dropdown, select **Microsoft Teams**.
+       1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
@@ -367,7 +367,7 @@ items:
        1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
        1. `"jsonPath"`: `"tools"`
 
-          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+          `jsonPath` is the path to one or more results in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is tools. For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
 
        1. `"responseLayout"`: `"list"`
 
