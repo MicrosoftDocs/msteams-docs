@@ -1,5 +1,5 @@
 ---
-title: Add test data to your Microsoft 365 test tenant
+title: Test App with Microsoft 365 Tenant
 description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets.
 ms.topic: how-to
 ms.localizationpriority: medium    
@@ -246,7 +246,6 @@ By default, only global admins or Teams service admins can upload the custom app
 
 ## See also
 
-* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

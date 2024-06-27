@@ -1,7 +1,7 @@
 ---
 title: Deep link to a Teams chat
 author: v-npaladugu
-description:  Learn how to create deep links to a teams chat and navigate using them in Microsoft Teams.
+description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ To use this deep link with your bot, specify the deep link as the URL target in 
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. The User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 

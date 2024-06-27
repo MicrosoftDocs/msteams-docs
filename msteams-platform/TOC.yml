@@ -293,7 +293,7 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Tools 
-    items:					  
+    items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
@@ -342,6 +342,8 @@
           - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
+          - name: Debug message extension app in Test Tool
+            href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process

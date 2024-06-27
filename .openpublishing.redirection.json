@@ -1041,6 +1041,10 @@
       {
         "source_path": "msteams-platform/sbs-api-me-ttk.yml",
         "redirect_url": "/microsoftteams/platform/sbs-api-msg-ext-ttk"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/format-ai-bot-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
       }
     ]
 }
