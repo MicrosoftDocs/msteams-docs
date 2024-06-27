@@ -123,5 +123,5 @@ For example:
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
-* [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
+* [Build your first Teams app](../../get-started/build-first-teams-app.md)
 * [Teams app planning checklist](planning-checklist.md)
