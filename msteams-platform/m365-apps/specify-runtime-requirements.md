@@ -25,7 +25,7 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 - **One-way dependencies**: If your app includes a message extension component with an action command that requires bot-sent Adaptive Card functionality, you can ensure that particular command isn't available in message extension hosts that don't support bots, such as Outlook.
 
-- **Mutual dependencies:** When your app has specific app components that must be loaded together in order to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support both components.  
+- **Mutual dependencies:** When your app has specific app components that must be loaded together in order to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all components.  
 
 - **Capability requirements:** When your app has component parts with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those components are *seamlessly omitted* (rather than loaded, yet not functional) from your app experience running in those hosts.
 

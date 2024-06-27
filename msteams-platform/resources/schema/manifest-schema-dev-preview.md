@@ -489,12 +489,10 @@ Describes a unidirectional dependency of one app component to another. If a Micr
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `element`| Object||✔️| Represents an individual app component that has a one-way runtime dependency on another component being loaded |
-| `element.name`| String|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `element.name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
 | `element.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
-| `element.commandIds` | Array of strings||| List of one or more message extension (`composeExtensions`) commands that are dependent on the specified `dependsOn` component.|
+| `element.commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only if the `element` is a message extension (`composeExtensions`).|
 | `dependsOn`| Array|| ✔️| Denotes one or more app components required for the specified `element` to load|
-| `dependsOn.name`| String||✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
-| `dependsOn.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
 
 ### elementRelationshipSet.mutualDependencies
 
@@ -558,7 +556,7 @@ Describes the runtime requirements for the tab to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  Species on or more runtime capabilities that are required by the tab to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  Species one or more runtime capabilities that are required by the tab to function properly.|
 
 #### staticTabs.requirementSet.hostMustSupportFunctionalities
 
