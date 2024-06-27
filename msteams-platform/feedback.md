@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams developer community support and feedback
-description: Learn about Developer community and help required to raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
+title: Developer Community Support & Feedback
+description: Learn about developer community help, raise issues, and general questions. Questions related to SDK and samples, documentation feedback, and feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 09/28/2022
@@ -21,6 +21,8 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 ## Developer community help
 
 Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
+
+📢 Read our latest [announcements](https://aka.ms/M365PlatformAnnouncement) and join the conversation with community members and platform engineers!
 
 ### Developer community forums
 

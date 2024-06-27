@@ -1,5 +1,5 @@
 ---
-title: Design your app with lightbox UI components
+title: Design App with Lightbox UI Components
 author: v-npaladugu
 description: Learn how to use lightbox UI component from Teams UI kit to build Microsoft Teams apps.
 ms.localizationpriority: medium
