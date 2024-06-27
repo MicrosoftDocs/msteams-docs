@@ -89,7 +89,7 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 > [!IMPORTANT]
 > When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at [go.microsoft.com](https://go.microsoft.com/?linkid=9710837) and the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=248686).</br>
-> Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
+> Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you comply with Microsoft's reasonable instructions in doing so. You won't encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
 ### Code snippets
 
@@ -97,73 +97,73 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 * **Call `getLocation` API to retrieve the location:**
 
-```javascript
-import {location} from "@microsoft/teams-js"
+  ```javascript
+  import {location} from "@microsoft/teams-js"
 
-let locationProps = {"allowChooseLocation":true,"showMap":true};
-if(location.isSupported()) {
-  microsoftTeams.location.getLocation(locationProps, (error, location) => {
-  // If there's any error, an alert shows the error message/code
-  if (error) {
-     if (error.message) {
+  let locationProps = {"allowChooseLocation":true,"showMap":true};
+  if(location.isSupported()) {
+    microsoftTeams.location.getLocation(locationProps, (error, location) => {
+      // If there's any error, an alert shows the error message/code
+       if (error) {
+         if (error.message) {
         alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
+      } else {
         alert(" ErrorCode: " + error.errorCode);
      }
   }
   console.log(JSON.stringify(location));
   })
-}
-else {/*Handle case where capability isn't supported */}
-```
+  }
+  else {/*Handle case where capability isn't supported */}
+  ```
 
 * **Call `showLocation` API to display the location:**
 
-```javascript
-import {location} from "@microsoft/teams-js"
+  ```javascript
+  import {location} from "@microsoft/teams-js"
 
-let location = {"latitude":17,"longitude":17};
-if(location.isSupported()) {
-  microsoftTeams.location.showLocation(location, (error, result) => {
-   if (error) {
-     if (error.message) {
-        alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-        alert(" ErrorCode: " + error.errorCode);
-     }
-   }
-  });
-}
-else {/*Handle case where capability isn't supported */}
-```
+  let location = {"latitude":17,"longitude":17};
+  if(location.isSupported()) {
+    microsoftTeams.location.showLocation(location, (error, result) => {
+     if (error) {
+         if (error.message) {
+           alert(" ErrorCode: " + error.errorCode + error.message);
+         } else {
+          alert(" ErrorCode: " + error.errorCode);
+      }
+    }
+   });
+  }
+  else {/*Handle case where capability isn't supported */}
+  ```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
 * **Call `getLocation` API to retrieve the location:**
 
-```javascript
-let locationProps = {"allowChooseLocation":true,"showMap":true};
-microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+  ```javascript
+  let locationProps = {"allowChooseLocation":true,"showMap":true};
+  microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
           if (err) {
             output(err);
             return;
           }
           output(JSON.stringify(location));
-});
-```
+  });
+  ```
 
 * **Call `showLocation` API to display the location:**
 
-```javascript
-let location = {"latitude":17,"longitude":17};
-microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
+  ```javascript
+  let location = {"latitude":17,"longitude":17};
+  microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
           if (err) {
             output(err);
             return;
           }
      output(result);
-});
-```
+  });
+  ```
 
 ---
 
