@@ -1,6 +1,6 @@
 ---
 title: Teams AI library
-description: In this article, learn about Teams conversation AI.
+description: Learn about Teams AI library, Teams-centric component scaffolding, natural language modeling, prompt engineering, LLM, action planner, assistants API, augmentation.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-ypalikila
