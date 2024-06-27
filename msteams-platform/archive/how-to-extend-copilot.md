@@ -1,6 +1,6 @@
 ---
 title: How to Extend Microsoft 365 Copilot
-description: In this article, learn how to integrate with Microsoft 365 Copilot through message extensions and Graph connectors. 
+description: Learn how to integrate with Microsoft 365 Copilot through message extensions, Graph connectors, plugins, and connect external data sources.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: ginobuzz
