@@ -1,5 +1,5 @@
 - name: Microsoft Teams developer documentation
-  href: index.yml
+  href: mstdd-landing.yml
 
 - name: What's new?
   href: whats-new.md
@@ -40,21 +40,19 @@
 - name: Build Teams app
   expanded: false
   items:
-  - name: Plan analytics for your Teams app
-    expanded: false
-    items:
-      - name: Overview
-        href: concepts/design/overview-analytics.md
-      - name: Strategize and decide what to measure
-        href: concepts/design/strategize-measure.md
-      - name: Plan code instrumentation using analytics service
-        href: concepts/design/plan-code-instrumentation.md
+  - name: Overview
+    href: concepts/design/overview-analytics.md
+  - name: Strategize and decide what to measure
+    href: concepts/design/strategize-measure.md
+  - name: Plan code instrumentation using analytics service
+    href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
+
 - name: Design your app
   items:
   - name: Teams App manifest
