@@ -935,6 +935,7 @@
       {
         "source_path": "msteams-platform/mstdd-landing.yml",
         "redirect_url": "msteams-platform/index.yml"
+      },
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
         "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
       },
