@@ -1,7 +1,7 @@
 ---
 title: Specify Microsoft 365 host runtime requirements in your app manifest
 description: Specify your app's runtime requirements in the app manifest to provide a deliberate experience on supported Microsoft 365 hosts. 
-ms.date: 6/21/2024
+ms.date: 7/10/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Specify Microsoft 365 host runtime requirements in your app manifest (preview)
 
-TODO: Crosslinking to applicable reference and conceptual articles.
+TODO: Crosslinking to applicable reference and conceptual articles, more visually appealing formatting.
 
 > [!NOTE]
 >
@@ -23,9 +23,9 @@ To ensure intentional and deliberate customer experiences with your app, you can
 Specifying your app's runtime requirements is useful in scenarios such as:
 
 
-- **One-way dependencies**: If your app includes a message extension component with an action command that requires bot-sent Adaptive Card functionality, you can ensure that particular command isn't available in message extension hosts that don't support bots, such as Outlook.
+- **One-way dependencies**: If your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can ensure that your settings tab doesn't load in hosts that don't support your message extension.
 
-- **Mutual dependencies:** When your app has specific app components that must be loaded together in order to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support both components.  
+- **Mutual dependencies:** When your app has specific app components that must be loaded together in order to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all components.  
 
 - **Capability requirements:** When your app has component parts with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those components are *seamlessly omitted* (rather than loaded, yet not functional) from your app experience running in those hosts.
 
@@ -40,7 +40,10 @@ Currently, a subset of Microsoft 365 host applications support the ability to sp
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
-You can specify relationships among the individual components of your app by including a `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
+You can specify relationships among the individual components of your app by including a [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
+
+> [!NOTE]
+> A given pair of app components can only be grouped once, by either a `oneWayDependency` or `mutualDependency`.  Similarly, cyclical `oneWayDependencies` (where for example, components *A* and *B* mutually declare each other as one-way dependency) are not allowed and will not pass manifest validation.
 
 Currently, a subset of Teams app elements can be specified as runtime requirements in the app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
 
@@ -58,7 +61,7 @@ Each app element is denoted by an `id`, which maps to `botId` for bots, `entityI
 
 ### One-way dependencies
 
-Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). For example:
+Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetonewaydependency) array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). For example:
 
 ```json
     "elementRelationshipSet": {
@@ -81,21 +84,22 @@ For message extensions, you can optionally specify individual commands that requ
 
 ### Mutual dependencies
 
-Use the `mutualDependencies` array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. For example:
+Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetmutualdependencies) array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. For example:
 
 ```json
     "elementRelationshipSet": {
       "mutualDependencies" : [
                 {"name" : "bots", "id" : "bot-id"}, 
-                {"name" : "staticTabs", "id" : "static-Tab-id"},
+                {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
       ]
     },
 ```
 
 ## Specify runtime capability requirements for specific app components (`requirementSet`)
 
-When you're defining an individual app component, you can specify it's specific TeamsJS runtime requirements using a `requirementSet`. This will ensure the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
+When you're defining an individual app component, you can specify it's specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This will ensure the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
 
 ```json
     "staticTabs": [
@@ -118,7 +122,7 @@ When you're defining an individual app component, you can specify it's specific 
     ],
 ```
 
-Currently, a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for `staticTabs`, `composeExtensions`, and `bots`:
+Currently, a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
 - HTML-based dialogs (`dialog.url`)
 - HTML-based dialogs for Bot Framework (`dialog.url.bot`)
@@ -128,13 +132,13 @@ Currently, a subset of TeamsJS capabilities can be specified as runtime requirem
 ## Frequently Asked Questions
 
 - Q: What will be the behavior of the app in the host if all the elements of the app require some sort of element or runtime support from the host, but the host can’t meet any of the app’s requirements?
-- A: The app will not be available on the host in this case. This is already true today. In-product store will not display apps with zero compatible elements to the host.
+  A: The app will not be available on the host in this case. This is already true today. In-product store will not display apps with zero compatible elements to the host.
 
 - Q: What is the relationship these new manifest properties to the Outlook Add-ins 'requirements' property in the `extensions` section of the manifest?
-- A: for now, the two are independent, but this design is parallel and might converge in the future
+  A: for now, the two are independent, but this design is parallel and might converge in the future
 
 - Q: How can I target specific host applications?
-- A: You can't, and this is by design. Best practice is to target runtime requirements in a host-agnostic way so your app is flexible as possible and take advantage of reach of future hosts. Check the latest host support in [TeamsJS support across Microsoft 365](teamsjs-support-m365.md).
+  A: You can't, and this is by design. Best practice is to target runtime requirements in a host-agnostic way so your app is flexible as possible and take advantage of reach of future hosts. Check the latest host support in [TeamsJS support across Microsoft 365](teamsjs-support-m365.md).
 
 ## See also
 
