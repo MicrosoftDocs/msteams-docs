@@ -945,9 +945,9 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property specifies Office Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
-|Name| Type| Maximum size | Required | Description|
+| Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| Array | | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
@@ -955,6 +955,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+|`keyboardShortcuts`| Array | 10 | | Defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts). |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -986,7 +987,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.displayName`| String | 64 characters | | Describes the action of a [custom keyboard shortcut](/office/dev/add-ins/design/keyboard-shortcuts). This description appears in the dialog that's shown to a user when there's a shortcut conflict between multiple add-ins or with Microsoft 365. The `actions.displayName` property is required if a keyboard shortcut is defined for a specific `actions` object. In addition to the description of an action, it's a good practice to also include the name of the add-in in the property, so that the user can easily identify to which add-in the action belongs. For example, "Set bold (Contoso Add-in)". For more information, see [Avoid key combinations in use by other add-ins](/office/dev/add-ins/design/keyboard-shortcuts#avoid-key-combinations-in-use-by-other-add-ins). |
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them.|
@@ -1119,6 +1120,27 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensions.keyboardShortcuts
+
+The `extensions.keyboardShortcuts` property defines custom keyboard shortcuts or key combinations to run specific actions. To learn more, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts).
+
+| Name | Type | Maximum size | Required | Description |
+|---|---|---|---|---|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the custom keyboard shortcuts to take effect. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets.<br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values when specified in an `extensions.keyboardShortcuts.requirements` object: `workbook` (Excel) |
+|`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in.<br>>Supported values when specified in an `extensions.keyboardShortcuts.requirements` object: `desktop`|
+|`shortcuts`| Array | 20,000 | ✔️ | Specifies the custom keyboard shortcuts and the action each one performs. |
+|`shortcuts.key`| Object | | ✔️ | Specifies custom key combinations for a single action across supported platforms. |
+|`shortcuts.key.default`| String | 32 | ✔️ | Specifies the default key combination that can be used on all supported platforms if there isn't a specific combination configured for a particular platform. A keyboard shortcut can be any combination of the characters `A-Z`, `a-z`, `0-9`, and the punctuation marks `-`, `_`, and `+`. It must include the name of at least one modifier key (Alt, Ctrl, or Shift) and only one other key. These keys must be joined by a `+` character. For example, `Ctrl+Alt+1`. Note that Shift can't be used as the only modifier key. It must be combined with either Alt or Ctrl. On macOS, the Alt key is mapped to the Option key. On Windows, the Command key is mapped to the Ctrl key. |
+|`shortcuts.key.mac`| String | 32 | | Specifies the key combination of an add-in in Office on Mac. A keyboard shortcut can be any combination of the characters `A-Z`, `a-z`, `0-9`, and the punctuation marks `-`, `_`, and `+`. It must include the name of at least one modifier key (Alt, Command, or Shift) and only one other key. These keys must be joined by a `+` character. For example, `Command+1`. Note that Shift can't be used as the only modifier key. It must be combined with either Alt or Command. On macOS, the Alt key is mapped to the Option key. |
+|`shortcuts.key.web`| String | 32 | | Specifies the key combination of an add-in in Office on the web. A keyboard shortcut can be any combination of the characters `A-Z`, `a-z`, `0-9`, and the punctuation marks `-`, `_`, and `+`. It must include the name of at least one modifier key (Alt/Option, Ctrl/Command, or Shift) and only one other key. These keys must be joined by a `+` character. For example, `Ctrl+Alt+1`. Note that Shift can't be used as the only modifier key. It must be combined with either Alt/Option or Ctrl/Command.|
+|`shortcuts.key.windows`| String | 32 | | Specifies the key combination of an add-in in Office on Windows. A keyboard shortcut can be any combination of the characters `A-Z`, `a-z`, `0-9`, and the punctuation marks `-`, `_`, and `+`. It must include the name of at least one modifier key (Alt, Ctrl, or Shift) and only one other key. These keys must be joined by a `+` character. For example, `Ctrl+Alt+1`. Note that Shift can't be used as the only modifier key. It must be combined with either Alt or Ctrl. |
+|`shortcuts.actionId`| String | 64 | ✔️ | Identifies the action that is performed when a keyboard shortcut is used. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
 
 ## actions
 
