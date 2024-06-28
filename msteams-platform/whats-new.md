@@ -35,8 +35,8 @@ Teams platform features that are available to all app developers.
 
 **2024 June**
 
+* ***June 26, 2024***: [Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages.](bots/how-to/format-ai-bot-messages.md)
 * ***June 26, 2024***: [Debug message extension app in Test Tool.](toolkit/debug-message-extension-app-in-test-tool.md)
-
 * ***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
 
 :::column-end:::
@@ -397,6 +397,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| May 23, 2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 
 ## Developer preview
