@@ -1,5 +1,5 @@
 ---
-title: Migrate project from 17.9 to 17.10+ version
+title: Migrate Teams Toolkit project from 17.9 to 17.10+ version
 author: v-preethah
 description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
 ms.author: v-preethah
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 06/05/2024
 ---
 
-# Migrate project from 17.9 to 17.10+ version
+# Migrate Teams Toolkit project from 17.9 to 17.10+ version
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
@@ -19,7 +19,7 @@ In the new Teams Toolkit version of 17.10, a Teams solution contians two project
 Before starting the migration process, ensure that you have the following:
 
 * A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
-* Visual Studio version 17.10 or later.
+* Visual Studio version 17.10 Preview 3 or later.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
 ## Migration process
@@ -61,7 +61,7 @@ Perform the following steps to migrate to the new project structure:
     > * The `launchSettings.json` of your project must start by itself.
     > * The `launchSettings.json` of the **TeamsApp** folder is configured to launch the browser or the test tool app that communicates with your project.
 
-1. Open the solution file using Visual Studio (version 17.10 Preview 3 or later) and add the new project `TeamsApp.ttkproj` from **TeamsApp** folder to the solution file in Visual Studio.
+1. Open the solution file using Visual Studio version 17.10 Preview 3 or later and add the new project `TeamsApp.ttkproj` from **TeamsApp** folder to the solution file in Visual Studio.
 
 1. Remove `<ProjectCapability Include="TeamsFx"/>` in your project.
 
