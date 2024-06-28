@@ -10,24 +10,23 @@ ms.date: 06/05/2024
 
 # Migrate project from 17.9 to 17.10+ version
 
-This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to leverage the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications.
+This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-`.ttkproj` suffix to represent the new project type. In the new version of 17.10, a Teams solution will contian two projects. One is Teams project, another one is your source code. Teams project contians the Teams app package and Teams Toolkit configuration files, your source code project is the business logic for your tab or bot or other. By separating the concept of Teams app and C# project, we can address the scenario where you already have your existing web or bot solutions and want to embed your web app to Teams or integrate their bot to Teams client. The Teams project makes it easier for you to integrate with any existing project or solution.
-
-Learn in detail to create a new project folder, move configuration files, adjust launch settings, and more.
+In the new Teams Toolkit version of 17.10, a Teams solution contians two projects, Teams project and your source code. Teams project contians the Teams app package and Teams Toolkit configuration files. Your source code project is the business logic for your tab, bot, or other. By separating the concept of Teams app and your project, we can address the scenario where you already have your existing web or bot solutions and want to embed your web app to Teams or integrate their bot to Teams client. The Teams project makes it easier for you to integrate with any existing project or solution.
 
 ## Prerequisites
 
 Before starting the migration process, ensure that you have the following:
 
 * A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
+* Visual Studio version 17.10 or later.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
 ## Migration process
 
 Perform the following steps to migrate to the new project structure:
 
-1. In your Teams project folder where you have the VS solution file create a new folder. You can provide any name to the new folder but must be meaningful. We recommend that you use the folder name as **TeamsApp**.
+1. In your Teams project folder where you have the Visual S solution file create a new folder. You can provide any name to the new folder but must be meaningful. We recommend that you use the folder name as **TeamsApp**.
 
 1. Create a **TeamsApp.ttkproj** file in the **TeamsApp** folder. Add the following code to the **TeamsApp.ttkproj** file:
 
@@ -71,7 +70,7 @@ Perform the following steps to migrate to the new project structure:
    # [Visual Studio](#tab/channel-meeting)
    
    1. Right-click the solution and select **Configure Startup Projects...**.
-   1. Select **Multiple start projects** and add more profiles that starts the **TeamsApp** and your project simultaneously. You can rename the profiles as required.
+   1. Select **Multiple start projects** and add more profiles that start the **TeamsApp** and your project simultaneously. You can rename the profiles as required.
    1. Select **OK**. The `{{solutionName}}.slnLaunch.user` file is automatically saved in the solution folder.
 
    # [Manually](#tab/manually)
@@ -156,7 +155,7 @@ Perform the following steps to migrate to the new project structure:
 
 1. Close the solution and ensure all changes are saved.
 
-You've succesfully migrated your project and your folder structure is updated.
+You've successfully migrated your project and your folder structure is updated.
 
 ## Folder Structure
 
