@@ -165,10 +165,12 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
 
-        1. **Success** - App validation is successful.
-        1. **Warning** - We recommend you to review and resolve the suggested warning.
-        1. **Error** - Fix the errors for the app to be published.
-        1. **Skipped** - The tool is unable to execute the test case. Submit a new validation request.
+        |Status|Validation|Result|Description|
+        |----|----|----|----|
+        |**Success**| Complete | Pass | No issues. |
+        |**Warning** | Compleye | Pass | Fixing this issue is optional but recommended. |
+        |**Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
+        |**Skipped**|Incomplete |NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later.|
 
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
 
