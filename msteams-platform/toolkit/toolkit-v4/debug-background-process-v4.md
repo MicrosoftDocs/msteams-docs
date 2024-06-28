@@ -1,7 +1,7 @@
 ---
 title: Debug Background Processes for Apps
 author: surbhigupta
-description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app in Teams toolkit v4.
+description: Learn how Microsoft Visual Studio and Teams Toolkit work during local debug process. Learn how to register and configure your Teams app in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -32,7 +32,7 @@ The tunnel creation dialog opens.
 * From the dropdown, select the  required public authentication in **Access**.
 * Select **OK**. Visual Studio displays confirmation of tunnel creation.
 
-The tunnel you have created will be under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
+The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
 
