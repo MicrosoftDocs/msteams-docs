@@ -26,6 +26,11 @@ The app playbooks and UI templates are also available to help you get started fo
 
 ### Microsoft Teams UI Library
 
+View and test individual Teams UI templates and related components in your browser.
+
+> [!div class="nextstepaction"]
+> [Try Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
+
 Import these templates and related components directly into your Teams app project.
 
 > [!div class="nextstepaction"]
