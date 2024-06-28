@@ -29,7 +29,7 @@ The app playbooks and UI templates are also available to help you get started fo
 View and test individual Teams UI templates and related components in your browser.
 
 > [!div class="nextstepaction"]
-> [Try the UI library (playground)](https://63587347138fdad13ed63ccd-omfbjvvebn.chromatic.com/)
+> [Try Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
 
 Import these templates and related components directly into your Teams app project.
 
