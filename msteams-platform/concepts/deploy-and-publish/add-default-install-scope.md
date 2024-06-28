@@ -47,7 +47,7 @@ If the app is configured with personal scope, the user needs to follow these ste
 
 1. Select **Use on your own**. The app gets added in the personal scope.
 
-    :::image type="content" source="../../assets/images/compose-extensions/personal-scope.png" alt-text="Screenshot shows to personal scope.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-scope.png" alt-text="Screenshot shows to option to select the personal scope.":::
 
 </details>
 </br>
@@ -66,7 +66,7 @@ If the app is configured with personal and shared scope, the user needs to follo
 
     Alternatively, select from the list of shared scopes.
 
-    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot shows to personal scope.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot shows to option to select the personal scope option or select the required scopes.":::
 
     The app gets added in the selected scope.
 
@@ -90,7 +90,7 @@ If the app is configured only with shared scope, the user needs to follow these 
 
 1. Select from the list of shared scopes. The app gets added in the selected scope.
 
-    :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot shows to personal scope.":::
+    :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot shows to option to select the required scopes.":::
 
 </details>
 </br>
