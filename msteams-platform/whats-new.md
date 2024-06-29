@@ -412,9 +412,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 June**
+**2024 July**
 
-***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
+***July 10, 2024***: [Specify your app's runtime requirements in the app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts that you're not ready to support.](m365-apps/specify-runtime-requirements.md).
 
 :::column-end:::
 :::row-end:::
@@ -427,6 +427,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 14/06/2024 |  Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation.| Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md)
 | 14/05/2024 | Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.| App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)|
 | 07/05/2024 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.| Distribute your app > [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon)|
 | 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
