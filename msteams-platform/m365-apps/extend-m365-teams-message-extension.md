@@ -34,6 +34,8 @@ To extend your Teams message extension to Outlook, ensure the following:
 > * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps **Current Channel**.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 
+## Build or extend a message extension
+
 To extend your Teams message extension to Outlook, you can either build a new message extension app with Teams Toolkit or extend an existing Teams message extension app to Outlook.
 
 # [Build a message extension app for Outlook](#tab/ttk)
