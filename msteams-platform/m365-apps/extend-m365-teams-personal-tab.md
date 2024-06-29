@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Extend a Teams personal tab across Microsoft 365
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications too. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook and Microsoft 365 app (desktop and web experiences), and the Microsoft 365 for Android app too.
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. Personal tabs can light up within other Microsoft 365 applications too. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in across Microsoft 365 applications, including Outlook and Microsoft 365 (Office), in web, desktop, and mobile experiences.
 
 Updating your Teams personal app to run in other Microsoft 365 applications involves these steps:
 
@@ -108,7 +108,9 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
+You can use Teams Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
 ## Update TeamsJS references
 

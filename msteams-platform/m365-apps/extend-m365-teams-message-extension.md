@@ -76,7 +76,11 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 }
 ```
 
-### Add Microsoft 365 channel for your app
+You can use Teams Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
+
+## Add Microsoft 365 channel for your app
 
 In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes the advantage of [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
@@ -128,7 +132,7 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
 
 ---
 
-### Upload your custom app in Teams
+## Upload your custom app in Teams
 
 Upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
 
@@ -146,7 +150,7 @@ Upload your updated message extension ([app package](/microsoftteams/platform/co
 
 After it's uploaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
-### Preview your message extension in Outlook
+## Preview your message extension in Outlook
 
 Here's how to test your message extension running in Outlook on the web. To preview your app running in Outlook on the web, follow these steps:
 
