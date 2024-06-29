@@ -10,8 +10,6 @@ ms.subservice: m365apps
 ---
 # Specify Microsoft 365 host runtime requirements in your app manifest (preview)
 
-TODO: Crosslinking to applicable reference and conceptual articles, more visually appealing formatting.
-
 > [!NOTE]
 >
 > The ability to specify Microsoft 365 host runtime requirements in the app manifest is currently in [public developer preview](../resources/schema/manifest-schema-dev-preview.md) and supported in Teams and Outlook mobile hosts.
@@ -21,7 +19,6 @@ If you have a Teams app that contains a personal tab or message extension, you c
 To ensure intentional and deliberate customer experiences with your app, you can specify your app's runtime requirements in the app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts that you're not ready to support. Describing your app's runtime requirements in the app manifest also helps ensure your production-ready app experience will reach wider audiences in additional Microsoft 365 host applications in the future.
 
 Specifying your app's runtime requirements is useful in scenarios such as:
-
 
 - **One-way dependencies**: If your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can ensure that your settings tab doesn't load in hosts that don't support your message extension.
 
