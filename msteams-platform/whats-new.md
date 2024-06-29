@@ -414,7 +414,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 July**
 
-***July 10, 2024***: [Specify your app's runtime requirements and dependencies in the app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts that you're not ready to support.](m365-apps/specify-runtime-requirements.md).
+***July 10, 2024***: [Specify runtime requirements in the app manifest to tailor your app's behavior in applicable Microsoft 365 hosts.](m365-apps/specify-runtime-requirements.md)
 
 :::column-end:::
 :::row-end:::

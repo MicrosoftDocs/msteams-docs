@@ -476,7 +476,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Describes relationships among individual app components, including as `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes relationships among individual app components, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
