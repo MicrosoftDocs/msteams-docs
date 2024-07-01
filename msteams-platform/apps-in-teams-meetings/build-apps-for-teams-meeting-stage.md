@@ -263,6 +263,31 @@ Users can screen share content to the meeting stage in the following scenarios:
           it('should throw if the shareAppContentToStage message sends and fails', async () => {
   ```
 
+  ```javascript
+  // Share the content in view-only screen sharing mode.
+      const shareSpecificAppContentScreenShare = (partName) => {
+          var appContentUrl = "";
+          microsoftTeams.app.getContext().then((context) => {
+              appContentUrl = partName == 'todo' ? `${window.location.origin}/todoView?meetingId=${context.meeting.id}` : partName == 'doing' ? `${window.location.origin}/doingView?meetingId=${context.meeting.id}` : `${window.location.origin}/doneView?meetingId=${context.meeting.id}`;
+              microsoftTeams.meeting.shareAppContentToStage((err, result) => {
+                  if (result) {
+                      // handle success
+                      console.log(result);
+                  }
+
+                  if (err) {
+                      // handle error
+                      alert(JSON.stringify(err))
+                  }
+              }, appContentUrl,
+                  // Optional shareOptions with sharingProtocol set to ScreenShare
+                  {
+                      sharingProtocol: microsoftTeams.meeting.SharingProtocol.ScreenShare
+                  });
+          });
+      };
+  ```
+
   | Value | Type | Required | Description |
   | --- | --- | --- | --- |
   |`callback` | String | Yes| Callback contains two parameters, error and result. The error can contain either an error of type SdkError or null when share is successful. The result can contain either a true value if there's a successful share or null when the share fails.|
