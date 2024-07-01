@@ -46,6 +46,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
+        url: bots/how-to/format-ai-bot-messages.md
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
@@ -61,7 +63,9 @@ landingContent:
       links:
       - text: Screen share content to meetings.
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
-      - text: Static tabs are generally available for chats, channels, and meetings.
+      - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
+        url: bots/how-to/format-ai-bot-messages.md 
+      - text: Static tabs are generally available for chats, channels, and meetings
         url: tabs/what-are-tabs.md
       - text: Preapproval of RSC permissions (Developer preview)
         url: graph-api/rsc/preapproval-instruction-docs.md
@@ -77,8 +81,6 @@ landingContent:
         url: tabs/open-content-in-stageview.md
       - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
         url: m365-apps/overview.md#outlook-add-ins
-      - text: Added support for python in Teams AI library
-        url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
 
     - linkListType: reference
       links:
