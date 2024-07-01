@@ -63,7 +63,6 @@ landingContent:
       links:
       - text: Use app validation tool to validate your Teams app in Teams Developer Portal
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
-      - text: Static tabs are generally available for chats, channels, and meetings.
       - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
