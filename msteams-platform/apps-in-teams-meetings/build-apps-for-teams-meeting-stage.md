@@ -221,47 +221,32 @@ Users can screen share content to the meeting stage in the following scenarios:
 
 * **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the `appContentURL`.
 
-   ```typescript
-   expect(shareAppContentToStageMessage.args[1]).toMatchObject(shareOptions);
-          });
-          it(`should successfully share app content to stage. content: ${context} context`, async () => {
-            await utils.initializeWithContext(context);
-            
-            let callbackCalled = false;
-            let returnedSdkError: SdkError | null;
-            let returnedResult: boolean | null;
-            const requestUrl = 'validUrl';
-            const shareOptions = {
-              sharingProtocol: meeting.SharingProtocol.ScreenShare,
-            };
-            meeting.shareAppContentToStage(
-              (error: SdkError, result: boolean) => {
-                callbackCalled = true;
-                returnedResult = result;
-                returnedSdkError = error;
-              },
-              requestUrl,
-              shareOptions,
-            );
+The following coed is an example of sharing app content to meeting stage view and share content in view only screen sharing mode:
 
-            const shareAppContentToStageMessage = utils.findMessageByFunc('meeting.shareAppContentToStage');
-            expect(shareAppContentToStageMessage).not.toBeNull();
-            const callbackId = shareAppContentToStageMessage.id;
-            utils.respondToFramelessMessage({
-              data: {
-                id: callbackId,
-                args: [null, true],
-              },
-            } as DOMMessageEvent);
-            expect(callbackCalled).toBe(true);
-            expect(returnedSdkError).toBeNull();
-            expect(returnedResult).toBe(true);
-            expect(shareAppContentToStageMessage.args).toContain(requestUrl);
-            expect(shareAppContentToStageMessage.args[1]).toMatchObject(shareOptions);
-          });
+# [Share app content](#tab/app-content)
 
-          it('should throw if the shareAppContentToStage message sends and fails', async () => {
+```typescript
+   // Share the content to meeting stage view.
+    const shareSpecificAppContent = (partName) => {
+        var appContentUrl = "";
+        microsoftTeams.app.getContext().then((context) => {
+            appContentUrl = partName == 'todo' ? `${window.location.origin}/todoView?meetingId=${context.meeting.id}` : partName == 'doing' ? `${window.location.origin}/doingView?meetingId=${context.meeting.id}` : `${window.location.origin}/doneView?meetingId=${context.meeting.id}`;
+            microsoftTeams.meeting.shareAppContentToStage((err, result) => {
+                if (result) {
+                    // handle success
+                    console.log(result);
+                }
+
+                if (err) {
+                    // handle error
+                    alert(JSON.stringify(err))
+                }
+            }, appContentUrl);
+        });
+    };
   ```
+
+# [View-only screen share](#tab/screen-share)
 
   ```javascript
   // Share the content in view-only screen sharing mode.
@@ -287,6 +272,8 @@ Users can screen share content to the meeting stage in the following scenarios:
           });
       };
   ```
+
+---
 
   | Value | Type | Required | Description |
   | --- | --- | --- | --- |
