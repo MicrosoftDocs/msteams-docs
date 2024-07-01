@@ -90,13 +90,14 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Update the following steps based on the AI services you select.
 
-   # [OpenAI key](#tab/OpenAI-key)
+# [OpenAI key](#tab/OpenAI-key)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
       ```text
        SECRET_OPENAI_KEY=<your OpenAI key>
       ```
+
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
       ```bicep
@@ -110,7 +111,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
           // }
       ```
 
-   # [Azure OpenAI](#tab/Azure-OpenAI)
+# [Azure OpenAI](#tab/Azure-OpenAI)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -152,6 +153,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
             "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
             }
            ```
+
     ---
 
 1. From the left pane, select **Teams Toolkit**.
@@ -168,6 +170,12 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 1. Select **Add**.
 
    :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
+
+   A dialog to select the required scope appears.
+
+1. Select the required scope and select **Go**.
+
+   :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot shows option to select the required scope.":::
 
    A chat window opens.
 
@@ -349,7 +357,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-   # [OpenAI key](#tab/OpenAI-key2)
+# [OpenAI key](#tab/OpenAI-key2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -358,7 +366,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
       ```
 
-   # [Azure OpenAI](#tab/Azure-OpenAI2)
+# [Azure OpenAI](#tab/Azure-OpenAI2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
