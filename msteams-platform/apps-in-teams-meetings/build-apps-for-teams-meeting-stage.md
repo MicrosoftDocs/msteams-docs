@@ -223,7 +223,7 @@ Users can screen share content to the meeting stage in the following scenarios:
 
 The following coed is an example of sharing app content to meeting stage view and share content in view only screen sharing mode:
 
-# [Share app content](#tab/app-content)
+# [Share app content](#tab/share-app-content)
 
 ```typescript
    // Share the content to meeting stage view.
@@ -246,7 +246,7 @@ The following coed is an example of sharing app content to meeting stage view an
     };
   ```
 
-# [View-only screen share](#tab/screen-share)
+# [View-only screen share](#tab/screen-share-content)
 
   ```javascript
   // Share the content in view-only screen sharing mode.
