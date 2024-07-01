@@ -244,11 +244,11 @@ The following coed is an example of sharing app content to meeting stage view an
             }, appContentUrl);
         });
     };
-  ```
+```
 
 # [View-only screen share](#tab/screen-share-content)
 
-  ```javascript
+```javascript
   // Share the content in view-only screen sharing mode.
       const shareSpecificAppContentScreenShare = (partName) => {
           var appContentUrl = "";
@@ -271,9 +271,9 @@ The following coed is an example of sharing app content to meeting stage view an
                   });
           });
       };
-  ```
+```
 
----
+ ---
 
   | Value | Type | Required | Description |
   | --- | --- | --- | --- |
