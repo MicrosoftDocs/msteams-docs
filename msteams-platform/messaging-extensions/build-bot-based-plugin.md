@@ -358,10 +358,6 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-[!INCLUDE [Developer mode](../includes/bots/message-extension-plugin-developer-mode.md)]
-
-For more on testing your plugin in Copilot for Microsoft 365 chat, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
-
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
