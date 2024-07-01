@@ -1,7 +1,7 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: In this module, learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
+description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -516,7 +516,7 @@ export class MyBot extends TeamsActivityHandler {
 The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
-> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the id of the channel that the user selected during app installation or where installation was triggered from.
+> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
 
 ```json
 {
@@ -1475,7 +1475,7 @@ Use the `installationUpdate` event to send an introductory message from your bot
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities is set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 

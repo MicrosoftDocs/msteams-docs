@@ -1,5 +1,5 @@
 ---
-title: Limitations and known issues in Collaboration control app
+title: Limitations in Collaboration Controls
 author: surbhigupta
 description: In this module, learn about limitations and known issues in Collaboration controls app for Microsoft Teams.
 ms.localizationpriority: medium
