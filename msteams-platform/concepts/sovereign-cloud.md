@@ -7,13 +7,17 @@ ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
 
-[Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is specific to China. To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans) offered by 21Vianet version of Office 365 specific to China. For more information, see [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet).
+# Teams operated by 21Vianet
+
+Microsoft 365 operated by 21Vianet version is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning).[Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is designed specifically for China, independently operated and transacted by 21Vianet. To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans).
 
 :::row:::
    :::column:::
       :::image type="icon" source="../assets/images/app-fundamentals/gallatin.png" link="/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet" border="false":::
    :::column-end:::
 :::row-end:::
+
+## Teams app capabilities
 
 The following table details the Teams apps supported for Teams operated by 21Vianet:
 
@@ -51,3 +55,9 @@ The following table details the Teams experiences supported for Teams operated b
 | Manage apps in Teams Admin Center | ✔️ |
 | Graph APIs | ✔️ |
 | Developer Portal for Teams | ❌ |
+
+## Service and availability
+
+## See also
+
+* [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet)
