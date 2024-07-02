@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Command Line Interface
 author: MuyangAmigo
-description: In this module, learn Teamsapp Command Line Interface, TeamsFx library, supported commands and its scenarios.
+description: In this module, learn Teamsapp Command Line Interface, TeamsFx library, supported commands, and its scenarios.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -20,7 +20,7 @@ Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-bas
 
 Teams Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Teams with zero configuration. Teams Toolkit command-line interface (CLI) provides the following features to facilitate the development of Teams applications:
 
-* **Collaboration**: Invite other developers to collaborate on your Teams Toolkit CLI project for debugging and deployment purposes.
+* **Collaboration**: Invite other developers to collaborate on your Teams Toolkit CLI project to debug and deploy.
 * **Application Creation**: Generate a new Teams application using available templates and samples.
 * **Application Preview**: Upload and preview your custom app in Teams, Outlook, and the Microsoft 365 app.
 * **Resource Provisioning and Deployment**: Provision necessary cloud resources and deploy your application to Azure.
@@ -128,7 +128,7 @@ The following table lists the parameters available for `teamsapp new`:
 
 ### `teamsapp new` scenarios
 
-The following is a list of scenarios to control all the parameters with `teamsapp new`:
+The following are a list of scenarios to control all the parameters with `teamsapp new`:
 
 * HTTP triggered notification bot with timer triggered in non-interactive mode.
 
@@ -730,7 +730,7 @@ Preview the current application.
 
 The following list provides the common scenarios for `teamsfx preview`:
 
-`teamsfx preview` expects users have already ran `teamsfx provision` and `teamsfx deploy`.
+`teamsfx preview` expects users have run `teamsfx provision` and `teamsfx deploy`.
 
 * Local Preview
 
@@ -765,7 +765,7 @@ Manage Microsoft 365 app.
 |:----------------  |:-------------|
 | `sideloading [options]` | Sideloading a Microsoft 365 App with corresponding information specified in the given app manifest package. |
 | `unacquire [options]` | Remove an acquired Microsoft 365 App. |
-| `launchinfo [options]` | Get launch information of an acquired M365 App. |
+| `launchinfo [options]` | Get launch information of an acquired Microsoft 365 App. |
 
 ## `teamsfx permission`
 
@@ -1019,7 +1019,7 @@ The `teamsfx deploy` command is used to deploy the current application. By defau
 | Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
-|`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
+|`--open-api-document`| No | Applicable when there's APIM resource in the project. The OpenAPI document file path. |
 |`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
 |`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
