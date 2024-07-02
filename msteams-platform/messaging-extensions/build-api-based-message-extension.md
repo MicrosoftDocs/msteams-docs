@@ -507,6 +507,77 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
+##### Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `name` and `id` properties in  `parameters` must match the values in the OpenAPI Description document.
+
+**Example**
+
+```json
+{
+      "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "${if(id, id, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(name, name, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(category.id, category.id, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(category.name, category.name, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "Container",
+        "$data": "${photoUrls}",
+        "items": [
+          {
+            "type": "Image",
+            "url": "${$data}",
+            "$when": "${$data != null}"
+          }
+        ]
+      },
+      {
+        "type": "Container",
+        "$data": "${tags}",
+        "items": [
+          {
+            "type": "TextBlock",
+            "text": "tags.id: ${if(id, id, 'N/A')}",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "tags.name: ${if(name, name, 'N/A')}",
+            "wrap": true
+          }
+        ]
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(status, status, 'N/A')}",
+        "wrap": true
+      }
+    ]
+  }
+```
+
 ## Authentication
 
 You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
@@ -608,6 +679,8 @@ You can authorize incoming requests to your service by configuring a static API 
         }
       },
 ```
+
+You can also add an API key authentication for your message extension using Teams Toolkit for Visual Studio Code. For more information, see [Create an API-based message extension](create-api-message-extension.md).
 
 </details>
 <br/>
@@ -894,7 +967,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -923,7 +996,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -984,11 +1057,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
