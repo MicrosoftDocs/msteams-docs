@@ -41,5 +41,4 @@ Add the test data to Microsoft 365 test tenant. For more information, see [add t
 ## See also
 
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
-* [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

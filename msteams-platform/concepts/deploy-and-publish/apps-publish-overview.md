@@ -1,6 +1,6 @@
 ---
 title: Overview - Distribute your app
-description: Learn to distribute, publish your app to Microsoft Teams Store or to your org. Understand how app's endpoints must comply with your Government Community Cloud(GCC) organization's requirements.
+description: Learn to publish app to Teams Store or to your org. Understand how app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
@@ -64,4 +64,4 @@ For more information, see [publish to the Teams Store](~/concepts/deploy-and-pub
 * [Publish to org](/microsoftteams/upload-custom-apps)
 * [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
 * [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
-* [Enable customization for your Microsoft Teams app](../design/enable-app-customization.md)
+
