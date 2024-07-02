@@ -15,6 +15,57 @@ ms.date: 10/19/2023
 
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
+
+|Traditional bot-based message extensions  |API-based message extensions  |
+|---------|---------|
+|Developers need to build, deploy, and maintain a service to handle invoke commands from the Teams client.     | If the end-service's APIs can be described using the Open API specification, developers can eliminate the need for the middle-layer handling service.         |
+|This service processes the incoming query and makes a call to the developer’s end-service.     | Teams can directly use the [Open API specification](https://swagger.io/resources/open-api/) to build requests and communicate with the developer's end-service.        |
+
+<br>
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagra also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
+*User query flow using Traditional Message Extensions. The developer must maintain a custom bot handler service which handles the requests from a Teams bot. The handler service sends a request to the developer’s service when a query is invoked.*
+
+<br>
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow-2.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagra also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow-2.png":::
+*User query flow using API Message Extensions. There is no need for a developer maintained handler service as long as the interaction is clearly outlined in the Open API specification in the App Package.*
+
+<br>
+<br>
+
+The app definition package contains several interesting artifacts which help facilitate this feature:
+
+1. Open API specification: Contains details to communicate with the developer’s service.
+
+1. App Manifest: Contains query command definition.
+
+1. Response Rendering Template: Contains details to convert the response from developer’s service back to UI for end-user.
+
+<br>
+<br>
+
+Here is a high-level sequence of events that occur during a query command invocation:
+
+1. When a user invokes a query command, the parameters of the query command are received by the Teams Bot Service.
+
+1. The query command is defined inside the app manifest file. The command definition contains a reference to the operation_id inside the Open API specification file along with the details of the parameters that need to be rendered by the Teams client for that command. For reference, the operation_id inside the Open API specification file is unique to a particular HTTP operation.
+
+1. The Teams Bot Service then uses the parameters supplied by the user along with the copy of the Open API specification for the associated operation_id to build an HTTP request for the developer’s endpoint.
+
+1. If authentication is required and is configured in the manifest, it is resolved to the appropriate token or key. This token or key is used as part of the outgoing request. *[Optionally]*
+
+1. The Teams Bot Service performs the HTTP request to the developer’s service.
+
+1. The developer’s service should respond in accordance with the schema outlined in the Open API specification. This is in JSON format.
+
+1. The Teams client needs to show the results back to the user. To convert the JSON results from the previous step to UI, the Teams Bot Service uses the Response Rendering Template to build an adaptive card for each result.
+
+1. The adaptive cards are sent to the client which renders them in the UI.
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-query-sequence-diagram.png" alt-text="Diagram shows the high-level sequence flow when a query is invoked in an API-based message extension.":::
+
+
 Before you get started, ensure that you meet the following requirements:
 
 </br>
@@ -114,7 +165,7 @@ schemas:
        description: Message of the error.
 ```
 
-For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
+For more information on how to write OpenAPI definitions in YAML, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 </details>
 
@@ -132,9 +183,9 @@ Ensure that you adhere to following guidelines for app manifest:
 * The `Commands.id` property in the app manifest must match the `operationId` in the OpenAPI Description.
 * If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
 * If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
-* Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
-* A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
-* Full description must not exceed 128 characters.
+* Ensure that the name of parameters for each command in the app manifest match exactly with the corresponding name of the parameter defined for the operation in the OpenAPI spec.
+* A response rendering template must be defined per command, which is used to convert responses from an API.
+* The command and parameter descriptions must not exceed 128 characters.
 
   ```json
    {
@@ -219,19 +270,19 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 </br>
 
-<details><summary id="response-template">3. Response rendering template</summary>
+<details><summary>3. Response rendering template</summary>
 
 > [!NOTE]
 >
-> Teams supports Adaptive Cards up to version 1.5 and the Adaptive Cards Designer supports up to version 1.6.
+> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
 
-* **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
-* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
-* **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* **Define the schema reference URL** in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented. For more information on the layout, see [respond to user requests](how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+* **A `jsonPath` is rerequired** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
 * **Define `jsonPath` as the path** to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
 * **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
 * **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
-* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the Adaptive Card template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -240,6 +291,7 @@ The following code is an example of a Response rendering template: <br/>
   ```json
   {
   "version": "1.0",
+  "$schema": "developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
   "jsonPath": "repairs",
   "responseLayout": "grid",
   "responseCardTemplate": {
@@ -326,6 +378,8 @@ The following code is an example of a Response rendering template: <br/>
 
   **Preview Card**
 
+A preview card template in the response rendering template schema is used to map JSON responses to a preview card that users see when they select a search result. The preview card then expands into an Adaptive Card in the message compose box. The preview card template is part of the response rendering template, which also includes an Adaptive Card template and metadata.
+
   :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the 'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
  **Expanded Adaptive Card**
@@ -344,7 +398,7 @@ The following code is an example of a Response rendering template: <br/>
 
 #### Json path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The [JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm) is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. This tool can be used. You can use the [JSON tool](https://jsonpath.com/) to validate a JSON path is correct given an example JSON token. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
@@ -366,9 +420,12 @@ As you can see, the array of results is under "products", which is nested under 
 Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
 Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
 
-#### Schema mapping
+#### OpenAPI schema conversion
 
-The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
+> [!NOTE]
+> We send an accept-language header in the HTTP request that is sent to the endpoint defined in the OpenAPI description document. The accept-language is based on the Teams client locale and can be used by the developer for returning back a localized response.
+
+The following data types in the OpenAPI description document are converted into elements within an Adaptive Card as follows:
 
 * `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
 
@@ -509,12 +566,19 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
+Authentication is a fundamental aspect of security and serves as the first line of defense, ensuring that access to systems, applications, and data is granted only to those with verified credentials. Authentication for API-based message extensions is crucial for several reasons:
+
+* **Security**: It protects against unauthorized access and potential breaches, safeguarding both user data and the integrity of the system.
+* **Data Privacy**: Ensures that personal and sensitive information is only accessible to users with the correct permissions.
+
+* **User Trust**: Builds confidence among users that their interactions with the app are secure, which is essential for user adoption and engagement.
+
 You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
 <details><summary id="none">none</summary>
 <br>
 
-You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
+You can update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
 
 ```json
     "authorization": {
@@ -528,13 +592,29 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 <details><summary id="secret-service-auth">Secret service auth</summary>
 
-API secret service authentication is a secure method for your app to authenticate with API. You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
+API secret service authentication is a method that allows your app to authenticate with your API. You can configure your endpoint to accept a secret to authenticate requests. The API secret must be registered in Microsoft Teams and when a user interacts with your message extension, Teams uses the secret to authenticate with your API. The following API key registration properties help you to secure your key and ensure it's limited to your application:
 
-When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
+* **Base URL**: Teams transmits the secrets to endpoints where the URL begins with the value in this field.
+* **Target Tenant**: To limit API access to your Microsoft 365 tenant.
+* **App ID**: To limit the key access to a specific app.
+* **Secret key**: To authorize access between your app and OpenAPI endpoints.
+
+API secret service authentication is a secure method for your app to authenticate with API. You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the API key registration ID returned when you submitted the API key through the portal.
+
+> [!NOTE]
+> The API secret registration ID is not a secret itself and can be retrieved from the Teams app manifest. For more information on securing your secret, see [best practices](#best-practices).
+
+When an API request is initiated, the system retrieves the encrypted API key before storage and is stored in a secured location and includes it in the authorization header using the bearer token scheme and sends it to the endpoint defined in the app manifest. The user must verify the validity of the API key.
+
+The following is an example of the payload with the authorization header using the bearer token scheme:
+
+```https
+GET https://example.com/search?myQuery=test
+Accept-Language: en-US
+Authorization: Bearer <MY_API_KEY>
+```
 
 ### Register an API key
-
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified message extension and the API key ID enables the authentication for the API calls that are behind an auth.
 
 To register an API Key, follow these steps:
 
@@ -544,58 +624,59 @@ To register an API Key, follow these steps:
 
 1. Select **+ New API key**.
 
-1. In the **API key registration** page, under **Register an API key**, update the following:
-
-   1. **Description**: Description of the API Key.
-   1. **Add domain**: Update the base path for API endpoints. The path must be a secure HTTPS URL, include a fully qualified domain name, and can optionally include a specific path. For example, `https://api.yelp.com`.
-
-      :::image type="content" source="../assets/images/Copilot/api-based-me-register-key-domain.png" alt-text="Screenshot shows the Description and Add domain options in the API key registration page in Developer Portal for Teams.":::
-
-1. Under **Set a target tenant**, select any of the following:
-
-   * **Home tenent**
-   * **Any tenant**
-
-   |Option   |When to use  | Description|
-   |---------|---------|----------------|
-   |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
-   |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
-
-   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
-
-1. Under **Set a Teams app**, select any of the following:
-
-   * **Any Teams app**
-   * **Existing Teams app ID**
-
-   |Option   |When to use  | Description|
-   |---------|---------|----------------|
-   |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
-   |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
-
-   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
-
-1. Select **+ Add Secret**. A **Add an API key** dialog appears.
+1. In the **API key registration** page, select **+ Add Secret**. A **Add an API key** dialog appears.
 
 1. Enter a value for the secret and select **Save**.
 
    > [!NOTE]
    >
-   > * You can maintain up to two secrets for each API key registration. If one key is compromised, it can be promptly removed and allows Teams to switch to the second key.
-   > * The secret value must have at least 10 characters and at most 128 characters.
-   > * If the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
+   > * You can maintain up to two secrets. If you need to replace one, you can do so without service interruption, as Teams will use the other configured key during the update process.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to the API key.":::
 
-An **API key registration ID** is generated.
+1. Under **API key name**, add a meaningful name for the API Key. For example, API key for Contoso message extension.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
+1. Under **Base URL**, specify a path that initiates all the API endpoints. The path must start with https, include a fully qualified domain name, and optionally, a path. Teams only transmits the secrets to endpoints where the URL begins with this value. For example, `https://api.yelp.com`. *[Mandatory]*
 
-Copy and save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
+   Base URL ensures that the key remains secure and isn't leaked to random endpoints, even if another app illicitly acquires the API secret registration ID and incorporates it into their own app. We enforce this URL constraint on API keys. If the path registered here doesn't prefix the target endpoint defined in the app manifest, the call gets dropped.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-register-key-domain.png" alt-text="Screenshot shows the Description and Add domain options in the API key registration page in Developer Portal for Teams.":::
+
+1. Under **Target tenant**, select any of the following:
+
+   * **Home tenant**: The API key is only functional within the tenant where it's registered.
+   * **Any tenant**: The API key t is usable in any tenant.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
+
+1. Under **Target Teams app**, select any of the following:
+
+   * **Existing Teams app**: The **Existing Teams app** option binds the API secret registration to your specific Teams app.
+   * **Any Teams app**: The API key can be used with any Teams app.
+
+   Adding a domain ensures that the key isn't exposed to endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially sending unwanted data to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
+
+   An **API key registration ID** is generated.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
+
+1. In Developer portal for Teams, select **Apps** and select an app where you want to add the API key.
+
+1. Go to **App features** > **Message extension**.
+
+1. Under **Authentication**, select **API key** and add the API key registration ID.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-auth-add-key.png" alt-text="Screenshot shows an example of the Authentication section with none and API key options in Developer Portal for Teams.":::
+
+1. Select **Save**.
+
+The API key registration ID is update as the value for the `apiSecretRegistrationId` property in the app manifest.
 
 ### Update app manifest
 
-You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams. For more information, see [composeExtensions.commands.](../resources/schema/manifest-schema.md#composeextensionscommands)
+Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams. For more information, see [composeExtensions.commands.](../resources/schema/manifest-schema.md#composeextensionscommands)
 
 ```json
 "composeExtensions": [
@@ -609,12 +690,33 @@ You can authorize incoming requests to your service by configuring a static API 
       },
 ```
 
+### Best practices
+
+* **Secret**:
+  * The secret value must have at least 10 characters and at most 128 characters.
+  * After you update the secret, it will take upto for one hour for the key to reflect throughout the system.
+
+* **Base URL**:
+  * The Base URL must begin with https, ensuring secure communication.
+  * Include the full host name to specify the exact domain.
+  * An optional path can be added to define a specific entry point for the API.
+
+   This structure is crucial for the security of your API secret(s), as Teams will only send secrets to endpoints that start with the specified Base URL.
+
+* **Target tenant**: As you develop your app within your Microsoft 365 tenant, you'll initially test it as a custom app built for your org (LoB) or custom app. During this stage, you must create the API secret registration with your **Home tenant** as the target tenant, ensuring the key remains exclusive to your tenant.
+
+  After you've completed testing and are ready to submit your app manifest to the Partner Center for the Teams Store, you'll need to switch the target tenant setting to **Any tenant**. This change allows your API secret registration to be used across various tenants once your app is available in the Teams Store.
+
+* **Teams app ID**: As you develop your app within your Microsoft 365 tenant and start to test it as a custom app built for your org (Lob) or custom app, you must set the API key registration with the Teams app ID as **Any Teams app**. This configuration allows the key to be used with any Teams app as custom app built for your org (Lob) or custom apps generate IDs after they're uploaded, and you won't have the app's ID at this stage.
+
+  Your key's security is still maintained through the **Home Tenant** and **Base URL**. When you're ready to release your app to the world, you need to change the Teams app ID setting to **Existing Teams app** and enter your manifest ID. Finally, submit your app manifest to the Partner Center for inclusion in the Teams Store. Later, your API secret registration is tied to your specific Teams app and can't be used with others.
+
 </details>
 <br/>
 
 <details><summary id="microsoft-entra">Microsoft Entra </summary>
 
-`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. Microsoft Entra SSO enables the app to silently obtain a user token that is issued for its resource by Microsoft Entra. The app can then authenticate this token and retrieve the user profile information without the user's consent.
 
 ### Prerequisites
 
@@ -630,9 +732,8 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The user invokes the API-based message extension app from a message extension in Teams and requests a command that requires authentication.
 * The app sends a request to the Teams backend service with the app ID and the required scope (access_as_user).
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
-* If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
+* If the user consents, Microsoft Entra generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
-* The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
@@ -719,20 +820,13 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!IMPORTANT]
     >
-    > * **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
-    >
+    > * If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * If you're building an app with a bot, a message extension, and a tab, enter the application ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
+    > * If you're building an app with a message extension or tab capabilities without the bot,  enter the application ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra application ID.
+
     > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
-    >
-    >   For example, to create an app service or web app with resource name, `demoapplication`:
-    >
-    >   | If base resource name used is | URL will be... | Format is supported on... |
-    >   | --- | --- | --- |
-    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
-    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported on Android. |
-    >
-    >    Use the lower-case option *demoapplication* as base resource name.
 
 1. Select **Save**.
 
@@ -749,7 +843,9 @@ To configure scope and authorize trusted client applications, you need:
 #### Configure API scope
 
 > [!NOTE]
-> API-based message extension support **access_as_user** scope only.
+>
+> * API-based message extension support **access_as_user** scope only.
+> * The API receives a Microsoft Entra access token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
@@ -792,8 +888,7 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!NOTE]
     >
-    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams are the actual IDs that you must add.
-    > * For a Teams API-based message extension app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams are the actual IDs that you must add.
 
     1. Select one of the following client IDs:
 
@@ -821,25 +916,22 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Update app manifest
 
-> [!NOTE]
-> `webApplicationInfo` is supported in the app manifest version 1.5 or later.
-
 Update the following properties in the app manifest file:
 
-* `webApplicationInfo`: Enables SSO for your app to help app users access your API-based message extension app seamlessly. section, which contains crucial details about your app. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications.
+* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and reduce the need for multiple authentications. If the property is set to `false` or is left empty, the user can't upload the app to Teams and the app fails validation.
 
 To configure app manifest:
 
-1. Open the API-based message extension app project.
+1. Open the API-based message extension app.
 2. Open the app manifest folder.
 
     > [!NOTE]
     >
-    > * The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../concepts/build-and-test/apps-package.md).
+    > * The app manifest folder should be at the root of your app folder. For more information, see [Create a Microsoft Teams app package](../concepts/build-and-test/apps-package.md).
     > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
@@ -857,7 +949,7 @@ To configure app manifest:
 
     where,
     * `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
-    * `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
+    * `api://subdomain.example.com/{Microsoft Entra AppId}` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
     **MicrosoftEntraConfiguration**
 
@@ -869,10 +961,6 @@ To configure app manifest:
       }
     },
     ```
-
-1. Update the subdomain URL in the following properties:
-   1. `contentUrl`
-   2. `configurationUrl`
   
 1. Save the app manifest file.
 
@@ -880,7 +968,7 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 
 #### Authenticate token
 
-When the message extension calls the API during authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
@@ -890,7 +978,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 
 After the API-based message extension gets a request header with token, perform the following steps:
 
-* **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app.
+* **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app. For more claims, see [ID token claims](/entra/identity-platform/access-tokens#validate-tokens).
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
@@ -952,10 +1040,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-* **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
-
-  > [!NOTE]
-  > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
+* **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API. For more information on claims reference with details on the claims included in access tokens, see [access token claims](/entra/identity-platform/access-token-claims-reference).
 
 </details>
 <br/>
@@ -984,11 +1069,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
