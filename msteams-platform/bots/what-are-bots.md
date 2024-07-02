@@ -57,6 +57,8 @@ You can change the bot name displayed in Teams environment, and you need to upda
 
   :::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window.":::
 
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
+
 ## Add SSO authentication to your conversation bots
 
 You can add single sign-on authentication to your conversation bot using the following steps:
