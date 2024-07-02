@@ -1,5 +1,5 @@
 ---
-title: Prepare your Microsoft Teams Store submission  
+title: Prepare for Teams Store Submission
 description: Learn final steps before you submit your Teams app to be listed on the Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
@@ -54,8 +54,8 @@ Depending on your app functionality, you're required to provide Teams tenant con
         * Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
-    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The validation team tests your app fully, including first-run user experience.
+    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team uses the sign up process as described.
 
 3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to understand your app better and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 

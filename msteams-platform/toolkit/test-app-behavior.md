@@ -1,5 +1,5 @@
 ---
-title: Test app behavior in different environment
+title: Test App in Local & Cloud Environments
 author: surbhigupta
 description: In this module, learn how to test app behavior in different environment.
 ms.author: surbhigupta
