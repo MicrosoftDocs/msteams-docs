@@ -311,7 +311,7 @@ If your app contains a conversation bot, ensure it's installed in the conversati
 To facilitate this flow, when your message extension first receives the `composeExtensions/fetchTask` invoke, check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
  > [!NOTE]
- >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload a custom app.
+ >`justInTimeInstall` functions when you upload an app to the app catalog, but fails when you upload a custom app.
 
 Here's an example of the response:
 
