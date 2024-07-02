@@ -18,19 +18,14 @@ Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-bas
 
 ::: zone pivot="version-three"
 
-Teams Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Teams with zero configuration.
+Teams Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Teams with zero configuration. Teams Toolkit command-line interface (CLI) provides the following features to facilitate the development of Teams applications:
 
-Following is a list of main Teams Toolkit CLI features:
-
-* **Teams Toolkit CLI Collaboration**: Enables developers and project owners to invite other collaborators to the Teams Toolkit CLI project. You can collaborate to debug and deploy a Teams Toolkit CLI project.
-
-* **Teams Toolkit CLI**: Accelerates Teams application development and enables CI/CD scenario where you can integrate CLI in scripts for automation.
-
-* Create new Teams application from templates and samples.
-* Preview your Teams application by uploading the custom app to Teams, Outlook, and the Microsoft 365 app.
-* Provision cloud resources and deploy the application to Azure.
-* Validate, package, and publish Teams application.
-* Manage multiple environments, Microsoft Entra apps, and Teams app registrations.
+* **Collaboration**: Invite other developers to collaborate on your Teams Toolkit CLI project for debugging and deployment purposes.
+* **Application Creation**: Generate a new Teams application using available templates and samples.
+* **Application Preview**: Upload and preview your custom app in Teams, Outlook, and the Microsoft 365 app.
+* **Resource Provisioning and Deployment**: Provision necessary cloud resources and deploy your application to Azure.
+* **Validation, Packaging, and Publishing**: Validate, package, and publish your Teams application using CLI commands.
+* **Environment Management**: Manage multiple environments, Microsoft Entra apps, and Teams app registration.
 
 ## Get started
 
