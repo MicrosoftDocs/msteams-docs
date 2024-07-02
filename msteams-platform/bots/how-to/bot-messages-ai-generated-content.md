@@ -152,10 +152,10 @@ await context.sendActivity({
 | Source Code | js, cs, html, htm, cmd, c, class, xml, cpp |
 | Sketch | sketch |
 | Adobe Illustrator | ai, ait, eps |
-| Flash | fla, swf, as |
+| Adobe Flash | fla, swf, as |
 | Adobe Photoshop | psd, pdd |
 | Adobe InDesign | indd, indl, indt, indb |
-| Adobe Aftereffects | aep, aet, aaf, aepx |SS
+| Adobe After Effects | aep, aet, aaf, aepx |
 | PDF | pdf, application/pdf |
 | Text | txt |
 | ZIP | zip, rar |
