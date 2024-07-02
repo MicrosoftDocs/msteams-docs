@@ -140,7 +140,7 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Tools 
-    items:					  
+    items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
@@ -189,6 +189,8 @@
           - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
+          - name: Debug message extension app in Test Tool
+            href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
@@ -447,8 +449,11 @@
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
+    - name: Bot messages with AI-generated content
+      href: bots/how-to/format-ai-bot-messages.md
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md      
+      href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams

@@ -70,6 +70,8 @@ After a user purchases a subscription plan, commercial marketplace directs them 
 
 ### Integrate with SaaS Fulfillment API
 
+When someone finishes buying a subscription plan for your app in the Teams Store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
+
 Integrating with the SaaS Fulfillment APIs help to manage the lifecycle of a subscription plan after the user purchases the subscription plan.
 
 Here's a quick overview on the steps to integrate SaaS Fulfillment APIs:
@@ -140,7 +142,7 @@ After you create the plan and configure the required information:
 * The offer goes through a series of automated validation checks and preview offers are created.
 * When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under **Go live**, to test the offer.
 
-We recommended to test the offer with the given preview links before you publish the offer in the marketplace.
+We recommended to test the offer with the given preview links before you publish the offer in the marketplace. Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
 ## Next step
 

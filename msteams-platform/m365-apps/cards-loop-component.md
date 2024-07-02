@@ -1,5 +1,5 @@
 ---
-title: Build Adaptive Card-based Loop component
+title: Adaptive Card-based Loop Component
 description: In this module, learn and build Adaptive Card Loop components.
 ms.localizationpriority: high
 ms.topic: reference

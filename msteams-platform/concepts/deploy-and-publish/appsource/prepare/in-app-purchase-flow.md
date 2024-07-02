@@ -1,5 +1,5 @@
 ---
-title: In-app purchase flow for monetization of apps
+title: In-app Purchases for App Monetization
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
 author: v-npaladugu
 ms.author: surbhigupta
@@ -56,9 +56,9 @@ To enable the in-app purchase experience, update your Teams app `manifest.json` 
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app. The following code snippet is an example of calling the API from the Teams app built using TeamsJS:
 
-# [TeamsJS v2](#tab/jsonV2)
+# [TeamsJS V2](#tab/jsonV2)
 
-```json
+```javascript
 <div>
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>
@@ -78,7 +78,8 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 # [TeamsJS v1](#tab/jsonV1)
 
-```json
+```javascript
+
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>

@@ -1,5 +1,5 @@
 ---
-title: Test resource-specific consent permissions in Teams
+title: Test RSC Permissions Using Postman
 description: Details testing resource-specific consent in Teams using Postman with Code Samples
 ms.localizationpriority: medium
 author: akjo
