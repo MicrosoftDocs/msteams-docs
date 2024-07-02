@@ -524,9 +524,9 @@ The search parameters must have good descriptions with acceptable parameters, en
 ## Sample prompts
 
 > [!NOTE]
-> Sample prompts feature will be available soon in Copilot for Microsoft 365. The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property is live in app manifest v1.17.
+> Sample prompts feature will be available soon in Copilot for Microsoft 365.
 
-The `samplePrompts` property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts will be available in the following areas within Copilot for Microsoft 365:
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts will be available in the following areas within Copilot for Microsoft 365:
 
 * First Run Experience (FRE): When a user first installs or enables a plugin.
 * Prompt library or Copilot Lab: When a user seeks help with prompts.
