@@ -1,10 +1,10 @@
 ---
 title: Plan for Sovereign clouds
 author: v-preethah
-description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, DOD, and Teams operated by 21Vianet tenants. Get an overview on how to deploy Teams in Government clouds.
+description: Understand Teams features and capabilities available for Teams operated by 21Vianet tenants.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 09/29/2023
+ms.date: 06/24/2024
 ---
 
 # Sovereign clouds

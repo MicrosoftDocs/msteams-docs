@@ -56,7 +56,7 @@ The following table details the Teams apps and capabilities for GCC, GCC High, a
 | Graph APIs | ✔️ | ✔️ | ✔️ |
 | Developer Portal for Teams | ✔️ | ❌ | ❌ |
 
-For more information on Graph API, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences)
+For more information on Graph API, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences).
 
 > [!NOTE]
 >
