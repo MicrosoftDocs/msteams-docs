@@ -20,7 +20,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Microsoft 365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
 </br>
@@ -36,12 +36,12 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
+Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offer a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
 * **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
-* **Semantic description**: Semantic description helps Copilot for Micrososft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
+* **Semantic description**: Semantic description helps Copilot for Microsoft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
 
 For more information, see [define descriptions](high-quality-message-extension.md#define-descriptions).
 
@@ -69,7 +69,7 @@ Before you get started, ensure that you install the following tools to build and
 * Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
-  1. Go to **Manage** > **Settings**.
+  1. Go to **Manage** :::image type="icon" source="../assets/icons/gear-icon.png" border="false"::: > **Settings**.
   1. Enter **Teams Toolkit** in the **Search settings** search box.
   1. Under **Extensions**, select the **Fx-extension: Develop Copilot Plugin** checkbox.
 
@@ -303,15 +303,17 @@ To trigger the message extension through M365 Chat, follow these steps:
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create a bot-based search message extension plugin using Developer portal for Teams, follow these steps:
+To create a bot-based message extension using Developer Portal for Teams, follow these steps:
 
-1. Go to **Teams Developer Portal**.
+1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/).
 1. Go to **Apps**.
 1. Select **+ New apps**.
-1. Under **Configure**, select **App features**.
-1. Select **Messaging extension**.
+1. In the **Add apps** page, update the name and select the manifest version as **Public developer preview (devPreview)**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the messaging extension option in Teams Developer Portal.":::
+
+1. Under **Configure**, select **App features**.
+1. Select **Messaging extension**.
 
 1. Under **Message extension type**, select **Bot**.
 
@@ -350,13 +352,11 @@ A bot-based search message extension is created.
 
 To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 ---
-
-For more on testing your plugin in Copilot for Microsoft 365 chat, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
 
 ## Step-by-step guide
 
