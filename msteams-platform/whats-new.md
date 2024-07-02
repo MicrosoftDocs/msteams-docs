@@ -87,7 +87,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|20/12/2023|Incoming Webhooks are available in GCC-High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
+|20/12/2023|Incoming Webhooks are available in GCC High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
 |20/12/2023|Introduced RSC permissions for users to access different resources.| Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access) |
 |18/12/2023|App caching in chat, channel, and meeting tab scopes is available for iOS.| Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 |15/12/2023|Bots can mention tags in text messages and Adaptive Cards posted in Teams channels.| Build bots > Bot conversation > [Channel and group chat conversations with a bot](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) |
@@ -98,7 +98,7 @@ Teams platform features that are available to all app developers.
 |17/11/2023|Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Teams app Test Tool](toolkit/debug-your-Teams-app-test-tool.md) |
 |14/11/2023|Use callRecording API to fetch meeting recording from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
 |14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.||
-|03/11/2023|Apps for Teams meetings are available in GCC-High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|03/11/2023|Apps for Teams meetings are available in GCC High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |25/10/2023|Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
 |11/10/2023|Introduced the new Microsoft Teams client to provide better experience for your apps and users. | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
 |05/10/2023|Use callTranscript API to fetch meeting transcript from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
@@ -186,7 +186,7 @@ Teams platform features that are available to all app developers.
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams Store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
-| 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
+| 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/cloud-overview.md#teams-app-capabilities-for-government-clouds) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 | 04/22/2022 | Test preview for monetized apps | Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 | 04/22/2022 | In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
