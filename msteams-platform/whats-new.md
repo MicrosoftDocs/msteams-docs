@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 **2024 July**
 
-***July 02, 2024***: [You can extend bot-based message extension plugins to meetings allows developers to enhance the Copilot for Teams meetings.](messaging-extensions/build-bot-based-message-extension.md#message-extension-as-plugin-for-copilot-for-teams-meetings)
+***July 02, 2024***: [You can extend bot-based message extension plugins to meetings allows developers to enhance the Copilot for Teams meetings.](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 :::column-end:::
 :::row-end:::

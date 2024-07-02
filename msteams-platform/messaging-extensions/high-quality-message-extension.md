@@ -679,6 +679,8 @@ Copilot for Microsoft 365 is available in Teams meetings. We recommend you to im
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
     * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
+For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
