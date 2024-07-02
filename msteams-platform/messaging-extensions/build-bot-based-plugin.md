@@ -34,7 +34,6 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
-* Perform actions on behalf of the user, such as creating a Contoso ticket.
 
 Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offer a clear and concise summary of the app’s features:
 

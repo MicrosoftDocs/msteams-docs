@@ -112,7 +112,7 @@ Meetings Copilot is interactive and efficient, it can assist with summarizing di
 | Scenarios         | Description                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
 | Reactive Commands | Users can directly command Copilot to perform specific actions or provide information.                                  |
-|                   | - Natural Language Prompts: Users can instruct Copilot to carry out search or action commands.                         |
+|                   | - Natural Language Prompts: Users can instruct Copilot to carry out search commands.                         |
 |                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot to execute.                                |
 | Proactive Assistance | Copilot proactively listens to meeting signals and assists users by:                                                   |
 |                   | - Suggesting prompts from apps: Contextually relevant suggestions based on the discussion topics.                      |
