@@ -19,9 +19,6 @@ Action-based message extensions allow your users to trigger actions in external 
 
 To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
- > [!NOTE]
- >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload a custom app.
-
 ### Complete app manifest example
 
 The following code is an example of a manifest with a search and a create command:
@@ -312,6 +309,9 @@ Just like in the Adaptive Card flow, your service sends a `fetchTask` event and 
 If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you might need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
 To facilitate this flow, when your message extension first receives the `composeExtensions/fetchTask` invoke, check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
+
+> [!NOTE]
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload a custom app.
 
 Here's an example of the response:
 
