@@ -78,10 +78,10 @@ It's important to cite the sources of the bot message to help users ask follow-u
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with in-text citation.":::
 
-Citations to your bot message include in-text citations, details to citation reference, and sensitivity labels for the content referenced.
+Citations in your bot's message include in-text citations, details of the citation reference, and sensitivity labels for the content referenced.
 
 * **In-text citations** denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
-* **Details to citation reference** include the title, keywords, an abstract, hyperlink, and sensitivity information. References appear as pop-up windows for each in-text citation.
+* **Details of the citation reference** include the title, icon, keywords, an abstract, hyperlink, and sensitivity information. References appear as pop-up windows for each in-text citation.
 * **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
 
 > [!NOTE]
@@ -133,6 +133,38 @@ await context.sendActivity({
 | `citation.appearance.url` | String | No | URL of the referenced content. |
 | `citation.appearance.abstract` | String | No | Extract of the referenced content and is limited to less than 1,000 characters. |
 | `citation.appearance.keywords` | Array | No | Keywords from the referenced content. You can't add more than three keywords. |
+|`citation.appearance.encodingFormat` | String | No | Media type of the citation source. It renders the citation icon in the details of the citation reference. |
+
+<br>
+<details>
+<summary>List of media type values allowed in the Encoding Format property</summary>
+
+| Icon | Extension (File format) |
+|--|--|
+| Microsoft Word | docx, doc, docm, dotx, dot, dotm, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.wordprocessingml.template, application/vnd.ms-word.document.macroenabled.12, application/vnd.ms-word.template.macroenabled.12 |
+| Microsoft Excel | xlsx, xlsb, xls, xlsm, csv, ods, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.openxmlformats-officedocument.spreadsheetml.template, application/vnd.ms-excel.sheet.macroenabled.12, application/vnd.ms-excel.template.macroenabled.12, application/vnd.ms-excel.addin.macroenabled.12, application/vnd.ms-excel.sheet.binary.macroenabled.12 |
+| Microsoft PowerPoint | pptx, potm, ppt, pptm, pot, potx, pps, ppsm, ppsx, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.openxmlformats-officedocument.presentationml.template, application/vnd.openxmlformats-officedocument.presentationml.slideshow, application/vnd.ms-powerpoint.addin.macroenabled.12, application/vnd.ms-powerpoint.presentation.macroenabled.12, application/vnd.ms-powerpoint.template.macroenabled.12, application/vnd.ms-powerpoint.slideshow.macroenabled.12 |
+| Microsoft OneNote | note, one, onenote, onepkg, notebk, onetoc2 |
+| Microsoft Visio | vsdx, vsdm, vsd |
+| Microsoft | Loop fluid, loop |
+| Microsoft Whiteboard | whiteboard |
+| Microsoft SharePoint | sppage, splist, splistform, splistitem, splistplaylist |
+| Source Code | js, cs, html, htm, cmd, c, class, xml, cpp |
+| Sketch | sketch |
+| Adobe Illustrator | ai, ait, eps |
+| Flash | fla, swf, as |
+| Adobe Photoshop | psd, pdd |
+| Adobe InDesign | indd, indl, indt, indb |
+| Adobe Aftereffects | aep, aet, aaf, aepx |SS
+| PDF | pdf, application/pdf |
+| Text | txt |
+| ZIP | zip, rar |
+| Image | png, jpg, jpeg, bmp, tiff, tif, image/png, image/jpg, image/jpeg |
+| GIF | gif, image/gif |
+| Audio | mp3, wav, m4a, wma |
+| Video | 3g2, 3gp, 3gpp, asf, avi, m2ts, m4v, mkv, mp4v, mts, ts, mp4, mov, wmv, webm |
+
+</details>
 
 After you enable citations, the bot message includes in-text citations and references. The in-text citations display the reference details when users hover over the citation.
 
