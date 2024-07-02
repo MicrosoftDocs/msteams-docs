@@ -113,6 +113,9 @@ After identifying the common properties for all cards, you can now work with Ada
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
+> [!NOTE]
+> Download Adaptive Card templates with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
+
 ### Support for Adaptive Cards
 
 The following table provides the features that support Adaptive Cards:
@@ -446,7 +449,7 @@ The following code shows an example of a list card:
 
 ## Connector card for Microsoft 365 Groups
 
-You can work with an connector cards for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groupsd](#additional-information-on-the-connector-card-for-microsoft-365-groups).
+You can work with a connector card for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groups](#additional-information-on-the-connector-card-for-microsoft-365-groups).
 
 ### Support for connector cards for Microsoft 365 Groups
 
@@ -463,7 +466,7 @@ The following table provides the properties of the connector card for Microsoft 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
-| summary | Rich text | Required if the card does not contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might simply read **New tweet from @someuser** without mentioning the content of the tweet itself.|
+| summary | Rich text | Required if the card doesn't contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might simply read **New tweet from @someuser** without mentioning the content of the tweet itself.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the `accentColor` provided from the application manifest. |
 
