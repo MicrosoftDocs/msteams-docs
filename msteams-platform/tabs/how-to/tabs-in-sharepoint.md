@@ -67,7 +67,7 @@ You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint,
 
         :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image065.png" alt-text="Screenshot shows the deploy dialog.":::
 
-1. You must then create a new page in your site. To create a new page, select the gear icon and then select **Add a page**.
+1. You must then create a new page in your site. To create a new page, select the gear icon and select **Add a page**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image066.png" alt-text="Screenshot shows the Office 365 settings options.":::
 
@@ -75,7 +75,7 @@ You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint,
 
 1. Open the web part toolbox and select **+**.
 
-1. From the dropdown list, search and select the app you uploaded. It creates a web part in the canvas that contains your Teams tab.
+1. From the list, search and select the app you uploaded. It creates a web part in the canvas that contains your Teams tab.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image071.png":::
 
