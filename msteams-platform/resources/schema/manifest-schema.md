@@ -601,7 +601,7 @@ Your message extension must declare one or more commands with a maximum of 10 co
 
 Each command item is an object with the following structure:
 
-|Name| Type| Maximum size | Required | Description| Copilot to show user prompts to start with
+|Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|||Type of the command. One of `query` or `action`. Default: **query**.|
