@@ -8,7 +8,7 @@ ms.date: 06/08/2023
 
 # Add Teams tab to SharePoint
 
-Experience a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to take a tab from a Microsoft Teams sample app and use it in SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
+Experience a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to integrate a tab from a Microsoft Teams sample app into SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
 
 - [SharePoint web parts in Teams](#sharepoint-web-parts-in-teams)
 - [Teams tabs in SharePoint](#teams-tabs-in-sharepoint)
