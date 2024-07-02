@@ -509,69 +509,73 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ##### Multi parameters
 
-Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for animes by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
 
 * The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
-* The `inputType`, `title`, and `description` properties in  `parameters` must match the values in the OpenAPI Description document.
+* The `name` and `id` properties in  `parameters` must match the values in the OpenAPI Description document.
 
 **Example**
 
 ```json
 {
       "type": "AdaptiveCard",
-      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.6",
-      "body": [
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "${if(id, id, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(name, name, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(category.id, category.id, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(category.name, category.name, 'N/A')}",
+        "wrap": true
+      },
+      {
+        "type": "Container",
+        "$data": "${photoUrls}",
+        "items": [
           {
-              "type": "Input.Text",
-              "placeholder": "Query to search for authors",
-              "label": "Search query",
-             "id": "query"
-         },
-         {
-             "type": "Input.ChoiceSet",
-             "choices": [
-                 {
-                     "title": "English",
-                     "value": "en"
-                 },
-                 {
-                     "title": "Tamil",
-                     "value": "ta"
-                 },
-                 {
-                     "title": "Spanish",
-                     "value": "es"
-                 }
-             ],
-             "placeholder": "The languages to scope the quotes to",
-             "id": "language",
-             "label": "Language"
-         },
-         {
-             "type": "Input.Toggle",
-             "title": "Show additional details",
-             "label": "Show additional details",
-             "id": "detailed"
-         },
-         {
-             "type": "Input.Number",
-             "placeholder": "Response is paged. This parameter controls where response starts the listing at",
-             "id": "start",
-             "label": "start",
-             "value": 0,
-             "isVisible": false
-         },
-         {
-             "type": "Input.Number",
-             "placeholder": "Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.",
-             "id": "limit",
-             "label": "limit",
-             "value": 30,
-             "isVisible": false
-         }
-     ]
- }  
+            "type": "Image",
+            "url": "${$data}",
+            "$when": "${$data != null}"
+          }
+        ]
+      },
+      {
+        "type": "Container",
+        "$data": "${tags}",
+        "items": [
+          {
+            "type": "TextBlock",
+            "text": "tags.id: ${if(id, id, 'N/A')}",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "tags.name: ${if(name, name, 'N/A')}",
+            "wrap": true
+          }
+        ]
+      },
+      {
+        "type": "TextBlock",
+        "text": "${if(status, status, 'N/A')}",
+        "wrap": true
+      }
+    ]
+  }
 ```
 
 ## Authentication
@@ -963,7 +967,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -992,7 +996,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -1053,11 +1057,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-

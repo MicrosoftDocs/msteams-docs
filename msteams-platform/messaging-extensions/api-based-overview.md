@@ -24,7 +24,6 @@ See the video to learn more about building an API-based message extension using 
 
 > [!VIDEO https://www.youtube.com/embed/jSYNHz6hz4Y?si=htmfWtlY9bYH_RT2]
 
-
 An API-based message extension uses the OpenAPI description to define how it interacts with external services. The message extension populates the inputs by taking user input or other data sources and sending them as parameters to the API endpoints defined in the OpenAPI description. The API processes these inputs and returns the response, which the message extension then transforms into an Adaptive Card format to display within Teams. This process allows for a seamless integration of external services into the Teams platform, enhancing the user experience by providing quick access to information and functionalities from within the chat interface.
 
 To create Adaptive Cards based on the API response, the message extension uses a response rendering template, which defines how to format the data into an Adaptive Card layout. This template ensures that the information is presented in a user-friendly and consistent manner across different message extensions and services.
