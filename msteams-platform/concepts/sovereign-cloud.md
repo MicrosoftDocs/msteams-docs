@@ -1,5 +1,5 @@
 ---
-title: Plan for Teams operated by 21Vianet
+title: Plan for Sovereign clouds
 author: v-preethah
 description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, DOD, and Teams operated by 21Vianet tenants. Get an overview on how to deploy Teams in Government clouds.
 ms.topic: conceptual
@@ -7,9 +7,13 @@ ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
 
-# Teams operated by 21Vianet
+# Sovereign clouds
 
-Microsoft 365 operated by 21Vianet version is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning).[Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is designed specifically for China, independently operated and transacted by 21Vianet. To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans).
+Sovereign clouds are designed to operate within specific countries or regions to comply with local data privacy regulations. In China, Microsoft services are operated and managed by 21Vianet, the largest service provider in the country.
+
+## Teams operated by 21Vianet
+
+Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning). To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans).
 
 :::row:::
    :::column:::
@@ -17,7 +21,7 @@ Microsoft 365 operated by 21Vianet version is tailored specifically for China an
    :::column-end:::
 :::row-end:::
 
-## Teams app capabilities
+### Apps, capabilities, and experiences
 
 The following table details the Teams apps supported for Teams operated by 21Vianet:
 
@@ -56,7 +60,9 @@ The following table details the Teams experiences supported for Teams operated b
 | Graph APIs | ✔️ |
 | Developer Portal for Teams | ❌ |
 
-## Service and availability
+### Service and availability
+
+ The availability of features in Teams depends on the Office 365 plan purchased. For more information, [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
 
 ## See also
 
