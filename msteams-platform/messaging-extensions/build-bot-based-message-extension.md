@@ -97,7 +97,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Message extension as plugin for Copilot for Teams meetings
 
-Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows developers to enhance the Copilot for Teams meetings. Copilot can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
+Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows you to enhance the Copilot for Teams meetings. Copilot can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
 
 Meetings Copilot is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. Users can ask natural language questions to meeting copilot and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both Copilot for Microsoft 365 and Copilot for Teams meetings.
 
