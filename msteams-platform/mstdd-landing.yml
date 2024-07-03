@@ -61,6 +61,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Screen share content to meetings.
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
+      - text: Extend bot-based message extension plugins to Teams meetings
+        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
       - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
@@ -77,15 +81,14 @@ landingContent:
         url: bots/how-to/bot-configuration-experience.md
       - text: The stageView API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
-      - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
-        url: m365-apps/overview.md#outlook-add-ins
-      - text: Added support for python in Teams AI library
-        url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
 
     - linkListType: reference
       links:
+      - text: Extend Microsoft Copilot for Microsoft 365
+        url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
 
 - title: Get started
   linkLists:
