@@ -122,7 +122,8 @@ The following table includes the query parameters:
 |---|---|----|---|
 |`callback`| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
 |`appContentURL`| String | Yes | The URL that is shared on to the stage. |
-| `sharingProtocol` | String | No | *collaborative* (default) or *screenShare* |
+| `shareOptions`| Object | No | Defines additional sharing options.|
+|`shareOptions.sharingProtocol` | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
 
 # [Get app content stage sharing state](#tab/get-app-content)
 
@@ -280,10 +281,10 @@ The following coed is an example of sharing app content to meeting stage view an
   |`callback` | String | Yes| Callback contains two parameters, error and result. The error can contain either an error of type SdkError or null when share is successful. The result can contain either a true value if there's a successful share or null when the share fails.|
   |`appContentURL`| String |Yes |The URL that is shared on to the stage.|
   | `shareOptions`| Object | No | Defines additional sharing options.|
-  |shareOptions.sharingProtocol | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
+  |`shareOptions.sharingProtocol` | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
 
   > [!NOTE]
-  > If the value for the `sharingProtocol` property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
+  > If the value for the `sharingProtocol` property is set as `screenShare`, you don't need to set `MeetingStage` in the `getContext` object of the manifest. Resource-Specific Consent (RSC) permissions are required in the app manifest for the `shareAppContentToStage` API, regardless of the `sharingProtocol` value used.
 
 ### Scenarios
 
