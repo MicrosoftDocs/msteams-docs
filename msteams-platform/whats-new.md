@@ -506,7 +506,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***June 20, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
+* ***July 09, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
 
 * ***April 30, 2024***: In tab experiences, tab margins are deprecated.
 
