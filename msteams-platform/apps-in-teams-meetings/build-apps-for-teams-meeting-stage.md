@@ -14,16 +14,16 @@ Microsoft Teams enhances meeting experiences by providing features that facilita
 
 In addition to screen sharing, Microsoft Teams offers various tools designed to make virtual interactions more productive. These tools replicate the dynamics of in-person meetings, enabling users to work together efficiently, regardless of their physical location. Integrating these features in Teams empowers organizations to conduct more interactive and fruitful meetings, driving better teamwork and results.
 
-Share to Stage and Screen share content to meetings are features that enhance the sharing experience in Teams. Share to Stage allows users to share an app to the meeting stage from the meeting side panel in an ongoing meeting. Screen share content to meetings enables users to share content to the meeting stage in Teams using the screen sharing architecture.
+[Share to Stage](#share-to-stage) and [Screen share content to meetings](#screen-share-content-to-meetings) are features that enhance the sharing experience in Teams. Share to Stage allows users to share an app to the meeting stage from the meeting side panel in an ongoing meeting. Screen share content to meetings enables users to share content to the meeting stage in Teams using the screen sharing architecture.
 
 The following table lists the scenarios to use Screen share and Share to stage features:
 
-| Feature | Screen share content to stage | Share to stage |
+| Feature |  Share to stage | Screen share content to stage  |
 | --- | --- | --- |
-| **Interaction Level** | View-only mode of the app or content. | Allows attendees to interact with the content. |
-| **Scenarios** | Coconsumption scenarios, such as reviewing dashboards in a scrum meeting. | Collaborative experiences, such as whiteboarding. |
-| **Developer Effort** | Aims to reduce developer effort for bringing the app or content onto the meeting stage. | Requires more effort. |
-| **Implementation Logic** | Suitable for larger meetings or when only one user has a premium license. | Suitable for smaller meetings. |
+| **Interaction Level** | Allows attendees to interact with the content. | View-only mode of the app or content.  |
+| **Scenarios** | Collaborative experiences, such as whiteboarding. |  Coconsumption scenarios, such as reviewing dashboards in a scrum meeting.  |
+| **Developer Effort** | Requires more effort. |Aims to reduce developer effort for bringing the app or content onto the meeting stage.  |
+| **Implementation Logic** |  Suitable for smaller meetings. | Suitable for larger meetings or when only one user has a premium license. |
 
 ## Share to stage
 
@@ -97,7 +97,7 @@ Use the following APIs to share specific part of the app:
 
 The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the TeamsJS library.
 
-The `appContentUrl` must be allowed by the `validDomains` array inside manifest.json, else the API returns a 501 error.
+The `validDomains` array must allow the `appContentUrl` inside manifest.json. Else, the API returns a 501 error.
 
 The following code is an example of `shareAppContentToStage` API:
 
@@ -222,7 +222,7 @@ Users can screen share content to the meeting stage in the following scenarios:
 
 * **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the `appContentURL`.
 
-The following coed is an example of sharing app content to meeting stage view and share content in view only screen sharing mode:
+The following code is an example of sharing app content to meeting stage view and share content in view only screen sharing mode:
 
 # [Share app content](#tab/share-app-content)
 
