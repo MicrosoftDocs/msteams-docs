@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # SaaS offer for your Teams app
 
-Software-as-a-Service (SaaS) offers have been important for businesses seeking to leverage their app to generate revenue. Microsoft Teams presents a unique opportunity for developers to integrate their SaaS solutions to Teams. This article guides you through the essential steps to plan, create, and configure a SaaS offer.
+Software-as-a-Service (SaaS) offers play a crucial role for businesses aiming to leverage their applications to generate revenue. Microsoft Teams presents a unique opportunity for developers to integrate their SaaS solutions to Teams. This article guides you through the essential steps to plan, create, and configure a SaaS offer within Teams.
 
 :::row:::
    :::column:::
@@ -32,20 +32,20 @@ Software-as-a-Service (SaaS) offers have been important for businesses seeking t
 
 ## Plan a SaaS offer
 
-SaaS offers allow you to license software solutions to customers through subscriptions. To monetize your SaaS app, it's important that you understand the features of a SaaS offer. Here's an overview that aids you to plan better.
+SaaS offers allow you to license software solutions to customers through subscriptions. To monetize your SaaS app, it's important that you understand the features of a SaaS offer. Here's an overview that aids you to plan better:
 
 | Feature | Description |
 |---|---|
 |**Offer type**| To create a SaaS offer you must decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating an offer, appears as a call-to-action button on the offer purchase landing page. |
 | **Offer details** | Offer details are the basic information that are available on the offer's landing page based on the offer configuration. These key features also enhance the discoverability and usability of your offer. |
 | **Offer plan** | SaaS offers, published through commercial marketplace, must have at least one plan added to the offer. The plan features facilitate appropriate purchase options for the target users. |
-| **Other features** | In addition to the basic planning, you can provide more features such as free trial and test drives to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers. |
+| **Other features** | In addition to the essential features, you can provide features such as free trial and test drives to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers. |
 
 For comprehensive guidance on planning the offer, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer) and [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 
 ## Prerequisites to create a SaaS offer
 
-Based on the offer that you create, you must have the required technical configurations and technical information. The technical information is used to update the offer configuration.
+Based on the offer that you create, you must have the required technical configurations and technical information. You need the technical information to update the offer configuration when creating a SaaS offer.
 
 The following illustration helps you understand the technical configurations based on the listing option you select:
 
@@ -70,9 +70,7 @@ After a user purchases a subscription plan, commercial marketplace directs them 
 
 ### Integrate with SaaS Fulfillment API
 
-When someone finishes buying a subscription plan for your app in the Teams Store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
-
-Integrating with the SaaS Fulfillment APIs help to manage the lifecycle of a subscription plan after the user purchases the subscription plan.
+After one purchases your app’s subscription in the Teams Store, they are redirected to your landing page. Here, they can handle the subscription such as assign a license to a specific user. Integrating the SaaS Fulfillment APIs helps manage the lifecycle of a subscription plan.
 
 Here's a quick overview on the steps to integrate SaaS Fulfillment APIs:
 
@@ -84,7 +82,7 @@ For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/a
 
 ### Integrate with usageRights Graph API
 
-Integrate with usageRights Graph API to manage user permissions when a customer, who has a purchased license, launches the app. Use Graph APIs to check if the logged-in user with a valid subscription plan can access your app.
+Integrate with usageRights Graph API to manage user permissions when a customer, who has a purchased license, launches the app. Use Graph APIs to check if the signed-in user with a valid subscription plan can access your app.
 
 To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas):
 
@@ -99,7 +97,7 @@ For more information, see [technical requirements](/partner-center/marketplace/p
 
 ## Create a SaaS offer
 
-Offers sold through Microsoft are transactable offers, which means Microsoft facilitates the financial transactions for the license on the publisher's behalf. To sell your SaaS app in Microsoft Teams Store, you must create an offer in  Partner Center.
+Offers sold through Microsoft are transactable offers, which means Microsoft facilitates the financial transactions for the license on the publisher's behalf. To sell your SaaS app in Microsoft Teams Store, you must create an offer in Partner Center.
 
 > [!NOTE]
 > You must have a [commercial marketplace account in Partner Center](/partner-center/create-account) to create offers.
@@ -129,9 +127,10 @@ The following table provides the three phases to create an offer:
 
 1. Select **Create**. The offer is created and you can continue to configure the offer.
 
+You can either allow Microsoft to manage licenses on your behalf or you can manage licenses on your own.
+
 After you create a SaaS offer, perform the following:
 
-1. You can either allow Microsoft to manage licenses on your behalf or you can manage licenses on your own. For more information, see [create a SaaS offer](/partner-center/marketplace-offers/create-new-saas-offer).
 1. You must configure the offer based on your requirements. For more information, see [configure the offer](/partner-center/marketplace-offers/create-new-saas-offer-properties).
 1. You must create at least one plan for the SaaS offer, where the plan features facilitate appropriate purchase options for the target users. For more information, see [create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans).
 
@@ -142,7 +141,7 @@ After you create the plan and configure the required information:
 * The offer goes through a series of automated validation checks and preview offers are created.
 * When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under **Go live**, to test the offer.
 
-We recommended to test the offer with the given preview links before you publish the offer in the marketplace. Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
+We recommended to test the offer with the given preview links before you publish the offer in the marketplace.
 
 ## Next step
 
@@ -151,6 +150,7 @@ We recommended to test the offer with the given preview links before you publish
 
 ## See also
 
+* [Create a SaaS offer](/partner-center/marketplace-offers/create-new-saas-offer)
 * [Marketplace categories and industries](/partner-center/marketplace/marketplace-categories-industries)
 * [Plans and pricing for commercial marketplace offers](/partner-center/marketplace/plans-pricing)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)

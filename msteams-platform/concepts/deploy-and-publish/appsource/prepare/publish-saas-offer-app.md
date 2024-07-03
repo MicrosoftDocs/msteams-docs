@@ -95,7 +95,7 @@ Once published, users can view the **Buy a subscription** option in the app deta
 
 :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-The SaaS app with suitable offers is available in the Microsoft Teams Store and the marketplace for purchase where the users can purchase subscriptions.
+The SaaS app with suitable offers is available in the Teams Store and the marketplace for purchase where the users can purchase subscriptions.
 
 ### Post purchase
 

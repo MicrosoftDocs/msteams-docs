@@ -16,13 +16,14 @@ ms.date: 04/06/2023
 
 To purchase a subscription plan for a Teams app, follow these steps:
 
-1. In the Teams Store, find and select the app for which you want to purchase the subscription.
+1. In the Microsoft Teams Store, find and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
 1. To view the available plans for your location, select your country or region.
+
 1. Select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
@@ -91,11 +92,17 @@ The following example shows how users can assign and unassign licenses for third
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
 
-Here are some best practices you can implement for license management.
+Here are some best practices you can implement for license management:
 
 * With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire organization.
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
+
+Consider the following best practices for license management:
+
+* Assign subscription plans (licenses) for transactable SaaS offers for Teams apps to individual users, not to groups or an entire organization.
+* After assigning a subscription plan to users, notify them via a Teams bot or email. Include information on how to add the app to Teams and initiate use.
+* Allow for multiple admins, that is multiple users within the same organization can purchase and manage subscriptions.
 
 ## Manage subscriptions
 
