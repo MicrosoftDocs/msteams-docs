@@ -944,6 +944,10 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app.PNG" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option highlighted in red.":::
 
+1. Select the required scope and Select **Go**.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.PNG" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option highlighted in red.":::
+
     Congratulations, your first tab app is running in your Azure environment!
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot shows the personal tab of your app in Teams.":::
