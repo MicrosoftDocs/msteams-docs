@@ -283,6 +283,8 @@ The following code is an example of sharing app content to meeting stage view an
   | `shareOptions`| Object | No | Defines additional sharing options.|
   |`shareOptions.sharingProtocol` | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
 
+  For more information on parameters, see [shareAppContentToStage](/javascript/api/%40microsoft/teams-js/meeting?#@microsoft-teams-js-meeting-shareappcontenttostage).
+
   > [!NOTE]
   > If the value for the `sharingProtocol` property is set as `screenShare`, you don't need to set `MeetingStage` in the `getContext` object of the manifest. Resource-Specific Consent (RSC) permissions are required in the app manifest for the `shareAppContentToStage` API, regardless of the `sharingProtocol` value used.
 
