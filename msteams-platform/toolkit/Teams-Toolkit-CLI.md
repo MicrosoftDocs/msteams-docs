@@ -54,7 +54,7 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp env`](#teamsapp-env) | Manage environments. |
 | [`teamsapp help`](#teamsapp-help) |  Show Teams Toolkit CLI help. |
 | [`teamsapp install`](#teamsapp-install) | Upload a custom app for a specific application package across Microsoft 365. |
-| [`teamsapp launchinfo`](#teamsapp-launchinfo) | Get launch information of an acquired Microsoft 365 App. |
+| [`teamsapp launchinfo`](#teamsapp-launchinfo) | Get launch information of an installed Microsoft 365 App. |
 | [`teamsapp list`](#teamsapp-list) | List available Teams application templates and samples. |
 | [`teamsapp provision`](#teamsapp-provision) | Run the provision stage in `teamsapp.yml` or `teamsapp.local.yml`.|
 | [`teamsapp deploy`](#teamsapp-deploy) | Run the deploy stage in `teamsapp.yml` or `teamsapp.local.yml`. |
