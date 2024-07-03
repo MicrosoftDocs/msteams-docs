@@ -49,7 +49,6 @@ A message extension consists of a web service that you host and an app manifest 
 > Though it's possible to manually create the web service, we recommend to use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
 In the app manifest (previously called as Teams app manifest), a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload with all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
-In the app manifest (previously called as Teams app manifest), a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload with all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
 
 ## Message extension commands types
 
@@ -58,7 +57,6 @@ There are two types of message extension commands, action command and search com
 ### Action commands
 
 Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message.  For more complex workflows, you can link multiple forms together.
-Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Then, the user can submit the message. For more complex workflows, you can link multiple forms together.
 
 Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v1.x):
 
@@ -117,7 +115,6 @@ The following table helps you select a message extension type to get started:
 * More flexible.
 * Message extension uses a Bot Framework.
 * Can use the full capabilities of a bot.
-* Can use the full capabilities of a bot.
 * Ideal for scenarios where the message extension needs to communicate with multiple services, manage complex logic or user interactions, or maintain state across sessions.
 * Supports action commands, search commands, and link unfurling.
 
@@ -144,7 +141,6 @@ The following table helps you select a message extension type to get started:
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |------------|-------------|----------------|------------|------------|------------|
 | Message extension with action-based commands | This sample shows how to define action commands, create dialog, and  respond to dialog submit action. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-| Message extension with search-based commands | This sample shows how to build a Search-based Message Extension. It searches NuGet packages and displays the results in search based messaging extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 | Message extension with search-based commands | This sample shows how to build a Search-based Message Extension. It searches NuGet packages and displays the results in search based messaging extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 |Message extension action for task scheduling|This sample shows how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp/demo-manifest/msgext-message-reminder.zip)|
