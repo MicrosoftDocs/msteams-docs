@@ -56,7 +56,7 @@ There are two types of message extension commands, action command and search com
 
 ### Action commands
 
-Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message.  For more complex workflows, you can link multiple forms together.
+Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message. For more complex workflows, you can link multiple forms together.
 
 Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v1.x):
 
@@ -64,7 +64,7 @@ Action commands are triggered from the compose message area, the command box, or
 
 ### Search commands
 
-Search commands allow the users to search an external system for information. Search commands can be used by manually entering a query into the search box or by inserting a link to a monitored domain in the compose message area, followed by embedding the search results into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+Search commands allow the users to search an external system for information. To use search commands, enter a query manually into the search box or insert a link to a monitored domain in the compose message area, then embed the search results into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
 The cards are triggered from the compose message area or the command box, but not from a message. They can't be triggered from a message.
 The following image displays the message extension search command dialog:
