@@ -19,6 +19,7 @@ This document provides an overview of message extensions, use cases, functionali
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
+> 
 > * @mentioning message extensions in the compose box isn't supported.
 > * Message extension options aren't supported for group chats with external users.
 
@@ -65,7 +66,7 @@ Action commands are triggered from the compose message area, the command box, or
 
 ### Search commands
 
-Search commands allow the users to search an external system for information. Search commands can be used in two ways: searching manually through a search box or by pasting a link to a monitored domain in the compose message area and then inserting the results of the search into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+Search commands allow the users to search an external system for information. Search commands can be used by manually entering a query into the search box or by inserting a link to a monitored domain in the compose message area, followed by embedding the search results into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
 The cards are triggered from the compose message area or the command box, but not from a message. They can't be triggered from a message.
 The following image displays the message extension search command dialog:
