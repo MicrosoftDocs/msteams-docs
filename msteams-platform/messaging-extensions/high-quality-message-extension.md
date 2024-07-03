@@ -660,7 +660,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Extend your plugin to Copilot in meetings
 
-Copilot for Microsoft 365 is available in Teams meetings. We recommend you to implement the following best practices:
+Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
 
 * Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
 
