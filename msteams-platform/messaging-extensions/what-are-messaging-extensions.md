@@ -39,11 +39,11 @@ The following image displays the locations from where message extensions can be 
 |:-----------------|:-----------------|
 |You need an external system to perform an action and return the result to your conversation.|Reserve a resource and allow the channel to know the reserved time slot.|
 |You need to search for something in an external system and share the results with the conversation.|Search for a work item in Azure DevOps and share it with the group as an Adaptive Card.|
-|You want to complete a complex task involving multiple steps or large amount of information in an external system and share the results with a conversation.|Create a bug in your tracking system based on a Teams message, assign that bug, and send a card to the conversation thread with the bug's details.|
+|You want to complete a complex task involving multiple steps or large amounts of information in an external system and share the results with a conversation.|Create a bug in your tracking system based on a Teams message, assign that bug, and send a card to the conversation thread with the bug's details.|
 
 ## Understand how message extensions work
 
-A message extension consists of a web service that you host and an app manifest that specifies the location in the Teams client where your web service is invoked. The web service utilizes the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
+A message extension is composed of a web service hosted by you and an app manifest that defines the location where your web service is invoked within the Teams client. The web service utilizes the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
 
 > [!NOTE]
 > Though it's possible to manually create the web service, we recommend to use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
