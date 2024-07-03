@@ -842,6 +842,10 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
 
+1. Select the required scope and Select **Go**.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.PNG" alt-text="Screenshot of Teams displaying the scope option for Blazor app with Go button highlighted in red. Options are open and select a channel or chat.":::
+
     Congratulations, your first tab app is running in your local environment!
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot shows your first tab app is running in your local environment.":::
@@ -946,7 +950,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select the required scope and Select **Go**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.PNG" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.PNG" alt-text="Screenshot of Teams displaying the scope option for Blazor app with Go button highlighted in red. Options are open and select a channel or chat.":::
 
     Congratulations, your first tab app is running in your Azure environment!
 
