@@ -1,5 +1,5 @@
 ---
-title: Register your tab app with Microsoft Entra ID
+title: Register Tab with Microsoft Entra ID
 description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients.
 ms.topic: how-to
 ms.localizationpriority: high
@@ -31,7 +31,7 @@ Microsoft Entra configuration enables SSO for your tab app in Teams. It responds
 It's helpful if you learn about the configuration for registering your app on Microsoft Entra ID beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
-- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. Currently, multiple domains per app aren't supported.
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. The multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -227,16 +227,7 @@ To configure scope and authorize trusted client applications, you need:
 
     1. Select one of the following client IDs:
 
-       | Use client ID | For authorizing... |
-       | --- | --- |
-       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
-       | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-       | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
-       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
-       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
-       | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+        [!INCLUDE [Microsoft 365 client application IDs](~/includes/tabs/microsoft-365-client-application-ids.md)]
 
     1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
