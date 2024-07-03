@@ -945,7 +945,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property specifies Outlook Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -955,14 +955,15 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click in the Office UI. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", and "autoRunEvents" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", "autoRunEvents", and "contextMenus" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
-|Name| Type| Maximum size | Required | Description|
+| Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
@@ -1022,7 +1023,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | ✔️ | Specifies the ID of the built-in tab that the custom tab should be positioned next to. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.position.align`| String enum | | ✔️ | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
-|`tabs.groups`| Array | | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` below.|
+|`tabs.groups`| Array | | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` later in this article.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
@@ -1056,7 +1057,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.|
+|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` earlier in this article.|
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
 |`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
@@ -1065,7 +1066,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
-|`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
+|`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icon's `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
 |`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
 
@@ -1119,6 +1120,23 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensions.contextMenus
+
+A context menu is a shortcut menu that appears when you right-click in the Office UI.
+
+|Name | Type | Maximum size | Required | Description |
+|---|---|---|---|---|
+|`menus`| Array | | ✔️ | Configures the context menus. |
+|`menus.entryPoint`| String enum | | ✔️ | Use `text` or `cell` here for Office context menu. Use `text` if the context menu should open when a user right-clicks on the selected text. Use `cell` if the context menu should open when the user right-clicks on a cell in an Excel spreadsheet. |
+|`menus.controls`| Array | | ✔️ | The same as controls in ribbons. The control type should be `menu`. |
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
 
