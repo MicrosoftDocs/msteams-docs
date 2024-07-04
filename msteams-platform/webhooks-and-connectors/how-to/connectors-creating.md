@@ -10,7 +10,7 @@ ms.date: 04/16/2023
 
 > [!IMPORTANT]
 >
-> All new Office 365 connector creation will be blocked starting Aug 15 2024. All existing Office 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
+> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting Aug 15 2024. All existing Microsoft 365 (previously called Office 365) connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
 [https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
