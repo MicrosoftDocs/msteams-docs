@@ -42,7 +42,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
 1. Under **Message extension type**, select **API**.
 
-   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
+   1. If you get a disclaimer that reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
@@ -134,7 +134,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
 1. Based on the options selected in **step 6**, select the following:
 
-# [New API](#tab/new-api)
+   # [New API](#tab/new-api)
 
    > [!NOTE]
    > The authentication flow for Microsoft Entra is only functional in remote environments. You can't test it in a local environment due to the lack of authentication support in Azure Function core tools. The repair API can be invoked anonymously in a local environment.
@@ -197,7 +197,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
       </details>
 
-# [OpenAPI Description](#tab/openapi-specification)
+   # [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -319,7 +319,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-# [New API](#tab/new-api2)
+   # [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
@@ -353,7 +353,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-# [OpenAPI Description](#tab/openapi-specification2)
+   # [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
