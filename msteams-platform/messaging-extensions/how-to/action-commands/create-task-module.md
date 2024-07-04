@@ -897,9 +897,6 @@ If the app contains a conversational bot, install the bot in the conversation an
 
 When the message extension receives the `composeExtensions/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
- > [!NOTE]
- > `justInTimeInstall` functions when you upload an app to the app catalog, but fails when you upload a custom app.
-
 #### Example
 
 The following code section is an example of the response:
