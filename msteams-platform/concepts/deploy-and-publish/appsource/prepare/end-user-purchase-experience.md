@@ -14,16 +14,15 @@ This article helps you understand the user's purchase experience for apps in Tea
 
 ## Subscription experience
 
-To purchase a subscription plan for a Teams app, follow these steps:
+The following steps provide the user experience to purchase a subscription plan for a Teams app:
 
 1. In the Teams Store, find and select the app for which you want to purchase the subscription.
 
-1. In the app details dialog, select **Buy a subscription**.
+1. In the app details dialog, select **View plans**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-1. To view the available plans for your location, select your country or region.
-1. Select **Save and continue**.
+1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
     :::image type="content" source="~/assets/images/saas-offer/add-region.png" alt-text="Screenshot shows option to select the country or region.":::
 
@@ -36,19 +35,31 @@ To purchase a subscription plan for a Teams app, follow these steps:
 
 1. In the **Checkout** dialog, enter the following information:
 
-    1. In the **Subscription details**, select **Quantity** and **Subscription length**.
+    1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
 
-    1. In the **Billing account**, enter the name and billing details.
+        :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
 
-    1. In the **Verify your address**, select the suitable address and select **Next**.
+    1. Under **Billing account**, enter the name and billing details, and select **Next**.
 
-    1. In the **Add a credit card or debit card**, add the required details and select **Next**.
+        :::image type="content" source="~/assets/images/saas-offer/billing-details.png" alt-text="Screenshot shows adding the billing address.":::
 
-    1. In the **Review**, verify the details and select **Place order**.
+    1. Under **Verify your address**, select the required address and select **Next**.
 
-    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+        :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows verifying the billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
+
+    1. Under **Add a credit card or debit card**, add the required details, select the billing address, and select **Next**.
+
+        You can either turn on **Same as billing address** to use the same address for the card or you can turn off to add an address.
+
+        :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address.":::
+
+    1. Under **Review**, verify the details and select **Place order**.
+
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
 
     1. Under **Purchase Authentication**, enter the code and select **Submit**.
+
+        :::image type="content" source="~/assets/images/saas-offer/purchase-auth.png" alt-text="Screenshot shows the purchase authentication.":::
 
 1. When prompted, select **Set up now** to activate your subscription.
 
@@ -56,7 +67,7 @@ To purchase a subscription plan for a Teams app, follow these steps:
 
     You're redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where you can manage your subscriptions.
 
-:::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
+    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
 When a new user launches the app for the first time, they're requested to provide consent to the app.
 
