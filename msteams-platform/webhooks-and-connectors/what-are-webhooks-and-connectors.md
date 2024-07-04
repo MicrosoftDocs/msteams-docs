@@ -10,14 +10,12 @@ ms.date: 11/23/2022
 
 # Build webhooks and connectors
 
-> [!IMPORTANT]
->
-> All new Office 365 connector creation will be blocked starting Aug 15 2024. All existing Office 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, visit
-[https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
-
 Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user-defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It's a way for an app to get real-time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 > [!IMPORTANT]
+>
+> * All new Office 365 connector creation will be blocked starting Aug 15 2024. All existing Office 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, visit
+[https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 >
 > * Webhooks and connectors are available only in Government Community Cloud (GCC) environment but aren't available in GCC-High and Department of Defense (DOD) environments.
 >
