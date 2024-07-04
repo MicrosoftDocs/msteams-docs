@@ -20,7 +20,7 @@ The following steps provide the user experience to purchase a subscription plan 
 
 1. In the app details dialog, select **View plans**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
 
 1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
@@ -47,9 +47,9 @@ The following steps provide the user experience to purchase a subscription plan 
 
         :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows verifying the billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
 
-    1. Under **Add a credit card or debit card**, add the required details, select the billing address, and select **Next**.
+    1. Under **Add a credit card or debit card**, add the required details, select the card address, and select **Next**.
 
-        You can either turn on **Same as billing address** to use the same address for the card or you can turn off to add an address.
+        You can either turn on **Same as billing address** to use the same address of the billing account for the card or you can turn off to add a new address.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address.":::
 
@@ -61,7 +61,7 @@ The following steps provide the user experience to purchase a subscription plan 
 
         :::image type="content" source="~/assets/images/saas-offer/purchase-auth.png" alt-text="Screenshot shows the purchase authentication.":::
 
-1. When prompted, select **Set up now** to activate your subscription.
+1. When prompted, select **Set up subscription** to activate your subscription.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
@@ -78,67 +78,15 @@ Following is an example of the consent screen:
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot shows the permissions requested consent dialog.":::
 
-## Manage subscriptions
+## License and subscriptions management experience
 
-If you've purchased a Teams app subscription or if you want to manage one for your team, you can view the list of subscriptions and their details:
+If you've purchased a Teams app subscription, you can manage the subscription through **Manage your apps**. You can access the list of subscriptions and their details, and perform the following actions to manage the subscription:
 
 * Change a plan.
 * Buy or remove licenses.
 * Update a payment method.
 * Cancel a subscription.
 * View your invoices.
-
-### Filter your subscriptions
-
-1. Go to **Microsoft Teams**.
-
-1. Select **Apps** > **Manage your apps**.
-
-1. Select the **Subscriptions** tab to view your list of subscriptions.
-
-1. To filter subscriptions by status, select **Filter** and then select the type(s) of subscriptions:
-    * **Pending**: Subscription still needs to be set up.
-    * **Active**: Subscription is set up and the service can be used.
-    * **Deleted**: Subscription is no longer available.
-
-1. To find a specific subscription, type the name of the app in the search box.
-
-    :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows you to find a specific subscription.":::
-
-### Manage licenses
-
-1. Go to **Microsoft Teams**.
-
-1. Select **Apps** > **Manage your apps**.
-
-1. Select the **Subscriptions** tab to view your list of subscriptions.
-
-1. Find the app subscription that you want to manage and select **More options ...**.
-
-1. Manage licenses by selecting **Buy licenses** or **Remove licenses**.
-
-### Cancel a subscription
-
-1. Go to **Microsoft Teams**.
-
-1. Select **Apps** > **Manage your apps**.
-
-1. Select the **Subscriptions** tab to view your list of subscriptions.
-
-    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
-
-1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
-
-1. Select **Cancel subscription**.
-
-> [!NOTE]
-> You can only manage subscriptions you purchased.
-
-You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
-
-:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
-
-## License management experience
 
 The following example shows how users can manage licenses for third-party apps from the Teams Store:
 
@@ -150,25 +98,85 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
-1. Select an existing subscription from the list and then select **Assign licenses**.
+    Here are the subscription management options:
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab highlighted in red.":::
+    <details>
+    <summary>To assign licenses</summary>
+    1. Select an existing subscription from the list and then select **Assign licenses**.
 
-1. To view license utilization and assign licenses, select **Assign licenses**.
+        :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab highlighted in red.":::
 
-    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the assigned licenses highlighted in red.":::
+    1. To view license utilization and assign licenses, select **Assign licenses**.
 
-1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
+        :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the assigned licenses highlighted in red.":::
 
-    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
+    1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
 
-    You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
+        :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
+        You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
-1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
+        :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
+    &nbsp;
 
-    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
+    </details>
+
+    <details>
+    <summary>To unassign licenses</summary>
+
+    1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
+
+        :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
+    &nbsp;
+
+    </details>
+
+    <details>
+    <summary>To filter your subscriptions</summary>
+
+    1. To filter subscriptions by status, select **Filter** and then select the type(s) of subscriptions:
+        * **Pending**: Subscription still needs to be set up.
+        * **Active**: Subscription is set up and the service can be used.
+        * **Deleted**: Subscription is no longer available.
+
+    1. To find a specific subscription, type the name of the app in the search box.
+
+        :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows you to find a specific subscription.":::
+    &nbsp;
+
+    </details>
+
+    <details>
+    <summary>To buy or remove licenses</summary>
+
+    1. Find the app subscription that you want to manage and select **More options ...**.
+
+    1. Manage licenses by selecting **Buy licenses** or **Remove licenses**.
+    &nbsp;
+
+    </details>
+
+    <details>
+    <summary>To cancel a subscription</summary>
+
+    1. Select the **Subscriptions** tab to view your list of subscriptions.
+
+        :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
+
+    1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
+
+    1. Select **Cancel subscription**.
+
+    &nbsp;
+
+    </details>
+
+> [!NOTE]
+> You can only manage subscriptions you purchased.
+
+You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+
+:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
 
 ## Admin purchasing experience
 
