@@ -37,6 +37,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 >
 > * [Define app, command, and parameter descriptions](#define-descriptions)
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
+> * [Define sample prompts](#sample-prompts)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
 ## Define descriptions
@@ -170,9 +171,13 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
 * Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+
 * Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+
 * Avoid grammar and punctuation errors. *[Mandatory fix]*
+
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+
 * Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
 The following table lists the command and semantic description examples for each category:
@@ -520,6 +525,71 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
+## Sample prompts
+
+> [!NOTE]
+> Sample prompts will be available soon in Copilot for Microsoft 365.
+
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts will be available in the following areas within Copilot for Microsoft 365:
+
+* First Run Experience (FRE): When a user first installs or enables a plugin.
+* Prompt library or Copilot Lab: When a user seeks help with prompts.
+* Plugin suggestions: To guide users towards better utterances.
+
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
+
+> [!NOTE]
+>
+> * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
+> * The `samplePrompts` property is mandatory for app validation during the app submission process.
+> * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
+
+We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* A plugin must have at least three prompts and maximum of five prompts for each command.
+* Each prompt must not exceed 128 characters.
+* Two commands within the same plugin must not have identical prompts.
+* Sample prompts must be generic in nature and not include custom references. For example, project names and task name.
+* All sample prompts must be functional and return responses.
+* Prompt must be relevant to the commands.
+
+The following code is an example of the `samplePrompts` property in app manifest:
+
+```json
+"composeExtensions": [
+ {
+  "canUpdateConfiguration": true,
+  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+  "commands": [
+   {
+    "id": "orders",
+    "title": "Orders",
+    "context": [
+     "Commandbox",
+     "Compose"
+    ],
+    "description": "Search for orders",
+    "semanticDescription": "Search for orders",
+    "samplePrompts": [
+     {
+      "text": "Search for all orders"
+     },
+     {
+      "text": "Search for orders related to Contoso"
+     },
+     {
+      "text": "Search for all pending orders"
+     },
+     {
+      "text": "Search for all completed ordered for Fabrikam"
+     }
+    ]
+   }
+  ]
+ }
+]
+```
+
 ## Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
@@ -650,6 +720,32 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+
+## Extend your plugin to Copilot in meetings
+
+Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
+
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
+
+  * **ColumnSets**
+
+    * Don't define `ColumnSets` with more than three columns.
+    * Don’t use explicit pixel width on more than one column in the set.
+    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+    * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+  * **Sizing images**
+
+    * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
+    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+    * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+
+For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 ## Technical requirements
 
