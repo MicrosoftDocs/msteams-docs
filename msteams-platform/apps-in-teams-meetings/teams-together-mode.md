@@ -163,7 +163,7 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
    A scene-only app is created and you can view the app and its `package.json` file in the **Apps** page in Developer Portal. A screen opens in your Teams to add the scene app created.
 
    > [!NOTE]
-   > Scene-only apps are different from standalone Teams apps. The app capabilities used by scene-only apps are focused on creating immersive Together Mode scenes. Administrators can manage the behavior of scene-only apps through app setup policies in Teams admin center.
+   > Scene-only apps are different from standalone Teams apps. The app capabilities used by scene-only apps are focused on creating immersive Together Mode scenes. Admins can manage the behavior of scene-only apps through app setup policies in Teams admin center.
 
 1. Select **Preview in Teams**.
 
