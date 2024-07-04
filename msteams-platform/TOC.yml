@@ -1089,6 +1089,8 @@
         href: /rest/api/industry/collaboration-controls/settings-standard-o-data-apis
     - name: Limitations for Collaboration control   
       href: samples/collaboration-controls-limitations.md
+  - name: Approvals app API
+    href: samples/approvals-app.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
     displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams

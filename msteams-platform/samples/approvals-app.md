@@ -1,6 +1,6 @@
 ---
 title: Approvals app APIs
-description: Learn to use app templates for Microsoft Teams platform with detailed instructions on deploying and installing an app.
+description: Learn the different types of the approvals app Microsoft Graph APIs.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 04/28/2023
