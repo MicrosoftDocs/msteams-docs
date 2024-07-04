@@ -1,5 +1,5 @@
 ---
-title: Prepare to build apps with Teams Toolkit in Visual Studio
+title: Prepare to Build App with Visual Studio
 author: surbhigupta
 description: Learn about build environments such as C# and Blazor of Teams Toolkit in Visual Studio. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
