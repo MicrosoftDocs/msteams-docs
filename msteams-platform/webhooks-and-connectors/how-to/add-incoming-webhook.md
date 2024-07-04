@@ -10,7 +10,7 @@ ms.date: 01/25/2023
 
 > [!IMPORTANT]
 >
-> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting Aug 15 2024. All existing Microsoft 365 (previously called Office 365) connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
+> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting Aug 15 2024. All existing Microsoft 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
 [https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 
 An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:

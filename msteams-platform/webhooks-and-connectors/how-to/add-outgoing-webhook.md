@@ -10,7 +10,7 @@ ms.date: 02/27/2023
 
 > [!IMPORTANT]
 >
-> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting Aug 15 2024. All existing Microsoft 365 (previously called Office 365) connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
+> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting Aug 15 2024. All existing Microsoft 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
 [https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 
 The Outgoing Webhook acts as a bot and searches for messages in channels using **@mention**. It sends notifications to an external web service and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
