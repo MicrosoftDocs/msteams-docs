@@ -57,4 +57,4 @@ The following table details the app experiences supported for Teams operated by 
 
 ## See also
 
-[Microsoft 365 operated by 21Vianet](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
+[Microsoft 365 operated by 21Vianet](https://learn.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
