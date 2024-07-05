@@ -113,9 +113,6 @@ After identifying the common properties for all cards, you can now work with Ada
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
-> [!NOTE]
-> Download Adaptive Card templates with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
-
 ### Support for Adaptive Cards
 
 The following table provides the features that support Adaptive Cards:
@@ -271,6 +268,8 @@ The following code shows an example of an Adaptive Card:
   }  
 }
 ```
+
+To explore more Adaptive Card templates, see [Teams Adaptive Card starter collection](starter-cards.md).
 
 ### Adaptive Cards best practices
 

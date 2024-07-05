@@ -8,7 +8,7 @@ ms.date: 06/17/2024
 
 # Teams Adaptive Card starter collection
 
-This article presents a curated set of nine Adaptive Card templates for Microsoft Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. They help you understand [Microsoft’s design principles for Adaptive Cards](/adaptive-cards/resources/principles), offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
+This article presents a curated set of nine Adaptive Card templates for Microsoft Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. The Adaptive Card templates help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
 
 * [Recipe hero](#recipe-hero)
 * [Work item thumbnail](#work-item-thumbnail)
@@ -20,8 +20,7 @@ This article presents a curated set of nine Adaptive Card templates for Microsof
 * [Issue status](#issue-status)
 * [Account details](#account-details)
 
-> [!NOTE]
-> Download Adaptive Card templates with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
+To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/pnp/AdaptiveCards-Templates).
 
 ## Recipe hero
 
