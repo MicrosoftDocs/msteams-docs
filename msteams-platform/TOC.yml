@@ -61,16 +61,18 @@
         href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
-  - name: Plan for Government clouds
-    href: concepts/cloud-overview.md
-    displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government cloud
-  - name: Plan for Sovereign clouds
-    href: concepts/cloud-overview.md
-    displayName: Teams operated by 21Vianet, sovereign cloud
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
+  - name: Plan for Special clouds
+    items:
+    - name: Plan for Government clouds
+      href: concepts/cloud-overview.md
+      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government cloud
+    - name: Plan for Sovereign clouds
+      href: concepts/cloud-overview.md
+      displayName: Teams operated by 21Vianet, sovereign cloud
 - name: Design your app
   items:
   - name: Overview

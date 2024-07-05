@@ -15,12 +15,6 @@ Sovereign clouds are designed to operate within specific countries or regions to
 
 Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning). To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans).
 
-:::row:::
-   :::column:::
-      :::image type="icon" source="../assets/images/app-fundamentals/gallatin.png" link="/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet" border="false":::
-   :::column-end:::
-:::row-end:::
-
 ### Apps, capabilities, and experiences
 
 The following table details the Teams apps supported for Teams operated by 21Vianet:
@@ -32,7 +26,7 @@ The following table details the Teams apps supported for Teams operated by 21Via
 | Custom apps built for your org (LOB apps) distributed and used in specific organization| ✔️ |
 | Upload a custom app | ❌ |
 
-The following table details the Teams capabilities supported for Teams operated by 21Vianet:
+The following table details the app capabilities supported for Teams operated by 21Vianet:
 
 | **App capabilities** | &nbsp; |
 |-------------|---|
@@ -46,7 +40,7 @@ The following table details the Teams capabilities supported for Teams operated 
 | Connectors and webhooks | ❌ |
 | Workflows | ❌ |
 
-The following table details the Teams experiences supported for Teams operated by 21Vianet:
+The following table details the app experiences supported for Teams operated by 21Vianet:
 
 | **Experiences** | &nbsp; |
 |-------------|---|
@@ -59,8 +53,8 @@ The following table details the Teams experiences supported for Teams operated b
 
 ### Service and availability
 
- The availability of features in Teams depends on the Office 365 plan purchased. For more information, see [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
+ The features that are available in Teams depends on the Office 365 plan purchased. For more information, see [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
 
 ## See also
 
-* [Microsoft 365 operated by 21Vianet](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
+[Microsoft 365 operated by 21Vianet](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
