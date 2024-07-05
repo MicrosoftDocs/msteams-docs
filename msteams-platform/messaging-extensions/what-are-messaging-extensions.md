@@ -14,7 +14,7 @@ Message extensions enable users to engage with your web service through buttons 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-This document provides an overview of message extensions, use cases, functionality, action and search commands, and link unfurling.
+The article provides an overview of message extensions, use cases, functionality, action and search commands, and link unfurling.
 
 The following image displays the locations from where message extensions can be invoked:
 
