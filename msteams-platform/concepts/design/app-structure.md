@@ -1,5 +1,5 @@
 ---
-title: Design your app - Understand the app structure
+title: Understand App Structure to Design Apps
 description: In this module, learn what you can and can't customize in Microsoft Teams when designing your app structure.
 author: heath-hamilton
 ms.topic: conceptual

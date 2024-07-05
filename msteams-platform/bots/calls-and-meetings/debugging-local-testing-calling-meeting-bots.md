@@ -1,6 +1,6 @@
 ---
-title: Debug your calling and meeting bot locally
-description: In this module, learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
+title: Debug Calling & Meeting Bots Locally
+description: Learn how to configure ngrok, set up signaling, set up local media, and start ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/18/2018
@@ -64,7 +64,7 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-Here, `12345` is the signaling port, `8445` is the application-hosted port, and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This will be used as the media URL for the bot. Of course, these port numbers are just examples and you can use any available port.
+Here, `12345` is the signaling port, `8445` is the application-hosted port, and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This is used as the media URL for the bot. Of course, these port numbers are just examples and you can use any available port.
 
 ### Update code
 
@@ -86,7 +86,7 @@ statefulClientBuilder.SetNotificationUrl(
 >
 > * The URL in `SetNotificationUrl` must be HTTPS.
 >
-> Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform will reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
+> Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
 
 #### Update media
 
