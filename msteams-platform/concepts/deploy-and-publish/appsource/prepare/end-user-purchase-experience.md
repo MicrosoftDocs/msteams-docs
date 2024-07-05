@@ -109,7 +109,7 @@ The following example shows how users can manage licenses for third-party apps f
 Here are the subscription management options:
 
 <details>
-<summary>Assign licenses</summary></br>
+<summary>Assign licenses</summary>
 
 1. Select an existing subscription from the list and select **Assign licenses**.
 
@@ -186,7 +186,7 @@ You can take additional actions related to your subscription, such as editing yo
 
 ## Admin purchasing experience
 
-Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
+Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
 
 ## See also
 
