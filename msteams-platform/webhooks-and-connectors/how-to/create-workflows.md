@@ -70,10 +70,10 @@ After creating a workflow, you can further [manage workflows](#manage-workflows)
 
 You can create a workflow in the channel and chat scopes in the same way you created from the **Workflows** in the **Apps** section. Once you create the workflow, you can add or run a workflow from messaging area or from the message.
 
-:::image type="content" source="../../assets/images/workflows/channel-chat-scope.png" alt-text="Screenshot shows the Workflows option in chat and channel scope.":::
-
 * Common workflows are grouped by type.  
 * If you don’t see the workflow you need, you can search in the Find workflows search box.
+
+:::image type="content" source="../../assets/images/workflows/channel-chat-scope.png" alt-text="Screenshot shows the Workflows option in chat and channel scope.":::
 
 # [Create from channel](#tab/channel)
 
@@ -81,7 +81,7 @@ To create a workflow and add in a channel:
 
 1. Select the Teams :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: icon.
 
-1. Right-click on the channel where you want to add the workflow or select **More options** (image).
+1. Right-click on the channel where you want to add the workflow or select **More options**.
 
 1. Select **Workflows**.
 
@@ -206,7 +206,7 @@ To manage workflows:
 
     :::image type="content" source="../../assets/images/workflows/workflows-app.png" alt-text="Screenshot shows the Workflows app.":::
 
-To view the Workflows app, select **View more apps** (three dots icon).
+To view the Workflows app, select **View more apps**.
 
 Also, the workflows you create within the Workflows app in Microsoft Teams are always created in your organization's default environment.
 
