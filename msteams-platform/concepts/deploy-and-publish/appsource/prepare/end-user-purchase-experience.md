@@ -10,13 +10,17 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's purchase experience for apps in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. You can add more features and functionality to your Teams app through subscriptions. As a developer, you can bring out the following purchase experience
+This article helps you understand the user's app purchase experience in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. As a developer, you can bring out the purchase experience detailed in this article.
 
 ## Subscription experience
 
-The following steps provide the user experience to purchase a subscription plan for a Teams app:
+Here's the end user experience to purchase a subscription plan for a Teams app:
+
+1. In Teams, select **Apps** > **Manage apps and purchases**.
 
 1. In Teams Store, find and select the app for which you want to purchase the subscription.
+
+    :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store.":::
 
 1. In the app details dialog, select **View plans**.
 
@@ -51,7 +55,7 @@ The following steps provide the user experience to purchase a subscription plan 
 
     1. Under **Add a credit card or debit card**, add the required details, select the card address, and select **Next**.
 
-        You can either turn on **Same as billing account** toggle to use the same address of the billing account for the card or you can turn off to add a new address.
+        To use the same address of the billing account for the card, turn on the **Same as billing account** toggle. You can turn off the toggle to add a new address.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address.":::
 
@@ -105,8 +109,7 @@ The following example shows how users can manage licenses for third-party apps f
 Here are the subscription management options:
 
 <details>
-<summary>Assign licenses</summary>
-To assign a license to the user:
+<summary>Assign licenses</summary></br>
 
 1. Select an existing subscription from the list and select **Assign licenses**.
 
