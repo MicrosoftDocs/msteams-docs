@@ -81,21 +81,23 @@ To create a workflow and add in a channel:
 
 1. Select the Teams :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: icon.
 
-1. Select the channel you want to add the workflow.
-
-1. Right-click on the chat or select **More options** (image).
+1. Right-click on the channel where you want to add the workflow or select **More options** (image).
 
 1. Select **Workflows**.
+
+    :::image type="content" source="../../assets/images/workflows/channel-workflow.png" alt-text="Screenshot shows the Workflows option in channel option.":::
 
 1. In the **Workflows** dialog, select the workflow you want to add to the channel.
 
     Alternatively, you can select **More workflows** to browse all workflow templates or create a new one.
 
+    :::image type="content" source="../../assets/images/workflows/select-channel-workflow.png" alt-text="Screenshot shows the Workflows dialog from the channel option.":::
+
     The workflow dialog appears and validates the connections required for the workflow to function.
 
-1. Modify the name as required or use the suggested name and select **Next**.
+1. Modify the name as required, fill in the required details, and select **Create workflow**.
 
-1. Fill in the required details and select **Create workflow**.
+    :::image type="content" source="../../assets/images/workflows/create-channel-workflow.png" alt-text="Screenshot shows the Create a workflow dialog from the channel option.":::
 
     A confirmation dialog appears displaying **Workflow added successfully!**
 
@@ -107,21 +109,25 @@ The workflow is added in the channel. The workflows are also available from **Mo
 
 To create a workflow and add it to a personal chat or a group chat:
 
-1. Select the Chat (icon image) icon.
+1. Select the chat :::image type="icon" source="../../assets/images/workflows/chat-icon.png" border="false"::: icon.
 
-1. Select the chat you want to add the workflow.
-
-1. Right-click on the chat or select **More options** (image).
+1. Right-click on the chat where you want to add the workflow or select **More options**.
 
 1. Select **Workflows**.
+
+    :::image type="content" source="../../assets/images/workflows/channel-workflow.png" alt-text="Screenshot shows the Workflows option in chat option.":::
 
 1. In the **Workflows** dialog, select the workflow you want to add to the chat.
 
     Alternatively, you can select **More workflows** to browse all workflow templates or create a new one.
 
+    :::image type="content" source="../../assets/images/workflows/select-channel-workflow.png" alt-text="Screenshot shows the Workflows dialog from the channel option.":::
+
     The workflow dialog appears and validates the connections required for the workflow to function.
 
 1. Modify the name as required or use the suggested name and select **Next**.
+
+    :::image type="content" source="../../assets/images/workflows/create-channel-workflow.png" alt-text="Screenshot shows the Create a workflow dialog from the channel option.":::
 
 1. Fill in the required details and select **Create workflow**.
 
@@ -150,20 +156,39 @@ To add and run workflow from a message:
 
 1. Go to the message to which you need to add a workflow.
 1. Select **More options** > **+ Create new action**.
-1. Select from the pre-built workflows or **+Create new**.
-1. Fill in the required details and select **Add workflow**.
+
+    :::image type="content" source="../../assets/images/workflows/add-workflow-message.png" alt-text="Screenshot shows the Workflows option in chat option.":::
+
+1. Select from the pre-built workflows.
+
+    Alternatively, you can select **+Create new** to create a new customized workflow.
+
+    :::image type="content" source="../../assets/images/workflows/create-workflow-message.png" alt-text="Screenshot shows the Create new action dialog to create a workflow.":::
+
+1. Fill in the required details and select **Add workflow**. Workflow gets added successfully.
+
 1. Select **Run workflow** and configure the workflow as required.
+
+    :::image type="content" source="../../assets/images/workflows/run-message-workflow.png" alt-text="Screenshot shows the Run workflow option once the workflow is added successfully.":::
 
 # [Add from messaging area](#tab/messagingarea)
 
 To add and run workflow from a messaging area:
 
 1. Go to the message compose area in a chat to add a workflow.
-1. Select **Actions and apps** > **+ Create new action** > **Create new action**.
+1. Select **+** > **+ Create new action** > **Create new action**.
+
+    :::image type="content" source="../../assets/images/workflows/add-workflow-compose-message.png" alt-text="Screenshot shows the Workflows option in chat option.":::
+
 1. Select a workflow from the pre-built workflows.
     Alternatively, you can select **+Create new** to create a new customized workflow.
-1. Fill in the required details and select **Add workflow**.
+
+    :::image type="content" source="../../assets/images/workflows/create-workflow-message.png" alt-text="Screenshot shows the Create new action dialog to create a workflow.":::
+
+1. Fill in the required details and select **Add workflow**. Workflow gets added successfully.
 1. Select **Run workflow** and configure the workflow as required.
+
+    :::image type="content" source="../../assets/images/workflows/run-message-workflow.png" alt-text="Screenshot shows the Run workflow option once the workflow is added successfully.":::
 
 ---
 
@@ -184,3 +209,7 @@ To manage workflows:
 To view the Workflows app, select **View more apps** (three dots icon).
 
 Also, the workflows you create within the Workflows app in Microsoft Teams are always created in your organization's default environment.
+
+## See also
+
+[Create and send messages](connectors-using.md)
