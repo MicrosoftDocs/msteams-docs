@@ -25,9 +25,8 @@ Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts 
 
 The following table details the Teams apps supported for Teams operated by 21Vianet:
 
-| &nbsp; | Teams operated by 21Vianet |
-|-------------|---|
 | **Apps** | &nbsp; |
+|-------------|---|
 | Apps built by Microsoft | ✔️ |
 | Third-party apps built by external developers | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific organization| ✔️ |
@@ -35,9 +34,8 @@ The following table details the Teams apps supported for Teams operated by 21Via
 
 The following table details the Teams capabilities supported for Teams operated by 21Vianet:
 
-| &nbsp; | Teams operated by 21Vianet |
-|-------------|---|
 | **App capabilities** | &nbsp; |
+|-------------|---|
 | Tabs | ✔️ |
 | Bots and message extensions | ✔️ |
 | Message actions | ❌ |
@@ -50,9 +48,8 @@ The following table details the Teams capabilities supported for Teams operated 
 
 The following table details the Teams experiences supported for Teams operated by 21Vianet:
 
-| &nbsp; | Teams operated by 21Vianet |
-|-------------|---|
 | **Experiences** | &nbsp; |
+|-------------|---|
 | Teams Store | ✔️ |
 | In-context Teams Store or app flyouts | ✔️ |
 | Manage apps in Teams | ✔️ |
@@ -62,8 +59,8 @@ The following table details the Teams experiences supported for Teams operated b
 
 ### Service and availability
 
- The availability of features in Teams depends on the Office 365 plan purchased. For more information, [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
+ The availability of features in Teams depends on the Office 365 plan purchased. For more information, see [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
 
 ## See also
 
-* [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet)
+* [Microsoft 365 operated by 21Vianet](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
