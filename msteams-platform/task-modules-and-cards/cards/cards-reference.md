@@ -269,6 +269,24 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
+### Adaptive Cards best practices
+
+Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
+
+* **ColumnSets**
+
+  * Avoid defining ColumnSets with more than three columns.
+  * Don’t use explicit pixel width on more than one column in the set.
+  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Copilot).
+  * In general, 48 pixels is about the maximum explicit width you’d want to use, although there may be exceptions depending on the scenario.
+
+* **Sizing images**
+  * When using an image inside a ColumnSet with more than one Column, prefer specifying the size of the column that contains the image rather than the image itself (set the image’s size to “auto” or “stretch”).
+  * If your image isn’t in a ColumnSet, it’s generally advisable to set its size to “auto” or “stretch”.
+  * If using an explicit width in pixels, make sure it doesn’t exceed 3/4 of the narrowest card width.
+  * When using explicit sizing in pixels, either set the width or the height, but not both. Setting only one will ensure your image has the proper aspect ratio.
+  * In general, only set the width of the image, not the height, although there may be exceptions depending on the scenario.
+
 #### Additional information on Adaptive Cards
 
 > [!Note]
@@ -495,7 +513,7 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 | `avatar` | Default, `activityImage` is cropped as a circle. |
 | `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
 
-For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams doesn't currently support are as follows:
+For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams doesn't support are as follows:
 
 * `heroImage`
 * `hideOriginalBody`

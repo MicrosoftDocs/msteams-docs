@@ -88,8 +88,6 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
-* [Include a SaaS offer with your Microsoft Teams app](include-saas-offer.md)
 * [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps)
