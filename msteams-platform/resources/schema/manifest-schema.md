@@ -465,7 +465,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
-|`scopes`|Array of enums|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
+|`scopes`|Array of enums|2|✔️|The configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true` |
 |`meetingSurfaces`|Array of enums|2||The set of `meetingSurfaceItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `sidePanel`, `stage` |
 |`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Accepted value: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingSidePanel, meetingStage]**.|
@@ -513,8 +513,8 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
-|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
-|`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
 
 ### bots.configuration
 
@@ -630,7 +630,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by Copilot using large language model (LLM).|
-|`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
+|`parameters.value`|String|512 characters||Initial value for the parameter. The value isn't supported|
 |`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` . <br>Default value: `text` |
 |`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameters.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
