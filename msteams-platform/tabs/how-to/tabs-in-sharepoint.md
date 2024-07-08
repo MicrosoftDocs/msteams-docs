@@ -8,14 +8,14 @@ ms.date: 06/08/2023
 
 # Add Teams tab to SharePoint
 
-Experience a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to integrate a tab from a Microsoft Teams sample app into SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
+Experience a rich integration experience between Microsoft Teams and SharePoint by adding a Teams tab in SharePoint as a SharePoint Framework (SPFx) web part. This document guides you on how to integrate a tab from a Teams sample app into SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
 
 - [SharePoint web parts in Teams](#sharepoint-web-parts-in-teams)
 - [Teams tabs in SharePoint](#teams-tabs-in-sharepoint)
 
 ## SharePoint web parts in Teams
 
-SharePoint hosts SPFx web parts without the need for external services like Azure. For SharePoint developers, this feature simplifies the development process for Teams tabs. For more information on SPFx in Teams, see [how to use the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+SharePoint hosts SPFx web parts without the need for external services like Azure. For SharePoint developers, this feature simplifies the development process for Teams tabs. For more information on SPFx in Teams, see [how to use the SharePoint Framework in Teams](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab).
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a Teams tab." lightbox="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png":::
 
@@ -52,7 +52,7 @@ You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint,
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set up a tab in a team.":::
 
-7. A new static tab is added to your Teams channel. You can experiment with the app and test its various features including configurable tabs and a chatbot.
+7. A new static tab is added to your Teams channel. You can experiment with the app and test its features including configurable tabs and a chatbot.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
 
@@ -67,7 +67,9 @@ You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint,
 
         :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image065.png" alt-text="Screenshot shows the deploy dialog.":::
 
-1. You must then create a new page in your site. To create a new page, select the gear icon and select **Add a page**.
+    You must then create a new page in your site.
+
+1. To create a new page, select the gear icon and select **Add a page**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image066.png" alt-text="Screenshot shows the Office 365 settings options.":::
 
@@ -87,7 +89,7 @@ You can host your Teams tabs in SharePoint with SPFx. When hosted in SharePoint,
 
 ### Explore Single Part App Pages in SharePoint
 
-After you publish your page, explore [Single Part App Pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This article helps you convert the current page into a Single Part App Page, a normal SharePoint page layout with the full page experience for the Teams tab.
+After you publish your page, explore [Single Part App Pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This helps you convert the current page into a Single Part App Page, a normal SharePoint page layout with the full-page experience for the Teams tab.
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot shows the Teams app in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image085.png":::
 
