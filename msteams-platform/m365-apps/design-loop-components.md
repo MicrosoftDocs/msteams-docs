@@ -18,10 +18,10 @@ Loop components were first released in Teams followed by other Microsoft 365 app
 
 The following table lists out the key features of a Loop component:
 
-|Key feature|Description|
+| Feature | Description |
 |---|---|
-|Live| The latest information is populated in the card. If there are multiple instances, they remain in sync as updates are made. |
-|Embedded |  Cards can be placed into documents and conversations that are separate from the rest of the content. |
+| Live | The latest information is populated in the card. If there are multiple instances, they remain in sync as updates are made. |
+| Embedded | Cards can be placed into documents and conversations that are separate from the rest of the content. |
 | Actionable | Tasks can be completed inline. |
 | Portable | Components can work across the Microsoft 365 app that supports Loop components. |
 
