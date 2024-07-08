@@ -24,7 +24,7 @@ As a collaborative platform for building apps, Teams offers the full range of ap
 You can use various tools and services to build your app. Following is an example development flow.
 
 1. Plan your project and figure out the requirement.
-1. Design your app. Use Teams UI Kit and UI Library for designing tabs UI.
+1. Design your app. Use Teams UI Kit and Fluent UI React components for designing tabs UI.
 1. Build your app with JavaScript using Teams Toolkit.
 1. Extend functionality by adding more Teams capabilities, send activity feed notifications, and use Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.

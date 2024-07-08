@@ -24,17 +24,12 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 
 The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
-### Microsoft Teams UI Library
+### Fluent UI React components
 
-View and test individual Teams UI templates and related components in your browser.
+View and test individual Fluent UI React components in your browser.
 
 > [!div class="nextstepaction"]
 > [Try Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
-
-Import these templates and related components directly into your Teams app project.
-
-> [!div class="nextstepaction"]
-> [Get the UI library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ### Sample app
 
