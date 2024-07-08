@@ -15,9 +15,7 @@ Adaptive Card-based Loop components enable you to build collaborative experience
 
 Following is an example of an Adaptive Card-based Loop component:
 
-:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Screenshot shows an Adaptive-based Loop component.":::
-
-This article provides an overview of how to build and test your Adaptive Card-based Loop components.
+:::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Screenshot shows an Adaptive Card-based Loop component.":::
 
 ## Build Adaptive Card-based Loop component
 
@@ -25,15 +23,16 @@ To build an Adaptive Card-based Loop component, follow these steps:
 
 1. [Build a message extension with a search command](../messaging-extensions/what-are-messaging-extensions.md).
 
-1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the message extension.
+1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) to the message extension.
 
 1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensure that the card is always up to date. For more information, see [up-to-date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
 
 1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md).
 
-1. Ensure that the Adaptive Card adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
-
 1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the Copy button present in the Loop component header.
+
+> [!NOTE]
+> Ensure that the Adaptive Card-based loop component adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your end users.
 
 ### Example
 
@@ -66,11 +65,11 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 |Property|Type|Description|Required|
 |---|---|---|---|
-| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
-| `webUrl` | String | URL that uniquely identifies the card, serving as a browser fallback usable by certain hosts. | No |
+| `metadata`| Object | Defines various metadata properties typically not used for rendering the card. | No |
+| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts. | No |
 
 > [!NOTE]
-> When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste it in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
+> When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste the URL in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
 
 ## Test your Loop component
 
@@ -78,7 +77,7 @@ You can test the Loop component in the developer environments of Teams and Outlo
 
 ### Test in Microsoft Teams
 
-To configure, distribute, and manage your application use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
+To configure, distribute, and manage your application, use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
 
 * **Overview page**: On the **Overview page**, under **Teams Store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Microsoft Teams Store test cases.
 * **Preview in Teams**: The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
