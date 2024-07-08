@@ -11,7 +11,7 @@ ms.date: 01/26/2024
 > [!NOTE]
 > Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
 
-Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Microsoft Outlook.
+Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch contexts between Microsoft 365 apps, such as Teams and Microsoft Outlook.
 
 Following is an example of an Adaptive Card-based Loop component:
 
@@ -27,7 +27,7 @@ To build an Adaptive Card-based Loop component, follow these steps:
 
 1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) support to the message extension.
 
-1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensure that the card is always up to date. For more information, see [up to date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
+1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensure that the card is always up to date. For more information, see [up-to-date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
 
 1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md).
 

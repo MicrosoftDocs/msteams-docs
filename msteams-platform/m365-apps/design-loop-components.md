@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. They allow users to share live content and collaborate with others in Microsoft Teams chats and meetings, Microsoft Outlook emails, Microsoft Whiteboard, or Loop app. You can create Loop components by either evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
-[Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
+Loop components were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
 
 ## Loop component key features
 
@@ -67,7 +67,7 @@ The following are the best practices for a Loop component body:
 
 * To understand the basics and core design principles of Adaptive Cards, go to [Adaptive Cards Home](https://adaptivecards.io) and review the [Adaptive Cards overview](/adaptive-cards/) article.
 * Follow the [Adaptive Card design guidelines](../task-modules-and-cards/cards/design-effective-cards.md), which include tools, examples, notes about responsive design, and pixel density.
-* The following list provides the Loop component specific considerations:
+* The following list provides the Loop component-specific considerations:
   * Ensure that your component is true to the Loop components attributes such as, live, actionable, embedded, and portable.
   * [Don’t add a separate button to open in browser.](#dont-add-a-separate-button-to-open-in-browser)
   * [Don’t add a duplicate header or border.](#dont-add-a-duplicate-header-or-border)
@@ -80,7 +80,7 @@ You can add buttons or links for more specific views, for example, **View Relate
 
 ### Don’t add a duplicate header or border
 
-All Loop components have a standard header and border. Ensure that your Adaptive Card code must not duplicate the header and border. You can have an item-specific title for your component but ensure that the app name and icon isn't the same.
+All Loop components have a standard header and border. Ensure that your Adaptive Card code doesn't duplicate the header and border. You can have an item-specific title for your component but ensure that the app name and icon aren't the same.
 
 ## Loop component header
 
@@ -100,7 +100,7 @@ The platform provides the component header, which includes standard elements suc
 
 ## Loop component border
 
-The component border separates your component from the content around it. It helps users understand that the Loop component is live and separate from the contents surrounding it such as, email or chat.
+The component border separates your component from the content around it. It helps users understand that the Loop component is live and separate from the contents surrounding it, such as email or chat.
 
 The border appears automatically.
 
@@ -108,3 +108,7 @@ The border appears automatically.
 
 > [!div class="nextstepaction"]
 > [Adaptive Card-based Loop components](cards-loop-component.md)
+
+## See also
+
+[First things to know about Loop components in Microsoft Teams](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81)
