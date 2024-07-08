@@ -29,7 +29,7 @@ To build an Adaptive Card-based Loop component, follow these steps:
 
 1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md).
 
-1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the Copy button present in the Loop component header.
+1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
 
 > [!NOTE]
 > Ensure that the Adaptive Card-based loop component adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your users.

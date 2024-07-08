@@ -86,15 +86,15 @@ All Loop components have a standard header and border. Ensure that your Adaptive
 
 ### Loop component header
 
-The platform provides the component header, which includes standard elements such as the app logo, app name, and a copy button.
+The platform provides the component header, which includes standard elements such as the app logo, app name, and a **Copy component** :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: button.
 
 :::image type="content" source="../assets/images/adaptive-cards/loop-component-header.png" alt-text="Infographic shows the UX elements in a Loop component header.":::
 
-|Counter  |Description  |
-|---------|---------|
-|1     |  **App logo**: Full color app logo of your app.       |
-|2     |  **App name**: Full name of your app.       |
-|3     |  Copy button      |
+| Counter | Description |
+|----|----|
+| 1 | **App logo**: Full color app logo of your app |
+| 2 | **App name**: Full name of your app |
+| 3 | **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: |
 
 **App name** is defined in your app manifest. We recommend to use a concise name for your app.
 
