@@ -88,7 +88,7 @@ The design is done and you’re ready to start building. The following tool can 
 
 ### Build with basic UI components
 
-Not unlike the design phase, you can use Fluent UI components in your app project if a UI template is missing something you need, or you just want to build the app from scratch.
+Not unlike the design phase, you can use Fluent UI React components in your app project if a UI template is missing something you need, or you just want to build the app from scratch.
 
 > [!div class="nextstepaction"]
 > [Get the library (Fluent UI)](https://react.fluentui.dev/?path=/docs/)

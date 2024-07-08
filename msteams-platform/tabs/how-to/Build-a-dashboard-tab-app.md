@@ -628,13 +628,15 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
 
 1. Add SSO feature to your Teams app: Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph. For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
-1. To install the required Node Package Manager (npm) packages, run the following command in your project's `tabs` folder:
+Install required `npm` packages.
+
+   Run the following command in your project `tabs` folder to install the required `npm` packages:
 
       ```bash
       npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
       ```
 
-1. Add a new Graph Toolkit widget: Create a new widget file in your project `src/views/widgets` folder, for example, `GraphWidget.tsx`. In this widget, we guide users to consent our app to access Microsoft Graph and then show the user's Todo list by using Microsoft Graph Toolkit.
+1. Add a new Graph Toolkit widget: Create a new widget file in your project `src/views/widgets` folder, for example, `GraphWidget.tsx`. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's Todo list by using Microsoft Graph Toolkit.
 
       The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
 
