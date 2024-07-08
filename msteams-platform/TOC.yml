@@ -65,13 +65,13 @@
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
-  - name: Plan for Special clouds
+  - name: Plan for special clouds
     items:
-    - name: Plan for Government clouds
+    - name: Plan for government clouds
       href: concepts/cloud-overview.md
       displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government cloud
-    - name: Plan for Sovereign clouds
-      href: concepts/cloud-overview.md
+    - name: Plan for sovereign clouds
+      href: concepts/sovereign-cloud.md
       displayName: Teams operated by 21Vianet, sovereign cloud
 - name: Design your app
   items:

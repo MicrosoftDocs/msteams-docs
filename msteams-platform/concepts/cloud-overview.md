@@ -1,15 +1,15 @@
 ---
-title: Plan for Government clouds
+title: Teams for government clouds
 author: v-preethah
-description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) environments. Get an overview on how to deploy Teams in Government clouds.
+description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) environments. Get an overview on how to deploy Teams in government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
 
-# Plan for Government clouds
+# Plan for government clouds
 
-Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
+Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data, and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, the specialized government cloud services offered are:
 
 :::row:::
    :::column:::
@@ -23,30 +23,35 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
    :::column-end:::
 :::row-end:::
 
-GCC, GCC High, and DOD are limited for use within Unites States. This article provides a comprehensive overview of Teams' compatibility across different Government cloud services, details the capabilities for each tenant, and provides guidance on deployment.
+GCC, GCC High, and DOD are limited for use within the United States. This article provides:
 
-## Teams app capabilities for Government clouds
+* Overview on Teams compatibility across different government cloud services
+* Details on the capabilities of each tenant
+* Guidance on deployment
 
-Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Some features available in commercial tenants might not be accessible in government tenants due to security and compliance restrictions, while other features take time to roll out. It’s important to have a clear understanding of the Teams apps and capabilities that are supported within government tenants to ensure they are utilized effectively.
+## Teams app capabilities
 
-The following table details the Teams apps and capabilities for GCC, GCC High, and DOD:
+Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Due to security and compliance restrictions, not all features available in commercial tenants are accessible in government tenants and other features take time to roll out. We recommend that you have a clear understanding of the Teams apps and its capabilities supported in government tenants to ensure effective utilization.
+
+The following table details the Teams apps and its capabilities for GCC, GCC High, and DOD:
 
 | &nbsp; | GCC | GCC High | DOD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Apps built by Microsoft | ✔️ | ✔️ | ✔️ |
-| Third-party apps built by external developers | ✔️ | ❌ | ❌ |
+| Third-party apps | ✔️ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific organization | ✔️ | ✔️ | ✔️ |
 | Upload a custom app | ✔️ | ❌ | ❌ |
 | **App capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
-| Bots and message extensions | ✔️ | ✔️ | ✔️ |
+| Bots | ✔️ | ✔️ | ✔️ |
+| Message extensions | ✔️ | ✔️ | ✔️ |
 | Message actions | ✔️ | ✔️ | ✔️ |
 | Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ✔️ | ✔️ | ✔️ |
-| Dialogs | ✔️ | ✔️ | ✔️ |
+| Dialogs (referred as task modules in TeamsJS v1.x) | ✔️ | ✔️ | ✔️ |
 | Link unfurling | ✔️ | ✔️ | ✔️ |
 | Meeting extensions | ✔️ | ✔️ | ✔️ |
-| Connectors and webhooks | ✔️ | ✔️ | ❌ |
+| Webhooks and connectors | ✔️ | ✔️ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
 | **Experiences** | &nbsp; | &nbsp; | &nbsp; |
 | Teams Store | ✔️ | ✔️ | ✔️ |
@@ -60,24 +65,24 @@ For more information on Graph API, see [Graph API for Government clouds](/graph/
 
 > [!NOTE]
 >
-> * Third-party apps are turned off by default for GCC and aren't available for GCC High, and DOD. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
-> * Only Incoming Webhooks are supported within GCC High.
+> * Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
+> * GCC High supports Incoming Webhooks only.
 
-### Plan to deploy Teams in Government clouds
+### Plan to deploy Teams in government clouds
 
 To deploy Teams in GCC, GCC High, or DOD, you must purchase a suitable [Microsoft 365 Government plan](https://products.office.com/government/compare-office-365-government-plans). US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
 ### Compliance with third-party services
 
-Here are few pointers to consider while connecting with third-party services from Government clouds:
+Here are few pointers to consider while connecting with third-party services from government clouds:
 
-| &nbsp; | Compliance check |
-| --- | --- |
-| ✔️ | Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft. |
-| ✔️ | Be responsible to mitigate risks associated with connecting to third-party bots in their services. |
-| ✔️ | Understand that enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR. |
-| ✔️ | Be responsible to evaluate the risk and compliance of any endpoint and URL that the users connect to. |
-| ✔️ | Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service. |
+> [!div class="checklist"]
+>
+> Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft.
+> Understand that enabling bots extend your system boundary beyond this tenant, and is based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR.
+> Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service.
+> Mitigate risks associated with connecting to third-party bots in their services.
+> Evaluate the risk and compliance of any endpoint and URL that the users connect to.
 
 ## See also
 

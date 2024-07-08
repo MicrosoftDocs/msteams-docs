@@ -1,5 +1,5 @@
 ---
-title: Plan for Sovereign clouds
+title: Teams for sovereign clouds
 author: v-preethah
 description: Understand Teams features and capabilities available for Teams operated by 21Vianet tenants.
 ms.topic: conceptual
@@ -7,43 +7,36 @@ ms.localizationpriority: high
 ms.date: 06/24/2024
 ---
 
-# Sovereign clouds
+# Plan for sovereign clouds
 
 Sovereign clouds are designed to operate within specific countries or regions to comply with local data privacy regulations. In China, Microsoft services are operated and managed by 21Vianet, the largest service provider in the country.
 
 ## Teams operated by 21Vianet
 
-Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning). To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans).
+Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts [Microsoft Teams operated by 21Vianet](/officeupdates/teams-app-versioning). To deploy Teams operated by 21Vianet, you must purchase a suitable plan. For more information, see [Office 365 plan operated by 21Vianet](/azure/information-protection/parity-between-azure-information-protection).
 
 ### Apps, capabilities, and experiences
 
-The following table details the Teams apps supported for Teams operated by 21Vianet:
+The following table details the apps and its capabilities supported for Teams operated by 21Vianet:
 
-| **Apps** | &nbsp; |
+| &nbsp; | Teams operated by 21Vianet |
 |-------------|---|
+| **Apps** | &nbsp; |
 | Apps built by Microsoft | ✔️ |
-| Third-party apps built by external developers | ❌ |
+| Third-party apps | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific organization| ✔️ |
 | Upload a custom app | ❌ |
-
-The following table details the app capabilities supported for Teams operated by 21Vianet:
-
 | **App capabilities** | &nbsp; |
-|-------------|---|
 | Tabs | ✔️ |
 | Bots and message extensions | ✔️ |
 | Message actions | ❌ |
 | Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ❌ |
-| Dialogs | ✔️ |
+| Dialogs (referred as task modules in TeamsJS v1.x) | ✔️ |
 | Link unfurling | ❌ |
 | Meeting extensions | ❌ |
 | Connectors and webhooks | ❌ |
 | Workflows | ❌ |
-
-The following table details the app experiences supported for Teams operated by 21Vianet:
-
 | **Experiences** | &nbsp; |
-|-------------|---|
 | Teams Store | ✔️ |
 | In-context Teams Store or app flyouts | ✔️ |
 | Manage apps in Teams | ✔️ |
