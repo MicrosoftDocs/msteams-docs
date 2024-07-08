@@ -1,7 +1,7 @@
 ---
 title: Test a SaaS offer
 author: v-ypalikila
-description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and upload.
+description: Learn to create and test SaaS Preview offers for Teams app. Create a preview offer ID, configure your app with the preview offer ID, and upload.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
@@ -15,10 +15,10 @@ ms.date: 12/26/2022
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4a.png" link="Test-preview-for-monetized-apps.md" border="false":::

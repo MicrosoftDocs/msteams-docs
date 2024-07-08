@@ -1,6 +1,6 @@
 ---
 title: Publish the app with SaaS offer to Teams Store
-description: Learn how to configure the SaaS offer to your app and publish the app to the Microsoft Teams Store.
+description: Learn about the go live stage, how to configure the SaaS offer to your app and publish the app to the Microsoft Teams Store.
 author: v-preethah
 ms.author: surbhigupta
 ms.topic: how-to
@@ -15,10 +15,10 @@ ms.date: 07/11/2023
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="prerequisites.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="include-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="Test-preview-for-monetized-apps.md" border="false":::
@@ -28,7 +28,7 @@ ms.date: 07/11/2023
    :::column-end:::
 :::row-end:::
 
-The SaaS offer created must be published in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
+A Software-as-a-Service (SaaS) offer created must be published in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
 
 ## Go live
 
@@ -38,7 +38,7 @@ Upon successful testing, your can submit the offer to [Go live](/partner-center/
 1. Keep track of the publishing status on the **Offer overview** page.
 1. If there are validation errors, rectify them and resubmit your offer for publishing. The errors might range from missing information to noncompliance with marketplace standards.
 1. Upon successful validation, the offer is published live in the marketplace.
-1. Post-publication, link the live SaaS offer to your SaaS app and publish the subscription to Teams Store.
+1. Post the publishing, link the live SaaS offer to your Teams app and publish the subscription to Teams Store.
 
 :::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="The screenshot shows the go live and offer publishing phase.":::
 
@@ -99,15 +99,11 @@ The SaaS app with suitable offers is available in the Teams Store and the market
 
 ### Post purchase
 
-1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. To check the existing experience for user purchase, see [monetized apps in Teams](https://aka.ms/TMTG).
+* Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. To check the existing experience for user purchase, see [monetized apps in Teams](https://aka.ms/TMTG).
 
-1. After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) that the user selects on the publisher landing page.
+* After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) that the user selects on the publisher landing page.
 
-## License management
-
-Microsoft manages licenses on your behalf if you opted for the same during offer configuration. After the subscription activation, the user is redirected from the landing page to Teams license management.
-
-For more information on license management, see [manage app licenses](end-user-purchase-experience.md#license-management).
+* Microsoft manages licenses on your behalf if you opted for the same during offer configuration. After the subscription activation, the user is redirected from the landing page to Teams license management. For more information, see [manage app licenses](end-user-purchase-experience.md#license-management).
 
 ## Remove a SaaS offer from your app
 

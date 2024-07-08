@@ -1,6 +1,6 @@
 ---
 title: SaaS offer for your Teams app
-description: Learn how to plan, create, and configure your SaaS offer. The article also provides the  basic information on the technical information, landing page, offer plan, and API integrations.
+description: Learn how to plan, create, and configure a SaaS offer. Know the basic information on technical configuration, landing page, offer plan, and API integrations.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -36,7 +36,7 @@ SaaS offers allow you to license software solutions to customers through subscri
 
 | Feature | Description |
 |---|---|
-|**Offer type**| To create a SaaS offer you must decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating an offer, appears as a call-to-action button on the offer purchase landing page. |
+|**Offer type**| To create a SaaS offer you must decide the listing or publishing option that aligns with your requirements. When creating an offer, the listing option you select appears as a call-to-action button on the offer purchase landing page. |
 | **Offer details** | Offer details are the basic information that are available on the offer's landing page based on the offer configuration. These key features also enhance the discoverability and usability of your offer. |
 | **Offer plan** | SaaS offers, published through commercial marketplace, must have at least one plan added to the offer. The plan features facilitate appropriate purchase options for the target users. |
 | **Other features** | In addition to the essential features, you can provide features such as free trial and test drives to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers. |
@@ -63,20 +63,27 @@ Here's a quick checklist to stay on track:
 
 ### Create a landing page
 
-After a user purchases a subscription plan, commercial marketplace directs them to the offer landing page to manage the subscription. To create a landing page that provides a seamless sign-in and onboarding experience, check the following articles:
+After a user purchases a subscription plan, commercial marketplace directs them to the offer landing page to manage the subscription. To create a landing page, check the following articles:
 
 * [Build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page)
 * [Build landing page for your free or trial SaaS offer](/partner-center/marketplace/azure-ad-free-or-trial-landing-page)
 
 ### Integrate with SaaS Fulfillment API
 
-After one purchases your app’s subscription in the Teams Store, they are redirected to your landing page. Here, they can handle the subscription such as assign a license to a specific user. Integrating the SaaS Fulfillment APIs helps manage the lifecycle of a subscription plan.
+After a user purchases an app subscription in the Microsoft Teams Store, they are redirected to the landing page. Here, they can manage the subscription such as assign a license to a specific user. Integrating the SaaS Fulfillment APIs helps manage the lifecycle of a subscription plan.
 
-Here's a quick overview on the steps to integrate SaaS Fulfillment APIs:
+</br>
+
+<details>
+
+<summary>Here's a quick overview on the steps to integrate SaaS Fulfillment APIs:</summary>
 
   1. When a purchase is made, you get a notification and your landing page URL opens with a purchase ID token.
   1. You must pass the token with the SaaS Resolve API to retrieve subscription details.
   1. After the user signs in and configures, call the Activate Subscription API to notify the commercial marketplace that the subscription is activated.
+</br>
+
+</details>
 
 For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis) and [SaaS Fulfillment purchase flow](/partner-center/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle).
 
@@ -84,7 +91,11 @@ For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/a
 
 Integrate with usageRights Graph API to manage user permissions when a customer, who has a purchased license, launches the app. Use Graph APIs to check if the signed-in user with a valid subscription plan can access your app.
 
-To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas):
+</br>
+
+<details>
+
+<summary>To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas):</summary>
 
   1. Get [access token on behalf of](/graph/auth-v2-user) a user.
   1. [Use the Microsoft Graph API](/graph/use-the-api) to get the user’s object ID.
@@ -92,12 +103,15 @@ To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas
 
   > [!NOTE]
   > If the Microsoft Entra app is used for both SaaS Fulfillment APIs and usageRights API, the tenant under which the Microsoft Entra app is created must either be a publishing tenant or an associated tenant in the Microsoft Partner Center.
+</br>
+
+</details>
 
 For more information, see [technical requirements](/partner-center/marketplace/plan-saas-offer) and [SaaS app listing requirements](/partner-center/marketplace/marketplace-criteria-content-validation).
 
 ## Create a SaaS offer
 
-Offers sold through Microsoft are transactable offers, which means Microsoft facilitates the financial transactions for the license on the publisher's behalf. To sell your SaaS app in Microsoft Teams Store, you must create an offer in Partner Center.
+Offers sold through Microsoft are transactable offers, which means Microsoft facilitates the financial transactions for the license on the publisher's behalf. To sell your SaaS app in Teams Store, you must create an offer in Partner Center.
 
 > [!NOTE]
 > You must have a [commercial marketplace account in Partner Center](/partner-center/create-account) to create offers.
