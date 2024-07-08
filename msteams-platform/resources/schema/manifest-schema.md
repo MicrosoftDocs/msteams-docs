@@ -625,7 +625,7 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout values such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout values such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|||Initial webview URL.|
-|`parameters`|Array of object|5 ||The list of parameters the command takes.|
+|`parameters`|Array of objects|5 ||The list of parameters the command takes.|
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
