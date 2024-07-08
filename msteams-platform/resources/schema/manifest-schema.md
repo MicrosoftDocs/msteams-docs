@@ -398,7 +398,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name|Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`short`|String|30 characters|✔️|The short display name for the app. Use `short` property where the space is limited, such as the app header.|
-|`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there is more space, such as the app catalog or the app details page.|
+|`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there's more space, such as the app catalog or the app details page.|
 
 > [!NOTE]
 >
@@ -523,7 +523,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false`|
-|`team.taskInfo`|Object||✔️|Specify the dialog to preload when you use a bot |
+|`team.taskInfo`|Object||✔️|The dialog to preload when you use a bot |
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16 characters||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16 characters||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -555,8 +555,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|title|String|32|✔️|The bot command name.|
-|description|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
+|`title`|String|32|✔️|The bot command name.|
+|`description`|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
 ## connectors
 
@@ -617,7 +617,7 @@ Each command item is an object with the following structure:
 |`context`|Array of Strings|3 ||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using large language model (LLM).|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using Large Language Models (LLMs).|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. <br>Default value: `false` |
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false` |
 |`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
