@@ -629,10 +629,10 @@ Each command item is an object with the following structure:
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by Copilot using large language model (LLM).|
-|`parameters.value`|String|512 characters||Initial value for the parameter. The value isn't supported|
-|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` . <br>Default value: `text` |
-|`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameters.inputType` is `choiceset`.|
+|`parameters.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by Copilot using Large Language Models (LLMs).|
+|`parameters.value`|String|512 characters||Initial value for the parameter. The value isn't supported.|
+|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. Input value can only be one of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`. <br>Default value: `text` |
+|`parameters.choices`|Array of objects|10 items||The choice options for the `choiceset`. Use only when `parameters.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
 
@@ -664,7 +664,7 @@ Provides the native features on a user's device that your app requests access to
 
 ## validDomains
 
-**Optional**, except **Required** where noted &ndash; Array of strings
+**Optional** (except **Required** where noted) &ndash; Array of strings
 
 A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI navigates to any other domain other than tab configuration, that domain must be specified here.
 
@@ -1009,11 +1009,11 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. |
-|`type`| String | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
+|`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| String | 2048 characters| ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| String | 2048 characters | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
-|`lifetime`| String | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). <br>Default value: `short` |
+|`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). <br>Default value: `short` |
 |`actions`| Array | 20 | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
@@ -1021,7 +1021,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false` |
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them. <br>Default value: `false` |
-|`actions.supportsNoItemContext`| Boolean | | | Allows task pane add-ins to activate without the Reading Pane enabled or a message selected. <br>Default value: `false` |
+|`actions.supportsNoItemContext`| Boolean | | | Allows task pane add-ins to activate without the reading pane enabled or a message selected. <br>Default value: `false` |
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
@@ -1054,18 +1054,18 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | ✔️ | Specifies the ID of the built-in tab that the custom tab should be positioned next to. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.position.align`| String | | ✔️ | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
+|`tabs.position.align`| String enum | | ✔️ | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
 |`tabs.groups`| Array | 10 | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` below.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | 3 | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| String| 2048 characters | ✔️| Specifies the absolute URL of the icon.|
+|`tabs.groups.icons.url`| String | 2048 characters | ✔️| Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| String | | ✔️ | Specifies the ID for the items within the app. |
-|`tabs.groups.controls.items.type`| String | | ✔️ | Defines the control items type. <br>Supported values: `menu`, `button`|
+|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported values: `menu`, `button`|
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
@@ -1094,13 +1094,13 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
 |`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
 |`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as `msgReadFunctionButton`.|
-|`tabs.customMobileRibbonGroups.controls.type` | String |  | ✔️ | Specifies the type of control. The supported value is `MobileButton`|
+|`tabs.customMobileRibbonGroups.controls.type` | String enum |  | ✔️ | Specifies the type of control. <br>Supported value: `MobileButton`|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
-|`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
-|`tabs.customMobileRibbonGroups.controls.icons.size` | Number | | ✔️ | Size in pixels of the icon. The required sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
+|`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
+|`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The required sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons' `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
-|`tabs.customMobileRibbonGroups.controls.icons.scale` | Number | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
+|`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
@@ -1151,10 +1151,10 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 |`alternateIcons`| Object | | | Specifies the main icons that are used to represent the add-in on older versions of Office. This property is **required** if the Office add-in is to be installable in Office on Mac, perpetual Office licenses, and Microsoft 365 subscription versions of Office on Windows earlier than 2304 (Build 16320.00000).|
 |`alternateIcons.icon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in. |
-|`alternateIcons.icon.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
+|`alternateIcons.icon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. Icon image must be 64 x 64 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
-|`alternateIcons.highResolutionIcon.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
+|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
 ## dashboardCards
