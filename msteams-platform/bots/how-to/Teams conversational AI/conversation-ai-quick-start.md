@@ -1,7 +1,7 @@
 ---
 title: Teams AI library quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description: In this module, learn how to quickly try the Teams AI library using the LightBot sample, which creates apps that control lights.
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start

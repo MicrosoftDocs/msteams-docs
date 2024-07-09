@@ -1,7 +1,7 @@
 ---
 title: Execution and handling of deep links
 author: v-npaladugu
-description: Learn how to execute and handle deep links in your Microsoft Teams.
+description: Learn how to execute deep links in your Microsoft Teams personal tab, shared tab, chat message, and bot, handle deep links, and consume a deep link from a tab.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -19,7 +19,7 @@ It's possible to navigate within an app using TeamsJS. The following code demons
 
 You can trigger the navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
 
-```javascript
+```TypeScript / JavaScript
 if (pages.isSupported()) {
   const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
   navPromise.
