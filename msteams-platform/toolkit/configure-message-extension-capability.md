@@ -2,7 +2,7 @@
 title: Configure message extension capability
 author: surbhigupta
 description: Learn how to configure message extension capability within Teams app.
-ms.author: v-vanv
+ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 03/01/2024
@@ -774,5 +774,5 @@ If you're adding message extension to a bot app, you should have a class that ex
 
    For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
-1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
-1. Select the F5 key to debug and preview your Teams app locally.
+1. Select **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
+1. Press **F5** to debug and preview your Teams app.
