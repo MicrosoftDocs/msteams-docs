@@ -1,7 +1,7 @@
 ---
 title: Prerequisites to Create Teams App in VS
 author: zyxiaoyuer
-description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit.
+description: Learn about the tools and accounts required to build a Teams app in Visual Studio, verify custom app upload, and enable custom app upload in admin center.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
