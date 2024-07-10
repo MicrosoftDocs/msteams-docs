@@ -600,7 +600,7 @@ Describes the runtime requirements for the tab to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  List of one or more runtime capabilities that are required for the tab to function properly, specified as name/value pairs, for example: `{ "name": "dialogUrl" }`. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the tab to function properly, specified as name/value pairs. For example, `{ "name": "dialogUrl" }`. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## bots
 
