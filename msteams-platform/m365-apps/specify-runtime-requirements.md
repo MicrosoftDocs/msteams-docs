@@ -54,7 +54,7 @@ Each app element is denoted by an `id`, which maps to `botId` for bots, `entityI
 > [!NOTE]
 > This feature introduces `id` properties to configurableTabs and composeExtensions definitions. Currently, Teams and other Microsoft 365 hosts only support apps containing a single configurableTab and/or single composeExtension. These ID properties were added to future-proof your app in case host support expands to accommodate multiple instances of these components.
 >
-> The `id` property must be specified on a configurableTab or composeExtension for it to be recognized in an `elementRelationshipSet`.
+> The `id` property must be specified in a `configurableTab` or a `composeExtension` for it to be recognized in an `elementRelationshipSet`.
 
 ### One-way dependencies
 
