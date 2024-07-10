@@ -142,7 +142,7 @@ The following code provides an example of a bot activity for a channel team scop
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-onmessageactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-imessageactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-activityhandler-onmessageactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-imessageactivity))-system-threading-cancellationtoken))
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
 
@@ -169,7 +169,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onmessage&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onmessage)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
@@ -201,7 +201,7 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity))
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
@@ -222,7 +222,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
 
 ```javascript
