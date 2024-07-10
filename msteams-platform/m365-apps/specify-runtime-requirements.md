@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> The ability to specify Microsoft 365 host runtime requirements in the app manifest is currently in [public developer preview](../resources/schema/manifest-schema-dev-preview.md) and supported in Teams and Outlook mobile hosts.
+> The ability to specify Microsoft 365 host runtime requirements in app manifest is currently in [public developer preview](../resources/schema/manifest-schema-dev-preview.md) and supported in Teams and Outlook mobile hosts.
 
 If you have a Teams app that contains a personal tab or message extension, you can easily [extend it to run across additional Microsoft 365 hosts](./overview.md), including Outlook and Microsoft 365 (Office) app across web, desktop, and mobile experiences. When you upgrade your Teams app to use app manifest version 1.13 or higher, your app is available in other Microsoft 365 application hosts by default. However, if your app also includes components that aren't yet supported across other Microsoft 365 hosts, your app might only partially load, resulting in unplanned and unsupported user experiences.
 
