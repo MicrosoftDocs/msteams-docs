@@ -750,7 +750,7 @@ Each command item is an object with the following structure:
 
 ### composeExtensions.requirementSet
 
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
