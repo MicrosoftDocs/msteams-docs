@@ -756,7 +756,7 @@ Describes the runtime requirements for the message extension to function properl
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  Species on or more runtime capabilities that are required by the message extension to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly.|
 
 #### composeExtensions.requirementSet.hostMustSupportFunctionalities
 
