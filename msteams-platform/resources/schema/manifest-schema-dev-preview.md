@@ -480,7 +480,7 @@ Describes relationships among individual app components, including  `staticTabs`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object with *dependent* (`element`) and *depended on* (`dependsOn`) [`element` objects](#element-object))|
+| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object with *dependent* (`element`) and *depended on* (`dependsOn`) [`element` objects](#element-object)).|
 | `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object))|
 
 ### element object
