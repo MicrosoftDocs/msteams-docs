@@ -40,7 +40,11 @@ Only a subset of Microsoft 365 host applications supports the ability to specify
 You can specify relationships among the individual components of your app by including an [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
 > [!NOTE]
-> A given pair of app components can only be grouped once, either by `oneWayDependency` or `mutualDependency`. Similarly, cyclical `oneWayDependencies`—where, for example, components *A* and *B* mutually declare each other as a one-way dependency—aren't allowed and will fail manifest validation.
+> Ensure the relationships you create adhere to the following validations rules:
+>
+> 1. Elements specified in an element relationship set must have definitions in the manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in the manifest (with matching `id` value) will result in a manifest validation error.  
+> 1. A given set of components can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) will result in a manifest validation error, because the *A depends on B* relationship is represented twice.
+> 1. Cyclical one-way dependencies aren't permitted. For example, specifying both an *A depends on B* relationship and a *B depends on A* relationship will result in a manifest validation error.
 
 Only a subset of Teams app capabilities can be specified as runtime requirements in app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
 
