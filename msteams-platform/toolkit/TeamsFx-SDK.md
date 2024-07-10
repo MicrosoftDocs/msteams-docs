@@ -1,7 +1,7 @@
 ---
 title: TeamsFx SDK
 author: surbhigupta
-description: In this module, learn about TeamsFx SDK, core concepts and code structure, advanced Customization and scenarios
+description: Learn and get started with prerequisites and core concepts of TeamsFx SDK, its code structure, advanced customizing, Graph scenarios, Bot SSO and latest SDK version used.
 ms.author: v-npaladugu
 ms.localizationpriority: medium
 ms.topic: overview
