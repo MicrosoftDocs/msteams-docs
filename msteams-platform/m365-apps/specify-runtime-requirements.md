@@ -58,7 +58,7 @@ Each app element is denoted by an `id`, which maps to `botId` for bots, `entityI
 
 ### One-way dependencies
 
-Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetonewaydependency) array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). For example:
+Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetonewaydependency) array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). The following JSON snippet shows specific message extension commands that have a one-way dependency on a bot:
 
 ```json
     "elementRelationshipSet": {
@@ -67,7 +67,7 @@ Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.m
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]  // Developers can add more commands.
+            "commandIds": ["command-1-id", "command-2-id"]
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
@@ -81,7 +81,7 @@ For message extensions, you can optionally specify individual commands that requ
 
 ### Mutual dependencies
 
-Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetmutualdependencies) array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. For example:
+Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipsetmutualdependencies) array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other.
 
 ```json
     "elementRelationshipSet": {
@@ -96,7 +96,7 @@ Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.m
 
 ## Specify runtime capability requirements for specific app components (`requirementSet`)
 
-When you're defining an individual app component, you can specify its specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
+When you're defining an individual app component, you can specify its specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. The following JSON snippet shows a static tab that requires its host to support both HTML dialogs invoked from tabs and HTML dialogs invoked from bots. 
 
 ```json
     "staticTabs": [
