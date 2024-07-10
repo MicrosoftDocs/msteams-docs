@@ -590,7 +590,7 @@ Describes the runtime requirements for the tab to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  Species one or more runtime capabilities that are required by the tab to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly.|
 
 #### staticTabs.requirementSet.hostMustSupportFunctionalities
 
