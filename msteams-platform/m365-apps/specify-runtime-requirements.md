@@ -30,10 +30,10 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 Only a subset of Microsoft 365 host applications supports the ability to specify runtime requirements in the app manifest. This support will expand over time. The following hosts ensure only applicable apps and their applicable components are made available to users:
 
-|Microsoft 365 host application| Web | Desktop | Mobile | Notes|
-|---|---|---|---|---|
-| Microsoft Teams| ✔️| ✔️| ✔️| |
-| Microsoft Outlook| ✔️| ✔️| ✔️| |
+|Microsoft 365 host application| Web | Desktop | Mobile |
+|---|---|---|---|
+| Microsoft Teams| ✔️| ✔️| ✔️|
+| Microsoft Outlook| ✔️| ✔️| ✔️|
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
