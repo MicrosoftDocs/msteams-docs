@@ -49,7 +49,7 @@ Currently, a subset of Teams app elements can be specified as runtime requiremen
 - Bots (`bots`)
 - Configurable tabs (`configurableTabs`)
 
-Each app element is denoted by an `id`, which maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.
+Each app element is denoted by an `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions.
 
 > [!NOTE]
 > This feature introduces `id` properties to `configurableTabs` and `composeExtensions` definitions. Teams and other Microsoft 365 hosts only support apps containing a single configurable tab and/or a single message extension. These ID properties future-proof your app in case host support expands to accommodate multiple instances of these components.
