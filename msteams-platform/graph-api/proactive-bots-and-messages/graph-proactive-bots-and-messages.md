@@ -1,9 +1,9 @@
 ---
-title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
+title: Authorize Proactive Bot Installation
 description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
 author: akjo
-ms.topic: Overview
+ms.topic: overview
 ms.date: 12/15/2022
 ---
 
@@ -110,9 +110,9 @@ You can retrieve the `teamsAppId` in the following ways:
     > [!TIP]
     > To narrow the list of results, you can filter any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object.
 
-### Determine whether your bot is currently installed for a message recipient
+### Determine whether your bot is installed for a message recipient
 
-You can determine whether your bot is currently installed for a message recipient as follows:
+You can determine whether your bot is installed for a message recipient as follows:
 
 **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 

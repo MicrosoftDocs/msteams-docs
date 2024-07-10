@@ -113,7 +113,7 @@ To test your API-based message extension created in the Developer Portal for Tea
 # [Visual Studio Code](#tab/visual-studio-code)
 
 > [!NOTE]
-> Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+> Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
 
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
@@ -389,5 +389,5 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 To build an API-based message extension, follow these step-by-step guides:
 
-* [For beginners](../sbs-api-me-ttk.yml): Build an API-based message extension using Teams Toolkit.
+* [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
