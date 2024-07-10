@@ -655,7 +655,7 @@ Describes the runtime requirements for the bot to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️|  Species on or more runtime capabilities that are required by the bot to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly.|
 
 #### bots.requirementSet.hostMustSupportFunctionalities
 
