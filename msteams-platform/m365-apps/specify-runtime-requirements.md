@@ -33,7 +33,7 @@ Only a subset of Microsoft 365 host applications supports the ability to specify
 |Microsoft 365 host application| Web | Desktop | Mobile |
 |---|---|---|---|
 | Microsoft Teams| ✔️| ✔️| ✔️|
-| Microsoft Outlook| ✔️| ✔️| ✔️|
+| Microsoft Outlook| ✔️| ✔️ (New Outlook)| ✔️|
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
