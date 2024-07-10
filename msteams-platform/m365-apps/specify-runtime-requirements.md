@@ -52,7 +52,7 @@ Currently, a subset of Teams app elements can be specified as runtime requiremen
 Each app element is denoted by an `id`, which maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.
 
 > [!NOTE]
-> This feature introduces `id` properties to configurableTabs and composeExtensions definitions. Currently, Teams and other Microsoft 365 hosts only support apps containing a single configurableTab and/or single composeExtension. These ID properties were added to future-proof your app in case host support expands to accommodate multiple instances of these components.
+> This feature introduces `id` properties to `configurableTabs` and `composeExtensions` definitions. Teams and other Microsoft 365 hosts only support apps containing a single configurable tab and/or a single message extension. These ID properties future-proof your app in case host support expands to accommodate multiple instances of these components.
 >
 > The `id` property must be specified in a `configurableTab` or a `composeExtension` for it to be recognized in an `elementRelationshipSet`.
 
@@ -77,7 +77,7 @@ Use the [`oneWayDependencies`](../resources/schema/manifest-schema-dev-preview.m
     }
 ```
 
-For message extensions, you can optionally specify individual commands that require support for specific app components. If those components aren't supported in the runtime host, they will not be made available to the end-user (though all other commands will run).
+For message extensions, you can optionally specify individual commands that require support for specific app components. If those components aren't supported in the runtime host, they won't be made available to the user (though all other commands will run).
 
 ### Mutual dependencies
 
@@ -96,7 +96,7 @@ Use the [`mutualDependencies`](../resources/schema/manifest-schema-dev-preview.m
 
 ## Specify runtime capability requirements for specific app components (`requirementSet`)
 
-When you're defining an individual app component, you can specify it's specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This will ensure the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
+When you're defining an individual app component, you can specify its specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the component only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. For example:
 
 ```json
     "staticTabs": [
@@ -119,7 +119,7 @@ When you're defining an individual app component, you can specify it's specific 
     ],
 ```
 
-Currently, a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
+Only a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
 - HTML-based dialogs (`dialog.url`)
 - HTML-based dialogs for Bot Framework (`dialog.url.bot`)
