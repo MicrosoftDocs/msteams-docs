@@ -1,7 +1,7 @@
 ---
 title: Debug Teams App Locally 
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app locally in Teams Toolkit using Visual Studio.
+description: Learn how to set up dev tunnel for bots and message extension and prepare Teams Toolkit to debug your Teams app locally using Visual Studio.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview

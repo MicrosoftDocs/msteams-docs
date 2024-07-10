@@ -1,7 +1,7 @@
 ---
 title: Create Teams App with Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit.
+description: Learn how to create Teams app in Visual Studio using templates. Know about prerequisites, directory structure, and teams app template available in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -78,8 +78,7 @@ To create a new Teams app, follow the steps:
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
-The steps to create the other apps are similar except notification bot. 
-
+The steps to create the other apps are similar except notification bot.
 
 ### Directory Structure
 
