@@ -20,9 +20,9 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Copilot for Microsoft 365." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Copilot." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
-See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
+See the video to learn more about extending Copilot using Teams message extensions:
 </br>
 </br>
 
@@ -359,7 +359,7 @@ For more on testing your plugin in Copilot, see [Debugging plugin selection](/mi
 
 ## Enable message extension as a plugin for Copilot for meetings
 
-Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365. Before you get started, We recommend you to follow the guidelines listed in [Copilot for Microsoft 365 extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
+Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot. Before you get started, We recommend you to follow the guidelines listed in [Copilot for Microsoft 365 extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
 
 To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
 
