@@ -8,7 +8,7 @@ ms.date: 06/08/2023
 
 # Add Teams tab to SharePoint
 
-Experience a rich integration between Microsoft Teams and SharePoint by adding a Teams tab as a SharePoint Framework (SPFx) web part. This article guides you on how to integrate a tab from a Teams sample app into SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
+Experience a rich integration of Microsoft Teams and SharePoint by adding a Teams tab as a SharePoint Framework (SPFx) web part. This article guides you on how to integrate a tab from a Teams sample app into SharePoint. With the latest release of Teams and SPFx, you have the following two capabilities:
 
 - [SharePoint web parts in Teams](#sharepoint-web-parts-in-teams)
 - [Teams tabs in SharePoint](#teams-tabs-in-sharepoint)
@@ -21,7 +21,7 @@ SharePoint hosts SPFx web parts without the need for external services such as A
 
 ## Teams tabs in SharePoint
 
-You can host your Teams tabs in SharePoint with SPFx that provides a full-page experience. It retains the features of Teams tabs while maintaining the context and familiarity of a SharePoint site.
+With SPFx, you can host your Teams tabs directly in SharePoint that provides a full-page experience. It retains the features of Teams tabs while maintaining the context and familiarity of a SharePoint site.
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows a Teams tab in SharePoint view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image084.png":::
 
@@ -42,9 +42,9 @@ You can host your Teams tabs in SharePoint with SPFx that provides a full-page e
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-4. Select the sample app manifest .zip file and select **Open**.
+4. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
 
-5. A dialog opens to add the custom app. Under the **Add** dropdown, select **Add to a team**.
+5. Under the **Add** dropdown, select **Add to a team**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
 
@@ -52,7 +52,9 @@ You can host your Teams tabs in SharePoint with SPFx that provides a full-page e
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set up a tab in a team.":::
 
-7. A new static tab is added to your Teams channel. You can experiment with the app and test its features including configurable tabs and a chatbot.
+7. A new static tab is added to your Teams channel.
+
+    You can experiment with the app and test its features including configurable tabs and a chatbot.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
 
@@ -71,7 +73,7 @@ You can host your Teams tabs in SharePoint with SPFx that provides a full-page e
 
     You must then create a new page in your site.
 
-1. To create a new page, select :::image type="icon" source="../../assets/images/tabs/tabs-in-sharepoint/gear-icon.png" border="false"::: icon and select **Add a page**.
+1. To create a new page, select **Settings** :::image type="icon" source="../../assets/images/tabs/tabs-in-sharepoint/gear-icon.png" border="false"::: and select **Add a page**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image066.png" alt-text="Screenshot shows the Office 365 settings options.":::
 
