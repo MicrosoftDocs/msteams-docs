@@ -37,7 +37,7 @@ Currently, a subset of Microsoft 365 host applications support the ability to sp
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
-You can specify relationships among the individual components of your app by including a [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
+You can specify relationships among the individual components of your app by including an [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
 > [!NOTE]
 > A given pair of app components can only be grouped once, by either a `oneWayDependency` or `mutualDependency`.  Similarly, cyclical `oneWayDependencies` (where for example, components *A* and *B* mutually declare each other as one-way dependency) are not allowed and will not pass manifest validation.
