@@ -42,7 +42,7 @@ You can specify relationships among the individual components of your app by inc
 > [!NOTE]
 > A given pair of app components can only be grouped once, either by `oneWayDependency` or `mutualDependency`. Similarly, cyclical `oneWayDependencies`—where, for example, components *A* and *B* mutually declare each other as a one-way dependency—aren't allowed and will fail manifest validation.
 
-Currently, a subset of Teams app elements can be specified as runtime requirements in the app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
+Only a subset of Teams app capabilities can be specified as runtime requirements in app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
 
 - Personal tabs (`staticTabs`)
 - Message extensions (`composeExtensions`), including individual commands
