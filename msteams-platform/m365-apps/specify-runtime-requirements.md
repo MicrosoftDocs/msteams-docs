@@ -44,10 +44,9 @@ You can specify relationships among the individual components of your app by inc
 
 Only a subset of Teams app capabilities can be specified as runtime requirements in app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
 
-- Personal tabs (`staticTabs`)
+- Tabs: personal (`staticTabs`) and configurable (`configurableTabs`)
 - Message extensions (`composeExtensions`), including individual commands
 - Bots (`bots`)
-- Configurable tabs (`configurableTabs`)
 
 Each app element is denoted by an `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions.
 
