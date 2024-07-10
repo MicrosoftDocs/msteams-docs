@@ -653,13 +653,13 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Security best practices
 
-If your message extension plugin uses URL-based dialogs (task modules), be aware that web browsers are moving toward [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). Best practice is to prepare now for third-party cookie deprecation by taking the following measures:
+If your message extension plugin uses URL-based dialogs (task modules), it’s important to note that web browsers are [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). To ensure your plugin remains functional and secure, request you to implementing the following best practices:
 
-1. Move away from third-party cookies.
+1. **Transition from third-party cookies**: Begin phasing out the use of third-party cookies in your application.
 
-2. If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies.
+1. **Secure cookies**: If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies. )to secure your cookies.
 
-3. Remove any fallbacks you may have put in place for TeamsJS initialization failures. If your URL-based dialog fails upon `app.initialize`, don't fall back to opening it as a regular web app, as this exposes it to third-party cookie attack vectors.
+1. **Remove TeamsJS initialization fallbacks**: Avoid implementing fallback mechanisms for TeamsJS initialization failures. If a URL-based dialog doesn't successfully initialize with `app.initialize`, refrain from defaulting to a standard web app launch as it makes your app vulnerable to third-party cookie attack vectors.
 
 ## Technical requirements
 
