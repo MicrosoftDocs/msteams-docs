@@ -584,7 +584,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ### staticTabs.requirementSet
 
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
