@@ -649,7 +649,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ### bots.requirementSet
 
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
