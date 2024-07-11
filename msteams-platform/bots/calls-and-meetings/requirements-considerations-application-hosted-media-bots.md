@@ -19,7 +19,7 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 
 An application-hosted media bot requires the following:
 
-* The bot must be developed in C# and the standard .NET Framework and deployed in Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media and .NET Core is supported for an application-hosted media bot and sdk supports .Net 6.0.
+* The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot,  and the SDK provides support for .Net 6.0.
 
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
