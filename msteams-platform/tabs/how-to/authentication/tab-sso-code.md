@@ -1,5 +1,5 @@
 ---
-title: Code configuration for enabling SSO for tabs
+title: Add Code to Enable SSO for Tabs
 description: Update code in your tab app for requesting and receiving access token using app user's Teams identity for enabling Single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
@@ -8,12 +8,12 @@ ms.date: 12/13/2022
 ---
 # Add code to enable SSO
 
-Before you add code to enable SSO, ensure that you've registered your app with Microsoft Entra ID.
+Ensure that you register your app with Microsoft Entra ID before you add code to enable SSO.
 
 > [!div class="nextstepaction"]
 > [Register with Microsoft Entra ID](tab-sso-register-aad.md)
 
-You need to configure your tab app's client-side code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
+You need to configure your tab app's client-side code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token":::
 
@@ -32,7 +32,7 @@ To obtain app access for the current app user, your client-side code must make a
 <summary>Learn more about getAuthToken()</summary>
 <br>
 
-`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests a Microsoft Entra access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Microsoft Entra ID to obtain a new access token.
+`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests a Microsoft Entra access token to be issued on behalf of app. The token is acquired from the cache, if it isn't expired. If it expires, a request is sent to Microsoft Entra ID to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/%40microsoft/teams-js/microsoftteams.authentication#@microsoft-teams-js-microsoftteams-authentication-getauthtoken).
 </details>
@@ -101,15 +101,15 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 > As a best practice for security of access token:
 >
 > - Always call `getAuthToken()` only when you need an access token.
-> - Teams will cache the access token for you. Don't cache or store it in your app's code.
+> - Teams automatically caches the access token, so there's no need to cache or store it within your app's code.
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who is currently signed in.
+When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who's signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. The app user can access and use your tab app for the granted permissions and scopes after consenting.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -137,7 +137,7 @@ Teams can cache this information associated with the app user's identity, such a
 
 ## Pass the access token to server-side code
 
-If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The web APIs must decode access token to view claims for that token.
+If you need to access web APIs on your server, you need to pass the access token to your server-side code. The web APIs must decode access token to view claims for that token.
 
 > [!NOTE]
 > If you don't receive User Principal Name (UPN) in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Microsoft Entra ID.
@@ -195,7 +195,7 @@ For more information on validating the access token, see [validate tokens](/azur
 
 #### Example access token
 
-The following is a typical decoded payload of an access token.
+The following code is a typical decoded payload of an access token:
 
 ```javascript
 {
@@ -224,7 +224,7 @@ The following is a typical decoded payload of an access token.
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|-----|
 | Tab SSO |Microsoft Teams sample app for tabs Microsoft Entra SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
-| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
+| Tab, bot, and message extension (ME) SSO | This sample shows SSO for tab, bot, and ME - search, action, and link unfurling. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
 
 ## Next step
 

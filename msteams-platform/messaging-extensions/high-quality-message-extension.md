@@ -1,6 +1,6 @@
 ---
-title: Bot-based message extension plugin guidelines
-description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+title: Guidelines to Create Copilot Extensions
+description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 11/14/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
+# Guidelines to create or upgrade Copilot extensions
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,10 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 
 We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions must support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365 (M365 Chat).":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
+
+> [!NOTE]
+> If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
 
 ## Mandatory requirements
 
@@ -39,11 +42,11 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 (M365 Chat).
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -125,7 +128,7 @@ The following table lists the short description examples for each category:
   "description": {
     "short": "Search and view customer leads.",
     "full": "Resolve tickets faster, simplify employee workflows and improve team performance by integrating Contoso CRM to Microsoft Teams. Contoso CRM is a complete customer service solution that’s easy to use and scales with your business."
-  },
+  }
 ```
 
 # [General](#tab/general)
@@ -168,9 +171,13 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
 * Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+
 * Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+
 * Avoid grammar and punctuation errors. *[Mandatory fix]*
+
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+
 * Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
 The following table lists the command and semantic description examples for each category:
@@ -270,7 +277,7 @@ The following table lists the command and semantic description examples for each
 
 ### Parameter description
 
-Each message extension command supports has a corresponding `parameters' property which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -416,14 +423,14 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
+> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365.
 
-For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters. 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -520,7 +527,10 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample prompts
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
+> [!NOTE]
+> Sample prompts will be available soon in Copilot for Microsoft 365.
+
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts will be available in the following areas within Copilot for Microsoft 365:
 
 * First Run Experience (FRE): When a user first installs or enables a plugin.
 * Prompt library or Copilot Lab: When a user seeks help with prompts.
@@ -547,36 +557,36 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ```json
 "composeExtensions": [
-	{
-		"canUpdateConfiguration": true,
-		"botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-		"commands": [
-			{
-				"id": "orders",
-				"title": "Orders",
-				"context": [
-					"Commandbox",
-					"Compose"
-				],
-				"description": "Search for orders",
-				"semanticDescription": "Search for orders",
-				"samplePrompts": [
-					{
-						"text": "Search for all orders"
-					},
-					{
-						"text": "Search for orders related to Contoso"
-					},
-					{
-						"text": "Search for all pending orders"
-					},
-					{
-						"text": "Search for all completed ordered for Fabrikam"
-					}
-				]
-			}
-		]
-	}
+ {
+  "canUpdateConfiguration": true,
+  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+  "commands": [
+   {
+    "id": "orders",
+    "title": "Orders",
+    "context": [
+     "Commandbox",
+     "Compose"
+    ],
+    "description": "Search for orders",
+    "semanticDescription": "Search for orders",
+    "samplePrompts": [
+     {
+      "text": "Search for all orders"
+     },
+     {
+      "text": "Search for orders related to Contoso"
+     },
+     {
+      "text": "Search for all pending orders"
+     },
+     {
+      "text": "Search for all completed ordered for Fabrikam"
+     }
+    ]
+   }
+  ]
+ }
 ]
 ```
 
@@ -586,7 +596,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
   <br/>
   <details><summary>Adaptive Card response template example</summary>
@@ -705,11 +715,37 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::
 
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+
+## Extend your plugin to Copilot in meetings
+
+Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
+
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
+
+  * **ColumnSets**
+
+    * Don't define `ColumnSets` with more than three columns.
+    * Don’t use explicit pixel width on more than one column in the set.
+    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+    * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+  * **Sizing images**
+
+    * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
+    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+    * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+
+For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 ## Technical requirements
 

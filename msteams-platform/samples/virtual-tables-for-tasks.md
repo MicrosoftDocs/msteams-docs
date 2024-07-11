@@ -1,5 +1,5 @@
 ---
-title: Virtual tables for Tasks, Meetings, and Files in Collaboration control app
+title: Virtual Tables in Collaboration Control
 author: surbhigupta
 description: In this module, learn about Virtual tables for Tasks, Meetings, and Files in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
@@ -431,7 +431,7 @@ HTTP/1.1 204 No Content
 ---
 
 > [!NOTE]
-> You can set the `If-Match` header to be '*' and then you'll not need to provide any etag values, but your changes will always overwrite the task and it’s details.
+> You can set the `If-Match` header to be '*' and then you won't need to provide any etag values, but your changes will always overwrite the task and it’s details.
 
 ## Virtual tables authorization
 
