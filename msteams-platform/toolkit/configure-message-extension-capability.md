@@ -128,7 +128,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
 ## Add message extension code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must looks like:
+1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
 
    ```yml
    |--.vscode/
@@ -201,11 +201,11 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ```
 
    > [!NOTE]
-   > In a JavaScript project, a `build` folder is not required to run the projec. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, a `build` folder is not required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
-1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the `Start application` task's dependOn to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's dependOn.
+1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the `Start application` task's `dependOn` to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn`:
 
    ```json
    "tasks":[
@@ -300,8 +300,8 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ]
    ```
 
-1. Add action `botAadApp/create` and `botFramework/create` under provision in `teamsapp.local.yml`.
-1. Add the following code in `file/createOrUpdateEnvironmentFile` action under deploy:
+1. Add the actions `botAadApp/create` and `botFramework/create` under provision in the `teamsapp.local.yml` file.
+1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
 
    ```yml
    provision:
@@ -350,7 +350,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
 ## Provision your app to Azure
 
-1. Copy the `botRegistration/` folder from bot to `infra/`.
+1. Copy the `botRegistration/` folder and add under `infra/`.
 1. Add following code to the bicep file:
 
    ```yml
@@ -416,7 +416,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    output BOT_DOMAIN string = webApp2.properties.defaultHostName
    ```
 
-1. Update the `azure.parameters.json` file with the following code to ensure that necessary parameters are set correctly:
+1. To ensure the necessary parameters correctly update the `azure.parameters.json` file with the following code:
 
    ```json
    {
@@ -484,10 +484,11 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
    For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
-1. Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
-1. Run `Teams: Deploy` command in Visual Studio Code to deploy your app code to Azure.
-1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
-1. Select the F5 key to debug and preview your Teams app.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
+1. Enter `Teams: Provision` to apply the bicep to Azure.
+1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+1. Select **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Press **F5** to debug and preview your Teams app.
 
 # [Add message extension to bot app](#tab/botapp)
 
@@ -594,7 +595,7 @@ To create a bot app, see [create a bot app with Teams Toolkit](create-new-projec
 
 ## Add message extension code to project
 
-If you're adding message extension to a bot app, you should have a class that extends `TeamsActivityHandler`. Add your message extension functions or copy functions from your previously created message extension app to your own class. The following code is an example if you copy functions from a message extension app created with Teams Toolkit:
+When incorporating message extensions into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from an earlier created message extension app into your class. The following code is an example:
 
    ```yml
      public class YourHandler extends TeamsActivityHandler{
@@ -628,13 +629,7 @@ If you're adding message extension to a bot app, you should have a class that ex
 
 ## Setup local debug environment
 
-1. Add the following new tasks in `.vscode/task.json`:
-
-   * `Start local tunnel`
-   * `Start bot`
-   * `Start frontend`.
-
-    Add `Start bot` and `Start frontend` to `dependOn` in the `Start application`task. Configure `Start bot` and `cwd` option of `Start frontend` as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to `dependOn` in the `Start Teams App Locally` task. For example:
+Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the `Start application` task's `depenOn` to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn`:
 
    ```json
    "tasks":[
@@ -729,8 +724,8 @@ If you're adding message extension to a bot app, you should have a class that ex
    ]
    ```
 
-1. Add action `botAadApp/create` and `botFramework/create` under provision in `teamsapp.local.yml`.
-1. Add the following code in `file/createOrUpdateEnvironmentFile` action under deploy:
+1. Add the actions `botAadApp/create` and `botFramework/create` under provision in the `teamsapp.local.yml` file.
+1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
 
    ```yml
    provision:
