@@ -12,7 +12,12 @@ ms.date: 06/05/2024
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-In the new Teams Toolkit version of 17.10, a Teams solution contians two projects, Teams project and your source code. Teams project contians the Teams app package and Teams Toolkit configuration files. Your source code project is the business logic for your tab, bot, or other. By separating the concept of Teams app and your project, we can address the scenario where you already have your existing web or bot solutions and want to embed your web app to Teams or integrate their bot to Teams client. The Teams project makes it easier for you to integrate with any existing project or solution.
+In the new Teams Toolkit version of 17.10, a Teams solution contains two projects, Teams project and your source code. 
+
+- **Teams project**: Teams project contains the Teams app package and Teams Toolkit configuration files. 
+- **Source code**: Your source code project is the business logic for your tab, bot, or others. 
+
+The separation of Teams project and source code allows the integration of existing web or bot solutions into Teams. This approach simplifies the process of integrating any existing project or solution with Teams.
 
 ## Prerequisites
 
