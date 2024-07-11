@@ -6,7 +6,7 @@ description: Learn the level of support for different TeamsJS library capabiliti
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
-ms.date: 07/03/2024
+ms.date: 07/11/2024
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 
@@ -34,7 +34,7 @@ For more information about the new Teams and Outlook, see [Outlook blog](https:/
 
 Using the following tables, select any TeamsJS Capability for further details including reference docs, samples, usage notes, and limitations.
 > [!NOTE]
-> Table information is based on tests run using **TeamsJS v2.24** and the latest host versions available at the time of testing. Depending on subsequent host changes, support might differ. These tables are provided to help you understand capability support across hosts, but you should always make sure to use the appropriate *isSupported()* calls in your code to verify support.
+> The information in the following tables is derived from tests conducted with TeamsJS v2.24 and the latest host versions available during testing. Support might vary based on subsequent host modifications. These tables are provided to help you understand capability support across hosts, however, always ensure to use the relevant `isSupported()` calls in your code to verify support.
 
 ## Cross-host capabilities
 
