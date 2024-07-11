@@ -1,6 +1,6 @@
 ---
 title: Add Teams tab to SharePoint
-description: Learn how to deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
+description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/08/2023
@@ -15,20 +15,20 @@ Experience a rich integration of Microsoft Teams and SharePoint by adding a Team
 
 ## SharePoint web parts in Teams
 
-SharePoint hosts SPFx web parts without the need for external services such as Azure. For SharePoint developers, this feature simplifies the development process for Teams tabs. For more information on SPFx in Teams, see [how to use the SharePoint Framework in Teams](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab).
+SharePoint hosts SPFx web parts without the need for external services such as Azure. For SharePoint developers, this functionality simplifies the development process for Teams tabs. For more information, see [how to use the SharePoint Framework in Teams](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab).
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt-text="Screenshot shows the web part exposed as a Teams tab." lightbox="../../assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png":::
 
 ## Teams tabs in SharePoint
 
-With SPFx, you can host your Teams tabs directly in SharePoint that provides a full-page experience. It retains the features of Teams tabs while maintaining the context and familiarity of a SharePoint site.
+With SPFx, you can host your Teams tabs directly in SharePoint that provides a full-page experience. It retains the functionality of Teams tabs while maintaining the context and familiarity of a SharePoint site.
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image084.png" alt-text="Screenshot shows a Teams tab in SharePoint view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image084.png":::
 
 ### Benefits
 
 - Reach SharePoint users with your existing Teams tab.
-- Upload your app manifest (previously called Teams app manifest) directly to your SharePoint App Catalog. SharePoint supports [Teams application packages](~/concepts/build-and-test/apps-package.md).
+- Upload your app manifest (previously called Teams app manifest) directly to your SharePoint App Catalog. SharePoint supports [Teams app package](~/concepts/build-and-test/apps-package.md).
 - Configure the tab on a page just like any other SharePoint web part.
 - Access the [context](~/tabs/how-to/access-teams-context.md) of your tab the same way it does when running in Teams.
 
@@ -93,9 +93,9 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image073.png":::
 
-### Explore Single Part App Pages in SharePoint
+### Explore single part app pages in SharePoint
 
-After you publish your page, explore [Single Part App Pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This helps you convert the current page into a Single Part App Page, a normal SharePoint page layout with the full-page experience for the Teams tab.
+After you publish your page, explore [single part app pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This helps you convert the current page into a single part app page, a normal SharePoint page layout with the full-page experience for the Teams tab.
 
 :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image085.png" alt-text="Screenshot shows the Teams app in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image085.png":::
 
