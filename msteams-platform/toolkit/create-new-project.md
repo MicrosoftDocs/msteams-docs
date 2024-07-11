@@ -1,7 +1,7 @@
 ---
 title: Create a new Teams app
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit using Visual Studio Code.
+description: Learn how to create basic and scenario-based Teams app in Visual Studio Code, the directory structure and teams app template available in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
