@@ -14,17 +14,28 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+command menus are set of commands or actions that help users start or continue conversations with bots. They are important for bots as they improve user engagement, retention, and discovery of the bot's capabilities.
+
+To assist users in initiating conversations with your bot, consider incorporating command menu. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. command menu is displayed at the start of a new chat, providing users with an easy way to begin a conversation.
+
+You can add command menu to your bot through the `commands` property in your app manifest. Each command represents a Prompt and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
+
+We recommend providing command menu that are specific and target real scenarios that your users are likely to face. For example, if you have a todo list app, prioritize command menus like Provide a summary of my tasks due today or What tasks are overdue from last week over more generic prompts like Hello.
+
+>[!NOTE]
+> When implementing command menus, your bot should not send a welcome message. The prompt starter will not show up if your bot sends a welcome message. 
+
+In group chats and channels Prompt Starters show up in a flyout when the user @mentions your bot. A similar flyout is available in 1:1 chats when the user clicks the View Prompts button above compose. 
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
 
-* * *
+---
 
 ## Create a command menu for your bot
 
@@ -92,7 +103,7 @@ The manifest example code for single menu for both scopes is as follows:
             },
             {
               "title":"Search Flights",
-              "description":"Search flights from Seattle to Phoenix May 2-5 departing after 3pm"
+              "description":"Search flights from X to Y May 2-5 departing after 3pm"
             },
             {
               "title":"Search Hotels",
@@ -100,7 +111,7 @@ The manifest example code for single menu for both scopes is as follows:
             },
             {
               "title":"Best Time to Fly",
-              "description":"Best time to fly to London for a 5 day trip this summer"
+              "description":"Best time to fly to X for a 5 day trip this summer"
             }
           ]
         }
