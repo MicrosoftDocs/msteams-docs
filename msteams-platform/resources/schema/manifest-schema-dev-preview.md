@@ -945,7 +945,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property specifies Outlook add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -955,7 +955,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
-|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you select and hold (or right-click) in the Office UI. |
+|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) in the UI of the Office application. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1078,7 +1078,7 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| Array |20 | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events`| Array |20 | ✔️ | Configures the event that cause actions in an Outlook add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
@@ -1123,12 +1123,12 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.contextMenus
 
-A context menu is a shortcut menu that appears when you select and hold (or right-click) in the Office UI.
+A context menu is a shortcut menu that appears when you right-click (or select and hold) in the UI of the Office application.
 
 |Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`menus`| Array | | ✔️ | Configures the context menus. |
-|`menus.entryPoint`| String enum | | ✔️ | Use `text` or `cell` here for Office context menu. Use `text` if the context menu should open when a user selects and holds (or right-clicks) on the selected text. Use `cell` if the context menu should open when the user selects and holds (or right-clicks) on a cell in an Excel spreadsheet. |
+|`menus.entryPoint`| String enum | | ✔️ | Use `text` or `cell` here for Office context menu. Use `text` if the context menu should open when a user right-clicks (or selects and holds) on the selected text. Use `cell` if the context menu should open when the user right-clicks (or selects and holds) on a cell in an Excel spreadsheet. |
 |`menus.controls`| Array | | ✔️ | The same as controls in [extensions.ribbons.tabs.groups.controls](#extensionsribbons). The control type should be `menu`. |
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
