@@ -36,23 +36,23 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
-2. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
+1. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 
-3. Select **Upload a custom app**.
+1. Select **Upload a custom app**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-4. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
+1. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
 
-5. Under the **Add** dropdown, select **Add to a team**.
+1. Under the **Add** dropdown, select **Add to a team**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
 
-6. Select the team where you want to install the app and select **Set up**.
+1. Select the team where you want to install the app and select **Set up**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set up a tab in a team.":::
 
-7. A new static tab is added to your Teams channel.
+1. A new static tab is added to your Teams channel.
 
     You can experiment with the app and test its features including configurable tabs and a chatbot.
 
