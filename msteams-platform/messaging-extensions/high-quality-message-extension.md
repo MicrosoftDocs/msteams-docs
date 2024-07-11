@@ -657,7 +657,7 @@ If your message extension plugin uses URL-based dialogs (task modules), it’s i
 
 1. **Transition from third-party cookies**: Begin phasing out the use of third-party cookies in your application.
 
-1. **Secure cookies**: If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies. )to secure your cookies.
+1. **Secure cookies**: If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies.
 
 1. **Remove TeamsJS initialization fallbacks**: Avoid implementing fallback mechanisms for TeamsJS initialization failures. If a URL-based dialog doesn't successfully initialize with `app.initialize`, refrain from defaulting to a standard web app launch as it makes your app vulnerable to third-party cookie attack vectors.
 
