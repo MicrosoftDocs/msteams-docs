@@ -9,6 +9,9 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
+> [!NOTE]
+> If you're using connectors to automate repetitive tasks, we are transitioning to Workflow for more efficient automation.
+
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
 ## Create actionable messages

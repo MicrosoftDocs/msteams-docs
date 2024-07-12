@@ -670,6 +670,9 @@
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
+  - name: Create Workflows
+    href: webhooks-and-connectors/how-to/create-workflows.md
+    displayName: run workflow, create workflow, add workflow, manage workflow
 - name: Build cards and dialogs
   items:
   - name: Overview
