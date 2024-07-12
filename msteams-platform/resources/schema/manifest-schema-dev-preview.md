@@ -955,7 +955,7 @@ The `extensions` property specifies Outlook add-ins within an app manifest and s
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
-|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) in the UI of the Office application. |
+|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1123,7 +1123,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.contextMenus
 
-A context menu is a shortcut menu that appears when you right-click (or select and hold) in the UI of the Office application.
+A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document.
 
 |Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
