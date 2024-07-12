@@ -10,11 +10,11 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's app purchase experience in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. As a developer, you can bring out the purchase experience detailed in this article.
+This article helps you understand the user's app purchase experience in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. As a developer, you can bring out the purchase experience for your app as detailed in this article.
 
 ## Subscription experience
 
-Here's the end user experience to purchase a subscription plan for a Teams app:
+Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In Teams, select **Apps** > **Manage apps and purchases**.
 
@@ -33,7 +33,7 @@ Here's the end user experience to purchase a subscription plan for a Teams app:
 1. In the **Choose a subscription plan** dialog, select **Buy** for the plan you want to purchase.
 
     > [!NOTE]
-    > Private plans are visible only to users of the organization you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates such private plans.
+    > Private plans are visible only to users of the organization to whom you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates a private plan.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan-lightbox.png":::
 
@@ -43,7 +43,7 @@ Here's the end user experience to purchase a subscription plan for a Teams app:
 
         :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
 
-    1. Under **Billing account**, enter the name and billing details, and select **Next**.
+    1. Under **Billing account**, enter the name and billing details and select **Next**.
 
         :::image type="content" source="~/assets/images/saas-offer/billing-details.png" alt-text="Screenshot shows adding the billing address." lightbox="../../../../assets/images/saas-offer/billing-details.png":::
 
