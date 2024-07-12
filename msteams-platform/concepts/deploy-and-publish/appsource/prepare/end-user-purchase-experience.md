@@ -88,8 +88,6 @@ Users can manage the app subscriptions purchased in Microsoft Teams through the 
 * Cancel a subscription
 * View your invoices
 
-Start by navigating to the Manage your apps section in Microsoft Teams. From there, select the subscription you wish to manage. You'll then see a detailed view of the selected subscription, where you can perform the aforementioned actions.
-
 The following example shows how users can manage licenses for third-party apps from the Teams Store:
 
 1. Go to **Microsoft Teams**.
@@ -157,10 +155,6 @@ Here are the subscription management options that the user can perform from the 
 
 <details>
 <summary>Cancel a subscription</summary>
-
-1. Select the **Subscriptions** tab to view your list of subscriptions.
-
-    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
 
 1. Find the app that you want to cancel and select **More options ...** > **View subscription**.
 
