@@ -1,14 +1,14 @@
 ---
 title: Configure Outlook Add-in capability within your Teams app
 author: surbhigupta
-description: Learn to configure Outlook Add-in capability within your Teams app.
+description: Learn to configure Outlook Add-in capability within Teams app.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 02/16/2024
 ---
 
-# Configure Outlook Add-in capability within your Teams app
+# Configure Outlook Add-in capability within Teams app
 
 The Outlook add-in for Microsoft Teams enhances collaboration and productivity by seamlessly integrating Teams functionality into the Outlook environment. Office Add-ins are web apps that extend the functionality of Outlook. The functionalities of an Outlook Add-in include:
 
@@ -145,7 +145,7 @@ The following steps help you add an Outlook Add-in to a Teams app:
     1. In the **ACCOUNTS** section, ensure that you're signed into Microsoft 365.
     1. Select **View** > **Run**.
     1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)**.
-    1. Select the F5 key.
+    1. Select **F5**.
        The project will build and run. This process takes a couple of minutes. Teams opens in browser with a prompt to add your tab app.
 
     > [!NOTE]
@@ -168,7 +168,7 @@ The following steps help you add an Outlook Add-in to a Teams app:
     1. In the **ACCOUNTS** section, ensure that you're signed into Microsoft 365.
     1. Select **View** > **Run**.
     1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)**.
-    1. Select the F5 key.
+    1. Select **F5**.
        The project will build and run. This process takes a couple of minutes. Teams opens in browser with a prompt to add your tab app.
     1. Open the **Inbox** of your Microsoft 365 account identity and open any message.
        A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you opened the message in its own window).
@@ -546,7 +546,7 @@ To see both the app and the add-in running at the same time, take the following 
           resourceId: ${{ADDIN_AZURE_STORAGE_RESOURCE_ID}}
     ```
 
-1. Open the infra/azure.parameters.json file in the root of the project and replace its contents with the following JSON:
+1. Open the `infra/azure.parameters.json` file in the root of the project and replace its contents with the following JSON:
 
     ```JSON
     {
