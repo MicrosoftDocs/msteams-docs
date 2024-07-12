@@ -1,7 +1,7 @@
 ---
 title: Integrate location capabilities
 author: surbhigupta
-description: Learn how to use Teams JavaScript client library to utilize location capabilities using Code snippets and samples.
+description: Learn how to use Teams JavaScript client library and location APIs to utilize location capabilities using code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
