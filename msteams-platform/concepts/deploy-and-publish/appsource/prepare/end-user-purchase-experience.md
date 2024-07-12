@@ -20,7 +20,7 @@ Here's the end user experience to purchase a subscription plan for a Teams app:
 
 1. In Teams Store, find and select the app for which you want to purchase the subscription.
 
-    :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store.":::
+    :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
 
 1. In the app details dialog, select **View plans**.
 
@@ -45,27 +45,21 @@ Here's the end user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Billing account**, enter the name and billing details, and select **Next**.
 
-        :::image type="content" source="~/assets/images/saas-offer/billing-details.png" alt-text="Screenshot shows adding the billing address.":::
+        :::image type="content" source="~/assets/images/saas-offer/billing-details.png" alt-text="Screenshot shows adding the billing address." lightbox="../../../../assets/images/saas-offer/billing-details.png":::
 
-    1. Under **Verify your address**, select the required address and select **Next**.
-
-        You can use the suggested address and also can edit the address for any changes.
+    1. Under **Verify your address**, select the address and select **Next**.
 
         :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows verifying the billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
 
     1. Under **Add a credit card or debit card**, add the required details, select the card address, and select **Next**.
 
-        To use the same address of the billing account for the card, turn on the **Same as billing account** toggle. You can turn off the toggle to add a new address.
+        To use the billing account's address for the card, turn on the **Same as billing account** toggle. To add a new address, turn off the toggle.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address.":::
 
     1. Under **Review**, verify the details and select **Place order**.
 
         :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
-
-    1. Under **Purchase Authentication**, enter the code and select **Submit**.
-
-        :::image type="content" source="~/assets/images/saas-offer/purchase-auth.png" alt-text="Screenshot shows the purchase authentication.":::
 
 1. When prompted, select **Set up subscription** to activate your subscription.
 
@@ -86,13 +80,15 @@ Following is an example of the consent screen:
 
 ## License and subscriptions management experience
 
-If you've purchased a Teams app subscription, you can manage the subscription through **Manage your apps**. You can only manage subscriptions you purchased. You can access the list of subscriptions and their details, and perform the following actions to manage the subscription:
+Users can manage the app subscriptions purchased in Microsoft Teams through the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
 
-* Change a plan.
-* Buy or remove licenses.
-* Update a payment method.
-* Cancel a subscription.
-* View your invoices.
+* Change a plan
+* Buy or remove licenses
+* Update a payment method
+* Cancel a subscription
+* View your invoices
+
+Start by navigating to the Manage your apps section in Microsoft Teams. From there, select the subscription you wish to manage. You'll then see a detailed view of the selected subscription, where you can perform the aforementioned actions.
 
 The following example shows how users can manage licenses for third-party apps from the Teams Store:
 
@@ -106,10 +102,10 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
 
-Here are the subscription management options:
+Here are the subscription management options that the user can perform from the **Subscriptions** page:
 
 <details>
-<summary>Assign licenses</summary>
+<summary>Assign or unassign licenses</summary>
 
 1. Select an existing subscription from the list and select **Assign licenses**.
 
@@ -126,16 +122,10 @@ Here are the subscription management options:
     You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
     :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
-&nbsp;
-
-</details>
-
-<details>
-<summary>Unassign licenses</summary>
 
 1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users." lightbox="../../../../assets/images/saas-offer/unassign-button.png":::
 &nbsp;
 
 </details>
