@@ -110,7 +110,7 @@ Perform the following steps to migrate to the new project structure:
 
     * `uses: file/createOrUpdateJsonFile`: This action might change the `appSettings.json` file of your project to configure runtime environments. Update the `target` field to the correct path.
         > [!IMPORTANT]
-        > You need not modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `teamsapp.local.yml`, remove it.
+        > You don't need to modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `teamsapp.local.yml`, remove it.
     * `uses: cli/runDotnetCommand`: This action executes a `.NET` command within your project to package it. Adjust the `workingDirectory` field to the new path and update the command string with the correct `.csproj` path.
     * `uses: azureAppService/zipDeploy`: This action deploys the packaged file remotely. Update the `workingDirectory` field to the correct path.
 
@@ -153,29 +153,25 @@ Perform the following steps to migrate to the new project structure:
     ```
 
     > [!NOTE]
-    > This step is easy to make mistakes, so you can provision and deploy on the new project folder to test the app.
+    > We recomment that you provision and deploy on the new project folder to test the app.
 
 1. Close the solution and ensure all changes are saved.
 
-You've successfully migrated your project and your folder structure is updated.
+You've successfully migrated your project and your folder structure is updated as follows:
 
 ##### Folder Structure
-
-# [Old structure](#tab/old)
-
-:::image type="content" source="../assets/images/teams-toolkit-overview/old-structure-migration.png" alt-text="Screenshot shows the old structure.":::
 
 # [New structure](#tab/new)
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/new-structure-migration.png" alt-text="Screenshot shows the new structure.":::
 
+# [Old structure](#tab/old)
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/old-structure-migration.png" alt-text="Screenshot shows the old structure.":::
+
 ---
 
 ##### Project Type File
-
-# [Old project type file](#tab/old)
-
-None
 
 # [New project type file](#tab/new)
 
@@ -193,9 +189,57 @@ This file extension is **.ttkproj**.
 </Project>
 ```
 
+# [Old project type file](#tab/old)
+
+None
+
 ---
 
 ##### LaunchSettings.json
+
+# [New launchSettings.json](#tab/new)
+
+The following code is the sample of the C# project:
+
+```json
+{
+  "profiles": {
+    "Start Project": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:44302;http://localhost:2544",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "hotReloadProfile": "aspnetcore"
+    }
+  }
+}
+```
+
+The following code is the sample of TeamsApp project:
+
+```json
+{
+  "profiles": {
+    // Debug project within Teams
+    "Microsoft Teams (browser)": {
+      "commandName": "Project",
+      "launchUrl": "https://teams.microsoft.com/l/app/${{TEAMS_APP_ID}}?installAppPackage=true&webjoin=true&appTenantId=${{TEAMS_APP_TENANT_ID}}&login_hint=${{TEAMSFX_M365_USER_NAME}}",
+    },
+    // Debug project within Microsoft 365
+    "Microsoft 365 app (browser)": {
+      "commandName": "Project",
+      "launchUrl": "https://www.office.com/m365apps/${{M365_APP_ID}}?auth=2&login_hint=${{TEAMSFX_M365_USER_NAME}}",
+    },
+    // Debug project within Outlook
+    "Outlook (browser)": {
+      "commandName": "Project",
+      "launchUrl": "https://outlook.office.com/host/${{M365_APP_ID}}?login_hint=${{TEAMSFX_M365_USER_NAME}}",
+    }
+  }
+}
+```
 
 # [Old launchSettings.json](#tab/old)
 
@@ -252,53 +296,51 @@ This file extension is **.ttkproj**.
 }
 ```
 
-# [New launchSettings.json](#tab/new)
-
-The following code is the sample of the C# project:
-
-```json
-{
-  "profiles": {
-    "Start Project": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:44302;http://localhost:2544",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "hotReloadProfile": "aspnetcore"
-    }
-  }
-}
-```
-
-The following code is the sample of TeamsApp project:
-
-```json
-{
-  "profiles": {
-    // Debug project within Teams
-    "Microsoft Teams (browser)": {
-      "commandName": "Project",
-      "launchUrl": "https://teams.microsoft.com/l/app/${{TEAMS_APP_ID}}?installAppPackage=true&webjoin=true&appTenantId=${{TEAMS_APP_TENANT_ID}}&login_hint=${{TEAMSFX_M365_USER_NAME}}",
-    },
-    // Debug project within Microsoft 365
-    "Microsoft 365 app (browser)": {
-      "commandName": "Project",
-      "launchUrl": "https://www.office.com/m365apps/${{M365_APP_ID}}?auth=2&login_hint=${{TEAMSFX_M365_USER_NAME}}",
-    },
-    // Debug project within Outlook
-    "Outlook (browser)": {
-      "commandName": "Project",
-      "launchUrl": "https://outlook.office.com/host/${{M365_APP_ID}}?login_hint=${{TEAMSFX_M365_USER_NAME}}",
-    }
-  }
-}
-```
-
 ---
 
 ##### Teams app YAML File
+
+# [New structure](#tab/new)
+
+The following code is the sample of teamapp.local.yml:
+
+```yml
+# Generate runtime appsettings to JSON file
+  - uses: file/createOrUpdateJsonFile
+    with:
+      target: ../MyTeamsApp8/appsettings.Development.json
+      content:
+        TeamsFx:
+          Authentication:
+            ClientId: ${{AAD_APP_CLIENT_ID}}
+            ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+            InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
+            OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
+
+```
+
+The following code is the sample of teamapp.yml:
+
+```yml
+# Triggered when 'teamsapp deploy' is executed
+deploy:
+  - uses: cli/runDotnetCommand
+    with:
+      args: publish --configuration Release MyTeamsApp8.csproj
+      workingDirectory: ../MyTeamsApp8
+  # Deploy your application to Azure App Service using the zip deploy feature.
+  # For additional details, refer to https://aka.ms/zip-deploy-to-app-services.
+  - uses: azureAppService/zipDeploy
+    with:
+      # Deploy base folder
+      artifactFolder: bin/Release/net8.0/publish
+      # The resource id of the cloud resource to be deployed to.
+      # This key will be generated by arm/deploy action automatically.
+      # You can replace it with your existing Azure Resource id
+      # or add it to your environment variable file.
+      resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
+      workingDirectory: ../MyTeamsApp8
+```
 
 # [Old structure](#tab/old)
 
@@ -375,55 +417,9 @@ deploy:
       resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
 ```
 
-# [New structure](#tab/new)
-
-The following code is the sample of teamapp.local.yml:
-
-```yml
-# Generate runtime appsettings to JSON file
-  - uses: file/createOrUpdateJsonFile
-    with:
-      target: ../MyTeamsApp8/appsettings.Development.json
-      content:
-        TeamsFx:
-          Authentication:
-            ClientId: ${{AAD_APP_CLIENT_ID}}
-            ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
-            InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
-            OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
-
-```
-
-The following code is the sample of teamapp.yml:
-
-```yml
-# Triggered when 'teamsapp deploy' is executed
-deploy:
-  - uses: cli/runDotnetCommand
-    with:
-      args: publish --configuration Release MyTeamsApp8.csproj
-      workingDirectory: ../MyTeamsApp8
-  # Deploy your application to Azure App Service using the zip deploy feature.
-  # For additional details, refer to https://aka.ms/zip-deploy-to-app-services.
-  - uses: azureAppService/zipDeploy
-    with:
-      # Deploy base folder
-      artifactFolder: bin/Release/net8.0/publish
-      # The resource id of the cloud resource to be deployed to.
-      # This key will be generated by arm/deploy action automatically.
-      # You can replace it with your existing Azure Resource id
-      # or add it to your environment variable file.
-      resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
-      workingDirectory: ../MyTeamsApp8
-```
-
 ---
 
 ##### Solution launch user file
-
-# [Old structure](#tab/old)
-
-None
 
 # [New structure](#tab/new)
 
@@ -478,5 +474,9 @@ This file must be stored at the same level of the solution folder.
   }
 ]
 ```
+
+# [Old structure](#tab/old)
+
+None
 
 ---
