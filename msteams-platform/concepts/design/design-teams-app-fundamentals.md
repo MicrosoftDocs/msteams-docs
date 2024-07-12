@@ -1,9 +1,10 @@
 ---
-title: Design your app - Understand the design system
+title: Basic App Design Fundementals
 description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.topic: overview
+ms.date: 01/07/2024
 ---
 # Microsoft Teams app design system
 
@@ -35,7 +36,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       An avatar is a graphical representation of a person, team, bot, or entity in Teams. An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space. 
 
-      * [See full avatar guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
+      [See full avatar guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -51,7 +52,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column span="3":::
 
-      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Teams store.
+      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Microsoft Teams Store.
 
       You also can use Fluent UI icons throughout your app:
 
@@ -130,7 +131,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.
 
-      * [See full copy and content guidelines—including writing for bots (Figma)](https://www.figma.com/community/file/916836509871353159)
+      [See full copy and content guidelines—including writing for bots (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

@@ -36,7 +36,7 @@ yarn add @microsoft/teams-js
 
 ## Setting up the package
 
-Live Share canvas has two primary classes that enable turn-key collaboration: `InkingManager` and `LiveCanvas`. `InkingManager` is responsible for attaching a fully-featured `<canvas>` element to your app, while `LiveCanvas` manages the remote synchronization with other meeting participants. Used together, your app can have complete whiteboard-like functionality in just a few lines of code.
+Live Share canvas has two primary classes that enable turn-key collaboration: `InkingManager` and `LiveCanvas`. `InkingManager` is responsible for attaching a fully-featured `<canvas>` element to your app, while `LiveCanvas` manages the remote synchronization with other connected participants. Used together, your app can have complete whiteboard-like functionality in just a few lines of code.
 
 | Classes                                                                     | Description                                                                                                                                                                                                                                      |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -92,7 +92,9 @@ const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
 const { container } = await liveShare.joinContainer(schema);
-const liveCanvas = container.initialObjects.liveCanvas as LiveCanvas;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const liveCanvas = container.initialObjects.liveCanvas as unknown as LiveCanvas;
 
 // Get the canvas host element
 const canvasHostElement = document.getElementById("canvas-host");
@@ -123,7 +125,7 @@ export const ExampleLiveCanvas = () => {
     );
 
     return (
-        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        {/* Canvas needs to be a child of a parent with absolute styling */}
         <div style={{ position: "absolute"}}>
             <div
                 ref={liveCanvasRef}
@@ -301,7 +303,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF shows an example of drawing strokes on the canvas using the the laser pointer tool.":::
 
-The laser pointer is unique as the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, the trailing effect renders for a short period before it fades out completely. This tool is perfect to point out information on the screen during a meeting, as the presenter doesn't have to switch between tools to erase strokes.
+The laser pointer is unique as the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, the trailing effect renders for a short period before it fades out completely. This tool is perfect to point out information on the screen during collaboration, as the presenter doesn't have to switch between tools to erase strokes.
 
 ```html
 <div>
@@ -435,7 +437,7 @@ You can customize this behavior in the following ways:
 - Change the scale level of the viewport.
 
 > [!NOTE]
-> Reference points, offsets, and scale levels are local to the client and aren't synchronized across meeting participants.
+> Reference points, offsets, and scale levels are local to the client and aren't synchronized across connected participants.
 
 Example:
 

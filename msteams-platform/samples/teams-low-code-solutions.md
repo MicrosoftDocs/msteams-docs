@@ -1,8 +1,9 @@
 ---
-title: Create low-code custom apps for Microsoft Teams
-description: Learn about the available Microsoft low and no code solutions with Teams an Microsoft Power Platform.
+title: Create Low-code & No-code Custom Apps
+description: Learn about the available Microsoft low and no code solutions and how to create an app with Teams and Microsoft Power Platform.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 02/28/2023
 ---
 
 # Create low-code custom apps for Teams
@@ -15,11 +16,11 @@ Low code platforms provide an intuitive approach to software development with mi
 
 Microsoft Power Platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, formerly Microsoft Flow, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment:
 
-:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
+:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Screenshot shows the Power Platform services.":::
 
 > [!NOTE]
 >
-> - If you're interested in publishing your power apps in the Teams Store for users across all organizations, please fill out this [form](https://go.microsoft.com/fwlink/?linkid=2204468).
+> - If you're interested in publishing your power apps in the Microsoft Teams Store for users across all organizations, please fill out this [form](https://go.microsoft.com/fwlink/?linkid=2204468).
 > - If you're interested in publishing an app for a specific organization, see the following:
 >   - [Power Apps and Microsoft Teams integration](/power-apps/teams/overview)
 >   - [Create apps in Microsoft Teams by using Power Apps](/power-apps/teams/create-apps-overview)
@@ -80,5 +81,6 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## See also
 
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Power Platform Connectors overview](/connectors/connectors)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Power Platform Connectors overview](/connectors/connectors)
+

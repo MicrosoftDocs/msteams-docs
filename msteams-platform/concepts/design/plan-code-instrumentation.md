@@ -1,10 +1,11 @@
 ---
-title: Plan code instrumentation using analytics service
+title: Plan Instrumentation Using Analytics
 author: heath-hamilton
 description: Learn about planning code instrumentation using an analytics service.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 11/28/2022
 ---
 
 # Plan code instrumentation using analytics service
@@ -36,5 +37,5 @@ Analyzing your solution usage and insights on features that your end users value
 - [Get context for your tab](../../tabs/how-to/access-teams-context.md)
 - [Get Teams specific context for your bot](../../bots/how-to/get-teams-context.md)
 - [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-- [Build Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+- [Build dialogs](../../task-modules-and-cards/what-are-task-modules.md)
 - [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)

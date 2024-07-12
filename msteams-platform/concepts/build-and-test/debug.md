@@ -1,8 +1,9 @@
 ---
-title: Choosing a setup to test and debug your app
-description: In this module, learn options for testing and debugging Microsoft Teams apps in local and cloud-hosted environment.
+title: Test & Debug App Locally or on Cloud
+description: In this module, learn options for testing and debugging Microsoft Teams apps in purely local, locally hosted in Teams, and cloud-hosted environment.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 08/28/2022
 ---
 
 # Choose a test setup and debug your Teams app
@@ -18,7 +19,7 @@ Run the experience from your own computer for purely local or local Teams testin
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
-Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
+Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our Microsoft Teams Store or distributing to customers.
 
 ## Purely local
 
@@ -76,7 +77,6 @@ To load and run your experience within Teams, you need to create a package and u
 
 ## See also
 
-* [Test your app](test-app-overview.md)
 * [Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
 * [DevTools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)
 * [Test app behavior in different environment](../../toolkit/test-app-behavior.md)

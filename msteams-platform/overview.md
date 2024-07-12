@@ -1,5 +1,5 @@
 ---
-title: Build apps for the Microsoft Teams platform
+title: Build Apps for Teams Platform
 author: heath-hamilton
 description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
 ms.topic: overview
@@ -24,7 +24,7 @@ Let's look at some areas where an app helps to meet a business need.
 
 | **Development options** | **Business opportunities** |
 | --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams store |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
 | **Customer benefits** | **Internal workflows** |
 | - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
 
@@ -58,11 +58,11 @@ Here's why Teams is best suited for your app needs:
 
     Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests, expense reports are repetitive tasks. They make for effective Teams apps.
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Teams app for internal use":::
+    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Screenshot shows you the Teams app for internal use.":::
 
 * **Personal apps with tabs and bots**
 
-    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
+    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including dialogs (referred as task modules in TeamsJS v1.x) to simplify complex sets of information.
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 
@@ -74,9 +74,9 @@ Here's why Teams is best suited for your app needs:
 
     :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the SharePoint site ported as a Teams tab.":::
 
-* **Teams store advantage**
+* **Teams Store advantage**
 
-    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams store marketplace can be a great platform for large audiences to discover your app.
+    Push your app on Teams Store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great platform for large audiences to discover your app.
 
 * **Build once, run everywhere**
 

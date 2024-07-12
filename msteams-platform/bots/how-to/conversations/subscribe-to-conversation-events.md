@@ -1,11 +1,10 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: Work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with samples (.NET,Node.js,Python).
+description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: events bot channel message reaction conversation
 ---
 
 # Conversation events in your Teams bot
@@ -29,10 +28,11 @@ You can use conversation update events to provide better notifications and effec
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
+* When the bot is added to a conversation.
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
@@ -98,8 +98,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-created)
 
 ```json
 {
@@ -196,8 +194,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-renamed)
-
 ```json
 {
     "type": "conversationUpdate",
@@ -291,8 +287,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-deleted)
-
 ```json
 {
     "type": "conversationUpdate",
@@ -355,7 +349,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
@@ -389,8 +383,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-restored)
 
 ```json
 {
@@ -521,12 +513,10 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-added)
-
 The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
-> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the id of the channel that the user selected during app installation or where installation was triggered from.
+> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
 
 ```json
 {
@@ -697,8 +687,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-removed)
-
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
 ```json
@@ -800,8 +788,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-renamed)
-
 ```json
 { 
     "type": "conversationUpdate",
@@ -887,8 +873,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-deleted)
 
 ```json
 { 
@@ -978,8 +962,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-restored)
 
 ```json
 { 
@@ -1072,8 +1054,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-archived)
-
 ```json
 { 
     "type": "conversationUpdate",
@@ -1164,8 +1144,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-unarchived)
 
 ```json
 { 
@@ -1284,8 +1262,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-added-to-bot-message)
 
 ```json
 {
@@ -1415,8 +1391,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-removed-from-bot-message)
-
 ```json
 {
     "reactionsRemoved": [
@@ -1501,7 +1475,7 @@ Use the `installationUpdate` event to send an introductory message from your bot
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities is set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
@@ -1557,8 +1531,6 @@ async onInstallationUpdateActivity(context: TurnContext) {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
 
 ```json
 {

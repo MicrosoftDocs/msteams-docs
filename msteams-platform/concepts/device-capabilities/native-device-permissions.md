@@ -1,10 +1,11 @@
 ---
-title: Request device permissions for your Microsoft Teams app
+title: Device Permissions for Teams Apps
 author: surbhigupta
-description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
-ms.localizationpriority: medium
+description: Learn to update your app manifest to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities.
+ms.localizationpriority: high
 ms.topic: how-to
 ms.author: surbhigupta
+ms.date: 03/21/2023
 ---
 
 # Request device permissions for your Teams app
@@ -19,7 +20,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, dialogs (referred as task modules in TeamsJS v1.x), or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
 * Capture and view images
@@ -47,19 +48,19 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
 1. Open Teams.
 1. Go to **Settings** > **App permissions**.
-1. Select the app for which you need to choose the settings.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
     :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Screenshot shows the mobile App permissions.":::
 
 # [Desktop](#tab/desktop)
 
-1. Open your Teams app.
-1. Select your profile icon in the upper right corner of the window.
-1. Select **Settings** > **Permissions** from the dropdown menu.
+1. Open Teams.
+1. Go to **Settings** > **App permissions**.
+1. Select the app for which you want to customize the settings.
 1. Select your desired settings.
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Screenshot shows the device permissions.":::
+    :::image type="content" source="../../assets/images/tabs/device-permissions-new.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new.png":::
 
 ---
 
@@ -86,6 +87,8 @@ Each property allows you to prompt the users to ask for their consent:
 | notifications | Permission to send the user notifications.      |
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
+
+For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
 
 ## Check permissions from your app
 
@@ -115,8 +118,8 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 
 > [!IMPORTANT]
 >
-> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop.
+> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams.media#functions) for a single image capture.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API isn't fully supported on the Teams desktop client.
 
 For example:
 
@@ -208,26 +211,26 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
-# [TeamsJS v2](#tab/teamsjs-v2)
-
-```JavaScript
-     function getLocation() {
-        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
-            let currentLocation = JSON.stringify(location);
-     }).catch((error) => { /*Error getting location*/ })} 
-```
-
-# [TeamsJS v1](#tab/teamsjs-v1)
-
-```JavaScript
-     function getLocation() {
-     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-         let currentLocation = JSON.stringify(location);
-     });
-     } 
-```
-
-***
+  # [TeamsJS v2](#tab/teamsjs-v2)
+    
+  ```JavaScript
+  function getLocation() {
+    location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+        let currentLocation = JSON.stringify(location);
+    }).catch((error) => { /*Error getting location*/ })} 
+  ```
+    
+  # [TeamsJS v1](#tab/teamsjs-v1)
+    
+  ```JavaScript
+  function getLocation() {
+  microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+     let currentLocation = JSON.stringify(location);
+  });
+  } 
+  ```
+    
+ ---
 
 Here's how the device permissions prompts appear to users on mobile and desktop.
 
@@ -267,5 +270,4 @@ Device permissions are stored for every sign in session. It means that if you si
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

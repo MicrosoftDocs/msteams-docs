@@ -59,7 +59,7 @@ Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to t
 In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [!TIP]
-> You need to have both your application in Visual Studio and ngrok running. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service, it will return a new URL and you will have to update your application with the new URL.
+> You need to have both your application in Visual Studio and ngrok running. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It continues to listen and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service, it returns a new URL and you have to update your application with the new URL.
 
 ## Upload your tab
 
@@ -68,11 +68,11 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 
 **To upload your tab**
 
-1. Go to Microsoft Teams. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
 1. Go to **App Studio** and select the **Manifest editor** tab.
 
-1. Select **Import an existing app** in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available here:
+1. Select **Import an existing app** in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It's available here:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
@@ -82,11 +82,11 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 
 ### Update your app package with Manifest editor
 
-After you have uploaded your app package into App Studio, you must finish configuring it.
+After uploading your app package into App Studio, you must finish configuring it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your `manifest.json` but there are a few fields that you must update:
+There's a list of steps on the left side of the Manifest editor, and on the right side, a list of properties that must have values for each of those steps. Much of the information is provided by your `manifest.json` but there are a few fields that you must update:
 
 #### Details: App details
 
@@ -123,7 +123,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up dialog box, select **Add to a team** or from the drop-down, select **Add to a chat**.
+1. In the pop-up dialog box, select **Add to a team** or from the dropdown, select **Add to a chat**.
 
 1. Choose the team or chat where you want the tab to be displayed and select **Set up a tab**.
 
@@ -132,4 +132,3 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. To view your tab, go to the team where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
 
     ![Channel tab ASPNETMVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
-

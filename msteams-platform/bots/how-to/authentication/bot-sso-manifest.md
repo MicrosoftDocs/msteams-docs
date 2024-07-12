@@ -1,56 +1,56 @@
 ---
 title: Update manifest for enabling SSO for bot and messaging extension
-description: Describes updating manifest to enable SSO for bot and message extension.
+description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
 # Update app manifest for SSO and preview your app
 
-Before you update Teams app manifest, ensure that you've configured code to enable SSO in your app.
+Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
 
-You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your app and bot resource in Microsoft Entra ID. You've also configured code to handle tokens. Now, you must update the app manifest to enable SSO for your app. The app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
-Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app to help app users access your bot app seamlessly.
+Configure the `webApplicationInfo` property in the app manifest file. This property enables SSO for your app to help app users access your bot app seamlessly.
 
 `webApplicationInfo` has two elements, `id` and `resource`.
 
 | Element | Description |
 | --- | --- |
-| `id` | Enter the app ID (GUID) that you created in Azure AD. |
-| `resource` | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy it from the **Azure AD** > **Expose an API** section. |
+| `id` | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
+| `resource` | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
 
 > [!NOTE]
-> Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
+> Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
+The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
 For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
 
-## To configure Teams app manifest
+## To configure app manifest
 
 1. Open the app project.
-2. Open the manifest folder.
+2. Open the app manifest folder.
 
     > [!NOTE]
     >
-    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
-1. Add one of the following code snippets to the manifest file to add the new property.
+1. Add one of the following code snippets to the app manifest file to add the new property:
 
     - If your app has a standalone bot, add the following code snippet:
 
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://botid-00000000-0000-0000-0000-000000000000"
+        "id": "{Azure AD AppId}",
+        "resource": "api://botid-{Azure AD AppId}"
         }
         ```
 
@@ -59,25 +59,25 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         ```json
         "webApplicationInfo": 
         {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "resource": "api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000"
+        "id": "{Azure AD AppId}",
+        "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
         }
         ```
 
         where,
-        - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
-        - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
+        - `{Azure AD AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
+        - `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
-4. Update the app ID from Azure AD in the **id** property.
+4. Update the app ID from Microsoft Entra ID in the **id** property.
 5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the Teams app manifest file.
+6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>
-<summary>Here's an example of app manifest after it's updated</summary>
+<summary>Here's an example of the app manifest after it's updated</summary>
 
 ```json
 {
@@ -159,11 +159,11 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 </details>
 
 > [!NOTE]
-> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-## Sideload and Preview in Teams
+## Upload a custom app and Preview in Teams
 
-You've configured the app to enable SSO. You can now sideload your app in Teams and preview it in Teams environment.
+You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in Teams environment.
 
 To preview your app in Teams:
 
@@ -177,11 +177,11 @@ To preview your app in Teams:
 
     The options to upload an app appear.
 
-1. Select **Upload a custom app** to sideload the app into Teams.
+1. Select **Upload a custom app** to upload your custom app into Teams.
 
 1. Select your app package zip file, and then select **Add**.
 
-    The app is sideloaded. The consent dialog appears to inform you of the permissions that may be required.
+    The custom app is uploaded. The consent dialog appears to inform you of the permissions that may be required.
 
 1. Select **Continue**.
 
@@ -201,7 +201,7 @@ You can also upload your SSO-enabled app in Developer Portal. To enable SSO supp
 
     The **Configure** page appears.
 
-1. Enter the messaging endpoint you configured in Azure AD as **Endpoint address**.
+1. Enter the messaging endpoint you configured in Microsoft Entra ID as **Endpoint address**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/dev-portal-sso.png" alt-text="Developer Portal support for SSO in a bot app":::
 

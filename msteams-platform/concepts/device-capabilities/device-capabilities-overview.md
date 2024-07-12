@@ -5,6 +5,7 @@ description: Learn how to integrate native device capabilities, such as, locatio
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
+ms.date: 02/08/2023
 ---
 
 # Device capabilities

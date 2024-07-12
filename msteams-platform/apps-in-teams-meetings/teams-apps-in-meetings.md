@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.date: 04/07/2022
 ---
 
-# Apps for Teams meetings and calls
+# Build apps for Teams meetings and calls
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle.
 
@@ -61,7 +61,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#receive-meeting-start-and-end-events":::
     :::column-end:::
     :::column span="":::
     :::column-end:::
@@ -70,7 +70,9 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 <br>
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
+Custom apps built for your org (LOB apps) built for meetings and calls are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
+
+Third-party apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
@@ -101,7 +103,11 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ### App caching for tab app in Teams meeting
 
-You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](build-tabs-for-meeting.md#app-caching).
+You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [app caching for your tab app](../tabs/how-to/app-caching.md).
+
+### Default theme for meeting apps
+
+By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api). Earlier versions of Teams clients only support dark and contrast theme for apps in Teams meetings.
 
 ## User types in Teams
 
@@ -113,14 +119,14 @@ Teams supports user types, such as in-tenant, guest, federated or external, and 
 
 The following list details the various user types along with their accessibility:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Entra ID for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee.
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Microsoft Entra ID and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your Teams or other shared resources from your organization. Guest access is a better option for external users to have access to Teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization will be in effect.
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
+* **Anonymous**: Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -146,9 +152,21 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 > * Presenter role isn't available in one-on-one calls.
 > * A user who starts the group call from a chat is considered as an organizer.
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant | Presenter or  organizer can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
+| Guest | Presenter or  organizer can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
+| Federated or External | Presenter can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
+| Anonymous |Presenter can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Not available |
+
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [Integrate Teams meetings and calls in external apps](../get-started/b2c-apps.md)

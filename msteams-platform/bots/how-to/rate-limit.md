@@ -1,6 +1,7 @@
 ---
 title: Rate limiting for bots
 description: Learn how to optimize bot with rate limiting. Detect transient exceptions, per bot thread limit. You can also perform an exponential backoff.
+ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
@@ -56,7 +57,8 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public static bool IsTransient(Exception ex)
+        public bool IsTransient(Exception ex) 
+          {
           {
               if (ex.Message.Contains("429"))
                   return true;

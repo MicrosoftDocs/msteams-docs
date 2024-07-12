@@ -1,5 +1,5 @@
 ---
-title: Update and delete messages sent from your bot
+title: Update & Delete Bot Messages
 author: WashingtonKayaker
 description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview
@@ -12,6 +12,9 @@ ms.author: anclear
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+
+> [!NOTE]
+> A bot can't update or delete messages sent by the user in Microsoft Teams.
 
 ## Update messages
 
@@ -27,6 +30,10 @@ It is not necessary for the new message to match the original in type. For examp
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
 ```csharp
+// Send initial message
+var response = await turnContext.SendActivityAsync(MessageFactory.Attachment(card.ToAttachment()), cancellationToken);
+var activityId = response.Id; // Fetch activity id.
+
 // MessageFactory.Text(): Specifies the type of text data in a message attachment.
 var newActivity = MessageFactory.Text("The new text for the activity");
 newActivity.Id = activityId;
@@ -43,6 +50,10 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
+// Send initial message
+var message = await context.sendActivity("<Your Message>");
+var activityId = message.id; // Fetch activity id.
+
 // MessageFactory.Text(): Specifies the type of text data in a message attachment.
 const newActivity = MessageFactory.text('The new text for the activity');
 newActivity.id = activityId;
@@ -59,6 +70,10 @@ await turnContext.updateActivity(newActivity);
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
+# Send initial message
+message = await turn_context.send_activity("<Your Message>")
+activityId = message.id # Fetch activity id.
+
 # MessageFactory.Text(): Specifies the type of text data in a message attachment.
 new_activity = MessageFactory.text("The new text for the activity")
 new_activity.id = activity_id

@@ -1,10 +1,11 @@
 ---
 title: Designing your message extension
-description: Learn how to design a Teams message extension and get the Microsoft Teams UI Kit. Describes about Teams design guidelines reference message extensions tips and best practice.
+description: Learn how to design a message extension and get the Microsoft Teams UI Kit. Describes Teams design guidelines reference message extensions tips and best practice.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
+ms.date: 05/17/2022
 ---
 # Designing your Microsoft Teams message extension
 
@@ -22,7 +23,7 @@ You can find comprehensive message extension design guidelines, including elemen
 
 You can add a message extension in the following Teams contexts:
 
-* From the Teams store.
+* From the Microsoft Teams Store.
 * In a channel, chat, or meeting (before, during, and after) near the compose box. It's worth noting if you add a message extension in one of these places, only you can use it in that context.
 
 The following examples show how to add a message extension in a channel.
@@ -75,7 +76,7 @@ You have some options for displaying message extension search results, including
 
 Action commands allow people to trigger actions and process requests in external services within Teams. For example, if your app tracks orders, a user could create a new order using the contents of a colleague’s message from right inside their chat.
 
-Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
+Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x).
 
 ## Open a message extension
 
@@ -255,9 +256,9 @@ If it makes sense for your use cases, consider creating a search-based message e
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example of handling design work.":::
 
-#### Don't: Embed your entire app in a task module
+#### Don't: Embed your entire app in a dialog
 
-If your message extension requires action commands, keep the task module simple and display only the components required to complete the action.
+If your message extension requires action commands, keep the dialog simple and display only the components required to complete the action.
 
    :::column-end:::
 :::row-end:::
@@ -278,7 +279,7 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
 #### Don't: Hard code color values
 
-If you don't use Teams color tokens, your designs will be less scalable and take more time to manage.
+If you don't use Teams color tokens, your designs will be less scalable and take time to manage.
 
    :::column-end:::
 :::row-end:::

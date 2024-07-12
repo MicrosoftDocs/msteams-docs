@@ -1,36 +1,36 @@
 ---
-title: Design your app - App icon for store and app bar
-description: Learn about the app icons for store and app bar
+title: Design App Icon for Teams Store
+description: Learn about the app icons for Microsoft Teams Store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.topic: App icon
+ms.topic: reference
+ms.date: 05/23/2023
 ---
-# Microsoft Teams app icon for store and app bar
+# Teams app icon for Teams Store and app bar
 
 This article provides the guidelines for creating icons in your app ecosystem to help designers and you submit the correct application icon. Following these guidelines creates uniformity and balance in your app ecosystem and emphasizes the artwork of your app icon.
 
 ## App icon
 
-When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Teams store review, these icons must meet certain size requirements. Follow the steps to ensure your app icons fit the Teams store standards.
+When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Microsoft Teams Store review, these icons must meet certain size requirements. Follow the steps to ensure your app icons fit the Teams Store standards.
 
 ### Balanced layout
 
-The icons are intended to create a uniform layout. These guidelines helps you create your app icon for submission.
+The icons are intended to create a uniform layout. These guidelines help you create your app icon for submission.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-icon-balanced-layout.png" alt-text="Example shows the uniform layout for app icons.":::
 
 ### Creating your assets
 
-Microsoft Teams needs three assets during app submission to generate the app icons.
+Microsoft Teams needs two assets during app submission to generate the app icons.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-icon-assets-needed.png" alt-text="Example shows the three assets to generate app icons." lightbox="../../assets/images/design-guidelines/app-icon-assets-needed.png":::
+:::image type="content" source="../../assets/images/design-guidelines/app-icon-asset-needed.png" alt-text="Example shows the two assets to generate app icons.":::
 
 |Counter|Description|
 |----------|-----------|
-|1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the app store or fly-outs.|
+|1|A full bleed PNG format at 192 x 192 pixels. Utilize the full asset space as the background. This is used in the Teams Store or fly-outs.|
 |2|A default or rest PNG format icon at 32 x 32 pixels. This icon is used as **rest/default** state in the app bar and other locations in the product. |
-|3|A focus or pressed  PNG format icon at 32 x 32 pixels. This icon is used as **focus** state in the app bar.|
 
 ### Color icon architecture
 
@@ -84,9 +84,9 @@ Refer this list for content areas where your icon shows in the product, dependin
    :::column span="":::
 :::image type="content" source="../../assets/images/design-guidelines/safe-area-do.png" alt-text="Example shows a logo within the safe area.":::
 
-#### Do: Follow the recommendation for safe area (96 x 96)
+#### Do: Follow the recommendation for safe area (120 x 120)
 
-It is recommended that if you have a logo, keep it within the 96 x 96 safe area inside of the 192 x 192 PNG format icon.
+It's recommended that if you have a logo, keep it within the 120 x 120 safe area inside of the 192 x 192 PNG format icon.
 
    :::column-end:::
    :::column span="":::
@@ -94,7 +94,7 @@ It is recommended that if you have a logo, keep it within the 96 x 96 safe area 
 
 #### Don’t: Make the icon bigger than the safe area
 
-Here is an example of a logo inside of the PNG format icon that is not within the safe area. It creates uneven padding (negative space) around the icon.
+Here's an example of a logo inside of the PNG format icon that isn't within the safe area. It creates uneven padding (negative space) around the icon.
 
    :::column-end:::
 :::row-end:::
@@ -132,7 +132,7 @@ Border is added automatically. In this case just upload your PNG format without 
 
 #### Don’t: Add a border
 
-Borders are added dynamically. If you include a border in your PNG format, it'll result in unwanted duplication on white backgrounds.
+Borders are added dynamically. If you include a border in your PNG format, it results in unwanted duplication on white backgrounds.
 
    :::column-end:::
 :::row-end:::
@@ -189,7 +189,7 @@ If you have a long app name, try to abbreviate so that it’s easier to read whe
 
 #### Don’t: Include multiple words in app icon
 
-Avoid using multiple words on the icon. It is impossible to read the text when the icon is at smaller sizes for example 32 x 32 or 36 x 36.
+Avoid using multiple words on the icon. It's impossible to read the text when the icon is at smaller sizes, for example, 32 x 32 or 36 x 36.
 
    :::column-end:::
 :::row-end:::

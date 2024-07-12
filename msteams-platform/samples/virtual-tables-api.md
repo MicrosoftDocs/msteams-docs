@@ -5,6 +5,7 @@ description: In this module, learn about Virtual Tables web API for Collaboratio
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Virtual tables Web API
@@ -12,7 +13,7 @@ ms.topic: conceptual
 When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features aren't supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See Virtual Tables Entity Reference for details on what each virtual table supports.
 
 > [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Virtual table sorting
 
@@ -24,7 +25,7 @@ With the virtual tables, you can use the OData $orderby query parameter to set c
 * Graph Event
 
 > [!NOTE]
-> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
+> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, the result set maintains its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
 
 Examples:
 
@@ -123,7 +124,7 @@ You can specify the page size by using the `odata.maxpagesize` preference value 
 
 ---
 
-Currently the following Virtual Tables support the `odata.maxpagesize` preference:
+The following Virtual Tables support the `odata.maxpagesize` preference:
 
 * Graph Booking Appointment
 * Graph Calendar Event
@@ -169,7 +170,7 @@ You can specify the number of records to return by passing the `$top` option in 
 > [!Note]
 > The response won't include the `@nextLink` property. If your use case requires the next page link to be returned, you can use the odata.maxpagesize preference header described in section 1 instead of passing the $top URI parameter.
 
-Currently the following virtual tables support fetching a specific page:
+The following virtual tables support fetching a specific page:
 
 * Graph Booking Appointment
 * Graph Calendar Event

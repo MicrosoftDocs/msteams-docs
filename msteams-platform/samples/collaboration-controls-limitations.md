@@ -1,16 +1,16 @@
 ---
-title: Limitations and known issues in Collaboration control app
+title: Limitations in Collaboration Controls
 author: surbhigupta
 description: In this module, learn about limitations and known issues in Collaboration controls app for Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
+ms.date: 09/30/2022
 ---
 
 # Limitations and known issues
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 Following are the limitations for Collaboration controls:
 
@@ -24,14 +24,14 @@ Following are the limitations for Collaboration controls:
      :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="The screenshot shows the subgrid view of the tasks." border= "true":::
 
 * Activities added to the timeline control don’t appear in the components, tasks, meetings, and notes created in the components aren't included in the timeline control.
-* New records must be saved before accessing the components, otherwise you'll see an empty screen.
+* New records must be saved before accessing the components, otherwise you see an empty screen.
 * The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
 * Microsoft Edge strict mode isn't supported and cross-site cookies are required.
 
 **Admin Center does not update when installation or upgrade is complete**
 
-When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when it's completed it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
+When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and after completion it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
 
 **View during installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="The screenshot shows the process during installation." border="true":::
@@ -60,7 +60,7 @@ The text on the “clear" button displayed on the Tasks filter isn't translated.
 
 **Tasks: Grid context menu appears cropped**
 
-When the Tasks grid is populated by a low number of Tasks the grid context menu may appear cropped and require use of scrollbars.
+When the Tasks grid is populated by a low number of Tasks the grid context menu might appear cropped and require use of scrollbars.
 
 **Tasks: Keyword search filter use “BeginsWith” operator for “Guest” tasks**
 
@@ -68,7 +68,7 @@ When search Tasks using the keyword text filter, “Guest” tasks are returned 
 
 ## Files
 
-When navigating into the Archive folder after archiving files, users might experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view resolves the issue, and files that are archived won't be removed.
+When navigating into the Archive folder after archiving files, users might experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view resolves the issue, and files that are archived aren't removed.
 
 ## Controls
 
@@ -102,11 +102,11 @@ The controls provide the following methods to debug your application.
 
 1. **Trace logging** of plugin events when an API is invoked. This information is stored in your Dataverse environment.
 
-    1. To enable trace logging follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email).
+    1. To enable trace logging, follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email).
 
 1. **Browser logging** for UI controls. This is standard console logging.
 
-    1. It's supported when using a browser to run the Collaboration Manager app via Power Platform and Teams web.
+    1. It'sBrowser logging is supported when using a browser to run the Collaboration Manager app through Power Platform and Teams web.
     1. Within the console tab, you can search for errors using the Collaboration Manager error message or searching for Collaboration Manager control names such as Tasks.
 
 > [!TIP]
@@ -120,7 +120,7 @@ The controls provide the following methods to debug your application.
 
 <summary><b>What are the Collaboration controls (Preview)?</b></summary>
 
-Collaboration controls (Preview) enable you to add Microsoft 365 capabilities to your Power Apps line of business custom applications to simplify user workflows when collaborating on business processes in Teams or Power Apps.
+Collaboration controls (Preview) enable you to add Microsoft 365 capabilities to your Power Apps custom app built for your org (LOB app) to simplify user workflows when collaborating on business processes in Teams or Power Apps.
 
 <br>
 
@@ -156,7 +156,7 @@ Your users can experience productivity gains and stay in their flow by collabo
 
 <summary><b>How do I get access to the Collaboration controls (Preview)?</b></summary>
 
-Request that your Power Platform administrator install the controls from AppSource to your Power Apps environment.
+Request that your Power Platform administrator installs the controls from AppSource to your Power Apps environment.
 
 <br>
 

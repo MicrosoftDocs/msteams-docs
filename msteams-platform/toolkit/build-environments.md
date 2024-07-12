@@ -1,5 +1,5 @@
 ---
-title: Prepare to build apps with Teams Toolkit
+title: Build Apps with Teams Toolkit - Prepare
 author: surbhigupta
 description: Learn about build environments such as SPFx of Teams Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
@@ -10,17 +10,16 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Teams Toolkit
 
-Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
+Microsoft Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
 
 :::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Illustration shows the steps to prepare to build apps using Teams Toolkit." lightbox="../assets/images/buildapps-TTK_1.png":::
 
 ## Build environments
 
-Teams Toolkit in Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
+Teams Toolkit in Microsoft Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
 
 * JavaScript or TypeScript
 * SharePoint Framework (SPFx)
-* C# using Blazor framework
 
 ### Create your Teams app using JavaScript or TypeScript
 
@@ -30,6 +29,7 @@ The apps built with JavaScript or TypeScript have the following advantages:
 * Provides quick upgrades to the existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
+* An app created in Teams Toolkit also supports React.
 
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
@@ -38,22 +38,18 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 * Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
 * Workflow bot: You can interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.
-* Message extension: You can interact with your web service through buttons and forms in the Microsoft Teams client.
+* Message extension: You can interact with your web service through buttons and forms in the Teams client.
 
 ### Create your Teams app using SPFx
 
 Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
 
 * Provides easy integration with data residing in SPFx to your Teams.
-* Integrates your SPFx solution with your business APIs secured with Microsoft Azure Active Directory (Azure AD).
+* Integrates your SPFx solution with your business APIs secured with Microsoft Entra ID.
 * Gives access to various open-source tools.
 * Creates powerful applications that can deliver a great UX.
 * Integrates with other Microsoft 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
-
-### Create your Teams app using C# and Blazor
-
-Teams Toolkit in Visual Studio allows you to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
 
 ## Support for Azure Functions
 
@@ -70,8 +66,20 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 * Processing IoT data streams
 * Managing message queues
 
+## Node.js version compatibility table for project type
+
+|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
+|---|---|---|
+| 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
+| 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
+| 4.2.0 | SPFx | 16 |
+| 4.0.3 | SPFx | 14, 16 |
+| 4.0.0 | Non-SPFx | 14, 16 |
+| 3.7.0 | SPFx | 12, 14 |
+| <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
+
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Create a new Teams project](create-new-project.md)

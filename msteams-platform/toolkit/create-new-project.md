@@ -1,19 +1,20 @@
 ---
 title: Create a new Teams app
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit.
+description: In this module, learn how to create a new Teams app using Teams Toolkit using Visual Studio Code.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Create a new Teams project
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
+# Create a new Teams app
+
+In this section, you can learn how to create a new Microsoft Teams project using Microsoft Visual Studio Code.
 
 ## Create a new Teams project using Visual Studio Code
 
-You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit v5 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
+You can build a new Teams project by selecting **Create a New App** in Microsoft Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 
@@ -43,7 +44,7 @@ To create a basic Teams app:
 
 1. Select **Basic Tab** as app capability.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows to select App Feature using a Tab as Basic Tab.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows the option to select App Feature using a Tab as Basic Tab.":::
 
 1. Select **JavaScript** as the programming language.
 
@@ -88,12 +89,13 @@ The following example shows a basic Teams tab app directory structure:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | Teams manifest file and icon files that Teams used to recognize your Teams app. |
+| `appPackage` | App manifest (previously called Teams app manifest) file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
-| `src\components\` | The main app which handles the initialization and routing. |
-| `src\index.jsx` | Entry point for the front-end app. |
+| `src/app.js` | Application entry point and `restify` handlers for website. |
+| `src/views/hello.html`| An HTML template that is bind to the tab endpoint. |
+| `src/static` | The web server can serve static assets such as CSS and JavaScript files. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
 | `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
 
@@ -120,7 +122,7 @@ The new project folder contains the following content:
 | Folder name | Contents |
 | --- | --- |
 | `.vscode` | Settings for VS Code to build and debug your Teams app. |
-| `appPackage` | Teams manifest file and icon files that Teams used to recognized your Teams app. |
+| `appPackage` | The app manifest file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |

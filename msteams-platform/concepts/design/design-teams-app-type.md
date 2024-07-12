@@ -4,7 +4,8 @@ description: Learn about the basics of typography in Microsoft Teams app includi
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.topic: Typography
+ms.topic: reference
+ms.date: 05/23/2023
 ---
 # Typography for your Microsoft Teams app
 

@@ -18,21 +18,22 @@ items:
   
    This step-by-step guide helps you to create a Agile Poker sample app using Live Share SDK. You'll see the following output:
 
-    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile Poker gif":::
+    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Screenshot shows the final output screen.":::
     
 - title: Prerequisites
   durationInMinutes: 1
   content: |
+   You install the following tools and set up your development environment: 
 
-    Ensure you install the following tools and set up your development environment:
- 
-    * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account
-    * [Latest version of Visual Studio Code](https://code.visualstudio.com/download)
-    * [Latest version of nodejs](https://nodejs.org/en/download/)
-    * [Latest version of ngrok](https://ngrok.com/download) or equivalent tunneling solution
-      
-      > [!NOTE]
-      > If you're downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
+    | &nbsp; | Install | For using... |
+    | --- | --- | --- |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+    | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+           
+    > [!NOTE]
+    > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
 - title: Build and run the Agile Poker sample app
   durationInMinutes: 1
@@ -50,7 +51,7 @@ items:
     1. Run the following command to go to the Agile Poker sample app folder:
 
         ```
-        cd live-share-sdk\samples\22.react-agile-poker
+        cd live-share-sdk\samples\javascript\22.react-agile-poker
         ```
     1. Run the following command to install the dependency package:
 
@@ -84,51 +85,48 @@ items:
   content: |
    You need to setup the manifest file and upload the manifest.zip package to Teams.
 
-     1. Go to the **manifest.json** file in your sample app folder.
+     1. Open the **manifest.json** file and update the following information.
+
+        * Set `"ID"` to **Microsoft App ID**.
+        * Replace all occurrences of `<<BASE_URI_DOMAIN>>` with your fully qualified ngrok or devtunnel domain name.
   
-     1. Open **manifest.json** in Visual Studio Code and update the configuration URL.
-       
-        Replace `https://<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok.
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="Screenshot shows the updated manifest file.":::
+    
+     1. Create a .zip file with the following files that are present in the **Manifest** folder:
 
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="update configuration url":::
+        * manifest.json
+        * outline.png
+        * color.png
+
+     1. Create a meeting in Teams with a few presenters and attendees.
+
+     1. Join the meeting.
+   
+     1. After the meeting has started, select **Apps**.
+    
+     1. In the pop-up window, select **Manage apps**.
+
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Screenshot shows the option to select Manage apps.":::
+
+     1. Select **Upload an app**.
+
+     1. Select the .zip file you've created in the **Manifest** folder and select **Open**.
+
+     1. Select **Add**.
+
+         :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Screenshot shows the option to add the app to Teams client.":::
       
-     1. Zip the contents of the **manifest** folder to create `manifest.zip`.
+     1. Go back to the meeting details page, and select **Apps** > **Agile Poker** app.
 
-        > [!NOTE]
-        > Ensure that the `manifest.zip` contains only the `manifest.json` source file, `color` icon, and  the `outline` icon.
-     
-     ## Upload your app to the Teams meeting
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-select-agile-poker.png" alt-text="Screenshot shows the selection of customized app installed in the meeting.":::
 
-      1. Open Teams.
-
-      1. Schedule a meeting from the calendar in Teams.
-         Ensure you invite atleast one attendee to the meeting.
-
-      1. Join the meeting.
-
-      1. In the meeting window, select **+ Apps** > **Manage apps**.
-
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Manage apps":::
-
-      1. Select **Upload a custom app**.
-
-      1. Upload the `manifest.zip` file.
-
-      1. Select **Add** to add the app to the meeting.
-
-         :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
-         
-      1. Select **+ Apps**, and then select **Agile Poker**.
-
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-select-agile-poker.png" alt-text="select Agile Poker":::
-
-      1. Select **Save**.
+     1. Select **Save**.
       
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Save Agile Poker app":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Screenshot shows the option to Save Agile Poker.":::
          
          The Agile Poker app is added to the Teams meeting side panel.
 
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add to teams meeting panel":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Screenshot shows the app added to the Teams meeting panel.":::
 
 - title: Test your app
   durationInMinutes: 1
@@ -137,7 +135,7 @@ items:
 
    Teams starts a live sync with the users in the meeting.
 
-    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
+    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Screenshot shows the app shared in the meeting.":::
 
     
 - title: Complete challenge
@@ -146,9 +144,8 @@ items:
 
     Did you come up with something like this?
     
-     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="play game":::
+     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Screenshot shows the final output screen.":::
 
 - content: |
     You've completed the tutorial to build collaborative apps for Microsoft Teams using Live Share SDK.
 
-    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile Poker gif":::

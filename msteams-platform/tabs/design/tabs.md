@@ -1,9 +1,10 @@
 ---
-title: Design tabs for desktop, web, and mobile
-description: Learn how to design a tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit. Learn about the tab, building user authentication, tab notifications, and deep linking.
+title: Design Tabs for Desktop, Web & Mobile
+description: Learn how to design a tab for desktop, web, and mobile, and get Microsoft Teams UI Kit. Learn tab, build user authentication, tab notifications, and deep linking.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.date: 05/04/2023
 ---
 # Design your tab for Microsoft Teams
 
@@ -18,7 +19,7 @@ You can find comprehensive tab design guidelines, including elements that you ca
 
 ## Add a tab
 
-You can add a tab from the Teams store (AppSource) or in one of the following contexts:
+You can add a tab from the Microsoft Teams Store (AppSource) or in one of the following contexts:
 
 * Chat
 * Channel
@@ -294,4 +295,4 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
 ## See also
 
-[Tab margin changes](~/resources/removing-tab-margins.md)
+[Build tabs for Teams](../what-are-tabs.md)

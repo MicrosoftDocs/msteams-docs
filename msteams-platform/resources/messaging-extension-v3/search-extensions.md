@@ -115,18 +115,18 @@ Every request to your message extension is done via an `Activity` object that is
 
 ### Receive user requests
 
-When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
+When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtensions` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
 |`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`name`| Type of command that is issued to your service. The following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object ID of the user that sent the request. |
-|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types—clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -223,7 +223,7 @@ Once you've added the domain to listen on to the app manifest, you need to chang
 }
 ```
 
-If your app returns multiple items, only the first will be used.
+If your app returns multiple items, only the first is used.
 
 ### Respond to user requests
 
@@ -235,8 +235,8 @@ Your service should respond with the results matching the user query. The respon
 |---|---|
 |`composeExtension`|Top-level response envelope.|
 |`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: Prompts the user to authenticate <br>`config`: Prompts the user to set up the message extension <br>`message`: displays a plain text message |
-|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
-|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>The following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>The following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
@@ -427,7 +427,7 @@ The default query has the same structure as any regular user query, except with 
 
 ## Identify the user
 
-Every request to your services includes the obfuscated ID of the user that performed the request, and the user's display name and Microsoft Azure Active Directory (Azure AD) object ID.
+Every request to your services includes the obfuscated ID of the user that performed the request, and the user's display name and Microsoft Entra object ID.
 
 ```json
 "from": {
@@ -437,7 +437,7 @@ Every request to your services includes the obfuscated ID of the user that perfo
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Microsoft Azure Active Directory (Azure AD) tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
+The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Microsoft Entra tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
 
 ## Authentication
 
@@ -651,4 +651,4 @@ app.run();
 
 ## See also
 
-[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)

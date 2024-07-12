@@ -3,6 +3,7 @@ title: Create Virtual Assistant
 description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.date: 12/21/2022
 ---
 
 # Create Virtual Assistant
@@ -29,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, dialogs (referred as task modules in TeamsJS v1.x), teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -117,15 +118,15 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
 
 ### Handle interruptions
 
-Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills:
+Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/switch-skills-prompt.png" alt-text="Screenshot of the confirmation prompt when switching to a new skill.":::
 
-### Handle task module requests
+### Handle dialog requests
 
-To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
+To add dialog capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to dialog-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
 
-Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
+Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse`, which is parsed and converted to `TaskModuleResponse` .
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -164,13 +165,13 @@ Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.b
         }
 ```
 
-A similar approach is followed for card action dispatching and task module responses. Task module fetch and submit action data is updated to include `skillId`.
-Activity Extension method `GetSkillId` extracts `skillId` from the payload which provides details about the skill that needs to be invoked.
+A similar approach is followed for card action dispatching and dialog responses. Dialog fetch and submit action data is updated to include `skillId`.
+Activity Extension method `GetSkillId` extracts `skillId` from the payload, which provides details about the skill that needs to be invoked.
 
 The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync` methods are given in the following section:
 
 ```csharp
-    // Invoked when a "task/fetch" event is received to invoke task module.
+    // Invoked when a "task/fetch" event is received to invoke dialog.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
@@ -192,7 +193,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
         }
     }
 
-    // Invoked when a 'task/submit' invoke activity is received for task module submit actions.
+    // Invoked when a 'task/submit' invoke activity is received for dialog submit actions.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
@@ -215,7 +216,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
     }
 ```
 
-Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that task modules invoked through a skill render properly.
+Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's [app manifest](../resources/schema/manifest-schema.md#validdomains) file so that dialogs invoked through a skill render properly.
 
 ### Handle collaborative app scopes
 
@@ -319,7 +320,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     }
 ```
 
-Some message extension activities don't include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
+Some message extension activities don't include the command ID. For example, `composeExtensions/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -341,13 +342,13 @@ The following example shows how to convert the Book-a-room app template to a Vir
 Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
-:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text=" Diagram that shows a Virtual Assistant with book a room skill.":::
+:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text="Screenshot shows a Virtual Assistant with a book a room skill.":::
 
 Followings are the delta changes introduced to convert it to a skill, which is attached to a Virtual Assistant. Similar guidelines are followed to convert any existing v4 bot to a skill.
 
 ### Skill manifest
 
-A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for sideloading an app in Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We've added the following manifest to the bot's wwwroot folder.
+A skill manifest is a JSON file that exposes a skill's messaging endpoint, ID, name, and other relevant metadata. This manifest is different than the manifest used for custom app upload in Teams. A Virtual Assistant requires a path to this file as an input to attach a skill. We've added the following manifest to the bot's wwwroot folder.
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -512,7 +513,7 @@ To modify `languages` parameter, update bot skills command as follows:
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. Bot framework activity has locale field which is used by this middleware. You can use the same for your skill as well. Book-a-room bot doesn't use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).
+Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. Bot framework activity has locale field, which is used by this middleware. You can use the same for your skill as well. Book-a-room bot doesn't use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).
 
 ### Claim validation
 
@@ -534,12 +535,12 @@ For more information on adding claims validation to a skill, see [add claims val
 
 Updating activity, such as card refresh isn't supported yet through Virtual Assistant ([github issue](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Hence, we've replaced all card refresh calls `UpdateActivityAsync` with posting new card calls `SendActivityAsync`.
 
-### Card actions and task module flows
+### Card actions and dialog flows
 
-To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
-`Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter.
+To forward card action or dialog activities to an associated skill, the skill must embed `skillId` to it.
+`Book-a-room` bot card action, dialog fetch and submit action payloads are modified to contain `skillId` as a parameter.
 
-For more information,, refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
+For more information, see [Add Adaptive Cards to your Virtual Assistant](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant).
 
 ### Handle activities from group chat or channel scope
 
@@ -560,18 +561,18 @@ For more information,, refer [this](/microsoftteams/platform/samples/virtual-ass
     }
 ```
 
-You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see [Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+You can also use existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see [Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## Limitations of Virtual Assistant
 
-* **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
+* **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can do that by `start over` command.  
 * **Card refresh**: Card refresh isn't yet supported through Virtual Assistant.  
 * **Message extensions**:
-  * Currently, a Virtual Assistant can support a maximum of ten commands for message extensions.
+  * A Virtual Assistant can support a maximum of 10 commands for message extensions.
   * Configuration of message extensions isn't scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
   * Message extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 
-You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
+You can also use existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
 
 ## Code sample
 
@@ -584,6 +585,6 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [App manifest](../resources/schema/manifest-schema.md)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)
+

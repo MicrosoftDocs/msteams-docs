@@ -1,9 +1,10 @@
 ---
-title: Analyze your app's usage in Developer Portal
-description: In this module, learn how to analyze your app's usage in Developer Portal
+title: Analyze App Usage in Developer Portal
+description: Learn how to analyze your app's usage in Developer Portal for Teams such as usage by time period, platform and OS, retention state, and intensity.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 12/15/2022
 ---
 
 # Analyze your app's usage in Developer Portal
@@ -11,7 +12,7 @@ ms.author: surbhigupta
 In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
 > [!NOTE]
-> Usage analytics are currently available for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Microsoft Teams store is available in **Partner Center**. For more information, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are available for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Microsoft Teams Store is available in **Partner Center**. For more information, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|

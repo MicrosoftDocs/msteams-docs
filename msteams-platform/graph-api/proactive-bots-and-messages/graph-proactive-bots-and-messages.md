@@ -1,9 +1,10 @@
 ---
-title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
+title: Authorize Proactive Bot Installation
 description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
 author: akjo
-ms.topic: Overview
+ms.topic: overview
+ms.date: 12/15/2022
 ---
 
 # Send proactive installation messages
@@ -30,25 +31,25 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any *user*, without prior sign in or use.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any *team*, without prior sign in or use.|
 
-To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
 
-* **id**: Your Azure Active Directory app ID.
+* **id**: Your Microsoft Entra app ID.
 * **resource**: The resource URL for the app.
 
 > [!NOTE]
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Azure AD tenant get the granted permissions.
+> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
 > [!IMPORTANT]
-> Microsoft Graph can only install apps published to your organization's app store or the Teams store.
+> Microsoft Graph can only install apps published to your organization's app store or the Microsoft Teams Store.
 
 ### Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 > [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
@@ -67,7 +68,7 @@ You can retrieve the `teamsAppId` in the following ways:
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your Teams app manifest:
+    The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your app manifest:
 
     ```json
     {
@@ -83,7 +84,10 @@ You can retrieve the `teamsAppId` in the following ways:
     }
     ```
 
-* If your app has already been uploaded or sideloaded for a user in personal scope:
+    > [!NOTE]
+    > When the app is in the Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
+
+* If your app has already been uploaded for a user in personal scope:
 
     **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -93,7 +97,7 @@ You can retrieve the `teamsAppId` in the following ways:
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
     ```
 
-* If your app has already been uploaded or sideloaded for a channel in team scope:
+* If your app has already been uploaded for a channel in team scope:
 
     **Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -106,9 +110,9 @@ You can retrieve the `teamsAppId` in the following ways:
     > [!TIP]
     > To narrow the list of results, you can filter any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object.
 
-### Determine whether your bot is currently installed for a message recipient
+### Determine whether your bot is installed for a message recipient
 
-You can determine whether your bot is currently installed for a message recipient as follows:
+You can determine whether your bot is installed for a message recipient as follows:
 
 **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -253,4 +257,3 @@ server.get('/api/notify', async (req, res) => {
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
-* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)

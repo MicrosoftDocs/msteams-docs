@@ -10,7 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ## Debug your Teams app for Visual Studio Code
 
@@ -18,7 +18,7 @@ Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You c
 
 During the debug process:
 
-* Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app.
+* Teams Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
 * Teams Toolkit checks the prerequisites during the debug background process.
 * Your Teams app is available for preview in Teams web client locally after debugging.
 * You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
@@ -33,12 +33,13 @@ Teams Toolkit supports the following debug features:
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
+* [Teams App Test Tool](#teams-app-test-tool)
 
 Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Azure Active Directory (Azure AD) app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
@@ -62,17 +63,21 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
+### Teams App Test Tool
+
+The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-Teams-app-test-tool.md).
+
 ## Prepare for debug
 
 The following steps help you to prepare for debug:
 
 ### Sign in to Microsoft 365
 
-If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program)
+If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
 
 ### Toggle breakpoints
 
-Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. For more information, see [Toggle breakpoints](#toggle-breakpoints)
+Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. For more information, see [Toggle breakpoints](#toggle-breakpoints).
 
 ## Customize debug settings
 
@@ -85,7 +90,7 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-Teams Toolkit creates Azure AD apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
+Teams Toolkit creates Microsoft Entra apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
 
 To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
@@ -107,7 +112,7 @@ SECRET_BOT_PASSWORD={YOUR_OWN_BOT_PASSWORD}
 
 </details>
 
-### Customize Scenarios
+### Customize scenarios
 
 Here's a list of debug scenarios that you can use:
 <br>
@@ -199,7 +204,7 @@ Teams Toolkit by default creates a set of `teamsApp` actions to manage app packa
     ...
   - uses: teamsApp/validateAppPackage # Validate app package using validation rules
     ...
-  - uses: teamsApp/update # Apply the Teams app manifest to an existing Teams app in Teams Developer Portal.
+  - uses: teamsApp/update # Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal.
     ...
 ...
 ```
@@ -257,7 +262,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
    ```json
    {
-       "name": "Debug (Edge)",
+       "name": "Debug in Teams (Edge)",
         "configurations": [
            "Attach to Frontend (Edge)",
            // "Attach to Bot",
@@ -302,4 +307,4 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)

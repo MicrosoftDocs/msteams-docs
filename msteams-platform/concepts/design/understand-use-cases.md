@@ -1,10 +1,11 @@
 ---
-title: Understanding your app's use cases and Teams features
+title: Understand App's Use Cases & Features
 author: heath-hamilton
-description: Learn about Microsoft Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
+description: Learn Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
+ms.date: 12/09/2022
 ---
 
 # Understand your use cases
@@ -19,7 +20,7 @@ If you're going to meet user requirements with your app, you first need to under
   * Recognize user issues and identify the solutions to some common problems the users face.
   * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   * Understand use cases to know how an end-user interacts with your app.
-  * It's recommended to go through the learn module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
+  * It's recommended to go through the learn module [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Teams Store submission process.
 
 * **Understand the problem**: Work out the core problem your app must solve.
 
@@ -146,7 +147,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that help you to create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app. The notification APIs provides a simple way to send notifications from your app to the Teams activity.
 
    :::column-end:::
 
@@ -158,9 +159,9 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 :::row-end:::
 
 > [!NOTE]
-> Teams store has evolved:
+> Teams Store has evolved:
 >
-> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+> Previously, the custom apps built for your org (LOB apps) were updated by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps)  by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ### App scope
 

@@ -4,6 +4,7 @@ description: In this article, learn how to use Teams JavaScript client library t
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.date: 02/24/2023
 ---
 
 # Integrate People Picker
@@ -14,7 +15,7 @@ You can use [Microsoft Teams JavaScript client library](/javascript/api/overview
 
 ## Advantages of using People Picker
 
-* Works on all Teams capabilities, such as task module, chat, channel, meeting tab, and personal app.
+* Works on all Teams capabilities, such as dialog (referred as task module in TeamsJS v1.x), chat, channel, meeting tab, and personal app.
 * Allows the user to search and select people in a chat, channel, or the entire organization within Teams.
 * Helps in scenarios involving task assignment, tagging, and notifying user.
 * Saves significant time and effort in comparison to building any similar control.
@@ -35,7 +36,7 @@ The `selectPeople` API comes with the following input configurations:
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`|String| It's an optional parameter and sets the title for the People Picker control.|`selectPeople`|
-|`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
+|`setSelected`|String| It's an optional parameter. You must pass Microsoft Entra IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|**False**|
 |`singleSelect`|Boolean|It's an optional parameter and when set to true, it launches the People Picker and restricts the selection to only one user.|**False**|
 
@@ -119,7 +120,6 @@ The following table lists the error codes and their descriptions:
 
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

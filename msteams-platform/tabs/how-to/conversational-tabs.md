@@ -5,6 +5,7 @@ description: Learn to create conversational tabs in Microsoft Teams to start, co
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: high
+ms.date: 01/30/2023
 ---
 
 # Create conversational tabs
@@ -79,7 +80,7 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the users selects **Close (X)** in the conversation view.
+You can also listen for an event when the users select **Close (X)** in the conversation view.
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
@@ -95,11 +96,6 @@ You can also listen for an event when the users selects **Close (X)** in the con
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
 |Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp/demo-manifest/tab-conversations.zip)|
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tab margin changes](~/resources/removing-tab-margins.md)
 
 ## See also
 

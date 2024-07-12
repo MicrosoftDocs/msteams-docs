@@ -1,23 +1,23 @@
 ---
-title: Create and send task module
+title: Create and send dialogs
 author: surbhigupta
-description: Learn how to create and send task modules. Handle the initial invoke action and respond with a task module from an action message extension command.
+description: Learn to create and send dialogs (task modules). Handle the initial invoke action and respond with a dialog (task module) from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create and send task module
+# Create and send dialogs
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers
-the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
+You can create a modal dialog (referred as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
+the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
-> If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
+> If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
-In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtensions/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -25,8 +25,8 @@ In the process of the initial invoke request, your service receives an `Activity
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`value.commandId` | Contains the ID of the command that was invoked. |
@@ -65,9 +65,9 @@ The code for the initial invoke request is given in the following example:
   "name": "composeExtension/fetchTask"
 ```
 
-## Payload activity properties when a task module is invoked from 1:1 chat
+## Payload activity properties when a dialog is invoked from 1:1 chat
 
-The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:
+The payload activity properties when a dialog is invoked from 1:1 chat are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -75,9 +75,9 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.source.name`| The source name from where task module is invoked. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
+|`channelData.source.name`| The source name from where dialog is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
@@ -85,7 +85,7 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 
 ### Example
 
-The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:
+The payload activity properties when a dialog is invoked from 1:1 chat are given in the following example:
 
 ```json
 {
@@ -116,9 +116,9 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 }
 ```
 
-## Payload activity properties when a task module is invoked from a group chat
+## Payload activity properties when a dialog is invoked from a group chat
 
-The payload activity properties when a task module is invoked from a group chat are listed as follows:
+The payload activity properties when a dialog is invoked from a group chat are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -126,9 +126,9 @@ The payload activity properties when a task module is invoked from a group chat 
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.source.name`| The source name from where task module is invoked. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
+|`channelData.source.name`| The source name from where dialog is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
@@ -136,7 +136,7 @@ The payload activity properties when a task module is invoked from a group chat 
 
 ### Example
 
-The payload activity properties when a task module is invoked from a group chat are given in the following example:
+The payload activity properties when a dialog is invoked from a group chat are given in the following example:
 
 ```json
 {
@@ -173,9 +173,9 @@ The payload activity properties when a task module is invoked from a group chat 
 }
 ```
 
-## Payload activity properties when a task module is invoked from a meeting chat
+## Payload activity properties when a dialog is invoked from a meeting chat
 
-The payload activity properties when a task module is invoked from a meeting chat are given in the following example:
+The payload activity properties when a dialog is invoked from a meeting chat are given in the following example:
 
 ```json
 {
@@ -215,9 +215,9 @@ The payload activity properties when a task module is invoked from a meeting cha
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel (new post)
+## Payload activity properties when a dialog is invoked from a channel (new post)
 
-The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:
+The payload activity properties when a dialog is invoked from a channel (new post) are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -225,11 +225,11 @@ The payload activity properties when a task module is invoked from a channel (ne
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`channelData.source.name`| The source name from where task module is invoked. |
+|`channelData.source.name`| The source name from where dialog is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
@@ -237,7 +237,7 @@ The payload activity properties when a task module is invoked from a channel (ne
 
 ### Example
 
-The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:
+The payload activity properties when a dialog is invoked from a channel (new post) are given in the following example:
 
 ```json
 {
@@ -281,9 +281,9 @@ The payload activity properties when a task module is invoked from a channel (ne
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel (reply to thread)
+## Payload activity properties when a dialog is invoked from a channel (reply to thread)
 
-The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:
+The payload activity properties when a dialog is invoked from a channel (reply to thread) are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -291,11 +291,11 @@ The payload activity properties when a task module is invoked from a channel (re
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`channelData.source.name`| The source name from where task module is invoked. |
+|`channelData.source.name`| The source name from where dialog is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
@@ -303,7 +303,7 @@ The payload activity properties when a task module is invoked from a channel (re
 
 ### Example
 
-The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:
+The payload activity properties when a dialog is invoked from a channel (reply to thread) are given in the following example:
 
 ```json
 {
@@ -390,9 +390,9 @@ The payload activity properties when a task module is invoked from a channel (re
 }
 ```
 
-## Payload activity properties when a task module is invoked from a command box
+## Payload activity properties when a dialog is invoked from a command box
 
-The payload activity properties when a task module is invoked from a command box are listed as follows:
+The payload activity properties when a dialog is invoked from a command box are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -400,16 +400,16 @@ The payload activity properties when a task module is invoked from a command box
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.source.name`| The source name from where task module is invoked. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
+|`channelData.source.name`| The source name from where dialog is invoked. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast`, or `dark`. |
 
 ### Example
 
-The payload activity properties when a task module is invoked from a command box are given in the following example:
+The payload activity properties when a dialog is invoked from a command box are given in the following example:
 
 ```json
 {
@@ -650,20 +650,20 @@ The schema for the taskInfo object is:
 
 |Property name|Purpose|
 |---|---|
-|`title`| The title of the task module.|
+|`title`| The title of the dialog.|
 |`height`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
 |`width`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
-|`card`| The adaptive card defining the form (if using one).
-|`url`| The URL to be opened inside of the task module as an embedded web view.|
-|`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
+|`card`| The Adaptive Card defining the form (if using one).
+|`url`| The URL to be opened inside of the dialog as an embedded web view.|
+|`fallbackUrl`| If a client does not support the dialog feature, this URL is opened in a browser tab. |
 
 ### Respond to the fetchTask with an Adaptive Card
 
-When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
+When using an Adaptive Card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
 
 #### Example
 
-The following code section is an example to `fetchTask` response with an adaptive card:
+The following code section is an example to `fetchTask` response with an Adaptive Card:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -689,7 +689,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
       {
         Height = "small",
         Width = "small",
-        Title = "Example task module",
+        Title = "Example dialog",
         Card = new Attachment()
         {
           ContentType = AdaptiveCard.ContentType,
@@ -773,7 +773,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
   "task": {​
     "type": "continue",
     "value": {​
-      "title": "Task module title",
+      "title": "Dialog title",
       "height": 500,
       "width": "medium",
       "card": {​
@@ -815,9 +815,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### Create a task module with an embedded web view
+### Create a dialog with an embedded web view
 
-When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).
+When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [dialog documentation](~/task-modules-and-cards/what-are-task-modules.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -841,7 +841,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
       {
         Height = "small",
         Width = "small",
-        Title = "Example task module",
+        Title = "Example dialog",
         Url = "https://contoso.com/msteams/taskmodules/newcustomer",
         },
       },
@@ -879,7 +879,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
   "task": {
     "type": "continue",
     "value": {
-      "title": "Task module title",
+      "title": "Dialog title",
       "height": 500,
       "width": "medium",
       "url": "https://contoso.com/msteams/taskmodules/newcustomer",
@@ -893,9 +893,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Request to install your conversational bot
 
-If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
+If the app contains a conversational bot, install the bot in the conversation and then load the dialog. The bot is useful to get additional context for the dialog. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the message extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
+When the message extension receives the `composeExtensions/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
 #### Example
 
@@ -925,7 +925,7 @@ The following code section is an example of the response:
 }
 ```
 
-After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+After the installation of conversational bot, it receives another invoke message with `name = composeExtensions/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
 #### Example
 
@@ -980,20 +980,21 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Sample name           | Description | .NET    | Node.js   | Python | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|:--------|
-|Teams message extension action| This sample shows how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Teams message extension action| This sample shows how to define action commands, create dialog, and respond to dialog submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 |Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also
 
-* [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Define message extension action commands](define-action-command.md)
 * [Message extensions](../../what-are-messaging-extensions.md)
+* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [Bot configuration experience](../../../bots/how-to/bot-configuration-experience.md)

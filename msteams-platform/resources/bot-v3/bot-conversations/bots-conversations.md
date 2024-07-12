@@ -35,7 +35,7 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech is currently not supported.
+Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech isn't supported.
 
 Messages are usually the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes, which you need to know about.
 
@@ -50,7 +50,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Rich text | ✔ | ✔ |  |
 | Pictures | ✔ | ✔ | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format; animated GIF aren't supported. |
 | Cards | ✖ | ✔ | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 such as, U+1F600 for grinning face. |
+| Emojis | ✖ | ✔ | Teams supports emojis via UTF-16 such as, U+1F600 for grinning face. |
 |
 
 For more information on the types of bot interaction supported by the Bot Framework, which bots in teams are based on, see the Bot Framework documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
@@ -155,7 +155,7 @@ The `channelData` object contains Teams-specific information and is the definiti
 A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id` Microsoft Azure Active Directory (Azure AD) tenant ID; passed in all contexts.
+* `tenant.id` Microsoft Entra tenant ID; passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel.
   * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates).
@@ -269,11 +269,11 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 You can create a personal conversation with a user or start a new reply chain in a channel for your team bot. This lets you message your user or users without having them first initiate contact with your bot. For more information, see the following articles:
 
-See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more general information on conversations started by bots.
+For more information on conversations started by bots, see [proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 ## Deleting messages
 
-Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html) method in the [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted).
+Messages can be deleted using the `connector.delete()` method in the BotBuilder SDK.
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {

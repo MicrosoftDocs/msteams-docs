@@ -4,18 +4,19 @@ description: In this article, learn how to create a brand new app and import an 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 02/27/2023
 ---
 
 # Developer Portal for Teams
 
-<a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+<a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> (previously known as App Studio) is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
 :::image type="content" source="../../assets/images/tdp/tdp-home.png" alt-text="Screenshot shows the home page of Developer Portal for Teams." lightbox="../../assets/images/tdp/tdp-home.png":::
 
 > [!NOTE]
 >
-> * Developer Portal isn't available for Government Community Cloud (GCC)-High or Department of Defense (DOD) tenants.
-> * However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
+> * Developer Portal for Government Community Cloud (GCC) is supported only as an app in Teams and not as a standalone website.
+> * Developer Portal isn't available for GCC-High and Department of Defense (DOD) tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
 
 ## Register an app
 

@@ -2,7 +2,7 @@
 title: Production-ready Shifts Connectors
 description: Learn about the benefits of using Workforce management Shifts connectors for Teams, such as Kronos-to-Teams Shifts connector and JDA-to-Teams Shifts connector.
 ms.topic: reference
-ms.date: 03/09/2020
+ms.date: 08/10/2022
 ms.localizationpriority: medium
 ---
 

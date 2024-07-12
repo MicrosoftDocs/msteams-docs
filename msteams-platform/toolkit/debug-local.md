@@ -10,7 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ## Debug your Teams app locally for Visual Studio Code
 
@@ -25,7 +25,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
@@ -55,7 +55,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
@@ -83,6 +83,56 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 Teams Toolkit launches your browser instance and opens a webpage to load Teams client.
 
+# [Command line](#tab/cli)
+
+1. Install [dev tunnel.](/azure/developer/dev-tunnels/get-started?tabs=windows)
+
+1. Run the following command to login to dev tunnel:
+
+    ```cmd
+    devtunnel user login
+    ```
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
+
+1. Run the following command to start your local tunnel service:
+
+    ```cmd
+    devtunnel host -p 3978 --protocol http --allow-anonymous
+    ```
+
+1. In a separate terminal, run the following command to update the `BOT_DOMAIN` and `BOT_ENDPOINT` values in the `env/.env.local` file:
+
+    ```cmd
+    BOT_DOMAIN=sample-id-3978.devtunnels.ms
+    BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
+    ```
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
+
+1. Run the following command to provision the app to Teams:
+
+    ```cmd
+    teamsapp provision --env local
+    ```
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
+
+1. Run the following command to deploy the app to Teams:
+
+    ```cmd
+    teamsapp deploy --env local
+    ```
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
+
+1. Run the following command to preview your application locally:
+
+    ```cmd
+    teamsapp preview --env local
+    ```
+
+If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
+
+```cmd
+npm run prepare-storage:teamsapp
+```
 ---
 
 ## Debug your app
@@ -91,7 +141,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Sideloads the Teams app](#sideloads-the-teams-app)
+* [Uploads the Teams app](#uploads-the-teams-app)
 
 ### Starts app services
 
@@ -113,6 +163,67 @@ Runs tasks as defined in `.vscode/tasks.json`. By default, the task name is `"St
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Screenshot shows the Start app services." lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
+
+### Start local tunnel
+
+Use dev tunnel as a local tunnel service to make your local bot message endpoint public.
+
+#### Dev tunnel
+
+To manually migrate your local tunnel task from a v4 project, update the following code in the `.vscode/tasks.json` file:
+
+```json
+{
+      "label": "Start local tunnel",
+      "type": "teamsfx",
+      "command": "debug-start-local-tunnel",
+      "args": {
+          "type": "dev-tunnel",
+          "ports": [
+              {
+                  "portNumber": 3978,
+                  "protocol": "http",
+                  "access": "public",
+                  "writeToEnvironmentFile": {
+                      "endpoint": "BOT_ENDPOINT",
+                      "domain": "BOT_DOMAIN"
+                  }
+              }
+        ],
+          "env": "local"
+      },
+      "isBackground": true,
+      "problemMatcher": "$teamsfx-local-tunnel-watch"
+    },
+```
+
+To use another port for local bot service, change the `portNumber` in the `.vscode/tasks.json` file and also change the `portNumber` in the `index.js` or `index.ts` file.
+
+The following table lists the required arguments:
+
+| **Arguments** | **Type** | **Required** | **Description** |
+| --- | --- | --- |--------|
+| `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
+| `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
+| `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
+
+The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
+
+| **Port** | **Type** | **Required** | **Description**|
+|---|---|---|------|
+| `portNumber` | number | required | The local port number of the tunnel. |
+| `protocol` | string | required | The protocol of the tunnel. |
+| `access` | string | optional | The access control setting for the tunnel. This value can be set to `private` or `public`. If not specified, the default value is `private`.|
+ | `writeToEnvironmentFile` | object | optional | The key of tunnel endpoint and tunnel domain environment variables that are written to `.env` file.|
+
+The `writeToEnvironmentFile` object contains two fields:
+
+| **WriteToEnvironmentFile** | **Type** | **Required** | **Description** |
+|-----|---|---|------|
+| `endpoint` | string | optional | The key of tunnel endpoint environment variable.|
+| `domain` | string | optional | The key of tunnel domain environment variable.|
+
+When `writeToEnvironmentFile` is included, the specified environment variables are written to the `.env` file. When the field is omitted, no environment variables are written to the file.
 
 ### Launches debug configurations
 
@@ -136,9 +247,9 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extension  |   **Attach to Bot** |  node  |
 |  Azure Functions |  **Attach to Backend** |  node |
 
-### Sideloads the Teams app
+### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams sideloads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot shows the Add local debug." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
@@ -154,6 +265,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Add capabilities to your Teams apps](add-capability.md)
+* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)

@@ -1,6 +1,6 @@
 ---
 title: Calls and online meetings bots
-description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
+description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/16/2022
@@ -18,7 +18,7 @@ To use these Graph APIs in a Teams app, you create a bot and specify some additi
 
 In addition, the Real-time Media Platform enables bots to interact with Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with few extra features used to register the bot.
 
-The Teams app manifest with two more settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams support only a specific set of media formats for audio and video content.
+The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with two more settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams support only a specific set of media formats for audio and video content.
 
 Now, you must understand some core concepts, terminology, and conventions.
 
@@ -47,7 +47,7 @@ Following are the different call types and permissions required for the call:
 * A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. The multiparty call isn't enabled yet in the Teams user interface.
 
     > [!NOTE]
-    > User initiated calls to a bot are currently not supported on Teams mobile platform.
+    > User initiated calls to a bot aren't supported on the Teams mobile client.
 
 * Graph permissions aren't necessary for a user to initiate a peer-to-peer call with your bot. Additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
 * A call can start as peer-to-peer and eventually become a multiparty call. Your bot can initiate multiparty calls by inviting others, provided your bot has the proper permissions. If your bot doesn't have permissions to participate in group calls and if a participant adds another participant to the call, your bot is dropped from the call.
@@ -102,7 +102,6 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [Develop calling and online meeting bots on your local PC](debugging-local-testing-calling-meeting-bots.md)
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
 * [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Teams recording policy](/microsoftteams/teams-recording-policy)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

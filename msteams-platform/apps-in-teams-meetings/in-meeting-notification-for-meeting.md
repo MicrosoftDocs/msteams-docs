@@ -1,7 +1,7 @@
 ---
-title: Build in-meeting notification for Teams meeting
+title: Build In-meeting Notification
 author: v-sdhakshina
-description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples.
+description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples and its feature compatibility by user types.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
@@ -109,7 +109,7 @@ To enable the targeted in-meeting notification:
 1. Retrieve the user IDs of the participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
    > [!NOTE]
-   > Targeted in-meeting notification doesn't support user IDs in the Azure Active Directory (Azure AD) user ID format.
+   > Targeted in-meeting notification doesn't support user IDs in the Microsoft Entra user ID format.
 
    **The following is an example of a user ID**:
     `id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
@@ -160,7 +160,9 @@ To enable the targeted in-meeting notification:
 
      Targeted in-meeting notification is enabled.
 
-For more information on `targetedMeetingNotification`, see [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api).
+For more information on `targetedMeetingNotification`, see [Targeted meeting notification and app icon badging API](meeting-apps-apis.md#targeted-meeting-notification-and-app-icon-badging-api).
+
+After you've built in-meeting notification for your app, you can use the `targetedMeetingNotification` API to enable app icon badging for your meeting app. This helps meeting participants to get a notification whenever there's new activity in the app. For more information, see [enable app icon badging for your Teams app](app-icon-badging-for-your-app.md).
 
 ## Code sample
 
