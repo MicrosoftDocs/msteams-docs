@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: Frequently asked questions for Teams developer document
+description: In this article, check FAQS on Adaptive Card, App validation, Bots, Live share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.localizationpriority: high
 ---

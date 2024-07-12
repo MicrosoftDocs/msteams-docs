@@ -1,7 +1,7 @@
 ---
 title: Integrate existing third-party APIs
 author: MuyangAmigo
-description: Learn how toolkit allows bootstrap sample access to existing APIs and the list of different authentication types.
+description: Learn how to add API connection in Teams toolkit, to allow bootstrap sample access to existing APIs, and the list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
