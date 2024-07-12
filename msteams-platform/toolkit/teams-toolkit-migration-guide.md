@@ -12,7 +12,7 @@ ms.date: 06/05/2024
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-In the new Teams Toolkit version of 17.10, a Teams solution contains two projects, Teams project and your source code. 
+In the new Teams Toolkit version 17.10, a Teams solution contains two projects, Teams project and your source code. 
 
 - **Teams project**: Teams project contains the Teams app package and Teams Toolkit configuration files. 
 - **Source code**: Your source code project is the business logic for your tab, bot, or others. 
@@ -31,9 +31,9 @@ Before starting the migration process, ensure that you have the following:
 
 Perform the following steps to migrate to the new project structure:
 
-1. In your Teams project folder where you have the Visual S solution file create a new folder. You can provide any name to the new folder but must be meaningful. We recommend that you use the folder name as **TeamsApp**.
+1. In your Teams project folder where you have the Visual Studio solution file, create a new folder. This folder is named and referred as **TeamsApp** in the subsequent steps.
 
-1. Create a **TeamsApp.ttkproj** file in the **TeamsApp** folder. Add the following code to the **TeamsApp.ttkproj** file:
+1. Create a **TeamsApp.ttkproj** file in the **TeamsApp** folderand the project file name must match the new folder name. Add the following code to the **TeamsApp.ttkproj** file:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -44,16 +44,13 @@ Perform the following steps to migrate to the new project structure:
     </Project>
     ```
 
-    > [!NOTE]
-    > The project file name must match the new folder name.
-
 1. Remove the following configuration folders and files from your project folder and add them in the **TeamsApp** folder.
 
     * Folders: `appPackage`, `env`, `infra`
     * Files: `teamsapp.yml`, `teamsapp.local.yml`, `aad.manifest.json`
 
     > [!NOTE]
-    > Once the folders and files are moved they are automatically included in your **TeamsApp.ttkproj** file and you needn't add them to the **TeamsApp.ttkproj** manually.
+    > Once the folders and files are moved, they are automatically included in your **TeamsApp.ttkproj** file and you don't need to add them to the **TeamsApp.ttkproj** manually.
 
 1. According to your `launchSettings.json`, move the launching browser or test tool capability to `launchSettings.json` of the **TeamsApp** folder.
 
@@ -162,7 +159,7 @@ Perform the following steps to migrate to the new project structure:
 
 You've successfully migrated your project and your folder structure is updated.
 
-## Folder Structure
+##### Folder Structure
 
 # [Old structure](#tab/old)
 
@@ -174,7 +171,7 @@ You've successfully migrated your project and your folder structure is updated.
 
 ---
 
-### Project Type File
+##### Project Type File
 
 # [Old project type file](#tab/old)
 
@@ -198,7 +195,7 @@ This file extension is **.ttkproj**.
 
 ---
 
-### LaunchSettings.json
+##### LaunchSettings.json
 
 # [Old launchSettings.json](#tab/old)
 
@@ -301,7 +298,7 @@ The following code is the sample of TeamsApp project:
 
 ---
 
-### Teams app YAML File
+##### Teams app YAML File
 
 # [Old structure](#tab/old)
 
@@ -422,7 +419,7 @@ deploy:
 
 ---
 
-### Solution launch user file
+##### Solution launch user file
 
 # [Old structure](#tab/old)
 
