@@ -1,6 +1,6 @@
 ---
 title: Get started with Teams AI library
-description: In this article, learn how to create an app using Teams AI library and its capabilities.
+description: In this article, learn how to create an app using Teams AI library with AI component, storage, register data source, prompts, and actions.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -585,7 +585,7 @@ Actions handle events triggered by AI components.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L132)
 
-```javascript
+```typescript
 // Register other AI actions
 app.ai.action(
     AI.FlaggedInputActionName,

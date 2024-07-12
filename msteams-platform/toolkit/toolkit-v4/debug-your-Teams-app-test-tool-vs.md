@@ -1,5 +1,5 @@
 ---
-title: Debug bot using Teams App Test Tool Visual Studio
+title: Debug Bot with Teams App Test Tool
 author: v-ganr
 description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool in Visual Studio.
 ms.localizationpriority: medium
@@ -78,9 +78,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     # [OpenAI](#tab/openai)
     
-    * Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
+    Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
     
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
     # [Azure OpenAI](#tab/azureopenai)
     

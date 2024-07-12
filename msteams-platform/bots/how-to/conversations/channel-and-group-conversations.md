@@ -1,7 +1,7 @@
 ---
-title: Create conversation bots for channel or group chat
+title: Channel/Group Conversation Chat Bot
 author: surbhigupta
-description: Learn how to create new conversation threads, work on user and tag mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
+description: Learn how to create new conversation threads, user and tag mentions, and send message on installation. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -18,7 +18,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 > * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
-> * Posting a message or Adaptive Card to a private channel is currently not supported.
+> * Posting a message or Adaptive Card to a private channel isn't supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
