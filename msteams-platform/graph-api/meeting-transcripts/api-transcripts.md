@@ -1,6 +1,6 @@
 ---
 title: Use Graph APIs to fetch transcript
-description: Describes the APIs to fetch meeting transcripts
+description: Learn about the Microsoft Graph APIs to fetch meeting transcripts based on the user ID of the meeting organizer and the meeting ID.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 08/03/2022
@@ -310,4 +310,3 @@ WEBVTT
 ```
 
 </details>
-
