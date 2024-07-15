@@ -840,6 +840,7 @@
     href: m365-apps/prerequisites.md
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
+    displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
     - name: Enable a Teams personal tab for Microsoft 365
