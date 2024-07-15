@@ -311,7 +311,7 @@ The schema defines the following properties:
 
 ## $schema
 
-*Optional, but recommended* &ndash; String
+**Optional** (but recommended) &ndash; String
 
 The `https://` URL referencing the JSON Schema for the app manifest.
 
@@ -349,9 +349,9 @@ Specifies information about the developer and their business. For Teams Store ap
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
 | `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
-| `websiteUrl`    |     | 2048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
-| `privacyUrl`    |     | 2048 characters | ✔️      | The `https://` URL to the app's privacy policy.                                                         |
-| `termsOfUseUrl` |     | 2048 characters | ✔️      | The `https://` URL to the app's terms of use.                                                           |
+| `websiteUrl`    | String | 2048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
+| `privacyUrl`    | String | 2048 characters | ✔️      | The `https://` URL to the app's privacy policy.                                                         |
+| `termsOfUseUrl` | String | 2048 characters | ✔️      | The `https://` URL to the app's terms of use.                                                           |
 | `mpnId`         | String | 10 characters    |          | The Microsoft Partner Network ID that identifies the partner organization creating the app. **Optional** |
 | `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
 
