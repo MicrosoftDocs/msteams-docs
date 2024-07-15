@@ -32,8 +32,10 @@ Only a subset of Microsoft 365 host applications supports the ability to specify
 
 |Microsoft 365 host application| Web | Desktop | Mobile |
 |---|---|---|---|
-| Microsoft Teams| ✔️| ✔️| ✔️|
-| Microsoft Outlook| ✔️| ✔️ (New Outlook)| ✔️|
+| Teams| ✔️| ✔️| ✔️|
+| Outlook| ✔️| ✔️ (New Outlook only)| ✔️|
+| Microsoft 365 (Office)| | | |
+| Copilot for Microsoft 365 | | | |
 
 ## Specify relationships between components of your app (`elementRelationshipSet`)
 
