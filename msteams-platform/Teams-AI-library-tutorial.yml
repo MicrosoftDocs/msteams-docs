@@ -19,7 +19,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    * How to setup your data on Azure OpenAI.
+    * How to set up your data on Azure OpenAI.
     * How to create a new custom copilot with Teams Toolkit.
     * How to interact with your LLMs and data.
     * The directory structure of your custom copilot.
@@ -38,10 +38,10 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-- title: Setup your data on Azure OpenAI
+- title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
-     1. Go to [**Azure Portal**](https://ms.portal.azure.com/).
+     1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
      1. Select the Azure OpenAI service that you created in the prerequisite.
 
