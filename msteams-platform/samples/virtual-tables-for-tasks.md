@@ -431,7 +431,7 @@ HTTP/1.1 204 No Content
 ---
 
 > [!NOTE]
-> You can set the `If-Match` header to be '*' and then you'll not need to provide any etag values, but your changes will always overwrite the task and it’s details.
+> You can set the `If-Match` header to be '*' and then you won't need to provide any etag values, but your changes will always overwrite the task and it’s details.
 
 ## Virtual tables authorization
 

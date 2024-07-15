@@ -33,9 +33,11 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 June**
+**2024 July**
 
-***June 24, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
+* ***July 3, 2024***: [Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings)
+
+* ***July 02, 2024***: [You can extend bot-based message extension plugins to Teams meetings.](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 :::column-end:::
 :::row-end:::
@@ -49,7 +51,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 17/05/2024 | Deploy Teams app to container service. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio > Prepare to build apps using Teams Toolkit > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md) |
+| 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
+| 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
+| 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
+|17/05/2024|Deploy Teams app to container service.|Tools and SDKs > Teams Toolkit for Visual Studio Code > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md)|
 |12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
 |12/04/2024|Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards.|[App manifest](resources/schema/manifest-schema.md)|
 |12/04/2024|Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.|App manifest > [extensions.requirements](resources/schema/manifest-schema.md#extensionsrequirements)|
@@ -395,6 +400,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| May 23, 2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 
 ## Developer preview

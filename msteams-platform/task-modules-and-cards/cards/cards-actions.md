@@ -614,7 +614,7 @@ The following code shows an example of Adaptive Cards with `messageBack` action:
 To include an `imBack` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
-> You can include additional hidden properties in the `data` object, if required.
+> The `value` field is a simple string that doesn’t support formatting or hidden characters.
 
 | Property | Description |
 | --- | --- |
