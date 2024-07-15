@@ -29,7 +29,7 @@ The app playbooks and UI templates are also available to help you get started fo
 View and test individual Fluent UI React components in your browser.
 
 > [!div class="nextstepaction"]
-> [Try Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
+> [Try Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
 
 ### Sample app
 

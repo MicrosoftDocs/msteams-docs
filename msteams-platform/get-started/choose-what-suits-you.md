@@ -72,7 +72,7 @@ The following tools in the Teams platform help you during app development:
 
 | App development phase | Teams platform tools |
 |-----|-----|
-| Design | Teams UI kit and Fluent UI React Components |
+| Design | Teams UI kit and Fluent UI React components |
 | Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
 | Test, deploy, and publish |Microsoft Entra ID and Developer Portal |
 | Distribute | Partner Center and Teams Store |
