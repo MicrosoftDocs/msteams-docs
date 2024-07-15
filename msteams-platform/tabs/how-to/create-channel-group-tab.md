@@ -886,7 +886,7 @@ To build and run your app:
 
     </details>
 
-1. Install the self-signed SSL certificate for local debugging, if requested.
+1. Trust the self-signed SSL certificate for local debugging, if requested.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot shows the option to select yes for a prompted security warning.":::
 
