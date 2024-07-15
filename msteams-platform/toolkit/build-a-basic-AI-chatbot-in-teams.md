@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to build a basic AI chatbot using Teams AI library in Teams Toolkit. Know about bot app source code, AI chatbot workflow, and customize AI chatbot.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
+ms.author: surbhigupta
 ms.date: 05/21/2024
 ---
 

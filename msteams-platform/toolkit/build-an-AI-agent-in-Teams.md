@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to build AI Agent in Teams AI library using Assistant APIs within Teams Toolkit, build and customize prompt augmentation and assistant creation.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
+ms.author: surbhigupta
 ms.date: 05/21/2024
 ---
 
