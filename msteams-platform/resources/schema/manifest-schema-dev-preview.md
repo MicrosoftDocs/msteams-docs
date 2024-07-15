@@ -1006,6 +1006,8 @@ To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/d
 
 The `extensions.contentRuntimes` array configures pages of content that are embedded in an Excel or PowerPoint document. 
 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
 |`code.page`| URL | | ✔️ | The full URL of the page that contains the content that is embedded in the document. |
