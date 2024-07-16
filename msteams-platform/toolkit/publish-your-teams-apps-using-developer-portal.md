@@ -1,7 +1,7 @@
 ---
 title: Publish App using Developer Portal
 author: zyxiaoyuer
-description: Learn how to publish the app in Developer Portal from Visual Studio Code, update app manifest, and publish manually in Developer Portal.
+description: Learn how to publish the app using Developer Portal in Teams Toolkit from Visual Studio Code, update app manifest, and publish manually.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
