@@ -41,7 +41,7 @@ For more information, see [manage your apps in the Teams admin center](/microsof
 
 ### Government Community Cloud (GCC) organizations
 
-In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../cloud-overview.md#teams-app-capabilities-for-government-clouds).
+In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../cloud-overview.md#teams-app-capabilities).
 
 > [!IMPORTANT]
 > If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
