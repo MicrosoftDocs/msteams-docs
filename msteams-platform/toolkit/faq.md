@@ -1,7 +1,7 @@
 ---
 title: FAQ
 author: MuyangAmigo
-description: In this article, check the FAQs on provision using Teams Toolkit in Visual Studio, troubleshoot errors, switch Azure subscription, change resource group.
+description: In this article, check the FAQs on provision using Teams Toolkit in Visual Studio, troubleshoot errors, switch Azure subscription, and change resource group.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
