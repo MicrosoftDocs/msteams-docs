@@ -522,15 +522,22 @@
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
+    expanded: false 
     items:
     - name: Overview
       href: messaging-extensions/api-based-overview.md
       displayName: OpenAPI Description, Search, single parameter, search based message extension
-    - name: Build API-based message extension
-      href: messaging-extensions/build-api-based-message-extension.md
-      display name: Response rendering template, OpenAPI Description, Search, single parameter
-    - name: Create API-based message extension
-      href: messaging-extensions/create-api-message-extension.md  
+    - name: API-based message extensions Authentication
+      items:
+      - name: Authentication overview
+        href: messaging-extensions/build-api-based-message-extension.md
+      - name: API Secret Service Authentication
+        href: messaging-extensions/api-based-secret-service-auth.md
+      - name: Microsoft Entra
+        href: messaging-extensions/api-based-microsoft-entra.md
+    - name: Create API-based message extensions
+      href: messaging-extensions/create-api-message-extension.md
+      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visula Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
