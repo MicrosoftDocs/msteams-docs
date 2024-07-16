@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Authentication in API-based message extension
+        url: messaging-extensions/build-api-based-message-extension.md
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
       - text: Extend bot-based message extension plugins to Teams meetings
@@ -73,8 +75,6 @@ landingContent:
         url: graph-api/rsc/preapproval-instruction-docs.md
       - text: 32x32 color icon for your app running in Outlook and Microsoft 365
         url: concepts/build-and-test/apps-package.md#outline-icon
-      - text: Authentication in API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Bot configuration experience

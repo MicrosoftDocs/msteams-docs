@@ -192,7 +192,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
+           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](api-based-secret-service-auth.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 

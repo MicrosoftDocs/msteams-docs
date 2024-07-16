@@ -34,12 +34,12 @@ See the video to learn more about building an API-based message extension using 
 
 The following images show the flow of user queries through Traditional message extensions and API message extensions:
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagram also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows user query flow between a user, Teams Client, and Teams bot service using Traditional message extensions. The diagram also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
 *User query flow using Traditional Message Extensions. The developer must maintain a custom bot handler service, which handles the requests from a Teams bot. The handler service sends a request to the developer’s service when a query is invoked.*
 
 <br>
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-flow-2.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagram also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow-2.png":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow-2.png" alt-text="Screenshot shows the query flow between a user, Teams Client, and Teams bot service using API Message Extensions. The diagram also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow-2.png":::
 *User query flow using API Message Extensions. There's no need for a developer maintained handler service as long as the interaction is clearly outlined in the OpenAPI Specification in the App Package.*
 
 
@@ -200,7 +200,7 @@ App manifest contains query command definition. Ensure that you adhere to follow
 
 The following is an app manifest example with definitions for API-based message extensions:
 
-<details><sumary>App manifest example</summary>
+<details><summary>App manifest example</summary>
 
   ```json
    {

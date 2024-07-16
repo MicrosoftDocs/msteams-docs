@@ -17,7 +17,6 @@ Authentication is a fundamental aspect of security and serves as the first line 
 
 * **User Trust**: Builds confidence among users that their interactions with the app are secure, which is essential for user adoption and engagement.
 
-
 You can enable the following authentication methods for your API-based message extension:
 
 **None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the authType to “none” in your app manifest.
@@ -41,7 +40,7 @@ Update `none` as a value for `authorization` in an API-based message extension w
 
 ### Troubleshooting
 
-* If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
+* If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](api-based-overview.md#app-manifest) and the [OpenAPI Description document](api-based-overview.md#openapi-description-oad) requirements to resolve errors or warnings and try uploading your app.
 
    :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
 
