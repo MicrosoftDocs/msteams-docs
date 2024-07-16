@@ -1,6 +1,6 @@
 ---
 title: Designing your message extension
-description: Learn how to design a Teams message extension and get the Microsoft Teams UI Kit. Describes about Teams design guidelines reference message extensions tips and best practice.
+description: Learn how to design a message extension and get the Microsoft Teams UI Kit. Describes Teams design guidelines reference message extensions tips and best practice.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -76,7 +76,7 @@ You have some options for displaying message extension search results, including
 
 Action commands allow people to trigger actions and process requests in external services within Teams. For example, if your app tracks orders, a user could create a new order using the contents of a colleague’s message from right inside their chat.
 
-Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x).
+Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x).
 
 ## Open a message extension
 
@@ -279,7 +279,7 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
 #### Don't: Hard code color values
 
-If you don't use Teams color tokens, your designs will be less scalable and take more time to manage.
+If you don't use Teams color tokens, your designs will be less scalable and take time to manage.
 
    :::column-end:::
 :::row-end:::
