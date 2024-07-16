@@ -1,7 +1,7 @@
 ---
 title: Install Teams Toolkit in Visual Studio
 author: zyxiaoyuer
-description: In this article, learn how to install Teams Toolkit for Visual Studio, and to use Visual Studio Installer to install the required version of Visual Studio.
+description: Learn how to install Microsoft Teams Toolkit for Visual Studio and to use Visual Studio installer to install the required version of Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

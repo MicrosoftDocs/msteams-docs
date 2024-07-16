@@ -1,7 +1,7 @@
 ---
 title: Debug Bot with Teams App Test Tool
 author: v-ganr
-description: Learn how to build, configure, and deploy bot using Teams App Test Tool in Visual Studio, and to mock activity using predefined and custom activity triggers.
+description: Learn how to build, configure, and deploy bot using Teams App Test Tool in Visual Studio, and to mock an activity using predefined and custom activity triggers.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -76,20 +76,20 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. The `appsettings.TestTool.json` file helps to configure the Test Tool by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
 
-# [OpenAI](#tab/openai)
+   # [OpenAI](#tab/openai)
 
     Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
 
-# [Azure OpenAI](#tab/azureopenai)
+   # [Azure OpenAI](#tab/azureopenai)
 
     1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
 
     1. Replace model name with Azure OpenAI model deployment name in `Program.cs` file.
-
+   
          :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployement name updated.":::
     ---
 
