@@ -178,8 +178,6 @@ schemas:
 </details>
 <br>
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-open-api-flow.png" alt-text="Screenshot shows the OpenAPI description flow from the user to Teams and back to the user.":::
-
 For more information on how to write OpenAPI definitions in YAML, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 ### App manifest
