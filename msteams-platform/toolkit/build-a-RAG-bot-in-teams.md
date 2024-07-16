@@ -160,7 +160,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
 
 1. **Retrieve DataSource**: Teams AI library provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and the Teams AI library calls it on demand.
 
-  # [JavaScript](#tab/javascript1)
+   # [JavaScript](#tab/javascript1)
 
     ```javascript
     class MyDataSource implements DataSource {
@@ -188,7 +188,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
     }
       ```
 
-  # [Python](#tab/python1)
+   # [Python](#tab/python1)
 
       ```python
       class MyDataSource(DataSource):
