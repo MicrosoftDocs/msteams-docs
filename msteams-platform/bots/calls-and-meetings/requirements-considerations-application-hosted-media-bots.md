@@ -21,9 +21,6 @@ An application-hosted media bot has the following requirements:
 
  v-shazilms/updatedoc
 * The bot must be developed in C# and the standard .NET Framework and deployed in Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media and .NET Core is supported for an application-hosted media bot and sdk supports dotnet 6.
-=======
-* The bot must be developed in C# and the standard .NET Framework and deployed in Microsoft Azure. The Graph Communications SDK supports .NET 6 and .NET Core frameworks. You can't use C++ or Node.js APIs to access real-time media.
- main
 
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
