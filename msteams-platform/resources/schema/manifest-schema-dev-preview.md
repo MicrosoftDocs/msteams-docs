@@ -945,7 +945,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Array
 
-The `extensions` property configures Office sdd-ins and aspects of other types of Microsoft 365 customizations. Currently, each manifest supports only one extension.
+The `extensions` property configures Office Add-ins and aspects of other types of Microsoft 365 customizations. Currently, each manifest supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1019,7 +1019,7 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation` |
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.ribbons
