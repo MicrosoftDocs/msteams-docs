@@ -23,7 +23,7 @@ The following sample code uses the paged endpoint for fetching the roster:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsinfo-getpagedmembersasync(microsoft-bot-builder-iturncontext-system-nullable((system-int32))-system-string-system-threading-cancellationtoken))
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
 
@@ -143,7 +143,7 @@ The following sample code is used to get single member details:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsinfo-getmemberasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/SequentialUserSpecificFlow/Bots/UserSpecificBot.cs#L37)
 
@@ -243,7 +243,7 @@ The following sample code is used to get team's details:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsinfo-getteamdetailsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
 
@@ -346,7 +346,7 @@ The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsinfo-getteamchannelsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
 
