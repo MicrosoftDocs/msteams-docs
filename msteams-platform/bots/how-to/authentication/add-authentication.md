@@ -310,7 +310,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 ### Deploy the bot to Azure
 
-To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Ccsharp&preserve-view=true).
+To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&preserve-view=true&tabs=userassigned%2Ccsharp).
 
 Alternatively, while in Visual Studio, you can follow these steps:
 
