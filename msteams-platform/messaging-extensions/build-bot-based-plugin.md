@@ -20,7 +20,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and Copilot for Microsoft 365." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Copilot for Microsoft 365." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
 </br>
@@ -65,7 +65,7 @@ Let's create a bot-based search message extension that can search npm registries
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
   1. Go to **Manage** > **Settings**.
@@ -240,7 +240,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot option selected in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results, and start with a bot option selected in the CLI window.":::
 
 1. Enter the location for your project and select **Enter**.
 
@@ -260,7 +260,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. From the list, select a subscription.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the sign-in to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
 1. If you receive a message, which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, enter **Y**.
