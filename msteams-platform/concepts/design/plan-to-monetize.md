@@ -1,6 +1,6 @@
 ---
 title: Plan to monetize your app
-description: Plan to monetize your Microsoft Teams app and also understand the best monetization options for global visibility.
+description: Plan to monetize your Teams app such as subscription, in-app purchase, free trails, test preview, and understand the best monetization options for global visibility.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
