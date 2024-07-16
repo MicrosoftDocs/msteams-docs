@@ -79,9 +79,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
     # [OpenAI](#tab/openai)
     
     Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
-
+    
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
-
+    
     # [Azure OpenAI](#tab/azureopenai)
     
     1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
