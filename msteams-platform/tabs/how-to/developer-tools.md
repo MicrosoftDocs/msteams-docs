@@ -1,6 +1,6 @@
 ---
 title: DevTools for Microsoft Teams tabs
-description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging.
+description: Learn about DevTools for Microsoft Teams tabs and learn how to access and debug DevTools when using Teams desktop client or using mobile client.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 08/29/2022
