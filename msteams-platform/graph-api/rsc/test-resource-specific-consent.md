@@ -1,6 +1,6 @@
 ---
 title: Test RSC Permissions Using Postman
-description: Learn to test resource-specific consent (RSC) permission to a team and chat in Teams using Postman app and revoked RSC permission using Postman with code samples.
+description: Learn to test and revoke resource-specific consent (RSC) permission to a team and chat in Teams using Postman with code samples.
 ms.localizationpriority: medium
 author: akjo
 ms.topic: tutorial

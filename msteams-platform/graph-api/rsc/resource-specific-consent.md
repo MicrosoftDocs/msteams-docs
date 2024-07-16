@@ -1,6 +1,6 @@
 ---
 title: Resource-specific Consent for Apps
-description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions. Learn to grant RSC permissions to an app.
+description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 03/20/2023
