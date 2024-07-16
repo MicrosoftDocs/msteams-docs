@@ -506,8 +506,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***July 15, 2024***: All new [Microsoft 365 (previously called Office 365) connector](webhooks-and-connectors/what-are-webhooks-and-connectors.md) creation will be blocked starting August 15 2024. All existing Microsoft 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
-[retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+* ***July 16, 2024***: The existing [Microsoft 365 (previously called Office 365) connectors ](webhooks-and-connectors/what-are-webhooks-and-connectors.md) across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 
 * ***April 30, 2024***: In tab experiences, tab margins are deprecated.
 

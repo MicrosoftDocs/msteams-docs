@@ -11,8 +11,7 @@ ms.date: 12/09/2022
 
 > [!IMPORTANT]
 >
-> All new Microsoft 365 (previously called Office 365) connector creation will be blocked starting August 15 2024. All existing Microsoft 365 connectors in all clouds will no longer be available as of October 1st 2024. To learn more about the timing and how the Workflows app provides a more flexible and secure experience, see
-[retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+> The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
