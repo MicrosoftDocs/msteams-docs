@@ -1,6 +1,6 @@
 ---
 title: Calls and online meetings bots
-description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
+description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/16/2022
@@ -153,7 +153,7 @@ Following are the different call types and permissions required for the call:
 * A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. The multiparty call isn't enabled yet in the Teams user interface.
 
     > [!NOTE]
-    > User initiated calls to a bot are currently not supported on Teams mobile platform.
+    > User initiated calls to a bot aren't supported on the Teams mobile client.
 
 * Graph permissions aren't necessary for a user to initiate a peer-to-peer call with your bot. Additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
 * A call can start as peer-to-peer and eventually become a multiparty call. Your bot can initiate multiparty calls by inviting others, provided your bot has the proper permissions. If your bot doesn't have permissions to participate in group calls and if a participant adds another participant to the call, your bot is dropped from the call.
