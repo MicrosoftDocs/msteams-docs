@@ -18,7 +18,7 @@ To configure bot as an additional capability, ensure the following prerequisites
 
 * The app manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
+* [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
 ## Add bot to Teams app
 
@@ -449,7 +449,6 @@ The following steps help you to add bot to a message extension app:
 * [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit)
 * [Update manifest file](#add-bot-in-app-manifest)
 * [Add bot code to project](#add-bot-code-to-project)
-* [Setup local debug environment](#setup-local-debug-environment-1)
 
 ## Create message extension app using Teams Toolkit
 
@@ -515,148 +514,3 @@ When incorporating message extensions into a bot app, ensure that you've a class
         */
       }
    ```
-
-## Setup local debug environment
-
-1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the Start application task's `depenOn` to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add Start local tunnel to the Start Teams App Locally task's `dependOn`:
-
-   ```json
-       "tasks":[
-               {
-                   // Start the local tunnel service to forward public URL to local port and inspect traffic.
-                   // See https://aka.ms/teamsfx-tasks/local-tunnel for the detailed args definitions.
-                   "label": "Start local tunnel",
-                   "type": "teamsfx",
-                   "command": "debug-start-local-tunnel",
-                   "args": {
-                       "type": "dev-tunnel",
-                       "ports": [
-                           {
-                               "portNumber": 3978,
-                               "protocol": "http",
-                               "access": "public",
-                               "writeToEnvironmentFile": {
-                                   "endpoint": "BOT_ENDPOINT", // output tunnel endpoint as BOT_ENDPOINT
-                                   "domain": "BOT_DOMAIN" // output tunnel domain as BOT_DOMAIN
-                               }
-                           }
-                       ],
-                       "env": "local"
-                   },
-                   "isBackground": true,
-                   "problemMatcher": "$teamsfx-local-tunnel-watch"
-               },
-               {
-                   "label": "Start bot",
-                   "type": "shell",
-                   "command": "npm run dev:teamsfx",
-                   "isBackground": true,
-                   "options": {
-                       "cwd": "${workspaceFolder}/bot"
-                   },
-                   "problemMatcher": {
-                       "pattern": [
-                           {
-                               "regexp": "^.*$",
-                               "file": 0,
-                               "location": 1,
-                               "message": 2
-                           }
-                       ],
-                       "background": {
-                           "activeOnStart": true,
-                           "beginsPattern": "[nodemon] starting",
-                           "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
-                       }
-                   }
-               },
-               {
-                  "label": "Start frontend",
-                  "type": "shell",
-                  "command": "npm run dev:teamsfx",
-                  "isBackground": true,
-                  "options": {
-                       "cwd": "${workspaceFolder}/tab"
-                   },
-                   "problemMatcher": {
-                       "pattern": {
-                           "regexp": "^.*$",
-                           "file": 0,
-                           "location": 1,
-                           "message": 2
-                       },
-                       "background": {
-                           "activeOnStart": true,
-                           "beginsPattern": ".*",
-                           "endsPattern": "listening to|Compiled|Failed|compiled|failed"
-                       }
-                   }
-               },
-                {
-                    "label": "Start application",
-                    "dependsOn": [
-                        "Start bot",
-                        "Start frontend"
-                    ]
-                },
-                {
-                    "label": "Start Teams App Locally",
-                    "dependsOn": [
-                        "Validate prerequisites",
-                        "Start local tunnel",
-                        "Provision",
-                        "Deploy",
-                        "Start application"
-                    ],
-                    "dependsOrder": "sequence"
-                },
-       ]
-   ```
-
-1. Add the actions `botAadApp/create` and `botFramework/create` under provision in the `teamsapp.local.yml` file.
-1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
-
-   ```yml
-    provision:
-      - uses: botAadApp/create
-        with:
-          # The Microsoft Entra application's display name
-          name: bot-${{TEAMSFX_ENV}}
-        writeToEnvironmentFile:
-          # The Microsoft Entra application's client id created for bot.
-          botId: BOT_ID
-          # The Microsoft Entra application's client secret created for bot.
-          botPassword: SECRET_BOT_PASSWORD 
-    
-      # Create or update the bot registration on dev.botframework.com
-      - uses: botFramework/create
-        with:
-          botId: ${{BOT_ID}}
-          name: bot
-          messagingEndpoint: ${{BOT_ENDPOINT}}/api/messages
-          description: ""
-          channels:
-            - name: msteams
-    deploy:
-      - uses: file/createOrUpdateEnvironmentFile # Generate runtime environment variables
-        with:
-          target: ./tab/.localConfigs
-          envs:
-            BROWSER: none
-            HTTPS: true
-            PORT: 53000
-            SSL_CRT_FILE: ${{SSL_CRT_FILE}}
-            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
-    
-      - uses: file/createOrUpdateEnvironmentFile # Generate runtime environment variables
-        with:
-          target: ./bot/.localConfigs
-          envs:
-            BOT_ID: ${{BOT_ID}}
-            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
-   ```
-
-   For more information, see [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
-
-1. Select **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
-1. Press **F5** to debug and preview your Teams app.
