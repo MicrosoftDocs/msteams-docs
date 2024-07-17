@@ -49,7 +49,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 1. Select your app package .zip file.
 1. Add your app to Teams as per your requirement:</br>
 
-   a. Select **Add** to install the app to Teams.</br>
+   a. Select **Add** to add your personal app.</br>
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the custom app to add in Teams or chat.":::
 
