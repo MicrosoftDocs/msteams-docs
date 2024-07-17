@@ -13,9 +13,10 @@ Introduction: what is a Bot, Bot apps (types) in Teams, how does a bot in Teams 
 
 ## Bots user experience in Teams
 
-Introduction to scopes where bots work and how influence user interaction.
+Introduction to scopes where bots work and how influence user interaction. Bot type vs. scope matrix.
 Introduction and an infographic or video that shows user experience for bots in Teams.
 
 ## Dev experience for bot interaction in Teams
 
-An infographic that shows the end-to-end interaction between a bot app and a user through the network/tenant.
+An infographic that shows the end-to-end interaction between a conversational bot app and a user through the network/tenant.
+Could add similar infographics for other bot types
