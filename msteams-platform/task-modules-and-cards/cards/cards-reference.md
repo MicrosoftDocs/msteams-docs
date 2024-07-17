@@ -32,11 +32,11 @@ To create a hero card, thumbnail card, or Adaptive Card from Developer Portal fo
 You can find additional information on how to use cards in the documentation for the Bot Builder SDK v3. Code samples are also available in the **Microsoft/BotBuilder-Samples** repository on GitHub. Following are a few card examples:
 
 * .NET
-  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true).
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true#send-an-adaptive-card).
   * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).
 
 * Node.js
-  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true).
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#send-an-adaptive-card).
   * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).
 
 ## Card types
@@ -310,8 +310,8 @@ Example:
 
 Bot Framework reference:
 
-* [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-* [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+* [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#send-an-adaptive-card)
+* [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true#send-an-adaptive-card)
 
 To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
@@ -383,8 +383,8 @@ The following code shows an example of a hero card:
 
 Bot Framework reference:
 
-* [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
-* [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
+* [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#send-a-hero-card)
+* [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&preserve-view=true&tabs=csharp#send-a-hero-card)
 
 ## List card
 
@@ -766,7 +766,7 @@ You can work with card collections that include carousel and list collections. T
 
 ### Carousel collection
 
-The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true#send-a-carousel-of-cards) shows a carousel of cards, optionally with associated action buttons.
 
 #### Support for carousel collections
 
