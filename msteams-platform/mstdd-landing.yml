@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: surbhigupta12 #Required; microsoft alias of author; optional team alias.
+  ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
   ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
