@@ -23,3 +23,26 @@ Introduction to scopes where bots work and how influence user interaction. Bot t
 
 An infographic that shows the end-to-end interaction between a conversational bot app and a user through the network/tenant.
 Could add similar infographics for other bot types
+
+## Bot users and bot features
+
+Bot features vs bot user types
+Introduction to bot user journeys based on user's beginner or advanced level
+
+Interactive infographic:
+
+* New user journey:
+  * Basic bot concepts
+  * Basic bot building in TTK - link back to Get started
+  * Building basic bot using code samples
+    * Learn bot activities, activity handlers, bot SDKs, etc.
+    * Configure bot
+    * Format message using Adaptive cards
+    * Interactive messages
+    * Send and receive files
+    * API changes to fetch team or chat members
+    * Optimize bot with rate limiting
+* Advanced user journey:
+  * Learn and build call and media bots
+  * Build AI bot
+  * Extend AI bot to Copilot
