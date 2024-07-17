@@ -1,7 +1,7 @@
 ---
-title: The launch stage for your collaborative app
+title: Launch Stage for Collaborative Apps
 author: heath-hamilton
-description: Learn what you can do during the launch stage of your app to grow your app.
+description: Learn what you can do during the launch stage of your app to grow your app. Learn about Teams Store listing, landing page, and Store marketing toolkit.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -32,7 +32,7 @@ Focus on the following with respect to your Teams Store listing, landing page an
   - Use bullet points and emojis to break the wall of text and achieve better readability.
   - Include screenshots in your listing that show the app’s experience and underscore the user value inside Teams.
   - Include a video in your listing that focuses on showing the app’s experience inside Teams. Generic marketing videos that talk about the user problem your app is solving or one that simply gives an overview of your entire SaaS product aren't meaningful. It leads to higher customer satisfaction if you set accurate expectations for your app's value and user experience inside Teams.
-  - Ensure to include customer testimonials or quotes directly in your description and links to public references and success stories to build trust that your Teams app has already benefited customers. It will instill confidence in new customers looking to acquire or try your app.
+  - Ensure to include customer testimonials or quotes directly in your description and links to public references and success stories to build trust that your Teams app has already benefited customers. It instills confidence in new customers looking to acquire or try your app.
 
     **Resources and examples for inspiration**
 
@@ -50,7 +50,7 @@ Focus on the following with respect to your Teams Store listing, landing page an
   - Include beautiful video, animated GIFs, and artful screenshots of your real Teams app on this page for impactful storytelling. Your goal should be to get everyone who lands on this page to install and try out your Teams app immediately.
   - Ensure to include credible customer testimonials (with their permissions of course) and links to public references and success stories to build trust that your Teams app has already benefited customers.
   - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app. It can include scenarios, features, any other cost or pricing, which SaaS subscription plans of yours support the Teams app, and so on.
-  - Include download links to on-demand webinars or sign-up links to scheduled trainings, webinars, or events for your Teams app on this page. Remember all of these will result in valuable marketing qualified leads for your app.
+  - Include download links to on-demand webinars or sign-up links to scheduled trainings, webinars, or events for your Teams app on this page. Remember all of these results in valuable marketing qualified leads for your app.
   - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to prominently showcase the planned roadmap for your Teams app. Your users can use this page to upvote or downvote upcoming features. Users are more likely to pick your app over competition if they see continuous investments in the product.
   - This page must link to public pages and host downloadable copies of various bills of materials for your Teams app (see the bill of materials section). It can include technical solution datasheets, Teams app one-pager, IT admin guides, end-user facing app usage guides, and so on.
   - Your detailed public support or documentation page for the Teams app (see Documentation section) must also be prominently discoverable on this page. Users typically stumble upon the app’s landing page via search results.
@@ -280,7 +280,3 @@ Contact your Microsoft field, account, or engineering representatives to request
 
 > [!div class="nextstepaction"]
 > [Gaining traction for your collaborative app in the market](gain-traction.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)

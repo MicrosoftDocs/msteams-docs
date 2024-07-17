@@ -24,17 +24,12 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 
 The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
-### Microsoft Teams UI Library
+### Fluent UI React components
 
-View and test individual Teams UI templates and related components in your browser.
-
-> [!div class="nextstepaction"]
-> [Try the UI library (playground)](https://63587347138fdad13ed63ccd-omfbjvvebn.chromatic.com/)
-
-Import these templates and related components directly into your Teams app project.
+View and test individual Fluent UI React components in your browser.
 
 > [!div class="nextstepaction"]
-> [Get the UI library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [Try Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
 
 ### Sample app
 
@@ -168,7 +163,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Top use case
 
-* Authenticate users
+Authenticate users
 
 ### Mobile
 
@@ -187,7 +182,7 @@ Settings screens are where users can configure their preferences with your app.
 
 ### Top use case
 
-* Manage app features
+Manage app features
 
 :::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." lightbox="../../assets/images/ui-templates/settings.png":::
 

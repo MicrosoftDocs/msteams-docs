@@ -4,7 +4,7 @@ author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
+ms.topic: conceptual
 ms.date: 01/17/2023
 ---
 
@@ -24,7 +24,7 @@ Your team can get the latest updates from different sources in Teams using the T
 
 ## Add a new dashboard
 
-After you've created a dashboard tab app, you can add a new dashboard.
+After you create a dashboard tab app, you can add a new dashboard.
 
 To add a new dashboard, follow these steps:
 
@@ -869,5 +869,4 @@ Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-
 
 * [What are Teams tabs](../what-are-tabs.md)
 * [App design guidelines for tab](../design/tabs.md)
-* [Fluent UI library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
-* [Fluent UI React charting examples](https://63587347138fdad13ed63ccd-omfbjvvebn.chromatic.com/?path=/story/ui-templates-dashboards--default)
+* [Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)

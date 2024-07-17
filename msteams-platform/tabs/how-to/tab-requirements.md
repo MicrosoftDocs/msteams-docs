@@ -32,7 +32,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, or else your page isn't displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) using script tags. After your page loads, make a call to `app.initialize()`, or else your page isn't displayed.
 
 * For authentication to work on mobile clients, you must upgrade to TeamsJS version 1.4.1 or later.
 
@@ -71,4 +71,5 @@ Now let's build your tab. But first select your choice of tab to build:
 * [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
 * [Register your tab app in Microsoft Entra ID](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Grant tab device permission in Teams](../../sbs-tab-device-permissions.yml)
 * [Content Security Policy](/aspnet/core/blazor/security/content-security-policy)

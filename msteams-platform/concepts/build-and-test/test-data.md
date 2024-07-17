@@ -1,5 +1,5 @@
 ---
-title: Add test data to your Microsoft 365 test tenant
+title: Test App with Microsoft 365 Tenant
 description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets.
 ms.topic: how-to
 ms.localizationpriority: medium    
@@ -17,7 +17,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
-5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
+5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true#installing-the-azure-ad-module).
 
 > [!NOTE]
 > You must have global admin permissions in the tenant to run the scripts.
@@ -246,7 +246,6 @@ By default, only global admins or Teams service admins can upload the custom app
 
 ## See also
 
-* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

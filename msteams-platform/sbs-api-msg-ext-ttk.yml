@@ -17,7 +17,8 @@ items:
 
     > [!NOTE]
     >
-    > API-based message extensions only support search commands.
+    > * API-based message extensions only support search commands.
+    > * Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
     
     Message extensions built using an API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
 
@@ -32,7 +33,7 @@ items:
    | Install | For using... |
    | --- | --- |
    |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
-   |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, or call - all in one place.|
+   |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
@@ -302,7 +303,11 @@ items:
 
     ```
     </details>
-    
+
+    > [!NOTE]
+    >
+    > Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
+
     Now that you have your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
 
      The following code is an example of the response rendering template: <br/>
