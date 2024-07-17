@@ -1,6 +1,6 @@
 ---
 title: Choose what suits you
-description: Learn more about the available tools and SDKs  to build a Microsoft Teams app based on the app capabilities, AI capability, UI components, and languages.
+description: Learn more about the available tools and SDKs to build a Microsoft Teams app based on the app capabilities, AI capability, UI components, and languages.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
