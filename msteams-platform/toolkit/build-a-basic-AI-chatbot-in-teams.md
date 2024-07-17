@@ -178,13 +178,13 @@ You can add customizations on top of the basic app to build complex scenarios as
 
 # [Syntax 1](#tab/syntax1)
 
-     1. {{ $[scope].property }}: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
+     1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
 
      1. The `{{$[scope].property}}` is used in the following way:
 
 # [JavaScript](#tab/javascript1)
 
-        1. In the src/app/turnState.ts file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
+        1. In the `src/app/turnState.ts` file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
 
             ```javascript
             import { DefaultConversationState, DefaultTempState, DefaultUserState, TurnState } from "@microsoft/teams-ai";
@@ -219,7 +219,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
 # [Python](#tab/python1)
 
-        1. In the src/state.py file, define your temp state, user state, conversation state, and app turn state.
+        1. In the `src/state.py` file, define your temp state, user state, conversation state, and app turn state.
 
             ```python
             from teams.state import TempState, ConversationState, UserState, TurnState
@@ -258,7 +258,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
 # [Syntax 2](#tab/syntax2)
 
-     1. {{ functionName }}: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
+     1. `{{ functionName }}`: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
 
 # [JavaScript](#tab/javascript2)
 
