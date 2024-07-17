@@ -69,7 +69,7 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-    displayName: Design principles, Figma, UI Kit, UI library, Fluent UI 
+    displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
