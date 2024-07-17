@@ -1,8 +1,7 @@
 ---
 title: Adaptive Card templates for Teams
-description: Learn about the different Adaptive Card templates for Microsoft Teams to design your own Adaptive Card.
+description: Learn to design Adaptive Cards with Adaptive Card templates for Microsoft Teams including hero card, item thumbnail, list card, and communications card.
 ms.localizationpriority: medium
-ms.topic: conceptual
 ms.date: 06/17/2024
 ---
 
@@ -20,11 +19,14 @@ This article presents a curated set of nine Adaptive Card templates for Microsof
 * [Issue status](#issue-status)
 * [Account details](#account-details)
 
-To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/pnp/AdaptiveCards-Templates).
+To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/).
 
 ## Recipe hero
 
 Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details.
+
+> [!div class="nextstepaction"]
+> [Download template](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
 
 # [Desktop](#tab/desktop1)
 
@@ -95,6 +97,9 @@ Use this template to showcase a variety of short video content, such as tutorial
 ## Course video
 
 This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users.
+
+> [!NOTE]
+> This Adaptive Card template can only be used in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 # [Desktop](#tab/desktop6)
 

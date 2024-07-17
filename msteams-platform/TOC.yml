@@ -684,7 +684,7 @@
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, Adaptive Card, command bot
     - name: Adaptive Card templates
       href: task-modules-and-cards/cards/starter-cards.md
-      displayName: Adaptive Card samples, hero card, list card
+      displayName: Adaptive Card template, Adaptive Card sample, Adaptive Card example, starter cards 
     - name: Format cards in Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock
