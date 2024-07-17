@@ -1,7 +1,7 @@
 ---
-title: Microsoft Adaptive Card Previewer Visual Studio
+title: Adaptive Card Previewer - Visual Studio
 author: v-ganr
-description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, limitations.
+description: In this article, learn more about the Microsoft Adaptive Card previewer using Teams Toolkit for Visual Studio, features, advantages, limitations.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -59,4 +59,4 @@ You can use an existing Adaptive Card template file or download the [Adaptive Ca
 
 ## See also
 
-* [Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
+[Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)

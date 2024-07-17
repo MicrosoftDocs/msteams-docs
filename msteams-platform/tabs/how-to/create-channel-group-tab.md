@@ -1,6 +1,6 @@
 ---
 title: Create a configurable tab
-description: Create configuration page and tab to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
@@ -96,7 +96,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Where do you want to place the files?**
 
-    You're currently in your project directory. Select **Enter**.
+    You're in your project directory. Select **Enter**.
 
 * **Title of your Microsoft Teams app project?**
 

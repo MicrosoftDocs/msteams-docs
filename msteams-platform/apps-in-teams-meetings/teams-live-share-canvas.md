@@ -125,7 +125,7 @@ export const ExampleLiveCanvas = () => {
     );
 
     return (
-        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        {/* Canvas needs to be a child of a parent with absolute styling */}
         <div style={{ position: "absolute"}}>
             <div
                 ref={liveCanvasRef}

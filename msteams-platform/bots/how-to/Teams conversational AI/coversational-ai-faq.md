@@ -1,7 +1,7 @@
 ---
 title: Teams AI library FAQs
 author: surbhigupta
-description: In this module, learn more about Teams AI library Frequently Asked Questions.
+description: In this module, learn more about Teams AI library frequently asked questions related to OpenAI models, Large Language Models (LLMs), and ODSL.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila

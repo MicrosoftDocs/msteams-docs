@@ -1,10 +1,10 @@
 ---
 title: Build a RAG bot in Teams
 author: surbhigupta
-description:  In this module, learn how to build RAG bot using Teams AI library.
+description: Learn how to build basic AI chatbot using Teams AI library in Teams Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
+ms.author: surbhigupta
 ms.date: 05/21/2024
 ---
 
@@ -266,6 +266,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     ```python
       planner.prompts.add_data_source(MyDataSource())
     ```
+
    ---
 
 * Create the `prompts/qa/skprompt.txt` file and add the following text:
@@ -704,16 +705,17 @@ After ingesting data into Azure AI Search, you can implement your own `DataSourc
 # [JavaScript](#tab/javascript3)
 
 ```javascript
-import { AzureKeyCredential, SearchClient } from "@azure/search-documents";
-import { DataSource, Memory, OpenAIEmbeddings, RenderedPromptSection, Tokenizer } from "@microsoft/teams-ai";
-import { TurnContext } from "botbuilder";
+const { AzureKeyCredential, SearchClient } = require("@azure/search-documents");
+const { DataSource, Memory, OpenAIEmbeddings, Tokenizer } = require("@microsoft/teams-ai");
+const { TurnContext } = require("botbuilder");
 
-export interface Doc {
-  id: string,
-  content: string, // searchable
-  filepath: string,
-  // contentVector: number[] // vector field
-  // ... other fields
+// Define the interface for document
+class Doc {
+  constructor(id, content, filepath) {
+    this.id = id;
+    this.content = content; // searchable
+    this.filepath = filepath;
+  }
 }
 
 // Azure OpenAI configuration
@@ -726,23 +728,22 @@ const searchEndpoint = "<your-search-endpoint>";
 const searchApiKey = "<your-search-apikey>";
 const searchIndexName = "<your-index-name>";
 
-export class MyDataSource implements DataSource {
-  public readonly name = "my-datasource";
-  private readonly embeddingClient: OpenAIEmbeddings;
-  private readonly searchClient: SearchClient<Doc>;
-
+// Define MyDataSource class implementing DataSource interface
+class MyDataSource extends DataSource {
   constructor() {
+    super();
+    this.name = "my-datasource";
     this.embeddingClient = new OpenAIEmbeddings({
       azureEndpoint: aoaiEndpoint,
       azureApiKey: aoaiApiKey,
       azureDeployment: aoaiDeployment
     });
-    this.searchClient = new SearchClient<Doc>(searchEndpoint, searchIndexName, new AzureKeyCredential(searchApiKey));
+    this.searchClient = new SearchClient(searchEndpoint, searchIndexName, new AzureKeyCredential(searchApiKey));
   }
 
-  public async renderData(context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: number): Promise<RenderedPromptSection<string>> {
+  async renderData(context, memory, tokenizer, maxTokens) {
     // use user input as query
-    const input = memory.getValue("temp.input") as string;
+    const input = memory.getValue("temp.input");
 
     // generate embeddings
     const embeddings = (await this.embeddingClient.createEmbeddings(input)).output[0];
@@ -758,7 +759,7 @@ export class MyDataSource implements DataSource {
           vector: embeddings,
           kNearestNeighborsCount: 3
         }]
-      }
+      },
       queryType: "semantic",
       top: 3,
       semanticSearchOptions: {
@@ -778,7 +779,7 @@ export class MyDataSource implements DataSource {
           break;
       }
 
-      // Append do to output
+      // Append doc to output
       output += doc;
       length += docLength;
     }

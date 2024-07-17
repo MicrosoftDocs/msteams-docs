@@ -69,7 +69,7 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-    displayName: Design principles, Figma, UI Kit, UI library, Fluent UI 
+    displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
@@ -140,7 +140,7 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Tools 
-    items:					  
+    items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
@@ -189,6 +189,8 @@
           - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
+          - name: Debug message extension app in Test Tool
+            href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
@@ -449,8 +451,11 @@
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
+    - name: Bot messages with AI-generated content
+      href: bots/how-to/format-ai-bot-messages.md
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md      
+      href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams
@@ -815,9 +820,12 @@
     items:
     - name: Overview
       href: graph-api/rsc/resource-specific-consent.md
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
-    displayName: Permissions, delegated, user, team, chat, application
+      displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
@@ -1133,6 +1141,9 @@
       displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
+  - name: Use Fluid with Teams
+    href: tabs/how-to/using-fluid-msteam.md
+    displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
 - name: Resources
   items:
   - name: Localization
