@@ -1,5 +1,5 @@
 ---
-title: Bots in Microsoft Teams
+title: Bots in Teams
 author: surbhigupta
 description: description
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 01/29/2023
 ---
 
 
-# Build bots for Teams
+# Build a bot app for Teams
 
 Introduction: what is a Bot, Bot apps (types) in Teams.
 
