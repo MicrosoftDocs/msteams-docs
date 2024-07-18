@@ -176,13 +176,13 @@ You can add customizations on top of the basic app to build complex scenarios as
 
      To use project generated with Teams Toolkit, you can author the prompts in the `src/prompts/chat/skprompt.txt` file. The prompts written in this file are inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text:
 
-# [Syntax 1](#tab/syntax1)
+    # [Syntax 1](#tab/syntax1)
 
      1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
 
      1. The `{{$[scope].property}}` is used in the following way:
 
-# [JavaScript](#tab/javascript1)
+    # [JavaScript](#tab/javascript1)
 
         1. In the `src/app/turnState.ts` file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
 
@@ -217,7 +217,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
         1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
 
-# [Python](#tab/python1)
+    # [Python](#tab/python1)
 
         1. In the `src/state.py` file, define your temp state, user state, conversation state, and app turn state.
 
@@ -256,11 +256,11 @@ You can add customizations on top of the basic app to build complex scenarios as
 `
          ---
 
-# [Syntax 2](#tab/syntax2)
+    # [Syntax 2](#tab/syntax2)
 
      1. `{{ functionName }}`: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
 
-# [JavaScript](#tab/javascript2)
+    # [JavaScript](#tab/javascript2)
 
         1. Register the function in the prompt manager in the `src/app/app.ts` file:
 
@@ -272,7 +272,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
         1. Use the function in  `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
 
-# [Python](#tab/python2)
+    # [Python](#tab/python2)
 
         1. Register the function into prompt manager in the `src/bot.py` file:
 
@@ -291,7 +291,7 @@ You can add customizations on top of the basic app to build complex scenarios as
         1. Use the function in the `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
          ---
 
-# [Syntax 3](#tab/syntax3)
+    # [Syntax 3](#tab/syntax3)
 
      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
 
@@ -311,7 +311,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
     * Maximum number of history messages. Configure `max_history_messages` when initializing `PromptManager`.
 
-# [JavaScript](#tab/javaScript3)
+    # [JavaScript](#tab/javaScript3)
 
         ```javascript
 
@@ -321,7 +321,7 @@ You can add customizations on top of the basic app to build complex scenarios as
         });
         ```
 
-# [Python](#tab/python3)
+    # [Python](#tab/python3)
 
         ```python
         
@@ -336,7 +336,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
     * Maximum number of history tokens. Configure `max_conversation_history_tok`ens when initializing `PromptManager`.
 
-# [JavaScript](#tab/javaScript4)
+    # [JavaScript](#tab/javaScript4)
 
         ```javascript
         
@@ -347,7 +347,7 @@ You can add customizations on top of the basic app to build complex scenarios as
         
         ```
 
-# [Python](#tab/python4)
+    # [Python](#tab/python4)
 
         ```python
         

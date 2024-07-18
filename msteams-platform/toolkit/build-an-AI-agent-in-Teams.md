@@ -44,7 +44,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
 1. To build an app, select any of the following options:
 
-# [Build new](#tab/buildnew)
+   # [Build new](#tab/buildnew)
 
     1. Select **Build New**.
 
@@ -125,7 +125,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
-# [Assistants API](#tab/assistantsapi)
+   # [Assistants API](#tab/assistantsapi)
 
     1. Select **Build with Assistants API Preview**.
 
