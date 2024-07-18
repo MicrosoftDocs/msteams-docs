@@ -412,10 +412,12 @@
   - name: App caching for your tab app
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
-- name: Build bots
+- name: Build bots-revamp
   items:
   - name: Overview
     href: bots/bot-overview.md
+  - name: Bot solutions
+    href: bot/bot-solutions.md 
 - name: Build bots
   items:
   - name: Overview

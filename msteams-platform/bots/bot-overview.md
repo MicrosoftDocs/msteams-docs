@@ -9,7 +9,7 @@ ms.date: 01/29/2023
 ---
 
 
-# Build a bot app for Teams
+# Bot app for Teams
 
 Introduction: what is a Bot, Bot apps (types) in Teams.
 
@@ -46,3 +46,11 @@ Interactive infographic:
   * Learn and build call and media bots
   * Build AI bot
   * Extend AI bot to Copilot
+
+## Common bot scenarios
+
+TBD
+
+## Bot manifest config
+
+TBD
