@@ -1,7 +1,7 @@
 ---
 title: Configure scope for a bot app
 author: surbhigupta
-description: Description
+description: Description for configuring bot scope
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta

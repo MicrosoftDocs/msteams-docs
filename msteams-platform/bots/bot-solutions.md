@@ -1,7 +1,7 @@
 ---
 title: Bots solutions in Teams
 author: surbhigupta
-description: Description
+description: Description for bot solutions
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta

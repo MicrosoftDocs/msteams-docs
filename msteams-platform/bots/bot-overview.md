@@ -1,7 +1,7 @@
 ---
 title: Bots in Teams
 author: surbhigupta
-description: description
+description: description for overview
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta

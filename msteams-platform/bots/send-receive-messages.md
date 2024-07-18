@@ -1,7 +1,7 @@
 ---
 title: Messages in bot apps
 author: surbhigupta
-description: Description
+description: Description for sending and receiving messgaes in a bot
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta
