@@ -135,10 +135,10 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
           :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
-       > [!NOTE]
-       >
-       > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
-       > * The `AssistantsPlanner` in Teams AI Library is in preview.
+         > [!NOTE]
+         >
+         > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
+         > * The `AssistantsPlanner` in Teams AI Library is in preview.
 
       1. Select **Azure OpenAI** or **OpenAI**.
 
@@ -168,7 +168,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-       **Create your own OpenAI Assistant**
+   **Create your own OpenAI Assistant**
 
         Before running or debugging your bot, follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
 
