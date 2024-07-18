@@ -417,7 +417,11 @@
   - name: Overview
     href: bots/bot-overview.md
   - name: Bot solutions
-    href: bot/bot-solutions.md 
+    href: bots/bot-solutions.md
+  - name: Send and receive messages
+    href: bots/send-receive-messages.md
+  - name: Configure bot scope
+    href: bots/config-bot-scope.md    
 - name: Build bots
   items:
   - name: Overview
