@@ -415,6 +415,10 @@
 - name: Build bots
   items:
   - name: Overview
+    href: bots/bot-overview.md
+- name: Build bots
+  items:
+  - name: Overview
     href: bots/what-are-bots.md
   - name: Bots and SDKs
     href: bots/bot-features.md
