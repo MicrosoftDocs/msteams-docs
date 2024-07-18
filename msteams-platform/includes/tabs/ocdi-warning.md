@@ -3,7 +3,7 @@
 >
 > 1. Update TeamsJS library to v.2.19.0 or later. For more information about the latest release of TeamsJS, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. If you've defined [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) headers for your app, update the [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive with the `*.cloud.microsoft` domains. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
+> 2. If you've defined [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) headers for your app, update the [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive to include the `*.cloud.microsoft` domain. To ensure backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers. This approach ensures that your app continues to work across both existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
 >
 > Update the following list of domains in `frame-ancestors` in your app's CSP headers:
 >
