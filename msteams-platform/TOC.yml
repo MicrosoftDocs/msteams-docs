@@ -69,7 +69,7 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-    displayName: Design principles, Figma, UI Kit, UI library, Fluent UI 
+    displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
@@ -1141,6 +1141,9 @@
       displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
+  - name: Use Fluid with Teams
+    href: tabs/how-to/using-fluid-msteam.md
+    displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
 - name: Resources
   items:
   - name: Localization
