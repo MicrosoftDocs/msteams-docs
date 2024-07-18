@@ -28,7 +28,7 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 ## Microsoft 365 host support
 
-Only a subset of Microsoft 365 host applications supports the ability to specify runtime requirements in the app manifest. This support will expand over time. The following hosts ensure only applicable apps and their applicable components are made available to users:
+Only a subset of Microsoft 365 host applications supports the ability to specify runtime requirements in app manifest. This support will expand over time. The following hosts ensure only applicable apps and their applicable components are made available to users:
 
 |Microsoft 365 host application| Web | Desktop | Mobile |
 |---|---|---|---|
@@ -57,7 +57,7 @@ Only a subset of Teams app capabilities can be specified as runtime requirements
 Each app element is denoted by an `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions.
 
 This feature introduces `id` properties to `configurableTabs` and `composeExtensions` definitions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab or a single message extension, or both. These ID properties future-proof your app in case host support expands to accommodate multiple instances of these components.
-> [NOTE!]
+> [!NOTE]
 > The `id` property must be specified in a `configurableTab` or a `composeExtension` for it to be recognized in an `elementRelationshipSet`.
 
 ### One-way dependencies

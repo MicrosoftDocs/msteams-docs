@@ -59,7 +59,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]  // Developers can add more commands.
+            "commandIds": ["command-1-id", "command-2-id"]  // You can add more commands.
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
@@ -476,12 +476,12 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Describes relationships among individual app components, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
+Describes relationships among individual app components, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object with *dependent* (`element`) and *depended on* (`dependsOn`) [`element` objects](#element-object)).|
-| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object))|
+| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object)).|
 
 ### element object
 
@@ -489,21 +489,21 @@ Describes an app component (`element`) in an elementRelationshipSet.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
-| `id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+| `name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`.|
+| `id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs, and message extensions.|
 | `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only for message extension (`"name" : "composeExtensions"`) component elements in relationship sets.|
 
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) won't load or otherwise surface to the end-user.
+Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) won't load or otherwise surface to the user.
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `element`| Object||✔️| Represents an individual app component (represented by [`element` object](#element-object)) that has a one-way runtime dependency on another component being loaded |
-| `dependsOn`| Array|| ✔️| Denotes one or more app components (each represented by [`element` object](#element-object)) required for the specified `element` to load|
+| `element`| Object||✔️| Represents an individual app component (represented by [`element` object](#element-object)) that has a one-way runtime dependency on another component being loaded. |
+| `dependsOn`| Array|| ✔️| Denotes one or more app components (each represented by [`element` object](#element-object)) required for the specified `element` to load.|
 
 ```json
  "elementRelationshipSet": {
@@ -512,7 +512,7 @@ Describes a unidirectional dependency of one app component (X) to another (Y). I
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]  // Developers can add more commands.
+            "commandIds": ["command-1-id", "command-2-id"]  // You can add more commands.
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
@@ -524,7 +524,7 @@ Describes a unidirectional dependency of one app component (X) to another (Y). I
 
 ### elementRelationshipSet.mutualDependencies
 
-Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components in order for any of those components to be available for end-users in that host.
+Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components for any of those components to be available for users in that host.
 
 **Optional** &ndash; Array of [`element` objects](#element-object)
 
