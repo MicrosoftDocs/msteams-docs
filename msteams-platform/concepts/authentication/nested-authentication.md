@@ -71,7 +71,7 @@ To enable nested authentication, your application must actively configure a redi
 brk-<broker_application_id>://<your_domain>
 ```
 
-Where <broker_application_id> is the alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**. If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams) then you just need to add one Redirect URI:
+Where <broker_application_id> is the alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**. If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams), then you just need to add one Redirect URI:
 
 ```http
 brk-multihub://<your_domain>
@@ -125,7 +125,7 @@ To acquire a token, follow these steps:
 
 1. Use MSAL.js to acquire tokens that for your app ID. Unlike On-Behalf-Of (OBO) flow, you don't need to preauthorize your hosts to call your endpoints. For more information on how to to get access tokens, see [Acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
 
-1. Use `getActiveAccount` API to verify if there is an active account to call the `publicClientApplication`. If ther's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like tenantID, homeAccountId, and loginHint from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface). 
+1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like tenantID, homeAccountId, and loginHint from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface). 
 
    > [!NOTE]
    > The `homeAccountId` property is equivalent to `userObjectId` in Teams JavaScript client library(TeamsJS).
@@ -206,8 +206,15 @@ fetch(graphEndpoint, options)
 
   In certain cases, the acquireTokenSilent method's attempt to get the token fails. For example, when there's an expired user session with Microsoft Entra or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
 
-* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level/legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
+* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level or legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
 * Nested app authentication might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of "true" indicates support for nested app authentication, while "false" suggests it isn't supported.
 
 * **Test your application in multiple environments**: If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
+
+## Code sample
+
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|
+|Nested app authentication   |  This sample shows how to build a NAA authentication protocol for single page applications embedded in host environments like Teams, Outlook, and Microsoft 365.||[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)| |
+
