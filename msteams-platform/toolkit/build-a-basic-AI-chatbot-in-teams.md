@@ -178,13 +178,13 @@ You can add customizations on top of the basic app to build complex scenarios as
 
     # [Syntax 1](#tab/syntax1)
 
-     1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
+      1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
 
-     1. The `{{$[scope].property}}` is used in the following way:
+      1. The `{{$[scope].property}}` is used in the following way:
 
     # [JavaScript](#tab/javascript1)
 
-        1. In the `src/app/turnState.ts` file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
+      1. In the `src/app/turnState.ts` file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
 
             ```javascript
             import { DefaultConversationState, DefaultTempState, DefaultUserState, TurnState } from "@microsoft/teams-ai";
@@ -203,7 +203,7 @@ You can add customizations on top of the basic app to build complex scenarios as
             export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
             ```
 
-        1. In the `src/app/app.ts` file, use app turn state to initialize the app.
+      1. In the `src/app/app.ts` file, use app turn state to initialize the app.
 
             ```javascript
             const storage = new MemoryStorage();
@@ -215,11 +215,11 @@ You can add customizations on top of the basic app to build complex scenarios as
             });
             ```
 
-        1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
+      1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
 
     # [Python](#tab/python1)
 
-        1. In the `src/state.py` file, define your temp state, user state, conversation state, and app turn state.
+      1. In the `src/state.py` file, define your temp state, user state, conversation state, and app turn state.
 
             ```python
             from teams.state import TempState, ConversationState, UserState, TurnState
@@ -244,7 +244,7 @@ You can add customizations on top of the basic app to build complex scenarios as
                     )
             ```
 
-        1. In the `src/bot.py` file, user app turn state to initialize app.
+      1. In the `src/bot.py` file, user app turn state to initialize app.
 
             ```python
             from state import AppTurnState
@@ -252,17 +252,16 @@ You can add customizations on top of the basic app to build complex scenarios as
             app = Application[AppTurnState](...)
             ```
 
-        1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
-`
-         ---
+      1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
+     ---
 
     # [Syntax 2](#tab/syntax2)
 
-     1. `{{ functionName }}`: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
+      `{{ functionName }}`: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
 
     # [JavaScript](#tab/javascript2)
 
-        1. Register the function in the prompt manager in the `src/app/app.ts` file:
+      1. Register the function in the prompt manager in the `src/app/app.ts` file:
 
             ```typescript
             prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
@@ -270,11 +269,11 @@ You can add customizations on top of the basic app to build complex scenarios as
             });
             ```
 
-        1. Use the function in  `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+      1. Use the function in  `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
 
     # [Python](#tab/python2)
 
-        1. Register the function into prompt manager in the `src/bot.py` file:
+      1. Register the function into prompt manager in the `src/bot.py` file:
 
             ```python
             @prompts.function("getTasks")
@@ -288,20 +287,19 @@ You can add customizations on top of the basic app to build complex scenarios as
                 return state.get("conversation.tasks")
             ```
 
-        1. Use the function in the `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-         ---
+      1. Use the function in the `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+      ---
 
     # [Syntax 3](#tab/syntax3)
 
-     `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
+      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
 
-     1. Register the function in prompt manager:
+      1. Register the function in prompt manager:
           * For JavaScript language, register it in `src/app/app.ts`.
           * For Python language, register it in `src/bot.py`.
 
-     1. Use the function in `src/prompts/chat/skprompt.txt: Your`task is: {{ getTasks taskTitle }}`.
-
-     ---
+      1. Use the function in `src/prompts/chat/skprompt.txt: Your`task is: {{ getTasks taskTitle }}`.
+      ---
 
 1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting `completion.include_input` to `true` in `src/prompts/chat/config.json`. You can also optionally configure the maximum number of user input tokens in `src/prompts/chat/config.json` by changing `completion.max_input_tokens`. This is useful when you want to limit the length of user inputs to avoid exceeding the token limit.
 
@@ -313,52 +311,49 @@ You can add customizations on top of the basic app to build complex scenarios as
 
     # [JavaScript](#tab/javaScript3)
 
-        ```javascript
+      ```javascript
 
         const prompts = new PromptManager({
         promptsFolder: path.join(__dirname, "../prompts"),
         max_history_messages: 3,
         });
-        ```
+      ```
 
     # [Python](#tab/python3)
 
-        ```python
-        
+      ```python
         prompts = PromptManager(PromptManagerOptions(
             prompts_folder=f"{os.getcwd()}/prompts",
             max_history_messages=3,
         ))
-        
-        ```
-
-        ---
+      ```
+      ---
 
     * Maximum number of history tokens. Configure `max_conversation_history_tok`ens when initializing `PromptManager`.
 
     # [JavaScript](#tab/javaScript4)
 
-        ```javascript
+      ```javascript
         
         const prompts = new PromptManager({
             promptsFolder: path.join(__dirname, "../prompts"),
             max_conversation_history_tokens: 1000,
         });
         
-        ```
+      ```
 
     # [Python](#tab/python4)
 
-        ```python
+      ```python
         
         prompts = PromptManager(PromptManagerOptions(
             prompts_folder=f"{os.getcwd()}/prompts",
             max_conversation_history_tokens=1000,
         ))
         
-        ```
+      ```
 
-        ---
+      ---
 
 1. **Customize model type**: You can use a specific model for a prompt. In the `src/prompts/chat/config.json` file, configure `completion.model`. If no model is configured for the prompt, the default model configured in `OpenAIModel` is used.
 
