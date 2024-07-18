@@ -13,7 +13,8 @@ ms.localizationpriority: medium
 > [!NOTE]
 >
 > * Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Nested app authentication is only supported in tabs.
+> * Nested app authentication is only supported in single page applications such as tabs.
+> * Nested app authentication isn't supported on Teams web client and Microsoft 365 apps.
 
 Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across applications nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow.
 
