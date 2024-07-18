@@ -93,15 +93,15 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-new-final-output.png" alt-text="Screenshot shows the final output of AI agent build new bot." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-new-output.png":::
 
-## Take a tour of the bot app source code
+   ## Take a tour of the bot app source code
 
-    | Folder       | Contents                                            |
-    | - | - |
-    | `.vscode`    | Visual Studio Code files for debugging.                          |
-    | `appPackage` | Templates for the Teams app manifest.        |
-    | `env`        | Environment files.                                   |
-    | `infra`      | Templates for provisioning Azure resources.          |
-    | `src`        | The source code for the app.                |
+      | Folder       | Contents                                            |
+      | - | - |
+      | `.vscode`    | Visual Studio Code files for debugging.                          |
+      | `appPackage` | Templates for the Teams app manifest.        |
+      | `env`        | Environment files.                                   |
+      | `infra`      | Templates for provisioning Azure resources.          |
+      | `src`        | The source code for the app.                |
 
     The following files can be customized and they demonstrate an example of implementation to get you started:
 
@@ -127,46 +127,46 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    # [Assistants API](#tab/assistantsapi)
 
-    1. Select **Build with Assistants API Preview**.
+      1. Select **Build with Assistants API Preview**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
 
-    1. Select **JavaScript**.
+      1. Select **JavaScript**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
        > [!NOTE]
        >
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
        > * The `AssistantsPlanner` in Teams AI Library is in preview.
 
-    1. Select **Azure OpenAI** or **OpenAI**.
+      1. Select **Azure OpenAI** or **OpenAI**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
 
-    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+      1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
-    1. Select **Enter**.
+      1. Select **Enter**.
 
-    1. Select **Default folder**.
+      1. Select **Default folder**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
-       To change the default location, follow these steps:
+         To change the default location, follow these steps:
 
-         1. Select **Browse**.
-         1. Select the location for the project workspace.
-         1. Select **Select Folder**.
+            1. Select **Browse**.
+            1. Select the location for the project workspace.
+            1. Select **Select Folder**.
 
-    1. Enter an app name for your app and then select the **Enter** key.
+      1. Enter an app name for your app and then select the **Enter** key.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+          :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-       You've successfully created your AI agent bot.
+         You've successfully created your AI agent bot.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
        **Create your own OpenAI Assistant**
 
@@ -206,15 +206,15 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assistants API bot." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-assistant-api-output.png":::
 
-## Take a tour of the bot app source code
+   ## Take a tour of the bot app source code
 
-    | Folder       | Contents                                            |
-    | - | - |
-    | `.vscode`    | Visual Studio Code files for debugging.                        |
-    | `appPackage` | Templates for the Teams application manifest.        |
-    | `env`        | Environment files.                                   |
-    | `infra`      | Templates for provisioning Azure resources.          |
-    | `src`        | The source code for the application.                 |
+      | Folder       | Contents                                            |
+      | - | - |
+      | `.vscode`    | Visual Studio Code files for debugging.                        |
+      | `appPackage` | Templates for the Teams application manifest.        |
+      | `env`        | Environment files.                                   |
+      | `infra`      | Templates for provisioning Azure resources.          |
+      | `src`        | The source code for the application.                 |
 
     The following files can be customized and they demonstrate an example of implementation to get you started:
 
