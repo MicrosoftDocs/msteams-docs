@@ -9,24 +9,21 @@ ms.date: 06/17/2024
 
 This article presents a curated set of nine Adaptive Card templates for Microsoft Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. The Adaptive Card templates help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
 
-* [Recipe hero](#recipe-hero)
-* [Work item thumbnail](#work-item-thumbnail)
-* [List](#list)
-* [Communications](#communications)
-* [Author highlight video](#author-highlight-video)
-* [Course video](#course-video)
-* [Standard video](#standard-video)
-* [Issue status](#issue-status)
-* [Account details](#account-details)
+* [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
+* [Work item thumbnail](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/work_item)
+* [List](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/list)
+* [Communications](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/communication)
+* [Author highlight video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/author-highlight-video)
+* [Course video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/course-video)
+* [Standard video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/standard-video)
+* [Issue status](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/issue)
+* [Account details](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/account)
 
 To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/).
 
 ## Recipe hero
 
 Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details.
-
-> [!div class="nextstepaction"]
-> [Download template](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
 
 # [Desktop](#tab/desktop1)
 
@@ -99,7 +96,7 @@ Use this template to showcase a variety of short video content, such as tutorial
 This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users.
 
 > [!NOTE]
-> This Adaptive Card template can only be used in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Ratings in Adaptive Cards are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 # [Desktop](#tab/desktop6)
 
