@@ -15,11 +15,6 @@ Before creating the action command, you must decide the following factors:
 1. [How is the dialog (referred as task module in TeamsJS v1.x) created?](#select-how-to-create-your-dialog)
 1. [Is the final message or card sent to the channel from a bot, or is the message or card inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
-See the following video to learn how to define message extension action commands:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
-<br>
-
 ## Select action command invoke locations
 
 First, you must decide the location from where your action command must be invoked. When you specify the `context` property in your app manifest (previously called Teams app manifest), your command can be invoked from one or more of the following locations:
