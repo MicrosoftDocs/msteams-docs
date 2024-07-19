@@ -1,5 +1,5 @@
 ---
-title: Bots in Teams
+title: Bots tutorials
 author: surbhigupta
 description: description for advanced tutorials for bots
 ms.topic: overview

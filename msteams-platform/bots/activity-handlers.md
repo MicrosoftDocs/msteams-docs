@@ -8,6 +8,6 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Bot activity handlers
+# Activity handlers in a bot
 
 TBD: Introduction
