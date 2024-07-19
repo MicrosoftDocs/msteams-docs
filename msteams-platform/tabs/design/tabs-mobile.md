@@ -56,7 +56,7 @@ The following table describes tab availability and behavior when the app is list
 
 | Capability | Mobile availability? | Mobile behavior |
 |----------|-----------|------------|
-|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace). |
+|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#pagesconfig). |
 |Personal app|No|Not applicable|
 
 > [!NOTE]

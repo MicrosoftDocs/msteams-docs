@@ -1,6 +1,6 @@
 ---
 title: Create a channel tab or group tab
-description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams and build your first app using Blazor.
+description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
@@ -54,7 +54,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Where do you want to place the files?**
 
-    You're currently in your project directory. Select **Enter**.
+    You're in your project directory. Select **Enter**.
 
 * **Title of your Microsoft Teams app project?**
 

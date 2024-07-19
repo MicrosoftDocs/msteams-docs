@@ -1,6 +1,6 @@
 ---
 title: Share to Teams overview
-description: Learn share to Teams overview and where you can create share-to-teams button in the Teams apps and tab apps.
+description: Learn how to create Share to Teams button for web apps and personal app or tab, and where to add it in the Microsoft Teams apps and tab apps.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 02/09/2023

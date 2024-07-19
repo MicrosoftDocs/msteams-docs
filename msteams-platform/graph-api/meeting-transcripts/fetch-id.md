@@ -1,6 +1,6 @@
 ---
 title: Get Meeting ID & Organizer ID
-description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
+description: Learn about the process to obtain meeting ID and organizer ID for fetching meeting transcripts and recordings using Microsoft Graph APIs.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 01/05/2023
@@ -463,7 +463,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
              GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/transcripts('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
             ```
 
-            The response payload will contain the transcripts in the `.vtt` format.
+            The response payload contains the transcripts in the `.vtt` format.
 
     - To fetch recordings, you'll need to:
 
@@ -512,7 +512,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             GET https://graph.microsoft.com/beta/users/b935e675-5e67-48b9-8d45-249d5f88e964/onlineMeetings/MSpiOTM1ZTY3NS01ZTY3LTQ4YjktOGQ0NS0yNDlkNWY4OGU5NjQqMCoqMTk6bWVldGluZ19ZbU0zTnpJNU9USXRZakU0WlMwME1tUTNMVGt6TVRRdFkyWm1PRGRtWmpsaVptRTNAdGhyZWFkLnYy/recordings/7e31db25-bc6e-4fd8-96c7-e01264e9b6fc/content?$format=video/mp4
             ```
 
-            The response payload will contain the recordings in the `.mp4` format.
+            The response payload contains the recordings in the `.mp4` format.
 
 ### Use Bot Framework to get meeting ID and organizer ID
 
