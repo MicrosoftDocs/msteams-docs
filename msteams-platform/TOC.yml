@@ -418,10 +418,26 @@
     href: bots/bot-overview.md
   - name: Bot solutions
     href: bots/bot-solutions.md
+  - name: Bring your bot to Teams
+    href: bots/bring-bot-to-teams.md  
   - name: Send and receive messages
-    href: bots/send-receive-messages.md
+    items:
+      - name: Activity handlers
+        href: bots/activity-handlers.md
+      - name: Send and receive messages
+        href: bots/send-receive-messages.md
+      - name: Format bot messages using Adaptive Cards
+        href: bots/format-messages.md
+      - name: Send interactive messages and actions
+        href: bots/interactive-messages.md
+      - name: Send files using a bot
+        href: bots/send-files-in-bot.md
+      - name: Get context data for a bot
+        href: bots/get-bot-context.md  
   - name: Configure bot scope
-    href: bots/config-bot-scope.md    
+    href: bots/config-bot-scope.md
+  - name: Bot tutorials
+    href: bots/bot-tutorials.md 
 - name: Build bots
   items:
   - name: Overview
