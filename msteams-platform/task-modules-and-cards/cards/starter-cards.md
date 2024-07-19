@@ -2,6 +2,7 @@
 title: Adaptive Card templates for Teams
 description: Learn to design Adaptive Cards with Adaptive Card templates for Microsoft Teams including hero card, item thumbnail, list card, and communications card.
 ms.localizationpriority: medium
+ms.topic: reference
 ms.date: 06/17/2024
 ---
 
