@@ -64,7 +64,7 @@ This method shows the simple and basic way to embed Share to Teams where you can
 
     After configuration, the **Share to Teams** button gets added to your website.
 
-    * If you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
+    * If you want a different icon size for the button, use the `data-icon-px-size` attribute.
 
         ```html
         <div
@@ -97,7 +97,7 @@ This method shows the simple and basic way to embed Share to Teams where you can
 
 # [Method 2](#tab/method2)
 
-This method allows you to have some control over which button is dynamically rendered or when the script is executed. The script only runs when `window.shareToMicrosoftTeams.renderButtons()` is invoked. You can pass specific HTML elements through the `renderButtons({elements: []})` API. You can customize the button styles, size, and languages.
+This method allows you to have control over which button is dynamically rendered or when the script is executed. The script only runs when `window.shareToMicrosoftTeams.renderButtons()` is invoked. You can pass specific HTML elements through the `renderButtons({elements: []})` API. You can customize the button styles, size, and languages.
 
 The async `shareToMicrosoftTeams.renderButtons(options)` API renders all share buttons that have the class name `teams-share-button` on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons.
 
@@ -129,7 +129,7 @@ The async `shareToMicrosoftTeams.renderButtons(options)` API renders all share b
 
 ### Share content in meetings
 
-Share to Teams from web apps now allows users to share content to a live or an upcoming meeting. By enabling content sharing to meetings, you can allow users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
+Share to Teams from web apps now allows users to share content to a live or an upcoming meeting. When you enable content sharing to meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
 
 Here's how the shared web content appears in the meeting stage:
 
@@ -146,7 +146,7 @@ Before you enable share content to meetings, you must ensure the following:
 
 > [!NOTE]
 >
-> * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are just sent in the regular meeting chat.
+> * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are sent in the regular meeting chat.
 > * If app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
 > Share to Teams in meeting is supported only for instant tab scenarios and specific to Teams.
 
@@ -164,7 +164,8 @@ Before you enable share content to meetings, you must ensure the following:
         <div
         class="teams-share-button"
         data-href="https://<link-to-be-shared>"
-        data-allow-share-in-meeting="<true>"
+        data-allow-share-in-meeting="true"
+        data-app-id="<app-id>"
         >
         </div>
     ```
