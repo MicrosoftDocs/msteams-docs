@@ -1,7 +1,7 @@
 ---
 title: FAQ v4
 author: MuyangAmigo
-description:  In this module, See FAQ for Teams Toolkit v4 using Visual Studio Code
+description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
