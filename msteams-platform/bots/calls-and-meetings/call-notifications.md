@@ -33,7 +33,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Enable your bot to answer an incoming call using the [answer](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
+Enable your bot to answer an incoming call using the [answer](/graph/api/call-answer?view=graph-rest-1.0&preserve-view=true&tabs=http) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
 
 The next section provides details on authenticating the callback by inspecting the token posted to your webhook.
 
