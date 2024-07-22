@@ -1,7 +1,7 @@
 ---
 title: App caching for your tab app
 author: surbhigupta
-description: Learn how to enable app caching to your tab app in Teams and how it improves the app's launch time. Know about code examples and app caching limitations.
+description: Learn how to enable app caching for tab app in Teams, improve app's launch time and about app caching limitations, troubleshooting, and code sample.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high

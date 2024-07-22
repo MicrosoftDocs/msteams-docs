@@ -1,6 +1,6 @@
 ---
 title: Configure OAuth Authentication for Tab
-description: Learn about third-party OAuth IdP authentication, how to configure and initiate authentication flow, and know about navigation page and authorization page.
+description: Learn about third-party OAuth IdP authentication, navigation and authorization page, and how to configure and initiate authentication flow.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022

@@ -1,6 +1,6 @@
 ---
 title: SSO in Tab with Microsoft Entra ID
-description: Learn about single sign-on (SSO) authentication in Teams, how to enable SSO in tab apps and enhance user experience, and understand SSO at runtime.
+description: Learn about single sign-on (SSO) authentication and user experience in Teams, how to enable SSO in tab app, and understand SSO at runtime.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 01/17/2023

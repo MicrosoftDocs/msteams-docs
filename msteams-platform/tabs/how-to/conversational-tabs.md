@@ -1,7 +1,7 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: Learn about conversational tabs and subentities in Microsoft Teams and the associated functions such as start, continue, enhance, and close a conversation.
+description: Learn how to create conversational tabs and subentities in Microsoft Teams and functions such as start, continue, enhance, and close a conversation.
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: high

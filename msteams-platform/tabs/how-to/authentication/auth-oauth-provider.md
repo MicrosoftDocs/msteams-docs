@@ -1,6 +1,6 @@
 ---
 title: Use external OAuth providers  
-description: Learn how to use external OAuth providers, how to add authentication to external browsers, and about the authenticate API parameters.
+description: Learn how to use external OAuth providers, add authentication to external browsers, and about the authenticate API parameters.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 09/01/2022
