@@ -1,7 +1,7 @@
 ---
 title: Build a RAG bot in Teams
 author: surbhigupta
-description:  In this module, learn how to build RAG bot using Teams AI library.
+description: Learn how to build basic AI chatbot using Teams AI library in Teams Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -266,6 +266,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     ```python
       planner.prompts.add_data_source(MyDataSource())
     ```
+
    ---
 
 * Create the `prompts/qa/skprompt.txt` file and add the following text:
