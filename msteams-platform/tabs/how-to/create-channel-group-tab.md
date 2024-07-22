@@ -1030,9 +1030,9 @@ You've completed the tutorial to build a tab app with Blazor.
 >
 > To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat, channels, and meetings. In static tabs, there is no configuration dialog, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. You can update your existing configurable tab to a static tab and add different scopes to the static tab.
+Static tab capability is extended to support group chat, channels, and meetings. In static tabs, there is no configuration dialog, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. If you have multiple static tabs declared in the manifest and the app is added in channel scope, only the first tab shows up.
 
-To change your configurable tab to static tab:
+You can update your existing configurable tab to a static tab and add different scopes to the static tab. To change your configurable tab to static tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
