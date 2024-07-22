@@ -1,7 +1,7 @@
 ---
 title: Customize Microsoft Entra Manifest
 author: zyxiaoyuer
-description: Learn how to edit, customize, and preview Microsoft Entra manifest with CodeLens in Teams Toolkit and app lifecycle. View Microsoft Entra app in Azure Portal.
+description: Learn how to edit, customize, and preview Microsoft Entra manifest with CodeLens in Teams Toolkit, app lifecycle, and view Microsoft Entra app in Azure Portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
