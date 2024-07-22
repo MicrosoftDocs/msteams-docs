@@ -438,6 +438,19 @@
     href: bots/config-bot-scope.md
   - name: Bot tutorials
     href: bots/bot-tutorials.md 
+- name: Build AI bots
+  items:
+    - name: Team AI library
+      href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+    - name: Basic AI chatbot
+      href: toolkit/build-a-basic-ai-chatbot-in-teams.md
+    - name: Build an AI agent chatbot
+      href: toolkit/build-an-ai-agent-in-teams.md
+    - name: Chat with you data
+      href: Teams-AI-library-tutorial.yml
+    - name: Extend AI bot to Copilot
+      href: bots/how-to/Teams conversational AI/bot-based-me-copilot-plugin.md
+
 - name: Build bots
   items:
   - name: Overview
