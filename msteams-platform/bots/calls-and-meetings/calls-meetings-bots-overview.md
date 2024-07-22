@@ -22,7 +22,6 @@ The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with tw
 
 Now, you must understand some core concepts, terminology, and conventions.
 
-# References
 
 Relevent SDK documentation,
 
