@@ -20,12 +20,38 @@ TBD: Conceptual content and link for tutorial.
 
 TBD: Conceptual content and link for tutorial.
 
+### Teams bot API changes to fetch team or chat members
+
+TBD: topics from - Send and receive files using bots
+
 ## Bot on Mobile
 
 TBD: Conceptual content and link for tutorial.
 
 ## Meeting bot
 
-TBD: Conceptual content and link for tutorial.
+TBD: Meeting bot overview - Conceptual content and link for tutorial.
+
+### Real-time media calls and meetings
+
+TBD
+
+### Register calls and meetings bot
+
+TBD
+
+### Incoming call notifications
+
+TBD
+
+### Requirements and considerations for application-hosted media bots
+
+TBD
+
+### Supported media formats for bots
+
+TBD
+
+
 
 
