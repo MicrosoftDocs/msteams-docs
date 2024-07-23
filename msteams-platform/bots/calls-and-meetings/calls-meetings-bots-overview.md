@@ -40,7 +40,7 @@ Now, you must understand some core concepts, terminology, and conventions.
 |------------------|--------------------------------------------------------------------------------------------------------------|
 | PSTN | Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Promote a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
 | General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
-| Device Management | Ask for permission to use audio and/or video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
+| Device management | - Ask for permission to use audio or audio and video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
 | Video Rendering | Render single video in many places (local camera or remote stream) <br>- Set / update scaling mode<br>- Render remote video stream |
 |------------------|--------------------------------------------------------------------------------------------------------------|
 
