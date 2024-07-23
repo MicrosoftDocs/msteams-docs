@@ -19,7 +19,18 @@
     href: overview-explore.md
   - name: The Teams solution
     href: overview-solution.md
+- name: Get started - revamp updates
+  expanded: false
+  items: 
+    - name: Teams platform overview
+      href: get-started/teams-platform-overview.md
+    - name: Quick start
+      href: get-started/gs-quick-start.md
+    - name: Teams app tutorials and code samples
+      href: get-started/teams-toolkit-tutorial.md     
+
 - name: Get started
+  visual: false
   expanded: false
   items:
   - name: Overview
@@ -35,7 +46,7 @@
     href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
     href: get-started/choose-what-suits-you.md
- 
+
 - name: Plan your app
   items:
   - name: Overview
