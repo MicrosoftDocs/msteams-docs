@@ -13,6 +13,28 @@ ms.date: 01/29/2023
 
 Introduction: what is a Bot, Bot apps (types) in Teams.
 
+
+## Typical bot scenarios
+
+TBD
+
+## Bot manifest configuration
+
+TBD
+
+## Concepts 
+
+TBD
+
+## Glossary
+
+TBD
+
+
+
+
+
+<!---
 ## Bots in Teams
 
 How does a bot in Teams helps a user?
@@ -54,3 +76,4 @@ TBD
 ## Bot manifest config
 
 TBD
+--->
