@@ -29,7 +29,6 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 * Nuget link :  https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115
 
-* Graph calling samples : https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples
 
 # Scenarios supported for Graph
 
