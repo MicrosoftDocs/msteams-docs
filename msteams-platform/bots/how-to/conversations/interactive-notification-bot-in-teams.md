@@ -162,7 +162,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-# [TypeScript](#tab/ts2)
+    # [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
