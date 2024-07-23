@@ -1,6 +1,6 @@
 ---
 title: Quick start
-description: In this module, learn to quickly 
+description: In this module, learn to build a basic Teams app
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Quick start
 
-TBD: Build apps using TTK or codespaces
+TBD: Build apps using TTK or code spaces
 TBD: Introduction to the TTK templates
 
 ## Build a tab app
