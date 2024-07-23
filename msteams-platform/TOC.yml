@@ -20,7 +20,7 @@
   - name: The Teams solution
     href: overview-solution.md
 - name: Get started - revamp updates
-  expanded: false
+  expanded: true
   items: 
     - name: Teams platform overview
       href: get-started/teams-platform-overview.md
@@ -424,6 +424,7 @@
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
 - name: Build bots-revamp
+  expanded: true
   items:
   - name: Overview
     href: bots/bot-overview.md
