@@ -490,7 +490,7 @@ Describes an app component (`element`) in an elementRelationshipSet.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`.|
-| `id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs, and message extensions.|
+| `id` | String | | ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
 | `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only for message extension (`"name" : "composeExtensions"`) component elements in relationship sets.|
 
 
@@ -600,7 +600,7 @@ Describes the runtime requirements for the tab to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the tab to function properly, specified as name/value pairs. For example, `{ "name": "dialogUrl" }`. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the tab to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## bots
 
@@ -665,7 +665,7 @@ Describes the runtime requirements for the bot to function properly in the Micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the bot to function properly, specified as name/value pairs. For example, `{ "name": "dialogUrl" }`. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the bot to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## connectors
 
@@ -710,7 +710,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
-|`type`     |  Type of the message extension.  Supported values are `apiBased` or `botBased`. |
+| `type` | Type of the message extension. Supported values are `apiBased` or `botBased`. |
 |`requirementSet`|Object|||Runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension.|
 
 ### composeExtensions.commands
@@ -766,7 +766,7 @@ Describes the runtime requirements for the message extension to function properl
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the message extension to function properly, specified as name/value pairs. For example, `{ "name": "dialogUrl" }`. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities required for the message extension to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## scopeConstraints
 
