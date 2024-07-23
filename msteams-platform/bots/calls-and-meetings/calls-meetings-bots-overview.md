@@ -25,104 +25,36 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 Relevent SDK documentation,
 
-* Graph overview :  https://learn.microsoft.com/en-us/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta 
+* To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta).
 
-* Nuget link :  https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115
+* To get the Microsoft.Graph.Communications.Calls Nuget package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115)
 
-* Graph calling samples : https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples
+* For samples that use Microsoft Graph SDK, see [Microsoft Graph Communications samples](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples).   
 
-# Scenarios supported for Graph
+## Supported scenarios supported for Microsoft Graph
 
-| Group of features                     | Capabilities                                                                                                    |
-| --------------------------------------| ----------------------------------------------------------------------------------------------------------------|
-| Core Capability                       | Place a one-to-one call between two users                                                                       |
-|                                       |-----------------------------------------------------------------------------------------------------------------|                 
-|                                       | Place a group call with more than two users (up to 350 users)                                                   |
-|                                       |-----------------------------------------------------------------------------------------------------------------|            
-|                                       | Promote a one-to-one call with two users into a group call with more than two users                             |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Join a group call after it has started                                                                          |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Invite another VoIP participant to join an ongoing group call                                                   |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Mid Call Control                      | Turn your video on/off                                                                                          |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Mute/Unmute mic                                                                                                 |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Switch between cameras                                                                                          |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Local hold/un-hold                                                                                              |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Active speaker                                                                                                  |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Choose speaker for calls                                                                                        |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Choose microphone for calls                                                                                     |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Show state of a participant [Idle, Early media, Connecting, Connected, On hold, In Lobby, Disconnected]         |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Show state of a call [Early Media, Incoming, Connecting, Ringing, Connected, Hold, Disconnecting, Disconnected] |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Show if a participant is muted                                                                                  |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Show the reason why a participant left a call                                                                   |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Screen sharing                        | Share the entire screen from within the application                                                             |     
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Share a specific application (from the list of running applications)                                            |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Share a web browser tab from the list of open tabs                                                              |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Share system audio during screen sharing                                                                        |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Participant can view remote screen share                                                                        |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-|  Roster                               | List participants                                                                                               | 
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Remove a participant                                                                                            |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| PSTN                                  | Place a one-to-one call with a PSTN participant                                                                 | 
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Place a group call with PSTN participants                                                                       |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Promote a one-to-one call with a PSTN participant into a group call                                             |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Dial-out from a group call as a PSTN participant                                                                |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Support for early media                                                                                         |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| General                               | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123)               |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Device Management                     | Ask for permission to use audio and/or video                                                                    |
-|                                       |-----------------------------------------------------------------------------------------------------------------| 
-|                                       | Get camera list                                                                                                 |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Set camera                                                                                                      |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Get selected camera                                                                                             |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Get microphone list                                                                                             |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Set microphone                                                                                                  |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Get selected microphone                                                                                         |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Get speakers list                                                                                               |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Set speaker                                                                                                     |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Get selected speaker                                                                                            |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Video Rendering                       | Render single video in many places (local camera or remote stream)                                              |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Set / update scaling mode                                                                                       |
-|                                       |-----------------------------------------------------------------------------------------------------------------|
-|                                       | Render remote video stream                                                                                      |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Group | Capabilities |
+| ------| -------------|
+| Core capability | Initiate a one-to-one call between two users <br>- Initiate a group call with more than two users (up to 350 users)<br>- Upgrade a one-to-one call with two users into a group call with more than two users<br>- Join a group call after it starts<br>- Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
+|----------------- |-----------------------------------------------------------------------------------------------------------------|
+| Mid-call control | - Turn the video on or off<br>- Mute or unmute the microphone<br>- Switch between cameras<br>- Put the call on hold or resume locally<br>- Active speaker<br>- Choose speaker for calls<br>- Choose microphone for calls<br>- Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected<br>- Show the state of a call, such as early media, incoming, Connecting, ringing, connected, on hold, disconnecting, or disconnected.<br>- Show if a participant is on mute<br>- Show the reason why a participant left a call |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| Screen sharing | Share the entire screen from within the application <br>- Share a specific application (from the list of running applications)<br>- Share a web browser tab from the list of open tabs<br>- Share system audio during screen sharing<br>- Participant can view remote screen share |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| Roster | List participants <br>- Remove a participant |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| PSTN | Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Promote a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| Device Management | Ask for permission to use audio and/or video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
+|------------------|--------------------------------------------------------------------------------------------------------------|
+| Video Rendering | Render single video in many places (local camera or remote stream) <br>- Set / update scaling mode<br>- Render remote video stream |
+|------------------|--------------------------------------------------------------------------------------------------------------|
 
 
 
-# Set up firewalls.
+## Set up firewalls
 
 https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf
 In this article, we discussed the communication flow for Microsoft Teams bot applications and their architecture. We explored the use cases of bots in Teams, their potential scenarios, and their benefits. We also provided information on accessing domains and handling user data transit and security. We will help you in understanding the ins and outs of implementing and securing bots in Teams.
