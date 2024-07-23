@@ -41,7 +41,6 @@ Now, you must understand some core concepts, terminology, and conventions.
 | General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
 | Device management | - Ask for permission to use audio or audio and video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
 | Video rendering | - Render single video in many places (local camera or remote stream) <br>- Set or update scaling mode<br>- Render remote video stream |
-|------------------|--------------------------------------------------------------------------------------------------------------|
 
 
 ## Set up firewalls
