@@ -45,8 +45,7 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 ## Set up firewalls
 
-https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf
-In this article, we discussed the communication flow for Microsoft Teams bot applications and their architecture. We explored the use cases of bots in Teams, their potential scenarios, and their benefits. We also provided information on accessing domains and handling user data transit and security. We will help you in understanding the ins and outs of implementing and securing bots in Teams.
+Setting up firewalls is crucial to protect your network and system from unauthorized access and malicious attacks. Firewalls act as a barrier, controlling incoming and outgoing traffic based on security rules, preventing hackers from accessing your system, blocking malicious traffic, and hiding internal IP addresses. They provide an additional layer of security, preventing attacks like hacking, malware, and DoS attacks, and protect sensitive data from breaches. For more information, see https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf.
 
 ## Terminologies
 
