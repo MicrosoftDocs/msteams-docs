@@ -8,6 +8,10 @@ ms.date: 04/16/2023
 ---
 # Create connectors for Microsoft 365 Groups
 
+> [!IMPORTANT]
+>
+> The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 See the following video to learn how to create an connectors for Microsoft 365 Groups:
@@ -159,7 +163,7 @@ You can execute an event handler when the user removes an existing connector con
 
 ### Include the connector in your app manifest
 
-Download the auto-generated app manifest (previously called Teams app manifest) from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
+Download the auto-generated app manifest (previously called Teams app manifest) from the [Developer Portal](https://dev.teams.microsoft.com). Perform the following steps, before testing or publishing the app:
 
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion in the app manifest file to include the file names of the icons instead of URLs.

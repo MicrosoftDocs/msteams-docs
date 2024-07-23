@@ -1,7 +1,7 @@
 ---
 title: FAQ v4
 author: MuyangAmigo
-description:  In this module, See FAQ for Teams Toolkit v4 using Visual Studio Code
+description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -57,7 +57,7 @@ Before provision, the tool asks you if you want to create a new resource group o
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
+> Teams app built with SharePoint framework and Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
 
 <br>
 
