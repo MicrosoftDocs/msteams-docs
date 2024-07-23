@@ -24,7 +24,7 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 
 * To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta).
-
+* To get the Microsoft.Graph.Communications.Calls Nuget package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115). 
 * Graph overview :  https://learn.microsoft.com/en-us/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta 
 
 * Nuget link :  https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115
