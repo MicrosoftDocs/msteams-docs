@@ -1551,7 +1551,9 @@ The following examples show how to capture the participant join and leave events
 
 # [Participant join event](#tab/participant-join-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 //Invoked on participant join a meeting
@@ -1564,7 +1566,9 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 
 # [Participant leave event](#tab/participant-leave-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 //Invoked on participant leave a meeting
