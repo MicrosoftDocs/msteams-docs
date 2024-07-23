@@ -23,6 +23,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 ## Generally available
 
+| Date | Update |Find here |
+| --- | --- | --- |
+| 22/05/2024 | Unified communication between bot and tab creates more customized interactions between the user and the app.| Build bots > [Synchronized bots and tabs](~/bots/how-to/teams%20conversational%20ai/bots-and-tabs.md)|
+
 :::row:::
 :::column:::
 

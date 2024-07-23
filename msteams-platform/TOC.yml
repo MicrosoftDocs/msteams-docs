@@ -516,6 +516,8 @@
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+  - name: Unified communication between bot and tab
+    href: bots/how-to/Teams conversational AI/bots-and-tabs.md
 - name: Build message extensions
   items:
   - name: Overview
