@@ -23,7 +23,7 @@ The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with tw
 Now, you must understand some core concepts, terminology, and conventions.
 
 
-Relevent SDK documentation,
+* To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta).
 
 * Graph overview :  https://learn.microsoft.com/en-us/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta 
 
