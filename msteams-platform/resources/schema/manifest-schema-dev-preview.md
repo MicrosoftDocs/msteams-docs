@@ -313,7 +313,7 @@ The schema defines the following properties:
 
 **Optional** (but recommended) &ndash; String
 
-The `https://` URL referencing the JSON Schema for the app manifest.
+The *https://* URL referencing the JSON Schema for the app manifest.
 
 ## manifestVersion
 
@@ -349,9 +349,9 @@ Specifies information about the developer and their business. For Teams Store ap
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
 | `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
-| `websiteUrl`    | String | 2048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
-| `privacyUrl`    | String | 2048 characters | ✔️      | The `https://` URL to the app's privacy policy.                                                         |
-| `termsOfUseUrl` | String | 2048 characters | ✔️      | The `https://` URL to the app's terms of use.                                                           |
+| `websiteUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app-specific page on your website.                                             |
+| `privacyUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app's privacy policy.                                                         |
+| `termsOfUseUrl` | String | 2048 characters | ✔️      | The *https://* URL to the app's terms of use.                                                           |
 | `mpnId`         | String | 10 characters    |          | The Microsoft Partner Network ID that identifies the partner organization creating the app. **Optional** |
 | `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
 
@@ -410,10 +410,10 @@ Describes your app to users. For apps submitted to AppSource, these values must 
 
 Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different.  Your short description must not be repeated within the long description and must not include any other app name.
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
-|`full`|4000 characters|✔️|The full description of your app.|
+|Name| Type | Maximum size | Required | Description|
+|---|---|---|---|---|
+|`short`| String |80 characters|✔️|A short description of your app experience, used when space is limited.|
+|`full`| String |4000 characters|✔️|The full description of your app.|
 
 ## icons
 
@@ -445,7 +445,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
+|`configurationUrl`|String|2048 characters|✔️|The *https://* URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Configurable tabs only support the `team` and `groupChat` scopes. |
 |`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`.|
@@ -467,12 +467,12 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|String|128 characters|✔️|The display name of the tab.|
-|`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`name`|String|128 characters||The display name of the tab.|
+|`contentUrl`|String|2048 characters||The *https://* URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
-|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
+|`websiteUrl`|String|2048 characters||The *https://* URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
-|`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
+|`searchUrl`|String|2048 characters||The *https://* URL to direct a user's search queries.|
 |`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. <br>Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
 
@@ -517,8 +517,8 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.scopes`|Array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
-|`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
+|`scopes`|Array of enum|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
+|`commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 ## connectors
 
@@ -530,7 +530,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
+|`configurationUrl`|String|2048 characters||The *https://* URL to use when configuring the connector using the inline configuration experience.|
 |`connectorId`|String|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). The `team` scope is only supported.|
 
@@ -670,7 +670,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 characters|✔️|The https:// URL where Graph-connector notifications for the application must be sent.|
+|`notificationUrl`|string|2048 characters|✔️|The *https://* URL where Graph-connector notifications for the application must be sent.|
 
 ## showLoadingIndicator
 
@@ -797,7 +797,7 @@ A value that indicates whether an app is blocked by default until admin allows i
 
 **Optional** &ndash; String
 
-The https:// URL to the page that provides additional app information for the admins. The maximum length of the string is 2048 characters.
+The *https://* URL to the page that provides additional app information for the admins. The maximum length of the string is 2048 characters.
 
 ## defaultInstallScope
 
@@ -834,7 +834,7 @@ Specifies the SaaS offer associated with your app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 characters | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
+|`offerId`| string | 2048 characters | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## meetingExtensionDefinition
 
@@ -846,7 +846,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. <br>Default value: `false`|
-|`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
+|`videoFiltersConfigurationUrl`|String|2048 characters||The *https://* URL for configuring the video filters.|
 |`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. <br>Default value: `false`|
 
 ### meetingExtensionDefinition.scenes
