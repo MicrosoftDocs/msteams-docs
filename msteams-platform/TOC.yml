@@ -327,7 +327,7 @@
       - name: Bots SDK (v3)
         href: resources/bot-v3/bots-overview.md
         items:
-        - name: Create a bot
+        - name: Build a bot
           href: resources/bot-v3/bots-create.md
         - name: Conversations
           href: resources/bot-v3/bot-conversations/bots-conversations.md
