@@ -35,7 +35,7 @@ This tutorial requires familiarity with the following concepts and resources:
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, for example, `/My Microsoft Teams Projects`.
-1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs):
+1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-configurable-tab-with-nodejs):
 
     ```cmd
     yo teams
