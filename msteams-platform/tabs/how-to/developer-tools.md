@@ -22,7 +22,7 @@ When Teams is running in a browser, it's easy to access the browser's DevTools: 
 While the web version and the desktop version of Teams are almost the same, there are some differences concerning authentication. Sometimes the only way to figure out what is going on is to use the DevTools. To use DevTools in the desktop client, you must:
 
 1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-or-web-client).
-1. Create a `configuration.json` file at `%localappdata%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams` and add the following and save the file:
+1. Create a `configuration.json` file at `%localappdata%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams`. Add the following and save the `configuration.json` file:
 
    ```json
    {
@@ -34,7 +34,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 1. Open the DevTools one of the following ways:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
 
-      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" lightbox="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
 
     * On macOS, select the Microsoft Teams icon in the Dock.
 
