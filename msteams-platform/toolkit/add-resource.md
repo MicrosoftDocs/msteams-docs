@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description: Learn how to add cloud resources such as Azure Functions, Azure SQL database, Azure API Management, Azure Key Vault using Teams Toolkit in Visual Studio Code.
+description: Learn how to add cloud resources such as Azure Functions, Azure SQL Database, Azure API Management, Azure Key Vault using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
