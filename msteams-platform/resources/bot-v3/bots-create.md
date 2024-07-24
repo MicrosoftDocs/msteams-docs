@@ -11,7 +11,7 @@ ms.date: 04/02/2023
 > [!IMPORTANT]
 > The content in this page is deprecated.
 >
-> * If you want to create an AI bot, see  [Create an AI bot](~/bots/how-to/teams-conversation-ai-overview.md)
+> * If you want to create an AI bot, see  [Create an AI bot](../bots/how-to/teams-conversation-ai-overview.md)
 > * If you want to create a basic bot, see [Get started](~/get-started/get-started-overview.md)
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
