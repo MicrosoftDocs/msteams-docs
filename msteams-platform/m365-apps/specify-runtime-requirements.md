@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> The ability to specify Microsoft 365 host runtime requirements in app manifest is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
+> The ability to specify Microsoft 365 host runtime requirements in app manifest (previously called Teams app manifest) is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
 
 If you have a Microsoft Teams app that contains a personal tab or message extension, you can easily [extend it to run across additional Microsoft 365 hosts](./overview.md), including Microsoft Outlook and Microsoft 365 app. When you upgrade your Teams app to use app manifest version 1.13 or higher, your app is available in other Microsoft 365 application hosts by default. However, if your app also includes components that aren't yet supported across other Microsoft 365 hosts, your app might only partially load, resulting in unplanned and unsupported user experiences.
 
@@ -28,7 +28,7 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 ## Microsoft 365 host support
 
-Only a subset of Microsoft 365 host applications supports the ability to specify runtime requirements in app manifest. This support will expand over time. The following hosts ensure only applicable apps and their applicable components are made available to users:
+The following Microsoft 365 host applications support the ability to specify runtime requirements in app manifest:
 
 |Microsoft 365 host application| Web | Desktop | Mobile |
 |---|---|---|---|
@@ -42,9 +42,9 @@ Only a subset of Microsoft 365 host applications supports the ability to specify
 You can specify relationships among the individual components of your app by including an [`elementRelationshipSet`](../resources/schema/manifest-schema-dev-preview.md#elementrelationshipset) in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
 > [!IMPORTANT]
-> Ensure the relationships you create adhere to the following validations rules:
+> Ensure the relationships you create adhere to the following validation rules:
 >
-> 1. Elements specified in an element relationship set must have definitions in the manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in the manifest (with matching `id` value) will result in a manifest validation error.  
+> 1. Elements specified in an element relationship set must have definitions in the manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in the manifest (with a matching `id` value) will result in a manifest validation error.  
 > 1. A given set of components can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) will result in a manifest validation error, because the *A depends on B* relationship is represented twice.
 > 1. Cyclical one-way dependencies aren't permitted. For example, specifying both an *A depends on B* relationship and a *B depends on A* relationship will result in a manifest validation error.
 
