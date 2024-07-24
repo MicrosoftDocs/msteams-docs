@@ -1,7 +1,7 @@
 ---
 title: Build a dashboard tab app
 author: v-silakshmi
-description: Learn how to build dashboard tab app in Teams, customize the layout, use a widget, make Graph API calls using the Teams Toolkit, and embed a Power BI dashboard.
+description: Learn how to build dashboard tab app in Teams, customize layout, use a widget, make Graph API calls using Teams Toolkit, and embed a Power BI dashboard.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
