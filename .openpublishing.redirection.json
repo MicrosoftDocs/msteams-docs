@@ -221,10 +221,6 @@
           "redirect_url": "/microsoftteams/platform/bots/how-to/debug/locally-with-an-ide"
       },
       {
-          "source_path": "msteams-platform/concepts/bots/bots-create.md",
-          "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
-      },
-      {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
           "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-commands-menu"
       },
