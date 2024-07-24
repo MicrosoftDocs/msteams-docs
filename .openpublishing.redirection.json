@@ -1043,6 +1043,10 @@
       {
         "source_path": "msteams-platform/bots/how-to/format-ai-bot-messages.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
+      },
+      {
+        "source_path": "msteams-platform/concepts/bots/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/Teams%conversational%AI/teams-conversation-ai-overview"
       }
     ]
 }
