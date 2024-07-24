@@ -330,63 +330,50 @@ items:
 
     1. Go to Visual Studio Code and open a terminal window.
     
-    1. Run the following command in the terminal to add the latest version of the Teams AI library to your application using npm:
+    1. Run the following command in the terminal to install `yarn`:
 
        ```bash
-       npm install @microsoft/teams-ai
-       npm install vectra
+       npm install -g yarn@1.21.1
+       
+       ```
+
+    1. Run the following command to add the latest version of the Teams AI in the sample:
+
+       ```bash
+       yarn install
+       yarn build
+       Yarn start
 
        ```
+
+    1. Run the following command to install the latest published version of Teams AI:
+
+       ```bash
+       npm install --workspaces=false
+       npm run build
+       npm start
+
+       ```
+
 
     1. Go to **Explorer** > **env**. 
     
-       1. For OpenAI: Go to **.env.local**, at the end of the file, enter the OpenAI key that you've generated.
+       1. For OpenAI: Go to **.env.local.user**, enter the OpenAI key that you've generated.
 
-       ```env/.env.local
-        SECRET_OPENAI_API_KEY=sk***********************
-       ```
+            ```env/.env.local
+                SECRET_OPENAI_API_KEY=********************
+            ```
 
-       1. For Azure OpenAI: Go to **.env.local**, at the end of the file, add the Azure OpenAI key and endpoint that you've generated.
+       1. For Azure OpenAI: Go to **.env.local.user**, enter the Azure OpenAI key, endpoint, and deployment that you've generated.
 
-       ```env/.env.local
-        AZURE_OPENAI_KEY=***********************
-        AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
-       ```
+            ```env/.env.local
+                SECRET_AZURE_OPENAI_API_KEY=********************
+                AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
+                AZURE_OPENAI_DEPLOYMENT_NAME=********************
+            ```
 
        > [!NOTE]
        > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI endpoint.
-
-    1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
-
-       1. For OpenAI:
-    
-       ```config.ts
-       openAIKey: process.env.OPENAI_KEY
-       ```
-
-       1. For Azure OpenAI:
-
-       ```config.ts
-       openAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT
-       ```
-
-       When you debug the app, the `OpenAIKey` or `openAIEndpoint` processes the `SECRET_OPENAI_API_KEY` or `AZURE_OPENAI_ENDPOINT` from the `.env.local.user` or `.env.local` file during local debug.
-
-    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
-
-       1. For OpenAI:
-
-       ```teamsapp.local.yml
-       OPENAI_KEY: ${{OPENAI_KEY}}
-       ```
-
-       1. For Azure OpenAI:
-
-       ```teamsapp.local.yml
-        AZURE_OPENAI_KEY: ${{AZURE_OPENAI_KEY}}
-        AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
-        ```
-       When you run the app locally, the values defined here are used in the local settings.
 
     1. Go to the `index.ts` file:
 
@@ -800,9 +787,9 @@ items:
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+        :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
-        You can type `Hi` to start interacting with the bot.
+        You can type `LightsOn` to start interacting with the bot.
 
       <!-- markdownlint-disable MD033 -->
       <details>
