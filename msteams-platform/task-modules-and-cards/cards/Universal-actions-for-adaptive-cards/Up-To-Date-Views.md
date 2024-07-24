@@ -1,6 +1,6 @@
 ---
 title: Up to date views
-description: Learn about Up to date card views using Universal Bot with code samples in Teams, approval base card with approve or reject buttons, and Adaptive Card response.
+description: Learn about Up to date card views using Universal Bot with code samples in Teams and approval base card with approve or reject buttons.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
