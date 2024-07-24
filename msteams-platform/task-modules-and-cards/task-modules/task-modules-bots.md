@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams bots
-description: Learn how to use dialogs with Microsoft Teams bots, Bot Framework cards, Adaptive Cards, and deep links. Invoke dialogs and respond to messages.
+description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, and about Bot Framework card and Adaptive Card actions, deep links, and respond to messages.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 01/31/2023
