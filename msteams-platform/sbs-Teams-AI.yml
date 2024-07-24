@@ -15,19 +15,19 @@ items:
 - durationInMinutes: 1
   content: |
    
-    Start Microsoft Teams app development with your first Teams AI library app. 
+   Start Microsoft Teams app development with your first Teams AI library app. 
     
-    You can create a conversational bot for Microsoft Teams that thinks it's a Chef to help you cook Teams apps and illustrates basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.
+   You can create a conversational bot for Microsoft Teams that thinks it's a Chef to help you cook Teams apps and illustrates basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.
     
-    In this tutorial, you'll learn:
+   In this tutorial, you'll learn:
 
-    - How to set up a new project with Teams Toolkit.
-    - How to import Teams AI library capabilities.
-    - How to deploy your bot in Teams and start a conversation.
+   - How to set up a new project with Teams Toolkit.
+   - How to import Teams AI library capabilities.
+   - How to deploy your bot in Teams and start a conversation.
 
-    You can see the following output:
+   You can see the following output:
 
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+   :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
 - title: Prerequisites
   durationInMinutes: 1
