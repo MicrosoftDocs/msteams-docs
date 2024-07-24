@@ -1,11 +1,18 @@
 ---
-title: Create a bot
-description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
+title: Build a bot
+description: In this module, learn how to build a bot
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
 ---
-# Create a bot
+
+# Build a bot
+
+> [!IMPORTANT]
+> The content in this page is deprecated.
+>
+> * If you want to create an AI bot, see [Create an AI bot][/bots/how-to/teams-conversation-ai-overview.md]
+> * If you want to create a basic bot, see [Get started][/get-started/get-started-overview.md]
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -13,9 +20,9 @@ All bots created using the Microsoft Bot Framework are configured and ready to w
 
 For more information, see [Bot Framework Documentation](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) for general information on bots.
 
-## Create a bot for Microsoft Teams
+## Build a bot for Microsoft Teams
 
-**Teams Developer Portal for Teams** is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
+**Teams Developer Portal for Teams** is a tool that can help build your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
 
 1. Create the bot using [Bot Framework](https://dev.botframework.com/bots/new). **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to reuse any Microsoft App ID you generated if you've already created your app package/manifest.
 
