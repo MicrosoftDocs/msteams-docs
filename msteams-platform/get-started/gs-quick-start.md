@@ -13,15 +13,19 @@ TBD: Introduction to the TTK templates
 
 ## Build a tab app
 
-Link: Build your basic tab app page
+TBD: Introduction
+For building a tab app, see [Build your basic tab app](build-basic-tab-app.md).
 
 ## Build an interactive notification app
 
-Link: Build an interactive notification bot
+TBD: Introduction
+For building an interactive notification bot, see [Start building a bot](build-notification-bot.md).
 
 ## Build a message extension app
 
-Link: Build message extension
+TBD: Introduction
+For building an interactive notification bot, see [Build message extension](build-message-extension.md).
 
+## See also
 
-
+TBD
