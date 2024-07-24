@@ -1,7 +1,7 @@
 ---
 title: Limitations in Collaboration Controls
 author: surbhigupta
-description: Learn about limitations, known issues, and erros on Booking Meetings, Tasks, Files in Collaboration controls app for Microsoft Teams.
+description: Learn about limitations, known issues, and errors in the Collaboration Controls app for Microsoft Teams, including Booking Meetings, Tasks, and Files.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
