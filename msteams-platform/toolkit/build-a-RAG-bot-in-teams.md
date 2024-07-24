@@ -16,7 +16,7 @@ The advanced Q&A chatbots are powerful apps built with the help of Large Languag
 
 * **Retrieval and generation**: The RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
-Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
+Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize productivity. Teams Toolkit provides a series of ready-to-use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365, and custom API as different data sources and LLMs to create a conversational search experience in Teams.
 
 ## Prerequisites
 
@@ -323,7 +323,7 @@ In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the foll
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
+1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
