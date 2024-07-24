@@ -29,7 +29,6 @@ items:
 
     :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
-
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -48,15 +47,13 @@ items:
    
    ## Prepare development environment
 
-   After you've installed the required tools, set up the development environment. 
-
+   After you've installed the required tools, set up the development environment.
 
    ### Install the Teams Toolkit
 
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
 
    # [Visual Studio Code](#tab/vscode)
 
@@ -222,16 +219,7 @@ items:
         After your app is created, the Teams Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
-        
-
-
-
-
-
-
-
-
-
+    
         Select **Local debug** to preview your project.
         
     <details>
@@ -243,10 +231,10 @@ items:
 
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+    Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
     ``` bash
-    teamsfx new
+    teamsapp new
     ```
 
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
@@ -279,7 +267,6 @@ items:
     | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
 
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
@@ -317,7 +304,7 @@ items:
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login m365
+        teamsapp account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -325,7 +312,7 @@ items:
     2. Sign in to Azure with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login azure
+        teamsapp account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
