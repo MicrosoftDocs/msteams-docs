@@ -1,6 +1,6 @@
 ---
 title: Developer Preview App Manifest Schema
-description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
+description: Learn about public developer preview manifest schema for Microsoft Teams, the sample and schema properties, and how to enable the developer preview.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
