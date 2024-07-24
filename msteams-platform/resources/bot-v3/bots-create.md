@@ -1,6 +1,6 @@
 ---
 title: Create a bot
-description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
+description: Learn how to create a bots using the Microsoft Bot Framework and ready to work in Teams and use Developer Portal to register/update app and bot information in Teams.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023

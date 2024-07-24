@@ -1,7 +1,7 @@
 ---
 title: Build API-based message extension
 author: v-ypalikila
-description: Learn about the requirements and troubleshooting guidelines for an API-based message extension.
+description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication in API-based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
