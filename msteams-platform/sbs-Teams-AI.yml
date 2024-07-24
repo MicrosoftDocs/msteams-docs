@@ -26,7 +26,7 @@ items:
 
    You can see the following output:
 
-   :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+   :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -172,11 +172,11 @@ items:
 
     1. Select **Custom Engine copilot**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-project.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
     1. Select **Basic AI chatbot**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/basic-ai-chatbot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
    
     1. Select **TypeScript** as the programming language.
 
@@ -184,9 +184,9 @@ items:
 
     1. Select **OpenAI** or **Azure OpenAI**.
     
-        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+        :::image type="content" source="assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
 
-    1. Enter **OpenAI** or **Azure OpenAI**.
+    1. Enter **OpenAI Key**.
 
     1. Select **Default folder** to store your project root folder in default location.
 
@@ -1003,7 +1003,7 @@ items:
 
     You've created a Teams AI library bot.
 
-    :::image type="content" source="assets/images/bots/conversational-ai-sample-bot-chat.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+    :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
     Now that you've learned to create an app using Teams AI library, you can move on to learn about Teams AI capabilities.
 
