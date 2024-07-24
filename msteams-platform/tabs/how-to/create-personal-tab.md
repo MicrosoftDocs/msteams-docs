@@ -1001,7 +1001,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property. If you’ve declared multiple static tabs in the manifest and the app is added in channel scope, only the first tab listed in the manifest appears.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
 Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
