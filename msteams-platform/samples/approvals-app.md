@@ -1,22 +1,22 @@
 ---
 title: Approvals app APIs
-description: Learn the different types of the approvals app Microsoft Graph APIs.
+description: Learn the different types of the approvals app Microsoft Graph APIs for personal and third-party apps, its use cases and benefits.
 ms.topic: reference
 ms.localizationpriority: medium
+ms.author: v-sdhakshina
 ms.date: 07/10/2024
 ---
 
 # Approvals app API
 
-The Approvals app is available as a personal app for all Microsoft Teams users. The Approvals app provides a simple way to bring auditing, compliance, accountability, and workflows to both structured and unstructured Approvals in Teams.
+Approvals app is available as a personal app for all Microsoft Teams users. The Approvals app provides a simple way to bring auditing, compliance, accountability, and workflows to both structured and unstructured Approvals in Teams.
 
 Approvals app API, discussing its functionalities and how it can be integrated into third-party apps. It mentions the ability to create, update, and list approvals, assign approvals to users, specify custom responses, and receive notifications on Teams. The APIs support graph subscriptions, allowing notifications for approval responses.
 
 The following table provides a list of APIs available across the Microsoft Graph:
 
-| Method | Description | Source |
-| ---- | ---- | ---- |
-|
+| Method | Description |
+| ---- | ---- |
 
 ## Use cases
 
