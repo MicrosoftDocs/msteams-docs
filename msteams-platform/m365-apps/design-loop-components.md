@@ -1,6 +1,6 @@
 ---
 title: Loop component design guidelines 
-description: Learn how to design Adaptive Card-based Loop components and learn ket features, loop component elements, loop component body, header, and border.
+description: Learn how to design Adaptive Card-based Loop components, its key features, loop component elements, body, header, and border.
 ms.author: mobajemu
 ms.date: 01/26/2024
 ms.topic: tutorial

@@ -1,6 +1,6 @@
 ---
 title: Build Actions in Microsoft 365
-description: Learn more how to build Actions, configure app manifest, retrieve Action information through context object, access content through Graph API, preinstall Actions.
+description: Learn how to build Actions, configure app manifest, retrieve Actions information through context object, access content through Graph API, preinstall Actions.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
