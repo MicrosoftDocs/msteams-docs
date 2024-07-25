@@ -17,7 +17,7 @@ ms.date: 11/14/2023
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
@@ -746,6 +746,16 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
     * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+
+## Security best practices
+
+If your message extension plugin uses URL-based dialogs (task modules), it’s important to note that web browsers are [deprecating third-party cookies](https://blogs.windows.com/msedgedev/2024/03/05/new-privacy-preserving-ads-api/). To ensure your plugin remains functional and secure, please implement the following best practices:
+
+1. **Transition from third-party cookies**: Begin phasing out the use of third-party cookies in your application.
+
+1. **Secure cookies**: If your app requires cookies, use either [Cookies Having Partitioned State (CHIPS)](https://developer.mozilla.org/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Storage Access API](https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API) to secure your cookies.
+
+1. **Remove TeamsJS initialization fallbacks**: Avoid implementing fallback mechanisms for TeamsJS initialization failures. If a URL-based dialog doesn't successfully initialize with `app.initialize`, refrain from defaulting to a standard web app launch as it makes your app vulnerable to third-party cookie attack vectors.
 
 ## Technical requirements
 
