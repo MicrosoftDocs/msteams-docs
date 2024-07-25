@@ -1,6 +1,6 @@
 ---
 author: heath-hamilton
-description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep-linking of your app with Teams.
+description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep linking of your app with Teams.
 ms.author: surbhigupta
 ms.date: 04/02/2023
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ The different types of apps, which you can integrate with Teams are as follows:
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
 * **Microsoft SharePoint**: A SharePoint page you want to surface in Teams.
 
-You can map and follow the appropriate guideline applicable to your integration scenario. This document gives an overview of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
+You can map and follow the appropriate guideline applicable to your integration scenario. This document gives an overview of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
 
 ## Get to know Teams platform capabilities
 
