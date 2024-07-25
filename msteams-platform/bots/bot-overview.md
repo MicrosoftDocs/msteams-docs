@@ -17,7 +17,7 @@ Types of bots
 
 1. Notification bot: Introduce notification bots
 
-    For more information, see [Interactive bots](/bots/interactive-messages.md)
+    For more information, see [Interactive bots](~/bots/interactive-messages.md)
 
 2. Workflow bot
 
