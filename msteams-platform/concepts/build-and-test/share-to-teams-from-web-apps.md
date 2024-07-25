@@ -211,7 +211,7 @@ Here are a few end user scenarios where the content is shared to different scope
 
 1. Select **Share**. The app content gets shared in an upcoming meeting chat as an Adaptive Card.
 
-    :::image type="content" source="../../assets/images/share-to-teams/upcoming-meeting-content.png" alt-text="Screenshot shows the shared content in the meeting chat.":::
+    :::image type="content" source="../../assets/images/share-to-teams/upcoming-meeting-content.png" alt-text="Screenshot shows the shared content in the meeting chat." lightbox="../../assets/images/share-to-teams/upcoming-meeting-content-lightbox.png":::
 
 When the meeting begins, the content shared to the meeting is displayed in a side panel experience, based on the app that's opened.
 
