@@ -8,7 +8,7 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share a link directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When **Share to Teams** is selected, it opens a dialog and prompts the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share a link directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 
@@ -133,7 +133,7 @@ Share to Teams from web apps now allows users to share content to a live or an u
 
 Here's how the shared web content appears in the meeting stage:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
+:::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage." lightbox="../../assets/images/share-to-teams/share-meeting-live.png":::
 
 Before you enable share content to meetings, you must ensure the following:
 
@@ -172,7 +172,7 @@ Before you enable share content to meetings, you must ensure the following:
 
     After the configuration, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
 
-    :::image type="content" source="../../assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
 Here are a few end user scenarios where the content is shared to different scopes from Share to Teams.
 
