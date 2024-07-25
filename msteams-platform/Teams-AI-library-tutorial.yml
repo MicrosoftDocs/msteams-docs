@@ -2,7 +2,7 @@
 title: Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit
 metadata:
   title: Tutorial - Build Custom Copilot
-  description: Learn how to create a custom copilot using Teams AI library in Teams Toolkit, set up data in Azure OpenAI, and configure custom copilot.
+  description: Learn how to create a custom copilot using Teams AI library and Teams Toolkit, set up data in Azure OpenAI, and configure custom copilot.
   audience: Developer
   level: Beginner
   ms.date: 29/04/2024
@@ -19,7 +19,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    * How to set up your data on Azure OpenAI.
+    * How to setup your data on Azure OpenAI.
     * How to create a new custom copilot with Teams Toolkit.
     * How to interact with your LLMs and data.
     * The directory structure of your custom copilot.
@@ -38,7 +38,7 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-- title: Set up your data on Azure OpenAI
+- title: Setup your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
