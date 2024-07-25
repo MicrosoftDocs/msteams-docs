@@ -1,6 +1,6 @@
 ---
 title: App templates for Microsoft Teams
-description: Learn about app templates for Teams that includes Microsoft 365 Learning pathways and Company Communicator with deployment and installation instructions.
+description: Learn about app templates for Teams that includes Microsoft 365 Learning Pathways and Company Communicator with deployment and installation instructions.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 04/28/2023
