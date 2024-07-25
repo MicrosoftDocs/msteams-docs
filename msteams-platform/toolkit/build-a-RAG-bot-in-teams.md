@@ -323,7 +323,7 @@ In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the foll
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as input.
+1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
