@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Tailor your app's behavior in applicable Microsoft 365 hosts (Developer preview)
+      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
         url: m365-apps/specify-runtime-requirements.md
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
