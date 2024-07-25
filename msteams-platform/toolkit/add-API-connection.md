@@ -1,5 +1,5 @@
 ---
-title: Integrate existing third-party APIs
+title: Use Existing APIs to Build Teams Apps
 author: MuyangAmigo
 description: Learn how toolkit allows bootstrap sample access to existing APIs and the list of different authentication types.
 ms.author: zhany
