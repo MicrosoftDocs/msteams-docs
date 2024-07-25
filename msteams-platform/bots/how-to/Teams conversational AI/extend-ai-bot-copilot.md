@@ -1,14 +1,17 @@
 ---
-title: Teams bot-based Copilot plugin
-description: Learn about Teams bot-based Copilot plugin
+title: Extend AI bot to Copilot
+description: Learn about extending a Teams AI bot to Copilot
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-ypalikila
-author: michaelmaillot
+ms.author: surbhigupta
 ms.date: 02/12/2024
 ---
 
-# Teams bot-based Copilot plugin
+# Extend AI bot to Copilot
+
+TBD
+
+## Bot-based message extension and Copilot Plugin
 
 TBD
 

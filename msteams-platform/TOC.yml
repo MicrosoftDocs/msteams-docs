@@ -452,8 +452,12 @@
     href: bots/bot-tutorials.md 
 - name: Build AI bots
   items:
-    - name: Team AI library
+    - name: Teams AI library
       href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+    - name: Teams AI library Core capabilities
+      href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+    - name: Get started with Teams AI library
+      href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
     - name: Basic AI chatbot
       href: toolkit/build-a-basic-ai-chatbot-in-teams.md
     - name: Build an AI agent chatbot
