@@ -1,6 +1,6 @@
 ---
 title: Add Third Party Authentication
-description: Learn how to add third party authentication to Adaptive Cards Universal Actions, their scenarios, and about authentication flow.
+description: Learn how to add third party authentication to Adaptive Cards Universal Actions, its scenarios, and about authentication flow.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
