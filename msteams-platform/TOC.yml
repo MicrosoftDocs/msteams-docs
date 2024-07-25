@@ -465,7 +465,7 @@
     - name: Chat with you data
       href: Teams-AI-library-tutorial.yml
     - name: Extend AI bot to Copilot
-      href: bots/how-to/Teams conversational AI/bot-based-me-copilot-plugin.md
+      href: bots/how-to/Teams conversational AI/extend-ai-bot-copilot.md
 
 - name: Build bots
   items:
