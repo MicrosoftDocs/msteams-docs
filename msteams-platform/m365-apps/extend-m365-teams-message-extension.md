@@ -82,7 +82,7 @@ You can use Teams Toolkit to [validate your app manifest](../toolkit/TeamsFx-pre
 
 [!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
-## Add Microsoft 365 channel for your app
+### Add Microsoft 365 channel for your app
 
 In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes the advantage of [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
