@@ -512,41 +512,11 @@ Describes a unidirectional dependency of one app capability (X) to another (Y). 
 | `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element-object)) that has a one-way runtime dependency on another capability being loaded. |
 | `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element-object)) required for the specified `element` to load.|
 
-```json
- "elementRelationshipSet": {
-      "oneWayDependencies" : [
-        {
-          "element" : {
-            "name" : "composeExtensions",
-            "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]  // You can add more commands.
-          },
-          "dependsOn" : [
-              {"name" : "bots", "id" : "bot-id"}
-            ]
-        }
-      ]
-    }
-```
-
 ### elementRelationshipSet.mutualDependencies
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
 **Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element-object))
-
-```json
-"elementRelationshipSet": {
-    "mutualDependencies" : [
-        [
-                {"name" : "bots", "id" : "bot-id"}, 
-                {"name" : "staticTabs", "id" : "staticTab-id"},
-                {"name" : "composeExtensions", "id" : "composeExtension-id"},
-                {"name" : "configurableTabs", "id": "configurableTab-id"}
-        ]
-    ]
-},
-```
 
 ## configurableTabs
 
