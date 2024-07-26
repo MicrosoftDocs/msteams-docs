@@ -1,5 +1,5 @@
 ---
-title: Contribute to Teams documentation
+title: Create, Publish & Update Documentation
 description: Learn steps for creating and publishing Teams documentation
 ms.localizationpriority: medium
 ms.topic: contributor-guide

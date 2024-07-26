@@ -1,5 +1,5 @@
 ---
-title: Respond to the dialog submit action
+title: Respond to Action Commands from Users
 author: surbhigupta
 description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
