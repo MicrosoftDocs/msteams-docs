@@ -59,7 +59,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]  // You can add more commands.
+            "commandIds": ["command-1-id", "command-2-id"]
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
@@ -480,10 +480,12 @@ Describes relationships among individual app components, including  `staticTabs`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object with *dependent* (`element`) and *depends on* (`dependsOn`) [`element` objects](#element-object)).|
+| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components (each represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element-object)).|
 | `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object)).|
 
-### element object
+### element
+
+**Optional** &ndash; Object
 
 Describes an app component (`element`) in an elementRelationshipSet.
 
