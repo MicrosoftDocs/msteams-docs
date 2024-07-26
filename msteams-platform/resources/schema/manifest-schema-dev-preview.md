@@ -481,36 +481,36 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Describes relationships among individual app components, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
+Describes relationships among individual app capabilities, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app only launches in applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components (each represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element-object)).|
-| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` array of [`element` objects](#element-object)).|
+| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities (each represented by a `mutualDependency` array of [`element` objects](#element-object)).|
 
 ### element
 
 **Optional** &ndash; Object
 
-Describes an app component (`element`) in an elementRelationshipSet.
+Describes an app capability (`element`) in an elementRelationshipSet.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `name`| String enum|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`.|
-| `id` | String | | ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
-| `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` component. Use only for message extension (`"name" : "composeExtensions"`) component elements in relationship sets.|
+| `name`| String enum|| ✔️| The type of app capability. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
+| `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` capability. Use only for message extensions. |
 
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes a unidirectional dependency of one app component (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required component (Y), the dependent component (X) won't load or otherwise surface to the user.
+Describes a unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `element`| Object||✔️| Represents an individual app component (represented by [`element` object](#element-object)) that has a one-way runtime dependency on another component being loaded. |
-| `dependsOn`| Array|| ✔️| Denotes one or more app components (each represented by [`element` object](#element-object)) required for the specified `element` to load.|
+| `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element-object)) that has a one-way runtime dependency on another capability being loaded. |
+| `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element-object)) required for the specified `element` to load.|
 
 ```json
  "elementRelationshipSet": {
@@ -531,7 +531,7 @@ Describes a unidirectional dependency of one app component (X) to another (Y). I
 
 ### elementRelationshipSet.mutualDependencies
 
-Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components for any of those components to be available for users in that host.
+Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
 **Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element-object))
 
@@ -558,7 +558,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String||| Unique identifier for configurable tab. Used when defining one-way and mutual app component dependencies as [elementRelationshipSet](#elementrelationshipset).|
+|`id`|String||| Unique identifier for configurable tab. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Configurable tabs only support the `team` and `groupChat` scopes. |
@@ -703,7 +703,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`id`|String||| Unique identifier for the message extension. Used when defining one-way and mutual app component dependencies as [elementRelationshipSet](#elementrelationshipset).|
+|`id`|String||| Unique identifier for the message extension. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the message extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||Authorization related information for the API-based message extension|
