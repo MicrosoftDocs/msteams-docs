@@ -67,10 +67,12 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
         }
       ],
       "mutualDependencies" : [
+        [
                 {"name" : "bots", "id" : "bot-id"}, 
                 {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
                 {"name" : "configurableTabs", "id": "configurableTab-id"}
+        ]
       ]
     },
     "configurableTabs": [
@@ -528,15 +530,17 @@ Describes a unidirectional dependency of one app component (X) to another (Y). I
 
 Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components for any of those components to be available for users in that host.
 
-**Optional** &ndash; Array of [`element` objects](#element-object)
+**Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element-object))
 
 ```json
 "elementRelationshipSet": {
     "mutualDependencies" : [
+        [
                 {"name" : "bots", "id" : "bot-id"}, 
                 {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
                 {"name" : "configurableTabs", "id": "configurableTab-id"}
+        ]
     ]
 },
 ```

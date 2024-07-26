@@ -82,15 +82,17 @@ For message extensions, you can optionally specify individual commands that requ
 
 ### Mutual dependencies
 
-Use the `mutualDependencies` array to group app components that must load together in order to support their intended function. Each object in the array represents a mutually dependent app component. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
+Use the `mutualDependencies` array to group app components that must load together in order to support their intended function. Each object in the array represents a set of mutually dependent app components. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
 
 ```json
     "elementRelationshipSet": {
       "mutualDependencies" : [
+        [
                 {"name" : "bots", "id" : "bot-id"}, 
                 {"name" : "staticTabs", "id" : "staticTab-id"},
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
                 {"name" : "configurableTabs", "id": "configurableTab-id"}
+        ]
       ]
     },
 ```
