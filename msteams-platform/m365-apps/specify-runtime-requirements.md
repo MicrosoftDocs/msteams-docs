@@ -37,7 +37,7 @@ The following Microsoft 365 host applications support the ability to specify run
 | Microsoft 365 (Office)| | | |
 | Copilot for Microsoft 365 | | | |
 
-## Specify relationships between components of your app (`elementRelationshipSet`)
+## Specify relationships between app capabilities (`elementRelationshipSet`)
 
 You can specify relationships among the individual components of your app by including an `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
@@ -96,7 +96,7 @@ Use the `mutualDependencies` array to group app components that must load togeth
     },
 ```
 
-## Specify runtime capability requirements for specific app components (`requirementSet`)
+## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
 Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. The following JSON snippet shows a static tab that requires its host to support HTML dialogs invoked from tabs and bots: 
 
