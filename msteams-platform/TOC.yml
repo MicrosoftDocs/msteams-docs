@@ -550,6 +550,9 @@
       - name: Respond to the dialog submit action
         href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
         displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
+      - name: Actions in Copilot for Microsoft 365
+        href: messaging-extensions/bot-based-action-plugin.md
+        displayName: HR or ERP workflows, approvals, meetings, content generation, employee recognition, bookings, natural language commands
     - name: Search commands
       items:
       - name: Define search commands

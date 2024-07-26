@@ -1,9 +1,9 @@
 ---
-title: Bot-based message extension plugin with Action
-description: Learn how to create a bot-based action plugin for Microsoft Teams messaging extensions.
+title: Action-based Message Extension Plugin
+description: Learn to create bot-based action message extensions in Microsoft Teams, enabling users to perform tasks with natural language commands in Copilot.
 ms.date: 04/23/2024
 ms.topic: conceptual
-author: v-ypalikila
+author: v-sdhakshina
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ---
@@ -18,35 +18,31 @@ It supports cross-app integration within the Microsoft 365 ecosystem, streamlini
 
 Actions in message extension for copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
 
-1. **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as "Can you file a sick leave for me?" or "Create a general issue".
+* **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as **Can you file a sick leave for me?** or **Create a general issue**.
 
-1. **Disclosure and Action Confirmation UI**: Copilot responds with the parameters to be sent to the third party service, derived from the plugin manifest. A customizable action confirmation message from the third party is also displayed,  with the parameters and parameter values that are sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
+* **User Action Confirmation**: Users explicitly confirm the action, which then shares the information with the plugin. The user selects on **Continue in plugin** to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in any more details or upload files as required by the app.
 
-1. **User Action Confirmation**: Users explicitly confirm the action, which then shares the information with the plugin. The user selects on "Continue in plugin" to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in any more details or upload files as required by the app.
+* **Completion Confirmation**: The plugin acknowledges the action's completion, potentially through an adaptive card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as **Your details have been successfully submitted**. The user can also view or edit the action details in the app.
 
-1. **Completion Confirmation**: The plugin acknowledges the action's completion, potentially through an adaptive card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as **Your details have been successfully submitted**. The user can also view or edit the action details in the app.
+* **Clarification [Optional Step]**: If essential parameters are missing, Copilot might request additional information from the user.
 
-1. **Clarification [Optional Step]**: If essential parameters are missing, Copilot might request additional information from the user.
+* **Modification [Optional Step]**: Users can modify the disclosed information by submitting a natural language query, using rich Large Language Model (LLM) capabilities to alter existing parameter values.
 
-1. **Modification [Optional Step]**: Users can modify the disclosed information by submitting a natural language query, using rich Large Language Model (LLM) capabilities to alter existing parameter values.
+* **3P Error [Optional Step]**: Should a service encounter an error, Copilot relays the plugin's error message to the user. The following errors are supported:
 
-1. **3P Error [Optional Step]**: Should a service encounter an error, Copilot relays the plugin's error message to the user. The following errors are supported:
-
-   1. **Recoverable Errors**:
+   * **Recoverable Errors**:
       * **Rectification Suggestions**: Developers can send an error response to the user with requests for corrections or more data in text or JSON format.
       * **Authentication/Configuration Failure**: Developers can prompt the user to reauthorize if there's an authentication or configuration issue.
 
-   1. **Irrecoverable Errors**:
+   * **Irrecoverable Errors**:
       * **From Developer**: Developers should be able to send a failure message that Copilot displays to the user.
       * **From Copilot**: In cases of API availability issues or network problems, Copilot can send an error message to the user.
-
-1. **Disclosure and Action Confirmation with Dialogs**: For plugins requiring complex inputs, business logic, or rich editing, a button to launch a modal-based form is provided. To ensure users have full control over their data and make changes to the data generated by Copilot, it's vital to show users the information being sent with each parameter and seek explicit confirmation before triggering an action.
 
 1. **User Action Confirmation from Dialogs**: Users must confirm actions from dialogs to complete the process.
 
 ## Prerequisites
 
-1. Updated your manifest to version 1.13 or later.
+1. Updated your app manifest to version 1.13 or later.
 1. [Upgrade to Teamsjs version v2.22 or later](https://www.npmjs.com/package/@microsoft/teams-js)
 1. Add the Microsoft 365 channel for your plugin for users to interact with your message extension from Microsoft 365 Copilot or Outlook. For more information, see Add Microsoft 365 channel.
 1. If you're using single sign-on (SSO), [update your Microsoft Entra ID app registration for SSO](/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#update-microsoft-entra-app-registration-for-sso).
