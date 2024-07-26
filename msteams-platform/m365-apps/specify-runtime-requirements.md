@@ -121,7 +121,7 @@ Within individual app capability definitions, you can specify specific TeamsJS r
     ],
 ```
 
-Only a subset of TeamsJS capabilities can be specified as runtime requirements for individual components of an app. This support will expand over time. The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
+The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
 - HTML-based dialogs (`dialog.url`)
 - HTML-based dialogs for Bot Framework (`dialog.url.bot`)
