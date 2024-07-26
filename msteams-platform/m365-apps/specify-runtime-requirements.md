@@ -41,14 +41,13 @@ The following Microsoft 365 host applications support the ability to specify run
 
 You can specify relationships among the individual components of your app by including an `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
 
-Only a subset of Teams app capabilities can be specified as runtime requirements in app manifest. This support will expand over time. The following app manifest elements can be specified as having one-way or mutual dependencies:
+The following app manifest components can be specified as having one-way or mutual dependencies:
 
 - Tabs: personal (`staticTabs`) and configurable (`configurableTabs`)
 - Message extensions (`composeExtensions`), including individual commands
 - Bots (`bots`)
 
-Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The ID property future-proofs your app in case host support expands to accommodate multiple instances of these components.
-
+Each app components is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The ID property future-proofs your app in case host support expands to accommodate multiple instances of these components.
 
 > [!IMPORTANT]
 > Ensure the relationships you create adhere to the following validation rules:
