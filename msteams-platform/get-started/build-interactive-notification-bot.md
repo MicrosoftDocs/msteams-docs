@@ -6,7 +6,7 @@ ms.date: 06/07/2023
 ms.topic: reference
 ---
 
-# Build an interactive notification bot
+# Build Interactive Notification Bot
 
 For an interactive notification, a bot sends messages in a Teams channel, group chat, or personal chat. You can trigger an interactive notification bot with an HTTP request, such as cards or texts. For proactive notifications from tab apps, use [activity feed notifications](/graph/teams-send-activityfeednotifications).
 
