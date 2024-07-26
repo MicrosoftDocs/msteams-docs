@@ -24,7 +24,7 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 - **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities.  
 
-- **Capability requirements:** When your app has component parts with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those components are *seamlessly omitted* (rather than loaded, yet not functional) from your app experience running in those hosts.
+- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those components are *seamlessly omitted* (rather than loaded but not functional) from your app experience running in those hosts.
 
 ## Microsoft 365 host support
 
