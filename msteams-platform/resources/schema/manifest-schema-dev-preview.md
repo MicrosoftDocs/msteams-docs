@@ -485,8 +485,8 @@ Describes relationships among individual app capabilities, including  `staticTab
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components (each represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element-object)).|
-| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities (each represented by a `mutualDependency` array of [`element` objects](#element-object)).|
+| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components (each represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element)).|
+| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities (each represented by a `mutualDependency` array of [`element` objects](#element)).|
 
 ### element
 
@@ -509,14 +509,14 @@ Describes a unidirectional dependency of one app capability (X) to another (Y). 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element-object)) that has a one-way runtime dependency on another capability being loaded. |
-| `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element-object)) required for the specified `element` to load.|
+| `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element)) that has a one-way runtime dependency on another capability being loaded. |
+| `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element)) required for the specified `element` to load.|
 
 ### elementRelationshipSet.mutualDependencies
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
-**Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element-object))
+**Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element))
 
 ## configurableTabs
 
