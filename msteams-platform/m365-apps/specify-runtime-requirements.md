@@ -77,7 +77,7 @@ Use the `oneWayDependencies` array to describe cases where one component of your
     }
 ```
 
-For message extensions, you can optionally specify individual commands that require support for specific app components. If those components aren't supported in the runtime host, they won't be made available to the user (though all other commands will run).
+For message extensions, you can optionally specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands will run).
 
 ### Mutual dependencies
 
