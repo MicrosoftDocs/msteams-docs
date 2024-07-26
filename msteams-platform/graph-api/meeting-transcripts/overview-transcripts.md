@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Graph to fetch transcripts and recordings for a Teams meeting
+title: Fetch Meeting Transcripts & Recordings
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -54,7 +54,7 @@ For more information about how your app can know when the meetings ends, see [su
 For more information about how your app can know when a transcript or recording is available after the online meeting ends, see [get notified when transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs currently support only scheduled meetings.
+> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support only scheduled meetings.
 
 ## Next step
 

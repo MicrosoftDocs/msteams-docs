@@ -69,7 +69,7 @@ Following are the steps to create a personal tab:
 
     * **Where do you want to place the files?**
 
-      You're currently in your project directory. Select **Enter**.
+      You're in your project directory. Select **Enter**.
 
     * **Title of your Microsoft Teams app project?**
 
@@ -261,7 +261,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+   Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
 ::: zone-end
 
@@ -415,7 +415,6 @@ ngrok http 3978 --host-header=localhost
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
-
 
 ::: zone-end
 
@@ -584,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
 ::: zone-end
 
@@ -592,7 +591,7 @@ ngrok http 3978 --host-header=localhost
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after after the step-by-step Blazor guide is successfully completed.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
 > [!NOTE]
 > Teams Toolkit doesn't support the message extension capability.
@@ -863,7 +862,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -998,13 +997,11 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
-> * Extending static tab to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
-> * To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
+> To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
 Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
@@ -1064,7 +1061,7 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal| Sample app, which showcases custom personal Tab with ASP.NET core for group chat, channels, and meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Tab personal| Sample app, which showcases custom personal Tab with ASP.NET core for group chat, channels, and meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal-quickstart/js) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
 
 ## Next step
 

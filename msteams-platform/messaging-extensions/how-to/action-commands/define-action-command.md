@@ -1,7 +1,7 @@
 ---
-title: Define message extension action commands
+title: Create Action Commands for App
 author: surbhigupta
-description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create dialog (task module), and respond to dialog (task module) submit action.
+description: Learn to define message extension action commands with app manifest in Teams. Sample (.NET, Node.js), create dialog (task module), respond to dialog submit action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -14,11 +14,6 @@ Before creating the action command, you must decide the following factors:
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
 1. [How is the dialog (referred as task module in TeamsJS v1.x) created?](#select-how-to-create-your-dialog)
 1. [Is the final message or card sent to the channel from a bot, or is the message or card inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
-
-See the following video to learn how to define message extension action commands:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
-<br>
 
 ## Select action command invoke locations
 
@@ -156,7 +151,7 @@ The following code provides an example of action-based for message extensions:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionfetchtaskasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionaction-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
 ```csharp
@@ -202,7 +197,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
 ```javascript
 // Invoked when a Messaging Extension Fetch activity is received from the connector.

@@ -1,6 +1,6 @@
 ---
 title: Grant RSC permissions to an app
-description: In this article, learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
+description: Learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
 ms.localizationpriority: medium
 author: surbhigupta
 ms.author: surbhigupta
@@ -457,7 +457,7 @@ You must have the following values from the Microsoft Entra registration process
 * **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. The client secret or certificate isn't required for native apps.
 * **Redirect URI**: The URL for your app to receive responses from Microsoft Entra ID.
 
-For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
+For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0&preserve-view=true#3-get-a-token) and [get access without a user](/graph/auth-v2-service).
 
 ### Check the RSC permissions granted to a specific resource
 
