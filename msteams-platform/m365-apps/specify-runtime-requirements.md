@@ -24,7 +24,7 @@ Specifying your app's runtime requirements is useful in scenarios such as:
 
 - **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities.  
 
-- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those components are *seamlessly omitted* (rather than loaded but not functional) from your app experience running in those hosts.
+- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those capabilities are *seamlessly omitted* (rather than loaded but not functional) from your app experience running in those hosts.
 
 ## Microsoft 365 host support
 
@@ -39,21 +39,21 @@ The following Microsoft 365 host applications support the ability to specify run
 
 ## Specify relationships between app capabilities (`elementRelationshipSet`)
 
-You can specify relationships among the individual components of your app by including an `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app components.
+You can specify relationships among the individual capabilities of your app by including an `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app capabilities.
 
-The following app manifest components can be specified as having one-way or mutual dependencies:
+The following app manifest capabilities can be specified as having one-way or mutual dependencies:
 
 - Tabs: personal (`staticTabs`) and configurable (`configurableTabs`)
 - Message extensions (`composeExtensions`), including individual commands
 - Bots (`bots`)
 
-Each app components is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The ID property future-proofs your app in case host support expands to accommodate multiple instances of these components.
+Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The ID property future-proofs your app in case host support expands to accommodate multiple instances of these capabilities.
 
 > [!IMPORTANT]
 > Ensure the relationships you create adhere to the following validation rules:
 >
 > 1. Elements specified under `elementRelationshipSet` must have definitions in app manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in the manifest (with a matching `id` value) results in a manifest validation error. The `id` property must be specified in a `configurableTab` or a `composeExtension` for it to be recognized in an `elementRelationshipSet`.
-> 1. A given set of components can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) will result in a manifest validation error, because the *A depends on B* relationship is represented twice.
+> 1. A given set of capabilities can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) will result in a manifest validation error, because the *A depends on B* relationship is represented twice.
 > 1. Cyclical one-way dependencies aren't permitted. For example, specifying both an *A depends on B* relationship and a *B depends on A* relationship results in a manifest validation error.
 
 ### One-way dependencies
@@ -81,7 +81,7 @@ For message extensions, you can optionally specify individual commands that requ
 
 ### Mutual dependencies
 
-Use the `mutualDependencies` array to group app components that must load together in order to support their intended function. Each object in the array represents a set of mutually dependent app components. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
+Use the `mutualDependencies` array to group app capabilities that must load together in order to support their intended function. Each object in the array represents a set of mutually dependent app capabilities. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
 
 ```json
     "elementRelationshipSet": {
