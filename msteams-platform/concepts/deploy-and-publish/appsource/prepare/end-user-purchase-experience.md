@@ -14,15 +14,23 @@ This article helps you understand the user's app purchase experience in Teams. U
 
 ## Subscription experience
 
+The purchase experience slightly differs for an existing user and a new user.
+
+* For existing users, the checkout process is expedited as their saved account details are automatically used.
+* New users must enter their account details, select a payment method, and confirm their purchase.
+
+> [!NOTE]
+> For some countries or regions, users might be asked to add a VAT ID and a Registration ID to comply with the requirements of that region.
+
 Here's the user experience to purchase a subscription plan for a Teams app:
 
-1. In Teams, select **Apps** > **Manage apps and purchases**.
+1. In Teams, select **Apps** > **Best selling**.
 
 1. In Teams Store, find and select the app for which you want to purchase the subscription.
 
     :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
 
-1. In the app details dialog, select **View plans**.
+1. In the app details dialog, select **Buy a subscription**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
 
@@ -38,6 +46,8 @@ Here's the user experience to purchase a subscription plan for a Teams app:
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan-lightbox.png":::
 
 1. In the **Checkout** dialog, enter the following information:
+
+    For an exisitng user, the user selects the license count and subscription length, and review the details to complete the purchase. Steps 6b to 6d aren't applicable.
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
 
@@ -102,6 +112,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 Here are the subscription management options that the user can perform from the **Subscriptions** page:
 
+<br>
 <details>
 <summary>Assign or unassign licenses</summary>
 
@@ -128,6 +139,7 @@ Here are the subscription management options that the user can perform from the 
 
 </details>
 
+<br>
 <details>
 <summary>Filter your subscriptions</summary>
 
@@ -143,6 +155,7 @@ Here are the subscription management options that the user can perform from the 
 
 </details>
 
+<br>
 <details>
 <summary>Buy or remove licenses</summary>
 
@@ -153,6 +166,7 @@ Here are the subscription management options that the user can perform from the 
 
 </details>
 
+<br>
 <details>
 <summary>Cancel a subscription</summary>
 
