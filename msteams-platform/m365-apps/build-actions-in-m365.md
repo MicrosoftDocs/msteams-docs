@@ -1,5 +1,5 @@
 ---
-title: Build Actions in Microsoft 365
+title: Create Actions in Microsoft 365
 description: In this article, learn more how to build Actions and its use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
