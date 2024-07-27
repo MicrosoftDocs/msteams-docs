@@ -769,7 +769,7 @@
         displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-      displayName: Caching
+      displayName: Caching, Single sign on
   - name: Use third party IdP authentication
     items:
     - name: Overview
