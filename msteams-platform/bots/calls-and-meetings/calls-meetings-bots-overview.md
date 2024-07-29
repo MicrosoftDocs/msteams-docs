@@ -29,7 +29,7 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 
 
-## Supported scenarios supported for Microsoft Graph
+## Microsoft Graph calling and meeting APIs
 
 Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
 
