@@ -26,7 +26,6 @@ See the video to learn more about building an API-based message extension using 
 
 <br>
 
-
 |Traditional bot-based message extensions  |API-based message extensions  |
 |---------|---------|
 |Developers need to build, deploy, and maintain a service to handle invoke commands from the Teams client.     | If the end-service's APIs can be described using the OpenAPI Specification, developers can eliminate the need for the middle-layer handling service.         |
@@ -42,7 +41,6 @@ The following images show the flow of user queries through Traditional message e
 :::image type="content" source="../assets/images/Copilot/api-based-me-flow-2.png" alt-text="Screenshot shows the query flow between a user, Teams Client, and Teams bot service using API Message Extensions. The diagram also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow-2.png":::
 *User query flow using API Message Extensions. There's no need for a developer maintained handler service as long as the interaction is clearly outlined in the OpenAPI Specification in the App Package.*
 
-
 <br>
 <br>
 
@@ -50,9 +48,9 @@ Here's a high-level sequence of events that occur during a query command invocat
 
 1. When a user invokes a query command, the parameters of the query command are received by the Teams Bot Service.
 
-1. The query command is defined inside the app manifest file. The command definition contains a reference to the operation_id inside the OpenAPI Specification file along with the details of the parameters that the Teams client renders for that command. For reference, the operation_id inside the OpenAPI Specification file is unique to a particular HTTP operation.
+1. The query command is defined inside the app manifest file. The command definition contains a reference to the `operationId` inside the OpenAPI Specification file along with the details of the parameters that the Teams client renders for that command. For reference, the `operationId` inside the OpenAPI Specification file is unique to a particular HTTP operation.
 
-1. The Teams Bot Service then uses the parameters supplied by the user along with the copy of the OpenAPI Specification for the associated operation_id to build an HTTP request for the developer’s endpoint.
+1. The Teams Bot Service then uses the parameters supplied by the user along with the copy of the OpenAPI Specification for the associated `operationId` to build an HTTP request for the developer’s endpoint.
 
 1. If authentication is required and is configured in the manifest. It's resolved to the appropriate token or key. This token or key is used as part of the outgoing request. *[Optionally]*
 
@@ -66,7 +64,6 @@ Here's a high-level sequence of events that occur during a query command invocat
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-query-sequence-diagram.png" alt-text="Diagram shows the high-level sequence flow when a query is invoked in an API-based message extension." lightbox="../assets/images/Copilot/api-based-me-query-sequence-diagram.png":::
 
-
 ## Prerequisites
 
 The app definition package includes various compelling artifacts that support the functionality of this feature. Before you get started, ensure that have a basic understanding of the following files:
@@ -77,8 +74,9 @@ The app definition package includes various compelling artifacts that support th
 > * [App manifest](#app-manifest)
 > * [Response rendering template](#response-rendering-template)
 
-
 ### OpenAPI Description (OAD)
+
+OpenAPI description documenat is an adopted industry standard for describing APIs. It allows you to abstract your APIs from their implementation, providing language-agnostic definitions that are both human-readable and machine-readable. The OpenAPI description documenat outlines the interactions your extension supports, enabling Teams to build requests and communicate directly with your service without the need for a middle-layer handling service.
 
 An OpenAPI description document contains details to communicate with the developer’s service. Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
 
@@ -175,12 +173,15 @@ schemas:
        type: string
        description: Message of the error.
 ```
+
 </details>
 <br>
 
 For more information on how to write OpenAPI definitions in YAML, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 ### App manifest
+
+App manifest is a blueprint for your Teams app, defining how and where the message extension is invoked within the Teams client. It includes the commands your extension supports and the locations from which they can be accessed, such as the compose message area, command bar, and message. The manifest links to the OpenAPI Specification and the Response Rendering Template to ensure proper functionality.
 
 App manifest contains query command definition. Ensure that you adhere to following guidelines for app manifest:
 
@@ -261,6 +262,7 @@ The following is an app manifest example with definitions for API-based message 
    "validDomains": []
    }
    ```
+
 </details>
 
 #### Parameters
@@ -273,13 +275,12 @@ The following is an app manifest example with definitions for API-based message 
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
-|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
+|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `operationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
 |`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
 For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
-
 
 ### Response rendering template
 
@@ -287,7 +288,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 >
 > Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
 
-A Response rendering template contains details to convert the response from developer’s service back to UI for end-user. Ensure that you adhere to following guidelines for response rendering template:
+Response rendering template is a predefined format that dictates how the results from your API are displayed within Teams. It uses templates to create Adaptive Cards or other UI elements from the API’s response, ensuring a seamless and integrated user experience within Teams. The template defines the layout and style of the information presented, which can include text, images, and interactive components. Ensure that you adhere to following guidelines for response rendering template:
 
 * **Define the schema reference URL** in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 * **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented. For more information on the layout, see [respond to user requests](how-to/search-commands/respond-to-search.md#respond-to-user-requests).
@@ -431,7 +432,6 @@ Let's say you have the following JSON for a list of products and you want to cre
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
 Use <https://adaptivecards.io/designer/> to preview the Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking. Teams supports cards up to version 1.5 while the designer supports 1.6.
-
 
 ## OpenAPI schema conversion
 
