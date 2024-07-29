@@ -339,7 +339,7 @@ items:
        ```
 
        > [!NOTE]
-       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI key and Azure Open AI Endpoint.
+       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
 
     1. Go to the `app.ts` file:
 
@@ -540,7 +540,7 @@ items:
 
         The `actions.json` file contains the actions that the bot can perform. The `ActionPlanner` from the `index.ts` file uses the actions defined in the `actions.json` file to perform the actions.
 
-    This sample leverages OpenAI or Azure OpenAI for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
+    This sample uses OpenAI or Azure OpenAI for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
 
     ## Build and run your first bot app locally
 
@@ -627,7 +627,7 @@ items:
     1. Select **Sign in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
