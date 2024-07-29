@@ -4,7 +4,7 @@ author: surbhigupta
 description:  In this module, learn how to build AI Agent using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
+ms.author: surbhigupta
 ms.date: 05/21/2024
 ---
 
@@ -343,4 +343,4 @@ When the assistant provides a function and its arguments for execution, the SDK 
 
 ## See also
 
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
