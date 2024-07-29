@@ -226,7 +226,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
 
 1. Select **Present now**. A consent dialog appears to share the content in the meeting.
 
-    :::image type="content" source="../../assets/images/share-to-teams/live-meeting.png" alt-text="Screenshot shows the  Share to Teams dialog to add content to an ongoing meeting.":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the  Share to Teams dialog to add content to an ongoing meeting.":::
 
    > [!NOTE]
    >
