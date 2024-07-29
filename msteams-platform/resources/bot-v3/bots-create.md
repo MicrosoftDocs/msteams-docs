@@ -12,7 +12,7 @@ ms.date: 04/02/2023
 >
 > This article is based on the v3 Bot Framework SDK.
 >
-> * If you want to create an AI bot, see  [create an AI bot](~/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
+> * If you want to create an AI bot, see  [create an AI bot](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md).
 > * If you want to create a basic bot, see [get started](~/get-started/get-started-overview.md), and if you want to look for current documentation version 4.6 or later of the SDK, see [conversational bots](~/bots/what-are-bots.md).
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
