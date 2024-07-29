@@ -221,6 +221,10 @@
           "redirect_url": "/microsoftteams/platform/bots/how-to/debug/locally-with-an-ide"
       },
       {
+        "source_path": "msteams-platform/concepts/bots/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
+      },
+      {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
           "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-commands-menu"
       },
@@ -1039,10 +1043,6 @@
       {
         "source_path": "msteams-platform/bots/how-to/format-ai-bot-messages.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
-      },
-      {
-        "source_path": "msteams-platform/platform/concepts/bots/bots-create.md",
-        "redirect_url": "/microsoftteams/platform/bots/what-are-bots"
       },
       {
         "source_path": "msteams-platform/resources/bot-v3/bots-create.md",
