@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build notification bot with JavaScript
 metadata:
-  title: Build notification bot with JavaScript
+  title: Create Notification Bot in JavaScript
   description: In this tutorial, you can learn to send notification by creating a new notification bot with Teams Toolkit.
   audience: Developer
   level: Beginner

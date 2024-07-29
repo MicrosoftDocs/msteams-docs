@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Create Teams workflow bot
 metadata:
-  title: Create Teams workflow bot
+  title: Steps to Build Workflow Bot in Teams
   description: With this learning module, you'll learn to create a workflow bot in Microsoft Teams with the Adaptive Card action handler feature.
   audience: Developer
   level: Beginner
