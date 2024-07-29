@@ -1043,6 +1043,10 @@
       {
         "source_path": "msteams-platform/concepts/bots/bots-create.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/Teams%conversational%AI/teams-conversation-ai-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/build-environments-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/build-environments-vs"
       }
     ]
 }
