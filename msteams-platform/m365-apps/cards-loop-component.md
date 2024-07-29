@@ -65,7 +65,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 |Property|Type|Description|Required|
 |---|---|---|---|
-| `metadata`| Object | Defines various metadata properties typically not used for rendering the card. | No |
+| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
 | `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts. | No |
 
 > [!NOTE]
