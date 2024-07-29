@@ -14,7 +14,7 @@ This article helps you understand the user's app purchase experience in Teams. U
 
 ## Subscription experience
 
-The purchase experience slightly differs for an existing user and a new user.
+The purchase experience partly differs for an existing user and a new user.
 
 * For existing users, the checkout process is expedited as their saved account details are automatically used.
 * New users must enter their account details, select a payment method, and confirm their purchase.
