@@ -4,7 +4,7 @@ author: surbhigupta
 description:  In this module, learn how to build AI Agent using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
+ms.author: surbhigupta
 ms.date: 05/21/2024
 ---
 
