@@ -22,13 +22,6 @@ The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with tw
 
 Now, you must understand some core concepts, terminology, and conventions.
 
-
-* To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta&preserve-view=true).
-* To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10115). 
-* For samples that use Microsoft Graph SDK, see [Microsoft Graph Communications samples](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples). 
-
-
-
 ## Microsoft Graph calling and meeting APIs
 
 Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
@@ -48,6 +41,8 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 ## Set up firewalls
 
 Setting up firewalls is crucial to protect your network and system from unauthorized access and malicious attacks. Firewalls act as a barrier, controlling incoming and outgoing traffic based on security rules, preventing hackers from accessing your system, blocking malicious traffic, and hiding internal IP addresses. They provide an additional layer of security, preventing attacks like hacking, malware, and DoS attacks, and protect sensitive data from breaches. For more information, see https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf.
+In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
+For more information, see https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf.
 
 ## Terminologies
 
@@ -109,6 +104,10 @@ Real-time media refers to scenarios where media must be processed in real-time, 
     For example, knowing when a user has pressed **0** to reach the operator.
 
 * **Application-hosted media**: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
+
+* To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta&preserve-view=true).
+* To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
+* For samples that use Microsoft Graph SDK, see [Microsoft Graph Communications samples](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples). 
 
 ## Code sample
 
