@@ -1,5 +1,5 @@
 ---
-title: Loop component design guidelines 
+title: Loop Component Key Features
 description: In this article, learn how to design Adaptive Card-based Loop components.
 ms.author: mobajemu
 ms.date: 01/26/2024
