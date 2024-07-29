@@ -1,5 +1,5 @@
 ---
-title: Install Teams Toolkit for VSC
+title: Steps to Install Teams Toolkit
 author: zyxiaoyuer
 description: Learn how to install Teams Toolkit from Visual Studio Code and marketplace, and to install different Teams Toolkit versions and prerelease versions.
 ms.author: zhany
