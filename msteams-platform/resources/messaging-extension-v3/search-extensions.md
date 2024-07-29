@@ -1,5 +1,5 @@
 ---
-title: Search with message extensions
+title: Build Search-based Message Extensions
 description: In this article, you learn how to develop search based message extensions
 ms.topic: how-to
 ms.localizationpriority: medium
