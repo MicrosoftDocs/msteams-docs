@@ -31,6 +31,8 @@ Now, you must understand some core concepts, terminology, and conventions.
 
 ## Supported scenarios supported for Microsoft Graph
 
+Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
+
 | Feature | Functions |
 | ------| -------------|
 | Core capabilities | - Initiate a one-to-one call between two users <br>- Initiate a group call with more than two users (up to 350 users)<br>- Upgrade a one-to-one call with two users into a group call with more than two users<br>- Join a group call after it starts<br>- Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
