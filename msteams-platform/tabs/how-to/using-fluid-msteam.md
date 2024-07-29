@@ -1,5 +1,5 @@
 ---
-title: Integrate Fluid Powered Application
+title: Integrate Fluid Powered Tab App
 author: timtwang
 ms.author: mobajemu
 description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application.
