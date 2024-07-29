@@ -1,5 +1,5 @@
 ---
-title: Build a RAG bot in Teams
+title: Create a Teams AI Bot with RAG
 author: surbhigupta
 description: Learn how to build basic AI chatbot using Teams AI library in Teams Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual

@@ -1,5 +1,5 @@
 ---
-title: Create a personal tab
+title: Methods to Build Personal Tab App
 author: laujan
 description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
 ms.localizationpriority: high

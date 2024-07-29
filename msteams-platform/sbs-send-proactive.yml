@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Send Proactive Messages
 metadata:
-  title: Send Proactive Messages
+  title: Create Bot to Send Proactive Messages
   description: In this module, learn how to send proactive messages, such as welcome messages, scheduled messages, and notifications from a bot.
   audience: Developer
   level: Beginner
