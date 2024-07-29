@@ -68,7 +68,7 @@ To debug your app after you create a project, perform the following steps:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Debug background process](debug-background-process-v4.md)
+> [Debug background process](debug-background-process-vs.md)
 
 ## See also
 
