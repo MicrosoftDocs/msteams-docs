@@ -20,7 +20,7 @@ The Teams Store editorial team determines the prominence and location of an app 
 
 The main parameters used to determine app placements include:
 
-- **Historical usage data**: Apps with higher volumes of usage in the Teams Store tend to rank higher than apps with lower usage.
+- **Historical usage data**: Apps with higher volumes of usage in the Teams Store globally as well as organization-level tend to rank higher than apps with lower usage for that organization. However, this is not a mandatory criterion as Microsoft tries to promote new apps on store.
 
 - **User engagement data**: Apps with higher user engagement in the Teams Store tend to rank higher than apps with lower engagement.
 
