@@ -1039,7 +1039,7 @@
     displayName: application, Low code platforms
   - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
-    displayName: Multitenancy, Sharepoint
+    displayName: Multitenancy, SharePoint
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
     displayname: OnMessageActivityAsync
