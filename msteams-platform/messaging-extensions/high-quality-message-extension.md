@@ -56,6 +56,8 @@ Ensure that you adhere to the description guidelines listed in the following tab
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the descriptions don't guide Copilot to take actions that bypass the normal functioning of the application. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
+The fields such as app name, command ID, command title, command description, parameter name, and parameter description enable the Copilot to identify the appropriate plugin and extract the parameters or commands. If your description strings exceed 128 characters, we recommend you to  use [`Command.semanticDescription`](#semantic-description) and [`Parameter.semanticDescription`](#parameter-description) to provide the descriptions to Copilot.
+
 ### App description
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
