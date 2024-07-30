@@ -139,6 +139,8 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
+[!INCLUDE [ocdi-warning](../includes/tabs/ocdi-warning.md)]
+
 <a name='update-azure-ad-app-registration-for-sso'></a>
 
 ## Update Microsoft Entra app registration for SSO
