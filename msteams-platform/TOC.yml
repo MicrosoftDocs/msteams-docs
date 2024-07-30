@@ -164,7 +164,7 @@
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
           - name: Create How-to Guides
-            href: toolkit/add-How-to-guides-vsc.md
+            href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -181,7 +181,7 @@
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
-            href: toolkit/AAD-manifest-customization.md
+            href: toolkit/aad-manifest-customization.md
         - name: Debug your Teams app
           items:
           - name: Overview

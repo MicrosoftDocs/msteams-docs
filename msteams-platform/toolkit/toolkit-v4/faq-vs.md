@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: FAQ for Teams Toolkit in Visual Studio
 author: MuyangAmigo
 description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
