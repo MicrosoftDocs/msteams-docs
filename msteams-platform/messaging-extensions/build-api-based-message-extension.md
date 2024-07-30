@@ -517,65 +517,204 @@ Multi parameters allow API-based message extensions to have more than one input 
 **Example**
 
 ```json
-{
-      "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-      {
-        "type": "TextBlock",
-        "text": "${if(id, id, 'N/A')}",
-        "wrap": true
-      },
-      {
-        "type": "TextBlock",
-        "text": "${if(name, name, 'N/A')}",
-        "wrap": true
-      },
-      {
-        "type": "TextBlock",
-        "text": "${if(category.id, category.id, 'N/A')}",
-        "wrap": true
-      },
-      {
-        "type": "TextBlock",
-        "text": "${if(category.name, category.name, 'N/A')}",
-        "wrap": true
-      },
-      {
-        "type": "Container",
-        "$data": "${photoUrls}",
-        "items": [
-          {
-            "type": "Image",
-            "url": "${$data}",
-            "$when": "${$data != null}"
-          }
-        ]
-      },
-      {
-        "type": "Container",
-        "$data": "${tags}",
-        "items": [
-          {
-            "type": "TextBlock",
-            "text": "tags.id: ${if(id, id, 'N/A')}",
-            "wrap": true
-          },
-          {
-            "type": "TextBlock",
-            "text": "tags.name: ${if(name, name, 'N/A')}",
-            "wrap": true
-          }
-        ]
-      },
-      {
-        "type": "TextBlock",
-        "text": "${if(status, status, 'N/A')}",
-        "wrap": true
-      }
-    ]
-  }
+"composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "apiSpecificationFile": "apiSpecificationFiles/openapi.json",
+            "commands": [
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search Animes",
+                    "id": "getAnimeSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available anime types",
+                            "choices": [
+                                {
+                                    "title": "TV",
+                                    "value": "tv"
+                                },
+                                {
+                                    "title": "OVA",
+                                    "value": "ova"
+                                },
+                                {
+                                    "title": "Movie",
+                                    "value": "movie"
+                                },
+                                {
+                                    "title": "Special",
+                                    "value": "special"
+                                },
+                                {
+                                    "title": "ONA",
+                                    "value": "ona"
+                                },
+                                {
+                                    "title": "Music",
+                                    "value": "music"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available airing statuses",
+                            "choices": [
+                                {
+                                    "title": "Airing",
+                                    "value": "airing"
+                                },
+                                {
+                                    "title": "Completed",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rating",
+                            "inputType": "choiceset",
+                            "title": "Rating",
+                            "description": "Available ratings",
+                            "choices": [
+                                {
+                                    "title": "G",
+                                    "value": "g"
+                                },
+                                {
+                                    "title": "PG",
+                                    "value": "pg"
+                                },
+                                {
+                                    "title": "PG-13",
+                                    "value": "pg13"
+                                },
+                                {
+                                    "title": "R",
+                                    "value": "r17"
+                                },
+                                {
+                                    "title": "R+",
+                                    "value": "r"
+                                },
+                                {
+                                    "title": "Rx",
+                                    "value": "rx"
+                                }
+                            ]
+                        }
+                    ],
+                    "description": "Search animes",
+                    "apiResponseRenderingTemplateFile": "response_json/getAnimeSearch.json"
+                },
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search mangas",
+                    "id": "getMangaSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available manga types",
+                            "choices": [
+                                {
+                                    "title": "Manga",
+                                    "value": "manga"
+                                },
+                                {
+                                    "title": "Novel",
+                                    "value": "novel"
+                                },
+                                {
+                                    "title": "Light Novel",
+                                    "value": "lightnovel"
+                                },
+                                {
+                                    "title": "One Shot",
+                                    "value": "oneshot"
+                                },
+                                {
+                                    "title": "Doujin",
+                                    "value": "doujin"
+                                },
+                                {
+                                    "title": "Manhwa",
+                                    "value": "manhwa"
+                                },
+                                {
+                                    "title": "Manhua",
+                                    "value": "manhua"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available manga statuses",
+                            "choices": [
+                                {
+                                    "title": "Publishing",
+                                    "value": "publishing"
+                                },
+                                {
+                                    "title": "Complete",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Hiatus",
+                                    "value": "hiatus"
+                                },
+                                {
+                                    "title": "Discontinued",
+                                    "value": "discontinued"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "start_date",
+                            "title": "Start Date",
+                            "description": "Start date of the manga",
+                            "inputType": "date"
+                        },
+                        {
+                            "name": "end_date",
+                            "title": "End Date",
+                            "description": "End date of the manga",
+                            "inputType": "date"
+                        }
+                    ],
 ```
 
 ## Authentication
