@@ -1,7 +1,7 @@
 ---
 title: Use Bot API to Fetch Team/Chat Members
 author: ojasvichoudhary 
-description: In this module, learn upcoming and in-progress changes to the Bot APIs used for retrieving members of teams and chats
+description: Learn about upcoming API changes, deprecating features, and limitations of Bot APIs used for retrieving members of team and chat.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: surbhigupta
@@ -10,9 +10,10 @@ ms.date: 08/30/2022
 
 # Teams bot API changes to fetch team or chat members
 
->[!NOTE]
-> The deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs have started. Initially, they are heavily throttled to five requests per minute and return a maximum of 10K members per team. This results in the full roster not being returned as team size increases.
-> You must update to version 4.10 or higher of the Bot Framework SDK and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes).
+> [!NOTE]
+>
+> * The deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs have started. Initially, they are heavily throttled to five requests per minute and return a maximum of 10K members per team. This results in the full roster not being returned as team size increases.
+> * You must update to version 4.10 or higher of the Bot Framework SDK and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes).
 
 If you want to retrieve information for one or more members of a chat or team, you can use the [Microsoft Teams bot APIs](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript or Node.js APIs. For more information, see [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
