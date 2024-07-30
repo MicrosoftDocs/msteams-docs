@@ -65,7 +65,7 @@ Let's create a bot-based search message extension that can search npm registries
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
   1. Go to **Manage** > **Settings**.
