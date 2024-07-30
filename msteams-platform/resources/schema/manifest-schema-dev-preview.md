@@ -80,7 +80,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
     },
     "configurableTabs": [
         {
-            "id": "configurableTab-id", // Use for including configurableTab in elementRelationshipSet
+            "id": "configurableTab-id",
             "configurationUrl": "https://contoso.com/teamstab/configure",
             "canUpdateConfiguration": true,
             "scopes": [
@@ -173,7 +173,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
     "composeExtensions": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
-            "id": "composeExtension-id", // Use for including composeExtension in elementRelationshipSet
+            "id": "composeExtension-id",
             "canUpdateConfiguration": true,
             "commands": [
                 {
@@ -503,7 +503,7 @@ Describes an app capability (`element`) in an elementRelationshipSet.
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes a unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
+Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
 
 **Optional** &ndash; Object
 
@@ -516,7 +516,7 @@ Describes a unidirectional dependency of one app capability (X) to another (Y). 
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
-**Optional** &ndash; Array of Arrays (each containing two or more [`element` objects](#element))
+**Optional** &ndash; Array of arrays (each containing two or more [`element` objects](#element))
 
 ## configurableTabs
 
