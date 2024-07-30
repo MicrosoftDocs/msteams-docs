@@ -28,8 +28,9 @@ The main parameters used to determine app placements include:
 
 - **Audience relevance**: Apps more relevant to a particular audience tend to rank higher than apps that are less relevant for that audience. Such apps can be based on their language settings and license type such as, Education, Enterprise, or Small and Medium business.
 
+<!--
 - **App update or new release**: Newly released or updated high-quality apps tend to rank higher than apps that were released or updated on an earlier date.
-
+-->
 None of the above is either a mandatory criteria or exhaustive list. These criteria vary based on business needs and industry.
 
 ## See also
