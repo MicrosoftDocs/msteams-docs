@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Send activity feed notification
 metadata:
-  title: Send activity feed notification
+  title: Create Activity Feed Broadcast App
   description: In this tutorial, you'll learn to broadcast a message to all members of organization using activity feed notification.
   audience: Developer
   level: Beginner

@@ -1,5 +1,5 @@
 ---
-title: App templates for Microsoft Teams
+title: Open-source App Template Code Samples
 description: Learn to use app templates for Microsoft Teams platform with detailed instructions on deploying and installing an app.
 ms.topic: reference
 ms.localizationpriority: medium

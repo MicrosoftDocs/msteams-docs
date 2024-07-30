@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title:  Build API-based message extension
 metadata:
-  title: Build API-based message extension
+  title: Tutorial - API-based Message Extension
   description: In this learn module, learn to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced

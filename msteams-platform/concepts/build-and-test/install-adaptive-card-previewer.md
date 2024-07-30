@@ -1,5 +1,5 @@
 ---
-title: Install Adaptive Card Previewer
+title: Adaptive Card Previewer in VS Code
 author: v-vanv
 description: In this article, learn more about how to install the Adaptive Card Previewer extension for Visual Studio Code code and Visual Studio Code Marketplace.
 ms.localizationpriority: medium
