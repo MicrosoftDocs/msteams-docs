@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build a dashboard in Teams
 metadata:
-  title: How to Build Dashboard Tab App
+  title: Build a dashboard in Teams
   description: Learn how to create a dashboard tab, add a new widget, and implement Graph API in Teams toolkit.
   audience: Developer
   level: Beginner
