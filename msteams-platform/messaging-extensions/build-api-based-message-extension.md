@@ -1,7 +1,7 @@
 ---
 title: Authentication for API-based message extensions
 author: v-ypalikila
-description: Learn about none, secret service auth, and Microsoft entra authentication methods for API-based message extension.
+description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication, register an API key, and schema mapping.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
