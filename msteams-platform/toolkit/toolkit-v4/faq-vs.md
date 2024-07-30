@@ -1,5 +1,5 @@
 ---
-title: FAQ v4
+title: FAQ
 author: MuyangAmigo
 description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# FAQ for Teams Toolkit v4
+# FAQ for Teams Toolkit
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
