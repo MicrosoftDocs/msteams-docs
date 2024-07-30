@@ -1,6 +1,6 @@
 ---
 title: Bot app in Teams
-description: In this module, learn how to build a bot.
+description: Learn how to create bots using Microsoft Bot Framework, and use Developer Portal for Teams to register or update app, and bot information in Teams.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
