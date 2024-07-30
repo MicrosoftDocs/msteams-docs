@@ -1,7 +1,7 @@
 ---
 title: Configure Tasks - Collaboration Control
 author: surbhigupta
-description: Learn how to configure Tasks for external clients in Collaboration control app in Microsoft Teams and configure XML schema.
+description: In this module, learn how to configure Tasks for external clients in Collaboration control app in Microsoft Teams.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual

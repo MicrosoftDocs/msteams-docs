@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
+description: Frequently asked questions for Teams developer document
 ms.topic: reference
 ms.localizationpriority: high
 ---

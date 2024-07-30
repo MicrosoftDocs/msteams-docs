@@ -1,6 +1,6 @@
 ---
 title: Extend Personal Tab to Microsoft 365
-description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
+description: Learn how to update your personal tab app to run in Outlook and Microsoft 365 app, in addition to Microsoft Teams.
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 author: erikadoyle

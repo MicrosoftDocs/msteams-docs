@@ -2,7 +2,7 @@
 title: Build Outgoing Webhooks
 metadata:
   title: Build Outgoing Webhooks
-  description: In this module, learn how to create, set up, and run Outgoing Webhooks from Visual Studio for Microsoft Teams to integrate with external apps.
+  description: With this learning module, learn how to set up Outgoing Webhooks for Microsoft Teams to integrate with external apps.
   audience: Developer
   level: Beginner
   ms.date: 14/01/2022

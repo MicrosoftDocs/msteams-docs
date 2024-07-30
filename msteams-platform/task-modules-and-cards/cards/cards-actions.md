@@ -1,6 +1,6 @@
 ---
 title: Add card actions in a bot
-description: Learn about card actions in Microsoft Teams, action types such as openAI, messageBack, imBack, invoke, and signin, and how to use card actions in bots.
+description: Learn what are card actions in Microsoft Teams, action types and how to use them in your bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/04/2023
