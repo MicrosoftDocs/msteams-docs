@@ -870,6 +870,14 @@ This object indicates meeting supported video filters.
 |`name`| String | 128 characters |✔️| The name of the video filter. |
 |`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
+### meetingExtensionDefinition.filters
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|||✔️| The unique identifier for the A/V filter. This id must be a GUID. |
+|`name`| string | 128 characters |✔️| The name of the A/V filter. |
+|`thumbnail`|||✔️| The relative file path to the A/V filter thumbnail.|
+
 ## authorization
 
 **Optional** &ndash; Object

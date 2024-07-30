@@ -417,7 +417,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 June**
 
-***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
+* ***June 14,2024***: [Video filters for meeting apps](apps-in-teams-meetings/video-filters-for-meeting-apps.md)
+
+* ***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
 
 :::column-end:::
 :::row-end:::

@@ -107,6 +107,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: /microsoftteams/platform/apps-in-teams-meetings/video-filters-for-meeting-apps.md
+          itemType: concept
+          text: Video filters for meeting apps
         - url: messaging-extensions/build-bot-based-plugin.md
           itemType: concept
           text: Build bot-based search message extension plugin
@@ -140,9 +143,6 @@ conceptualContent:
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=commonscenarios
           itemType: reference
           text: Build scenarios for Teams apps
-        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
-          itemType: reference
-          text: Best practices for Teams app scenarios
       
 
     # Card
