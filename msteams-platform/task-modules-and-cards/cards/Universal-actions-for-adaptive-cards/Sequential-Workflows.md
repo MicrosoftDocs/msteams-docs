@@ -1,5 +1,5 @@
 ---
-title: Sequential Workflows
+title: Sequential Workflow for Adaptive Cards
 description: In this module, learn about Sequential Workflows for Adaptive cards using Universal Actions with Code samples
 author: surbhigupta12
 ms.topic: conceptual
