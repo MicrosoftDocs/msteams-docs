@@ -1,5 +1,5 @@
 ---
-title: Specify Microsoft 365 host runtime requirements in your app manifest
+title: Specify App Runtime Requirements for Microsoft 365
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
 ms.date: 7/10/2024
 ms.author: mosdevdocs
