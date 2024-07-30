@@ -2,7 +2,7 @@
 title:  Build API-based message extension
 metadata:
   title: Build API-based message extension 
-  description: In this learn module, learn about a message extension with OpenAPI Description (OAD) document with Teams Toolkit.
+  description: In this module, learn about a message extension using an OpenAPI Description (OAD) document with Teams Toolkit and build an API-based message extension.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
