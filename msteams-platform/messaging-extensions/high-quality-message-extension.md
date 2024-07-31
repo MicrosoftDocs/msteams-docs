@@ -553,6 +553,10 @@ We recommend you to follow these guidelines to increase the chances of your app 
 * All sample prompts must be functional and return responses.
 * Prompt must be relevant to the commands.
 
+> [IMPORTANT]
+>
+> To enable the OAuth sign-in link for the plugin, ensure that you set the `initialRun` property to `true` for search commands in the app manifest.
+
 The following code is an example of the `samplePrompts` property in app manifest:
 
 ```json
