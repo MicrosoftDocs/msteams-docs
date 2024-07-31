@@ -1865,7 +1865,6 @@ The long description of an app must clearly call out the following:
 ## See also
 
 * [Test and debug your app](~/concepts/build-and-test/debug.md)
-* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
