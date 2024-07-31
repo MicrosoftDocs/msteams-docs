@@ -176,3 +176,4 @@ For more information, see [Teams Store validation guidelines for apps with AI-ge
 * [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md)
 * [Commercial marketplace certification policies](/legal/marketplace/certification-policies)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
+* [Manage your apps in Developer Portal](../../build-and-test/manage-your-apps-in-developer-portal.md#publish)
