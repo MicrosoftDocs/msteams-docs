@@ -67,6 +67,20 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             "context": []
         }
     ],
+    "copilotExtensions": {
+        "declarativeCopilots": [
+            {
+                "id": "copilot1",
+                "file": "declarativeCopilot1.json"
+            }
+        ],
+        "plugins": [
+            {
+                "id": "plugin1",
+                "file": "plugin1.json"
+            }
+        ]
+    },
     "staticTabs": [
         {
             "entityId": "idForPage",
@@ -434,6 +448,35 @@ Icons used within the Teams app. The icon files must be included as part of the 
 A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+
+## copilotExtensions
+
+**Optional** &ndash; Object
+
+Defines one or more extensions to Microsoft Copilot, including declarative copilots and plugins. [Declarative copilots](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Copilot for Microsoft 365 that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API Plugins](/microsoft-365-copilot/extensibility/build-api-plugins-existing-api), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`declarativeCopilots`|Array of objects| 1 | | List of `declarativeCopilot` objects. |
+|`plugins`|Array of objects| 1 | | List of `plugin` objects.|
+
+### declarativeCopilot
+
+Represents a customization of Copilot for Microsoft 365, as defined by its manifest file.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique identifier for the declarative copilot. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative copilot manifest](/microsoft-365-copilot/extensibility/declarative-copilot-manifest) file.  |
+
+### plugin
+
+Represents an API Plugin, as defined by its manifest file.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique identifier for the plugin.|
+|`file`|String| |✔️| Relative path within the app package to the [API Plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
 
 ## configurableTabs
 
