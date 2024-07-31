@@ -42,7 +42,7 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
-- title: Microsoft Build 2024
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
