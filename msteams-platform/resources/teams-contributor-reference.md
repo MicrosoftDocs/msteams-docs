@@ -1,5 +1,5 @@
 ---
-title: Create, Publish & Update Documentation
+title: Guidelines- Teams Content Contribution
 description: Learn steps for creating and publishing Teams documentation
 ms.localizationpriority: medium
 ms.topic: contributor-guide

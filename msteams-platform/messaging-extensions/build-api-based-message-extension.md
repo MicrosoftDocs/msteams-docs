@@ -1,5 +1,5 @@
 ---
-title: Integrate External APIs into Teams
+title: Build API-based message extension
 author: v-ypalikila
 description: Learn about the requirements and troubleshooting guidelines for an API-based message extension.
 ms.localizationpriority: medium
