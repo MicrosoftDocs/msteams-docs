@@ -1869,4 +1869,4 @@ The long description of an app must clearly call out the following:
 * [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
-* [Manage your apps in Developer Portal](~/build-and-test/manage-your-apps-in-developer-portal.md#publish)
+* [Validate your app in Developer Portal for Teams](../build-and-test/manage-your-apps-in-developer-portal.md#publish)
