@@ -50,7 +50,7 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
 
 ## Add actions to bot-based message extension
 
-1. **Define Parameters for Action Commands**: In your manifest, define parameters for Action commands. The bot processes the parameters. Here's an example of how to define parameters:
+1. **Define Parameters for Action Commands**: In your manifest, within the Action command section, add the parameters and its descriptions which you need for that command. Here's an example of how to define parameters:
 
    ```json
    "composeExtensions": [
@@ -73,29 +73,50 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
                            "inputType": "textarea"
                        }
                    ]
-               }
+               } 
            ]
        }
    ]
    ```
 
-   Ensure that your command and parameter descriptions are friendly to LLM, which ensures that your commands are easily understood and used by users across different locales. For example, avoid using jargon or complex language in your descriptions.
+1. **Upgrade to Teamsjs version v2.22 or later** [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js) (v2.22 may be in Beta at the time you are reading this, it is expected to be a released as a stable build in early April 2024).
 
-1. **Adjust bot logic**: Adjust your bot logic to process the parameters defined in the manifest. The bot should be able to handle the command and its parameters, perform the necessary actions, and return a response. To enable action commands with natural language in the Copilot chat window, the bot logic should be updated to:
-
-   * Use the getContext API to receive the values of the parameters that are defined in the manifest and passed by Copilot.
+1. Prepopulate the dialog fields by calling `app.getContext` and checking the `dialogParameters` object:
 
    ```JavaScript
-    await app.initialize(); 
-    const context = await app.getContext(); 
-    const dialogParameters = context.dialogParameters; 
-    /* context.dialogParameters will contain key value pairs prepopulated by Copilot.The keys will match the parameter names specified in the manifest. 
-     
-    For example, if you had three parameters in your manifest called Title, Description and Date, you can access the values Copilot has prepopulated for you using dialogParameters.Title, dialogParameters.Description and dialogParameters.Date 
-    */ 
-    document.getElementById("Title").value = dialogParameters["Title"]; 
-    document.getElementById("Summary").value = dialogParameters["Summary"]; 
-    document.getElementById("Priority").value = dialogParameters["Priority"]; 
+    await app.initialize();  
+    const context = await app.getContext();  
+    const dialogParameters = context.dialogParameters;  
+    /* context.dialogParameters will contain key value pairs prepopulated by Copilot.The keys will match the parameter names specified in the manifest.
+
+    For example, if you had three parameters in your manifest called Title, Description and Priority, you can access the values Copilot has prepopulated for you using dialogParameters.Title, dialogParameters.Description and dialogParameters.Priority  
+    */  
+    document.getElementById("Title").value = dialogParameters["Title"];  
+    document.getElementById("Summary").value = dialogParameters["Summary"];  
+    document.getElementById("Priority").value = dialogParameters["Priority"];  
    ```
 
-1. **Provide a synchronous card response**: For user-initiated cards, provide a synchronous card response from the dialog, which ensures that users receive immediate feedback upon initiating an action. For example, once a user creates a task, they should receive a confirmation card.
+1. Extracted parameters are also sent as part of the bot invoke response – if you are using fetchTask based adaptive card dialog – you must prepopulate the dialog with the parameter values using these. A sample invoke request for fetch-task will look something like this:
+
+    ```json
+    {  
+        "name": "composeExtension/fetchTask",  
+        "value": {  
+            "commandId": "createCommand",  
+            "data": {  
+            "taskParameters": [  
+                     { "name": "title", "value": "Contoso issue" },  
+                     { "name": "summary", "value": "Contoso issue faced in the Fabrikam app" },  
+                     { "name": "priority", "value": "Critical" }  
+            ]  
+                 //.....  
+         }  
+              // ...  
+        }  
+    } 
+    ```
+
+    > [!NOTE]
+    > For static parameter based dialogs, Copilot will auto-populate the parameters and show the dialog to the user.
+
+1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) which will then be shown to the user.
