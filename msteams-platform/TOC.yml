@@ -110,7 +110,7 @@
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: commands      
+      displayName: commands
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
@@ -130,7 +130,7 @@
       displayname: Forms
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
-      displayName: hide page layout  
+      displayName: hide page layout
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -156,7 +156,7 @@
         items:
         - name: Prerequisites for creating your Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: Accounts to build your Teams app
         - name: Create a new Teams app project
           href: toolkit/create-new-project.md
         - name: Develop your Teams app
@@ -167,7 +167,7 @@
             href: toolkit/add-How-to-guides-v5.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
-            href: toolkit/add-resource.md  
+            href: toolkit/add-resource.md
             displayName: application 
           - name: Integrate existing third party APIs
             href: toolkit/add-API-connection.md
@@ -175,7 +175,7 @@
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
-            href: toolkit/use-existing-aad-app.md  
+            href: toolkit/use-existing-aad-app.md
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
@@ -190,23 +190,23 @@
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md            
+            href: toolkit/debug-message-extension-app-in-test-tool.md
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
-            href: toolkit/debug-mobile.md        
+            href: toolkit/debug-mobile.md
         - name: Host your app on Azure
-          items:    
+          items:
           - name: Provision cloud resources
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
-            href: toolkit/deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md
           - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md            
+            href: toolkit/use-CICD-template.md
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
@@ -239,13 +239,13 @@
         items:
         - name: Prerequisites for creating your Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-v4.md
-          displayName: Accounts to build your Teams app    
+          displayName: Accounts to build your Teams app
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your Teams app
           items: 
           - name: Add single sign-on to Teams app
-            href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
+            href: toolkit/toolkit-v4/add-single-sign-on-vs.md
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
@@ -260,14 +260,14 @@
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
-            href: toolkit/toolkit-v4/debug-background-process-v4.md            
+            href: toolkit/toolkit-v4/debug-background-process-v4.md
             displayName: DevTunnel
         - name: Host your app on Azure
-          items:    
+          items:
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to the cloud
-            href: toolkit/toolkit-v4/deploy-vs.md            
+            href: toolkit/toolkit-v4/deploy-vs.md
       - name: Migrate Teams Toolkit project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, migration
@@ -285,7 +285,7 @@
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
       - name: Analyze your apps usage in Developer Portal
-        href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
+        href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
         displayName: dashboard
     - name: Adaptive Card Previewer for Visual Studio Code
       items:
@@ -351,7 +351,7 @@
         - name: Bots with tabs
           href: resources/bot-v3/bots-with-tabs.md
         - name: Format bot messages
-          href: resources/bot-v3/bots-text-formats.md  
+          href: resources/bot-v3/bots-text-formats.md
         - name: Test a bot
           href: resources/bot-v3/bots-test.md
       - name: Message extensions SDK (v3)
@@ -533,12 +533,12 @@
       href: messaging-extensions/build-api-based-message-extension.md
       display name: Response rendering template, OpenAPI Description, Search, single parameter
     - name: Create API-based message extension
-      href: messaging-extensions/create-api-message-extension.md  
-  - name: Build message extensions using Bot Framework  
+      href: messaging-extensions/create-api-message-extension.md
+  - name: Build message extensions using Bot Framework
     items:
     - name: Overview
       href: messaging-extensions/build-bot-based-message-extension.md
-      displayName:  one-on-one conversation, search command, action command, search based message extension, action based message extension
+      displayName: one-on-one conversation, search command, action command, search based message extension, action based message extension
     - name: Action commands
       items:
       - name: Define action commands
@@ -561,23 +561,23 @@
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for Copilot extensions
         href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+        displayName: Criteria, extend message extension, plugin, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+        displayName: Copilot, extend message extension, search based message extension, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
         displayName: custom copilot, custom engine copilot, plugin, conversation
       - name: Copilot for Microsoft 365 plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
-        displayName: M365, bot-based message extension, plugin
+        displayName: Copliot for Microsoft 365, FAQ, bot-based message extension, plugin
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
     - name: Micro-capabilities for website links
       href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-      displayName: App less link unfurling  
+      displayName: App less link unfurling
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
@@ -696,10 +696,10 @@
       displayName: Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: Static and dynamic typeahead search  
+      displayName: Static and dynamic typeahead search
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      displayName: media elements, media files, Adaptive Card, command bot        
+      displayName: media elements, media files, Adaptive Card, command bot
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -877,7 +877,7 @@
         displayName: actions design
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
-        displayName: build actions, retrieve action  
+        displayName: build actions, retrieve action
       - name: Quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
@@ -1028,7 +1028,7 @@
     - name: Public developer preview
       items:
         - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
+          href: resources/dev-preview/developer-preview-intro.md
         - name: Public developer preview app manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
@@ -1075,9 +1075,9 @@
           displayName: entities
         - name: Virtual tables web API 
           href: samples/virtual-tables-api.md
-        - name: Virtual tables entity reference  
+        - name: Virtual tables entity reference
           href: samples/virtual-table-entity-references.md
-          displayName: entities           
+          displayName: entities
     - name: Collaboration controls and Settings API
       items:
       - name: Overview
@@ -1090,7 +1090,7 @@
         href: /rest/api/industry/collaboration-controls/settings-custom-apis
       - name: Settings - Standard OData APIs
         href: /rest/api/industry/collaboration-controls/settings-standard-o-data-apis
-    - name: Limitations for Collaboration control   
+    - name: Limitations for Collaboration control
       href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
@@ -1109,7 +1109,7 @@
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: Install Moodle LMS
-      href: resources/moodleInstructions.md  
+      href: resources/moodleInstructions.md
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
@@ -1140,7 +1140,7 @@
     - name: Execution and handling of deep links
       href: concepts/build-and-test/deep-links-execution-handling.md
       displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
-  - name: Integrate People Picker  
+  - name: Integrate People Picker
     href: concepts/device-capabilities/people-picker-capability.md
   - name: Use Fluid with Teams
     href: tabs/how-to/using-fluid-msteam.md
