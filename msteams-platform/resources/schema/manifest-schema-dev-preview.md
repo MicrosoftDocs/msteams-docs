@@ -453,7 +453,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Defines one or more extensions to Microsoft Copilot, including declarative copilots and plugins. [Declarative copilots](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Copilot for Microsoft 365 that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API Plugins](/microsoft-365-copilot/extensibility/build-api-plugins-existing-api), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
+Defines one or more extensions to Microsoft Copilot, including declarative copilots and plugins. [Declarative copilots](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Copilot for Microsoft 365 that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -471,12 +471,12 @@ Represents a customization of Copilot for Microsoft 365, as defined by its manif
 
 ### plugin
 
-Represents an API Plugin, as defined by its manifest file.
+Represents an API plugin, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the plugin.|
-|`file`|String| |✔️| Relative path within the app package to the [API Plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
+|`file`|String| |✔️| Relative path within the app package to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
 
 ## configurableTabs
 
