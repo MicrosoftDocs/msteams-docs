@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: Frequently asked questions for Teams developer document
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.localizationpriority: high
 ---
@@ -537,7 +537,7 @@ For support and help on the product and services issues or developer community h
 ## Notifications
 
 <details>
-<summary>How can I save conservation reference in a proactive bot?</summary>
+<summary>How can I save conversation reference in a proactive bot?</summary>
 
 It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 

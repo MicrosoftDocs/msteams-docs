@@ -1,7 +1,7 @@
 ---
 title: Virtual table entity references
 author: surbhigupta
-description: In this module, learn about virtual tables entity reference and their attributes in Microsoft Teams.
+description: Learn about Collaboration controls virtual entities such as Graph Planner Task, Event, Drive, and Booking Appointment in Teams to Microsoft Graph resources.
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
