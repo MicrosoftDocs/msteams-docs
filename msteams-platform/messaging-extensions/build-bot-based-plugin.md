@@ -57,7 +57,7 @@ Before you get started, ensure that you're familiar with the following standards
 ## Create bot-based message extension
 
 > [!IMPORTANT]
-> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Copilot for Microsoft 365 in Microsoft Teams.
+> Plugins for Copilot are in preview and only work in Copilot for Microsoft 365 in Microsoft Teams.
 
 Let's create a bot-based search message extension that can search npm registries in Teams and Copilot and share results through the compose message area of the Microsoft Teams client.
 

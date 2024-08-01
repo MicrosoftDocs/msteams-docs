@@ -1841,7 +1841,7 @@ The long description of an app must clearly call out the following:
 
 ### Response Quality
 
-* The mandatory fields in Copilot's Adaptive Card response must include the title of the information and at least two additional useful fields of your choice, such as date modified, author, status, and flags. Both the preview and content must be part of a single response.
+* The mandatory fields in Copilot's Adaptive Card response must include the information title and at least two additional useful fields of your choice, such as date modified, author, status, and flags. Both the preview and content must be part of a single response.
 
    :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot's response that contains Preview and Content in the same response.":::
 
