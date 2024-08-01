@@ -1,7 +1,7 @@
 ---
 title: Debug for mobile
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app in mobile clients.
+description: Learn how to debug and test your Teams app with tab and bot capability on mobile client in both Visual Studio Code and command line.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview

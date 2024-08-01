@@ -1,6 +1,6 @@
 ---
 title: Extend Personal Tab to Microsoft 365
-description: Learn how to update your personal tab app to run in Outlook and Microsoft 365 app, in addition to Microsoft Teams.
+description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 author: erikadoyle
@@ -138,6 +138,8 @@ As in Microsoft Teams, tab applications are hosted within [iframe elements](http
 If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, make sure you allow all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in your CSP headers:
 
 [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+
+[!INCLUDE [ocdi-warning](../includes/tabs/ocdi-warning.md)]
 
 <a name='update-azure-ad-app-registration-for-sso'></a>
 
