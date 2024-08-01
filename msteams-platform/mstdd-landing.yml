@@ -5,13 +5,13 @@ summary: Welcome to overview of Microsoft Teams developer documentation. Teams a
 
 metadata:
   title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
+  description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: msauthor #Required; microsoft alias of author; optional team alias.
+  ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
   ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
+        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
       - text: Extend bot-based message extension plugins to Teams meetings
@@ -79,8 +81,6 @@ landingContent:
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Bot configuration experience
         url: bots/how-to/bot-configuration-experience.md
-      - text: The stageView API with the openmode property allows you to open your app content in different Stageview experience
-        url: tabs/open-content-in-stageview.md
 
     - linkListType: reference
       links:
