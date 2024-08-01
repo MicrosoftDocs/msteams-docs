@@ -1,5 +1,5 @@
 ---
-title: Interactive Notification Bot Overview
+title: Interactive notification bot in Teams
 author: surbhigupta
 description: Learn how interactive notification bot works in Teams, notification based events, installation, customize notification and add authentication for notification API.
 ms.topic: conceptual
