@@ -52,32 +52,53 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
 
 1. **Define Parameters for Action Commands**: In your manifest, within the Action command section, add the parameters and its descriptions which you need for that command. Here's an example of how to define parameters:
 
-   ```json
-   "composeExtensions": [
-       {
-           "commands": [
-               {
-                   "id": "createTask",
-                   "type": "action",
-                   "parameters": [
-                       {
-                           "name": "taskTitle",
-                           "title": "Task Title",
-                           "description": "Title of the task",
-                           "inputType": "text"
-                       },
-                       {
-                           "name": "taskDescription",
-                           "title": "Task Description",
-                           "description": "Description of the task",
-                           "inputType": "textarea"
-                       }
-                   ]
-               } 
-           ]
-       }
-   ]
-   ```
+    ```json
+    "composeExtensions": [
+      {
+        "commands": [
+          {
+            "id": "createContosoItem",
+            "type": "action",
+            "title": "Create Item",
+            "description": "Create an item on Contoso",
+            "taskInfo": {
+              "title": "Create Item",
+              "width": "large",
+              "height": "large",
+              "url": "your dialog url"
+            },
+            "parameters": [
+              {
+                "name": "Title",
+                "inputType": "text",
+                "title": "Title",
+                "description": "Title of the item to be created"
+              },
+              {
+                "name": "Summary",
+                "inputType": "text",
+                "title": "Summary",
+                "description": "Summary of the item to be created"
+              },
+              {
+                "name": "Priority",
+                "inputType": "text",
+                "title": "Priority",
+                "description": "Priority of the item. This can be high, medium or low."
+              }
+            ],
+            "samplePrompts": [
+              { "text": "Create a Contoso ticket on <Topic>" },
+              { "text": "Create a Contoso ticket on <Topic> and mark the priority as <Priority>" }
+            ],
+            "context": [
+              "compose"
+            ]
+          }
+        ]
+      }
+    ]
+    ```
 
 1. **Upgrade to Teamsjs version v2.22 or later** [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js) (v2.22 may be in Beta at the time you are reading this, it is expected to be a released as a stable build in early April 2024).
 
@@ -109,14 +130,12 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
                      { "name": "summary", "value": "Contoso issue faced in the Fabrikam app" },  
                      { "name": "priority", "value": "Critical" }  
             ]  
-                 //.....  
          }  
-              // ...  
         }  
     } 
     ```
 
     > [!NOTE]
-    > For static parameter based dialogs, Copilot will auto-populate the parameters and show the dialog to the user.
+    > For static parameter based dialogs, Copilot auto-populates the parameters and show the dialog to the user.
 
 1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) which will then be shown to the user.
