@@ -136,7 +136,7 @@ The following table provides the features that support Adaptive Cards:
 
 The following code shows an example of an Adaptive Card:
 
-```json
+```msgraph-interactive
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
   "content": {
