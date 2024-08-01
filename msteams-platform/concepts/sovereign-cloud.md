@@ -28,7 +28,7 @@ The following table details the apps and its capabilities supported for Teams op
 | Upload a custom app | ❌ |
 | **App capabilities** | &nbsp; |
 | Tabs | ✔️ |
-| Bots and message extensions | ✔️ |
+| Bots and message extensions | ❌ |
 | Message actions | ❌ |
 | Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ❌ |
 | Dialogs (referred as task modules in TeamsJS v1.x) | ✔️ |
