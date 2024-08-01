@@ -45,12 +45,14 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
 1. Updated your app manifest to version 1.13 or later.
 1. [Upgrade to Teamsjs version v2.22 or later](https://www.npmjs.com/package/@microsoft/teams-js)
 1. Add the Microsoft 365 channel for your plugin for users to interact with your message extension from Microsoft 365 Copilot or Outlook. For more information, see Add Microsoft 365 channel.
-1. If you're using single sign-on (SSO), [update your Microsoft Entra ID app registration for SSO](/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#update-microsoft-entra-app-registration-for-sso).
-1. If using Content Security Policy, [modify your Content Security Policy headers](/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers).
+1. If you're using single sign-on (SSO), [update your Microsoft Entra ID app registration for SSO](/m365-apps/extend-m365-teams-personal-tab.md#update-microsoft-entra-app-registration-for-sso).
+1. If using Content Security Policy, [modify your Content Security Policy headers](/m365-apps/extend-m365-teams-personal-tab.md?tabs=manifest-teams-toolkit#configure-content-security-policy-headers).
+
+[Extend a Teams personal tab across Microsoft 365](../m365-apps/extend-m365-teams-personal-tab.md)
 
 ## Add actions to bot-based message extension
 
-1. **Define Parameters for Action Commands**: In your manifest, within the Action command section, add the parameters and its descriptions which you need for that command. Here's an example of how to define parameters:
+1. **Define Parameters for Action Commands**: In your manifest, within the action command section, add the parameters and its descriptions which you need for that command. Here's an example of how to define parameters:
 
     ```json
     "composeExtensions": [
