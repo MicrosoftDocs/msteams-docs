@@ -275,6 +275,10 @@ The following table lists the command and semantic description examples for each
 
 ---
 
+> [!IMPORTANT]
+>
+> To enable the OAuth sign-in link for the plugin, ensure that you set the `initialRun` property to `true` for search commands in the app manifest.
+
 ### Parameter description
 
 Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
@@ -552,10 +556,6 @@ We recommend you to follow these guidelines to increase the chances of your app 
 * Sample prompts must be generic in nature and not include custom references. For example, project names and task name.
 * All sample prompts must be functional and return responses.
 * Prompt must be relevant to the commands.
-
-> [IMPORTANT]
->
-> To enable the OAuth sign-in link for the plugin, ensure that you set the `initialRun` property to `true` for search commands in the app manifest.
 
 The following code is an example of the `samplePrompts` property in app manifest:
 
