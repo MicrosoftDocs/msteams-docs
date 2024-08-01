@@ -52,7 +52,7 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
 
 ## Add actions to bot-based message extension
 
-1. **Define Parameters for Action Commands**: In your manifest, within the action command section, add the parameters and its descriptions which you need for that command. Here's an example of how to define parameters:
+1. **Define Parameters for Action Commands**: In your manifest, within the action command section, define the parameters along with their descriptions for the command.  The following snippet is an example to define parameters:
 
     ```json
     "composeExtensions": [
@@ -102,9 +102,9 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
     ]
     ```
 
-1. **Upgrade to Teamsjs version v2.22 or later** [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js) (v2.22 may be in Beta at the time you are reading this, it is expected to be a released as a stable build in early April 2024).
+1. **Upgrade to Teamsjs version v2.22 or later** [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
-1. Prepopulate the dialog fields by calling `app.getContext` and checking the `dialogParameters` object:
+1. Call `app.getContext` and check `dialogParameters` object to prepopulate the dialog fields:
 
    ```JavaScript
     await app.initialize();  
@@ -119,7 +119,7 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
     document.getElementById("Priority").value = dialogParameters["Priority"];  
    ```
 
-1. Extracted parameters are also sent as part of the bot invoke response – if you are using fetchTask based adaptive card dialog – you must prepopulate the dialog with the parameter values using these. A sample invoke request for fetch-task will look something like this:
+1. Adding extracted parameters into a bot invoke response is essential, especially when utilizing a fetchTask-based adaptive card dialog. It's important to auto-fill the dialog with parameter values obtained from the extracted data. Here's an example of a potential invoke request for fetch-task:
 
     ```json
     {  
@@ -138,6 +138,6 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
     ```
 
     > [!NOTE]
-    > For static parameter based dialogs, Copilot auto-populates the parameters and show the dialog to the user.
+    > For static parameter based dialogs, Copilot auto-populates the parameters and displays the dialog to the user.
 
 1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) which will then be shown to the user.
