@@ -147,7 +147,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         > [!NOTE]
         > * Before you start validation, resolve any app manifest errors.
-        > * You can start validation for only one app at a time.
+        > * You can submit only one validation request for a particular app at any given time. After the current validation is complete, you can initiate a subsequent request.
 
         Teams Developer Portal now starts to validate your app package:
 
@@ -176,6 +176,9 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     </details>
 
+   > [!NOTE]
+   > The app validation tool checks your app package against the test cases that Microsoft uses to review your app to submit it to Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
+
 * **Publish to org**:
 
    1. In the Developer Portal, select the **Apps** that you're working.
@@ -187,9 +190,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
    1. In the Developer Portal, select the **Apps** that you're working.
    1. Go to **Publish to Store** under **Publish**.
    1. Select **Publish**.
-
-   > [!NOTE]
-   > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
    You can download the app package by selecting the **Download app package** button from the **Publish to store** page.
 
