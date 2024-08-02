@@ -41,13 +41,15 @@ If the app is configured with personal scope, the user flow to add the app withi
 
 1. Go to **Apps**, search for the app to install, and select **Add**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the Add to a team option.":::
+1. In the app details dialog, select **Add**.
+
+    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the app details dialog with the Add option.":::
 
     When the app is added, a dialog appears to add the app in personal scope.
 
-1. Select **Use on your own**. The app gets added in the personal scope.
+1. Select **Open**. The app gets added in the personal scope.
 
-    :::image type="content" source="../../assets/images/compose-extensions/personal-scope.png" alt-text="Screenshot shows to option to select the personal scope.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-scope.png" alt-text="Screenshot shows the Open option to open the app in personal scope.":::
 
 </details>
 </br>
@@ -58,11 +60,13 @@ If the app is configured with personal and shared scope, the user flow to add th
 
 1. Go to **Apps**, search for the app to install, and select **Add**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the Add to a team option.":::
+1. In the app details dialog, select **Add**.
 
-    When the app is added, a dialog appears with the option to add in personal or shared space.
+    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the app details dialog with the Add option.":::
 
-1. Select **Use on your own** to add in the personal scope.
+     When the app is added, a dialog appears with the option to add in personal or shared space.
+
+1. Select **Open** to add in the personal scope.
 
     Alternatively, you can search and select from the list of shared scopes.
 
@@ -84,7 +88,9 @@ If the app is configured with shared scopes, the user flow to add the app in the
 
 1. Go to **Apps**, search for the app to install, and select **Add**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the Add to a team option.":::
+1. In the app details dialog, select **Add**.
+
+    :::image type="content" source="../../assets/images/compose-extensions/app-add-button.png" alt-text="Screenshot shows the app details dialog with the Add option.":::
 
     When the app is added, a dialog appears with the option to select the scope.
 
