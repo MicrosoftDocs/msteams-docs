@@ -1,6 +1,6 @@
 ---
 title: Actions in Microsoft 365 Quick Starts
-description: In this article, learn how to create Actions in Microsoft 365, function of Actions and its use cases.
+description: In this article, learn how to build and run the sample app for Actions in Microsoft 365 using Teams Toolkit in Visual Studio Code, its functions and use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
@@ -62,4 +62,3 @@ You can try your Actions in the Microsoft 365 home page, right-click a Word, Exc
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
 If you want to run Actions in the Microsoft 365 on Azure, see [sample.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/m365-actions-preview/nodejs/README.md#optional-deploy-the-app-to-azure)
-
