@@ -1,5 +1,5 @@
 ---
-title: Cards
+title: Types of Cards & their Usage
 description: Learn about card types, cards specific to bots, connectors, and message extensions, Adaptive Cards overflow menu and Object ID, UPN in user mentions.
 ms.localizationpriority: high
 ms.topic: overview

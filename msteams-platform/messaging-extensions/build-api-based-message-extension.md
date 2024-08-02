@@ -1,5 +1,5 @@
 ---
-title: Build API-based message extension
+title: API-based Message Extension Guidelines
 author: v-ypalikila
 description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication, register an API key, and schema mapping.
 ms.localizationpriority: medium
