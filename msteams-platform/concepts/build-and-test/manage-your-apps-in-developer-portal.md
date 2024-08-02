@@ -151,7 +151,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         Teams Developer Portal now starts to validate your app package:
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress." lightbox="../../assets/images/tdp/app-validation-in-progress.png":::
 
         The app validation status is updated as follows:
 
@@ -161,7 +161,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         You can select **Refresh Status** to retrieve latest validation status when the validation is **In progress** status.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status." lightbox="../../assets/images/tdp/app-validation-refresh.png":::
 
     1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
 
@@ -172,7 +172,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         |**Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
         |**Skipped**|Incomplete |NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later.|
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
 
     </details>
 
