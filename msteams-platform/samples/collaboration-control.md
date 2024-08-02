@@ -1,5 +1,5 @@
 ---
-title: Collaboration controls
+title: Collaboration Controls Overview
 author: surbhigupta
 description: In this module, learn how Collaboration controls allow makers to build apps that integrate with Microsoft 365 services like Planner, Bookings, and Outlook.
 ms.localizationpriority: medium
