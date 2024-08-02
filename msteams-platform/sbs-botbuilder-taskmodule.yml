@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Invoke dialogs from Microsoft Teams
+title: Invoke Dialog in Bot with Adaptive Card
 metadata:
   title: Invoke dialogs from Microsoft Teams
-  description: In this module, learn how to create an Azure bot to invoke Teams dialogs using Adaptive Cards or Bot Framework cards.
+  description: In this module, learn how to create an Azure bot for Task Module app to invoke Teams dialogs using Adaptive Cards or Bot Framework cards.
   audience: Developer
   level: Beginner
   ms.date: 23/02/2022
