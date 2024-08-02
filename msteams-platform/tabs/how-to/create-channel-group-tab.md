@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab or group tab
+title: How to Create Channel/Group Tab
 description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
