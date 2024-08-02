@@ -12,20 +12,20 @@ ms.date: 07/10/2024
 > [!NOTE]
 > Approvals app API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-The Approvals app API in Microsoft Teams allows you to integrate approval workflows into the both Teams app and third-party applications. You can create new approvals, update existing ones, and list all approvals. It mentions the ability to create, update, and list approvals, assign approvals to users, specify custom responses, and receive notifications on Teams. The APIs support graph subscriptions, allowing notifications for approval responses.
+The Approvals app API in Microsoft Teams allows you to integrate approval workflows into the both Teams app and third-party apps. You can create new approvals, update existing ones, and list all approvals. It mentions the ability to create, update, and list approvals, assign approvals to users, specify custom responses, and receive notifications on Teams. The APIs support graph subscriptions, allowing notifications for approval responses.
 
 Approvals app is available as a personal app for all Microsoft Teams users. The Approvals app provides a simple way to bring auditing, compliance, accountability, and workflows to both structured and unstructured Approvals in Teams.
 
-The following table provides a list of APIs available across the Microsoft Graph for the approvals app:
+The following table provides the list of APIs available across Microsoft Graph for the Approvals app:
 
 | API | Description |
 | ---- | ---- |
 | [Approval item](/graph/api/resources/approvalitem?view=graph-rest-beta&preserve-view=true) | Represents a request for approval, encompassing related decisions, status, and responses. You can create new approval items, view sent or received approval items, and perform actions on these approval items. |
 | [Approval solution](/graph/api/resources/approvalsolution?view=graph-rest-beta&preserve-view=true) | Represents the provisioning status of the approval solution for a tenant. |
-| [Approval item request](/graph/api/resources/approvalitemrequest?view=graph-rest-beta&preserve-view=true) | Represents a request created for each approver on an `approvalItem`. |
+| [Approval item request](/graph/api/resources/approvalitemrequest?view=graph-rest-beta&preserve-view=true) | Represents a request created for each approver on `approvalItem`. |
 | [Approval item response](/graph/api/resources/approvalitemresponse?view=graph-rest-beta&preserve-view=true) | Represents a response to an approval item request. |
 | [Approval item view point](/graph/api/resources/approvalitemviewpoint?view=graph-rest-beta&preserve-view=true) |Represents the user's roles for an `approvalItem`.|
-| [Approval operation](/graph/api/resources/approvaloperation?view=graph-rest-beta&preserve-view=true) | Represents the status and details for an operation performed on an `approvalItem`.|
+| [Approval operation](/graph/api/resources/approvaloperation?view=graph-rest-beta&preserve-view=true) | Represents the status and details for an operation performed on `approvalItem`.|
 
 ## Use cases
 
