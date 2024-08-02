@@ -147,7 +147,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         > [!NOTE]
         > * Before you start validation, resolve any app manifest errors.
-        > * You can submit only one validation request for a particular app at any given time. After the current validation is complete, you can initiate a subsequent request.
+        > * You can submit only one validation request for a particular app at any given time. After the current validation completes, you can initiate a subsequent request.
 
         Teams Developer Portal now starts to validate your app package:
 
