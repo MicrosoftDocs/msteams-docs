@@ -1,5 +1,5 @@
 ---
-title: DevTools for Microsoft Teams tabs
+title: DevTools for Teams Desktop & Mobile
 description: Learn about DevTools for Microsoft Teams tabs and how to access and debug DevTools using Teams desktop or mobile client (Android).
 ms.localizationpriority: medium
 ms.topic: how-to
