@@ -1,6 +1,6 @@
 ---
 title: Install & Configure Moodle LMS
-description: In this article, you'll learn how to install and configure the Moodle integration app for Microsoft Teams.
+description: Learn how to install and configure Moodle LMS with Microsoft 365 plugins, integrate with Microsoft Teams, and deploy Moodle assistant bot to Azure.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: surbhigupta
