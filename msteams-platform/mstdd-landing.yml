@@ -5,7 +5,7 @@ summary: Welcome to overview of Microsoft Teams developer documentation. Teams a
 
 metadata:
   title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
+  description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
@@ -42,7 +42,7 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
-- title: Microsoft Build 2024
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
@@ -63,6 +63,8 @@ landingContent:
       links:
       - text: Introduced Adaptive Card templates
         url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
+      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
+        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
       - text: Extend bot-based message extension plugins to Teams meetings
@@ -79,8 +81,6 @@ landingContent:
         url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
-      - text: Bot configuration experience
-        url: bots/how-to/bot-configuration-experience.md
 
     - linkListType: reference
       links:
