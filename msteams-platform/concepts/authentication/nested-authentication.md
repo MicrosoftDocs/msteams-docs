@@ -43,8 +43,8 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 | Scenario | Description |
 | --- | --- |
 | **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consenting, Tom can use Mural seamlessly in future meetings across devices. |
-| **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom of the more verification needed, leading them through the MFA process to continue using Mural. |
-| **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. A retry button prompts Tom to reauthenticate, only to find that the system administrator blocked access to Mural. |
+| **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Mural. |
+| **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Mural. |
 
 ## Configure nested authentication
 
@@ -72,7 +72,11 @@ To enable nested authentication, your app must actively configure a redirect URI
 brk-<broker_application_id>://<your_domain>
 ```
 
-Where <broker_application_id> is the alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**. If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams), then you just need to add one redirect URI:
+Where, 
+* <broker_application_id> is the alias of the broker or brokers you wish to trust
+* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**. 
+
+If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
 ```http
 brk-multihub://<your_domain>
@@ -120,13 +124,13 @@ export function initializePublicClient() {
 
 ### Acquire your first token
 
-The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. The MSAL.js handles token acquisition for user authentication. It tries to get an access token silently, and if that fails, it prompts the user interactively.  The token is then used to call the Microsoft Graph API or other Entra ID protected resources.
+The tokens acquired by MSAL.js through nested app authentication are issued for your Azure app registration ID. MSAL.js handles token acquisition for user authentication. It tries to get an access token silently. If that is unsuccessful, it prompts the user for consent. The token is then used to call the Microsoft Graph API or other Entra ID protected resources. Unlike On-Behalf-Of (OBO) flow, you don't need to preauthorize your hosts to call the endpoints.
 
 To acquire a token, follow these steps:
 
-1. Use MSAL.js to acquire tokens that for your app ID. Unlike On-Behalf-Of (OBO) flow, you don't need to preauthorize your hosts to call your endpoints. For more information on how to to get access tokens, see [Acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
+1. Use MSAL.js to acquire tokens for your app ID. For more information on how to to get access tokens, see [Acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
 
-1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like tenantID, homeAccountId, and loginHint from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface). 
+1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like `tenantID`, `homeAccountId`, and `loginHint` from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface).
 
    > [!NOTE]
    > The `homeAccountId` property is equivalent to `userObjectId` in Teams JavaScript client library(TeamsJS).
