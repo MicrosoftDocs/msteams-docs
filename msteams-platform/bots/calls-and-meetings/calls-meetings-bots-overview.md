@@ -22,28 +22,6 @@ The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with tw
 
 Now, you must understand some core concepts, terminology, and conventions.
 
-## Microsoft Graph calling and meeting APIs
-
-Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
-
-| Feature | Functions |
-| ------| -------------|
-| Core capabilities | - Initiate a one-to-one call between two users <br>- Initiate a group call with more than two users (up to 350 users)<br>- Upgrade a one-to-one call with two users into a group call with more than two users<br>- Join a group call after it starts<br>- Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
-| Mid-call control | - Turn the video on or off<br>- Mute or unmute the microphone<br>- Switch between cameras<br>- Put the call on hold or resume locally<br>- Active speaker<br>- Choose speaker for calls<br>- Choose microphone for calls<br>- Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected<br>- Show the state of a call, such as early media, incoming, Connecting, ringing, connected, on hold, disconnecting, or disconnected.<br>- Show if a participant is on mute<br>- Show the reason why a participant left a call |
-| Screen sharing | - Share the entire screen from within the app <br>- Share a specific application (from the list of running apps)<br>- Share a web browser tab from the list of open tabs<br>- Share system audio during screen sharing<br>- Participant can view remote screen share |
-| Roster | - List participants <br>- Remove a participant |
-| PSTN | - Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Upgrade a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
-| General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
-| Device management | - Ask for permission to use audio or audio and video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
-| Video rendering | - Render single video in many places (local camera or remote stream) <br>- Set or update scaling mode<br>- Render remote video stream |
-
-
-## Set up firewalls
-
-Setting up firewalls is crucial for protecting your network and system from unauthorized access and malicious attacks. Firewalls act as barriers, controlling incoming and outgoing traffic based on security rules. They prevent hackers from accessing your system, block malicious traffic, and hide internal IP addresses.
-
-In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
-
 ## Terminologies
 
 The following core concepts, terminology, and conventions guide you by using calls and online meetings bots:
@@ -108,6 +86,27 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta&preserve-view=true).
 * To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
 * For samples that use Microsoft Graph SDK, see [Microsoft Graph Communications samples](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples). 
+
+## Microsoft Graph calling and meeting APIs
+
+Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
+
+| Feature | Functions |
+| ------| -------------|
+| Core capabilities | - Initiate a one-to-one call between two users <br>- Initiate a group call with more than two users (up to 350 users)<br>- Upgrade a one-to-one call with two users into a group call with more than two users<br>- Join a group call after it starts<br>- Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
+| Mid-call control | - Turn the video on or off<br>- Mute or unmute the microphone<br>- Switch between cameras<br>- Put the call on hold or resume locally<br>- Active speaker<br>- Choose speaker for calls<br>- Choose microphone for calls<br>- Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected<br>- Show the state of a call, such as early media, incoming, Connecting, ringing, connected, on hold, disconnecting, or disconnected.<br>- Show if a participant is on mute<br>- Show the reason why a participant left a call |
+| Screen sharing | - Share the entire screen from within the app <br>- Share a specific application (from the list of running apps)<br>- Share a web browser tab from the list of open tabs<br>- Share system audio during screen sharing<br>- Participant can view remote screen share |
+| Roster | - List participants <br>- Remove a participant |
+| PSTN | - Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Upgrade a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
+| General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
+| Device management | - Ask for permission to use audio or audio and video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
+| Video rendering | - Render single video in many places (local camera or remote stream) <br>- Set or update scaling mode<br>- Render remote video stream |
+
+## Set up firewalls
+
+Setting up firewalls is crucial for protecting your network and system from unauthorized access and malicious attacks. Firewalls act as barriers, controlling incoming and outgoing traffic based on security rules. They prevent hackers from accessing your system, block malicious traffic, and hide internal IP addresses.
+
+In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
 
 ## Code sample
 
