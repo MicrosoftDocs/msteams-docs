@@ -1,5 +1,5 @@
 ---
-title: Virtual tables Web API
+title: Introduction to Virtual Tables Web API
 author: surbhigupta
 description: In this module, learn about Virtual Tables web API for Collaboration control app, virtual table sorting, and filtering in Microsoft Teams.
 ms.localizationpriority: medium
