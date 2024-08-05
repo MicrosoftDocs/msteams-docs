@@ -481,7 +481,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Describes relationships among individual app capabilities, including  `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app only launches in applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
+Describes relationships among individual app capabilities, including `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app only launches in applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -492,12 +492,12 @@ Describes relationships among individual app capabilities, including  `staticTab
 
 **Optional** &ndash; Object
 
-Describes an app capability (`element`) in an elementRelationshipSet.
+Describes an app capability (`element`) in an `elementRelationshipSet`.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `name`| String enum|| ✔️| The type of app capability. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
-| `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. Maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
+| `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. It maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
 | `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` capability. Use only for message extensions. |
 
 

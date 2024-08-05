@@ -52,8 +52,8 @@ Each app capability is defined by the newly introduced property, `id`, which map
 > [!IMPORTANT]
 > Ensure the relationships you create adhere to the following validation rules:
 >
-> 1. Elements specified under `elementRelationshipSet` must have definitions in app manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in the manifest (with a matching `id` value) results in a manifest validation error. The `id` property must be specified in a `configurableTab` or a `composeExtension` for it to be recognized in an `elementRelationshipSet`.
-> 1. A given set of capabilities can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) will result in a manifest validation error, because the *A depends on B* relationship is represented twice.
+> 1. Elements specified under `elementRelationshipSet` must have definitions in app manifest. For example, an `element` or `commandId` listed in the `dependsOn` section of a `oneWayDependencies` object that doesn't have a corresponding definition in app manifest (with a matching `id` value) results in a manifest validation error. The `id` property must be specified in a `configurableTab` or a `composeExtension` to be recognized in an `elementRelationshipSet`.
+> 1. A given set of capabilities can only be grouped by a `mutualDependency` or `oneWayDependency`, but not both. For example, specifying both a one-way dependency (*A* depends on *B*) and a mutual dependency (*A* and *B* depend on each other) results in a manifest validation error, because the *A depends on B* relationship is represented twice.
 > 1. Cyclical one-way dependencies aren't permitted. For example, specifying both an *A depends on B* relationship and a *B depends on A* relationship results in a manifest validation error.
 
 ### One-way dependencies
@@ -98,7 +98,7 @@ Use the `mutualDependencies` array to group app capabilities that must load toge
 
 ## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
-Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. The following JSON snippet shows a static tab that requires its host to support HTML dialogs invoked from tabs and bots: 
+Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots: 
 
 ```json
     "staticTabs": [
