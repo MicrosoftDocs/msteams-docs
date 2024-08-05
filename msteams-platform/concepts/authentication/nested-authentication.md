@@ -29,20 +29,20 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 
 | Steps | Traditional Teams Microsoft Entra ID SSO | NAA |
 | --- | --- | --- |
-| Expose redirect URI | ✔️ | ✔️ * SPA redirect URI necessary |
+| Expose redirect URI | ✔️ | ✔️ SPA redirect URI necessary |
 | Register API in Microsoft Entra ID | ✔️ |  |
 | Define a custom scope in Microsoft Entra ID | ✔️ |  |
 | Authorize Teams client apps | ✔️ |  |
-| Revise Teams manifest | ✔️ | Recommended helping IT admins in providing consent through the Admin Portal |
+| Revise Teams manifest | ✔️ | It is recommended for helping IT admins in providing consent through the Admin Portal |
 | Acquire access token through Teams JS SDK | ✔️ |  |
 | Solicit user consent for more permissions | ✔️ |  |
 | Conduct an OBO exchange on the server | ✔️ |  |
 
 ## Scenarios
 
-| Scenario | description |
+| Scenario | Description |
 | --- | --- |
-| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After tom consents, Tom can use Mural seamlessly in future meetings across devices. |
+| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consenting, Tom can use Mural seamlessly in future meetings across devices. |
 | **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom of the more verification needed, leading them through the MFA process to continue using Mural. |
 | **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. A retry button prompts Tom to reauthenticate, only to find that the system administrator blocked access to Mural. |
 
@@ -50,8 +50,8 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 
 > [!NOTE]
 >
-> * Nested authentication is in developer preview and not supported by all host environments. You must check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
-> * If the API return the value as `true`, then call MSAL for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
+> * Nested authentication is in developer preview and not supported by all host environments. Ensure that you check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
+> * If the API returns the value as `true`, then call MSAL for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To use nested authentication, follow these steps:
 
@@ -66,19 +66,19 @@ You need to create a Microsoft Azure App registration for your add-in on the Azu
 
 ### Add trusted brokers
 
-To enable nested authentication, your application must actively configure a redirect URI to indicate the Microsoft identity platform that your application allows itself to be brokered by supported hosts. The redirect URI of the application must be of type **Single Page Application** and conform to the following scheme:
+To enable nested authentication, your app must actively configure a redirect URI to indicate the Microsoft identity platform that your app can be brokered by supported hosts. The redirect URI of the app must be of type **Single Page Application** and conform to the following scheme:
 
 ```
 brk-<broker_application_id>://<your_domain>
 ```
 
-Where <broker_application_id> is the alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**. If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams), then you just need to add one Redirect URI:
+Where <broker_application_id> is the alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**. If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams), then you just need to add one redirect URI:
 
 ```http
 brk-multihub://<your_domain>
 ```
 
-Your domain should only include the origin and not sub-paths. For example:
+Your domain must include only the origin, and not sub-paths. For example:
 
 * Correct: brk-multihub://myapp.teams.microsoft.com
 * Incorrect: brk-multihub://myapp.teams.microsoft.com/go
@@ -86,9 +86,9 @@ Your domain should only include the origin and not sub-paths. For example:
 ### Initialize public client application
 
 > [!NOTE]
-> Ensure that you initialize TeamsJS before you initialize MSAL (Microsoft Authentication Library), else Nested app authentication might fail.
+> To ensure successful authentication, initialize TeamsJS before you initialize MSAL (Microsoft Authentication Library).
 
-You need to initialize MSAL and get an instance of the public client application. This is used to get access tokens when needed.
+Initialize MSAL and get an instance of the public client application to get access tokens, when needed.
 
 ```javascript
 import {
