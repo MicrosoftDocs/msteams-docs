@@ -277,7 +277,7 @@ The following table lists the command and semantic description examples for each
 
 > [!IMPORTANT]
 >
-> For activating the OAuth sign-in link in the plugin, make sure to set the `initialRun` property to `true` for search commands within the app manifest.
+> For activating the OAuth sign-in link in the plugin, ensure to set the `initialRun` property to `true` for search commands within the app manifest.
 
 ### Parameter description
 
