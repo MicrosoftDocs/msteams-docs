@@ -1,5 +1,5 @@
 ---
-title: Overview - User story for Microsoft Teams platform
+title: User Story for Teams Platform
 author: heath-hamilton
 description: Learn how Microsoft Teams apps helps your users in the Teams environment. Understand your user, problem, app requirements, benefits, and user centric solution.
 ms.topic: overview

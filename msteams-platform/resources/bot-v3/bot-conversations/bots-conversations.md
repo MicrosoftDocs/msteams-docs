@@ -35,7 +35,7 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech is currently not supported.
+Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech isn't supported.
 
 Messages are usually the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes, which you need to know about.
 
@@ -50,15 +50,15 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Rich text | ✔ | ✔ |  |
 | Pictures | ✔ | ✔ | Maximum 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format; animated GIF aren't supported. |
 | Cards | ✖ | ✔ | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 such as, U+1F600 for grinning face. |
+| Emojis | ✖ | ✔ | Teams supports emojis via UTF-16 such as, U+1F600 for grinning face. |
 |
 
 For more information on the types of bot interaction supported by the Bot Framework, which bots in teams are based on, see the Bot Framework documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
 
 ## Message formatting
 
-You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bots-message-format.md) for a detailed description of supported formatting in bot messages.
-You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0&preserve-view=true#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bots-message-format.md) for a detailed description of supported formatting in bot messages.
+You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0&preserve-view=true#customizing-a-message) property to control how your message's text content is rendered.
 
 For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](~/resources/bot-v3/bots-text-formats.md).
 
@@ -194,7 +194,7 @@ string tenantId = channelData.Tenant.Id;
 
 ## Sending replies to messages
 
-To reply to an existing message, call [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_&preserve-view=true) in .NET or [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities&preserve-view=true) in Node.js. The Bot Builder SDK handles all the details.
+To reply to an existing message, call [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_&preserve-view=true) in .NET or [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0&preserve-view=true#sendactivities) in Node.js. The Bot Builder SDK handles all the details.
 
 If you choose to use the REST API, you can also call the [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0&preserve-view=true) endpoint.
 

@@ -1,6 +1,6 @@
 ---
-title: Prepare your Microsoft 365 tenant
-description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
+title: Get Started with Microsoft 365 Tenant
+description: Learn how to get started with Teams in Microsoft 365, enable Teams for your organization and custom app upload, and create your development environment.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 01/31/2023
