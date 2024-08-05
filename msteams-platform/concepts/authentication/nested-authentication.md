@@ -182,9 +182,9 @@ The following code shows you an example to access a token:
 
 ### Call an API
 
-After receiving the token, you use the token to call the API. This ensures that the API is called with a valid token, allowing for authenticated requests to be made to the server.
+After you receive the token, use it to call the API. This ensures that the API is called with a valid token for ensuring that authenticated requests can be made to the server.
 
-The following example shows how to make authenticated requests to the Microsoft Graph API to access Microsoft 365 data:
+The following example shows how to make an authenticated request to the Microsoft Graph API to access Microsoft 365 data:
 
 ```javascript
 
@@ -207,15 +207,15 @@ fetch(graphEndpoint, options)
 
 ### Best practices
 
-* **Use silent authentication whenever possible**: MSAL.js provides the acquireTokenSilent method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), a fresh token is returned. The library doesn't automatically invoke the acquireTokenSilent method. We recommended that you call acquireTokenSilent in your app before making an API call to get the valid token.
+* **Use silent authentication whenever possible**: MSAL.js provides the `acquireTokenSilent` method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), Microsoft Entra returns a fresh token. The library doesn't automatically invoke the `acquireTokenSilent` method. We recommended that you call `acquireTokenSilent` in your app before making an API call to get the valid token.
 
-  In certain cases, the acquireTokenSilent method's attempt to get the token fails. For example, when there's an expired user session with Microsoft Entra or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
+  In certain cases, the attempt to get the token using the `acquireTokenSilent` method fails. For example, when there's an expired user session with Microsoft Entra or a password change by the app user, which requires user interaction. If the `acquireTokenSilent` fails, call the interactive acquire token method (`acquireTokenPopup`).
 
-* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level or legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
+* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your app might appear in down-level or legacy clients aren't updated to support NAA. In these cases, your app doesn't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
 * Nested app authentication might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of "true" indicates support for nested app authentication, while "false" suggests it isn't supported.
 
-* **Test your application in multiple environments**: If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
+* **Test your app in multiple environments**: If your app is expected to work in both WebView and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
 
 ## Code sample
 
