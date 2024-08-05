@@ -16,7 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 ## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
-----------> 
+---------->
 
 ## Generally available
 
@@ -30,11 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 July**
+**2024 August**
 
-* ***July 31, 2024***: [Use app validation tool to validate your Teams app in Developer Portal for Teams.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
-* ***July 03, 2024***: [Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings)
-* ***July 02, 2024***: [You can extend bot-based message extension plugins to Teams meetings.](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+* ***August 31, 2024***: [Confiugre you app with Approvals APIs to get approvals from others.](samples/approvals-app-api.md).
 
 :::column-end:::
 :::row-end:::
@@ -48,6 +46,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
+| 03/07/2024 | Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Build apps for meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
+| 02/07/2024 | You can extend bot-based message extension plugins to Teams meetings. | Build message extension > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as plugin for Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)|
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|

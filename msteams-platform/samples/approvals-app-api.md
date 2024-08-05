@@ -7,7 +7,7 @@ ms.author: v-sdhakshina
 ms.date: 07/10/2024
 ---
 
-# Approvals app API
+# Approvals app APIs
 
 > [!NOTE]
 > Approvals app API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -29,13 +29,13 @@ The following table provides the list of APIs available across Microsoft Graph f
 
 ## Use cases
 
-* Approvals app can be used to manage various types of requests, such as time-off requests, expense approvals, or project sign-offs, ensuring that they are reviewed and approved by the appropriate personnel in a timely manner.
-* Approvals app often integrate with other systems like Power Automate, SharePoint, and Microsoft Dynamics 365, allowing for a seamless approval process across different platforms.
+* Approvals app can be used to manage various types of requests, such as time-off requests, expense approvals, or project sign-offs, ensuring that they're reviewed and approved by the appropriate personnel in a timely manner.
+* Approvals app often integrates with other systems like Power Automate, SharePoint, and Microsoft Dynamics 365, allowing for a seamless approval process across different platforms.
 * In Teams, for example, you can create an approval directly from a chat conversation, making it easier to initiate and track approval requests within the context of ongoing discussions.
 
 ## Key benefits
 
-* Approvals app reduce the time and effort required to manage approvals by automating the workflow and notification process.
+* Approvals app reduces the time and effort required to manage approvals by automating the workflow and notification process.
 * They provide a centralized hub where all approvals can be tracked, managed, and audited, offering greater transparency into the approval process.
 * By using templates and predefined approval processes, organizations can ensure consistency in how approvals are handled across various departments and teams.
 * Approvals app can enforce compliance with organizational policies by ensuring that all necessary approvals are obtained before any action is taken.
