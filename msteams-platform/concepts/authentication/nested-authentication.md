@@ -12,22 +12,22 @@ ms.localizationpriority: medium
 
 > [!NOTE]
 >
-> * Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Nested app authentication is only supported in single page applications such as tabs.
-> * Nested app authentication isn't supported on Teams web client and Microsoft 365 apps.
+> * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * NAA is supported only in single page apps (SPA) like tabs.
+> * NAA isn't supported on Teams web client and Microsoft 365 apps.
 
-Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across applications nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow.
+NAA is a new authentication protocol for single page apps that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate Single Sign-on (SSO) across apps nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow.
 
-* You only need to use the MSAL.js library and don’t need the getAuthToken function in TeamsJS.
+* You need to use only the MSAL.js library and don’t need the `getAuthToken` function in TeamsJS.
 * You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
 * You can use incremental and dynamic consent for scopes.
 * You don't need to preauthorize your hosts (for example, Teams, Office) to call your endpoints.
 
 The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-Ins and Teams Tabs and Personal apps.
 
-The following table outlines the difference between Teams Microsoft Entra ID SSO and Nested App Authentication:
+The following table outlines the difference between Teams Microsoft Entra ID SSO and NAA:
 
-| Steps | Traditional Teams Microsoft Entra ID SSO | Nested App Authentication |
+| Steps | Traditional Teams Microsoft Entra ID SSO | NAA |
 | --- | --- | --- |
 | Expose redirect URI | ✔️ | ✔️ * SPA redirect URI necessary |
 | Register API in Microsoft Entra ID | ✔️ |  |
