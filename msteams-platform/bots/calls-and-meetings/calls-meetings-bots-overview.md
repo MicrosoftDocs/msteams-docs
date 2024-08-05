@@ -40,7 +40,9 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 
 ## Set up firewalls
 
-Setting up firewalls is crucial to protect your network and system from unauthorized access and malicious attacks. Firewalls act as a barrier, controlling incoming and outgoing traffic based on security rules, preventing hackers from accessing your system, blocking malicious traffic, and hiding internal IP addresses. They provide an additional layer of security, preventing attacks like hacking, malware, and DoS attacks, and protect sensitive data from breaches. For more information, see https://cdn.graph.office.net/prod/pdf/teams-to-bot-communication-final.pdf.
+Setting up firewalls is crucial for protecting your network and system from unauthorized access and malicious attacks. Firewalls act as barriers, controlling incoming and outgoing traffic based on security rules. They prevent hackers from accessing your system, block malicious traffic, and hide internal IP addresses.
+
+In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
 In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
 
 ## Terminologies
