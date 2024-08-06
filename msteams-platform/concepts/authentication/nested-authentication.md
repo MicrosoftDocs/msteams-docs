@@ -211,11 +211,11 @@ fetch(graphEndpoint, options)
 
   In certain cases, the attempt to get the token using the `acquireTokenSilent` method fails. For example, when there's an expired user session with Microsoft Entra or a password change by the app user, which requires user interaction. If the `acquireTokenSilent` fails, call the interactive acquire token method (`acquireTokenPopup`).
 
-* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your app might appear in down-level or legacy clients aren't updated to support NAA. In these cases, your app doesn't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
+* **Have a fallback**: These flows offer a high degree of compatibility across the Microsoft ecosystem. However, your app might appear in down-level or legacy clients that aren't updated to support NAA. In these cases, your app can't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
 * NAA might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of "true" indicates support for NAA, while "false" suggests it isn't supported.
 
-* **Test your app in multiple environments**: If your app is expected to work in both WebView and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
+* **Test your app in multiple environments**: If your app is expected to work in both WebView and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Certain APIs that function in the browser might not operate within WebViews.
 
 ## Code sample
 
