@@ -12,17 +12,12 @@ ms.date: 04/06/2023
 
 This article helps you understand the user's app purchase experience in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. As a developer, you can bring out the purchase experience for your app as detailed in this article.
 
-## Subscription experience
-
-The purchase experience partly differs for an existing user and a new user.
-
-* For existing users, the checkout process is expedited as their saved account details are automatically used.
-* New users must enter their account details, select a payment method, and confirm their purchase.
+## Subscription purchase experience
 
 > [!NOTE]
 > For some countries or regions, users might be asked to add a VAT ID and a Registration ID to comply with the requirements of that region.
 
-Here's the user experience to purchase a subscription plan for a Teams app:
+The subscription purchase experience partially differes for a new and an existing user. Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In Teams, select **Apps** > **Best selling**.
 
@@ -47,7 +42,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In the **Checkout** dialog, enter the following information:
 
-    For an exisitng user, the user selects the license count and subscription length, and review the details to complete the purchase. Steps 6b to 6d aren't applicable.
+    # [New user](#tab/newuser)
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
 
@@ -70,6 +65,20 @@ Here's the user experience to purchase a subscription plan for a Teams app:
     1. Under **Review**, verify the details and select **Place order**.
 
         :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+
+    # [Existing user](#tab/existinguser)
+
+    For existing users, the checkout process is quick as their saved account details are automatically used. The user needs to select the license count and subscription length, and review the details to complete the purchase.
+
+    1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
+
+        :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
+
+    1. Under **Review**, verify the details and select **Place order**.
+
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+    
+---
 
 1. When prompted, select **Set up subscription** to activate your subscription.
 
