@@ -408,6 +408,83 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 }
 ```
 
+## Dependent dropdowns
+
+Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. This is particularly useful in filtering out options based on a previous choice. Suppose you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
+
+If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in USA, such as **CA**, **FL**, and **TX**.
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
+
+If the user changes the selection from **USA** to **India**, the values in the second dropdown list must be reset and display the various states in India.
+
+### `associatedInputs`
+
+The first dropdown list, in this case, is associated with the second dropdown list, acting as a filter to the list of values in the second dropdown list. You can associate two dropdown lists through the `associatedInputs` property under the `Data.Query` object. This association means that whenever a user changes a value in one of the dropdown lists, a request is sent to the bot to retrieve the associated values dynamically through the data query to filter the list of values in the other dropdown list.
+
+| Property| Type | Required | Description |
+|---|---|---|---|
+| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
+
+The following JSON payload shows how to associate two dropdown lists:
+
+
+
+### `valueChangedAction`
+
+When a user changes a value in one of the dropdown lists, there's already an associated value populated in the other dropdown list that might not be appropriate anymore. Hence, we've introduced the `valueChangedAction` property that contains a new type of action, `Action.ResetInputs` to reset the associated value when a change is detected in one of the dropdown lists.
+
+This forces the user to pick a new value from the dropdown list that is reset. If the dropdown list uses dynamic typeahead search, when the user picks a new value, a new request is sent to the bot with the value of the first input that has now changed and enable the bot to filter using a different keyword.
+
+| Property| Type | Required | Description |
+|---|---|---|---|
+| `valueChangedAction` |  | No | Contains the `Action.ResetInputs` action |
+| `Action.ResetInputs` | String | No | Resets the input values for the fields defined under the `targetInputIds` property |
+| `targetInputIds` | Array of strings | No | The IDs of the input values that should be reset. |
+
+The `valueChangedAction` property can be used to reset inputs outside dropdown lists. The following JSON payload shows how to reset an input in an Adaptive Card.
+
+```json
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "id": "main",
+            "label": "Main input - changing its value will reset all the other inputs",
+            "valueChangedAction": {
+                "type": "Action.ResetInputs",
+                "targetInputIds": [
+                    "text",
+                    "multiline",
+                    "date",
+                    "time",
+                    "number",
+                    "compact",
+                    "expanded",
+                    "toggle"
+                ]
+            }
+        },
+```
+
+### Implement dependent dropdowns
+
+To implement dependent dropdowns in an Adaptive Card with multiple dropdown lists, execute the following steps:
+* Ensure that the dependent dropdown lists use dynamic typeahead search.
+* Add the `associatedInputs` property under `Data.Query` object to link the dropdown lists.
+* Add the `Action.ResetInputs` property under `valueChangedAction` to clear the values in the dependent dropdown lists when a user changes the value in the one of the dropdown lists.
+
 ---
 
 ## Code sample
