@@ -15,15 +15,15 @@ This article helps you understand the user's app purchase experience in Teams. U
 ## Subscription purchase experience
 
 > [!NOTE]
-> For some countries or regions, users might be asked to add a VAT ID and a Registration ID to comply with the requirements of that region.
+> For some countries or regions, users might be asked to add a [VAT ID number](/partner-center/enroll/vat-info) and a [registration ID number](/partner-center/account-settings/reg-number-id) to comply with the requirements of that region.
 
-The subscription purchase experience partially differes for a new and an existing user. Here's the user experience to purchase a subscription plan for a Teams app:
+The subscription purchase experience partially differs for a new and an existing user. Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In Teams, select **Apps** > **Best selling**.
 
-1. In Teams Store, browse and select the app for which you want to purchase the subscription.
-
     :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
+
+1. In the Teams Store, browse and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -36,7 +36,7 @@ The subscription purchase experience partially differes for a new and an existin
 1. In the **Choose a subscription plan** dialog, select **Buy** for the plan you want to purchase.
 
     > [!NOTE]
-    > Private plans are visible only to users of the organization to whom you're providing the specific offer. A **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon indicates a private plan.
+    > Private plans are only visible to users within the organization that the offer is intended for and are indicated with a **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan-lightbox.png":::
 
@@ -56,9 +56,9 @@ The subscription purchase experience partially differes for a new and an existin
 
         :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows verifying the billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
 
-    1. Under **Add a credit card or debit card**, add the required details, select the card address, and select **Next**.
+    1. Under **Add a credit card or debit card**, add the required details and select **Next**.
 
-        To use the billing account's address for the card, turn on the **Same as billing account** toggle. To add a new address, turn off the toggle.
+        By default, the **Same as billing account** toggle is turned on to use the billing account’s address for the card. To add a new address, turn off the toggle and enter the new address.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address." lightbox="../../../../assets/images/saas-offer/card-address.png":::
 
@@ -68,7 +68,7 @@ The subscription purchase experience partially differes for a new and an existin
 
     # [Existing user](#tab/existinguser)
 
-    For existing users, the checkout process is quick as their saved account details are automatically used. The user needs to select the license count and subscription length, and review the details to complete the purchase.
+    For existing users, the checkout process is quick as their saved account details are automatically used.
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
 
@@ -78,20 +78,20 @@ The subscription purchase experience partially differes for a new and an existin
 
         :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
     
----
+    ---
 
 1. When prompted, select **Set up subscription** to activate your subscription.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-    You're redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where you can manage your subscriptions.
+    Users are redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where they can manage subscriptions.
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
 When a new user launches the app for the first time, they're requested to provide consent to the app.
 
 > [!NOTE]
-> Consent dialog is part of the flow to get the user's license information and may vary based on Independent software vendors (ISVs) integration approach.
+> Consent dialog is part of the flow to get the user's license information and might vary based on Independent software vendors (ISVs) integration approach.
 
 Following is an example of the consent screen:
 
@@ -137,11 +137,11 @@ Here are the subscription management options that the user can perform from the 
 
     :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot shows assigning license to a Team highlighted in red.":::
 
-    You can view the list of assigned users or teams for the subscription and also check the status of the assignment.
+    Users can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
     :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
 
-1. If you want to unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
+1. To unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users." lightbox="../../../../assets/images/saas-offer/unassign-button.png":::
 &nbsp;
@@ -187,9 +187,9 @@ Here are the subscription management options that the user can perform from the 
 
 </details>
 
-You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+Users can take additional actions related to your subscription, such as editing the billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
-:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
+:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows how to manage the additional subscriptions in M365 admin center.":::
 
 ## Admin purchasing experience
 
