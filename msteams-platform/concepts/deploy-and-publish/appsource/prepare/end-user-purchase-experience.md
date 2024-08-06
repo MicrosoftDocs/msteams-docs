@@ -1,6 +1,6 @@
 ---
-title: Purchase and manage app subscriptions and licenses
-description: Learn how to purchase, assign, and manage licenses for third-party apps in Microsoft Teams.
+title: Buy & Manage App Subscription & License
+description: Learn how to purchase, assign, and manage app subscriptions and licenses for third-party apps in Microsoft Teams and admin purchasing experience.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -157,5 +157,4 @@ Admins can manage the app subscriptions and licenses in the Teams admin center. 
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
-* [Set up Microsoft license management for third-party apps](manage-third-party-apps-license.md)
+[Monetize your app](monetize-overview.md)

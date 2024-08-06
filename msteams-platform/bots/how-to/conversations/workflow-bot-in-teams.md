@@ -1,5 +1,5 @@
 ---
-title: Workflow bot in Teams
+title: Build and Customize Workflow Bot
 author: surbhigupta
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
@@ -41,8 +41,8 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface:
 
-``` Export interface
--
+```typescript
+
 TeamsFxAdaptiveCardActionHandler 
 {
     /**

@@ -221,10 +221,6 @@
           "redirect_url": "/microsoftteams/platform/bots/how-to/debug/locally-with-an-ide"
       },
       {
-          "source_path": "msteams-platform/concepts/bots/bots-create.md",
-          "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
-      },
-      {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
           "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-commands-menu"
       },
@@ -1039,6 +1035,14 @@
       {
         "source_path": "msteams-platform/sbs-api-me-ttk.yml",
         "redirect_url": "/microsoftteams/platform/sbs-api-msg-ext-ttk"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/format-ai-bot-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
+      },
+      {
+        "source_path": "msteams-platform/concepts/bots/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/Teams%conversational%AI/teams-conversation-ai-overview"
       }
     ]
 }

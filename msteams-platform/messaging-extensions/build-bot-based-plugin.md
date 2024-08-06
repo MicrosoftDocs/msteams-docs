@@ -1,5 +1,5 @@
 ---
-title: Create bot based Message extension plugin
+title: Message Extension as Plugin for Copilot
 author: v-ypalikila
 description: Learn how to build a bot-based message extension plugin for Microsoft Copilot for Microsoft 365 using Teams Developer Portal and Teams Toolkit.
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Copilot for Microsoft 365." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
 </br>
@@ -34,14 +34,13 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
-* Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
+Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offer a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
 * **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
-* **Semantic description**: Semantic description helps Copilot for Micrososft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
+* **Semantic description**: Semantic description helps Copilot for Microsoft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
 
 For more information, see [define descriptions](high-quality-message-extension.md#define-descriptions).
 
@@ -66,7 +65,7 @@ Let's create a bot-based search message extension that can search npm registries
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
   1. Go to **Manage** > **Settings**.
@@ -106,23 +105,23 @@ To run your message extension in Teams, follow these steps:
 1. Select a product from the list. Teams unfurls the product as an Adaptive Card in the message compose area.
 1. Select **Send**.
 
-**Trigger message extension in M365 Chat**
+**Trigger message extension in Copilot for Microsoft 365**
 
-To trigger the message extension as plugin in M365 Chat, follow these steps:
+To trigger the message extension as plugin in Copilot for Microsoft 365 in Teams, follow these steps:
 
 1. Select **Apps**.
-1. Search for **M365 Chat** and open the **M365 Chat** app.
+1. Search for **Copilot** and open the **Copilot for Microsoft 365** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your message extension.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for Microsoft 365.":::
 
 > [!NOTE]
-> This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message.
+> This prompt might not always make Copilot for Microsoft 365 include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Copilot for Microsoft 365 response and leave a message.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -183,9 +182,9 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-send-card.png" alt-text="Screenshot shows Contoso. Base product sent as an Adaptive Card in Teams chat.":::
 
-**Trigger message extension in M365 Chat**
+**Trigger message extension in Copilot for Microsoft 365**
 
-To trigger the message extension as plugin in M365 Chat, follow these steps:
+To trigger the message extension as plugin in Copilot for Microsoft 365, follow these steps:
 
 1. Go to **Visual Studio**.
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
@@ -193,18 +192,18 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser) debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
-1. Search for **M365 Chat** and open the **M365 Chat** app.
+1. Search for **Copilot for Microsoft 365** and open the **Copilot for Microsoft 365** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npmsearchlocal.
+1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npmsearchlocal.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from M365 Chat. The response contains a list of four products with Contoso product name. ":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from Copilot for Microsoft 365. The response contains a list of four products with Contoso product name. ":::
 
 > [!NOTE]
-> This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message.
+> This prompt might not always make Copilot for Microsoft 365 include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Copilot for Microsoft 365 response and leave a message.
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
@@ -241,7 +240,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot option selected in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results, and start with a bot option selected in the CLI window.":::
 
 1. Enter the location for your project and select **Enter**.
 
@@ -261,7 +260,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. From the list, select a subscription.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the sign-in to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
 1. If you receive a message, which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, enter **Y**.
@@ -283,23 +282,23 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
 1. Select your message extension and enter your search query.
 
-**Trigger message extension in M365 Chat**
+**Trigger message extension in Copilot for Microsoft 365**
 
-To trigger the message extension through M365 Chat, follow these steps:
+To trigger the message extension through Copilot for Microsoft 365, follow these steps:
 
 1. Select **Apps**.
-1. Search for **M365 Chat** and open the **M365 Chat** app.
+1. Search for **Copilot for Microsoft 365** and open the **Copilot for Microsoft 365** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for Microsoft 365.":::
 
 > [!NOTE]
-> This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message tagged with [MessageExtension].
+> This prompt might not always make Copilot for Microsoft 365 include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Copilot for Microsoft 365 response and leave a message tagged with [MessageExtension].
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -350,17 +349,47 @@ A bot-based search message extension is created.
 
 To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 ---
 
-For more on testing your plugin in Copilot for Microsoft 365 chat, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
+For more on testing your plugin in Copilot for Microsoft 365, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
+
+## Enable message extension as a plugin for Copilot for meetings
+
+Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365. Before you get started, We recommend you to follow the guidelines listed in [Copilot for Microsoft 365 extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
+
+To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
+
+1. Go to a **Teams meeting**.
+1. Select **Join**.
+1. In the meeting window, select **Copilot**.
+
+1. Select **Start transcription**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-start-transcription.png" alt-text="Screenshot shows the Copilot option and start transcription button in a Teams meeting.":::
+
+1. Select the Spoken language and select **Confirm**. The Copilot for Teams pane appears.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-select-language.png" alt-text="Screenshot shows the dropdown to select a spoken language and a confirm button in Teams meeting.":::
+
+1. In the Copilot for Teams pane, at the bottom-right corner, select the **Copilot Plugin Button**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-trigger-plugin.png" alt-text="Screenshot shows the plugin icon in the copilot pane in a Teams meeting.":::
+
+1. Search for your plugin and turn on the toggle for your plugin.
+
+1. From the compose area, select **More prompts** to send a static prompt or you can type your own prompt and select **Send**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the copilot pane in a Teams meeting.":::
+
+Meeting Copilot helps your meetings to be better and more productive. You can make meetings more interactive, which helps users by giving them a smoother and more interesting experience.
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
+Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for Copilot for Microsoft 365.
 
 ## See also
 
