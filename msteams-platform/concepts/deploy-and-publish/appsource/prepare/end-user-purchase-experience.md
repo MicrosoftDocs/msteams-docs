@@ -21,7 +21,7 @@ The subscription purchase experience partially differes for a new and an existin
 
 1. In Teams, select **Apps** > **Best selling**.
 
-1. In Teams Store, find and select the app for which you want to purchase the subscription.
+1. In Teams Store, browse and select the app for which you want to purchase the subscription.
 
     :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
 
@@ -60,11 +60,11 @@ The subscription purchase experience partially differes for a new and an existin
 
         To use the billing account's address for the card, turn on the **Same as billing account** toggle. To add a new address, turn off the toggle.
 
-        :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address.":::
+        :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address." lightbox="../../../../assets/images/saas-offer/card-address.png":::
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order." lightbox="../../../../assets/images/saas-offer/placesubscriptionorder.png":::
 
     # [Existing user](#tab/existinguser)
 
