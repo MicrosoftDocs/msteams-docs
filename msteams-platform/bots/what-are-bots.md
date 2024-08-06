@@ -1,7 +1,7 @@
 ---
-title: Bots in Microsoft Teams
+title: Create a bot in Microsoft Teams
 author: surbhigupta
-description: In this article, use conversational bots in Microsoft Teams to share files, send proactive notification, interactive cards, make calls, invoke bot command, IVR.
+description: In this article, learn how to create a bot for Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
