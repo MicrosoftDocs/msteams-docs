@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build Outgoing Webhooks
 metadata:
-  title: Build Outgoing Webhooks
+  title: Integrate External Apps using Webhooks
   description: In this module, learn how to create, set up, and run Outgoing Webhooks from Visual Studio for Microsoft Teams to integrate with external apps.
   audience: Developer
   level: Beginner
