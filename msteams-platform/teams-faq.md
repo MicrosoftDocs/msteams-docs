@@ -50,7 +50,7 @@ Resolution - Connect Microsoft Entra ID to MPN settings](/partner-center/mpn-ben
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
-
+ 
 </details>
 <!--
 <details>
