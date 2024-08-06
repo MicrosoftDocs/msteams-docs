@@ -47,6 +47,8 @@ Follow the steps in the pages given here:
 1. [Microsoft Learn
 Resolution - Connect Microsoft Entra ID to Partner Center](/partner-center/mpn-benefits-azure-cloud).
 
+
+
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
