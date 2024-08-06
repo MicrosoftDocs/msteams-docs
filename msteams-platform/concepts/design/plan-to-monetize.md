@@ -35,5 +35,7 @@ In addition to these features, Teams Store also lets you:
 
 Establishing a monetizing option beforehand helps guide the app design, build, and distribution decisions.
 
+## Next step
+
 > [!div class="nextstepaction"]
 > [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
