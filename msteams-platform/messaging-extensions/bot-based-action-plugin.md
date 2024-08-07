@@ -141,3 +141,9 @@ Ensure that you adhere to the following prerequisites while building Actions in 
     > For static parameter-based dialogs, Copilot auto-populates the parameters and displays the dialog to the user.
 
 1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) which will then be shown to the user.
+
+## Code sample
+
+| **Sample name** | **Description** | **Typescript** |
+|------------|-------------|----------------|
+| Actions in Copilot for Microsoft 365 | This sample implements a Teams message extension that can be used as a plugin for Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-action-ts) |
