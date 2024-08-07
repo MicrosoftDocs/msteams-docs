@@ -10,14 +10,14 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's app purchase experience in Teams. Users can purchase subscriptions and manage licenses from the Microsoft Teams Store for an individual, team, or an organization. As a developer, you can bring out the purchase experience for your app as detailed in this article.
+This article helps you understand the user's app purchase experience in Microsoft Teams. Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can bring out the purchase experience for your app as detailed in this article.
 
 ## Subscription purchase experience
 
 > [!NOTE]
 > For some countries or regions, users might be asked to add a [VAT ID number](/partner-center/enroll/vat-info) and a [registration ID number](/partner-center/account-settings/reg-number-id) to comply with the requirements of that region.
 
-The subscription purchase experience partially differs for a new and an existing user. Here's the user experience to purchase a subscription plan for a Teams app:
+The subscription purchase experience partially differs for a new and an existing user. Here's the user experience for purchasing a subscription plan for a Teams app:
 
 1. In Teams, select **Apps** > **Best selling**.
 
@@ -56,7 +56,7 @@ The subscription purchase experience partially differs for a new and an existing
 
         :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows verifying the billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
 
-    1. Under **Add a credit card or debit card**, add the required details and select **Next**.
+    1. Under **Add a credit or debit card**, add the required details and select **Next**.
 
         By default, the **Same as billing account** toggle is turned on to use the billing account’s address for the card. To add a new address, turn off the toggle and enter the new address.
 
@@ -64,7 +64,7 @@ The subscription purchase experience partially differs for a new and an existing
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order." lightbox="../../../../assets/images/saas-offer/placesubscriptionorder.png":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-new.png" alt-text="Screenshot shows placing the subscription order." lightbox="../../../../assets/images/saas-offer/placesubscriptionorder.png":::
 
     # [Existing user](#tab/existinguser)
 
@@ -76,7 +76,7 @@ The subscription purchase experience partially differs for a new and an existing
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Screenshot shows placing the subscription order.":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-existing.png" alt-text="Screenshot shows placing the subscription order.":::
     
     ---
 
@@ -99,7 +99,7 @@ Following is an example of the consent screen:
 
 ## License and subscriptions management experience
 
-Users can manage the app subscriptions purchased in Microsoft Teams through the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
+Users can manage the app subscriptions purchased in Teams through the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
 
 * Change a plan
 * Buy or remove licenses
@@ -113,13 +113,13 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your apps option highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your apps option highlighted in red." lightbox="../../../../assets/images/saas-offer/client-experience.png":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red." lightbox="../../../../assets/images/saas-offer/subscription-list.png":::
 
-Here are the subscription management options that the user can perform from the **Subscriptions** page:
+Here are the subscription management options available to users on the **Subscriptions** page:
 
 <br>
 <details>
@@ -127,11 +127,11 @@ Here are the subscription management options that the user can perform from the 
 
 1. Select an existing subscription from the list and select **Assign licenses**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app under subscription tab highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-subscriptions.png" alt-text="Screenshot shows the assign licenses option of the respective app highlighted under Subscriptions tab." lightbox="../../../../assets/images/saas-offer/list-of-subscriptions.png":::
 
 2. To view license utilization and assign licenses, select **Assign licenses**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the assigned licenses highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot shows the assigned licenses highlighted." lightbox="../../../../assets/images/saas-offer/view-license.png":::
 
 1. Search for the users or a team in the search box and select **Assign**. The users or a team are assigned with the license.
 
@@ -139,7 +139,7 @@ Here are the subscription management options that the user can perform from the 
 
     Users can view the list of assigned users or teams for the subscription and also check the status of the assignment.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot shows the list of assigned users with assign licenses option highlighted in red." lightbox="../../../../assets/images/saas-offer/list-of-assigned-users.png":::
 
 1. To unassign a license for a user or a team, select the users or a team from the list and select **Unassign**.
 
