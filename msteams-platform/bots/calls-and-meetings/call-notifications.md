@@ -1,5 +1,5 @@
 ---
-title: Incoming call notifications
+title: Configure Incoming Call Notifications
 description: Learn about incoming notification protocol to convert the call from legacy to Graph format, redirects for region affinity and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
