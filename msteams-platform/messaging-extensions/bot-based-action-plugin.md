@@ -10,13 +10,15 @@ ms.localizationpriority: medium
 
 # Actions in Copilot for Microsoft 365
 
+Actions in message extension for Copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps.
+
 Actions in Copilot for Microsoft 365 allow a user to interact with applications by enabling direct engagement with external systems. Actions extend to a wide range of scenarios, from project and incident management to HR or ERP workflows, approvals, meetings, content generation, employee  recognition, and bookings. With the added advantage of AI,  Actions can generate content and perform actions based on contextual understanding, optimizing users' time, and resources.
 
 It supports cross-app integration within the Microsoft 365 ecosystem, streamlining project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. The cross-app integration allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience. Action commands allow users to interact with Copilot in natural language to create or update items, tapping into Generative AI powered by company data. This simplifies tasks like ticket creation, leave requests, and sending kudos, directly within Copilot’s interface.
 
 ## Build Actions in Copilot for Microsoft 365
 
-Actions in message extension for Copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
+The following steps explain the process to build Actions in Copilot for Microsoft 365:
 
 1. **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as **Can you file a sick leave for me?** or **Create a general issue**.
 
@@ -41,6 +43,8 @@ Actions in message extension for Copilot for Microsoft 365 is the process of per
 1. **User Action Confirmation from Dialogs**: Users must confirm actions from dialogs to complete the process.
 
 ## Prerequisites
+
+Ensure that you adhere to the following prerequisites while building Actions in Copilot for Microsoft 365:
 
 1. Update your app manifest to version 1.13 or later.
 1. [Upgrade to Teamsjs version v2.22 or later](https://www.npmjs.com/package/@microsoft/teams-js)
