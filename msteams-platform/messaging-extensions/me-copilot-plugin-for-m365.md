@@ -20,12 +20,12 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
 
 * <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO</b>
 
-    Azure Active Directory (AD) single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
+    Azure Active Directory (AD) single sign-on (SSO) for message extensions work in the same way [as it does in Teams](../bots/how-to/authentication/auth-aad-sso-bots) or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
-    1. Sign in to Azure portal with your sandbox tenant account. 
-    1. Open App registrations. 
+    1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
+    1. Open <b>App registrations</b>. 
     1. Select the name of your application to open its app registration. 
-    1. Select Expose an API (under Manage). 
+    1. Select Expose an <b>API</> (under Manage). 
     1. In the <b>Authorized client applications</b> section, ensure the following Client Id values are listed:
 
         | Microsoft 365 client application  | Client ID |
@@ -34,7 +34,7 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
 
 * <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
 
-    1. Sign in to (Azure portal)[https://portal.azure.com/] with your sandbox tenant account.
+    1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
     1. Open Bot <b>Services</b>. 
     1. Select the name of your bot to update its channels. 
     1. Select Channels (under Settings). 
@@ -42,7 +42,7 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
 
 * <b>Configure content security policy headers</b>
 
-    If your app makes use of (Content Security Policy)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy] (CSP) headers, make sure you allow all the following (frame-ancestors)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors] in your CSP headers:
+    If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, make sure you allow all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in your CSP headers:
 
     | Microsoft 365 App | frame-ancestor permission |
     | --- | --- |
@@ -55,4 +55,4 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
 
     If you're using Teams JS version lower than 2.19, update it to 2.19+.  
 
-    For more information, see Teams JS Repository Link: (@microsoft/teams-js - npm (npmjs.com))[https://www.npmjs.com/package/@microsoft/teams-js].
+    For more information, see Teams JS Repository Link: [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
