@@ -64,7 +64,7 @@ The subscription purchase experience partially differs for a new and an existing
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-new.png" alt-text="Screenshot shows placing the subscription order." lightbox="../../../../assets/images/saas-offer/placesubscriptionorder.png":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-new.png" alt-text="Screenshot shows placing the subscription order.":::
 
     # [Existing user](#tab/existinguser)
 
@@ -72,7 +72,7 @@ The subscription purchase experience partially differs for a new and an existing
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
 
-        :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
+        :::image type="content" source="~/assets/images/saas-offer/subscription-details-existing.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-existing-lightbox.png":::
 
     1. Under **Review**, verify the details and select **Place order**.
 
