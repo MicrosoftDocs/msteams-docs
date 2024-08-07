@@ -1,5 +1,5 @@
 ---
-title: Explore Teams Toolkit in Visual Studio
+title: Explore Teams Toolkit UI & Features
 author: zyxiaoyuer
 description: Learn about Teams Toolkit UI in Visual Studio, and functions such as app dependencies, manifest update, and authentication code to build and develop your app.
 ms.author: zhany

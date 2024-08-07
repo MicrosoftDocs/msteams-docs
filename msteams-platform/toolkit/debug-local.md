@@ -1,5 +1,5 @@
 ---
-title: Debug your Teams app locally
+title: Teams Toolkit - Debug your Apps Locally
 author: surbhigupta 
 description: Learn how to set up Teams Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
