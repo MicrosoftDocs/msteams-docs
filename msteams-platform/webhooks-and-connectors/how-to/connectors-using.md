@@ -1,5 +1,5 @@
 ---
-title: Create and send messages
+title: Create & Send Actionable Messages
 author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
