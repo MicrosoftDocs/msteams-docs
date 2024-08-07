@@ -945,13 +945,13 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Array
 
-The `extensions` property configures Office Add-ins and aspects of other types of Microsoft 365 customizations. Currently, each manifest supports only one extension.
+The `extensions` property configures Office Add-ins and aspects of other types of Microsoft 365 customizations. Each manifest supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| Array | | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
-|`contentRuntimes`| Array | 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. Min size: 1. Max size: 1.|
+|`contentRuntimes`| Array | 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document.|
 |`ribbons`| Array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
@@ -1010,11 +1010,11 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
-|`code.page`| URL | | ✔️ | The full URL of the page that contains the content that is embedded in the document. |
+|`code.page`| String | 2048 charaters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
 |`requestedWidth`| Number | | | The desired width between 32 and 1000 pixels. If this property isn't used, the Office application determines the width.|
 |`requestedHeight`| Number | | | The desired height between 32 and 1000 pixels. If this property isn't used, the Office application determines the height.|
-|`disableSnapshot` | boolean | | | Specifies whether a snapshot image of your content add-in is saved with the host document. Default value is `false`, so a snapshot is saved. Set to `true` to prevent a snapshot from being saved.|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the content to be embedded in the document. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the host document. Default value is `false`, so a snapshot is saved. Set to `true` to prevent a snapshot from being saved.|
+|`requirements`| Object | | | Specifies the scopes that must be supported on the Office client in order for the content to be embedded in the document. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Don't use when the grandparent is a content runtime object. |
 |`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation` |
 |`requirements.formFactors`| Array of enums | | | Don't use when the grandparent is a content runtime object. |
