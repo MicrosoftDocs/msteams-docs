@@ -12,7 +12,7 @@ ms.date: 10/19/2023
 
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing additional skills and knowledge to Copilot for a personalized user experience. Plugins, which are a specific type subset of Copilot extensions, enable users to integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.. 
 
- If you have developed a plugin for Copilot in Teams or copilot.microsoft.com, you are already aware of the benefits it offers to users within their workflow. To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.
+ If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.
 
 ## Requirements for plugins in Word, PowerPoint, Excel, OneNote Copilots
 
@@ -53,6 +53,6 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
 
 * <b>Upgrade Teams JS version to the 2.19.0 build</b>
 
-    If you are using Teams JS version lower than 2.19, please update it to 2.19+.  
+    If you're using Teams JS version lower than 2.19, update it to 2.19+.  
 
     For more information, see Teams JS Repository Link: (@microsoft/teams-js - npm (npmjs.com))[https://www.npmjs.com/package/@microsoft/teams-js].
