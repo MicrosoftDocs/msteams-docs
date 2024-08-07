@@ -408,6 +408,8 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 }
 ```
 
+---
+
 ## Dependent dropdowns
 
 Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. This is particularly useful in filtering out options based on a previous choice. Suppose you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
@@ -429,8 +431,6 @@ The first dropdown list, in this case, is associated with the second dropdown li
 | `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
 
 The following JSON payload shows how to associate two dropdown lists:
-
-
 
 ### `valueChangedAction`
 
@@ -484,8 +484,6 @@ To implement dependent dropdowns in an Adaptive Card with multiple dropdown list
 * Ensure that the dependent dropdown lists use dynamic typeahead search.
 * Add the `associatedInputs` property under `Data.Query` object to link the dropdown lists.
 * Add the `Action.ResetInputs` property under `valueChangedAction` to clear the values in the dependent dropdown lists when a user changes the value in the one of the dropdown lists.
-
----
 
 ## Code sample
 
