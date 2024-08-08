@@ -1,30 +1,28 @@
 ---
-title: Adaptive Card templates for Teams
-description: Learn to design Adaptive Cards with Adaptive Card templates for Microsoft Teams including hero card, item thumbnail, list card, and communications card.
+title: Adaptive Card Templates for Starters
+description: Get started designing effective Adaptive Cards for Microsoft Teams with ready-to-use, customizable templates.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 06/17/2024
+ms.date: 08/09/2024
 ---
 
 # Teams Adaptive Card starter collection
 
 This article presents a curated set of nine Adaptive Card templates for Microsoft Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. The Adaptive Card templates help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. Feel free to use the following templates as they are, or customize them for your app's requirements:
 
-* [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
-* [Work item thumbnail](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/work_item)
-* [List](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/list)
-* [Communications](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/communication)
-* [Author highlight video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/author-highlight-video)
-* [Course video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/course-video)
-* [Standard video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/standard-video)
-* [Issue status](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/issue)
-* [Account details](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/account)
+* [Recipe hero](#recipe-hero)
+* [Work item thumbnail](#work-item-thumbnail)
+* [List](#list)
+* [Communications](#communications)
+* [Author highlight video](#author-highlight-video)
+* [Course video](#course-video)
+* [Standard video](#standard-video)
+* [Issue status](#issue-status)
+* [Account details](#account-details)
 
-To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/).
+## Recipe hero
 
-## [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
-
-Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details.
+Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details. To download the ready-to-use sample, see [recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe).
 
 # [Desktop](#tab/desktop1)
 
@@ -36,11 +34,9 @@ Capture users’ attention with the hero showcase card, featuring an engaging im
 
 ---
 
-To download the ready-to-use sample, see [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe).
-
 ## Work item thumbnail
 
-This card design optimizes space with a small image, making it ideal for displaying concise information.
+This card design optimizes space with a small image, making it ideal for displaying concise information. To download the ready-to-use sample, see [work item thumbnail](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/work_item).
 
 # [Desktop](#tab/desktop2)
 
@@ -54,7 +50,7 @@ This card design optimizes space with a small image, making it ideal for display
 
 ## List
 
-Use this card to display a selection of personalized content, handpicked for your users. Emphasize what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for an in-depth view within the app.
+Use this card to display a selection of personalized content, handpicked for your users. Emphasize what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for an in-depth view within the app. To download the ready-to-use sample, see [list](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/list).
 
 # [Desktop](#tab/desktop3)
 
@@ -68,7 +64,7 @@ Use this card to display a selection of personalized content, handpicked for you
 
 ## Communications
 
-This card is designed for communication and social interaction. Whether it's company announcements, update posts, or community engagement, this card adapts to your content. Customize it with your own text, images, and links to create an interesting social experience for users.
+This card is designed for communication and social interaction. Whether it's company announcements, update posts, or community engagement, this card adapts to your content. Customize it with your own text, images, and links to create an interesting social experience for users. To download the ready-to-use sample, see [communications](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/communication).
 
 # [Desktop](#tab/desktop4)
 
@@ -82,7 +78,7 @@ This card is designed for communication and social interaction. Whether it's com
 
 ## Author highlight video
 
-Use this template to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users.
+Use this template to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users. To download the ready-to-use sample, [author highlight video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/author-highlight-video).
 
 # [Desktop](#tab/desktop5)
 
@@ -96,10 +92,7 @@ Use this template to showcase a variety of short video content, such as tutorial
 
 ## Course video
 
-This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users.
-
-> [!NOTE]
-> Ratings in Adaptive Cards are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users. To download the ready-to-use sample, [course video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/course-video).
 
 # [Desktop](#tab/desktop6)
 
@@ -113,7 +106,7 @@ This card template serves as a comprehensive learning hub filled with video cont
 
 ## Standard video
 
-Use this card template to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content.
+Use this card template to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content. To download the ready-to-use sample, [standard video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/standard-video).
 
 # [Desktop](#tab/desktop7)
 
@@ -127,7 +120,7 @@ Use this card template to share a variety of content, ranging from tech updates 
 
 ## Issue status
 
-The issue card template is designed to highlight a specific issue, providing key details including the status and owner. You can customize the card with other relevant information, such as priority or due date.
+The issue card template is designed to highlight a specific issue, providing key details including the status and owner. You can customize the card with other relevant information, such as priority or due date. To download the ready-to-use sample, [issue status](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/issue).
 
 # [Desktop](#tab/desktop8)
 
@@ -141,7 +134,7 @@ The issue card template is designed to highlight a specific issue, providing key
 
 ## Account details
 
-This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore the content further.
+This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore the content further. To download the ready-to-use sample, [account details](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/account).
 
 # [Desktop](#tab/desktop9)
 
@@ -158,4 +151,3 @@ This design focuses on a high-level summary of an individual sales opportunity. 
 * [Designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md)
 * [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
 * [Types of cards](cards-reference.md)
-* [Adaptive Card Designer](https://adaptivecards.io/designer/)
