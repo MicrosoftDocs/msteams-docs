@@ -696,7 +696,7 @@ Provide your Microsoft Entra App ID and Microsoft Graph information to help user
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String||✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
-|`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
+|`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. The dummy URL string value mustn't contain domains or URLs that aren't in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid. The top-level domains are prohibited, for example, `*.com`, `*.org`. |
 
 ## graphConnector
 
