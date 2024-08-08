@@ -763,9 +763,9 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Message extensions Plugins in Copilot for Microsoft 365
 
-Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
+Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
- If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. 
+ If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
 ### Requirements for plugins in Word, PowerPoint, Excel, and OneNote Copilots
@@ -774,7 +774,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
 * <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO</b>
 
-    Azure Active Directory (AD) single sign-on (SSO) for message extensions work in the same way [as it does in Teams](../bots/how-to/authentication/auth-aad-sso-bots.md) or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
+    Azure AD single sign-on (SSO) for message extensions work in the same way [as it does in Teams](../bots/how-to/authentication/auth-aad-sso-bots.md) or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
     1. Open <b>App registrations</b>.
@@ -809,7 +809,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
 * <b>Configure content security policy headers</b>
 
-    If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, make sure you allow all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in your CSP headers:
+    If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
     | Microsoft 365 App | frame-ancestor permission |
     | --- | --- |
