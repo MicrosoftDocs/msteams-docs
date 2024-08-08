@@ -774,17 +774,17 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
 * <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO</b>
 
-    Azure AD single sign-on (SSO) for message extensions work in the same way [as it does in Teams](../bots/how-to/authentication/auth-aad-sso-bots.md) or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
+    Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
     1. Open <b>App registrations</b>.
     1. Select the name of your application to open its app registration.
     1. From the <b>Manage</b> section, select <b>Expose an API</b>.
-    1. In the <b>Authorized client applications</b> section, ensure that the following Client ID values are listed:
+    1. In the <b>Authorized client applications</b> section, ensure that the following client ID values are listed:
 
         | Microsoft 365 client application  | Client ID |
         | --- | --- |
-        | Word, PowerPoint, Excel (Web, Desktop) | 3068386c-7a16-4f6a-a664-043b6b232816 |
+        | Word, PowerPoint, Excel (web, desktop) | 3068386c-7a16-4f6a-a664-043b6b232816 |
         | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
         | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
         | Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca |
@@ -797,7 +797,8 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
     > [!NOTE]
     >
-    > Support for Excel and OneNote client applications will be available soon. 
+    > Support for Excel and OneNote client applications will be available soon.
+    > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 * <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
 
@@ -818,12 +819,12 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
     | Excel | fa000000124.resources.office.net |
     | OneNote | fa000000128.resources.office.net |
     | Copilot and Bing | ‘edgeservices.bing.com’, ‘www.bing.com’, ‘copilot.microsoft.com’ |
-    | Microsoft 365 app | `*.microsoft365.com`, `*.office.com`,  |
+    | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` | 
 
 * <b>Upgrade Teams JS version to the 2.22.0 build</b>
 
-    If you're using Teams JS version lower than 2.22, update it to 2.22+.  
+    If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
