@@ -772,9 +772,9 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
 
 To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, follow these requirements:
 
-* <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO</b>
+* <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps</b>
 
-    Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
+    Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
     1. Open <b>App registrations</b>.
