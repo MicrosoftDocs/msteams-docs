@@ -416,21 +416,36 @@ Dependent dropdowns are dropdown lists where the values in one dropdown list dep
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
 
-If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in USA, such as **CA**, **FL**, and **TX**.
+If a user selects **USA** as the country in the first dropdown list, the second dropdown list must display the various states in USA, such as **CA**, **FL**, and **TX**.
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
 
-If the user changes the selection from **USA** to **India**, the values in the second dropdown list are reset and and a new list of various states in India is displayed.
+If the user changes the selection from **USA** to **India**, the values in the second dropdown list must be reset, and a new list of states in India must be displayed.
 
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one dropdown list (containing static typeahead search) is associated with another (containing dynamic typeahead search) and acts as a filter to the values in the second dropdown. To enable depedent dropdowns, define the `associatedInputs` property under the `Data.Query` object of the dropdown lists.
+You can implement dependent dropdowns where one dropdown list is associated with another and acts as a filter to the values in the second dropdown. To enable depedent dropdowns, define the `associatedInputs` property under the `Data.Query` object of the dropdown lists.
 
 This property ensures that if a user changes an input value in the first dropdown and sends a data query request to the bot, the request contains the updated value of the first dropdown and the current value of the second dropdown. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
 
-However, when a user changes an input value in one of the dropdown lists, the existing value in the other dropdown list might become invalid. Hence, we recommend using the `Action.ResetInputs` property to reset the values in the dependent dropdown lists. This enables the user to pick a new value from the dropdown list that is reset.
+However, when a user changes an input value in one of the dropdown lists, the existing value in the other dropdown list might become invalid. Use the `Action.ResetInputs` property to reset the values in the dependent dropdown lists. This enables the user to pick a new value from the dropdown list that is reset. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
+
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.6",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This is a placeholder card.",
+            "weight": "bolder",
+            "size": "medium",
+            "wrap": true
+        }
+    ]
+}
 
 | Property| Type | Required | Description |
 |---|---|---|---|
