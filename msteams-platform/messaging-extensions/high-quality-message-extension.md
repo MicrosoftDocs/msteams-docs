@@ -763,7 +763,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Message extensions Plugins in Copilot for Microsoft 365
 
-Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a specific type subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
+Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a specific type of subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
  If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
@@ -814,12 +814,13 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
     | PowerPoint | fa000000129.resources.office.net |
     | Excel | fa000000124.resources.office.net |
     | OneNote | fa000000128.resources.office.net |
+    | Copilot and Bing | ‘edgeservices.bing.com’, ‘www.bing.com’, ‘copilot.microsoft.com’ |
 
-* <b>Upgrade Teams JS version to the 2.19.0 build</b>
+* <b>Upgrade Teams JS version to the 2.22.0 build</b>
 
-    If you're using Teams JS version lower than 2.19, update it to 2.19+.  
+    If you're using Teams JS version lower than 2.22, update it to 2.22+.  
 
-    For more information, see Teams JS Repository Link: [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
+    For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
 
 ## Code samples
