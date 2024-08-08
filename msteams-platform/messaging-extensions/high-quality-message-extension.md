@@ -763,13 +763,14 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Message extensions Plugins in Copilot for Microsoft 365
 
-Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing additional skills and knowledge to Copilot for a personalized user experience. Plugins, which are a specific type subset of Copilot extensions, enable users to integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.. 
+Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a specific type subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
- If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.
+ If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. 
+ <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
 ### Requirements for plugins in Word, PowerPoint, Excel, OneNote Copilots
 
-To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, ensure to follow the following requirements:
+To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, follow these requirements:
 
 * <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO</b>
 
