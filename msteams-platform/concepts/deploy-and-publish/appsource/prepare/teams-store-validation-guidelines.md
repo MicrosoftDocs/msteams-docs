@@ -469,7 +469,7 @@ App packages must be correctly formatted and include all required information an
 >   * **Clearly describe limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 >   * **Emphasis on any considerations** for testers while validating your app submission.
 >   * **Prepopulate the test accounts with dummy data** to aid testing.
->   * If you are providing your test accounts, ensure that you enable third-party integration. Also, disable two-factor or multi-factor authentication.
+>   * If you are providing your test accounts, ensure that you enable third-party integration.
 
 [Back to top](#teams-store-validation-guidelines)
 
