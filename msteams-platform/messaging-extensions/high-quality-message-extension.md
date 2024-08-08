@@ -822,7 +822,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
     | PowerPoint | fa000000129.resources.office.net |
     | Excel | fa000000124.resources.office.net |
     | OneNote | fa000000128.resources.office.net |
-    | Copilot and Bing | ‘edgeservices.bing.com’, ‘www.bing.com’, ‘copilot.microsoft.com’ |
+    | Copilot and Bing | `edgeservices.bing.com`, `www.bing.com`, `copilot.microsoft.com` |
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` | 
 
