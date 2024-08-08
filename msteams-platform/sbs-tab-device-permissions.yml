@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Grant tab device permission
 metadata:
-  title: Grant tab device permission
+  title: Integrate Tab Device Permission
   description: Learn how to create and add a tab device permission app to Microsoft Teams that allows you to grant and manage device permissions.
   audience: Developer
   level: Beginner
