@@ -47,7 +47,7 @@ The following app manifest capabilities can be specified as having one-way or mu
 - Message extensions (`composeExtensions`), including individual commands
 - Bots (`bots`)
 
-Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The ID property future-proofs your app in case host support expands to accommodate multiple instances of these capabilities.
+Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The `id` property future-proofs your app if host support expands to accommodate multiple instances of these capabilities.
 
 > [!IMPORTANT]
 > Ensure the relationships you create adhere to the following validation rules:
@@ -77,7 +77,7 @@ Use the `oneWayDependencies` array to describe cases where one component of your
     }
 ```
 
-For message extensions, you can optionally specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands will run).
+For message extensions, you can optionally specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands run).
 
 ### Mutual dependencies
 
@@ -128,8 +128,13 @@ The following TeamsJS capabilities can be specified as runtime requirements for 
 - Adaptive Card dialogs (`dialog.adaptiveCard`)
 - Adaptive Card dialogs for Bot Framework (`dialog.adaptiveCard.bot`)
 
+## Code samples
+
+| Sample name | Description | JavaScript |
+|----------------|-----------------|--------------|
+| ElementRelationshipSet | This sample app demonstrates how to specify runtime requirements, such as one-way or mutual dependencies and app capabilities, to tailor app experience across different Microsoft 365 hosts. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) |
 ## See also
 
-- [Developer preview app manifest reference](../resources/schema/manifest-schema-dev-preview.md)
+- [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
 - [Extend Teams apps across Microsoft 365](overview.md)
 - [Use TeamsJS to differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience)
