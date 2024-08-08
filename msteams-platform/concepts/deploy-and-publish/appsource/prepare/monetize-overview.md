@@ -55,7 +55,7 @@ You can create a private plan for your SaaS offer to provide customized solution
 
 Now that we know about the monetizing options and a SaaS offer, let's learn in detail on planning and publishing the SaaS offer for your app.
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Plan a SaaS offer](include-saas-offer.md)
@@ -65,3 +65,4 @@ Now that we know about the monetizing options and a SaaS offer, let's learn in d
 * [Microsoft commercial marketplace](/partner-center/marketplace/overview)
 * [Introduction to listing options](/partner-center/marketplace/determine-your-listing-type)
 * [Publishing guide by offer type](/partner-center/marketplace/publisher-guide-by-offer-type)
+* [Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
