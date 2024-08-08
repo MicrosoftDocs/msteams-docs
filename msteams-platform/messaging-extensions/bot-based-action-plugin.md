@@ -54,7 +54,7 @@ Ensure that you adhere to the following prerequisites while building Actions in 
 
 ## Add actions to bot-based message extension
 
-1. **Define Parameters for Action Commands**: In your manifest, within the action command section, define the parameters along with their descriptions for the command.  The following snippet is an example to define parameters:
+1. **Define Parameters for Action Commands**: In your app manifest, within the action command section, define the parameters along with their descriptions for the command. The following code snippet is an example to define parameters:
 
     ```json
     "composeExtensions": [
@@ -119,7 +119,7 @@ Ensure that you adhere to the following prerequisites while building Actions in 
     document.getElementById("Priority").value = dialogParameters["Priority"];  
    ```
 
-1. Adding extracted parameters into a bot invoke response is essential, especially when utilizing a fetchTask-based Adaptive Card dialog. It's important to auto-populate the dialog with parameter values obtained from the extracted data. Here's an example of a potential invoke request for fetch task:
+    Adding extracted parameters into a bot invoke response is essential, especially when utilizing a `fetchTask` Adaptive Card dialog. It's important to autopopulate the dialog with parameter values obtained from the extracted data. Here's an example of a potential invoke request for fetch task:
 
     ```json
     {  
@@ -138,12 +138,16 @@ Ensure that you adhere to the following prerequisites while building Actions in 
     ```
 
     > [!NOTE]
-    > For static parameter-based dialogs, Copilot auto-populates the parameters and displays the dialog to the user.
+    > For static parameter-based dialogs, Copilot autopopulates the parameters and displays the dialog to the user.
 
-1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) which will then be shown to the user.
+1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) that's displayed to the user.
 
 ## Code sample
 
 | **Sample name** | **Description** | **Typescript** |
 |------------|-------------|----------------|
-| Actions in Copilot for Microsoft 365 | This sample implements a Teams message extension that can be used as a plugin for Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-action-ts) |
+| Actions in Copilot for Microsoft 365 | This sample implements a Teams message extension that can be used as a plugin in Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-action-ts) |
+
+## See also
+
+[Extend bot-based message extension as plugin for Copilot for Microsoft 365](build-bot-based-plugin.md)

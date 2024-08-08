@@ -398,3 +398,4 @@ Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.y
 * [Build message extensions using API](api-based-overview.md)
 * [Define message extension action commands](how-to/action-commands/define-action-command.md)
 * [Extend Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/)
+* [Actions in Copilot for Microsoft 365](bot-based-action-plugin.md)
