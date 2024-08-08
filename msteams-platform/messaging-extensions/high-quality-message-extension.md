@@ -768,7 +768,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
  If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
-### Requirements for plugins in Word, PowerPoint, Excel, OneNote Copilots
+### Requirements for plugins in Word, PowerPoint, Excel, and OneNote Copilots
 
 To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, follow these requirements:
 
@@ -777,10 +777,10 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
     Azure Active Directory (AD) single sign-on (SSO) for message extensions work in the same way [as it does in Teams](../bots/how-to/authentication/auth-aad-sso-bots.md) or Outlook. However, you need to add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
-    1. Open <b>App registrations</b>. 
-    1. Select the name of your application to open its app registration. 
-    1. Select Expose an <b>API</b> (under Manage). 
-    1. In the <b>Authorized client applications</b> section, ensure the following Client Id values are listed:
+    1. Open <b>App registrations</b>.
+    1. Select the name of your application to open its app registration.
+    1. From the <b>Manage</b> section, select <b>Expose an API</b>.
+    1. In the <b>Authorized client applications</b> section, ensure that the following Client ID values are listed:
 
         | Microsoft 365 client application  | Client ID |
         | --- | --- |
@@ -801,8 +801,8 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
     1. Open Bot <b>Services</b>. 
     1. Select the name of your bot to update its channels. 
-    1. Select Channels (under Settings). 
-    1. From <b>Available channels</b>, choose <b>Microsoft 365 & Microsoft Teams</b> and then select <b>Apply</b>. 
+    1. From the <b>Settings</b> section, select <b>Channels</b>. 
+    1. From <b>Available channels</b>, select <b>Microsoft 365 & Microsoft Teams</b>, and then select <b>Apply</b>. 
 
 * <b>Configure content security policy headers</b>
 
