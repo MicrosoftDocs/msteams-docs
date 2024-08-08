@@ -22,7 +22,7 @@ This article presents a curated set of nine Adaptive Card templates for Microsof
 
 To explore more Adaptive Card templates with ready-to-use code, see [Adaptive Card Templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/).
 
-## Recipe hero
+## [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe)
 
 Capture users’ attention with the hero showcase card, featuring an engaging image. This card type is perfect for highlighting featured content, such as food recipes. When users select **Show more**, it expands to reveal more details.
 
@@ -35,6 +35,8 @@ Capture users’ attention with the hero showcase card, featuring an engaging im
 :::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-mobile.png" alt-text="Screenshot shows the mobile version of the recipe hero Adaptive Card sample.":::
 
 ---
+
+To download the ready-to-use sample, see [Recipe hero](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/recipe).
 
 ## Work item thumbnail
 
