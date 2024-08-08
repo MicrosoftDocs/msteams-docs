@@ -78,7 +78,7 @@ This card is designed for communication and social interaction. Whether it's com
 
 ## Author highlight video
 
-Use this template to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users. To download the ready-to-use sample, [author highlight video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/author-highlight-video).
+Use this template to showcase a variety of short video content, such as tutorials, interviews, or creative pieces. Personalize it with your unique title, a detailed description, and information about the author to create an immersive viewing experience for users. To download the ready-to-use sample, see [author highlight video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/author-highlight-video).
 
 # [Desktop](#tab/desktop5)
 
@@ -92,7 +92,7 @@ Use this template to showcase a variety of short video content, such as tutorial
 
 ## Course video
 
-This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users. To download the ready-to-use sample, [course video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/course-video).
+This card template serves as a comprehensive learning hub filled with video content. Customize it with a curated series of courses, tutorials, or informative clips. Modify the title, description, and author information to meet the specific needs of your users. To download the ready-to-use sample, see [course video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/course-video).
 
 # [Desktop](#tab/desktop6)
 
@@ -106,7 +106,7 @@ This card template serves as a comprehensive learning hub filled with video cont
 
 ## Standard video
 
-Use this card template to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content. To download the ready-to-use sample, [standard video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/standard-video).
+Use this card template to share a variety of content, ranging from tech updates to creative inspiration. Users can access additional features, such as bookmarks, through the overflow menu. They can also share or learn more about the content. To download the ready-to-use sample, see [standard video](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/standard-video).
 
 # [Desktop](#tab/desktop7)
 
@@ -120,7 +120,7 @@ Use this card template to share a variety of content, ranging from tech updates 
 
 ## Issue status
 
-The issue card template is designed to highlight a specific issue, providing key details including the status and owner. You can customize the card with other relevant information, such as priority or due date. To download the ready-to-use sample, [issue status](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/issue).
+The issue card template is designed to highlight a specific issue, providing key details including the status and owner. You can customize the card with other relevant information, such as priority or due date. To download the ready-to-use sample, see [issue status](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/issue).
 
 # [Desktop](#tab/desktop8)
 
@@ -134,7 +134,7 @@ The issue card template is designed to highlight a specific issue, providing key
 
 ## Account details
 
-This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore the content further. To download the ready-to-use sample, [account details](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/account).
+This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore the content further. To download the ready-to-use sample, see [account details](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main/samples/account).
 
 # [Desktop](#tab/desktop9)
 
