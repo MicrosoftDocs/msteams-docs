@@ -751,10 +751,10 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Criteria | Fulfillment |
 |---|---|
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
-|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
+|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
@@ -778,7 +778,7 @@ To enable your Plugins to work in Word, Excel, PowerPoint & OneNote Copilots, en
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
     1. Open <b>App registrations</b>. 
     1. Select the name of your application to open its app registration. 
-    1. Select Expose an <b>API</> (under Manage). 
+    1. Select Expose an <b>API</b> (under Manage). 
     1. In the <b>Authorized client applications</b> section, ensure the following Client Id values are listed:
 
         | Microsoft 365 client application  | Client ID |
