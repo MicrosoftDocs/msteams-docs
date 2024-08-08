@@ -1,7 +1,7 @@
 ---
 title: Add How-to guides to Your Teams apps
 author: surbhigupta
-description:  In this module, learn to add How-to guides to Teams Toolkit.
+description: Learn to add How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook Add-in capabilities.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
