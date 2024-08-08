@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
-# Specify Microsoft 365 host runtime requirements in your app manifest
+# Specify Microsoft 365 host runtime requirements in app manifest
 
 > [!NOTE]
 >
 > The ability to specify Microsoft 365 host runtime requirements in app manifest (previously called Teams app manifest) is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
 
-When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences. For example, if your app is defined with app manifest schema version 1.17 and includes a bot and a personal tab that represents the bot's configuration settings, your app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
+When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences. For example, if your app is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings, your app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
 
 To ensure high-quality app experiences while reaching the widest possible user audience, specify your app's runtime requirements in app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
 
