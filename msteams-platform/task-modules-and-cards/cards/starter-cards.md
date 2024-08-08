@@ -1,6 +1,6 @@
 ---
 title: Adaptive Card Templates for Starters
-description: Get started designing effective Adaptive Cards for Microsoft Teams with ready-to-use, customizable templates.
+description: Learn how to design effective Adaptive Cards with ready-to-use, customizable templates, such as recipe hero cards, work item thumbnail cards, and more.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 08/09/2024
