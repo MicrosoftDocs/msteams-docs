@@ -763,7 +763,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Message extensions Plugins in Copilot for Microsoft 365
 
-Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a specific type of subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
+Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. Using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
  If you've developed a plugin for Copilot in Teams or copilot.microsoft.com, you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
@@ -784,7 +784,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
         | Microsoft 365 client application  | Client ID |
         | --- | --- |
-        | OfficeAIAppChatCopilotExt | 3068386c-7a16-4f6a-a664-043b6b232816 |
+        | Word, PowerPoint, Excel (Web, Desktop) | 3068386c-7a16-4f6a-a664-043b6b232816 |
         | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
         | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
         | Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca |
@@ -795,6 +795,9 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
         | Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
         | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
 
+    > [!NOTE]
+    >
+    > Support for Excel and OneNote client applications will be available soon. 
 
 * <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
 
