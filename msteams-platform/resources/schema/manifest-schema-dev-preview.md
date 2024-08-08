@@ -563,13 +563,12 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ### staticTabs.requirementSet
 
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 #### staticTabs.requirementSet.hostMustSupportFunctionalities
 
@@ -628,13 +627,12 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ### bots.requirementSet
 
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 #### bots.requirementSet.hostMustSupportFunctionalities
 
@@ -729,13 +727,12 @@ Each command item is an object with the following structure:
 
 ### composeExtensions.requirementSet
 
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly.|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 #### composeExtensions.requirementSet.hostMustSupportFunctionalities
 
