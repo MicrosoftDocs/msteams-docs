@@ -164,7 +164,7 @@
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
           - name: Create How-to Guides
-            href: toolkit/add-How-to-guides-v5.md
+            href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -181,7 +181,7 @@
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
-            href: toolkit/AAD-manifest-customization.md
+            href: toolkit/aad-manifest-customization.md
         - name: Debug your Teams app
           items:
           - name: Overview
@@ -235,10 +235,10 @@
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit
-        href: toolkit/toolkit-v4/build-environments-v4.md
+        href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites for creating your Teams app
-          href: toolkit/toolkit-v4/tools-prerequisites-v4.md
+          href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
@@ -260,7 +260,7 @@
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
-            href: toolkit/toolkit-v4/debug-background-process-v4.md            
+            href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
         - name: Host your app on Azure
           items:    
