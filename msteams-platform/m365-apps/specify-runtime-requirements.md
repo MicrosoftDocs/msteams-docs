@@ -14,7 +14,7 @@ ms.subservice: m365apps
 >
 > The ability to specify Microsoft 365 host runtime requirements in app manifest (previously called Teams app manifest) is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
 
-When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in these hosts, your app might only partially load, resulting in unplanned user experiences.
+When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences. For example, if your app is defined with app manifest schema version 1.17 and includes a bot and a personal tab that represents the bot's configuration settings, your app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
 
 To ensure high-quality app experiences while reaching the widest possible user audience, specify your app's runtime requirements in app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
 
@@ -58,7 +58,9 @@ Each app capability is defined by the newly introduced property, `id`, which map
 
 ### One-way dependencies
 
-Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). The following JSON snippet shows specific message extension commands that have a one-way dependency on a bot:
+Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). You also have the option to specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands run).
+
+ The following JSON snippet shows specific message extension commands that have a one-way dependency on a bot:
 
 ```json
     "elementRelationshipSet": {
@@ -76,8 +78,6 @@ Use the `oneWayDependencies` array to describe cases where one component of your
       ]
     }
 ```
-
-For message extensions, you can optionally specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands run).
 
 ### Mutual dependencies
 
@@ -98,7 +98,16 @@ Use the `mutualDependencies` array to group app capabilities that must load toge
 
 ## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
-Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots: 
+Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. 
+
+The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
+
+- HTML-based dialogs ([`dialog.url`](/javascript/api/@microsoft/teams-js/dialog.url))
+- HTML-based dialogs for Bot Framework ([`dialog.url.bot`](/javascript/api/@microsoft/teams-js/dialog.url.bot))
+- Adaptive Card dialogs ([`dialog.adaptiveCard`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard))
+- Adaptive Card dialogs for Bot Framework ([`dialog.adaptiveCard.bot`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot))
+
+The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots: 
 
 ```json
     "staticTabs": [
@@ -121,13 +130,6 @@ Within individual app capability definitions, you can specify specific TeamsJS r
     ],
 ```
 
-The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
-
-- HTML-based dialogs (`dialog.url`)
-- HTML-based dialogs for Bot Framework (`dialog.url.bot`)
-- Adaptive Card dialogs (`dialog.adaptiveCard`)
-- Adaptive Card dialogs for Bot Framework (`dialog.adaptiveCard.bot`)
-
 ## Code samples
 
 | Sample name | Description | JavaScript |
@@ -137,4 +139,5 @@ The following TeamsJS capabilities can be specified as runtime requirements for 
 
 - [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
 - [Extend Teams apps across Microsoft 365](overview.md)
+- [Build dialogs](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules)
 - [Use TeamsJS to differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience)
