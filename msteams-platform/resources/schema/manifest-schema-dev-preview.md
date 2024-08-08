@@ -568,17 +568,8 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
-#### staticTabs.requirementSet.hostMustSupportFunctionalities
-
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
-
-**Optional** &ndash; Array
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the tab to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## bots
 
@@ -627,22 +618,12 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ### bots.requirementSet
 
-
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
-#### bots.requirementSet.hostMustSupportFunctionalities
-
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
-
-**Optional** &ndash; Array
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities that are required for the bot to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## connectors
 
@@ -727,22 +708,11 @@ Each command item is an object with the following structure:
 
 ### composeExtensions.requirementSet
 
-
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
-
-#### composeExtensions.requirementSet.hostMustSupportFunctionalities
-
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension. Supported values correspond to the following TeamsJS capabilities: `dialogUrl` to [dialog.url](/javascript/api/@microsoft/teams-js/dialog.url), `dialogUrlBot` to [dialog.url.bot](/javascript/api/@microsoft/teams-js/dialog.url.bot), `dialogAdaptiveCard` to [dialog.adaptiveCard](/javascript/api/@microsoft/teams-js/dialog.adaptivecard), and `dialogAdaptiveCardBot` to [dialog.adaptiveCard.bot](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot).
-
-**Optional** &ndash; Array
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| List of one or more runtime capabilities required for the message extension to function properly, specified as name-value pairs. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 ## scopeConstraints
 
