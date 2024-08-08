@@ -30,9 +30,11 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 August**
+**2024 July**
 
-* ***August 31, 2024***: [Confiugre you app with Approvals APIs to get approvals from others.](samples/approvals-app-api.md).
+* ***July 31, 2024***: [Use app validation tool to validate your Teams app in Developer Portal for Teams.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
+* ***July 03, 2024***: [Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings)
+* ***July 02, 2024***: [You can extend bot-based message extension plugins to Teams meetings.](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 :::column-end:::
 :::row-end:::
@@ -46,9 +48,6 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
-| 03/07/2024 | Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Build apps for meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
-| 02/07/2024 | You can extend bot-based message extension plugins to Teams meetings. | Build message extension > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as plugin for Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)|
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
@@ -410,9 +409,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 June**
+**2024 August**
 
-***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
+***August 31, 2024***: [Confiugre you app with Approvals APIs to get approvals from others.](samples/approvals-app-api.md).
 
 :::column-end:::
 :::row-end:::
@@ -425,6 +424,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 14/06/2024 | Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md)|
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | 23/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 | 14/05/2024 | Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.| App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)|

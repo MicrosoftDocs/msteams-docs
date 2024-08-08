@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Approvals app APIs
+      - text: Approvals app APIs (Developer preview)
         url: samples/approvals-app-api.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
