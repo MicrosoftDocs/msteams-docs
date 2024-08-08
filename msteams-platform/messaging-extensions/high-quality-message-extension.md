@@ -795,10 +795,10 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
         | Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
         | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
 
-    > [!NOTE]
-    >
-    > Support for Excel and OneNote client applications will be available soon.
-    > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
+        > [!NOTE]
+        >
+        > * Support for Excel and OneNote client applications will be available soon.
+        > * For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 * <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
 
