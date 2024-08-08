@@ -44,4 +44,4 @@ In both cases, use event notifications wisely and never spam the user with unnec
 
 ## See also
 
-[Add How-to guides to Microsoft Teams app](../../toolkit/add-How-to-guides-v5.md)
+[Add How-to guides to Microsoft Teams app](../../toolkit/add-how-to-guides-vsc.md)

@@ -275,6 +275,10 @@ The following table lists the command and semantic description examples for each
 
 ---
 
+> [!IMPORTANT]
+>
+> For activating the OAuth sign-in link in the plugin, ensure that you set the `initialRun` property to `true` for search commands within the app manifest.
+
 ### Parameter description
 
 Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
