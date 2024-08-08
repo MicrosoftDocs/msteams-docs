@@ -62,7 +62,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Introduced Adaptive Card templates
-        url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
+        url: task-modules-and-cards/cards/starter-cards.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings

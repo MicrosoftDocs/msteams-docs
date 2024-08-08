@@ -30,9 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 July**
+**2024 August**
 
-***August 09, 2024***: [Introduced Adaptive Card templates.](task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards)
+***August 09, 2024***: [Introduced Adaptive Card templates.](task-modules-and-cards/cards/starter-cards.md)
 
 :::column-end:::
 :::row-end:::
