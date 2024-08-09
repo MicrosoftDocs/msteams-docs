@@ -758,9 +758,9 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
-| [Microsoft 365 Channel](#requirements-for-plugins-in-word-powerpoint-excel-and-onenote-copilots)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
-| [Single sign-on (SSO)](#requirements-for-plugins-in-word-powerpoint-excel-and-onenote-copilots) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| [Content Security Policy](#requirements-for-plugins-in-word-powerpoint-excel-and-onenote-copilots) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+| [Microsoft 365 Channel](#requirements-for-plugins-in-word-powerpoint-excel-onenote-office-and-outlook-copilots)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
+| [Single sign-on (SSO)](#requirements-for-plugins-in-word-powerpoint-excel-onenote-office-and-outlook-copilots) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
+| [Content Security Policy](#requirements-for-plugins-in-word-powerpoint-excel-onenote-office-and-outlook-copilots) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
