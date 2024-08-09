@@ -83,7 +83,6 @@ If you choose to use Microsoft license management to manage a SaaS license purch
 :::column-end:::
 :::row-end:::
 
-## Next step
+## See also
 
-* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
-* [Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
+[Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
