@@ -9,9 +9,11 @@ ms.date: 01/26/2024
 # Adaptive Card-based Loop components
 
 > [!NOTE]
-> Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
+> * Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
+> * Adaptive Card-based Loop components aren't available in Microsoft Teams and Microsoft Outlook mobile clients.
+> * Adaptive Card-based Loop components aren't available in devices running on macOS.
 
-Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch contexts between Microsoft 365 apps, such as Teams and Microsoft Outlook.
+Adaptive Card-based Loop components enable you to build collaborative experiences within your Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch contexts between Microsoft 365 apps, such as Teams and Microsoft Outlook.
 
 Following is an example of an Adaptive Card-based Loop component:
 
@@ -29,7 +31,7 @@ To build an Adaptive Card-based Loop component, follow these steps:
 
 1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md).
 
-1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property in the [Adaptive Card schema](https://adaptivecards.io/explorer/). The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
+1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property. The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
 
 > [!NOTE]
 > Ensure that the Adaptive Card-based Loop component adheres to the [design guidelines](design-loop-components.md) to build an actionable and coherent Adaptive Card-based experience for your users.
@@ -73,9 +75,9 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 ## Test your Loop component
 
-You can test the Loop component in the developer environments of Teams and Outlook for web.
+You can test the Loop component in the developer environments of Teams and Outlook.
 
-### Test in Microsoft Teams
+### Test in Teams
 
 To configure, distribute, and manage your application, use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
 
