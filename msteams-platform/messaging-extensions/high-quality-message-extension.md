@@ -772,7 +772,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
  If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
-### Requirements for plugins in Word, PowerPoint, Excel, and OneNote Copilots
+### Requirements for plugins in Word, PowerPoint, Excel, OneNote, Office, and Outlook Copilots
 
 To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, follow these requirements:
 
@@ -818,6 +818,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, 
 
     | Microsoft 365 App | frame-ancestor permission |
     | --- | --- |
+    | All hosts (New) | `*.cloud.microsoft` |
     | Word | fa000000125.resources.office.net |
     | PowerPoint | fa000000129.resources.office.net |
     | Excel | fa000000124.resources.office.net |
