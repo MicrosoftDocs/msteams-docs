@@ -969,15 +969,21 @@ OAuth 2.0 in your Teams app provides a secure way to access user data from third
 
 :::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
 
-**Authorization server**: The Microsoft identity platform is the authorization server, also called an identity provider or IdP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
+* **Authorization server**: The Microsoft identity platform is the authorization server, also called an identity provider or IdP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
 
-**Client**: The client in an OAuth exchange is the application requesting access to a protected resource. The client could be a web app running on a server, a single-page web app running in a user's web browser, or a web API that calls another web API. You'll often see the client referred to as client application, application, or app.
+* **Client**: The client in an OAuth exchange is the application requesting access to a protected resource. The client could be a web app running on a server, a single-page web app running in a user's web browser, or a web API that calls another web API. You'll often see the client referred to as client application, application, or app.
 
-**Resource owner**: The resource owner in an auth flow is usually the application user, or the user. The user "owns" the protected resource (their data), which your app accesses on their behalf. The resource owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the user owns on the external system, and the user can consent to or deny your app's request to access their data.
+* **Resource owner**: The resource owner in an auth flow is usually the application user, or the user. The user "owns" the protected resource (their data), which your app accesses on their behalf. The resource owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the user owns on the external system, and the user can consent to or deny your app's request to access their data.
 
-**Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
+* **Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
 
-## Prerequisites
+## Implement OAuth
+
+When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke request where the app ID is used to check if there's a valid access token. If a valid token is available, it triggers the sign-in flow.
+
+If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client then renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
+
+### Prerequisites
 
 Before you start, you need to have: 
 
@@ -1105,17 +1111,11 @@ Update your Teams app manifest schema to include the new auth type: `oAuth` and 
 }
 ```
 
-### Implement OAuth
-
-When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke request where the app ID is used to check if there's a valid access token. If a valid token is available, it triggers the sign-in flow.
-
-If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client then renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
-
 ### Handle errors
 
 Ensure that the OAuth implementation in your app can handle error cases such as, missing token, expired token, invalid token, user fails to log-in or the permission isn't granted, user closes the dialog box, invoke request fails due to a network issue, the service is down, the service is unable to fetch the app, endpoint returns any error other than 401 or 403, the resource server returns 401 or 403.
 
-## Limitations and best practices
+### Limitations and best practices
 
 * After an OAuth configuration is saved, it becomes read-only, except for updating the allowed app ID or allowed tenant, the description, and the domain.
 * Developers must not update the OAuth configuration frequently, even during the initial development process.
@@ -1127,7 +1127,7 @@ Implementing OAuth 2.0 for API message extensions and plugins in Microsoft Teams
 </details>
 <br/>
 
-### Troubleshooting
+## Troubleshooting
 
 * If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
 
