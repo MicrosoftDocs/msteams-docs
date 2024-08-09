@@ -977,7 +977,7 @@ OAuth 2.0 in your Teams app provides a secure way to access user data from third
 
 * **Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
 
-## Implement OAuth
+### Implement OAuth
 
 When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke request where the app ID is used to check if there's a valid access token. If a valid token is available, it triggers the sign-in flow.
 
@@ -990,7 +990,7 @@ Before you start, you need to have:
 * A Microsoft Teams app with API Message Extensions or Plugins. 
 * An OAuth 2.0 client ID and client secret from the third-party authorization server.
 
-### Configure OAuth in Developer Portal
+#### Configure OAuth in Developer Portal
 
 You can register OAuth client configurations for your API-based message extensions and Copilot plugins in Teams Developer Portal.
 
@@ -1072,7 +1072,7 @@ To update **OAuth client registration ID** in API-based message extension, follo
 
   Your API-based message extension is configured with OAuth authentication.
 
-### Update app manifest
+#### Update app manifest
 
 Update your Teams app manifest schema to include the new auth type: `oAuth` and the `oAuthConfigurationId` you received from the Developer Portal.
 
