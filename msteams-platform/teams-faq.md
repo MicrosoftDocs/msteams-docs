@@ -1,6 +1,6 @@
 ---
-title: Frequently asked questions for Teams developer document
-description: Frequently asked questions for Teams developer document
+title: Teams Developer Documentation - FAQs
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.localizationpriority: high
 ---
@@ -125,7 +125,7 @@ Live Share supports scheduled meetings, one-on-one calls, group calls, and meet 
 <details>
 <summary>Will Live Share's media package work with DRM content?</summary>
 
-Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+Live Share's media package doesn't work with DRM content. Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
 
 For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
@@ -134,28 +134,28 @@ For more information, you can [track the issue here](https://github.com/microsof
 <details>
 <summary>How many people can attend a Live Share session?</summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I use Live Share's data structures outside of Teams?</summary>
 
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I use multiple Fluid containers?</summary>
 
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I change my Fluid container schema after creating the container?</summary>
 
-Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
@@ -168,7 +168,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
 > [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+> Live Share doesn't support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
 
 <br>
 &nbsp;
@@ -334,7 +334,7 @@ After the app passes the proactive validation, developers of both existing and n
 
 <summary> How are new plugins certified?</summary>
 
-Developers will be encouraged to certify their new plugin after successfully completing validation.
+Developers are encouraged to certify their new plugin after successfully completing validation.
 </details>
 <details>
 <summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
@@ -537,7 +537,7 @@ For support and help on the product and services issues or developer community h
 ## Notifications
 
 <details>
-<summary>How can I save conservation reference in a proactive bot?</summary>
+<summary>How can I save conversation reference in a proactive bot?</summary>
 
 It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 
@@ -924,28 +924,28 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 <details>
 <summary>What does the Teams AI library do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
+Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
 
 <details>
-<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+<summary>Can we use the AI library with other Large Language Models (LLMs) apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other large language model (LLM)s.
+Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of large language model (LLM)s in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
 <br>
 </details>
 
@@ -978,7 +978,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
 <br>
 &nbsp;
 </details>
@@ -1006,7 +1006,7 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
+> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
 
 <br>
 &nbsp;

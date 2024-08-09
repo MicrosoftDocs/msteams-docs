@@ -1,5 +1,5 @@
 ---
-title: Public developer preview for Microsoft Teams
+title: Public Developer Preview
 description: A Developer Preview (Beta) is public program to explore and test upcoming features for potential inclusion in your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -14,9 +14,9 @@ Developer Preview is a public program for developers, which provides early acces
 
 ## Developer preview app manifest
 
-Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes, nor you can use it to upload your app for testing. To upload your app, you need to select the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method, you can only upload a zipped version of your app package.
+Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes or upload your app for testing. To upload your app in Teams, select **Apps** > **Manage your apps** > **Upload an app**. Using this method, you can only upload a zipped version of your app package.
 
-You might find it useful to use Developer Portal for Teams to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. After you added the developer preview features to the `manifest.json` file, you can't reimport the package into Developer Portal for Teams.
+You might find it useful to use Developer Portal to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. After you added the developer preview features to the `manifest.json` file, you can't reimport the package into Developer Portal.
 
 ## Enable developer preview
 

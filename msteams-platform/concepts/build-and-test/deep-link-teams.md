@@ -1,7 +1,7 @@
 ---
 title: Deep link to a Teams chat
 author: v-npaladugu
-description:  Learn how to create deep links to a teams chat and navigate using them in your Microsoft Teams.
+description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -16,9 +16,11 @@ In this article, you’ll learn to create:
 
 - [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
 - [Deep link to navigate to a chat](#deep-link-to-navigate-to-a-chat)<br>
-- [Deep links to navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)<br>
-- [Deep links to navigate to chat messages](#deep-links-to-navigate-to-chat-messages)<br>
-- [Generate deep links to a file in a channel](#generate-deep-links-to-a-file-in-a-channel)
+- [Deep link to navigate to channel conversation](#deep-link-to-navigate-to-channel-conversation)<br>
+- [Deep link to navigate to chat messages](#deep-link-to-navigate-to-chat-messages)<br>
+- [Deep link to navigate to a team](#deep-link-to-navigate-to-a-team)<br>
+- [Deep link to navigate to channel](#deep-link-to-navigate-to-channel)<br>
+- [Generate deep link to a file in a channel](#generate-deep-link-to-a-file-in-a-channel)
 
 ## Deep link to start a new chat
 
@@ -43,7 +45,7 @@ To use this deep link with your bot, specify the deep link as the URL target in 
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. The User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
@@ -73,7 +75,7 @@ The query parameter is `chatId`, which represents chat ID of the conversation. T
 
 Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 
-## Deep links to navigate to channel conversation
+## Deep link to navigate to channel conversation
 
 You can use the following deep link format to go to a particular conversation within channel thread:
 
@@ -93,7 +95,7 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
 
-## Deep links to navigate to chat messages
+## Deep link to navigate to chat messages
 
 Use the following deep link format to navigate a user to a message in a personal or group chat in Teams:
 
@@ -112,7 +114,49 @@ The query parameters are:
 
 Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
-## Generate deep links to a file in a channel
+## Deep link to navigate to a team
+
+To navigate to a particular team, use the following deep link format:
+
+`https://teams.microsoft.com/l/team/<channelId>/conversations?groupId=<groupId>&tenantId=<tenantId>`
+
+The query parameters are:
+
+* `channelId`: Channel ID of the conversation (URL encoded). For example, 19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2.
+* `groupId`: Group ID of the file. For example, 72602e12-78ac-474c-99d6-f619710353a9.
+* `tenantId`: Tenant ID, such as 72f988bf-86f1-41af-91ab-2d7cd011db47.
+ 
+> [!Note]
+> You can get `channelId` and `groupId` in the URL from the team.
+
+Example: `https://teams.microsoft.com/l/team/19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2/conversations?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+
+## Deep link to navigate to channel
+
+You can use the following deep link formats to navigate to particular channels:
+
+* **Standard channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>`
+
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+
+* **Private channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true`
+
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true`
+
+* **Shared channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true&allowXTenantAccess=true`
+
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true&allowXTenantAccess=true`
+
+The query parameters are:
+
+* `channelId`: Channel ID of the conversation (URL encoded). For example, `19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2`.
+* `channelName`: Name of the team's channel (URL encoded). For example, `My%20example%20channel`.
+* `groupId`: Group ID of the team. For example, `72602e12-78ac-474c-99d6-f619710353a9`.
+* `tenantId`: Tenant ID, such as `72f988bf-86f1-41af-91ab-2d7cd011db47`.
+* `ngc`: Indicates a next-generation channel. For private channels needs to be set to `true`.
+* `allowXTenantAccess`: Indicates a channel that can be accessed across tenant boundaries. For shared channels needs to be set to `true`.
+
+## Generate deep link to a file in a channel
 
 Use the following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 

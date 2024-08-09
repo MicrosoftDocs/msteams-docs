@@ -1,7 +1,7 @@
 ---
-title: Build message extensions using API
+title: Create API-based Message Extension
 author: v-ypalikila
-description: Learn how to build a message extension from an OpenAPI description document (OAD) using using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
+description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -79,6 +79,8 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
   ]
 }
 ```
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-open-api-flow.png" alt-text="Screenshot shows the OpenAPI description flow from the user to Teams and back to the user.":::
 
 ## Next step
 

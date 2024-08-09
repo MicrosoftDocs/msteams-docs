@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Build Teams connectors
 metadata:
-  title: Build Teams connectors
-  description: In this module, learn how to configure and test a Connector for Microsoft Teams app.
+  title: Tutorial - Build a Task Management App
+  description: In this module, learn how to build, configure, and test Connectors for Microsoft Teams app in Visual Studio and to enable developer preview in Teams admin center.
   audience: Developer
   level: Beginner
   ms.date: 02/14/2022
@@ -40,7 +40,7 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all-in-one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version.|
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version.|
      | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |

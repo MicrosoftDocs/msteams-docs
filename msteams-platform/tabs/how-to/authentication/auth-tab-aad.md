@@ -1,6 +1,6 @@
 ---
-title: Configure third party OAuth authentication
-description: Learn Teams authentication tabs Microsoft Entra ID, authentication in Teams and how to use it in tabs.
+title: Configure OAuth Authentication for Tab
+description: Learn about third-party OAuth IdP authentication, navigation and authorization page, and how to configure and initiate authentication flow.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022
@@ -12,7 +12,7 @@ ms.date: 12/13/2022
 
 Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Microsoft Entra ID using Microsoft Graph. This article primarily focuses on using Microsoft Entra ID for authentication to access this information.
 
-OAuth 2.0, an open standard for authentication, is utilized by Microsoft Entra ID and numerous other service providers. Understanding of OAuth 2.0 is essential when dealing with authentication in Teams and Microsoft Entra ID. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Microsoft Entra ID and Microsoft Graph.
+Microsoft Entra ID and numerous other service providers use OAuth 2.0, an open standard for authentication. It's essential to understand OAuth 2.0 when dealing with authentication in Teams and Microsoft Entra ID. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Microsoft Entra ID and Microsoft Graph.
 
 The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Microsoft Entra ID.
 
@@ -26,7 +26,7 @@ Authentication flow in tabs differs from authentication flow in bots.
 
 ## Configure your app to use Microsoft Entra ID as an identity provider
 
-OAuth 2.0 supporting identity providers do not authenticate requests from unregistered applications. Therefore, it's essential to register your applications in advance. For registering an application with Microsoft Entra ID, follow these steps:
+OAuth 2.0 supporting identity providers don't authenticate requests from unregistered applications. Therefore, it's essential to register your applications in advance. For registering an application with Microsoft Entra ID, follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
@@ -36,7 +36,7 @@ OAuth 2.0 supporting identity providers do not authenticate requests from unregi
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
+Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you complete or host your app (or the sample app). Resume this process when you have this information.
 
 > [!NOTE]
 > You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Microsoft Entra ID as a third party OAuth provider. For more information on using any third party OAuth provider, visit the website of the particular provider.
@@ -50,7 +50,7 @@ Trigger the authentication flow by a user action. Avoid opening the authenticati
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that is displayed inside a pop-up window by Teams client. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that Teams client displays inside a pop-up window. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -98,11 +98,11 @@ microsoftTeams.authentication.authenticate({
 
 * Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
-* If you fail to use `authenticate()`, the pop-up may not close at the end of the sign-in process, causing a problem.
+* If you fail to use `authenticate()`, the pop-up might not close at the end of the sign-in process, causing a problem.
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of the page is to redirect to your identity provider so the user can sign-in. This redirection can be done on the server side using HTTP 302, but in this case it's done on the client side using a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Microsoft Entra ID.
+When your pop-up page (`/tab-auth/simple-start`) is displayed, the following code is run. The main goal of the page is to redirect to your identity provider so the user can sign-in. This redirection can be done on the server side using HTTP 302, but in this case it's done on the client side using a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Microsoft Entra ID.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -221,16 +221,16 @@ This code parses the key-value pairs received from Microsoft Entra ID in `window
   > [!NOTE]
   > We recommend not to use `same-origin` or `same-origin-allow-popups` values for `Cross-Origin-Opener-Policy` response header on the login pages, as it disrupts the connection to the parent window and causes the authenticate API call to return prematurely with a `CancelledByUser` error.
 
-* `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
+* `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that a pop-up blocker has blocked the window.
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
 
-Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
+Your app can set its own session cookie so that the user doesn't need to sign in again when they return to your tab on the current device.
 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are currently signed into.
+> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

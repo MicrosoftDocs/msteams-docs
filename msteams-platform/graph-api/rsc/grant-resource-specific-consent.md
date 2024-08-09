@@ -1,6 +1,6 @@
 ---
 title: Grant RSC permissions to an app
-description: In this article, learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
+description: Learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
 ms.localizationpriority: medium
 author: surbhigupta
 ms.author: surbhigupta
@@ -12,7 +12,7 @@ ms.date: 03/28/2023
 
 Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams, chats, or users within an organization.
 
-In this section, you'll learn to:
+In this section, you learn to:
 
 1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
 1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user)
@@ -345,6 +345,14 @@ To install your app on which you've enabled RSC permission in a team, chat, or u
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
 1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
+> [!NOTE]
+>
+> To see the RSC settings for team or chat, users must have one of these Microsoft 365 roles:
+> * Global Administrator
+> * Global Reader
+> * Teams Administrator
+> * Privileged Role Administrator
+
 ### Configure consent settings
 
 The tenant-level controls of application RSC permissions vary based on the resource type.
@@ -449,7 +457,7 @@ You must have the following values from the Microsoft Entra registration process
 * **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. The client secret or certificate isn't required for native apps.
 * **Redirect URI**: The URL for your app to receive responses from Microsoft Entra ID.
 
-For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
+For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0&preserve-view=true#3-get-a-token) and [get access without a user](/graph/auth-v2-service).
 
 ### Check the RSC permissions granted to a specific resource
 
