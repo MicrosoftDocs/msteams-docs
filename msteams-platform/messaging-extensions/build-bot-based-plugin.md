@@ -5,7 +5,8 @@ description: Learn how to build a bot-based message extension plugin for Microso
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 11/14/2023
+ms.date: 07/02/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Extend bot-based message extension as plugin for Copilot for Microsoft 365
