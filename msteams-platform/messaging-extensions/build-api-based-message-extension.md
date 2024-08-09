@@ -1021,9 +1021,9 @@ To register OAuth for your API-based message extensions, follow these steps:
       | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
       |**Existing Teams app ID** | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
-      :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
-
 1. Under **OAuth settings**, update the following:
+
+    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
 
    1. **Client ID**: The client ID is a unique identifier assigned to your application by the third-party authorization server.
 
