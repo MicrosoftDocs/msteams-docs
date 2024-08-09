@@ -969,11 +969,11 @@ OAuth 2.0 in your Teams app provides a secure way to access user data from third
 
 :::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
 
-**Authorization server**: The Microsoft identity platform is the authorization server, also called an identity provider or IdP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the app user has signed in (authenticated).
+**Authorization server**: The Microsoft identity platform is the authorization server, also called an identity provider or IdP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
 
 **Client**: The client in an OAuth exchange is the application requesting access to a protected resource. The client could be a web app running on a server, a single-page web app running in a user's web browser, or a web API that calls another web API. You'll often see the client referred to as client application, application, or app.
 
-**Resource owner**: The resource owner in an auth flow is usually the application user, or end-user in OAuth terminology. The end-user "owns" the protected resource (their data) which your app accesses on their behalf. The resources owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the end-user owns on the external system, and the end-user can consent to or deny your app's request to access their data.
+**Resource owner**: The resource owner in an auth flow is usually the application user, or end-user in OAuth terminology. The end-user "owns" the protected resource (their data), which your app accesses on their behalf. The resource owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the end-user owns on the external system, and the end-user can consent to or deny your app's request to access their data.
 
 **Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
 
@@ -997,17 +997,17 @@ To register OAuth for your API-based message extensions, follow these steps:
 
 1. In the **OAuth client registration** page, under **App settings**, update the following:
 
-   1. Registration name:
-   1. Base URL:
+   1. <b>Registration name</b>
+   1. <b>Base URL</b>
    1. Under **Restrict usage by org**, select any of the following:
 
       * **My organization only**
       * **Any Microsoft 365 organization**
 
-      |Option   |When to use  | Description|
-      |---------|---------|----------------|
-      |**My organization only**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
-      |**Any Microsoft 365 organization**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
+      | Option | When to use | Description |
+      | --- | --- | --- |
+      | **My organization only** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key is only usable within the tenant where the API is registered. |
+      | **Any Microsoft 365 organization** | After you've completed testing the app and want to enable the app across different tenants, ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
 
@@ -1016,10 +1016,10 @@ To register OAuth for your API-based message extensions, follow these steps:
       * **Any Teams app**
       * **Existing Teams app ID**
 
-      |Option   |When to use  | Description|
-      |---------|---------|----------------|
-      |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
-      |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+      | Option | When to use | Description |
+      | --- | --- |--- |
+      | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
+      |**Existing Teams app ID** | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
 
