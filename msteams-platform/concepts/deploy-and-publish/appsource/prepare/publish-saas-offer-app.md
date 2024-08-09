@@ -28,25 +28,25 @@ ms.date: 07/11/2023
    :::column-end:::
 :::row-end:::
 
-A Software-as-a-Service (SaaS) offer created must be published in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
+After you create and test a Software-as-a-Service (SaaS) offer, you must publish it in Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. When published, the SaaS app is available for purchase in the Microsoft Teams Store with the configured subscriptions.
 
 ## Go live
 
-Upon successful testing, your can submit the offer to [Go live](/partner-center/marketplace/test-publish-saas-offer) that publishes the offer in the marketplace. The following are the phases in the Go live stage:
+Upon successful testing, your can submit the offer to [Go live](/partner-center/marketplace/test-publish-saas-offer) that publishes the offer in the marketplace. The following are the phases in Go live:
 
 1. Select **Go live** to initiate the validation checks before publishing.
 1. Keep track of the publishing status on the **Offer overview** page.
-1. If there are validation errors, rectify them and resubmit your offer for publishing. The errors might range from missing information to noncompliance with marketplace standards.
+1. If there are validation errors, rectify them and resubmit the offer for publishing. The errors might range from missing information to noncompliance with marketplace standards.
 1. Upon successful validation, the offer is published live in the marketplace.
-1. Post the publishing, link the live SaaS offer to your Teams app and publish the subscription to Teams Store.
+1. Post publishing, link the live SaaS offer to your Teams app and publish the subscription to Teams Store.
 
-:::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="The screenshot shows the go live and offer publishing phase.":::
+:::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="Screenshot shows the Go live and offer publishing phase.":::
 
-For a comprehensive understanding of validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
+For more information on validation and certification, check [review and publish offers](/partner-center/marketplace/review-publish-offer).
 
 ## Configure SaaS offer to your app
 
-For the users to view your subscription plan in the Teams Store, link the published SaaS offer from Partner Center to your app. There are two ways you can link the offer to your Teams app.
+For the users to view your subscription plan in Teams Store, link the published SaaS offer from Partner Center to your app. There are two ways you can link the SaaS offer to your Teams app.
 
 * Teams Developer Portal
 * App manifest update
@@ -91,11 +91,11 @@ After linking the offer to your app, you can submit your monetized app through P
 > * Even if your app is already listed on the Teams Store, you must still go through the store validation process again to include your SaaS offer.
 > * Flat rate offers created without the offer ID and publisher ID in the app manifest should be updated and resubmitted for validation.
 
-Once published, users can view the **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
+After the SaaS app is published, users can view the **Buy a subscription** option in the app details dialog when the user adds your app to Teams.
 
 :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
-The SaaS app with suitable offers is available in the Teams Store and the marketplace for purchase where the users can purchase subscriptions.
+SaaS app with suitable offers is available in the Teams Store and the marketplace to purchase subscriptions.
 
 ### Post purchase
 
@@ -110,12 +110,12 @@ The SaaS app with suitable offers is available in the Teams Store and the market
 If you decide to unlink your SaaS offer from the app, follow these steps:
 
 1. Sign in to [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
-1. On the **Apps** page, select the app you're removing the offer from.
+1. On the **Apps** page, select the app to remove the offer.
 1. Go to the **Plans and pricing** page and select **Revert**.
 
-After unlinking the offer, perform the following steps to update your store listing:
+After unlinking the offer, perform the following steps to update your Teams Store listing:
 
-1. Select **Distribute** > **Publish to the Teams store**.
+1. Select **Distribute** > **Publish to the Teams Store**.
 1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
 If you unlink a SaaS offer included in your Teams Store listing, you must republish your app to see the change in the Teams Store.
@@ -126,3 +126,4 @@ If you unlink a SaaS offer included in your Teams Store listing, you must republ
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Purchase and manage subscriptions and licenses](end-user-purchase-experience.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+
