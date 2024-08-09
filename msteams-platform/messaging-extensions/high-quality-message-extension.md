@@ -772,7 +772,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
  If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow. 
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
-### Requirements for plugins in Word, PowerPoint, Excel, OneNote, Office, and Outlook Copilots
+### Plugins requirements for Microsoft 365
 
 To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
 
