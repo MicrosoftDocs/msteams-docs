@@ -262,7 +262,7 @@ items:
         
    1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
 
-   1. A dialog box opens to let you add the message extension app to Teams. Select **Add**.
+   1. A dialog box opens to let you add the message extension app to Teams. Select **Open**.
     
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the option to add the custom app in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
 
