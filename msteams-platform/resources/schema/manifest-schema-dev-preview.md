@@ -554,7 +554,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 | `authorization.microsoftEntraConfiguration` | Object | | | Object capturing details needed to do microsoftEntra auth flow. Applicable only when auth type is `microsoftEntra`. |
 | `authorization.microsoftEntraConfiguration.supportsSingleSignOn` | boolean | | | A value indicating whether single sign-on is configured for the app. |
 | `authorization.apiSecretServiceAuthConfiguration` | Object | | | Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`. |
-| `authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId` | | String | 128 characters | Registration ID returned when developer submits the API key through Developer Portal. |
+| `authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId` | String | 128 characters | | Registration ID returned when developer submits the API key through Developer Portal. |
 | `authorization.oAuthConfiguration` | Object | | | |
 | `authorization.oAuthConfiguration.oAuthConfigurationId` | String | 128 characters | | |
 | `apiSpecificationFile` | String | 2048 characters | | A relative file path to the api specification file in the manifest package. |
