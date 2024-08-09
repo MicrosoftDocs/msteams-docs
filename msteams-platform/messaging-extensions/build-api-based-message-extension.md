@@ -963,9 +963,9 @@ After the API-based message extension gets a request header with token, perform 
 <details><summary id="oauth">OAuth</summary>
 <br>
 
-Open Authorization (OAuth) enables a client application to obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP), It uses access tokens to prove your identity and allow it to interact with another service on your behalf.
+By using Open Authorization (OAuth), your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
 
-OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can only grant access to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
+OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can grant access only to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
 
 :::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
 
