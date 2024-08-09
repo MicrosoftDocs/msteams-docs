@@ -545,8 +545,32 @@ Defines a message extension for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
-|Name| Type | Maximum Size | Required | Description|
-|---|---|---|---|---|
+| Name| Type | Maximum Size | Required | Description |
+| --- | --- | --- | --- | --- |
+| `botId` | String | | |The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`composeExtensionType`|String| | |Type of the compose extension. Enum values are `botBased` and `apiBased`.|
+|`authorization`|Object|2| | Authorization related information for the API-based message extension|
+| `authorization.authType` | String | | | Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`. |
+| `authorization.microsoftEntraConfiguration` | Object | | | Object capturing details needed to do microsoftEntra auth flow. Applicable only when auth type is `microsoftEntra`. |
+| `authorization.microsoftEntraConfiguration.supportsSingleSignOn` | boolean | | | A value indicating whether single sign-on is configured for the app. |
+| `authorization.apiSecretServiceAuthConfiguration` | Object | | | Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`. |
+| `authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId` | | String | 128 characters | Registration ID returned when developer submits the API key through Developer Portal. |
+| `authorization.oAuthConfiguration` | Object | | | |
+| `authorization.oAuthConfiguration.oAuthConfigurationId` | String | 128 characters | | |
+| `apiSpecificationFile` | String | 2048 characters | | A relative file path to the api specification file in the manifest package. |
+| `canUpdateConfiguration` | Boolean | | | A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true` |
+| `commands` | Array of object | 10 | | Array of commands the message extension supports. |
+| `messageHandlers` | Array of objects | 5 | | A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`. |
+| `messageHandlers.type` | String | | | The type of message handler. Must be `"link"`. |
+| `messageHandlers.value.domains` | Array of Strings|2048 characters | | Array of domains that the link message handler can register for. |
+| `messageHandlers.supportsAnonymizedPayloads` | Boolean | | | A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`. |
+| `type` | Type of the compose extension. Supported values are `apiBased` or `botBased`. | | | |
+
+
+
+
+
+<!--
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||| Authorization related information for the API-based message extension|
@@ -565,6 +589,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 |`type`     ||||  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
+-->
 
 ### composeExtensions.commands
 
