@@ -997,6 +997,8 @@ To register OAuth for your API-based message extensions, follow these steps:
 
 1. In the **OAuth client registration** page, under **App settings**, update the following:
 
+    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
+
    1. <b>Registration name</b>
    1. <b>Base URL</b>
    1. Under **Restrict usage by org**, select any of the following:
@@ -1008,8 +1010,6 @@ To register OAuth for your API-based message extensions, follow these steps:
       | --- | --- | --- |
       | **My organization only** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key is only usable within the tenant where the API is registered. |
       | **Any Microsoft 365 organization** | After you've completed testing the app and want to enable the app across different tenants, ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
-
-      :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
 
    1. Under **Restrict usage by app**, select any of the following:
 
@@ -1023,7 +1023,7 @@ To register OAuth for your API-based message extensions, follow these steps:
 
 1. Under **OAuth settings**, update the following:
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-oauthsettings.png" alt-text="Screenshots shows the OAuth settings required for oauth configuration ID in Developer Portal for Teams":::
 
    1. **Client ID**: The client ID is a unique identifier assigned to your application by the third-party authorization server.
 
@@ -1036,8 +1036,6 @@ To register OAuth for your API-based message extensions, follow these steps:
    1. **Refresh endpoint**: The refresh URL allows your app to obtain a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
 
    1. **Scope**: The scope defines the permissions your app requests from the user. *[Optional]*
-
-      :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-oauthsettings.png" alt-text="Screenshots shows the OAuth settings required for oauth configuration ID in Developer Portal for Teams":::
 
 1. Select **Save**.
 
