@@ -1,6 +1,6 @@
 ---
 title: Monetize your app overview
-description: Monetize your app and enable transactions. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
+description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing your app through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
@@ -8,81 +8,57 @@ ms.localizationpriority: high
 ms.date: 11/23/2022
 ---
 
-# Monetize your app
+# Monetize your Teams app
 
-Microsoft Teams Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
+App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your apps in Microsoft Partner Center and publish in Teams Store to reach customers with the best solutions.
 
-## Choose a pricing model
+Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. When published, they are available as Software as a Service (SaaS) offers for purchase from commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store.
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app":::
-    :::column-end:::
-    :::column span="2":::
-
-**Include a SaaS offer with your app**
-
-With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
-
-    :::column-end:::
-:::row-end:::
+There are four ways by which you can drive app monetization:
 
 :::row:::
-    :::column:::
-     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials":::
-    :::column-end:::
-    :::column span="2":::
+   :::column span="":::
+      * **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
 
-**Free trials**
-
-You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
-
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
-    :::column-end:::
-    :::column span="2":::
-
-**In-app purchases**
-
-Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
-
-[Use in-app purchases](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test preview SaaS offer":::
-    :::column-end:::
-    :::column span="2":::
-
-**Test preview for monetized app**
-
-With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
-
-[Test preview for monetized apps](Test-preview-for-monetized-apps.md)
-
-    :::column-end:::
+      * **Free trial**: You can provide free access to your app for a limited time or functionality. This encourages users to purchase the full version after the trial period.
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
+   :::column-end:::
 :::row-end:::
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Manage license for third party apps":::
-    :::column-end:::
-    :::column span="2":::
+* **Test drive**: You can provide access to preconfigured environment for a fixed period and encourage users to purchase.
 
-**Set up Microsoft license management**
+* **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
+## SaaS offer
 
-[Set up Microsoft license management](manage-third-party-apps-license.md).
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. SaaS apps that are published in commercial marketplace with subscriptions for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase.
 
-:::column-end:::
-:::row-end:::
+When creating a SaaS offer, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently. For more information on publishing options, see [plan for a SaaS offer](include-saas-offer.md).
+
+Here are the features associated with a SaaS offer:
+
+* **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, [in-app purchases](in-app-purchase-flow.md) can generate an ongoing revenue stream. </br>
+
+* **Test drive**: Allow users to test the end-to-end purchase experience of your app for a fixed time. Test drive and free trials are different, and you can provide one or both the features to the customers.</br>
+
+* **Microsoft license management**: Enable Microsoft to manage app licenses on your behalf to track and manage licenses from the Teams Store. For more information, see [set up Microsoft license management](manage-third-party-apps-license.md#set-up-microsoft-license-management).
+
+### Private plans
+
+Private plan provides customized solutions for targeted customers based on their organizational requirements. You can either use an existing offer or a new offer to create a private plan. For more information, see [private plans in commercial marketplace](/partner-center/marketplace/private-plans).
+
+This module guides you through the process of creating a SaaS offer in Partner Center, test the SaaS offer, link the SaaS offer to your app, and publish the SaaS app in the marketplace.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Plan a SaaS offer](include-saas-offer.md)
 
 ## See also
 
-[Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
+* [Introduction to listing options](/partner-center/marketplace/determine-your-listing-type)
+* [Publishing guide by offer type](/partner-center/marketplace/publisher-guide-by-offer-type)
+* [Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
