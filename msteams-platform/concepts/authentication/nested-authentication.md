@@ -128,12 +128,12 @@ The tokens acquired by MSAL.js through nested app authentication are issued for 
 
 To acquire a token, follow these steps:
 
-1. Use MSAL.js to acquire tokens for your app ID. For more information on how to to get access tokens, see [Acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
+1. Use MSAL.js to acquire tokens for your app ID. For more information on how to get access tokens, see [Acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
 
 1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like `tenantID`, `homeAccountId`, and `loginHint` from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface).
 
    > [!NOTE]
-   > The `homeAccountId` property is equivalent to `userObjectId` in Teams JavaScript client library(TeamsJS).
+   > The `homeAccountId` property is equivalent to `userObjectId` in Teams JavaScript client library (TeamsJS).
 
 1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. `accessTokenRequest` specifies the scopes for which the access token is requested. Nested app authentication supports incremental and dynamic consent so always request the minimum scopes needed for your code to complete its task.
 
