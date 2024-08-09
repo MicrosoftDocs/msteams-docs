@@ -995,7 +995,7 @@ To register OAuth for your API-based message extensions, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-register.png" alt-text="Screenshot shows the registerclient  option to register oauth configuration id in Developer Portal for Teams.":::
 
-1. In the **OAuth client registration** page, under **App settings**, update the following:
+1. In the **OAuth client registration** page under **App settings**, update the following:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
 
@@ -1019,7 +1019,7 @@ To register OAuth for your API-based message extensions, follow these steps:
       | Option | When to use | Description |
       | --- | --- |--- |
       | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
-      |**Existing Teams app ID** | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+      |**Existing Teams app ID** | After you've completed testing your app within your tenant as a custom app or custom app built for your organization, update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
 1. Under **OAuth settings**, update the following:
 
@@ -1029,13 +1029,13 @@ To register OAuth for your API-based message extensions, follow these steps:
 
    1. **Client secret**: The client secret is a confidential string known by the third-party authorization server.
 
-   1. **Authorization endpoint**: The authorization URL is where the user is redirected to sign-in and grant or deny access to your app. For example, `https://login.example.com/authorize` .
+   1. **Authorization endpoint**: The authorization endpoint is the URL where the user is redirected to sign-in and grant or deny access to your app. For example, `https://login.example.com/authorize` .
 
-   1. **Token endpoint**: The token URL is where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
+   1. **Token endpoint**: The token enpoint is the URL where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
 
-   1. **Refresh endpoint**: The refresh URL allows your app to obtain a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
+   1. **Refresh endpoint**: By using the refresh endpoint URL, your app obtains a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
 
-   1. **Scope**: The scope defines the permissions your app requests from the user. *[Optional]*
+   1. **Scope**: *[Optional]* The scope defines the permissions your app requests from the user.
 
 1. Select **Save**.
 
@@ -1053,7 +1053,7 @@ To update **OAuth client registration ID** in API-based message extension, follo
 
 1. Select the message extension app that you've created.
 
-1. From the left pane, under **Configure**, select **App features** > **Message extension**.
+1. From the left pane under **Configure**, select **App features** > **Message extension**.
 
 1. Under **Authentication and authorization**, select **OAuth** and enter the **OAuth client registration ID**.
 
@@ -1061,11 +1061,11 @@ To update **OAuth client registration ID** in API-based message extension, follo
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-add-oauth-registration.png" alt-text="Screenshot shows the OAuth to add the registration ID copied earlier to the message extension in Developer Portal for Teams.":::
 
-Your API-based message extension is configured with OAuth authentication.
+  Your API-based message extension is configured with OAuth authentication.
 
 ### Update app manifest
 
-Update your Teams app manifest schema to include the new auth type: `oAuth` and the `oAuthConfigurationId` you received from the dev portal.
+Update your Teams app manifest schema to include the new auth type: `oAuth` and the `oAuthConfigurationId` you received from the Developer Portal.
 
 ```json
 {
@@ -1104,24 +1104,25 @@ Update your Teams app manifest schema to include the new auth type: `oAuth` and 
 
 ### Implement OAuth
 
-When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke with the app ID being used to check if there's a valid token/trigger the sign-in flow. If the token acquisition fails, then trigger the sign-in flow. The Teams client then renders the OAuth card in a pop-up. The end-user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback url on TGS. TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS then saves.
+When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke request where the app ID is used to check if there's a valid token. If a valid token is available, it triggers the sign-in flow.
+
+If the token acquisition fails, then it triggers the sign-in flow. The Teams Client then renders the OAuth card in a pop-up. The end-user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
 
 ### Handle errors
 
-Ensure your implementation can handle error cases such as missing token, expired token, invalid token, user fails to log-in/does not grant permissions, user closes out of the dialog box, invoke fails due to network issue/service being down/unable to fetch app/endpoint returning anything other than 401/403, resource server returns 401 or 403.
+Ensure that the OAuth implementation in your app can handle error cases such as, missing token, expired token, invalid token, user fails to log-in or the permissions isn't granted, if a user closes the dialog box, if the invoke request fails due to a network issue, if the service being is down, if the service unable to fetch app, if endpoint returns anything other than 401 or 403 error, if the resource server returns 401 or 403.
 
 ## Limitations and best practices
 
-* After an OAuth configuration is saved, it becomes read-only except for updating the allowed app Id/allowed tenant and the description and domain.
-* Developers shouldn't be updating the OAuth configuration frequently even during the initial development process.
-* If a developer wants to make any changes to configuration such as adding scopes or the authorization url, they need to register a new OAuth configuration, which generates a new unique ID.
+* After an OAuth configuration is saved, it becomes read-only except for updating the allowed app Id or allowed tenant, the description, and domain.
+* Developers must not update the OAuth configuration frequently, even during the initial development process.
+* If a developer wants to make any changes to configuration such as, adding a scope or authorization URL, they must register a new OAuth configuration, which generates a new unique ID.
 
 For more information, see the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
 
 ## Conclusion
 
-Implementing OAuth 2.0 for API MEs and Plugins in Microsoft Teams enhances the security of your app by providing a secure way to access user data from third-party applications without exposing user credentials. By following this guide, you can successfully implement OAuth 2.0 in your Teams app.
-
+Implementing OAuth 2.0 for API MEs and Plugins in Microsoft Teams enhances the security of your app. It provides a secure way to access user data from third-party applications without exposing user credentials.
 </details>
 <br/>
 
