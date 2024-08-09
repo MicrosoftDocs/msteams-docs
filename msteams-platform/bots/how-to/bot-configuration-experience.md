@@ -17,11 +17,11 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphical representation that shows adding a bot to a group chat and configuring the bot settings during installation.":::
 
 **Reconfigure**
 
-:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the bot in the message compose area.":::
 
 ## Build bot configuration experience
 

@@ -135,7 +135,7 @@ To discontinue your app:
 
 Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. As a developer, you can interact and respond to these reviews from Partner Center, and the responses are shown on AppSource along with Teams experience, helping users find and use the app more easily. This feedback improves app visibility, keeps users engaged, and encourages more downloads on Teams Store.
 
-:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphical representation that shows rating and review submission for an app.":::
 
 > [!NOTE]
 > Ratings and reviews aren't available for custom apps that are built for your organization.
