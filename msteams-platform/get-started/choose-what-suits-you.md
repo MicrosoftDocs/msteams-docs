@@ -1,6 +1,6 @@
 ---
-title: Choose what suits you
-description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app
+title: Explore Ways to Build a Teams App
+description: Learn more about the available tools and SDKs to build a Microsoft Teams app based on the app capabilities, AI capability, UI components, and languages.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference

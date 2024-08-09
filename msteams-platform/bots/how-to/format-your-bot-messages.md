@@ -1,5 +1,5 @@
 ---
-title: Format your bot messages
+title: Customize Bot Messages
 author: surbhigupta
 description: Learn how to format and style your bot messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
 ms.topic: conceptual
