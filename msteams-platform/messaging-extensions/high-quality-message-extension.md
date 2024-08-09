@@ -774,7 +774,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
 
 ### Requirements for plugins in Word, PowerPoint, Excel, OneNote, Office, and Outlook Copilots
 
-To ensure your plugins work with Word, Excel, PowerPoint, and OneNote Copilots, follow these requirements:
+To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
 
 * <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps</b>
 
