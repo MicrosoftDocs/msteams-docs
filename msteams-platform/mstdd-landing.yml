@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Teams app susbscriptions purchase flow from Teams Store
+      - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish

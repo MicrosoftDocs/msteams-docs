@@ -10,14 +10,14 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-This article helps you understand the user's app purchase experience in Microsoft Teams. Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can bring out the purchase experience for your app as detailed in this article.
+Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Microsoft Teams Store and helps you provide a similar experience.
 
 ## Subscription purchase experience
 
 > [!NOTE]
-> For some countries or regions, users might be asked to add a [VAT ID number](/partner-center/enroll/vat-info) and a [registration ID number](/partner-center/account-settings/reg-number-id) to comply with the requirements of that region.
+> Users might be asked to add a VAT ID and a registration ID based on the compliance requirement of a country or region. For more information, see [VAT ID number](/partner-center/enroll/vat-info) and [registration ID number](/partner-center/account-settings/reg-number-id).
 
-The subscription purchase experience partially differs for a new and an existing user. Here's the user experience for purchasing a subscription plan for a Teams app:
+Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In Teams, select **Apps** > **Best selling**.
 
@@ -40,7 +40,7 @@ The subscription purchase experience partially differs for a new and an existing
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows the selection of appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan-lightbox.png":::
 
-1. In the **Checkout** dialog, enter the following information:
+1. The checkout experience partially differs for a new and an existing user. In the **Checkout** dialog, perform the following actions:
 
     # [New user](#tab/newuser)
 
@@ -187,7 +187,7 @@ The following example shows how users can manage licenses for third-party apps f
     
     </details>
 
-Users can take additional actions related to your subscription, such as editing the billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+Users can take additional actions related to app subscription, such as editing the billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
 :::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows how to manage the additional subscriptions in M365 admin center.":::
 
