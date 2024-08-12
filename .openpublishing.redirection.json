@@ -1071,6 +1071,26 @@
       {
         "source_path": "msteams-platform/bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-How-to-guides-v5.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-how-to-guides-vsc"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/build-environments-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/build-environments-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-background-process-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/debug-background-process-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/faq-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/faq-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/tools-prerequisites-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/tools-prerequisites-vs"
       }
     ]
 }
