@@ -1,5 +1,5 @@
 ---
-title: Bots for Teams Calls and Online Meetings
+title: Bots for Teams Calls and Online Meeting
 description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -89,7 +89,7 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 
 | Capabilities | Functions |
 | ------| -------------|
-| Core capabilities | * Initiate a one-to-one call between two users <br>* Initiate a group call with more than two users (up to 350 users)<br>* Upgrade a one-to-one call with two users into a group call with more than two users<br>* Join a group call after it starts<br>* Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
+| Core capabilities | &bull; Initiate a one-to-one call between two users. <br> &bull; Initiate a group call with more than two users (up to 350 users). <br> &bull; Upgrade a one-to-one call with two users into a group call with more than two users. <br> &bull; Join a group call after it starts. <br> &bull; Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call. |
 | Mid-call control | - Turn the video on or off<br>- Mute or unmute the microphone<br>- Switch between cameras<br>- Put the call on hold or resume locally<br>- Active speaker<br>- Choose speaker for calls<br>- Choose microphone for calls<br>- Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected<br>- Show the state of a call, such as early media, incoming, Connecting, ringing, connected, on hold, disconnecting, or disconnected.<br>- Show if a participant is on mute<br>- Show the reason why a participant left a call |
 | Screen sharing | - Share the entire screen from within the app <br>- Share a specific application (from the list of running apps)<br>- Share a web browser tab from the list of open tabs<br>- Share system audio during screen sharing<br>- Participant can view remote screen share |
 | Roster | - List participants <br>- Remove a participant |
@@ -121,7 +121,7 @@ In the context of Teams, setting up firewalls for calling and meeting bots is im
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
-* [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview)
+* [Microsoft Graph SDK overview](/graph/sdks/sdks-overview)
 * [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 * [Add Graph permissions](registering-calling-bot.md#add-graph-permissions)
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
