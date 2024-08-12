@@ -74,6 +74,7 @@ After you have selected your desired filters, you can explore the following indi
    :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Screenshot shows you the usage by retention state chart for your published app.":::
 
    | Metric | Definition |
+   | :-----------------------| :------------------------------------------------------------------------------------------------------|
    | New users or tenants | Active users or tenants who are new and have not used your app. |
    | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
@@ -98,8 +99,6 @@ After you have selected your desired filters, you can explore the following indi
    You can select each of these **Metric name** to see trends over time.
 
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
-
----
 
 # [Third party apps](#tab/thirdpartyapps)
 
