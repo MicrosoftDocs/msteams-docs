@@ -291,6 +291,10 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png" alt-text="Screenshot of Meeting Token App with Add option highlighted in red.":::
 
+    1. Search and select the required scope to open the app.
+
+         :::image type="content" source="~/assets/images/meeting-token-generator/add-scope.png" alt-text="Screenshot of Meeting Token App scope pop-up to select the scope of the app.":::
+
        The **Manage apps** section displays the list of applications.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png" alt-text="Screenshot of Manage apps displaying the list of applications.":::

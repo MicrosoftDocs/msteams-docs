@@ -186,6 +186,14 @@ items:
     1. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+       
+    1. Select **Add**. 
+
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the Teams client with the Add option highlighted.":::
+    
+    1. Select **Open** or search and select the required chat or meeting to open the app.
+    
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the Teams client with the Add option highlighted."::: 
                       
 - title: Interact with the app in Teams
   durationInMinutes: 1
