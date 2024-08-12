@@ -95,7 +95,7 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 | Roster | &bull; List participants. <br> &bull; Remove a participant. |
 | Public Switched Telephone Network (PSTN) | &bull; Place a one-to-one call with a PSTN participant. <br> &bull; Place a group call with PSTN participants. <br> &bull; Upgrade a one-to-one call with a PSTN participant into a group call. <br> &bull; Dial-out from a group call as a PSTN participant. <br> &bull; Support for early media. |
 | General | Test your microphone, speaker, and camera with an audio testing service (available by calling 8:echo123). |
-| Device management | &bull; Ask for permission to use audio or audio and video. <br> &bull; Get camera list. <br> &bull; Set camera. <br> &bull; Get selected camera. <br> &bull; Get microphone list. <br> &bull; Set microphone. <br> &bull; Get selected microphone. <br>- Get speakers list. <br> &bull; Set speaker. <br> &bull; Get selected speaker. |
+| Device management | &bull; Ask for permission to use audio or audio and video. <br> &bull; Get camera list. <br> &bull; Set camera. <br> &bull; Get selected camera. <br> &bull; Get microphone list. <br> &bull; Set microphone. <br> &bull; Get selected microphone. <br> &bull; Get speakers list. <br> &bull; Set speaker. <br> &bull; Get selected speaker. |
 | Video rendering | &bull; Render single video in multiple places (local camera or remote stream). <br> &bull; Set or update scaling mode. <br> &bull; Render remote video stream. |
 
 To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
