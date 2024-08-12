@@ -30,7 +30,7 @@ You can view your app's usage and other insights from the **Analytics** page. To
 
    :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
-# [Custom app](#custom-app)
+# [Custom app](#tab/customapp)
 
 As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
 
@@ -102,7 +102,7 @@ You can select each of these **Metric name** to see trends over time.
 
 ---
 
-# [Third party apps](#third-party-apps)
+# [Third party apps](#tab/thirdpartyapps)
 
 The Developer Portal for Teams provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
