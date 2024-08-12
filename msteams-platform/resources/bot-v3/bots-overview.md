@@ -70,7 +70,7 @@ The following articles will guide you through the process of creating a great bo
 
 <summary><b>Build a bot for Microsoft Teams</b></summary>
 
-### Build a bot
+<b>Build a bot</b>
 
 **Teams Developer Portal for Teams** is a tool that can help build your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
 
@@ -89,7 +89,7 @@ The following articles will guide you through the process of creating a great bo
 
 > [!NOTE]
 >
-> ### Bots and Microsoft Azure
+> <b>Bots and Microsoft Azure</b>
 >
 > As of December, 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
 >
