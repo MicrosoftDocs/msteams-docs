@@ -16,7 +16,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 ## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
-----------> 
+---------->
 
 ## Generally available
 
@@ -408,6 +408,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+**2024 August**
+
+***August 14, 2024***: [Introduced SSO authentication for nested apps][concepts/authentication/nested-authentication.md].
 
 **2024 June**
 
