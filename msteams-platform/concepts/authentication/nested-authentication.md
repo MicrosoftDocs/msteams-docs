@@ -94,6 +94,8 @@ Your domain must include only the origin, and not sub-paths. For example:
 
 Initialize MSAL and get an instance of the public client application to get access tokens, when needed.
 
+# [Javascript](#tab/javascript)
+
 ```javascript
 import {
   AccountInfo,
@@ -121,6 +123,34 @@ export function initializePublicClient() {
   );
 }
 ```
+
+# [.NET](#tab/.net)
+
+```
+using Microsoft.Identity.Client;
+using System;
+using System.Threading.Tasks;
+
+public class MsalClient
+{
+    private static IPublicClientApplication pca;
+
+    public static async Task<IPublicClientApplication> InitializePublicClientAsync()
+    {
+        Console.WriteLine("Starting initializePublicClient");
+
+        var msalConfig = PublicClientApplicationBuilder.Create("your_client_id")
+            .WithAuthority("https://login.microsoftonline.com/{your_tenant_id}")
+            .Build();
+
+        pca = msalConfig;
+        Console.WriteLine("Client app created");
+
+        return pca;
+    }
+}
+```
+
 
 ### Acquire your first token
 
