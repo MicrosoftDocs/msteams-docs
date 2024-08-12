@@ -1,6 +1,6 @@
 ---
 title: Fix Store Submission Issues/Failures
-description: Troubleshoot and correct problems with your Microsoft Teams Store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
+description: Troubleshoot and correct problems with your Microsoft Teams Store submission. Get help directly from Microsoft, resolve issues, and resubmit your app.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
@@ -33,7 +33,7 @@ After resolving all issues shared in the review report, submit your updated app 
 
 * Updated app package
 * Test notes for your app, if they weren't included in your original submission:
-  * Credentials for at least two accounts (one admin and one non-admin).
+  * Credentials for at least two accounts (one admin account and one non-admin account).
   * Instructions to configure the app and test its functionality.
   * A video showing your app used in Teams.
 
@@ -41,15 +41,14 @@ Let's look at the process to resubmit the app to Teams Store.
 
 :::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Partner Centre":::
 
-Following app submission, the process for resolving issues and resubmitting an app involves the following steps:
+Following app submission on Partner Centre, the process for resolving issues and resubmitting an app involves the following steps:
 
-1. Microsoft concierge validation team takes the updated app through functional and experience testing. Following the testing, the app validation may either pass or fail.
-1. If the app passes the testing process, it is listed on the Teams Store.
+1. Microsoft concierge validation team undertakes the functional and experience testing the updated app. Following the testing, the app validation may either pass or fail.
+1. If the app passes the testing process, it's listed on the Teams Store.
 1. If the app fails the testing process, the Microsoft concierge validation team sends you a detailed report with recommendations for resolving issues found in the app. You can expect to receive this report within 24 hours of your app's functional and experience testing.
 1. Resolve the issues shared in the report sent by the Microsoft concierge validation team.
-1. Resubmit your updated app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> after resolving issues, so that the app may be tested again.
 
-The process continues till the app is found fully validated as per Microsoft validation guidelines.
+Resubmit your updated app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> after resolving issues, so that the app may be tested again. The process continues till the app is found fully validated as per Microsoft validation guidelines.
 
 > [!CAUTION]
 > To avoid multiple submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team approves your app.
@@ -109,7 +108,7 @@ No. Microsoft doesn't start validating your app until you submit your app for th
 
 <summary><b>I received an email from Partner Center saying my app was approved to publish. Why isn't my app in the Teams Store?</b></summary>
 
-Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app hasn't published after two business days, contact <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
+Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app isn't published after two business days, contact <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 <br>
 
