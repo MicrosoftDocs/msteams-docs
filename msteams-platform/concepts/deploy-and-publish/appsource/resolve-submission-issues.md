@@ -19,9 +19,9 @@ The concierge validation service provided by Microsoft helps developers get thei
 
 If your app submission fails, Microsoft sends you a review report with recommendations within 24 hours of submission.
 
-## Resolve issues and resubmit your app
+### Resolve issues and resubmit your app
 
-You must fix all issues reported by the Microsoft concierge validation team before resubmitting your app on Partner Center.
+After you receive the review report, you must fix all issues reported by the Microsoft concierge validation team before resubmitting your app on Partner Center.
 
 The Microsoft report includes the following information:
 
@@ -31,8 +31,18 @@ The Microsoft report includes the following information:
 
 Let's look at the process for resolving issues before you resubmit the app to Teams Store.
 
-:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Teams Store":::
+:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Partner Centre":::
 
+After you've fixed all issues shared in the review report, the process for resolving issues and resubmitting an app involves the following steps:
+
+1. Submit your app with all the issues resolved. To submit the app to Partner Centre, send the following to the Microsoft concierge validation team at a href="mailto:teamsubm@microsoft.com"><teamsubm@microsoft.com></a>:
+    1. Updated app package
+    1. Test notes for your app, if you didn't include these in your original submission:
+        * Credentials for at least two accounts (one admin and one non-admin).
+        * Instructions to configure the app and test its functionality.
+        * A video showing your app used in Teams.
+
+<!--
 The process for resolving issues and resubmitting an app typically goes like this:
 
 1. You fix all issues in the report.
@@ -46,6 +56,7 @@ The process for resolving issues and resubmitting an app typically goes like thi
 1. You do one of the following steps:
    * If your app is free of issues, resubmit your app on Partner Center.
    * If issues aren't resolved or Microsoft finds new issues, you receive another report on what to fix. Resolve those issues and send an updated version of the app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
+-->
 
 > [!CAUTION]
 > To avoid multiple submission failures, do not resubmit your app on Partner Center until the Microsoft concierge validation team approves your app.
