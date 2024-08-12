@@ -21,13 +21,17 @@ If your app submission fails, Microsoft sends you a review report with recommend
 
 ## Resolve issues and resubmit your app
 
-You must fix all issues reported by the Microsoft concierge validation team before resubmitting your app on Partner Center. The Microsoft report includes the following information:
+You must fix all issues reported by the Microsoft concierge validation team before resubmitting your app on Partner Center.
 
-:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Teams Store":::
+The Microsoft report includes the following information:
 
 * A corresponding [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) for each issue.
 * Instructions on how to reproduce each issue.
 * Recommendations for resolving each issue based on publicly available developer documentation.
+
+Let's look at the process for resolving issues before you resubmit the app to Teams Store.
+
+:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Teams Store":::
 
 The process for resolving issues and resubmitting an app typically goes like this:
 
