@@ -1,5 +1,5 @@
 ---
-title: Bots for Teams Calls and Online Meeting
+title: Bots for Teams Calls and Online Meetings
 description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.date: 05/16/2022
 
 # Calls and online meetings bots
 
-Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
+Bots can interact with Microsoft Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
 * Interactive voice response (IVR).
 * Call control.
@@ -16,7 +16,7 @@ Bots can interact with Teams calls and meetings using real-time voice, video, an
 
 To use these Graph APIs in a Teams app, you create a bot and specify some additional information and permissions.
 
-In addition, the Real-time Media Platform enables bots to interact with Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with few extra features used to register the bot.
+In addition, the Real-time Media Platform enables bots to interact with Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Teams bot with few extra features used to register the bot.
 
 The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with two more settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams support only a specific set of media formats for audio and video content.
 
@@ -83,36 +83,35 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 * **Application-hosted media**: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
 
-* To learn about Microsoft Graph SDK and its libraries, see [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview?context=graph%2Fapi%2Fbeta&view=graph-rest-beta&preserve-view=true).
-* To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
-* For samples that use Microsoft Graph SDK, see [Microsoft Graph Communications samples](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples). 
-
 ## Microsoft Graph calling and meeting APIs
 
 Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
 
-| Feature | Functions |
+| Capabilities | Functions |
 | ------| -------------|
-| Core capabilities | - Initiate a one-to-one call between two users <br>- Initiate a group call with more than two users (up to 350 users)<br>- Upgrade a one-to-one call with two users into a group call with more than two users<br>- Join a group call after it starts<br>- Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
+| Core capabilities | * Initiate a one-to-one call between two users <br>* Initiate a group call with more than two users (up to 350 users)<br>* Upgrade a one-to-one call with two users into a group call with more than two users<br>* Join a group call after it starts<br>* Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call|
 | Mid-call control | - Turn the video on or off<br>- Mute or unmute the microphone<br>- Switch between cameras<br>- Put the call on hold or resume locally<br>- Active speaker<br>- Choose speaker for calls<br>- Choose microphone for calls<br>- Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected<br>- Show the state of a call, such as early media, incoming, Connecting, ringing, connected, on hold, disconnecting, or disconnected.<br>- Show if a participant is on mute<br>- Show the reason why a participant left a call |
 | Screen sharing | - Share the entire screen from within the app <br>- Share a specific application (from the list of running apps)<br>- Share a web browser tab from the list of open tabs<br>- Share system audio during screen sharing<br>- Participant can view remote screen share |
 | Roster | - List participants <br>- Remove a participant |
-| PSTN | - Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Upgrade a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
+| Public Switched Telephone Network (PSTN) | - Place a one-to-one call with a PSTN participant <br>- Place a group call with PSTN participants<br>- Upgrade a one-to-one call with a PSTN participant into a group call<br>- Dial-out from a group call as a PSTN participant<br>- Support for early media |
 | General | Test your mic, speaker, and camera with an audio testing service (available by calling 8:echo123) |
 | Device management | - Ask for permission to use audio or audio and video <br>- Get camera list<br>- Set camera<br>- Get selected camera<br>- Get microphone list<br>- Set microphone<br>- Get selected microphone<br>- Get speakers list<br>- Set speaker<br>- Get selected speaker |
 | Video rendering | - Render single video in many places (local camera or remote stream) <br>- Set or update scaling mode<br>- Render remote video stream |
+
+To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
+
 
 ## Set up firewalls
 
 Setting up firewalls is crucial for protecting your network and system from unauthorized access and malicious attacks. Firewalls act as barriers, controlling incoming and outgoing traffic based on security rules. They prevent hackers from accessing your system, block malicious traffic, and hide internal IP addresses.
 
-In the context of Microsoft Teams, setting up firewalls for calling and meeting bots is particularly important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
+In the context of Teams, setting up firewalls for calling and meeting bots is important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
 
 ## Code sample
 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
-| Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples) |
 
 ## Next step
 
@@ -122,11 +121,10 @@ In the context of Microsoft Teams, setting up firewalls for calling and meeting 
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
+* [Microsoft Graph SDK overview](https://learn.microsoft.com/graph/sdks/sdks-overview)
 * [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 * [Add Graph permissions](registering-calling-bot.md#add-graph-permissions)
-* [Develop calling and online meeting bots on your local PC](debugging-local-testing-calling-meeting-bots.md)
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
-* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
 * [Teams recording policy](/microsoftteams/teams-recording-policy)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
-* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Set up auto answer for Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
