@@ -29,10 +29,10 @@ The Microsoft report includes the following information:
 * Instructions on how to reproduce each issue.
 * Recommendations for resolving each issue based on publicly available developer documentation.
 
-After you've resolved all issues shared in the review report, submit your updated app the to Partner Centre. Send the following to the Microsoft concierge validation team at a href="mailto:teamsubm@microsoft.com"><teamsubm@microsoft.com></a>:
+After resolving all issues shared in the review report, submit your updated app the to Partner Centre. Send the following to the Microsoft concierge validation team at a href="mailto:teamsubm@microsoft.com"><teamsubm@microsoft.com></a>:
 
 * Updated app package
-* Test notes for your app, if you didn't include these in your original submission:
+* Test notes for your app, if they weren't included in your original submission:
   * Credentials for at least two accounts (one admin and one non-admin).
   * Instructions to configure the app and test its functionality.
   * A video showing your app used in Teams.
@@ -62,9 +62,9 @@ Get answers to some common questions when resolving app submission issues.
 
 <details>
 
-<summary><b>How long will it take to publish my app?</b></summary>
+<summary><b>How long does it take to publish my app?</b></summary>
 
-If your Teams Store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish, or still needs more work.
+If your Teams Store submission has no issues, your app is published within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. After you resolve issues and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish, or still needs more work.
 
 <br>
 
