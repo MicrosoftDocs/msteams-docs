@@ -12,14 +12,11 @@ zone_pivot_groups: What-new-features
 
 Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+<!------
+
 ## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| May 22, 2024 | Use Live Share sessions to enable seamless collaboration in Teams meetings, chats, and channels.| Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share collaborative contexts](apps-in-teams-meetings/teams-live-share-overview.md#live-share-collaborative-contexts)|
-| May 21, 2024 | Introduced Assistants API to create powerful AI assistants capable of performing a variety of tasks. | Build bots > Teams AI library > [Overview](bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api) |
-| May 21, 2024 | Get started with the process of building apps with the Teams AI library using the LightBot sample. | Build bots > Teams AI library > [Quick start guide](bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md)|
-| May 21, 2024 | Introduced a step-by-step guide to build a custom copilot to chat with your data using the Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom copilot > [Build custom copilot using Teams Toolkit](teams-ai-library-tutorial.yml)|
+---------->
 
 ## Generally available
 
@@ -35,8 +32,8 @@ Teams platform features that are available to all app developers.
 
 **2024 July**
 
+* ***July 31, 2024***: [Use app validation tool to validate your Teams app in Developer Portal for Teams.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
 * ***July 03, 2024***: [Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings)
-
 * ***July 02, 2024***: [You can extend bot-based message extension plugins to Teams meetings.](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 :::column-end:::
@@ -54,6 +51,10 @@ Teams platform features that are available to all app developers.
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
+| 21/05/2024 | Introduced Assistants API to create powerful AI assistants capable of performing a variety of tasks. | Build bots > Teams AI library > [Overview](bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api) |
+| 21/05/2024 | Get started with the process of building apps with the Teams AI library using the LightBot sample. | Build bots > Teams AI library > [Quick start guide](bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md)|
+| 21/05/2024 | Introduced a step-by-step guide to build a custom copilot to chat with your data using the Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom copilot > [Build custom copilot using Teams Toolkit](teams-ai-library-tutorial.yml)|
+| 21/05/2024 | Use Live Share sessions to enable seamless collaboration in Teams meetings, chats, and channels. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share collaborative contexts](apps-in-teams-meetings/teams-live-share-overview.md#live-share-collaborative-contexts)|
 |17/05/2024|Deploy Teams app to container service.|Tools and SDKs > Teams Toolkit for Visual Studio Code > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md)|
 |12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
 |12/04/2024|Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards.|[App manifest](resources/schema/manifest-schema.md)|
@@ -396,13 +397,6 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| May 23, 2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
-| May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
-
 ## Developer preview
 
 :::row:::
@@ -430,6 +424,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
+| 23/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 | 14/05/2024 | Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.| App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)|
 | 07/05/2024 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.| Distribute your app > [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon)|
 | 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
@@ -451,6 +447,7 @@ Developer preview is a public program that provides early access to unreleased T
 |02/11/2023| Introduced Adaptive Card Previewer in public developer preview. | Tools > [Adaptive Card Previewer](concepts/build-and-test/adaptive-card-previewer.md)|
 |25/10/2023| Introduced the `extensions` property in public developer preview app manifest schema. | App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#extensions)|
 |25/10/2023| Build message extensions using API (API-based) to interact directly with third-party data, apps, and services. | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md)|
+|28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
 |21/08/2023| Introduced the new Microsoft Teams client to provide better experience for your apps and users | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|

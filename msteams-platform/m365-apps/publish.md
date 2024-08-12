@@ -1,5 +1,5 @@
 ---
-title: Publish Teams apps for Microsoft 365
+title: Publish App for Microsoft 365 & Outlook
 description: Learn to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app via single tenant and multitenant distribution.
 ms.date: 10/10/2022
 ms.author: mosdevdocs
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
+
 # Publish Teams apps for Microsoft 365
 
 Microsoft Teams supports Microsoft 365 enabled Teams apps for production. You can distribute these apps to users who use the following clients:

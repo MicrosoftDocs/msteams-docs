@@ -750,7 +750,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video must highlight your app’s functionalities and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
-* The video must be in the format `https://www.example.com/123456789`.
+* The video must be in the format `https://www.youtube.com/watch?v=:id` or `https://youtu.be/:id` for YouTube and `https://vimeo.com/:id` for Vimeo.
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
@@ -1865,7 +1865,7 @@ The long description of an app must clearly call out the following:
 ## See also
 
 * [Test and debug your app](~/concepts/build-and-test/debug.md)
-* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
+* [Validate your app in Developer Portal for Teams](../../../build-and-test/manage-your-apps-in-developer-portal.md#publish)
