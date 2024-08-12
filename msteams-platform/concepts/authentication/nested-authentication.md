@@ -94,7 +94,7 @@ Your domain must include only the origin, and not sub-paths. For example:
 
 Initialize MSAL and get an instance of the public client application to get access tokens, when needed.
 
-# [Javascript](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
 ```javascript
 import {
@@ -172,7 +172,7 @@ To acquire a token, follow these steps:
 
 The following code shows you an example to access a token:
 
-# [.NET](#tab/js)
+# [JavaScript](#tab/js)
 
 ```javascript
 
@@ -213,7 +213,7 @@ The following code shows you an example to access a token:
 
 ```
 
-# [.NET](#tab/cs)
+# [.NET](#tab/netcode)
 
 ```
 // MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
@@ -260,6 +260,8 @@ After you receive the token, use it to call the API. This ensures that the API i
 
 The following example shows how to make an authenticated request to the Microsoft Graph API to access Microsoft 365 data:
 
+# [JavaScript](#tab/jscript)
+
 ```javascript
 
 var headers = new Headers();
@@ -278,6 +280,40 @@ fetch(graphEndpoint, options)
     });
 
 ```
+# [.NET](#tab/dotnet)
+
+```
+using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+
+public class GraphApiClient
+{
+    private static readonly HttpClient client = new HttpClient();
+
+    public static async Task CallGraphApiAsync(string accessToken)
+    {
+        var graphEndpoint = "https://graph.microsoft.com/v1.0/me";
+        var request = new HttpRequestMessage(HttpMethod.Get, graphEndpoint);
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+        var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            // Do something with response
+            var responseBody = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(responseBody);
+        }
+        else
+        {
+            Console.WriteLine($"Error: {response.StatusCode}");
+        }
+    }
+}
+```
+
+---
 
 ### Best practices
 
