@@ -1,6 +1,6 @@
 ---
 title: Extend Personal Tab to Microsoft 365
-description: Learn how to update your personal tab app to run in Outlook and Microsoft 365 app, in addition to Microsoft Teams.
+description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 author: erikadoyle
@@ -138,6 +138,8 @@ As in Microsoft Teams, tab applications are hosted within [iframe elements](http
 If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, make sure you allow all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) in your CSP headers:
 
 [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+
+[!INCLUDE [ocdi-warning](../includes/tabs/ocdi-warning.md)]
 
 <a name='update-azure-ad-app-registration-for-sso'></a>
 
@@ -325,7 +327,6 @@ Teams Toolkit (`F5`) doesn't support debugging Android apps in Microsoft 365. He
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365 app) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Sample static tab (Microsoft 365 app) | Demonstrates SSO authentication and the TeamsJS library capabilities as available in different hosts. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 | Northwind Orders app | Demonstrates how to use the TeamsJS library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
