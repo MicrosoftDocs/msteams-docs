@@ -124,7 +124,7 @@ export function initializePublicClient() {
 }
 ```
 
-# [.NET](#tab/.net)
+# [.NET](#tab/net)
 
 ```
 using Microsoft.Identity.Client;
@@ -151,6 +151,7 @@ public class MsalClient
 }
 ```
 
+---
 
 ### Acquire your first token
 
@@ -170,6 +171,8 @@ To acquire a token, follow these steps:
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired, or the user didn't consent to all the requested scopes.
 
 The following code shows you an example to access a token:
+
+# [.NET](#tab/js)
 
 ```javascript
 
@@ -209,6 +212,47 @@ The following code shows you an example to access a token:
     });
 
 ```
+
+# [.NET](#tab/cs)
+
+```
+// MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
+var account = publicClientApplication.GetAccountsAsync().Result.FirstOrDefault();
+var accessTokenRequest = publicClientApplication.AcquireTokenSilent(new[] { "user.read" }, account);
+
+try
+{
+    var accessTokenResponse = accessTokenRequest.ExecuteAsync().Result;
+    // Acquire token silent success
+    var accessToken = accessTokenResponse.AccessToken;
+    // Call your API with token
+    CallApi(accessToken);
+}
+catch (MsalUiRequiredException ex)
+{
+    // Acquire token silent failure, and send an interactive request
+    try
+    {
+        var accessTokenResponse = publicClientApplication.AcquireTokenInteractive(new[] { "user.read" }).ExecuteAsync().Result;
+        // Acquire token interactive success
+        var accessToken = accessTokenResponse.AccessToken;
+        // Call your API with token
+        CallApi(accessToken);
+    }
+    catch (Exception innerEx)
+    {
+        // Acquire token interactive failure
+        Console.WriteLine(innerEx);
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex);
+}
+```
+
+---
+
 
 ### Call an API
 
