@@ -1,6 +1,6 @@
 ---
 title: One-on-one conversations with bots
-description: In this module, learn end-to-end scenario of having a one-on-one conversation with a bot in Microsoft Teams
+description: Learn about end-to-end scenario of bot conversation in one-on-one chat, design personal bot, and best practices for welcome messages in personal chat.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/02/2023
