@@ -765,9 +765,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
 
-## Message extensions Plugins in Copilot for Microsoft 365 applications
-
- Microsoft 365 Message extensions plugins in Copilot for M365 applications
+## Message extensions plugins in Copilot for Microsoft 365 applications
 
 > [!IMPORTANT]
 > Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
@@ -777,7 +775,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
  If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
-### Requirements for Plugins in Copilot for Microsoft 365
+### Requirements for plugins in Copilot for Microsoft 365
 
 To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
 
