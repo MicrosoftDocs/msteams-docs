@@ -765,10 +765,12 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
 
-## Message extensions Plugins in Copilot for Microsoft 365
+## Message extensions Plugins in Copilot for Microsoft 365 applications
+
+ Microsoft 365 Message extensions plugins in Copilot for M365 applications
 
 > [!IMPORTANT]
-> Message extensions Plugins in Copilot for Microsoft 365 are in limited private preview. More details to be published after a public preview is announced.
+> Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
