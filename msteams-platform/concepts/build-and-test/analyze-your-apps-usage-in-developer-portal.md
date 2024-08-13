@@ -109,7 +109,8 @@ After you have selected your desired filters, you can explore the following indi
 
  The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-   :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows you the analytics page filter in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshots shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
+
    After you have selected your desired filters, you can explore the following individual widgets:
 
    * [Usage over time](#usage-by-time-period)
@@ -121,7 +122,7 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
-   (Image to be added)
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshots shows you app usage over time of your published app in Developer Portal.:::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -133,6 +134,7 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
+   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshots shows you app usage by retention state of your published app in Developer Portal.:::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -145,13 +147,13 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on actuve users in different country or region.
 
-   image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal. lightbox="../../assets/images/tdp/tdp-region.png":::
 
  ### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
-   image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshots shows you app usage intensity of your published app in Developer Portal.:::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -177,6 +179,8 @@ After you have selected your desired filters, you can explore the following indi
 
    You can also check the host with most active users and OS with most active users of monthly, weekly, and daily data in metric card on this page.
 
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.:::
+
  ### Usage by host product
 
    The **Usage by host app** chart shows your app's active usage across various host products, such as **Teams**, **Microsoft 365 app**, and **Outlook** of monthly, weekly, and daily data.
@@ -199,28 +203,16 @@ After you have selected your desired filters, you can explore the following indi
 
    The app capability page shows you the usage of individual app capabilities that you've configured within your app. The Key Performance Indicator (KPI) cards that display metrics such as the capability with the most active users and the capability with the least active users.
 
-  This page summarizes the overall usage of the following app capabilities in differnt host product.
+  This page summarizes the overall usage of the following app capabilities in different host product.
 
+  * Bot
+  * Tab
+  * Message extension
+  * Meeting extension
+  * Connector
+  * 
 
-   * Personal App – Personal- Teams 
-   * Personal Tabs-Sope(?)   - Outlook  
-
-Personal Tabs- (scope?) Office  
-
-Tabs-- Group, team, meetings – Teams  
-
-Message Extensions- scope? Teams  
-
-Message Extensions –scope?  Outlook  
-
-Add-In – scope? - outlook  
-
-Bots – personal, channel,meetings-  teams- Teams  
-
-
-
-
-
+   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal.:::
 
 ---
 
