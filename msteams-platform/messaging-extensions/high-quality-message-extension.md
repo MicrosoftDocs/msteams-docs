@@ -767,9 +767,12 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Message extensions Plugins in Copilot for Microsoft 365
 
+> [!IMPORTANT]
+> Message extensions Plugins in Copilot for Microsoft 365 are currently in limited private preview. More details will be published once a public preview is announced.
+
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
- If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow. 
+ If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
  <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
 ### Requirements for Plugins in Copilot for Microsoft 365
@@ -780,7 +783,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 
     Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
-    1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account. 
+    1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account.
     1. Open <b>App registrations</b>.
     1. Select the name of your application to open its app registration.
     1. From the <b>Manage</b> section, select <b>Expose an API</b>.
@@ -807,10 +810,10 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 * <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
-    1. Open Bot <b>Services</b>. 
-    1. Select the name of your bot to update its channels. 
-    1. From the <b>Settings</b> section, select <b>Channels</b>. 
-    1. From <b>Available channels</b>, select <b>Microsoft 365 & Microsoft Teams</b>, and then select <b>Apply</b>. 
+    1. Open Bot <b>Services</b>.
+    1. Select the name of your bot to update its channels.
+    1. From the <b>Settings</b> section, select <b>Channels</b>.
+    1. From <b>Available channels</b>, select <b>Microsoft 365 & Microsoft Teams</b>, and then select <b>Apply</b>.
 
 * <b>Configure content security policy headers</b>
 
@@ -825,14 +828,13 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
     | OneNote | fa000000128.resources.office.net |
     | Copilot and Bing | `edgeservices.bing.com`, `www.bing.com`, `copilot.microsoft.com` |
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
-    | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` | 
+    | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 * <b>Upgrade Teams JS version to the 2.22.0 build</b>
 
     If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
-
 
 ## Code samples
 
