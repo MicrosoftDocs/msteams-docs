@@ -578,7 +578,7 @@ You can try the following code sample for a bot app:
 |----------------|-----------------|--------------|--------------|
 | Meeting transcription | This is a sample application which demonstrates how to get meeting transcript using Graph API and show it in the dialog (referred as task module in TeamsJS v1.x). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 | Meeting transcript and recording | This is a sample application which demonstrates how to get meeting transcript and recording using Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) |
-| Tab Meeting Recording and transcript with auto recording | This sample shows meeting auto recording. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) | - |
+| Tab Meeting Recording and transcript with auto recording | This code sample demonstrates how to build and configure a meeting app for auto recording and auto transcription. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) | - |
 
 ## Next step
 
