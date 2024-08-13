@@ -532,9 +532,9 @@ The search parameters must have good descriptions with acceptable parameters, en
 ## Sample prompts
 
 > [!NOTE]
-> Sample prompts will be available soon in Copilot for Microsoft 365.
+> Sample prompts to be available soon in Copilot for Microsoft 365.
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts will be available in the following areas within Copilot for Microsoft 365:
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts to be available in the following areas within Copilot for Microsoft 365:
 
 * First Run Experience (FRE): When a user first installs or enables a plugin.
 * Prompt library or Copilot Lab: When a user seeks help with prompts.
@@ -768,7 +768,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 ## Message extensions Plugins in Copilot for Microsoft 365
 
 > [!IMPORTANT]
-> Message extensions Plugins in Copilot for Microsoft 365 are currently in limited private preview. More details will be published once a public preview is announced.
+> Message extensions Plugins in Copilot for Microsoft 365 are in limited private preview. More details to be published after a public preview is announced.
 
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
@@ -779,15 +779,15 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
 
 To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
 
-* <b>Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps</b>
+* **Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps**
 
     Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account.
-    1. Open <b>App registrations</b>.
+    1. Open **App registrations**.
     1. Select the name of your application to open its app registration.
-    1. From the <b>Manage</b> section, select <b>Expose an API</b>.
-    1. In the <b>Authorized client applications</b> section, ensure that the following client ID values are listed:
+    1. From the **Manage** section, select **Expose an API**.
+    1. In the **Authorized client applications** section, ensure that the following client ID values are listed:
 
         | Microsoft 365 client application  | Client ID |
         | --- | --- |
@@ -804,18 +804,18 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 
         > [!NOTE]
         >
-        > * Support for Excel and OneNote client applications will be available soon.
+        > * Support for Excel and OneNote client applications to be available soon.
         > * For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
-* <b>Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel</b>
+* **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
-    1. Open Bot <b>Services</b>.
+    1. Open Bot **Services**.
     1. Select the name of your bot to update its channels.
-    1. From the <b>Settings</b> section, select <b>Channels</b>.
-    1. From <b>Available channels</b>, select <b>Microsoft 365 & Microsoft Teams</b>, and then select <b>Apply</b>.
+    1. From the **Settings** section, select **Channels**.
+    1. From **Available channels**, select **Microsoft 365 & Microsoft Teams**, and then select **Apply**.
 
-* <b>Configure content security policy headers</b>
+* **Configure content security policy headers**
 
     If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
@@ -830,7 +830,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
-* <b>Upgrade Teams JS version to the 2.22.0 build</b>
+* **Upgrade Teams JS version to the 2.22.0 build**
 
     If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
