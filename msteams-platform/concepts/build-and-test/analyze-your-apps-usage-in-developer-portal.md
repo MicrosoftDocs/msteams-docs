@@ -22,7 +22,9 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-You can view your app's usage and other insights from the **Analytics** page. To access the page:
+# [Custom app built for your org](#tab/custom-app-built-for-your-org)
+
+You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
@@ -30,8 +32,6 @@ You can view your app's usage and other insights from the **Analytics** page. To
 1. Select **Analytics** under the **Overview** or select **View details** under the **Active Users (Preview)** card.
 
    :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
-
-# [Custom app built for your org](#tab/custom-app-built-for-your-org)
 
 As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
 
@@ -95,13 +95,20 @@ After you have selected your desired filters, you can explore the following indi
 
  ### App dashboard
 
-   The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
+   The **My App dashboard** shows you the latest R28 (Rolling 28 days) data for each of the metrics under the previous four categories, and the Month over Month change.
 
    You can select each of these **Metric name** to see trends over time.
 
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
 # [Third party apps](#tab/thirdpartyapps)
+
+You can view your third party app's usage and other insights from the **Analytics** page. To access the page:
+
+1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
+1. Select **Apps** from the left pane.
+1. Select the required app from the **Apps** page.
+1. Select **Analytics** under the **Overview**.
 
 As you explore your third party app usage metrics on this page, you've the following three different section:
 
