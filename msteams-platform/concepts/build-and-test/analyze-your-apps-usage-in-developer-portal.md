@@ -208,9 +208,8 @@ After you have selected your desired filters, you can explore the following indi
   * Bot
   * Tab
   * Message extension
-  * Meeting extension
+  * Personal app
   * Connector
-  * 
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal.:::
 
