@@ -229,9 +229,7 @@ To configure app manifest:
     > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
-1. Add the following code snippet to the app manifest file:
-
-   **webApplicationInfo**
+1. Add the following code snippet into the `webApplicationInfo` section of your app manifest file:
 
     ```json
     "webApplicationInfo":
@@ -245,7 +243,7 @@ To configure app manifest:
     * `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
     * `api://subdomain.example.com/{Microsoft Entra AppId}` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
-    **MicrosoftEntraConfiguration**
+1. Add the following code snippet into the `composeExtensions` section of your app manifest file:
 
     ```json
     "authorization": {

@@ -290,13 +290,13 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 Response rendering template is a predefined format that dictates how the results from your API are displayed within Teams. It uses templates to create Adaptive Cards or other UI elements from the API’s response, ensuring a seamless and integrated user experience within Teams. The template defines the layout and style of the information presented, which can include text, images, and interactive components. Ensure that you adhere to following guidelines for response rendering template:
 
-* **Define the schema reference URL** in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
-* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented. For more information on the layout, see [respond to user requests](how-to/search-commands/respond-to-search.md#respond-to-user-requests).
-* **A `jsonPath` is rerequired** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
-* **Define `jsonPath` as the path** to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
-* **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
-* **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
-* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the Adaptive Card template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+* Define the schema reference URL in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+* The supported values for `responseLayout` are `list` and `grid`, which determine how the response is visually presented. For more information on the layout, see [respond to user requests](how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+* A `jsonPath` is rerequired for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* Define `jsonPath` as the path to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
+* Get a sample response for validating the response rendering template. This serves as a test to ensure your template works as expected.
+* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
+* You can use the Adaptive Card Designer to bind the API response to the response rendering template and preview the Adaptive Card. Insert the Adaptive Card template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
