@@ -118,16 +118,14 @@ As you explore your third party app usage metrics on this page, you've the follo
 
  ### App usage
 
- The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
-
-   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshots shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
-
-   After you have selected your desired filters, you can explore the following individual widgets:
+ The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to two days to reflect in the charts. The app usage page shows you the following analytics:
 
    * [Usage over time](#usage-by-time-period)
    * [Usage by retention state](#usage-by-retention-state)
    * [Usage by country or region](#usage-by-country-or-region)
    * [Usage intensity](#usage-intensity)
+
+   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshots shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
 
  #### Usage over time
 
@@ -188,7 +186,7 @@ As you explore your third party app usage metrics on this page, you've the follo
    * [Usage by operating system](#usage-by-operating-system)
    * [Usage by platform](#usage-by-platform)
 
-   You can also check the host with most active users and OS with most active users of monthly, weekly, and daily data in metric card on this page.
+   The Key Performance Indicator (KPI) cards that display metrics such as the host with most active users and OS with most active users of monthly, weekly, and daily data in metric card.
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.":::
 
