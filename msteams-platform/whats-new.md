@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
-* ***August 13, 2024***: [DevTools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
+* ***August 14, 2024***: [DevTools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
 
 :::column-end:::
 :::row-end:::
