@@ -13,9 +13,9 @@ ms.date: 07/16/2024
 API secret service authentication is a method that allows your app to authenticate with your API. You can configure your endpoint to accept a secret to authenticate requests. The API secret must be registered in Microsoft Teams and when a user interacts with your message extension, Teams uses the secret to authenticate with your API. The following API key registration properties help you to secure your key and ensure it's limited to your application:
 
 * **Base URL**: Teams transmits the secrets to endpoints where the URL begins with the value in this field.
-* **Target Tenant**: To limit API access to your Microsoft 365 tenant.
-* **App ID**: To limit the key access to a specific app.
-* **Secret key**: To authorize access between your app and OpenAPI endpoints.
+* **Target Tenant**: To limit API access to your Microsoft 365 tenant or any tenant.
+* **App ID**: To limit the key access to a specific app or any app.
+* **Secret key**: To authenticate access to your app.
 
 API secret service authentication is a secure method for your app to authenticate with API. You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the API key registration ID returned when you submitted the API key through the portal.
 
@@ -56,14 +56,14 @@ To register an API Key, follow these steps:
 
 1. Under **Base URL**, specify a path that initiates all the API endpoints. The path must start with https, include a fully qualified domain name, and optionally, a path. Teams only transmits the secrets to endpoints where the URL begins with this value. For example, `https://api.yelp.com`. *[Mandatory]*
 
-   Base URL ensures that the key remains secure and isn't leaked to random endpoints, even if another app illicitly acquires the API secret registration ID and incorporates it into their own app. We enforce this URL constraint on API keys. If the path registered here doesn't prefix the target endpoint defined in the app manifest, the call gets dropped.
+   Base URL ensures that the key remains secure and isn't leaked to random endpoints, even if another app illicitly acquires the API secret registration ID and incorporates it into their own app. We enforce this URL constraint on API keys. If the path registered here doesn't prefix the target endpoint defined in the OpenAPI spec, the call gets dropped.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-register-key-domain.png" alt-text="Screenshot shows the Description and Add domain options in the API key registration page in Developer Portal for Teams.":::
 
 1. Under **Target tenant**, select any of the following:
 
    * **Home tenant**: The API key is only functional within the tenant where it's registered.
-   * **Any tenant**: The API key t is usable in any tenant.
+   * **Any tenant**: The API key is usable in any tenant.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
 
@@ -72,7 +72,7 @@ To register an API Key, follow these steps:
    * **Existing Teams app**: The **Existing Teams app** option binds the API secret registration to your specific Teams app.
    * **Any Teams app**: The API key can be used with any Teams app.
 
-   Adding a domain ensures that the key isn't exposed to endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially sending unwanted data to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration.
+   Adding a domain ensures that the key isn't exposed to random endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially sending unwanted data to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
 
@@ -121,13 +121,13 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 
    This structure is crucial for the security of your API secret(s), as Teams will only send secrets to endpoints that start with the specified Base URL.
 
-* **Target tenant**: As you develop your app within your Microsoft 365 tenant, you'll initially test it as a custom app built for your org (LoB) or custom app. During this stage, you must create the API secret registration with your **Home tenant** as the target tenant, ensuring the key remains exclusive to your tenant.
+* **Target tenant**: As you develop your app within your Microsoft 365 tenant, you'll initially test it as a custom app built for your org (LOB app) or custom app. During this stage, you must create the API secret registration with your **Home tenant** as the target tenant, ensuring the key remains exclusive to your tenant.
 
   After you've completed testing and are ready to submit your app manifest to the Partner Center for the Teams Store, you'll need to switch the target tenant setting to **Any tenant**. This change allows your API secret registration to be used across various tenants once your app is available in the Teams Store.
 
-* **Teams app ID**: As you develop your app within your Microsoft 365 tenant and start to test it as a custom app built for your org (Lob) or custom app, you must set the API key registration with the Teams app ID as **Any Teams app**. This configuration allows the key to be used with any Teams app as custom app built for your org (Lob) or custom apps generate IDs after they're uploaded, and you won't have the app's ID at this stage.
+* **Teams app ID**: As you develop your app within your Microsoft 365 tenant and start to test it as a custom app built for your org (Lob) or custom app, you must set the API key registration with the Teams app ID as **Any Teams app**. This configuration allows the key to be used with any Teams app as custom app built for your org (LOB app) or custom apps generate IDs after they're uploaded, and you won't have the app's ID at this stage.
 
-  Your key's security is still maintained through the **Home Tenant** and **Base URL**. When you're ready to release your app to the world, you need to change the Teams app ID setting to **Existing Teams app** and enter your manifest ID. Finally, submit your app manifest to the Partner Center for inclusion in the Teams Store. Later, your API secret registration is tied to your specific Teams app and can't be used with others.
+  Your key's security is still maintained through the **Home Tenant** and **Base URL**. When you're ready to release your app to the world, you need to change the Teams app ID setting to **Existing Teams app** and enter your Teams app ID. Finally, submit your app manifest to the Partner Center for inclusion in the Teams Store. Later, your API secret registration is tied to your specific Teams app and can't be used with others.
 
 ## Next step
 

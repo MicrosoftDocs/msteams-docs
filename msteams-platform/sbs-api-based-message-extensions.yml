@@ -496,8 +496,8 @@ items:
             "full": "Search ME API full"
         },
         "description": {
-            "short": "product app for testing API message extensions",
-            "full": "product app for testing API message extensions"
+            "short": "product app for testing API based message extensions",
+            "full": "product app for testing API based message extensions"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
