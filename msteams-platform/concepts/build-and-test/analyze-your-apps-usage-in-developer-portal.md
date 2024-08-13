@@ -49,7 +49,7 @@ After you have selected your desired filters, you can explore the following indi
 * [Usage by retention state](#usage-by-retention-state)
 * [Usage intensity](#usage-intensity)
 
- ## Usage by time period
+ ### Usage by time period
 
   The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
@@ -62,13 +62,13 @@ After you have selected your desired filters, you can explore the following indi
  | **Weekly R7** | Each data point represents a given R7 (Rolling 7 days) period. |
  | **Daily** | Each data point represents a given R1 (Rolling 1 day) period. |
 
- ## Usage by platform and OS
+ ### Usage by platform and OS
 
   The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 days) period.
 
    :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Screenshot shows you the usage by platform and OS chart for your published app.":::
 
- ## Usage by retention state
+ ### Usage by retention state
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
@@ -81,7 +81,7 @@ After you have selected your desired filters, you can explore the following indi
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
    | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
- ## Usage intensity
+ ### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
@@ -93,7 +93,7 @@ After you have selected your desired filters, you can explore the following indi
    | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
    | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
 
- ## App dashboard
+ ### App dashboard
 
    The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
 
@@ -103,9 +103,13 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third party apps](#tab/thirdpartyapps)
 
- 
+As you explore your third party app usage metrics on this page, you've the following three different section:
 
- ## App usage
+* [App usage](#app-usage)
+* [Host product](#host-product)
+* [App capability](#app-capability)
+
+ ### App usage
 
  The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
@@ -118,7 +122,7 @@ After you have selected your desired filters, you can explore the following indi
    * [Usage by country or region](#usage-by-country-or-region)
    * [Usage intensity](#usage-intensity)
 
- ### Usage over time
+ #### Usage over time
 
    The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
@@ -130,7 +134,7 @@ After you have selected your desired filters, you can explore the following indi
    | **Weekly (WAU)** | Each data point represents a given R7 (Rolling 7 days) period. |
    | **Daily (DAU)** | Each data point represents a given R1 (Rolling 1 day) period. |
 
- ### Usage by retention state
+ #### Usage by retention state
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
@@ -143,13 +147,13 @@ After you have selected your desired filters, you can explore the following indi
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
    | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
- ### Usage by country or region
+ #### Usage by country or region
 
-   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on actuve users in different country or region.
+   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on active users in different country or region.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-region.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
 
- ### Usage intensity
+ #### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
@@ -161,7 +165,7 @@ After you have selected your desired filters, you can explore the following indi
    | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
    | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
 
- ### App dashboard
+ #### App dashboard
 
    The **My App dashboard** table shows you the latest R30 (Rolling 28 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
 
@@ -169,7 +173,7 @@ After you have selected your desired filters, you can explore the following indi
 
    image to be added
 
- ## Host product
+ ### Host product
 
    The Host product page shows you the following app usage analytics:
 
@@ -181,25 +185,25 @@ After you have selected your desired filters, you can explore the following indi
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.":::
 
- ### Usage by host product
+ #### Usage by host product
 
    The **Usage by host app** chart shows your app's active usage across various host products, such as **Teams**, **Microsoft 365 app**, and **Outlook** of monthly, weekly, and daily data.
 
    Image to be added
 
- ### Usage by platform
+ #### Usage by platform
 
    The **Usage by platform** chart shows your app's active usage across various platform, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
 
    Image to be added
 
- ### Usage by operating system
+ #### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating system, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
 
    Image to be added
 
- ## App capability
+ ### App capability
 
    The app capability page shows you the usage of individual app capabilities that you've configured within your app. The Key Performance Indicator (KPI) cards that display metrics such as the capability with the most active users and the capability with the least active users.
 
