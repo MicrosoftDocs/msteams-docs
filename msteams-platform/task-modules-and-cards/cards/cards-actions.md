@@ -1,6 +1,6 @@
 ---
 title: Add card actions in a bot
-description: Learn what are card actions in Microsoft Teams, action types and how to use them in your bots.
+description: Learn about card actions in Microsoft Teams, action types such as openAI, messageBack, imBack, invoke, and signin, and how to use card actions in bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/04/2023
@@ -25,7 +25,7 @@ Cards used by bots and message extensions in Microsoft Teams support the followi
 >
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#suggest-action-using-button) in Bot Framework or Azure Bot Service.
 >* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
 ## Action type openUrl

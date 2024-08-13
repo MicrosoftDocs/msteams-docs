@@ -1,6 +1,6 @@
 ---
-title: Search with message extensions
-description: In this article, you learn how to develop search based message extensions
+title: Build Search-based Message Extensions
+description: Learn how to create search based message extensions for Microsoft Teams using v3 Bot Framework SDK, handle queries, event handlers, authentication, and SDK support.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023

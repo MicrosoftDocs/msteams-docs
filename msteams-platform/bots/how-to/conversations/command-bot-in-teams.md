@@ -1,5 +1,5 @@
 ---
-title: Command bot in Teams
+title: Build & Explore Command Bot in Teams
 author: surbhigupta
 description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
