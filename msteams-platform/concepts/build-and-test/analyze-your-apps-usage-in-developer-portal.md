@@ -122,7 +122,7 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshots shows you app usage over time of your published app in Developer Portal.:::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshots shows you app usage over time of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -134,7 +134,7 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshots shows you app usage by retention state of your published app in Developer Portal.:::
+   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshots shows you app usage by retention state of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -147,13 +147,13 @@ After you have selected your desired filters, you can explore the following indi
 
    The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on actuve users in different country or region.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal. lightbox="../../assets/images/tdp/tdp-region.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-region.png":::
 
  ### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshots shows you app usage intensity of your published app in Developer Portal.:::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshots shows you app usage intensity of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -179,7 +179,7 @@ After you have selected your desired filters, you can explore the following indi
 
    You can also check the host with most active users and OS with most active users of monthly, weekly, and daily data in metric card on this page.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.:::
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.":::
 
  ### Usage by host product
 
@@ -211,7 +211,7 @@ After you have selected your desired filters, you can explore the following indi
   * Personal app
   * Connector
 
-   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal.:::
+   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal.":::
 
 ---
 
