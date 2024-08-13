@@ -1,6 +1,6 @@
 ---
-title: Copilot handoff
-description: Learn how to allow users to continue their conversation with custom engine copilot from the copilot for Microsoft 365.
+title: Copilot Handoffs for Bots
+description: Learn how to allow users to continue their conversation with custom engine copilot from the copilot for Microsoft 365 to your bot service.
 ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila

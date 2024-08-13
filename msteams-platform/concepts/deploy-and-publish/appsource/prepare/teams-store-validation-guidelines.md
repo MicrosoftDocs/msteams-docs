@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams Store validation guidelines
+title: Teams Store Validation Guidelines
 description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the mandatory and suggested fixes, and validation guidelines.
 author: heath-hamilton
 ms.author: surbhigupta
@@ -15,8 +15,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 >
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
-> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Teams Store validation only after you have fixed the issues.
-> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams Store, if you choose not to fix the issues.
+> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -750,7 +750,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video must highlight your app’s functionalities and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
-* The video must be in the format `https://www.example.com/123456789`.
+* The video must be in the format `https://www.youtube.com/watch?v=:id` or `https://youtu.be/:id` for YouTube and `https://vimeo.com/:id` for Vimeo.
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
@@ -1505,7 +1505,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Graphic shows an example of continuous loading screen in an app.":::
 
-* App mustn't open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
+* App mustn't open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the active Teams instance. [*Mandatory Fix*]
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
 
@@ -1865,7 +1865,7 @@ The long description of an app must clearly call out the following:
 ## See also
 
 * [Test and debug your app](~/concepts/build-and-test/debug.md)
-* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
+* [Validate your app in Developer Portal for Teams](../../../build-and-test/manage-your-apps-in-developer-portal.md#publish)
