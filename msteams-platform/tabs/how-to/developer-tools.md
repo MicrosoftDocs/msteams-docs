@@ -28,7 +28,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 
       :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" lightbox="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
 
-    * On macOS, select the Microsoft Teams icon in the Dock.
+    * On macOS
 
       :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.png" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
 
