@@ -171,11 +171,11 @@ As you explore your third party app usage metrics on this page, you've the follo
 
    You can select each of these **Metric name** to see trends over time.
 
-   image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshots shows you app capability usage of your published app in Developer Portal.":::
 
  ### Host product
 
-   The Host product page shows you the following app usage analytics:
+   The host product page shows you the following app usage analytics:
 
    * [Usage by host product](#usage-by-host-product)
    * [Usage by operating system](#usage-by-operating-system)
@@ -189,19 +189,19 @@ As you explore your third party app usage metrics on this page, you've the follo
 
    The **Usage by host app** chart shows your app's active usage across various host products, such as **Teams**, **Microsoft 365 app**, and **Outlook** of monthly, weekly, and daily data.
 
-   Image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshots shows you app usage in different host product of your published app in Developer Portal.":::
 
  #### Usage by platform
 
    The **Usage by platform** chart shows your app's active usage across various platform, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
 
-   Image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshots shows you app usage in different platform of your published app in Developer Portal.":::
 
  #### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating system, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
 
-   Image to be added
+   :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshots shows you app usage in different OS of your published app in Developer Portal.":::
 
  ### App capability
 
