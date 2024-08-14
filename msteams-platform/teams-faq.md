@@ -611,9 +611,9 @@ No, the landscape mode support in Teams doesn't have any negative effect on app 
 ## Partner Center
 
 <details>
-<summary>Where do you find MPN ID?</summary>
+<summary>Where do you find CCP ID?</summary>
 
-You can find your MPN ID by fetching the Partner Center ID.
+You can find your CCP ID by fetching the Partner Center ID.
 <br>
 &nbsp;
 </details>
