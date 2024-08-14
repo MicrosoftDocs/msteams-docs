@@ -1,7 +1,7 @@
 ---
 title: Add an Outlook Add-in to a Teams app
 description: Learn how to add an Outlook Add-in to a Teams app. This article walks you through the steps to add an Outlook Add-in to a Teams app, test it, then deploy it to Azure.
-ms.date: 02/15/2024
+ms.date: 08/20/2024
 ms.author: mosdevdocs
 author: rickki
 ms.topic: tutorial
@@ -10,6 +10,9 @@ ms.subservice: m365apps
 ---
 
 # Add an Outlook Add-in to a Teams app
+
+> [!TIP]
+> This article helps you understand how to create a combined Teams app and Office add-in by having you begin with a newly created Teams app and Outlook add-in. For an overview of the general process of merging Teams apps and Office add-ins, including existing Teams apps and add-ins that are already in use, see [General guidance for combining an Outlook add-in and a Teams app](overview-combining-add-in-and-teams-app.md).
 
 ## Introduction
 
