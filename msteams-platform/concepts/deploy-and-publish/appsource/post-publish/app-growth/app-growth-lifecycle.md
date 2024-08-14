@@ -1,7 +1,7 @@
 ---
-title: Growth lifecycle for your app
+title: A Guide for App Growth Lifecycle
 author: heath-hamilton
-description: Learn to plan growth lifecycle for your Teams app.
+description: Learn to plan growth lifecycle for your Teams app, review the Teams partners GTM guide, and best practices for app growth and adoption.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -23,9 +23,9 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
   - Building awareness for the app through impactful customer and seller marketing channels.
   - Building readiness of product, sales, customer success and support functions for the app’s upcoming adoption, growth, and ROI realization.
 
-  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
+  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning, and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
-- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
+- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the Software as a Service (SaaS) app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
 
 - **Succeed stage**: The final stage of the Teams collaborative app lifecycle is where the app moves from being a product integration built on Teams into a full-fledged strategic product line just as the core SaaS product for the web browser or native apps for Windows or mobile phones.
 
@@ -35,11 +35,11 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
   - Optimizing customer sales and conversion based on PQLs
   - Investing further in more user-valuable scenarios or experiences inside the app
 
-There may be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
+There might be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
 
 ## Review the Teams partners GTM guide
 
-Get started first by reviewing (and sharing with your GTM leaders) this high-level visual [Guide to ISV success with Microsoft for Teams Partners](https://aka.ms/teamsappsGTMguide) flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
+Get started first by reviewing (and sharing with your GTM leaders) this high-level visual [Guide to ISV success with Microsoft for Teams Partners](https://aka.ms/teamsappsGTMguide) flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app through Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account, or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
 
 ## Step-by-step guide to grow your app
 
@@ -48,7 +48,7 @@ It's time now to expand on the preview provided by the flipbook above! The follo
 Developers are encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem. However, the guidance provided can't be considered comprehensive. It's recommended that developers must always adapt these growth initiatives in the context best known to them based on:
 
 - The nature of business.
-- The app they’ve launched on Teams.
+- The app launched on Teams.
 - The target customer personas.
 
 <!--
@@ -63,6 +63,29 @@ You can plan your app's growth through the app lifecycle:
 
 [Back to top](#growth-lifecycle-for-your-app)
 
+## Best practices for app growth and adoption
+
+To accelerate the growth of third-party apps and increase the adoption rates, consider the following strategies:
+
+- **Leverage a freemium model**: It's proven that a basic freemium account significantly improves user conversion rates. It allows users to experience the core benefits of your app without initial costs and increases the chances of conversion to paid plans. It's recommended to offer a free trial period of 30 days.
+
+- **Integrate a shareable call-to-action**: Implement a dynamic call-to-action (CTA) button within an Adaptive Card. It enables users to share your app effortlessly, to onboard their team members, thereby fostering organic growth.
+
+- **Implement adoption change management**: Consistent communication with users is a key. Update users regularly about the new and existing features through email, which helps maintain their interest and encourages continued use of your app.
+
+- **Identify and resolve blockers**: Proactively address and resolve any issues to drive app adoption. Collaborate with partners to gather feedback and eliminate any blockers that hinder the user experience.
+
+- **Embrace growth marketing**: Develop a dynamic growth marketing strategy tailored for SaaS offers that focuses on driving usage through data-driven techniques and user engagement analytics.
+
+  Here are a few recommendations for growth marketing strategies:
+
+  - Send active notifications to users through email with a CTA to the Teams app.
+  - Conduct targeted campaigns on social media with direct links to the Teams app.
+  - Secure a premium placement for the Independent software vendor (ISV) Teams app on SaaS platforms with a CTA to the Teams app.
+  - Create informative blog posts, tutorials, or webinars that highlights the unique features of your Teams app.
+
+By adopting these methods, you can observe an increase in app installations, sustained engagement, and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
+
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -70,8 +93,7 @@ You can plan your app's growth through the app lifecycle:
 
 ## See also
 
-- [Strategize and execute growth for your app](overview-app-growth.md)
-- [Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
+[Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
 
 <!--
 ### Building your collaborative app

@@ -1,5 +1,5 @@
 ---
-title: Integrate People Picker
+title: Integrate People Picker in Teams Apps
 description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -120,7 +120,6 @@ The following table lists the error codes and their descriptions:
 
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

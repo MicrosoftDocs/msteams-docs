@@ -1,7 +1,7 @@
 ---
-title: Debug your Teams app locally using Visual Studio
+title: Debug Teams App Locally 
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app locally in Teams Toolkit using Visual Studio.
+description: Learn how to set up dev tunnel for bots and message extensions and prepare Teams Toolkit to debug your Teams app locally using Visual Studio.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -68,7 +68,7 @@ To debug your app after you create a project, perform the following steps:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Debug background process](debug-background-process-v4.md)
+> [Debug background process](debug-background-process-vs.md)
 
 ## See also
 
@@ -76,4 +76,4 @@ To debug your app after you create a project, perform the following steps:
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env-v4.md)
+* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env-v4.md)
