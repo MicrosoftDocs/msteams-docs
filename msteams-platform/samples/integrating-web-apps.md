@@ -5,7 +5,7 @@ ms.author: surbhigupta
 ms.date: 04/02/2023
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerations for Teams integration
+title: Factors to Consider for App Integration
 ---
 # Considerations for Teams integration
 

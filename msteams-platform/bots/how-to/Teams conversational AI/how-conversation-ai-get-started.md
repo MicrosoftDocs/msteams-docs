@@ -1,5 +1,5 @@
 ---
-title: Get started with Teams AI library
+title: Use Teams AI Library to Build Apps/Bots
 description: In this article, learn how to create an app using Teams AI library with AI component, storage, register data source, prompts, and actions.
 ms.localizationpriority: medium
 ms.topic: overview
