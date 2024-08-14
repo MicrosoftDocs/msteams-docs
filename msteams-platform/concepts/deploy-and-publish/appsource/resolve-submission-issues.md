@@ -29,6 +29,10 @@ The Microsoft report includes the following information:
 * Instructions on how to reproduce each issue.
 * Recommendations for resolving each issue based on publicly available developer documentation.
 
+Let's look at the process to resubmit the app to Teams Store.
+
+:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Partner Centre":::
+
 After resolving all issues shared in the review report, submit your updated app the to Partner Centre. Send the following to the Microsoft concierge validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
 
 * Updated app package
@@ -36,10 +40,6 @@ After resolving all issues shared in the review report, submit your updated app 
   * Credentials for at least two accounts (one admin account and one non-admin account).
   * Instructions to configure the app and test its functionality.
   * A video showing your app used in Teams.
-
-Let's look at the process to resubmit the app to Teams Store.
-
-:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Partner Centre":::
 
 Following app submission on Partner Centre, the process for resolving issues and resubmitting an app involves the following steps:
 
