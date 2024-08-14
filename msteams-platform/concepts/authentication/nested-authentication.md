@@ -16,12 +16,14 @@ ms.localizationpriority: medium
 > * NAA is supported only in single page apps (SPA) like tabs.
 > * NAA isn't supported on Teams web client and Microsoft 365 apps.
 
-NAA is a new authentication protocol for single page apps that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate Single Sign-on (SSO) across apps nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow.
+NAA is a new authentication protocol for single page apps that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate Single Sign-on (SSO) across apps nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow:
 
 * You need to use only the MSAL.js library and don’t need the `getAuthToken` function in TeamsJS.
 * You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
 * You can use incremental and dynamic consent for scopes.
 * You don't need to preauthorize your hosts (for example, Teams, Office) to call your endpoints.
+
+For more information about SSO for tab apps, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
 The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-Ins and Teams Tabs and Personal apps.
 
@@ -38,7 +40,7 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 | Solicit user consent for more permissions | ✔️ |  |
 | Conduct an OBO exchange on the server | ✔️ |  |
 
-## Scenarios
+## Use cases for enabling NAA
 
 | Scenario | Description |
 | --- | --- |
@@ -72,9 +74,10 @@ To enable nested authentication, your app must actively configure a redirect URI
 brk-<broker_application_id>://<your_domain>
 ```
 
-Where, 
+Where,
+
 * <broker_application_id> is the alias of the broker or brokers you wish to trust
-* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**. 
+* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
 If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
@@ -253,7 +256,6 @@ catch (Exception ex)
 
 ---
 
-
 ### Call an API
 
 After you receive the token, use it to call the API. This ensures that the API is called with a valid token for ensuring that authenticated requests can be made to the server.
@@ -280,6 +282,7 @@ fetch(graphEndpoint, options)
     });
 
 ```
+
 # [.NET](#tab/dotnet)
 
 ```
@@ -332,4 +335,3 @@ public class GraphApiClient
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|
 |Nested app authentication   |  This sample shows how to build a NAA authentication protocol for single page applications embedded in host environments like Teams, Outlook, and Microsoft 365.||[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)| |
-
