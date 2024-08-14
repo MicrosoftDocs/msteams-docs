@@ -1,6 +1,6 @@
 ---
 title: Types of Cards & their Usage
-description: Learn about card types, cards specific to bots, connectors, and message extensions, Adaptive Cards overflow menu and Object ID, UPN in user mentions.
+description: Learn about card types, cards specific to bots, connectors, and message extensions, Adaptive Cards overflow menu, and Object ID, UPN in user mentions.
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 01/08/2023
@@ -89,6 +89,10 @@ Share code snippets as richly formatted Adaptive Cards in Teams chats, channels,
 ### Adaptive Card responsive layout
 
 You must design your Adaptive Cards to look great on any device to provide an enhanced user experience across chat, channels, and meeting chat. Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).
+
+### Borders and rounded corners in Adaptive Cards
+
+You can add borders around containers, columns, column sets, and tables in Adaptive Cards to delineate different sections of the card. For more information, see [borders in Adaptive Cards](cards/cards-format.md#borders-in-adaptive-cards). You can add rounded corners to containers, columns, column sets, tables, and images in Adaptive Cards to make the card design look more modern and visually appealing. For more information, see [rounded corners in Adaptive Cards](cards/cards-format.md#rounded-corners-in-adaptive-cards).
 
 ## Overflow menu on Adaptive Cards
 

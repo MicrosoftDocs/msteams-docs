@@ -1023,6 +1023,101 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ---
 
+## Borders in Adaptive Cards
+
+You can add borders around containers, columns, column sets, and tables to delineate various elements in an Adaptive Card, making it easier for users to distinguish between them. Borders can highlight important information or sections, drawing the user’s attention to key areas. Additionally, borders can add a polished and professional look to your Adaptive Cards, enhancing their visual appeal.
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
+
+You can add borders to the following elements in an Adaptive Card:
+* [`Container`](https://adaptivecards.io/explorer/Container.html)
+* [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
+* [`Column`](https://adaptivecards.io/explorer/Column.html)
+* [`Table`](https://adaptivecards.io/explorer/Table.html)
+
+To add a border to an element in an Adaptive Card, set the `showBorder` property to `true` for the element in the card’s payload.
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
+
+> [!NOTE]
+> The border color will match the container’s style, as defined in `HostConfig.json` for each container style.
+
+## Rounded corners in Adaptive Cards
+
+You can add rounded corners to containers, columns, column sets, tables, and images in Adaptive Cards to make the card design look more modern and visually appealing. Elements with rounded corners improve readability and provide a seamless visual experience. Additionally, many contemporary design systems and frameworks use rounded corners, so incorporating them in your Adaptive Cards can help maintain consistency with current design trends.
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
+
+You can add borders to the following elements in an Adaptive Card:
+* [`Container`](https://adaptivecards.io/explorer/Container.html)
+* [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
+* [`Column`](https://adaptivecards.io/explorer/Column.html)
+* [`Table`](https://adaptivecards.io/explorer/Table.html)
+
+To add rounded corners to an element in an Adaptive Card, set the `roundedCorners` property to `true` for the element in the card’s payload.
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `roundedCorners` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
+
+> [!NOTE]
+> In order to add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
+
+The following JSON payload shows an Adaptive Card with a border around the column set and rounded corners for the image:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "showBorder": true,
+            "roundedCorners": true,
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "style": "accent",
+                    "showBorder": true,
+                    "roundedCorners": true,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "New TextBlock",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "style": "good",
+                    "showBorder": true,
+                    "roundedCorners": true,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "New TextBlock",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ],
+            "style": "emphasis"
+        },
+        {
+            "type": "Image",
+            "style": "roundedCorners",
+            "url": "https://cdn.discordapp.com/avatars/292760559319777280/70c3e0ee9f6d4b480694fb5de16b7f34.png"
+        }
+    ]
+}
+```
+
 ## Format cards with HTML
 
 The following card types support HTML formatting in Teams:
