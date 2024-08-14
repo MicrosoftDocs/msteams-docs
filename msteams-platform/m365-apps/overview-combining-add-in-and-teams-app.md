@@ -14,7 +14,7 @@ ms.subservice: m365apps
 When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and Microsoft 365 tenant administrators to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
 > [!NOTE]
-> Currenlty, Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We are working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
+> Currently, Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We are working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
 
 There can be no algorithmic procedure for merging an add-in and a Teams app for the following reasons:
 
@@ -57,9 +57,9 @@ When you are ready to merge your existing add-in and Teams app, follow these pri
 - Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project.
 - Use the same base domain for the built files of both the add-in and Teams app, for example contoso.com.
 - Merge the two manifests into a single manifest. Use the process you went through in step 1 as a guide.
-- The [id](../resources/schema/manifest-schema-dev-preview.md#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
-- Raise the value of the [version](../resources/schema/manifest-schema-dev-preview.md#version) property; for example, raise "1.0.0" to "1.1.0".
-- Add an [extensions.alternates](../resources/schema/manifest-schema-dev-preview.md#extensionsalternates) property to the manifest and configure it to hide the original Office add-in in versions of Office that support combining an add-in and a Teams app. For more information, see [Manage new and old versions of an add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).
+- The [id](../resources/schema/manifest-schema.md#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
+- Raise the value of the [version](../resources/schema/manifest-schema.md#version) property; for example, raise "1.0.0" to "1.1.0".
+- Add an [extensions.alternates](../resources/schema/manifest-schema.md#extensionsalternates) property to the manifest and configure it to hide the original Office add-in in versions of Office that support combining an add-in and a Teams app. For more information, see [Manage new and old versions of an add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).
 
 ## Publish the combined Teams app and Office add-in
 
