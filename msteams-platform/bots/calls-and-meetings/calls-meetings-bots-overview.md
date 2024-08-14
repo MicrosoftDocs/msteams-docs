@@ -101,7 +101,6 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
 
 
-## Set up firewalls
 
 Setting up firewalls is crucial for protecting your network and system from unauthorized access and malicious attacks. In the context of Teams, setting up firewalls for calling and meeting bots is important to protect sensitive communication data and prevent unauthorized access. Firewalls can help prevent toll fraud and denial-of-service (DoS) attacks on your bots, minimizing the risk of financial losses and disruption of critical communication services.
 
