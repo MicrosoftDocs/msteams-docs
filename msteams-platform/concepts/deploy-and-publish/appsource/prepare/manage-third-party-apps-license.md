@@ -1,6 +1,6 @@
 ---
-title: Set up Microsoft license management
-description: Learn to manage SaaS licenses for third-party apps purchased from Teams storefront. 
+title: Enable Microsoft License Management
+description: Learn to manage SaaS licenses for third-party apps purchased from Teams Store such as create an offer, post purchase, and integrate with Graph usageRights API.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to

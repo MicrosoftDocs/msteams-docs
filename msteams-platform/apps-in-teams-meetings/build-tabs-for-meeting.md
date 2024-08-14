@@ -1,5 +1,5 @@
 ---
-title: Build tabs for meeting
+title: Create Customized Tab Apps for Meetings
 author: surbhigupta
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
@@ -294,6 +294,6 @@ The following table provides the user types and lists the features that each use
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&preserve-view=true&tabs=http)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
 * [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)

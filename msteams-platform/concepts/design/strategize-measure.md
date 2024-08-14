@@ -1,7 +1,7 @@
 ---
-title: Strategize and decide what to measure
+title: Qualities to Measure App Performance
 author: heath-hamilton
-description: Learn about deciding what to measure using instrumentation data for your Teams app analytics
+description: Learn to strategize and decide what to measure using instrumentation data for your Microsoft Teams app analytics and monitor events for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
