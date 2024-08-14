@@ -27,7 +27,7 @@ The review report from Microsoft concierge validation team includes the issues f
 * Instructions on how to reproduce each issue.
 * Recommendations for resolving each issue based on publicly available developer documentation.
 
-You must fix all issues shared in the review report before you resubmit your updated app on Partner Center. Let's look at the process to resolve all issues before resubmitting the updated app on the Partner Center.
+You must fix all issues shared in the review report before you resubmit your updated app on Partner Center. Let's look at the process to resolve all issues before resubmitting the updated app on Partner Center.
 
 :::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app on Partner Center":::
 
@@ -41,9 +41,9 @@ After resolving all issues shared in the review report, submit your updated app 
 
 Following app submission on Partner Center, the app goes through the following steps:
 
-1. The validation team conducts functional and experience testing of the updated app. Following the testing, the app validation may either pass or fail.
+1. The validation team conducts functional and experience testing of the updated app. The app validation may either pass or fail.
 1. If the app passes the testing process, it can be listed on the Teams Store. You can resubmit the app on Partner Center.
-1. If the app fails the testing process, the validation team sends you a detailed report with recommendations for resolving issues found in the app.
+1. If the app fails the testing process, the validation team sends you a detailed review report with recommendations for resolving issues found in the app.
 
     You can expect to receive this report within 24 hours of your app's functional and experience testing.
 1. Fix all issues shared in the review report sent by the validation team.
