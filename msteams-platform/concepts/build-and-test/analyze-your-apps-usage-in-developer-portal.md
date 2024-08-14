@@ -76,10 +76,10 @@ After you have selected your desired filters, you can explore the following indi
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | New users or tenants | Active users or tenants who are new and have not used your app. |
+   | New users or tenants | Active users or tenants who are new and haven't used your app. |
    | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
-   | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
  ### Usage intensity
 
@@ -110,7 +110,7 @@ You can view your third party app's usage and other insights from the **Analytic
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
 
-As you explore your third party app usage metrics on this page, you can see the following three different section:
+As you explore your third party app usage metrics on this page, you can see the following three different sections:
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
@@ -147,10 +147,10 @@ As you explore your third party app usage metrics on this page, you can see the 
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | New users or tenants | Active users or tenants who are new and have not used your app. |
+   | New users or tenants | Active users or tenants who are new and haven't used your app. |
    | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
-   | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
  #### Usage by country or region
 
@@ -198,13 +198,13 @@ As you explore your third party app usage metrics on this page, you can see the 
 
  #### Usage by platform
 
-   The **Usage by platform** chart shows your app's active usage across various platform, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
+   The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
 
    :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshots shows you app usage in different platform of your published app in Developer Portal.":::
 
  #### Usage by operating system
 
-   The **Usage by operating system** chart shows your app's active usage across various operating system, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
+   The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
 
    :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshots shows you app usage in different OS of your published app in Developer Portal.":::
 
