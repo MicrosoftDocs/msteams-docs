@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Microsoft Teams Store and helps you provide a similar experience.
+Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and helps you provide a similar experience.
 
 ## Subscription purchase experience
 
@@ -23,7 +23,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows the Best selling option highlighted in Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
 
-1. In the Teams Store, browse and select the app for which you want to purchase the subscription.
+1. In Teams Store, browse and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -107,7 +107,7 @@ Users can manage the app subscriptions purchased in Teams through the **Manage y
 * Cancel a subscription
 * View your invoices
 
-The following example shows how users can manage licenses for third-party apps from the Teams Store:
+The following example shows how users can manage licenses for third-party apps from Teams Store:
 
 1. Go to **Microsoft Teams**.
 
