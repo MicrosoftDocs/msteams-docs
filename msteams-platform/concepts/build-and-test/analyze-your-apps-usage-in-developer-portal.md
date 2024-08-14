@@ -22,7 +22,7 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom app built for your org](#tab/custom-app-built-for-your-org)
+# [Custom apps built for your org](#tab/custom-apps-built-for-your-org)
 
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
