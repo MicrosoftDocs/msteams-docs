@@ -1129,7 +1129,7 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |---|---|---|---|---|
 |`menus`| Array | | ✔️ | Configures the context menus. |
 |`menus.entryPoint`| String enum | | ✔️ | Use `text` or `cell` here for Office context menu. Use `text` if the context menu should open when a user right-clicks (or selects and holds) on the selected text. Use `cell` if the context menu should open when the user right-clicks (or selects and holds) on a cell in an Excel spreadsheet. |
-|`menus.controls`| Array | | ✔️ | The same as controls in [extensions.ribbons.tabs.groups.controls](#extensionsribbons). The control type should be `menu`. |
+|`menus.controls`| Array | | ✔️ | The same as controls in [extensions.ribbons.tabs.groups.controls](#extensionsribbons). The control type should be `button`. |
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
