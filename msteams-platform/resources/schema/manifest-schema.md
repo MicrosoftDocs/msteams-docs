@@ -341,7 +341,7 @@ The schema defines the following properties:
 
 ## $schema
 
-Optional,but recommended &ndash; String
+Optional, but recommended &ndash; String
 
 The https:// URL referencing the JSON Schema for the app manifest.
 
