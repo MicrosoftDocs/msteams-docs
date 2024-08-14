@@ -95,7 +95,10 @@ After you have selected your desired filters, you can explore the following indi
 
  ### App dashboard
 
-   The **My App dashboard** shows you the latest R28 (Rolling 28 days) data for each of the metrics under the previous four categories, and the Month over Month change.
+   The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+
+* Daily R30 data for the last 75 days.
+* End of month R30 data for up to 12 months.
 
    You can select each of these **Metric name** to see trends over time.
 
@@ -172,7 +175,10 @@ As you explore your third party app usage metrics on this page, you can see the 
 
  #### App dashboard
 
-   The **My App dashboard** table shows you the latest R30 (Rolling 28 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date to see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
+   The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+
+* Daily R30 data for the last 75 days.
+* End of month R30 data for up to 12 months.
 
    You can select each of these **Metric name** to see trends over time.
 
