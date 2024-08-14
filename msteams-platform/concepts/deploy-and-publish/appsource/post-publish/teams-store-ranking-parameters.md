@@ -28,6 +28,9 @@ The main parameters used to determine app placements include:
 
 - **Audience relevance**: Apps more relevant to a particular audience tend to rank higher than apps that are less relevant for that audience. Such apps can be based on the audience's language settings and license type such as, Education, Enterprise, or Small and Medium business.
 
+> [!NOTE]
+> The information on main parameters applies to specific surfaces in the store but not to the entire store.
+
 The criteria mentioned above are neither mandatory nor exhaustive. They can vary based on business requirements and industry standards.
 
 ## See also
