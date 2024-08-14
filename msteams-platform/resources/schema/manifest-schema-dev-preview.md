@@ -604,7 +604,7 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|16 characters||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|16 characters||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`parameters`|Array of objects|5||The list of parameters the command takes. Minimum: 1; maximum: 5|
+|`parameters`|Array of objects|5||The list of parameters the command takes.|
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
@@ -721,8 +721,8 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|String|32 characters|✔️|The notification type. *See below*.|
-|`description`|String|128 characters|✔️|A brief description of the notification. *See below*.|
+|`type`|String|32 characters|✔️|The notification type.|
+|`description`|String|128 characters|✔️|A brief description of the notification.|
 |`templateText`|String|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
 
 ```json
@@ -980,12 +980,12 @@ The `extensions.requirements` object specifies the scopes, form factors, and Off
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| Array | 100 | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
-|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
-|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
-|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
-|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+|`capabilities`| Array | 100 | | Identifies the requirement sets.|
+|`capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.runtimes
 
