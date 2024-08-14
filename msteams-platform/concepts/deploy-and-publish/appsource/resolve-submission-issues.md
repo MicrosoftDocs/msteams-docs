@@ -21,13 +21,13 @@ If your app submission fails, Microsoft sends you a review report with recommend
 
 ## Resolve issues and resubmit your app
 
-The review report from Microsoft concierge validation team includes the following information:
+The review report from Microsoft concierge validation team includes the issues found during testing along with the following information:
 
-* A corresponding [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) for each issue.
+* A [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) corresponding for each issue.
 * Instructions on how to reproduce each issue.
 * Recommendations for resolving each issue based on publicly available developer documentation.
 
-You must fix all issues shared in the review report before you resubmit your updated app on Partner Center. Let's look at the process to resubmit the updated app to the Teams Store.
+You must fix all issues shared in the review report before you resubmit your updated app on Partner Center. Let's look at the process to resubmit the updated app to the Partner Center.
 
 :::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app to Partner Center":::
 
@@ -37,16 +37,16 @@ After resolving all issues shared in the review report, submit your updated app 
 * Test notes for your app, if they weren't included in your original submission:
   * Credentials for at least two accounts (one admin account and one non-admin account).
   * Instructions to configure the app and test its functionality.
-  * A video showing your app used in Teams.
+  * A video showing your app working in Teams.
 
-Following app submission on Partner Center, the process for resolving issues and resubmitting an app involves the following steps:
+Following app submission on Partner Center, the app goes through the following steps:
 
-1. Microsoft concierge validation team undertakes the functional and experience testing the updated app. Following the testing, the app validation may either pass or fail.
+1. Microsoft concierge validation team undertakes the functional and experience testing of the updated app. Following the testing, the app validation may either pass or fail.
 1. If the app passes the testing process, it's listed on the Teams Store.
 1. If the app fails the testing process, the Microsoft concierge validation team sends you a detailed report with recommendations for resolving issues found in the app. You can expect to receive this report within 24 hours of your app's functional and experience testing.
-1. Resolve the issues shared in the report sent by the Microsoft concierge validation team.
+1. Fix all issues shared in the review report sent by the Microsoft concierge validation team.
 
-Resubmit your updated app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> after resolving issues, so that the app may be tested again. The process continues till the app is found fully validated as per Microsoft validation guidelines.
+Resubmit your updated app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> after resolving issues, so that the app may be tested again. The process continues till the app has fully met the Microsoft validation guidelines.
 
 > [!CAUTION]
 > To avoid multiple submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team approves your app.
