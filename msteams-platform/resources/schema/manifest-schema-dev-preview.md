@@ -1015,9 +1015,9 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |`requestedHeight`| Number | | | The desired height between 32 and 1000 pixels. If this property isn't used, the Office application determines the height.|
 |`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the host document. Default value is `false`, so a snapshot is saved. Set to `true` to prevent a snapshot from being saved.|
 |`requirements`| Object | | | Specifies the scopes that must be supported on the Office client in order for the content to be embedded in the document. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
-|`requirements.capabilities`| Array | | | This property (though present under `requirements` for other objects) must not be added for `contentRuntimes` object |
+|`requirements.capabilities`| Array | | | This property (though present under `requirements` for other objects) must not be added for `contentRuntimes` object. |
 |`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation` |
-|`requirements.formFactors`| Array of enums | | | This property (though present under `requirements` for other objects) must not be added for `contentRuntimes` object |
+|`requirements.formFactors`| Array of enums | | | This property (though present under `requirements` for other objects) must not be added for `contentRuntimes` object. |
 
 ### extensions.ribbons
 
