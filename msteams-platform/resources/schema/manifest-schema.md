@@ -814,7 +814,7 @@ When a group install scope is selected, it defines the default capability when t
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team`|String|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`groupChat`|String|||When the install scope selected is `groupChat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|String|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|String|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## configurableProperties
