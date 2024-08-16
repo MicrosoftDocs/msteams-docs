@@ -445,7 +445,7 @@ The instructions must not include the following:
 </details>
 
 <details>
-<summary>1. Must support three or more unique compound utterances for search and action scenarios that are applicable​
+<summary>1. Must support three or more unique compound utterances for search and action scenarios that are applicable​</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-compound-utterances.png" alt-text="This image shows an example of compound utterances for Copilot.":::
 
