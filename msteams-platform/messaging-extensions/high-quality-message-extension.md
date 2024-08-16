@@ -429,8 +429,10 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ### Validation guidelines in declarative Copilot
 
+A declarative copilot must ensure the following validations:
+
 <details>
-<summary>1. Must not lead to prompt injection attack:</summary>
+<summary>1. Avoid prompt injection attack:</summary>
 
 Check App short description, command description, parameter descriptions, instruction, conversation starter.
 
@@ -445,7 +447,7 @@ The instructions must not include the following:
 </details>
 
 <details>
-<summary>1. Must support three or more unique compound utterances for search and action scenarios that are applicable​</summary>
+<summary>2. Support for three or more unique compound utterances for applicable​ search and action scenarios</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-compound-utterances.png" alt-text="This image shows an example of compound utterances for Copilot.":::
 
@@ -458,20 +460,25 @@ The example shown in the image gives three utterances:
 </details>
 
 <details>
-<summary>1. Must include min three zero query prompts​</summary>
+<summary>3. Provide minimum three zero-query prompts​</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-zero-query-prompt.png" alt-text="This image shows an exmaple of zero query prompt in a Copilot.":::
 
 </details>
 
 <details>
-<summary>1. Must create rich citation​</summary>
+<summary>4. Support for creating rich citation​</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
 </details>
 
-1. Must share user disclosure & seek user confirmation for action scenarios ​
+<details>
+<summary>5. Share user disclosure and seek user confirmation for action scenarios</summary>​
+
+:::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
+
+</details>
 
 1. Instructions only copilots not allowed ​
 
