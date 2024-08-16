@@ -425,6 +425,58 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
+## Validation guidelines for Copilot extensions
+
+### Validation guidelines in declarative Copilot
+
+1. Must not lead to prompt injection attack: Check App short description, command description, parameter descriptions, instruction, conversation starter ​
+
+1. Must support 3+ unique compound utterances for search and action scenarios that are applicable​
+
+1. Must include min three zero query prompts​
+
+1. Must create rich citation​
+
+1. Must share user disclosure & seek user confirmation for action scenarios ​
+
+1. Instructions only copilots not allowed ​
+
+1. Must be responsive and fail gracefully for topics that it doesn’t specialize ​
+
+1. Must not spam users by sending multiple messages in short succession​
+
+​
+
+### Validation guidelines for custom engine copilot
+
+1. Must contain AI conversational bot (bot type in manifest =’conversational’)​
+
+1. Uses an enterprise LLM (TBD; Open item)​
+
+1. User can reference custom engine copilot in Copilot & handoff chat experience in Teams​
+
+1. Must adhere to the UX design requirements​
+
+        1. AI Disclaimer label​
+
+        1. Feedback Loop Buttons​
+
+        1. Must include min three zero query prompts​
+
+        1. Must include min two Suggested/ Follow-up prompts ​
+
+        1. Must create rich citation in form of Adaptive Card​
+
+        1. Sensitivity Icon & Label – Suggested Fix​
+
+**Bot related policy apply**
+
+1. Must send Welcome message with value proposition & how to use the app​
+
+1. Must be responsive and fail gracefully for topics that it doesn’t specialize ​
+
+1. Must not spam users by sending multiple messages in short succession​
+
 ## Compound utterances
 
 > [!NOTE]
