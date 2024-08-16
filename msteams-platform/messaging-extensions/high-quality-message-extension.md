@@ -457,17 +457,17 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 1. Must adhere to the UX design requirements​
 
-        1. AI Disclaimer label​
+      1. AI Disclaimer label​
 
-        1. Feedback Loop Buttons​
+      1. Feedback Loop Buttons​
 
-        1. Must include min three zero query prompts​
+      1. Must include min three zero query prompts​
 
-        1. Must include min two Suggested/ Follow-up prompts ​
+      1. Must include min two Suggested/ Follow-up prompts ​
 
-        1. Must create rich citation in form of Adaptive Card​
+      1. Must create rich citation in form of Adaptive Card​
 
-        1. Sensitivity Icon & Label – Suggested Fix​
+      1. Sensitivity Icon & Label – Suggested Fix​
 
 **Bot related policy apply**
 
