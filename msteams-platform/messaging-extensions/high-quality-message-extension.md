@@ -438,17 +438,38 @@ Check App short description, command description, parameter descriptions, instru
 
 The instructions must not include the following:
 
-* manipulative phrases E.g. "ignore", "delete", "reset", "new instructions",  "Answer in Bold"  or "Do not print anything“ which are not relevant to expected actions​​
+* Manipulative phrases for example, "ignore", "delete", "reset", "new instructions", "Answer in Bold"  or "Do not print anything" that aren't relevant to expected actions​​
 * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​
 * Grammar and punctuation errors​​
 
 </details>
 
-1. Must support 3+ unique compound utterances for search and action scenarios that are applicable​
+<details>
+<summary>1. Must support three or more unique compound utterances for search and action scenarios that are applicable​
 
-1. Must include min three zero query prompts​
+:::image type="content" source="../assets/images/Copilot/dc-compound-utterances.png" alt-text="This image shows an example of compound utterances for Copilot.":::
 
-1. Must create rich citation​
+The example shown in the image gives three utterances:
+
+* Fix water pipeline
+* John
+* 18th May 2024
+
+</details>
+
+<details>
+<summary>1. Must include min three zero query prompts​</summary>
+
+:::image type="content" source="../assets/images/Copilot/dc-zero-query-prompt.png" alt-text="This image shows an exmaple of zero query prompt in a Copilot.":::
+
+</details>
+
+<details>
+<summary>1. Must create rich citation​</summary>
+
+:::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
+
+</details>
 
 1. Must share user disclosure & seek user confirmation for action scenarios ​
 
