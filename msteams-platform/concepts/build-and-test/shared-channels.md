@@ -3,7 +3,7 @@ title: Teams Connect shared channels
 author: Rajeshwari-v
 description:  Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: Normal
 ms.topic: conceptual
 ms.date: 11/02/2022
 ---
