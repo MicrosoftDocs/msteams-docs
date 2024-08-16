@@ -490,6 +490,8 @@ In the following example, declarative copilot includes Type B plugin with action
 In the following example, no nodes are defined for actions or Graph connectors etc. The results are not grounded in a data sources, and for this reason, the authenticity of the result is questionable. ​
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
+</details>
+
 <details>
 <summary>7. Must be responsive and fail gracefully for topics that it doesn’t specialize</summary>​
 
@@ -502,8 +504,6 @@ In the following example, no nodes are defined for actions or Graph connectors e
 
 details TBA
 </details>
-
-​
 
 ### Validation guidelines for custom engine copilot
 
