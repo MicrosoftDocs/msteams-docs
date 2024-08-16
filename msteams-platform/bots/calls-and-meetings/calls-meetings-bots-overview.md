@@ -85,6 +85,8 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## Microsoft Graph calling and meeting APIs
 
+Discover how to integrate calling and online meeting capabilities into your applications with the Microsoft Graph Communications API. Learn more about this powerful API and its features at https://learn.microsoft.com/en-us/graph/api/resources/communications-api-overview?view=graph-rest-1.0.
+
 Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
 
 | Capabilities | Functions |
@@ -94,14 +96,8 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 | Screen sharing | &bull; Share the entire screen from within the app. <br> &bull; Share a specific application (from the list of running apps). <br> &bull; Share a web browser tab from the list of open tabs. <br> &bull; Share system audio during screen sharing. <br> &bull; Participant can view remote screen share. |
 | Roster | &bull; List the participants in a call. <br> &bull; Remove a participant from a call. |
 | Public Switched Telephone Network (PSTN) | &bull; Place a one-to-one call with a PSTN participant. <br> &bull; Place a group call with PSTN participants. <br> &bull; Upgrade a one-to-one call with a PSTN participant into a group call. <br> &bull; Dial-out from a group call as a PSTN participant. <br> &bull; Support for early media. |
-| General | Test your microphone, speaker, and camera with an audio testing service (available by calling 8:echo123). |
-| Device management | &bull; Ask for permission to use audio or audio and video. <br> &bull; Get camera list. <br> &bull; Set camera. <br> &bull; Get selected camera. <br> &bull; Get microphone list. <br> &bull; Set microphone. <br> &bull; Get selected microphone. <br> &bull; Get speakers list. <br> &bull; Set speaker. <br> &bull; Get selected speaker. |
-| Video rendering | &bull; Render single video in multiple places (local camera or remote stream). <br> &bull; Set or update scaling mode. <br> &bull; Render remote video stream. |
 
 To get the Microsoft.Graph.Communications.Calls NuGet package, see [NuGet Gallery | Microsoft.Graph.Communications.Calls 1.2.0.10563](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls/1.2.0.10563). 
-
-
-
 
 ## Code sample
 
