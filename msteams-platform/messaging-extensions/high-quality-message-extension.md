@@ -429,7 +429,20 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ### Validation guidelines in declarative Copilot
 
-1. Must not lead to prompt injection attack: Check App short description, command description, parameter descriptions, instruction, conversation starter ​
+<details>
+<summary>1. Must not lead to prompt injection attack:</summary>
+
+Check App short description, command description, parameter descriptions, instruction, conversation starter.
+
+:::image type="content" source="../assets/images/Copilot/dc-prompt-injection-attack.png" alt-text="This image highlights instructions and conversation starter for Copilot":::
+
+The instructions must not include the following:
+
+* manipulative phrases E.g. "ignore", "delete", "reset", "new instructions",  "Answer in Bold"  or "Do not print anything“ which are not relevant to expected actions​​
+* URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​
+* Grammar and punctuation errors​​
+
+</details>
 
 1. Must support 3+ unique compound utterances for search and action scenarios that are applicable​
 
