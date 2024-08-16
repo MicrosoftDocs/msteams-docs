@@ -16,7 +16,7 @@ Bots can interact with Teams calls and meetings using real-time voice, video, an
 
 To use these Graph APIs in a Teams app, you create a bot and specify some additional information and permissions.
 
-In addition, the Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Teams bot with few extra features used to register the bot.
+In addition, the Real-time Media Platform enables bots to interact with Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with few extra features used to register the bot.
 
 The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with two more settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams support only a specific set of media formats for audio and video content.
 
@@ -27,8 +27,8 @@ Bots can perform the following functions by calling Microsoft Graph APIs for cal
 | Capabilities | Functions |
 | ------| -------------|
 | Core capabilities | &bull; Initiate a one-to-one call between two users. <br> &bull; Initiate a group call with more than two users (up to 350 users). <br> &bull; Upgrade a one-to-one call with two users into a group call with more than two users. <br> &bull; Join a group call after it starts. <br> &bull; Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call. |
-| Mid-call control | &bull; Turn the video on or off. <br> &bull; Mute or unmute the microphone. <br> &bull; Switch between cameras. <br> &bull; Put the call on hold or resume locally. <br> &bull; Active speaker. <br> &bull; Choose speaker for calls. <br> &bull; Choose microphone for calls. <br> &bull; Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, and disconnected. <br> &bull; Show the state of a call, such as early media, incoming, connecting, ringing, connected, on hold, disconnecting, or disconnected. <br> &bull; Show if a participant is on mute. <br> &bull; Show the reason why a participant left a call. |
-| Screen sharing | &bull; Share the entire screen from within the app. <br> &bull; Share a specific application (from the list of running apps). <br> &bull; Share a web browser tab from the list of open tabs. <br> &bull; Share system audio during screen sharing. <br> &bull; Participant can view remote screen share. |
+| Mid-call control | &bull; Turn the video on or off. <br> &bull; Mute or unmute the microphone. <br> &bull; Switch between cameras. <br> &bull; Put the call on hold or resume locally. <br> &bull; Active speaker. <br> &bull; Choose speaker for calls. <br> &bull; Choose microphone for calls. <br> &bull; Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, or disconnected. <br> &bull; Show the state of a call, such as early media, incoming, connecting, ringing, connected, on hold, disconnecting, or disconnected. <br> &bull; Show if a participant is on mute. <br> &bull; Show the reason why a participant left a call. |
+| Screen sharing | &bull; Share the entire screen from within the app. <br> &bull; Share a specific app (from the list of running apps). <br> &bull; Share a web browser tab from the list of open tabs. <br> &bull; Share system audio during screen sharing. <br> &bull; Participant can view remote screen share. |
 | Roster | &bull; List the participants in a call. <br> &bull; Remove a participant from a call. |
 | Public Switched Telephone Network (PSTN) | &bull; Place a one-to-one call with a PSTN participant. <br> &bull; Place a group call with PSTN participants. <br> &bull; Upgrade a one-to-one call with a PSTN participant into a group call. <br> &bull; Dial-out from a group call as a PSTN participant. <br> &bull; Support for early media. |
 
@@ -99,7 +99,7 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
-| Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples) |
+| Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## Next step
 
