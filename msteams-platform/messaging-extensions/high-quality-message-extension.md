@@ -432,7 +432,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 A declarative copilot must ensure the following validations:
 
 <details>
-<summary>1. Avoid prompt injection attack:</summary>
+<summary>1. Avoid prompt injection attack</summary>
 
 Check App short description, command description, parameter descriptions, instruction, conversation starter.
 
@@ -480,11 +480,28 @@ The example shown in the image gives three utterances:
 
 </details>
 
-1. Instructions only copilots not allowed ​
+<details>
+<summary>6. Instructions-only Copilots must not be supported</summary>
 
-1. Must be responsive and fail gracefully for topics that it doesn’t specialize ​
+In the following example, declarative copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
 
-1. Must not spam users by sending multiple messages in short succession​
+:::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::
+
+In the following example, no nodes are defined for actions or Graph connectors etc. The results are not grounded in a data sources, and for this reason, the authenticity of the result is questionable. ​
+:::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
+
+<details>
+<summary>7. Must be responsive and fail gracefully for topics that it doesn’t specialize</summary>​
+
+:::image type="content" source="../assets/images/Copilot/dc-no-spam-in-copilot.png" alt-text="This image shows an example of how Copilot can fail gracefully and be responsive.":::
+
+</details>
+
+<details>
+<summary>8. Must not spam users by sending multiple messages in short succession​</summary>
+
+details TBA
+</details>
 
 ​
 
