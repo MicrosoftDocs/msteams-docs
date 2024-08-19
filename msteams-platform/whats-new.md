@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
-***August 14, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
+***August 20, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
 
 :::column-end:::
 :::row-end:::
