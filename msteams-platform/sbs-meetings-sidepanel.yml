@@ -85,7 +85,7 @@ items:
 
       The window shows the HTTPS URL.
 
-      :::image type="content" source="../../assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+      :::image type="content" source="~/assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
 
       ---     
 
@@ -117,13 +117,13 @@ items:
 
     1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
-        :::image type="content" source="../../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
+        :::image type="content" source="~/assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
 
     1. In the left pane, under **Settings**, select **Configuration**.
 
     1. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-        :::image type="content" source="../../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+        :::image type="content" source="~/assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
     1. Select **Apply**.
 
@@ -136,7 +136,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-        :::image type="content" source="../../assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the HTTPS ngrok URL.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the HTTPS ngrok URL.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -146,7 +146,7 @@ items:
 
     1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
-        :::image type="content" source="../../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+        :::image type="content" source="~/assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
 
     1. Select **Apply**.
 
