@@ -515,9 +515,9 @@ The validation guidelines for declarative copilot are applicable for custom engi
 You must define the (bot type in the manifest  as 'conversational'.​
 </details>
 
-2. Uses an enterprise LLM
+1. Uses an enterprise LLM
 
-    (TBD; Open item)​
+  (TBD; Open item)​
 
 <details>
 <summary>3. Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</summary>
@@ -576,6 +576,52 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 1. Must be responsive and fail gracefully for topics that it doesn’t specialize ​
 
 1. Must not spam users by sending multiple messages in short succession​
+
+### Validation guidelines for action-based message extension in Copilot
+
+1. Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
+
+1. Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​
+
+1. A confirmation of the completion of the action is shared by the plugin in form of card etc. [Bot sent card is not supported]​
+
+1.Action taken by user is correctly reflected in 3P service ​
+
+1. Modification requests by user prior to confirmation of the action, must be honoured [Platform]​
+
+1. If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​
+
+1. Bulk delete actions should not be supported [details TBD]​
+
+1. Description checks [Same as plugins]​
+
+1. Compound utterances via Multi parameter (3 or more) ​
+
+1. Include at least 3 sample prompts in the manifest​
+
+### Validation guidelines for type B actions in Copilot
+
+1. When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
+
+1. Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] ​
+
+1. Data shared/ sent by user gets correctly reflected in the confirmation​
+
+1. Action taken by user is correctly reflected in 3P service - Dev​
+
+1. Modification requests by user prior to confirmation of the action, must be honoured by plugin [Platform] ​
+
+1. A confirmation of the completion of the action is shared by the plugin in form of card ​
+
+1. If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [Details TBD] ​
+
+1. Multi delete scenario should not be supported [Details TBD]​
+
+1. Description checks [Same as plugins]​
+
+1. Compound utterances via Multi parameter​
+
+1. Include at least 3 sample prompts in the manifest
 
 ## Compound utterances
 
