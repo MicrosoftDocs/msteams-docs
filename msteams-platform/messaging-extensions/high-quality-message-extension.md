@@ -513,12 +513,11 @@ The validation guidelines for declarative copilot are applicable for custom engi
 <summary>1. Include an AI conversational bot</summary>
 
 You must define the (bot type in the manifest  as 'conversational'.​
+</details>
 
 2. Uses an enterprise LLM
 
     (TBD; Open item)​
-
-</details>
 
 <details>
 <summary>3. Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</summary>
@@ -534,17 +533,17 @@ You must define the (bot type in the manifest  as 'conversational'.​
 
 :::image type="content" source="../assets/images/Copilot/dc-disclaimer-label.png" alt-text="This image is an example that shows disclaimer label for each message generated in an AI bot.":::
 
+1. Feedback Loop Buttons​
+
+1. Minimum three zero-query prompts​
+
+1. Minimum two prompts or suggested prompts ​
+
+1. Be able to create rich citation in form of Adaptive Card​
+
+1. Sensitivity icon and label
+
 </details>
-
-      1. Feedback Loop Buttons​
-
-      1. Must include min three zero query prompts​
-
-      1. Must include min two Suggested/ Follow-up prompts ​
-
-      1. Must create rich citation in form of Adaptive Card​
-
-      1. Sensitivity Icon & Label – Suggested Fix​
 
 **Bot related policy apply**
 
