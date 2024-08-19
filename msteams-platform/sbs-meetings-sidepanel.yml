@@ -136,7 +136,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-        :::image type="content" source="../../assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+        :::image type="content" source="../../assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the HTTPS ngrok URL.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
