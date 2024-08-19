@@ -387,7 +387,7 @@ Specifies information about your company. For apps submitted to the Teams Store,
 |`websiteUrl`|String|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|String|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|String|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|String|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`mpnId`|String|10 characters| |**Optional** The Microsoft Cloud Partner Program ID (formerly known as Microsoft Partner Network ID) that identifies the partner organization building the app.|
 
 ## name
 
@@ -722,7 +722,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
  **Optional** &ndash; Boolean
 
-Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default value: `false` 
+Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default value: `false`
 
 > [!NOTE]
 >
@@ -1188,7 +1188,7 @@ Defines the icon properties of a given dashboard card.
 |`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
 |`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon's friendly name for the card. This value is used if `iconUrl` is not specified. |
 
-### dashboardCards.dashboardCard.contentSource 
+### dashboardCards.dashboardCard.contentSource
 
 Defines the content source of a given dashboard card.
 
