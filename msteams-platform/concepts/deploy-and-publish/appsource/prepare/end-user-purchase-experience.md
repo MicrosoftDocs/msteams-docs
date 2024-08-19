@@ -44,7 +44,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     # [New user](#tab/newuser)
 
-    1. Under **Subscription details**, select **Quantity** and **Subscription length**, and select **Next**.
+    1. Under **Subscription details**, select **Quantity** and **Subscription length** and select **Next**.
 
         :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
 
