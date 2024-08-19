@@ -164,7 +164,7 @@
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
           - name: Create How-to Guides
-            href: toolkit/add-How-to-guides-v5.md
+            href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
             href: toolkit/add-resource.md  
@@ -181,7 +181,7 @@
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
-            href: toolkit/AAD-manifest-customization.md
+            href: toolkit/aad-manifest-customization.md
         - name: Debug your Teams app
           items:
           - name: Overview
@@ -235,10 +235,10 @@
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit
-        href: toolkit/toolkit-v4/build-environments-v4.md
+        href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites for creating your Teams app
-          href: toolkit/toolkit-v4/tools-prerequisites-v4.md
+          href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
@@ -260,7 +260,7 @@
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
-            href: toolkit/toolkit-v4/debug-background-process-v4.md            
+            href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
         - name: Host your app on Azure
           items:    
@@ -280,7 +280,7 @@
         displayName: App Studio, Changelog for Developer Portal
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
-        displayName: AppID, app validation, validate your app, Microsoft's test cases
+        displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
@@ -453,7 +453,7 @@
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
     - name: Bot messages with AI-generated content
-      href: bots/how-to/format-ai-bot-messages.md
+      href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
@@ -565,6 +565,9 @@
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+      - name: Debug a copilot plugin with developer mode
+        href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
+        displayName: copilot, enabled plugins, matched functions, selected functions for execution, function execution details
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
         displayName: custom copilot, custom engine copilot, plugin, conversation
@@ -614,9 +617,6 @@
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
-    - name: Fetch meeting ID and organizer ID
-      href: graph-api/meeting-transcripts/fetch-id.md
-      displayName: Obtain meeting details using user-level notification, tenant-level notification, transcript, recording
     - name: Get notified when transcripts and recordings are available
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
