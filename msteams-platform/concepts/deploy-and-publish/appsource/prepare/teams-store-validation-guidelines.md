@@ -505,7 +505,7 @@ The app manifest defines your app's configuration.
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Mandatory Fix*]
 
-* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Suggested Fix*]
+* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Suggested Fix*]
 
 * Scopes and/or context declared in app manifest must be visible within the app. [*Mandatory Fix*]
 

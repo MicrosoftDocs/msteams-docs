@@ -37,7 +37,7 @@ No, Adaptive Card Previewer is available in Visual Studio Code only.
 ## App validation
 
 <details>
-<summary>How can I connect Microsoft Entra ID to Partner One ID for Microsoft Cloud Partner Program?</summary>
+<summary>How can I connect Microsoft Entra ID to CCP ID for Microsoft Cloud Partner Program?</summary>
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 <!--
@@ -46,7 +46,7 @@ Follow the steps in the pages given here:
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution - Connect Microsoft Entra ID to Partner Center](/partner-center/mpn-benefits-azure-cloud)
+Resolution - Connect Microsoft Entra ID to Microsoft Cloud Partner Program](/partner-center/mpn-benefits-azure-cloud)
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -632,7 +632,7 @@ For more information about raising a ticket, see [Get help or open a support tic
 You can create a Partner Center account one of the following ways:
 
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
-* If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+* If you're already enrolled in the Microsoft Cloud Partner Program, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
 
 &nbsp;
