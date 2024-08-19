@@ -535,13 +535,37 @@ You must define the (bot type in the manifest  as 'conversational'.​
 
 1. Feedback Loop Buttons​
 
+To collect user's feedback on each message, the bot can opt in a flag in the message payload to indicate client rendering feedback loop buttons with thumb-up (Like) and thumb-down (Dislike). When user clicks either button, a task module will be launched to collect user's feedback and send it to bot via invoke.​
+
+The feedback dialog is non-customizable and pre-designed by Teams.​
+
+:::image type="content" source="../assets/images/Copilot/dc-feedback-loop.png" alt-text="This image shows an example of a feedback loop.":::
+
 1. Minimum three zero-query prompts​
+
+The first run experience (FRE) screen for 1:1 bot chat has been completely revamped! The sleek new FRE screen features zero prompts, which are sourced from the bots command list in the manifest(specifically, "personal" scope commands for 1:1 bot chat) and presented as prompt starter pills. When a user selects one, the command is placed into the compose box, like the bot input menu UX.​
+
+:::image type="content" source="../assets/images/Copilot/dc-three-zero-prompt.png" alt-text="This image shows an example of three zero-query prompts.":::
 
 1. Minimum two prompts or suggested prompts ​
 
+The "View Prompts" UX has replaced the bot input menu in 1:1 bot chats! This change brings the Bot UX closer to that of Copilot with the "view prompts" popup on the top of compose box, which we hope will lead to increased engagement in LLM and GPT bot scenarios.​
+
+:::image type="content" source="../assets/images/Copilot/dc-minimum-prompts.png" alt-text="This image shows an example of two prompts or two suggested prompts.":::
+
 1. Be able to create rich citation in form of Adaptive Card​
 
+Bot can cite text content with references. Citation can be inserted in the middle of any place in the text, and the associated reference may include title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References will be rendered as inline citation as popups and the expandable citation footers.​
+
+:::image type="content" source="../assets/images/Copilot/dc-inline-citation.png" alt-text="This image shows an example of inline citations in a AI bot message.":::
+
+:::image type="content" source="../assets/images/Copilot/dc-citation-reference.png" alt-text="This image is an example of citation reference.":::
+
 1. Sensitivity icon and label
+
+For each message, the bot can customize sensitivity information. A sensitivity icon will be automatically added to the top of the message along with a hover tooltip with title and description for the information details.​
+
+:::image type="content" source="../assets/images/Copilot/dc-sensitivity-icon-label.png" alt-text="This image is an example of sensitivity icon and label.":::
 
 </details>
 
