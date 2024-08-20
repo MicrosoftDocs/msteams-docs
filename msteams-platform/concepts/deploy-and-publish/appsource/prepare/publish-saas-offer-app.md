@@ -28,7 +28,7 @@ ms.date: 07/11/2023
    :::column-end:::
 :::row-end:::
 
-After you create and test a Software-as-a-Service (SaaS) offer, you must publish it in Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. When published, the SaaS app is available for purchase in the Microsoft Teams Store with the configured subscriptions.
+After you create and test a software as a service (SaaS) offer, you must publish it in Microsoft commercial marketplace. This article outlines the steps to publish the SaaS offer, link the SaaS offer to your app, and publish the SaaS app. When published, the SaaS app is available for purchase in Microsoft Teams Store with the configured subscriptions.
 
 ## Go live
 

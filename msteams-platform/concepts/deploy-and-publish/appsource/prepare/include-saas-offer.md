@@ -1,5 +1,5 @@
 ---
-title: Create SaaS offer for Teams app
+title: Create SaaS Offer for Teams App
 description: Learn how to plan, create, and configure a SaaS offer. Know the basic information on technical configuration, landing page, offer plan, and API integrations.
 author: heath-hamilton
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # SaaS offer for your Teams app
 
-Software-as-a-Service (SaaS) offers allow you to license software solutions to customers through subscriptions. Microsoft Teams presents unique opportunities for developers to integrate their SaaS solutions to Microsoft Teams Store. This article guides you through the steps to plan, create, and configure a SaaS offer in Microsoft Partner Center.
+Software as a service (SaaS) offers allow you to license software solutions to customers through subscriptions. Microsoft Teams presents unique opportunities for developers to integrate their SaaS solutions to Microsoft Teams Store. This article guides you through the steps to plan, create, and configure a SaaS offer in Microsoft Partner Center.
 
 :::row:::
    :::column:::

@@ -1,5 +1,5 @@
 ---
-title: Monetize your app overview
+title: Monetize your App Overview
 description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing your app through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
@@ -12,9 +12,13 @@ ms.date: 11/23/2022
 
 App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your apps in Microsoft Partner Center and publish in Teams Store to reach customers with the best solutions.
 
-Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. When published, they are available as Software as a Service (SaaS) offers for purchase from commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store.
+Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. When published, they are available as software as a service (SaaS) offers for purchase from commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store.
 
-There are four ways by which you can drive app monetization:
+## SaaS offer
+
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. SaaS apps that are published in commercial marketplace with subscriptions for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase.
+
+The publishing options available in a SaaS offer by which you can drive app monetization are:
 
 :::row:::
    :::column span="":::
@@ -27,21 +31,15 @@ There are four ways by which you can drive app monetization:
    :::column-end:::
 :::row-end:::
 
-* **Test drive**: You can provide access to preconfigured environment for a fixed period and encourage users to purchase.
+* **Test drive**: You can provide access to preconfigured environment for a fixed period and encourage users to purchase. Test drive and free trials are different, and you can provide one or both the features to the customers.
 
 * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-## SaaS offer
-
-SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. SaaS apps that are published in commercial marketplace with subscriptions for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase.
-
 When creating a SaaS offer, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently. For more information on publishing options, see [plan for a SaaS offer](include-saas-offer.md).
 
-Here are the features associated with a SaaS offer:
+Here are the other features associated with a SaaS offer:
 
 * **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, [in-app purchases](in-app-purchase-flow.md) can generate an ongoing revenue stream. </br>
-
-* **Test drive**: Allow users to test the end-to-end purchase experience of your app for a fixed time. Test drive and free trials are different, and you can provide one or both the features to the customers.</br>
 
 * **Microsoft license management**: Enable Microsoft to manage app licenses on your behalf to track and manage licenses from the Teams Store. For more information, see [set up Microsoft license management](manage-third-party-apps-license.md#set-up-microsoft-license-management).
 
@@ -61,4 +59,3 @@ This module guides you through the process of creating a SaaS offer in Partner C
 * [Microsoft commercial marketplace](/partner-center/marketplace/overview)
 * [Introduction to listing options](/partner-center/marketplace/determine-your-listing-type)
 * [Publishing guide by offer type](/partner-center/marketplace/publisher-guide-by-offer-type)
-* [Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)

@@ -29,28 +29,29 @@ To facilitate an in-app purchase experience for your app users, ensure the follo
 
 * The app is invoked with [`openPurchaseExperience` API](#purchase-experience-api).
 
+## Activate in-app purchase
+
 You can activate the in-app purchase experience through one of the following ways:
 
-* Update `manifest.json` file.
-* Enable **Show in-app purchase offers** in the **Permissions** section of **Teams Developer Portal**.
+1. In Teams Developer Portal, go to **Permissions** and enable **Show in-app purchase offers**.
 
-### Update manifest
+1. Update `manifest.json` file.
 
-To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
-
-```json
-
-"authorization": {
-    "permissions": {
-        "resourceSpecific": [
-            {
-                "name": "InAppPurchase.Allow.User",
-                "type": "Delegated"
-            }
-        ]
+    To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
+    
+    ```json
+    
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "InAppPurchase.Allow.User",
+                    "type": "Delegated"
+                }
+            ]
+        }
     }
-}
-```
+    ```
 
 ### Purchase Experience API
 
@@ -109,8 +110,3 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 * [Monetize your app](monetize-overview.md)
 * [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
 * [RSC permissions](../../../../graph-api/rsc/resource-specific-consent.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
