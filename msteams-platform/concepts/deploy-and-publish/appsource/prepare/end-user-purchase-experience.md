@@ -88,10 +88,10 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
-When a new user launches the app for the first time, they're requested to provide consent to the app.
+When a new user launches the app for the first time, they are requested to provide consent to the app.
 
 > [!NOTE]
-> Consent dialog is part of the flow to get the user's license information and might vary based on Independent software vendors (ISVs) integration approach.
+> Consent dialog is part of the flow to get the user's license information and might vary based on independent software vendors (ISVs) integration approach.
 
 Following is an example of the consent screen:
 
@@ -119,7 +119,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red." lightbox="../../../../assets/images/saas-offer/subscription-list.png":::
 
-    Here are the subscription management options available for users on the **Subscriptions** page:
+    Here's the subscription management options available for users on the **Subscriptions** page:
     
     <br>
     <details>
