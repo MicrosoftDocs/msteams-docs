@@ -834,7 +834,7 @@ To build and run your app:
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ssl-prompt.png" alt-text="Screenshot of Security Warning with Yes option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ssl-prompt.png" alt-text="Screenshot of Security Warning with Yes option highlighted.":::
 
     Teams is loaded in a web browser.
 
@@ -844,7 +844,7 @@ To build and run your app:
 
 1. Select **Open** to use the app on your own.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of BlazorApp displaying the personal scope option with open button highlighted.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of BlazorApp displaying the personal scope option of open highlighted.":::
 
     Congratulations, your first tab app is running in your local environment!
 
