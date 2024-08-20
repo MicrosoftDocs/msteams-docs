@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and helps you provide a similar experience.
+Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and provide a similar experience.
 
 ## Subscription purchase experience
 
@@ -27,7 +27,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In the app details dialog, select **Buy a subscription**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
 
 1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
@@ -46,7 +46,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length** and select **Next**.
 
-        :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
+        :::image type="content" source="~/assets/images/saas-offer/subscription-details.png" alt-text="Screenshot shows selecting the Quantity and Subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-lightbox.png":::
 
     1. Under **Billing account**, enter the name and billing details and select **Next**.
 
@@ -72,7 +72,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Subscription details**, select **Quantity** and **Subscription length** and select **Next**.
 
-        :::image type="content" source="~/assets/images/saas-offer/subscription-details-existing.png" alt-text="Screenshot shows selecting the quantity and subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-existing-lightbox.png":::
+        :::image type="content" source="~/assets/images/saas-offer/subscription-details-existing.png" alt-text="Screenshot shows selecting the Quantity and Subscription length."  lightbox="../../../../assets/images/saas-offer/subscription-details-existing-lightbox.png":::
 
     1. Under **Review**, verify the details and select **Place order**.
 
