@@ -10,8 +10,7 @@ ms.date: 01/26/2024
 
 > [!NOTE]
 > * Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
-> * Adaptive Card-based Loop components aren't available in Microsoft Teams and Microsoft Outlook mobile clients.
-> * Adaptive Card-based Loop components aren't available in devices running on macOS.
+> * Adaptive Card-based Loop components aren't available in Microsoft Teams and Microsoft Outlook on macOS and mobile clients.
 
 Adaptive Card-based Loop components enable you to build collaborative experiences within your Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch contexts between Microsoft 365 apps, such as Teams and Microsoft Outlook.
 
@@ -65,30 +64,31 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 ### Query parameters
 
-|Property|Type|Description|Required|
-|---|---|---|---|
-| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. | No |
-| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts. | No |
+|Property|Type|Description|
+|---|---|---|
+| `metadata`| Metadata | Defines various metadata properties typically not used for rendering the card. |
+| `webUrl` | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts. |
 
 > [!NOTE]
-> When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste the URL in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
+> * When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste the URL in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
+> * Adaptive Card-based Loop components use the same [refresh mechanism](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism) as regular Adaptive Cards. The content in an Adaptive Card-based Loop component is refreshed only when a user opens the Loop component.
 
-## Test your Loop component
+## Test AdaptiveCard-based Loop component
 
-You can test the Loop component in the developer environments of Teams and Outlook.
+You can test Adaptive Card-based Loop components in Teams and Outlook.
 
 ### Test in Teams
 
-To configure, distribute, and manage your application, use [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md). You can test and debug your app in Developer Portal using the following options:
+You can test and debug your app in [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) using the following options:
 
 * **Overview page**: On the **Overview page**, under **Teams Store validation**, you can see a snapshot of your app's configuration and check if your app package validates against Microsoft Teams Store test cases.
 * **Preview in Teams**: The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
 
 :::image type="content" source="../assets/images/developer-portal-overview.png" alt-text="A screenshot of the Developer Portal overview page with the Preview in Teams button highlighted. " lightbox="../assets/images/developer-portal-overview.png" :::
 
-### Test in Outlook for web
+### Test in Outlook
 
-To turn on the Adaptive Card-based Loop component in Outlook for web, follow these steps:
+To turn on the Adaptive Card-based Loop component in Outlook, follow these steps:
 
 1. Create a search-based message extension using [Teams App Camp](https://microsoft.github.io/app-camp/).
 1. [Create a Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program) or sign in with your test tenant credentials.
