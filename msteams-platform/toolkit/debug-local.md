@@ -1,5 +1,5 @@
 ---
-title: Debug your Teams app locally
+title: Teams Toolkit - Debug your Apps Locally
 author: surbhigupta 
 description: Learn how to set up Teams Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
@@ -270,6 +270,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env.md)
