@@ -89,9 +89,9 @@ The following code shows an example of an Adaptive Card with media elements:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Media` to add media files.|
-| `poster` | URL of an image to display before playing. Supports data URI in version 1.2+. If poster is omitted, the Media element will either use a default poster (controlled by the host application) or will attempt to automatically pull the poster from the target video service when the source URL points to a video from a Web provider such as YouTube.|
-| `sources.url`| URL to media. Supports data URI in version 1.2+. |
-| `sources.mimeType`| Mime type of associated media, such as `video/mp4`. For YouTube and other Web video URLs, `mimeType` can be omitted.|
+| `poster` | URL of an image to display before playing. Supports data URI in version 1.2+.</br> If poster is omitted, the `media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from a Web provider, such as YouTube.|
+| `sources.url`| URL to media file. Supports data URI in version 1.2+. |
+| `sources.mimeType`| Mime type of associated media, such as `video/mp4`.</br> For YouTube and other Web video URLs, `mimeType` can be omitted.|
 
 For more information, see [`media`](https://www.adaptivecards.io/explorer/Media.html).
 
@@ -109,10 +109,10 @@ You can add media files to an existing or new Adaptive Card using Teams Develope
 
 1. In **ELEMENT PROPERTIES** section, update the following fields:
 
-   * Under **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#add-audio-or-video-to-onedrive-or-sharepoint).
-   * Under **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under the **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#add-audio-or-video-to-onedrive-or-sharepoint).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
+     :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
 1. Select **Save** and then select **Send me this card**.
 
@@ -122,24 +122,26 @@ You can add media files to an existing or new Adaptive Card using Teams Develope
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
 
-### Add audio or video to OneDrive or SharePoint
+### Add media files to OneDrive or SharePoint
 
-To add audio or video to OneDrive or SharePoint, follow the steps:
+To add media files to OneDrive or SharePoint, follow the steps:
 
 1. Add your media files to OneDrive or SharePoint.
 
-1. [Create a sharing link or URL for a DriveItem](/graph/api/driveitem-createlink). You can also get a link or URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
+1. Get a link or URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
+   
+   You can also create a sharing link or URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
 
     >[!NOTE]
-    > Adaptive Card does't support media file links or URL that are copied directly from the address bar of OneDrive or SharePoint.
+    > Adaptive Card doesn't support media file links or URLs that are copied directly from the address bar of OneDrive or SharePoint.
 
 ## Limitations
 
 * `mimeType` is a required field for Teams web and desktop clients.
-* `poster` URL is supported only for mobile clients.
-* For Teams desktop clients, Adaptive cards support inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
+* `poster` URL is supported only for Teams mobile clients.
+* For Teams desktop clients, Adaptive Cards support inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
 * For SharePoint or OneDrive media files, ensure that the users have access to the media files available in the SharePoint or OneDrive.
 
 ## Code samples
