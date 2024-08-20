@@ -111,7 +111,7 @@ await context.sendActivity({
       appearance: {
         "@type": "DigitalDocument",
         name: "AI bot", // Title
-        url: "https://example.com/claim-1", // Hyperlink on the title
+        url: "https://contoso.com/claim-1", // Hyperlink on the title
         abstract: "Excerpt description", // Appears in the citation pop-up window
         keywords: ["keyword 1", "keyword 2", "keyword 3"], // Appears in the citation pop-up window
         },
