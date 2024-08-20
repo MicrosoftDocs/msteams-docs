@@ -578,7 +578,7 @@ items:
     1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, user can invoke the message extension app that is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
