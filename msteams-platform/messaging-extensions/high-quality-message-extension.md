@@ -5,7 +5,8 @@ ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/14/2023
+ms.date: 07/03/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Guidelines to create or upgrade Copilot extensions
