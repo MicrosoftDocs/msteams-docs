@@ -1,6 +1,6 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams, format cards with Markdown, and design responsive Adaptive Cards.
+description: Learn about card text formatting with Markdown and HTML, the CodeBlock element, borders, rounded corners, and how to design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
@@ -1106,7 +1106,7 @@ You can add borders to the following elements in an Adaptive Card:
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 * [`Image`](https://adaptivecards.io/explorer/Image.html)
 
-To add rounded corners to an element in an Adaptive Card, set the `roundedCorners` property to `true` for the element in the card’s payload.
+To add rounded corners to containers, columns, column sets, and tables in an Adaptive Card, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
 
 The following JSON payload shows an Adaptive Card with rounded corners around columns, a coulmn set, and an image:
 
@@ -1161,9 +1161,6 @@ The following JSON payload shows an Adaptive Card with rounded corners around co
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
 | `roundedCorners` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
-
-> [!NOTE]
-> To add rounded corners to an image in an Adaptive Card, set the `style` property to `RoundedCorners` within the `Image` element.
 
 ## Format cards with HTML
 
