@@ -313,7 +313,7 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. Go to **Select host app** and from the dropdown, select **Microsoft Teams**.
+       1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
        1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
        1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
@@ -495,8 +495,8 @@ items:
             "full": "Search ME API full"
         },
         "description": {
-            "short": "product app for testing API MEs",
-            "full": "product app for testing API MEs"
+            "short": "product app for testing API Messaging Extensions",
+            "full": "product app for testing API Messaging Extensions"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
@@ -569,10 +569,10 @@ items:
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
 
-    1. Go to a chat and from the message compose area, select **+** and search for your app.
+    1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that using the plus icon in the chat menu, user can launch the message extension app that is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
@@ -583,6 +583,6 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've done it! 
-    You've learned to create a API-based message extension using OpenAPI Description document.
+    You did it! 
+    You learned to create a API-based message extension using OpenAPI Description document.
 
