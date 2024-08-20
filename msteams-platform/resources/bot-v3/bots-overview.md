@@ -7,7 +7,12 @@ ms.date: 04/02/2023
 ---
 # Add bots to Microsoft Teams apps
 
-[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+> [!IMPORTANT]
+>
+> This article is based on the v3 Bot Framework SDK.
+>
+> * If you want to create an AI bot, see  [create an AI bot](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md).
+> * If you want to create a basic bot, see [get started](~/get-started/get-started-overview.md), and if you want to look for current documentation version 4.6 or later of the SDK, see [conversational bots](~/bots/what-are-bots.md).
 
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
@@ -68,9 +73,14 @@ The following articles will guide you through the process of creating a great bo
 
 <details>
 
-<summary><b>Build a bot for Microsoft Teams</b></summary>
+<summary><b>Bots SDK V3</b></summary>
 
-## Build a bot
+> [!IMPORTANT]
+>
+> This article is based on the v3 Bot Framework SDK.
+>
+> * If you want to create an AI bot, see  [create an AI bot](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md).
+> * If you want to create a basic bot, see [get started](~/get-started/get-started-overview.md), and if you want to look for current documentation version 4.6 or later of the SDK, see [conversational bots](~/bots/what-are-bots.md).
 
 **Teams Developer Portal for Teams** is a tool that can help build your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
 
