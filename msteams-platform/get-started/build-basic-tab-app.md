@@ -63,9 +63,13 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
 1. When the app dialog appears, select **Add** to install your tab app in Teams.
 
-   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows you the tab app loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot of the tab app loaded in the Teams client.":::
 
-   The tab app is installed in the Teams client and opens.
+   When the tab app is installed, a dialog appears to select the scope.
+
+1. Select **Open** to add in personal scope. Alternatively, you can select from the list of suggested scopes or search and select the required shared scope.
+
+   :::image type="content" source="../assets/images/get-started/tab-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 
    You've successfully created the tab app and loaded in the Teams client.
 

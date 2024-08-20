@@ -10,9 +10,9 @@ ms.date: 12/15/2022
 
 It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. For example, if your app is primarily intended for use within a team or channel, you can ensure that users only view that specific scope when they install your app from Microsoft Teams Store.
 
-When the user selects an app to install from Teams Store, a dialog to select the install scope appears.
+When the user selects an app to install from Teams Store, the app gets installed and a dialog appears to select the install scope.
 
-:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot shows the channel, chat, and meeting scope.":::
+:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required app install scope.":::
 
 If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
 
@@ -68,7 +68,7 @@ If the app is configured with personal and shared scope, here's the user flow to
 
 1. Select **Open** to add in personal scope.
 
-    Alternatively, you can search and select from the list of shared scopes.
+    Alternatively, you can select from the list of suggested scopes or search and select the required shared scope.
 
     :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 
@@ -94,7 +94,7 @@ If the app is configured with shared scope, here's the user flow to add the app 
 
     When the app is added, a dialog appears to select the scope.
 
-1. Search and select from the list of shared scopes. The app opens in the respective scope.
+1. Select from the list of suggested scopes or search and select the required shared scope. The app opens in the respective scope.
 
     :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
 
