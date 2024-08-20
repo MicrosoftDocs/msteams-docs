@@ -22,7 +22,7 @@ items:
 
     Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This message extension app can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -578,7 +578,7 @@ items:
     1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that with the plus icon in the chat menu, user can launch the message extension app that is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, user can invoke the message extension app that is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
