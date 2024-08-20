@@ -840,11 +840,11 @@ To build and run your app:
 
 1. Select **Add** when prompted to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of BlazorApp installation with Add option highlighted.":::
 
 1. Select **Open** to use the app on your own.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of Teams displaying the scope options for BlazorApp with open button highlighted in red. Options are open and select a channel or chat.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of BlazorApp displaying the personal scope option with open button highlighted.":::
 
     Congratulations, your first tab app is running in your local environment!
 
