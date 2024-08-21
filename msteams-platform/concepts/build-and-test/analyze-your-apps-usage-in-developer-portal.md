@@ -106,14 +106,14 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third party apps](#tab/thirdpartyapps)
 
-You can view your third party app's usage and other insights from the **Analytics** page. To access the page:
+You can view usage for your third party app and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
 
-As you explore your third party app usage metrics on this page, you can see the following three different sections:
+As you explore the app usage metrics on this page, you can see the following three sections:
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
@@ -157,7 +157,7 @@ As you explore your third party app usage metrics on this page, you can see the 
 
  #### Usage by country or region
 
-   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on active users in different country or region.
+   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on active users in different countries or region.
 
    :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
 
@@ -180,7 +180,7 @@ As you explore your third party app usage metrics on this page, you can see the 
 * Daily R30 data for the last 75 days.
 * End of month R30 data for up to 12 months.
 
-   You can select each of these **Metric name** to see trends over time.
+   You can select each of these metric names to see trends over time.
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshots shows you app capability usage of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
 
@@ -198,7 +198,7 @@ As you explore your third party app usage metrics on this page, you can see the 
 
  #### Usage by host product
 
-   The **Usage by host app** chart shows your app's active usage across various host products, such as **Teams**, **Microsoft 365 app**, and **Outlook** of monthly, weekly, and daily data.
+   The **Usage by host product** chart shows your app's active usage across various host products, including as **Teams**, **Outlook**, and the **Microsoft 365 app** of monthly, weekly, and daily data.
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshots shows you app usage in different host product of your published app in Developer Portal.":::
 
@@ -216,7 +216,7 @@ As you explore your third party app usage metrics on this page, you can see the 
 
  ### App capability
 
-   The app capability page shows you the usage of individual app capabilities that you've configured within your app. The Key Performance Indicator (KPI) cards display metrics such as the capability with the most active users and the capability with the least active users.
+   The app capability page shows you the usage of individual app capabilities that you've configured within your app.
 
   This page summarizes the overall usage of the following app capabilities in different host products.
 
