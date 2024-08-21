@@ -68,7 +68,7 @@ To enable DevTools:
 
 1. Validate if user or tenant is enabled for Targeted release. If it isn't enabled, you must enable it.
 
-For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization)
+For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true)
 
 > [!IMPORTANT]
 > After enabling it would take 24 hours for the targeted release settings to take effect. Try logging out and in from Teams iOS client, after the time to ensure feature to take effect.
