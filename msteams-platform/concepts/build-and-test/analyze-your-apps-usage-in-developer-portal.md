@@ -157,7 +157,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
  #### Usage by country or region
 
-   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on active users in different countries or region.
+   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more details on active users in different countries or regions.
 
    :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
 
