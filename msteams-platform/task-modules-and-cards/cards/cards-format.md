@@ -21,6 +21,8 @@ You can include an inline image with any Teams card. Supported image formats are
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
+You can add rounded corners and borders to Adaptive Cards.
+
 ## Format cards with Markdown
 
 The following card types support Markdown formatting in Teams:
@@ -1025,11 +1027,21 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ## Borders in Adaptive Cards
 
-You can add borders around containers, columns, column sets, and tables to delineate various elements in an Adaptive Card, making it easier for users to distinguish between them. Borders can highlight important information or sections, drawing the user’s attention to key areas. Additionally, borders can add a polished and professional look to your Adaptive Cards, enhancing their visual appeal.
+Adaptive Cards support a wide variety of elements, but having too many elements can introduce visual clutter and reduce readability. You can add borders around different elements in Adaptive Cards to delineate them, making it easier for users to distinguish between them.
 
-Placeholder image:
+Design your Adaptive Cards with borders that help highlight important information or sections, drawing the user’s attention to key areas. Additionally, borders can add a polished and professional look to your Adaptive Cards, enhancing their visual appeal.
+
+**Placeholder image:**
+
+# [Without borders](#tab/noborder)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
+
+# [With borders](#tab/withborder)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
+
+---
 
 You can add borders to the following elements in an Adaptive Card:
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
@@ -1037,9 +1049,9 @@ You can add borders to the following elements in an Adaptive Card:
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 
-To add a border to an element in an Adaptive Card, set the `showBorder` property to `true` for the element in the card’s payload.
+To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
 
-The following JSON payload shows an Adaptive Card with a border around the columns in a column set:
+The following JSON payload shows an Adaptive Card with a border around columns and a column set:
 
 ```json
 {
@@ -1086,16 +1098,21 @@ The following JSON payload shows an Adaptive Card with a border around the colum
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
-| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
-
-> [!NOTE]
-> The border color matches the container’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config) for each container style.
+| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
 
 ## Rounded corners in Adaptive Cards
 
-You can add rounded corners to containers, columns, column sets, tables, and images in Adaptive Cards to make the card design look more modern and visually appealing. Elements with rounded corners improve readability and provide a seamless visual experience. Additionally, many contemporary design systems and frameworks use rounded corners, so incorporating them in your Adaptive Cards can help maintain consistency with current design trends.
+You can use Adaptive Cards across multiple hosts that contain contemporary design systems and frameworks following current design trends. To help maintain consistency across different hosts and keep up with the latest design trends, Adaptive Cards support rounded corners in various elements.
 
-Placeholder image:
+Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Rounded corners improve readability and provide a seamless user experience.
+
+**Placeholder image:**
+
+# [Without rounded corners](#tab/nocorner)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
+
+# [With rounded corners](#tab/roundedcorner)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a a border and rounded corners.":::
 
