@@ -53,49 +53,45 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
 ## Access DevTools for an iOS client
 
-For accessing DevTools for the Teams iOS client, You must enable it for the Teams iOS client.
+To use DevTools with the Teams iOS client, you need to enable it first.
 
 ### Prerequisites
 
-Ensure the following requirements are met for accessing DevTools for an iOS client:
+To access DevTools for an iOS client, ensure you meet the following requirements:
 
 * Mac system with Safari.
-* Teams iOS version 6.10.0 or later. You can download Teams iOS from [Appstore](https://aka.ms/teamsmobiledownload).
+* Teams iOS version 6.10.0 or later. You can download Microsoft Teams for iOS from the [AppStore](https://aka.ms/teamsmobiledownload).
 
 ### Activate DevTools for your iOS client
 
 To activate DevTools:
 
-1. Validate if the user or the tenant is enabled for targeted release. If it isn't enabled, you must enable it.
+1. Confirm whether the user or tenant is activated for targeted release. If not, you need to enable it.
 
    For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
 
    > [!IMPORTANT]
-   > After you've enabled the user or the tenant for targeted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that it is active.
+   > After enabling the user or the tenant for targeted release, allow 24 hours for the settings to take effect. After this period, try signing out and then signing back in on the Teams iOS client to confirm its activation.
 
-1. Log into Teams iOS app, and enable developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
+1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-1. Enable Web Inspector in Safari and the iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+1. Activate the Web Inspector in Safari and the iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
-1. Connect your iOS client to your Mac system.
-
-   You're prompted to confirm if you trust the client. You must consent for allowing to connect your iOS client to the Mac system.
+1. Connect your iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
 
 1. Open Teams on your connected iOS client, and open your app inside Teams.
 
-1. Go to Safari on your Mac system.
+1. On your Mac system, open Safari. You'll find your client listed under the **Develop** option.
 
-   Your client appears under the **Develop** option.
+1. Select the connected client to view the inspection link for your app.
 
-1. Select your connected client to see your app’s inspection link.
-
-   :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="This screenshot shows the app inspection link for your app." lightbox="../../assets/images/devtools/app-inspection-link.png":::
+   :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="The screenshot displays the app inspection link for your application." lightbox="../../assets/images/devtools/app-inspection-link.png":::
 
 1. Select the link to open Safari Web Inspector for your app.
 
-   :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
+   :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="The screenshot displays the Web Inspector in Safari." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
 
-   You can now use DevTools for your iOS client.
+   You can now utilize DevTools for your iOS client.
 
 ## See also
 
