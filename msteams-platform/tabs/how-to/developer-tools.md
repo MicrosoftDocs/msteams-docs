@@ -53,7 +53,32 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
 ## Access DevTools for an iOS device
 
-You can also enable the DevTools for the Teams iOS client. To enable DevTools, you must:
+You can also enable the DevTools for the Teams iOS client.
+
+### Prerequisites
+
+Ensure the following requirements are met for enabling DevTools for an iOS device:
+
+* Mac system with Safari
+* Teams iOS version 6.10.0 or higher. You can download Teams iOS from [Appstore](https://aka.ms/teamsmobiledownload).
+
+### Enable DevTools for your iOS device
+
+To enable DevTools:
+
+1. Validate if user or tenant is enabled for Targeted release. If it isn't enabled, you must enable it.
+
+For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization)
+
+> [!IMPORTANT]
+> After enabling it would take 24 hours for the targeted release settings to take effect. Try logging out and in from Teams iOS client, after the time to ensure feature to take effect.
+
+1. Log in into Teams iOS app, and enable the developer preview.
+
+For more information about developer preview, see ([Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md))
+
+1.
+1.
 
 ## See also
 
