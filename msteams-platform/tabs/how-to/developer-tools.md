@@ -81,23 +81,25 @@ To enable DevTools:
 
    For more information on web inspector, see [Enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
-1. Connect your iOS device to your Mac system and allow for trust.  
+1. Connect your iOS device to your Mac system.
+
+   You're prompted if you trust the device and you must consent for allowing to connect your iOS device.
 
 1. Open Teams on your connected iOS device.
 
 1. Open your app inside Teams.
 
-1. Go to Safari on Mac.
+1. Go to Safari on your Mac system.
 
    Your device appears under the **Develop** option.
 
 1. Select your connected device to see your app’s inspection link.
 
-   :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="This screenshot shows the app inspection link for your app.":::
+   :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="This screenshot shows the app inspection link for your app." lightbox="../../assets/images/devtools/app-inspection-link.png":::
 
 1. Select the link to open Safari web inspector for your app.
 
-    :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector.":::
+    :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
 
 ## See also
 
