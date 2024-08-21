@@ -78,11 +78,11 @@ Here are few pointers to consider while connecting with third-party services fro
 
 > [!div class="checklist"]
 >
-> Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft.
-> Understand that enabling bots extend your system boundary beyond this tenant, and is based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR.
-> Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service.
-> Mitigate risks associated with connecting to third-party bots in their services.
-> Evaluate the risk and compliance of any endpoint and URL that the users connect to.
+> * Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft.
+> * Understand that enabling bots extend your system boundary beyond this tenant, and is based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR.
+> * Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service.
+> * Mitigate risks associated with connecting to third-party bots in their services.
+> * Evaluate the risk and compliance of any endpoint and URL that the users connect to.
 
 ## See also
 
