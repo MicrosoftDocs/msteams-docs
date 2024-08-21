@@ -475,7 +475,7 @@ Represents an API plugin, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique identifier for the plugin. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference|
+|`id`|String| |✔️| Unique identifier for the plugin. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
 |`file`|String| |✔️| Relative path within the app package to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
 
 ## configurableTabs
