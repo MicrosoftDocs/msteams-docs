@@ -545,6 +545,7 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 > * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
 > * The `samplePrompts` property is mandatory for app validation during the app submission process.
 > * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
+> * Prompt library or Copilot Lab to be available soon in Copilot for Microsoft 365.
 
 We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
