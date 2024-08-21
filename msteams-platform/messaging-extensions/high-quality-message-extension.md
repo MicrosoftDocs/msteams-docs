@@ -532,11 +532,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample prompts
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts to be available in the following areas within Copilot for Microsoft 365:
-
-* First Run Experience (FRE): When a user first installs or enables a plugin.
-* Prompt library or Copilot Lab: When a user seeks help with prompts.
-* Plugin suggestions: To guide users towards better utterances.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
 
@@ -545,7 +541,6 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 > * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
 > * The `samplePrompts` property is mandatory for app validation during the app submission process.
 > * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
-> * Prompt library or Copilot Lab to be available soon in Copilot for Microsoft 365.
 
 We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
