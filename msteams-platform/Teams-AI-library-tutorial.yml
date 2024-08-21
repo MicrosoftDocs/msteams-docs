@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 29/04/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+  nextTutorialHref: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
   nextTutorialTitle: Back to Teams AI library
   ms.custom: mvc
   ms.localizationpriority: high
@@ -19,7 +19,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    * How to setup your data on Azure OpenAI.
+    * How to set up your data on Azure OpenAI.
     * How to create a new custom copilot with Teams Toolkit.
     * How to interact with your LLMs and data.
     * The directory structure of your custom copilot.
@@ -38,7 +38,7 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-- title: Setup your data on Azure OpenAI
+- title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
@@ -83,7 +83,7 @@ items:
      1. Select **Browse for a file** and upload files you prefer to use as your data, then select **Upload files**.
 
          > [!NOTE]
-         > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, or `.pptx` format with 16 MB size limit.
+         > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, or `.pptx` format with 16-MB size limit.
 
      1. Select the **Data management** settings as default and select **Next**.
      
