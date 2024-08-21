@@ -93,7 +93,7 @@ To activate DevTools:
 
 1. Select the link to open Safari Web Inspector for your app.
 
-    :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
+   :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
 
    You can now use DevTools for your iOS client.
 
