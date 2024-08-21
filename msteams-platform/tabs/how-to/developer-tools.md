@@ -57,7 +57,7 @@ For accessing DevTools for the Teams iOS client, You must enable it for the Team
 
 ### Prerequisites
 
-Ensure the following requirements are met for accessing DevTools for an iOS device:
+Ensure the following requirements are met for accessing DevTools for an iOS client:
 
 * Mac system with Safari.
 * Teams iOS version 6.10.0 or later. You can download Teams iOS from [Appstore](https://aka.ms/teamsmobiledownload).
@@ -75,19 +75,19 @@ To activate DevTools:
 
 1. Log into Teams iOS app, and enable developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-1. Enable Web Inspector in Safari and the iOS device. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+1. Enable Web Inspector in Safari and the iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
-1. Connect your iOS device to your Mac system.
+1. Connect your iOS client to your Mac system.
 
-   You're prompted to confirm if you trust the device. You must consent for allowing to connect your iOS device to the Mac system.
+   You're prompted to confirm if you trust the client. You must consent for allowing to connect your iOS client to the Mac system.
 
-1. Open Teams on your connected iOS device, and open your app inside Teams.
+1. Open Teams on your connected iOS client, and open your app inside Teams.
 
 1. Go to Safari on your Mac system.
 
-   Your device appears under the **Develop** option.
+   Your client appears under the **Develop** option.
 
-1. Select your connected device to see your app’s inspection link.
+1. Select your connected client to see your app’s inspection link.
 
    :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="This screenshot shows the app inspection link for your app." lightbox="../../assets/images/devtools/app-inspection-link.png":::
 
@@ -95,7 +95,7 @@ To activate DevTools:
 
     :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
 
-   You can now use DevTools for your iOS device.
+   You can now use DevTools for your iOS client.
 
 ## See also
 
