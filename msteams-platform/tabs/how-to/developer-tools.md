@@ -66,12 +66,12 @@ Ensure the following requirements are met for enabling DevTools for an iOS devic
 
 To enable DevTools:
 
-1. Validate if user or tenant is enabled for Targeted release. If it isn't enabled, you must enable it.
+1. Validate if user or tenant is enabled for targeted release. If it isn't enabled, you must enable it.
 
    For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true)
 
-> [!IMPORTANT]
-> After enabling it would take 24 hours for the targeted release settings to take effect. Try logging out and in from Teams iOS client, after the time to ensure feature to take effect.
+   > [!IMPORTANT]
+   > After you've enabled the user or tenant for targetted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that the feature takes effect.
 
 1. Log in into Teams iOS app, and enable the developer preview.
 
@@ -92,6 +92,12 @@ To enable DevTools:
    Your device appears under the **Develop** option.
 
 1. Select your connected device to see your app’s inspection link.
+
+   :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="This screenshot shows the app inspection link for your app.":::
+
+1. Select the link to open Safari web inspector for your app.
+
+    :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="This screenshot shows the Safari web inspector.":::
 
 ## See also
 
