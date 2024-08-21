@@ -424,11 +424,13 @@ If the user changes the selection from **USA** to **India**, the values in the s
 
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one dropdown list is associated with another and acts as a filter to the values in the second dropdown. To enable depedent dropdowns, define the `associatedInputs` property under the `Data.Query` object of the dropdown lists.
+You can implement dependent dropdowns where one dropdown list is associated with another and acts as a filter to the values in the second dropdown. To associate two dropdown lists, define the `associatedInputs` property under the `Data.Query` object of the dropdown lists.
 
-This property ensures that if a user changes an input value in the first dropdown and sends a data query request to the bot, the request contains the updated value of the first dropdown and the current value of the second dropdown. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
+* When a user changes an input value in one of the dropdown lists, the existing input value in the other dropdown list might become invalid. Use the `Action.ResetInputs` property to reset the values in the dependent dropdown lists and trigger a data query request to the bot.
 
-However, when a user changes an input value in one of the dropdown lists, the existing value in the other dropdown list might become invalid. Use the `Action.ResetInputs` property to reset the values in the dependent dropdown lists. This enables the user to pick a new value from the dropdown list that is reset. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
+* Since the two dropdowns are associated through the `associatedInputs` property, the data query request to the bot contains the updated input values of two dropdown lists. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
+
+* This enables the user to pick a new input value from the dropdown list that is reset. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinput
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
