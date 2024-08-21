@@ -51,7 +51,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
    :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools.":::
 
-## Access DevTools for an iOS device
+## Access DevTools for an iOS client
 
 For accessing DevTools for the Teams iOS client, You must enable it for the Teams iOS client.
 
@@ -59,27 +59,23 @@ For accessing DevTools for the Teams iOS client, You must enable it for the Team
 
 Ensure the following requirements are met for accessing DevTools for an iOS device:
 
-* Mac system with Safari
-* Teams iOS version 6.10.0 or higher. You can download Teams iOS from [Appstore](https://aka.ms/teamsmobiledownload).
+* Mac system with Safari.
+* Teams iOS version 6.10.0 or later. You can download Teams iOS from [Appstore](https://aka.ms/teamsmobiledownload).
 
-### Activate DevTools for your iOS device
+### Activate DevTools for your iOS client
 
 To activate DevTools:
 
 1. Validate if the user or the tenant is enabled for targeted release. If it isn't enabled, you must enable it.
 
-   For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
+   For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
 
    > [!IMPORTANT]
-   > After you've enabled the user or the tenant for targetted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that the feature takes effect.
+   > After you've enabled the user or the tenant for targeted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that it is active.
 
-1. Log into Teams iOS app, and enable developer preview.
+1. Log into Teams iOS app, and enable developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-   For more information about developer preview, see [Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
-
-1. Enable Web Inspector in Safari and the iOS device.
-
-   For more information on Web Inspector, see [Enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+1. Enable Web Inspector in Safari and the iOS device. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
 1. Connect your iOS device to your Mac system.
 
