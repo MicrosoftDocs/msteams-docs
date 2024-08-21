@@ -53,7 +53,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
 ## Access DevTools for an iOS device
 
-You can also enable the DevTools for the Teams iOS client.
+You can enable DevTools for the Teams iOS client.
 
 ### Prerequisites
 
@@ -66,24 +66,24 @@ Ensure the following requirements are met for enabling DevTools for an iOS devic
 
 To enable DevTools:
 
-1. Validate if user or tenant is enabled for targeted release. If it isn't enabled, you must enable it.
+1. Validate if the user or the tenant is enabled for targeted release. If it isn't enabled, you must enable it.
 
    For more information, see [Targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true)
 
    > [!IMPORTANT]
-   > After you've enabled the user or tenant for targetted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that the feature takes effect.
+   > After you've enabled the user or the tenant for targetted release, it takes 24 hours for the targeted release settings to take effect. After 24 hours, you can try logging out and logging in from Teams iOS client to ensure that the feature takes effect.
 
-1. Log in into Teams iOS app, and enable the developer preview.
+1. Log in into Teams iOS app, and enable developer preview.
 
-   For more information about developer preview, see ([Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md))
+   For more information about developer preview, see ([Public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md)).
 
-1. Enable web inspector in Safari & iOS device.
+1. Enable web inspector in Safari and the iOS device.
 
    For more information on web inspector, see [Enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
 1. Connect your iOS device to your Mac system.
 
-   You're prompted if you trust the device and you must consent for allowing to connect your iOS device.
+   You're prompted if you trust the device and you must consent for allowing to connect your iOS device to the Mac system.
 
 1. Open Teams on your connected iOS device.
 
