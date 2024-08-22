@@ -330,8 +330,6 @@
       - name: Bots SDK (v3)
         href: resources/bot-v3/bots-overview.md
         items:
-        - name: Build a bot
-          href: resources/bot-v3/bots-create.md
         - name: Conversations
           href: resources/bot-v3/bot-conversations/bots-conversations.md
           items:
@@ -558,14 +556,14 @@
   - name: Teams AI library
     items:
       - name: Overview
-        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
         displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
       - name: Core capabilities
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       - name: Get started
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
-        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+        href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - name: Build custom copilot
         items: 
           - name: Custom copilot for Microsoft 365 
@@ -573,7 +571,7 @@
           - name: Build custom copilot using Teams Toolkit 
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
-        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+        href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
