@@ -412,49 +412,154 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## Dependent dropdowns
 
-Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. These types of dropdown lists are useful in filtering out options based on a previous choice. For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
+> [!NOTE]
+> Dependent dropdowns are only available on the web and desktop versions of the Teams client.
+
+You can design Adaptive Cards that contain forms with interactive data entry fields through dynamic typeahead search. In these types of forms, there might be instances where the input value in one field is dependent on the input value of another. It's also possible that when a user changes an input value in one field, the existing input value in the other field might become invalid.
+
+For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country/region and another for selecting a specific city within that country/region.
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
 
-If a user selects **USA** as the country in the first dropdown list, the second dropdown list must display the various states in USA, such as **CA**, **FL**, and **TX**.
+If a user selects **USA** as the country/region in the first dropdown list, the second dropdown list must display the various states in USA, such as **CA**, **FL**, and **TX**.
+
+However, inputs values in elements in Adaptive Cards are independent of each other. Hence, when a user changes the input value in a field, the value of the other input element might not be sent to the bot. In this case, when the user changes the country/region name from **USA** to **India**, the action can cause the two following issues:
+
+* You can validate the input data in the card only when the user submits the whole form. If the validation fails, the bot shows an error message. In this case, the validation fails as the selected country/region is **India** and the name of the states displayed belong to USA.
+* For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In this case, the bot has to search for city names from the list of all available/regions.
+
+The ideal experience in this case would be if the user changes the selection from **USA** to **India**, the values in the second dropdown list must be reset, and a new list of states in India must be displayed.
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
 
-If the user changes the selection from **USA** to **India**, the values in the second dropdown list must be reset, and a new list of states in India must be displayed.
+This kind of dropdowns is called a dependent dropdown. Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. These types of dropdown lists are useful in filtering out options based on a previous choice.
 
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one dropdown list is associated with another and acts as a filter to the values in the second dropdown. To associate two dropdown lists, define the `associatedInputs` property under the `Data.Query` object of the dropdown lists.
+You can implement dependent dropdowns where one input value (can be a string, number, or a dropdown) is associated with another and acts as a filter to the input values in the second dropdown (typically with dymanic typeahead search). To associate an input value with a dropdown list, define the `associatedInputs` property under the `Data.Query` object of the dropdown list.
 
-* When a user changes an input value in one of the dropdown lists, the existing input value in the other dropdown list might become invalid. Use the `Action.ResetInputs` property to reset the values in the dependent dropdown lists and trigger a data query request to the bot.
+* When a user changes an input value in a field, the existing input value in the other dropdown list might become invalid. Use the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot.
 
-* Since the two dropdowns are associated through the `associatedInputs` property, the data query request to the bot contains the updated input values of two dropdown lists. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
+* Since the `associatedInputs` property is defined in the dropdown, the data query request to the bot contains the updated input values of all the elements in the card. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
 
-* This enables the user to pick a new input value from the dropdown list that is reset. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinput
+* This enables the user to pick a new input value from the dropdown list. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinput).
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
+```json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.6",
     "body": [
         {
-            "type": "TextBlock",
-            "text": "This is a placeholder card.",
-            "weight": "bolder",
-            "size": "medium",
-            "wrap": true
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "id": "main",
+            "label": "Main input - changing its value will reset all the other inputs",
+            "valueChangedAction": {
+                "type": "Action.ResetInputs",
+                "targetInputIds": [
+                    "text",
+                    "multiline",
+                    "date",
+                    "time",
+                    "number",
+                    "compact",
+                    "expanded",
+                    "toggle"
+                ]
+            }
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Input.Text",
+            "id": "text",
+            "separator": true,
+            "spacing": "ExtraLarge"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Multiline Input.Text",
+            "id": "multiline",
+            "isMultiline": true
+        },
+        {
+            "type": "Input.Date",
+            "label": "Input.Date",
+            "id": "date"
+        },
+        {
+            "type": "Input.Time",
+            "label": "Input.Time",
+            "id": "time"
+        },
+        {
+            "type": "Input.Number",
+            "placeholder": "Placeholder text",
+            "label": "Input.Number",
+            "id": "number"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "label": "Compact Input.ChoiceSet",
+            "id": "compact"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "label": "Expanded Input.ChoiceSet",
+            "id": "expanded"
+        },
+        {
+            "type": "Input.Toggle",
+            "title": "New Input.Toggle",
+            "label": "Input.Toggle",
+            "id": "toggle"
         }
     ]
 }
+```
 
 | Property| Type | Required | Description |
 |---|---|---|---|
 | `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
 
 > [!NOTE]
-> If you set the value of `associatedInputs` to `auto`, the values of all the inputs in the Adaptive Card is included in the data query request sent to the bot.
+> If you set the value of `associatedInputs` to `auto`, Teams includes the values of all the inputs in Adaptive Card in the data query request sent to the bot.
 
 ## Code sample
 
