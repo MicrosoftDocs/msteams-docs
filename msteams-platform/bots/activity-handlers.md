@@ -8,7 +8,7 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Bot activity handlers
+# Activity handlers
 
 This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
@@ -32,10 +32,10 @@ An invoke event is sent to a user from the bot when a user performs an action, s
 * Provide feedback or input to the bot
 
 When an event occurs, invoke activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
-
+<!--
 |Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md#event-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
 | User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 Teams activity handler is derived from [Bot Framework's activity handler](~/bots/how-to/conversations/bot-events.md#bot-framework-activity-handler). The two primary Teams activity handlers are as follows:
@@ -44,7 +44,7 @@ Teams activity handler is derived from [Bot Framework's activity handler](~/bots
 * `OnInvokeActivityAsync`: Routes all Teams invoke activities.
 
 The invoke activities listed in this article are applicable for conversational bots in Teams.
-
+-->
 [TBD: Update for code snippets]
 
 ## Bot logic
