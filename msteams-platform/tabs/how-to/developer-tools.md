@@ -15,24 +15,24 @@ When Teams is running in a browser, it's easy to access the browser's DevTools: 
 1. Add breakpoints to your JavaScript code and perform interactive debugging.
 
 > [!NOTE]
-> The feature is only available for desktop and Android clients after the **Developer Preview** has been enabled. For more information, see [How do I enable developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> DevTools is only available for desktop and Android clients after the **Public preview** has been enabled. For more information, see [Public preview](~/resources/dev-preview/developer-preview-intro.md#desktop-or-web-client).
 
 ## Access DevTools on the desktop
 
 While the web version and the desktop version of Teams are almost the same, there are some differences concerning authentication. Sometimes the only way to figure out what is going on is to use the DevTools. To use DevTools in the desktop client, you must:
 
-1. Ensure you have enabled [Enable developer preview](../../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
+1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-or-web-client).
 1. Open up a tab so you have something to inspect with the DevTools.
 1. Open the DevTools one of the following ways:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
 
-      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" lightbox="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
 
-    * On macOS, select the Microsoft Teams icon in the Dock.
+    * On macOS
 
-      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.png" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
 
-The following example shows DevTools open and inspecting a tab configuration dialog:
+The following example shows DevTools:
 
    :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools." lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
 
@@ -44,7 +44,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
    :::image type="content" source="~/assets/images/tabs/android-beta-dev-tools.png" alt-text="Screenshot shows the option to join the beta.":::
    
-1. Enable the [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#mobile-client).
 1. Connect your device to your desktop computer, and set up your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:

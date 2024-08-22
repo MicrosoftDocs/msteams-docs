@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
+***August 22, 2024***: [DevTools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
 ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
 
 :::column-end:::
