@@ -305,6 +305,12 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 
 </details>
 
+## Code sample
+
+|Sample name | Description | .NET | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Teams tab Stageview | This sample app demonstrates a tab in Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
+
 ## See also
 
 [Create deep links](../concepts/build-and-test/deep-links.md)
