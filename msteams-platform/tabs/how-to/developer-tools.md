@@ -32,10 +32,6 @@ While the web version and the desktop version of Teams are almost the same, ther
 
       :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.png" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
 
-    The following example shows DevTools:
-
-    :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools." lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
-
 ## Access DevTools from Android device
 
 You can enable DevTools in the Teams Android client. To enable DevTools, follow these steps:
@@ -49,7 +45,7 @@ You can enable DevTools in the Teams Android client. To enable DevTools, follow 
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
-   :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools." lightbix="../../assets/images/android-devtools.png":::
+   :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools." lightbox="../../assets/images/android-devtools.png":::
 
 ## See also
 
