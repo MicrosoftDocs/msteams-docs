@@ -1,5 +1,5 @@
 ---
-title: Plan to send app notifications
+title: App Notification Types
 author: v-sdhakshina
 description: Learn how to design effective app notifications and choose the right framework for your app such as activity feed notification and interactive notification.
 ms.author: v-sdhakshina
