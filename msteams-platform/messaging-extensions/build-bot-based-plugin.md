@@ -133,11 +133,11 @@ Before you get started, ensure that you install the following tools to build and
   1. Open **Visual Studio**.
   1. Go to **Tools** > **Options**.
   1. Enter **Teams Toolkit** in the **Search Settings** search box.
-  1. Under **Preview Features**, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
+  1. In the **Preview Features** section, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
 * Ensure that the multi-project launch profile is enabled. To enable the profile, follow these steps:
   1. Open **Visual Studio**.
   1. Go to **Tools** > **Options**.
-  1. Under **Preview Features**, select the **Enable Multi-Project Launch Profiles** checkbox.
+  1. In the **Preview Features** section, select the **Enable Multi-Project Launch Profiles** checkbox.
 
 To create a bot-based search message extension plugin using Visual Studio, follow these steps:
 
@@ -146,9 +146,9 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 1. Search for **Teams** and select **Microsoft Teams App**.
 
-   The Configure your new project dialog appears.
+1. Enter the project details, and then select the **Place solution and project in the same directory** checkbox.
 
-1. Enter the project details in the Configure your new project dialog, and select the **Place solution and project in the same directory**.
+1. Select **Create**.
 
 1. Select **Custom Search Results**.
 
