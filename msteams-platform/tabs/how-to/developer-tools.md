@@ -79,7 +79,7 @@ To activate DevTools:
 
 1. Connect your iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
 
-1. Open Teams on your connected iOS client, and open your app inside Teams.
+1. Open Teams on your connected iOS client and open your app inside Teams.
 
 1. On your Mac system, open Safari. You'll find your client listed under the **Develop** option.
 
