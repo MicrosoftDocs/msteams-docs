@@ -590,6 +590,160 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ---
 
+## Adaptive Card response
+
+Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
+
+* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
+
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
+
+  <br/>
+  <details><summary>Adaptive Card response template example</summary>
+
+  ```json
+   {
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.5",
+      "body": [
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${companyName}",
+              "size": "Medium",
+              "wrap": true,
+              "style": "heading"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${stockExchange} ${stockSymbol}",
+              "isSubtle": true,
+              "spacing": "None",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${formattedDate} ${formattedTime}",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "spacing": "None",
+          "items": [
+            {
+              "type": "ColumnSet",
+              "columns": [
+                {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${currentPrice} ",
+                      "size": "ExtraLarge",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "${priceChange} ${percentChange}",
+                      "color": "${changeColor}",
+                      "spacing": "None",
+                      "wrap": true
+                    }
+                  ]
+                },
+                {
+                  "type": "Column",
+                  "width": "auto",
+                  "items": [
+                    {
+                      "type": "FactSet",
+                      "facts": [
+                        {
+                          "title": "Open",
+                          "value": "${openPrice} "
+                        },
+                        {
+                          "title": "High",
+                          "value": "${highPrice} "
+                        },
+                        {
+                          "title": "Low",
+                          "value": "${lowPrice} "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previewCard": {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "title": "${companyName}",
+          "text": "${stockSymbol}"
+        }
+      }
+    }
+  ```
+
+  </details>
+
+* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
+
+* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Mandatory*]
+
+* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
+
+  > [!NOTE]
+  > Action types `imBack`, `messageBack` aren't supported in a data object.
+
+  The following action types are recommended:
+
+  * `Action.OpenUrl`: Opens a specified URL from the Card.
+  * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
+  * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
+  * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
+
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::
+
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+
+## Extend your plugin to Copilot in meetings
+
+Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
+
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
+
+  * **ColumnSets**
+
+    * Don't define `ColumnSets` with more than three columns.
+    * Don’t use explicit pixel width on more than one column in the set.
+    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+    * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+  * **Sizing images**
+
+    * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
+    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+    * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+
+For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+
 ## Validation guidelines for Copilot extensions
 
 ### Validation guidelines in declarative Copilot
@@ -597,7 +751,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 A declarative copilot must ensure the following validations:
 
 <details>
-<summary>1. Avoid prompt injection attack</summary>
+<summary>**Avoid prompt injection attack**</summary>
 
 Check App short description, command description, parameter descriptions, instruction, conversation starter.
 
@@ -612,7 +766,7 @@ The instructions must not include the following:
 </details>
 
 <details>
-<summary>2. Support for three or more unique compound utterances for applicable​ search and action scenarios</summary>
+<summary>**Support for three or more unique compound utterances for applicable​ search and action scenarios**</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-compound-utterances.png" alt-text="This image shows an example of compound utterances for Copilot.":::
 
@@ -625,28 +779,28 @@ The example shown in the image gives three utterances:
 </details>
 
 <details>
-<summary>3. Provide minimum three zero-query prompts​</summary>
+<summary>**Provide minimum three zero-query prompts​**</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-zero-query-prompt.png" alt-text="This image shows an exmaple of zero query prompt in a Copilot.":::
 
 </details>
 
 <details>
-<summary>4. Support for creating rich citation​</summary>
+<summary>**Support for creating rich citation​**</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
 </details>
 
 <details>
-<summary>5. Share user disclosure and seek user confirmation for action scenarios</summary>​
+<summary>**5. **Share user disclosure and seek user confirmation for action scenarios**</summary>​
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
 </details>
 
 <details>
-<summary>6. Instructions-only Copilots must not be supported</summary>
+<summary>**Instructions-only Copilots must not be supported**</summary>
 
 In the following example, declarative copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
 
@@ -658,14 +812,14 @@ In the following example, no nodes are defined for actions or Graph connectors e
 </details>
 
 <details>
-<summary>7. Be responsive and fail gracefully for topics that it doesn’t specialize</summary>​
+<summary>**Be responsive and fail gracefully for topics that it doesn’t specialize**</summary>​
 
 :::image type="content" source="../assets/images/Copilot/dc-no-spam-in-copilot.png" alt-text="This image shows an example of how Copilot can fail gracefully and be responsive.":::
 
 </details>
 
 <details>
-<summary>8. Must not spam users by sending multiple messages in short succession​</summary>
+<summary>**Must not spam users by sending multiple messages in short succession​**</summary>
 
 details TBA
 </details>
@@ -675,24 +829,24 @@ details TBA
 The validation guidelines for declarative copilot are applicable for custom engine copilot as well. In addition, you must ensure that the following validations are met:
 
 <details>
-<summary>1. Include an AI conversational bot</summary>
+<summary>**Include an AI conversational bot**</summary>
 
 You must define the (bot type in the manifest  as 'conversational'.​
 </details>
 
-1. Uses an enterprise LLM
+**Uses an enterprise LLM**
 
   (TBD; Open item)​
 
 <details>
-<summary>3. Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</summary>
+<summary>**Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​**</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-handoff-chat-experience.png" alt-text="This image is an example that shows Custom engine copilot in Copilot & handoff chat experience in Teams​.":::
 
 </details>
 
 <details>
-<summary>4. Adhere to the following UX design requirements​</summary>
+<summary>**Adhere to the following UX design requirements​**</summary>
 
 1. AI disclaimer label​: For each message, the bot can mark it as generated by AI, so a label that reads "AI generated" will be automatically added to the top of the message along with a hover tooltip that indicates the AI disclaimer.​
 
@@ -736,57 +890,57 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 **Bot related policy apply**
 
-1. Must send Welcome message with value proposition & how to use the app​
+* Must send Welcome message with value proposition and how to use the app​
 
-1. Must be responsive and fail gracefully for topics that it doesn’t specialize ​
+* Must be responsive and fail gracefully for topics that it doesn’t specialize ​
 
-1. Must not spam users by sending multiple messages in short succession​
+* Must not spam users by sending multiple messages in short succession​
 
 ### Validation guidelines for action-based message extension in Copilot
 
-1. Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
+* Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
 
-1. Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​
+* Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​
 
-1. A confirmation of the completion of the action is shared by the plugin in form of card etc. [Bot sent card is not supported]​
+* A confirmation of the completion of the action is shared by the plugin in form of card etc. [Bot sent card is not supported]​
 
-1.Action taken by user is correctly reflected in 3P service ​
+* Action taken by user is correctly reflected in 3P service ​
 
-1. Modification requests by user prior to confirmation of the action, must be honoured [Platform]​
+* Modification requests by user prior to confirmation of the action, must be honoured [Platform]​
 
-1. If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​
+* If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​
 
-1. Bulk delete actions should not be supported [details TBD]​
+* Bulk delete actions should not be supported [details TBD]​
 
-1. Description checks [Same as plugins]​
+* Description checks [Same as plugins]​
 
-1. Compound utterances via Multi parameter (3 or more) ​
+* Compound utterances via Multi parameter (3 or more) ​
 
-1. Include at least 3 sample prompts in the manifest​
+* Include at least 3 sample prompts in the manifest​
 
 ### Validation guidelines for type B actions in Copilot
 
-1. When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
+* When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
 
-1. Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] ​
+* Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] ​
 
-1. Data shared/ sent by user gets correctly reflected in the confirmation​
+* Data shared/ sent by user gets correctly reflected in the confirmation​
 
-1. Action taken by user is correctly reflected in 3P service - Dev​
+* Action taken by user is correctly reflected in 3P service - Dev​
 
-1. Modification requests by user prior to confirmation of the action, must be honoured by plugin [Platform] ​
+* Modification requests by user prior to confirmation of the action, must be honoured by plugin [Platform] ​
 
-1. A confirmation of the completion of the action is shared by the plugin in form of card ​
+* A confirmation of the completion of the action is shared by the plugin in form of card ​
 
-1. If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [Details TBD] ​
+* If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [Details TBD] ​
 
-1. Multi delete scenario should not be supported [Details TBD]​
+* Multi delete scenario should not be supported [Details TBD]​
 
-1. Description checks [Same as plugins]​
+* Description checks [Same as plugins]​
 
-1. Compound utterances via Multi parameter​
+* Compound utterances via Multiparameter​
 
-1. Include at least 3 sample prompts in the manifest
+* Include at least 3 sample prompts in the manifest
 
 <!--
 ## Compound utterances
@@ -954,7 +1108,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 ```
 ---
 -->
-
+<!--
 ## Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
@@ -1108,6 +1262,7 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
     * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+-->
 
 ## Technical requirements
 
