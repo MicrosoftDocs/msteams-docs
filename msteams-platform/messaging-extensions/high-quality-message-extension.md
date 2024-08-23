@@ -1264,6 +1264,7 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 -->
 
+<!--
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
@@ -1280,6 +1281,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
+-->
 
 ## Message extensions plugins in Copilot for Microsoft 365 applications
 
@@ -1351,6 +1353,23 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
     If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
+
+## Technical requirements
+
+For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
+
+| Criteria | Fulfillment |
+|---|---|
+| Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
+| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
+| [Microsoft 365 Channel](#requirements-for-plugins-in-copilot-for-microsoft-365)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
+| [Single sign-on (SSO)](#requirements-for-plugins-in-copilot-for-microsoft-365) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
+| [Content Security Policy](#requirements-for-plugins-in-copilot-for-microsoft-365) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+
+> [!IMPORTANT]
+> If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
 
 ## Code samples
 
