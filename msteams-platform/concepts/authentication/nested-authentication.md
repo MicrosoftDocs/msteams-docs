@@ -126,7 +126,7 @@ export function initializePublicClient() {
 }
 ```
 
-# [C#](#tab/cs)
+# [C#](#tab/csharp)
 
 ```
 using Microsoft.Identity.Client;
@@ -174,7 +174,7 @@ To acquire a token, follow these steps:
 
 The following code shows you an example to access a token:
 
-# [JavaScript](#tab/c#)
+# [JavaScript](#tab/js)
 
 ```javascript
 
@@ -215,7 +215,7 @@ The following code shows you an example to access a token:
 
 ```
 
-# [C#](#tab/netcode)
+# [C#](#tab/cs)
 
 ```
 // MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
@@ -282,7 +282,7 @@ fetch(graphEndpoint, options)
 
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/c#)
 
 ```
 using System;
