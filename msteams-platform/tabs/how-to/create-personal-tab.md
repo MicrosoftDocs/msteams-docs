@@ -842,7 +842,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of BlazorApp installation with Add option highlighted.":::
 
-1. Select **Open** to use the app on your own.
+1. Select **Open** to use the app in personal scope.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of BlazorApp displaying the personal scope option of open highlighted.":::
 
