@@ -128,7 +128,7 @@ export function initializePublicClient() {
 
 # [C#](#tab/cs1)
 
-```
+```csharp
 using Microsoft.Identity.Client;
 using System;
 using System.Threading.Tasks;
@@ -217,7 +217,7 @@ The following code shows you an example to access a token:
 
 # [C#](#tab/cs2)
 
-```
+```csharp
 // MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
 var account = publicClientApplication.GetAccountsAsync().Result.FirstOrDefault();
 var accessTokenRequest = publicClientApplication.AcquireTokenSilent(new[] { "user.read" }, account);
@@ -284,7 +284,7 @@ fetch(graphEndpoint, options)
 
 # [C#](#tab/cs3)
 
-```
+```csharp
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
