@@ -41,13 +41,13 @@ You can enable DevTools in the Teams Android client. To enable DevTools, follow 
    :::image type="content" source="~/assets/images/tabs/android-beta-dev-tools.png" alt-text="Screenshot shows the option to join the beta.":::
 
 1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#mobile-client).
-1. Connect your device to your desktop computer, and set up your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+1. Connect your device to your desktop computer, and set up your Teams Android client for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
    :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools." lightbox="../../assets/images/android-devtools.png":::
 
-## Access DevTools for a Teams iOS client
+## Access DevTools for Teams iOS client
 
 To access DevTools on your Teams iOS client, you need to first activate it. This involves meeting the necessary prerequisites and following the steps to use it.
 
