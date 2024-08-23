@@ -746,7 +746,7 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 ## Guidelines specific to different Copilot extensions
 
-In addition to the common guidelines, here are guidelines for
+In addition to the common guidelines, there are specific follwing guidelines for Copilot extensions.
 
 ### Validation guidelines in declarative Copilot
 
@@ -893,7 +893,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 </details>
 
-**Bot related policy apply**
+**Bot-related policy**
 
 * Must send Welcome message with value proposition and how to use the app​
 
