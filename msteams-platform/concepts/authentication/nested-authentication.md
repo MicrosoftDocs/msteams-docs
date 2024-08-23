@@ -126,7 +126,7 @@ export function initializePublicClient() {
 }
 ```
 
-# [C#](#tab/csharp)
+# [C#](#tab/cs)
 
 ```
 using Microsoft.Identity.Client;
@@ -174,7 +174,7 @@ To acquire a token, follow these steps:
 
 The following code shows you an example to access a token:
 
-# [JavaScript](#tab/csharp)
+# [JavaScript](#tab/c#)
 
 ```javascript
 
