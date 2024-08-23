@@ -49,7 +49,7 @@ You can enable DevTools in the Teams Android client. To enable DevTools, follow 
 
 ## Access DevTools for Teams iOS client
 
-To access DevTools on your Teams iOS client, you need to first activate it. This involves meeting the necessary prerequisites and following the steps to use it.
+You can access DevTools on your Teams iOS client. This involves meeting the necessary prerequisites and following the steps to activate it.
 
 ### Prerequisites
 
