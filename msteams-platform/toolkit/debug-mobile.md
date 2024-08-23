@@ -160,7 +160,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="Screenshot shows how to clear the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
 
-      ---
+---
 
 1. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
 
