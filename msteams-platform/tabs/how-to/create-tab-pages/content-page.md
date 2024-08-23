@@ -158,4 +158,4 @@ Use the following steps to show the native loading indicator:
 * [Create a personal tab](../create-personal-tab.md)
 * [Create a channel tab or group tab](../create-channel-group-tab.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
-* [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
+* [Dev Tools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
