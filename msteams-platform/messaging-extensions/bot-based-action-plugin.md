@@ -144,7 +144,7 @@ Ensure that you adhere to the following prerequisites while building Actions in 
 
 You've successfully added actions in your bot-based message extension. Upload your bot-based message extension app in Teams and you'll see the following:
 
-:::image type="content" source="../../assets/images/actions-in-m365.gif" alt-text="The GIF shows the actions in bot-based message extension.":::
+:::image type="content" source="~/assets/images/actions-in-m365.gif" alt-text="The GIF shows the actions in bot-based message extension.":::
 
 ## Code sample
 
