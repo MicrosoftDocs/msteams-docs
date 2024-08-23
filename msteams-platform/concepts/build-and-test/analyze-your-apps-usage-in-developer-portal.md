@@ -173,9 +173,9 @@ As you explore the app usage metrics on this page, you can see the following thr
    | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
    | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
 
- #### App dashboard
+ #### My app dashboard
 
-   The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+   The **My App Dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
 
 * Daily R30 data for the last 75 days.
 * End of month R30 data for up to 12 months.
