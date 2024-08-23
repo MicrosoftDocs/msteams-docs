@@ -413,7 +413,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 August**
 
-***August 23, 2024***: [Access DevTools for an iOS client.](tabs/how-to/developer-tools.md)
+***August 22, 2024***: [Access DevTools for an iOS client.](tabs/how-to/developer-tools.md#access-devtools-for-an-ios-client)
 
 :::column-end:::
 :::row-end:::

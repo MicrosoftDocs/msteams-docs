@@ -32,7 +32,7 @@ While the web version and the desktop version of Teams are almost same, there ar
 
       :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.png" alt-text="Screenshot shows the option to open Dev Tools from macOS dock.":::
 
-## Access DevTools from Android device
+## Access DevTools from Teams Android client
 
 You can enable DevTools in the Teams Android client. To enable DevTools, follow these steps:
 
@@ -47,18 +47,18 @@ You can enable DevTools in the Teams Android client. To enable DevTools, follow 
 
    :::image type="content" source="../../assets/images/android-devtools.png" alt-text="Screenshot shows the Android DevTools." lightbox="../../assets/images/android-devtools.png":::
 
-## Access DevTools for an iOS client
+## Access DevTools for a Teams iOS client
 
-You can access DevTools for an iOS client. You must enable it first.
+To access DevTools on your Teams iOS client, you need to first activate it. This involves meeting the necessary prerequisites and following the steps to use it.
 
 ### Prerequisites
 
-To access DevTools for an iOS client, ensure you meet the following requirements:
+To access DevTools for a Teams iOS client, ensure you meet the following requirements:
 
 - Mac system with Safari.
 - Teams iOS version 6.10.0 or later. You can download Microsoft Teams for iOS from the [AppStore](https://aka.ms/teamsmobiledownload).
 
-### Activate DevTools for your iOS client
+### Activate DevTools for your Teams iOS client
 
 To activate DevTools:
 
@@ -71,11 +71,11 @@ To activate DevTools:
 
 1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-1. Activate the Web Inspector in Safari and the iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+1. Activate the Web Inspector in Safari and the Teams iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
-1. Connect your iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
+1. Connect your Teams iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
 
-1. Open Teams on your connected iOS client and open your app inside Teams.
+1. Open Teams on your connected Teams iOS client and open your app inside Teams.
 
 1. On your Mac system, open Safari. You'll find your client listed under the **Develop** option.
 
@@ -87,7 +87,7 @@ To activate DevTools:
 
    :::image type="content" source="../../assets/images/devtools/safari-web-inspector.png" alt-text="The screenshot displays the Web Inspector in Safari." lightbox="../../assets/images/devtools/safari-web-inspector.png":::
 
-   You can now utilize DevTools for your iOS client.
+   You can now utilize DevTools for your Teams iOS client.
 
 ## See also
 
