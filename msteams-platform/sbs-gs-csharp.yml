@@ -207,9 +207,9 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot shows the selection of Add.":::
 
-    1. Select the required scope and select **Go**.
+    1. Select from the list of suggested scopes or search and select the required scope and select **Go**.
 
-        :::image type="content" source="~/assets/images/bots/add-scope.png" alt-text="Screenshot shows option to select the required scope.":::
+        :::image type="content" source="~/assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
        Congratulations, your first tab app is running on Teams!
 
