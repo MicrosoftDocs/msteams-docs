@@ -744,7 +744,9 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
-## Validation guidelines for Copilot extensions
+## Guidelines specific to different Copilot extensions
+
+In addition to the common guidelines, here are guidelines for
 
 ### Validation guidelines in declarative Copilot
 
@@ -834,7 +836,7 @@ The validation guidelines for declarative copilot are applicable for custom engi
 You must define the bot type in the manifest  as 'conversational'.​
 </details>
 
-**Uses an enterprise LLM**
+* **Uses an enterprise LLM**
 
   (TBD; Open item)​
 
@@ -1290,7 +1292,6 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
  If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
- <!--To extend your plugin's functionality to Copilot in Word, Excel, PowerPoint, and OneNote, refer to the following document for the required additional steps.-->
 
 ### Requirements for plugins in Copilot for Microsoft 365
 
