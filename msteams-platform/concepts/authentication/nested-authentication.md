@@ -14,7 +14,6 @@ ms.localizationpriority: medium
 >
 > * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * NAA is supported only in single page apps (SPA) like tabs.
-> * NAA isn't supported on Teams web client and Microsoft 365 apps.
 
 NAA is a new authentication protocol for single page apps that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate Single Sign-on (SSO) across apps nested within supported host apps and provides several advantages over the On-Behalf-Of (OBO) flow:
 
@@ -127,7 +126,7 @@ export function initializePublicClient() {
 }
 ```
 
-# [.NET](#tab/net)
+# [C#](#tab/net)
 
 ```
 using Microsoft.Identity.Client;
@@ -216,7 +215,7 @@ The following code shows you an example to access a token:
 
 ```
 
-# [.NET](#tab/netcode)
+# [C#](#tab/netcode)
 
 ```
 // MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
