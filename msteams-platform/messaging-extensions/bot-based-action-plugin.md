@@ -142,7 +142,7 @@ Ensure that you adhere to the following prerequisites while building Actions in 
 
 1. After the action is completed in the dialog, you must return a [card as response](how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) that's displayed to the user.
 
-You've successfully added actions in your bot-based message extension. Upload your bot-based message extension app in Teams and you'll see the following:
+You've successfully added actions in your bot-based message extension. Upload your bot-based message extension app in Teams and you'll see it appears in the message compose box as shown in the following example:
 
 :::image type="content" source="~/assets/images/actions-in-m365.gif" alt-text="The GIF shows the actions in bot-based message extension.":::
 
