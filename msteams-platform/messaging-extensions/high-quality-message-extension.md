@@ -830,22 +830,22 @@ details TBA
 
 The validation guidelines for declarative copilot are applicable for custom engine copilot as well. In addition, you must ensure that the following validations are met:
 
-<details>
-<summary><b>Include an AI conversational bot</b></summary>
+  <details>
+  <summary><b>Include an AI conversational bot</b></summary>
 
-You must define the bot type in the manifest  as 'conversational'.​
-</details>
+  You must define the bot type in the manifest  as 'conversational'.​
+  </details>
 
 * **Uses an enterprise LLM**
 
   (TBD; Open item)​
 
-<details>
-<summary><b>Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</b></summary>
+  <details>
+  <summary><b>Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</b></summary>
 
-:::image type="content" source="../assets/images/Copilot/dc-handoff-chat-experience.png" alt-text="This image is an example that shows Custom engine copilot in Copilot & handoff chat experience in Teams​.":::
+  :::image type="content" source="../assets/images/Copilot/dc-handoff-chat-experience.png" alt-text="This image is an example that shows Custom engine copilot in Copilot & handoff chat experience in Teams​.":::
 
-</details>
+  </details>
 
 <details>
 <summary><b>Adhere to the following UX design requirements​</b></summary>
