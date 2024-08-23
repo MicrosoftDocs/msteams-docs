@@ -282,7 +282,7 @@ fetch(graphEndpoint, options)
 
 ```
 
-# [.NET](#tab/c#)
+# [C#](#tab/c#)
 
 ```
 using System;
