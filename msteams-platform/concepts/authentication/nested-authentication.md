@@ -96,7 +96,7 @@ Your domain must include only the origin, and not sub-paths. For example:
 
 Initialize MSAL and get an instance of the public client application to get access tokens, when needed.
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/js1)
 
 ```javascript
 import {
@@ -126,7 +126,7 @@ export function initializePublicClient() {
 }
 ```
 
-# [C#](#tab/csharp)
+# [C#](#tab/cs1)
 
 ```
 using Microsoft.Identity.Client;
@@ -174,7 +174,7 @@ To acquire a token, follow these steps:
 
 The following code shows you an example to access a token:
 
-# [JavaScript](#tab/js)
+# [JavaScript](#tab/js2)
 
 ```javascript
 
@@ -215,7 +215,7 @@ The following code shows you an example to access a token:
 
 ```
 
-# [C#](#tab/cs)
+# [C#](#tab/cs2)
 
 ```
 // MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
@@ -261,7 +261,7 @@ After you receive the token, use it to call the API. This ensures that the API i
 
 The following example shows how to make an authenticated request to the Microsoft Graph API to access Microsoft 365 data:
 
-# [JavaScript](#tab/jscript)
+# [JavaScript](#tab/js3)
 
 ```javascript
 
@@ -282,7 +282,7 @@ fetch(graphEndpoint, options)
 
 ```
 
-# [C#](#tab/csh)
+# [C#](#tab/cs3)
 
 ```
 using System;
