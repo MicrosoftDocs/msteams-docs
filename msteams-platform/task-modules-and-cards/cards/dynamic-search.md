@@ -413,7 +413,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ## Dependent dropdowns
 
 > [!NOTE]
-> Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+>
+> * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
+> * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 You can design Adaptive Cards that contain forms with interactive data entry fields through dynamic typeahead search. In such forms, there might be instances where the input value in one field depends on the input value of another. It's also possible that when a user changes an input value in one field, the existing input value in the other field might become invalid.
 
@@ -426,6 +428,7 @@ If a user selects **USA** as the country/region in the first dropdown list, the 
 However, the input values in elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, the input values in other elements might not be sent to the bot. In this case, when the user changes the country/region name from USA to India, the action can cause the following two issues:
 
 * You can validate the input data in the card only when the user submits the entire form. If the validation fails, the bot shows an error message. In this case, the validation fails because the selected country/region is India, but the states displayed belong to the USA.
+
 * For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In this case, the bot has to search for city names from the list of all available countries/regions in the dataset.
 
 The ideal experience in this case would be if the user changes the selection from **USA** to **India**, the values in the second dropdown list are reset, and a new list of states in India must be displayed.
@@ -446,7 +449,7 @@ You can implement dependent dropdowns where one input value (which can be of any
 
 * To associate the input value with the dropdown list, define the `associatedInputs` property under the `Data.Query` object of the dropdown list. To ensure that the data query request sent to the bot contains the updated input values of all the elements in the card, set the value of `associatedInputs` to `auto`.
 
-The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+* The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
