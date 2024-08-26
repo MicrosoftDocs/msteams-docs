@@ -15,7 +15,7 @@ Users can purchase subscriptions and manage licenses from Microsoft Teams Store 
 ## Subscription purchase experience
 
 > [!NOTE]
-> Users might be asked to add a VAT ID and a registration ID based on the compliance requirement of a country or region. For more information, see [VAT ID number](/partner-center/enroll/vat-info) and [registration ID number](/partner-center/account-settings/reg-number-id).
+> Users might be asked to add a value-added tax (VAT) ID and a registration ID based on the compliance requirement of a country or region. For more information, see [VAT ID number](/partner-center/enroll/vat-info) and [registration ID number](/partner-center/account-settings/reg-number-id).
 
 Here's the user experience to purchase a subscription plan for a Teams app:
 
@@ -23,7 +23,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     :::image type="content" source="~/assets/images/saas-offer/teams-store.png" alt-text="Screenshot shows the Best selling option highlighted in Teams Store." lightbox="../../../../assets/images/saas-offer/teams-store-lightbox.png":::
 
-1. In Teams Store, browse and select the app for which you want to purchase the subscription.
+1. Browse and select the app for which you want to purchase the subscription.
 
 1. In the app details dialog, select **Buy a subscription**.
 
@@ -58,7 +58,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Add a credit or debit card**, add the required details and select **Next**.
 
-        By default, the **Same as billing account** checkbox is selected to use the billing account’s address for the card. To add a new address, clear the checkbox and enter the address.
+        By default, the **Same as billing address** checkbox is selected to use the billing account’s address for the card. To add a new address, clear the checkbox and enter the address.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address." lightbox="../../../../assets/images/saas-offer/card-address.png":::
 
