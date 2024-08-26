@@ -900,7 +900,7 @@
     displayName: Allow users to upload apps
   - name: Tabs
     items:
-    - name: DevTools for Microsoft Teams tabs
+    - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
