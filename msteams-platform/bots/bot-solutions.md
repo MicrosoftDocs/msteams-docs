@@ -156,6 +156,45 @@ For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
 ### Code snippets for TeamsFx SDKs
 
 TBD
+The following code provides an example of a bot activity for a channel team scope:
+
+```
+
+# [JavaScript](#tab/js)
+
+```javascript
+/**
+* Interface implemented by object based middleware
+*/
+export interface Middleware{
+    /**
+    * Calling 'await next(); ` will cause execution to continue to either the next place of 
+    * middleware in the chain or the bots main logic if you are the last piece of middleware.
+    *
+    * Your middleware should perform its business logic before and/or after the call to `next()`,
+    * You can short-circuit further execution of the turn by omitting the call to `next()`.
+    *
+    * The following example shows a sample piece of logging middleware:
+    *
+    * ```JavaScript
+    *class MyLogger {
+    *    async onTurn(context, next) {
+    *        console.log(`Leading Edge`);
+    *        await next();
+    *        console.log(`Trailing Edge`);
+    *    }
+    *}
+```
+
+*
+* @param context Context for current turn of conversation with the user.
+* @param next Function to call to continue execution to the next step in the middleware chain.
+*/
+onTurn(context: TurnContext, next: () => Promise<void>): Promise<void>;
+}
+
+```
+---
 
 ## Azure AI bot service
 
