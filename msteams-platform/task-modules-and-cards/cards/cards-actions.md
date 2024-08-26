@@ -537,19 +537,24 @@ The following is an example of the incoming activity to a bot when user types so
 
 ### Action.ResetInputs
 
-The `Action.ResetInputs` resets the values of the inputs in the Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in the Adaptive Card. If you need to reset particular input values, define the IDs of the input values in the `targetInputIds` property.
+The `Action.ResetInputs` resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in the Adaptive Card. If you need to reset particular input values, define the IDs of the input values in the `targetInputIds` property.
 
-`Action.ResetInputs` is particularly useful in implementing dependent dropdowns as it can be used to reset the values in dropdowns lists based on the user's input. To learn more about dependent dropdowns in Adaptive Cards, see [Dependent dropdowns](dynamic-search.md#dependent-dropdowns).
+`Action.ResetInputs` is useful in implementing dependent dropdowns as it can be used to reset the values in dropdowns lists based on the user's input. To learn more about dependent dropdowns in Adaptive Cards, see [Dependent dropdowns](dynamic-search.md#dependent-dropdowns).
 
 | Property| Type | Required | Description |
 |---|---|---|---|
 | `valueChangedAction` | Action.ResetInputs | No | Contains the `Action.ResetInputs` action |
-| `Action.ResetInputs` | String | No | Resets the input values for the fields defined under the `targetInputIds` property |
-| `targetInputIds` | Array of strings | No | The IDs of the input values that should be reset. |
+| `Action.ResetInputs` | String | No | Resets the input values in an Adaptive Card |
+| `targetInputIds` | Array of strings | No | Defines the IDs of the input values that are to be reset |
 
 The following JSON payload shows how to reset an input in an Adaptive Card:
 
 ```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.6",
+    "body": [
         {
             "type": "Input.ChoiceSet",
             "choices": [
@@ -579,6 +584,77 @@ The following JSON payload shows how to reset an input in an Adaptive Card:
                 ]
             }
         },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Input.Text",
+            "id": "text",
+            "separator": true,
+            "spacing": "ExtraLarge"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Multiline Input.Text",
+            "id": "multiline",
+            "isMultiline": true
+        },
+        {
+            "type": "Input.Date",
+            "label": "Input.Date",
+            "id": "date"
+        },
+        {
+            "type": "Input.Time",
+            "label": "Input.Time",
+            "id": "time"
+        },
+        {
+            "type": "Input.Number",
+            "placeholder": "Placeholder text",
+            "label": "Input.Number",
+            "id": "number"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "label": "Compact Input.ChoiceSet",
+            "id": "compact"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "Choice 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "Choice 2"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "label": "Expanded Input.ChoiceSet",
+            "id": "expanded"
+        },
+        {
+            "type": "Input.Toggle",
+            "title": "New Input.Toggle",
+            "label": "Input.Toggle",
+            "id": "toggle"
+        }
+    ]
+}
 ```
 
 The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
