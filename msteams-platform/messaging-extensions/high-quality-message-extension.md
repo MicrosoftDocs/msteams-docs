@@ -893,7 +893,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 </details>
 
-**Bot-related policy**
+**Bot-related policy apply:**
 
 * Must send Welcome message with value proposition and how to use the app​
 
