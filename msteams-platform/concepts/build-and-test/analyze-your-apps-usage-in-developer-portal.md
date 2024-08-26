@@ -209,7 +209,7 @@ As you explore the app usage metrics on this page, you can see the following thr
    :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshots shows you app usage in different platform of your published app in Developer Portal.":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that it's in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
  #### Usage by operating system
 
