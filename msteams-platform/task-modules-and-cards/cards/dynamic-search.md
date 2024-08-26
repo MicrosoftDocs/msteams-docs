@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ## Dependent dropdowns
 
 > [!NOTE]
-> Dependent dropdowns are only available on the web and desktop versions of the Teams client.
+> Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 You can design Adaptive Cards that contain forms with interactive data entry fields through dynamic typeahead search. In these types of forms, there might be instances where the input value in one field is dependent on the input value of another. It's also possible that when a user changes an input value in one field, the existing input value in the other field might become invalid.
 
@@ -432,7 +432,7 @@ The ideal experience in this case would be if the user changes the selection fro
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
 
-This kind of dropdowns is called a dependent dropdown. Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. These types of dropdown lists are useful in filtering out options based on a previous choice.
+This kind of dropdown is called a dependent dropdown. Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. These types of dropdown lists are useful in filtering out options based on a previous choice.
 
 ### Implement dependent dropdowns
 
@@ -442,7 +442,7 @@ You can implement dependent dropdowns where one input value (can be a string, nu
 
 * Since the `associatedInputs` property is defined in the dropdown, the data query request to the bot contains the updated input values of all the elements in the card. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset.
 
-* This enables the user to pick a new input value from the dropdown list. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinput).
+* This enables the user to pick a new input value from the dropdown list. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
