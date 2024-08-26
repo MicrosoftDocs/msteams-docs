@@ -14,8 +14,8 @@ ms.date: 01/29/2023
 Introduction: TBD
 You can use any one of the following ways to build a bot for Teams:
 
-* TeamsFx SDK
 * Bot Framework SDK
+* TeamsFx SDK
 * Teams AI bot
 * Azure AI bot service
 * Virtual Power Agent
@@ -24,12 +24,6 @@ You can register your bot with Teams in any one of the following ways:
 
 * Azure AD
 * Developer Portal
-
-## TeamsFx SDK
-
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
-
-For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
 
 ## Bot framework SDKs
 
@@ -50,9 +44,20 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
+## TeamsFx SDK
+
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
+
+For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
+
 ## Azure AI bot service
 
 TBD
+Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.
+
+The Bot Framework Service, which is a component of the Azure AI Bot Service, sends information between the user's bot-connected app and the bot. Each channel can include additional information in the activities they send.
+
+For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-basics).
 
 ## Teams AI bot
 
@@ -74,7 +79,7 @@ links for code samples to build a basic bot app using samples
 
 The following code provides an example of a bot activity for a channel team scope:
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
@@ -133,7 +138,7 @@ this.onMessage(async (turnContext, next) => {
 
 The following code provides an example of bot activity for a one-to-one chat:
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
 
