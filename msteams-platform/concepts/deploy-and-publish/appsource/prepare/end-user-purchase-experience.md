@@ -58,7 +58,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Add a credit or debit card**, add the required details and select **Next**.
 
-        By default, the **Same as billing account** toggle is turned on to use the billing account’s address for the card. To add a new address, turn off the toggle and enter the new address.
+        By default, the **Same as billing account** checkbox is selected to use the billing account’s address for the card. To add a new address, clear the checkbox and enter the address.
 
         :::image type="content" source="~/assets/images/saas-offer/card-address.png" alt-text="Screenshot shows the option to choose the same billing address or add an address." lightbox="../../../../assets/images/saas-offer/card-address.png":::
 
