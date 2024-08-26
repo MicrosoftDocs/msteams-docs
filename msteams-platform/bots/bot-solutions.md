@@ -158,8 +158,6 @@ For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
 TBD
 The following code provides an example of a bot activity for a channel team scope:
 
-```
-
 # [JavaScript](#tab/js)
 
 ```javascript
