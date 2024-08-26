@@ -15,7 +15,7 @@ Users can purchase subscriptions and manage licenses from Microsoft Teams Store 
 ## Subscription purchase experience
 
 > [!NOTE]
-> Users might be asked to add a value-added tax (VAT) ID and a registration ID based on the compliance requirement of a country or region. For more information, see [VAT ID number](/partner-center/enroll/vat-info) and [registration ID number](/partner-center/account-settings/reg-number-id).
+> Users might be asked to add a value-added tax (VAT) ID and a registration ID based on the compliance requirements of a country or region. For more information, see [VAT ID number](/partner-center/enroll/vat-info) and [registration ID number](/partner-center/account-settings/reg-number-id).
 
 Here's the user experience to purchase a subscription plan for a Teams app:
 
