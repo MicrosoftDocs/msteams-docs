@@ -156,7 +156,8 @@ For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
 ### Code snippets for TeamsFx SDKs
 
 TBD
-The following code provides an example of a bot activity for a channel team scope:
+
+The following code provides an example of a bot activity handler for a channel team scope in TeamsFx SDK:
 
 # [JavaScript](#tab/js)
 
