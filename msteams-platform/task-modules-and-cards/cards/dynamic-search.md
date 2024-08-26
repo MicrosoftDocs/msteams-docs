@@ -439,11 +439,11 @@ This kind of dropdown is called a dependent dropdown. Dependent dropdowns are dr
 
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one input value (which can be of any type) is associated with another and acts as a filter for the input values in the second dropdown (which can be of any type but preferably supports dynamic typeahead search). From the earlier example, the following diagram illustrates the how the user, Adaptive Card, the host and the bot interact in a depedent dropdown:
+You can implement dependent dropdowns where one input value (which can be of any type) is associated with another and acts as a filter for the input values in the second dropdown (which can be of any type but preferably supports dynamic typeahead search). The following diagram illustrates how the user, Adaptive Card, the host and the bot interact in a dependent dropdown:
 
 **Placeholder image**
 
-:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a depedent dropdown.":::
+:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown.":::
 
 * When a user changes an input value in a field, the existing input value in the dropdown list might become invalid. Define the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 
