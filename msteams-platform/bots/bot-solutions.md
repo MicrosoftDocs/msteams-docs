@@ -184,8 +184,6 @@ export interface Middleware{
     *        console.log(`Trailing Edge`);
     *    }
     *}
-```
-
 *
 * @param context Context for current turn of conversation with the user.
 * @param next Function to call to continue execution to the next step in the middleware chain.
@@ -194,6 +192,7 @@ onTurn(context: TurnContext, next: () => Promise<void>): Promise<void>;
 }
 
 ```
+
 ---
 
 ## Azure AI bot service
