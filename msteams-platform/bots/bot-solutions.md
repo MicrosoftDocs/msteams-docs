@@ -12,6 +12,24 @@ ms.date: 01/29/2023
 # Bot solutions
 
 Introduction: TBD
+You can use any one of the following ways to build a bot for Teams:
+
+* TeamsFx SDK
+* Bot Framework SDK
+* Teams AI bot
+* Azure AI bot service
+* Virtual Power Agent
+
+You can register your bot with Teams in any one of the following ways:
+
+* Azure AD
+* Developer Portal
+
+## TeamsFx SDK
+
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
+
+For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
 
 ## Bot framework SDKs
 
