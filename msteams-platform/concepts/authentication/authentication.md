@@ -19,8 +19,8 @@ Choose to add authentication for your app in one of the two ways:
 
 * **Enable SSO for nested aaps**: You can use Nested App Authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside of supported first-party apps. Compared with existing full-trust authentication models and the on-behalf-of flow, NAA provides better security and greater flexibility in app architecture, enabling the creation of rich, client-driven apps. With NAA, developers can use MSAL.js to acquire tokens for their Teams Tab or Office add-in app, using capabilities of the first-party host to enable Conditional Access and Intune policies (for example, registered device policy) which couldn't otherwise be supported when hosted inside of native WebViews. NAA is supported in MSAL.js v3.1 and higher.
 
-> [!NOTE]
-> Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+  > [!NOTE]
+  > Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 ## Select authentication method
 
