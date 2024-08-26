@@ -44,38 +44,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
-## TeamsFx SDK
-
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
-
-For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
-
-## Azure AI bot service
-
-TBD
-Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.
-
-The Bot Framework Service, which is a component of the Azure AI Bot Service, sends information between the user's bot-connected app and the bot. Each channel can include additional information in the activities they send.
-
-For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-basics).
-
-## Teams AI bot
-
-TBD
-
-## Power Agent
-
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
-
->[!NOTE]
->You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
-
-## Build a bot app with Azure bot service
-
-link back to Get started to build a basic bot app using TTK
-links for code samples to build a basic bot app using samples
-
-## Code snippets
+### Code snippets for bot framework SDKs
 
 The following code provides an example of a bot activity for a channel team scope:
 
@@ -173,6 +142,42 @@ this.onMessage(async (context, next) => {
 ```
 
 ---
+
+## TeamsFx SDK
+
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
+
+For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
+
+### Code snippets for TeamsFx SDKs
+
+TBD
+
+## Azure AI bot service
+
+TBD
+Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.
+
+The Bot Framework Service, which is a component of the Azure AI Bot Service, sends information between the user's bot-connected app and the bot. Each channel can include additional information in the activities they send.
+
+For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-basics).
+
+## Teams AI bot
+
+TBD
+
+## Power Agent
+
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
+
+>[!NOTE]
+>You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
+
+## Build a bot app with Azure bot service
+
+TBD
+link back to Get started to build a basic bot app using TTK
+links for code samples to build a basic bot app using samples
 
 ## Code sample
 
