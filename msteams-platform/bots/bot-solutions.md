@@ -143,7 +143,11 @@ this.onMessage(async (context, next) => {
 
 ---
 
-## TeamsFx SDK
+## Teams Toolkit and TeamsFx SDK
+
+Teams Toolkit makes it simple to get started with bot app development for Teams. You can begin with a project template for common custom bot app built for your org (LOB app) scenarios or start from a sample.
+
+For more information, see [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md).
 
 TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
 
