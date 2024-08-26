@@ -454,11 +454,11 @@
 - name: Build AI bots
   items:
     - name: Teams AI library
-      href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+      href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
     - name: Teams AI library Core capabilities
-      href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
     - name: Get started with Teams AI library
-      href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
     - name: Basic AI chatbot
       href: toolkit/build-a-basic-ai-chatbot-in-teams.md
     - name: Build an AI agent chatbot
@@ -466,7 +466,7 @@
     - name: Chat with you data
       href: Teams-AI-library-tutorial.yml
     - name: Extend AI bot to Copilot
-      href: bots/how-to/Teams conversational AI/extend-ai-bot-copilot.md
+      href: bots/how-to/teams-conversational-ai/extend-ai-bot-copilot.md
 
 - name: Build bots
   items:
