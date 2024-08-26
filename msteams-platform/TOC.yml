@@ -319,8 +319,6 @@
       - name: Bots SDK (v3)
         href: resources/bot-v3/bots-overview.md
         items:
-        - name: Build a bot
-          href: resources/bot-v3/bots-create.md
         - name: Conversations
           href: resources/bot-v3/bot-conversations/bots-conversations.md
           items:
@@ -453,7 +451,7 @@
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
     - name: Bot messages with AI-generated content
-      href: bots/how-to/format-ai-bot-messages.md
+      href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
@@ -503,14 +501,14 @@
   - name: Teams AI library
     items:
       - name: Overview
-        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
         displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
       - name: Core capabilities
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       - name: Get started
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
-        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+        href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - name: Build custom copilot
         items: 
           - name: Custom copilot for Microsoft 365 
@@ -518,7 +516,7 @@
           - name: Build custom copilot using Teams Toolkit 
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
-        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+        href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
@@ -902,7 +900,7 @@
     displayName: Allow users to upload apps
   - name: Tabs
     items:
-    - name: DevTools for Microsoft Teams tabs
+    - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
