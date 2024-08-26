@@ -22,8 +22,6 @@ NAA is a new authentication protocol for single page apps that are embedded in h
 * You can use incremental and dynamic consent for scopes.
 * You don't need to preauthorize your hosts (for example, Teams, Office) to call your endpoints.
 
-For more information about SSO for tab apps, see [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
-
 The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-Ins and Teams Tabs and Personal apps.
 
 The following table outlines the difference between Teams Microsoft Entra ID SSO and NAA:
