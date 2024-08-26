@@ -208,6 +208,9 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshots shows you app usage in different platform of your published app in Developer Portal.":::
 
+   > [!NOTE]
+   > The `Preview` tag indicates that it's in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+
  #### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
