@@ -12,9 +12,9 @@ ms.date: 07/10/2024
 > [!NOTE]
 > Approvals app API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-The Approvals app API in Microsoft Teams allows you to integrate approval workflows into both Teams app and third-party apps. You can create new approvals, update existing ones, and list all approvals. It mentions the ability to create, update, and list approvals, assign approvals to users, specify custom responses, and receive notifications on Teams. As APIs support graph subscriptions, you can send notifications for approval responses. Approvals app is available as a personal app for all Microsoft Teams users.
+The approvals app API in Microsoft Teams allows you to integrate approval workflows into both Teams app and third-party apps. You can create new approvals, update existing ones, and list all approvals. It mentions the ability to create, update, and list approvals, assign approvals to users, specify custom responses, and receive notifications on Teams. As APIs support graph subscriptions, you can send notifications for approval responses. Approvals app is available as a personal app for all Teams users.
 
-The following table provides the list of APIs available across Microsoft Graph for the Approvals app:
+The following table provides the list of APIs available across Microsoft Graph for the approvals app:
 
 | API | Description |
 | ---- | ---- |
@@ -37,7 +37,7 @@ The following table provides the list of APIs available across Microsoft Graph f
 
 **Enhanced user experience**: By using the API, you can create custom experiences within Teams that streamline the approval process for users. This could involve creating bots that assist with creating and managing approvals or building custom interfaces that make it easier for users to review and respond to approval requests.
 
-## Key benefits of Approvals app
+## Key benefits of approvals app
 
 * Approvals app reduces the time and effort required to manage approvals by automating the workflow and notification process.
 * It provides a centralized hub where all approvals can be tracked, managed, and audited, offering greater transparency into the approval process.
@@ -46,4 +46,4 @@ The following table provides the list of APIs available across Microsoft Graph f
 
 ## See also
 
-[Manage the Approvals app in Microsoft Teams](/microsoftteams/approval-admin)
+[Manage the approvals app in Microsoft Teams](/microsoftteams/approval-admin)
