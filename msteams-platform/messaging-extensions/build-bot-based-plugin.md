@@ -5,7 +5,8 @@ description: Learn how to build a bot-based message extension plugin for Microso
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 11/14/2023
+ms.date: 07/02/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Extend bot-based message extension as plugin for Copilot for Microsoft 365
@@ -68,7 +69,7 @@ Before you get started, ensure that you install the following tools to build and
 * Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
-  1. Go to **Manage** > **Settings**.
+  1. Go to **Manage** :::image type="icon" source="../assets/icons/gear-icon.png" border="false"::: > **Settings**.
   1. Enter **Teams Toolkit** in the **Search settings** search box.
   1. Under **Extensions**, select the **Fx-extension: Develop Copilot Plugin** checkbox.
 
@@ -302,15 +303,17 @@ To trigger the message extension through Copilot, follow these steps:
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create a bot-based search message extension plugin using Developer portal for Teams, follow these steps:
+To create a bot-based message extension using Developer Portal for Teams, follow these steps:
 
-1. Go to **Teams Developer Portal**.
+1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/).
 1. Go to **Apps**.
 1. Select **+ New apps**.
-1. Under **Configure**, select **App features**.
-1. Select **Messaging extension**.
+1. In the **Add apps** page, update the name and select the manifest version as **Public developer preview (devPreview)**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the messaging extension option in Teams Developer Portal.":::
+
+1. Under **Configure**, select **App features**.
+1. Select **Messaging extension**.
 
 1. Under **Message extension type**, select **Bot**.
 
