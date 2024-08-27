@@ -208,9 +208,9 @@ For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-
 
 TBD
 
-A Teams AI bot utilizes artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations, and can be integrated into larger applications or used as standalone tools.
+A Teams AI bot uses artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations.
 
-Teams AI bots are built using the Bot Framework SDK and can leverage the Teams AI library to streamline the process of building intelligent applications. This library provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+Teams AI bots are built using the Bot Framework SDK and leverage the Teams AI library to streamline the process of building intelligent apps. The Teams AI library provides APIs to access and manipulate data, and controls and components to create custom user interfaces.
 
 ## Power Agent
 
