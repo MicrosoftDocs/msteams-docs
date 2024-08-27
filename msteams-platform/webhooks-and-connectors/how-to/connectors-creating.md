@@ -8,7 +8,7 @@ ms.date: 04/16/2023
 ---
 # Create connectors for Microsoft 365 Groups
 
-[!INCLUDE [deprecation-note](includes/deprecation-note.md)]
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 

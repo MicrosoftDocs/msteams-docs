@@ -9,7 +9,7 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
-[!INCLUDE [deprecation-note](includes/deprecation-note.md)]
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
