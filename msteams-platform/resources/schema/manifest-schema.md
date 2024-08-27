@@ -387,7 +387,7 @@ Specifies information about your company. For apps submitted to the Teams Store,
 |`websiteUrl`|String|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|String|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|String|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|String|10 characters| |**Optional** The Microsoft Cloud Partner Program ID (formerly known as Microsoft Partner Network ID) that identifies the partner organization building the app.|
+|`mpnId`|String|10 characters| |**Optional** The Microsoft Cloud Partner Program ID (formerly known as Microsoft Partner Network (MPN) ID) that identifies the partner organization building the app.|
 
 ## name
 
