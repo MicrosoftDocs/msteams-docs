@@ -8,7 +8,7 @@ ms.date: 01/25/2023
 
 # Create Incoming Webhooks
 
-[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
+[!INCLUDE [deprecation-note](includes/deprecation-note.md)]
 
 An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
 
