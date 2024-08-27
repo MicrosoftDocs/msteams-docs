@@ -417,29 +417,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-You can design Adaptive Cards that contain forms with interactive data entry fields through dynamic typeahead search. In such forms, there might be instances where the input value in one field depends on the input value of another. It's also possible that when a user changes an input value in one field, the existing input value in the other field might become invalid.
+Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. Dependent dropdowns are useful for filtering out options based on a previous choice. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search.
 
-For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country/region and another for selecting a specific city within that country/region.
+For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
 
-If a user selects **USA** as the country/region in the first dropdown list, the second dropdown list must display the various states in USA, such as **CA**, **FL**, and **TX**.
-
-However, the input values in elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, the input values in other elements might not be sent to the bot. In this case, when the user changes the country/region name from USA to India, the action can cause the following two issues:
-
-* You can validate the input data in the card only when the user submits the entire form. If the validation fails, the bot shows an error message. In this case, the validation fails because the selected country/region is India, but the states displayed belong to the USA.
-
-* For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In this case, the bot has to search for city names from the list of all available countries/regions in the dataset.
-
-The ideal experience in this case would be if the user changes the selection from **USA** to **India**, the values in the second dropdown list are reset, and a new list of states in India must be displayed.
+If a user selects **USA** as the country in the first dropdown list, the second dropdown list must display the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown must be reset, and a new list of states in India must be displayed.
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
 
-This kind of dropdown is called a dependent dropdown. Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. Dependent dropdowns are useful for filtering out options based on a previous choice.
+However, the input values in elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, the input values in other elements aren't sent to the bot. In the example, when the user changes the country name from USA to India, the action can cause the following two issues:
+
+* You can validate the input data in the card only when the user submits the entire form. If the validation fails, the bot displays an error message. In the example, the validation fails because the selected country is India, but the states displayed belong to the USA.
+
+* For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In the example, the bot has to search for city names from the list of all available countries in the dataset.
 
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one input value (which can be of any type) is associated with another and acts as a filter for the input values in the second dropdown (which can be of any type but preferably supports dynamic typeahead search). The following diagram illustrates how the user, Adaptive Card, the host and the bot interact in a dependent dropdown:
+You can implement dependent dropdowns where one input value (which can be of any type) is associated with another and acts as a filter for the input values in the second dropdown (must be dynamic typeahead search). The following diagram illustrates how the user, Adaptive Card, the host and the bot interact in a dependent dropdown:
 
 **Placeholder image**
 
