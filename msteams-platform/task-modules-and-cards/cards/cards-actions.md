@@ -493,7 +493,7 @@ The following is an example of the incoming activity to a bot when user types so
   "serviceUrl": "https://smba.trafficmanager.net/amer/",
   "from": {
     "id": "29:1E0NZYNZFQOCUI8zM9NY_EhlCsWgNbLGTHUNdBVX2ob8SLjhltEhQMPi07Gr6MLScFeS8SrKH1WGvJSiVKThnyw",
-    "name": "Alex Wilbur",
+    "name": "Megan Bowen",
     "aadObjectId": "97b1ec61-45bf-453c-9059-6e8984e0cef4"
   },
   "conversation": {
