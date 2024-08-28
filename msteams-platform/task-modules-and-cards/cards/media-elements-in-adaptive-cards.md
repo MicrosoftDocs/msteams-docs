@@ -111,7 +111,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. Select an existing card from the previously created Adaptive Cards list, or create a new Adaptive Card. To create a new card, select **+New card**, enter the card's name, and select **Save**.
 
-1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
+1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
 
@@ -138,13 +138,13 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. Select an existing card by pasting the existing card JSON in the **CARD PAYLOAD EDITOR**, or create a new Adaptive Card. To create a new card, select **New card** > **Blank Card** or **From JSON Schema** or select a card template from **Explore**.
 
-1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
+1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
 
 1. Under **CARD STRUCTURE**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
-1. In **ELEMENT PROPERTIES** section, update the following fields:
+1. In **ELEMENT PROPERTIES**, update the following fields:
 
    * Under the **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#add-media-files-to-onedrive-or-sharepoint).
    * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
