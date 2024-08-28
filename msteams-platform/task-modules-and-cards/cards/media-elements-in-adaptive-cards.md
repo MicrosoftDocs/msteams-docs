@@ -9,11 +9,15 @@ ms.author: v-sdhakshina
 
 # Media elements in Adaptive Card
 
-Media elements in Adaptive Card provide enhanced media experience and increases engagement with the Adaptive Card. You can view and play the media files within the Adaptive Card in Teams.
+Adaptive Card media elements are components that allow you to embed audio and video clips directly into your Adaptive Cards. These elements enhance the user experience by making the cards more interactive and engaging for your app users. They can view and play media files directly within Teams using Adaptive Card. Here are few key points about media elements in Adaptive Card:
 
-Adaptive Card plays the video or audio clips by accessing the media files available in OneDrive, SharePoint, YouTube, Dailymotion, or Vimeo. You can add media files such as audio or video clips to your Adaptive Card through `media` as `type` property in the Adaptive Card payload.
+* ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture user's attention more effectively. 
 
-The following screenshot shows you the media elements in your Adaptive Card:
+* ***Improved Communication***: Media elements can convey information more richly and effectively than text alone. 
+
+* ***Versatility***: They can be used in various scenarios, such as tutorials, announcements, or feedback requests. 
+
+The following image shows the media elements in Adaptive Card:
 
 # [Desktop](#tab/desktop)
 
@@ -25,9 +29,11 @@ The following screenshot shows you the media elements in your Adaptive Card:
 
 ---
 
+You can add audio or video clips to your Adaptive Card by setting `media` as the `type` property in the Adaptive Card payload. The video or audio clips are accessed through the media files available in OneDrive, SharePoint, YouTube, Dailymotion, or Vimeo.
+
 ## Adaptive Card example with media elements
 
-The following code shows an example of an Adaptive Card with media elements:
+The following is an Adaptive Card payload that includes media elements:
 
 ```json
 {
@@ -89,15 +95,15 @@ The following code shows an example of an Adaptive Card with media elements:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Media` to add media files.|
-| `poster` | URL of an image to display before playing. Supports data URI in version 1.2+.</br> If poster is omitted, the `media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from a Web provider, such as YouTube.|
-| `sources.url`| URL to media file. Supports data URI in version 1.2+. |
+| `poster` | The URL of an image displayed before the media plays. Supports data URI in version 1.2+.</br> If you omit the poster, the `media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from a Web provider, such as YouTube.|
+| `sources.url`| The URL to media file. Supports data URI in version 1.2+. |
 | `sources.mimeType`| Mime type of associated media, such as `video/mp4`.</br> For YouTube and other Web video URLs, `mimeType` can be omitted.|
 
-For more information, see [`media`](https://www.adaptivecards.io/explorer/Media.html).
+For more information, see [Adaptive Cards `media` ](https://www.adaptivecards.io/explorer/Media.html).
 
 ## Add media elements to your Adaptive Card
 
-You can add media files to an existing or new Adaptive Card using Teams Developer Portal or Adaptive Card Designer. To add media files to your Adaptive Card, follow the steps:
+Add media files into an existing or new Adaptive Card either through [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer). To incorporate media files into your Adaptive Card, follow these steps:
 
 1. Open an existing Adaptive Card or create a new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer).
 
