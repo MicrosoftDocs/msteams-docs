@@ -127,7 +127,7 @@ export function initializePublicClient() {
   );
 }
 ```
-
+<!--
 # [C#](#tab/cs1)
 
 ```csharp
@@ -154,7 +154,7 @@ public class MsalClient
     }
 }
 ```
-
+-->
 ---
 
 ### Acquire your first token
@@ -216,7 +216,7 @@ The following code snippet shows an example to access a token:
     });
 
 ```
-
+<!--
 # [C#](#tab/cs2)
 
 ```csharp
@@ -254,7 +254,7 @@ catch (Exception ex)
     Console.WriteLine(ex);
 }
 ```
-
+-->
 ---
 
 ### Call an API
@@ -283,7 +283,7 @@ fetch(graphEndpoint, options)
     });
 
 ```
-
+<!--
 # [C#](#tab/cs3)
 
 ```csharp
@@ -316,7 +316,7 @@ public class GraphApiClient
     }
 }
 ```
-
+-->
 ---
 
 ### Best practices
