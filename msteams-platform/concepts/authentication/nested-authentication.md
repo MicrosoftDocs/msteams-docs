@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 > * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * NAA is supported only in single page apps (SPA) like tabs.
 
-NAA is a new authentication protocol for SPA that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-ins, Teams Tabs, and Personal apps.
+NAA is a new authentication protocol for SPA that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this model in Office Add-ins, Teams Tabs, and Personal apps.
 
 The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
@@ -54,7 +54,7 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 
 To use nested authentication, follow these steps:
 
-1. [Register your SPA](#register-your-single-page-application)
+1. [Register your single-page application](#register-your-single-page-application)
 1. [Add trusted brokers](#add-trusted-brokers)
 1. [Initialize public client app](#initialize-public-client-application)
 1. [Acquire your first token](#acquire-your-first-token)
