@@ -319,8 +319,6 @@
       - name: Bots SDK (v3)
         href: resources/bot-v3/bots-overview.md
         items:
-        - name: Build a bot
-          href: resources/bot-v3/bots-create.md
         - name: Conversations
           href: resources/bot-v3/bot-conversations/bots-conversations.md
           items:
@@ -503,14 +501,14 @@
   - name: Teams AI library
     items:
       - name: Overview
-        href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
         displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
       - name: Core capabilities
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       - name: Get started
-        href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
+        href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
-        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+        href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - name: Build custom copilot
         items: 
           - name: Custom copilot for Microsoft 365 
@@ -518,7 +516,7 @@
           - name: Build custom copilot using Teams Toolkit 
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
-        href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+        href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
@@ -902,7 +900,7 @@
     displayName: Allow users to upload apps
   - name: Tabs
     items:
-    - name: DevTools for Microsoft Teams tabs
+    - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
@@ -981,21 +979,20 @@
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: SaaS offer for your Teams app
+  - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: license, transactable Software-as-a-Service, recloud app
-  - name: Test a SaaS offer
-    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee, test SaaS offer
-  - name: Publish the app with SaaS offer
-    href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
-    displayName: configure, apps, publish app
-  - name: Configure in-app purchases
+    displayName: license, Transactable Software-as-a-Service, Recloud app
+  - name: In-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    displayName: manifest, purchase experience API, purchase
-  - name: App subscriptions and licenses
+  - name: Test preview for monetized apps
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    displayName: paid, AppSource, fee 
+  - name: Set up Microsoft license management
+    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Purchase and manage app subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-    displayName: Purchase license, purchase subscription, apps, License, manage
+    displayName: Purchase, Teams apps, License, manage, buy subscriptions
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
