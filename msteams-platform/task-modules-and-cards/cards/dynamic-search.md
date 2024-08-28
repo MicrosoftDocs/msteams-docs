@@ -427,15 +427,17 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-india.jpg" alt-text="Screenshot shows a dependent dropdown with India and its states.":::
 
-However, the input values in elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, the input values in other elements aren't sent to the bot. In the example, when the user changes the country name from USA to India, the action can cause the following two issues:
+However, the input values in the elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, Teams doesn't send the input values of the other elements to the bot. In the example, when the user changes the country name from USA to India, the action can cause the following two issues:
 
 * You can validate the input data in the card only when the user submits the entire form. If the validation fails, the bot displays an error message. In the example, the validation fails because the selected country is India, but the states displayed belong to the USA.
 
 * For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In the example, the bot has to search for city names from the list of all available countries in the dataset.
 
+Hence, to implement dependent dropdowns, ensure that when a user changes a value in a dropdown, the updated input values of all dependent elements are sent to the bot, and the dropdown’s input value is reset.
+
 ### Implement dependent dropdowns
 
-You can implement dependent dropdowns where one input value (which can be of any type) is associated with another and acts as a filter for the input values in the second dropdown (must be dynamic typeahead search). The following diagram illustrates how the user, Adaptive Card, the host and the bot interact in a dependent dropdown:
+You can implement dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search, and acts as a filter for the dropdown list's input values. The following diagram illustrates how the user, Adaptive Card, the host and the bot interact in a dependent dropdown:
 
 **Placeholder image**
 
