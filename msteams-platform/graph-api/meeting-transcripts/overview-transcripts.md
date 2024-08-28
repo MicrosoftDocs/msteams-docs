@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Graph to fetch transcripts and recordings for a Teams meeting
+title: Fetch Meeting Transcripts & Recordings
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -24,7 +24,6 @@ You can fetch meeting transcript, recording, or both using Graph APIs.
 To fetch the transcript and recording for a particular meeting:
 
 - [Configure permissions on Microsoft Entra ID to access transcript and recording](#configure-permissions-on-azure-ad-to-access-transcript-and-recording)
-- [Obtain meeting ID and organizer ID](fetch-id.md)
 - [Get notified when the meeting transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript)
 - [Use Graph APIs to fetch transcript](/graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true)
 - [Use Graph APIs to fetch recording](/graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true)
@@ -49,17 +48,17 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 
 After you've configured the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings available events or all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
 
-For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
-
 For more information about how your app can know when a transcript or recording is available after the online meeting ends, see [get notified when transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
+For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
+
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs currently support only scheduled meetings.
+> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support only scheduled meetings.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Obtain meeting ID and organizer ID](fetch-id.md)
+> [Get notified when the meeting transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript)
 
 ## See also
 

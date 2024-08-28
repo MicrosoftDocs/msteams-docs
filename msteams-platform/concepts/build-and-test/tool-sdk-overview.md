@@ -1,7 +1,7 @@
 ---
-title: Tools and SDKs
+title: Tools and SDKs to Build Teams App
 author: v-sdhakshina
-description: In this article, learn more about the tools and SDKs available for building your Microsoft Teams app.
+description: Learn more about the tools such as Teams Toolkit, Yeoman generator for Teams, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -72,7 +72,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | ----------------- | -------------- | ----------------------- |
 | [Bot Framework SDK](/azure/bot-service/bot-service-overview) | Microsoft Bot Framework and Azure AI Bot Service are a collection of libraries, tools, and services that enable you to build, test, deploy, and manage intelligent bots. The Bot Framework includes a modular and extensible SDK for building bots and connecting to AI services. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure Bot Service**. |
 | [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Microsoft Graph**. |
-| [Teams AI library](../../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) | Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure OpenAI**. |
+| [Teams AI library](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure OpenAI**. |
 
 ### Additional libraries and UI utilities to build Teams apps
 
@@ -80,7 +80,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | ----------------- | -------------- | ----------------------- |
 | [Adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) | An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. | :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **TeamsFx SDK**, **Teams JavaScript client library**, and **SharePoint Framework (SPFx)**. |
 | [Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) | Fluent UI React components are a collection of UI elements and tools that come from combining various React-based component libraries used in production, like `@fluentui/react` and `@fluentui/react-northstar`. | :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Teams JavaScript client library** and **SharePoint Framework (SPFx)**. |
-| [Fluid Framework](https://fluidframework.com/docs/) | Fluid Framework consists of client libraries that help distribute and synchronize shared state. These libraries enable multiple clients to simultaneously create and operate on shared data structures using coding patterns similar to those used to work with local data. | :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **Live Share SDK**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure Fluid Relay**. |
+| [Fluid Framework](https://fluidframework.com/docs) | Fluid Framework consists of client libraries that help distribute and synchronize shared state. These libraries enable multiple clients to simultaneously create and operate on shared data structures using coding patterns similar to those used to work with local data. | :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: You can pass the reference to **Live Share SDK**. </br> :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Based on **Azure Fluid Relay**. |
 
 <a name='azure-ad-secured-services-and-apis'></a>
 

@@ -1,5 +1,5 @@
 ---
-title: Live Share canvas overview
+title: Collaborate with Live Share Canvas
 author: surbhigupta
 description: In this module, learn more about Live Share canvas, an extension enabling inking, laser pointers, and cursors for meeting apps.
 ms.topic: conceptual
@@ -125,7 +125,7 @@ export const ExampleLiveCanvas = () => {
     );
 
     return (
-        {/** Canvas currently needs to be a child of a parent with absolute styling */}
+        {/* Canvas needs to be a child of a parent with absolute styling */}
         <div style={{ position: "absolute"}}>
             <div
                 ref={liveCanvasRef}
