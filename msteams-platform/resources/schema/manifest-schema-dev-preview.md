@@ -1068,12 +1068,12 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
 |`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
-|`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must be configured if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
+|`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
 |`fixedControls.id`| String | 64 characters | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
-|`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. Currently, only the `button` type is supported. |
-|`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the button of a spam-reporting add-in. |
-|`fixedControls.enabled`| Boolean | | ✔️ | While this property must be specified in a `fixedControls` object, it doesn't affect the functionality of a spam-reporting add-in. |
-|`fixedControls.icons`| Array | | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects; one each with `16`, `32`, and `80` pixels icon size. |
+|`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. <br>Supported value: `button` |
+|`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text that apptheears on  button of a spam-reporting add-in. |
+|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in. |
+|`fixedControls.icons`| Array | | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
 |`fixedControls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, and `80`.<br>Required image sizes: `16`, `32`, `80` |
 |`fixedControls.icons.url`| URL | | | Specifies the absolute URL to the icon. |
 |`fixedControls.supertip`| Object | | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
@@ -1083,13 +1083,13 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`spamPreProcessingDialog`| Object | | | Configures the preprocessing dialog of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. |
 |`spamPreProcessingDialog.title`| String | 128 characters | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. |
 |`spamPreProcessingDialog.description`| String | 250 characters | ✔️ | Specifies the custom text that appears in the preprocessing dialog of a spam-reporting add-in. |
-|`spamPreProcessingDialog.spamReportingOptions`| Object | | | Lists up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message. |
+|`spamPreProcessingDialog.spamReportingOptions`| Object | | | Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message. |
 |`spamPreProcessingDialog.spamReportingOptions.title`| String | 128 characters | ✔️ | Specifies the custom text or title to describe the reporting options provided in the preprocessing dialog. |
 |`spamPreProcessingDialog.spamReportingOptions.options`| Array of strings | 5 options<br><br>128 characters per option | ✔️ | Specifies a custom option with a checkbox that a user can select from the preprocessing dialog to provide a reason for reporting a message. At least one option must be specified. A maximum of five options can be included.|
 |`spamPreProcessingDialog.spamFreeTextSectionTitle`| String | 128 characters | | Adds a text box to the preprocessing dialog for users to provide additional information on the message they're reporting. The string provided in this property appears above the text box. |
 |`spamPreProcessingDialog.spamMoreInfo`| Object | | | Configures a link to provide informational resources to a user. In the preprocessing dialog, the link appears below the text provided in `spamPreProcessingDialog.description`.|
 |`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
-|`spamPreProcessingDialog.spamMoreInfo.url`| String | 2,048 characters | ✔️ | Specifies the HTTPS URL of a site containing informational resources. |
+|`spamPreProcessingDialog.spamMoreInfo.url`| String | 2048 characters | ✔️ | Specifies the HTTPS URL of a site that contains informational resources. |
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
