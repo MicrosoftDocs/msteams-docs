@@ -103,17 +103,21 @@ For more information, see [Adaptive Cards `media` ](https://www.adaptivecards.io
 
 ## Add media elements to your Adaptive Card
 
-Add media files into an existing or new Adaptive Card either through [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer). To incorporate media files into your Adaptive Card, follow these steps:
+Add media files into an existing or new Adaptive Card either through [Developer Portal for Teams](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer). To incorporate media files into your Adaptive Card, follow these steps:
 
-1. Open an existing Adaptive Card or create a new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer).
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+
+1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/cards).
+
+1. Select an existing card from the previously created Adaptive Cards list, or create a new Adaptive Card. To create a new card, select **+New card**, enter the card's name, and select **Save**.
 
 1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
 
-1. Under **Custom card structure title**, select **Media**. The **ELEMENT PROPERTIES** window appears.
+1. Under **CARD STRUCTURE**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
-1. In **ELEMENT PROPERTIES** section, update the following fields:
+1. In **ELEMENT PROPERTIES**, update the following fields:
 
    * Under the **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#add-media-files-to-onedrive-or-sharepoint).
    * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
@@ -122,11 +126,36 @@ Add media files into an existing or new Adaptive Card either through [Teams Deve
 
 1. Select **Save** and then select **Send me this card**.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams"lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams" lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
 
    Your Adaptive Card with media file is successfully saved and sent to your Teams chat. Now, you can play your media file in your Adaptive Card.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
+
+# [Adaptive Card Designer](#tab/adaptive-card-designer)
+
+1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer).
+
+1. Select an existing card by pasting the existing card JSON in the **CARD PAYLOAD EDITOR**, or create a new Adaptive Card. To create a new card, select **New card** > **Blank Card** or **From JSON Schema** or select a card template from **Explore**.
+
+1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
+
+1. Under **CARD STRUCTURE**, select **Media**. The **ELEMENT PROPERTIES** window appears.
+
+1. In **ELEMENT PROPERTIES** section, update the following fields:
+
+   * Under the **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#add-media-files-to-onedrive-or-sharepoint).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+
+     :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
+
+   Now, you can play your media file in your Adaptive Card.
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
+
+---
 
 ### Add media files to OneDrive or SharePoint
 
