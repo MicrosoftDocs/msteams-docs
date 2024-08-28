@@ -489,7 +489,7 @@ items:
         }
         ```
 
-       The bot relies on OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. The `config.json` is initiated by the `PromptManager` from the `index.ts` file. When a prompt is initiated, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings into OpenAI or Azure OpenAI.
+       The bot uses OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the bot's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
 
     1. Go to the `skprompt.txt` file. Add the following instructions for OpenAI or Azure OpenAI to conduct and facilitate conversation:
 
