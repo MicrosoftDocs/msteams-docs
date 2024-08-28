@@ -1,6 +1,6 @@
 ---
-title: Nested app authentication
-description: Learn about nested authentication in the Microsoft Teams platform.
+title: SSO authentication for nested apps
+description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
 ms.date:
 ms.topic: conceptual
 author: v-ypalikila
@@ -13,16 +13,16 @@ ms.localizationpriority: medium
 > [!NOTE]
 >
 > * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * NAA is supported only in single-page application (SPA) like tabs.
+> * NAA is supported only in single-page application (SPA), such as tabs.
 
-NAA is a new authentication protocol for SPA that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
+NAA is a new authentication protocol for SPA that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
 The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 * NAA requires you to use only the MSAL.js library. You don't need to use the `getAuthToken` function in Teams JavaScript client library (TeamsJS).
 * You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
 * You can use incremental and dynamic consent for scopes (permissions).
-* You don't need to preauthorize your hosts, such as Teams or Office, to call your endpoints.
+* You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
 The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
@@ -32,18 +32,20 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 | Register API in Microsoft Entra ID | ✔️ |  |
 | Define a custom scope in Microsoft Entra ID | ✔️ |  |
 | Authorize Teams client apps | ✔️ |  |
-| Revise Teams manifest | ✔️ | It is recommended to help IT admins for providing consent through Admin Portal. |
+| Revise app manifest (previously called Teams app manifest) | ✔️ | Helps IT admins to provide consent through Teams admin center. |
 | Acquire access token through TeamsJS SDK | ✔️ |  |
 | Solicit user consent for more permissions | ✔️ |  |
 | Conduct an OBO exchange on the server | ✔️ |  |
+
+The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
 ## Use cases for enabling NAA
 
 | Scenario | Description |
 | --- | --- |
-| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams meetings to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consent, Tom can use Mural seamlessly in future meetings across devices. |
-| **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Mural. |
-| **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Mural. |
+| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use the Contoso app in Teams meetings to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consent, Tom can use Contoso seamlessly in future meetings across devices. |
+| **Reauthentication or Conditional Access step-up auth** | Tom, when working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Contoso in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Contoso. |
+| **Errors** | Tom faces an sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
 ## Configure nested authentication
 
@@ -75,7 +77,7 @@ brk-<broker_application_id>://<your_domain>
 
 Where,
 
-* <broker_application_id> is the alias of the broker or brokers you wish to trust
+* <broker_application_id> is the alias of the broker or brokers you want to trust
 * <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
 If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
@@ -163,16 +165,16 @@ To acquire a token, follow these steps:
 
 1. Use MSAL.js to acquire tokens for your app ID. For more information, see [acquire and use an access token](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md).
 
-1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters like `tenantID`, `homeAccountId`, and `loginHint` from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface).
+1. Use `getActiveAccount` API to verify if there's an active account to call the `publicClientApplication`. If there's no active account, try to retrieve one from the cache with `getAccount`, using additional filter parameters, such as `tenantID`, `homeAccountId`, and `loginHint` from [Context interface](../../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface).
 
    > [!NOTE]
    > The `homeAccountId` property is equivalent to `userObjectId` in TeamsJS.
 
-1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. `accessTokenRequest` specifies the scopes for which the access token is requested. NAA supports incremental and dynamic consent so always request the minimum scopes needed for your code to complete its task.
+1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. `accessTokenRequest` specifies the scopes for which the access token is requested. NAA supports incremental and dynamic consent. Ensure that you always request the minimum scopes needed for your code to complete its task.
 
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired or if the user didn't consent to all the requested scopes.
 
-The following code snippet shows you an example to access a token:
+The following code snippet shows an example to access a token:
 
 # [JavaScript](#tab/js2)
 
@@ -257,7 +259,7 @@ catch (Exception ex)
 
 ### Call an API
 
-After you receive the token, use it to call the API. This ensures that the API is called with a valid token for ensuring that authenticated requests can be made to the server.
+After you receive the token, use it to call the API. This ensures that the API is called with a valid token to make authenticated requests to the server.
 
 The following example shows how to make an authenticated request to Microsoft Graph API to access Microsoft 365 data:
 
@@ -319,13 +321,18 @@ public class GraphApiClient
 
 ### Best practices
 
-* **Use silent authentication whenever possible**: MSAL.js provides the `acquireTokenSilent` method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), Microsoft Entra returns a fresh token. The library doesn't automatically invoke the `acquireTokenSilent` method. We recommended that you call `acquireTokenSilent` in your app before making an API call to get the valid token.
+* **Use silent authentication whenever possible**:
+  MSAL.js provides the `acquireTokenSilent` method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra ID and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), Microsoft Entra ID returns a fresh token. The library doesn't automatically invoke the `acquireTokenSilent` method. We recommend that you call `acquireTokenSilent` in your app before making an API call to get a valid token.
 
-  In certain cases, the attempt to get the token using the `acquireTokenSilent` method fails. For example, when there's an expired user session with Microsoft Entra or a password change by the app user, which requires user interaction. If the `acquireTokenSilent` fails, call the interactive acquire token method (`acquireTokenPopup`).
+  In certain cases, the attempt to get the token using the `acquireTokenSilent` method fails. For example, when there's an expired user session with Microsoft Entra ID or a password change by the app user, `acquireTokenSilent` fails. Call the interactive acquire token method (`acquireTokenPopup`).
 
-* **Have a fallback**: These flows offer a high degree of compatibility across the Microsoft ecosystem. However, your app might appear in down-level or legacy clients that aren't updated to support NAA. In these cases, your app can't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
+* **Have a fallback**:
+  The NAA flows offer compatibility across the Microsoft ecosystem. However, your app might appear in down-level or legacy clients that aren't updated to support NAA. In such cases, your app can't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
-* NAA might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of `true` indicates support for NAA, while `false` suggests it isn't supported.
+  > [!NOTE]
+  > You mustn't use NAA if you're using a non Microsoft Entra identity provider, you can use pop-up authentication instead.
+
+* **Support for NAA**: NAA might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of `true` indicates support for NAA, while `false` suggests it isn't supported.
 
 * **Test your app in multiple environments**: If your app is expected to work in both webview and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Certain APIs that function in the browser might not operate within webviews.
 
@@ -333,4 +340,4 @@ public class GraphApiClient
 
 | Sample name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|:--------|
-|Nested app authentication   |  This sample shows how to build an NAA authentication protocol for SPA embedded in host environments like Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
+| Nested app authentication   | This sample shows how to build an NAA authentication protocol for SPA embedded in host environments, such as Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|

@@ -17,10 +17,14 @@ Choose to add authentication for your app in one of the two ways:
 * **Enable authentication using third-party OAuth provider**:
   You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to your app. Microsoft Entra ID is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
-* **Enable SSO for nested aaps**: You can use Nested App Authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside of supported first-party apps. Compared with existing full-trust authentication models and the on-behalf-of flow, NAA provides better security and greater flexibility in app architecture, enabling the creation of rich, client-driven apps. With NAA, developers can use MSAL.js to acquire tokens for their Teams Tab or Office add-in app, using capabilities of the first-party host to enable Conditional Access and Intune policies (for example, registered device policy) which couldn't otherwise be supported when hosted inside of native WebViews. NAA is supported in MSAL.js v3.1 and higher.
+* **Enable SSO for nested apps**:
+  You can use nested app authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside the supported Microsoft apps. Compared with existing full-trust authentication models and the on-behalf-of (OBO) flow, NAA provides better security and flexibility in app architecture, enabling the creation of rich, client-driven apps.
+
+  With the network access account, you can use MSAL.js to obtain tokens for your Teams tab or Office Add-in apps. NAA leverages the capabilities of the Microsoft host to facilitate conditional access and Intune policies, such as registered device policy. These policies might not be supported when hosted within the native webviews.
 
   > [!NOTE]
-  > Nested app authentication is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+  > NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+  > NAA is supported in MSAL.js v3.1 and higher.
 
 ## Select authentication method
 
