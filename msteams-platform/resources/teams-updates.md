@@ -1,6 +1,6 @@
 ---
 title: The New Microsoft Teams Client
-description: Learn about the latest updates to Microsoft Teams.
+description: Learn about the new Microsoft Teams, advantages, timelines, rollout, limitations, versions, deprecated features, and latest updates.
 author: v-ypalikila
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -43,8 +43,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 > * We recommend you to test the functionality of apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 
 The following Teams features aren't supported in the new Teams client:
-
-* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
 
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 

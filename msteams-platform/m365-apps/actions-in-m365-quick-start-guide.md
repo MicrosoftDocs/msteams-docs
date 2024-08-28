@@ -1,6 +1,6 @@
 ---
-title: Actions in Microsoft 365 Quick Starts
-description: In this article, learn how to create Actions in Microsoft 365, function of Actions and its use cases.
+title: Get Started - Actions in Microsoft 365
+description: In this article, learn how to build and run the sample app for Actions in Microsoft 365 using Teams Toolkit in Visual Studio Code, its functions and use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
@@ -23,7 +23,7 @@ Before you get started, ensure that you install the following tools:
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 
@@ -62,4 +62,3 @@ You can try your Actions in the Microsoft 365 home page, right-click a Word, Exc
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
 If you want to run Actions in the Microsoft 365 on Azure, see [sample.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/m365-actions-preview/nodejs/README.md#optional-deploy-the-app-to-azure)
-
