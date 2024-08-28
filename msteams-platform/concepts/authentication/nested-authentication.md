@@ -24,9 +24,9 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Office, to call your endpoints.
 
-The following table outlines the difference between Teams Microsoft Entra ID SSO and NAA:
+The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps | Traditional Teams Microsoft Entra ID SSO | NAA |
+| Steps | Traditional Teams Microsoft Entra SSO | NAA |
 | --- | --- | --- |
 | Expose redirect URI | ✔️ | ✔️ SPA redirect URI necessary |
 | Register API in Microsoft Entra ID | ✔️ |  |
@@ -41,7 +41,7 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 
 | Scenario | Description |
 | --- | --- |
-| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consenting, Tom can use Mural seamlessly in future meetings across devices. |
+| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consent, Tom can use Mural seamlessly in future meetings across devices. |
 | **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Mural. |
 | **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Mural. |
 
@@ -54,15 +54,15 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 
 To use nested authentication, follow these steps:
 
-1. [Register their single page application](#register-your-single-page-application)
+1. [Register your SPA](#register-your-single-page-application)
 1. [Add trusted brokers](#add-trusted-brokers)
-1. [Initialize public client application](#initialize-public-client-application)
+1. [Initialize public client app](#initialize-public-client-application)
 1. [Acquire your first token](#acquire-your-first-token)
 1. [Call an API](#call-an-api)
 
 ### Register your single-page application
 
-You need to create a Microsoft Azure App registration for your add-in on the Azure portal. The app registration must have a name, supported account type, and SPA redirect. If your add-in requires additional app registration beyond NAA and SSO, see [Register your single-page application.](/entra/identity-platform/scenario-spa-app-registration)
+You must create a Microsoft Azure App registration for your add-in on Azure portal. The app registration must have a name, supported account type, and SPA redirect. If your add-in requires additional app registration beyond NAA and SSO, see [register your single-page application.](/entra/identity-platform/scenario-spa-app-registration)
 
 ### Add trusted brokers
 
