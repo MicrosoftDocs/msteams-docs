@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Create dependent dropdowns with typeahead search in Adaptive Cards
+        url: task-modules-and-cards/cards/dynamic-search.md#dependent-dropdowns
       - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
@@ -79,8 +81,6 @@ landingContent:
         url: concepts/build-and-test/apps-package.md#outline-icon
       - text: Authentication in API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md#authentication
-      - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
-        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
 
     - linkListType: reference
       links:
