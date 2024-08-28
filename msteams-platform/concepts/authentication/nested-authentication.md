@@ -19,7 +19,7 @@ NAA is a new authentication protocol for SPA that are embedded in host environme
 
 The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
-* You only need to use the MSAL.js library. The `getAuthToken` function in TeamsJS is not required.
+* You need to use the MSAL.js library only. The `getAuthToken` function in TeamsJS is not required.
 * You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Office, to call your endpoints.
@@ -330,6 +330,6 @@ public class GraphApiClient
 
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest|
+| Sample name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|:--------|
-|Nested app authentication   |  This sample shows how to build a NAA authentication protocol for single page applications embedded in host environments like Teams, Outlook, and Microsoft 365.||[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)| |
+|Nested app authentication   |  This sample shows how to build a NAA authentication protocol for single page applications embedded in host environments like Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
