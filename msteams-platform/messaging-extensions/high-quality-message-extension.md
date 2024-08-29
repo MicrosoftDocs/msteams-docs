@@ -171,11 +171,11 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Must fix]*
 
-* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Must fix]*
 
-* Avoid grammar and punctuation errors. *[Mandatory fix]*
+* Avoid grammar and punctuation errors. *[Must fix]*
 
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
 
@@ -594,7 +594,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
-* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
+* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
@@ -697,13 +697,13 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   </details>
 
-* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Must fix*]
 
-* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
+* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Must fix*]
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
@@ -725,7 +725,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
 
-* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Must fix]*
 
   * **ColumnSets**
 
@@ -820,11 +820,11 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
-| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
-| [Microsoft 365 Channel](#requirements-for-plugins-in-copilot-for-microsoft-365)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
+| Manifest version | App manifest version must be 1.13 or later. [*Must fix*] |
+| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Must fix*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
+| [Microsoft 365 Channel](#requirements-for-plugins-in-copilot-for-microsoft-365)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | [Single sign-on (SSO)](#requirements-for-plugins-in-copilot-for-microsoft-365) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | [Content Security Policy](#requirements-for-plugins-in-copilot-for-microsoft-365) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
@@ -837,7 +837,7 @@ Microsoft Teams supports various Copilot extensions, including message extension
 
 ### Validation guidelines in declarative Copilot
 
-A declarative copilot must ensure the following validations:
+A declarative Copilot must ensure the following validations:
 
 <details>
 <summary><b>Avoid prompt injection attack</b></summary>
@@ -891,7 +891,7 @@ The example shown in the image gives three utterances:
 <details>
 <summary><b>Instructions-only Copilots must not be supported</b></summary>
 
-In the following example, declarative copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
+In the following example, declarative Copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
 
 :::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::
 
@@ -913,9 +913,10 @@ In the following example, no nodes are defined for actions or Graph connectors e
 details TBA
 </details>
 
-### Validation guidelines for custom engine copilot
+<!--
+### Validation guidelines for custom engine Copilot
 
-The validation guidelines for declarative copilot are applicable for custom engine copilot as well. In addition, you must ensure that the following validations are met:
+The validation guidelines for declarative Copilot are applicable for custom engine Copilot as well. In addition, you must ensure that the following validations are met:
 
 <details>
 <summary><b>Include an AI conversational bot</b></summary>
@@ -931,9 +932,9 @@ You must define the bot type in the manifest  as 'conversational'.​
 </details>
 
 <details>
-<summary><b>Users must be able to reference custom engine copilot in Copilot and handoff chat experience in Teams​</b></summary>
+<summary><b>Users must be able to reference custom engine Copilot in Copilot and handoff chat experience in Teams​</b></summary>
 
-:::image type="content" source="../assets/images/Copilot/dc-handoff-chat-experience.png" alt-text="This image is an example that shows Custom engine copilot in Copilot & handoff chat experience in Teams​.":::
+:::image type="content" source="../assets/images/Copilot/dc-handoff-chat-experience.png" alt-text="This image is an example that shows custom engine Copilot in Copilot & handoff chat experience in Teams​.":::
 
 </details>
 
@@ -987,6 +988,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Must be responsive and fail gracefully for topics that it doesn’t specialize ​
 
 * Must not spam users by sending multiple messages in short succession​
+-->
 
 ### Validation guidelines for action-based message extension in Copilot
 
@@ -1009,7 +1011,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 * Include at least 3 sample prompts in the manifest​
 
-### Validation guidelines for type B actions in Copilot
+### Validation guidelines for API plugins in Copilot
 
 * When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
 
