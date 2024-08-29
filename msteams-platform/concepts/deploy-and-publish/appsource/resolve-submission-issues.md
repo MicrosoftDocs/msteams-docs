@@ -61,7 +61,7 @@ To list your app on the Teams Store, submit your app on the Partner Center. The 
 
         > [!CAUTION]
         >
-> To avoid multiple submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team approves your app.
+        > To avoid multiple submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team approves your app.
 
 ## FAQ
 
