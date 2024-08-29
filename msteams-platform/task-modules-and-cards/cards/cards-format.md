@@ -1026,7 +1026,7 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ## Borders in Adaptive Cards
 
-Adaptive Cards support a wide variety of elements, but having too many elements can introduce visual clutter and reduce readability. You can add borders around different elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
+Adaptive Cards support a wide variety of elements, but having too many elements in a card introduces visual clutter and reduces readability. You can add borders around different elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
 
 Design your Adaptive Cards with borders to highlight important information or sections, drawing the user’s attention to key areas. Borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
 
@@ -1103,7 +1103,7 @@ The following JSON payload shows an Adaptive Card with a border around columns a
 
 You can use Adaptive Cards across multiple hosts that contain contemporary design systems and frameworks following current design trends. To help maintain consistency across different hosts and keep up with the latest design trends, Adaptive Cards support rounded corners in various elements.
 
-Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Rounded corners improve readability and provide a seamless user experience.
+Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience.
 
 **Placeholder image:**
 
