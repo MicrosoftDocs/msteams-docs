@@ -1007,7 +1007,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 7 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array.<br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `spamReportingOverride`, `default`|
+|`contexts`| Array | 8 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array.<br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `spamReportingOverride`, `default`|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
@@ -1071,14 +1071,14 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
 |`fixedControls.id`| String | 64 characters | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
 |`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. <br>Supported value: `button` |
-|`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text that apptheears on  button of a spam-reporting add-in. |
-|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in. |
-|`fixedControls.icons`| Array | | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
+|`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text that appears on  button of a spam-reporting add-in. |
+|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in.<br>Default value: `True` |
+|`fixedControls.icons`| Array | 3 | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
 |`fixedControls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, and `80`.<br>Required image sizes: `16`, `32`, `80` |
-|`fixedControls.icons.url`| URL | | | Specifies the absolute URL to the icon. |
+|`fixedControls.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL to the icon. |
 |`fixedControls.supertip`| Object | | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
 |`fixedControls.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. |
-|`fixedControls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip. |
+|`fixedControls.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip. |
 |`fixedControls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
 |`spamPreProcessingDialog`| Object | | | Configures the preprocessing dialog of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. |
 |`spamPreProcessingDialog.title`| String | 128 characters | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. |
