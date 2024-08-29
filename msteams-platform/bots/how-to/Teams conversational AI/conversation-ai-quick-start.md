@@ -90,7 +90,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Update the following steps based on the AI services you select.
 
-# [OpenAI key](#tab/OpenAI-key)
+    # [OpenAI key](#tab/OpenAI-key)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -111,7 +111,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
           // }
       ```
 
-# [Azure OpenAI](#tab/Azure-OpenAI)
+    # [Azure OpenAI](#tab/Azure-OpenAI)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -173,7 +173,9 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
    A dialog to select the required scope appears.
 
-1. Select the required scope and select **Go**.
+1. Select **Open** to use the app in personal scope. 
+    
+   Alternatively, select a channel or chat for collaborative use and select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot shows option to select the required scope.":::
 
@@ -357,7 +359,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-# [OpenAI key](#tab/OpenAI-key2)
+    # [OpenAI key](#tab/OpenAI-key2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -365,7 +367,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
    SECRET_OPENAI_KEY=<your OpenAI key>
    ```
 
-# [Azure OpenAI](#tab/Azure-OpenAI2)
+    # [Azure OpenAI](#tab/Azure-OpenAI2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -374,7 +376,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
    SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
    ```
 
----
+    ---
 
 1. To install the following dependencies, go to **View** > **Terminal** and run the following commands:
 

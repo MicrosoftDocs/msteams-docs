@@ -113,6 +113,10 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    4. You'll be prompted to upload a custom app into Teams. Select **Open**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
+   
+   5. Select **Open**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot shows an app being installed.":::
 
         The app opens as a personal tab.
 

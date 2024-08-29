@@ -207,7 +207,9 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot shows the selection of Add.":::
 
-    1. Select from the list of suggested scopes or search and select the required scope and select **Go**.
+    1. Select **Open** to use the app in personal scope.
+
+        Alternatively, select a channel or chat for collaborative use and select **Go**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
