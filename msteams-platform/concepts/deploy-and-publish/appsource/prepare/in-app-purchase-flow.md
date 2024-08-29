@@ -25,7 +25,7 @@ To facilitate an in-app purchase experience for your app users, ensure the follo
 
 * The app is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
-* The app is enabled with [RSC permissions](#update-manifest).
+* The app is enabled with [RSC permissions](#activate-in-app-purchase).
 
 * The app is invoked with [`openPurchaseExperience` API](#purchase-experience-api).
 
@@ -33,11 +33,14 @@ To facilitate an in-app purchase experience for your app users, ensure the follo
 
 You can activate the in-app purchase experience through one of the following ways:
 
-1. In Teams Developer Portal, go to **Permissions** and enable **Show in-app purchase offers**.
+**Update from Developer Portal**
 
-1. Update `manifest.json` file.
+1. In Teams Developer Portal, go to **Permissions**. 
+1. Enable **Show in-app purchase offers**.
 
-    To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
+**Update manifest**
+
+To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
     
     ```json
     

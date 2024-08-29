@@ -103,7 +103,7 @@ SaaS app with suitable offers is available in the Teams Store and the marketplac
 
 * After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) that the user selects on the publisher landing page.
 
-* Microsoft manages licenses on your behalf if you opted for the same during offer configuration. After the subscription activation, the user is redirected from the landing page to Teams license management. For more information, see [manage app licenses](end-user-purchase-experience.md#license-management).
+* Microsoft manages licenses on your behalf if you opted for the same during offer configuration. After the subscription activation, the user is redirected from the landing page to Teams license management. For more information, see [manage app licenses](end-user-purchase-experience.md#license-and-subscriptions-management-experience).
 
 ## Remove a SaaS offer from your app
 

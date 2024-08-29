@@ -10,7 +10,7 @@ ms.date: 04/06/2023
 
 # Purchase and manage app subscriptions and licenses
 
-Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and provide a similar experience.
+Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. You can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and you can provide a similar experience.
 
 ## Subscription purchase experience
 
@@ -84,7 +84,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-    Users are redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where they can manage subscriptions.
+    Users are redirected to the app website (also known as a [landing page](/partner-center/marketplace-offers/azure-ad-transactable-saas-landing-page)) where they can manage subscriptions.
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
@@ -99,7 +99,7 @@ Following is an example of the consent screen:
 
 ## License and subscriptions management experience
 
-Users can manage the app subscriptions purchased in Teams through the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
+Users can manage the app subscriptions purchased in Teams from the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
 
 * Change a plan
 * Buy or remove licenses
@@ -119,7 +119,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red." lightbox="../../../../assets/images/saas-offer/subscription-list.png":::
 
-    Here's the subscription management options available for users on the **Subscriptions** page:
+    Here's the subscription management options on the **Subscriptions** page:
     
     <br>
     <details>
@@ -221,7 +221,7 @@ Yes, we support in-app purchases. For more information, see [in-app purchases](i
 
 <summary>How the flow is handled by CSP who makes the purchase for enterprise?</summary>
 
-CSP can purchase from Teams Store. For more information, see [third-party app purchase](end-user-purchase-experience.md).
+CSP can make purchases for enterprise from Teams Store. For more information, see [third-party app purchase](subscription-purchase-experience.md).
 
 </br>
 
@@ -267,9 +267,9 @@ It's not mandatory but a good practice to implement it.
 
 <details>
 
-<summary>If the app is transactable on Azure marketplace will it be also available in Appsource or Teams by default?</summary>
+<summary>If the app is transactable on Azure marketplace, will it also be available in Appsource or Teams by default?</summary>
 
-No. The Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource, must have a linked transactable offer, and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy** button.
+No. Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource, must have a linked transactable offer, and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy** button.
 
 </br>
 
@@ -293,7 +293,7 @@ You must add the IDs to the manifest (and uploading through PC to validate) that
 
 <summary>Can ISV set different pricing per country per region?</summary>
 
-Yes. For mor information, see [in-app purchase flow for the monetization of apps](in-app-purchase-flow.md).
+Yes. For more information, see [pricing and offers](/partner-center/pricing/pricing-and-offers).
 
 </br>
 
@@ -334,7 +334,7 @@ Being Channel Ready places, ISVs in the best position to be successful matched a
 
 <summary>Are partners able to provide a minimum number of licenses available to purchase as part of a subscription?</summary>
 
-Yes. For more information, see [purchase experience](#purchase-experience).
+Yes. For more information, see [subscription purchase experience](#subscription-purchase-experience).
 
 </br>
 
@@ -344,7 +344,7 @@ Yes. For more information, see [purchase experience](#purchase-experience).
 
 <summary>How can subscribers upgrade, downgrade, or cancel their subscriptions?  Can they upgrade from monthly to annual?</summary>
 
-Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](#license-management).
+Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](#license-and-subscriptions-management-experience).
 
 </br>
 

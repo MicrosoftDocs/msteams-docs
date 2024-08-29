@@ -1,6 +1,6 @@
 ---
 title: Monetize your App Overview
-description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives. Learn in detail on monetizing your app through SaaS offers.
+description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives and to monetize through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
