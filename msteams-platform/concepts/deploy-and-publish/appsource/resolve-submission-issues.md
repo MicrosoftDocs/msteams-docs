@@ -29,7 +29,7 @@ The review report from Microsoft concierge validation team includes the issues f
 
 You must fix all issues shared in the review report before you resubmit your updated app on Partner Center. Let's look at the process to resolve all issues before resubmitting the updated app on Partner Center.
 
-:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Infographic shows the process to resolve issues before resubmitting the app on Partner Center":::
+:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Image shows the process to resolve issues before resubmitting the app on Partner Center":::
 
 After resolving all issues shared in the review report, submit your updated app on Partner Center. Send the following to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
 
