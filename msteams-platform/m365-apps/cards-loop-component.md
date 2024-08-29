@@ -73,7 +73,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 > * When you copy an Adaptive Card-based Loop component, the URL of the Loop component is copied. When you paste the URL in a Teams chat or the Loop app, the link unfurls into the Adaptive Card-based Loop component.
 > * Adaptive Card-based Loop components use the same [refresh mechanism](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism) as regular Adaptive Cards. The content in an Adaptive Card-based Loop component is refreshed only when a user opens the Loop component.
 
-## Test AdaptiveCard-based Loop component
+## Test Adaptive Card-based Loop component
 
 You can test Adaptive Card-based Loop components in Teams and Outlook.
 
