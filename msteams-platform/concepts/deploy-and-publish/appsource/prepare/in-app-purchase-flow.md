@@ -41,7 +41,7 @@ You can activate the in-app purchase experience through one of the following way
 **Update manifest**
 
 To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
-    
+
     ```json
     
     "authorization": {
@@ -112,4 +112,3 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 * [Monetize your app](monetize-overview.md)
 * [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
-* [RSC permissions](../../../../graph-api/rsc/resource-specific-consent.md)

@@ -1,5 +1,5 @@
 ---
-title: Publish the app with SaaS offer to Teams Store
+title: Publish SaaS app to Teams Store
 description: Learn about the go live stage, how to configure the SaaS offer to your app and publish the app to the Microsoft Teams Store.
 author: v-preethah
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 07/11/2023
 ---
 
-# Publish the app with SaaS offer
+# Publish your SaaS app
 
 :::row:::
    :::column:::

@@ -221,7 +221,7 @@ Yes, we support in-app purchases. For more information, see [in-app purchases](i
 
 <summary>How the flow is handled by CSP who makes the purchase for enterprise?</summary>
 
-CSP can make purchases for enterprise from Teams Store. For more information, see [third-party app purchase](subscription-purchase-experience.md).
+CSP can make purchases for enterprise from Teams Store. For more information, see [third-party app purchase](#subscription-purchase-experience).
 
 </br>
 
@@ -352,7 +352,7 @@ Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more infor
 
 <details>
 
-<summary>Does Team app support metered billing?</summary>
+<summary>Does Teams app support metered billing?</summary>
 
 Yes. Metered billing is available for SaaS offer. For more information, see [metered billing for SaaS offers](/partner-center/marketplace-offers/partner-center-portal/saas-metered-billing).
 
@@ -363,3 +363,4 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 ## See also
 
 [Monetize your app](monetize-overview.md)
+[ISV to customer private offers](/partner-center/marketplace-offers/isv-customer)
