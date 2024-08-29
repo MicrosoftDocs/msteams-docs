@@ -138,7 +138,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | **Monthly (MAU)** | Each data point represents a given R28 (Rolling 28 days) period. |
+   | **Monthly (MAU)** | Each data point represents a given R30 (Rolling 30 days) period. |
    | **Weekly (WAU)** | Each data point represents a given R7 (Rolling 7 days) period. |
    | **Daily (DAU)** | Each data point represents a given R1 (Rolling 1 day) period. |
 
@@ -228,6 +228,7 @@ As you explore the app usage metrics on this page, you can see the following thr
   * Message extension
   * Personal app
   * Connector
+  * Personal tab
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
