@@ -441,7 +441,7 @@ You can implement dependent dropdowns where one input value (of any type) is ass
 
 **Placeholder image**
 
-:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown.":::
+:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
 * When a user changes an input value in a field, the existing input value in the dropdown list might become invalid. Define the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 

@@ -539,7 +539,7 @@ The following is an example of the incoming activity to a bot when user types so
 
 The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you need to reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
 
-The `Action.ResetInputs` property is useful for implementing dependent dropdowns, as you can use it to reset the values in dropdowns lists based on the user's input. To learn more about dependent dropdowns in Adaptive Cards, see [dependent dropdowns](dynamic-search.md#dependent-dropdowns).
+The `Action.ResetInputs` property is useful for implementing dependent dropdowns, as you can use it to reset the values in dropdown lists based on the user's input. To learn more about dependent dropdowns in Adaptive Cards, see [dependent dropdowns](dynamic-search.md#dependent-dropdowns).
 
 The following JSON payload shows how to reset an input in an Adaptive Card:
 

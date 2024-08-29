@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Create dependent dropdowns with typeahead search in Adaptive Cards
+      - text: Build dependent dropdowns with typeahead search in Adaptive Cards
         url: task-modules-and-cards/cards/dynamic-search.md#dependent-dropdowns
       - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
