@@ -32,7 +32,10 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
-***August 31, 2024***: [Add borders and rounded corners to Adaptive Card elements.](task-modules-and-cards/cards/cards-format.md#borders-in-adaptive-cards)
+* ***August 31, 2024***: [Add borders and rounded corners to Adaptive Card elements.](task-modules-and-cards/cards/cards-format.md#borders-in-adaptive-cards)
+* ***August 26, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
+* ***August 22, 2024***: [Dev Tools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
+* ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
 
 :::column-end:::
 :::row-end:::
@@ -46,9 +49,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
-| 03/07/2024 | Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Build apps for meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
-| 02/07/2024 | You can extend bot-based message extension plugins to Teams meetings. | Build message extension > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as plugin for Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)|
+| 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Publish](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
+| 03/07/2024 | share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Share to stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
+| 02/07/2024 | Extend bot-based message extension plugins to Teams meetings. | Build message extensions > Build message extensions using Bot Framework > Search Commands > [Enable message extension as a plugin for Copilot for meetings](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings) |
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
@@ -369,7 +372,7 @@ Explore updates from the previous GA releases listed here.
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph is released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/registering-calling-bot.md), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts.md), [Registering a calling bot](~/concepts/calls-and-meetings/registering-calling-bot.md), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Tab configuration pages are now taller. | [Tab Design](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.|[Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
-| 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
+| 08/10/2018 | Client support for Dev Tools.| [Dev Tools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Message extensions now support multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation is revised and expanded for clarity.| [Connectors](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Your bot can now send and receive files. | [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
