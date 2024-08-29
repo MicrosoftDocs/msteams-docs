@@ -1,7 +1,7 @@
 ---
 title: Search Types & Usage in Adaptive Cards
 author: Rajeshwari-v
-description: Learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent dropdowns in Adaptive Cards.
+description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent dropdowns in Adaptive Cards.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
@@ -414,7 +414,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 > [!NOTE]
 >
-> * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
+> * Dependent dropdowns require [Adaptive Card schema](https://adaptivecards.io/explorer/) version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. Dependent dropdowns are useful for filtering out options based on a previous choice. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search.
