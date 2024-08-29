@@ -16,7 +16,7 @@ Loop components were first released in Teams followed by other Microsoft 365 app
 
 ## Loop component key features
 
-The following table lists out the key features of a Loop component:
+The following table lists the key features of a Loop component:
 
 | Feature | Description |
 |---|---|
@@ -96,7 +96,7 @@ The platform provides the component header, which includes standard elements suc
 | 2 | **App name**: Full name of your app |
 | 3 | **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: |
 
-**App name** is defined in your app manifest. We recommend to use a concise name for your app.
+**App name** is defined in your app manifest. We recommend using a concise name for your app.
 
 **App logo** is defined in your app manifest. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Teams.
 
