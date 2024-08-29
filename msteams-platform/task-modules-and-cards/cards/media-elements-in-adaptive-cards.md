@@ -1,23 +1,23 @@
 ---
 title: Add Audio/Video Clips in Adaptive Cards
-author: v-sdhakshina
-description: Learn how the media elements are supported in the Adaptive Card and support consumption directly within Teams Adaptive Card.
+author: surbhigupta12
+description: Learn how the media files are added and supported in the Adaptive Card, and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high
 ms.topic: reference
-ms.author: v-sdhakshina
+ms.author: surbhigupta12
 ---
 
 # Media elements in Adaptive Card
 
-Adaptive Card media elements are components that allow you to embed audio and video clips directly into your Adaptive Cards. These elements enhance the user experience by making the cards more interactive and engaging for your app users. They can view and play media files directly within Teams using Adaptive Card. Here are few key points about media elements in Adaptive Card:
+Adaptive Card media element is a component that is used to embed audio and video files directly into your Adaptive Card. These elements enhance the user experience by making the cards more interactive and engaging. Your app users can view and play media files directly within Teams using Adaptive Cards. Here are few key points about media elements in Adaptive Card:
 
-* ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture user's attention more effectively. 
+* ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture app users attention more effectively. 
 
-* ***Improved Communication***: Media elements can convey information more richly and effectively than text alone. 
+* ***Improved Communication***: Media elements can convey information more effectively with rich posters than text alone. 
 
-* ***Versatility***: They can be used in various scenarios, such as tutorials, announcements, or feedback requests. 
+* ***Versatility***: Media elements can be used in various scenarios, such as tutorials, announcements, or feedback requests. 
 
-The following image shows the media elements in Adaptive Card:
+The following image shows the media element in Adaptive Card:
 
 # [Desktop](#tab/desktop)
 
@@ -29,11 +29,11 @@ The following image shows the media elements in Adaptive Card:
 
 ---
 
-You can add audio or video clips to your Adaptive Card by setting `media` as the `type` property in the Adaptive Card payload. The video or audio clips are accessed through the media files available in OneDrive, SharePoint, YouTube, Dailymotion, or Vimeo.
+You can add the media files available in OneDrive, SharePoint, YouTube, Dailymotion, or Vimeo to your Adaptive Card.
 
 ## Adaptive Card example with media elements
 
-The following is an Adaptive Card payload that includes media elements:
+You can add audio or video files to your Adaptive Card by setting `media` as the `type` property in the Adaptive Card payload. The following is an Adaptive Card payload that includes media elements:
 
 ```json
 {
@@ -95,9 +95,9 @@ The following is an Adaptive Card payload that includes media elements:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Media` to add media files.|
-| `poster` | The URL of an image displayed before the media plays. Supports data URI in version 1.2+.</br> If you omit the poster, the `media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from a Web provider, such as YouTube.|
-| `sources.url`| The URL to media file. Supports data URI in version 1.2+. |
-| `sources.mimeType`| Mime type of associated media, such as `video/mp4`.</br> For YouTube and other Web video URLs, `mimeType` can be omitted.|
+| `poster` | The URL of an image displayed before the media plays. Supports data URI in version 1.2+.</br> If you omit the poster, the `Media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from the host site, such as YouTube.|
+| `sources.url`| The URL to a media file. Supports data URI in version 1.2+. |
+| `sources.mimeType`| Mime type of associated media, such as `video/mp4`.</br> For YouTube and other video URLs, `mimeType` can be omitted.|
 
 For more information, see [Adaptive Cards `media` ](https://www.adaptivecards.io/explorer/Media.html).
 
@@ -136,7 +136,12 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer).
 
-1. Select an existing card by pasting the existing card JSON in the **CARD PAYLOAD EDITOR**, or create a new Adaptive Card. To create a new card, select **New card** > **Blank Card** or **From JSON Schema** or select a card template from **Explore**.
+1. Select an existing card or create a new Adaptive Card:
+    * To select an existing card paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
+    * To create a new card, select **New card** and choose one of the following:
+        * **Blank Card**
+        * **From JSON Schema**
+        * Select a card template from **Explore**
 
 1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
@@ -157,33 +162,31 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 ---
 
-### Add media files to OneDrive or SharePoint
+### Get media URL for OneDrive or SharePoint
 
-To add media files to OneDrive or SharePoint, follow the steps:
+As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. To get URL for your media files in OneDrive or SharePoint, follow the steps:
 
-1. Add your media files to OneDrive or SharePoint.
+1. Upload your media files to OneDrive or SharePoint.
 
-1. Get a link or URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
+1. Get a URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can copy a link.":::
    
-   You can also create a sharing link or URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
+   You can also create a URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
 
-    >[!NOTE]
-    > Adaptive Card doesn't support media file links or URLs that are copied directly from the address bar of OneDrive or SharePoint.
 
 ## Limitations
 
 * `mimeType` is a required field for Teams web and desktop clients.
 * `poster` URL is supported only for Teams mobile clients.
-* For Teams desktop clients, Adaptive Cards support inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
-* For SharePoint or OneDrive media files, ensure that the users have access to the media files available in the SharePoint or OneDrive.
+* For Teams desktop clients, Adaptive Card supports inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
+* For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive.
 
 ## Code samples
 
 |Sample name| Description|.NET|
 |-------|------------------|-----|
-| Media elements in Adaptive Card | This sample shows how user can send Adaptive Cards with media files. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
+| Media elements in Adaptive Card | This sample shows how you can send Adaptive Cards with media files. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
 
 ## See also
 
