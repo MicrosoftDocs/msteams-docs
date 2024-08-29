@@ -40,8 +40,11 @@ The requirements for building message extension plugins for Copilot for Microsof
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
 > * [Define sample prompts](#sample-prompts)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
+> * [Extend your plugin to Copilot in meetings](#extend-your-plugin-to-copilot-in-meetings)
+> * [Message extensions plugins in Copilot for Microsoft 365 applications](#message-extensions-plugins-in-copilot-for-microsoft-365-applications)
+> * [Technical requirements](#technical-requirements)
 
-## Define descriptions
+### Define descriptions
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
 
@@ -425,7 +428,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
-## Compound utterances
+### Compound utterances
 
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365.
@@ -530,7 +533,7 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
-## Sample prompts
+### Sample prompts
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.
 
@@ -590,7 +593,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ---
 
-## Adaptive Card response
+### Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
@@ -744,7 +747,7 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
-## Message extensions plugins in Copilot for Microsoft 365 applications
+### Message extensions plugins in Copilot for Microsoft 365 applications
 
 > [!IMPORTANT]
 > Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
@@ -753,7 +756,7 @@ Copilot extensions customize and extend the Copilot for Microsoft 365 experience
 
  If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 
-### Requirements for plugins in Copilot for Microsoft 365
+#### Requirements for plugins in Copilot for Microsoft 365
 
 To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
 
@@ -814,7 +817,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
-## Technical requirements
+### Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
 
