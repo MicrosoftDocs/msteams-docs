@@ -837,6 +837,9 @@ Microsoft Teams supports various Copilot extensions, including message extension
 
 ### Validation guidelines in declarative Copilot
 
+> [!IMPORTANT]
+> Message extensions plugins for declarative Copilot are in limited private preview.
+
 A declarative Copilot must ensure the following validations:
 
 <details>
@@ -1012,6 +1015,9 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Include at least 3 sample prompts in the manifest​
 
 ### Validation guidelines for API plugins in Copilot
+
+> [!IMPORTANT]
+> Message extensions plugins for API plugins are in limited private preview.
 
 * When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
 
