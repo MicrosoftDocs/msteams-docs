@@ -28,7 +28,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Announcement**: Latest updates of your apps on Developer Portal for Teams.
     * **Active users (Preview)**: Shows you the active user count.
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
-    * **Upgrade to 1.15**: Upgrade your app manifest to the latest version 1.15, which enables support for extending Teams apps to Outlook and Office.
+    * **Upgrade to 1.17**: Upgrade your app manifest to the latest version 1.17, which enables support for extending Teams apps to Outlook and Office.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
@@ -147,11 +147,11 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         > [!NOTE]
         > * Before you start validation, resolve any app manifest errors.
-        > * You can start validation for only one app at a time.
+        > * You can submit only one validation request for a particular app at any given time. After the current validation completes, you can initiate a subsequent request.
 
         Teams Developer Portal now starts to validate your app package:
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress." lightbox="../../assets/images/tdp/app-validation-in-progress.png":::
 
         The app validation status is updated as follows:
 
@@ -161,7 +161,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         You can select **Refresh Status** to retrieve latest validation status when the validation is **In progress** status.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status." lightbox="../../assets/images/tdp/app-validation-refresh.png":::
 
     1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
 
@@ -172,9 +172,12 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         |**Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
         |**Skipped**|Incomplete |NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later.|
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
 
     </details>
+
+   > [!NOTE]
+   > The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
 * **Publish to org**:
 
@@ -187,9 +190,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
    1. In the Developer Portal, select the **Apps** that you're working.
    1. Go to **Publish to Store** under **Publish**.
    1. Select **Publish**.
-
-   > [!NOTE]
-   > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
    You can download the app package by selecting the **Download app package** button from the **Publish to store** page.
 

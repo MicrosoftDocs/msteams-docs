@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build a bot with SSO authentication
 metadata:
-  title: Build a bot with SSO authentication
+  title: Bots Built with SSO Authentication
   description: In this module, learn how to create a conversational bot that uses single sign-on (SSO) authentication methods to streamline user authentication.
   audience: Developer
   level: Beginner
