@@ -21,7 +21,7 @@ You can include an inline image with any Teams card. Supported image formats are
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
-You can add rounded corners and borders to containers in Adaptive Cards. For more information, see [borders in Adaptive Cards](#borders-in-adaptive-cards) and [rounded corners in Adaptive Cards](#rounded-corners-in-adaptive-cards).
+You can add rounded corners and borders to various elements in Adaptive Cards. For more information, see [borders in Adaptive Cards](#borders-in-adaptive-cards) and [rounded corners in Adaptive Cards](#rounded-corners-in-adaptive-cards).
 
 ## Format cards with Markdown
 
@@ -1048,7 +1048,7 @@ You can add borders to the following elements in an Adaptive Card:
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 
-To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
+To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
 
 The following JSON payload shows an Adaptive Card with a border around columns and a column set:
 
@@ -1124,7 +1124,7 @@ You can add borders to the following elements in an Adaptive Card:
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 * [`Image`](https://adaptivecards.io/explorer/Image.html)
 
-To add rounded corners to containers, columns, column sets, and tables in an Adaptive Card, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
+To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
 
 The following JSON payload shows an Adaptive Card with rounded corners around columns, a column set, and an image:
 
@@ -1178,7 +1178,7 @@ The following JSON payload shows an Adaptive Card with rounded corners around co
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
-| `roundedCorners` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
+| `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
 
 ## Format cards with HTML
 
