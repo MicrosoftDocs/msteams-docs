@@ -1130,7 +1130,7 @@ The objects in the `extensions.getStartedMessages` array provide information abo
 |`title`|string|125 characters | ✔️ | The title used for the top of the callout. |
 |`description`|string|250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
 |`learnMoreUrl`|url|2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the Get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
