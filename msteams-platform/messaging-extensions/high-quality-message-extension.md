@@ -46,6 +46,8 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 ## Define descriptions
 
+[*Must-fix*]
+
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
@@ -180,9 +182,9 @@ We recommend you to review the following guidelines for semantic description to 
 
 * Avoid grammar and punctuation errors. *[Must fix]*
 
-* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+* Avoid overly verbose, flowery, or marketing language. *[Good-to-fix]*
 
-* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Good-to-fix]*
 
 The following table lists the command and semantic description examples for each category:
 
@@ -430,6 +432,8 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ## Compound utterances
 
+[*Must-fix*]
+
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365.
 
@@ -535,6 +539,8 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample prompts
 
+[*Must-fix*]
+
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
@@ -594,6 +600,8 @@ The following code is an example of the `samplePrompts` property in app manifest
 ---
 
 ## Adaptive Card response
+
+[*Must-fix*]
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
@@ -834,9 +842,9 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
 
-## Guidelines specific to different Copilot extensions
+## Guidelines for specific Copilot extensions
 
-Microsoft Teams supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
+Microsoft 365 supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
 
 ### Validation guidelines in declarative Copilot
 
