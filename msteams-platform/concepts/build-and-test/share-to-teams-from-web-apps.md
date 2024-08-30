@@ -340,6 +340,12 @@ The following are the launcher.js definitions:
 | assignTitle | `data-assign-title` | string | NA | The default text to be inserted in the assignments **Title** field. The maximum number of characters is 50. |
 | share in meeting | `data-allow-share-in-meeting` | String | NA | Allows users to share content in meetings in addition to existing capability to share in chat or channel. It's considered as `false` by default. |
 
+## Code sample
+
+| **Sample name** | **Description** |**Node.js** |
+|-----------------|-----------------|----------------|
+| Share to Teams | This sample app displays a web page as a tab and includes a Share to Teams button with a Present now option. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
+
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
