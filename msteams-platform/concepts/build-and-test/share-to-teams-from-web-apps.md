@@ -342,9 +342,9 @@ The following are the launcher.js definitions:
 
 ## Code sample
 
-| **Sample name** | **Description** |**Node.js** |
+| **Sample name** | **Description** | **Node.js** |
 |-----------------|-----------------|----------------|
-| Share to Teams | This sample app displays a web page as a tab and includes a Share to Teams button with a Present now option. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
+| Share to Teams | This sample app displays a webpage as a tab and includes a Share to Teams button with a Present now option. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
 
 ## See also
 
