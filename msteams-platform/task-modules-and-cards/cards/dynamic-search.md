@@ -417,7 +417,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > * Dependent dropdowns require [Adaptive Card schema](https://adaptivecards.io/explorer/) version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. Dependent dropdowns are useful for filtering out options based on a previous choice. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search.
+Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
 
 For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
 
@@ -425,29 +425,31 @@ For example, when you have two dropdown lists in an Adaptive Card: one for selec
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
 
-If a user selects **USA** as the country in the first dropdown list, the second dropdown list must display the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown must be reset, and a new list of states in India must be displayed.
+If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
 
-However, the input values in the elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, Teams doesn't send the input values of the other elements to the bot. In the example, when the user changes the country name from USA to India, the action can cause the following two issues:
+### Dependent dropdowns in Adaptive Cards
 
-* You can validate the input data in the card only when the user submits the entire form. If the validation fails, the bot displays an error message. In the example, the validation fails because the selected country is India, but the states displayed belong to the USA.
+The input values in the elements of an Adaptive Card are independent of each other. Hence, when a user changes the input value in one element, Teams doesn't send the input values of the other elements to the bot. In the example, when the user changes the country name from USA to India, the action can cause the following two issues:
+
+* You can validate the input data in the card only when the user submits their actions through a button, such as **Save** or **Submit**. If the validation fails, the bot displays an error message. In the example, the validation fails because the selected country is India, but the states displayed belong to the USA.
 
 * For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In the example, the bot has to search for city names from the list of all available countries in the dataset.
 
-Hence, to implement dependent dropdowns, ensure that when a user changes a value in a dropdown, the updated input values of all dependent elements are sent to the bot, and the dropdown’s input value is reset.
+Hence, in order to implement dependent dropdowns in Adaptive Cards, you need to use the following properties in your card's payload:
+* `associatedInputs`: Define this property under the `Data.Query` object of the dropdown list to ensure that the updated input values of all dependent elements are sent to the bot.
+* `Action.ResetInputs`: Define this property to reset the dropdown’s input value. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 
-### Implement dependent dropdowns
+### How dependent dropdowns work
 
-You can implement dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search, and acts as a filter for the dropdown list's input values. The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
-
-**Placeholder image**
+You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search, and acts as a filter for the dropdown list's input values. The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
 
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
-* When a user changes an input value in a field, the existing input value in the dropdown list might become invalid. Define the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
+When a user changes an input value, the existing input value in the dropdown list becomes invalid. Define the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot. To associate the input value with the dropdown list, define the `associatedInputs` property in the dropdown list.
 
-* To associate the input value with the dropdown list, define the `associatedInputs` property under the `Data.Query` object of the dropdown list. To ensure that the data query request sent to the bot contains the updated input values of all the elements in the card, set the value of `associatedInputs` to `auto`.
+To ensure that the data query request sent to the bot contains the updated input values of all the elements in the card, set the value of `associatedInputs` to `auto`. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
-* The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+### Implement dependent dropdowns
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
