@@ -955,12 +955,13 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+|`getStartedMessages`| Array | 3 | | Provides information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. Min size 1. Max size 3. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", and "autoRunEvents" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", "autoRunEvents", "contextMenus", "contentRuntimes", and "getStarteMessages" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1119,6 +1120,23 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensions.getStartedMessages
+
+The objects in the `extensions.getStartedMessages` array provide information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. There can be up to three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that no more than one of these objects is used in any given Office client.
+
+|Name| Type| Maximum size | Required | Description|
+|:----|:----|:----|:----|:----|
+|`title`|string|125 characters | ✔️ | The title used for the top of the callout. |
+|`description`|string|250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
+|`learnMoreUrl`|url|2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the Get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`, `document`. |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
 
