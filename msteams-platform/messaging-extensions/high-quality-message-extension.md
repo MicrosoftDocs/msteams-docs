@@ -846,7 +846,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 Microsoft 365 supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
 
-### Validation guidelines in declarative Copilot
+## Validation guidelines in declarative Copilot
 
 > [!IMPORTANT]
 > Message extensions plugins for declarative Copilot are in limited private preview.
@@ -1004,7 +1004,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Must not spam users by sending multiple messages in short succession​
 -->
 
-### Validation guidelines for action-based message extension in Copilot
+## Validation guidelines for action-based message extension in Copilot
 
 * Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
 
@@ -1025,7 +1025,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 * Include at least 3 sample prompts in the manifest​
 
-### Validation guidelines for API plugins in Copilot
+## Validation guidelines for API plugins in Copilot
 
 > [!IMPORTANT]
 > Message extensions plugins for API plugins are in limited private preview.
