@@ -221,8 +221,8 @@
           "redirect_url": "/microsoftteams/platform/bots/how-to/debug/locally-with-an-ide"
       },
       {
-          "source_path": "msteams-platform/concepts/bots/bots-create.md",
-          "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
+        "source_path": "msteams-platform/concepts/bots/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
       },
       {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
@@ -1043,6 +1043,54 @@
       {
         "source_path": "msteams-platform/bots/how-to/format-ai-bot-messages.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
+      },
+      {
+        "source_path": "msteams-platform/resources/bot-v3/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/assistants-api-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/assistants-api-quick-start"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/conversation-ai-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/conversation-ai-quick-start"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/coversational-ai-faq"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-How-to-guides-v5.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-how-to-guides-vsc"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/build-environments-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/build-environments-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-background-process-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/debug-background-process-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/faq-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/faq-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/tools-prerequisites-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/tools-prerequisites-vs"
       }
     ]
 }

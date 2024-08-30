@@ -1,5 +1,5 @@
 ---
-title: Set up Microsoft license management
+title: Enable Microsoft License Management
 description: Learn to manage SaaS licenses for third-party apps purchased from Teams Store such as create an offer, post purchase, and integrate with Graph usageRights API.
 author: heath-hamilton
 ms.author: surbhigupta
@@ -121,7 +121,7 @@ To determine if the tenant for the Microsoft Entra app is part of the Partner Ce
 1. On the upper-right corner, select the **Settings** icon.
 1. Select **Account Settings**.
 1. On the left pane, select **Tenants**.
-   You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Microsoft Entra app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
+   You can see all tenants associated with the Microsoft Cloud Partner Program (CCP) account. The tenant, who is the owner of the Microsoft Entra app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
 ## Check license usage in Partner Center analytics
 

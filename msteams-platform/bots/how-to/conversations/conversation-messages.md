@@ -1,5 +1,5 @@
 ---
-title: Messages in bot conversations
+title: Bot Conversations & Message Activity
 description: Learn to send, receive, edit, undelete, soft delete a message with suggested actions, notification, attachments, images, Adaptive Card, status error code responses.
 ms.topic: overview
 ms.author: anclear

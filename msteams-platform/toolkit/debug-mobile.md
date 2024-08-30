@@ -1,5 +1,5 @@
 ---
-title: Debug for mobile
+title: Debug Tab or Bot Apps in Mobile
 author: surbhigupta 
 description: Learn how to debug and test your Teams app with tab and bot capability on mobile client in both Visual Studio Code and command line.
 ms.author: surbhigupta 
@@ -173,7 +173,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
     :::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="Screenshot shows the mobile tab app.":::
 
-1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it's running.
+1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-android-device) to debug your tab while it's running.
 
 ## Test your bot app on mobile client
 

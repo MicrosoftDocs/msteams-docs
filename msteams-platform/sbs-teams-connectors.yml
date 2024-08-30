@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Build Teams connectors
 metadata:
-  title: Build Teams connectors
-  description: In this module, learn how to configure and test a Connector for Microsoft Teams app.
+  title: Tutorial - Build a Task Management App
+  description: In this module, learn how to build, configure, and test Connectors for Microsoft Teams app in Visual Studio and to enable developer preview in Teams admin center.
   audience: Developer
   level: Beginner
   ms.date: 02/14/2022
