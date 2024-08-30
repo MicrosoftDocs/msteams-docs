@@ -436,7 +436,7 @@ The input values in the elements of an Adaptive Card are independent of each oth
 * For large datasets, if you don't have appropriate filters, the latency of the search query increases as the bot has to search and retrieve the appropriate value from a huge chunk of the dataset. In the example, the bot has to search for city names from the list of all available countries in the dataset.
 
 Hence, in order to implement dependent dropdowns in Adaptive Cards, you need to use the following properties in your card's payload:
-* `associatedInputs`: Define this property under the `Data.Query` object of the dropdown list to ensure that the updated input values of all dependent elements are sent to the bot.
+* `associatedInputs`: Define this property under the `Data.Query` object of the dropdown list and set it to `auto`. This action ensures that the updated input values of all dependent elements are sent to the bot.
 * `Action.ResetInputs`: Define this property to reset the dropdown’s input value. For more information about the `Action.ResetInputs` property, see [Action.ResetInputs](cards-actions.md#actionresetinputs).
 
 ### How dependent dropdowns work
@@ -445,9 +445,9 @@ You can build dependent dropdowns where one input value (of any type) is associa
 
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
-When a user changes an input value, the existing input value in the dropdown list becomes invalid. Define the `Action.ResetInputs` property to reset the values in the dropdown list and trigger a data query request to the bot. To associate the input value with the dropdown list, define the `associatedInputs` property in the dropdown list.
+When a user changes an input value, the existing input value in the dependent dropdown list becomes invalid. If you've defined the `Action.ResetInputs` property, Teams resets the values in the dropdown list and triggers a data query request to the bot.
 
-To ensure that the data query request sent to the bot contains the updated input values of all the elements in the card, set the value of `associatedInputs` to `auto`. The bot uses these values to filter the list in the second dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+If you've defined the `associatedInputs`, the data query request sent to the bot contains the updated input values of all the elements in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
 ### Implement dependent dropdowns
 
