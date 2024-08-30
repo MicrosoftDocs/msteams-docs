@@ -1123,13 +1123,13 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.getStartedMessages
 
-The objects in the `extensions.getStartedMessages` array provide information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. There can be up to three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that no more than one of these objects is used in any given Office client.
+The objects in the `extensions.getStartedMessages` array provide information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. There can be up to three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that no more than one of these objects is used in any given Office client. If `extensions.getStartedMessages` is omitted, the callout uses the values from the "name.short" and "description.short" properties instead.
 
 |Name| Type| Maximum size | Required | Description|
 |:----|:----|:----|:----|:----|
-|`title`|string|125 characters | ✔️ | The title used for the top of the callout. |
-|`description`|string|250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
-|`learnMoreUrl`|url|2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
+|`title`|String| 125 characters | ✔️ | The title used for the top of the callout. |
+|`description`|String| 250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
+|`learnMoreUrl`|URL| 2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
