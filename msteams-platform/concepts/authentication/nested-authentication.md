@@ -111,6 +111,7 @@ const msalConfig = {
   auth: {
     clientId: "your_client_id",
     authority: "https://login.microsoftonline.com/{your_tenant_id}",
+    supportsNestedAppAuth: true
   },
 };
 
