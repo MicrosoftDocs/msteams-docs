@@ -10,6 +10,31 @@ ms.date: 01/29/2023
 
 # Activity handlers
 
+[From updated content in PR #10369]
+
+An invoke event is sent to a user from the bot when a user performs an action, such as selecting a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses, such as following:
+
+* Send back confirmations
+* Select items
+* Provide feedback or input to the bot
+
+When an event occurs, invoke activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
+
+The following table outlines which communication concept to use:
+
+|Comunication flow| Concept| Description |
+|---|---| --- |
+| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md#event-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
+
+Teams activity handler is derived from [Bot Framework's activity handler](~/bots/how-to/conversations/bot-events.md#bot-framework-activity-handler). The two primary Teams activity handlers are as follows:
+
+* `OnConversationUpdateActivityAsync`: Routes all the [conversation update activities](~/bots/how-to/conversations/bot-events.md).
+* `OnInvokeActivityAsync`: Routes all Teams invoke activities.
+
+[TBA: Comments from Li Ma]
+---
+
 This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
 An activity handler is used to organize the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
