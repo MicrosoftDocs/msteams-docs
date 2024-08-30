@@ -23,9 +23,9 @@ If your app submission fails, Microsoft sends you a review report with recommend
 
 Your app must pass the functional and validation test for being listed on the Teams Store. Let's look at the process to successfully list your app on the Teams Store.
 
-:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="Image shows the process to resolve issues before resubmitting the app on Partner Center":::
+:::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="The image illustrates the process for resolving issues prior to resubmitting the app on Partner Center.":::
 
-To list your app on the Teams Store, submit your app on the Partner Center. The app must undergo functional and validation testing. The app may go through one of the following two flows, where the app may:
+To list your app on the Teams Store, submit it on the Partner Center. Your app must undergo functional and validation tests. It might follow one of these two processes:
 
 * **Pass the functional and validation testing**
   If the app passes the functional and validation testing, it is listed on the Teams Store.
