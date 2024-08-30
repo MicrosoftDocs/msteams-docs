@@ -441,7 +441,7 @@ Hence, in order to implement dependent dropdowns in Adaptive Cards, you need to 
 
 ### How dependent dropdowns work
 
-You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search, and acts as a filter for the dropdown list's input values. The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
+You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. This input value acts as a filter for the dropdown list's input values. The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
 
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
