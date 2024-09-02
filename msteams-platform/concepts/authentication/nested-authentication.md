@@ -45,7 +45,7 @@ The IT admin might block the app or consent to only certain permissions for the 
 | --- | --- |
 | **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use the Contoso app in Teams meetings to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After giving consent, Tom can use Contoso seamlessly in future meetings across devices. |
 | **Reauthentication or Conditional Access step-up auth** | Tom, when working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Contoso in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Contoso. |
-| **Errors** | Tom faces an sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
+| **Errors** | Tom faces a sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
 ## Configure nested authentication
 
@@ -333,11 +333,11 @@ public class GraphApiClient
   The NAA flows offer compatibility across the Microsoft ecosystem. However, your app might appear in down-level or legacy clients that aren't updated to support NAA. In such cases, your app can't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
   > [!NOTE]
-  > You mustn't use NAA if you're using a non Microsoft Entra identity provider, you can use pop-up authentication instead.
+  > You mustn't use NAA if you're using a non-Microsoft Entra identity provider, you can use pop-up authentication instead.
 
 * **Support for NAA**: NAA might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of `true` indicates support for NAA, while `false` suggests it isn't supported.
 
-* **Test your app in multiple environments**: If your app is expected to work in both webview and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Certain APIs that function in the browser might not operate within webviews.
+* **Test your app in multiple environments**: If your app is expected to work in both web view and browser deployments, we recommend testing your app in both deployment environments to ensure it behaves as you expect. Certain APIs that function in the browser might not operate within web views.
 
 ## Code sample
 
