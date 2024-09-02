@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Single sign-on (SSO) authentication for nested apps
+      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
         url: concepts/authentication/nested-authentication.md
       - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
