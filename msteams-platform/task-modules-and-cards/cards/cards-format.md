@@ -1028,7 +1028,7 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 Adaptive Cards support a wide variety of elements, but having too many elements in a card introduces visual clutter and reduces readability. You can add borders around different elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
 
-Design your Adaptive Cards with borders to highlight important information or sections, drawing the user’s attention to key areas. Borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
+Borders highlight important information or sections, drawing the user’s attention to key areas. Elements with borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
 
 **Placeholder images**
 
@@ -1051,7 +1051,7 @@ Design your Adaptive Cards with borders to highlight important information or se
 
 :::row-end:::
 
-You can add borders to the following elements in an Adaptive Card:
+You can add borders only to the following elements in an Adaptive Card:
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
@@ -1060,6 +1060,10 @@ You can add borders to the following elements in an Adaptive Card:
 ### Implement borders
 
 To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
 
 The following JSON payload shows an Adaptive Card with a border around columns and a column set:
 
@@ -1106,29 +1110,34 @@ The following JSON payload shows an Adaptive Card with a border around columns a
 }
 ```
 
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
-
 ## Rounded corners in Adaptive Cards
 
-You can use Adaptive Cards across multiple hosts that contain contemporary design systems and frameworks following current design trends. To help maintain consistency across different hosts and keep up with the latest design trends, Adaptive Cards support rounded corners in various elements.
+You can use Adaptive Cards across multiple hosts that follow contemporary design systems and frameworks. To help maintain consistency across different hosts and keep up with the latest design trends, Adaptive Cards support rounded corners in various elements.
 
 Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience.
 
-**Placeholder image:**
+**Placeholder images**
 
-# [Without rounded corners](#tab/nocorner)
+:::row:::
+:::column span="2":::
+
+**Without rounded corners**
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a border and rounded corners.":::
 
-# [With rounded corners](#tab/roundedcorner)
+:::column-end:::
+
+:::column span="2":::
+
+**With rounded corners**
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-border-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with a border and rounded corners.":::
 
----
+:::column-end:::
 
-You can add rounded corners to the following elements in an Adaptive Card:
+:::row-end:::
+
+You can add rounded corners only to the following elements in an Adaptive Card:
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
@@ -1138,6 +1147,11 @@ You can add rounded corners to the following elements in an Adaptive Card:
 ### Implement rounded corners 
 
 To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
+| `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `RoundedCorners`. |
 
 The following JSON payload shows an Adaptive Card with rounded corners around columns, a column set, and an image:
 
@@ -1188,10 +1202,6 @@ The following JSON payload shows an Adaptive Card with rounded corners around co
     ]
 }
 ```
-
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
 
 ## Format cards with HTML
 
