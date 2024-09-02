@@ -417,13 +417,14 @@ CardFactory.actions([
 
 ## Adaptive Cards actions
 
-Adaptive Cards support four action types:
+Adaptive Cards support the following six action types:
 
 * [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Open the specified url.
 * [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
 * [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
 * [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
+* [Action.ResetInputs](dynamic-search.md#actionresetinputs): Resets the values of the inputs in an Adaptive Card.
 
 ### Action.Submit
 
@@ -534,128 +535,6 @@ The following is an example of the incoming activity to a bot when user types so
   "localTimezone": "America/Los_Angeles"
 }
  ```
-
-### Action.ResetInputs
-
-The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you need to reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
-
-The `Action.ResetInputs` property is useful for implementing dependent dropdowns, as you can use it to reset the values in dropdown lists based on the user's input. To learn more about dependent dropdowns in Adaptive Cards, see [dependent dropdowns](dynamic-search.md#dependent-dropdowns).
-
-The following JSON payload shows how to reset inputs in an Adaptive Card:
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.6",
-    "body": [
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "id": "main",
-            "label": "Main input - changing its value will reset all the other inputs",
-            "valueChangedAction": {
-                "type": "Action.ResetInputs",
-                "targetInputIds": [
-                    "text",
-                    "multiline",
-                    "date",
-                    "time",
-                    "number",
-                    "compact",
-                    "expanded",
-                    "toggle"
-                ]
-            }
-        },
-        {
-            "type": "Input.Text",
-            "placeholder": "Placeholder text",
-            "label": "Input.Text",
-            "id": "text",
-            "separator": true,
-            "spacing": "ExtraLarge"
-        },
-        {
-            "type": "Input.Text",
-            "placeholder": "Placeholder text",
-            "label": "Multiline Input.Text",
-            "id": "multiline",
-            "isMultiline": true
-        },
-        {
-            "type": "Input.Date",
-            "label": "Input.Date",
-            "id": "date"
-        },
-        {
-            "type": "Input.Time",
-            "label": "Input.Time",
-            "id": "time"
-        },
-        {
-            "type": "Input.Number",
-            "placeholder": "Placeholder text",
-            "label": "Input.Number",
-            "id": "number"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "label": "Compact Input.ChoiceSet",
-            "id": "compact"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "label": "Expanded Input.ChoiceSet",
-            "id": "expanded"
-        },
-        {
-            "type": "Input.Toggle",
-            "title": "New Input.Toggle",
-            "label": "Input.Toggle",
-            "id": "toggle"
-        }
-    ]
-}
-```
-
-| Property| Type | Required | Description |
-|---|---|---|---|
-| `valueChangedAction` | Action.ResetInputs | No | Contains the `Action.ResetInputs` property |
-| `Action.ResetInputs` | String | No | Resets the input values |
-| `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
 
 #### Form completion feedback
 
