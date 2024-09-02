@@ -1028,7 +1028,7 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 Adaptive Cards support a wide variety of elements, but having too many elements in a card introduces visual clutter and reduces readability. You can add borders around different elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
 
-Borders highlight important information or sections, drawing the user’s attention to key areas. Elements with borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
+You can use borders to highlight important information or sections, drawing the user’s attention to key areas. Borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
 
 **Placeholder images**
 
@@ -1051,19 +1051,22 @@ Borders highlight important information or sections, drawing the user’s attent
 
 :::row-end:::
 
-You can add borders only to the following elements in an Adaptive Card:
+You can add borders only to the following elements in an Adaptive Card, and your card needs to contain at least one or more of these elements:
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 
-### Implement borders
+### Implement borders in Adaptive Cards
 
 To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
+
+The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
 | `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
+| `showGridLines` | Boolean | No | Adds a border to the `Table` element. |
 
 The following JSON payload shows an Adaptive Card with a border around columns and a column set:
 
@@ -1137,14 +1140,14 @@ Rounded corners make the card design look more modern and visually appealing, cr
 
 :::row-end:::
 
-You can add rounded corners only to the following elements in an Adaptive Card:
+You can add rounded corners only to the following elements in an Adaptive Card, and your card needs to contain at least one or more of these elements:
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
 * [`Table`](https://adaptivecards.io/explorer/Table.html)
 * [`Image`](https://adaptivecards.io/explorer/Image.html)
 
-### Implement rounded corners 
+### Implement rounded corners in Adaptive Cards
 
 To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
 
