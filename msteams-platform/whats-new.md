@@ -412,9 +412,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 August**
+**2024 September**
 
-***August 28, 2024***: [Introduced SSO authentication for nested apps](concepts/authentication/nested-authentication.md).
+***September 02, 2024***: [Introduced single sign-on (SSO) authentication for nested apps](concepts/authentication/nested-authentication.md).
 
 :::column-end:::
 :::row-end:::
