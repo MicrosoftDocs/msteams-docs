@@ -48,7 +48,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. In **ELEMENT PROPERTIES**, update the following fields:
 
-   * Under the **Sources** section, enter your media file URL in the **URL**.</br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. To get URL for your media files in OneDrive or SharePoint, follow the steps:
+   * Under the **Sources** section, enter your media file URL in the **URL**.</br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
 
      1. Upload your media files to OneDrive or SharePoint.
 
@@ -68,7 +68,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams" lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
 
-   Your Adaptive Card with media file is successfully saved and sent to your Teams chat. Now, you can play your media file in your Adaptive Card.
+   Your Adaptive Card with media file is successfully saved and sent to your Teams chat. The following is an example of media file in your Adaptive Card:
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
 
@@ -91,18 +91,29 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. In **ELEMENT PROPERTIES**, update the following fields:
 
-   * Under the **Sources** section, enter your media file URL in the **URL**. To add and obtain the media file URL from OneDrive or SharePoint, see [OneDrive or SharePoint media file](#get-media-url-for-onedrive-or-sharepoint).
+   * Under the **Sources** section, enter your media file URL in the **URL**. </br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
+
+     1. Upload your media files to OneDrive or SharePoint.
+
+     1. Get a URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
+
+        :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can copy a link.":::
+   
+        You can also create a URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
+        
+    </details>
+
    * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
 
      :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
-   Now, you can play your media file in your Adaptive Card.
+   The following is an example of media file in your Adaptive Card:
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat." lightbox="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png":::
 
 ---
 
-The following code shows an example of an Adaptive Card with media elements:
+The following code shows an example of an Adaptive Card payload with media elements:
 
 ```json
 {
@@ -164,23 +175,15 @@ The following code shows an example of an Adaptive Card with media elements:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Media` to add media files.|
-| `poster` | The URL of an image displayed before the media plays. Supports data URI in version 1.2+.</br> If you omit the poster, the `Media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from the host site, such as YouTube.|
+| `poster` | The URL of an image displayed before the media plays. Supports data URI in version 1.2+.</br> If you omit the poster, the `media` element either uses a default poster (controlled by the host application) or attempts to automatically pull the poster from the target video service when the source URL points to a video from the host site, such as YouTube. `poster` URL is supported only for Teams mobile clients.|
 | `sources.url`| The URL to a media file. Supports data URI in version 1.2+. |
-| `sources.mimeType`| Mime type of associated media, such as `video/mp4`.</br> For YouTube and other video URLs, `mimeType` can be omitted.|
+| `sources.mimeType`| Mime type of associated media, such as `video/mp4`. `mimeType` is a required field for Teams web and desktop clients.|
 
 For more information, see [Adaptive Cards `media` ](https://www.adaptivecards.io/explorer/Media.html).
 
-### Get media URL for OneDrive or SharePoint
-
-
-
-
 ## Limitations
 
-* `mimeType` is a required field for Teams web and desktop clients.
-* `poster` URL is supported only for Teams mobile clients.
-* For Teams desktop clients, Adaptive Card supports inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
-* For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive.
+For Teams desktop clients, Adaptive Card supports inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP), which allows you to watch video in floating window when you open the other apps.
 
 ## Code samples
 
