@@ -1059,7 +1059,7 @@ You can add borders only to the following elements in an Adaptive Card, and your
 
 ### Implement borders in Adaptive Cards
 
-To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table`, set the `showGridLines` property to `true`.
+To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table` element, set the `showGridLines` property to `true`.
 
 The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
 
@@ -1115,7 +1115,7 @@ The following JSON payload shows an Adaptive Card with a border around columns a
 
 ## Rounded corners in Adaptive Cards
 
-You can use Adaptive Cards across multiple hosts that follow contemporary design systems and frameworks. To help maintain consistency across different hosts and keep up with the latest design trends, Adaptive Cards support rounded corners in various elements.
+You can use Adaptive Cards across multiple hosts that follow contemporary design systems and frameworks. Adaptive Cards support rounded corners in various elements to help maintain consistency across different hosts and keep up with the latest design trends.
 
 Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience.
 
@@ -1154,7 +1154,7 @@ To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` eleme
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
 | `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
-| `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `RoundedCorners`. |
+| `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
 
 The following JSON payload shows an Adaptive Card with rounded corners around columns, a column set, and an image:
 
