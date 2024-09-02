@@ -448,7 +448,7 @@ The bot uses these values to filter the list in the dropdown and dynamically ret
 
 ### Implement dependent dropdowns
 
-You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. Esnure that you define the `Action.ResetInputs` and `associatedInputs` properties in the card's payload.
+You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. Ensure that you define the `Action.ResetInputs` and `associatedInputs` properties in the card's payload.
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
