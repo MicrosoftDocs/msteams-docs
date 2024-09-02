@@ -24,7 +24,7 @@ Choose to add authentication for your app in one of the two ways:
 
   > [!NOTE]
   > NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-  > NAA is supported in MSAL.js v3.1 and higher.
+  > NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
 
 ## Select authentication method
 

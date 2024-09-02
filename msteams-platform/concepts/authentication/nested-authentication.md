@@ -78,7 +78,7 @@ brk-<broker_application_id>://<your_domain>
 Where,
 
 * <broker_application_id> is the alias of the broker or brokers you want to trust
-* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
+* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**. For more information, see [enable SSO in an Office Add-in using nested app authentication](/office/dev/add-ins/develop/enable-nested-app-authentication-in-your-add-in#add-a-trusted-broker-through-spa-redirect).
 
 If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
