@@ -1,7 +1,7 @@
 ---
 title: Build a bot with Teams Toolkit
 author: surbhigupta
-description: description for overview
+description: Learn about creating different types of bots
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta
@@ -23,3 +23,21 @@ You can start by building any one of the following bots:
 3. Conversational bot
 
 4. AI bot
+
+# [Interactive bot](#tab/interactive)
+
+[!INCLUDE [Build an interacive bot with Teams Toolkit](\bots\how-to\includes\interactive-bot-include.md)]
+
+# [Command bot](#tab/command)
+
+TBD: Include file for command bot
+
+# [Workflow bot](#tab/workflow)
+
+TBD: Include file for workflow bot
+
+# [AI bot](#tab/ai)
+
+TBD: Include file for AI bot
+
+---
