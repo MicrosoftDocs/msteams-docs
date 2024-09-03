@@ -225,6 +225,10 @@ TBD
 link back to Get started to build a basic bot app using TTK
 links for code samples to build a basic bot app using samples
 
+## Create a bot
+
+You can create a bot with Teams Toolkit or using Bot Framework SDKs.
+
 ## Code sample
 
 |Sample name | Description | .NETCore | Node.js | Python| Manifest
