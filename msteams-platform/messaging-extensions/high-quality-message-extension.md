@@ -734,7 +734,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Extend your plugins for Copilot in meetings
+## Extend your plugins to Copilot in meetings
 
 [*Must-fix*]
 
