@@ -868,12 +868,6 @@ The instructions must not include the following:
 |:::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​ |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Grammar and punctuation errors​​ |
 
-The instructions must not include the following:
-
-* Manipulative phrases for example, "ignore", "delete", "reset", "new instructions", "Answer in Bold"  or "Do not print anything" that aren't relevant to expected actions​​
-* URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​
-* Grammar and punctuation errors​​
-
 </details>
 
 <details>
@@ -1014,6 +1008,21 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 ## Validation guidelines for action-based message extension in Copilot
 
+| Action | Reason |
+| --- | --- |
+| ✔️ | Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​​​ |
+| | Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​ |
+| | A confirmation of the completion of the action is shared by the plugin in form of card etc. [Bot sent card is not supported] |
+| | Action taken by user is correctly reflected in 3P service |
+| | Modification requests by user prior to confirmation of the action, must be honoured [Platform] |
+| | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​ |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Bulk delete actions should not be supported [details TBD]​ |
+| | Description checks [Same as plugins]​ |
+| | Compound utterances via Multi parameter (3 or more) |
+| | Include at least 3 sample prompts in the manifest​ |
+
+<!--
+
 * Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
 
 * Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​
@@ -1032,6 +1041,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Compound utterances via Multi parameter (3 or more) ​
 
 * Include at least 3 sample prompts in the manifest​
+-->
 
 ## Validation guidelines for API plugins in Copilot
 
