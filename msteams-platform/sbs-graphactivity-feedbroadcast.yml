@@ -296,8 +296,12 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Screenshot shows the add app screen." border="true":::
-   
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Screenshot of the app details dialog with the Add option highlighted.":::
+
+    1.  Select **Open**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-app-scope.png" alt-text="Screenshot of the scope selection dialog with the option to open the app in personal scope.":::
+
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |

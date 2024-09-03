@@ -86,7 +86,11 @@ items:
 
      1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot of the app details dialog with the Add option highlighted.":::
+
+     1.  Select **Open**.
+
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-add-scope.png" alt-text="Screenshot of the scope selection dialog with the option to open the app in personal scope.":::
 
         Tab app dashboard is successfully created in Teams.
 

@@ -291,11 +291,13 @@ items:
 
     1. Select **Add** to install the **Calling bot** app in Teams.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of Calling bot with Add option highlighted.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of calling bot with Add option highlighted.":::
 
-    1. Select **Open**.
+    1. Select **Open** to use the app in personal scope. 
 
-        :::image type="content" source="./assets/images/calls-and-meetings/calling-add-scope.png" alt-text="Screenshot of Calling bot to add app in the default scope."::: 
+        Alternatively, select a channel, chat, or meeting for collaborative use and select **Go**.
+
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-add-scope.png" alt-text="Screenshot of calling bot to add app in the required scope."::: 
 
 - title: Interact with calling and meeting bot
   durationInMinutes: 2
