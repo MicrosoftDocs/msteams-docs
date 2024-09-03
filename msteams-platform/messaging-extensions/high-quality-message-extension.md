@@ -1048,6 +1048,20 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 > [!IMPORTANT]
 > Message extensions plugins for API plugins are in limited private preview.
 
+| Action | Reason |
+| | When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] |
+| | Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] |
+| | Data shared or sent by user gets correctly reflected in the confirmation |
+| | Action taken by user is correctly reflected in 3P service - Dev |
+| | Modification requests by user prior to confirmation of the action, must be honoured by plugin [Platform] |
+| | A confirmation of the completion of the action is shared by the plugin in form of card |
+| | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [Details TBD] |
+| | Multi delete scenario should not be supported [Details TBD]​ |
+| | Description checks [Same as plugins]​ |
+| | Compound utterances via Multiparameter |
+| | Include at least 3 sample prompts in the manifest |
+
+<!--
 * When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
 
 * Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] ​
@@ -1069,6 +1083,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Compound utterances via Multiparameter​
 
 * Include at least 3 sample prompts in the manifest
+-->
 
 ## Code samples
 
