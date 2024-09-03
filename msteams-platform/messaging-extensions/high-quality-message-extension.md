@@ -862,6 +862,14 @@ Check App short description, command description, parameter descriptions, instru
 
 The instructions must not include the following:
 
+| Action | Reason |
+| --- | --- |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: |  Manipulative phrases for example, "ignore", "delete", "reset", "new instructions", "Answer in Bold"  or "Do not print anything" that aren't relevant to expected actions​​ |
+|:::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​ |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Grammar and punctuation errors​​ |
+
+The instructions must not include the following:
+
 * Manipulative phrases for example, "ignore", "delete", "reset", "new instructions", "Answer in Bold"  or "Do not print anything" that aren't relevant to expected actions​​
 * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.​​
 * Grammar and punctuation errors​​
