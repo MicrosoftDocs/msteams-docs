@@ -1016,10 +1016,6 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 | | Action taken by user is correctly reflected in 3P service |
 | | Modification requests by user prior to confirmation of the action, must be honoured [Platform] |
 | | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​ |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Bulk delete actions should not be supported [details TBD]​ |
-| | Description checks [Same as plugins]​ |
-| | Compound utterances via Multi parameter (3 or more) |
-| | Include at least 3 sample prompts in the manifest​ |
 
 <!--
 
