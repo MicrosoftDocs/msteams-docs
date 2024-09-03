@@ -414,7 +414,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 September**
 
-***September 03, 2024***: [Introduced single sign-on (SSO) authentication for nested apps](concepts/authentication/nested-authentication.md).
+***September 03, 2024***: [Introduced nested app authentication for single-page applications that are embedded in host environment.](concepts/authentication/nested-authentication.md).
 
 :::column-end:::
 :::row-end:::
