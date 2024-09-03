@@ -898,14 +898,14 @@ The example shown in the image gives three utterances:
 </details>
 
 <details>
-<summary><b>Provide minimum three zero-query prompts​ [*Must fix*]</b></summary>
+<summary><b>Provide minimum three zero-query prompts</b>[<i>Must fix</i>]</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-zero-query-prompt.png" alt-text="This image shows an exmaple of zero query prompt in a Copilot.":::
 
 </details>
 
 <details>
-<summary><b>Support for creating rich citation​ [*Must fix*]</b></summary>
+<summary><b>Support for creating rich citation​</b>[<i>Must fix</i>]</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
