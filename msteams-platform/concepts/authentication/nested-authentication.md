@@ -39,7 +39,7 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 
 The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
-## Use cases for enabling NAA
+## Use cases for NAA
 
 | Scenario | Description |
 | --- | --- |
@@ -47,7 +47,7 @@ The IT admin might block the app or consent to only certain permissions for the 
 | **Reauthentication or Conditional Access step-up auth** | Tom, when working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Contoso in Teams. A dialog informs Tom that more verification is needed, leading them through the MFA process to continue using Contoso. |
 | **Errors** | Tom faces a sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
-## Configure nested authentication
+## Configure NAA
 
 > [!NOTE]
 >
@@ -91,7 +91,7 @@ Your domain must include only the origin and not its subpaths. For example:
 ✔️ brk-multihub://myapp.teams.microsoft.com <br>
 ❌ brk-multihub://myapp.teams.microsoft.com/go
 
-For more information on domain, see [enable SSO in an Office Add-in using nested app authentication](/office/dev/add-ins/develop/enable-nested-app-authentication-in-your-add-in#add-a-trusted-broker-through-spa-redirect).
+For more information on domain, see [enable SSO in an Office Add-in using NAA](/office/dev/add-ins/develop/enable-nested-app-authentication-in-your-add-in#add-a-trusted-broker-through-spa-redirect).
 
 ### Initialize public client app
 
@@ -130,34 +130,7 @@ export function initializePublicClient() {
   );
 }
 ```
-<!--
-# [C#](#tab/cs1)
 
-```csharp
-using Microsoft.Identity.Client;
-using System;
-using System.Threading.Tasks;
-
-public class MsalClient
-{
-    private static IPublicClientApplication pca;
-
-    public static async Task<IPublicClientApplication> InitializePublicClientAsync()
-    {
-        Console.WriteLine("Starting initializePublicClient");
-
-        var msalConfig = PublicClientApplicationBuilder.Create("your_client_id")
-            .WithAuthority("https://login.microsoftonline.com/{your_tenant_id}")
-            .Build();
-
-        pca = msalConfig;
-        Console.WriteLine("Client app created");
-
-        return pca;
-    }
-}
-```
--->
 ---
 
 ### Acquire your first token
@@ -219,45 +192,7 @@ The following code snippet shows an example to access a token:
     });
 
 ```
-<!--
-# [C#](#tab/cs2)
 
-```csharp
-// MSAL.NET exposes several account APIs, logic to determine which account to use is the responsibility of the developer
-var account = publicClientApplication.GetAccountsAsync().Result.FirstOrDefault();
-var accessTokenRequest = publicClientApplication.AcquireTokenSilent(new[] { "user.read" }, account);
-
-try
-{
-    var accessTokenResponse = accessTokenRequest.ExecuteAsync().Result;
-    // Acquire token silent success
-    var accessToken = accessTokenResponse.AccessToken;
-    // Call your API with token
-    CallApi(accessToken);
-}
-catch (MsalUiRequiredException ex)
-{
-    // Acquire token silent failure, and send an interactive request
-    try
-    {
-        var accessTokenResponse = publicClientApplication.AcquireTokenInteractive(new[] { "user.read" }).ExecuteAsync().Result;
-        // Acquire token interactive success
-        var accessToken = accessTokenResponse.AccessToken;
-        // Call your API with token
-        CallApi(accessToken);
-    }
-    catch (Exception innerEx)
-    {
-        // Acquire token interactive failure
-        Console.WriteLine(innerEx);
-    }
-}
-catch (Exception ex)
-{
-    Console.WriteLine(ex);
-}
-```
--->
 ---
 
 ### Call an API
@@ -286,40 +221,7 @@ fetch(graphEndpoint, options)
     });
 
 ```
-<!--
-# [C#](#tab/cs3)
 
-```csharp
-using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-
-public class GraphApiClient
-{
-    private static readonly HttpClient client = new HttpClient();
-
-    public static async Task CallGraphApiAsync(string accessToken)
-    {
-        var graphEndpoint = "https://graph.microsoft.com/v1.0/me";
-        var request = new HttpRequestMessage(HttpMethod.Get, graphEndpoint);
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-
-        var response = await client.SendAsync(request);
-        if (response.IsSuccessStatusCode)
-        {
-            // Do something with response
-            var responseBody = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseBody);
-        }
-        else
-        {
-            Console.WriteLine($"Error: {response.StatusCode}");
-        }
-    }
-}
-```
--->
 ---
 
 ### Best practices
@@ -343,7 +245,7 @@ public class GraphApiClient
 
 | Sample name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|:--------|
-| Nested app authentication   | This sample shows how to build an NAA authentication protocol for SPA embedded in host environments, such as Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
+| Nested app authentication   | This sample shows how to build an NAA protocol for SPA embedded in host environments, such as Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
 
 ## See also
 
