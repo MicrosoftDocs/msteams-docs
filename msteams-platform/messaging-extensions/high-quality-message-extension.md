@@ -865,7 +865,7 @@ The specific guidelines for Copilot extensions include:
 > [!IMPORTANT]
 > Message extensions plugins for declarative Copilot are in limited private preview.
 
-A declarative Copilot must ensure the following validations:
+Besides the common guidelines, there are specific guidelines for declarative Copilot. It must ensure the following validations:
 
 <details>
 <summary><b>Extension must not manipulate LLM behavior</b></summary>
@@ -898,14 +898,14 @@ The example shown in the image gives three utterances:
 </details>
 
 <details>
-<summary><b>Provide minimum three zero-query prompts</b>[<i>Must fix</i>]</summary>
+<summary><b>Provide minimum three zero-query prompts</b> [<i>Must fix</i>]</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-zero-query-prompt.png" alt-text="This image shows an exmaple of zero query prompt in a Copilot.":::
 
 </details>
 
 <details>
-<summary><b>Support for creating rich citation​</b>[<i>Must fix</i>]</summary>
+<summary><b>Support for creating rich citation​</b> [<i>Must fix</i>]</summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
@@ -1024,6 +1024,8 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 ## Validation guidelines for action-based message extension in Copilot
 
+Besides the common guidelines, there are specific guidelines for action-based message extensions in Copilot. It must ensure the following validations:
+
 | Action | Reason |
 | --- | --- |
 | ✔️ | Data shown in 3P service (through dialogue), is reflective of confirmation provided by user (valid only for supported dialogues) |
@@ -1057,6 +1059,8 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 > [!IMPORTANT]
 > Message extensions plugins for API plugins are in limited private preview.
+
+Besides the common guidelines, there are specific guidelines for API plugins in Copilot. It must ensure the following validations:
 
 | Action | Reason |
 | --- | --- |
