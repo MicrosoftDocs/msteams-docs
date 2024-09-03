@@ -54,7 +54,7 @@ A good description offers a clear and concise summary of the app’s features an
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
-Ensure that you adhere to the description guidelines listed in the following table:
+Ensure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
 
 | Action | Reason |
 | --- | --- |
@@ -169,6 +169,8 @@ Command description maps user intent and utterance to search command inside a pl
 * Focus on keywords that are likely to be used in the search function of your native apps.
 
 #### Semantic description
+
+[*Good-to-fix*]
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -437,7 +439,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365.
 
-For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
@@ -732,7 +734,9 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Extend your plugin to Copilot in meetings
+## Extend your plugins for Copilot in meetings
+
+[*Must-fix*]
 
 Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
 
@@ -756,6 +760,8 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 ## Message extensions plugins in Copilot for Microsoft 365 applications
+
+[*Must-fix*]
 
 > [!IMPORTANT]
 > Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
@@ -846,7 +852,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 Microsoft 365 supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
 
-## Validation guidelines in declarative Copilot
+## Validation guidelines for declarative Copilot
 
 > [!IMPORTANT]
 > Message extensions plugins for declarative Copilot are in limited private preview.
@@ -854,7 +860,7 @@ Microsoft 365 supports various Copilot extensions, including message extensions,
 A declarative Copilot must ensure the following validations:
 
 <details>
-<summary><b>Avoid prompt injection attack</b></summary>
+<summary><b>Extension must not manipulate LLM behavior</b></summary>
 
 Check App short description, command description, parameter descriptions, instruction, conversation starter.
 
@@ -891,7 +897,7 @@ The example shown in the image gives three utterances:
 </details>
 
 <details>
-<summary><b>Support for creating rich citation​</b> [*Must fix*]</summary>
+<summary><b>Support for creating rich citation​ [*Must fix*]</b></summary>
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
