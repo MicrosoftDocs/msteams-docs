@@ -852,6 +852,14 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 Microsoft 365 supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
 
+The specific guidelines for Copilot extensions include:
+
+> [!div class="checklist"]
+>
+> * [Validation guidelines for declarative Copilot](#validation-guidelines-for-declarative-copilot)
+> * [Validation guidelines for custom engine Copilot](#validation-guidelines-for-custom-engine-copilot)
+> * [Validation guidelines for API plugins in Copilot](#validation-guidelines-for-api-plugins-in-copilot)
+
 ## Validation guidelines for declarative Copilot
 
 > [!IMPORTANT]
