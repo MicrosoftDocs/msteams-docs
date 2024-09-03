@@ -1,6 +1,6 @@
 ---
 title: Guidelines to Create Copilot Extensions
-description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta

@@ -1,5 +1,5 @@
 ---
-title: Update manifest for enabling SSO for bot and messaging extension
+title: Update App Manifest to Enable SSO
 description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
 ms.topic: how-to
 ms.localizationpriority: high
