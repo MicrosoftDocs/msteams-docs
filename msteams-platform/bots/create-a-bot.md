@@ -26,7 +26,7 @@ You can start by building any one of the following bots:
 
 # [Interactive bot](#tab/interactive)
 
-[!INCLUDE [Build an interacive bot with Teams Toolkit](\bots\how-to\includes\interactive-bot-include.md)]
+[!INCLUDE [interactive-bot-include](how-to/includes/interactive-bot-include.md)]
 
 # [Command bot](#tab/command)
 
