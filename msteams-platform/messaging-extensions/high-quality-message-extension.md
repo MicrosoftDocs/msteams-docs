@@ -857,7 +857,7 @@ The specific guidelines for Copilot extensions include:
 > [!div class="checklist"]
 >
 > * [Validation guidelines for declarative Copilot](#validation-guidelines-for-declarative-copilot)
-> * [Validation guidelines for custom engine Copilot](#validation-guidelines-for-custom-engine-copilot)
+> * [Validation guidelines for action-based message extension in Copilot](#validation-guidelines-for-action-based-message-extension-in-copilot)
 > * [Validation guidelines for API plugins in Copilot](#validation-guidelines-for-api-plugins-in-copilot)
 
 ## Validation guidelines for declarative Copilot
