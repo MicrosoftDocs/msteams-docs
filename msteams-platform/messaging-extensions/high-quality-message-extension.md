@@ -44,7 +44,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 > * [Message extensions plugins in Copilot for Microsoft 365 applications](#message-extensions-plugins-in-copilot-for-microsoft-365-applications)
 > * [Technical requirements](#technical-requirements)
 
-## Define descriptions
+## Define app, command, and parameter descriptions
 
 [*Must-fix*]
 
@@ -432,7 +432,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
-## Compound utterances
+## Enhance message extension to retrieve information through compound utterances
 
 [*Must-fix*]
 
@@ -539,7 +539,7 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
-## Sample prompts
+## Define sample prompts
 
 [*Must-fix*]
 
@@ -601,7 +601,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ---
 
-## Adaptive Card response
+## Create rich Adaptive Card responses
 
 [*Must-fix*]
 
