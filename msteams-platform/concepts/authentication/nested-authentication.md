@@ -54,7 +54,7 @@ The IT admin might block the app or consent to only certain permissions for the 
 > * As NAA is in developer preview and isn't supported by all host environments, ensure that you check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
 > * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
-To use nested authentication, follow these steps:
+To configure nested authentication, follow these steps:
 
 1. [Register your SPA](#register-your-spa)
 1. [Add trusted brokers](#add-trusted-brokers)
@@ -69,7 +69,7 @@ If your add-in requires additional app registration beyond NAA and SSO, see [reg
 
 ### Add trusted brokers
 
-To enable nested authentication, your app must actively configure a redirect URI for your app. The redirect URI indicates to the Microsoft identity platform that your app can be brokered by supported hosts. The redirect URI of the app must be of type **Single-page application** and conform to the following scheme:
+To configure nested app authentication, your app must actively configure a redirect URI for your app. The redirect URI indicates to the Microsoft identity platform that your app can be brokered by supported hosts. The redirect URI of the app must be of type **Single-page application** and conform to the following scheme:
 
 ```
 brk-<broker_application_id>://<your_domain>
