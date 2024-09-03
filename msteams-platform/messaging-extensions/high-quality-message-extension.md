@@ -929,11 +929,13 @@ In the following example, no nodes are defined for actions or Graph connectors e
 
 </details>
 
+<!--
 <details>
 <summary><b>Must not spam users by sending multiple messages in short succession​</b></summary>
 
 details TBA
 </details>
+->
 
 <!--
 ### Validation guidelines for custom engine Copilot
@@ -1016,12 +1018,10 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 | Action | Reason |
 | --- | --- |
-| ✔️ | Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​​​ |
-| ✔️ | Data shown in 3P service (through dialogue), is reflective of confirmation provided by user [Works only for supported dialogues]​ |
-| ✔️ | A confirmation of the completion of the action is shared by the plugin in form of card etc. [Bot sent card is not supported] |
+| ✔️ | Data shown in 3P service (through dialogue), is reflective of confirmation provided by user (valid only for supported dialogues) |
+| ✔️ | A confirmation of the completion of the action is shared by the plugin in the form of card. [Bot sent card is not supported.] |
 | ✔️ | Action taken by user is correctly reflected in 3P service |
-| ✔️ | Modification requests by user prior to confirmation of the action, must be honoured [Platform] |
-| ✔️ | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [details TBD]​ |
+| ✔️ | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user​ |
 
 <!--
 
@@ -1052,14 +1052,11 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 | Action | Reason |
 | --- | --- |
-| ✔️ | When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] |
-| ✔️ | Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] |
 | ✔️ | Data shared or sent by user gets correctly reflected in the confirmation |
-| ✔️ | Action taken by user is correctly reflected in 3P service - Dev |
-| ✔️ | Modification requests by user prior to confirmation of the action, must be honoured by plugin [Platform] |
-| ✔️ | A confirmation of the completion of the action is shared by the plugin in form of card |
-| ✔️| If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user [Details TBD] |
-|  :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Multi delete scenario should not be supported [Details TBD]​ |
+| ✔️ | Action taken by user is correctly reflected in 3P service |
+| ✔️ | A confirmation of the completion of the action is shared by the plugin in the form of card |
+| ✔️| If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user |
+|  :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Multi-delete scenario must not be supported |
 
 <!--
 * When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
