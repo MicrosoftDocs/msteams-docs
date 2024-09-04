@@ -27,41 +27,39 @@ Your app must pass the functional and validation test for being listed on the Te
 
 To list your app on the Teams Store, submit it on the Partner Center. Your app must undergo functional and validation tests. It might follow one of these two processes:
 
-* **Pass the functional and validation testing**
-  If the app passes the functional and validation testing, it is listed on the Teams Store.
+* **Successful Functional and Validation Testing**
+  After the app successfully passes both functional and validation testing, it gets listed on the Teams Store.
 
-* **Fail the functional and validation testing**
-  If the app fails the test, then it must resolve all issues before it can be resubmitted on the Partner Center. To resolve all issues and resubmit your app:
+* **Failure in Functional and Validation Testing**
+  If your app fails the test, you will receive a review report with recommendations within 24 hours. You must resolve all issues before resubmitting your app on the Partner Center. To address all issues and resubmit your app, follow these steps:
 
-  1. Receive the review report from Microsoft concierge validation team. The report includes the issues found during testing along with the following information:
+    1. Resolve all shared issues from the Microsoft concierge validation team's review report. The report contains issues identified during testing, along with the associated information.
 
-      * A [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) corresponding for each issue.
-      * Instructions on how to reproduce each issue.
-      * Recommendations for resolving each issue based on publicly available developer documentation.
+        * A [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) corresponding for each issue.
+        * Instructions on how to reproduce each issue.
+        * Recommendations for resolving each issue based on publicly available developer documentation.
 
-  1. Resolve all issues shared in the review report.
+    1. Send the following to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
 
-  1. Send the following to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
+        * Updated app package
+        * Testing notes for your app, if they were not part of your initial submission:
+            * Login details for a minimum of two accounts (one administrator account and one non-administrator account).
+            * Instructions to configure the app and test its functionality.
+            * A video demonstrating your app operating in Teams.
 
-      * Updated app package
-      * Test notes for your app, if they weren't included in your original submission:
-        * Credentials for at least two accounts (one admin account and one non-admin account).
-        * Instructions to configure the app and test its functionality.
-        * A video showing your app working in Teams.
+    1. The validation team conducts functional and experience testing on the updated app. The app validation might either succeed or fail.
 
-  1. The validation team conducts functional and experience testing of the updated app. The app validation may either pass or fail.
-  1. If the app passes the testing process, it can be listed on the Teams Store. You can resubmit the app on Partner Center.
-  1. If the app fails the testing process, the validation team sends you a detailed review report with recommendations for resolving issues found in the app.
+        * After the app successfully completes the testing process, it becomes eligible for listing on the Teams Store. You can resubmit the app on Partner Center.
+        * If the app fails the testing process, the validation team provides a comprehensive review report. This report includes recommendations to address any issues identified within the app. Expect to receive this report within 24 hours after the functional and experience testing of your app.
 
-      You can expect to receive this report within 24 hours of your app's functional and experience testing.
+            1. Fix all issues  shared in the review report provided by the validation team.
 
-  1. Fix all issues shared in the review report sent by the validation team.
+            1. After resolving the issues, resubmit your updated app package and test notes to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>. This allows the team to conduct another round of testing on your app.
 
-  1. Resubmit your updated app package and test notes to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> after resolving issues, so that the app may be tested again. The process continues till the app has fully met the Microsoft validation guidelines.
+            The process continues until the app fully complies with the Microsoft validation guidelines.
 
-        > [!CAUTION]
-        >
-        > To avoid multiple submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team approves your app.
+            > [!CAUTION]
+            > To prevent repeated submission failures, resubmit your app on Partner Center only after the Microsoft concierge validation team has approved your app.
 
 ## FAQ
 
