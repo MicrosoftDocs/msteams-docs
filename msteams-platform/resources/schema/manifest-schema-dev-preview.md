@@ -349,10 +349,12 @@ Specifies information about the developer and their business. For Teams Store ap
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
 | `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
+                                                       |
+
 | `websiteUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app-specific page on your website.                                             |
 | `privacyUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app's privacy policy.                                                         |
 | `termsOfUseUrl` | String | 2048 characters | ✔️      | The *https://* URL to the app's terms of use.                                                           |
-| `mpnId`         | String | 10 characters    |          | The Microsoft Partner Network ID that identifies the partner organization creating the app. **Optional** |
+| `mpnId`         | String | 10 characters    |          | The Microsoft Cloud Partner Program (CCP) ID (formerly known as Microsoft Partner Network (MPN) ID) that identifies the partner organization creating the app. **Optional** |
 | `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
 
 ### developer.contactInfo

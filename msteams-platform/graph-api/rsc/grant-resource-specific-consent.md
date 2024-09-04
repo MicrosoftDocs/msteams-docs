@@ -532,6 +532,7 @@ For more information on how to get details of the apps installed for the user, s
 | **Sample name** | **Description** | **.NET** |**Node.js** | **App manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
 | Resource-Specific Consent (RSC) | This sample code describes the process to use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp/demo-manifest/graph-rsc.zip)|
+| Configure RSC permissions | This sample code demonstrates how to configure RSC permissions in the app manifest, utilize them to invoke Microsoft Graph, and observe the actual response with the installed scope. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc-helper/nodeJs)|NA|
 
 ## See also
 
