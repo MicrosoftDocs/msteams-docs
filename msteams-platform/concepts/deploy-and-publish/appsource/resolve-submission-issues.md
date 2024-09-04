@@ -25,7 +25,7 @@ For your app to be listed on the Teams Store, it must pass both functional and v
 
 :::image type="content" source="../../../assets/images/submission/resolve-submission-issues.png" alt-text="The image illustrates the process for resolving issues prior to resubmitting the app on Partner Center.":::
 
-To list your app on the Teams Store, submit it on the Partner Center. Your app must undergo functional and validation tests. It might follow one of these two processes:
+To list your app on the Teams Store, submit it on the Partner Center. Your app must undergo functional and validation tests. It might follow one of these two flows:
 
 * **Successful Functional and Validation Testing**
   After the app successfully passes both functional and validation testing, it gets listed on the Teams Store.
@@ -33,9 +33,9 @@ To list your app on the Teams Store, submit it on the Partner Center. Your app m
 * **Failure in Functional and Validation Testing**
   Expect to receive the review report within 24 hours after the functional and experience testing of your app. Address all issues before resubmitting your app on the Partner Center. Here's the process to fix all issues and resubmit your app:
 
-    1. Microsoft concierge validation team's shares a review report with you.
+    1. Microsoft concierge validation team shares a review report with you.
         <details>
-        <summary>Select to view review report contents</summary>
+        <summary>Select to view review report contents.</summary>
 
         * A [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) corresponding for each issue.
         * Instructions on how to reproduce each issue.
@@ -48,7 +48,7 @@ To list your app on the Teams Store, submit it on the Partner Center. Your app m
     1. Send the updated app to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
 
         <details>
-        <summary>Select to view the contents for app testing</summary>
+        <summary>Select to view the contents for app testing.</summary>
 
         * Updated app package
         * Testing notes for your app, if they were not part of your initial submission:
