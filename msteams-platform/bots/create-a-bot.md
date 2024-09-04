@@ -24,6 +24,12 @@ You can start by building any one of the following bots:
 
 4. AI bot
 
+> [!div class="op_multi-selector" title1="SDK" title2="Type of bot"]
+>
+> - [TeamsFx | Interactive notification bot](how-to/includes/interactive-bot-include.md)
+> - [TeamsFx | Command bot](how-to/conversations/command-bot-in-teams.md)
+> - [Bot Framework SDK | AI bot](../Teams-AI-library-tutorial.yml)
+
 # [Interactive bot](#tab/interactive)
 
 [!INCLUDE [interactive-bot-include](how-to/includes/interactive-bot-include.md)]
