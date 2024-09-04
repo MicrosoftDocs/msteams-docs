@@ -839,6 +839,9 @@
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+  - name: Enable nested app authentication
+    href: concepts/authentication/nested-authentication.md
+    displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
