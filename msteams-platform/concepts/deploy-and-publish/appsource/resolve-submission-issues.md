@@ -33,15 +33,22 @@ To list your app on the Teams Store, submit it on the Partner Center. Your app m
 * **Failure in Functional and Validation Testing**
   Expect to receive the review report within 24 hours after the functional and experience testing of your app. Address all issues before resubmitting your app on the Partner Center. Here's the process to fix all issues and resubmit your app:
 
-    1. Microsoft concierge validation team's shares a review report with you. The report contains issues identified during testing, along with the associated information.
+    1. Microsoft concierge validation team's shares a review report with you.
+        <details>
+        <summary>Select to view review report contents</summary>
 
         * A [validation guideline](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) corresponding for each issue.
         * Instructions on how to reproduce each issue.
         * Recommendations for resolving each issue based on publicly available developer documentation.
 
+        </details>
+
     1. Fix all issues shared in the validation team's review report.
 
-    1. Send the following to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
+    1. Send the updated app to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
+
+        <details>
+        <summary>Select to view the contents for app testing</summary>
 
         * Updated app package
         * Testing notes for your app, if they were not part of your initial submission:
@@ -49,16 +56,18 @@ To list your app on the Teams Store, submit it on the Partner Center. Your app m
             * Instructions to configure the app and test its functionality.
             * A video demonstrating your app operating in Teams.
 
+        </details>
+
     1. The validation team conducts functional and experience testing on the updated app. The app validation might either succeed or fail.
 
-        * After the app successfully passes the testing process, it becomes eligible for listing on the Teams Store. You can resubmit the app on Partner Center.
-        * If the app fails the testing process, the validation team provides a review report that includes recommendations to address issues identified within the app.
+        * If the app passes the testing process, it becomes eligible for listing on the Teams Store. You can resubmit the app on Partner Center.
+        * If the app fails the testing process, the validation team provides a review report that includes issues and recommendations to resolve them.
 
             1. Fix all issues shared in the review report provided by the validation team.
 
-            1. Submit your updated app package and test notes to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>. This allows the team to conduct another round of testing on your app.
+            1. Submit your updated app package and test notes to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
-            The process continues until the app fully complies with the validation guidelines.
+            This allows the team to conduct another round of testing on your app. The process continues until the app fully complies with the validation guidelines.
 
             > [!CAUTION]
             > To prevent repeated submission failures, resubmit your app on Partner Center only after the validation team has approved your app.
