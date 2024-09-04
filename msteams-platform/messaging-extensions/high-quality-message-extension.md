@@ -29,7 +29,7 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 > [!NOTE]
 > The following guidelines must be ensured to increasing the chances of your app to pass the Microsoft Teams Store submission process:
-
+>
 > * [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 > * [Common requirements for Copilot extensions](#common-requirements-for-copilot-extensions)
 > * [Guidelines for specific Copilot extensions](#guidelines-for-specific-copilot-extensions) relevant for your Copilot extension.
