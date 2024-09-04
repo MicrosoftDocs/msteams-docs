@@ -28,7 +28,17 @@ We recommend that you build or upgrade your existing message extensions to maxim
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
 
 > [!NOTE]
+> The following guidelines must be ensured to increasing the chances of your app to pass the Microsoft Teams Store submission process:
+
+> * [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> * [Common requirements for Copilot extensions](#common-requirements-for-copilot-extensions)
+> * [Guidelines for specific Copilot extensions](#guidelines-for-specific-copilot-extensions) relevant for your Copilot extension.
+> * [Guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams), if you want to configure a custom Graph connector for Copilot for Microsoft 365
+
+<!--
+> [!NOTE]
 > If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
+-->
 
 ## Common requirements for Copilot extensions
 
@@ -43,6 +53,9 @@ The requirements for building message extension plugins for Copilot for Microsof
 > * [Extend your plugin to Copilot in meetings](#extend-your-plugin-to-copilot-in-meetings)
 > * [Message extensions plugins in Copilot for Microsoft 365 applications](#message-extensions-plugins-in-copilot-for-microsoft-365-applications)
 > * [Technical requirements](#technical-requirements)
+
+> [!NOTE]
+> The common requirements must be ensured in addition to [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) for  increasing the chances of your app to pass the Microsoft Teams Store submission process
 
 ## Define app, command, and parameter descriptions
 
@@ -865,7 +878,7 @@ The specific guidelines for Copilot extensions include:
 > [!IMPORTANT]
 > Message extensions plugins for declarative Copilot are in limited private preview.
 
-Besides the common guidelines, there are specific guidelines for declarative Copilot. It must ensure the following validations:
+Besides the Teams Store validation guidelines and common guidelines, there are specific guidelines for declarative Copilot. It must ensure the following validations:
 
 <details>
 <summary><b>Extension must not manipulate LLM behavior</b></summary>
@@ -1024,7 +1037,7 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 
 ## Validation guidelines for action-based message extension in Copilot
 
-Besides the common guidelines, there are specific guidelines for action-based message extensions in Copilot. It must ensure the following validations:
+Besides the Teams Store validation guidelines and common guidelines, there are specific guidelines for action-based message extensions in Copilot. It must ensure the following validations:
 
 | Action | Reason |
 | --- | --- |
@@ -1060,7 +1073,7 @@ Besides the common guidelines, there are specific guidelines for action-based me
 > [!IMPORTANT]
 > Message extensions plugins for API plugins are in limited private preview.
 
-Besides the common guidelines, there are specific guidelines for API plugins in Copilot. It must ensure the following validations:
+Besides the Teams Store validation guidelines and common guidelines, there are specific guidelines for API plugins in Copilot. It must ensure the following validations:
 
 | Action | Reason |
 | --- | --- |
