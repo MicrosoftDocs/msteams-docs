@@ -254,9 +254,19 @@ The following table lists the debug configuration names and types for project wi
 
 ### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). 
+
+When Teams client loads in the web browser, perform the following steps:
+
+1. Select **Add** to install the app in Teams.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot shows the Add local debug." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
+
+1. Select **Open** to use the app in personal scope.
+
+    Alternatively, select a channel or chat for collaborative use and select **Go**.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/local-debug-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    Your app is added to Teams!
 
