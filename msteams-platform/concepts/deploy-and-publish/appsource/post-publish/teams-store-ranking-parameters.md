@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams Store ranking parameters
+title: Teams Store Ranking Parameters
 description: Learn Teams Store ranking parameters like historical usage, user engagement data, app quality and values, audience relevance, and app update or new release.
 ms.topic: reference
 ms.localizationpriority: high
@@ -20,15 +20,18 @@ The Teams Store editorial team determines the prominence and location of an app 
 
 The main parameters used to determine app placements include:
 
-- **Historical usage data**: Apps with higher volumes of usage in the Teams Store tend to rank higher than apps with lower usage.
+- **Historical usage data**: Apps with higher volumes of usage in the Teams Store globally as well as organization-level tend to rank higher than apps with lower usage for that organization. However, this criterion isn't mandatory as the goal is to promote the introduction of new apps in the Teams Store.
 
 - **User engagement data**: Apps with higher user engagement in the Teams Store tend to rank higher than apps with lower engagement.
 
-- **App quality and value**:  Apps with distinct value and that provide a high-quality user experience tend to rank higher.
+- **App quality and value**: Apps that offer unique value and provide a high-quality user experience tend to rank better. Higher ratings and genuine reviews indicate the app's superior quality.
 
-- **Audience relevance**: Apps more relevant to a particular audience tend to rank higher than apps that are less relevant. Such apps can be based on their language settings and license type such as, Education, Enterprise, or Small and Medium business.
+- **Audience relevance**: Apps more relevant to a particular audience tend to rank higher than apps that are less relevant for that audience. Such apps can be based on the audience's language settings and license type such as, Education, Enterprise, or Small and Medium business.
 
-- **App update or new release**: Newly released or updated high-quality apps tend to rank higher than apps that were released or updated on an earlier date.
+> [!NOTE]
+> The information on main parameters applies to specific surfaces in the store but not to the entire store.
+
+The criteria mentioned above are neither mandatory nor exhaustive. They can vary based on business requirements and industry standards.
 
 ## See also
 

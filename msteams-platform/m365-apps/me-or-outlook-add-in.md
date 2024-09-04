@@ -1,6 +1,6 @@
 ---
-title: Decide between creating a message extension or an Outlook add-in
-description: Learn how to decide whether your Microsoft 365 app should be message extension or an Outlook add-in.
+title: Message Extension vs. Outlook Add-in
+description: Learn how to decide whether Microsoft 365 app must be message extension or Outlook add-in, and customer relation, security, attachment, and signature management.
 ms.date: 01/05/2023
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -83,4 +83,3 @@ The following examples show the recommended app type for different scenarios bas
 | Customize a signature based on the recipients, new thread or reply, and other contextual facts. | Outlook add-in |
 | Synchronize a signature across devices. | Outlook add-in |
 | Enable administrator management of signatures for an organization. | Outlook add-in |
-

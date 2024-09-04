@@ -1,5 +1,5 @@
 ---
-title: Conversation basics
+title: Learn Basics of Bot Conversations
 description: In this module, learn about bot conversation type in a channel, personal chat, and a group chat scopes in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear

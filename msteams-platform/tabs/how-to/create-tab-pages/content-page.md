@@ -1,6 +1,6 @@
 ---
-title: Create a content page
-description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside dialog (task module).
+title: Build a Content Page for Tab
+description: Learn about webpage within Teams client in personal, channel, or group custom tab. Create content page and embed it as webview inside dialog (task module).
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/23/2022
@@ -28,7 +28,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
+To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
@@ -158,4 +158,4 @@ Use the following steps to show the native loading indicator:
 * [Create a personal tab](../create-personal-tab.md)
 * [Create a channel tab or group tab](../create-channel-group-tab.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
-* [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
+* [Dev Tools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
