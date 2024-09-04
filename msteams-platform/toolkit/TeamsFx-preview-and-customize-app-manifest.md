@@ -58,16 +58,14 @@ For example, you can put your manifest.json file in `test/test.json`, and update
 
 1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in the manifest.json file.
 For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
+   `.env.dev`
 
-`.env.dev`
+   ```text
+   TEAMS_APP_DESCRIPTION=This is an amazing app
+   ```
+   `manifest.json`
 
-```text
-    TEAMS_APP_DESCRIPTION=This is an amazing app
-```
-
-`manifest.json`
-
-```json
+   ```json
     {
         "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
         "manifestVersion": "1.16",
@@ -76,7 +74,51 @@ For example, you can customize app description by defining a new environment var
             "full": "Full description of tab0418"
         },
     }
-```
+   ```
+
+1. If you would like to put the value of one field in a separate text file (for example, the description of your app is extremely long or have multiple lines), you could use `file` function. For example, you can create description.txt file storing the full description of the app in the parent folder of manifest.json, and then set the value of description.full as $[file('description.txt')] in manifest.json. Teams Toolkit will read the content from the text file and set the content of the file as full description during sideloading and provision. 
+
+  `description.txt`
+
+  ```text
+    This is a the full description of the app.
+  ```
+
+  `manifest.json`
+
+  ```json
+    {
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.16",
+        "description": {
+            "short": "Short description of tab",
+            "full": "$[file('./description.txt')]"
+        },
+    }
+  ```
+
+You could either put the file path in env/.env.xx and update the input parameter function of file function to placeholder in ${{xx_xx}} format.
+
+`.env.dev`
+
+  ```text
+DESCRIPTION_PATH=./instruction.txt
+  ```
+
+  `manifest.json`
+
+  ```json
+    {
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.16",
+        "description": {
+            "short": "Short description of tab",
+            "full": "$[file(${{DESCRIPTION_PATH}})]"
+        },
+    }
+  ```
+
+
 
 ## Validate your app
 
