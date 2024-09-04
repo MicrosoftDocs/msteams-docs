@@ -28,7 +28,17 @@ We recommend that you build or upgrade your existing message extensions to maxim
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
 
 > [!NOTE]
+> The following guidelines must be ensured to increasing the chances of your app to pass the Microsoft Teams Store submission process:
+>
+> * [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> * [Common requirements for Copilot extensions](#common-requirements-for-copilot-extensions)
+> * [Guidelines for specific Copilot extensions](#guidelines-for-specific-copilot-extensions) relevant for your Copilot extension.
+> * [Guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams), if you want to configure a custom Graph connector for Copilot for Microsoft 365
+
+<!--
+> [!NOTE]
 > If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
+-->
 
 ## Mandatory requirements
 
