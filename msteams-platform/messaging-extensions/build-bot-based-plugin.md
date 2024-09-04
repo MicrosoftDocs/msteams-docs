@@ -117,7 +117,7 @@ To trigger the message extension as plugin in Copilot for Microsoft 365 in Teams
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, teamsjsx.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for Microsoft 365.":::
 
