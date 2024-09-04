@@ -77,7 +77,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-1. If you would like to put the value of one field in a separate text file (for example, the description of your app is extremely long or have multiple lines), you could use `file` function. For example, you can create description.txt file storing the full description of the app in the parent folder of manifest.json, and then set the value of description.full as $[file('description.txt')] in manifest.json. Teams Toolkit will read the content from the text file and set the content of the file as full description during sideloading and provision. 
+1. If you would like to store the value of a field, such as a lengthy or multiline app description, in a separate text file, you could use the `file` function. For example, you can create description.txt file sotring the full description of your app in the parent folder of `manifest.json`. Then set the value of description.full as `$[file('description.txt')]` in `manifest.json`. Teams Toolkit will read the content from the text file and use it as full description when building app package zip.
 
    `description.txt`
 
