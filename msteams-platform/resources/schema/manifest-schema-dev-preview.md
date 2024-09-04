@@ -349,8 +349,6 @@ Specifies information about the developer and their business. For Teams Store ap
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
 | `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
-                                                       |
-
 | `websiteUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app-specific page on your website.                                             |
 | `privacyUrl`    | String | 2048 characters | ✔️      | The *https://* URL to the app's privacy policy.                                                         |
 | `termsOfUseUrl` | String | 2048 characters | ✔️      | The *https://* URL to the app's terms of use.                                                           |
