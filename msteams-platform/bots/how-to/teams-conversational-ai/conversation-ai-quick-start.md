@@ -363,18 +363,18 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
-       ```text
-       SECRET_OPENAI_KEY=<your OpenAI key>
-       ```
+      ```text
+      SECRET_OPENAI_KEY=<your OpenAI key>
+      ```
 
    # [Azure OpenAI](#tab/Azure-OpenAI2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
-       ```text
-       SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
-       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
-       ```
+      ```text
+      SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+      SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+      ```
 
     ---
 
