@@ -110,13 +110,13 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
-   4. You'll be prompted to upload a custom app into Teams. Select **Open**.
+   4. You'll be prompted to upload a custom app into Teams. Select **Add**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
    
    5. Select **Open**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot shows an app being installed.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in the required scope.":::
 
         The app opens as a personal tab.
 

@@ -54,7 +54,7 @@ To debug your app after you create a project, perform the following steps:
 
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md).
 
-1. Select **Open** to install and add your app in Teams.
+1. Select **Add** to install and add your app in Teams.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-add-loadapp.png" alt-text="Screenshot shows the option to add app.":::
 
