@@ -1,6 +1,6 @@
 ---
 title: Bot message format
-description: In this module, learn details of formatting for bot messages
+description: Learn how to format bot messages in Microsoft Teams using Bot Framework SDK including Markdown and HTML tags with platform-specific limitations.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 04/02/2023
@@ -23,7 +23,7 @@ Microsoft Teams supports the following formatting options:
 
 Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
-Currently, the following limitations apply:
+The following limitations apply:
 
 * Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
@@ -31,7 +31,7 @@ Currently, the following limitations apply:
 
 ## Cross-platform support
 
-To ensure that your formatting works across all platforms supported by Teams, be aware that some styles aren't currently supported across all platforms.
+To ensure that your formatting works across all platforms supported by Teams, be aware that some styles aren't supported across all platforms.
 
 | Style                     | Text-only messages | Rich cards (XML only) |
 | ---                       | :---: | :---: |

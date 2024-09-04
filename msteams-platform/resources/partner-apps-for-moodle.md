@@ -1,6 +1,6 @@
 ---
-title: Partner apps for Moodle
-description: Learn partner apps for Moodle, key benefits of partner apps for Moodle, SaaS offerings and mConnect. Enable singe-sign-on SSO for users of Teams.
+title: Integrate Partner Apps for Moodle
+description: Learn partner apps for Moodle, key benefits of partner apps for Moodle, SaaS offerings, and mConnect. Enable singe-sign-on SSO for users of Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
@@ -39,5 +39,4 @@ mConnect allows Moodle administrators to set up Teams for Moodle course automati
 
 * [Integrate web apps](../samples/integrate-web-apps-overview.md)
 * [SSO Authentication](../concepts/authentication/authentication.md)
-* [Moodle FAQ](faqs.md)
 * [Skooler](https://skooler.com/mconnect/how-to/)
