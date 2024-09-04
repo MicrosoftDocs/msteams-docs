@@ -54,15 +54,23 @@ Before creating one-to-one chatbots, consider whether a conversation-based inter
 
 ## Types of bots
 
-1. Notification bot: Introduce notification bots
+You can create the following types of bots using either Bot Framework SDK or Teams Toolkit:
 
-    For more information, see
+1. Notification bot: A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as, sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
 
-2. Workflow bot
+  For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 
-3. Conversational bot
+2. Workflow bot: You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
 
-4. AI bot
+  For more information, see [Build command bot with JavaScript](../sbs-gs-commandbot.yml).
+
+3. Conversational bot: A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
+
+  For more information, see [Create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+
+4. AI bot: An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more.
+
+  For more information, see [Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
 
 ## Typical bot scenarios
 
@@ -78,33 +86,32 @@ TBD
 
 ## Advantages of bots
 
-## Disadvantages of bots
+TBD
+
+## Recommendations
 
 An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
 
-### Have multi-turn experiences in chat
+* **Avoid multi-turn experiences in chat**
+  An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
-An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+    USER: Schedule a meeting with Megan.
 
-USER: Schedule a meeting with Megan.
+    BOT: I’ve found 200 results, include a first and last name.
 
-BOT: I’ve found 200 results, include a first and last name.
+    USER: Schedule a meeting with Megan Bowen.
 
-USER: Schedule a meeting with Megan Bowen.
+    BOT: OK, what time would you like to meet with Megan Bowen?
 
-BOT: OK, what time would you like to meet with Megan Bowen?
+    USER: 1:00 pm.
 
-USER: 1:00 pm.
+    BOT: On which day?
 
-BOT: On which day?
+* **Support six or less frequent commands**
+  As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
 
-### Support too many commands
-
-As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-
-### Maintain a large knowledge base
-
-One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+* **Optimize size of knowledgebase for quicker interaction**
+  One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 ## Limitations and known issues
 
