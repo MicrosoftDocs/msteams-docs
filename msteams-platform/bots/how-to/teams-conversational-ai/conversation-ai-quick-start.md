@@ -90,7 +90,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Update the following steps based on the AI services you select.
 
-    # [OpenAI key](#tab/OpenAI-key)
+   # [OpenAI key](#tab/OpenAI-key)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -111,7 +111,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
           // }
       ```
 
-    # [Azure OpenAI](#tab/Azure-OpenAI)
+   # [Azure OpenAI](#tab/Azure-OpenAI)
 
    1. Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -359,22 +359,22 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-    # [OpenAI key](#tab/OpenAI-key2)
+   # [OpenAI key](#tab/OpenAI-key2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
-   ```text
-   SECRET_OPENAI_KEY=<your OpenAI key>
-   ```
+       ```text
+       SECRET_OPENAI_KEY=<your OpenAI key>
+       ```
 
-    # [Azure OpenAI](#tab/Azure-OpenAI2)
+   # [Azure OpenAI](#tab/Azure-OpenAI2)
 
    Go to the `env` folder and update the following code in `./env/.env.local.user` file:
 
-   ```text
-   SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
-   SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
-   ```
+       ```text
+       SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+       ```
 
     ---
 
