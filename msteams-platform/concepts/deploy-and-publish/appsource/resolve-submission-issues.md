@@ -67,7 +67,7 @@ To list your app on the Teams Store, submit it on the Partner Center. Your app m
 
             1. Submit your updated app package and test notes to the validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
-            This allows the team to conduct another round of testing on your app. The process continues until the app fully complies with the validation guidelines.
+            This allows the validation team to conduct another round of testing on your app. The process continues until the app fully complies with the validation guidelines.
 
             > [!CAUTION]
             > To prevent repeated submission failures, resubmit your app on Partner Center only after the validation team has approved your app.
