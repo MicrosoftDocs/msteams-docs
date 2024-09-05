@@ -1044,7 +1044,7 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 | ✔️ | Data shown in 3P service (through dialogue), is reflective of confirmation provided by user (valid only for supported dialogues) |
 | ✔️ | A confirmation of the completion of the action is shared by the plugin in the form of card. [Bot sent card is not supported.] |
 | ✔️ | Action taken by user is correctly reflected in 3P service |
-| ✔️ | If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user​ |
+| ✔️ | If your plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared with the user​ |
 
 <!--
 
@@ -1080,7 +1080,8 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 | ✔️ | Data shared or sent by user gets correctly reflected in the confirmation |
 | ✔️ | Action taken by user is correctly reflected in 3P service |
 | ✔️ | A confirmation of the completion of the action is shared by the plugin in the form of card |
-| ✔️| If plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared to user |
+| ✔️| If your plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared with the user |
+| ✔️ | Ensure plugins follows standard security protocols such as TLS 1.2 or higher and all API calls must use HTTPS with TLS 1.2 or higher |
 |  :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Multi-delete scenario must not be supported |
 
 <!--
