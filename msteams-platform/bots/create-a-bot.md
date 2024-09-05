@@ -38,9 +38,9 @@ Option 2:
 
 [!INCLUDE [interactive-bot-include](how-to/includes/interactive-bot-include.md)]
 
-# [Command bot](#tab/command)
+# [Conversational bot](#tab/command)
 
-TBD: Include file for command bot
+TBD: Include file for conversational bot
 
 # [Workflow bot](#tab/workflow)
 
