@@ -12,6 +12,17 @@ ms.date: 01/29/2023
 
 TBD: Introduction
 
+## Templates for building a bot in Teams Toolkit
+
+| # | Type of bot | Teams Toolkit template | SBS guide | Code sample |
+| --- | --- | --- | --- |
+| Notification bot | A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. | Use the Teams Toolkit template to build a bot that can send notification and inform with a message that displays in Teams chat | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml). | [View] |
+| Workflow bot | You use a workflow bot to automate or streamline business processes. | Use the Teams Toolkit template to build a bot that can interact with multi-step processes in Teams chats | [Build command bot with JavaScript](../sbs-gs-commandbot.yml) | [View] |
+| Conversational bot | A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. | Use the Teams Toolkit template to build a basic chat bot. | [Build a basic bot](../sbs-gs-bot.yml) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) |
+
+
+
+
 ## Types of bots
 
 You can start by building any one of the following bots:

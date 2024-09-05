@@ -58,19 +58,19 @@ You can create the following types of bots using either Bot Framework SDK or Tea
 
 1. Notification bot: A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as, sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
 
-  For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
+  For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 
 2. Workflow bot: You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
 
-  For more information, see [Build command bot with JavaScript](../sbs-gs-commandbot.yml).
+  For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
 3. Conversational bot: A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
 
-  For more information, see [Create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+  For more information, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 
 4. AI bot: An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more.
 
-  For more information, see [Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
+  For more information, see [build a custom copilot to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
 
 ## Typical bot scenarios
 
