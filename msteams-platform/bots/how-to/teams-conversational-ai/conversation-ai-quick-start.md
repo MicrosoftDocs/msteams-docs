@@ -5,7 +5,7 @@ description: In this module, learn how to quickly try the Teams AI library using
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 12/06/2022
 ---
 
@@ -169,15 +169,15 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the scope selection dialog to add the LightBot app.":::
 
    A dialog to select the required scope appears.
 
-1. Select **Open** to use the app in personal scope. 
+1. Select **Open** to open the app in personal scope. 
     
    Alternatively, select a channel or chat for collaborative use and select **Go**.
 
-   :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot shows option to select the required scope.":::
+   :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    A chat window opens.
 
@@ -292,9 +292,19 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Select **F5** or select **Debug** > **Start**.
 
-1. Select **Add**. The app is added to Teams and a chat window opens.
+1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
+
+   A dialog to select the required scope appears.
+
+1. Select **Open** to open the app in personal scope.
+
+   Alternatively, select a channel or chat for collaborative use and select **Go**.
+
+   :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+   A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
@@ -399,7 +409,15 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
+
+   A dialog to select the required scope appears.
+
+1. Select **Open** to open the app in personal scope.
+
+   Alternatively, select a channel or chat for collaborative use and select **Go**.
+
+   :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    A chat window opens.
 

@@ -205,9 +205,9 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot shows the selection of Add.":::
+        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot of the app details dialog to add the app.":::
 
-    1. Select **Open** to use the app in personal scope.
+    1. Select **Open** to open the app in personal scope.
 
         Alternatively, select a channel or chat for collaborative use and select **Go**.
 
