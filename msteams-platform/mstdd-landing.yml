@@ -63,6 +63,8 @@ landingContent:
       links:
       - text: Approvals app APIs (Developer preview)
         url: samples/approvals-app-api.md
+      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
+        url: concepts/authentication/nested-authentication.md
       - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
@@ -79,8 +81,6 @@ landingContent:
         url: graph-api/rsc/preapproval-instruction-docs.md
       - text: 32x32 color icon for your app running in Outlook and Microsoft 365
         url: concepts/build-and-test/apps-package.md#outline-icon
-      - text: Authentication in API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md#authentication
 
     - linkListType: reference
       links:
