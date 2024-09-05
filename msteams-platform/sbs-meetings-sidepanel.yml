@@ -206,11 +206,13 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot shows the option to add the side panel app."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of the app details dialog to add the side panel app."::: 
 
-    1. Search and select the required chat or meeting to open the app.
+    1. Select **Open** to use the app in personal scope.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/select-app-scope.png" alt-text="Screenshot shows the option to select the scope to add the side panel app."::: 
+        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/select-app-scope.png" alt-text="Screenshot of the scope selection dialog to select the scope to add the side panel app."::: 
 
        The **Manage apps** section displays the list of applications.
    

@@ -189,11 +189,13 @@ items:
        
     1. Select **Add**. 
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the Teams client with the Add option highlighted.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog with the Add option highlighted.":::
     
-    1. Select **Open** or search and select the required chat or meeting to open the app.
+    1. Select **Open** to use the app in personal scope.
+
+       Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
     
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the Teams client with the Add option highlighted."::: 
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope."::: 
                       
 - title: Interact with the app in Teams
   durationInMinutes: 1
