@@ -1,6 +1,6 @@
 ---
-title: Add code to enable SSO for Adaptive Cards Universal Actions
-description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
+title: SSO for Adaptive Card Universal Actions
+description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -129,6 +129,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 
 ## See also
 
-* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
 * [Enable SSO for your bot app](../../../bots/how-to/authentication/bot-sso-overview.md)
 * [Update app manifest for SSO and preview your app](../../../bots/how-to/authentication/bot-sso-manifest.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+

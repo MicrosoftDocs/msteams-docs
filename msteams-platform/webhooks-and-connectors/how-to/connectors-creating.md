@@ -1,12 +1,14 @@
 ---
-title: Create connectors for Microsoft 365 Groups
+title: Connectors for Microsoft 365 Groups
 author: laujan
-description: Get started with connectors for Microsoft 365 Groups. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) connector for Microsoft 365 Groups generating notifications to Teams channel.
+description: Learn to create connectors for Microsoft 365 Groups with .NET, Node.js samples, which generates notifications to Teams channel and add connector to Teams app.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/16/2023
 ---
 # Create connectors for Microsoft 365 Groups
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
@@ -42,7 +44,7 @@ Users can complete the entire connector configuration experience without having 
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the user, channel, or team context, and initiate authentication flows.
 
 To integrate the configuration experience:
 
@@ -159,7 +161,7 @@ You can execute an event handler when the user removes an existing connector con
 
 ### Include the connector in your app manifest
 
-Download the auto-generated app manifest (previously called Teams app manifest) from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
+Download the auto-generated app manifest (previously called Teams app manifest) from the [Developer Portal](https://dev.teams.microsoft.com). Perform the following steps, before testing or publishing the app:
 
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion in the app manifest file to include the file names of the icons instead of URLs.
