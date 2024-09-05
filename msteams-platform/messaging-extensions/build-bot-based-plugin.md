@@ -146,7 +146,7 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 1. Search for **Teams** and select **Microsoft Teams App**.
 
-1. Enter the project details, and then select the **Place solution and project in the same directory** checkbox.
+1. Enter the project details. Ensure that the **Place solution and project in the same directory** checkbox is not selected.
 
 1. Select **Create**.
 
