@@ -32,8 +32,9 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
-***August 22, 2024***: [DevTools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
-***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
+* ***August 26, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
+* ***August 22, 2024***: [Dev Tools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
+* ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
 
 :::column-end:::
 :::row-end:::
@@ -370,7 +371,7 @@ Explore updates from the previous GA releases listed here.
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph is released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/registering-calling-bot.md), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts.md), [Registering a calling bot](~/concepts/calls-and-meetings/registering-calling-bot.md), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Tab configuration pages are now taller. | [Tab Design](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.|[Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
-| 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
+| 08/10/2018 | Client support for Dev Tools.| [Dev Tools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Message extensions now support multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation is revised and expanded for clarity.| [Connectors](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Your bot can now send and receive files. | [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
@@ -411,9 +412,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 June**
+**2024 September**
 
-***June 14, 2024***: [Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation](graph-api/rsc/preapproval-instruction-docs.md).
+***September 03, 2024***: [Introduced nested app authentication for single-page applications that are embedded in host environment.](concepts/authentication/nested-authentication.md)
 
 :::column-end:::
 :::row-end:::
@@ -426,6 +427,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 14/06/2024 | Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md) |
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | 23/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 | 14/05/2024 | Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.| App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)|
@@ -504,6 +506,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
 
 * ***July 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
 * ***July 16, 2024***: The existing [Microsoft 365 (previously called Office 365) connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
