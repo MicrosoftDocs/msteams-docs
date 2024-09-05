@@ -61,13 +61,15 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
 
    GitHub Codespaces builds your interactive notification bot app, loads it to Teams client, and opens it in a separate browser tab.
 
-1. Once the app dialog appears, select **Add** to install your interactive notification bot in Teams.
+1. When the app details dialog appears, select **Add** to install your interactive notification bot in Teams.
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot of the notification bot loaded in the Teams client.":::
 
    When the app is installed, a dialog appears to select the scope.
 
-1. Select **Open** to add in personal scope. Alternatively, you can select from the list of suggested scopes or search and select the required shared scope.
+1. Select **Open** to open in personal scope. 
+
+    Alternatively, select a channel, chat, or meeting for collaborative use and select **Go**.
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 

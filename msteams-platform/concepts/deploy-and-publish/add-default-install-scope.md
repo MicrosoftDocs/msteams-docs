@@ -8,13 +8,17 @@ ms.date: 12/15/2022
 ---
 # Configure default options for Teams app
 
-It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. For example, if your app is primarily intended for use within a team or channel, you can ensure that users only view that specific scope when they install your app from Microsoft Teams Store.
+It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. Teams UI helps users to identify the default scope to install your app.
 
-When the user selects an app to install from Teams Store, the app gets installed and a dialog appears to select the install scope.
+When the user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either shared or personal scope. 
 
-:::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required app install scope.":::
+* Shared scope: If your app is primarily intended for use within a channel, it's identified by a **Recommended** label adjacent to the channel scope list.
 
-If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
+* Personal scope: If the app supports personal scope, it's identified by an **Open** option to open the app in personal scope. 
+
+    :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required app install scope.":::
+
+In addition to your app working in a personal scope, let's assume that your app's primary capability is a bot. Then you can also make the bot the default capability when a user installs your app to a team.
 
 ## Configure your app's default install scope
 
@@ -39,7 +43,9 @@ App installation within the configured default install scope such as personal, c
 
 If the app is configured with personal scope only, here's the user flow to add the app:
 
-1. Go to **Apps** and browse and select the app to install.
+1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
+
+1. Browse and select the app to install.
 
 1. In the app details dialog, select **Add**.
 
@@ -58,7 +64,9 @@ If the app is configured with personal scope only, here's the user flow to add t
 
 If the app is configured with personal and shared scope, here's the user flow to add the app in the required scope:
 
-1. Go to **Apps** and browse and select the app to install.
+1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
+
+1. Browse and select the app to install.
 
 1. In the app details dialog, select **Add**.
 
@@ -66,7 +74,7 @@ If the app is configured with personal and shared scope, here's the user flow to
 
      When the app is added, a dialog appears to select the scope.
 
-1. Select **Open** to add in personal scope.
+1. Select **Open** to open in personal scope.
 
     Alternatively, you can select from the list of suggested scopes or search and select the required shared scope.
 
@@ -86,7 +94,9 @@ If the app is configured with personal and shared scope, here's the user flow to
 
 If the app is configured with shared scope, here's the user flow to add the app in the required scope:
 
-1. Go to **Apps** and browse and select the app to install.
+1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
+
+1. Browse and select the app to install.
 
 1. In the app details dialog, select **Add**.
 

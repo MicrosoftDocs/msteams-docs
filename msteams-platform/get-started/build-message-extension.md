@@ -64,11 +64,11 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
    Your message extension app is uploaded to Teams.
 
-1. Once the app dialog appears in Teams, select **Add** to install your message extension in Teams.
+1. When the app details dialog appears in Teams, select **Add** to install your message extension in Teams.
 
    :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot of message extension loaded in the Teams client.":::
 
-1. Select **Open** to add the app in personal scope.
+1. Select **Open** to open the app extension in personal scope.
 
    :::image type="content" source="../assets/images/get-started/codespace/me-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog with the Open option highlighted.":::
 
