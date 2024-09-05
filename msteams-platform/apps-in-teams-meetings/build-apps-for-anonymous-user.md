@@ -237,6 +237,15 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
 
+## Manage anonymous bot and user joining Teams meeting
+
+If you want to disable anonymous bot from joining Teams meeting:
+
+* Tenant admin mustn't permit an anonymous bot to join a meeting in their tenant.
+* Tenant admin and meeting organizer mustn't permit the anonymous user to interact with apps. If the anonymous user still has the permissions to interact with apps, the tenant admin must disable anonymous participants to interact with apps in meetings. For more information, see [manage anonymous participants interact with apps in meetings](/microsoftteams/anonymous-users-in-meetings#how-anonymous-participants-interact-with-apps-in-meetings).
+
+If you want to disable anonymous user from joining Teams meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
+
 ## Code sample
 
 |Sample name | Description | .NET |Node.js|
