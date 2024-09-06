@@ -456,109 +456,221 @@ The following JSON payload shows how to implement dependent dropdowns using the 
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.6",
-    "body": [
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.6",
+  "body": [
+    {
+      "columns": [
         {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "id": "main",
-            "label": "Main input - changing its value will reset all the other inputs",
-            "valueChangedAction": {
-                "type": "Action.ResetInputs",
-                "targetInputIds": [
-                    "text",
-                    "multiline",
-                    "date",
-                    "time",
-                    "number",
-                    "compact",
-                    "expanded",
-                    "toggle"
-                ]
+          "width": "1",
+          "items": [
+            {
+              "size": null,
+              "url": "https://urlp.asm.skype.com/v1/url/content?url=https%3a%2f%2fi.imgur.com%2fhdOYxT8.png",
+              "height": "auto",
+              "type": "Image"
             }
+          ],
+          "type": "Column"
         },
         {
-            "type": "Input.Text",
-            "placeholder": "Placeholder text",
-            "label": "Input.Text",
-            "id": "text",
-            "separator": true,
-            "spacing": "ExtraLarge"
-        },
-        {
-            "type": "Input.Text",
-            "placeholder": "Placeholder text",
-            "label": "Multiline Input.Text",
-            "id": "multiline",
-            "isMultiline": true
-        },
-        {
-            "type": "Input.Date",
-            "label": "Input.Date",
-            "id": "date"
-        },
-        {
-            "type": "Input.Time",
-            "label": "Input.Time",
-            "id": "time"
-        },
-        {
-            "type": "Input.Number",
-            "placeholder": "Placeholder text",
-            "label": "Input.Number",
-            "id": "number"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "label": "Compact Input.ChoiceSet",
-            "id": "compact"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [
-                {
-                    "title": "Choice 1",
-                    "value": "Choice 1"
-                },
-                {
-                    "title": "Choice 2",
-                    "value": "Choice 2"
-                }
-            ],
-            "placeholder": "Placeholder text",
-            "label": "Expanded Input.ChoiceSet",
-            "id": "expanded"
-        },
-        {
-            "type": "Input.Toggle",
-            "title": "New Input.Toggle",
-            "label": "Input.Toggle",
-            "id": "toggle"
+          "width": "2",
+          "items": [
+            {
+              "size": "extraLarge",
+              "text": "Game Purchase",
+              "weight": "bolder",
+              "wrap": true,
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
         }
-    ]
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "text": "Please fill out the below form to send a game purchase request.",
+      "wrap": true,
+      "type": "TextBlock"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Select Genre",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "choices": [
+                {
+                  "title": "First Person Shooter",
+                  "value": "fps"
+                },
+                {
+                  "title": "Real Time Strategy",
+                  "value": "rts"
+                },
+                {
+                  "title": "Role Playing Game",
+                  "value": "rpg"
+                }
+              ],
+              "style": "filtered",
+              "placeholder": "Search for a genre",
+              "id": "choiceGameSingle",
+              "type": "Input.ChoiceSet"
+            }
+          ],
+          "type": "Column",
+          "valueChangedAction": {
+          "type": "Action.ResetInputs",
+          "targetInputIds": [
+              "choiceGameMulti",
+          ]
+        }
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Multi-Game: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "choices": [
+                {
+                  "title": "Static Option 1",
+                  "value": "static_option_1"
+                },
+                {
+                  "title": "Static Option 2",
+                  "value": "static_option_2"
+                },
+                {
+                  "title": "Static Option 3",
+                  "value": "static_option_3"
+                }
+              ],
+              "value": "Static_option_2",
+              "isMultiSelect": true,
+              "style": "filtered",
+
+              "choices.data": {
+                "type": "Data.Query",
+                "dataset": "xbox",
+                "associatedInputs": "auto"
+              },
+              "id": "choiceGameMulti",
+              "type": "Input.ChoiceSet"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Needed by: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        },
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "id": "choiceDate",
+              "type": "Input.Date"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+  ],
+  "actions": [
+    {
+      "data": {
+        "msteams": {
+          "type": "invoke",
+          "value": {
+            "type": "task/submit"
+          }
+        }
+      },
+      "title": "Request Purchase",
+      "type": "Action.Submit"
+    }
+  ]
+}
+```
+
+The following code snippet shows an example of a bot invoke request for the card payload:
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "minecraft",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "xbox",
+        "data": {
+            "choiceGameSingle": "<value of the input>",
+            "choiceGameMulti": "<value of the input>",
+            "choiceDate": "<value of the input>"
+        }
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles"
+    // …. other fields
 }
 ```
 
