@@ -1,6 +1,6 @@
 ---
 title: Guidelines to Create Copilot Extensions
-description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -13,17 +13,17 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> * Plugins for Copilot for Microsoft 365 and Copilot for Teams chats are in preview and only work in Copilot for Microsoft 365 and Copilot for Teams chats in Teams.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Microsoft Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot for Microsoft 365 and Copilot for Teams chats to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365 and Copilot for Teams chats, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions must support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365 and Copilot for Teams chats. Message extensions must support one or more search commands, as Copilot for Microsoft 365 and Copilot for Teams chats recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
 
@@ -32,7 +32,7 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 ## Mandatory requirements
 
-The requirements for building message extension plugins for Copilot for Microsoft 365 include:
+The requirements for building message extension plugins for Copilot for Microsoft 365 and Copilot for Teams chats include:
 
 > [!div class="checklist"]
 >
@@ -43,7 +43,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 or Copilot for Teams chats to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 and Copilot for Teams chats.
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
@@ -59,9 +59,9 @@ Ensure that you adhere to the description guidelines listed in the following tab
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365 and Copilot for Teams chats, modify the app description to suit the following plugin requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365 and Copilot for Teams chats. For example, Use Contoso cloud in Copilot for Microsoft 365 and Copilot for Teams chats to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -165,7 +165,7 @@ Command description maps user intent and utterance to search command inside a pl
 
 #### Semantic description
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365 and Copilot for Teams chats. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 and Copilot for Teams chats uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -433,7 +433,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
-* Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
+* Copilot for Microsoft 365 and Copilot for chats in Teams might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
 * A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
