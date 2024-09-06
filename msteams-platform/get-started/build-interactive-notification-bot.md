@@ -69,7 +69,7 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
 
 1. Select **Open** to open in personal scope. 
 
-    Alternatively, select a channel, chat, or meeting for collaborative use and select **Go**.
+    Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
    :::image type="content" source="../assets/images/get-started/codespace/bot-teams-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 

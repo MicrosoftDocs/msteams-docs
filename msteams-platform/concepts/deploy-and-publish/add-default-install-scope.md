@@ -12,13 +12,13 @@ It’s common for an app to support multiple scenarios in Microsoft Teams, but y
 
 When the user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either shared or personal scope. 
 
-* Shared scope: If your app is primarily intended for use within a channel, it's identified by a **Recommended** label adjacent to the channel scope list.
+* Shared scope: If your app is primarily intended for use within a channel, it's identified by a **Recommended** label adjacent to the respective scope.
 
 * Personal scope: If the app supports personal scope, it's identified by an **Open** option to open the app in personal scope. 
 
     :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required app install scope.":::
 
-In addition to your app working in a personal scope, let's assume that your app's primary capability is a bot. Then you can also make the bot the default capability when a user installs your app to a team.
+In addition to your app working in a personal scope, let's assume that your app's primary capability is a bot, then you can also set the bot as the default capability when a user installs your app to a team.
 
 ## Configure your app's default install scope
 
@@ -62,7 +62,7 @@ If the app is configured with personal scope only, here's the user flow to add t
 <details>
 <summary>Personal and shared scopes</summary>
 
-If the app is configured with personal and shared scope, here's the user flow to add the app in the required scope:
+If the app is configured with personal and shared scopes with a default scope, here's the user flow to add the app in the required scope:
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
@@ -76,7 +76,7 @@ If the app is configured with personal and shared scope, here's the user flow to
 
 1. Select **Open** to open in personal scope.
 
-    Alternatively, you can select from the list of suggested scopes or search and select the required shared scope.
+    Alternatively, you can select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
     :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 
@@ -92,7 +92,7 @@ If the app is configured with personal and shared scope, here's the user flow to
 <details>
 <summary>Shared scope</summary>
 
-If the app is configured with shared scope, here's the user flow to add the app in the required scope:
+If the app is configured with shared scopes and a default scope, here's the user flow to add the app in the required scope:
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
@@ -104,7 +104,7 @@ If the app is configured with shared scope, here's the user flow to add the app 
 
     When the app is added, a dialog appears to select the scope.
 
-1. Select from the list of suggested scopes or search and select the required shared scope. The app opens in the respective scope.
+1. Select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
     :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
 
