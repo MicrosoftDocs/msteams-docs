@@ -1,7 +1,8 @@
 ---
 title: Teams Connect shared channels
 description:  Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
-localization_priority: Normal
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/02/2022
 ---
@@ -15,7 +16,8 @@ Microsoft Teams Connect shared channels allow members of a channel to collaborat
 * Individuals and other teams of other organizations.
 
 > [!NOTE]
-> Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC-High, and DOD environments.
 
 Teams Connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 

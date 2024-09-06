@@ -1,6 +1,6 @@
 ---
 title: SSO for Adaptive Card Universal Actions
-description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
+description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
