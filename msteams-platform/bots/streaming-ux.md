@@ -11,17 +11,13 @@ ms.author: surbhigupta
 
 >[!NOTE]
 >
-> Streaming UX is only available in one-on-one chats and [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Streaming UX is only available for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft Teams users expect swift and seamless interactions with bots, mirroring the instant responsiveness of chatbots like ChatGPT. However, the current experience falls short due to delays in response generation by underlying Large Language Models (LLMs) or others, leading to user disengagement and a perception of inadequacy.
+Microsoft Teams users expect swift and seamless interactions with bots, mirroring the instant responsiveness of chatbots like ChatGPT. Streaming UX introduces a dynamic interaction model where bots stream activity, and chunks of responses in real-time. This not only aligns with user expectations of promptness but also maintains user engagement. It transforms the wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows.
 
-To bridge this gap, the Streaming UX introduces a dynamic interaction model where bots stream activity and chunks of responses in real-time. This not only aligns with user expectations of promptness but also maintains engagement, transforming the wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows.
+Streaming UX can improve the user experience by making the bot seem more responsive, performative, and transparent. Streaming UX allows bots to send updates to the user while they're generating a response. Streaming UX has two types of updates:
 
-Streaming UX allows bots to send updates to the user while they're generating a response. It can be used to show the user what the bot is doing, such as searching a document or analyzing data, and to show the user the response as the bot is typing it out. Streaming UX can improve the user experience by making the bot seem more responsive, performative, and transparent.
-
-Streaming UX has two types of updates:
-
-* **Informative updates**: Informative updates are shown as a blue progress bar at the bottom of the chat, and they tell the user what the bot is doing before it has a response ready.
+* **Informative updates**: Informative update is shown as a blue progress bar at the bottom of the chat, and they tell the user what the bot is doing before it has a response ready.
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
 
@@ -35,42 +31,50 @@ To enable streaming in bots, follow these steps:
 
 1. ***Start streaming***: Initiate the streaming process to begin sharing content.
 
-    ```json
-    // Ex: A bot sends the second request with content && the content is informative loading message.
+   ```json
+
+   // Ex: A bot sends the second request with content && the content is informative loading message.
     
-        POST /conversations/<conversationId>/activities HTTP/1.1 {
-        "type": "typing",
-        " serviceurl": "<https://smba.trafficmanager.net/amer/> ",
-        "channelId": "msteams",
-        "from": {
-           "id": "<botId>",
-            "name": "BotName>"
-          },
-          "conversation": {
-            "conversationType": "personal",
-            "id : (conversationId>"
-          },
-          "recipient": {
-            "id": "recipientId>",
-            "name": "<recipientName>",
-            "aadObjectId": "<recipient aad objecID>"
-          },
-        "locale": "en-US"
-         "text": "Searching through documents.", // First informative loading message.
-         "channelData": { 
-         "streamType": "informative", // informative or streaming(name needs to be finalized); default: streaming.
-            "streamSequence": 1 // (required) incremental integer; must be present for any streaming request.
-         }
-    } 
+   POST /conversations/<conversationId>/activities HTTP/1.1 
+   {
+      "type": "typing",
+      " serviceurl": "<https://smba.trafficmanager.net/amer/> ",
+      "channelId": "msteams",
+      "from": {
+        "id": "<botId>",
+        "name": "BotName>"
+      },
+      "conversation": {
+        "conversationType": "personal",
+        "id : (conversationId>"
+      },
+      "recipient": {
+        "id": "recipientId>",
+        "name": "<recipientName>",
+        "aadObjectId": "<recipient aad objecID>"
+      },
+      "locale": "en-US"
+      "text": "Searching through documents.", // First informative loading message.
+      "channelData": { 
+        "streamType": "informative", // informative or streaming(name needs to be finalized); default: streaming.
+        "streamSequence": 1 // (required) incremental integer; must be present for any streaming request.
+      }
+    }
+
     201 created {a-0000l} // return activity id
-    ```
+
+   ```
   
-  :::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows the UX of start streaming." lightbox="../assets/images/bots/start_streaming.png":::
+   The following image is an example of start streaming:
+   
+   :::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows the UX of start streaming." lightbox="../assets/images/bots/start_streaming.png":::
 
 2. ***Provide informative updates***: Offer insights into the bot's current actions, such as **Scanning through documents** or **Summarizing Content**. These updates should occur before the bot generates its final response.
 
    ```json
+
     // Ex: A bot sends the second request with content && the content is informative loading message.
+
     POST /conversations/<conversationId>/activities HTTP/1.1 
     {
       "type": "typing",
@@ -102,12 +106,14 @@ To enable streaming in bots, follow these steps:
 
    ```
 
-  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
+   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
 
 3. ***Switch to response streaming***: Transition to response streaming once the bot is ready to generate the final message. Each update should include the latest version of the final message, appending new tokens generated by the LLM to the previous message content.
 
    ```json
+
    // Ex: A bot sends the second request with content && the content is informative loading message.
+
     POST /conversations/<conversationId>/activities HTTP/1.1
     {
      "type": "typing",
@@ -120,7 +126,7 @@ To enable streaming in bots, follow these steps:
      "conversation": {
         "conversationType": "personal",
         "id : (conversationId>"
-        },
+      },
      "recipient": {
       "id" : "recipientId>",
       "name": "<recipientName>",
@@ -135,10 +141,13 @@ To enable streaming in bots, follow these steps:
        }
     }
     200 0K
+
    ```
 
    ```json
+
    // Ex: A bot sends the second request with content && the content is informative loading message.
+
     POST /conversations/<conversationId>/activities HTTP/1.1
     {
      "type": "typing",
@@ -168,12 +177,14 @@ To enable streaming in bots, follow these steps:
     200 0K
    ```
 
-  :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
+   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
 4. ***End streaming and send the final message***: Conclude the streaming with an end signal and deliver the final message and its contents to the user.
 
     ```json
+
        // Ex: A bot sends the second request with content && the content is informative loading message.
+
         POST /conversations/<conversationId>/activities HTTP/1.1
         {
          "type": "message",
@@ -200,6 +211,7 @@ To enable streaming in bots, follow these steps:
            }
         }
         200 0K
+
        ```
    :::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the UX of final streamed message." lightbox="../assets/images/bots/streaming_final.png":::
 
