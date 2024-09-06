@@ -92,7 +92,7 @@ You must design your Adaptive Cards to look great on any device to provide an en
 
 ### Borders and rounded corners in Adaptive Cards
 
-You can add borders around containers, columns, column sets, and tables in Adaptive Cards to delineate different sections of the card. For more information, see [borders in Adaptive Cards](cards/cards-format.md#borders-in-adaptive-cards). You can add rounded corners to containers, columns, column sets, tables, and images in Adaptive Cards to make the card design look more modern and visually appealing. For more information, see [rounded corners in Adaptive Cards](cards/cards-format.md#rounded-corners-in-adaptive-cards).
+You can add borders to the `Container`, `ColumnSet`, `Column`, and `Table` elements in Adaptive Cards to delineate different sections of the card. For more information, see [borders in Adaptive Cards](cards/cards-format.md#borders-in-adaptive-cards). You can add rounded corners to the `Container`, `ColumnSet`, `Column`, `Table`, and `Image` elements in Adaptive Cards to make the card design look more modern and visually appealing. For more information, see [rounded corners in Adaptive Cards](cards/cards-format.md#rounded-corners-in-adaptive-cards).
 
 ## Overflow menu on Adaptive Cards
 

@@ -1149,7 +1149,7 @@ You can add rounded corners only to the following elements in an Adaptive Card, 
 
 ### Implement rounded corners in Adaptive Cards
 
-To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to an image, set the `style` property to `RoundedCorners` within the `Image` element.
+To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to the `Image` element, set the `style` property to `RoundedCorners` within the element.
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
