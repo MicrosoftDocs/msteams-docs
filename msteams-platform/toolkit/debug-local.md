@@ -260,12 +260,12 @@ When Teams client loads in the web browser, perform the following steps:
 
 1. Select **Add** to install the app in Teams.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot shows the Add local debug." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to Add the app." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
 1. Select **Open** to use the app in personal scope.
 
-    Alternatively, select a channel or chat for collaborative use and  move through the dialog to select **Go**.
-    
+    Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/local-debug-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    Your app is added to Teams!
