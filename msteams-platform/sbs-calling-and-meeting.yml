@@ -293,9 +293,9 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of calling bot with Add option highlighted.":::
 
-    1. Select **Open** to use the app in personal scope. 
+    1. Select **Open** to open the app in personal scope. 
 
-        Alternatively, select a channel, chat, or meeting for collaborative use and select **Go**.
+        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/calling-add-scope.png" alt-text="Screenshot of calling bot to add app in the required scope."::: 
 
