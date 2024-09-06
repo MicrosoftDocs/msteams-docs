@@ -72,6 +72,7 @@ The following image illustrates mobile experience of typeahead search:
 > * The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
 > * To use dynamic typeahead search in group chat, the user must add `groupchat` scope to the bot installation scope in the app manifest and install it to that particular group chat.
 > * The number of options in the dropdown is limited to 15.
+> * Define the `associatedInputs` property under the `Data.Query` object to ensure that the data query requests sent to the bot include the values of the associated inputs in the card. This action allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent dropdowns](#dependent-dropdowns).
 
 ### Schema properties
 
@@ -92,6 +93,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
 | count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
+| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. Allowed values: `auto`, `none` |
 
 ### Example
 
@@ -452,7 +454,7 @@ You can build dependent dropdowns where one input value (of any type) is associa
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
-**Placeholder**
+**To be validated**
 
 ```json
 {
