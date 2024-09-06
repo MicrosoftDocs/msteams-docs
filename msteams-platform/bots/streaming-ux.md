@@ -13,9 +13,9 @@ ms.author: surbhigupta
 >
 > Streaming UX is only available for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft Teams users expect swift and seamless interactions with bots, mirroring the instant responsiveness of chatbots like ChatGPT. Streaming UX introduces a dynamic interaction model where bots stream activity, and chunks of responses in real-time. This not only aligns with user expectations of promptness but also maintains user engagement. It transforms the wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows.
+Microsoft Teams users expect swift and seamless interactions with bots, mirroring the instant responsiveness of chatbots like ChatGPT. Streaming UX introduces a dynamic interaction model where bots stream activity, and chunks of responses in real-time. This not only aligns user expectations of promptness but also maintains user engagement. It transforms the wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows.
 
-Streaming UX can improve the user experience by making the bot seem more responsive, performative, and transparent. Streaming UX allows bots to send updates to the user while they're generating a response. Streaming UX has two types of updates:
+Streaming UX improves the user experience by making the bot seem more responsive, performative, and transparent. Streaming UX allows bots to send updates to the user while they're generating a response. Streaming UX has two types of updates:
 
 * **Informative updates**: Informative update is shown as a blue progress bar at the bottom of the chat, and they tell the user what the bot is doing before it has a response ready.
 
@@ -46,7 +46,7 @@ To enable streaming in bots, follow these steps:
       },
       "conversation": {
         "conversationType": "personal",
-        "id : (conversationId>"
+        "id : (conversationId)"
       },
       "recipient": {
         "id": "recipientId>",
@@ -66,7 +66,7 @@ To enable streaming in bots, follow these steps:
    ```
   
    The following image is an example of start streaming:
-   
+
    :::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows the UX of start streaming." lightbox="../assets/images/bots/start_streaming.png":::
 
 2. ***Provide informative updates***: Offer insights into the bot's current actions, such as **Scanning through documents** or **Summarizing Content**. These updates should occur before the bot generates its final response.
@@ -219,4 +219,3 @@ To enable streaming in bots, follow these steps:
 
 * Ensure no attachments are included during streaming.
 * Maintain only one stream per thread.
-* Handle other potential errors gracefully.
