@@ -387,7 +387,7 @@ Specifies information about your company. For apps submitted to the Teams Store,
 |`websiteUrl`|String|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|String|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|String|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|String|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`mpnId`|String|10 characters| |**Optional** The Microsoft Cloud Partner Program ID (formerly known as Microsoft Partner Network (MPN) ID) that identifies the partner organization building the app.|
 
 ## name
 
@@ -696,7 +696,7 @@ Provide your Microsoft Entra App ID and Microsoft Graph information to help user
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String||✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
-|`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
+|`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. The dummy URL string value mustn't contain domains or URLs that aren't in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid. The top-level domains are prohibited, for example, `*.com`, `*.org`. |
 
 ## graphConnector
 
@@ -722,7 +722,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
  **Optional** &ndash; Boolean
 
-Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default value: `false` 
+Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default value: `false`
 
 > [!NOTE]
 >
@@ -974,7 +974,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property specifies Outlook Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1050,14 +1050,14 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 |`tabs`| Array | 20 |✔️| Configures the custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
-|`tabs.builtinTabId`| String | 64 characters | | Specifies the ID of a built-in Office ribbon tab. The possible values vary by Office host application. Outlook add-ins are only supported and the allowed value for Outlook is "TabDefault". The default tab depends on where the Outlook add-in is surfaced, as determined in the "extensions.ribbons.contexts" property. In the main Outlook window, it is the **Home** tab, in a message window, it is the **Message** tab, and in a meeting window, it is the **Meeting** tab. |
-|`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
+|`tabs.builtinTabId`| String | 64 characters | | Specifies the ID of a built-in Office ribbon tab. The possible values vary by Office host application. Outlook add-ins are only supported and the allowed value for Outlook is "TabDefault". The default tab depends on where the Outlook add-in is surfaced, as determined in the "extensions.ribbons.contexts" property. In the main Outlook window, it's the **Home** tab, in a message window, it's the **Message** tab, and in a meeting window, it's the **Meeting** tab. |
+|`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | ✔️ | Specifies the ID of the built-in tab that the custom tab should be positioned next to. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.position.align`| String enum | | ✔️ | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
-|`tabs.groups`| Array | 10 | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` below.|
+|`tabs.groups`| Array | 10 | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
-|`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
+|`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.groups.icons`| Array | 3 | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`tabs.groups.icons.url`| String | 2048 characters | ✔️| Specifies the absolute URL of the icon.|
@@ -1069,7 +1069,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| String | 2048 charcters | ✔️ | Specifies the absolute URL of the icon.|
+|`tabs.groups.controls.items.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip.|
@@ -1078,7 +1078,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
+|`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.groups.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
 |`tabs.groups.controls.icons.url`| String | 2048 characters | | Specifies the absolute URL to the icon.|
@@ -1089,7 +1089,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.|
+|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups`.|
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
 |`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
@@ -1188,7 +1188,7 @@ Defines the icon properties of a given dashboard card.
 |`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
 |`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon's friendly name for the card. This value is used if `iconUrl` is not specified. |
 
-### dashboardCards.dashboardCard.contentSource 
+### dashboardCards.dashboardCard.contentSource
 
 Defines the content source of a given dashboard card.
 
