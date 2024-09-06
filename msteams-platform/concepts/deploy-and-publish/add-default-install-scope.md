@@ -10,19 +10,19 @@ ms.date: 12/15/2022
 
 It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. Teams UI helps users to identify the default scope to install your app.
 
-When the user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either shared or personal scope. 
+When the user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either personal or shared scope. 
 
-* Shared scope: If your app is primarily intended for use within a channel, it's identified by a **Recommended** label adjacent to the respective scope.
+* Personal scope: If the app supports personal scope, the **Open** option appears in scope selection dialog to open the app in personal scope. 
 
-* Personal scope: If the app supports personal scope, it's identified by an **Open** option to open the app in personal scope. 
+* Shared scope: If your app supports different shared scopes, all the supported scopes are lsited in the scope selection dialog. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
     :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required app install scope.":::
 
-In addition to your app working in a personal scope, let's assume that your app's primary capability is a bot, then you can also set the bot as the default capability when a user installs your app to a team.
+If you have a bot app that's intended to work in personal scope, then in addition to setting its default scope, you can also set the bot as the default capability during app installation.
 
 ## Configure your app's default install scope
 
-Default install scope allows you to specify whether your app is available for personal, team, or meeting scopes. You can configure the app's default install scope and can set only one scope at a time. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultinstallscope).
+You can use default install scope to specify whether your app is available for personal, team, or meeting scopes. When you configure the default install scope, you can set only one scope at a time. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultinstallscope).
 
 To configure the default install scope in your app manifest:
 
@@ -45,7 +45,7 @@ If the app is configured with personal scope only, here's the user flow to add t
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
-1. Browse and select the app to install.
+1. Browse and select the app that you want to install.
 
 1. In the app details dialog, select **Add**.
 
@@ -66,7 +66,7 @@ If the app is configured with personal and shared scopes with a default scope, h
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
-1. Browse and select the app to install.
+1. Browse and select the app that you want to install.
 
 1. In the app details dialog, select **Add**.
 
@@ -76,16 +76,16 @@ If the app is configured with personal and shared scopes with a default scope, h
 
 1. Select **Open** to open in personal scope.
 
-    Alternatively, you can select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
+    Alternatively, you can either select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
     :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with Open option and also the search option to select from shared scopes.":::
 
-    The app opens in the respective scope.
+    The app opens in the scope that you selected.
 
     > [!NOTE]
     >
-    > * **Recommended** button indicates the scope where the app provides best usage experience.
-    > * **View more** option lists the respective channel, chat, and meetings scopes available for the user.
+    > * The **Recommended** button indicates the scope in which the app provides best usage experience.
+    > * The **View more** option lists the respective channel, chat, and meetings scopes available for the user.
 
 </details>
 </br>
@@ -96,7 +96,7 @@ If the app is configured with shared scopes and a default scope, here's the user
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
-1. Browse and select the app to install.
+1. Browse and select the app that you want to install.
 
 1. In the app details dialog, select **Add**.
 
@@ -104,9 +104,11 @@ If the app is configured with shared scopes and a default scope, here's the user
 
     When the app is added, a dialog appears to select the scope.
 
-1. Select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
+1. Select either from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
     :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
+
+    The app opens in the scope that you selected.
 
 </details>
 </br>
