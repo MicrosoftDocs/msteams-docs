@@ -174,8 +174,8 @@ Get started with Teams AI library using the LightBot sample. It enables your com
    A dialog to select the required scope appears.
 
 1. Select **Open** to open the app in personal scope. 
-    
-   Alternatively, select a channel or chat for collaborative use and select **Go**.
+
+   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -300,7 +300,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Select **Open** to open the app in personal scope.
 
-   Alternatively, select a channel or chat for collaborative use and select **Go**.
+   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -415,7 +415,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Select **Open** to open the app in personal scope.
 
-   Alternatively, select a channel or chat for collaborative use and select **Go**.
+   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 

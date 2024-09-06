@@ -209,7 +209,7 @@ items:
 
     1. Select **Open** to open the app in personal scope.
 
-        Alternatively, select a channel or chat for collaborative use and select **Go**.
+        Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
