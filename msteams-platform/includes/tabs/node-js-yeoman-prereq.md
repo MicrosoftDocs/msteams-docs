@@ -66,7 +66,7 @@ In addition, this project requires that you have the following tools installed i
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and should only be used if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
     **What do you want to add to your project?**
 
