@@ -1115,7 +1115,7 @@ The following JSON payload shows an Adaptive Card with a border around columns a
 
 ## Rounded corners in Adaptive Cards
 
-You can use Adaptive Cards across multiple hosts that follow contemporary design systems and frameworks. Adaptive Cards support rounded corners in various elements to help maintain consistency across different hosts and keep up with the latest design trends.
+You can use Adaptive Cards across multiple hosts. Many of these hosts follow contemporary design systems and frameworks. Adaptive Cards support rounded corners in various elements to help maintain consistency with these hosts and keep up with the latest design trends.
 
 Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience.
 
