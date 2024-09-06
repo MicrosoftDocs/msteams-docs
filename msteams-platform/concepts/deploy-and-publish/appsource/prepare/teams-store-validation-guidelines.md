@@ -430,7 +430,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 * App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
 
   * Consider using any of the following:
-    * Use [Teams AI library](~/bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
+    * Use [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Suggested Fix*]
     * Use of moderation hooks, which can be used to regulate bot responses through moderation API. [*Suggested Fix*]
     * Add conversation sweeping capability, which helps you monitor conversations and intervene when conversations go astray. [*Suggested Fix*]
 
@@ -505,7 +505,7 @@ The app manifest defines your app's configuration.
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Mandatory Fix*]
 
-* We recommend that you declare the Microsoft Partner Network (MPN) ID in the app manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
+* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Suggested Fix*]
 
 * Scopes and/or context declared in app manifest must be visible within the app. [*Mandatory Fix*]
 
@@ -1865,7 +1865,7 @@ The long description of an app must clearly call out the following:
 ## See also
 
 * [Test and debug your app](~/concepts/build-and-test/debug.md)
-* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
+* [Validate your app in Developer Portal for Teams](../../../build-and-test/manage-your-apps-in-developer-portal.md#publish)

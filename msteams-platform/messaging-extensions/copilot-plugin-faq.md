@@ -5,7 +5,8 @@ description: Get answers to some frequently asked questions while building a plu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 11/14/2023
+ms.date: 02/14/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Frequently Asked Questions

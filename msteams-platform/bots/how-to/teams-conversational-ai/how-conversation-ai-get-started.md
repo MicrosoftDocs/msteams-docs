@@ -1,5 +1,5 @@
 ---
-title: Get started with Teams AI library
+title: Use Teams AI Library to Build Apps/Bots
 description: In this article, learn how to create an app using Teams AI library with AI component, storage, register data source, prompts, and actions.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -499,7 +499,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
 
-   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/sequence/config.json)
+   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/tools/config.json)
 
     ```json
      {

@@ -1,5 +1,5 @@
 ---
-title: Create a personal tab
+title: Methods to Build Personal Tab App
 author: laujan
 description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
 ms.localizationpriority: high
@@ -89,7 +89,7 @@ Following are the steps to create a personal tab:
 
     * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
-      This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+      This field isn't required and must be used only if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
     * **What do you want to add to your project?**
 
@@ -603,7 +603,7 @@ Here's a list of tools you require for building and deploying your app.
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 ## Prepare development environment
 
