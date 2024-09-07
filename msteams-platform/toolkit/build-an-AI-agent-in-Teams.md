@@ -343,4 +343,4 @@ When the assistant provides a function and its arguments for execution, the SDK 
 
 ## See also
 
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
