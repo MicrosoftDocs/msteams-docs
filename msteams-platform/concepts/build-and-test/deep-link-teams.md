@@ -164,7 +164,7 @@ Use the following deep link format can be used in a bot, connector, or message e
 
 The query parameters are:
 
-* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc` or `sharepointIds.listItemUniqueId` from Sharepoint Online `driveItem` API response. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID, such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
