@@ -90,15 +90,13 @@ items:
 
         When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
-    1. Select **Add** 
+    1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of Proactive message bot installation with Add option highlighted.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of Proactive Message app installation with Add option highlighted.":::
 
     1. Select a channel or chat to use the app colloboratively and move through the dialog to select **Go**.
 
-    1. Select a channel or chat to use the app collaboratively and move through the dialog to select **Go**.
-
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of Proactive message bot displaying the scope options.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of Proactive Message app with scope options.":::
 
     1. Enter the name of a chat or team in the search field and select **Set up a bot**. 
     
