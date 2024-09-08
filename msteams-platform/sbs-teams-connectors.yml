@@ -195,13 +195,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/addtoteam-1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Add option highlighted.":::
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam-1.png" alt-text="Screenshot of TeamsTodo Connector installation with Add option highlighted.":::
 
     1. Search and select the required channel and then select **Go** to open the app.
 
-       :::image type="content" source="~/assets/images/sbs-connector/channel-1.png" alt-text="Screenshot of adding TeamsTodo Connector in .NET/C# to a team with Type a team or channel name":::
- 
-    1. Select **Set up a connector**.
+       :::image type="content" source="~/assets/images/sbs-connector/channel-1.png" alt-text="Screenshot of TeamsTodo Connector displaying the scope options.":::
 
     1. In the left pane, search **Teams ToDo** connector in the search bar and select **Configure**.
 

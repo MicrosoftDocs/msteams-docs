@@ -200,7 +200,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-addapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with the Add option highlighted in red.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-addapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with Add option highlighted.":::
+    
+    1. Select **Open**.
+
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-openapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with Open option highlighted.":::
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
