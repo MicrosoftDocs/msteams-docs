@@ -88,7 +88,7 @@ Once the provisioning and deployment steps are complete:
 
    Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope.png"" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You successfully added your bot app to the Teams client.
 

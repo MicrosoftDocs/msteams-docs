@@ -292,7 +292,7 @@ items:
        
         Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-scope.png"" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
