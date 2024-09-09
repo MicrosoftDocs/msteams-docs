@@ -17,7 +17,11 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+> * Message extension plugins for declarative Copilot are in limited private preview.
 
+This section is in line with [Microsoft commercial marketplace policy number 1140.9](/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
+
+<!--
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
@@ -35,10 +39,9 @@ We recommend that you build or upgrade your existing message extensions to maxim
 > * [Guidelines for specific Copilot extensions](#guidelines-for-specific-copilot-extensions) relevant for your Copilot extension.
 > * [Guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams), if you want to configure a custom Graph connector for Copilot for Microsoft 365
 
-<!--
 > [!NOTE]
 > If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
--->
+
 
 ## Common requirements for Copilot extensions
 
@@ -56,24 +59,46 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 > [!NOTE]
 > The common requirements must be ensured in addition to [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) for  increasing the chances of your app to pass the Microsoft Teams Store submission process
+-->
 
-## Define app, command, and parameter descriptions
+## Descriptions
 
-[*Must-fix*]
+<!--[*Must-fix*]-->
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations.
+
+<!--A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.-->
+
+Description related guidelines for M365 apps apply - Link; In addition copilot extensions must follow below guidelines -
+
+- Short description of app, parameter, command description, Semantic description & operation ID must not include –
+  - Instructional phrases E.g. “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
+  - URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
+  - Grammar and punctuation errors [*Must-fix*]
+  - Overly verbose, flowery, or marketing language. [*Good-to-fix*]
+  - Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
+
+    > [!NOTE]
+    > In case of declarative Copilots, above checks also apply to instructions and conversation starters fields.
+
+  - Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
+
+- App long description should clearly call out that extension works in Copilot E.g., Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
-Ensure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
+- The semanticDescription property isn't a mandatory field. However, if you add semanticDescription in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+<!--nsure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
 
 | Action | Reason |
 | --- | --- |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and long descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the descriptions don't guide Copilot to take actions that bypass the normal functioning of the application. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
+-->
 
 ### App description
 
