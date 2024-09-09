@@ -9,7 +9,7 @@ ms.author: v-sdhakshina
 
 # Media elements in Adaptive Card
 
-Media elements in Adaptive Card provides enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card.
+Media elements in Adaptive Card provide enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card.
 
 Adaptive Card plays the video or audio clips by accessing the media files available in OneDrive or SharePoint. You can view the media files within the Adaptive Card in Teams.
 

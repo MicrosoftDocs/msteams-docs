@@ -1,6 +1,6 @@
 ---
 title: Use Universal Actions for Adaptive Card
-description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
+description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 12/20/2022
@@ -64,13 +64,13 @@ The following are the features of UserIds in refresh:
 
 * UserIds is an array of user MRIs, which is part of the `refresh` property in Adaptive Cards.
 
-* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card isn't automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
+* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card isn't automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you might choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
 
 * UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. The `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
 
 * You can fetch Teams conversation member's user MRIs. For more information on how to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
- You can get the user MRI for channel, Group Chat or 1:1 chat using the following example:
+ You can get the user MRI for personal chats, group chats, or channels using the following example:
 
  1. Using TurnContext  
 

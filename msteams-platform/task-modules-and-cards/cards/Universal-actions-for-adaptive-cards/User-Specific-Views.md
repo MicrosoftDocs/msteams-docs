@@ -1,6 +1,6 @@
 ---
 title: User Specific Views in Adaptive Cards
-description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
+description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -228,7 +228,7 @@ The following list provides card design guidelines for User Specific Views:
 
 * Refresh timeout: Teams client triggers a refresh in two ways, either through **Refresh** or by selecting **Execute**. The refresh triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
 
-* For User Specific Views, Teams client stores 50 latest cached cards per user. When a new card requires caching, the store removes the oldest card based on when it's last read and replaces it with the latest card. There's no process to restore the removed cards after a certain period. The user can also clear Teams cache to delete cards from the store.
+* For User Specific Views, Teams client stores 50 latest cached cards per user. When a new card requires caching, the store removes the oldest card based on when its last read and replaces it with the latest card. There's no process to restore the removed cards after a certain period. The user can also clear Teams cache to delete cards from the store.
 
 * A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with **Refresh** enabled.
 
