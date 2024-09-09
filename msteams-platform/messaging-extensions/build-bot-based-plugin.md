@@ -362,7 +362,7 @@ For more on testing your plugin in Copilot for Microsoft 365, see [Debugging plu
 
 ## Render an app as a plugin in Copilot for Microsoft 365
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
+To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
 
 * Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
