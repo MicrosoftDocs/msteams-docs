@@ -70,7 +70,7 @@ A good description offers a clear and concise summary of the app’s features an
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
-* Short description of app, parameter, command description, Semantic description & operation ID must not include –
+* Short description of app, parameter, command description, Semantic description & operation ID must not include:
   * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
   * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
   * Grammar and punctuation errors [*Must-fix*]
@@ -78,11 +78,11 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
     > [!NOTE]
-    > In case of declarative Copilots, above checks also apply to instructions and conversation starters fields.
+    > In case of declarative Copilots, these guidelines apply to instructions and conversation starters fields also.
 
-  * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
+  * Superlative claims such as, “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
-* App long description should clearly call out that extension works in Copilot, for example, Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description should clearly call out that extension works in Copilot. For example, use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
@@ -919,7 +919,7 @@ Follow these requirements:
 
 ## Technical requirements
 
-For Copilot extension to be validated, invoked, and work seamlessly, ensure that it meets the following criteria: [*Must fix*]
+For Copilot extensions to be validated, invoked, and work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
 |---|---|
