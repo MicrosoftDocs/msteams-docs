@@ -1122,7 +1122,7 @@ Rounded corners make the card design look more modern and visually appealing, cr
 
 **Without rounded corners**
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-no-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card without rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-no-rounded-corner.png"::::::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card without rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-no-rounded-corner.png":::
 
 :::column-end:::
 
