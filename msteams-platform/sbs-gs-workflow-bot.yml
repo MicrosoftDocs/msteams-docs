@@ -96,7 +96,7 @@ items:
        
         Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
         
-        :::image type="content" source="~/assets/images/sbs-workflow-bot/workflowbot-add-scope.png.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+        :::image type="content" source="~/assets/images/sbs-workflow-bot/workflowbot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     ### Take tour of source code
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
