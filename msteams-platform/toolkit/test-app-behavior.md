@@ -47,9 +47,12 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 1. Add your app to Teams as per your requirement:
 
     1. Select **Add** to add your personal app.
-    1. Use the dropdown menu to add your app to a Team or chat.
+        
+        :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of custom app installation to Teams with Add option highlighted.":::
 
-   :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the App description.":::
+    1.  Select **Open** to use the app in personal scope. Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**. <br>
+
+        :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of custom app displaying the scopes on how the app can be used. The displayed options are open and select a channel or chat.":::
 
 You can test your Teams app after integrating with Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Microsoft Teams Toolkit for testing your Teams app:
 
