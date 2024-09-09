@@ -111,6 +111,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 * For declarative copilot, ensure that the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical.
 
+<!--
 ### App description
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
@@ -480,9 +481,15 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ```
 
 ---
+-->
 
-## Enhance message extension to retrieve information through compound utterances
+## Compound utterances
 
+Copilot eextensions must support atleast more than three unique compound utterances by handling three or more parameters.
+
+:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
+
+<!--
 [*Must-fix*]
 
 > [!NOTE]
@@ -588,14 +595,20 @@ For Copilot for Microsoft 365, a search-based message extension must support mor
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
-## Define sample prompts
+-->
+
+## Sample prompts
 
 [*Must-fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various extensiosn within Copilot.
+
+<!--Copilot uses the sample prompts to display the prompts for the user.-->
+ The prompts must be adaptable to different locales and clear across different commands. <!--Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.-->
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
 
+<!-->
 > [!NOTE]
 >
 > * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
@@ -603,6 +616,10 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 > * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
 
 We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
+-->
+
+Plugins must have sample prompts to guide users on how to use the various plugins within Copilot. [*Must Fix*]
+Sample prompts are specified using `samplePrompts` property in the manifest. These prompts must meet the following requirements: [*Must Fix*]
 
 * A plugin must have at least three prompts and maximum of five prompts for each command.
 * Each prompt must not exceed 128 characters.
@@ -611,6 +628,7 @@ We recommend you to follow these guidelines to increase the chances of your app 
 * All sample prompts must be functional and return responses.
 * Prompt must be relevant to the commands.
 
+<!--
 The following code is an example of the `samplePrompts` property in app manifest:
 
 ```json
@@ -649,6 +667,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 ```
 
 ---
+-->
 
 ## Create rich Adaptive Card responses
 
