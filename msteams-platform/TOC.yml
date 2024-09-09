@@ -575,7 +575,8 @@
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
-
+    - name: Extend bot-based message extension as plugin for Copilot
+      href: messaging-extensions/bot-based-action-plugin.md
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
