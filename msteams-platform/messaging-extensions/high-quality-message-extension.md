@@ -19,7 +19,7 @@ ms.collection: ce-skilling-ai-copilot
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 > * Message extension plugins for declarative Copilot are in limited private preview.
 
-This section is in line with [Microsoft commercial marketplace policy number 1140.9](/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
+This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
 <!--
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
