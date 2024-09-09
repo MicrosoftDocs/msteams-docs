@@ -825,7 +825,7 @@ Copilot extensions must be fully responsive and functional on the latest version
 
 [*Must-fix*]
 
-Copilot for Microsoft 365 is available in Teams meetings. You must implement the following:
+<!--Copilot for Microsoft 365 is available in Teams meetings.--> You must implement the following:
 
 * Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Must fix]*
 
@@ -846,7 +846,7 @@ Copilot for Microsoft 365 is available in Teams meetings. You must implement the
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
-## Message extensions plugins in Copilot for Microsoft 365 applications
+<!--## Message extensions plugins in Copilot for Microsoft 365 applications
 
 [*Must-fix*]
 
@@ -855,11 +855,11 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 Copilot extensions customize and extend the Copilot for Microsoft 365 experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot extensions, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
 
- If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
+ If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.-->
 
-### Requirements for plugins in Copilot for Microsoft 365
+### Ensure your extensions work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
-To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots, follow these requirements:
+Follow these requirements:
 
 * **Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps**
 
@@ -886,8 +886,8 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 
         > [!NOTE]
         >
-        > * Support for Excel and OneNote client applications to be available soon.
-        > * For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
+        <!-->> * Support for Excel and OneNote client applications to be available soon.-->
+        > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 * **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
 
@@ -920,7 +920,7 @@ To ensure your plugins work with Word, Excel, PowerPoint, OneNote, Office, and O
 
 ## Technical requirements
 
-For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
+For Copilot extension to be validated, invoked, and work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
 |---|---|
@@ -932,10 +932,10 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | [Single sign-on (SSO)](#requirements-for-plugins-in-copilot-for-microsoft-365) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | [Content Security Policy](#requirements-for-plugins-in-copilot-for-microsoft-365) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
-> [!IMPORTANT]
-> If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
+<!-->> [!IMPORTANT]
+> If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).-->
 
-## Guidelines for specific Copilot extensions
+<!--## Guidelines for specific Copilot extensions
 
 Microsoft 365 supports various Copilot extensions, including message extensions, API extensions, declarative Copilot, and custom engine Copilot. Besides the common guidelines, there are specific guidelines for each type of Copilot extension.
 
@@ -996,28 +996,35 @@ The example shown in the image gives three utterances:
 
 :::image type="content" source="../assets/images/Copilot/dc-rich-citation.png" alt-text="This image shows an exmaple of rich citation in a Copilot.":::
 
-</details>
+</details>-->
 
-<details>
-<summary><b>Share user disclosure and seek user confirmation for action scenarios</b></summary>​
+## User disclosure and confirmation for action scenarios
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
-</details>
+For action scenarios, Copilot extensions must share user disclosure & seek user confirmation [*Must Fix*].
 
-<details>
-<summary><b>Instructions-only Copilots must not be supported</b></summary>
+* Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
 
-In the following example, declarative Copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
+* A confirmation of the completion of the action must be shared by the plugin in form of card etc.
 
-:::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::
+* Action taken by user must be correctly reflected in 3P service.
 
-In the following example, no nodes are defined for actions or Graph connectors etc. The results are not grounded in a data sources, and for this reason, the authenticity of the result is questionable. ​
+* Modification requests by user prior to confirmation of the action, must be honoured.
+
+* Highly consequential tasks such as bulk delete should not be supported. [*Suggested Fix*]
+
+## Instructions-only Copilots must not be supported
+
+<!--In the following example, declarative Copilot includes Type B plugin with actions defined as functions like List Repair, Create Repairs​.
+
+:::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::-->
+
+If your copilot extension does not have any nodes are defined for actions or Graph connectors etc in the manifest, the extension responses are not grounded in a data sources. These extensions, also called as instruction only copilot extensions, are not allowed considering questionable authenticity of the result. [*Must fix*]
+​
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
-</details>
-
-<details>
+<!--<details>
 <summary><b>Be responsive and fail gracefully for topics that it doesn’t specialize</b></summary>​
 
 :::image type="content" source="../assets/images/Copilot/dc-no-spam-in-copilot.png" alt-text="This image shows an example of how Copilot can fail gracefully and be responsive.":::
@@ -1030,9 +1037,7 @@ In the following example, no nodes are defined for actions or Graph connectors e
 
 details TBA
 </details>
-->
 
-<!--
 ### Validation guidelines for custom engine Copilot
 
 The validation guidelines for declarative Copilot are applicable for custom engine Copilot as well. In addition, you must ensure that the following validations are met:
@@ -1107,7 +1112,6 @@ For each message, the bot can customize sensitivity information. A sensitivity i
 * Must be responsive and fail gracefully for topics that it doesn’t specialize ​
 
 * Must not spam users by sending multiple messages in short succession​
--->
 
 ## Validation guidelines for action-based message extension in Copilot
 
@@ -1119,8 +1123,6 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 | ✔️ | A confirmation of the completion of the action is shared by the plugin in the form of card. [Bot sent card is not supported.] |
 | ✔️ | Action taken by user is correctly reflected in 3P service |
 | ✔️ | If your plugin encounters an error while completing the action, graceful failure along with the way forward message must be shared with the user​ |
-
-<!--
 
 * Plugin must show all data parameters that are being sent to the app and ask for confirmation of the action from user [Platform]​
 
@@ -1140,7 +1142,6 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 * Compound utterances via Multi parameter (3 or more) ​
 
 * Include at least 3 sample prompts in the manifest​
--->
 
 ## Validation guidelines for API plugins in Copilot
 
@@ -1158,7 +1159,6 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 | ✔️ | Ensure plugins follows standard security protocols such as TLS 1.2 or higher and all API calls must use HTTPS with TLS 1.2 or higher |
 |  :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Multi-delete scenario must not be supported |
 
-<!--
 * When user query is not complete or does not match for action intent, plugin must ask user for clarification related to required fields for calling an action [Platform] ​
 
 * Plugin must show what data is being sent to the app and ask for confirmation of the action from user [Platform] ​
