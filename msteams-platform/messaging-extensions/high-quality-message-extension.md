@@ -1,6 +1,6 @@
 ---
-title: Guidelines to Create Copilot Extensions
-description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+title: Guidelines to validate Copilot Extensions
+description: Learn to increase the chances of your your message extension as a plugin for Microsoft Copilot for Microsoft 365 to pass the Teams Store submission process. Understand the must fixes and good-to-fixes, and validation guidelines.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -9,7 +9,7 @@ ms.date: 07/03/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Guidelines to create or upgrade Copilot extensions
+# Validation guidelines for Copilot extensions
 
 > [!IMPORTANT]
 >
