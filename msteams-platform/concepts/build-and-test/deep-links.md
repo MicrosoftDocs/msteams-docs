@@ -33,7 +33,7 @@ You can use deep links in Teams in the following ways:
 
 * **Deep link to teams and channels**: Use a deep link to navigate to a particular team or channel. For more information, see [deep link to a channel](~/concepts/build-and-test/deep-link-teams.md).
 
-    :::image type="content" source="~/assets/images/deeplink-teams-and-channels.gif" alt-text="Graphical representation shows the user experience of deep links in channel.":::
+    :::image type="content" source="~/assets/images/deeplink-teams-and-channels.gif" alt-text="Graphical representation that shows the user experience of deep links in group chat.":::
 
 * **Deep link to a workflow**: Use a deep link to create a new chat, open a scheduling dialog, or navigate to an audio-video call. App users can benefit from an improved app experience by utilizing simplified or automated user tasks. These tasks include initiating a new chat or scheduling a meeting that can be made easier by prepopulating the deep links with necessary parameters.
 
