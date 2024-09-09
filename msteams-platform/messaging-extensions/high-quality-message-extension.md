@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Copilot in Microsoft Teams.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
@@ -90,7 +90,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
-<!--nsure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
+<!--Ensure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
 
 | Action | Reason |
 | --- | --- |
@@ -103,7 +103,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
-In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
+In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to Copilot functionality. [*Must-fix*]
 
 ## App or extension name
 
@@ -1006,7 +1006,7 @@ For action scenarios, Copilot extensions must share user disclosure & seek user 
 
 * Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
 
-* A confirmation of the completion of the action must be shared by the plugin in form of card, etc.
+* A confirmation of the completion of the action must be shared by the plugin in the form of card.
 
 * Action taken by user must be correctly reflected in 3P service.
 
