@@ -235,7 +235,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/tab-in-teams.png" alt-text="Screenshot of TabAdaptiveCard with Add option highlighted in red.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/tab-in-teams.png" alt-text="Screenshot of app details dialog with Add option.":::
+
+    1. Select **Open** to open the app in personal scope.
+
+        :::image type="content" source="~/assets/images/adaptive-cards/add-scope-tab-in-teams.png" alt-text="Screenshot of scope selction dialog to open the app in personal scope.":::
 
         You can interact with this tab by signing in.
    

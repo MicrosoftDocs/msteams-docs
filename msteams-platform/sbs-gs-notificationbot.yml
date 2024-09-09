@@ -116,6 +116,12 @@ items:
     
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output1"border="true":::
 
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
        Your notification bot app is uploaded into Teams client.
 
        In real time, events are triggered by an external source, such as a third party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually using powershell or terminal.

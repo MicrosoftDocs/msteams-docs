@@ -184,7 +184,11 @@ items:
   
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="add the app tab device permission":::               
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="Screenshot of app details dialog to add app to Teams.":::               
+
+    1. Select **Open** to open the app in personal scope.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-add-scope.png" alt-text="Screenshot of scope selction dialog to open the app in personal scope.":::
 
     1. Select **Device Permission Tab** to see the following output:
 
