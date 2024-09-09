@@ -416,7 +416,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
-1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
+1. Select **Add** and select a channel, chat or meeting to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
@@ -631,7 +631,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
-1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
+1. Select **Add** select a channel, chat or meeting to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 
@@ -892,9 +892,13 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. Select **Add to a team** when prompted to install the app to Teams.
+1. Select **Add** when prompted to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot shows the option to add your blazor app to a team.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of blazor app installation with Add option highlighted.":::
+
+1. Select a channel or chat for collaborative use and move through the dialog to select **Go**.
+    
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of blazor app with shared scope options.":::
 
     Congratulations, your first tab app is running in your local environment!
 
@@ -996,7 +1000,11 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Add** when prompted to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app.PNG" alt-text="Screenshot shows the option to add your Blazor app in Teams.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of Blazor app installation with Add option highlighted.":::
+
+1. Select a channel or chat for collaborative use and move through the dialog to select **Go**.
+    
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of Blazor app with chat or channel scope options.":::
 
     Congratulations, your first tab app is running in your Azure environment!
 
