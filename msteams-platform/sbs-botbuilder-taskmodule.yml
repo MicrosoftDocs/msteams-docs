@@ -188,8 +188,12 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/add-app-card.png" alt-text="Add the app":::
-   
+       :::image type="content" source="~/assets/images/Teams-task-module/add-app-card.png" alt-text="Screenshot of Task module app installation with Add option highlighted.":::
+
+    1. Select **Open**.
+
+       :::image type="content" source="~/assets/images/Teams-task-module/open-app-card.png" alt-text="Screenshot of Task module app with Open option highlighted.":::
+
     1. In the compose message area, type **hi** and bot sends an Adaptive card. 
 
        :::image type="content" source="~/assets/images/Teams-task-module/chat_ready_1.png" alt-text="Chat":::
