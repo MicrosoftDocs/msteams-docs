@@ -82,7 +82,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
   * Superlative claims such as, “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
-* App long description should clearly call out that extension works in Copilot. For example, use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description must clearly call out that extension works in Copilot. For example, use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
@@ -1006,13 +1006,13 @@ For action scenarios, Copilot extensions must share user disclosure & seek user 
 
 * Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
 
-* A confirmation of the completion of the action must be shared by the plugin in form of card etc.
+* A confirmation of the completion of the action must be shared by the plugin in form of card, etc.
 
 * Action taken by user must be correctly reflected in 3P service.
 
-* Modification requests by user prior to confirmation of the action, must be honored.
+* Modification requests by user prior to confirmation of the action must be honored.
 
-* Highly consequential tasks such as bulk delete should not be supported. [*Suggested Fix*]
+* Highly consequential tasks such as, bulk delete must not be supported. [*Suggested Fix*]
 
 ## Instructions-only Copilots must not be supported
 
@@ -1020,28 +1020,28 @@ For action scenarios, Copilot extensions must share user disclosure & seek user 
 
 :::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::-->
 
-If your copilot extension does not have any nodes are defined for actions or Graph connectors etc in the manifest, the extension responses are not grounded in a data sources. These extensions, also called as instruction only copilot extensions, are not allowed considering questionable authenticity of the result. [*Must fix*]
+If your Copilot extension doesn't have any nodes defined for actions or Graph connectors in the manifest, the extension responses are not grounded in a data sources. These extensions, also called as instruction-only Copilot extensions, aren't allowed due to questionable authenticity of the result. [*Must fix*]
 
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
 ## Graceful error handling
 
-All copilot extensions must handle below scenarios gracefully i.e. reject user request provide way forward. [*Must fix*]
+All Copilot extensions must handle the following scenarios gracefully, that is, the extension must reject the user request and provide a way forward. [*Must fix*]
 
 * For incorrect search parameters
 * For misuse or inappropriate language
 * For topics in which the Copilot doesn’t specialize
 
-  For example, Graceful error message with way forward for declarative copilot:
+  For example, Graceful error message with way forward for declarative Copilot:
 
   :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshots how to incorporate graceful error handling.":::
 
-## Security requirements for OpenAPI spec url
+## Security requirements for OpenAPI spec URL
 
-Copilot extensions that use OpenAPI specs must follow below security standards:
+Copilot extensions that use OpenAPI specs must ensure the following security standards:
 
 * All API calls must use HTTPS with TLS 1.2 or higher.
-* API calls must not lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer.
+* API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer.
 
 <!--<details>
 <summary><b>Be responsive and fail gracefully for topics that it doesn’t specialize</b></summary>​
