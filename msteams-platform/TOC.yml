@@ -782,6 +782,9 @@
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+  - name: Enable nested app authentication
+    href: concepts/authentication/nested-authentication.md
+    displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
@@ -992,7 +995,7 @@
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
   - name: Purchase and manage app subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-    displayName: Purchase, apps, License, manage
+    displayName: Purchase, Teams apps, License, manage, buy subscriptions
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
@@ -1048,48 +1051,6 @@
       displayName: Power BI, Power Apps, Power Automate, Project Oakdale
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-  - name: Collaboration controls
-    items:
-    - name: Overview
-      href: samples/collaboration-control.md
-      displayName: Dataverse
-    - name: Install Collaboration controls
-      href: samples/install-collaboration-control.md
-    - name: Create an app with Collaboration controls
-      href: samples/app-with-collaboration-controls.md
-      displayName: application, groupId, approvals 
-    - name: Deploy an app with Collaboration control to Teams
-      href: samples/deploy-collaboration-control-in-teams.md
-    - name: Optional configurations for Collaboration control app
-      items:
-      - name: Power Automate
-        href: samples/collaboration-control-power-automate.md
-      - name: Configure Tasks for external clients 
-        href: samples/configure-tasks.md
-      - name: Virtual tables for Tasks, Meetings, and Files
-        items:
-        - name: Overview
-          href: samples/virtual-tables-for-tasks.md
-          displayName: entities
-        - name: Virtual tables web API 
-          href: samples/virtual-tables-api.md
-        - name: Virtual tables entity reference  
-          href: samples/virtual-table-entity-references.md
-          displayName: entities           
-    - name: Collaboration controls and Settings API
-      items:
-      - name: Overview
-        href: samples/collaboration-api-reference.md
-      - name: Collaboration - Custom APIs
-        href: /rest/api/industry/collaboration-controls/collaboration-custom-apis
-      - name: Collaboration - Standard OData APIs
-        href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-apis
-      - name: Settings - Custom APIs
-        href: /rest/api/industry/collaboration-controls/settings-custom-apis
-      - name: Settings - Standard OData APIs
-        href: /rest/api/industry/collaboration-controls/settings-standard-o-data-apis
-    - name: Limitations for Collaboration control   
-      href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
     displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
@@ -1125,19 +1086,19 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: create deep link, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: create deeplink for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
-      displayName: create deep link for specific chat, deep link for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
+      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
-      displayName: create deep link for workflow, deep link for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
-    - name: Execution and handling of deep links
+      displayName: create deep link for workflow, deeplink for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
+    - name: Execution and handling of deeplinks
       href: concepts/build-and-test/deep-links-execution-handling.md
-      displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
+      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
   - name: Use Fluid with Teams
