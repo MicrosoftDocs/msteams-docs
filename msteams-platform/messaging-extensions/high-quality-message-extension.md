@@ -100,6 +100,18 @@ Description related guidelines for M365 apps apply - Link; In addition copilot e
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the descriptions don't guide Copilot to take actions that bypass the normal functioning of the application. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 -->
 
+## Screenshots
+
+The [description](#descriptions) related guidelines for Microsoft 365 apps apply. In addition, the following guidelines must also be followed:
+
+- Apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
+
+## App or extension name
+
+The [description](#descriptions) related guidelines for Microsoft 365 apps apply. In addition, the following guidelines must also be followed:
+
+- For declarative copilot, ensure that the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. 
+
 ### App description
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
