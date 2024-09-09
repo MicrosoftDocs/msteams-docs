@@ -360,6 +360,104 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 For more on testing your plugin in Copilot for Microsoft 365, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
 
+## Render an app as a plugin in Copilot for Microsoft 365
+
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
+
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
+
+The following table lists the short description examples for each category:
+
+# [Tasks](#tab/tasks)
+
+**Description**: Create, search, view tickets, bugs, and projects.
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.13",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "Tasks",
+    "full": "Contoso Tasks"
+  },
+  "description": {
+    "short": "Create, search, view tickets, bugs, and projects",
+    "full": "Contoso Tasks makes it easy to stay organized. Create, assign, and track tasks individually or collaboratively with your team, and see everything come together in one place."
+  },
+```
+
+# [Surveys](#tab/surveys)
+
+**Description**: Create and search for surveys and results.
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.13",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "Survey",
+    "full": "Contoso Survey"
+  },
+  "description": {
+    "short": "Create and search for surveys and results.",
+    "full": "Contoso Survey helps you manage all your surveys in one place. Create, capture and analyze surveys within the platform you use every day."
+  },
+```
+
+# [CRM](#tab/crm)
+
+**Description**: Search and view customer leads.
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.13",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "CRM",
+    "full": "Contoso CRM"
+  },
+  "description": {
+    "short": "Search and view customer leads.",
+    "full": "Resolve tickets faster, simplify employee workflows and improve team performance by integrating Contoso CRM to Microsoft Teams. Contoso CRM is a complete customer service solution that’s easy to use and scales with your business."
+  }
+```
+
+# [General](#tab/general)
+
+**Description**:  Stock and share lookup tool.
+
+**App description example:**
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.13",
+  "id": "2bxxxxc5-5xxx-4xxx-aXXX-94xxxx8919e5",
+  "name": {
+    "short": "General",
+    "full": "Contoso stocks"
+  },
+  "description": {
+    "short": "Stock and share look up tool.",
+    "full": "Get real-time stock quotes and share them in a conversation. Search by company name, share, or stocks."
+```
+
+---
+
 ## Enable message extension as a plugin for Copilot for meetings
 
 Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365. Before you get started, We recommend you to follow the guidelines listed in [Copilot for Microsoft 365 extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
