@@ -435,11 +435,10 @@ and when for these, and just reference that from here, along with the set of ste
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
 1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
-The following window appears:
+1. Select **Add** when prompted to install the app to teams.
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="Screenshot shows an example of the bot after it's uploaded into Teams.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with Add option highlighted.":::
 
-1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
