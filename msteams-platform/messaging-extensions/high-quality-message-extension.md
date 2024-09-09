@@ -1024,6 +1024,25 @@ If your copilot extension does not have any nodes are defined for actions or Gra
 ​
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
+## Graceful error handling
+
+All copilot extensions must handle below scenarios gracefully i.e. reject user request provide way forward. [*Must fix*]
+
+* For incorrect search parameters
+* For misuse or inappropriate language
+* For topics in which the Copilot doesn’t specialize
+
+  For example, Graceful error message with way forward for declarative copilot:
+
+  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshots how to incorporate graceful error handling.":::
+
+## Security requirements for OpenAPI spec url
+
+Copilot extensions that use OpenAPI specs must follow below security standards:
+
+* All API calls must use HTTPS with TLS 1.2 or higher.
+* API calls must not lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer.
+
 <!--<details>
 <summary><b>Be responsive and fail gracefully for topics that it doesn’t specialize</b></summary>​
 
