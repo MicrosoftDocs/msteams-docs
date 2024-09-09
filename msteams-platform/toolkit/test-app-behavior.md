@@ -50,7 +50,7 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
         
         :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of custom app installation to Teams with Add option highlighted.":::
 
-    1.  Select **Open** to use the app in personal scope. Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**. <br>
+    1.  Select **Open** to use the app in personal scope.<br> Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**. <br>
 
         :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of custom app displaying the scopes on how the app can be used. The displayed options are open and select a channel or chat.":::
 
