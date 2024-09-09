@@ -1,6 +1,6 @@
 ---
 title: Guidelines to validate Copilot Extensions
-description: Learn to increase the chances of your your message extension as a plugin for Microsoft Copilot for Microsoft 365 to pass the Teams Store submission process. Understand the must fixes and good-to-fixes, and validation guidelines.
+description: Learn to increase the chances of your message extension as a plugin for Microsoft Copilot for Microsoft 365 to pass the Teams Store submission process. Understand the requirements, and validation guidelines.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -71,7 +71,7 @@ A good description offers a clear and concise summary of the app’s features an
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
 * Short description of app, parameter, command description, Semantic description & operation ID must not include –
-  * Instructional phrases E.g. “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
+  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
   * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
   * Grammar and punctuation errors [*Must-fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
@@ -82,7 +82,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
-* App long description should clearly call out that extension works in Copilot E.g., Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description should clearly call out that extension works in Copilot, for example, Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
@@ -485,7 +485,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ## Compound utterances
 
-Copilot eextensions must support atleast more than three unique compound utterances by handling three or more parameters.
+Copilot extensions must support atleast more than three unique compound utterances by handling three or more parameters.
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
@@ -601,7 +601,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 [*Must-fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various extensiosn within Copilot.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various extensions within Copilot.
 
 <!--Copilot uses the sample prompts to display the prompts for the user.-->
  The prompts must be adaptable to different locales and clear across different commands. <!--Sample prompts are available for First Run Experience (FRE) within Copilot for Microsoft 365 when a user first installs or enables a plugin.-->
@@ -928,9 +928,9 @@ For Copilot extension to be validated, invoked, and work seamlessly, ensure that
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
-| [Microsoft 365 Channel](#requirements-for-plugins-in-copilot-for-microsoft-365)| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
-| [Single sign-on (SSO)](#requirements-for-plugins-in-copilot-for-microsoft-365) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| [Content Security Policy](#requirements-for-plugins-in-copilot-for-microsoft-365) |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+| Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
+| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
+| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
 <!-->> [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).-->
@@ -1010,7 +1010,7 @@ For action scenarios, Copilot extensions must share user disclosure & seek user 
 
 * Action taken by user must be correctly reflected in 3P service.
 
-* Modification requests by user prior to confirmation of the action, must be honoured.
+* Modification requests by user prior to confirmation of the action, must be honored.
 
 * Highly consequential tasks such as bulk delete should not be supported. [*Suggested Fix*]
 
