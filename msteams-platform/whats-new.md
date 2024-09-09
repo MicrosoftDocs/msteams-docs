@@ -32,7 +32,8 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
-* ***August 31, 2024***: [Add borders and rounded corners to Adaptive Card elements.](task-modules-and-cards/cards/cards-format.md#borders-in-adaptive-cards)
+* ***August 31, 2024***: [Add borders to delineate Adaptive Card elements.](task-modules-and-cards/cards/cards-format.md#borders-in-adaptive-cards)
+* ***August 31, 2024***: [Add rounded corners to create visually appealing Adaptive Card elements.](task-modules-and-cards/cards/cards-format.md#rounded-corners-in-adaptive-cards)
 * ***August 26, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
 * ***August 22, 2024***: [Dev Tools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
 * ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
