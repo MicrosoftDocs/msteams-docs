@@ -84,7 +84,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of Bot configuration sample app installation with Add option highlighted.":::
 
-     1. Select a channel or chat for collaborative use and move through the dialog to select **Go**.
+     1. Select a chat or channel for collaborative use and move through the dialog to select **Go**.
 
         :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of Bot configuration sample app with shared scope options.":::
 
