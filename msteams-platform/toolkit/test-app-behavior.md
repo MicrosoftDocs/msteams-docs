@@ -46,7 +46,7 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 
 1. Add your app to Teams as per your requirement:
 
-    1. Select **Add** to add your personal app.
+    1. Select **Add** to install and add your personal app to Teams.
         
         :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of custom app installation to Teams with Add option highlighted.":::
 
