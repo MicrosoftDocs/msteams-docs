@@ -608,7 +608,7 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
 
-<!-->
+<!--
 > [!NOTE]
 >
 > * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
