@@ -88,7 +88,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
-* The semanticDescription property isn't a mandatory field. However, if you add semanticDescription in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+* The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
 <!--nsure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
 
@@ -101,15 +101,15 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 ## Screenshots
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
-* Apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
+In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
 
 ## App or extension name
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
-* For declarative copilot, ensure that the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical.
+In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical.
 
 <!--
 ### App description
@@ -619,6 +619,7 @@ We recommend you to follow these guidelines to increase the chances of your app 
 -->
 
 Plugins must have sample prompts to guide users on how to use the various plugins within Copilot. [*Must Fix*]
+
 Sample prompts are specified using `samplePrompts` property in the manifest. These prompts must meet the following requirements: [*Must Fix*]
 
 * A plugin must have at least three prompts and maximum of five prompts for each command.
@@ -672,7 +673,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 ---
 -->
 
-## Create rich Adaptive Card responses
+## Adaptive Card responses
 
 <!--[*Must-fix*]-->
 
@@ -792,7 +793,6 @@ Copilot extension responses provided as an adaptive card must meet below require
 * Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Must fix*]
 
 <!--* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Must fix*]-->
-
 <!--  > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
 
@@ -886,7 +886,6 @@ Follow these requirements:
 
         > [!NOTE]
         >
-        <!-->> * Support for Excel and OneNote client applications to be available soon.-->
         > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 * **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
@@ -932,7 +931,8 @@ For Copilot extension to be validated, invoked, and work seamlessly, ensure that
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
-<!-->> [!IMPORTANT]
+<!--
+> [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).-->
 
 <!--## Guidelines for specific Copilot extensions
@@ -1021,7 +1021,7 @@ For action scenarios, Copilot extensions must share user disclosure & seek user 
 :::image type="content" source="../assets/images/Copilot/dc-actions-as-functions-pass.png" alt-text="The image shows an example of a pass scenario where actions are defined as functions.":::-->
 
 If your copilot extension does not have any nodes are defined for actions or Graph connectors etc in the manifest, the extension responses are not grounded in a data sources. These extensions, also called as instruction only copilot extensions, are not allowed considering questionable authenticity of the result. [*Must fix*]
-​
+
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
 ## Graceful error handling
