@@ -204,9 +204,13 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot shows the app added into Teams.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot of TeamsConversationBot installation with Add option highlighted.":::
 
-        You can interact with the bot.
+    1. Select **Open** to use the app in personal scope.<br> Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**.
+       
+       :::image type="content" source="./assets/images/conversation-bot/open-app-teams.png" alt-text="Screenshot of TeamsConversationBot with personal and shared scope options.":::
+
+       You can interact with the bot.
 
 - title: Interact with the conversation bot
   durationInMinutes: 2
