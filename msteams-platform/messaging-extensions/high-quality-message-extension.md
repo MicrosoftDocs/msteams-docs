@@ -805,11 +805,23 @@ Copilot extension responses provided as an adaptive card must meet below require
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::-->
 
-* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
-* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Must fix*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
+* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Must fix*]
 
-## Extend your plugin to Copilot in meetings
+## Compatibility
+
+Copilot extensions must be fully responsive and functional on the latest versions of these clients. [*Must-fix*]
+
+* Microsoft Teams on Desktop and Web
+* copilot.microsoft.com on web
+* Copilot for Microsoft 365 in Word
+
+> [!NOTE]
+> Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> Support for Excel and OneNote client applications to be available soon.
+
+## Ensure your Copilot plugins work in Teams meetings
 
 [*Must-fix*]
 
