@@ -42,7 +42,6 @@ We recommend that you build or upgrade your existing message extensions to maxim
 > [!NOTE]
 > If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
 
-
 ## Common requirements for Copilot extensions
 
 The requirements for building message extension plugins for Copilot for Microsoft 365 include:
@@ -69,27 +68,27 @@ A good description offers a clear and concise summary of the app’s features an
 
 <!--A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.-->
 
-Description related guidelines for M365 apps apply - Link; In addition copilot extensions must follow below guidelines -
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
-- Short description of app, parameter, command description, Semantic description & operation ID must not include –
-  - Instructional phrases E.g. “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
-  - URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
-  - Grammar and punctuation errors [*Must-fix*]
-  - Overly verbose, flowery, or marketing language. [*Good-to-fix*]
-  - Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
+* Short description of app, parameter, command description, Semantic description & operation ID must not include –
+  * Instructional phrases E.g. “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
+  * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
+  * Grammar and punctuation errors [*Must-fix*]
+  * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
+  * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
     > [!NOTE]
     > In case of declarative Copilots, above checks also apply to instructions and conversation starters fields.
 
-  - Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
+  * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
-- App long description should clearly call out that extension works in Copilot E.g., Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description should clearly call out that extension works in Copilot E.g., Use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
-- The semanticDescription property isn't a mandatory field. However, if you add semanticDescription in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+* The semanticDescription property isn't a mandatory field. However, if you add semanticDescription in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
 <!--nsure that you adhere to the description guidelines listed in the following table [*Must-fix*]:
 
@@ -102,15 +101,15 @@ Description related guidelines for M365 apps apply - Link; In addition copilot e
 
 ## Screenshots
 
-The [description](#descriptions) related guidelines for Microsoft 365 apps apply. In addition, the following guidelines must also be followed:
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
-- Apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
+* Apps with Copilot extension functionality must have atleast one screenshot related to copilot functionality. [*Must-fix*]
 
 ## App or extension name
 
-The [description](#descriptions) related guidelines for Microsoft 365 apps apply. In addition, the following guidelines must also be followed:
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
-- For declarative copilot, ensure that the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. 
+* For declarative copilot, ensure that the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical.
 
 ### App description
 
