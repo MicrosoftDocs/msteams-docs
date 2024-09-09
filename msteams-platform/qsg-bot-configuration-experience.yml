@@ -80,17 +80,17 @@ items:
 
         A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-     1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
+     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot shows add your bot to chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of Bot configuration sample app installation with Add option highlighted.":::
 
-     1. Enter the name of a chat in the search field.
+     1. Select a channel or chat for collaborative use and move through the dialog to select **Go**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of Bot configuration sample app with shared scope options.":::
 
-     1. Select **Set up a bot**.
+     1. Configure the bot settings and select **Submit**.
 
-        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot shows set up a bot in chat.":::
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot.png" alt-text="Screenshot of Bot configuration sample app with configuration options.":::
 
          The bot is installed in the chat.
 
