@@ -264,8 +264,12 @@ items:
 
       1. Select **Add** to add the bot to your chat.
 
-         :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of Conversation Bot with Add option highlighted.":::
 
+      1. Select **Open**.
+
+         :::image type="content" source="~/assets/images/bots/conversation-bot-open.png" alt-text="Screenshot of Conversation Bot with Open option highlighted.":::
+   
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
       1. Send a message to the bot. The conversation bot asks for consent for the first time.
