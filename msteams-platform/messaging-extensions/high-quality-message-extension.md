@@ -628,6 +628,9 @@ Sample prompts are specified using `samplePrompts` property in the manifest. The
 * All sample prompts must be functional and return responses.
 * Prompt must be relevant to the commands.
 
+> [!NOTE]
+> In case of declarative Copilot, these guidelines also apply for zero-query prompts.
+
 <!--
 The following code is an example of the `samplePrompts` property in app manifest:
 
@@ -671,14 +674,17 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ## Create rich Adaptive Card responses
 
-[*Must-fix*]
+<!--[*Must-fix*]-->
 
-Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
+Copilot extension responses provided as an adaptive card must meet below requirements. [*Must fix*]
+
+<!--Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:-->
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
+<!--
   <br/>
   <details><summary>Adaptive Card response template example</summary>
 
@@ -777,6 +783,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   ```
 
   </details>
+-->
 
 * Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Must fix*]
 
@@ -784,19 +791,19 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Must fix*]
 
-* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Must fix*]
+<!--* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Must fix*]-->
 
-  > [!NOTE]
+<!--  > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
 
   The following action types are recommended:
 
-  * `Action.OpenUrl`: Opens a specified URL from the Card.
-  * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
-  * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
-  * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
+* `Action.OpenUrl`: Opens a specified URL from the Card.
+* `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
+* `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
+* `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::-->
 
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
