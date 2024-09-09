@@ -419,7 +419,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent dropdowns are dropdown lists where the values in one dropdown list depend on the selection made in another dropdown list. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
+Dependent dropdowns are dropdown lists where the input values in a dropdown list depend on an another input value. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
 
 For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
 
@@ -465,23 +465,11 @@ The following JSON payload shows how to implement dependent dropdowns using the 
     {
       "columns": [
         {
-          "width": "1",
-          "items": [
-            {
-              "size": null,
-              "url": "https://urlp.asm.skype.com/v1/url/content?url=https%3a%2f%2fi.imgur.com%2fhdOYxT8.png",
-              "height": "auto",
-              "type": "Image"
-            }
-          ],
-          "type": "Column"
-        },
-        {
           "width": "2",
           "items": [
             {
               "size": "extraLarge",
-              "text": "Game Purchase",
+              "text": "Country Picker",
               "weight": "bolder",
               "wrap": true,
               "type": "TextBlock"
@@ -493,7 +481,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
       "type": "ColumnSet"
     },
     {
-      "text": "Please fill out the below form to send a game purchase request.",
+      "text": "Pick a country/region",
       "wrap": true,
       "type": "TextBlock"
     },
@@ -503,7 +491,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
           "width": "auto",
           "items": [
             {
-              "text": "Select Genre",
+              "text": "Select country/region",
               "wrap": true,
               "height": "stretch",
               "type": "TextBlock"
@@ -522,21 +510,21 @@ The following JSON payload shows how to implement dependent dropdowns using the 
             {
               "choices": [
                 {
-                  "title": "First Person Shooter",
-                  "value": "fps"
+                  "title": "USA",
+                  "value": "usa"
                 },
                 {
-                  "title": "Real Time Strategy",
-                  "value": "rts"
+                  "title": "India",
+                  "value": "india"
                 },
                 {
-                  "title": "Role Playing Game",
-                  "value": "rpg"
+                  "title": "China",
+                  "value": "china"
                 }
               ],
               "style": "filtered",
-              "placeholder": "Search for a genre",
-              "id": "choiceGameSingle",
+              "placeholder": "Search for a country/region",
+              "id": "choiceCountry",
               "type": "Input.ChoiceSet"
             }
           ],
@@ -544,7 +532,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
           "valueChangedAction": {
           "type": "Action.ResetInputs",
           "targetInputIds": [
-              "choiceGameMulti",
+              "choiceCity"
           ]
         }
         }
@@ -557,7 +545,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
           "width": "auto",
           "items": [
             {
-              "text": "Multi-Game: ",
+              "text": "Select city/cities",
               "wrap": true,
               "height": "stretch",
               "type": "TextBlock"
@@ -594,38 +582,11 @@ The following JSON payload shows how to implement dependent dropdowns using the 
 
               "choices.data": {
                 "type": "Data.Query",
-                "dataset": "xbox",
+                "dataset": "countries",
                 "associatedInputs": "auto"
               },
-              "id": "choiceGameMulti",
+              "id": "choiceCity",
               "type": "Input.ChoiceSet"
-            }
-          ],
-          "type": "Column"
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "columns": [
-        {
-          "width": "auto",
-          "items": [
-            {
-              "text": "Needed by: ",
-              "wrap": true,
-              "height": "stretch",
-              "type": "TextBlock"
-            }
-          ],
-          "type": "Column"
-        },
-        {
-          "width": "stretch",
-          "items": [
-            {
-              "id": "choiceDate",
-              "type": "Input.Date"
             }
           ],
           "type": "Column"
@@ -644,7 +605,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
           }
         }
       },
-      "title": "Request Purchase",
+      "title": "Confirm selection",
       "type": "Action.Submit"
     }
   ]
@@ -658,17 +619,22 @@ The following code snippet shows an example of a bot invoke request for the card
     "name": "application/search",
     "type": "invoke",
     "value": {
-        "queryText": "minecraft",
+        "queryText": "india",
         "queryOptions": {
             "skip": 0,
             "top": 15
         },
-        "dataset": "xbox",
-        "data": {
-            "choiceGameSingle": "<value of the input>",
-            "choiceGameMulti": "<value of the input>",
-            "choiceDate": "<value of the input>"
-        }
+        "dataset": "countries",
+        "data": [
+          {
+            "inputId": "choiceCountry",
+            "inputValue": "<value of the input>"
+          },
+          {
+            "inputId": "choiceCity",
+            "inputValue": "<value of the input>"
+          }
+        ]
     },
     "locale": "en-US",
     "localTimezone": "America/Los_Angeles"
