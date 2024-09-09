@@ -77,7 +77,8 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-1. Since Teams Toolkit 5.10, if you would like to store the value of a field, such as a lengthy or multiline app description, in a separate text file, you could use the `file` function. For example, you can create description.txt file sotring the full description of your app in the parent folder of `manifest.json`. Then set the value of description.full as `$[file('description.txt')]` in `manifest.json`. Teams Toolkit will read the content from the text file and use it as full description when building app package zip. 
+1. Starting with Teams Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. Teams Toolkit will read the content from the text file and use it as full description when building an app package.
+   For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`.
 
    `description.txt`
 
