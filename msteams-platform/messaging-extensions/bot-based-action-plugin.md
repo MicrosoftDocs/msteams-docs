@@ -1,7 +1,7 @@
 ---
 title: Message Extension as Plugin for Copilot
 description: Learn to create bot-based action message extensions in Microsoft Teams, enabling users to perform tasks with natural language commands in Copilot.
-ms.date: 04/23/2024
+ms.date: 09/15/2024
 ms.topic: conceptual
 author: v-sdhakshina
 ms.author: surbhigupta
