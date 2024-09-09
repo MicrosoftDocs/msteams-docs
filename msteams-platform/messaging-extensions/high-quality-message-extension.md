@@ -1201,11 +1201,11 @@ Besides the Teams Store validation guidelines and common guidelines, there are s
 * Include at least 3 sample prompts in the manifest
 -->
 
-## Code samples
+<!--## Code samples
 
 |Sample name | Description |TypeScript |
 |----------------|-----------------|--------------|
-| Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as a plugin in Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
+| Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as a plugin in Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |-->
 
 ## See also
 
