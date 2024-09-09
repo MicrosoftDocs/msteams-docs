@@ -107,9 +107,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
-    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    1. Select **Add**.
     
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::    
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot of the app details dialog to app the app.":::    
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+        
+        :::image type="content" source="~/assets/images/sbs-command-bot/add-scope.png"" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     1. Select the **command bot**.
     
