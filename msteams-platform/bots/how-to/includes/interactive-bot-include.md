@@ -1,14 +1,14 @@
 ---
-title: Build an interacive bot with Teams Toolkit
+title: Build an interacive bot
 author: surbhigupta
-description: Learn about creating interactive bot with Teams Toolkit
+description: Learn about creating interactive bot
 ms.topic: overview
 ms.localizationpriority: high
 ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Interactive notification bot in Teams
+# Interactive notification bot
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 

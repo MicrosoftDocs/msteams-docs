@@ -11,19 +11,19 @@ ms.date: 01/29/2023
 
 # Bot solutions
 
-Introduction: TBD
 You can use any one of the following ways to build a bot for Teams:
 
 * Bot Framework SDK
 * TeamsFx SDK
 * Teams AI bot
 * Azure AI bot service
-* Virtual Power Agent
 
 You can register your bot with Teams in any one of the following ways:
 
 * Azure AD
 * Developer Portal
+
+[TBD: Add infographic]
 
 ## Bot framework SDKs
 
@@ -212,12 +212,12 @@ A Teams AI bot uses artificial intelligence (AI) technology to communicate with 
 
 Teams AI bots are built using the Bot Framework SDK and leverage the Teams AI library to streamline the process of building intelligent apps. The Teams AI library provides APIs to access and manipulate data, and controls and components to create custom user interfaces.
 
-## Power Agent
+<!--## Power Agent
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
 
 >[!NOTE]
->You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.-->
 
 ## Build a bot app with Azure bot service
 
@@ -228,6 +228,14 @@ links for code samples to build a basic bot app using samples
 ## Create a bot
 
 You can create a bot with Teams Toolkit or using Bot Framework SDKs.
+
+### Templates for building a bot in Teams Toolkit
+
+| # | Type of bot | Teams Toolkit template | SBS guide | Code sample |
+| --- | --- | --- | --- | --- |
+| 1. | Notification bot | A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. | Use the Teams Toolkit template to build a bot that can send notification and inform with a message that displays in Teams chat | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml). | [View] |
+| 2. | Workflow bot | You use a workflow bot to automate or streamline business processes. | Use the Teams Toolkit template to build a bot that can interact with multi-step processes in Teams chats | [Build workflow bot with JavaScript](../sbs-gs-workflow-bot.yml) | [View] |
+| 3. | Conversational bot | A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. | Use the Teams Toolkit template to build a basic chat bot. | [Build a basic bot](../sbs-gs-bot.yml) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) |
 
 ## Code sample
 

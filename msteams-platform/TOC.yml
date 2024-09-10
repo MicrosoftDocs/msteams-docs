@@ -448,7 +448,9 @@
       - name: Send files using a bot
         href: bots/send-files-in-bot.md
       - name: Get context data for a bot
-        href: bots/get-bot-context.md  
+        href: bots/get-bot-context.md
+      - name: Customize a bot
+        href: bots/customize-bots.md  
   - name: Configure bot scope
     href: bots/config-bot-scope.md
   - name: Bot tutorials
