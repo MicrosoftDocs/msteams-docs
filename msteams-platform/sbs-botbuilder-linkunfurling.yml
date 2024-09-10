@@ -205,8 +205,12 @@ items:
       
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot shows the adding of app.":::
-         
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot of Link Unfurling app with Add option highlighted.":::
+
+    1. Select **Open**.
+
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/openapp.png" alt-text="Screenshot of Link Unfurling app with Open option highlighted.":::
+
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
        The link unfurls as shown in the following image:
