@@ -450,7 +450,7 @@ The input values in the elements of an Adaptive Card are independent. Hence, Tea
 
 The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
-### Action.ResetInputs
+#### Action.ResetInputs
 
 The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you must reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
 
@@ -460,7 +460,7 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 | `Action.ResetInputs` | String | No | Resets the input values |
 | `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
 
-### associatedInputs
+#### associatedInputs
 
 The `associatedInputs` property ensures that Teams includes the input values of all elements in a card when a data query request is sent to the bot. You must define the `associatedInputs` property under the `Data.Query` object of the `Input.ChoiceSet` control. If you set the value of the property to `auto`, Teams includes the input values of all elements in a card in the data query request sent to the bot. If you set the value of the property to `none`, Teams includes no input values in the data query request sent to the bot.
 
