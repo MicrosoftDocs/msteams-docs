@@ -99,11 +99,15 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Screenshots
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
 
 In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to Copilot functionality. [*Must-fix*]
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ## App or extension name
 
@@ -111,11 +115,15 @@ The guidelines related to the description for Microsoft 365 apps are applicable.
 
 In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Compound utterances
 
 Copilot extensions must support atleast more than three unique compound utterances by handling three or more parameters.
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ## Sample prompts
 
@@ -139,6 +147,8 @@ Sample prompts are specified using `samplePrompts` property in the manifest. The
 > [!NOTE]
 > In case of declarative Copilot, these guidelines also apply for zero-query prompts.
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Adaptive Card response
 
 Copilot extension responses provided as an adaptive card must meet below requirements. [*Must fix*]
@@ -157,6 +167,8 @@ Copilot extension responses provided as an adaptive card must meet below require
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Must fix*]
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Compatibility
 
 Copilot extensions must be fully responsive and functional on the latest versions of these clients. [*Must-fix*]
@@ -168,6 +180,8 @@ Copilot extensions must be fully responsive and functional on the latest version
 > [!NOTE]
 > Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > Support for Excel and OneNote client applications to be available soon.
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ### Ensure your Copilot plugins work in Teams meetings
 
@@ -193,6 +207,8 @@ You must implement the following:
     * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
 For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ### Ensure your extensions work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
@@ -254,6 +270,8 @@ Follow these requirements:
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Technical requirements
 
 For Copilot extensions to be validated, invoked, and work seamlessly, ensure that it meets the following criteria: [*Must fix*]
@@ -267,6 +285,8 @@ For Copilot extensions to be validated, invoked, and work seamlessly, ensure tha
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Must fix*] |
 | Content Security Policy | If applicable, modify your Content Security Policy headers. [*Must fix*] |
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ## User disclosure and confirmation for action scenarios
 
@@ -284,11 +304,15 @@ For action scenarios, Copilot extensions must share user disclosure and seek use
 
 * Highly consequential tasks such as, bulk delete must not be supported. [*Good-to-fix*]
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Instructions-only Copilots must not be supported
 
 If your Copilot extension doesn't have any nodes defined for actions or Graph connectors in the manifest, the extension responses are not grounded in a data sources. These extensions, also called as instruction-only Copilot extensions, aren't allowed due to questionable authenticity of the result. [*Must fix*]
 
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ## Graceful error handling
 
@@ -302,12 +326,16 @@ All Copilot extensions must handle the following scenarios gracefully, that is, 
 
   :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshots how to incorporate graceful error handling.":::
 
+[Back to top](#validation-guidelines-for-copilot-extensions)
+
 ## Security requirements for OpenAPI spec URL
 
 Copilot extensions that use OpenAPI specs must ensure the following security standards:
 
 * All API calls must use HTTPS with TLS 1.2 or higher.
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer.
+
+[Back to top](#validation-guidelines-for-copilot-extensions)
 
 ## See also
 
