@@ -196,8 +196,6 @@ onTurn(context: TurnContext, next: () => Promise<void>): Promise<void>;
 
 ## Azure AI bot service
 
-TBD
-
 Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.
 
 The Bot Framework Service, which is a component of the Azure AI Bot Service, sends information between the user's bot-connected app and the bot. Each channel can include additional information in the activities they send.
@@ -205,8 +203,6 @@ The Bot Framework Service, which is a component of the Azure AI Bot Service, sen
 For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-basics).
 
 ## Teams AI bot
-
-TBD
 
 A Teams AI bot uses artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations.
 
@@ -218,12 +214,6 @@ Teams AI bots are built using the Bot Framework SDK and leverage the Teams AI li
 
 >[!NOTE]
 >You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.-->
-
-## Build a bot app with Azure bot service
-
-TBD
-link back to Get started to build a basic bot app using TTK
-links for code samples to build a basic bot app using samples
 
 ## Create a bot
 
