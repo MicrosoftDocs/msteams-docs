@@ -212,7 +212,7 @@ For Copilot extensions to be validated, invoked, and work seamlessly, ensure tha
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Must fix*] |
-| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Must fix*] |
+| Content Security Policy | If applicable, modify your Content Security Policy headers. [*Must fix*] |
 
 ## User disclosure and confirmation for action scenarios
 
@@ -224,7 +224,7 @@ For action scenarios, Copilot extensions must share user disclosure and seek use
 
 * A confirmation of the completion of the action must be shared by the plugin in the form of card.
 
-* Action taken by user must be correctly reflected in 3P service.
+* Action taken by a user must be correctly reflected in 3P service.
 
 * Modification requests by user prior to confirmation of the action must be honored.
 
