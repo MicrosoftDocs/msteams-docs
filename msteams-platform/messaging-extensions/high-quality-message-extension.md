@@ -211,14 +211,14 @@ For Copilot extensions to be validated, invoked, and work seamlessly, ensure tha
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
-| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Must fix*] |
+| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Must fix*] |
 
 ## User disclosure and confirmation for action scenarios
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
-For action scenarios, Copilot extensions must share user disclosure and seek user confirmation [*Must Fix*].
+For action scenarios, Copilot extensions must share user disclosure and seek user confirmation. [*Must Fix*]
 
 * Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
 
@@ -228,7 +228,7 @@ For action scenarios, Copilot extensions must share user disclosure and seek use
 
 * Modification requests by user prior to confirmation of the action must be honored.
 
-* Highly consequential tasks such as, bulk delete must not be supported. [*Suggested Fix*]
+* Highly consequential tasks such as, bulk delete must not be supported. [*Good-to-fix*]
 
 ## Instructions-only Copilots must not be supported
 
