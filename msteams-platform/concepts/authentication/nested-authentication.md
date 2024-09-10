@@ -37,7 +37,7 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 | Solicit user consent for more permissions | Required |  |
 | Conduct an OBO exchange on the server | Required |  |
 
-*The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
+* The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
 ## Use cases for NAA
 
