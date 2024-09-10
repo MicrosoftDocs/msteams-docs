@@ -68,8 +68,8 @@ For example, you can customize app description by defining a new environment var
 
    ```json
     {
-        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-        "manifestVersion": "1.16",
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.17",
         "description": {
             "short": "${{TEAMS_APP_DESCRIPTION}}",
             "full": "Full description of tab0418"
@@ -89,8 +89,8 @@ For example, you can customize app description by defining a new environment var
 
    ```json
     {
-        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-        "manifestVersion": "1.16",
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.17",
         "description": {
             "short": "Short description of tab",
             "full": "$[file('./description.txt')]"
@@ -98,7 +98,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-   You could either put the file path in env/.env.xx and update the input parameter function of file function to placeholder in ${{xx_xx}} format.
+You can also add the file path in `env/.env.xx`. Then, modify the parameter of file function to a placeholder in the `${{xx_xx}}` format.
 
 
    `.env.dev`
@@ -111,8 +111,8 @@ For example, you can customize app description by defining a new environment var
 
     ```json
     {
-        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-        "manifestVersion": "1.16",
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.17",
         "description": {
             "short": "Short description of tab",
             "full": "$[file(${{DESCRIPTION_PATH}})]"
