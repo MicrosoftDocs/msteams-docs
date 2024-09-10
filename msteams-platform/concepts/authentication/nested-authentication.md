@@ -72,12 +72,12 @@ If your add-in requires additional app registration beyond NAA and SSO, see [reg
 To configure nested app authentication, your app must actively configure a redirect URI for your app. The redirect URI indicates to the Microsoft identity platform that your app can be brokered by supported hosts. The redirect URI of the app must be of type **Single-page application** and conform to the following scheme:
 
 ```
-brk-<broker_application_id>://<your_domain>
+brk-multihub://<your_domain>
 ```
 
 Where,
 
-* <broker_application_id> is the alias of the broker or brokers you want to trust
+* <brk-multihub> enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
 * <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
 If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
