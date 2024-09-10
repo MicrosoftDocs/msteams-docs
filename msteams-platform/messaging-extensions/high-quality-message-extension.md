@@ -159,11 +159,11 @@ Copilot extensions must be fully responsive and functional on the latest version
 > Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > Support for Excel and OneNote client applications to be available soon.
 
-## Ensure your Copilot plugins work in Teams meetings
+### Ensure your Copilot plugins work in Teams meetings
 
 [*Must-fix*]
 
-<!--Copilot for Microsoft 365 is available in Teams meetings.--> You must implement the following:
+You must implement the following:
 
 * Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Must fix]*
 
