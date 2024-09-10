@@ -75,7 +75,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column-end:::
 :::row-end:::
 
-## Descriptions
+## App description
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations.
 
@@ -107,7 +107,7 @@ In addition, you must ensure that apps with Copilot extension functionality must
 
 ## App or extension name
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+The guidelines related to the description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
@@ -139,7 +139,7 @@ Sample prompts are specified using `samplePrompts` property in the manifest. The
 > [!NOTE]
 > In case of declarative Copilot, these guidelines also apply for zero-query prompts.
 
-## Adaptive Card responses
+## Adaptive Card response
 
 Copilot extension responses provided as an adaptive card must meet below requirements. [*Must fix*]
 
@@ -274,7 +274,7 @@ For Copilot extensions to be validated, invoked, and work seamlessly, ensure tha
 
 For action scenarios, Copilot extensions must share user disclosure and seek user confirmation. [*Must Fix*]
 
-* Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
+* Data shown in 3P service (through dialogue) must be reflective of confirmation provided by user.
 
 * A confirmation of the completion of the action must be shared by the plugin in the form of card.
 
