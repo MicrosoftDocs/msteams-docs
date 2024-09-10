@@ -214,7 +214,7 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 Follow these requirements:
 
-* **Update Microsoft Azure Active Directory (Azure AD) app registration for SSO-enabled apps**
+1. **If using SSO-enabled app, update Microsoft Azure Active Directory (Azure AD) app registration**
 
     Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
@@ -238,10 +238,9 @@ Follow these requirements:
         | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
 
         > [!NOTE]
-        >
         > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
-* **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
+1. **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
     1. Open Bot **Services**.
@@ -249,7 +248,7 @@ Follow these requirements:
     1. From the **Settings** section, select **Channels**.
     1. From **Available channels**, select **Microsoft 365 & Microsoft Teams**, and then select **Apply**.
 
-* **Configure content security policy headers**
+1. **Configure content security policy headers**
 
     If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
@@ -264,7 +263,7 @@ Follow these requirements:
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
-* **Upgrade Teams JS version to the 2.22.0 build**
+1. **Upgrade Teams JS version to the 2.22.0 build**
 
     If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
