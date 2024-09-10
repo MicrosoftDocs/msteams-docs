@@ -23,7 +23,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../assets/icons/description.png" link="#descriptions" border="false":::
+      :::image type="icon" source="../assets/icons/description.png" link="#app-description" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/screenshots.png" link="#screenshots" border="false":::
@@ -41,7 +41,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column span="":::
-      :::image type="icon" source="../assets/icons/adaptive-card-response.png" link="#adaptive-card-responses" border="false":::
+      :::image type="icon" source="../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/compatibility.png" link="#compatibility" border="false":::
