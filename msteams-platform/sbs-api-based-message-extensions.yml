@@ -573,7 +573,11 @@ items:
     1. Select the zip file created and select **Open**.
     1. Select **Add**. The app is added to Teams.
 
-       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with Add option highlighted.":::
+    
+    1. Select **Open**.
+
+       :::image type="content" source="assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with Open option highlighted.":::
 
     1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
