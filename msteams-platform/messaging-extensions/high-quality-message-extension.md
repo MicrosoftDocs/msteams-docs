@@ -64,6 +64,15 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column span="":::
       :::image type="icon" source="../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
    :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
+   :::column-end:::
 :::row-end:::
 
 ## Descriptions
