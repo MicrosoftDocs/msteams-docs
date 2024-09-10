@@ -27,23 +27,6 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
 
-## Common requirements for Copilot extensions
-
-The requirements for building message extension plugins for Copilot for Microsoft 365 include:
-
-> [!div class="checklist"]
->
-> * [Define app, command, and parameter descriptions](#define-app-command-and-parameter-descriptions)
-> * [Enhance message extension to retrieve information through compound utterances](#enhance-message-extension-to-retrieve-information-through-compound-utterances)
-> * [Define sample prompts](#define-sample-prompts)
-> * [Create rich Adaptive Card responses](#create-rich-adaptive-card-responses)
-> * [Extend your plugin to Copilot in meetings](#extend-your-plugin-to-copilot-in-meetings)
-> * [Message extensions plugins in Copilot for Microsoft 365 applications](#message-extensions-plugins-in-copilot-for-microsoft-365-applications)
-> * [Technical requirements](#technical-requirements)
-
-> [!NOTE]
-> The common requirements must be ensured in addition to [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) for  increasing the chances of your app to pass the Microsoft Teams Store submission process
-
 ## Define app, command, and parameter descriptions
 
 [*Must-fix*]
