@@ -22,11 +22,11 @@ The following image shows the media element in Adaptive Card:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/desktop-media.png" alt-text="Screenshot shows you the media elements in desktop.":::
+:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/desktop-media.png" alt-text="Screenshot shows you the media elements in desktop." lightbox="../../assets/images/media-elements-in-adaptive-cards/desktop-media.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/mobile-media.png" alt-text="Screenshot shows you the media elements in mobile.":::
+:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/mobile-media.png" alt-text="Screenshot shows you the media elements in mobile." lightbox="../../assets/images/media-elements-in-adaptive-cards/mobile-media.png":::
 
 ---
 
