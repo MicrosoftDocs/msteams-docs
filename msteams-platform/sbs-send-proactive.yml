@@ -97,11 +97,7 @@ items:
     1. Select a channel or chat to use the app colloboratively and move through the dialog to select **Go**.
 
         :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of Proactive Message app with scope options.":::
-
-    1. Enter the name of a chat or team in the search field and select **Set up a bot**. 
-    
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
-        
+ 
         The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
