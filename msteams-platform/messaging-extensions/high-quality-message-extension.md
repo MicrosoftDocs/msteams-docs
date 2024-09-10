@@ -27,17 +27,15 @@ A good description offers a clear and concise summary of the app’s features an
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot extensions:
 
-* Short description of app, parameter, command description, Semantic description & operation ID must not include:
+* Short description of app, parameter, command description, Semantic description and Operation ID must not include:
   * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
   * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
   * Grammar and punctuation errors [*Must-fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
-    > [!NOTE]
-    > In case of declarative Copilots, these guidelines apply to instructions and conversation starters fields also.
-
-  * Superlative claims such as, “#1,” “amazing,” or “best.” [*Good-to-fix*]
+  > [!NOTE]
+  > In case of declarative Copilots, these guidelines apply to instructions and conversation starters fields also.
 
 * App long description must clearly call out that extension works in Copilot. For example, use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
 
@@ -57,7 +55,7 @@ In addition, you must ensure that apps with Copilot extension functionality must
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
-In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical.
+In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
 ## Compound utterances
 
