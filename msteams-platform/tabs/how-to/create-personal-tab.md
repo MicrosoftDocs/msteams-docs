@@ -838,7 +838,7 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. When prompted to install the app to Teams, select **Add**.
+1. Select **Add**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of the app installation dialog. The Add option is highlighted.":::
 
@@ -944,7 +944,9 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
-1. When prompted to install the app to Teams, select **Add**.
+    Teams is loaded in a web browser.
+
+1. Select **Add**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of the app installation dialog. The Add option is highlighted.":::
 
