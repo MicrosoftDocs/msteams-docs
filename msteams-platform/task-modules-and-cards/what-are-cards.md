@@ -71,7 +71,7 @@ Typeahead search added as an input control in Adaptive Cards enable [dynamic sea
 
 ### Dependent dropdowns in Adaptive Cards
 
-[Dependent dropdowns](cards/dynamic-search.md#dependent-dropdowns) are dropdown lists where the input values in a dropdown list depend on an another input value. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
+[Dependent dropdowns](cards/dynamic-search.md#dependent-dropdowns) are dropdown lists where the options in a list depend on the value of another input field. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
 
 ### Media elements in Adaptive Cards
 
