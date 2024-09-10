@@ -26,18 +26,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps required for development | Traditional Teams Microsoft Entra SSO | NAA |
+| Steps required for development | Traditional Teams Entra SSO | NAA |
 | --- |:---:|:---:|
-| Expose redirect URI | Required | ✔️ SPA redirect URI necessary |
+| Expose redirect URI | Required | Required |
 | Register API in Microsoft Entra ID | Required |  |
 | Define a custom scope in Microsoft Entra ID | Required |  |
 | Authorize Teams client apps | Required |  |
-| Revise app manifest (previously called Teams app manifest) | Required | Helps IT admins to provide consent through Teams admin center. |
+| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
 | Acquire access token through TeamsJS SDK | Required |  |
 | Solicit user consent for more permissions | Required |  |
 | Conduct an OBO exchange on the server | Required |  |
 
-The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
+*The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
 ## Use cases for NAA
 
