@@ -165,7 +165,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. To debug your app, select the **F5** key.
 
-   A browser tab opens a Teams web client requesting to add the bot to your tenant.
+   A browser tab opens the Teams web client to add the bot to your tenant.
 
 1. Select **Add**.
 
@@ -292,7 +292,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Select **F5** or select **Debug** > **Start**.
 
-1. Select **Add**.
+1. Select **Add** to add the bot to your tenant.
 
    :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
 
@@ -405,7 +405,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. To debug your app, select the **F5** key.
 
-   A browser tab opens a Teams web client requesting to add the bot to your tenant.
+   A browser tab opens a Teams web client to add the bot to your tenant.
 
 1. Select **Add**.
 
