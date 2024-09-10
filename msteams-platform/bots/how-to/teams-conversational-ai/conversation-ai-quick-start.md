@@ -405,7 +405,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. To debug your app, select the **F5** key.
 
-   A browser tab opens a Teams web client to add the bot to your tenant.
+   A browser tab opens the Teams web client to add the bot to your tenant.
 
 1. Select **Add**.
 
