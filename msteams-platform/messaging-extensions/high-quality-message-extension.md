@@ -41,7 +41,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
+      :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-responses" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compatibility.png" link="#compatibility" border="false":::
