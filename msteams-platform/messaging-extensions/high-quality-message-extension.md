@@ -23,7 +23,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../assets/icons/description.png" border="false":::
+      :::image type="icon" source="../assets/icons/description.png" link="#descriptions" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/screenshots.png" link="#screenshots" border="false":::
