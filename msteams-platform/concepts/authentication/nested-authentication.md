@@ -26,16 +26,16 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps | Traditional Teams Microsoft Entra SSO | NAA |
-| --- | --- | --- |
-| Expose redirect URI | ✔️ | ✔️ SPA redirect URI necessary |
-| Register API in Microsoft Entra ID | ✔️ |  |
-| Define a custom scope in Microsoft Entra ID | ✔️ |  |
-| Authorize Teams client apps | ✔️ |  |
-| Revise app manifest (previously called Teams app manifest) | ✔️ | Helps IT admins to provide consent through Teams admin center. |
-| Acquire access token through TeamsJS SDK | ✔️ |  |
-| Solicit user consent for more permissions | ✔️ |  |
-| Conduct an OBO exchange on the server | ✔️ |  |
+| Steps required for development | Traditional Teams Microsoft Entra SSO | NAA |
+| --- |:---:|:---:|
+| Expose redirect URI | Required | ✔️ SPA redirect URI necessary |
+| Register API in Microsoft Entra ID | Required |  |
+| Define a custom scope in Microsoft Entra ID | Required |  |
+| Authorize Teams client apps | Required |  |
+| Revise app manifest (previously called Teams app manifest) | Required | Helps IT admins to provide consent through Teams admin center. |
+| Acquire access token through TeamsJS SDK | Required |  |
+| Solicit user consent for more permissions | Required |  |
+| Conduct an OBO exchange on the server | Required |  |
 
 The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -92,7 +92,7 @@ Your domain must include only the origin and not its subpaths. For example:
 ❌ brk-multihub://myapp.teams.microsoft.com/go
 
 For more information on upgrading your Teams app to run in Outlook and Microsoft365.com, see
-[Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+[extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Initialize public client app
 
