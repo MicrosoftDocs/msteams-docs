@@ -218,7 +218,7 @@ For Copilot extensions to be validated, invoked, and work seamlessly, ensure tha
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
-For action scenarios, Copilot extensions must share user disclosure & seek user confirmation [*Must Fix*].
+For action scenarios, Copilot extensions must share user disclosure and seek user confirmation [*Must Fix*].
 
 * Data shown in 3P service (through dialogue), must be reflective of confirmation provided by user.
 
