@@ -94,7 +94,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Copilot for Microsoft 365, turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
