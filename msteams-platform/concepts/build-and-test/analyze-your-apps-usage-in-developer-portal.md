@@ -234,11 +234,10 @@ As you explore the app usage metrics on this page, you can see the following thr
 
  ### Known limitations
 
- * Usage data for Outlook message extension and Outlook Add-in isn't available.
+ * Usage data for message extension in Outlook and Outlook Add-in isn't available.
  * Usage data of the Outlook personal tab includes both personal tab and tab (meeting scenario) data.
  * Usage data for consumer apps isn't available.
- * Usage data from Outlook Android, which does not have a tenant ID, isn't available.
- * Some usage events in Teams are showing unidentified element types due to existing telemetry issues. We are actively developing solutions to address this.
+ * Usage data for Android in Outlook, which doesn't have a tenant ID, isn't available.
 
 ---
 
