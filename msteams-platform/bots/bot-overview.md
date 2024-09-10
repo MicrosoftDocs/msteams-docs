@@ -86,11 +86,11 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
+:::image type="content" source="../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
 
 **Reconfigure**
 
-:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+:::image type="content" source="../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 ## Build bot configuration experience
 
@@ -132,7 +132,7 @@ In the app manifest (previously called Teams app manifest) file, update the `fet
   ],
 ```
 
-For more information, see [app manifest schema](../../resources/schema/manifest-schema.md#botsconfiguration).
+For more information, see [app manifest schema](../resources/schema/manifest-schema.md#botsconfiguration).
 
 ### Configure your bot
 
@@ -305,18 +305,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
 
-## Code sample
-
-| **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
-|-----------------|-----------------|----------------|----------------|
-| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat with `continue` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This sample code describes the configuration and reconfiguration for bots in team and group chat with `auth` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the team or group chat where the bot is installed.
-
-
 ## Concepts
 
 TBD
@@ -374,6 +362,17 @@ If you're unable to create a bot in Developer Portal, ensure the following:
 ## Glossary
 
 TBD
+
+## Code sample
+
+| **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
+|-----------------|-----------------|----------------|----------------|
+| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat with `continue` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This sample code describes the configuration and reconfiguration for bots in team and group chat with `auth` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the team or group chat where the bot is installed.
 
 ## See also
 
