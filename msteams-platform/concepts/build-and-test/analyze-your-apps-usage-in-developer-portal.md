@@ -194,7 +194,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    The Key Performance Indicator (KPI) cards display metrics such as the host with the most active users and the operating system (OS) with the most active users, based on monthly, weekly, and daily data, in a metric card format.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-host-product.png":::
 
  #### Usage by host product
 
