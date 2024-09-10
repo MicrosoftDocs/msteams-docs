@@ -431,8 +431,6 @@
     href: bots/bot-overview.md
   - name: Bot solutions
     href: bots/bot-solutions.md
-  - name: Build a Bot
-    href: bots/create-a-bot.md  
   - name: Bring your bot to Teams
     href: bots/bring-bot-to-teams.md  
   - name: Send and receive messages

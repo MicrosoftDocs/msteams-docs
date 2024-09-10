@@ -8,7 +8,7 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Conversational bot
+# Customize conversational bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
