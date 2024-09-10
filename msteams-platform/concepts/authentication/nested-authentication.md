@@ -77,21 +77,22 @@ brk-multihub://<your_domain>
 
 Where,
 
-* <brk-multihub> enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
+* `brk-multihub` enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
 * <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
-If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
+<!--If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
 ```http
 brk-multihub://<your_domain>
 ```
-
+-->
 Your domain must include only the origin and not its subpaths. For example:
 
 ✔️ brk-multihub://myapp.teams.microsoft.com <br>
 ❌ brk-multihub://myapp.teams.microsoft.com/go
 
-For more information on domain, see [enable SSO in an Office Add-in using NAA](/office/dev/add-ins/develop/enable-nested-app-authentication-in-your-add-in#add-a-trusted-broker-through-spa-redirect).
+For more information on upgrading your Teams app to run in Outlook and Microsoft365.com, see
+[Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Initialize public client app
 
