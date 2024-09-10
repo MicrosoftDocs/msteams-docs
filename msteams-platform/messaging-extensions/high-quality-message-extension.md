@@ -21,6 +21,50 @@ ms.collection: ce-skilling-ai-copilot
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="../../../../assets/icons/descriptions.png" link="#descriptions" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/screenshots.png" link="#screenshots" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="icon" source="../../../../assets/icons/app-name.png" link="#app-or-extension-name" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/sample-prompts.png" link="#sample-prompts" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/compatibility.png" link="#compatibility" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../../../../assets/icons/technical-requirements.png" link="#technical-requirements" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="icon" source="../../../../assets/icons/user-disclosure.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/instructions-only.png" link="#instructions-only-copilots-must-not-be-supported" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
+   :::column-end:::
+
 ## Descriptions
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations.
