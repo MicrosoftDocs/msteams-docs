@@ -12,7 +12,7 @@ It’s common for an app to support multiple scenarios in Microsoft Teams, but y
 
 When the user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either personal or shared scope. 
 
-* Personal scope: If the app supports personal scope, the **Open** option appears in scope selection dialog to open the app in personal scope. 
+* Personal scope: If your app supports personal scope, the **Open** option appears in scope selection dialog to open the app in personal scope. 
 
 * Shared scope: If your app supports different shared scopes, all the supported scopes are lsited in the scope selection dialog. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
@@ -62,7 +62,7 @@ If the app is configured with personal scope only, here's the user flow to add t
 <details>
 <summary>Personal and shared scopes</summary>
 
-If the app is configured with personal and shared scopes with a default scope, here's the user flow to add the app in the required scope:
+If the app is configured with personal and shared scopes along with a default install scope, here's the user flow to add the app in the required scope:
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
@@ -92,7 +92,7 @@ If the app is configured with personal and shared scopes with a default scope, h
 <details>
 <summary>Shared scope</summary>
 
-If the app is configured with shared scopes and a default scope, here's the user flow to add the app in the required scope:
+If the app is configured with shared scopes along with a default install scope, here's the user flow to add the app in the required scope:
 
 1. Go to **Apps** :::image type="icon" source="../../assets/images/compose-extensions/app-icon.png" border="false":::.
 
