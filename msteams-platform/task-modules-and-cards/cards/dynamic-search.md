@@ -428,7 +428,15 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 
 **Placeholder for GIF**
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
+
+---
 
 ### How dependent dropdowns work
 
