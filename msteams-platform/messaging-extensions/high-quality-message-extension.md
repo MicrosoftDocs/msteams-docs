@@ -47,13 +47,13 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 ## Screenshots
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
 
 In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to Copilot functionality. [*Must-fix*]
 
 ## App or extension name
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
