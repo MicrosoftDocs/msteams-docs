@@ -232,6 +232,14 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
+ ### Known limitations
+
+ * Usage data from Outlook message extension and Outlook Add-in isn't available.
+ * The Outlook personal tab includes both personal tab and tab (meeting scenario) data.
+ * Consumer apps usage isn't available.
+ * Usage data from Outlook Android that lacks tenant ID isn't available.
+ * Some usage events have unknown element types due to known telemetry issues in Teams; fixes are currently in progress.
+
 ---
 
 ## See also
