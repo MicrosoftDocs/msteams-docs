@@ -72,7 +72,6 @@ The following image illustrates mobile experience of typeahead search:
 > * The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
 > * To use dynamic typeahead search in group chat, the user must add `groupchat` scope to the bot installation scope in the app manifest and install it to that particular group chat.
 > * The number of options in the dropdown is limited to 15.
-> * Define the `associatedInputs` property under the `Data.Query` object to ensure that the data query requests sent to the bot include the values of the associated inputs in the card. This action allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent dropdowns](#dependent-dropdowns).
 
 ### Schema properties
 
@@ -93,7 +92,9 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
 | count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
-| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. Allowed values: `auto`, `none` |
+| `associatedInputs` | String | No | Specifies the input values associated with the `Data.Query` object. Allowed values: `auto`, `none` |
+
+When you define the `associatedInputs` property under the `Data.Query` object, Teams includes the values of the all input values in the card in the data query request sent to the bot. This action allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent dropdowns](#dependent-dropdowns).
 
 ### Example
 
@@ -419,7 +420,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent dropdowns are dropdown lists where the input values in a dropdown list depend on an another input value. You can design Adaptive Cards in Teams that contain dependent dropdown lists with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
+Dependent dropdowns are dropdown lists where the input values in a dropdown list depend on an another input value. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
 
 For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
 
@@ -435,18 +436,29 @@ The following diagram illustrates how the user, Adaptive Card, the host, and the
 
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
-When a user changes an input value, the existing input value in the dependent dropdown list becomes invalid. Define the `Action.ResetInputs` property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
+When a user changes an input value, the existing input value in the dependent dropdown becomes invalid. Define the [`Action.ResetInputs`](#actionresetinputs) property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
 
-The input values in the elements of an Adaptive Card are independent. Hence, Teams doesn't send the input values of the other elements in the data query request to the bot. Define the `associatedInputs` property under the `Data.Query` object of the dropdown list and set it to `auto`. This action ensures that the updated input values of all elements are sent to the bot.
+The input values in the elements of an Adaptive Card are independent. Hence, Teams doesn't send the input values of the other elements in the data query request to the bot. Define the [`associatedInputs`](#associatedinputs) property under the `Data.Query` object of the dropdown list. This action ensures that the updated input values of all elements are sent to the bot.
 
 The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+
+### Action.ResetInputs
+
+The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you must reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
+
+| Property| Type | Required | Description |
+|---|---|---|---|
+| `valueChangedAction` | Action.ResetInputs | No | Contains the `Action.ResetInputs` property |
+| `Action.ResetInputs` | String | No | Resets the input values |
+| `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
+
+### associatedInputs
+
+The `associatedInputs` property ensures that Teams includes the input values of all elements in a card when a data query request is sent to the bot. You must define the `associatedInputs` property under the `Data.Query` object of the `Input.ChoiceSet` control. If you set the value of the property to `auto`, Teams includes the input values of all elements in a card in the data query request sent to the bot. If you set the value of the property to `none`, Teams includes no input values in the data query request sent to the bot.
 
 | Property| Type | Required | Description |
 |---|---|---|---|
 | `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
-| `valueChangedAction` | Action.ResetInputs | No | Contains the `Action.ResetInputs` property |
-| `Action.ResetInputs` | String | No | Resets the input values |
-| `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
 
 ### Implement dependent dropdowns
 
@@ -465,7 +477,7 @@ The following JSON payload shows how to implement dependent dropdowns using the 
     {
       "columns": [
         {
-          "width": "2",
+          "width": "auto",
           "items": [
             {
               "size": "extraLarge",
@@ -641,10 +653,6 @@ The following code snippet shows an example of a bot invoke request for the card
     // …. other fields
 }
 ```
-
-### Action.ResetInputs
-
-The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you need to reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
 
 ## Code sample
 
