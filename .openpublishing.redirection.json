@@ -1135,10 +1135,6 @@
       {
         "source_path": "msteams-platform/samples/collaboration-controls-limitations.md",
         "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
-      },
-      {
-        "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
-        "redirect_url": "/microsoftteams/platform/messaging-extensions/high-quality-message-extension"
       }
     ]
 }
