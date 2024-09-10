@@ -110,7 +110,7 @@
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: commands
+      displayName: commands      
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
@@ -130,7 +130,7 @@
       displayname: Forms
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
-      displayName: hide page layout
+      displayName: hide page layout  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -156,7 +156,7 @@
         items:
         - name: Prerequisites for creating your Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app
+          displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
           href: toolkit/create-new-project.md
         - name: Develop your Teams app
@@ -167,7 +167,7 @@
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
           - name: Create capability based cloud resources
-            href: toolkit/add-resource.md
+            href: toolkit/add-resource.md  
             displayName: application 
           - name: Integrate existing third party APIs
             href: toolkit/add-API-connection.md
@@ -175,7 +175,7 @@
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
-            href: toolkit/use-existing-aad-app.md
+            href: toolkit/use-existing-aad-app.md  
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
@@ -559,19 +559,19 @@
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for Copilot extensions
         href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+        displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+        displayName: Copilot, extend message extension, search based message extension, Microsoft 365 Copilot, customize Microsoft 365 Copilot
       - name: Debug a copilot plugin with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
         displayName: copilot, enabled plugins, matched functions, selected functions for execution, function execution details
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
         displayName: custom copilot, custom engine copilot, plugin, conversation
-      - name: Copilot for Microsoft 365 plugin FAQ
+      - name: Microsoft 365 Copilot plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
-        displayName: Copliot for Microsoft 365, FAQ, bot-based message extension, plugin
+        displayName: Microsoft 365 Copliot, FAQ, bot-based message extension, plugin
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
@@ -1068,7 +1068,7 @@
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: Install Moodle LMS
-      href: resources/moodleInstructions.md
+      href: resources/moodleInstructions.md  
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
@@ -1126,7 +1126,7 @@
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot
+    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
