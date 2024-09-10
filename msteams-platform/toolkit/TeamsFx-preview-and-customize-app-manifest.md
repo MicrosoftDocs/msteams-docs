@@ -98,7 +98,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-You can also add the file path in `env/.env.xx`. Then, modify the parameter of file function to a placeholder in the `${{xx_xx}}` format.
+    You can also add the file path in `env/.env.xx`. Then, modify the parameter of file function to a placeholder in the `${{xx_xx}}` format.
 
 
    `.env.dev`
