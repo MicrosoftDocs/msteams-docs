@@ -73,10 +73,10 @@ A good description offers a clear and concise summary of the app’s features an
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
 
 * Short description of app, parameter, command description, Semantic description and Operation ID must not include:
-  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“. [*Must-fix*]
+  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“ [*Must-fix*]
   * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
   * Grammar and punctuation errors [*Must-fix*]
-  * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
+  * Overly verbose, flowery, or marketing language [*Good-to-fix*]
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
   > [!NOTE]
@@ -153,10 +153,7 @@ Copilot agent responses provided as an Adaptive Card must meet below requirement
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
 * Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Must fix*]
-
-* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Must fix*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
-* Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -201,7 +198,9 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots [*Must fix*]
+### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+
+[*Must fix*]
 
 Follow these requirements:
 
@@ -268,13 +267,13 @@ For Copilot agents to be validated, invoked, and work seamlessly, ensure that it
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | App manifest version must be 1.13 or later. [*Must fix*] <br> If using declarative Copilot, app manifest version must be 1.18 [*Must fix*] |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative Copilot, app manifest version must be 1.18. [*Must fix*] |
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
-| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| Content Security Policy | If applicable, modify your Content Security Policy headers, and X-Frame-Options in accordance with [Configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Recommended*] |
+| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Recommended*] |
+| Content Security Policy | If applicable, modify your Content Security Policy headers and X-Frame-Options in accordance with [Configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Recommended*] |
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -285,13 +284,9 @@ For Copilot agents to be validated, invoked, and work seamlessly, ensure that it
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation. [*Must Fix*]
 
 * Data shown in 3P service (through dialogue) must be reflective of confirmation provided by user.
-
 * A confirmation of the completion of the action must be shared by the plugin in the form of card.
-
 * Action taken by a user must be correctly reflected in 3P service.
-
 * Modification requests by user prior to confirmation of the action must be honored.
-
 * Highly consequential tasks such as, bulk delete must not be supported. [*Good-to-fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
