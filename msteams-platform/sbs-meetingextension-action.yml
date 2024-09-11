@@ -187,13 +187,13 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
        
-    1. Select **Add**. 
+    1. Select **Add**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog with the Add option highlighted.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
     
     1. Select **Open** to open the app in personal scope.
 
-       Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+       Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
     
        :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope."::: 
                       
