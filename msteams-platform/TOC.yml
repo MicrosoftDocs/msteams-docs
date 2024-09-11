@@ -571,8 +571,8 @@
         displayName: M365, bot-based message extension, plugin
     
     - name: Guidelines to create and upgrade Copilot agents
-        href: messaging-extensions/dev-guidelines-copilot-agents.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
+      href: messaging-extensions/dev-guidelines-copilot-agents.md
+      displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
