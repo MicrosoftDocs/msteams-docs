@@ -420,9 +420,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
 > * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent dropdowns are dropdown lists where the options in a list depend on the value of another input field. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
+Dependent dropdowns are dropdown lists where the options in a list depend on the value of another input field. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search.
 
-For example, when you have two dropdown lists in an Adaptive Card: one for selecting a country and another for selecting a specific city within that country.
+For example, when you have two dropdown lists in an Adaptive Card—one for selecting a country and another for selecting a specific city within that country—the first dropdown list acts as a filter for the cities displayed in the second dropdown list.
 
 If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
 
@@ -442,13 +442,19 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 
 The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
 
+**Work-in-progress image**
+
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
-When a user changes an input value, the existing input value in the dependent dropdown becomes invalid. Define the [`Action.ResetInputs`](#actionresetinputs) property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
+1. When a user changes an input value, the existing input value in the dependent dropdown becomes invalid. Define the [`Action.ResetInputs`](#actionresetinputs) property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
 
-The input values in the elements of an Adaptive Card are independent. Hence, Teams doesn't send the input values of the other elements in the data query request to the bot. Define the [`associatedInputs`](#associatedinputs) property under the `Data.Query` object of the dropdown list. This action ensures that the updated input values of all elements are sent to the bot.
+1. The input values in the elements of an Adaptive Card are independent. Hence, Teams doesn't send the input values of the other elements in the data query request to the bot. Define the [`associatedInputs`](#associatedinputs) property under the `Data.Query` object of the dropdown list. This action ensures that the updated input values of all elements are sent to the bot.
 
-The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+1. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+
+### Implement dependent dropdowns
+
+You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. Ensure that you define the `Action.ResetInputs` and `associatedInputs` properties in the card's payload.
 
 #### Action.ResetInputs
 
@@ -467,10 +473,6 @@ The `associatedInputs` property ensures that Teams includes the input values of 
 | Property| Type | Required | Description |
 |---|---|---|---|
 | `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
-
-### Implement dependent dropdowns
-
-You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. Ensure that you define the `Action.ResetInputs` and `associatedInputs` properties in the card's payload.
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
