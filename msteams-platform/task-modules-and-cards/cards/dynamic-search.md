@@ -470,7 +470,7 @@ The `associatedInputs` property ensures that Teams includes the input values of 
 
 | Property| Type | Required | Description |
 |---|---|---|---|
-| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. When a `Data.Query` is executed, the values of the associated inputs are sent to the bot, allowing it to filter values based on the user's input. Allowed values: "auto", "none" |
+| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. Allowed values: "auto", "none" |
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
