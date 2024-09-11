@@ -12,15 +12,15 @@
 >
 > * Create a Power Automate connector: Power Automate enhances the widely used **Workflows** apps in Teams. It's the scalable and secure approach to transmit data programmatically into and out of Teams. If you adopt this method, you can create one or two workflow templates for posting alerts from your product to Teams channels. This approach simplifies user adoption of the new method. For more information, see [Power Automate for enterprise developers, ISVs, and partners.](/power-automate/developer/dev-enterprise-intro)
 >
-> * Update your Teams app: You can also enhance your current Teams app. For instance, you can enable users to set up proactive messages based on trigger events within your system. For more information, see [how bots can post to channels through proactive messages.](../resources/bot-v3/bot-conversations/bots-conversations.md#proactive-messages)
+> * Update your Teams app: You can enhance your current Teams app. For example, you can enable users to set up proactive messages based on trigger events within your system. For more information, see [how bots can post to channels through proactive messages.](../resources/bot-v3/bot-conversations/bots-conversations.md#proactive-messages)
 >
 > **Known issues**
 >
 > * Workflows app can't post in private channels.
-> * Workflows can't post messages using the payload or format of O365 Connectors. Workflows only support Adaptive Cards and don't support the older message card format.
-> * Workflows aren't available in GCCH.
+> * Workflows can't post messages using the payload or format of O365 Connectors. Workflows support only Adaptive Cards and don't support the older message card format.
+> * Workflows aren't available in Government community cloud (GCC) High.
 > * Workflows don't include connectors such as, Jenkins, DataDog, and so on.
-> * Workflows can be created in your default environment only.
+> * Workflows can only be created in your default environment.
 >
 > **Limitations**
 >
