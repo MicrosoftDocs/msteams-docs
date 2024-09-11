@@ -422,7 +422,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 Dependent dropdowns are dropdown lists where the options in a list depend on the value of another input field. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search.
 
-For example, when you have two dropdown lists in an Adaptive Card—one for selecting a country and another for selecting a specific city within that country—the first dropdown list acts as a filter for the cities displayed in the second dropdown list.
+For example, consider an Adaptive Card with two dropdown lists: one for selecting a country and another for selecting a specific city within that country. The first dropdown list filters the cities shown in the second dropdown list.
 
 If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
 
@@ -441,8 +441,6 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 ### How dependent dropdowns work
 
 The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
-
-**Work-in-progress image**
 
 :::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
 
