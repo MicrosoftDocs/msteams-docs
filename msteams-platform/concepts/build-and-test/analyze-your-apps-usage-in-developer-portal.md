@@ -11,18 +11,13 @@ ms.date: 12/15/2022
 
 The Developer Portal for Teams provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you’re tracking active users, retention rates, or usage patterns across different platforms, the Developer Portal helps you with the information you need to optimize your app and ensure its success within the Microsoft Teams ecosystem.
+Whether you’re tracking active users, retention rates, or usage patterns across different platforms, the Developer Portal helps you with the information you need to optimize your app and ensure its success within Microsoft Teams for LOB apps, as well as within Teams, Outlook, and Microsoft 365 for third-party apps.
 
 In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
-| Metric | Definition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
-| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
-
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom apps built for your org](#tab/custom-apps-built-for-your-org)
+# [Custom apps built for your org (LOB app)](#tab/custom-apps-built-for-your-org)
 
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
@@ -30,6 +25,12 @@ You can view your custom app's usage and other insights from the **Analytics** p
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section or select **View details** under the **Active Users (Preview)** card.
+
+| Metric | Definition |
+| :-----------------------| :------------------------------------------------------------------------------------------------------|
+| **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
+| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
+| **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
 
    :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
@@ -104,14 +105,22 @@ After you have selected your desired filters, you can explore the following indi
 
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
-# [Third party apps](#tab/thirdpartyapps)
+# [Third-party apps](#tab/thirdpartyapps)
 
-You can view usage for your third party app and other insights from the **Analytics** page. To access the page:
+You can view usage for your [third-party app](/promote-app-adoption#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
+
+To learn more about how to create a new app or import an existing app, see [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal).
+
+| Metric | Definition |
+| :-----------------------| :------------------------------------------------------------------------------------------------------|
+| **Monthly R28 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 28 days window in UTC. |
+| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
+| **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
 
 As you explore the app usage metrics on this page, you can see the following three sections:
 
@@ -138,7 +147,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | **Monthly (MAU)** | Each data point represents a given R30 (Rolling 30 days) period. |
+   | **Monthly (MAU)** | Each data point represents a given R28 (Rolling 28 days) period. |
    | **Weekly (WAU)** | Each data point represents a given R7 (Rolling 7 days) period. |
    | **Daily (DAU)** | Each data point represents a given R1 (Rolling 1 day) period. |
 
@@ -151,9 +160,9 @@ As you explore the app usage metrics on this page, you can see the following thr
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
    | New users or tenants | Active users or tenants who are new and haven't used your app. |
-   | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
-   | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
-   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+   | Returning users or tenants | Active users or tenants who used your app during a given R28 (Rolling 28 days) time period and the immediately preceding R28 time period. |
+   | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R28 time period. |
+   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R28 time period but were seen during the immediately preceding R28 time period. |
 
  #### Usage by country or region
 
@@ -169,16 +178,16 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | **Median days used per month** | The median number of days in which your app was opened in the last R30 (Rolling 30 days) time period. |
-   | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
-   | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
+   | **Median days used per month** | The median number of days in which your app was opened in the last R28 (Rolling 28 days) time period. |
+   | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R28 time period. |
+   | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R28 time period. |
 
  #### My app dashboard
 
-   The **My App Dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+   The **My App Dashboard** table shows you the latest R28 (Rolling 28 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
 
-* Daily R30 data for the last 75 days.
-* End of month R30 data for up to 12 months.
+* Daily R28 data for the last 75 days.
+* End of month R28 data for up to 12 months.
 
    You can select each of these metric names to see trends over time.
 
