@@ -558,8 +558,8 @@
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines to create and upgrade Copilot agents
-        href: messaging-extensions/dev-guidelines-copilot-extensions.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+        href: messaging-extensions/dev-guidelines-copilot-agents.md
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
@@ -953,7 +953,7 @@
       displayName: validDomain, valid domain, validdomain, logo, Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy
     - name: Validation guidelines for Copilot agents
       href: messaging-extensions/high-quality-message-extension.md
-      displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+      displayName: Criteria, extend message extension, plugin, M365, Microsoft 365 Copilot, Microsoft Copilot agent, customize Microsoft 365 Copilot
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
@@ -1129,7 +1129,7 @@
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot
+    displayName: message extension, plugin, Copilot agents, Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
