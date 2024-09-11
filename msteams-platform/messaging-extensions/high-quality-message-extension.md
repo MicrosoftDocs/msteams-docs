@@ -34,12 +34,12 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column span="":::
       :::image type="icon" source="../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../assets/icons/sample-prompts.png" link="#sample-prompts" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+   :::column span="":::
+      :::image type="icon" source="../assets/icons/sample-prompts.png" link="#sample-prompts" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
@@ -49,29 +49,20 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column:::
       :::image type="icon" source="../assets/icons/technical-requirements.png" link="#technical-requirements" border="false":::
    :::column-end:::
+:::row-end:::
+
+:::row:::
    :::column span="":::
      :::image type="icon" source="../assets/icons/user-disclosure.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/instructions-only.png" link="#instructions-only-copilots-must-not-be-supported" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../assets/icons/white-bg.png" border="false":::
    :::column-end:::
 :::row-end:::
 
