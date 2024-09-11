@@ -215,11 +215,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot of the app details dialog with the Add option to upload the custom app in Teams."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot of the app details dialog to add the file upload bot in Teams."::: 
 
     1.  Select **Open**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the option to open the app in personal scope.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2

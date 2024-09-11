@@ -82,15 +82,15 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select the **F5** to run the application in debug mode.
+     1. Select **F5** to run the application in debug mode.
 
      1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot of the app details dialog with the Add option highlighted.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
 
      1.  Select **Open**.
 
-         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-add-scope.png" alt-text="Screenshot of the scope selection dialog with the option to open the app in personal scope.":::
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-add-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
         Tab app dashboard is successfully created in Teams.
 
