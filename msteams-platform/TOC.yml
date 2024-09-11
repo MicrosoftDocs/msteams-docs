@@ -193,6 +193,9 @@
             href: toolkit/debug-message-extension-app-in-test-tool.md            
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
+          - name: Debug apps in Teams desktop client
+            href: toolkit/debug-apps-in-Teams-desktop-client.md
+            displayName: debug app in desktop client             
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
