@@ -19,10 +19,10 @@ The following are the advantages of Teams desktop client:
 
 ## Capabilities
 
-The Teams desktop client incorporates debugging capabilities in the appl templates scaffolded by the Teams Toolkit:
+The Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
 
 * Bot
-* Copilot Plugin
+* Copilot Engine Copilot
 * Custom Copilot
 * Message Extension
 
@@ -43,7 +43,7 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
 1. Open Visual Studio Code (VS Code).
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
@@ -106,9 +106,9 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows an example of the app to desktop client.":::
 
-> [!NOTE]
-> The system level notification for account matching appears only once per project. In subsequent debug sessions, the Teams Toolkit sends reminders about the account through VS Code notifications.
-> :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
+    > [!NOTE]
+    > The system level notification for account matching appears only once per project. In subsequent debug sessions, the Teams Toolkit sends reminders about the account through VS Code notifications.
+    > :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
 1. You can add breakpoints and hot reload your changes.
 
