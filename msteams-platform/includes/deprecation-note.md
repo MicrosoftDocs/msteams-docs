@@ -10,19 +10,19 @@
 >
 > **ISV Outreach for those with O365 Connectors**
 >
-> * Create a Power Automate connector: Power Automate is the technology powering the popular "Workflows" app in Teams. It is the scalable and secure method we'll be recommending our customers use to relay information programmatically into and out of Teams. If you go this route we could even help create a workflow template or two for posting alerts from your product to Teams channels. This would make it very simple for users to adopt the new method. For more information, see [Power Automate for enterprise developers, ISVs, and partners.](/power-automate/developer/dev-enterprise-intro)
+> * Create a Power Automate connector: Power Automate enhances the widely used Workflows apps in Teams. It's the scalable and secure approach we recommend for our customers to transmit data programmatically into and out of Teams. If you adopt this method, we assist in creating one or two workflow templates for posting alerts from your product to Teams channels. This approach simplifies user adoption of the new method. For more information, see [Power Automate for enterprise developers, ISVs, and partners.](/power-automate/developer/dev-enterprise-intro)
 >
-> * Update your Teams app: Another option is invest further in your existing Teams app. For example, you could allow users to set up proactive messages based on trigger events in your system. For more information, see [how bots can post to channels through proactive messages.](../resources/bot-v3/bot-conversations/bots-conversations.md#proactive-messages)
+> * Update your Teams app: You can also enhance your current Teams app. For instance, you can enable users to set up proactive messages based on trigger events within your system. For more information, see [how bots can post to channels through proactive messages.](../resources/bot-v3/bot-conversations/bots-conversations.md#proactive-messages)
 >
-> **Coming soon**
+> **Known issues**
 >
-> * Workflows bot can't post to private channels.
-> * Workflows can't post messages using the payload or format of O365 Connectors such as, workflows only supports Adaptive Cards and not the legacy message card format.
-> * Currently Workflows is not in GCCH.
-> * Workflows are missing some connectors such as, Jenkins, DataDog etc.
-> * Ability to create a workflow within another environment but default.
+> * Workflows bot can't post in private channels.
+> * Workflows can't post messages using the payload or format of O365 Connectors. Workflows only support Adaptive Cards and don't support the older message card format.
+> * Currently, Workflows isn't available in GCCH.
+> * Connectors such as, Jenkins and DataDog, aren't included in the workflows.
+> * You've the capability to establish a workflow within an environment other than the default.
 >
 > **Limitations**
 >
-> * Moving users to premium connectors.
-> * Workflows are tied to individuals while O365 Connectors are tied to the Teams team/channel.
+> * Upgrading users to premium connectors.
+> * Individual workflows are linked to specific users, whereas O365 Connectors are associated with the respective Teams team or channel.
