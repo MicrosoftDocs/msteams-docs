@@ -69,7 +69,7 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
 1. Select **Open** to open the app in personal scope. 
 
-    Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**.
+    Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../assets/images/get-started/tab-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog with the options to open the app from the list of suggested scopes.":::
 
