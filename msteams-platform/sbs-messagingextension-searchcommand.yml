@@ -200,11 +200,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-addapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with Add option highlighted.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-addapp.png" alt-text="Screenshot of message extension app details dialog with Add option highlighted.":::
     
-    1. Select **Open** to use the app in personal scope.
+    1. Select **Open**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-openapp.png" alt-text="Screenshot of Search Messaging Extension in Teams with Open option highlighted.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/me-openapp.png" alt-text="Screenshot of the scope options dialog with Open option highlighted.":::
 
 - title: Interact with the app in Teams
   durationInMinutes: 1

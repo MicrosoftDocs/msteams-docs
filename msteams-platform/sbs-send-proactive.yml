@@ -92,11 +92,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of Proactive Message app installation with Add option highlighted.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension details dialog with Add option highlighted.":::
 
-    1. Select a channel or chat to use the app colloboratively and move through the dialog to select **Go**.
+    1. Search and select the required scope or select a channel, chat, or meeting from the list, and select **Go**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of Proactive Message app with scope options.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
  
         The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
