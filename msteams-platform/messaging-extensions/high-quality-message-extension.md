@@ -159,7 +159,7 @@ Copilot agent responses provided as an Adaptive Card must meet below requirement
 
 ## Compatibility
 
-Copilot agents must be fully responsive and functional on the latest versions of these clients. [*Must-fix*]
+Copilot agents must be fully responsive and functional on the latest versions of these clients: [*Must-fix*]
 
 * Microsoft Teams on Desktop and Web
 * copilot.microsoft.com on web
@@ -177,7 +177,7 @@ Copilot agents must be fully responsive and functional on the latest versions of
 
 You must implement the following:
 
-* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Must fix]*
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. [*Must fix*]
 
   * **ColumnSets**
 
@@ -198,7 +198,7 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+### Ensure your Copilot agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
 [*Must fix*]
 
@@ -293,7 +293,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 ## Instructions-only Copilots must not be supported
 
-If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the manifest, the agent responses are not grounded in a data sources. These agents, also called as instruction-only Copilot agents, aren't allowed due to questionable authenticity of the result. [*Must fix*]
+If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the agent's responses are not grounded in a data source. Such agents, also called instruction-only Copilot agents, aren't allowed due to questionable authenticity of the result. [*Must fix*]
 
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
 
