@@ -572,7 +572,7 @@
     
     - name: Guidelines to create and upgrade Copilot agents
       href: messaging-extensions/dev-guidelines-copilot-agents.md
-      displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
+      displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
@@ -953,7 +953,7 @@
       displayName: validDomain, valid domain, validdomain, logo, Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy
     - name: Validation guidelines for Copilot agents
       href: messaging-extensions/high-quality-message-extension.md
-      displayName: Criteria, extend message extension, plugin, M365, Microsoft 365 Copilot, Microsoft Copilot agent, customize Microsoft 365 Copilot
+      displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Microsoft Copilot agent, customize Microsoft 365 Copilot
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
