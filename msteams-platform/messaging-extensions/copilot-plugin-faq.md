@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Copilot plugin FAQ
 author: v-ypalikila
-description: In this article, get answers to some frequently asked questions about building a plugin for Microsoft 365 Copilot.
+description: In this article, fetch answers to some frequently asked questions while building a plugin for Microsoft 365 Copilot.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.date: 02/14/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Microsoft 365 Copilot Frequently Asked Questions
+# Frequently Asked Questions
 
 Get answers to your common queries about building a message extension and extending the message extension as a plugin in Microsoft 365 Copilot.
 

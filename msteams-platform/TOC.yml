@@ -559,10 +559,10 @@
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for Copilot extensions
         href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
-        displayName: Copilot, extend message extension, search based message extension, Microsoft 365 Copilot, customize Microsoft 365 Copilot
+        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Debug a copilot plugin with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
         displayName: copilot, enabled plugins, matched functions, selected functions for execution, function execution details
@@ -571,7 +571,7 @@
         displayName: custom copilot, custom engine copilot, plugin, conversation
       - name: Microsoft 365 Copilot plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
-        displayName: Microsoft 365 Copliot, FAQ, bot-based message extension, plugin
+        displayName: Microsoft 365 Copilot, FAQ, bot-based message extension, plugin
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md

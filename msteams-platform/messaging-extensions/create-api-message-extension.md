@@ -42,7 +42,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
 1. Under **Message extension type**, select **API**.
 
-   1. If you get a disclaimer that reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
+   1. 1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
