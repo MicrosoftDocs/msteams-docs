@@ -68,7 +68,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 ## App description
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations.
+A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
 
@@ -325,4 +325,4 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 ## See also
 
 * [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
-* [Extend Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/)
+* [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
