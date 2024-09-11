@@ -110,9 +110,9 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
-   4. When prompted to upload the custom app to Teams, select **Add**.
+   4. Select **Add** to upload the custom app to Teams.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
    
    5. Select **Open**.
 

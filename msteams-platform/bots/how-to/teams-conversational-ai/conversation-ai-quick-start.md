@@ -163,7 +163,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
    * **Microsoft 365 account**
    * **Azure account**
 
-1. To debug your app, select the **F5** key.
+1. To debug your app, select **F5**.
 
    A browser tab opens the Teams web client to add the bot to your tenant.
 
@@ -171,11 +171,11 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
    :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the scope selection dialog to add the LightBot app.":::
 
-   A dialog to select the required scope appears.
+   When the app is added, a dialog to select the required scope appears.
 
 1. Select **Open** to open the app in personal scope. 
 
-   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -296,11 +296,11 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
    :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
 
-   A dialog to select the required scope appears.
+   When the app is added, a dialog to select the required scope appears.
 
 1. Select **Open** to open the app in personal scope.
 
-   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -403,7 +403,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Enter **Python: Create Environment** to create a virtual environment.
 
-1. To debug your app, select the **F5** key.
+1. To debug your app, select **F5**.
 
    A browser tab opens the Teams web client to add the bot to your tenant.
 
@@ -411,11 +411,11 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
    :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
 
-   A dialog to select the required scope appears.
+   When the app is added, a dialog to select the required scope appears.
 
 1. Select **Open** to open the app in personal scope.
 
-   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../../../assets/images/bots/bot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
