@@ -201,11 +201,11 @@ For more information to create plugins for teams meetings, see [Enable message e
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots [*Must fix*]
 
 Follow these requirements:
 
-1. **If using SSO-enabled app, update Microsoft Azure Active Directory (Azure AD) app registration**
+1. **If using SSO-enabled app, update Microsoft Azure Active Directory (Azure AD) app registration** [*Must fix*]
 
     Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
@@ -239,7 +239,7 @@ Follow these requirements:
     1. From the **Settings** section, select **Channels**.
     1. From **Available channels**, select **Microsoft 365 & Microsoft Teams**, and then select **Apply**.
 
-1. **Configure content security policy headers**
+1. **Configure content security policy headers** [*Must fix*]
 
     If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
@@ -254,7 +254,7 @@ Follow these requirements:
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
-1. **Upgrade Teams JS version to the 2.22.0 build**
+1. **Upgrade Teams JS version to the 2.22.0 build** [*Must fix*]
 
     If you're using Teams JS version 2.22 or earlier, update it to version 2.22 or higher.  
 
