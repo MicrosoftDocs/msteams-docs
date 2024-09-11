@@ -284,13 +284,13 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to upload the custom bot app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload the custom bot app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the bot app to Teams.":::
     
     1. Select **Open** to open the app in personal scope.
        
-        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 

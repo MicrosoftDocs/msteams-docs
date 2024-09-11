@@ -82,11 +82,11 @@ Once the provisioning and deployment steps are complete:
 
 1. Select **Add**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot of the app details dialog to add the app.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
 
 1. Select **Open** to open the app in personal scope.
 
-   Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 

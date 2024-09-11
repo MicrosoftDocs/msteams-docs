@@ -204,11 +204,11 @@ items:
         
     1. Select **Add** to install your app in Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp.png" alt-text="Screenshot of the app details dialog to add the app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
 
     1. Select **Open** to open the app in personal scope.
        
-        Alternatively, select a channel or chat for collaborative use and move through the dialog to select **Go**.
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -414,11 +414,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of the app details dialog to add the Blazor app.":::
 
     1. Select **Open** to open the app in personal scope.
        
-        Alternatively, select a channel, chat, or meeting for collaborative use and move through the dialog to select **Go**.
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
