@@ -5,7 +5,8 @@ description: Learn how to build a bot-based message extension plugin for Microso
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 11/14/2023
+ms.date: 07/02/2024
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Extend bot-based message extension as plugin for Copilot for Microsoft 365
@@ -132,7 +133,11 @@ Before you get started, ensure that you install the following tools to build and
   1. Open **Visual Studio**.
   1. Go to **Tools** > **Options**.
   1. Enter **Teams Toolkit** in the **Search Settings** search box.
-  1. Under **Preview Features**, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
+  1. In the **Preview Features** section, select the **Teams Toolkit: Develop Copilot Plugin** checkbox.
+* Ensure that the multi-project launch profile is enabled. To enable the profile, follow these steps:
+  1. Open **Visual Studio**.
+  1. Go to **Tools** > **Options**.
+  1. In the **Preview Features** section, select the **Enable Multi-Project Launch Profiles** checkbox.
 
 To create a bot-based search message extension plugin using Visual Studio, follow these steps:
 
@@ -140,6 +145,10 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 1. Go to **File** > **New** > **Project...** or **Create a new Project**.
 
 1. Search for **Teams** and select **Microsoft Teams App**.
+
+1. Enter the project details. Ensure that the **Place solution and project in the same directory** checkbox isn't selected.
+
+1. Select **Create**.
 
 1. Select **Custom Search Results**.
 
