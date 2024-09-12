@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Update bot or Message extension app to use Certificate or MSI for Authentication
+# Update Bot or Message extension app to use Certificate or MSI for Authentication
 
 Update your bot project to authenticate using a certificate or Managed Service Identity (MSI), rather than a bot ID and secret. This addresses compliance issues associated with the use of Entra ID and a secret.
 
@@ -108,23 +108,15 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
     :::image type="content" source="../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
 
-1. Under **Pricing**, select **Change plan**.
-
-    :::image type="content" source="../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
-
-1. Select **FO Free** > **Select**.
-
-    :::image type="content" source="../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
-
 1. Under **Microsoft App ID**, select **Type of App** as **User-Assigned Managed Identity**.
 
 1. In the **Creation type**, select **Create new Microsoft App ID**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app id option.":::
 
-OR
+    OR
 
-1. You can manually create a managed identity first, then create the **Azure Bot** using the **Use existing app registration**.
+    You can manually create a managed identity first, then create the **Azure Bot** using the **Use existing app registration**.
 
 1. Update the new **Azure Bot** messaging endpoint and channels to match those of the old service.
 
