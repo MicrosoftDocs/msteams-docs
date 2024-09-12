@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Microsoft Teams.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
->   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+>   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > * Message extension plugins for declarative Copilot are in limited private preview.
 
@@ -82,11 +82,11 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
   > [!NOTE]
   > In case of declarative Copilots, these guidelines apply to instructions and conversation starters fields also.
 
-* App long description must clearly call out that agent works in Copilot. For example, use Contoso in Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description must clearly call out that agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must-fix*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Microsoft 365 Copilot.":::
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -96,7 +96,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
 
-In addition, you must ensure that apps with Copilot extension functionality must have atleast one screenshot related to Copilot functionality. [*Must-fix*]
+In addition, you must ensure that apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must-fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -122,9 +122,9 @@ Copilot agents must support atleast more than three unique compound utterances b
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Copilot.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Microsoft 365 Copilot.":::
 
-Plugins must have sample prompts to guide users on how to use the various plugins within Copilot. [*Must Fix*]
+Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]
 
 Sample prompts are specified using `samplePrompts` property in the manifest. These prompts must meet the following requirements: [*Must Fix*]
 
@@ -146,7 +146,7 @@ Copilot agent responses provided as an Adaptive Card must meet below requirement
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains Preview and Content in the same response.":::
 
 * Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Must fix*]
 
@@ -166,7 +166,7 @@ Copilot agents must be fully responsive and functional on the latest versions of
 * Copilot for Microsoft 365 in Word
 
 > [!NOTE]
-> Message extensions plugins in Copilot for Microsoft 365 applications are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> Message extensions plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > Support for Excel and OneNote client applications to be available soon.
 
 [Back to top](#validation-guidelines-for-copilot-agents)
@@ -183,7 +183,7 @@ You must implement the following:
 
     * Don't define `ColumnSets` with more than three columns.
     * Don’t use explicit pixel width on more than one column in the set.
-    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Microsoft 365 Copilot.
     * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
 
   * **Sizing images**
@@ -249,7 +249,7 @@ Follow these requirements:
     | PowerPoint | fa000000129.resources.office.net |
     | Excel | fa000000124.resources.office.net |
     | OneNote | fa000000128.resources.office.net |
-    | Copilot and Bing | `edgeservices.bing.com`, `www.bing.com`, `copilot.microsoft.com` |
+    | Microsoft 365 Copilot and Bing | `edgeservices.bing.com`, `www.bing.com`, `copilot.microsoft.com` |
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
