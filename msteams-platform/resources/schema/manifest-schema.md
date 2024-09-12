@@ -3,7 +3,7 @@ title: Manifest schema reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 02/09/2023
+ms.date: 09/16/2024
 ---
 
 # App manifest schema
@@ -60,14 +60,8 @@ The following is the sample app manifest schema:
     "copilotExtensions": {
         "declarativeCopilots": [
             {
-                "id": "copilot1",
-                "file": "declarativeCopilot1.json"
-            }
-        ],
-        "plugins": [
-            {
-                "id": "plugin1",
-                "file": "plugin1.json"
+                "id": "agent1",
+                "file": "declarativeAgent1.json"
             }
         ]
     },
@@ -474,30 +468,33 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Defines one or more extensions to Microsoft Copilot, including declarative copilots and plugins. [Declarative copilots](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Copilot for Microsoft 365 that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
+Defines one or more agents for Microsoft 365 Copilot, including declarative agents and plugins. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Microsoft 365 Copilot.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`declarativeCopilots`|Array of objects| 1 | | List of `declarativeCopilot` objects. |
-|`plugins`|Array of objects| 1 | | List of `plugin` objects.|
+|`plugins`|Array of objects| 1 | | [Limited preview] List of `plugin` objects.|
 
 ### declarativeCopilot
 
-Represents a customization of Copilot for Microsoft 365, as defined by its manifest file.
+Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique identifier for the declarative copilot. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
-|`file`|String| |✔️| Relative path within the app package to the [declarative copilot manifest](/microsoft-365-copilot/extensibility/declarative-copilot-manifest) file.  |
+|`id`|String| |✔️| Unique identifier for the declarative agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-copilot-manifest) file.  |
 
 ### plugin
 
 Represents an API plugin, as defined by its manifest file.
 
+> [!NOTE]
+> Standalone API plugins for Microsoft 365 Copilot are in limited preview and are not generally available. API plugins are currently only supported within [declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-copilot).
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique identifier for the plugin. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
-|`file`|String| |✔️| Relative path within the app package to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
+|`id`|String| |✔️| [Limited preview] Unique identifier for the plugin. When using Microsoft Copilot Studio to build agents with actions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| [Limited preview] Relative path within the app package to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
 
 ## configurableTabs
 

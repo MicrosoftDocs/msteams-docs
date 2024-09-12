@@ -3,7 +3,7 @@ title: Developer Preview App Manifest Schema
 description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 11/15/2021
+ms.date: 09/16/2024
 ---
 # Public developer preview app manifest schema
 
@@ -70,8 +70,8 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     "copilotExtensions": {
         "declarativeCopilots": [
             {
-                "id": "copilot1",
-                "file": "declarativeCopilot1.json"
+                "id": "agent1",
+                "file": "declarativeAgent1.json"
             }
         ],
         "plugins": [
@@ -453,7 +453,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Defines one or more extensions to Microsoft Copilot, including declarative copilots and plugins. [Declarative copilots](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Copilot for Microsoft 365 that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
+Defines one or more agents to Microsoft 365 Copilot, including declarative agents and plugins. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -462,12 +462,12 @@ Defines one or more extensions to Microsoft Copilot, including declarative copil
 
 ### declarativeCopilot
 
-Represents a customization of Copilot for Microsoft 365, as defined by its manifest file.
+Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique identifier for the declarative copilot. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
-|`file`|String| |✔️| Relative path within the app package to the [declarative copilot manifest](/microsoft-365-copilot/extensibility/declarative-copilot-manifest) file.  |
+|`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-copilot-manifest) file. |
 
 ### plugin
 
@@ -475,7 +475,7 @@ Represents an API plugin, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique identifier for the plugin. When using Microsoft Copilot Studio to build extensions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`id`|String| |✔️| Unique identifier for the plugin. When using Microsoft Copilot Studio to build agents with actions, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
 |`file`|String| |✔️| Relative path within the app package to the [API plugin manifest](/microsoft-365-copilot/extensibility/api-plugin-manifest) file. |
 
 ## configurableTabs
