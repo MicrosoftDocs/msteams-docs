@@ -176,8 +176,8 @@
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
             href: toolkit/use-existing-aad-app.md
-          - name: Update bot/ME project to use Certificate or MSI for Authentication
-            href: toolkit/use-existing-aad-app.md  
+          - name: Update Bot or Message extension app to use Certificate or MSI for Authentication
+            href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
