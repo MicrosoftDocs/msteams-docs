@@ -370,7 +370,7 @@ For more on testing your plugin in Microsoft 365 Copilot, see [Debugging plugin 
 
 ## Enable message extension as a plugin for Copilot for meetings
 
-Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, We recommend you to follow the guidelines listed in [Microsoft 365 Copilot extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
+Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, We recommend you to follow the guidelines listed in [guidelines for Copilot agent](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
 
 To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
 
