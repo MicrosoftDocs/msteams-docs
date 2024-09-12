@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Update Bot or Message extension app to use Certificate or MSI for Authentication
 
-Update your bot or message extension app to authenticate using a certificate or Managed Service Identity (MSI), instead of a bot ID and secret. This action resolves compliance concerns related to the use of Entra ID and a secret.
+Update your bot or message extension app to authenticate using a certificate or Managed Service Identity (MSI), instead of a bot ID and secret. This action resolves compliance concerns related to the use of Microsoft Entra ID and a secret.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
 
 * An Azure bot.
 * An Entra ID with a secret used for bot authentication.
-* A resource that hosts your bot app such as, Azure App Service, Azure Functions, and so on.
+* A resource that hosts your bot app, such as Azure App Service, Azure Functions, and so on.
 
 ## Update to Certificate based Authentication
 
@@ -37,7 +37,7 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/certificates-secrets.png" alt-text="Screenshot shows the certificates and secrets option.":::
 
-    The **Upload a certiificate** window appears.
+    The **Upload a certificate** window appears.
 
     > [!NOTE]
     > Upload a certiificate (public key) with one of the following file types: .cer, .pem, .crt
@@ -112,7 +112,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. In the **Creation type**, select **Create new Microsoft App ID**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app id option.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
 
     OR
 
