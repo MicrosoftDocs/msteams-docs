@@ -9,11 +9,11 @@ ms.localizationpriority: high
 
 # Update Bot or Message extension app to use Certificate or MSI for Authentication
 
-Update your bot project to authenticate using a certificate or Managed Service Identity (MSI), rather than a bot ID and secret. This addresses compliance issues associated with the use of Entra ID and a secret.
+Update your bot or message extension app to authenticate using a certificate or Managed Service Identity (MSI), instead of a bot ID and secret. This action resolves compliance concerns related to the use of Entra ID and a secret.
 
 ## Prerequisites
 
-Ensure that you have a Teams bot app deployed to Azure with the following resources:
+Ensure that you've a Teams bot app deployed to Azure with the following resources:
 
 * An Azure bot.
 * An Entra ID with a secret used for bot authentication.
