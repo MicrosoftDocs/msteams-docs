@@ -105,14 +105,14 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-You can view usage for your [third-party app](../promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
+You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
 
-To learn how to import your existing app, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
+To learn how to import your published app into Developer Portal for Teams, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
 
 | Metric | Definition |
