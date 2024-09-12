@@ -17,7 +17,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * Message extension plugins for declarative Copilot are in limited private preview.
+> * Message extension plugins for declarative copilot are in limited private preview.
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
@@ -80,7 +80,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
   > [!NOTE]
-  > In case of declarative Copilots, these guidelines apply to instructions and conversation starters fields also.
+  > In case of declarative copilots, these guidelines apply to instructions and conversation starters fields also.
 
 * App long description must clearly call out that agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must-fix*]
 
@@ -104,7 +104,7 @@ In addition, you must ensure that apps with Copilot agent functionality must hav
 
 The guidelines related to the description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
-In addition, you must ensure that for declarative Copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
+In addition, you must ensure that for declarative copilot, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -136,7 +136,7 @@ Sample prompts are specified using `samplePrompts` property in the manifest. The
 * Prompt must be relevant to the commands.
 
 > [!NOTE]
-> In case of declarative Copilot, these guidelines also apply for zero-query prompts.
+> In case of declarative copilot, these guidelines also apply for zero-query prompts.
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -267,7 +267,7 @@ For Copilot agents to be validated, invoked, and work seamlessly, ensure that it
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative Copilot, app manifest version must be 1.18. [*Must fix*] |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative copilot, app manifest version must be 1.18. [*Must fix*] |
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
@@ -307,7 +307,7 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 * For misuse or inappropriate language
 * For topics in which the Copilot doesn’t specialize
 
-  For example, Graceful error message with way forward for declarative Copilot:
+  For example, Graceful error message with way forward for declarative copilot:
 
   :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshots how to incorporate graceful error handling.":::
 
