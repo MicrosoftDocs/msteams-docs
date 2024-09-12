@@ -486,7 +486,7 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 
 ### plugin
 
-Represents an API plugin, as defined by its manifest file.
+[Limited preview] Represents an API plugin, as defined by its manifest file.
 
 > [!NOTE]
 > Standalone API plugins for Microsoft 365 Copilot are in limited preview and are not generally available. API plugins are currently only supported within [declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-copilot).
