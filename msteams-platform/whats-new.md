@@ -30,11 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 August**
+**2024 September**
 
-* ***August 26, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
-* ***August 22, 2024***: [Dev Tools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
-* ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
+***September 17, 2024***: [Update Bot or Message extension app to use Certificate or MSI for Authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
 
 :::column-end:::
 :::row-end:::
