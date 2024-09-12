@@ -830,7 +830,7 @@ Update the following properties in the app manifest file:
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `authorization.microsoftEntraConfiguration`: Enables Single sign-on authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. For more information, see [composeextensions](../resources/schema/manifest-schema.md#composeextensions).
+* `authorization.microsoftEntraConfiguration`: Enables single sign-on (SSO) authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and reduce the need for multiple authentications. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
 
 To configure app manifest:
 
@@ -953,15 +953,15 @@ After the API-based message extension gets a request header with token, perform 
   > [!NOTE]
   > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
-For more information on how to validate an access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+For more information on how to validate an access token, see [validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are several libraries to validate JSON Web Token (JWT). For basic validation, ensure that you check the following:
+There are several libraries to validate JSON Web Tokens (JWT). For basic validation, ensure that you check the following:
 
 * The token is well-formed.
 * The token was issued by the intended authority.
 * The token is targeted to the web API.
 
-Ensure the following when validating the token:
+When validating the token, ensure the following:
 
 * Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
 * The `aud1` parameter in the token must match the app ID from Microsoft Entra app registration.
