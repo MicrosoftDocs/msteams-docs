@@ -1,13 +1,13 @@
 ---
-title: Update bot/ME project to use Certificate or MSI for Authentication
+title: Update Bot or Message extension app to use Certificate or MSI for Authentication
 author: surbhigupta
-description: Learn about Update bot/ME project to use Certificate or MSI for Authentication.
+description: Learn about Update Bot or Message extension app to use Certificate or MSI for Authentication.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Update bot/ME project to use Certificate or MSI for Authentication
+# Update bot or Message extension app to use Certificate or MSI for Authentication
 
 Update your bot project to authenticate using a certificate or Managed Service Identity (MSI), rather than a bot ID and secret. This addresses compliance issues associated with the use of Entra ID and a secret.
 
