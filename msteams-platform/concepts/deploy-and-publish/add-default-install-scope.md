@@ -10,15 +10,15 @@ ms.date: 12/15/2022
 
 It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. Teams UI helps users to identify the default scope to install your app.
 
-When a user installs an app from Microsoft Teams Store, the user is provided with options to open the app in either personal or shared scope:
+When a user installs an app from Microsoft Teams Store, the user has the option to open the app in either personal or shared scope:
 
-* Personal scope: If your app supports personal scope, the **Open** option appears in scope selection dialog to open the app in personal scope. 
+* Personal scope: If the app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope. 
 
-* Shared scope: If your app supports shared scopes, all the supported scopes are listed in the scope selection dialog. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
+* Shared scope: If the app supports shared scopes, all the supported scopes are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
     :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required scope to use the app.":::
 
-If you have a bot app that's intended to work in personal scope, then in addition to setting its default scope, you can also set the bot as the default capability during app installation.
+If you have a bot app that's intended to work in personal scope, then in addition to setting its default scope, you can also set the bot as the default capability during installation.
 
 ## Configure your app's default install scope
 
