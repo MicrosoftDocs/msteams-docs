@@ -61,7 +61,7 @@ You can build a Teams meeting app for Outlook through the Teams Toolkit extensio
 
 1. Select **Add**.
 
-    :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Screenshot of the app details dialog with Add option to add meeting app in Microsoft Teams.":::
+    :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Screenshot of the app details dialog with the Add option to add meeting app in Microsoft Teams.":::
 
 1. Search and select the meeting that you've scheduled earlier and move through the dialog to select **Go**.
 

@@ -256,7 +256,7 @@ The following table lists the debug configuration names and types for project wi
 
 The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). 
 
-When Teams client loads in the web browser, perform the following steps:
+When Teams client opens in the web browser, perform the following steps:
 
 1. Select **Add** to upload the app in Teams.
 
