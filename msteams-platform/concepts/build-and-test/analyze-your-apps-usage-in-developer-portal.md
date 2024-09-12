@@ -105,7 +105,7 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-You can view usage for your [third-party app](promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
+You can view usage for your [third-party app](../promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
