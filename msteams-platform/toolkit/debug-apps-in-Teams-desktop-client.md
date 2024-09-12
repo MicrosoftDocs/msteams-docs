@@ -9,17 +9,17 @@ ms.localizationpriority: high
 
 # Debug apps in Teams Desktop Client
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, open debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
 
 The following are the advantages of Teams desktop client:
 
-* Improves performance.
-* Reduces time-to-F5.
-* Improves coverage of debug targets.
+* Improves performance
+* Reduces time-to-F5
+* Improves coverage of debug targets
 
-## Capabilities
+## Capabilities of Teams desktop client
 
-The Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
+Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
 
 * Bot
 * Copilot Engine Copilot
@@ -33,11 +33,11 @@ Ensure you install the following tools for building and deploying your app in Te
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
 
-## Debug in Teams desktop client experience in Teams Toolkit for Visual Studio Code
+## Debug in Teams desktop client
 
 Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
@@ -63,9 +63,9 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
 1. Select **OpenAI**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/service-for-large-language-model.png" alt-text="Screenshot shows LLM in visual studio code.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/service-for-large-language-model.png" alt-text="Screenshot shows LLM in Visual Studio Code.":::
 
-1. Enter the values for the OpenAI.
+1. Enter the OpenAI service key.
 
 1. Select **Default folder**.
 
@@ -86,7 +86,7 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/debug-in-teams-desktop.png" alt-text="Screenshot shows the option to select debug in Teams (Desktop).":::
 
@@ -98,19 +98,19 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
 1. Select **Add**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/add-app.png" alt-text="Screenshot shows the add app to desktop client.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/add-app.png" alt-text="Screenshot shows the add button to add the app to Teams desktop client.":::
 
     A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows an example of the app to desktop client.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows the app added to Teams desktop client.":::
 
     > [!NOTE]
-    > The system level notification for account matching appears only once per project. In subsequent debug sessions, the Teams Toolkit sends reminders about the account through VS Code notifications.
+    > The system level notification for account matching appears only once per project. In subsequent debug sessions, Teams Toolkit sends reminders about the account through VS Code notifications.
     > :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
-1. You can add breakpoints and hot reload your changes.
+1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
 
