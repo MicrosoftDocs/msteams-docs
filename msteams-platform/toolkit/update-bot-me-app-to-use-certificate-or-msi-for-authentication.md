@@ -27,7 +27,7 @@ Ensure that you have a Teams bot app deployed to Azure with the following resour
 
 1. Select **App registrations**.
 
-    :::image type="content" source="../../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+    :::image type="content" source="../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
 
 1. Select your registered app.
 
@@ -92,13 +92,13 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 1. Select **Azure Bot**.
 1. Select **Create**.
 
-    :::image type="content" source="../../assets/images/include-files/azure-bot.png" alt-text="Screenshot shows the creation of Azure bot.":::
+    :::image type="content" source="../assets/images/include-files/azure-bot.png" alt-text="Screenshot shows the creation of Azure bot.":::
 
 1. Enter the bot name in **Bot handle**.
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
 
-    :::image type="content" source="../../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
+    :::image type="content" source="../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
 
     If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:
 
@@ -106,15 +106,15 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
     1. Enter the resource name and select **OK**.
     1. Select a location from **New resource group location** dropdown list.
 
-    :::image type="content" source="../../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
+    :::image type="content" source="../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
 
 1. Under **Pricing**, select **Change plan**.
 
-    :::image type="content" source="../../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
+    :::image type="content" source="../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
 
 1. Select **FO Free** > **Select**.
 
-    :::image type="content" source="../../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
+    :::image type="content" source="../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
 
 1. Under **Microsoft App ID**, select **Type of App** as **User-Assigned Managed Identity**.
 
