@@ -26,13 +26,13 @@ You can view your custom app's usage and other insights from the **Analytics** p
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section or select **View details** under the **Active Users (Preview)** card.
 
+   :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
+
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
 | **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
 | **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
-
-   :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
 As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
 
@@ -107,14 +107,14 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-You can view usage for your [third-party app](promote-app-adoption#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
+You can view usage for your [third-party app](promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
 
-To learn more about how to create a new app or import an existing app, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+To learn more about how you can import your existing app, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
