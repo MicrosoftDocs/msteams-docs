@@ -893,7 +893,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -922,7 +922,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -964,11 +964,13 @@ After the API-based message extension gets a request header with token, perform 
 
 By using Open Authorization (OAuth), your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
 
+For more information about OAuth 2.0, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow).
+
 OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can grant access only to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
 
-:::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
+:::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Image shows the oauth authorization flow.":::
 
-* **Authorization server**: The Microsoft identity platform is the authorization server, also called an identity provider or IdP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
+* **Authorization server**: The identity platform is the authorization server, also called an identity provider or IDP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
 
 * **Client**: The client in an OAuth exchange is the application requesting access to a protected resource. The client could be a web app running on a server, a single-page web app running in a user's web browser, or a web API that calls another web API. You'll often see the client referred to as client application, application, or app.
 
@@ -984,9 +986,9 @@ If the token acquisition fails, then it triggers the sign-in flow, and the Teams
 
 ### Prerequisites
 
-Before you start, you need to have: 
+Before you start, you need to have:
 
-* A Microsoft Teams app with API Message Extensions or Plugins. 
+* A Microsoft Teams app with API Message Extensions or Plugins.
 * An OAuth 2.0 client ID and client secret from the third-party authorization server.
 
 #### Configure OAuth in Developer Portal
@@ -1041,7 +1043,7 @@ To register OAuth for your API-based message extensions, follow these steps:
 
    1. **Token endpoint**: The token endpoint is the URL where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
 
-   1. **Refresh endpoint**: By using the refresh endpoint URL, your app obtains a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
+   1. **Refresh endpoint**: By using the refresh endpoint URL, your app obtains a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`. At times, the refresh endpoint might be the same as the token endpoint.
 
    1. **Scope**: *[Optional]* The scope defines the permissions your app requests from the user.
 
