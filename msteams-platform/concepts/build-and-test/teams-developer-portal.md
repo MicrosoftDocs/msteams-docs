@@ -67,6 +67,21 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
      :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
 
+#### Troubleshooting
+
+After publishing your app in Teams Store, if you want to monitor the app analytics, you must import your app into Developer Portal for Teams. While importing your published app, you might face the following error:
+
+Image to be added
+
+To resolve this error, we recommend that you must raise a ticket with the following details:
+
+* AppId
+* TenantId
+* Your email ID
+* Screenshot of the email from Partner Center when the app was published. 
+
+This information is required to verify the app owner's identity who is raising the ticket.
+
 ## Changelog for Developer Portal
 
 Changelog for Developer Portal allows you to stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes.
