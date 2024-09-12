@@ -111,7 +111,7 @@ To run your message extension in Teams, follow these steps:
 To trigger the message extension as plugin in Microsoft 365 Copilot in Teams, follow these steps:
 
 1. Select **Apps**.
-1. Search for **Copilot** and open the **Copilot for Microsoft 365** app.
+1. Search for **Copilot** and open the Microsoft 365 Copilot app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your message extension.
 
@@ -201,7 +201,7 @@ To trigger the message extension as plugin in Microsoft 365 Copilot, follow thes
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser) debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
-1. Search for **Copilot for Microsoft 365** and open the **Copilot for Microsoft 365** app.
+1. Search for Microsoft 365 Copilot and open the Microsoft 365 Copilot app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
@@ -296,7 +296,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 To trigger the message extension through Microsoft 365 Copilot, follow these steps:
 
 1. Select **Apps**.
-1. Search for **Copilot for Microsoft 365** and open the **Copilot for Microsoft 365** app.
+1. Search for Microsoft 365 Copilot and open the Microsoft 365 Copilot app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
