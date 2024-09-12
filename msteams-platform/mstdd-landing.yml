@@ -62,7 +62,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Actions in Microsoft 365 Copilot
-        url: messaging-extensions/bot-based-action-plugin.md#actions-in-microsoft-365-copilot
+        url: messaging-extensions/build-bot-based-plugin.md#actions-in-microsoft-365-copilot
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
         url: concepts/authentication/nested-authentication.md
       - text: New purchase experience for Teams app subscriptions bought from Teams Store

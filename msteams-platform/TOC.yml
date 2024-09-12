@@ -570,7 +570,7 @@
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
     - name: Extend bot-based message extension as plugin
-      href: messaging-extensions/bot-based-action-plugin.md
+      href: messaging-extensions/build-bot-based-plugin.md
       displayName: Copilot, extend message extension, search and action based message extension, M365, Microsoft 365 Chat, customize Microsoft 365 Copilot, Actions in Microsoft 365 Copilot, HR or ERP workflows, approvals, meetings, content generation, employee recognition, bookings, natural language commands
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md

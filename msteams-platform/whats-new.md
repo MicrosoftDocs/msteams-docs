@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 16, 2024***: [Perform actions with natural language commands in the Copilot chat window using message extension plugins.](messaging-extensions/bot-based-action-plugin.md#actions-in-microsoft-365-copilot).
+***September 16, 2024***: [Perform actions with natural language commands in the Copilot chat window using message extension plugins.](messaging-extensions/build-bot-based-plugin.md#actions-in-microsoft-365-copilot).
 
 :::column-end:::
 :::row-end:::
