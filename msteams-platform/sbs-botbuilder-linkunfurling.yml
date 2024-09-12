@@ -205,11 +205,11 @@ items:
       
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot of Link Unfurling app with Add option highlighted.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot of app details dialog with Add option highlighted.":::
 
     1. Select **Open**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/openapp.png" alt-text="Screenshot of Link Unfurling app with Open option highlighted.":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/openapp.png" alt-text="Screenshot of scope option dialogue with Open option highlighted.":::
 
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
