@@ -1,5 +1,5 @@
 ---
-title: Get started with Teams AI library
+title: Use Teams AI Library to Build Apps/Bots
 description: In this article, learn how to create an app using Teams AI library with AI component, storage, register data source, prompts, and actions.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -18,7 +18,7 @@ You can easily integrate Teams AI library, prompt management, and safety moderat
 Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
 
 > [!NOTE]
-> The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
+> The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
 
 # [.NET](#tab/dotnet1)
 
@@ -499,7 +499,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
 
-   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/sequence/config.json)
+   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/tools/config.json)
 
     ```json
      {
@@ -585,7 +585,7 @@ Actions handle events triggered by AI components.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L132)
 
-```javascript
+```typescript
 // Register other AI actions
 app.ai.action(
     AI.FlaggedInputActionName,

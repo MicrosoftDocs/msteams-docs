@@ -1,6 +1,6 @@
 ---
 title: Get Meeting ID & Organizer ID
-description: Describes the process of Obtain meeting ID and organizer ID for fetching meeting transcripts and recordings
+description: Learn about the process to obtain meeting ID and organizer ID for fetching meeting transcripts and recordings using Microsoft Graph APIs.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 01/05/2023
@@ -575,9 +575,10 @@ After your app obtains the meeting ID and the organizer ID, it triggers the Grap
 You can try the following code sample for a bot app:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** |
-|----------------|-----------------|--------------|--------------|--------------|
+|----------------|-----------------|--------------|--------------|
 | Meeting transcription | This is a sample application which demonstrates how to get meeting transcript using Graph API and show it in the dialog (referred as task module in TeamsJS v1.x). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 | Meeting transcript and recording | This is a sample application which demonstrates how to get meeting transcript and recording using Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) |
+| Tab Meeting Recording and transcript with auto recording | This code sample demonstrates how to build and configure a meeting app for auto recording and auto transcription. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) | - |
 
 ## Next step
 
