@@ -136,8 +136,8 @@ The following JSON snippet shows a static tab that requires its host to support 
 
 | Sample name | Description | JavaScript |
 |----------------|-----------------|--------------|
-| Requirements targeting: One-way dependency | Sample app demonstrating how to specify one-way-dependency relationships between different app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-oneway-dependency/nodejs) |
-| Requirements targeting: Mutual dependency | Sample app demonstrating how to specify mutual dependency relationship between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-mutual-dependency/nodejs)
+| Requirements targeting: One-way dependency | Sample app demonstrating how to specify one-way dependency relationships between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-oneway-dependency/nodejs) |
+| Requirements targeting: Mutual dependency | Sample app demonstrating how to specify mutual dependency relationships between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-mutual-dependency/nodejs)
 ## See also
 
 - [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
