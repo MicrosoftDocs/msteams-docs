@@ -298,11 +298,11 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation. [*Must Fix*]
 
-* Data shown in 3P service (through dialogue) must be reflective of confirmation provided by user.
-* A confirmation of the completion of the action must be shared by the plugin in the form of card.
+* Data shown in 3P service (through dialogue) must be reflective of confirmation provided by the user.
+* A confirmation of the completion of the action must be shared by the plugin in the form of a card.
 * Action taken by a user must be correctly reflected in 3P service.
-* Modification requests by user prior to confirmation of the action must be honored.
-* Highly consequential tasks such as, bulk delete must not be supported. [*Good-to-fix*]
+* Modification requests by the user prior to confirmation of the action must be honored.
+* Highly consequential tasks such as bulk delete must not be supported. [*Good-to-fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -310,7 +310,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the agent's responses are not grounded in a data source. Such agents, also called instruction-only Copilot agents, aren't allowed due to questionable authenticity of the result. [*Must fix*]
 
-:::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This image shows an example of a fail scenario where no node for actions is defined.":::
+:::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This screenshot shows an example of a fail scenario where no node for actions is defined.":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -320,11 +320,11 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 
 * For incorrect search parameters
 * For misuse or inappropriate language
-* For topics in which the Copilot doesn’t specialize
+* For topics in which the Copilot agent doesn’t specialize
 
-  For example, Graceful error message with way forward for declarative agent:
+  For example, graceful error message with way forward for declarative agent:
 
-  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshots how to incorporate graceful error handling.":::
+  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling.":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
