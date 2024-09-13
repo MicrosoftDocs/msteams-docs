@@ -1,5 +1,5 @@
 ---
-title: Specify App Runtime Requirements for Microsoft 365
+title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
 ms.date: 7/10/2024
 ms.author: mosdevdocs
@@ -16,7 +16,7 @@ ms.subservice: m365apps
 
 When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences. For example, if your app is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings, your app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
 
-To ensure high-quality app experiences while reaching the widest possible user audience, specify your app's runtime requirements in app manifest to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
+To ensure high-quality app experiences and reach a wider user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
 
 Specifying your app's runtime requirements is useful in scenarios such as:
 
@@ -35,7 +35,7 @@ The following Microsoft 365 host applications support the ability to specify run
 | Teams| ✔️| ✔️| ✔️|
 | Outlook| ✔️| ✔️ (New Outlook only)| ✔️|
 | Microsoft 365 (Office)| | | |
-| Copilot for Microsoft 365 | | | |
+| Microsoft 365 Copilot | | | |
 
 ## Specify relationships between app capabilities (`elementRelationshipSet`)
 
@@ -134,7 +134,8 @@ The following JSON snippet shows a static tab that requires its host to support 
 
 | Sample name | Description | JavaScript |
 |----------------|-----------------|--------------|
-| ElementRelationshipSet | This sample app demonstrates how to specify runtime requirements, such as one-way or mutual dependencies and app capabilities, to tailor app experience across different Microsoft 365 hosts. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) |
+| Requirements targeting: One-way dependency | Sample app demonstrating how to specify one-way-dependency relationships between different app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-oneway-dependency/nodejs) |
+| Requirements targeting: Mutual dependency | Sample app demonstrating how to specify mutual dependency relationship between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-mutual-dependency/nodejs)
 ## See also
 
 - [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
