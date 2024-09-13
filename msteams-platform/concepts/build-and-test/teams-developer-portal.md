@@ -73,7 +73,7 @@ You might have published apps in Teams Store that wasn't registered in Developer
 
 :::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal."::: 
 
-To resolve this error, we recommend that you must raise a support ticket to Microsoft with the following details:
+To resolve this error, we recommend that you must raise a [support ticket](../../feedback.md) to Microsoft with the following details:
 
 * AppId
 * TenantId
