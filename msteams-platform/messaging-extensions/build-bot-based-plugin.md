@@ -528,8 +528,8 @@ You've successfully added actions in your bot-based message extension. Upload yo
 
 ## Code sample
 
-| **Sample name** | **Description** | **Typescript** | **C#** |
-|------------|-------------|----------------|
+| **Sample name** | **Description** | **Typescript** | **.NET** |
+|------------|-------------|----------------|-----------------|
 | Actions in Microsoft 365 Copilot | This sample implements a Teams message extension that can be used as a plugin in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-action-ts) | [View](https://github.com/OfficeDev/Copilot-for-M365-Samples/tree/main/samples/msgext-northwind-inventory-action-csharp) |
 
 ## Step-by-step guide
