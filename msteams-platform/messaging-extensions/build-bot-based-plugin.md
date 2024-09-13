@@ -1,7 +1,7 @@
 ---
 title: Message Extension as Plugin for Copilot
 author: v-ypalikila
-description: Learn how to build a bot-based message extension plugin for Microsoft 365 Copilot using Teams Developer Portal and Teams Toolkit.
+description: Learn how to build a bot-based message extension plugin for Microsoft 365 Copilot and to build actions in Microsoft 365 Copilot.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -403,7 +403,7 @@ Meeting Copilot helps your meetings to be better and more productive. You can ma
 > [!NOTE]
 > Actions in Microsoft 365 Copilot are generally available.
 
-Actions in message extension for Microsoft 365 Copilot is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps.
+Actions in message extensions for Microsoft 365 Copilot is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps.
 
 ### Advantages
 
@@ -411,35 +411,35 @@ Actions in Microsoft 365 Copilot allow a user to interact with applications by e
 
 The cross-app integration allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience. Action commands allow users to interact with Copilot in natural language to create or update items, tapping into generative AI powered by company data. This simplifies tasks such as ticket creation, leave requests, and sending kudos, directly within Copilot’s interface.
 
-### Build Actions in Microsoft 365 Copilot
+### Build actions in Microsoft 365 Copilot
 
-The following steps explain the process to build Actions in Microsoft 365 Copilot:
+The following steps explain the process to build actions in Microsoft 365 Copilot:
 
-1. **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as **Can you file a sick leave for me?** or **Create a general issue**.
+1. **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user enters a natural language command in the Copilot chat window, such as **Can you file a sick leave for me?** or **Create a general issue**.
 
-1. **User Action Confirmation**: Users confirm the action to share the information with the plugin. User selects **Continue in plugin** to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in more details or upload files as required by the app.
+1. **User action confirmation**: Users confirm the action to share the information with the plugin. User selects **Continue in plugin** to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in more details or upload files as required by the app.
 
-1. **Completion Confirmation**: The plugin acknowledges the action's completion, through an Adaptive Card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as **Your details have been successfully submitted**. The user can also view or edit the action details in the app.
+1. **Completion confirmation**: The plugin acknowledges the action's completion, through an Adaptive Card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as **Your details have been successfully submitted**. The user can also view or edit the action details in the app.
 
 1. **Clarification [Optional]**: If essential parameters are missing, Copilot requests additional information from the user.
 
 1. **Modification [Optional]**: Users can modify the submitted action command to Copilot by typing a natural language query, using rich Large Language Model (LLM) capabilities to alter existing parameter values and submitting again.
 
-1. **3P Error [Optional]**: Should a service encounter an error, Copilot relays the plugin's error message to the user. The following errors are supported:
+1. **Third-party error [Optional]**: When a service encounter an error, Copilot relays the plugin's error message to the user. The following errors are supported:
 
-   * **Recoverable Errors**:
-      * **Rectification Suggestions**: You can send an error response to the user with requests for corrections or more data in text or JSON format.
-      * **Authentication/Configuration Failure**: You can prompt the user to reauthorize if there's an authentication or configuration issue.
+   * **Recoverable errors**:
+      * **Rectification suggestions**: You can send an error response to the user with requests for corrections or more data in text or JSON format.
+      * **Authentication/Configuration failure**: You can prompt the user to reauthorize if there's an authentication or configuration issue.
 
-   * **Irrecoverable Errors**:
-      * **From Developer**: You should be able to send a failure message that Copilot displays to the user.
+   * **Irrecoverable errors**:
+      * **From Developer**: You must be able to send a failure message to the user that Copilot displays.
       * **From Copilot**: In cases of API availability issues or network problems, Copilot can send an error message to the user.
 
-1. **User Action Confirmation from Dialogs**: Users must confirm actions from dialogs to complete the process.
+1. **User action confirmation from dialogs**: Users must confirm actions from dialogs to complete the process.
 
 ### Add actions to bot-based message extension
 
-1. **Define Parameters for Action Commands**: In your app manifest, within the action command section, define the parameters along with their descriptions for the command. The following code snippet is an example to define parameters:
+1. In your app manifest, within the `command` section, define the parameters along with their descriptions for the command. The following code snippet is an example to define parameters:
 
     ```json
     "composeExtensions": [
@@ -504,7 +504,7 @@ The following steps explain the process to build Actions in Microsoft 365 Copilo
     document.getElementById("Priority").value = dialogParameters["Priority"];  
    ```
 
-    Adding extracted parameters into a bot invoke response is essential, especially when utilizing a `fetchTask` Adaptive Card dialog. It's important to autopopulate the dialog with parameter values obtained from the extracted data. Here's an example of a potential invoke request for fetch task:
+    Adding extracted parameters into a bot invoke response is essential, especially when utilizing a `fetchTask` Adaptive Card dialog. It's important to autopopulate the dialog with parameter values obtained from the extracted data. Here's an example of a invoke request for fetch task:
 
     ```json
     {  
@@ -514,7 +514,7 @@ The following steps explain the process to build Actions in Microsoft 365 Copilo
             "data": {  
             "taskParameters": [  
                      { "name": "title", "value": "Contoso issue" },  
-                     { "name": "summary", "value": "Contoso issue faced in the Fabrikam app" },  
+                     { "name": "summary", "value": "Contoso issue faced in the external app" },  
                      { "name": "priority", "value": "Critical" }  
             ]  
          }  
