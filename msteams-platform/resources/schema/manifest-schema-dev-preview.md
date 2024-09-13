@@ -62,7 +62,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]
+            "commandIds": ["exampleCmd1", "exampleCmd2"]
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
