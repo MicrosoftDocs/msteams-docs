@@ -13,11 +13,14 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Microsoft Teams.
+> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
+> * Message extension plugins are in preview.
+> * Message extensions plugins in Microsoft 365 Copilot are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> * Support for Excel and OneNote client applications to be available soon.
+>
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * Message extension plugins are in preview.
 
 <!--
 > * Message extension plugins for declarative agents are in limited private preview.
@@ -70,15 +73,6 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column-end:::
 :::row-end:::
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
-
-* Search for the latest information or record. For example, the latest incident ticket or survey results.
-* Summarize information based on multiple records.
-
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands, as Microsoft 365 Copilot recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
-
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot.":::
-
 If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 ## App description
@@ -96,6 +90,8 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
   > [!NOTE]
   > In case of declarative agents, these guidelines apply to the instructions and conversation starters fields also.
+  > For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text) `states\reasoning\description` in `functions` fields, if provided [*Must fix*]
+  > If using swagger or OpenAPI formats for file, these guidelines apply to `path` content for the keys for all the get, post, put, delete APIs and the `description` fields for API [*Must fix*]
 
 * App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 

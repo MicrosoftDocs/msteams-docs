@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Microsoft Teams.
+> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
