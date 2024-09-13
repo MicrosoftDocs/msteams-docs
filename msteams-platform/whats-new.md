@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 August**
 
+* **September 17, 2024***: [Share content to live and upcoming meetings with Share to Teams.](concepts/build-and-test/share-to-teams-from-web-apps.md)
 * ***August 26, 2024***: [Enhanced user experience for Teams app susbscriptions purchased from Teams Store.](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience)
 * ***August 22, 2024***: [Dev Tools for Teams tabs are available in the new Microsoft Teams client.](tabs/how-to/developer-tools.md)
 * ***August 21, 2024***: [Use sample prompts to guide the users for using various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
