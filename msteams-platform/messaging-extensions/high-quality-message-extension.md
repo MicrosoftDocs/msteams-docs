@@ -1,11 +1,11 @@
 ---
 title: Guidelines to validate Copilot agents
-description: Learn to increase the chances of your message extension as an agent or plugin for Microsoft Copilot for Microsoft 365 to pass the Teams Store submission process. Understand the requirements, and validation guidelines.
-ms.topic: how-to
+description: Understand the requirements and validation guidelines to increase the chances of your message extension as a Copilot agent or plugin for Microsoft 365 to pass the Teams Store submission process.
+ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 07/03/2024
+ms.date: 16/09/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -22,10 +22,6 @@ ms.collection: ce-skilling-ai-copilot
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > * If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
-
-<!--
-> * Message extension plugins for declarative agents are in limited private preview.
--->
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
