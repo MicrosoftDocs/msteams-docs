@@ -563,15 +563,15 @@
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
-      - name: Debug a copilot plugin with developer mode
+      - name: Debug a Copilot agent with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
-        displayName: copilot, enabled plugins, matched functions, selected functions for execution, function execution details
+        displayName: Copilot, enabled agents, matched functions, selected functions for execution, function execution details
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
-        displayName: custom copilot, custom engine copilot, plugin, conversation
-      - name: Microsoft 365 Copilot plugin FAQ
-        href: messaging-extensions/copilot-plugin-faq.md
-        displayName: Microsoft 365 Copilot, FAQ, bot-based message extension, plugin
+        displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot
+      - name: Microsoft 365 Copilot agent FAQ
+        href: messaging-extensions/copilot-agent-faq.md
+        displayName: Microsoft 365 Copilot, FAQ, bot-based message extension, agent
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
@@ -1126,7 +1126,7 @@
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
+    displayName: message extension, agent, Copilot, Microsoft 365 Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
