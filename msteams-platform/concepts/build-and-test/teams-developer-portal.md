@@ -71,7 +71,7 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
 After publishing your app in Teams Store, if you want to monitor the app analytics, you must import your app into Developer Portal for Teams. While importing your published app, you might face the following error:
 
-Image to be added
+:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal.":::
 
 To resolve this error, we recommend that you must raise a ticket with the following details:
 
