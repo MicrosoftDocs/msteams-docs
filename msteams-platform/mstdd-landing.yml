@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Analyze your third-party apps usage in Developer Portal for Teams
+      - text: Analyze your third-party app usage metrics in Developer Portal for Teams
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
         url: concepts/authentication/nested-authentication.md
