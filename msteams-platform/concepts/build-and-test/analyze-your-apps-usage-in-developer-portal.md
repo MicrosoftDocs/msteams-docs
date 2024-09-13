@@ -1,17 +1,17 @@
 ---
 title: Analyze App Usage in Developer Portal
-description: Learn how to analyze your app's usage metrics for your custom apps built for your org (LOB apps) and third-party apps in Developer Portal for Teams.
+description: Learn how to analyze your app's usage metrics for your custom apps built for your org (LOB apps) and third-party apps in Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 12/15/2022
 ---
 
-# Analyze app usage in Developer Portal for Teams
+# Analyze app usage in Developer Portal
 
-The Developer Portal for Teams provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
+Developer Portal provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you’re tracking active users, retention rates, or usage patterns across different platforms, the Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
+Whether you’re tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
@@ -19,7 +19,7 @@ The app usage for a given day is reflected within 24 to 48 hours, and usage data
 
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
-1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
+1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section or select **View details** under the **Active Users (Preview)** card.
@@ -107,12 +107,12 @@ After you have selected your desired filters, you can explore the following indi
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
-1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
+1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
 
-To learn how to import your published app into Developer Portal for Teams, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
+To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
 
 | Metric | Definition |

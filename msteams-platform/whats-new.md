@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 13, 2024***: [Analyze your third-party app usage metrics in Developer Portal for Teams.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
+***September 13, 2024***: [Analyze your third-party app usage metrics in Developer Portal.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::
