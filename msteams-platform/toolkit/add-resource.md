@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description: Learn how to add resources of Teams Toolkit and about advantages, limitations, and capabilities.
+description: Learn how to add cloud resources such as Azure Functions, Azure SQL Database, Azure API Management, Azure Key Vault using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -47,7 +47,7 @@ You can add cloud resources in the following ways:
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
 
    1. Enter **How-to Guides** and select **Teams:View How-to Guides** from the list.
-     
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the respective How-to Guide.
@@ -66,5 +66,5 @@ You can add cloud resources in the following ways:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
-* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)

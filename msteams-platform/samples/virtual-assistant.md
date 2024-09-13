@@ -1,5 +1,5 @@
 ---
-title: Create Virtual Assistant 
+title: Create Virtual Assistant Bot in Teams
 description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -529,7 +529,7 @@ The allowed callers array can restrict which skill consumers can access the skil
 "AllowedCallers": [ "*" ],
 ```
 
-For more information on adding claims validation to a skill, see [add claims validation to skill](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
+For more information on adding claims validation to a skill, see [add claims validation to skill](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs&preserve-view=true#claims-validator).
 
 ### Limitation of card refresh
 

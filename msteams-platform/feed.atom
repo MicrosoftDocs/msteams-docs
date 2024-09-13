@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2024-05-01T04:15:01+05:30</updated>
+	<updated>2024-08-16T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Announcing the launch of the enhanced App validation tool in Developer Portal!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11459</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed"/>
+		<updated>2024-07-31T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you're an ISV developer, our updated App validation tool lets you evaluate your app packages using the same test cases Microsoft uses for reviews. It identifies errors or warnings in app manifests, basic info, and bot capabilities, providing clear guidelines for resolution. Developers now get detailed success, error, and warning statuses based on new bot capability scenarios, helping them fix issues before submission.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[App validation update: Common reasons for app validation failure]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10819</id>
@@ -110,14 +118,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/media-capabilities?tabs=mobile#media-capability-apis?referrer=whats.new.rssfeed"/>
 		<updated>2023-11-20T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[The captureImage API enables users to activate the camera and capture an image or select media from the gallery. When the captureImage callback is triggered, the image is shared as a file. The API restricts users to either select or capture a single image for sharing and is compatible only with mobile clients.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Version%20Independent%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Content%3A%20%5BIntegrate%20media%20capabilities%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities%3Ftabs%3Dmobile)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You donâ€™t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Version%20Independent%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Content%3A%20%5BDebug%20bot%20using%20Teams%20App%20Test%20Tool%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
