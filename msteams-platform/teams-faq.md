@@ -222,7 +222,7 @@ No, Live Share doesn't support meeting recordings.
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator in the Copilot reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -293,7 +293,7 @@ Here's an example description that work for NPM Finder.
 
 <summary> Microsoft 365 Copilot includes my plugin in the response, but the Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the downvoting option in the Copilot reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -340,7 +340,7 @@ Developers are encouraged to certify their new plugin after successfully complet
 <details>
 <summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/high-quality-message-extension.md).
+ You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/high-quality-message-extension.md).
 </details>
 
 ## Microsoft Graph

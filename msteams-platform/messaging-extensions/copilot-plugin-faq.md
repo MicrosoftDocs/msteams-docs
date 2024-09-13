@@ -16,11 +16,11 @@ Get answers to your common queries about building a message extension and extend
 </br>
 <details>
 
-<summary>Why isn't Microsoft 365 Copilot 365 including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Copilot including my plugin in a response?</summary>
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator in the Copilot reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 </br>
@@ -93,7 +93,7 @@ Here's an example description that work for NPM Finder.
 
 <summary> Microsoft 365 Copilot includes my plugin in the response, but the Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the downvoting option in the Copilot reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 </br>
@@ -117,7 +117,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 <details>
 <summary>What are the guidelines for Teams apps extensible as plugin for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Copilot.
+You can read the [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Microsoft 365 Copilot.
 
 </details>
 </br>
@@ -150,5 +150,5 @@ Developers will be encouraged to certify their new plugin after successfully com
 <details>
 <summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](high-quality-message-extension.md).
+ You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](high-quality-message-extension.md).
 </details>

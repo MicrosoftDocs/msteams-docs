@@ -42,7 +42,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
 1. Under **Message extension type**, select **API**.
 
-   1. 1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
+   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
@@ -102,7 +102,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 An API-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Copilot app created in the app features page in Teams Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Microsoft 365 Copilot created in the app features page in Teams Developer Portal.":::
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 

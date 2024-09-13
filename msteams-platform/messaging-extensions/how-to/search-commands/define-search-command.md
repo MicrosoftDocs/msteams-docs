@@ -111,9 +111,9 @@ To run the message extension in Teams, follow these steps:
 ### Extend bot-based message extension as plugin
 
 > [!IMPORTANT]
-> Plugins for Microsoft 365 Copilot are in preview and only work in Business Chat in Teams.
+> Plugins for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Teams.
 
-Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Copilot to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot. For more information, see [extend bot-based message extension as plugin for Microsoft 365 Copilot](../../build-bot-based-plugin.md).
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. For more information, see [extend bot-based message extension as plugin for Microsoft 365 Copilot](../../build-bot-based-plugin.md).
 
 ## Code snippets
 
