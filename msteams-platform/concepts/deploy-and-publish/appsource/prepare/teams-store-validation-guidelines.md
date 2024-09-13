@@ -1,6 +1,6 @@
 ---
 title: Teams Store Validation Guidelines
-description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the mandatory and suggested fixes, and validation guidelines.
+description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the must fix and good-to-fix validation guidelines.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
@@ -16,7 +16,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
-> * Other guidelines are marked as *Good-to-fix*. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
+> * Other guidelines are marked as [*Good-to-fix*]. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -505,7 +505,7 @@ The app manifest defines your app's configuration.
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Must fix*]
 
-* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Suggested Fix*]
+* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Good-to-Fix*]
 
 * Scopes and/or context declared in app manifest must be visible within the app. [*Must fix*]
 
@@ -739,7 +739,7 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people must use your app. You can add your YouTube or Vimeo video URL that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
+A video in your app listing is one of the most effective ways to communicate why people must use your app. You can add your YouTube or Vimeo video URL that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Good-to-fix*]
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure that you meet the following criteria:
 
