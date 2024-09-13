@@ -67,20 +67,20 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
      :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
 
-#### Troubleshooting
+#### Steps to import a published app not registered in Developer Portal for Teams
 
-After publishing your app in Teams Store, if you want to monitor the app analytics, you must import your app into Developer Portal for Teams. While importing your published app, you might face the following error:
+You might have published apps in Teams Store that wasn't registered in Developer Portal for Teams. If you want to monitor app analytics or validate your app, you must import your app into Developer Portal for Teams. While importing your published app, you might face the following error:
 
-:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal."::: 
 
-To resolve this error, we recommend that you must raise a ticket with the following details:
+To resolve this error, we recommend that you must raise a support ticket to Microsoft with the following details:
 
 * AppId
 * TenantId
 * Your email ID
-* Screenshot of the email from Partner Center when the app was published. 
+* Screenshot of the email from Partner Center when the app was published.
 
-This information is required to verify the app owner's identity who is raising the ticket.
+This information is required to verify the app owner's identity who is raising the ticket and to allow you to import an app.
 
 ## Changelog for Developer Portal
 

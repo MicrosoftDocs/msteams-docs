@@ -11,7 +11,7 @@ ms.date: 12/15/2022
 
 The Developer Portal for Teams provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you’re tracking active users, retention rates, or usage patterns across different platforms, the Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new M365 dimensions, such as host product and capabilities.
+Whether you’re tracking active users, retention rates, or usage patterns across different platforms, the Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
@@ -105,7 +105,7 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps.md) and other insights from the **Analytics** page. To access the page:
+You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
@@ -121,8 +121,17 @@ To learn how to import your published app into Developer Portal for Teams, see [
 | **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
 | **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
 
+As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
+
+* **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
+* **Platform**
+* **Operating system**
+* **Area**
+
+ :::image type="content" source="../../assets/images/tdp/filter-tdp.png" alt-text="Screenshot shows you the app analytics page filter in Developer Portal for Teams.":::
+
 > [!TIP]
-> To know more about each metric definition, select the metric. A pop-up help window appears on the right-side of the window with the required definitions.
+> To know more about each metric definition, select the **see metric definitions**. A pop-up help window appears on the right-side of the window with the required definitions.
 
 As you explore the app usage metrics on this page, you can see the following three sections:
 
@@ -242,6 +251,9 @@ As you explore the app usage metrics on this page, you can see the following thr
   * Personal tab
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
+
+   > [!NOTE]
+   > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
  ### Known limitations
 
