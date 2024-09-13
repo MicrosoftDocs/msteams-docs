@@ -58,7 +58,7 @@ Before you get started, ensure that you're familiar with the following standards
 ## Create bot-based message extension
 
 > [!IMPORTANT]
-> Plugins for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> Plugins for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Microsoft Teams.
 
 Let's create a bot-based search message extension that can search npm registries in Teams and Copilot and share results through the compose message area of the Microsoft Teams client.
 
@@ -400,11 +400,16 @@ Meeting Copilot helps your meetings to be better and more productive. You can ma
 
 ## Actions in Microsoft 365 Copilot
 
+> [!NOTE]
+> Actions in Microsoft 365 Copilot are generally available.
+
 Actions in message extension for Microsoft 365 Copilot is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps.
 
-Actions in Microsoft 365 Copilot allow a user to interact with applications by enabling direct engagement with external systems. Actions extend to a wide range of scenarios, from project and incident management to HR or ERP workflows, approvals, meetings, content generation, employee  recognition, and bookings. With the added advantage of AI,  Actions can generate content and perform actions based on contextual understanding, optimizing users' time, and resources.
+### Advantages
 
-It supports cross-app integration within the Microsoft 365 ecosystem, streamlining project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. The cross-app integration allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience. Action commands allow users to interact with Copilot in natural language to create or update items, tapping into Generative AI powered by company data. This simplifies tasks like ticket creation, leave requests, and sending kudos, directly within Copilot’s interface.
+Actions in Microsoft 365 Copilot allow a user to interact with applications by enabling direct engagement with external systems. It supports cross-app integration within the Microsoft 365 ecosystem, streamlining project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. 
+
+The cross-app integration allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience. Action commands allow users to interact with Copilot in natural language to create or update items, tapping into generative AI powered by company data. This simplifies tasks such as ticket creation, leave requests, and sending kudos, directly within Copilot’s interface.
 
 ### Build Actions in Microsoft 365 Copilot
 
