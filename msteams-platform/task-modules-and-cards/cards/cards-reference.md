@@ -277,7 +277,7 @@ Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls
 
   * Avoid defining ColumnSets with more than three columns.
   * Don’t use explicit pixel width on more than one column in the set.
-  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Copilot).
+  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Microsoft 365 Copilot).
   * In general, 48 pixels is about the maximum explicit width you’d want to use, although there may be exceptions depending on the scenario.
 
 * **Sizing images**
