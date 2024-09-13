@@ -31,13 +31,13 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
     
      The following image shows a tab added to the meeting details page in the Teams desktop client:
     
-         :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+      :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
     
    # [Mobile](#tab/mobile)
     
      The following image shows a tab added to the meeting details page in the Teams mobile client:
     
-         :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
+      :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
    ---
 
