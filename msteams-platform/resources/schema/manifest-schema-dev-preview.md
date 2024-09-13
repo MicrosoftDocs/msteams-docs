@@ -453,7 +453,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot, including declarative agents and plugins. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-copilot) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
+Defines one or more agents to Microsoft 365 Copilot, including declarative agents and plugins. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models. Plugins in this node refer specifically to [API plugins](/microsoft-365-copilot/extensibility/overview-api-plugins), which connect existing OpenAPI-defined REST API services to Copilot for Microsoft 365.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
