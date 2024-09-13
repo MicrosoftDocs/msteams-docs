@@ -85,7 +85,7 @@ If you want to configure a custom Graph connector for Copilot for Microsoft 365,
 
 A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
+The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [app descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
 
 * Short description of app, parameter, command description, semantic description and operation ID mustn't include:
   * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“ [*Must fix*]
@@ -97,7 +97,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
   > [!NOTE]
   > In case of declarative agents, these guidelines apply to the instructions and conversation starters fields also.
 
-* App long description must clearly call out that agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
+* App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
 
@@ -109,7 +109,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 ## Screenshots
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
+The guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
 
 In addition, you must ensure that apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
@@ -117,7 +117,7 @@ In addition, you must ensure that apps with Copilot agent functionality must hav
 
 ## App or agent name
 
-The guidelines related to the description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+The guidelines related to the app name for Microsoft 365 apps are applicable. For more information, see [app name](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 In addition, you must ensure that for declarative agent, the `name` field in manifest file and the `name` field in declarativecopilot.json and `name_for_human` in plugin.json files are identical. [*Must fix*]
 
