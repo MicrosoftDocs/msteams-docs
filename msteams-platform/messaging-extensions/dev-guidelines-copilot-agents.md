@@ -30,7 +30,7 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 ## Define app, command, and parameter descriptions
 
-[*Must-fix*]
+[*Must fix*]
 
 A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Copilot.
 
@@ -410,7 +410,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ## Enhance message extension to retrieve information through compound utterances
 
-[*Must-fix*]
+[*Must fix*]
 
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Microsoft 365 Copilot.
@@ -517,7 +517,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Define sample prompts
 
-[*Must-fix*]
+[*Must fix*]
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a plugin.
 
@@ -570,7 +570,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ## Create rich Adaptive Card responses
 
-[*Must-fix*]
+[*Must fix*]
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
@@ -695,7 +695,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Message extensions plugins in Microsoft 365 Copilot apps
 
-[*Must-fix*]
+[*Must fix*]
 
 > [!IMPORTANT]
 > Message extensions plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.

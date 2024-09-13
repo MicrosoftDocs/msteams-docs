@@ -73,16 +73,16 @@ A good description offers a clear and concise summary of the app’s features an
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
 
 * Short description of app, parameter, command description, Semantic description and Operation ID must not include:
-  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“ [*Must-fix*]
-  * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must-fix*]
-  * Grammar and punctuation errors [*Must-fix*]
+  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“ [*Must fix*]
+  * URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols [*Must fix*]
+  * Grammar and punctuation errors [*Must fix*]
   * Overly verbose, flowery, or marketing language [*Good-to-fix*]
   * Superlative claims such as “#1,” “amazing,” or “best.” [*Good-to-fix*]
 
   > [!NOTE]
   > In case of declarative agents, these guidelines apply to instructions and conversation starters fields also.
 
-* App long description must clearly call out that agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must-fix*]
+* App long description must clearly call out that agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
 
@@ -96,7 +96,7 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
 
 The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [App descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
 
-In addition, you must ensure that apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must-fix*]
+In addition, you must ensure that apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -118,7 +118,7 @@ Copilot agents must support atleast more than three unique compound utterances b
 
 ## Sample prompts
 
-[*Must-fix*]
+[*Must fix*]
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Copilot.
 
@@ -159,7 +159,7 @@ Copilot agent responses provided as an Adaptive Card must meet below requirement
 
 ## Compatibility
 
-Copilot agents must be fully responsive and functional on the latest versions of these clients: [*Must-fix*]
+Copilot agents must be fully responsive and functional on the latest versions of these clients: [*Must fix*]
 
 * Microsoft Teams on Desktop and Web
 * copilot.microsoft.com on web
@@ -173,7 +173,7 @@ Copilot agents must be fully responsive and functional on the latest versions of
 
 ### Ensure your Copilot plugins work in Teams meetings
 
-[*Must-fix*]
+[*Must fix*]
 
 You must implement the following:
 
