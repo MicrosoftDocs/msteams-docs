@@ -128,7 +128,7 @@ As you explore individual metrics on this page, you can use **Filter** button to
 * **Operating system**
 * **Area**
 
- :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows you the app analytics page filter in Developer Portal for Teams.":::
+ :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows you the app analytics page filter in Developer Portal for Teams."lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 > [!TIP]
 > To know more about each metric definition, select the **see metric definitions**. A pop-up help window appears on the right-side of the window with the required definitions.
