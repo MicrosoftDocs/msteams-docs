@@ -203,11 +203,11 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 <br></br>
 <details><summary>Expand to know more</summary>
 
-App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited. [Must fix]
+App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited. [*Must fix*]
 
-Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps mustn't require a substantial time investment of over 60 mins per session or affect productivity. [Must fix]
+Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps mustn't require a substantial time investment of over 60 mins per session or affect productivity. [*Must fix*]
 
-Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Must fix]
+Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-content-aggregator-app.png" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
 
