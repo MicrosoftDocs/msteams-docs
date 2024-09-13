@@ -70,6 +70,17 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column-end:::
 :::row-end:::
 
+Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
+
+* Search for the latest information or record. For example, the latest incident ticket or survey results.
+* Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
+
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands, as Microsoft 365 Copilot recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
+
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot.":::
+
+If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
+
 ## App description
 
 A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
