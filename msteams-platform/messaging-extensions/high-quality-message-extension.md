@@ -73,13 +73,13 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column-end:::
 :::row-end:::
 
-If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
+If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 ## App description
 
 A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
 
-The guidelines related to description for Microsoft 365 apps are applicable. For more information, see [app descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
+The guidelines related to app description for Microsoft 365 apps are applicable. For more information, see [app descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions). In addition, you must ensure to meet the following guidelines for Copilot agents:
 
 * Short description of app, parameter, command description, semantic description and operation ID mustn't include:
   * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything“ [*Must fix*]
@@ -89,9 +89,9 @@ The guidelines related to description for Microsoft 365 apps are applicable. For
   * Superlative claims such as “#1,” “amazing,” or “best” [*Good-to-fix*]
 
   > [!NOTE]
-  > In case of declarative agents, these guidelines apply to the instructions and conversation starters fields also.
-  > For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text) `states\reasoning\description` in `functions` fields, if provided [*Must fix*]
-  > If using swagger or OpenAPI formats for file, these guidelines apply to `path` content for the keys for all the get, post, put, delete APIs and the `description` fields for API [*Must fix*]
+  > * In case of declarative agents, these guidelines apply to the instructions and conversation starters fields also.
+  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text) `states\reasoning\description` in `functions` fields, if provided [*Must fix*]
+  > * If using swagger or OpenAPI formats for file, these guidelines apply to `path` content for the keys for all the get, post, put, delete APIs and the `description` fields for API [*Must fix*]
 
 * App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
