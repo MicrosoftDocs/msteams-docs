@@ -75,12 +75,12 @@ You might have published apps in Teams Store that wasn't registered in Developer
 
 To resolve this error, we recommend that you must raise a [support ticket](../../feedback.md) to Microsoft with the following details:
 
-* AppId
-* TenantId
+* App ID
+* Tenant ID
 * Your email ID
 * Screenshot of the email from Partner Center when the app was published.
 
-This information is required to verify the app owner's identity who is raising the ticket and to allow you to import an app.
+This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app.
 
 ## Changelog for Developer Portal
 
