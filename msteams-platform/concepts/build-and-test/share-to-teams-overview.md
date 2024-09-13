@@ -12,7 +12,7 @@ Share to Teams is a button enabled on any web app, personal app, or tab that all
 
 In addition to Share to Teams, the **Present Now** button in the meeting stage allows users to present the content for live meetings or Meet Now scenarios. The users can share content and also present it live for real-time collaboration and discussion among Teams users.
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot showing the Share button on the app.":::
+:::image type="content" source="~/assets/images/share-to-teams/share-to-teams-popup.png" alt-text="Screenshot showing the Share button on the app.":::
 
 You can enable Share to Teams button in the following scopes:
 

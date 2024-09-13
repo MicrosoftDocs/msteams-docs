@@ -326,11 +326,11 @@ async function fetchContentDetails() {
 }
 ```
 
-### Query parameter
+### Response payload parameters
 
-The following table includes the query parameter:
+The following table includes the response payload parameters:
 
-|Value|Type|Required|Description|
+| Value | Type | Required | Description |
 |---|---|----|---|
 | `appId` | String | Yes | The ID of the app to be shared. |
 | `title` | String | Yes | The title of the shared content. |
@@ -343,7 +343,7 @@ The following table includes the query parameter:
 
 The following table provides the response codes:
 
-|Response code|Description|
+| Response code | Description |
 |---|---|
 | **200** | Meeting content details successfully retrieved. |
 | **500** | Internal error. |

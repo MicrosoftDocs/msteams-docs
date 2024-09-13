@@ -170,30 +170,12 @@ Before you enable share content to meetings, you must ensure the following:
         </div>
     ```
 
-    After the configuration, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
+    After the configuration, the Share to Teams dialog appears with **Present now**. Present now allows the users to share content to an ongoing meeting.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+    :::image type="content" source="~/assets/images/share-to-teams-meeting.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
-Here are a few end user scenarios where the content is shared to different scopes from Share to Teams.
+Here are a few end user scenarios where the content is shared using Share to Teams in meetings:
 
-</br>
-<details>
-<summary>Share content to a chat or channel</summary>
-
-1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
-
-    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button in the browser.":::
-
-1. Add the chat or channel name.
-
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
-
-   > [!NOTE]
-   > If the app isn't already added in chat or channel scope, an app consent disclaimer appears within the Share to Teams dialog.
-
-1. Select **Share**. The app content gets shared in the respective scope.
-
-</details>
 </br>
 <details>
 <summary>Share content to an upcoming meeting</summary>
