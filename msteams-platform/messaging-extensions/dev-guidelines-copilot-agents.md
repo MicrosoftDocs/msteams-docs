@@ -42,7 +42,7 @@ A good description offers a clear and concise summary of the app’s features an
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Copilot, modify the app description to suit the following plugin requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Microsoft 365 Copilot. For example, Use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -87,7 +87,7 @@ The following table lists the short description examples for each category:
   },
   "description": {
     "short": "Create and search for surveys and results.",
-    "full": "Contoso Survey helps you manage all your surveys in one place. Create, capture and analyze surveys within the platform you use every day."
+    "full": "Contoso Survey helps you manage all your surveys in one place. Create, capture, and analyze surveys within the platform you use every day."
   },
 ```
 
@@ -151,18 +151,6 @@ Command description maps user intent and utterance to search command inside a pl
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft 365 Copilot. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft 365 Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
-
-We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
-
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Must fix]*
-
-* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Must fix]*
-
-* Avoid grammar and punctuation errors. *[Must fix]*
-
-* Avoid overly verbose, flowery, or marketing language. *[Good-to-fix]*
-
-* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Good-to-fix]*
 
 The following table lists the command and semantic description examples for each category:
 
