@@ -1,6 +1,6 @@
 ---
 title: Guidelines to validate Copilot agents
-description: Understand the requirements and validation guidelines to increase the chances of your message extension as a Copilot agent or plugin for Microsoft 365 to pass the Teams Store submission process.
+description: Learn how to increase the chances of your message extension as a Copilot agent or plugin for Microsoft 365 to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
@@ -330,6 +330,7 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 ## See also
 
+* [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * [Guidelines to create and upgrade Copilot agents](dev-guidelines-copilot-agents.md)
 * [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
