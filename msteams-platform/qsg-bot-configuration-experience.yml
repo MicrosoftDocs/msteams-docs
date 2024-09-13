@@ -82,15 +82,15 @@ items:
 
      1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of Bot configuration sample app installation with Add option highlighted.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of app details dialog to add bot configuration sample app.":::
 
-     1. Select a chat or channel for collaborative use and move through the dialog to select **Go**.
+     1. Search and select the required scope or select a channel, or chat from the list, and move through the dialog to select **Go**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of Bot configuration sample app with shared scope options.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
      1. Configure the bot settings and select **Submit**.
 
-        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot of Bot configuration sample app with configuration options.":::
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot of configuration options for Bot configuration sample app.":::
 
          The bot is installed in the chat.
 
