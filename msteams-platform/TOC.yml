@@ -571,7 +571,7 @@
         displayName: custom agent, custom engine agent, plugin, conversation, Microsoft 365 Copilot
       - name: Microsoft 365 Copilot plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
-        displayName: Microsoft 365 Copilot, FAQ, bot-based message extension, plugin
+        displayName: M365, Microsoft 365 Copilot, FAQ, bot-based message extension, plugin
 
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
