@@ -8,11 +8,13 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share a link directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog.":::
+:::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog.":::
+
+By default, Share to Teams supports tagging users with @username and @everyone when content is shared on Teams. The tagged users receive notifications within Teams.
 
 > [!NOTE]
 >
@@ -127,6 +129,28 @@ The async `shareToMicrosoftTeams.renderButtons(options)` API renders all share b
 
 ---
 
+Here's the end user scenario where the content is shared to chat or channel using Share to Teams:
+
+</br>
+<details>
+<summary>Share content to a chat or channel</summary>
+
+1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
+
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button in the browser.":::
+
+1. Add the chat or channel name.
+
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
+
+   > [!NOTE]
+   > If the app isn't already added in chat or channel scope, an app consent disclaimer appears within the Share to Teams dialog.
+
+1. Select **Share**. The app content gets shared in the respective scope.
+
+</details>
+</br>
+
 ### Share content in meetings
 
 Share to Teams from web apps now allows users to share content to a live or an upcoming meeting. When you enable content sharing to meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
@@ -170,11 +194,11 @@ Before you enable share content to meetings, you must ensure the following:
         </div>
     ```
 
-    After the configuration, the Share to Teams dialog appears with **Present now**. Present now allows the users to share content to an ongoing meeting.
+    After the configuration, the Share to Teams dialog appears with **Present now**. Present now allows the users to share content to an ongoing meeting. For the user who shared content in meeting stage, the side panel opens automatically as the meeting begins and populates the shared content in the meeting side panel.
 
-    :::image type="content" source="~/assets/images/share-to-teams-meeting.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
-Here are a few end user scenarios where the content is shared using Share to Teams in meetings:
+Here are a few end user scenarios where the content is shared to meetings using Share to Teams:
 
 </br>
 <details>
@@ -186,7 +210,7 @@ Here are a few end user scenarios where the content is shared using Share to Tea
 
 1. Add the meeting name.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
 
    > [!NOTE]
    > If the app isn't already added in the meeting scope, an app consent disclaimer appears within the Share to Teams dialog.
@@ -208,7 +232,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
 
 1. Select **Present now**. A consent dialog appears to share the content in the meeting.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the  Share to Teams dialog to add content to an ongoing meeting.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the  Share to Teams dialog to add content to an ongoing meeting.":::
 
    > [!NOTE]
    >
@@ -238,7 +262,7 @@ If there's no ongoing meeting and the user wants to initiate a meeting and prese
 
 1. Select **Present now**. A consent dialog appears to start the meeting.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add meeting name or participants.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog to add meeting name or participants.":::
 
    > [!NOTE]
    > If the app isn't already added in the meeting scope, an app consent disclaimer appears within the Share to Teams dialog.
