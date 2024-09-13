@@ -141,7 +141,7 @@ Here's the end user scenario where the content is shared to chat or channel usin
 
 1. Add the chat or channel name.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
 
    > [!NOTE]
    > If the app isn't already added in chat or channel scope, an app consent disclaimer appears within the Share to Teams dialog.
@@ -210,7 +210,7 @@ Here are a few end user scenarios where the content is shared to meetings using 
 
 1. Add the meeting name.
 
-    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog to add meeting name.":::
 
    > [!NOTE]
    > If the app isn't already added in the meeting scope, an app consent disclaimer appears within the Share to Teams dialog.
