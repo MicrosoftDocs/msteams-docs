@@ -181,7 +181,7 @@ Copilot agents must be fully responsive and functional on the latest versions of
 * Copilot for Microsoft 365 in Word
 
 > [!NOTE]
-> Message extensions plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > Support for Excel and OneNote client applications to be available soon.
 
 [Back to top](#validation-guidelines-for-copilot-agents)
@@ -203,13 +203,13 @@ You must implement the following:
 
   * **Sizing images**
 
-    * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+    * When using an image inside a `ColumnSet` with more than one column, specify the size of the column containing an image rather than the image itself.
     * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
-    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+    * If you want to define explicit width in pixels, ensure that they don't exceed 3/4th of the narrowest card width.
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
-    * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+    * We recommend that you must set the width of the image, though some scenarios might allow for exceptions.
 
-For more information to create plugins for teams meetings, see [Enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -221,7 +221,7 @@ Follow these requirements:
 
 1. **If using SSO-enabled app, update Microsoft Azure Active Directory (Azure AD) app registration** [*Must fix*]
 
-    Azure AD single sign-on (SSO) for message extensions work in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
+    Azure AD single sign-on (SSO) for message extension works in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Azure AD app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/)  with your sandbox tenant account.
     1. Open **App registrations**.
@@ -248,14 +248,14 @@ Follow these requirements:
 1. **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
-    1. Open Bot **Services**.
+    1. Open **Bot Services**.
     1. Select the name of your bot to update its channels.
     1. From the **Settings** section, select **Channels**.
     1. From **Available channels**, select **Microsoft 365 & Microsoft Teams**, and then select **Apply**.
 
 1. **Configure content security policy headers** [*Must fix*]
 
-    If your app makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
+    If your app makes use of [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
     | Microsoft 365 App | frame-ancestor permission |
     | --- | --- |
@@ -278,17 +278,17 @@ Follow these requirements:
 
 ## Technical requirements
 
-For Copilot agents to be validated, invoked, and work seamlessly, ensure that it meets the following criteria: [*Must fix*]
+For a Copilot agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
 |---|---|
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative agent, app manifest version must be 1.18. [*Must fix*] |
-| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Must fix*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
+| Response Time | Response time must not exceed nine seconds for 99 percent, five Seconds for 75 percent and two Seconds for 50 percent. [*Must fix*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
-| Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
+| Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Recommended*] |
-| Content Security Policy | If applicable, modify your Content Security Policy headers and X-Frame-Options in accordance with [Configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Recommended*] |
+| Content-Security-Policy | If applicable, modify your Content-Security-Policy headers and X-Frame-Options in accordance with [configure Content-Security-Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Recommended*] |
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
