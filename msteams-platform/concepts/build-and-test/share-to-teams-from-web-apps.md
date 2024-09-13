@@ -8,13 +8,13 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** buttons on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 
 :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog.":::
 
-By default, Share to Teams supports tagging users with @username and @everyone when content is shared on Teams. The tagged users receive notifications within Teams.
+By default, Share to Teams supports tagging users with @username and @everyone, and the tagged users receive notifications within Teams when content is shared on Teams.
 
 > [!NOTE]
 >
@@ -27,7 +27,7 @@ The following image displays the link unfurling experience through Share to Team
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Screenshot shows the Share to Teams link unfurling experience.":::
 
-This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
+This article guides you on how to create and embed Share to Teams option for your website, craft your website preview, and extend Share to Teams for Education.
 
 The following video provides the basic steps on how to embed Share to Teams:
 <br>
@@ -47,7 +47,7 @@ There are two methods by which you can embed Share to Teams on your webpage. Bas
 
 # [Method 1](#tab/method1)
 
-This method shows the simple and basic way to embed Share to Teams where you can customize the button and its functionality based on your requirements.
+This method shows the simple and basic way to embed Share to Teams where you can customize the button and its functionality based on your requirements:
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -86,7 +86,7 @@ This method shows the simple and basic way to embed Share to Teams where you can
         </div>
         ```
 
-    * To display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
+    * If you want to display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
 
          ```html
          <div
@@ -153,7 +153,7 @@ Here's the end user scenario where the content is shared to chat or channel usin
 
 ### Share content in meetings
 
-Share to Teams from web apps now allows users to share content to a live or an upcoming meeting. When you enable content sharing to meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
+Share to Teams from web apps allows users to share content to a live or an upcoming meeting. When you enable content sharing to meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
 
 Here's how the shared web content appears in the meeting stage:
 
@@ -161,9 +161,9 @@ Here's how the shared web content appears in the meeting stage:
 
 Before you enable share content to meetings, you must ensure the following:
 
-1. A [Microsoft Teams app with a tab](../../apps-in-teams-meetings/build-tabs-for-meeting.md) that supports meeting side panel and Share to Stage APIs.
+1. A [Microsoft Teams app with a tab](../../apps-in-teams-meetings/build-tabs-for-meeting.md) that supports meeting side panel and [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md).
 
-2. To display the content on the meeting stage, the meeting app must support [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) with two primary requirements:
+2. The meeting app must support Share to Stage APIs with two primary requirements to display the content on the meeting stage:
 
     * The [app manifest](../../resources/schema/manifest-schema.md) that supports both `meetingStage` and `meetingSidePanel` configured as frame contexts. If not configured, meeting participants might not be able to view the content on stage.
     * The app that supports `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
@@ -171,8 +171,8 @@ Before you enable share content to meetings, you must ensure the following:
 > [!NOTE]
 >
 > * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are sent in the regular meeting chat.
-> * If app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
-> Share to Teams in meeting is supported only for instant tab scenarios and specific to Teams.
+> * If an app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
+> * Share to Teams in meeting is supported only for instant tab scenarios and specific to Teams.
 
 **Enable Share to Teams for meeting**
 
@@ -194,9 +194,9 @@ Before you enable share content to meetings, you must ensure the following:
         </div>
     ```
 
-    After the configuration, the Share to Teams dialog appears with **Present now**. Present now allows the users to share content to an ongoing meeting. For the user who shared content in meeting stage, the side panel opens automatically as the meeting begins and populates the shared content in the meeting side panel.
+    After the configuration, the Share to Teams dialog appears with the **Present now** option. Present now allows the users to share content to an ongoing meeting. For the user who shared content in meeting stage, the side panel opens automatically as the meeting begins and populates the shared content in the meeting side panel.
 
-    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with the Present now option.":::
 
 Here are a few end user scenarios where the content is shared to meetings using Share to Teams:
 
@@ -232,7 +232,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
 
 1. Select **Present now**. A consent dialog appears to share the content in the meeting.
 
-    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the  Share to Teams dialog to add content to an ongoing meeting.":::
+    :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog to add content to an ongoing meeting.":::
 
    > [!NOTE]
    >
@@ -245,7 +245,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
 
 1. The web app is shared to meeting stage and all the participants can interact and work together.
 
-   :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
+   :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows an app shared to the teams meeting stage.":::
 
 </details>
 </br>
@@ -338,13 +338,13 @@ The following are the launcher.js definitions:
 | Property | HTML attribute | Type | Default | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | url | `data-href` | string | NA | The URL of the content to be shared. This URL can be used to pin the content to an upcoming meeting or to share in an ongoing meeting. Required if `allow-share-in-meeting` is set as `true`. |
-| preview | `data-preview` | Boolean (as a string) | `true` | Specifies whether to show a preview of the content to be shared. |
+| preview | `data-preview` | Boolean (as a string) | `true` | The value specifies whether to show a preview of the content to be shared. |
 | appId | `data-app-id` | String | NA | The ID of the app to be shared. Required if `allow-share-in-meeting` is set as `true`. |
 | iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share to Teams button to be rendered. |
-| msgText | `data-msg-text` | string | NA | The default text to be inserted before the link in the message compose box. The maximum number of characters is 200. |
-| assignInstr | `data-assign-instr` | string | NA | The default text to be inserted in the assignments **Instructions** field. The maximum number of characters is 200. |
-| assignTitle | `data-assign-title` | string | NA | The default text to be inserted in the assignments **Title** field. The maximum number of characters is 50. |
-| share in meeting | `data-allow-share-in-meeting` | String | NA | Allows users to share content in meetings in addition to existing capability to share in chat or channel. It's considered as `false` by default. |
+| msgText | `data-msg-text` | string | NA | The default text to be added before the link in the message compose box. The maximum number of characters is 200. |
+| assignInstr | `data-assign-instr` | string | NA | The default text to be added in the assignments **Instructions** field. The maximum number of characters is 200. |
+| assignTitle | `data-assign-title` | string | NA | The default text to be added in the assignments **Title** field. The maximum number of characters is 50. |
+| share in meeting | `data-allow-share-in-meeting` | String | NA | The value that allows users to share content in meetings in addition to existing capability to share in chat or channel. It's considered as `false` by default. |
 
 ## Code sample
 

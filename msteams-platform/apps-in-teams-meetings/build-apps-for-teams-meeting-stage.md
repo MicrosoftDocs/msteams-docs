@@ -310,9 +310,9 @@ The following code is an example of sharing app content to meeting stage view an
 
 The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
 
-When the meeting starts, the app’s side panel automatically opens for the user who has shared content in the meeting. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+When a meeting begins, the app, in which content is shared, automatically opens the meeting side panel for the user who shared the content. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
 
-### Example
+The following code is an example to fetch shared content in the meeting side panel:
 
 ```javascript
 // Define an async function
@@ -326,7 +326,7 @@ async function fetchContentDetails() {
 }
 ```
 
-### Response payload parameters
+**Response payload parameters**
 
 The following table includes the response payload parameters:
 
@@ -339,7 +339,7 @@ The following table includes the response payload parameters:
 | `author` | String | Yes | The ID of the user who shared the content. |
 | `contentType` | String | Yes | The type of the content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
 
-### Response codes
+**Response codes**
 
 The following table provides the response codes:
 
