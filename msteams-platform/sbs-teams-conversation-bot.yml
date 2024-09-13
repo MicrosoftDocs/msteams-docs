@@ -198,7 +198,7 @@ items:
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
   
-    1. Select **Open** to upload the .zip file that you created in the **TeamAppManifest** folder.
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
     
         :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Screenshot shows the Manifest upload in Teams.":::
 
