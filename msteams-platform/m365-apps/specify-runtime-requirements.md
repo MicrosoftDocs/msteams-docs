@@ -1,7 +1,7 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 7/10/2024
+ms.date: 9/16/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -14,7 +14,9 @@ ms.subservice: m365apps
 >
 > The ability to specify Microsoft 365 host runtime requirements in app manifest (previously called Teams app manifest) is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
 
-When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences. For example, if your app is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings, your app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
+When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences.
+
+For example, consider an app that is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings. The app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
 
 To ensure high-quality app experiences and reach a wider user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
 
@@ -58,7 +60,7 @@ Each app capability is defined by the newly introduced property, `id`, which map
 
 ### One-way dependencies
 
-Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). You also have the option to specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they won't be made available to the user (though all other commands run).
+Use the `oneWayDependencies` array to describe cases where one component of your app depends upon another component. For each object in the array, specify the dependent component (`element`) and the component it depends on (`dependsOn`). You can also specify individual commands that require support for specific app capabilities. If those capabilities aren't supported in the runtime host, they aren't made available to the user (though all other commands run).
 
  The following JSON snippet shows specific message extension commands that have a one-way dependency on a bot:
 
@@ -69,7 +71,7 @@ Use the `oneWayDependencies` array to describe cases where one component of your
           "element" : {
             "name" : "composeExtensions",
             "id" : "composeExtension-id",
-            "commandIds": ["command-1-id", "command-2-id"]
+            "commandIds": ["exampleCmd1", "exampleCmd2"]
           },
           "dependsOn" : [
               {"name" : "bots", "id" : "bot-id"}
@@ -81,7 +83,7 @@ Use the `oneWayDependencies` array to describe cases where one component of your
 
 ### Mutual dependencies
 
-Use the `mutualDependencies` array to group app capabilities that must load together in order to support their intended function. Each object in the array represents a set of mutually dependent app capabilities. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
+Use the `mutualDependencies` array to group app capabilities that must load together to support their intended function. Each object in the array represents a set of mutually dependent app capabilities. The following JSON snippet shows a bot, static tab, message extension, and configurable tab that are mutually dependent on each other:
 
 ```json
     "elementRelationshipSet": {
