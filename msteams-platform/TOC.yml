@@ -557,6 +557,9 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
+      - name: Guidelines for Copilot agents
+        href: messaging-extensions/dev-guidelines-copilot-agents.md
+        displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, Copilot agent, extend message extension, search based message extension, M365, Microsoft 365 Copilot, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
@@ -569,10 +572,7 @@
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
-    
-    - name: Guidelines to create and upgrade Copilot agents
-      href: messaging-extensions/dev-guidelines-copilot-agents.md
-      displayName: Criteria, extend message extension, plugin, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
+     
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
