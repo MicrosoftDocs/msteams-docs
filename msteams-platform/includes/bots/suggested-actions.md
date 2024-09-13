@@ -6,7 +6,7 @@ When a user selects a button, it remains visible and accessible on the rich card
 >
 > * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to six suggested actions.
+> * `imBack` is the only supported action type and Teams display up to three suggested actions.
 
 To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
