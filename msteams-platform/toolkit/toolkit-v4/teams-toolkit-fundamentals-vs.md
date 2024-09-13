@@ -40,7 +40,7 @@ The following are the key features of Teams Toolkit:
 * [Microsoft 365 Copilot plugin](#microsoft-365-copilot-plugin)
 
 > [!NOTE]
-> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation and Microsoft 365 Copilot plugin is available in public developer preview.
+> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation, and Microsoft 365 Copilot plugin is available in public developer preview.
 
 ### Project templates
 
