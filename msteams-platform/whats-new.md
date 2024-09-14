@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 17, 2024***: [Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client.](toolkit/debug-apps-in-teams-desktop-client.md)
+***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::
