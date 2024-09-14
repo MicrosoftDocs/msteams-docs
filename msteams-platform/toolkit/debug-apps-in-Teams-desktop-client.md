@@ -67,7 +67,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Select **Default folder**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="The screenshot shows the selection of default location.":::
 
     To change the default location, follow these steps:
 
