@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 16/09/2024
+ms.date: 14/09/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
