@@ -441,7 +441,7 @@ and when for these, and just reference that from here, along with the set of ste
 
 1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
 
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
