@@ -128,7 +128,7 @@ To enable copilot handoff in Teams, follow these steps:
     await context.sendActivities([
       {
         type: ActivityTypes.Message,
-        text: "Continuing conversation from Microsoft 365 Copilot...",
+        text: "Continuing conversation from copilot...",
       },
       { type: ActivityTypes.Typing },
       { type: "delay", value: 1000 },
