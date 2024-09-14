@@ -40,7 +40,7 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
     The **Upload a certificate** window appears.
 
     > [!NOTE]
-    > Upload a certiificate (public key) with one of the following file types: .cer, .pem, .crt
+    > Upload a certificate (public key) with one of the following file types: .cer, .pem, .crt
 
 1. Upload a certificate.
 
