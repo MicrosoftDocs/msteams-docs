@@ -1,13 +1,13 @@
 ---
-title: Update Bot or Message extension app to use Certificate or MSI for Authentication
+title: Update bot or message extension app to use certificate or MSI for authentication
 author: surbhigupta
-description: Learn about Update Bot or Message extension app to use Certificate or MSI for Authentication.
+description: Learn how to update bot or message extension app to use certificate or MSI for authentication.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Update Bot or Message extension app to use Certificate or MSI for Authentication
+# Update bot or message extension app to use certificate or MSI for authentication
 
 Update your bot or message extension app to authenticate using a certificate or Managed Service Identity (MSI), instead of a bot ID and secret. This action resolves compliance concerns related to the use of Microsoft Entra ID and a secret.
 
@@ -17,9 +17,9 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
 
 * An Azure bot.
 * An Entra ID with a secret used for bot authentication.
-* A resource that hosts your bot app, such as Azure App Service, Azure Functions, and so on.
+* A resource that hosts your bot app, such as Azure App Service, Azure Functions.
 
-## Update to Certificate based Authentication
+## Update to certificate based Authentication
 
 1. Obtain a certificate and private key.
 
@@ -40,7 +40,7 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
     The **Upload a certificate** window appears.
 
     > [!NOTE]
-    > Upload a certiificate (public key) with one of the following file types: .cer, .pem, .crt
+    > Upload a certificate (public key) with one of the following file types: .cer, .pem, .crt.
 
 1. Upload a certificate.
 
@@ -72,13 +72,13 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
     builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
     ```
 
-1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
+1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
 
 1. Delete the secrets from Entra.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-## Update to MSI based Authentication
+## Update to MSI based authentication
 
 > [!NOTE]
 > The **Azure Bot** service ID and type can't be modified after creation.
@@ -155,3 +155,5 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
 
 1. Delete the old Azure bot and the Entra ID.
+
+## See Also
