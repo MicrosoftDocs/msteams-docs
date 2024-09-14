@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Debug apps in Teams Desktop Client
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, open debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, opens debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
 
 The following are the advantages of Teams desktop client:
 
@@ -22,9 +22,9 @@ The following are the advantages of Teams desktop client:
 Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
 
 * Bot
-* Copilot Engine Copilot
-* Custom Copilot
-* Message Extension
+* Custom engine agent
+* Custom agent
+* Message extension
 
 ## Prerequisites
 
