@@ -1,7 +1,7 @@
 ---
-title: Debug apps in Teams Desktop Client
+title: Debug your Teams Toolkit apps in Teams Desktop Client
 author: surbhigupta
-description: Learn about Debug apps in Teams Desktop Client.
+description: Learn how to debug your bot, Copilot plugin, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -22,8 +22,8 @@ The following are the advantages of Teams desktop client:
 Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
 
 * Bot
+* Copilot plugin
 * Custom engine agent
-* Custom agent
 * Message extension
 
 ## Prerequisites
@@ -105,6 +105,7 @@ Ensure you install the following tools for building and deploying your app in Te
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows the app added to Teams desktop client.":::
 
     > [!NOTE]
+    >
     > The system level notification for account matching appears only once per project. In subsequent debug sessions, Teams Toolkit sends reminders about the account through VS Code notifications.
     > :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
@@ -113,6 +114,8 @@ Ensure you install the following tools for building and deploying your app in Te
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/after-hot-reload.png" alt-text="Screenshot shows an example after hot reload of an app.":::
+
+You can continue to debug your custom engine agent app in Teams desktop client.
 
 ## See also
 
