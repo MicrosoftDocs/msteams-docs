@@ -40,7 +40,7 @@ You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) t
 | --- | --- |
 | Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | • Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> • Automatically generate to run the `Provision` command in Teams Toolkit. |
 | Configure Azure resources |• Manually prepare the resources by examining the bicep files under the `infra` folder. <br> • Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
-| Ensure that you've a service principal and its access policies on resources are properly configured. Set up a service principal as follows:| The `Teamsapp` command-line interface (CLI) supports Azure login with certificate-based authentication or password-based authentication (application secret). You can [Create a service principal with certificate-based authentication](/cli/azure/azure-cli-sp-tutorial-3) and sotre the the generated certificate, appId (client ID) and tenant (tenant ID) or [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret."::: <br> For more infomation about service principal: <br> • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). |
+| Ensure you've a properly configured service principal with appropriate access policies on resources. | The `Teamsapp` command-line interface (CLI) supports Azure login through certificate-based authentication or password-based authentication (application secret). You can either [create a service principal with certificate-based authentication](/cli/azure/azure-cli-sp-tutorial-3) and save the generated certificate, `appId` (client ID) and `tenant` (tenant ID) or [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret."::: <br> For more information about service principal, see: <br> • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). |
 
 After you've completed the prerequisites, let's set up a pipeline:
 
@@ -55,7 +55,7 @@ To set up the pipeline with GitHub, follow these steps:
 1. Open Visual Studio Code.
 
 1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
-   # [certificate-based authentication](#tab/certificate)
+   # [Certificate-based authentication](#tab/certificate)
     ```yaml
     on:
       push:
@@ -110,7 +110,7 @@ To set up the pipeline with GitHub, follow these steps:
               name: artifact
               path: appPackage/build/appPackage.zip
     ```
-   # [password-based authentication](#tab/secret)
+   # [Password-based authentication](#tab/secret)
     ```yaml
     on:
       push:
@@ -167,16 +167,16 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Update the following variables and secrets you created during the prerequisites:
 
-    * # [certificate-based authentication](#tab/certificate)
-      `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and encoding your generated certificate content into a Base64 string then set as `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64`
+    * # [Certificate-based authentication](#tab/certificate)
+      `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64`. `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64` is the Base64 string encoded content of the certificate that you've generated.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
 
       > [!NOTE]
       > The `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64` variable must be set as secret.
-      > Utilize the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) to use different sets of variables.
+      > Use the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) for different variable sets.
 
-      # [password-based authentication](#tab/secret)
+      # [Password-based authentication](#tab/secret)
       `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
@@ -234,7 +234,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 1. Create a `cd.yml` file in your project and add the following code in the file:
 
-    # [certificate-based authentication](#tab/certificate)
+    # [Certificate-based authentication](#tab/certificate)
     ```yaml
     trigger:
       - main
@@ -352,10 +352,10 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     To set variables in your pipeline, go to your pipeline and select **Edit** > **Variables**.
 
-    In your Azure DevOps project, navigate to "Pipelines" > "Library" and add a new secure file. Upload the certificate (.pem) file and give it a name `azure_sp_cert.pem`.
+    In your Azure DevOps project, navigate to **Pipelines** > **Library** and add a new secure file. Upload the certificate (.pem) file and name the file as `azure_sp_cert.pem`.
 
-   # [password-based authentication](#tab/secret)
-   Update the following variables and secrets you created during the prerequisites:
+   # [Password-based authentication](#tab/secret)
+   Update the following variables and secrets that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
     * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
