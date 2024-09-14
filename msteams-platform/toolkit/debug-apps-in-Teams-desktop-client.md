@@ -39,9 +39,9 @@ Ensure you install the following tools for building and deploying your app in Te
 
 ## Debug in Teams desktop client
 
-Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
+To debug your custom engine agent app in Teams desktop client:
 
-1. Open Visual Studio Code (VS Code).
+1. Open Visual Studio Code (VS Code) and log into your Microsoft 365 account through Teams Toolkit.
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar**.
 
@@ -49,7 +49,7 @@ Ensure you are logged into your Microsoft 365 account through Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Engine Copilot**.
+1. Select **Custom Engine Agent**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/custom-engine-copilot.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
