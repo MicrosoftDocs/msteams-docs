@@ -25,6 +25,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Microsoft Graph | Microsoft Graph APIs enable Teams apps to build collaborative features with the intelligence of Microsoft 365 data and engage users regularly through activity feed notifications. | Send activity feed notifications, export or import messages, get meeting transcripts and recordings, use resource-specific consent (RSC) permissions, CRUD (create, read, update, and delete) users, chats, channels, and apps.  |
 | Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
 | Dialogs (referred as task modules in TeamsJS v1.x) | Dialogs permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
+| Copilot agents, plugins, and connectors | You can use agents, plugins, and connectors to bring your organization's knowledge, skills, and process automation into Microsoft 365 Copilot. | Generate unique insights and automate functions such as customer support, content creation, and data analysis with data specific to your organization. |
 
 ### Extend your Teams app across Microsoft 365
 
