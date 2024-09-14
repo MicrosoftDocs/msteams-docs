@@ -91,7 +91,7 @@ Here's an example description that work for NPM Finder.
 </br>
 <details>
 
-<summary> Microsoft 365 Copilot includes my plugin in the response, but the Copilot’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Copilot includes my plugin in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
