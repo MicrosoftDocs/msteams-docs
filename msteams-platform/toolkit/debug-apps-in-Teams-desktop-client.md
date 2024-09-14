@@ -53,7 +53,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Select **Basic AI Chatbot**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/app-feature.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/app-feature.png" alt-text="Screenshot shows the app capabilities to add to your new app.":::
 
 1. Select **JavaScript**.
 
@@ -73,7 +73,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the option to browse and select the location.":::
 
     1. Select the location for the project workspace.
     1. Select **Select Folder**.
