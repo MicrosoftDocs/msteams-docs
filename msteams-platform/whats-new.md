@@ -32,9 +32,11 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. Additionally, explore the development guidance on Copilot agents and plugins.](message extension/high-quality-message-extension.md)
+* **September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store.](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
 
-***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
+* **September 16, 2024*** : [Additionally, explore the development guidance on Copilot agents and plugins.](messaging-extensions/dev-guidelines-copilot-agents.md)
+
+* **September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::

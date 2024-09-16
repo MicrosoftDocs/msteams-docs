@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extensions plugins in Microsoft 365 Copilot are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Word and PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
@@ -23,7 +23,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
-Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
+Apps must be consistent with responsible [AI checks](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 :::row:::
    :::column:::
@@ -150,7 +150,7 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 ### Prompt starters
 
-Declarative agents guide the user on how to start using declarative copilot. You must ensure the following guidelines for prompt starters:
+Prompt starters guide users on how to start using declarative agents. You must ensure the following guidelines for prompt starters:
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must Fix*]
 * All prompt starters must be functional and return responses. [Must Fix]
