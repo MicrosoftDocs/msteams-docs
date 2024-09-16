@@ -65,7 +65,7 @@ To update your bot app to use certificate based authentication:
 
 # [JavaScript](#tab/js1)
 
-    ```javascript
+```javascript
     const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
       MicrosoftAppId: config.botId,
       CertificatePrivateKey: '{your private key}',
@@ -79,14 +79,15 @@ To update your bot app to use certificate based authentication:
     );
     
     const adapter = new CloudAdapter(botFrameworkAuthentication);
-    ```
+```
 
 # [C#](#tab/cs1)
 
-    ```csharp
+```csharp
     builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
-    ```
-    ---
+```
+
+---
 
 1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
 
@@ -159,9 +160,9 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Update your code and deploy.
 
-[JavaScript](#tab/js2)
+# [JavaScript](#tab/js2)
 
-    ```javascript
+```javascript
     const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
       MicrosoftAppType: 'UserAssignedMsi',
       MicrosoftAppId: '{your MSI’s client ID}',
@@ -174,16 +175,18 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
     );
     
     const adapter = new CloudAdapter(botFrameworkAuthentication);
-    ```
+```
 
-[C#](#tab/cs2)
-    ```csharp
+# [C#](#tab/cs2)
+
+```csharp
     builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
     builder.Configuration["MicrosoftAppId"] = "{your MSI’s client ID}";
     builder.Configuration["MicrosoftAppPassword"] = "{your MSI’s tenant ID}";
     builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
-    ```
-    ---
+```
+
+---
 
 1. Update the `BOT_ID` in your `.env` file.
 
@@ -194,5 +197,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 1. Delete the old Azure bot and the Entra ID.
 
 Your bot app now uses MSI for authentication.
+
+---
 
 ## See Also
