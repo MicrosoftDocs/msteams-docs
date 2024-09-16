@@ -5,7 +5,7 @@ description: In this article, fetch answers to some frequently asked questions w
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 02/14/2024
+ms.date: 09/16/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 

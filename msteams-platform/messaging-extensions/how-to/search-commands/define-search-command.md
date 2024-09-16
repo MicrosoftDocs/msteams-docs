@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 09/16/2024
 ms.localizationpriority: medium
 ---
 # Define message extension search commands
@@ -11,7 +12,7 @@ ms.localizationpriority: medium
 The search command is invoked from any one or both of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
-* Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams, search command is invoked by @mentioning in the command box. For example, **@your-app-name**. 
+* Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams, search command is invoked by @mentioning in the command box. For example, **@your-app-name**.
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When a search command invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -82,7 +83,7 @@ To run the message extension in Teams, follow these steps:
    :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
-    
+
    1. If you don't have an existing bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
 
 1. Select **Save**.

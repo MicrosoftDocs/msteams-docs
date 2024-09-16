@@ -2,6 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
+ms.date: 09/16/2024
 ms.localizationpriority: high
 ---
 
@@ -51,7 +52,7 @@ Resolution - Connect Microsoft Entra ID to Microsoft Cloud Partner Program](/par
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
- 
+
 </details>
 <!--
 <details>
