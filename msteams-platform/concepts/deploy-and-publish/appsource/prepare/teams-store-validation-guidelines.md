@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 03/21/2023
+ms.date: 09/16/2024
 ---
 # Teams Store validation guidelines
 
@@ -1811,7 +1811,7 @@ The app must terminate the user account instance when the user is switched or lo
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365
+## Teams apps extensible as plugin for Microsoft 365 Copilot
 
 * App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
@@ -1831,29 +1831,29 @@ The short descriptions of an app, parameter, and command must not include the fo
 
 The long description of an app must clearly call out the following:
 
-* App's compatibility with Copilot. For example, use Contoso in Copilot to search and summarize your tasks.
+* App's compatibility with Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks.
 
-* Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one prompt of how users can use a message extension plugin in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
 
 ### Response Quality
 
-* The mandatory fields in Microsoft 365 Chat Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+* The mandatory fields in Microsoft 365 Copilot Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
 
-   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot's response that contains Preview and Content in the same response.":::
 
-* Adaptive Cards in Microsoft 365 Chat response must have at least one action button.
-* Action buttons present in Microsoft 365 Chat response Adaptive Cards must be functional.
+* Adaptive Cards in Microsoft 365 Copilot response must have at least one action button.
+* Action buttons present in Microsoft 365 Copilot response Adaptive Cards must be functional.
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Microsoft 365 Chat must respond accurately and not display an error when a user prompts with a single parameter.
-* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a multi parameter.
-* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
-* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
+* Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Copilot.
 
 [Back to top](#teams-store-validation-guidelines)
 
