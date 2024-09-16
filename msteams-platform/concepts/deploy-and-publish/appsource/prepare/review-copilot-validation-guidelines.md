@@ -102,7 +102,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 You must ensure to meet the following guidelines for Copilot agents:
 
-* The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots).
+* The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
 * Apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
@@ -111,7 +111,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 You must ensure to meet the following guidelines for Copilot agents:
 
-* The Teams Store validation guidelines related to app name for Microsoft 365 apps are applicable. For more information, see [app name](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+* The Teams Store validation guidelines related to app name for Microsoft 365 apps are applicable. For more information, see [app name](teams-store-validation-guidelines.md#app-name).
 * For declarative agent, ensure that the following parameters are identical: [*Must fix*]
   * `name` in the app manifest
   * `name` in declarativecopilot.json
@@ -123,15 +123,15 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 Copilot agents must support atleast three unique compound utterances by handling three or more parameters.
 
-:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
+:::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
 ## Prompts
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot.
+The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
 
 Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]
 
@@ -163,11 +163,11 @@ Copilot agent responses provided as an Adaptive Card must meet the following req
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains preview and content in the same response.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains preview and content in the same response.":::
 
 * Apart from the Copilot agent logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes such as, data modified, author, status, and flags. [*Must fix*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
 * Adaptive Card must be well-formatted to suit the desktop, web, and mobile (iOS and Android) clients. [*Must fix*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
@@ -292,7 +292,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 ## User disclosure and confirmation for action scenarios
 
-:::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
+:::image type="content" source="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation:
 
@@ -301,17 +301,13 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must Fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must Fix*]
 * Highly consequential tasks such as bulk delete must not be supported. [*Good-to-fix*]
-* Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-with-ai-generated-content).
+* Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
 ## Copilot agent must have Action or knowledge source
 
 If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the Copilot agent's responses are not grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
-
-<!--
-:::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This screenshot shows an example of a fail scenario where no node for actions is defined.":::
--->
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -325,7 +321,7 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 
   For example, graceful error message with way forward for declarative agent:
 
-  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../assets/images/Copilot/graceful-error-handling.png":::
+  :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../assets/images/Copilot/graceful-error-handling.png":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
