@@ -4,7 +4,7 @@ description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. 
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
-ms.date: 02/27/2023
+ms.date: 09/17/2024
 ---
 
 # Create a channel tab or group tab
@@ -423,7 +423,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add**.
-1. Select a channel or chat to add the tab and select **Go**. Configure your tab and select **Save**. Your tab is now available in Teams.
+1. Select a channel or chat to add the tab and select **Go**. 
+1. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
@@ -640,7 +641,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add**.
 
-1. Select a channel or chat to add the tab and select **Go**. Configure your tab and select **Save**. Your tab is now available in Teams.
+1. Select a channel or chat to add the tab and select **Go**. 
+1. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 

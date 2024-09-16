@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 09/17/2024
 ---
 
 # Add authentication to your Teams bot
@@ -437,7 +438,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
 1. Select **Add** to install the app to Teams.
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with Add option highlighted.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with the Add option highlighted.":::
 
 1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
