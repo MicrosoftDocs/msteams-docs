@@ -72,7 +72,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
 
 ## Description
 
-A good description offers a clear and concise summary of the Copilot agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations .
+A good description offers a clear and concise summary of the Copilot agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
 
 You must ensure to meet the following guidelines for Copilot agents:
 
@@ -152,8 +152,8 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 Prompt starters guide users on how to start using declarative agents. You must ensure the following guidelines for prompt starters:
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must Fix*]
-* All prompt starters must be functional and return responses. [Must Fix]
-* It must be generic in nature and not include custom references, for example, project names and task name. [Must Fix]
+* All prompt starters must be functional and return responses. [*Must Fix*]
+* It must be generic in nature and not include custom references, for example, project names and task name. [*Must Fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -180,7 +180,7 @@ Copilot agents must be fully responsive and functional on the latest versions of
 
 * Microsoft Teams on Desktop and Web
 * copilot.microsoft.com on web
-* Copilot for Microsoft 365 in Word
+* Microsoft 365 Copilot in Word
 
 ### Ensure your Copilot plugins work in Teams meetings
 
@@ -331,5 +331,5 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
 * [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
-* [Extend bot-based message extension as plugin for Copilot for Microsoft 365](../../../../messaging-extensions/build-bot-based-plugin.md)
+* [Extend bot-based message extension as plugin for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-plugin.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
