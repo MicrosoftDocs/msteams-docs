@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 14/09/2024
+ms.date: 09/16/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -56,7 +56,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column span="":::
-     :::image type="icon" source="../assets/icons/action-scenarios.png" link="#requirements-for-action-scenarios" border="false":::
+     :::image type="icon" source="../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/instructions-only.png" link="#instructions-only-copilots-must-not-be-supported" border="false":::
@@ -307,7 +307,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 ## Instructions-only Copilots must not be supported
 
-If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the agent's responses are not grounded in a data source. Such agents, also called instruction-only Copilot agents, aren't allowed due to questionable authenticity of the result. [*Must fix*]
+If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the agent's responses are not grounded in a data source. These type of copipot agents are not allowed [*Must fix*]
 
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This screenshot shows an example of a fail scenario where no node for actions is defined.":::
 
