@@ -19,11 +19,19 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
 * An Entra ID with a secret used for bot authentication.
 * A resource that hosts your bot app, such as Azure App Service, Azure Functions.
 
-## Update to certificate based Authentication
+# [Update to certificate based Authentication](#tab/certificate)
+
+To update your bot app to use certificate based authentication:
+
+* [Create and upload certificate in Azure AD](#create-and-upload-certificate-in-azure-ad)
+* [Update the bot app code](#update-the-bot-app-code)
+* [Delete bot secret](#delete-bot-secret)
+
+## Create and upload certificate in Azure AD
 
 1. Obtain a certificate and private key.
 
-1. Go to [Azure portal.](https://ms.portal.azure.com)
+1. Go to [Azure portal](https://ms.portal.azure.com).
 
 1. Select **App registrations**.
 
@@ -50,7 +58,12 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
-1. Update your code and deploy.
+## Update the bot app code
+
+1. Open your bot app project in Visual Studio or Visual Studio Code.
+1. Update your code.
+
+# [JavaScript](#tab/js1)
 
     ```javascript
     const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -68,17 +81,33 @@ Ensure that you've a Teams bot app deployed to Azure with the following resource
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
+# [C#](#tab/cs1)
+
     ```csharp
     builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
     ```
+    ---
 
 1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
 
+## Delete bot secret
+
+1. Go to [Azure portal](https://ms.portal.azure.com), and open your bot service.
 1. Delete the secrets from Entra.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-## Update to MSI based authentication
+Your bot app now uses the certificate for authentication.
+
+# [Update to MSI based authentication](#tab/msi)
+
+To update your bot app to use MSI based authentication:
+
+* [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
+* [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
+* [Delete the previous bot details](#delete-the-previous-bot-details)
+
+## Create bot service with MSI type in Azure AD
 
 > [!NOTE]
 > The **Azure Bot** service ID and type can't be modified after creation.
@@ -126,7 +155,11 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Add the managed identity that you've created.
 
+## Update your bot app code for MSI
+
 1. Update your code and deploy.
+
+[JavaScript](#tab/js2)
 
     ```javascript
     const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -143,17 +176,23 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
+[C#](#tab/cs2)
     ```csharp
     builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
     builder.Configuration["MicrosoftAppId"] = "{your MSI’s client ID}";
     builder.Configuration["MicrosoftAppPassword"] = "{your MSI’s tenant ID}";
     builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
     ```
+    ---
 
 1. Update the `BOT_ID` in your `.env` file.
 
 1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
 
+## Delete the previous bot details
+
 1. Delete the old Azure bot and the Entra ID.
+
+Your bot app now uses MSI for authentication.
 
 ## See Also
