@@ -419,7 +419,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 * **September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store.](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
 
-* **September 16, 2024*** : [Explore the development guidance on building Copilot agents and plugins.](messaging-extensions/dev-guidelines-copilot-agents.md)
+* **September 16, 2024*** : [Explore the development guidance to build Copilot agents.](messaging-extensions/dev-guidelines-copilot-agents.md)
 
 :::column-end:::
 :::row-end:::
