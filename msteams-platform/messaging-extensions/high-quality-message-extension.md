@@ -14,7 +14,6 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extension plugins are in preview.
 > * Message extensions plugins in Microsoft 365 Copilot are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > * Support for Excel and OneNote client applications to be available soon.
 >
@@ -70,14 +69,14 @@ This section is in line with [Microsoft commercial marketplace policy number 114
    :::column-end:::
 :::row-end:::
 
-## App description
+## Description
 
-A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
+A good description offers a clear and concise summary of the Copilot agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations .
 
 You must ensure to meet the following guidelines for Copilot agents:
 
 * The Teams Store validation guidelines related to app description for Microsoft 365 apps are applicable. For more information, see [app descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
-* Short description of app, parameter, command description, semantic description, and operation ID mustn't include:
+* Short description of Copilot agent, parameter, command description, semantic description, and operation ID mustn't include:
   * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold” or “Do not print anything”. [*Must fix*]
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
