@@ -1,6 +1,6 @@
 ---
 title: Development guidelines for Copilot agents
-description: Learn how to optimize the Copilot agents with these development guidelines to create and upgrade Copilots
+description: Learn how to optimize the Copilot agents with these development guidelines to create and upgrade Microsoft 365 Copilots
 ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
@@ -15,18 +15,18 @@ ms.collection: ce-skilling-ai-copilot
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
 > * Message extension plugins are in preview.
-> * Message extensions plugins in Microsoft 365 Copilot are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
-> * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Copilot:
->   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
+> * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
+>   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](high-quality-message-extension.md).
+> For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands, as Microsoft 365 Copilot recognizes them as skills it can execute on behalf of the user.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. As Microsoft 365 Copilot recognizes them as skills, it can execute on behalf of the user.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot.":::
 
@@ -47,7 +47,7 @@ Long and short app descriptions must be clear and define the app's scope. To ren
 * Long description must clearly explain the functionality and usage of the message extension plugin in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
-The following table lists the short description examples for each category:
+The following code snippets show the short description examples for each category:
 
 # [Tasks](#tab/tasks)
 
@@ -154,7 +154,7 @@ The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#com
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
-The following table lists the command and semantic description examples for each category:
+The following code snippets show the command and semantic description examples for each category:
 
 # [Tasks](#tab/tasks)
 
@@ -257,7 +257,7 @@ The following table lists the command and semantic description examples for each
 
 Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft 365 Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft 365 Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -509,9 +509,9 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 [*Must fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a plugin.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a plugin.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Copilot.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
 
 > [!NOTE]
 >
@@ -566,7 +566,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains preview and content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains preview and content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot.png":::
 
   <br/>
   <details><summary>Adaptive Card response template example</summary>
@@ -677,7 +677,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Microsoft 365 Copilot.":::
 
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
@@ -690,9 +690,9 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 > [!IMPORTANT]
 > Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
-Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Copilot can present it upon request when the plugin is activated.
+Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
 
- If you've developed a plugin for Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
+ If you've developed a plugin for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 
 ## Code samples
 
