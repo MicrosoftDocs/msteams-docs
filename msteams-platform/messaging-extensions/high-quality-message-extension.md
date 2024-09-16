@@ -32,7 +32,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
       :::image type="icon" source="../assets/icons/screenshots.png" link="#screenshots" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="icon" source="../assets/icons/app-name.png" link="#app-or-agent-name" border="false":::
+     :::image type="icon" source="../assets/icons/app-name.png" link="#copilot-agent-name" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
@@ -107,7 +107,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## App or agent name
+## Copilot agent name
 
 You must ensure to meet the following guidelines for Copilot agents:
 
@@ -272,7 +272,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative agent, app manifest version must be 1.18. [*Must fix*] |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative agent, you must use dev preview app manifest. [*Must fix*] |
 | Response Time | Response time must not exceed nine seconds for 99 percent, five Seconds for 75 percent and two Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
@@ -282,7 +282,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## User disclosure and confirmation for action scenarios
+## Requirements for action scenarios
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
