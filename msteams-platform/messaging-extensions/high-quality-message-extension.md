@@ -32,7 +32,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
       :::image type="icon" source="../assets/icons/screenshots.png" link="#screenshots" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="icon" source="../assets/icons/app-name.png" link="#copilot-agent-name" border="false":::
+     :::image type="icon" source="../assets/icons/copilot-agent-name.png" link="#copilot-agent-name" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
@@ -127,13 +127,15 @@ Copilot agents must support atleast three unique compound utterances by handling
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Sample prompts
+## Prompts
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
 
 Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]
+
+### Sample prompts
 
 Sample prompts are specified using `samplePrompts` property in the app manifest. These prompts must meet the following requirements:
 
@@ -143,6 +145,8 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 * Sample prompts must be generic in nature and not include custom references. For example, project names and task name. [*Must Fix*]
 * All sample prompts must be functional and return responses. [*Must Fix*]
 * Prompt must be relevant to the commands. [*Must Fix*]
+
+### Prompt starters
 
 > [!NOTE]
 > In case of declarative agent, these guidelines also apply for prompt starters.
@@ -277,12 +281,12 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
-| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Good-to-fix*] |
-| Content-Security-Policy | If applicable, modify your Content-Security-Policy headers and X-Frame-Options in accordance with [configure Content-Security-Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Good-to-fix*] |
+| Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Must fix*] |
+| Content-Security-Policy | If applicable, modify your Content-Security-Policy headers and X-Frame-Options in accordance with [configure Content-Security-Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Requirements for action scenarios
+## User disclosure and confirmation for action scenarios
 
 :::image type="content" source="../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
 
@@ -293,6 +297,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must Fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must Fix*]
 * Highly consequential tasks such as bulk delete must not be supported. [*Good-to-fix*]
+* Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
