@@ -25,12 +25,12 @@ In the **Overview** section, you can see the following components to manage your
 
   * In the **Dashboard** under **Overview** section, you can see the following components for your app:
     * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
-    * **Announcement**: Latest updates of your apps on Developer Portal for Teams.
+    * **Announcement**: Latest updates of your apps on Developer Portal.
     * **Active users (Preview)**: Shows you the active user count.
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
     * **Upgrade to 1.17**: Upgrade your app manifest to the latest version 1.17, which enables support for extending Teams apps to Outlook and Office.
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
 * **Analytics**
 
@@ -44,7 +44,7 @@ To install and render your app in Teams, you must include a set of configuration
 
 In the **Configure** section, you can see the following components to manage and access your app:
 
-* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
+* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID** (CCP ID).
 * **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
 * **App features**: This section allows you to add the following features to your app:
   * Personal app
