@@ -56,6 +56,14 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "color32x32": "%FILENAME-32x32px%"
     },
     "accentColor": "%HEX-COLOR%",
+    "copilotExtensions": {
+        "declarativeCopilots": [
+            {
+                "id": "agent1",
+                "file": "declarativeAgent1.json"
+            }
+        ]
+    },
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -434,6 +442,25 @@ Icons used within the Teams app. The icon files must be included as part of the 
 A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+
+## copilotExtensions
+
+**Optional** &ndash; Object
+
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`declarativeCopilots`|Array of objects| 1 |✔️| Array of `declarativeCopilot` objects. |
+
+### declarativeCopilot
+
+Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
 
 ## configurableTabs
 
