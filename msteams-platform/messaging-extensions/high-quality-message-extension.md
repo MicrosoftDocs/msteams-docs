@@ -26,7 +26,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../assets/icons/description.png" link="#app-description" border="false":::
+      :::image type="icon" source="../assets/icons/description.png" link="#description" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/screenshots.png" link="#screenshots" border="false":::
@@ -41,7 +41,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column span="":::
-      :::image type="icon" source="../assets/icons/sample-prompts.png" link="#sample-prompts" border="false":::
+      :::image type="icon" source="../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
@@ -56,7 +56,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 
 :::row:::
    :::column span="":::
-     :::image type="icon" source="../assets/icons/user-disclosure.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
+     :::image type="icon" source="../assets/icons/action-scenarios.png" link="#requirements-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/instructions-only.png" link="#instructions-only-copilots-must-not-be-supported" border="false":::
