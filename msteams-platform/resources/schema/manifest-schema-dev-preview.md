@@ -447,7 +447,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent.md) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -460,7 +460,7 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
-|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest.md) file. |
 
 ## configurableTabs
 
