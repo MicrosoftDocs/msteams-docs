@@ -59,7 +59,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
      :::image type="icon" source="../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../assets/icons/instructions-only.png" link="#instructions-only-copilots-must-not-be-supported" border="false":::
+      :::image type="icon" source="../assets/icons/instructions-only.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
@@ -165,7 +165,7 @@ Copilot agent responses provided as an Adaptive Card must meet the following req
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains preview and content in the same response.":::
 
-* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes such as, data modified, author, status, and flags. [*Must fix*]
+* Apart from the Copilot agent logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes such as, data modified, author, status, and flags. [*Must fix*]
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
@@ -253,7 +253,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 1. **Configure Content-Security-Policy headers** [*Must fix*]
 
-    If your app makes use of [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
+    If your Copilot agent makes use of [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
     | Microsoft 365 App | frame-ancestor permission |
     | --- | --- |
@@ -280,10 +280,10 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If using declarative agent, you must use dev preview app manifest. [*Must fix*] |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use developer preview app manifest. [*Must fix*] |
 | Response Time | Response time must not exceed nine seconds for 99 percent, five Seconds for 75 percent and two Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
-| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
+| Zero Regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Must fix*] |
 | Content-Security-Policy | If applicable, modify your Content-Security-Policy headers and X-Frame-Options in accordance with [configure Content-Security-Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
@@ -305,9 +305,9 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Instructions-only Copilots must not be supported
+## Copilot agent must have Action or knowledge source
 
-If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the agent's responses are not grounded in a data source. These type of copipot agents are not allowed [*Must fix*]
+If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the Copilot agent's responses are not grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
 
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This screenshot shows an example of a fail scenario where no node for actions is defined.":::
 
