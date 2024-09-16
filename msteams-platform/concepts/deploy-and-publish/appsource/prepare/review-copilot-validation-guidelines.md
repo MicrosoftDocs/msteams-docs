@@ -135,7 +135,7 @@ You must ensure the following guidelines for sample prompts and prompt starters.
 
 ### Sample prompts
 
-The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Microsoft 365 Copilot.
+The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various plugins in Microsoft 365 Copilot.
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
 
