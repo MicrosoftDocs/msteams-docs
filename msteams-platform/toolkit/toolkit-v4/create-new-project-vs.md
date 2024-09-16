@@ -102,7 +102,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
 |**Workflow Bot**     |You can interact with the bot using automate repetitive workflow action.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables SSO using Teams account.         |
-|**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching Nugget packages, or unfurling links for the `dev.botframework.com` domain.         |
+|**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching NuGet packages, or unfurling links for the `dev.botframework.com` domain.         |
 
 ## See also
 
