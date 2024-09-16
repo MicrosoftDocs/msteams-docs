@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Word and PowerPoint.
+> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
