@@ -3,7 +3,7 @@
 
     :::image type="content" source="../../assets/images/include-files/create-new-project.png" alt-text="Screenshot shows the selection to create a new project.":::
 
-1. In the search box, enter **ASP.NET**. From the search results, select **ASP.NET Core Web App (Razor Pages)**.
+1. In the search box, enter **ASP.NET**. From the search results, select **ASP.NET Core Web App**.
 
 1. Select **Next**.
 
