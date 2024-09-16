@@ -141,6 +141,8 @@ items:
 
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
+    > [!NOTE]
+    >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
     > * Only bot-based search message extension can be extended as a plugin for Microsoft 365 Copilot.
 
