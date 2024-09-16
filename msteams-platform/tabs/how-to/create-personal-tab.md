@@ -5,7 +5,7 @@ description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 02/27/2023
+ms.date: 09/17/2024
 ---
 
 # Create a personal tab
@@ -834,7 +834,7 @@ To build and run your app:
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ssl-prompt.png" alt-text="Screenshot of Security Warning with Yes option highlighted.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ssl-prompt.png" alt-text="Screenshot of Security Warning with the Yes option highlighted.":::
 
     Teams is loaded in a web browser.
 
