@@ -32,7 +32,8 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
+* ***September 16, 2024***: [Perform actions with natural language commands in the Copilot chat window using message extension plugins.](messaging-extensions/build-bot-based-plugin.md#actions-in-microsoft-365-copilot).
+* ***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::
