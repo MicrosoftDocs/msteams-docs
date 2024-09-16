@@ -215,7 +215,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/manifest1.png" alt-text="Screenshot shows the Manifest.":::
 
-    1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
+    1. Zip the contents of the **appPackage** folder to create manifest.zip.
     
         > [!NOTE]
         > The `manifest.zip` must not contain any other folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
@@ -272,7 +272,7 @@ items:
 
 - title: Interact with the conversation bot
   durationInMinutes: 2
-  content: |
+  content: | 
     You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the strings.
 
     In the left pane of the Teams, select More added apps (●●●), and then select your app from the list. The bot shows **Suggestions** as follows:
