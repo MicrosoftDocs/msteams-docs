@@ -63,31 +63,30 @@ To update your bot app to use certificate based authentication:
 1. Open your bot app project in Visual Studio or Visual Studio Code.
 1. Update your code.
 
-# [JavaScript](#tab/js1)
+    # [JavaScript](#tab/js1)
 
-```javascript
-    const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-      MicrosoftAppId: config.botId,
-      CertificatePrivateKey: '{your private key}',
-      CertificateThumbprint: '{your cert thumbprint}',
-      MicrosoftAppType: "MultiTenant",
-    });
-    
-    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
-      {},
-      credentialsFactory
-    );
-    
-    const adapter = new CloudAdapter(botFrameworkAuthentication);
-```
+    ```javascript
+        const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
+        MicrosoftAppId: config.botId,
+        CertificatePrivateKey: '{your private key}',
+        CertificateThumbprint: '{your cert thumbprint}',
+        MicrosoftAppType: "MultiTenant",
+        });
+        
+        const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
+        {},
+        credentialsFactory
+        );
+        
+        const adapter = new CloudAdapter(botFrameworkAuthentication);
+    ```
 
-# [C#](#tab/cs1)
+    # [C#](#tab/cs1)
 
-```csharp
-    builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
-```
-
----
+    ```csharp
+        builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
+    ```
+    ---
 
 1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
 
@@ -160,33 +159,33 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Update your code and deploy.
 
-# [JavaScript](#tab/js2)
+    # [JavaScript](#tab/js2)
 
-```javascript
-    const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-      MicrosoftAppType: 'UserAssignedMsi',
-      MicrosoftAppId: '{your MSI’s client ID}',
-      MicrosoftAppTenantId: '{your MSI’s tenant ID}',
-    });
-    
-    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
-      {},
-      credentialsFactory
-    );
-    
-    const adapter = new CloudAdapter(botFrameworkAuthentication);
-```
+    ```javascript
+        const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
+        MicrosoftAppType: 'UserAssignedMsi',
+        MicrosoftAppId: '{your MSI’s client ID}',
+        MicrosoftAppTenantId: '{your MSI’s tenant ID}',
+        });
+        
+        const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
+        {},
+        credentialsFactory
+        );
+        
+        const adapter = new CloudAdapter(botFrameworkAuthentication);
+    ```
 
-# [C#](#tab/cs2)
+    # [C#](#tab/cs2)
 
-```csharp
-    builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
-    builder.Configuration["MicrosoftAppId"] = "{your MSI’s client ID}";
-    builder.Configuration["MicrosoftAppPassword"] = "{your MSI’s tenant ID}";
-    builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
-```
+    ```csharp
+        builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
+        builder.Configuration["MicrosoftAppId"] = "{your MSI’s client ID}";
+        builder.Configuration["MicrosoftAppPassword"] = "{your MSI’s tenant ID}";
+        builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
+    ```
 
----
+    ---
 
 1. Update the `BOT_ID` in your `.env` file.
 
