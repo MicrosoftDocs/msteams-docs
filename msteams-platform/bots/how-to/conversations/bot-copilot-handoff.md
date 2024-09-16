@@ -16,9 +16,9 @@ ms.author: surbhigupta
 
 Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Microsoft 365 Copilot to your bot service. You can enhance your Copilot message extension plugin to hand off a conversation to your custom engine agent to handle scenarios where specialized knowledge or actions are required, such as complex IT support queries, detailed product inquiries, or interactive order management.
 
-In the following graphic, a user looks for help on tech issues using Microsoft 365 Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Microsoft 365 Copilot to the Contoso bot, without losing the conversation context is called a copilot handoff.
+In the following graphic, a user looks for help on tech issues using Microsoft 365 Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Microsoft 365 Copilot to the Contoso bot without losing the conversation context is called a copilot handoff.
 
-:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between Microsoft 365 Copilot and the Contoso chat bot.":::
+:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="Graphical representation shows the conversation handoff between Microsoft 365 Copilot and the Contoso chat bot.":::
 
 ## How copilot handoff works
 
