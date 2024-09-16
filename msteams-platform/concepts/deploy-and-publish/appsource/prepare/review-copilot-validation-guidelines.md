@@ -209,7 +209,7 @@ You must implement the following:
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
     * We recommend that you must set the width of the image, though some scenarios might allow for exceptions.
 
-For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings.](build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings)
+For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -241,7 +241,7 @@ You must ensure to meet the following guidelines for Copilot agents:
         | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
 
         > [!NOTE]
-        > For more information about how SSO works for message extensions, see [SSO for bot and message extension app](../bots/how-to/authentication/auth-aad-sso-bots.md).
+        > For more information about how SSO works for message extensions, see [enable SSO for your app](../../../../bots/how-to/authentication/bot-sso-overview.md).
 
 1. **Ensure your registered bot is connected to Microsoft 365 and Microsoft Teams channel**: [*Must fix*]
 
@@ -284,7 +284,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 | Response Time | Response time must not exceed nine seconds for 99 percent, five Seconds for 75 percent and two Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
-| Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
+| Microsoft 365 Channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO. [*Must fix*] |
 | Content-Security-Policy | If applicable, modify your Content-Security-Policy headers and X-Frame-Options in accordance with [configure Content-Security-Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
@@ -321,7 +321,7 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 
   For example, graceful error message with way forward for declarative agent:
 
-  :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../assets/images/Copilot/graceful-error-handling.png":::
+  :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -336,7 +336,7 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 ## See also
 
-* [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
-* [Guidelines to create and upgrade Copilot agents](dev-guidelines-copilot-agents.md)
-* [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Teams Store validation guidelines](teams-store-validation-guidelines.md)
+* [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
+* [Extend bot-based message extension as plugin for Copilot for Microsoft 365](../../../../messaging-extensions/build-bot-based-plugin.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
