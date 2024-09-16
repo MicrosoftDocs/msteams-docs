@@ -370,9 +370,9 @@ For more on testing your plugin in Microsoft 365 Copilot, see [Debugging plugin 
 
 ## Enable message extension as a plugin for Copilot for meetings
 
-Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, We recommend you to follow the guidelines listed in [Microsoft 365 Copilot extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
+Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, we recommend you to follow the guidelines listed in [Microsoft 365 Copilot extension guidelines](high-quality-message-extension.md#extend-your-plugin-to-copilot-in-meetings) to extend your plugin for Copilot for meetings.
 
-To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
+To enable message extension as a plugin for Copilot for meetings, follow these steps:
 
 1. Go to a **Teams meeting**.
 1. Select **Join**.
@@ -388,15 +388,15 @@ To enable message extension as a plugin for Copilot for Teams meetings, follow t
 
 1. In the Copilot for Teams pane, at the bottom-right corner, select the **Copilot Plugin Button**.
 
-   :::image type="content" source="../assets/images/Copilot/meeting-copilot-trigger-plugin.png" alt-text="Screenshot shows the plugin icon in the copilot pane in a Teams meeting.":::
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-trigger-plugin.png" alt-text="Screenshot shows the plugin icon in the Copilot for Teams pane in a Teams meeting.":::
 
 1. Search for your plugin and turn on the toggle for your plugin.
 
 1. From the compose area, select **More prompts** to send a static prompt or you can type your own prompt and select **Send**.
 
-   :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the copilot pane in a Teams meeting.":::
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the Copilot for Teams pane in a Teams meeting.":::
 
-Meeting Copilot helps your meetings to be better and more productive. You can make meetings more interactive, which helps users by giving them a smoother and more interesting experience.
+Copilot for meetings helps your meetings to be better and more productive. You can make meetings more interactive, which helps users by giving them a smoother and more interesting experience.
 
 ## Step-by-step guide
 
