@@ -22,7 +22,7 @@ In the following graphic, a user looks for help on tech issues using Microsoft 3
 
 ## How copilot handoff works
 
-A [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-copilot) sends a deep link with a continuation token to Microsoft 365 Copilot. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Microsoft 365 Copilot sends an invoke call to the bot with the continuation token, and the bot then resumes the conversation based on the context. This process enables a seamless transition from Microsoft 365 Copilot to your custom engine agent, maintaining the conversation’s continuity and context, which optimizes the user experience.
+A [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) sends a deep link with a continuation token to Microsoft 365 Copilot. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Microsoft 365 Copilot sends an invoke call to the bot with the continuation token, and the bot then resumes the conversation based on the context. This process enables a seamless transition from Microsoft 365 Copilot to your custom engine agent, maintaining the conversation’s continuity and context, which optimizes the user experience.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Microsoft 365 Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
