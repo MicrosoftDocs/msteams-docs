@@ -16,13 +16,14 @@ ms.collection: ce-skilling-ai-copilot
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
 > * Message extensions plugins in Microsoft 365 Copilot are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > * Support for Excel and OneNote client applications to be available soon.
->
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > * If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
+
+Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 :::row:::
    :::column:::
@@ -129,13 +130,14 @@ Copilot agents must support atleast three unique compound utterances by handling
 
 ## Prompts
 
-The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot.
-
-:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
-
-Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]
+You must ensure the following guidelines for sample prompts and prompt starters.
+<!--Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]-->
 
 ### Sample prompts
+
+The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Microsoft 365 Copilot.
+
+:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
 
 Sample prompts are specified using `samplePrompts` property in the app manifest. These prompts must meet the following requirements:
 
@@ -148,10 +150,9 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 ### Prompt starters
 
-You must ensure the following guidelines for prompt starters:
+Declarative agents guide the user on how to start using declarative copilot. You must ensure the following guidelines for prompt starters:
 
-* In case of declarative agent, these guidelines also apply for prompt starters.
-* * A plugin must have at least three prompts and maximum of five prompts for each command. [*Must Fix*]
+* A declarative agent must have at least three prompts and maximum of six prompts. [*Must Fix*]
 * All prompt starters must be functional and return responses. [Must Fix]
 * It must be generic in nature and not include custom references, for example, project names and task name. [Must Fix]
 
@@ -182,9 +183,11 @@ Copilot agents must be fully responsive and functional on the latest versions of
 * copilot.microsoft.com on web
 * Copilot for Microsoft 365 in Word
 
+<!--
 > [!NOTE]
 > Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 > Support for Excel and OneNote client applications to be available soon.
+-->
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -301,13 +304,12 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must Fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must Fix*]
 * Highly consequential tasks such as bulk delete must not be supported. [*Good-to-fix*]
-* Apps must be consistent with responsible AI checks. For more information, see [Apps with AI-generated content](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
 ## Copilot agent must have Action or knowledge source
 
-If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the Copilot agent's responses are not grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
+Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. If these aren't defined the Copilot agent's responses aren't grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
