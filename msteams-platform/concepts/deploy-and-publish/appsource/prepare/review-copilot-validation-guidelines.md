@@ -292,7 +292,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 ## User disclosure and confirmation for action scenarios
 
-:::image type="content" source="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation.":::
+:::image type="content" source="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation." lightbox="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" :::
 
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation:
 
