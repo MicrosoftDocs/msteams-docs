@@ -309,7 +309,9 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 If your Copilot agent doesn't have any nodes defined for actions or Graph connectors in the app manifest, the Copilot agent's responses are not grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
 
+<!--
 :::image type="content" source="../assets/images/Copilot/dc-no-node-for-actions-fail.png" alt-text="This screenshot shows an example of a fail scenario where no node for actions is defined.":::
+-->
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -323,7 +325,7 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 
   For example, graceful error message with way forward for declarative agent:
 
-  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling.":::
+  :::image type="content" source="../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../assets/images/Copilot/graceful-error-handling.png":::
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
