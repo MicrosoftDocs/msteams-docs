@@ -309,7 +309,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 ## Copilot agent must have Action or knowledge source
 
-Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. If these aren't defined the Copilot agent's responses aren't grounded in a data source. These type of Copilot agents are not allowed. [*Must fix*]
+Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
