@@ -131,7 +131,6 @@ Copilot agents must support atleast three unique compound utterances by handling
 ## Prompts
 
 You must ensure the following guidelines for sample prompts and prompt starters.
-<!--Plugins must have sample prompts to guide users on how to use the various plugins within Microsoft 365 Copilot. [*Must Fix*]-->
 
 ### Sample prompts
 
@@ -182,14 +181,6 @@ Copilot agents must be fully responsive and functional on the latest versions of
 * Microsoft Teams on Desktop and Web
 * copilot.microsoft.com on web
 * Copilot for Microsoft 365 in Word
-
-<!--
-> [!NOTE]
-> Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
-> Support for Excel and OneNote client applications to be available soon.
--->
-
-[Back to top](#validation-guidelines-for-copilot-agents)
 
 ### Ensure your Copilot plugins work in Teams meetings
 
