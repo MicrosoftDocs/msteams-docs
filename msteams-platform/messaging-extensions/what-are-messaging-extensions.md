@@ -5,7 +5,7 @@ description: Learn how message extensions are used, its types, and scenarios. Sa
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 02/24/2023
+ms.date: 09/16/2024
 ---
 # Build message extensions
 
@@ -19,7 +19,7 @@ The article provides an overview of message extensions, use cases, functionality
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
-> 
+>
 > * @mentioning message extensions in the compose box isn't supported.
 > * Message extension options aren't supported for group chats with external users.
 

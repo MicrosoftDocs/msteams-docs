@@ -5,7 +5,7 @@ description: Learn about Teams Toolkit, it's installation, navigation, and user 
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/24/2022
+ms.date: 09/16/2024
 ---
 
 # Teams Toolkit Visual Studio Overview

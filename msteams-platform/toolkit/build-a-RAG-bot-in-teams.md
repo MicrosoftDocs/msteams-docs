@@ -5,7 +5,7 @@ description: Learn how to build basic AI chatbot using Teams AI library in Teams
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 05/21/2024
+ms.date: 09/16/2024
 ---
 
 # Build a RAG bot in Teams

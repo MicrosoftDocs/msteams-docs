@@ -5,7 +5,7 @@ description: Learn about Bot-based message extension using Bot Framework to inte
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 09/16/2024
 ---
 
 # Build message extensions using Bot Framework
