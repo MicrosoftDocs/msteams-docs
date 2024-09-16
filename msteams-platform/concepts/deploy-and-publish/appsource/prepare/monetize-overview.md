@@ -20,16 +20,11 @@ SaaS offers play a crucial role for businesses aiming to leverage their apps to 
 
 The publishing options available in a SaaS offer by which you can drive app monetization are:
 
-:::row:::
-   :::column span="":::
-      * **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
+:::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
 
-      * **Free trial**: You can provide free access to your app for a limited time or functionality. This encourages users to purchase the full version after the trial period.
-   :::column-end:::
-   :::column span="":::
-      :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
-   :::column-end:::
-:::row-end:::
+* **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
+
+* **Free trial**: You can provide free access to your app for a limited time or functionality. This encourages users to purchase the full version after the trial period.
 
 * **Test drive**: You can provide access to preconfigured environment for a fixed period and encourage users to purchase. Test drive and free trials are different, and you can provide one or both the features to the customers.
 

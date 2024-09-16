@@ -12,24 +12,6 @@ ms.date: 03/21/2023
 
 Software as a service (SaaS) offers allow you to license software solutions to customers through subscriptions. Microsoft Teams presents unique opportunities for developers to integrate their SaaS solutions to Microsoft Teams Store. This article guides you through the steps to plan, create, and configure a SaaS offer in Microsoft Partner Center.
 
-:::row:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1a.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2a.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3a.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="Test-preview-for-monetized-apps.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="publish-saas-offer-app.md" border="false":::
-   :::column-end:::
-:::row-end:::
-
 ## Plan a SaaS offer
 
 To monetize your SaaS app, it's important that you understand the features of a SaaS offer and plan based on your requirements. Here's an overview on the major features that aids you to plan better:

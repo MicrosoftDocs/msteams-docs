@@ -10,24 +10,6 @@ ms.date: 12/26/2022
 
 # Test your SaaS offer
 
-:::row:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4a.png" link="Test-preview-for-monetized-apps.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="publish-saas-offer-app.md" border="false":::
-   :::column-end:::
-:::row-end:::
-
 Testing your app before publishing helps to understand the user issues, rectify them, and improve user experience. Let's learn in detail on the steps to create a test or preview offer, configure your app with the preview offer, and understand error scenarios with their respective fixes.
 
 >[!NOTE]

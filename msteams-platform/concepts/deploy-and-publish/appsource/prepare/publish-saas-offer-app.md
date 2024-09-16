@@ -10,24 +10,6 @@ ms.date: 07/11/2023
 
 # Publish your SaaS app
 
-:::row:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow2.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="include-saas-offer.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="Test-preview-for-monetized-apps.md" border="false":::
-   :::column-end:::
-   :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5a.png" link="publish-saas-offer-app.md" border="false":::
-   :::column-end:::
-:::row-end:::
-
 After you create and test a software as a service (SaaS) offer, you must publish it in Microsoft commercial marketplace. This article outlines the steps to publish the SaaS offer, link the SaaS offer to your app, and publish the SaaS app. When published, the SaaS app is available for purchase in Microsoft Teams Store with the configured subscriptions.
 
 ## Go live
@@ -38,7 +20,7 @@ Upon successful testing, your can submit the offer to [Go live](/partner-center/
 1. Keep track of the publishing status on the **Offer overview** page.
 1. If there are validation errors, rectify them and resubmit the offer for publishing. The errors might range from missing information to noncompliance with marketplace standards.
 1. Upon successful validation, the offer is published live in the marketplace.
-1. Post publishing, link the live SaaS offer to your Teams app and publish the subscription to Teams Store.
+1. Whne the offer is published live, link the live SaaS offer to your Teams app and publish the subscription to Teams Store.
 
 :::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="Screenshot shows the Go live and offer publishing phase.":::
 
