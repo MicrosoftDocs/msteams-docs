@@ -59,7 +59,7 @@ This section is in line with [Microsoft commercial marketplace policy number 114
      :::image type="icon" source="../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../assets/icons/instructions-only.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
+      :::image type="icon" source="../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
