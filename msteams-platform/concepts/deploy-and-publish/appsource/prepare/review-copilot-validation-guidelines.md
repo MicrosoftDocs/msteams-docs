@@ -114,7 +114,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 * The Teams Store validation guidelines related to app name for Microsoft 365 apps are applicable. For more information, see [app name](teams-store-validation-guidelines.md#app-name).
 * For declarative agent, ensure that the following parameters are identical: [*Must fix*]
   * `name` in the app manifest
-  * `name` in declarativecopilot.json
+  * `name` in declarativeAgent1.json
   * `name_for_human` in plugin.json files
 
 [Back to top](#validation-guidelines-for-copilot-agents)
@@ -280,7 +280,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use developer preview app manifest. [*Must fix*] |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response Time | Response time must not exceed nine seconds for 99 percent, five Seconds for 75 percent and two Seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero Regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
