@@ -366,7 +366,7 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-For more on testing your plugin in Microsoft 365 Copilot, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
+For more on testing your plugin in Microsoft 365 Copilot, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/debugging-plugin-selection).
 
 ## Enable message extension as a plugin for Copilot for meetings
 
