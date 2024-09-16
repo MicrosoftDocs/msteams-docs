@@ -509,11 +509,11 @@
         href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - name: Build custom agent
+      - name: Build custom engine agent
         items: 
-          - name: Custom agent for Microsoft 365 
+          - name: Custom engine agent for Microsoft 365 
             href: /microsoft-365-copilot/extensibility/overview-custom-engine-copilot
-          - name: Build custom agent using Teams Toolkit 
+          - name: Build custom engine agent using Teams Toolkit 
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
         href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
