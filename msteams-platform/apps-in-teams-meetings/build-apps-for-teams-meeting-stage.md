@@ -5,7 +5,7 @@ description: Learn how to build apps for Teams meeting stage, share to stage API
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 04/07/2022
+ms.date: 09/18/2024
 ---
 
 # Build apps for Teams meeting stage
@@ -92,8 +92,6 @@ Use the following APIs to share specific part of the app:
 |**Share app content to stage**| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |**Get app content stage sharing state**| Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |**Get app content stage sharing capabilities**| Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
-|**Get app content in meeting side panel**| Fetch the app content shared to display in the meeting side panel. | [TeamsJS library](/javascript/api/@microsoft/teams-js/sharing.history) |
-
 
 # [Share app content to stage](#tab/app-content)
 
@@ -310,7 +308,7 @@ The following code is an example of sharing app content to meeting stage view an
 
 The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
 
-When a meeting begins, the app, in which content is shared, automatically opens the meeting side panel for the user who shared the content. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+When a meeting begins, the app, in which the content is shared, automatically opens the meeting side panel for the user who shared the content. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
 
 The following code is an example to fetch shared content in the meeting side panel:
 
@@ -348,6 +346,8 @@ The following table provides the response codes:
 | **200** | Meeting content details successfully retrieved. |
 | **500** | Internal error. |
 | **501** | API isn't supported in the current context.|
+
+For more information, see [sharing.history.getContent](/javascript/api/@microsoft/teams-js/sharing.history).
 
 ## Build an in-meeting document signing app
 

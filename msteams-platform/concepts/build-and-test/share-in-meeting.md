@@ -4,7 +4,7 @@ description: Learn how to add the share in meeting button, which allows users to
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
-ms.date: 02/08/2023
+ms.date: 09/18/2024
 ---
 # Share in meeting
 
@@ -14,9 +14,7 @@ The following image shows the **Share in meeting** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
-During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage.
-
-When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format:
+During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
 

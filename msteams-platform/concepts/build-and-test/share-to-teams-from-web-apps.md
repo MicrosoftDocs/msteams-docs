@@ -3,18 +3,18 @@ title: Embed Share to Teams on Web Apps
 description: Learn to add the Share to Teams embedded button on third-party websites, with a website preview, using launcher script and code samples.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 07/22/2022
+ms.date: 09/18/2024
 ---
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed **Share to Teams** on their webpages. When users select **Share to Teams**, it opens a dialog that prompts the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed the Share to Teams button on their webpages. When users select **Share to Teams**, the Share to Teams dialog appears and prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 
 :::image type="content" source="~/assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog.":::
 
-By default, Share to Teams supports tagging users with @username and @everyone, and the tagged users receive notifications within Teams when content is shared on Teams.
+By default, Share to Teams supports tagging users with @username and @everyone, and the tagged users receive notifications within Microsoft Teams when content is shared on Teams.
 
 > [!NOTE]
 >
@@ -27,7 +27,7 @@ The following image displays the link unfurling experience through Share to Team
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Screenshot shows the Share to Teams link unfurling experience.":::
 
-This article guides you on how to create and embed Share to Teams option for your website, craft your website preview, and extend Share to Teams for Education.
+The content outlined here guides you on how to create and embed Share to Teams for your website, craft your website preview, and extend Share to Teams for Education.
 
 The following video provides the basic steps on how to embed Share to Teams:
 <br>
@@ -43,7 +43,7 @@ The following video provides the basic steps on how to embed Share to Teams:
 
 ## Embed Share to Teams
 
-There are two methods by which you can embed Share to Teams on your webpage. Based on the control you want on the Share to Teams button, you can use one of the following methods:
+There are two methods by which you can embed Share to Teams on your webpage. Based on the control you want on Share to Teams, you can use one of the following methods:
 
 # [Method 1](#tab/method1)
 
@@ -55,7 +55,7 @@ This method shows the simple and basic way to embed Share to Teams where you can
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute.
+1. Add an HTML element on your webpage with `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute.
 
     ```html
     <div
@@ -172,7 +172,7 @@ Before you enable share content to meetings, you must ensure the following:
 >
 > * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are sent in the regular meeting chat.
 > * If an app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
-> * Share to Teams in meeting is supported only for instant tab scenarios and specific to Teams.
+> * Share to Teams in meeting is supported only for tab scenarios and specific to Teams.
 
 **Enable Share to Teams for meeting**
 
@@ -182,7 +182,7 @@ Before you enable share content to meetings, you must ensure the following:
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute. To enable your users to share content in meetings from Share to Teams, add `allow-share-in-meeting` attribute and set it to `true`.
+1. Add an HTML element on your webpage with `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute. To enable your users to share content in meetings from Share to Teams, add `allow-share-in-meeting` attribute and set it to `true`.
 
     ```html
         <div
@@ -305,7 +305,7 @@ The following table outlines the necessary tags:
 
 You can use either the HTML default versions or the Open Graph version.
 
-## Share to Teams for Education
+## Share to Teams for education
 
 For teachers using the Share to Teams button, there's an additional option to `Create an Assignment` that enables you to quickly create an assignment in the chosen Team, based on the shared link.
 
