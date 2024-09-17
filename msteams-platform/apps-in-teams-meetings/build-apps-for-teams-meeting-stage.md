@@ -335,7 +335,7 @@ The following table includes the response payload parameters:
 | `contentReference` | String | Yes | The content reference link of the shared content. |
 | `threadId` | String | Yes | The conversation ID where the content was shared. |
 | `author` | String | Yes | The ID of the user who shared the content. |
-| `contentType` | String | Yes | The type of the content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
+| `contentType` | String | Yes | The type of content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
 
 **Response codes**
 

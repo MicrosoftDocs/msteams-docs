@@ -86,7 +86,7 @@ This method shows the simple and basic way to embed Share to Teams where you can
         </div>
         ```
 
-    * If you want to display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
+    * If you want to display a message of your choice in the compose box, you can define your text in `data-msg-text` attribute.
 
          ```html
          <div
@@ -153,7 +153,7 @@ Here's the end user scenario where the content is shared to chat or channel usin
 
 ### Share content in meetings
 
-Share to Teams from web apps allows users to share content to a live or an upcoming meeting. When you enable content sharing to meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
+Share to Teams from web apps allows users to share content to a live or an upcoming meeting. When you enable content sharing in meetings, it allows users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
 
 Here's how the shared web content appears in the meeting stage:
 
