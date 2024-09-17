@@ -18,7 +18,7 @@ When a user installs an app from Microsoft Teams Store or uploads a custom app, 
 
     :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required scope to use the app.":::
 
-If you have a bot app that's intended to work in personal scope, then in addition to setting its default scope, you can also set the bot as the default capability during installation.
+If your app's primary capability is a bot and intended to work in personal scope, you can set the default capability as bot and also set the default scope as personal.
 
 ## Configure your app's default install scope
 
@@ -74,7 +74,7 @@ If an app is configured with personal and shared scopes along with a default ins
 
      When the app is added, a dialog appears to select the scope.
 
-1. Select **Open** to open in personal scope.
+1. Select **Open** to open the app in personal scope.
 
     Alternatively, you can either select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
