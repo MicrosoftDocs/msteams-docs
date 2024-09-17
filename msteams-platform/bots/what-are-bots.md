@@ -51,15 +51,15 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ### Bot name and icon
 
-You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
+***Bot name***: You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
 
-***Bot name***: The bot name, displayed as a title in the chat window, is updated and managed within your app manifest (previously called Teams app manifest).
+* The bot name, displayed as a title in the chat window, is updated and managed within your app manifest (previously called Teams app manifest).
 
- The bot name that's displayed in your Teams chat list and in the chat window with each message is managed within Microsoft Azure portal. For custom uploaded apps, you can update the bot name in the **Bot profile** page in Azure portal.
+* The bot name that's displayed in your Teams chat list and in the chat window with each message is managed within Microsoft Azure portal. For custom uploaded apps, you can update the bot name in the **Bot profile** page in Azure portal.
 
-   :::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window." lightbox="~\assets\images\bot_name.png":::
+  :::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window." lightbox="~\assets\images\bot_name.png":::
 
-***Bot icon***: You can add or update the bot icon for the Teams apps as follows. The updated bot icon becomes visible only after the user signs out and signs back into Teams. This is because the icons are cached:
+***Bot icon***: You can add or update the bot icon for the Teams app as follows. The updated bot icon becomes visible only after the user signs out and signs back into Teams. This is because the icons are cached:
 
 * [Microsoft Teams Store app](~/concepts/deploy-and-publish/appsource/publish.md): For Teams Store apps, bot icons are fetched from the app manifest. You can update the bot profile icon by updating it through the app manifest and republishing the app.
     
