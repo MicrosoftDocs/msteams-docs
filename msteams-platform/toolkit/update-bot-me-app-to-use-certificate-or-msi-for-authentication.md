@@ -62,7 +62,7 @@ To use a certificate for bot authentication:
 
 ## Update the bot app code
 
-Follow the steps to update the bot app code: 
+Follow the steps to update the bot app code:
 
 1. Open your bot app project in Visual Studio or Visual Studio Code.
 1. Update your code.
@@ -90,6 +90,7 @@ Follow the steps to update the bot app code:
     ```csharp
         builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
     ```
+
     ---
 
 1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
@@ -175,7 +176,8 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 To update the bot app code for MSI, follow these steps:
 
-1. Update your code and deploy.
+1. Open your bot app project in Visual Studio or Visual Studio Code.
+1. Update your code.
 
     # [JavaScript](#tab/js2)
 
