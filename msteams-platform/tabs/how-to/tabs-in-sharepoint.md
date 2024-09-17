@@ -44,13 +44,13 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 1. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
 
-1. 1. Select **Add**.
+1. Select **Add**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot of the app details dialog to add the sample app to Teams.":::
 
 1. Select **Open** to open the app in personal scope. 
 
-   Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+   Alternatively, you can either search and select the required scope or select a channel or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
 
