@@ -16,7 +16,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
-> * Other guidelines are marked as [*Good-to-fix*]. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
+> * Other guidelines are marked as *Good-to-fix*. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -505,7 +505,7 @@ The app manifest defines your app's configuration.
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Must fix*]
 
-* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Good-to-Fix*]
+* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Good-to-fix*]
 
 * Scopes and/or context declared in app manifest must be visible within the app. [*Must fix*]
 
@@ -1080,7 +1080,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
-* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Must fix*]
+* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, date of birth, place, and designation instead of using multi-turn conversations. [*Must fix*]
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Must fix*]
 
@@ -1815,7 +1815,7 @@ The app must terminate the user account instance when the user is switched or lo
 
 * App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
-* App must meet the [plugin compatible criteria](../../../../messaging-extensions/high-quality-message-extension.md).
+* App must meet the [plugin compatible criteria](review-copilot-validation-guidelines.md).
 
 ### Plugin must not manipulate LLM behavior
 
