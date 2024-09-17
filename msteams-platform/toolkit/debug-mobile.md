@@ -5,7 +5,7 @@ description: Learn how to debug and test your Teams app with tab and bot capabil
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 06/14/2023
+ms.date: 09/18/2024
 ---
 
 # Debug for mobile
@@ -116,7 +116,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    
    5. Select **Open**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in the required scope.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
         The app opens as a personal tab.
 

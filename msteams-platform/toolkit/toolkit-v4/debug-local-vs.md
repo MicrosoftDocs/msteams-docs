@@ -5,7 +5,7 @@ description: Learn how to set up dev tunnel for bots and message extensions and 
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/21/2022
+ms.date: 09/18/2024
 ---
 
 # Debug your Microsoft Teams app locally using Microsoft Visual Studio
@@ -62,7 +62,7 @@ To debug your app after you create a project, perform the following steps:
 
     Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-mobile-local.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-mobile-local.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You can also use the hot reload function of Visual Studio during debug. For more information, see [.NET hot reload](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/).
 

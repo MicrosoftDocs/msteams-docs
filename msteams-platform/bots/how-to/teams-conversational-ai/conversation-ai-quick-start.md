@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: surbhigupta
-ms.date: 12/06/2022
+ms.date: 09/18/2024
 ---
 
 # Teams AI library quick start guide
@@ -169,7 +169,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the scope selection dialog to add the LightBot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot of the app details dialog to add the LightBot app.":::
 
    When the app is added, a dialog to select the required scope appears.
 
