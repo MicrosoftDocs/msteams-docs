@@ -54,7 +54,7 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
       - text: Build apps with the Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - text: Build a custom copilot to chat with your data
+      - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
 
 - title: What's new
@@ -84,7 +84,7 @@ landingContent:
 
     - linkListType: reference
       links:
-      - text: Extend Microsoft Copilot for Microsoft 365
+      - text: Extend Microsoft 365 Copilot
         url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
