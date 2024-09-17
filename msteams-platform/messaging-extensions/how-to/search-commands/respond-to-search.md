@@ -100,6 +100,10 @@ If a message extension uses a configuration page, the [`onQuery`](/dotnet/api/mi
 
 The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. The `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the message extension.
 
+The following image shows the `config` command workflow:
+
+:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
+
 The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
 
 ```csharp
@@ -134,10 +138,6 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 
 ```
-
-The following image shows the `config` command workflow:
-
-:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
 
 The following code is an example of message extension configuration:
 
