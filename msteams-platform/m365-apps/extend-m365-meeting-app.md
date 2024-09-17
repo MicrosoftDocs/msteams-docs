@@ -57,7 +57,7 @@ You can build a Teams meeting app for Outlook through the Teams Toolkit extensio
 
     :::image type="content" source="images/toolkit-meeting-app-sample.png" alt-text="My First Meeting App sample in Teams Toolkit":::
 
-1. Press **F5** to debug and run the sample locally in Teams. Teams prompts you to install the app.
+1. Select **F5** to debug and run the sample locally in Teams. Teams prompts you to install the app.
 
 1. Select **Add**.
 

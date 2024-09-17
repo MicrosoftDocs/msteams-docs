@@ -260,7 +260,7 @@ When Teams client opens in the web browser, perform the following steps:
 
 1. Select **Add** to upload the app in Teams.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to add the app." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to add the app.":::
 
 1. Select **Open** to open the app in personal scope.
 
