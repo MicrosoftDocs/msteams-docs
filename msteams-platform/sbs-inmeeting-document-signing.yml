@@ -2,7 +2,7 @@
 title: Build in-meeting document signing
 metadata:
   title: Build in-meeting document signing app
-  description: With this learning module, learn how to build in-meeting document signing app in Teams.
+  description: Learn how to build an in-meeting document signing app in Microsoft Teams to sign document in real-time during meetings using electronic signatures.
   audience: Developer
   level: Beginner
   ms.date: 27/07/2022

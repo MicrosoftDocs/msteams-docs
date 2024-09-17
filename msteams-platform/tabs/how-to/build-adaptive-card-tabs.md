@@ -1,7 +1,7 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, the backend is powered by a bot. Explore invoke activities and handle submits. 
+description: Learn to build tabs using Adaptive Cards where front end is rendered with Adaptive Cards, backend is powered by a bot. Explore invoke activities and handle submits. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -102,7 +102,7 @@ Communication between your Adaptive Card tab and your bot is done through `invok
 
 > [!NOTE]
 >
-> * Bots need to send all the responses to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). Service URL is received as part of incoming `activity` payload.
+> * Bots need to send all the responses to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#base-uri). Service URL is received as part of incoming `activity` payload.
 > * The invoke payload size has increased to 80kb.
 
 ### Fetch Adaptive Card to render to a tab

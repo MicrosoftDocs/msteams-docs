@@ -5,7 +5,7 @@ description: Learn how to create or build an API-based message extension using T
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 04/08/2024
+ms.date: 09/16/2024
 ---
 # Create an API-based message extension
 
@@ -94,7 +94,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Microsoft 365 chat, turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
@@ -102,7 +102,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 An API-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Copilot app created in the app features page in Teams Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Microsoft 365 Copilot created in the app features page in Teams Developer Portal.":::
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
@@ -113,7 +113,7 @@ To test your API-based message extension created in the Developer Portal for Tea
 # [Visual Studio Code](#tab/visual-studio-code)
 
 > [!NOTE]
-> Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+> Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
 
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 

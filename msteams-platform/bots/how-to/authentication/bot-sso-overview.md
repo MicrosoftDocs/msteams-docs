@@ -1,6 +1,6 @@
 ---
-title: Overview to authentication using SSO in Teams with Microsoft Entra ID
-description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension.
+title: Enable SSO with Microsoft Entra ID
+description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, and SSO in Teams at runtime.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
@@ -29,7 +29,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 

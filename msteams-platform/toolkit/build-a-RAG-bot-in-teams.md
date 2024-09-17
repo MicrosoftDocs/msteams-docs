@@ -1,11 +1,11 @@
 ---
-title: Build a RAG bot in Teams
+title: Create a Teams AI Bot with RAG
 author: surbhigupta
-description:  In this module, learn how to build RAG bot using Teams AI library.
+description: Learn how to build basic AI chatbot using Teams AI library in Teams Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
-ms.date: 05/21/2024
+ms.author: surbhigupta
+ms.date: 09/16/2024
 ---
 
 # Build a RAG bot in Teams
@@ -38,9 +38,9 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.
+1. Select **Custom Engine Agent**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **Chat With Your Data**.
 
@@ -266,6 +266,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     ```python
       planner.prompts.add_data_source(MyDataSource())
     ```
+
    ---
 
 * Create the `prompts/qa/skprompt.txt` file and add the following text:
@@ -704,16 +705,17 @@ After ingesting data into Azure AI Search, you can implement your own `DataSourc
 # [JavaScript](#tab/javascript3)
 
 ```javascript
-import { AzureKeyCredential, SearchClient } from "@azure/search-documents";
-import { DataSource, Memory, OpenAIEmbeddings, RenderedPromptSection, Tokenizer } from "@microsoft/teams-ai";
-import { TurnContext } from "botbuilder";
+const { AzureKeyCredential, SearchClient } = require("@azure/search-documents");
+const { DataSource, Memory, OpenAIEmbeddings, Tokenizer } = require("@microsoft/teams-ai");
+const { TurnContext } = require("botbuilder");
 
-export interface Doc {
-  id: string,
-  content: string, // searchable
-  filepath: string,
-  // contentVector: number[] // vector field
-  // ... other fields
+// Define the interface for document
+class Doc {
+  constructor(id, content, filepath) {
+    this.id = id;
+    this.content = content; // searchable
+    this.filepath = filepath;
+  }
 }
 
 // Azure OpenAI configuration
@@ -726,23 +728,22 @@ const searchEndpoint = "<your-search-endpoint>";
 const searchApiKey = "<your-search-apikey>";
 const searchIndexName = "<your-index-name>";
 
-export class MyDataSource implements DataSource {
-  public readonly name = "my-datasource";
-  private readonly embeddingClient: OpenAIEmbeddings;
-  private readonly searchClient: SearchClient<Doc>;
-
+// Define MyDataSource class implementing DataSource interface
+class MyDataSource extends DataSource {
   constructor() {
+    super();
+    this.name = "my-datasource";
     this.embeddingClient = new OpenAIEmbeddings({
       azureEndpoint: aoaiEndpoint,
       azureApiKey: aoaiApiKey,
       azureDeployment: aoaiDeployment
     });
-    this.searchClient = new SearchClient<Doc>(searchEndpoint, searchIndexName, new AzureKeyCredential(searchApiKey));
+    this.searchClient = new SearchClient(searchEndpoint, searchIndexName, new AzureKeyCredential(searchApiKey));
   }
 
-  public async renderData(context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: number): Promise<RenderedPromptSection<string>> {
+  async renderData(context, memory, tokenizer, maxTokens) {
     // use user input as query
-    const input = memory.getValue("temp.input") as string;
+    const input = memory.getValue("temp.input");
 
     // generate embeddings
     const embeddings = (await this.embeddingClient.createEmbeddings(input)).output[0];
@@ -758,7 +759,7 @@ export class MyDataSource implements DataSource {
           vector: embeddings,
           kNearestNeighborsCount: 3
         }]
-      }
+      },
       queryType: "semantic",
       top: 3,
       semanticSearchOptions: {
@@ -778,7 +779,7 @@ export class MyDataSource implements DataSource {
           break;
       }
 
-      // Append do to output
+      // Append doc to output
       output += doc;
       length += docLength;
     }
@@ -882,7 +883,7 @@ class MyDataSource(DataSource):
 
 ## Add more API for Custom API as data source
 
-Follow these steps to extend the custom copilot from Custom API template with more APIs.
+Follow these steps to extend the custom engine agent from Custom API template with more APIs.
 
 1. Update `./appPackage/apiSpecificationFile/openapi.*`.
 
@@ -1063,4 +1064,4 @@ export class GraphApiSearchDataSource implements DataSource {
 
 ## See also
 
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)

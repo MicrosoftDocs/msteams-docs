@@ -1,6 +1,6 @@
 ---
-title: Share to Teams from web apps
-description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
+title: Embed Share to Teams on Web Apps
+description: Learn to add the Share to Teams embedded button on third-party websites, with a website preview, using launcher script and code samples.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 07/22/2022
@@ -128,7 +128,7 @@ For teachers using the Share to Teams button, there's an additional option to `C
 
 `options` (optional): `{ elements?: HTMLElement[] }`
 
-Currently, all share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
+All share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
 
 ### Set default form values
 

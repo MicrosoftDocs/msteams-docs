@@ -1,5 +1,5 @@
 ---
-title: Live Share media capabilities
+title: Live Share Media Synchronization
 author: surbhigupta
 description: In this module, learn more about Live Share media capabilities, suspensions and wait points, audio ducking, and synchronizing video and audio.
 ms.topic: conceptual
@@ -210,26 +210,26 @@ Example:
 // ...
 
 document.getElementById("play-button").onclick = async () => {
-  // Will play for all users in the session.
-  // If using role verification, this will throw an error if the user doesn't have the required role.
+  // Plays for all users in the session.
+  // If using role verification, this throws an error if the user doesn't have the required role.
   await synchronizer.play();
 };
 
 document.getElementById("pause-button").onclick = async () => {
-  // Will pause for all users in the session.
-  // If using role verification, this will throw an error if the user doesn't have the required role.
+  // Pauses for all users in the session.
+  // If using role verification, this throws an error if the user doesn't have the required role.
   await synchronizer.pause();
 };
 
 document.getElementById("restart-button").onclick = async () => {
-  // Will seek for all users in the session.
-  // If using role verification, this will throw an error if the user doesn't have the required role.
+  // Seeks for all users in the session.
+  // If using role verification, this throws an error if the user doesn't have the required role.
   await synchronizer.seekTo(0);
 };
 
 document.getElementById("change-track-button").onclick = () => {
-  // Will change the track for all users in the session.
-  // If using role verification, this will throw an error if the user doesn't have the required role.
+  // Changes the track for all users in the session.
+  // If using role verification, this throws an error if the user doesn't have the required role.
   synchronizer.setTrack({
     trackIdentifier: "SOME_OTHER_VIDEO_SRC",
   });
@@ -328,7 +328,7 @@ const waitPoint = {
 const suspension = mediaSession.coordinator.beginSuspension(waitPoint);
 // End the suspension when the user readies up
 document.getElementById("ready-up-button").onclick = () => {
-  // Sync will resume when everyone has ended suspension
+  // Sync resumes when everyone ends suspension
   suspension.end();
 };
 ```
@@ -347,7 +347,7 @@ const suspension = mediaSession.coordinator.beginSuspension(waitPoint);
 
 // End the suspension when the user readies up
 document.getElementById("ready-up-button")!.onclick = () => {
-  // Sync will resume when everyone has ended suspension
+  // Sync resumes when everyone ends suspension
   suspension.end();
 };
 ```
@@ -532,7 +532,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 ```
 
 > [!NOTE]
-> The `registerSpeakingStateChangeHandler` API used for audio ducking currently only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
+> The `registerSpeakingStateChangeHandler` API used for audio ducking only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
 
 ## Code samples
 

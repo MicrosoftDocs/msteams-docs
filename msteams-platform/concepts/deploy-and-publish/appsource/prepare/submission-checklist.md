@@ -1,6 +1,6 @@
 ---
-title: Prepare your Microsoft Teams Store submission  
-description: Final steps before you submit your Microsoft Teams app to be listed on the Microsoft Teams Store. Validate app package and complete publisher verification and attestation.
+title: Prepare for Teams Store Submission
+description: Learn final steps before you submit your Teams app to be listed on the Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
@@ -54,8 +54,8 @@ Depending on your app functionality, you're required to provide Teams tenant con
         * Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
-    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The validation team tests your app fully, including first-run user experience.
+    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team uses the sign up process as described.
 
 3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to understand your app better and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
@@ -163,7 +163,7 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo in the format `https://www.example.com/123456789`.
+A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos in the format `https://www.youtube.com/watch?v=:id` or `https://youtu.be/:id` for YouTube and `https://vimeo.com/:id` for Vimeo.
 
 For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
@@ -278,6 +278,4 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-* [Publish your app to the Microsoft Teams Store](../publish.md)
-* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
-* [Resolve issues if your Microsoft Teams Store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)

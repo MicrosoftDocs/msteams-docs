@@ -1,6 +1,6 @@
 ---
 title: How to Extend Microsoft 365 Copilot
-description: In this article, learn how to integrate with Microsoft 365 Copilot through message extensions and Graph connectors. 
+description: Learn how to integrate with Microsoft 365 Copilot through message extensions, Graph connectors, plugins, and connect external data sources.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: ginobuzz
@@ -92,7 +92,7 @@ To ensure your plugin works as intended, it's important to include good descript
 
 ## Upgrading your plugin to a rich conversational Teams app  
 
-When you connect your API to Teams, you've built a simple, powerful Microsoft 365 Copilot plugin. Teams makes it easier and helps you enhance this experience by adding rich conversational components. In addition to your plugin, you can use Teams Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md). By bot, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.
+When you connect your API to Teams, you've built a simple, powerful Microsoft 365 Copilot plugin. Teams makes it easier and helps you enhance this experience by adding rich conversational components. In addition to your plugin, you can use Teams Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md). By bot, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.
 
 ## Connecting external data sources
 
