@@ -86,9 +86,9 @@ To activate DevTools:
 
 1. Open Teams on your connected Teams iOS client and open your app inside Teams.
 
-1. On your Mac system, open Safari. You'll find your iOS client listed under the **Develop** option.
+1. On your Mac system, open Safari. You'll find your iOS client listed under the **Develop** option. Select **Use for Development...** for your iOS client.
 
-1. Select the connected client, and select **Use for Development...** to view the inspection link for your app.
+1. Select the connected client to view the inspection link for your app.
 
    :::image type="content" source="../../assets/images/devtools/app-inspection-link.png" alt-text="The screenshot displays the app inspection link for your application." lightbox="../../assets/images/devtools/app-inspection-link.png":::
 
