@@ -1,6 +1,6 @@
 ---
-title: Development guidelines for Copilot agents
-description: Learn how to optimize the Copilot agents with these development guidelines to create and upgrade Microsoft 365 Copilots
+title: Development Guidelines for Copilot Agents
+description: Discover the essential guidelines and best practices to create, upgrade, and optimize agents for Microsoft 365 Copilot.
 ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
@@ -15,20 +15,20 @@ ms.collection: ce-skilling-ai-copilot
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
 > * Message extension plugins are in preview.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
+> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. As Microsoft 365 Copilot recognizes them as skills, it can execute on behalf of the user.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. Since Microsoft 365 Copilot recognizes them as skills, it can execute commands on the user's behalf.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot.":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-interface.png":::
 
 ## Define app, command, and parameter descriptions
 
@@ -255,7 +255,7 @@ The following code snippets show the command and semantic description examples f
 
 ### Parameter description
 
-Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command has a corresponding `parameters` property, which supports up to five parameters. The first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft 365 Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft 365 Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -263,8 +263,8 @@ A good parameter description explains the requirements of the system in a natura
 
 # [Tasks](#tab/tasks)
 
-Basic search: Search for tasks related to Northwind.</br>
-Advanced search: Search for high priority tasks related to Northwind that are due tomorrow.
+* **Basic search**: Search for tasks related to Northwind.</br>
+* **Advanced search**: Search for high priority tasks related to Northwind that are due tomorrow.
 
 **Parameter description example:**
 
@@ -294,8 +294,8 @@ Advanced search: Search for high priority tasks related to Northwind that are du
 
 # [Surveys](#tab/surveys)
 
-Basic search: Retrieve Customer Satisfaction Surveys. </br>
-Advanced search: Retrieve recent customer satisfaction survey on product Contoso which as filled by more than 100 recipients.
+* **Basic search**: Retrieve Customer Satisfaction Surveys. </br>
+* **Advanced search**: Retrieve recent customer satisfaction survey on product Contoso which as filled by more than 100 recipients.
 
 **Parameter description example:**
 
@@ -325,8 +325,8 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
 
 # [CRM](#tab/crm)
 
-Basic search: Fetch me qualified leads. </br>
-Advanced search: Fetch qualified leads for which quotes are pending from last seven days.
+* **Basic search**: Fetch me qualified leads. </br>
+* **Advanced search**: Fetch qualified leads for which quotes are pending from last seven days.
 
 **Parameter description example:**
 
@@ -358,8 +358,8 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
 
 # [General](#tab/general)
 
-Basic search: Find stocks in NASDAQ.</br>
-Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less than 2.
+* **Basic search**: Find stocks in NASDAQ.</br>
+* **Advanced search**: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less than 2.
 
 **Parameter description example:**
 
@@ -407,8 +407,8 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 For Microsoft 365 Copilot, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
-* Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
-* Microsoft 365 Copilot might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
+* Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [respond to search command](how-to/search-commands/respond-to-search.md).
+* Microsoft 365 Copilot might pass an empty string or null value for parameters, which aren't part of user utterance. Update your web service to handle the parameters.
 
 * A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
@@ -503,7 +503,7 @@ For Microsoft 365 Copilot, a search-based message extension must support more th
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
-The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
+The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [parameter description](#parameter-description).
 
 ## Define sample prompts
 
@@ -668,18 +668,18 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   </details>
 
   > [!NOTE]
-  > Action types `imBack`, `messageBack` aren't supported in a data object.
+  > Action types `imBack` and `messageBack` aren't supported in a data object.
 
   The following action types are recommended:
 
-  * `Action.OpenUrl`: Opens a specified URL from the Card.
+  * `Action.OpenUrl`: Opens a specified URL from the card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Microsoft 365 Copilot.":::
 
-* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* If a user can change information on the card through a dialog, Stageview, or directly from the card, we recommend that Adaptive Card support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
