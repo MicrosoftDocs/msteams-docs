@@ -28,7 +28,7 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 
 Build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. Since Microsoft 365 Copilot recognizes them as skills, it can execute commands on the user's behalf.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot." lightbox=""../assets/images/Copilot/ailib-copilot-interface.png"":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-interface.png":::
 
 ## Define app, command, and parameter descriptions
 
