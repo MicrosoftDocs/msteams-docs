@@ -5,7 +5,7 @@ description: Learn about Teams Toolkit, it's installation, navigation, and user 
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/24/2022
+ms.date: 09/16/2024
 ---
 
 # Teams Toolkit Visual Studio Overview
@@ -37,10 +37,10 @@ The following are the key features of Teams Toolkit:
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
 * [CodeLens to trigger Teams Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
 * [Teams Toolkit documentation](#teams-toolkit-documentation)
-* [Copilot plugin](#copilot-plugin)
+* [Microsoft 365 Copilot plugin](#microsoft-365-copilot-plugin)
 
 > [!NOTE]
-> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation and Copilot plugin is available in public developer preview.
+> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation, and Microsoft 365 Copilot plugin is available in public developer preview.
 
 ### Project templates
 
@@ -78,9 +78,9 @@ To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
 
 A browser window opens to view the documentation.
 
-### Copilot plugin
+### Microsoft 365 Copilot plugin
 
-The latest version of Teams Toolkit incorporates numerous preview features designed to support in Microsoft Copilot development. To enable and activate the preview feature, follow these steps:
+The latest version of Teams Toolkit incorporates numerous preview features designed to support Microsoft 365 Copilot plugin development. To enable and activate the preview feature, follow these steps:
 
 1. Select **Tools** > **Options...**.
 
@@ -96,7 +96,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview feature.":::
 
-Enhance the capabilities of Microsoft Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Copilot using the Teams Toolkit. Teams Toolkit Copilot plugin supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
+Enhance the capabilities of Microsoft 365 Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit Copilot plugin supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
 
 #### TeamsFx .NET SDK reference
 
