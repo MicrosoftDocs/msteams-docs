@@ -51,7 +51,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ### Bot name and icon
 
-***Bot name***: You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
+***Bot name***: You can change the bot name displayed in Teams environment by updating it in the following occurrences:
 
 * The bot name, displayed as a title in the chat window, is updated and managed within your app manifest (previously called Teams app manifest).
 
