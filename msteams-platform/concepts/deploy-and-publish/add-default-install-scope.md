@@ -12,9 +12,9 @@ It’s common for an app to support multiple scenarios in Microsoft Teams, but y
 
 When a user installs an app from Microsoft Teams Store or uploads a custom app, the user has the option to open the app in either personal or shared scope:
 
-* Personal scope: If the app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope. 
+* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope. 
 
-* Shared scope: If the app supports shared scopes, all the supported scopes are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
+* Shared scope: If an app supports shared scopes, all the supported scopes such as channel, chat, and meeting are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
     :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot of the scope selection dialog to select the required scope to use the app.":::
 
@@ -22,12 +22,12 @@ If you have a bot app that's intended to work in personal scope, then in additio
 
 ## Configure your app's default install scope
 
-You can use default install scope to specify whether your app is available for personal, team, or meeting scopes. When you configure the default install scope, you can set only one scope at a time. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultinstallscope).
+You can use default install scope to specify whether your app is available for personal, channel, chat, or meeting scopes. When you configure the default install scope, you can set only one scope at a time. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultinstallscope).
 
 To configure the default install scope in your app manifest:
 
 1. Open your app manifest and add the `defaultInstallScope` property.
-2. Set default install scope value as, either `personal`, `team`, `groupchat`, or `meetings`.
+2. Set default install scope value as either `personal`, `team`, `groupChat`, or `meetings`.
 
     ```json
     "defaultInstallScope": "meetings",
@@ -35,7 +35,7 @@ To configure the default install scope in your app manifest:
 
 ### App install user experience
 
-App installation within the configured default install scope such as personal, channel, chat, and meeting scopes is quick and straightforward. The following procedures outline the user flow for installing an app within the configured scope:
+App installation within the configured default install scope such as personal, channel, chat, or meeting scopes is quick and straightforward. The following procedures outline the user flow for installing an app within the configured scope:
 
 </br>
 <details>
@@ -78,7 +78,7 @@ If an app is configured with personal and shared scopes along with a default ins
 
     Alternatively, you can either select from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with the pen option and also the search option to select from shared scopes.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with the options to open the app in personal or shared scopes.":::
 
     The app opens in the scope that you selected.
 
@@ -124,7 +124,7 @@ To configure details in app manifest:
 
 1. Open your app manifest and add the `defaultGroupCapability` property to it.
 2. Set a value of `team`, `groupchat`, or `meetings`.
-3. For the selected group capability, the available group capabilities are, `bot`, `tab`, or `connector`.
+3. For the selected group capability, the available group capabilities are `bot`, `tab`, or `connector`.
 
     > [!NOTE]
     > You can select only one default capability, `bot`, `tab`, or `connector` for the selected group capability.
