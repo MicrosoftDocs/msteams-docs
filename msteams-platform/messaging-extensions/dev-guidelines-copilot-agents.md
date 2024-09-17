@@ -21,12 +21,12 @@ ms.collection: ce-skilling-ai-copilot
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-Build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. Since Microsoft 365 Copilot recognizes them as skills, it can execute commands on the user's behalf.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Copilot. Message extensions must support one or more search commands. Since Microsoft 365 Copilot recognizes them as skills, it can execute commands on the user's behalf.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-interface.png":::
 
@@ -679,7 +679,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Microsoft 365 Copilot.":::
 
-* If a user can change information on the card through a dialog, Stageview, or directly from the card, Adaptive Card must support universal actions and automatic refresh. [*Recommended*]
+* If a user can change information on the card through a dialog, Stageview, or directly from the card, we recommend that Adaptive Card support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 

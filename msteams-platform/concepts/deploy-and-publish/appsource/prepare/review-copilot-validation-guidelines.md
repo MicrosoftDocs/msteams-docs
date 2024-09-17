@@ -198,10 +198,10 @@ You must implement the following:
   * **Sizing images**
 
     * When using an image inside a `ColumnSet` with more than one column, specify the size of the column containing an image rather than the image itself.
-    * If the image isn’t in a `ColumnSet`, set its size to `auto` or `stretch`.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
     * If you want to define an explicit width in pixels, ensure that it doesn’t exceed three-fourths of the narrowest card width.
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
-    * You must set the width of the image, though some scenarios might allow for exceptions.
+    * We recommend that you set the width of the image, though some scenarios might allow for exceptions.
 
 For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
 
