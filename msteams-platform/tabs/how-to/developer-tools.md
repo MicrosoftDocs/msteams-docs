@@ -65,22 +65,18 @@ To access DevTools for a Teams iOS client, ensure you meet the following require
 
 To activate DevTools:
 
-1. Ensure that you follow these steps on the iOS client:
+1. Confirm whether the user or the tenant is activated for targeted release. If not, you need to enable it.
 
-      1. Confirm whether the user or the tenant is activated for targeted release. If not, you need to enable it.
+   For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
 
-          For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
+   > [!IMPORTANT]
+   > After enabling the user or the tenant for targeted release, allow 24 hours for the settings to take effect. After this period, try signing out and then signing back in on the Teams iOS client to confirm its activation.
 
-          > [!IMPORTANT]
-          > After enabling the user or the tenant for targeted release, allow 24 hours for the settings to take effect. After this period, try signing out and then signing back in on the Teams iOS client to confirm its activation.
+1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-      1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
+1. On the Mac system, open Safari and follow the steps for [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
 
-1. Activate the Web Inspector in Safari on your Mac system and in the Teams iOS client.
-
-      1. On the Mac system, open Safari and follow the steps for [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
-
-      1. On Teams iOS client, you'll see the tab.teams.microsoft.com option. Use this option to enable the Web Inspector.
+1. Enable Web Inspector in the Teams iOS client.
 
 1. Connect your Teams iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
 
