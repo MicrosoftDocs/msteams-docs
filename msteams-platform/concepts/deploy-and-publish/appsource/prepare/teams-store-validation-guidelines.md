@@ -1080,7 +1080,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
-* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Must fix*]
+* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, date of birth, place, and designation instead of using multi-turn conversations. [*Must fix*]
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Must fix*]
 
