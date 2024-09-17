@@ -208,7 +208,7 @@ items:
 
     1. Select **Open** to use the app in personal scope.
     
-      Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+       Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
        
        :::image type="content" source="./assets/images/conversation-bot/open-app-teams.png" alt-text="Screenshot of TeamsConversationBot with personal and shared scope options.":::
 
