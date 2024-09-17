@@ -31,7 +31,7 @@ While the web version and the desktop version of Teams are almost same, there ar
     - On macOS: Select **Open Dev Tools**:
 
       :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.png" alt-text="Screenshot shows the option to open Dev Tools from macOS dock.":::
-   
+
     The following example shows DevTools:
     :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools." lightbox="../../assets/images/dev-preview/dev-tools-exp.png":::
 
@@ -65,16 +65,21 @@ To access DevTools for a Teams iOS client, ensure you meet the following require
 
 To activate DevTools:
 
-1. Confirm whether the user or tenant is activated for targeted release. If not, you need to enable it.
+1. Ensure your follow these steps on the iOS client:
 
-   For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
+      1. Confirm whether the user or tenant is activated for targeted release. If not, you need to enable it.
 
-   > [!IMPORTANT]
-   > After enabling the user or the tenant for targeted release, allow 24 hours for the settings to take effect. After this period, try signing out and then signing back in on the Teams iOS client to confirm its activation.
+          For more information, see [targeted release for entire organization](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide.md#targeted-release-for-entire-organization&preserve-view=true).
 
-1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
+          > [!IMPORTANT]
+          > After enabling the user or the tenant for targeted release, allow 24 hours for the settings to take effect. After this period, try signing out and then signing back in on the Teams iOS client to confirm its activation.
 
-1. Activate the Web Inspector in Safari and the Teams iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+      1. Sign in to the Teams iOS app and activate the developer preview. For more information about developer preview, see [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
+
+      1. Activate the Web Inspector in Safari and the Teams iOS client. For more information on Web Inspector, see [enabling Web Inspector](https://webkit.org/web-inspector/enabling-web-inspector/).
+
+          > [!NOTE]
+          > You'll' see the tab.teams.microsoft.com option when you select iPhone. Use this option to enable the Web Inspector.
 
 1. Connect your Teams iOS client to your Mac system. When prompted, confirm that you trust the client and give your consent to allow the connection.
 
