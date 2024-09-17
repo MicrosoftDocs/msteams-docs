@@ -1138,7 +1138,7 @@
       },
       {
         "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
-        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/validation-guidelines-copilot-agent"
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       }
     ]
 }
