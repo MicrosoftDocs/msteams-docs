@@ -3,7 +3,7 @@ title: Developer Preview App Manifest Schema
 description: Learn about public developer preview manifest schema for Microsoft Teams, sample app manifest, schema properties, and how to enable developer preview.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 11/15/2021
+ms.date: 09/16/2024
 ---
 # Public developer preview app manifest schema
 
@@ -76,7 +76,14 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
                 {"name" : "configurableTabs", "id": "configurableTab-id"}
         ]
-      ]
+      ],
+    "copilotExtensions": {
+        "declarativeCopilots": [
+            {
+                "id": "agent1",
+                "file": "declarativeAgent1.json"
+            }
+        ]
     },
     "configurableTabs": [
         {
@@ -518,6 +525,25 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 **Optional** &ndash; Array of arrays (each containing two or more [`element` objects](#element))
 
+## copilotExtensions
+
+**Optional** &ndash; Object
+
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`declarativeCopilots`|Array of objects| 1 |✔️| Array of `declarativeCopilot` objects. |
+
+### declarativeCopilot
+
+Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+
 ## configurableTabs
 
 **Optional** &ndash; Array
@@ -695,13 +721,13 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`samplePrompts`|Array|5 ||Property used by Copilot to display prompts supported by the plugin to the user. For Copilot scenarios, this property is required in order to pass app validation for store submission.  |
+|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the plugin to the user. For Microsoft 365 Copilot scenarios, this property is required in order to pass app validation for store submission.  |
 |`samplePrompts.text`|string|128 characters|✔️|Content of the sample prompt.|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
 |`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using Large Language Models (LLMs).|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Microsoft 365 Copilot using Large Language Models (LLMs).|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog dynamically.<br>Default value: `false`|
 |`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
