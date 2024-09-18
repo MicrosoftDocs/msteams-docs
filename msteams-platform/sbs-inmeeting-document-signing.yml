@@ -254,6 +254,10 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Screenshot shows how to add the app.":::
 
+    1. Search or select the required meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-scope.png" alt-text="Screenshot shows how to add the app.":::
+
        Now the meeting signing app is added to the meeting.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png" alt-text="Screenshot shows the app added to the meeting.":::
