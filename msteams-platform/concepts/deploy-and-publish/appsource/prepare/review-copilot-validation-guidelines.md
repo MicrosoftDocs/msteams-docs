@@ -259,11 +259,10 @@ You must ensure to meet the following guidelines for Copilot agents:
     | Microsoft 365 Copilot and Bing | `edgeservices.bing.com`, `www.bing.com`, `copilot.microsoft.com` |
     | Microsoft 365 app | `*.microsoft365.com`, `*.office.com` |
     | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
-    | Office.com | `*.office.com` <br> `Office.com/copilot` <br> `Office.com/chat` |
-    | Microsoft365.com | `*.microsoft365.com` <br> `Microsoft365.com/copilot` <br> `Microsoft365.com/chat` |
-   | M365.cloud.microsoft | `M365.cloud.microsoft/chat` <br> `M365.cloud.microsoft/copilot` |
-   | Copilot.cloud.microsoft | `Copilot.cloud.microsoft` |
-   | All apps | `*.cloud.microsoft` |
+    | Office.com | `Office.com/copilot` <br> `Office.com/chat` |
+    | Microsoft365.com | `Microsoft365.com/copilot` <br> `Microsoft365.com/chat` |
+    | M365.cloud.microsoft | `M365.cloud.microsoft/chat` <br> `M365.cloud.microsoft/copilot` |
+    | Copilot.cloud.microsoft | `Copilot.cloud.microsoft` |
 
 1. **Upgrade Teams JS version to the 2.22.0 build** [*Must fix*]
 
