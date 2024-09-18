@@ -31,7 +31,7 @@ Prompt starters help users start a conversation with your bot.
 
 :::column span="2":::
 
-##### [Suggested actions](#suggested-actions)
+##### [Suggested actions](#suggested-actions-1)
 
 Suggested actions help users continue conversations with your bot.
 

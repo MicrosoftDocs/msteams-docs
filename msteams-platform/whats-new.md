@@ -415,7 +415,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 September**
 
-* ***September 17, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
+* ***September 18, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
 
 * ***September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store.](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
 
