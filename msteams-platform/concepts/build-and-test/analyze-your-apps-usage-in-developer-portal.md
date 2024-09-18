@@ -13,7 +13,7 @@ Developer Portal provides a comprehensive suite of tools to help you analyze and
 
 Whether you’re tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
-The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
+Usage data for an imported app can take up to 48 hours to appear in the charts.
 
 # [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
 
