@@ -327,7 +327,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
-1. # [certificate-based authentication](#tab/certificate)
+1. # [Certificate-based authentication](#tab/certificate)
    Update the following variables and set the certificate that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`
 
