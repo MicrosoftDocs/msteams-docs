@@ -13,17 +13,26 @@ ms.author: surbhigupta
 >
 > Streaming UX is only available for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft Teams users expect swift and seamless interactions with bots, mirroring the instant responsiveness of chatbots like ChatGPT. Streaming UX introduces a dynamic interaction model where bots stream activity, and chunks of responses in real-time. This not only aligns user expectations of promptness but also maintains user engagement. It transforms the wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows.
+Streaming UX in bots refers to the process of delivering portions of the bot’s response to the user in real-time, as the response is being generated. Streaming UX transforms response generation wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows. Streaming UX allows users to observe the bot actively processing their request, potentially boosting user satisfaction and trust.
 
-Streaming UX improves the user experience by making the bot seem more responsive, performative, and transparent. Streaming UX allows bots to send updates to the user while they're generating a response. Streaming UX has two types of updates:
+Streaming UX enables bots to provide updates to the user during the response generation process. Streaming UX has two types of updates:
 
-* **Informative updates**: Informative update is shown as a blue progress bar at the bottom of the chat, and they tell the user what the bot is doing before it has a response ready.
+* **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat, informing the user about the bot's ongoing actions before a response is generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
 
-* **Response streaming**: Response streaming is shown as a typing indicator, and it shows the user the response as the bot is generating it.
+* **Response streaming**: Response streaming is displayed as a typing indicator, revealing the bot's response to the user as it is being generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
+
+Following are few benifits of Streaming UX in Bots:
+
+> [!div class="checklist"]
+> 
+> * **Improved engagement**: Streaming UX keeps users engaged by providing real-time updates, making the interaction feel more dynamic. 
+> * **Perceived responsiveness**: Users perceive the bot as more responsive because they see immediate feedback rather than waiting for a complete response. 
+> * **Transparency**: Informative updates offer transparency into what the bot is doing, which can increase user trust. 
+> * **Reduced abandonment**: Faster perceived response times can reduce the likelihood of users abandoning the interaction. 
 
 ## Enable streaming in bots
 
