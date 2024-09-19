@@ -145,6 +145,13 @@ async function example() {
 > [!TIP]
 > When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
 
+Cross-cloud communication via SDK isn't allowed due to security reasons, therefore Teams operated by 21Vianet domain isn't added to `validOrigins`. If an app wants to work in Teams operated by 21Vianet, it needs to explicitly specify the Teams operated by 21Vianet domain when initializing the SDK in the deployment of their apps using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest) parameter.
+
+```js
+import { app } from '@microsoft/teams-js';
+app.initialize(["https://teams.microsoftonline.cn"]);
+```
+
 ### APIs organized into capabilities
 
 A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365 app, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
