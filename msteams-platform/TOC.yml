@@ -467,8 +467,6 @@
       href: toolkit/build-an-ai-agent-in-teams.md
     - name: Chat with you data
       href: Teams-AI-library-tutorial.yml
-    - name: Extend AI bot to Copilot
-      href: bots/how-to/teams-conversational-ai/extend-ai-bot-copilot.md
 
 - name: Build bots
   items:

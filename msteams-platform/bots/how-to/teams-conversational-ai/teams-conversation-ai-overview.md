@@ -137,6 +137,15 @@ The following are some of the main features available through Teams AI library:
         Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
+
+        **Try it out**: Math tutor assistant code sample 
+        
+          This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math.
+          
+          * [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot)
+          * [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot)
+          * [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot)
+
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -205,10 +214,10 @@ The following table lists the updates to the Teams AI library:
 | Type | Description | .NET | JavaScript | Python |
 | --- | --- |:---:|:---:|:---:|
 | OpenAIModel | The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2. | ✔️ | ✔️ | ✔️ |
-| Embeddings | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings. | ❌ |✔️|✔️|
-| Prompts | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window. | ✔️ |✔️|✔️|
-| Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️|✔️|
-| Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ |✔️|✔️|
+| Embeddings | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings. | ❌ | ✔️ | ✔️ |
+| Prompts | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window. | ✔️ | ✔️ | ✔️ |
+| Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️ | ✔️ |
+| Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |
 
 
 ## Code samples
@@ -231,3 +240,7 @@ The following table lists the updates to the Teams AI library:
 
 > [!div class="nextstepaction"]
 > [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
+
+## See also
+
+[Copilot handoff](../bots/how-to/conversations/bot-copilot-handoff)
