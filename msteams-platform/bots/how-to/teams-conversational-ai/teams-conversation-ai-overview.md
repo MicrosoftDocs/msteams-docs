@@ -32,9 +32,22 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
-The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
+The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
+
+## Team AI Library features or attributes
 
 The following are some of the main features available through Teams AI library:
+
+[TBD: Use clickable icons or columns for listing features instead of level 2 headings. This layout is confusing.]
+
+:::row:::
+    :::column-span="":::
+        Simple Teams-centric component scaffolding
+    :::column-end:::
+    :::column-span="2":::
+        The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
+    :::column-end:::
+:::row-end:::
 
 ## Simple Teams-centric component scaffolding
 
