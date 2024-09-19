@@ -170,13 +170,13 @@ The following are some of the main features available through Teams AI library:
     :::column span="3":::
         Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
 
-        **Relevant code samples**: Search command message extension 
+        **Try it out**: Search command message extension code sample
             
-          This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library:
+          This sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. Select one of following the code samples to try it out:
 
-            * [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) 
-            * [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) 
-            * [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
+            * [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) 
+            * [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) 
+            * [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
 
     :::column-end:::
 :::row-end:::
