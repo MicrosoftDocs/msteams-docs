@@ -38,7 +38,7 @@ The Teams AI Library is available in JavaScript and C# languages allowing you to
 
 The following are some of the main features available through Teams AI library:
 
-[Use clickable icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
+[Use (clickable, if needed) icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
 
 :::row:::
     :::column span="":::
@@ -140,7 +140,7 @@ The following are some of the main features available through Teams AI library:
 
         | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
         | --- |
-        | &nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
+        | &nbsp;&nbsp;&nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
 
     :::column-end:::
 :::row-end:::
@@ -175,13 +175,9 @@ The following are some of the main features available through Teams AI library:
     :::column span="3":::
         Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
 
-        **Try it out**: Search command message extension code sample
-            
-          This sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. Select one of following the code samples to try it out:
-
-            * [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) 
-            * [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) 
-            * [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
+        | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
+        | --- |
+        | &nbsp;&nbsp;&nbsp; | Search command message extension code sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. |
 
     :::column-end:::
 :::row-end:::
