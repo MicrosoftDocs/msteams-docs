@@ -41,13 +41,19 @@ The following are some of the main features available through Teams AI library:
 [TBD: Use clickable icons or columns for listing features instead of level 2 headings. This layout is confusing.]
 
 :::row:::
-    :::column-span="":::
-        Simple Teams-centric component scaffolding
+    :::column span="":::
+
+        **Simple Teams-centric component scaffolding**
+
     :::column-end:::
-    :::column-span="2":::
+    :::column span="2":::
+
         The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
+
     :::column-end:::
 :::row-end:::
+
+
 
 ## Simple Teams-centric component scaffolding
 
