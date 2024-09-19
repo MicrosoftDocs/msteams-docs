@@ -138,13 +138,9 @@ The following are some of the main features available through Teams AI library:
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
 
-        **Try it out**: Math tutor assistant code sample 
+        **Try it out**: [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) | [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) | [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot)
         
-          This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math.
-          
-          * [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot)
-          * [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot)
-          * [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot)
+          Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math.
 
     :::column-end:::
 :::row-end:::
