@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Overview
+# Overview for bots
 
 Bots are software applications that perform automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligency (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
@@ -48,9 +48,9 @@ You may be just delving into bot apps or bringing your existing bots up to suppo
 
 The following table [TBD: clickable browse path] guides you through building a bot app:
 
-| | Here's your path |
+| If you want to... | Here's your path |
 | --- | --- |
-| New to bots | [Basic bot concepts, scopes] <br> [Build a basic bot: TTK and Bot SDK] <br> [Build basic AI bot - QS SBS guide] |
+| Begin building a bot | [Basic bot concepts, scopes] <br> [Build a basic bot: TTK and Bot SDK] <br> [Build basic AI bot - QS SBS guide] |
 | Configure a basic bot | [Introduction to activity handler, events] <br> [Bot logic] <br> [Manifest configuration] <br> [SBS guides for TTK apps or TTK sample apps + Code samples for Bot SDK for interactive messages, send and receive files, fetching team or chat members, rate limiting, etc.] |
 | Configure an AI bot | [AI concepts and capabilities] <br> [Build basic AI bot (custom engine agent)] <br> [Get started] <br> [Bot logic for an AI bot] <br> [Copilot handoff]]
 | Explore advanced bot features | [SSO] <br> [Access data with MS Graph] <br> [Bot on Mobile] <br> [Build call and media bots] |
