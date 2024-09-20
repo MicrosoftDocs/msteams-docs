@@ -8,7 +8,7 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Customize conversational bot
+# Customize a conversational bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -19,7 +19,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > [!NOTE]
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC].
 > * Posting a message or Adaptive Card to a private channel isn't supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
