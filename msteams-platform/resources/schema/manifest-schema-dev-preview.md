@@ -1192,20 +1192,46 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.contextMenus
 
-A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document.
+A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document. Currently valid only for Word, Excel, and PowerPoint.
 
 |Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`menus`| Array | | ✔️ | Configures the context menus. |
-|`menus.entryPoint`| String enum | | ✔️ | Use `text` or `cell` here for Office context menu. Use `text` if the context menu should open when a user right-clicks (or selects and holds) on the selected text. Use `cell` if the context menu should open when the user right-clicks (or selects and holds) on a cell in an Excel spreadsheet. |
-|`menus.controls`| Array | | ✔️ | The same as controls in [extensions.ribbons.tabs.groups.controls](#extensionsribbons). The control type should be `button`. |
+|`menus.entryPoint`| String enum | | ✔️ | Defines the method for opening the context menu. Use `text` if the context menu should open when a user right-clicks (or selects and holds) on the selected text. Use `cell` if the context menu should open when the user right-clicks (or selects and holds) on a cell in an Excel spreadsheet. |
+|`menus.controls`| Array | | ✔️ | Configures the menu buttons. |
+|`menus.controls.id`| String | 64 characters | ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
+|`menus.controls.items`| Array | | | Configures the items for a menu control. |
+|`menus.controls.items.id`| String | | ✔️ | Specifies the ID for the items within the app. |
+|`menus.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported values: `button`, `menu`|
+|`menus.controls.items.label`| String | 64 characters | ✔️ | Specifies the text displayed for the items. |
+|`menus.controls.items.icons`| Array | | | Configures the icons for the custom item.|
+|`menus.controls.items.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
+|`menus.controls.items.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon.|
+|`menus.controls.items.supertip`| | | ✔️ | Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+|`menus.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
+|`menus.controls.items.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip.|
+|`menus.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with `runtime.actions.id`. |
+|`menus.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
+|`menus.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`|
+|`menus.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`menus.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
+|`menus.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
+|`menus.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
+|`menus.controls.icons.url`| String | 2048 characters | | Specifies the absolute URL to the icon.|
+|`menus.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
+|`menus.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
+|`menus.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
+|`menus.controls.actionId`| String | 64 characters | | Required if the control type is `button`. Don't use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`menus.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
+|`menus.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
-|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`, `document` |
-|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`, `document` |
+|`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
 
