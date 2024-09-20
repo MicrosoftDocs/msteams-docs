@@ -1168,6 +1168,55 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
+## Ratings in Adaptive Cards
+
+Ratings in Adaptive Cards enable users to visually represent feedback or preferences through a star-based system. Ratings can be used to collect customer feedback or conduct internal employee evaluations, making it a versatile tool for gathering insights in an interactive and visually appealing manner.
+
+You can customize the ratings in an Adaptive Card, including size, color, and the number of stars, to fit the design and needs of your app. You can display a rating in an Adaptive Card with the `Rating` element or use the `Input.Rating` property to get ratings from users.
+
+### Rating
+
+| Property | Required | Type | Allowed values | Description |
+|----|----|----|----|----|
+| type | Yes | String | `Rating` | Specifies the type of rating element. |
+| `id` | No | String | | Unique identifier for the rating element. |
+| `requires` | No | Object | | Dependencies for the rating element. |
+| `isVisible` | No | Boolean| | Determines if the element is visible. |
+| `separator` | No | Boolean| | Adds a separator line before the element. |
+| `height` | No | String | `Auto`, `Stretch` | Specifies the height of the element. |
+| `horizontalAlignment` | No | String | Left, Center, Right | Aligns the element horizontally. |
+| `spacing` | No | String | `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` | Specifies the spacing around the element. |
+| `targetWidth` | No | String | `VeryNarrow`, `Narrow`, `Standard`, `Wide` | Specifies the width of the element. |
+| `value` | No | Number | | The number of stars selected. Cannot exceed max if max is specified. |
+| `count` | No | Number | | The number of ratings that make up the average. |
+| `max` | No | Number | | The total number of stars. Maximum and default is 5. |
+| `size` | No | String | `Medium`, `Large` | The size of the stars. |
+| `colour` | No | String | `Neutral`, `Marigold` | The colour of the stars. |
+| `style` | No | String | `Default`, `Compact` | In compact mode, only one star is displayed. |
+
+### Input.Rating
+
+| Property | Required | Type | Allowed Values | Description |
+|----|----|----|----|----|
+| `type` | Yes | String | `Input.Rating` | Specifies the type of input element. |
+| `id` | Yes | String | | Unique identifier for the input element. |
+| `requires` | No | Object | | Dependencies for the input element. |
+| `isVisible` | No | Boolean| | Determines if the element is visible. |
+| `separator` | No | Boolean| | Adds a separator line before the element. |
+| `height` | No | String | `Auto`, `Stretch` | Specifies the height of the element. |
+| `horizontalAlignment` | No | String | Left, Center, Right | Aligns the element horizontally. |
+| `spacing` | No | String | `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` | Specifies the spacing around the element. |
+| `targetWidth` | No | String | `VeryNarrow`, `Narrow`, `Standard`, `Wide` | Specifies the width of the element. |
+| `label` | No | String | | Label for the input element. |
+| `isRequired` | No | Boolean| | Marks the input element as required. |
+| `errorMessage` | No | String | | Error message displayed if validation fails. |
+| `valueChangedAction` | No | Action | | Action to perform when the value changes. |
+| `value` | No | Number | | The number of stars selected by default. Cannot exceed max if max is specified. |
+| `max` | No | Number | | The total number of stars. Maximum and default is 5. |
+| `allowHalfSteps` | No | Boolean| | Determines if the user can select half stars. |
+| `size` | No | String | `Medium`, `Large` | The size of the stars. |
+| `colour` | No | String | `Neutral`, `Marigold` | The colour of the stars. |
+
 ## Code samples
 
 | S.No. | Description |.NET | Node.js | Manifest |
