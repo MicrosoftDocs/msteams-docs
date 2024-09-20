@@ -16,9 +16,11 @@ Microsoft Teams Store provides features that enable you to monetize your apps an
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/publish-app/pricing-charge-price.png" link="[Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)" alt-text="Charge a price for your app":::
+        :::image type="content" source="../../../../assets/images/publish-app/pricing-charge-price.png" link="[Include a SaaS offer with your Teams app](include-saas-offer.md)" alt-text="Charge a price for your app":::
     :::column-end:::
     :::column span="2":::
+
+[Include a SaaS offer with your Teams app](include-saas-offer.md)
 
 With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
 
