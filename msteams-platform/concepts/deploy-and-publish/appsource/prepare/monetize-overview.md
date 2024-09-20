@@ -14,58 +14,33 @@ Microsoft Teams Store provides features that enable you to monetize your apps an
 
 ## Choose a pricing model
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/publish-app/pricing-charge-price.png" link="include-saas-offer.md" alt-text="Charge a price for your app":::
-    :::column-end:::
-    :::column span="3":::
+* **Include a SaaS offer with your app**:
 
-With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
+  With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
 
-    :::column-end:::
-:::row-end:::
+  For more information, see [include a SaaS offer with your Teams app](include-saas-offer.md).
 
-:::row:::
-    :::column:::
-     :::image type="content" source="../../../../assets/images/publish-app/pricing-free-trial.png" alt-text="Free trials":::
-    :::column-end:::
-    :::column span="3":::
+* **Free trials**:
 
-You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
+  You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
 
-    :::column-end:::
-:::row-end:::
+* **In-app purchases**:
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/publish-app/pricing-in-app-purchases.png" link="~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md" alt-text="In-app purchases":::
-    :::column-end:::
-    :::column span="3":::
+  Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
 
-Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
+  For more information, see [In-app purchases](in-app-purchase-flow.md).
 
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/publish-app/test-preview-monetize-app.png" link="Test-preview-for-monetized-apps.md" alt-text="Test preview SaaS offer":::
-    :::column-end:::
-    :::column span="3":::
+* **Test preview for monetized app**:
 
-With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
-    :::column-end:::
-:::row-end:::
+  With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/publish-app/test-preview-license-management.png" link="manage-third-party-apps-license.md" alt-text="Manage license for third party apps":::
-    :::column-end:::
-    :::column span="3":::
+  For more information, see
 
-If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
+* **Set up Microsoft license management**:
 
-:::column-end:::
-:::row-end:::
+  If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
+
+  For more information, see [Set up Microsoft license management](manage-third-party-apps-license.md).
 
 ## See also
 
