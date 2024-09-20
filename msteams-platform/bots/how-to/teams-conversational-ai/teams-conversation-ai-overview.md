@@ -140,7 +140,7 @@ The following are some of the main features available through Teams AI library:
 
         | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
         | --- |
-        | &nbsp;&nbsp;&nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
 
     :::column-end:::
 :::row-end:::
@@ -177,7 +177,7 @@ The following are some of the main features available through Teams AI library:
 
         | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
         | --- |
-        | &nbsp;&nbsp;&nbsp; | Search command message extension code sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. |
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Search command message extension code sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. |
 
     :::column-end:::
 :::row-end:::

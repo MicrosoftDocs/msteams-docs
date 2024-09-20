@@ -9,7 +9,7 @@ ms.date: 05/24/2023
 
 # Teams AI library capabilities
 
-Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
 Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
 
@@ -17,13 +17,26 @@ Teams AI library supports the following capabilities:
 
 * [Send or receive message](#send-or-receive-message)
 
-* [Message extension (ME) capabilities](#message-extensions)
+* [Message extension capabilities](#message-extensions)
 
 * [Adaptive Cards capabilities](#adaptive-cards-capabilities)
 
- You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
+You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
 
-In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
+In the following section, we've used the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
+
+<!--NOTES: This section assumes that the devs have worked with building bots earlier and are aware of the bot capabilities and configurations. Most of the content is about migrating existing bots to AI, though the **SBS** are about building AI-based bots, and **code samples** are about upgrading an app to utilize AI library. It may be good to add a prerequisite or a note that the content is not for new devs, and they must go through the Build bots module to be familiarized with it.
+The core capabilities page talks about the code samples for upgrading existing apps to use AI.
+The Get started page is about building an AI app using SBS guides.
+
+>> Query list: 
+1. Should the order be flipped as per user journey? 
+
+2. What is the focus of this module - to aid new devs in building AI apps and to help upgrade existing apps. However, for upgrading existing apps to AI, devs would still need to go through Get started (Initial setup, creating components, defining storage, etc.). By covering Core competency from the pov of upgrading before GS, would the dev need to go back and forth?
+
+3. Suggested flow: Overview - section of core capabilities; prerequisite - Build bots config/customization > GS > QS > Configuring or upgrading existing apps to use AI > Build custom engine agents (?)
+
+-->
 
 ## Send or receive message
 
@@ -86,7 +99,7 @@ async def on_message(context: TurnContext, _state: TurnState):
 
 ## Message extensions
 
-In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of HeroCards displaying package information. The result is used to display the search results in the messaging extension.
+In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of Hero Cards displaying package information. The result is used to display the search results in the messaging extension.
 
 # [.NET](#tab/dotnet5)
 
