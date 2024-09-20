@@ -54,7 +54,7 @@ To enable streaming in bots, follow these steps:
 1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
 
    ```json
-  //Ex: A bot sends the second request with content && the content is informative loading message.
+   //Ex: A bot sends the second request with content && the content is informative loading message.
     
    POST /conversations/<conversationId>/activities HTTP/1.1 
    {
