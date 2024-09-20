@@ -40,7 +40,7 @@ You can offer a free trial version of your app to get more customers to try it. 
     :::column:::
         :::image type="content" source="../../../../assets/images/publish-app/pricing-in-app-purchases.png" alt-text="In-app purchases":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
 
 Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
 
@@ -50,7 +50,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
     :::column:::
         :::image type="content" source="./../../../assets/images/publish-app/test-preview-monetize-app-image.png" alt-text="Test preview SaaS offer":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
 
 **Test preview for monetized app**
 
@@ -65,7 +65,7 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
     :::column:::
         :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Manage license for third party apps":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
 
 **Set up Microsoft license management**
 
