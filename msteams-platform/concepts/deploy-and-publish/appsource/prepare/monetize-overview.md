@@ -28,19 +28,19 @@ Microsoft Teams Store provides features that enable you to monetize your apps an
 
   Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
 
-  For more information, see [In-app purchases](in-app-purchase-flow.md).
+  For more information, see [in-app purchases](in-app-purchase-flow.md).
 
 * **Test preview for monetized app**:
 
   With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
 
-  For more information, see
+  For more information, see [test preview for monetized apps](Test-preview-for-monetized-apps.md).
 
 * **Set up Microsoft license management**:
 
   If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
 
-  For more information, see [Set up Microsoft license management](manage-third-party-apps-license.md).
+  For more information, see [set up Microsoft license management](manage-third-party-apps-license.md).
 
 ## See also
 
