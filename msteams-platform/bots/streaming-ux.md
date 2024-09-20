@@ -13,7 +13,7 @@ ms.author: surbhigupta
 >
 > Streaming UX is only available for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Streaming UX in bots refers to the process of delivering portions of the bot’s response to the user in real-time, as the response is being generated. Streaming UX transforms response generation wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows. It allows users to observe the bot actively processing their request, potentially boosting user satisfaction and trust.
+Streaming UX in bots refers to the process of delivering chunks of the bot’s response to the user in real-time, as the response is being generated. Streaming UX transforms response generation wait time into an informative and interactive experience that enhances the overall utility of Teams bots in daily workflows. It allows users to observe the bot actively processing their request, potentially boosting user satisfaction and trust.
 
 Streaming UX enables bots to provide updates to the user during the response generation process and it has two types of updates:
 
@@ -29,20 +29,32 @@ Following are few benefits of Streaming UX in Bots:
 
 > [!div class="checklist"]
 > 
-> * **Improved engagement**: Streaming UX keeps users engaged by providing real-time updates, making the interaction feel more dynamic. 
-> * **Perceived responsiveness**: Users perceive the bot as more responsive because they see immediate feedback rather than waiting for a complete response. 
-> * **Transparency**: Informative updates offer transparency into what the bot is doing, which can increase user trust. 
-> * **Reduced abandonment**: Faster perceived response times can reduce the likelihood of users abandoning the interaction. 
+> * **Improved engagement**: Streaming UX maintains user interest by delivering real-time updates, creating a more dynamic interaction.
+>
+> * **Perceived responsiveness**: The bot appears more responsive to users as they receive immediate feedback in chunks instead of waiting for a full response.
+>
+> * **Transparency**: Providing informative updates gives insight into the bot's actions, potentially boosting user trust.
+>
+> * **Reduced abandonment**: The perception of quicker response times might reduce the chance of users abandoning the interaction.
 
 ## Enable streaming in bots
 
+To enable streaming in bots, you need the following query parameters:
+
+|Property|Type|Description|
+|---|---|---|
+| `type` | String | {TBD}|
+| `text` | String | {TBD}|
+| `streamType` | String | {TBD}|
+| `streamSequence` | Integer| {TBD} |
+| `streamld` | String | {TBD}|
+
 To enable streaming in bots, follow these steps:
 
-1. ***Start streaming***: Initiate the streaming process to begin sharing content.
+1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
 
    ```json
-
-   // Ex: A bot sends the second request with content && the content is informative loading message.
+  //Ex: A bot sends the second request with content && the content is informative loading message.
     
    POST /conversations/<conversationId>/activities HTTP/1.1 
    {
@@ -62,7 +74,7 @@ To enable streaming in bots, follow these steps:
         "name": "<recipientName>",
         "aadObjectId": "<recipient aad objecID>"
       },
-      "locale": "en-US"
+      "locale": "en-US",
       "text": "Searching through documents.", // First informative loading message.
       "channelData": { 
         "streamType": "informative", // informative or streaming(name needs to be finalized); default: streaming.
