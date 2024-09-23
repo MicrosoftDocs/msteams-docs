@@ -453,6 +453,9 @@
     - name: Bot messages with AI-generated content
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+    - name: Streaming UX in bots
+      href: bots/streaming-ux.md
+      displayName: Streaming, response generation
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot
@@ -517,8 +520,6 @@
             href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
         href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
-  - name: Streaming UX in bots
-    href: bots/streaming-ux.md
 - name: Build message extensions
   items:
   - name: Overview
