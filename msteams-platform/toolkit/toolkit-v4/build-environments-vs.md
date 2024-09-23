@@ -18,7 +18,7 @@ Teams Toolkit in Microsoft Visual Studio offers a set of environments to build y
 
 ### Create your Teams app using C# and Blazor
 
-Teams Toolkit in Visual Studio allows you to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
+Use Teams Toolkit in Visual Studio to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
 
 ## Support for Azure Functions
 
