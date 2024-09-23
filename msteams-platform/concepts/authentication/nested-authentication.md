@@ -252,3 +252,4 @@ fetch(graphEndpoint, options)
 
 * [Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow)
 * [Caching in MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/caching.md)
+* [Introducing Nested App Authentication: An improved authentication protocol for your Teams app](https://devblogs.microsoft.com/microsoft365dev/introducing-nested-app-authentication-an-improved-authentication-protocol-for-your-teams-app/)
