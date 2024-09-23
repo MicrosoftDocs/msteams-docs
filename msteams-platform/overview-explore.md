@@ -1,16 +1,16 @@
 ---
 title: Use Teams Platform to Build Apps 
 author: heath-hamilton
-description: Microsoft Teams platform features for your app on desktop and mobile. Tabs, bots, messaging extension, webhook, connectors, Microsoft Graph, or Adaptive Cards.
+description: Learn about Teams platform capabilities such as tabs, bots, message extensions, webhooks, connectors, Microsoft Graph, Adaptive Cards, and Copilot plugins.
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 11/02/2021
+ms.date: 09/23/2024
 ---
 # Explore Teams platform features
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows you the conceptual representation of Teams as a platform."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Graphic shows the conceptual representation of Teams as a platform and its capabilities."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
 ## Teams app features
 
@@ -25,7 +25,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Microsoft Graph | Microsoft Graph APIs enable Teams apps to build collaborative features with the intelligence of Microsoft 365 data and engage users regularly through activity feed notifications. | Send activity feed notifications, export or import messages, get meeting transcripts and recordings, use resource-specific consent (RSC) permissions, CRUD (create, read, update, and delete) users, chats, channels, and apps.  |
 | Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
 | Dialogs (referred as task modules in TeamsJS v1.x) | Dialogs permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
-| Copilot agents, plugins, and connectors | You can use agents, plugins, and connectors to bring your organization's knowledge, skills, and process automation into Microsoft 365 Copilot. | Generate unique insights and automate functions such as customer support, content creation, and data analysis with data specific to your organization. |
+| Copilot agents, plugins, and connectors | Use agents, plugins, and connectors to integrate your organization's knowledge, skills, and process automation into Microsoft 365 Copilot. | Generate unique insights and automate functions such as customer support, content creation, and data analysis using data specific to your organization. |
 
 ### Extend your Teams app across Microsoft 365
 
