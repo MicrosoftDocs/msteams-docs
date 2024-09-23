@@ -1,9 +1,9 @@
 ---
 title: Format Adaptive Cards
-description: In this module, learn how to format Adaptive Cards with Markdown and HTML, design responsive Adaptive Cards, CodeBlock element, and overflow menu.
+description: In this module, learn how to format Adaptive Cards with Markdown and HTML, design responsive Adaptive Cards, use the CodeBlock element, and create an overflow menu.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 09/18/2024
+ms.date: 09/24/2024
 ---
 
 # Format cards in Teams
@@ -532,7 +532,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 }
 ```
 
-For more information regarding typeahead search, see [typeahead search in Adaptive Cards](dynamic-search.md).
+For more information about typeahead search, see [typeahead search in Adaptive Cards](dynamic-search.md).
 
 ### Stageview for images in Adaptive Cards
 
