@@ -507,6 +507,216 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
+##### Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `name` and `id` properties in  `parameters` must match the values in the OpenAPI Description document.
+
+**Example**
+
+```json
+"composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "apiSpecificationFile": "apiSpecificationFiles/openapi.json",
+            "commands": [
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search Animes",
+                    "id": "getAnimeSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available anime types",
+                            "choices": [
+                                {
+                                    "title": "TV",
+                                    "value": "tv"
+                                },
+                                {
+                                    "title": "OVA",
+                                    "value": "ova"
+                                },
+                                {
+                                    "title": "Movie",
+                                    "value": "movie"
+                                },
+                                {
+                                    "title": "Special",
+                                    "value": "special"
+                                },
+                                {
+                                    "title": "ONA",
+                                    "value": "ona"
+                                },
+                                {
+                                    "title": "Music",
+                                    "value": "music"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available airing statuses",
+                            "choices": [
+                                {
+                                    "title": "Airing",
+                                    "value": "airing"
+                                },
+                                {
+                                    "title": "Completed",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rating",
+                            "inputType": "choiceset",
+                            "title": "Rating",
+                            "description": "Available ratings",
+                            "choices": [
+                                {
+                                    "title": "G",
+                                    "value": "g"
+                                },
+                                {
+                                    "title": "PG",
+                                    "value": "pg"
+                                },
+                                {
+                                    "title": "PG-13",
+                                    "value": "pg13"
+                                },
+                                {
+                                    "title": "R",
+                                    "value": "r17"
+                                },
+                                {
+                                    "title": "R+",
+                                    "value": "r"
+                                },
+                                {
+                                    "title": "Rx",
+                                    "value": "rx"
+                                }
+                            ]
+                        }
+                    ],
+                    "description": "Search animes",
+                    "apiResponseRenderingTemplateFile": "response_json/getAnimeSearch.json"
+                },
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search mangas",
+                    "id": "getMangaSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available manga types",
+                            "choices": [
+                                {
+                                    "title": "Manga",
+                                    "value": "manga"
+                                },
+                                {
+                                    "title": "Novel",
+                                    "value": "novel"
+                                },
+                                {
+                                    "title": "Light Novel",
+                                    "value": "lightnovel"
+                                },
+                                {
+                                    "title": "One Shot",
+                                    "value": "oneshot"
+                                },
+                                {
+                                    "title": "Doujin",
+                                    "value": "doujin"
+                                },
+                                {
+                                    "title": "Manhwa",
+                                    "value": "manhwa"
+                                },
+                                {
+                                    "title": "Manhua",
+                                    "value": "manhua"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available manga statuses",
+                            "choices": [
+                                {
+                                    "title": "Publishing",
+                                    "value": "publishing"
+                                },
+                                {
+                                    "title": "Complete",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Hiatus",
+                                    "value": "hiatus"
+                                },
+                                {
+                                    "title": "Discontinued",
+                                    "value": "discontinued"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "start_date",
+                            "title": "Start Date",
+                            "description": "Start date of the manga",
+                            "inputType": "date"
+                        },
+                        {
+                            "name": "end_date",
+                            "title": "End Date",
+                            "description": "End date of the manga",
+                            "inputType": "date"
+                        }
+                    ],
+```
+
 ## Authentication
 
 You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
@@ -608,6 +818,8 @@ You can authorize incoming requests to your service by configuring a static API 
         }
       },
 ```
+
+You can also add an API key authentication for your message extension using Teams Toolkit for Visual Studio Code. For more information, see [Create an API-based message extension](create-api-message-extension.md).
 
 </details>
 <br/>
@@ -893,7 +1105,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -922,7 +1134,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -983,11 +1195,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
