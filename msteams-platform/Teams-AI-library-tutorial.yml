@@ -1,13 +1,13 @@
 ### YamlMime:Tutorial
-title: Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit
+title: Build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit
 metadata:
-  title: Build a custom copilot to chat with your data using Teams AI library and Teams Toolkit
-  description: In this module, learn how to quickly try the Teams AI library.
+  title: Tutorial - Build Custom Engine Agent
+  description: Learn how to create a custom engine agent using Teams AI library and Teams Toolkit, set up data in Azure OpenAI, and configure custom engine agent.
   audience: Developer
   level: Beginner
-  ms.date: 29/04/2024
+  ms.date: 06/19/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+  nextTutorialHref: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
   nextTutorialTitle: Back to Teams AI library
   ms.custom: mvc
   ms.localizationpriority: high
@@ -15,14 +15,14 @@ items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a custom copilot with Teams AI library using Teams Toolkit to chat with your data on Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and Large Language Models (LLMs) of your choice.
+    This tutorial shows how to create a custom engine agent with Teams AI library using Teams Toolkit to chat with your data on Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and Large Language Models (LLMs) of your choice.
 
     In this tutorial, you'll learn:
 
-    * How to setup your data on Azure OpenAI.
-    * How to create a new custom copilot with Teams Toolkit.
+    * How to set up your data on Azure OpenAI.
+    * How to create a new custom engine agent with Teams Toolkit.
     * How to interact with your LLMs and data.
-    * The directory structure of your custom copilot.
+    * The directory structure of your custom engine agent.
 
 
 - title: Prerequisites
@@ -38,10 +38,10 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-- title: Setup your data on Azure OpenAI
+- title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
-     1. Go to [**Azure Portal**](https://ms.portal.azure.com/).
+     1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
      1. Select the Azure OpenAI service that you created in the prerequisite.
 
@@ -83,16 +83,16 @@ items:
      1. Select **Browse for a file** and upload files you prefer to use as your data, then select **Upload files**.
 
          > [!NOTE]
-         > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, or `.pptx` format with 16 MB size limit.
+         > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, or `.pptx` format with 16-MB size limit.
 
      1. Select the **Data management** settings as default and select **Next**.
      
      1. Select **Save and close**.
 
-     After the data ingestion process is complete, you can start creating your custom copilot using the Teams AI library and Teams Toolkit.
+     After the data ingestion process is complete, you can start creating your custom engine agent using the Teams AI library and Teams Toolkit.
  
 
-- title: Create your custom copilot
+- title: Create your custom engine agent
   durationInMinutes: 1
   content: |
 
@@ -104,9 +104,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/bots/create-a-new-app.png" alt-text="Screenshot shows how to create a new app in Visual Studio Code.":::     
 
-     1. Select **Custom Copilot**.
+     1. Select **Custom Engine Agent**.
 
-        :::image type="content" source="../msteams-platform/assets/images/bots/custom-copilot.png" alt-text="Screenshot shows custom copilot option in Visual Studio Code.":::
+        :::image type="content" source="../msteams-platform/assets/images/bots/custom-copilot.png" alt-text="Screenshot shows custom engine agent option in Visual Studio Code.":::
 
      1. Select **Basic AI Chatbot**.
 
@@ -128,15 +128,15 @@ items:
 
          * **Deployment name**
 
-     1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file once your custom copilot is created.
+     1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file once your custom engine agent is created.
 
-     1. Select a folder that contains the root folder of your project and enter a suitable name for your custom copilot.
+     1. Select a folder that contains the root folder of your project and enter a suitable name for your custom engine agent.
      
-     1. Select **Enter**. Custom copilot is created in a few seconds.
+     1. Select **Enter**. Custom engine agent is created in a few seconds.
 
      ## Take a tour of the source code
 
-     Have a look at what's inside this custom copilot > Basic AI Chatbot template.
+     Have a look at what's inside this custom engine agent > Basic AI Chatbot template.
 
      | Folder name | Contents |
      | --- | --- |
@@ -155,11 +155,11 @@ items:
      | `teamsapp.local.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging. |
      | `teamsapp.testtool.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
-- title: Configure your custom copilot
+- title: Configure your custom engine agent
   durationInMinutes: 1
   content: |
 
-     Let's customize the prompt for your custom copilot.
+     Let's customize the prompt for your custom engine agent.
 
      1. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
@@ -201,13 +201,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in test tool.":::
 
-     1. Custom copilot runs within the Teams App Test Tool, which opens in your browser.
+     1. Custom engine agent runs within the Teams App Test Tool, which opens in your browser.
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
 
-   In the Teams App Test Tool, ask questions related to your document and chat with your custom copilot to learn more about your data.
+   In the Teams App Test Tool, ask questions related to your document and chat with your custom engine agent to learn more about your data.
 
     :::image type="content" source="../msteams-platform/assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
 

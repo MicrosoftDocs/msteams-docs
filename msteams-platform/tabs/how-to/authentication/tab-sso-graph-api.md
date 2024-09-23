@@ -1,6 +1,6 @@
 ---
-title: Extend tab app with Microsoft Graph permissions
-description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
+title: Microsoft Graph Permissions for Tab
+description: Learn how to configure API permissions and authentication for different platforms, and get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
@@ -161,7 +161,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```Node.js
 // Exchange client Id side token with server token
@@ -204,7 +204,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > [!IMPORTANT]
 >
 > - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
-> - Two separate apps registered in Microsoft Entra ID will require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
+> - Two separate apps registered in Microsoft Entra ID require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Obtain consent

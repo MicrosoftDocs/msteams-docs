@@ -1,6 +1,6 @@
 ---
 title: Reasons for App Validation Failure
-description: Learn the common reasons for app validation failure such as inadequate app description, improper screenshots, mismatch between Partner Center and app manifest, valid domains guidelines violation, or broken app functionality.
+description: Learn about inadequate app description, improper screenshots, Partner Center and app manifest mismatch, valid domains violation, or broken app functionality.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
@@ -174,5 +174,5 @@ For more information, see [Teams Store validation guidelines for apps with AI-ge
 * [Distribute your Microsoft Teams app](../apps-publish-overview.md)
 * [Publish your app to the Microsoft Teams Store](publish.md)
 * [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md)
-* [Commercial marketplace certification policies](/legal/marketplace/certification-policies)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
+* [Validate your app in Developer Portal for Teams](../../build-and-test/manage-your-apps-in-developer-portal.md#publish)

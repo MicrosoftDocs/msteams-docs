@@ -1,13 +1,15 @@
 ---
-title: Create and send messages
+title: Create & Send Actionable Messages
 author: laujan
-description: Create actionable messages, send message through Incoming Webhook, connectors for Microsoft 365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
+description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 12/09/2022
 ---
 
 # Create and send messages
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 

@@ -1,5 +1,5 @@
 ---
-title: Format your bot messages
+title: Customize Bot Messages
 author: surbhigupta
 description: Learn how to format and style your bot messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
 ms.topic: conceptual
@@ -27,7 +27,7 @@ Microsoft Teams supports the following formatting options:
 
 Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
-Currently, the following limitations apply to formatting:
+The following limitations apply to formatting:
 
 * Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
@@ -77,9 +77,16 @@ The following table provides a list of styles, which are supported on desktop, i
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ | ❌ |
 
-### Cards
+## AI-generated content messages
 
-For card support, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
+AI labels, citations, feedback buttons, and sensitivity labels in your bot’s messages improve user engagement and foster transparency and trust.
+
+* [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
+* [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the bot's message through in-text citations and references.
+* [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the bot's messages.
+* [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the bot's message.
+
+For more information, see [bot messages with AI-generated content](format-ai-bot-messages.md).
 
 ## Next step
 
@@ -91,3 +98,4 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 * [Build bots for Teams](../what-are-bots.md)
 * [Designing your Microsoft Teams bot](../design/bots.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Format cards in Teams](../../task-modules-and-cards/cards/cards-format.md)

@@ -1,5 +1,5 @@
 ---
-title: Create a configuration page
+title: Create Configuration Page in Tabs
 author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
@@ -19,7 +19,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configuration page for tabs
 
-The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -180,11 +180,11 @@ The configuration page code informs Teams that the configuration requirements ar
 
 Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
+For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context). Collect the values of context data variables in the following two ways:
 
 * Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
 
-* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
+* Use the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 

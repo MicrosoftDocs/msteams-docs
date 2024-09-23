@@ -6,8 +6,8 @@ summary: "Get documentation, sample code, tutorials, and more to help you build 
 brand: teams
 
 metadata:
-  title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft Teams platform makes it easy for developers to build apps on Teams. Developers can integrate their own apps and services to improve productivity. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
@@ -19,7 +19,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: Microsoft Build 2024
+    - title: What's new
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
@@ -77,6 +77,9 @@ conceptualContent:
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
+        - url: /microsoft-365-copilot/extensibility/
+          itemType: concept
+          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities
@@ -107,7 +110,7 @@ conceptualContent:
         - url: messaging-extensions/build-bot-based-plugin.md
           itemType: concept
           text: Build bot-based search message extension plugin
-        - url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library
         - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
