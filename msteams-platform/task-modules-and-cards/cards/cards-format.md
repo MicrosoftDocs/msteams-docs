@@ -1049,7 +1049,8 @@ You can use borders to highlight important information or sections, drawing the 
 
 :::row-end:::
 
-You can add borders only to the following elements in an Adaptive Card, and your card needs to contain at least one or more of these elements:
+You can add borders only to the following elements in an Adaptive Card:
+
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
@@ -1066,27 +1067,33 @@ The border color matches the element’s style, as defined in the [`HostConfig.j
 | `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
 | `showGridLines` | Boolean | No | Adds a border to the `Table` element. Default value: `true` |
 
-The following JSON payload shows an Adaptive Card with a border around columns and a column set:
+The following JSON payload shows an Adaptive Card with a border around its elements:
 
 ```json
 {
     "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.5",
     "body": [
         {
+            "type": "TextBlock",
+            "text": "Below is a **ColumnSet** with borders:",
+            "wrap": true
+        },
+        {
             "type": "ColumnSet",
             "showBorder": true,
+            "style": "emphasis",
             "columns": [
                 {
                     "type": "Column",
                     "width": "stretch",
-                    "style": "accent",
                     "showBorder": true,
+                    "style": "accent",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "New TextBlock",
+                            "text": "This is a **Column** with borders",
                             "wrap": true
                         }
                     ]
@@ -1094,18 +1101,67 @@ The following JSON payload shows an Adaptive Card with a border around columns a
                 {
                     "type": "Column",
                     "width": "stretch",
-                    "style": "good",
                     "showBorder": true,
+                    "style": "good",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "New TextBlock",
+                            "text": "This is another **Column** with borders",
                             "wrap": true
                         }
                     ]
                 }
+            ]
+        },
+        {
+            "type": "Container",
+            "style": "attention",
+            "showBorder": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "This is a **Container** with borders",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Table",
+            "columns": [
+                {
+                    "width": 1
+                },
+                {
+                    "width": 1
+                }
             ],
-            "style": "emphasis"
+            "rows": [
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "This **Table**...",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "...has borders",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
@@ -1136,7 +1192,8 @@ Rounded corners make the card design look more modern and visually appealing, cr
 
 :::row-end:::
 
-You can add rounded corners only to the following elements in an Adaptive Card, and your card needs to contain at least one or more of these elements:
+You can add rounded corners only to the following elements in an Adaptive Card:
+
 * [`Container`](https://adaptivecards.io/explorer/Container.html)
 * [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
 * [`Column`](https://adaptivecards.io/explorer/Column.html)
@@ -1152,27 +1209,33 @@ To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` eleme
 | `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
 | `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
 
-The following JSON payload shows an Adaptive Card with rounded corners around columns, a column set, and an image:
+The following JSON payload shows an Adaptive Card with rounded corners around its elements:
 
 ```json
 {
     "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.5",
     "body": [
         {
+            "type": "TextBlock",
+            "text": "Below is a **ColumnSet** with rounded corners:",
+            "wrap": true
+        },
+        {
             "type": "ColumnSet",
             "roundedCorners": true,
+            "style": "emphasis",
             "columns": [
                 {
                     "type": "Column",
                     "width": "stretch",
-                    "style": "accent",
                     "roundedCorners": true,
+                    "style": "accent",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "New TextBlock",
+                            "text": "This is a **Column** with rounded corners",
                             "wrap": true
                         }
                     ]
@@ -1180,23 +1243,79 @@ The following JSON payload shows an Adaptive Card with rounded corners around co
                 {
                     "type": "Column",
                     "width": "stretch",
-                    "style": "good",
                     "roundedCorners": true,
+                    "style": "good",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "New TextBlock",
+                            "text": "This is another **Column** with rounded corners",
                             "wrap": true
                         }
                     ]
                 }
+            ]
+        },
+        {
+            "type": "Container",
+            "style": "attention",
+            "roundedCorners": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "This is a **Container** with rounded corners",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Table",
+            "roundedCorners": true,
+            "columns": [
+                {
+                    "width": 1
+                },
+                {
+                    "width": 1
+                }
             ],
-            "style": "emphasis"
+            "rows": [
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "This **Table**...",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "...has rounded corners",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "The below **Image** has rounded corners:",
+            "wrap": true
         },
         {
             "type": "Image",
-            "style": "roundedCorners",
-            "url": "https://example.com/example-image.png"
+            "url": "https://media.licdn.com/dms/image/C4E03AQF5uhIghtPzrA/profile-displayphoto-shrink_400_400/0/1517690039090?e=2147483647&v=beta&t=g1DFilNHZhah2fhaTS9ylBxGGGb2XyPA2C7LZptk4QE",
+            "width": "100px",
+            "style": "RoundedCorners"
         }
     ]
 }
