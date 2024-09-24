@@ -3,7 +3,7 @@ title: Introduction to Teams AI Library
 description: Learn about Teams AI library, Teams-centric component scaffolding, natural language modeling, prompt engineering, LLM, action planner, assistants API, augmentation.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-ypalikila
+ms.author: surbhigupta
 author: michaelmaillot
 ms.date: 02/12/2024
 ---
@@ -34,7 +34,7 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
-## Team AI Library features or attributes
+## Teams AI library features
 
 The following are some of the main features available through Teams AI library:
 
@@ -211,7 +211,6 @@ The following table lists the updates to the Teams AI library:
 | Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️ | ✔️ |
 | Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |
 
-
 ## Code samples
 
 | Sample name | Description | .NET | Node.js | Python |
@@ -235,4 +234,4 @@ The following table lists the updates to the Teams AI library:
 
 ## See also
 
-[Copilot handoff](../bots/how-to/conversations/bot-copilot-handoff)
+[Copilot handoff](../conversations/bot-copilot-handoff.md)

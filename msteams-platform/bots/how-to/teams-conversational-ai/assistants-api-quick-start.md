@@ -98,6 +98,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
       SECRET_OPENAI_KEY=<your OpenAI key>
       ASSISTANT_ID=<your Assistant ID>
       ```
+
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
       ```bicep
@@ -153,6 +154,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
             "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
             }
       ```
+
     ---
 
 1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
@@ -178,7 +180,6 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
    :::image type="content" source="../../../assets/images/bots/mathbot-output.png" alt-text="Screenshot shows an example of the mathbot output." lightbox="../../../assets/images/bots/mathbot-output.png":::
 
-
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
@@ -195,4 +196,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Assistants API](teams-conversation-ai-overview.md#assistants-api)
+> [Assistants API](teams-conversation-ai-overview.md#teams-ai-library-features)
