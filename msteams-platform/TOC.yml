@@ -416,7 +416,7 @@
 - name: Build bots
   items:
   - name: Overview
-    href: bots/what-are-bots.md
+    href: bots/overview.md
   - name: Bots and SDKs
     href: bots/bot-features.md
     displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
