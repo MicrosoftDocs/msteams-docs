@@ -67,7 +67,7 @@ After an AI label is added, your bot’s message displays an **AI generated** la
 
 > [!NOTE]
 >
-> The **AI generated** label is available only when you send a new message using `SendActivity`. If you update a message using `UpdateActivity`, **Edited** label is added.
+> The **AI generated** label is available only when you send a new message using `SendActivity`. If you update a message using `UpdateActivity`, the **Edited** label is added.
 
 ### Error handling
 
