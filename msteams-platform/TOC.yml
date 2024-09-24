@@ -413,10 +413,23 @@
   - name: App caching for your tab app
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
-- name: Build bots
+- name: Build bots - Revamp
   items:
   - name: Overview
     href: bots/overview.md
+  - name: Hello Bot
+    items:
+    - name: Get started with bots
+      href: bots/overview.md  
+  - name: Build AI bots
+    items:
+    - name: Teams AI library overview
+      href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
+
+- name: Build bots
+  items:
+  - name: Overview
+    href: bots/what-are-bots.md
   - name: Bots and SDKs
     href: bots/bot-features.md
     displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
