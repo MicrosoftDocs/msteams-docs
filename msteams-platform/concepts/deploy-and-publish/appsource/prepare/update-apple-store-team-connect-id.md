@@ -1,5 +1,5 @@
 ---
-title: Update Apple Developer Program Team ID Team ID on Partner center
+title: Enable App for Teams iOS Platform
 description: Update your Apple Developer Program Team ID in the Microsoft Partner Center to enable end-users to search and acquire your app on the Teams iOS platform.
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -20,6 +20,9 @@ To enable end-users to install your app on the Teams iOS platform, update your A
 1. Go to the offer page and republish your Teams app.
   
 Your Apple Developer Program Team ID is now updated and users can install your app on the Teams iOS platform.
+
+> [!NOTE]
+> Apple Developer Program Team ID is mandatory as per compliance requirement for a Teams app to appear on iOS devices, irrespective of installation origin.
 
 To get Apple Developer Program Team ID from Apple Developer portal, follow these steps:
 

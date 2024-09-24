@@ -1,7 +1,7 @@
 ---
 author: joshuapartlow
 title: Tab app navigation
-description: Learn about options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
+description: Learn about options for navigating between tabs using the Microsoft Teams JavaScript client library (TeamsJS) and how to configure back button navigation.
 ms.date: 05/31/2023
 ms.topic: conceptual
 ms.custom: m365apps
@@ -23,9 +23,9 @@ The [pages](/javascript/api/@microsoft/teams-js/pages) capability of the TeamsJS
 
 The following code illustrates how to navigate to a specific page:
 
-```js
+```typescript
 if (pages.currentApp.isSupported()) {
-    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId:<subPageId>});
+    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId: <subPageId>});
     navPromise.
         then((result) => {/*Successful navigation*/}).
         catch((error) => {/*Failed navigation*/});
@@ -40,7 +40,8 @@ else {/*Handle situation where capability isn't supported*/
 
 The following code illustrates how to navigate to the app's default tab:
 
-```js
+```typescript
+
 if (pages.currentApp.isSupported()) {
     const navPromise = pages.currentApp.navigateToDefaultPage();
     navPromise.
@@ -53,7 +54,7 @@ else {/*Handle situation where capability isn't supported*/}
 > [!NOTE]
 > The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
-Use the [pages.navigateToApp()](/javascript/api/%40microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function or [deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs-library) for tab app navigation.
+Use the [pages.navigateToApp()](/javascript/api/%40microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function or [deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs) for tab app navigation.
 
 ## Configure back button navigation
 

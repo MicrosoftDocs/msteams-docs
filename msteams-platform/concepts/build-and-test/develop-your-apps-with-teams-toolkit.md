@@ -1,6 +1,6 @@
 ---
-title: Develop your apps with Teams Toolkit
-description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Visual Studio Code and Visual Studio.
+title: App Development with Teams Toolkit
+description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Microsoft Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-sdhakshina
@@ -18,7 +18,7 @@ Teams Toolkit scaffolds the necessary files based on the feature and configurati
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can open and launch your project in Visual Studio Code.
+In Teams Developer Portal, you can open and launch your project (React app) in Visual Studio Code.
 
 Following are the steps to open your app in Visual Studio Code:
 

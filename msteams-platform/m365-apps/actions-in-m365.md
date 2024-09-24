@@ -1,10 +1,10 @@
 ---
-title: Actions in Microsoft 365
-description: In this article, learn more about the function of Actions and its use cases. 
+title: Introduction - Actions in Microsoft 365
+description: In this article, learn more about the function of Actions in Microsoft 365, how Actions work, design guidelines, and its use cases. 
 ms.date: 11/16/2023
 ms.author: mosdevdocs
 author: v-bvishnu
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 # Actions in Microsoft 365
@@ -24,7 +24,7 @@ The following graphic is an example of an Action that directs user to view list 
 | --- | --- |
 | 1 | In Microsoft 365, the user right-clicks on the Excel file. A context menu appears.|
 | 2 | The user selects **Related suppliers** to view the list of suppliers for the Northwind company.|
-| 3 | The Northwind page opens with the list of suppliers mentioned in the Excel file. The user saves time by checking the result with a single click on the Excel file without manually opening the file each time.|
+| 3 | The Northwind personal tab opens with the list of suppliers mentioned in the Excel file. The user saves time by checking the result with a single click on the Excel file without manually opening the file each time.|
 
 ## Understand how Actions work
 
@@ -38,7 +38,7 @@ The following table lists the required elements and support information for Acti
 | --- | --- | --- | ---|
 | &nbsp; | Intent | Intent is the objective a user wants to perform or achieve. Intent is typically represented by a verb, such as `Open`, `Add to`, or any other actions that a user intends to perform. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `Add to`, and `custom` Actions. You can use `custom` Action to create a tailored action. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. Object represents the noun or context that defines what the user wants to perform an action on.  | Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and must be accessible through Microsoft Graph. |
-| &nbsp; | Handlers | A handler refers to the method to fulfill the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
+| &nbsp; | Handlers | A handler refers to the method to fulfill the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated personal tab, providing them with a rich and expansive interface to accomplish their goals. |
 
 ## Design guidelines
 

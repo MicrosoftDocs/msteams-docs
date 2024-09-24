@@ -22,7 +22,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 > * App installation is supported only on Teams desktop client.
 > * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
-From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to the Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
+From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
 If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
 
@@ -78,7 +78,7 @@ To access apps through **Manage your apps**, follow the steps:
 
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Screenshot shows the list of scopes where the app is installed.":::
 
-1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view currently.
+1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view.
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
@@ -133,7 +133,6 @@ To remove app from Teams, follow the steps:
 
 ## See also
 
-* [Distribute your Microsoft Teams app](apps-publish-overview.md)
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)

@@ -1,7 +1,7 @@
 ---
-title: Command bot in Teams
+title: Build & Explore Command Bot in Teams
 author: surbhigupta
-description: Learn how a command bot works in Teams, and to add command and responses.
+description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -42,7 +42,7 @@ You need to create `ConversationBot` to respond to the command in a chat. You ca
 
 # [JavaScript/TypeScript](#tab/jsts1)
 
-```js(ts)
+```Javascript / Typescript
 /** JavaScript/TypeScript: src/internal/initialize.js(ts) **/
 const commandApp = new ConversationBot({
   // The bot id and password to create CloudAdapter.

@@ -1,5 +1,5 @@
 ---
-title: Prerequisites
+title: Requirements for Building Tabs
 description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -12,9 +12,16 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Enable discovery of your tab pages in an iFrame by utilizing X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
 
+* Ensure that all Teams app pages are hosted on HTTPS endpoints.
+
 * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
-[!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+  [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+
+  [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
+
+  > [!NOTE]
+  > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
 
 * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
 
@@ -27,7 +34,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, or else your page isn't displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) using script tags. After your page loads, make a call to `app.initialize()`, or else your page isn't displayed.
 
 * For authentication to work on mobile clients, you must upgrade to TeamsJS version 1.4.1 or later.
 
@@ -43,7 +50,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
 | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
@@ -66,4 +73,5 @@ Now let's build your tab. But first select your choice of tab to build:
 * [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
 * [Register your tab app in Microsoft Entra ID](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Grant tab device permission in Teams](../../sbs-tab-device-permissions.yml)
 * [Content Security Policy](/aspnet/core/blazor/security/content-security-policy)

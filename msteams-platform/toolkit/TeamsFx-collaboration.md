@@ -1,14 +1,14 @@
 ---
-title: Collaborate on TeamsFx Project using Teams Toolkit
+title: Collaborate on TeamsFx - Teams Toolkit
 author: surbhigupta
-description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
+description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using Teams Toolkit, remove collaboration, and test app behavior.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on Teams project using Microsoft Teams Toolkit
+# Collaborate on Microsoft Teams project using Microsoft Teams Toolkit
 
 Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
 

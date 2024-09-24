@@ -1,6 +1,6 @@
 ---
 title: Send activity feed notifications
-description: Learn to send activity feed notification to help keep users up to date with changes in the tools and workflows.
+description: Learn how to send and customize activity feed notifications in chat or team, types and use cases of notification cards, and about reversed activity type.
 author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -235,9 +235,9 @@ The following are the benefits and limitations for the `systemDefault` activity 
 
 ## Code sample
 
-| Sample name | Description | .NET |
+| Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|
-|Send activity feed notifications |Sample app demonstrates how to send activity feed notifications using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)|
+|Send activity feed notifications |Sample app demonstrates how to send activity feed notifications using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/nodejs)|
 
 ## Step-by-step guide
 
