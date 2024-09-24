@@ -30,6 +30,7 @@ Let's learn about some common bot elements and how they work together to make a 
 * **Conversation**: This is an interactive exchange between a user and a bot, which can include text or voice messaging. A conversation involves user inputs, the bot's responses, the context of the conversation such as history and state, the intent of the conversation (the user's goal or purpose), and dialog that can be a multi-turn exchange.
 * Dialog:
 * Bot logic:
+* Bot scope:
 
 For more information, see [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
