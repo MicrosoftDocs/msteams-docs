@@ -239,3 +239,8 @@ To enable streaming in bots, follow these steps:
 
 * Ensure no attachments are included during streaming.
 * Maintain only one stream per thread.
+
+## See also
+
+* [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content)
+* [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview)
