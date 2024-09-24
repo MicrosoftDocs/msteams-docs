@@ -1,6 +1,6 @@
 ---
-title: Code configuration for enabling SSO for bots
-description: Describes code configuration for enabling SSO for bots.
+title: Update App Manifest to Enable SSO
+description: Learn how to add code configuration, handle an access token, receive token, and handle app user log out for enabling in Teams bots. Sample (C#, Node.js).
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
@@ -77,7 +77,7 @@ To update your app's code:
     ---
 
     > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest&preserve-view=true#remarks).
 
 1. Use the following code snippet for requesting a token.
 

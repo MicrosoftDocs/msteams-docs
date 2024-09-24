@@ -1,5 +1,5 @@
 ---
-title: Add Power Virtual Agents chatbot
+title: Publish Power Virtual Agents Chatbot
 author: surbhigupta
 description: Learn to integrate a Power Virtual Agents chatbot in the Teams platform to create conversational chatbots and to integrate it with Teams
 ms.topic: how-to
@@ -97,7 +97,6 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 * [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-* [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Security and compliance in Microsoft Teams](/microsoftteams/security-compliance-overview)
 * [Human resources Power Virtual Agents bot](/power-virtual-agents/teams/fundamentals-get-started-teams)
 * [Add a chatbot to Microsoft Teams from within the Teams app](/power-virtual-agents/teams/publication-add-bot-to-microsoft-teams-teams)

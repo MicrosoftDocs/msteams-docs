@@ -1,6 +1,6 @@
 ---
-title: Search with message extensions
-description: In this article, you learn how to develop search based message extensions
+title: Build Search-based Message Extensions
+description: Learn how to create search based message extensions for Microsoft Teams using v3 Bot Framework SDK, handle queries, event handlers, authentication, and SDK support.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
@@ -122,7 +122,7 @@ In addition to the standard bot activity properties, the payload contains the fo
 |Property name|Purpose|
 |---|---|
 |`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`name`| Type of command that is issued to your service. The following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
@@ -223,7 +223,7 @@ Once you've added the domain to listen on to the app manifest, you need to chang
 }
 ```
 
-If your app returns multiple items, only the first will be used.
+If your app returns multiple items, only the first is used.
 
 ### Respond to user requests
 
@@ -235,8 +235,8 @@ Your service should respond with the results matching the user query. The respon
 |---|---|
 |`composeExtension`|Top-level response envelope.|
 |`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: Prompts the user to authenticate <br>`config`: Prompts the user to set up the message extension <br>`message`: displays a plain text message |
-|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
-|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>The following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>The following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 

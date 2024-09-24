@@ -4,6 +4,8 @@ Microsoft Teams is a cloud-based communications platform that combines different
 
 Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps. See [Microsoft Teams developer documentation](https://learn.microsoft.com/microsoftteams/platform/mstdd-landing/).
 
+You can check out [Platform Annoucement](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements).
+
 ## How to contribute
 
 Microsoft Teams documentation is part of the Microsoft Learn technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. You can ask questions, provide suggestion, or provide updates. See [how to contribute to Teams documentation](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).

@@ -1,7 +1,7 @@
 ---
-title: Build API-based message extension
+title: API-based Message Extension Guidelines
 author: v-ypalikila
-description: Learn about the requirements and troubleshooting guidelines for an API-based message extension.
+description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication, register an API key, and schema mapping.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -632,7 +632,6 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
-* The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:

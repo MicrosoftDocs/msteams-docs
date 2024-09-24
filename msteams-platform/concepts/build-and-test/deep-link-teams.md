@@ -1,7 +1,7 @@
 ---
 title: Deep link to a Teams chat
 author: v-npaladugu
-description:  Learn how to create deep links to a teams chat and navigate using them in Microsoft Teams.
+description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ To use this deep link with your bot, specify the deep link as the URL target in 
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. The User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
@@ -164,7 +164,7 @@ Use the following deep link format can be used in a bot, connector, or message e
 
 The query parameters are:
 
-* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc` or `sharepointIds.listItemUniqueId` from Sharepoint Online `driveItem` API response. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID, such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.

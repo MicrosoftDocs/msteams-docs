@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams tabs
-description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Microsoft Teams JavaScript client library (TeamsJS). It includes code samples.
+description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 02/22/2023
@@ -74,12 +74,7 @@ You can invoke either an HTML or Adaptive Card dialog from a tab.
 
 The value of `UrlDialogInfo.url` is set to the location of the content of your dialog. The dialog window opens and `UrlDialogInfo.url` is loaded as an `<iframe>` inside it. JavaScript in the dialog page calls `microsoftTeams.app.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.dialog.url.open()`, then `submitHandler` is invoked with `err` set to the error string indicating the same.
 
-> [!WARNING]
-> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the *cloud.microsoft* domain. Perform the following steps before June 2024 to ensure your app continues to render on the Teams web client:
->
-> 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
->
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ***teams.cloud.microsoft*** domain. If your Teams app extends across Outlook and Microsoft 365, ensure you allow your app to access ***teams.cloud.microsoft***, ***outlook.cloud.microsoft***, and ***m365.cloud.microsoft*** domains.
+[!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
 ### Adaptive Card dialog
 
@@ -160,7 +155,7 @@ If there's no invocation error and the user doesn't select **X** to dismiss the 
 
 After validating user input, call `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to close the dialog, or you can pass an object or string `result` back to your app as the first parameter, and an `appId` of the app that opened the dialog as the second parameter. If you call `submit()` with a `result` parameter, you must pass an `appId` (or an array of `appId` strings of apps authorized to receive the result of the dialog). This action enables Teams to validate that the app sending the result is the same as the invoked dialog.
 
-Teams will then invoke your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
+Teams then invokes your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
 
 ### Adaptive Card dialogs
 

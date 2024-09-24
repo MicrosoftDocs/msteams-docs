@@ -1,6 +1,6 @@
 ---
 title: Include a SaaS offer with your app
-description: Learn to monetize your Microsoft Teams app by selling subscription plans directly from your Microsoft Teams Store listing. Understand publish app, end-user, admin purchase experience. 
+description: Learn to monetize your Teams app by selling subscription plans directly from your Teams Store listing. Understand publish app, end-user, admin purchase experience. 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -69,7 +69,7 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 
 ## Build a landing page for subscription management
 
-When someone finishes buying a subscription plan for your app in the Teams Store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
+When someone finishes buying a subscription plan for your app in the Teams Store, the commercial marketplace directs them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
 
@@ -156,7 +156,7 @@ You’ve created your SaaS offer and linked it to your Teams app—now it's time
 > * Even if your app is already listed on the Teams Store, you still must go through the Teams Store validation process again to include your SaaS offer.
 > * Flat rate offers created without the Offer ID and Publisher ID in the app manifest should be updated and resubmitted for validation.
 
-Once published, users will see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
+Once published, users see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
 ## Remove a SaaS offer from your app
 
@@ -177,7 +177,5 @@ If you unlink a SaaS offer included in your Teams Store listing, you must republ
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
-* [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
 * [Microsoft commercial marketplace](/partner-center/marketplace/overview)

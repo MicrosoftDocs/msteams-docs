@@ -33,7 +33,7 @@ The following table provides the features and description of Outgoing Webhooks:
 | Features | Description |
 | ------- | ----------- |
 | Scoped configuration| Webhooks are scoped at the team level. Mandatory setup process for each adds an Outgoing Webhook. |
-| Reactive messaging| Users must use **@mention** for the webhook to receive messages. Currently, users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
+| Reactive messaging| Users must use **@mention** for the webhook to receive messages. The users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
 | Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They can't access any other APIs, such as retrieve the roster or list of channels in a team.|
 
@@ -65,7 +65,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
     * **Description**: A detailed string that appears in the profile card and the team-level app dashboard.
     * **Profile picture**: An app icon for your webhook, which is optional.
 
-1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
+1. Select **Create**. The Outgoing Webhook is added to the team's channel.
 
     :::image type="content" source="../../assets/images/create-outgoingwebhook.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
 
