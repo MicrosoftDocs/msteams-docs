@@ -15,17 +15,17 @@ A bot is a software application that performs automated tasks by interacting wit
 
 You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education,finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
 
-[TBD: More details to follow]
+[**TBD**: More details to follow]
 
 ## Bot user experience in Teams
 
 The app users access and use your bot app within Teams.
 
-[TBD: Bot UX infographic or gif]
+[**TBD**: Bot UX infographic or gif]
 
 ## Bot solution with Teams
 
-[TBD: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
+[**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
 1. Use any one of the following ways to build a bot for Teams:
@@ -48,7 +48,7 @@ You may be just delving into bot apps or bringing your existing bots up to suppo
 
 Let's begin to learn, automate, and innovate with bots.
 
-The following table [TBD: clickable browse path] guides you through building a bot app:
+The following table [**TBD**: Clickable browse path] guides you through building a bot app:
 
 | If you want to... | Here's your path |
 | --- | --- |
@@ -56,3 +56,7 @@ The following table [TBD: clickable browse path] guides you through building a b
 | Configure a basic bot | [Introduction to activity handler, events] <br> [Bot logic] <br> [Manifest configuration] <br> [SBS guides for TTK apps or TTK sample apps + Code samples for Bot SDK for interactive messages, send and receive files, fetching team or chat members, rate limiting, etc.] |
 | Configure an AI bot | [AI concepts and capabilities] <br> [Build basic AI bot (custom engine agent)] <br> [Get started] <br> [Bot logic for an AI bot] <br> [Copilot handoff] |
 | Explore advanced bot features | [SSO] <br> [Access data with MS Graph] <br> [Bot on Mobile] <br> [Build call and media bots] |
+
+## Next step
+
+## See also
