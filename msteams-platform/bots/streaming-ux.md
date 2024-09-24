@@ -242,5 +242,5 @@ To enable streaming in bots, follow these steps:
 
 ## See also
 
-* [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content)
-* [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview)
+* [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
+* [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
