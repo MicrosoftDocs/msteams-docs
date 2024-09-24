@@ -420,7 +420,7 @@
   - name: Hello Bot
     items:
     - name: Get started with bots
-      href: bots/overview.md  
+      href: bots/get-started-bots.md  
   - name: Build AI bots
     items:
     - name: Teams AI library overview
