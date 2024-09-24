@@ -31,7 +31,7 @@ Let's learn about some common bot elements and how they work together to make a 
 * Dialog:
 * Bot logic:
 
-For more information, see [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp).
+For more information, see [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Explore bot capabilities
 
