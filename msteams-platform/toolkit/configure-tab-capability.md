@@ -18,7 +18,6 @@ Ensure the following prerequisites are met to configure a tab in Teams app:
 
 * The app manifest file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
 
 > [!Tip]
 > Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
@@ -48,19 +47,8 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
              "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
              "scopes": [
                  "personal"
-             ]
-         }
-     ],
-   ```
-
-   ```JSON
-     "configurableTabs": [
-         {
-             "configurationUrl": "${{TAB_ENDPOINT}}/index.html#/config",
-             "canUpdateConfiguration": true,
-             "scopes": [
-                 "team",
-                 "groupchat"
+                 "groupChat",
+                 "team"
              ]
          }
      ],
@@ -225,35 +213,34 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
 
 If you prefer to develop a server-side tab app, you don't need to update your bicep files or Azure infrastructure. Your tab app can be hosted in the same Azure App Service as your bot.
 
-1. To provision an Azure Storage Account for your tab app, add the following code snippet to your bicep file:
+1. To provision an Azure static web for your tab app, add the following code to your bicep file:
 
    ```json
    @maxLength(20)
    @minLength(4)
    param resourceBaseName string
    param storageSku string
-   param storageName string = resourceBaseName
-   param location string = resourceGroup().location
-
-   // Azure Storage that hosts your static web site
-   resource storage 'Microsoft.Storage/storageAccounts@2021-06-01' = {
-     kind: 'StorageV2'
-     location: location
-     name: storageName
-     properties: {
-       supportsHttpsTrafficOnly: true
-     }
+   param staticWebAppName string = resourceBaseName
+    
+   // Azure Static Web Apps that hosts your static web site
+   resource swa 'Microsoft.Web/staticSites@2022-09-01' = {
+     name: staticWebAppName
+     // SWA do not need location setting
+     location: 'centralus'
      sku: {
-       name: storageSku
+       name: staticWebAppSku
+       tier: staticWebAppSku
      }
+     properties: {}
    }
-   var siteDomain = replace(replace(storage.properties.primaryEndpoints.web, 'https://',''), '/', '')
-   output TAB_AZURE_STORAGE_RESOURCE_ID string = storage.id // used in deploy stage
+   var siteDomain = swa.properties.defaultHostname
+   
+   output AZURE_STATIC_WEB_APPS_RESOURCE_ID string = swa.id
    output TAB_DOMAIN string = siteDomain
    output TAB_ENDPOINT string = 'https://${siteDomain}'
    ```
 
-1. Update the `azure.parameters.json` file to ensure that necessary parameters are set correctly. For example:
+1. Update the `azure.parameters.json` file to ensure that necessary parameters are set correctly.
 
    ```json
    {
@@ -264,24 +251,36 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
          "value": "helloworld${{RESOURCE_SUFFIX}}"
        },
        "storageSku": {
-         "value": "Standard_LRS"
+         "value": "Free"
        },
      }
    }
    ```
 
-1. To host your tab app in Azure Storage, you need to enable the static website feature for the storage account. Add the following action to your `teamsapp.yml` file:
+1. To host your tab app in Azure static web apps and add the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file:
+
+    > [!NOTE]
+    >
+    > The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
 
    ```json
-   provision:
-     - uses: azureStorage/enableStaticWebsite
-       with:
-         storageResourceId: ${{TAB_AZURE_STORAGE_RESOURCE_ID}}
-         indexPage: index.html
-         errorPage: error.html
+    provision:
+      ...
+      - uses: arm/deploy
+        ...
+      # Add this action
+      - uses: azureStaticWebApps/getDeploymentToken
+        with:
+          resourceId: ${{AZURE_STATIC_WEB_APPS_RESOURCE_ID}}
+          writeToEnvironmentFile:
+            deploymentToken: SECRET_TAB_SWA_DEPLOYMENT_TOKEN
+      ...
    ```
 
-1. Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
+1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
+
+1. Enter `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
+
 1. To automate build and deployment of your tab app, add the following `build` and `deploy` actions to your `teamsapp.yml` file:
 
    ```json
@@ -294,13 +293,10 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
          args: run build
          workingDirectory: ./tab
      # Deploy bits to Azure Storage Static Website
-     - uses: azureStorage/deploy
-       with:
-         workingDirectory: tab
-         # Deploy base folder
-         artifactFolder: build
-         # The resource id of the cloud resource to be deployed to. This key will be generated by arm/deploy action automatically. You can replace it with your existing Azure Resource id or add it to your environment variable file.
-         resourceId: ${{TAB_AZURE_STORAGE_RESOURCE_ID}}
+    - uses: cli/runNpxCommand
+        name: deploy to Azure Static Web Apps
+        with:
+          args: '@azure/static-web-apps-cli deploy ./build -d ${{SECRET_TAB_SWA_DEPLOYMENT_TOKEN}} --env production'
    ```
 
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
