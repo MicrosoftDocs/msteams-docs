@@ -631,7 +631,7 @@ To install the Microsoft Teams Toolkit extension:
 
 1. Select **Install**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option ASP.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
     Your Visual Studio is installed in a few minutes.
 
@@ -643,7 +643,7 @@ To install the TeamsFx CLI, use the `npm` package manager:
 npm install -g @microsoft/teamsfx-cli
 ```
 
-Depending on your configuration, you may need to use `sudo` to install the CLI:
+Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
@@ -752,7 +752,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
+      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on the project's name.
 
    1. Select the folder path where you want to create the project workspace.
 
@@ -1031,7 +1031,7 @@ Following is an example of app manifest where a static tab is defined that works
 
 ```
 
-If a context isn't defined in the app manifest, by default Teams consider the following context:
+If a context isn't defined in app manifest, Teams considers the following context by default:
 
 ```json
 "context": [ 
@@ -1062,12 +1062,12 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 > [!NOTE]
 > Personal tabs with offline functionality aren't supported in the Teams iOS client.
 
-You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining consistency in data across the organization.
+You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining data consistency across the organization.
 
 Creating a personal tab with offline functionality has the following advantages:
 
-* **Accessibility**: You can access important information, documents, or tools without needing an internet connection, making it easier to work from remote areas or during travel.
-* **Seamless sync**: Any changes made offline automatically sync once you’re back online. This ensures that your work is up-to-date without manual effort.
+* **Accessibility**: Users can access important information, documents, or tools without needing an internet connection, making it easier to work from remote areas or while traveling.
+* **Seamless sync**: Any changes made offline automatically sync once users are back online, ensuring that their work is up-to-date without manual effort.
 
 # [Desktop](#tab/desktop)
 
@@ -1106,7 +1106,6 @@ Creating a personal tab with offline functionality has the following advantages:
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
-* [Create a channel tab or group tab](create-channel-group-tab.md)
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
