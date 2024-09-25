@@ -425,7 +425,20 @@
     items:
     - name: Teams AI library overview
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-
+    - name: Get started
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+    - name: Quick start guide
+      href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+    - name: Core capabilities
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+    - name: Build custom engine agent
+      items: 
+      - name: Custom engine agent for Microsoft 365 
+        href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
+      - name: Build custom engine agent using Teams Toolkit 
+        href: Teams-AI-library-tutorial.yml
+    - name: Teams AI library FAQs
+      href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md  
 - name: Build bots
   items:
   - name: Overview
