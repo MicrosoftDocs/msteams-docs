@@ -97,6 +97,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
       ```text
        SECRET_OPENAI_KEY=<your OpenAI key>
       ```
+
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
       ```bicep
@@ -152,6 +153,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
             "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
             }
            ```
+
     ---
 
 1. From the left pane, select **Teams Toolkit**.
@@ -414,4 +416,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library FAQ](coversational-ai-faq.md)
+> [Get started with Teams AI library](how-conversation-ai-get-started.md)

@@ -230,7 +230,7 @@ The following table lists the updates to the Teams AI library:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
+> [Teams AI library quick start guide](conversation-ai-quick-start.md)
 
 ## See also
 

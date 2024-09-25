@@ -803,4 +803,4 @@ A feedback loop consists of the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library quick start guide](conversation-ai-quick-start.md)
+> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
