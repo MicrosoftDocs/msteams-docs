@@ -1,16 +1,17 @@
 ---
 title: Use Teams Platform to Build Apps 
 author: heath-hamilton
-description: Learn about Teams platform capabilities such as tabs, bots, message extensions, webhooks, connectors, Microsoft Graph, Adaptive Cards, and Copilot plugins.
+description: Learn about Teams platform capabilities such as tabs, bots, message extensions, webhooks, connectors, Microsoft Graph, Adaptive Card, and Copilot extensibility.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 09/23/2024
 ---
+
 # Explore Teams platform features
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Graphic shows the conceptual representation of Teams as a platform and its capabilities."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Graphic shows the conceptual representation of Teams as a platform and its capabilities." lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
 ## Teams app features
 
@@ -33,7 +34,7 @@ For more information about how to extend Microsoft 365 Copilot, see [Microsoft 3
 
 If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
 
-:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest."lightbox="assets/images/overview/app-manifest.png":::
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest." lightbox="assets/images/overview/app-manifest.png":::
 
 ## Next step
 
