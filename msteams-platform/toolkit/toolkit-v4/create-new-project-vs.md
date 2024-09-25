@@ -1,7 +1,7 @@
 ---
 title: Create Teams App with Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit.
+description: Learn how to create Teams app in Visual Studio using templates, its prerequisites, directory structure, and teams app template available in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -78,8 +78,7 @@ To create a new Teams app, follow the steps:
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
-The steps to create the other apps are similar except notification bot. 
-
+The steps to create the other apps are similar except notification bot.
 
 ### Directory Structure
 
@@ -103,14 +102,14 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
 |**Workflow Bot**     |You can interact with the bot using automate repetitive workflow action.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables SSO using Teams account.         |
-|**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching Nugget packages, or unfurling links for the `dev.botframework.com` domain.         |
+|**Message Extension**     |The message extension app implements simple features such as creating an Adaptive Card, searching NuGet packages, or unfurling links for the `dev.botframework.com` domain.         |
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
-* [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-v4.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments-v4.md)
+* [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-vs.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments-vs.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
-* [Deploy Teams app to the cloud using Visual Studio][Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio](deploy-vs.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-vs.md)
