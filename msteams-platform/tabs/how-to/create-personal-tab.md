@@ -1044,7 +1044,7 @@ If a context isn't defined in app manifest, Teams considers the following contex
 ]
 ```
 
-## Customize your static tab in chats or meetings
+## Customizing your static tab in chats or meetings
 
 To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
 
