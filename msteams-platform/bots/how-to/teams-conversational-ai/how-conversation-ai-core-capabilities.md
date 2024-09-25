@@ -894,4 +894,4 @@ async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build a custom engine agent](Teams-AI-library-tutorial.yml)
+> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)

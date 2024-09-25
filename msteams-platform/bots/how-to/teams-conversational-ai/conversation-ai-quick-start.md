@@ -5,7 +5,7 @@ description: In this module, learn how to quickly try the Teams AI library using
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 12/06/2022
 ---
 
