@@ -1039,14 +1039,14 @@
         displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
-    - name: App manifest schema
+    - name: App manifest
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest schema
+        - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Integrate with Teams
