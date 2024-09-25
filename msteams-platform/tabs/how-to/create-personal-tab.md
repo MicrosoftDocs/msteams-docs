@@ -1044,7 +1044,7 @@ If a context isn't defined in app manifest, Teams considers the following contex
 ]
 ```
 
-## Customizing your static tab in chats or meetings
+## Customize your static tab in chats or meetings
 
 To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
 
@@ -1057,7 +1057,7 @@ pages.config.setConfig({
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
-## Configure offline functionality
+## Offline tabs
 
 > [!NOTE]
 > Personal tabs with offline functionality are only supported in the Teams Android client.
