@@ -352,7 +352,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-The `theme` argument in the function is a string with a value of `default`, `dark`, `glass`, or `contrast`.  The [AppInfo](/javascript/api/%40microsoft/teams-js/app.appinfo?branch=main&view=msteams-client-js-latest#@microsoft-teams-js-app-appinfo-theme&preserve-view=true) property in the getContext API supports the `glass` theme for Teams running on Apple Vision Pro devices.
+The `theme` argument in the function is a string with a value of `default`, `dark`, `glass`, or `contrast`. The [AppInfo](/javascript/api/%40microsoft/teams-js/app.appinfo?branch=main&view=msteams-client-js-latest#@microsoft-teams-js-app-appinfo-theme&preserve-view=true) property in the getContext API supports the `glass` theme for Teams running on Apple Vision Pro devices.
 
 # [Default](#tab/default)
 
