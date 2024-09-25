@@ -1062,7 +1062,7 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 > [!NOTE]
 > Personal tabs with offline functionality aren't supported in the Teams iOS client.
 
-You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining consistency in data across the organization.
+You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining consistency in data across the organization.
 
 Creating a personal tab with offline functionality has the following advantages:
 
@@ -1085,7 +1085,7 @@ Creating a personal tab with offline functionality has the following advantages:
 
 1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository with Git.
 
-1. In the repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
+1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
 1. Open **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
 
