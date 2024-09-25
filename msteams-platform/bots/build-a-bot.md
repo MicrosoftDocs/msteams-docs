@@ -36,7 +36,7 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
   * [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)
   * [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)
 
-* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml)
+* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml).
 
 ## Next step
 
