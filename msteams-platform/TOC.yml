@@ -425,11 +425,11 @@
     items:
     - name: Teams AI library overview
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-    - name: Get started
-      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
     - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-    - name: Core capabilities
+    - name: Get started
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md    
+    - name: Build core capabilities
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
     - name: Build custom engine agent
       items: 

@@ -593,7 +593,7 @@ Teams AI library supports the following activity handlers:
 
 In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
 
-## Send or receive message
+### Send or receive message
 
 You can send and receive messages using the Bot Framework. The app listens for the user to send a message, and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
 
@@ -652,7 +652,7 @@ async def on_message(context: TurnContext, _state: TurnState):
 
 ---
 
-## Message extensions
+### Message extensions
 
 In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of HeroCards displaying package information. The result is used to display the search results in the messaging extension.
 
@@ -800,7 +800,7 @@ async def search_command(
 
 ---
 
-## Adaptive Cards capabilities
+### Adaptive Cards capabilities
 
 You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card, submit buttons on the Adaptive Cards.
 
