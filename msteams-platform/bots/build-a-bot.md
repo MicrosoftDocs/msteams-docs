@@ -29,11 +29,15 @@ To achieve these functionalities, you would need to integrate the bot app with A
 
 Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
 
-* To use Teams Toolkit to build conversational bot, see [Create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+* To use Teams Toolkit to build conversational bot, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 * To use Bot Framework SDK V4, see one of the following code samples:
 
   * [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)
   * [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)
   * [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)
 
-* To build an AI bot, see [Build a custom engine agent](../Teams-AI-library-tutorial.yml)
+* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml)
+
+## Next step
+
+## See also
