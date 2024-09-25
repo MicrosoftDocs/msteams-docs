@@ -15,315 +15,9 @@ Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Tea
 
 Teams AI library supports the following capabilities:
 
-* [Send or receive message](#send-or-receive-message)
-
-* [Message extension (ME) capabilities](#message-extensions)
-
-* [Adaptive Cards capabilities](#adaptive-cards-capabilities)
-
- You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
-
-In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
-
-## Send or receive message
-
-You can send and receive messages using the Bot Framework. The app listens for the user to send a message, and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
-
-# [.NET](#tab/dotnet6)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
-
-```csharp
- // Listen for user to say "/reset" and then delete conversation state
-    app.OnMessage("/reset", ActivityHandlers.ResetMessageHandler);
-
-    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
-    app.OnActivity(ActivityTypes.Message, ActivityHandlers.MessageHandler);
-
-    return app;
-```
-
-# [JavaScript](#tab/javascript6)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.getting-started/a.echoBot/src/index.ts#L74)
-
-```typescript
-// Listen for user to say '/reset' and then delete conversation state
-app.message('/reset', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.deleteConversationState();
-    await context.sendActivity(`Ok I've deleted the current conversation state.`);
-});
-
-// Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
-app.activity(ActivityTypes.Message, async (context: TurnContext, state: ApplicationTurnState) => {
-    // Increment count state
-    let count = state.conversation.count ?? 0;
-    state.conversation.count = ++count;
-
-    // Echo back users request
-    await context.sendActivity(`[${count}] you said: ${context.activity.text}`);
-});
-```
-
-# [Python](#tab/python6)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/01.messaging.a.echoBot/src/bot.py#L25)
-
-```python
-@app.activity("message")
-async def on_message(context: TurnContext, _state: TurnState):
-    await context.send_activity(f"you said: {context.activity.text}")
-    return True
-```
-
----
-
-## Message extensions
-
-In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of HeroCards displaying package information. The result is used to display the search results in the messaging extension.
-
-# [.NET](#tab/dotnet5)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
-
-* [Search results reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
-
-```csharp
-// Listen for search actions
-    app.MessageExtensions.OnQuery("searchCmd", activityHandlers.QueryHandler);
-    // Listen for item tap
-    app.MessageExtensions.OnSelectItem(activityHandlers.SelectItemHandler);
-
-    return app;
-
- // Format search results in ActivityHandlers.cs
-
-            List<MessagingExtensionAttachment> attachments = packages.Select(package => new MessagingExtensionAttachment
-            {
-                ContentType = HeroCard.ContentType,
-                Content = new HeroCard
-                {
-                    Title = package.Id,
-                    Text = package.Description
-                },
-                Preview = new HeroCard
-                {
-                    Title = package.Id,
-                    Text = package.Description,
-                    Tap = new CardAction
-                    {
-                        Type = "invoke",
-                        Value = package
-                    }
-                }.ToAttachment()
-            }).ToList();
-
-            // Return results as a list
-
-            return new MessagingExtensionResult
-            {
-                Type = "result",
-                AttachmentLayout = "list",
-                Attachments = attachments
-            };
-
-```
-
-# [JavaScript](#tab/javascript5)
-
-Now, the app class has `messageExtensions` features to simplify creating the handlers:
-
-* `context`: `TurnContext`
-* `state`: `TurnState`
-* `query`: The data passed from message extension interaction
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L79)
-
-```javascript
-import { MessagingExtensionAttachment } from "botbuilder";
-import axios from 'axios';
-import { Application } from `@microsoft/teams-ai`;
-
-// Listen for search actions
-app.messageExtensions.query('searchCmd', async (context: TurnContext, state: TurnState, query) => {
-    const searchQuery = query.parameters.queryText ?? '';
-    const count = query.count ?? 10;
-    const response = await axios.get(
-        `http://registry.npmjs.com/-/v1/search?${new URLSearchParams({
-            size: count.toString(),
-            text: searchQuery
-        }).toString()}`
-    );
-
-    // Format search results
-    const results: MessagingExtensionAttachment[] = [];
-    response?.data?.objects?.forEach((obj: any) => results.push(createNpmSearchResultCard(obj.package)));
-
-    // Return results as a list
-    return {
-        attachmentLayout: 'list',
-        attachments: results,
-        type: 'result'
-    };
-});
-```
-
-Similarly, `selectItem` listener would be set up as:
-
-```typescript
-app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, item) => {
-    // Generate detailed result
-    const card = createNpmPackageCard(item);
-
-    // Return results
-    return {
-        attachmentLayout: 'list',
-        attachments: [card],
-        type: 'result'
-    };
-});
-```
-
-# [Python](#tab/python5)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
-
-```python
-@app.message_extensions.query("searchCmd")
-async def search_command(
-    _context: TurnContext, _state: AppTurnState, query: MessagingExtensionQuery
-) -> MessagingExtensionResult:
-    query_dict = query.as_dict()
-    search_query = ""
-    if query_dict["parameters"] is not None and len(query_dict["parameters"]) > 0:
-        for parameter in query_dict["parameters"]:
-            if parameter["name"] == "queryText":
-                search_query = parameter["value"]
-                break
-    count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
-    url = "http://registry.npmjs.com/-/v1/search?"
-    params = {"size": count, "text": search_query}
-
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url, params=params) as response:
-            res = await response.json()
-
-            results: List[MessagingExtensionAttachment] = []
-
-            for obj in res["objects"]:
-                results.append(create_npm_search_result_card(result=obj["package"]))
-
-            return MessagingExtensionResult(
-                attachment_layout="list", attachments=results, type="result"
-            )
-```
-
----
-
-## Adaptive Cards capabilities
-
-You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card, submit buttons on the Adaptive Cards.
-
-# [.NET](#tab/dotnet4)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
-
-```csharp
-// Listen for messages that trigger returning an adaptive card
-    app.OnMessage(new Regex(@"static", RegexOptions.IgnoreCase), activityHandlers.StaticMessageHandler);
-    app.OnMessage(new Regex(@"dynamic", RegexOptions.IgnoreCase), activityHandlers.DynamicMessageHandler);
-
-    // Listen for query from dynamic search card
-    app.AdaptiveCards.OnSearch("nugetpackages", activityHandlers.SearchHandler);
-    // Listen for submit buttons
-    app.AdaptiveCards.OnActionSubmit("StaticSubmit", activityHandlers.StaticSubmitHandler);
-    app.AdaptiveCards.OnActionSubmit("DynamicSubmit", activityHandlers.DynamicSubmitHandler);
-
-    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER HANDLERS
-    app.OnActivity(ActivityTypes.Message, activityHandlers.MessageHandler);
-
-    return app;
-```
-
-# [JavaScript](#tab/javascript4)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
-
-```javascript
-// Listen for messages that trigger returning an adaptive card
-app.message(/dynamic/i, async (context, _state) => {
-    const attachment = createDynamicSearchCard();
-    await context.sendActivity({ attachments: [attachment] });
-});
-
-app.message(/static/i, async (context, _state) => {
-    const attachment = createStaticSearchCard();
-    await context.sendActivity({ attachments: [attachment] });
-});
-
-// Listener for action.submit on cards from the user
-
-interface SubmitData {
-    choiceSelect?: string;
-}
-
-// Listen for submit buttons
-app.adaptiveCards.actionSubmit('DynamicSubmit', async (context, _state, data: SubmitData) => {
-    await context.sendActivity(`Dynamically selected option is: ${data.choiceSelect}`);
-});
-
-app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: SubmitData) => {
-    await context.sendActivity(`Statically selected option is: ${data.choiceSelect}`);
-});
-```
-
-# [Python](#tab/python4)
-
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)
-
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/03.adaptiveCards.a.typeAheadBot/src/bot.py#L39C1-L78C1)
-
-```python
-@app.message(re.compile(r"static", re.IGNORECASE))
-async def static_card(context: TurnContext, _state: AppTurnState) -> bool:
-    attachment = create_static_search_card()
-    await context.send_activity(Activity(attachments=[attachment]))
-    return True
-
-@app.adaptive_cards.action_submit("StaticSubmit")
-async def on_static_submit(context: TurnContext, _state: AppTurnState, data) -> None:
-    await context.send_activity(f'Statically selected option is: {data["choiceSelect"]}')
-
-@app.adaptive_cards.action_submit("DynamicSubmit")
-async def on_dynamic_submit(context: TurnContext, _state: AppTurnState, data) -> None:
-    await context.send_activity(f'Dynamically selected option is: {data["choiceSelect"]}')
-
-@app.message(re.compile(r"dynamic", re.IGNORECASE))
-async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
-    attachment = create_dynamic_search_card()
-    await context.send_activity(Activity(attachments=[attachment]))
-    return True
-```
-
----
-
-## Core capabilities
+* [Bot logic for handling an action](#bot-logic-for-handling-an-action)
+* [Intents to action](#intents-to-actions)
+* [Activity handlers](#activity-handlers)
 
 ## Bot logic for handling an action
 
@@ -881,6 +575,318 @@ async def on_remove_items(
                 items.remove(item)
         state.conversation.lists[parameters.list] = items
     return "items removed. think about your next action"
+```
+
+---
+
+## Activity handlers
+
+Teams AI library supports the following activity handlers:
+
+* [Send or receive message](#send-or-receive-message)
+
+* [Message extension (ME) capabilities](#message-extensions)
+
+* [Adaptive Cards capabilities](#adaptive-cards-capabilities)
+
+ You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
+
+In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
+
+## Send or receive message
+
+You can send and receive messages using the Bot Framework. The app listens for the user to send a message, and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
+
+# [.NET](#tab/dotnet6)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
+
+```csharp
+ // Listen for user to say "/reset" and then delete conversation state
+    app.OnMessage("/reset", ActivityHandlers.ResetMessageHandler);
+
+    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
+    app.OnActivity(ActivityTypes.Message, ActivityHandlers.MessageHandler);
+
+    return app;
+```
+
+# [JavaScript](#tab/javascript6)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.getting-started/a.echoBot/src/index.ts#L74)
+
+```typescript
+// Listen for user to say '/reset' and then delete conversation state
+app.message('/reset', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.deleteConversationState();
+    await context.sendActivity(`Ok I've deleted the current conversation state.`);
+});
+
+// Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
+app.activity(ActivityTypes.Message, async (context: TurnContext, state: ApplicationTurnState) => {
+    // Increment count state
+    let count = state.conversation.count ?? 0;
+    state.conversation.count = ++count;
+
+    // Echo back users request
+    await context.sendActivity(`[${count}] you said: ${context.activity.text}`);
+});
+```
+
+# [Python](#tab/python6)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/01.messaging.a.echoBot/src/bot.py#L25)
+
+```python
+@app.activity("message")
+async def on_message(context: TurnContext, _state: TurnState):
+    await context.send_activity(f"you said: {context.activity.text}")
+    return True
+```
+
+---
+
+## Message extensions
+
+In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of HeroCards displaying package information. The result is used to display the search results in the messaging extension.
+
+# [.NET](#tab/dotnet5)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
+
+* [Search results reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+
+```csharp
+// Listen for search actions
+    app.MessageExtensions.OnQuery("searchCmd", activityHandlers.QueryHandler);
+    // Listen for item tap
+    app.MessageExtensions.OnSelectItem(activityHandlers.SelectItemHandler);
+
+    return app;
+
+ // Format search results in ActivityHandlers.cs
+
+            List<MessagingExtensionAttachment> attachments = packages.Select(package => new MessagingExtensionAttachment
+            {
+                ContentType = HeroCard.ContentType,
+                Content = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description
+                },
+                Preview = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description,
+                    Tap = new CardAction
+                    {
+                        Type = "invoke",
+                        Value = package
+                    }
+                }.ToAttachment()
+            }).ToList();
+
+            // Return results as a list
+
+            return new MessagingExtensionResult
+            {
+                Type = "result",
+                AttachmentLayout = "list",
+                Attachments = attachments
+            };
+
+```
+
+# [JavaScript](#tab/javascript5)
+
+Now, the app class has `messageExtensions` features to simplify creating the handlers:
+
+* `context`: `TurnContext`
+* `state`: `TurnState`
+* `query`: The data passed from message extension interaction
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L79)
+
+```javascript
+import { MessagingExtensionAttachment } from "botbuilder";
+import axios from 'axios';
+import { Application } from `@microsoft/teams-ai`;
+
+// Listen for search actions
+app.messageExtensions.query('searchCmd', async (context: TurnContext, state: TurnState, query) => {
+    const searchQuery = query.parameters.queryText ?? '';
+    const count = query.count ?? 10;
+    const response = await axios.get(
+        `http://registry.npmjs.com/-/v1/search?${new URLSearchParams({
+            size: count.toString(),
+            text: searchQuery
+        }).toString()}`
+    );
+
+    // Format search results
+    const results: MessagingExtensionAttachment[] = [];
+    response?.data?.objects?.forEach((obj: any) => results.push(createNpmSearchResultCard(obj.package)));
+
+    // Return results as a list
+    return {
+        attachmentLayout: 'list',
+        attachments: results,
+        type: 'result'
+    };
+});
+```
+
+Similarly, `selectItem` listener would be set up as:
+
+```typescript
+app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, item) => {
+    // Generate detailed result
+    const card = createNpmPackageCard(item);
+
+    // Return results
+    return {
+        attachmentLayout: 'list',
+        attachments: [card],
+        type: 'result'
+    };
+});
+```
+
+# [Python](#tab/python5)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
+
+```python
+@app.message_extensions.query("searchCmd")
+async def search_command(
+    _context: TurnContext, _state: AppTurnState, query: MessagingExtensionQuery
+) -> MessagingExtensionResult:
+    query_dict = query.as_dict()
+    search_query = ""
+    if query_dict["parameters"] is not None and len(query_dict["parameters"]) > 0:
+        for parameter in query_dict["parameters"]:
+            if parameter["name"] == "queryText":
+                search_query = parameter["value"]
+                break
+    count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
+    url = "http://registry.npmjs.com/-/v1/search?"
+    params = {"size": count, "text": search_query}
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params) as response:
+            res = await response.json()
+
+            results: List[MessagingExtensionAttachment] = []
+
+            for obj in res["objects"]:
+                results.append(create_npm_search_result_card(result=obj["package"]))
+
+            return MessagingExtensionResult(
+                attachment_layout="list", attachments=results, type="result"
+            )
+```
+
+---
+
+## Adaptive Cards capabilities
+
+You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card, submit buttons on the Adaptive Cards.
+
+# [.NET](#tab/dotnet4)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
+
+```csharp
+// Listen for messages that trigger returning an adaptive card
+    app.OnMessage(new Regex(@"static", RegexOptions.IgnoreCase), activityHandlers.StaticMessageHandler);
+    app.OnMessage(new Regex(@"dynamic", RegexOptions.IgnoreCase), activityHandlers.DynamicMessageHandler);
+
+    // Listen for query from dynamic search card
+    app.AdaptiveCards.OnSearch("nugetpackages", activityHandlers.SearchHandler);
+    // Listen for submit buttons
+    app.AdaptiveCards.OnActionSubmit("StaticSubmit", activityHandlers.StaticSubmitHandler);
+    app.AdaptiveCards.OnActionSubmit("DynamicSubmit", activityHandlers.DynamicSubmitHandler);
+
+    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER HANDLERS
+    app.OnActivity(ActivityTypes.Message, activityHandlers.MessageHandler);
+
+    return app;
+```
+
+# [JavaScript](#tab/javascript4)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
+
+```javascript
+// Listen for messages that trigger returning an adaptive card
+app.message(/dynamic/i, async (context, _state) => {
+    const attachment = createDynamicSearchCard();
+    await context.sendActivity({ attachments: [attachment] });
+});
+
+app.message(/static/i, async (context, _state) => {
+    const attachment = createStaticSearchCard();
+    await context.sendActivity({ attachments: [attachment] });
+});
+
+// Listener for action.submit on cards from the user
+
+interface SubmitData {
+    choiceSelect?: string;
+}
+
+// Listen for submit buttons
+app.adaptiveCards.actionSubmit('DynamicSubmit', async (context, _state, data: SubmitData) => {
+    await context.sendActivity(`Dynamically selected option is: ${data.choiceSelect}`);
+});
+
+app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: SubmitData) => {
+    await context.sendActivity(`Statically selected option is: ${data.choiceSelect}`);
+});
+```
+
+# [Python](#tab/python4)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/03.adaptiveCards.a.typeAheadBot/src/bot.py#L39C1-L78C1)
+
+```python
+@app.message(re.compile(r"static", re.IGNORECASE))
+async def static_card(context: TurnContext, _state: AppTurnState) -> bool:
+    attachment = create_static_search_card()
+    await context.send_activity(Activity(attachments=[attachment]))
+    return True
+
+@app.adaptive_cards.action_submit("StaticSubmit")
+async def on_static_submit(context: TurnContext, _state: AppTurnState, data) -> None:
+    await context.send_activity(f'Statically selected option is: {data["choiceSelect"]}')
+
+@app.adaptive_cards.action_submit("DynamicSubmit")
+async def on_dynamic_submit(context: TurnContext, _state: AppTurnState, data) -> None:
+    await context.send_activity(f'Dynamically selected option is: {data["choiceSelect"]}')
+
+@app.message(re.compile(r"dynamic", re.IGNORECASE))
+async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
+    attachment = create_dynamic_search_card()
+    await context.send_activity(Activity(attachments=[attachment]))
+    return True
 ```
 
 ---
