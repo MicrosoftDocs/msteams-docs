@@ -1,11 +1,11 @@
 ---
 title: Methods to Build Personal Tab App
 author: laujan
-description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
+description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 02/27/2023
+ms.date: 09/27/2024
 ---
 
 # Create a personal tab
@@ -1056,6 +1056,37 @@ pages.config.setConfig({
 ```
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+
+## Configure offline functionality
+
+You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining consistency in data across the organization.
+
+Creating a personal tab with offline functionality has the following advantages:
+
+* **Accessibility**: You can access important information, documents, or tools without needing an internet connection, making it easier to work from remote areas or during travel.
+* **Seamless sync**: Any changes made offline automatically sync once you’re back online. This ensures that your work is up-to-date without manual effort.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/tabs/tab-support-offline.gif" alt-text="Graphic shows how an offline tab works in Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
+
+### Build an offline tab
+
+Build an offline tab with the following steps:
+
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). For more information about Azure Blob storage, see [what is Azure Blob storage](/azure/storage/blobs/storage-blobs-overview).
+
+1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository with Git.
+
+1. In the repository, go to **samples** > **tab-support-offline** > **nodejs** and open it in Visual Studio Code.
+
+1. Open **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
+
+1. Debug the app with Teams Toolkit and add the tab app to Teams.
 
 ## Code sample
 

@@ -407,8 +407,6 @@
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
-  - name: Build offline tabs
-    href: tabs/how-to/create-offline-tab.md
   - name: Send activity feed notifications
     href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
