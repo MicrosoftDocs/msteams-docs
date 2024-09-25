@@ -1060,7 +1060,7 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 ## Configure offline functionality
 
 > [!NOTE]
-> Personal tabs with offline functionality aren't supported in the Teams iOS client.
+> Personal tabs with offline functionality are only supported in the Teams Android client.
 
 You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining data consistency across the organization.
 
@@ -1069,17 +1069,11 @@ Creating a personal tab with offline functionality has the following advantages:
 * **Accessibility**: Users can access important information, documents, or tools without needing an internet connection, making it easier to work from remote areas or while traveling.
 * **Seamless sync**: Any changes made offline automatically sync once users are back online, ensuring that their work is up-to-date without manual effort.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/tab-support-offline.gif" alt-text="Graphic shows how an offline tab works in Teams desktop client.":::
-
-# [Mobile](#tab/mobile)
-
 :::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
 
----
-
 ### Build an offline tab
+
+1. Ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
 
 1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal).
 
@@ -1090,6 +1084,8 @@ Creating a personal tab with offline functionality has the following advantages:
 1. Open **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
 
 1. Debug the app in Teams Toolkit and add the tab app to Teams.
+
+Congratulations! You've successfully created a Teams tab with offline functionality.
 
 ## Code sample
 
