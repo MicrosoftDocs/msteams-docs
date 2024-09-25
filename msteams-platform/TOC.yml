@@ -424,7 +424,7 @@
     - name: Build a bot
       href: bots/build-a-bot.md 
     - name: Build your bot to Teams
-      href: bots/bring-bot-to-teams.md  
+      href: bots/bring-bot-to-teams.md    
   - name: Build AI bots
     items:
     - name: Teams AI library overview

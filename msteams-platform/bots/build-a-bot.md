@@ -18,8 +18,11 @@ Building a bot app involves various phases, from initial concept to final deploy
 1. Test, optimize, and deploy: Thoroughly test your bot app, make necessary optimizations, and then deploy it.
 
 Here's an example of a bot app:
+
 Contoso TravelBuddy: This bot can be deployed on Teams and offers features such as booking flights, hotels, and car rentals. It can assist in searching for travel destinations, provide weather updates, offer travel recommendations, and track the status of flights or trains.
+
 The primary goals and purposes of this bot include offering convenience and saving time in making travel plans, personalizing recommendations, providing real-time updates, and ensuring a secure payment process.
+
 To achieve these functionalities, you would need to integrate the bot app with APIs for flight booking, hotel booking, rental booking, weather forecasts, and payment gateways.
 
 ## Build a basic conversational bot
