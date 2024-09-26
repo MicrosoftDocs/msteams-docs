@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# What do I need to know before I build a bot?
+# What must I know before I build a bot?
 
 Building a bot app involves various phases, from initial concept to final deployment. This article offers a detailed guide to help you get started.
 
