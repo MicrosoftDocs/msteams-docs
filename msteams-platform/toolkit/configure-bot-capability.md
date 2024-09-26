@@ -5,6 +5,8 @@ description: Learn how to configure bot capability within Teams app.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
+nextTutorialHref: ~/toolkit/add-How-to-guides-v5.md
+nextTutorialTitle: Back to Add How-to guides to Microsoft Teams app
 ms.date: 02/16/2024
 ---
 
