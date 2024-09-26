@@ -631,7 +631,7 @@ To install the Microsoft Teams Toolkit extension:
 
 1. Select **Install**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option ASP.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
     Your Visual Studio is installed in a few minutes.
 
@@ -752,7 +752,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on the project's name.
+      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
 
    1. Select the folder path where you want to create the project workspace.
 
@@ -1031,7 +1031,7 @@ Following is an example of app manifest where a static tab is defined that works
 
 ```
 
-If a context isn't defined in app manifest, Teams considers the following context by default:
+If a context isn't defined in the app manifest, by default Teams consider the following context:
 
 ```json
 "context": [ 
@@ -1102,6 +1102,7 @@ Congratulations! You've successfully created a Teams tab with offline functional
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
+* [Create a channel tab or group tab](create-channel-group-tab.md)
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
