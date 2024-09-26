@@ -1,0 +1,25 @@
+### YamlMime:Tutorial
+title: Resource index for bot apps
+metadata:
+  title: Resource index for bot apps
+  description: This is an index of activity handlers, events, and status codes from bot conversational APIs   
+  audience: Developer
+  level: Beginner
+  ms.date: 09/26/2024
+  ms.topic: interactive-tutorial
+  nextTutorialHref: ~/get-started/get-started-overview.md
+  nextTutorialTitle: Back to Get started overview
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+
+    This index includes activity handlers, events, and status codes from bot conversational APIs. 
+    
+
+- title: Teams activity handlers
+  durationInMinutes: 1
+  content: |
+
+   Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
