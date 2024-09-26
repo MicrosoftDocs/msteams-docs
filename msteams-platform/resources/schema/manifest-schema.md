@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 09/16/2024
+ms.date: 10/04/2024
 ---
 
 # App manifest
@@ -29,10 +29,11 @@ The following is the sample app manifest schema:
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
-        "defaultLanguageTag": "en-us",
+        "defaultLanguageTag": "es-es",
+        "defaultLanguageFile": "es-es.json",
         "additionalLanguages": [
             {
-                "languageTag": "es-es",
+                "languageTag": "en-us",
                 "file": "en-us.json"
             }
         ]
@@ -57,6 +58,14 @@ The following is the sample app manifest schema:
         "color": "A relative path to a full color .png icon — 192px X 192px"
     },
     "accentColor": "A valid HTML color code.",
+    "copilotAgents": {
+        "declarativeAgents": [
+            {
+                "id": "agent1",
+                "file": "declarativeAgent1.json"
+            }
+        ]
+    },
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -422,20 +431,21 @@ Ensure that your description describes your experience and helps potential custo
 
 **Optional** &ndash; Object
 
-Allows the specification of a default language and provides pointers to more language files. For more information, see [localization](~/concepts/build-and-test/apps-localization.md).
+Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`||✔️|The language tag of the strings in this top-level app manifest file.|
+|`defaultLanguageTag`||✔️|The language tag for the strings in this app manifest file. For example, `en-us`.|
+|`defaultLanguageFile`|2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
 
-An array of objects specifying more language translations.
+An array of objects with the following properties to specify additional language translations.
 
-|Name| Type | Maximum size | Required | Description|
-|---|---|---|---|---|
-|`languageTag`|String||✔️|The language tag of the strings in the provided file.|
-|`file`|String|2048 characters|✔️|A relative file path to the .json file containing the translated strings.|
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`languageTag`||✔️|The language tag of the strings in the provided file. For example, `es-es`.|
+|`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## icons
 
@@ -455,6 +465,25 @@ Icons used within the Teams app. The icon files must be included as part of the 
 A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`. For more information, see [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups).
+
+## copilotAgents
+
+**Optional** &ndash; Object
+
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`declarativeAgents`|Array of objects| 1 |✔️| Array of `declarativeAgent` objects. |
+
+### declarativeAgent
+
+Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
+|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
 
 ## configurableTabs
 
