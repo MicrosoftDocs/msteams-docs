@@ -2,7 +2,7 @@
 title: Resource index for bot apps
 metadata:
   title: Resource index for bot apps
-  description: This is an index of activity handlers, events, and status codes from bot conversational APIs   
+  description: This resource index includes a list of activity handlers, events, and status codes from bot conversational APIs.
   audience: Developer
   level: Beginner
   ms.date: 09/26/2024
@@ -119,7 +119,7 @@ items:
 
     In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
 
-    To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
+    To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [**bot logic**] section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
 
     The code snippets for Teams activity handlers:
 
@@ -189,6 +189,6 @@ items:
 
     In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
 
-    To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+    To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [**bot logic**] section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
     ---
