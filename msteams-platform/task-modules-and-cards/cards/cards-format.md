@@ -1030,6 +1030,8 @@ Adaptive Cards support a wide variety of elements, but having too many elements 
 
 You can use borders to highlight important information or sections, drawing the user’s attention to key areas. Borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
 
+# [Desktop](#tab/desktop)
+
 :::row:::
 :::column span="2":::
 
@@ -1048,6 +1050,29 @@ You can use borders to highlight important information or sections, drawing the 
 :::column-end:::
 
 :::row-end:::
+
+# [Mobile](#tab/mobile)
+
+:::row:::
+:::column span="2":::
+
+**Without borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-border-mobile.png" alt-text="Screenshot shows an Adaptive Card with no borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-no-border-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-mobile.png" alt-text="Screenshot shows an Adaptive Card with borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-border-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
 
 You can add borders only to the following elements in an Adaptive Card:
 
@@ -1173,6 +1198,8 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 
 Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience across hosts.
 
+# [Desktop](#tab/desktop)
+
 :::row:::
 :::column span="2":::
 
@@ -1191,6 +1218,29 @@ Rounded corners make the card design look more modern and visually appealing, cr
 :::column-end:::
 
 :::row-end:::
+
+# [Mobile](#tab/mobile)
+
+:::row:::
+:::column span="2":::
+
+**Without rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-rounded-corner-mobile.png" alt-text="Screenshot shows an Adaptive Card without rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-no-rounded-corner-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-rounded-corner-mobile.png" alt-text="Screenshot shows an Adaptive Card with rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-rounded-corner-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
 
 You can add rounded corners only to the following elements in an Adaptive Card:
 
