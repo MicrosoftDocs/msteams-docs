@@ -15,7 +15,7 @@ This article provides guidelines and templates for displaying app artwork and de
 
 Select one of the following templates that helps you show customers your app images in an appealing way. Use the templates to highlight key screens from your app and change the text to emphasize features. It's recommended to change the background color to enhance your brand.
 
-Use Size 1 for single column images and Size 2 for double column images.
+Single column must use Size 1 (540 x 300 px), and double column images must use Size 2 (360 x 200 px).
 
 #### Template A
 
