@@ -417,7 +417,7 @@
   items:
   - name: What is a bot?
     href: bots/overview.md
-  - name: What must I know before I build a bot?
+  - name: How do bots work?
     href: bots/get-started-bots.md
   - name: What must I to know before I build a bot?
     href: bots/build-a-bot.md 
