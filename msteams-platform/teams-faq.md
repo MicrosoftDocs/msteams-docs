@@ -2,6 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
+ms.date: 09/16/2024
 ms.localizationpriority: high
 ---
 
@@ -51,7 +52,7 @@ Resolution - Connect Microsoft Entra ID to Microsoft Cloud Partner Program](/par
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
- 
+
 </details>
 <!--
 <details>
@@ -214,15 +215,15 @@ No, Live Share doesn't support meeting recordings.
 
 </details>
 
-## Microsoft 365 Chat
+## Microsoft 365 Copilot
 
 <details>
 
-<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Copilot including my plugin in a response?</summary>
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -291,9 +292,9 @@ Here's an example description that work for NPM Finder.
 </details>
 <details>
 
-<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Copilot includes my plugin in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -304,16 +305,16 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 </details>
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Copilot? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
 
 </details>
 <details>
-<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
+<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365.
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Microsoft 365 Copilot.
 
 </details>
 <details>
@@ -338,9 +339,9 @@ After the app passes the proactive validation, developers of both existing and n
 Developers are encouraged to certify their new plugin after successfully completing validation.
 </details>
 <details>
-<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
+<summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
+ You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
 </details>
 
 ## Microsoft Graph
