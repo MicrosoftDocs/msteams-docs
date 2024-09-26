@@ -26,6 +26,8 @@ items:
 
    The code snippets for Teams activity handlers:
 
+  # [C#](#tab/csharp)
+
     `OnTeamsChannelCreatedAsync`
 
     ```csharp
