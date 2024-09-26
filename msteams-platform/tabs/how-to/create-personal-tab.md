@@ -1060,7 +1060,7 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 ## Offline tabs
 
 > [!NOTE]
-> Personal tabs with offline functionality are only supported in the Teams Android client.
+> Personal tabs with offline functionality are only supported on Teams for Android devices.
 
 You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining data consistency across the organization.
 
@@ -1075,13 +1075,13 @@ Creating a personal tab with offline functionality has the following advantages:
 
 1. Ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
 
-1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal).
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
 
-1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository with Git.
+1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
 
 1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
-1. Open **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
+1. Open the **blobStoreOperations.js** file and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
 
 1. Debug the app in Teams Toolkit and add the tab app to Teams.
 
