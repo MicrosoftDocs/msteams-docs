@@ -415,16 +415,14 @@
     displayName: App caching, caching, launch time, cache
 - name: Build bots - Revamp
   items:
-  - name: Overview
+  - name: What is a bot?
     href: bots/overview.md
-  - name: Hello Bot
-    items:
-    - name: Get started with bots
-      href: bots/get-started-bots.md
-    - name: Build a bot
-      href: bots/build-a-bot.md 
-    - name: Build your bot to Teams
-      href: bots/bring-bot-to-teams.md
+  - name: What must I know before I build a bot?
+    href: bots/get-started-bots.md
+  - name: What must I to know before I build a bot?
+    href: bots/build-a-bot.md 
+  - name: How can I bring my bot to Teams?
+    href: bots/bring-bot-to-teams.md
   - name: Build bot capabilities
     items:
     - name: Build conversation capability

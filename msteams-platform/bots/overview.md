@@ -1,5 +1,5 @@
 ---
-title: Overview to build bots
+title: What is a bot
 description: Learn about bots, the application of bots across industry, build familiarity with bots in Teams environment and bot development SDKs and libraries. It offers a map through the module to help you navigate through various tasks for building a bot.
 ms.localizationpriority: high
 ms.date: 09/20/2024
@@ -7,23 +7,25 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Overview for bots
+# What is a bot?
 
 A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligency (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
-## Types of bots and application
+## When do I build a bot?
 
 You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education,finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
 
-[**TBD**: More details to follow]
+[**TBD**: More details to follow about user scenarios where bots are effective.]
 
-## Bot user experience in Teams
+## Why must I build a bot?
 
-The app users access and use your bot app within Teams.
+Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
+
+The bot app users access and use your bot app within Teams.
 
 [**TBD**: Bot UX infographic or gif]
 
-## Bot solution with Teams
+## How can I build a bot for Teams?
 
 [**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
@@ -42,7 +44,7 @@ The app users access and use your bot app within Teams.
 
 1. Explore advanced bot capabilities (Call and media bot, access data using MS Graph, and more)
 
-## Navigate through bots
+## How can learn more?
 
 You may be just delving into bot apps or bringing your existing bots up to supporting AI, this article provides an overview of bots and covers building, configuring, and customizing bots.
 

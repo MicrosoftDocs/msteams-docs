@@ -1,5 +1,5 @@
 ---
-title: Get started with building bots
+title: How do bots work
 description: Learn about bot developer experience, bot events, bot activity handler, bot types, and scopes
 ms.localizationpriority: high
 ms.date: 09/20/2024
@@ -7,9 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Get started with bots
-
-What are bots, anyway?
+# How do bots work?
 
 Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
@@ -32,7 +30,7 @@ Let's learn about some common bot elements and how they work together to make a 
 * Bot logic:
 * Bot scope:
 
-For more information, see [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
+For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Explore bot capabilities
 

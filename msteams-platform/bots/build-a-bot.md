@@ -1,5 +1,5 @@
 ---
-title: Build a bot app
+title: Let's build a bot
 description: Learn to build a basic chatbot using Teams Toolkit, Bot Framework SDK. Additionally, learn to build an AI bot.
 ms.localizationpriority: high
 ms.date: 09/25/2024
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Build a bot app
+# What do I need to know before I build a bot?
 
 Building a bot app involves various phases, from initial concept to final deployment. This article offers a detailed guide to help you get started.
 
@@ -27,7 +27,7 @@ To achieve these functionalities, you would need to integrate the bot app with A
 
 [**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
 
-## Build a basic conversational bot
+## Let's build a bot
 
 Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
 
