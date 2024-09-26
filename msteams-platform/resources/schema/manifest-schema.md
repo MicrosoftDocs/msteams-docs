@@ -29,12 +29,12 @@ The following is the sample app manifest schema:
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
-        "defaultLanguageTag": "es-es",
-        "defaultLanguageFile": "es-es.json",
+        "defaultLanguageTag": "en",
+        "defaultLanguageFile": "en.json",
         "additionalLanguages": [
             {
-                "languageTag": "en-us",
-                "file": "en-us.json"
+                "languageTag": "es",
+                "file": "es.json"
             }
         ]
     },
@@ -435,7 +435,7 @@ Allows the specification of a default language, and pointers to additional langu
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`||✔️|The language tag for the strings in this app manifest file. For example, `en-us`.|
+|`defaultLanguageTag`||✔️|The language tag for the strings in this app manifest file. For example, `en`.|
 |`defaultLanguageFile`|2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
@@ -444,7 +444,7 @@ An array of objects with the following properties to specify additional language
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`languageTag`||✔️|The language tag of the strings in the provided file. For example, `es-es`.|
+|`languageTag`||✔️|The language tag of the strings in the provided file. For example, `es`.|
 |`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## icons
