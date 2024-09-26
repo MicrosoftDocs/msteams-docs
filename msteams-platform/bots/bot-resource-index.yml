@@ -24,9 +24,9 @@ items:
 
    Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-   The code snippets for Teams activity handlers:
-
   # [C#](#tab/csharp)
+
+    The code snippets for Teams activity handlers:
 
     `OnTeamsChannelCreatedAsync`
 
@@ -116,12 +116,6 @@ items:
     ```
 
     # [JavaScript](#tab/javascript)
-
-    Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
-
-    In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
-
-    To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [**bot logic**] section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
 
     The code snippets for Teams activity handlers:
 
