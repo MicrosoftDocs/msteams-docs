@@ -24,7 +24,7 @@ items:
 
    Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-  # [C#](#tab/csharp)
+    # [C#](#tab/csharp)
 
     The code snippets for Teams activity handlers:
 
