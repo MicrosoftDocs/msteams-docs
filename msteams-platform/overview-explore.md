@@ -34,7 +34,7 @@ For more information about how to extend Microsoft 365 Copilot, see [Microsoft 3
 
 If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
 
-:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest." lightbox="assets/images/overview/app-manifest.png":::
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in app manifest." lightbox="assets/images/overview/app-manifest.png":::
 
 ## Next step
 
