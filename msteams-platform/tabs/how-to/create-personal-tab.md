@@ -261,7 +261,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your tab.
 
-   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-static-tabs) your tabs in Teams.
+   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tabs in Teams.
 
 ::: zone-end
 
@@ -414,7 +414,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-static-tabs) your tab in Teams.
+   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
@@ -583,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-static-tabs) your tab in Teams.
+    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
