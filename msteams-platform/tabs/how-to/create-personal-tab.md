@@ -1081,9 +1081,9 @@ Creating a personal tab with offline functionality has the following advantages:
 
 1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
-   :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code.":::
+   :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code." lightbox="../../assets/images/tabs/open-tab-sample-vsc.png":::
 
-1. In **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `supportricketblob` and `aircraft-issue-list` with your Azure Blob storage account's values.
+1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
 
 1. Select the **F5** key to debug the app.
 
