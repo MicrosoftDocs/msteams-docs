@@ -1,5 +1,5 @@
 ---
-title: Bots and SDKs
+title: Tools and Bot Framework SDKs for Bots
 author: surbhigupta
 description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
 ms.topic: overview

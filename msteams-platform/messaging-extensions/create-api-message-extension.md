@@ -5,7 +5,7 @@ description: Learn how to create or build an API-based message extension using T
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 04/08/2024
+ms.date: 09/16/2024
 ---
 # Create an API-based message extension
 
@@ -94,7 +94,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Microsoft 365 chat, turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
@@ -102,7 +102,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 An API-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Copilot app created in the app features page in Teams Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Microsoft 365 Copilot created in the app features page in Teams Developer Portal.":::
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
@@ -249,10 +249,10 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
    ```
 
-1. Type `teamsfx new` in the terminal
+1. Type `teamsapp new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -276,7 +276,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsfx provision --env dev```
+   ```teamsapp provision --env dev```
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
 1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
@@ -285,7 +285,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```Preview the app: teamsfx preview --env dev```
+   ```Preview the app: teamsapp preview --env dev```
 
  A new browser window with Teams web client opens. You can add your app to Teams.
 
