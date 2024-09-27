@@ -416,9 +416,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ## Dependent dropdowns
 
 > [!NOTE]
->
-> * Dependent dropdowns require Adaptive Card schema version 1.6 or later.
-> * Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 Dependent dropdowns are dropdown lists where the options in a list depend on the value of another input field. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search.
 
