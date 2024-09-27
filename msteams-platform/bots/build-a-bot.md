@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# What must I know before I build a bot?
+# Let's build a bot
 
 Building a bot app involves various phases, from initial concept to final deployment. This article offers a detailed guide to help you get started.
 
@@ -27,7 +27,7 @@ To achieve these functionalities, you would need to integrate the bot app with A
 
 [**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
 
-## Let's build a bot
+## Build a bot
 
 Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
 

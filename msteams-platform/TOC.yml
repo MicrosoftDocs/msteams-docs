@@ -419,7 +419,7 @@
     href: bots/overview.md
   - name: How do bots work?
     href: bots/get-started-bots.md
-  - name: What must I to know before I build a bot?
+  - name: Let's build a bot
     href: bots/build-a-bot.md 
   - name: How can I bring my bot to Teams?
     href: bots/bring-bot-to-teams.md
