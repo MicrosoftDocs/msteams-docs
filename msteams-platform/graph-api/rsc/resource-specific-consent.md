@@ -169,6 +169,7 @@ The following table provides RSC permissions for a user and their applicable dat
 | `MeetingParticipantReaction.Read.User` | Read the user's reactions while participating in a meeting. |Supported |NA |
 | `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |Supported |NA |
 | `TeamsActivity.Send.User` | Send activity notifications to the user. |NA |Supported |
+| `TeamsAppInstallation.Read.User` | Read the apps that are installed in the user's personal scope. | NA | Supported |
 
 ## Next step
 
