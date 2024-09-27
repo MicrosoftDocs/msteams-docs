@@ -29,9 +29,9 @@ The following requirements are mandatory for building the custom engine agent UX
 
 - [Update the app manifest to connect the bot ID with the custom engine agent node](#update-the-app-manifest-for-custom-engine-agent)
 
-- [Stream the custom engine agent response to the user.](#stream-the-custom-engine-agent-response-to-the-user)
+- [Stream the custom engine agent response to the user](#stream-the-custom-engine-agent-response-to-the-user).
 
-- Ensure the custom engine agent response contains citations, when needed (UX is hub based).
+- [Ensure the custom engine agent response contains citations](#ensure-the-custom-engine-agent-response-contains-citations).
 
 - Ensure the custom engine agent response contains an AI Label.
 
@@ -85,7 +85,7 @@ Add the `botID` property to the `copilotExtension1 node in the manifest.
 
 ### Stream the custom engine agent response to the user
 
-custom engine agent uses a large language model (LLM) to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, custom engine agent must stream its responses, making them appear fast despite the processing time.
+A custom engine agent uses a large language model (LLM) to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, custom engine agent must stream its responses, making them appear fast despite the processing time.
 
 To stream the response:
 
@@ -96,3 +96,12 @@ You can use one of the following to stream the resposne:
 
 - Use Teams AI Library to add streaming to the agent.
 - Call the bot framework APIs directly for streaming.
+
+### Ensure the custom engine agent response contains citations
+
+Users need to know the sources a custom engine agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
+
+You can use one of the following to include citations for the resources used by the agent:
+
+- Use Teams AI Library citations module.
+- Incorporate citations into the Bot Framework API calls.
