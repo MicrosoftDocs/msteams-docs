@@ -32,8 +32,6 @@ Let's learn about some common bot elements and how they work together to make a 
 
 For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
-For resources on activity handlers, see [Resource index for bot apps](bot-resource-index.yml).
-
 ## Explore bot capabilities
 
 You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams Toolkit to build these capabilities in your bot.
