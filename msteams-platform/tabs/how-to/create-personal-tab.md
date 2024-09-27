@@ -643,7 +643,7 @@ To install the TeamsFx CLI, use the `npm` package manager:
 npm install -g @microsoft/teamsfx-cli
 ```
 
-Depending on your configuration, you might need to use `sudo` to install the CLI:
+Depending on your configuration, you may need to use `sudo` to install the CLI:
 
 ``` bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
@@ -1073,7 +1073,7 @@ Creating a personal tab with offline functionality has the following advantages:
 
 ### Build an offline tab
 
-1. Ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
+Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
 
 1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
 
@@ -1085,13 +1085,13 @@ Creating a personal tab with offline functionality has the following advantages:
 
 1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
 
-1. Select the **F5** key to debug the app.
+1. Select the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
 
-1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
+1. Sign in with your Microsoft 365 account, if prompted.
 
-1. A dialog box opens to let you add the tab app to Teams. Select **Add**.
+1. Select **Add** when a dialog box opens to let you add the tab app to Teams.
 
-:::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
+   :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
 
 Congratulations! You've successfully created a Teams tab with offline functionality.
 
