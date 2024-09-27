@@ -27,9 +27,9 @@ To meet this goal, you must follow some mandatory and recommended steps and requ
 
 The following requirements are mandatory for building the custom engine agent UX:
 
-- [Update the app manifest to connect the bot ID with the custom engine agent node](#ensure-mandatory-requirements-for-cea).
+- [Update the app manifest to connect the bot ID with the custom engine agent node](#update-the-app-manifest-for-custom-engine-agent)
 
-- Stream the custom engine agent response to the user.
+- [Stream the custom engine agent response to the user.](#stream-the-custom-engine-agent-response-to-the-user)
 
 - Ensure the custom engine agent response contains citations, when needed (UX is hub based).
 
@@ -87,4 +87,12 @@ Add the `botID` property to the `copilotExtension1 node in the manifest.
 
 custom engine agent uses a large language model (LLM) to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, custom engine agent must stream its responses, making them appear fast despite the processing time.
 
-To stream the
+To stream the response:
+
+- Informative updates: Send information on the sub-steps the agent as the response is being generated before it sends the final response.
+- Response streaming: Sending the user intermediate states of the final response while the LLM creates its full response.
+
+You can use one of the following to stream the resposne:
+
+- Use Teams AI Library to add streaming to the agent.
+- Call the bot framework APIs directly for streaming.
