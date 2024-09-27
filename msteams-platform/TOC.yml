@@ -437,6 +437,8 @@
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md    
     - name: Build core capabilities
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+    - name: Build custom engine agent user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md  
     - name: Build custom engine agent
       items: 
       - name: Custom engine agent for Microsoft 365 
