@@ -831,6 +831,9 @@
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
+  - name: Approvals app APIs
+    href: samples\approvals-app-api.md
+    displayName: Approvals, Approvals API, Get approvals
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -1054,9 +1057,6 @@
       displayName: Power BI, Power Apps, Power Automate, Project Oakdale
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-  - name: Approvals app APIs
-    href: samples\approvals-app-api.md
-    displayName: Approvals, Approvals API, Get approvals
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
     displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
