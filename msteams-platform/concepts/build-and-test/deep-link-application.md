@@ -237,13 +237,13 @@ else {/*Handle situation where capability isn't supported*/}
 > [!NOTE]
 > The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
-##### Configure back button navigation
+#### Configure back button navigation
 
 When an app has multiple tabs, a user can use the Microsoft 365 host app's back button to go backwards through the navigational history. However, the history doesn't include the actions a user performs within a tab. If you want to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This can be accomplished through the `registerBackButtonHandler()` function in the [`pages.backStack`](/javascript/api/@microsoft/teams-js/pages.backstack) namespace.
 
 After you register the handler, it helps you to address the navigational request before the system takes action. If the handler is able to manage the request, it should return `true` so that the system knows no further action is necessary. If the internal stack is empty, it should return `false` so that the system can call the `navigateBack()` function instead and take the appropriate action.
 
-##### Return focus to host app
+#### Return focus to host app
 
 After the user starts using elements within a tab, by default, the focus remains with the elements of your iFrame until the user selects outside of it. If the iFrame is a part of the user navigating with keyboard shortcuts (the Tab key or the F6 key), you can focus on the host app. You can focus on the host app by using the [`pages.returnFocus()`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-returnfocus) function. The `returnFocus()` function accepts a Boolean indicating the direction to advance focus within the host app; `true` for forward and `false` for backwards. Generally, forward highlights the search bar and backwards highlights the app bar.
 
