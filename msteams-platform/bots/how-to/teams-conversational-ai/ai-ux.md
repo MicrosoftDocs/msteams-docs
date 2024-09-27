@@ -45,7 +45,7 @@ You must update the CEA app manifest to define specific properties and configura
 
 Add the `botID` property to the `copilotExtension1 node in the manifest.
 
-```
+```json
 "bots": [ 
 
     { 
