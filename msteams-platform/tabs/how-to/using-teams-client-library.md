@@ -145,7 +145,7 @@ async function example() {
 > [!TIP]
 > When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
 
-Cross-cloud communication through SDK is restricted for security reasons, hence Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, you must specify the Teams operated by 21Vianet domain during the SDK initialization in their app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
+Cross-cloud communication through SDK is restricted for security reasons; hence, Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, specify the Teams operated by 21Vianet domain during the SDK initialization in your app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
 
 ```js
 import { app } from '@microsoft/teams-js';
