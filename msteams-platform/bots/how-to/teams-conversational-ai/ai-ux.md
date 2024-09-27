@@ -131,6 +131,10 @@ You can use one of the following to ensure intelligent context-based conversatio
 
 ### Ensure that the custom engine agent offers zero prompts or welcome card
 
+A custom engine agent must assist users by offering prompt suggestions on how to best utilize the agent. This will help users overcome challenges not only during their initial use but also in subsequent interactions with the agent.
+
+Zero Prompts are the initial prompts that users see when a custom engine agent is added to a new conversation, such as starting a new one-on-one chat, a new session, or adding it to a group chat. These prompts should be tailored to the user's context and the specific conversation thread.
+
 ## Next step
 
 ## See also
