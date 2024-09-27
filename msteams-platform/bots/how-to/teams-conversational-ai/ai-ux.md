@@ -19,7 +19,7 @@ A custom engine agent encompasses the following features that aid its functional
 
 - **Generative AI integration**: Utilizes advanced AI models to facilitate natural language processing and interaction.
 - **Bots**: Extend or build bots to utilize the LLM and generative AI to provide high quality chat bots experience.
-- **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the custom copilot behavior and responses to specific use cases.
+- **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the custom agent behavior and responses to specific use cases.
 
 To meet this goal, you must follow some mandatory and recommended steps and requirements.
 
@@ -27,7 +27,7 @@ To meet this goal, you must follow some mandatory and recommended steps and requ
 
 The following requirements are mandatory for building the custom engine agent UX:
 
-- [Update the app manifest to connect the bot ID with the custom engine agent node](#update-the-app-manifest-for-custom-engine-agent)
+- [Update the app manifest to connect the bot ID with the custom engine agent node](#update-the-app-manifest-for-custom-engine-agent).
 
 - [Stream the custom engine agent response to the user](#stream-the-custom-engine-agent-response-to-the-user).
 
@@ -114,3 +114,21 @@ You can use one of the following to include AI Label in the agent's response:
 
 - Use Teams AI Library, which add the AI Label to all AI-generated messages automatically.
 - Set the flag in the Bot Framework API for message activities.
+
+### Ensure that the custom engine agent is an intelligent conversational bot
+
+A custom engine agent must track a conversation's context and history to provide an intelligent experience. The bot must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
+
+You can use one of the following to ensure intelligent context-based conversation:
+
+- Use Teams AI Library, which manages and passes conversational history and context to the LLM.
+- Use Bot Framework API:
+
+  - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
+  - **Identify conversation location**: Ensure the agent is aware of platform the conversation is occurring in, such as on Teams, copilot.com, in a meeting side-pane, or a group chat.
+  - **Store and pass conversation history**: Determine means of storage and pass some extent of the conversation history to the agent.
+  - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to using the LLM and recent conversation history. The agent mustn't need the user to reestablish context with every message.
+
+## Next step
+
+## See also
