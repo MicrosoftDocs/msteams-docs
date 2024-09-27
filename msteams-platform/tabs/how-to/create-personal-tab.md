@@ -1081,9 +1081,17 @@ Creating a personal tab with offline functionality has the following advantages:
 
 1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
-1. Open the **blobStoreOperations.js** file and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account's values.
+   :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code.":::
 
-1. Debug the app in Teams Toolkit and add the tab app to Teams.
+1. In **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `supportricketblob` and `aircraft-issue-list` with your Azure Blob storage account's values.
+
+1. Select the **F5** key to debug the app.
+
+1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
+
+1. A dialog box opens to let you add the tab app to Teams. Select **Add**.
+
+:::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
 
 Congratulations! You've successfully created a Teams tab with offline functionality.
 
