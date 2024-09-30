@@ -94,8 +94,6 @@ You must design your Adaptive Cards to look great on any device to provide an en
 
 You can add borders to the `Container`, `ColumnSet`, `Column`, and `Table` elements in Adaptive Cards to delineate different sections of the card. You can add rounded corners to the `Container`, `ColumnSet`, `Column`, `Table`, and `Image` elements in Adaptive Cards to make the card design look modern and visually appealing. For more information, see [borders and rounded corners in Adaptive Cards](cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards).
 
- For more information, see [rounded corners in Adaptive Cards](cards/cards-format.md#rounded-corners-in-adaptive-cards).
-
 ## Overflow menu on Adaptive Cards
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.

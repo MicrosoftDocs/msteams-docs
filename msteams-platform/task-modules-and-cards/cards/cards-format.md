@@ -1118,9 +1118,7 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 
 ---
 
-You can add borders only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), and [`Table`](https://adaptivecards.io/explorer/Table.html) elements in an Adaptive Card.
-
-You can add rounded corners only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), [`Table`](https://adaptivecards.io/explorer/Table.html), and [`Image`](https://adaptivecards.io/explorer/Image.html) elements in an Adaptive Card:
+You can add borders only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), and [`Table`](https://adaptivecards.io/explorer/Table.html) elements in an Adaptive Card. You can add rounded corners only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), [`Table`](https://adaptivecards.io/explorer/Table.html), and [`Image`](https://adaptivecards.io/explorer/Image.html) elements in an Adaptive Card:
 
 ### Implement borders and rounded corners in Adaptive Cards
 
