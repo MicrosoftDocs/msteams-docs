@@ -200,7 +200,7 @@ The [pages](/javascript/api/@microsoft/teams-js/pages) capability of the TeamsJS
 
 # [Specific tab](#tab/specific)
 
-The following code illustrates how to navigate to a specific tab
+The following code illustrates how to navigate to a specific tab:
 
 ```typescript
 if (pages.currentApp.isSupported()) {
