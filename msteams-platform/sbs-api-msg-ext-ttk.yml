@@ -50,7 +50,7 @@ items:
 
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
 
 
    # [Visual Studio Code](#tab/vscode)
@@ -72,11 +72,11 @@ items:
 
    # [Command line](#tab/cli)
 
-   To install the TeamsFx CLI, use the `npm` package manager:
+   To install the Teamsapp CLI, use the `npm` package manager:
 
    ``` cmd
 
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
 
    ```
 
@@ -84,7 +84,7 @@ items:
 
    ```cmd
 
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+   sudo npm install -g --unsafe-perm @microsoft/teamsapp-cli
 
    ```
 
@@ -92,10 +92,10 @@ items:
 
    Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
 
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+   You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
 
    > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
+   > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
 
    ---
 
@@ -174,27 +174,27 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with the Teamsapp CLI:
 
         ```cmd
 
-        teamsfx account login m365
+        teamsapp account login m365
 
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with the Teamsapp CLI:
 
         ```cmd
 
-        teamsfx account login azure
+        teamsapp account login azure
 
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
 
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
