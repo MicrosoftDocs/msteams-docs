@@ -987,7 +987,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Describes the action of a [custom keyboard shortcut](/office/dev/add-ins/design/keyboard-shortcuts). This description appears in the dialog that's shown to a user when there's a shortcut conflict between multiple add-ins or with Microsoft 365. The `actions.displayName` property is required if a keyboard shortcut is defined for a specific `actions` object. Office appends the name of the add-in in parentheses after the description. For example, "Set bold (Contoso Add-in)". For more information, see [Avoid key combinations in use by other add-ins](/office/dev/add-ins/design/keyboard-shortcuts#avoid-key-combinations-in-use-by-other-add-ins). |
+|`actions.displayName`| String | 64 characters | | Describes the action of a [custom keyboard shortcut](/office/dev/add-ins/design/keyboard-shortcuts). This description appears in the dialog that's shown to a user when there's a shortcut conflict between multiple add-ins or with Microsoft 365. The `actions.displayName` property is required if a keyboard shortcut is defined for a specific `actions` object. Office appends the name of the add-in in parentheses after the description. For example, Set bold (Contoso Add-in). For more information, see [Avoid key combinations in use by other add-ins](/office/dev/add-ins/design/keyboard-shortcuts#avoid-key-combinations-in-use-by-other-add-ins). |
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them.|
@@ -1123,7 +1123,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.keyboardShortcuts
 
-The `extensions.keyboardShortcuts` property defines custom keyboard shortcuts or key combinations to run specific actions. To learn more, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts).
+The `extensions.keyboardShortcuts` property defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts).
 
 | Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
