@@ -18,7 +18,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 |:------------|:------------|
 | **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, visit the Microsoft 365 Admin Center and use the Support menu to [open a service request](https://admin.microsoft.com/). |
 | **Azure help and support** | If you have a paid Azure subscription, visit the Azure Admin Center to [open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about Teams** | If you have general questions on Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
+| **General questions about Teams** | If you have general questions on Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/). Search for msteams forum in the **Search the community** box.|
 
 ## Developer support channels
 
@@ -29,7 +29,7 @@ To inquire about general questions related to Copilot and Copilot samples use th
 | Microsoft 365 Copilot service issues, development issues, and limited advisory support. | If you have a Premier/Unified support agreement for Microsoft 365, visit the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home#/homepage) and use the Support menu to open a service request. |
 | General questions about Microsoft 365 Copilot | If you have general questions on Microsoft 365 Copilot, submit your questions on [Microsoft Q&A](/answers/tags/466/copilot-m365-development). |
 | Developer community help | [Microsoft Q&A](/answers/) exists as the home of technical questions and answers for Microsoft products. Use the [Microsoft 365 Copilot Development](/answers/tags/466/copilot-m365-development.html) tag to post questions, connect with other developers, and submit answers. |
-| Extensibility samples | Submit issues and ask general questions related to samples using the respective Microsoft 365 Copilot [extensibility samples](samples.md) GitHub repositories. |
+| Extensibility samples | Submit issues and ask general questions related to samples using the respective Microsoft 365 Copilot [extensibility samples](/microsoft-365-copilot/extensibility/samples) GitHub repositories. |
 
 ## Developer community help
 
