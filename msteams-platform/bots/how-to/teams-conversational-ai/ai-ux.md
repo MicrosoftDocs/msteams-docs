@@ -43,7 +43,7 @@ The following requirements are mandatory for building the custom engine agent UX
 
 You must update the custom engine agent app manifest to define specific properties and configurations that characterize its capabilities and behavior.
 
-Add the `botID` property to the `copilotExtension1 node in the manifest.
+Add the `botID` property to the `copilotExtensions` node in the manifest.
 
 ```json
 "bots": [ 
