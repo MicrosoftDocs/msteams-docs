@@ -1,5 +1,5 @@
 ---
-title: Tabs on mobile
+title: Tab Functions on Mobile Devices
 description: Learn how tab functions on Android and iOS Microsoft Teams clients (mobile), their authentication, low bandwidth connection, testing, or distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
