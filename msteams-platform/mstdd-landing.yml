@@ -61,10 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Add borders to delineate Adaptive Card elements
-        url: task-modules-and-cards/cards/cards-format.md#borders-in-adaptive-cards
-      - text: Add rounded corners to create visually appealing Adaptive Card elements
-        url: task-modules-and-cards/cards/cards-format.md#rounded-corners-in-adaptive-cards
+      - text: Add borders and rounded corners to Adaptive Card elements
+        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
       - text: Analyze your third-party app usage metrics in Developer Portal
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
@@ -81,6 +79,9 @@ landingContent:
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
         url: tabs/what-are-tabs.md
+      - text: Preapproval of RSC permissions (Developer preview)
+        url: graph-api/rsc/preapproval-instruction-docs.md
+
 
     - linkListType: reference
       links:

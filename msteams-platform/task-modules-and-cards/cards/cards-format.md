@@ -3,7 +3,7 @@ title: Text formatting in cards
 description: Learn about card text formatting with Markdown and HTML, the CodeBlock element, borders, rounded corners, and how to design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 06/25/2021
+ms.date: 10/07/2024
 ---
 
 # Format cards in Teams
@@ -21,7 +21,7 @@ You can include an inline image with any Teams card. Supported image formats are
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
-You can add rounded corners and borders to various elements in Adaptive Cards. For more information, see [borders in Adaptive Cards](#borders-in-adaptive-cards) and [rounded corners in Adaptive Cards](#rounded-corners-in-adaptive-cards).
+You can add borders and rounded corners to various elements in Adaptive Cards. For more information, see [borders and rounded corners in Adaptive Cards](#borders-and-rounded-corners-in-adaptive-cards).
 
 ## Format cards with Markdown
 
@@ -1024,11 +1024,9 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ---
 
-## Borders in Adaptive Cards
+## Borders and rounded corners in Adaptive Cards
 
 Adaptive Cards support a wide variety of elements, but having too many elements clutters the card and hinders readability. You can add borders to various elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
-
-You can use borders to highlight important information or sections, drawing the user’s attention to key areas. Borders add a polished and professional look to the various elements in your Adaptive Cards, enhancing their visual appeal.
 
 # [Desktop](#tab/desktop)
 
@@ -1074,129 +1072,7 @@ You can use borders to highlight important information or sections, drawing the 
 
 ---
 
-You can add borders only to the following elements in an Adaptive Card:
-
-* [`Container`](https://adaptivecards.io/explorer/Container.html)
-* [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
-* [`Column`](https://adaptivecards.io/explorer/Column.html)
-* [`Table`](https://adaptivecards.io/explorer/Table.html)
-
-### Implement borders in Adaptive Cards
-
-To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table` element, set the `showGridLines` property to `true`.
-
-The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
-
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
-| `showGridLines` | Boolean | No | Adds a border to the `Table` element. Default value: `true` |
-
-The following JSON payload shows an Adaptive Card with a border around its elements:
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "Below is a **ColumnSet** with borders:",
-            "wrap": true
-        },
-        {
-            "type": "ColumnSet",
-            "showBorder": true,
-            "style": "emphasis",
-            "columns": [
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "showBorder": true,
-                    "style": "accent",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "This is a **Column** with borders",
-                            "wrap": true
-                        }
-                    ]
-                },
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "showBorder": true,
-                    "style": "good",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "This is another **Column** with borders",
-                            "wrap": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Container",
-            "style": "attention",
-            "showBorder": true,
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "This is a **Container** with borders",
-                    "wrap": true
-                }
-            ]
-        },
-        {
-            "type": "Table",
-            "columns": [
-                {
-                    "width": 1
-                },
-                {
-                    "width": 1
-                }
-            ],
-            "rows": [
-                {
-                    "type": "TableRow",
-                    "cells": [
-                        {
-                            "type": "TableCell",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "This **Table**...",
-                                    "wrap": true
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableCell",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "...has borders",
-                                    "wrap": true
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Rounded corners in Adaptive Cards
-
-You can use Adaptive Cards across multiple hosts. Many of these hosts follow contemporary design systems and frameworks. Adaptive Cards support rounded corners for various elements to maintain consistency with these hosts and keep up with latest design trends.
-
-Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow. Adaptive Cards that contain elements with rounded corners improve readability and provide a seamless user experience across hosts.
+You can use Adaptive Cards across multiple hosts. Many of these hosts follow contemporary design systems and frameworks. Adaptive Cards support rounded corners for various elements to maintain consistency with these hosts and keep up with latest design trends. Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow.
 
 # [Desktop](#tab/desktop)
 
@@ -1242,15 +1118,18 @@ Rounded corners make the card design look more modern and visually appealing, cr
 
 ---
 
-You can add rounded corners only to the following elements in an Adaptive Card:
+You can add borders only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), and [`Table`](https://adaptivecards.io/explorer/Table.html) elements in an Adaptive Card.
 
-* [`Container`](https://adaptivecards.io/explorer/Container.html)
-* [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)
-* [`Column`](https://adaptivecards.io/explorer/Column.html)
-* [`Table`](https://adaptivecards.io/explorer/Table.html)
-* [`Image`](https://adaptivecards.io/explorer/Image.html)
+You can add rounded corners only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), [`Table`](https://adaptivecards.io/explorer/Table.html), and [`Image`](https://adaptivecards.io/explorer/Image.html) elements in an Adaptive Card:
 
-### Implement rounded corners in Adaptive Cards
+### Implement borders and rounded corners in Adaptive Cards
+
+To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table` element, set the `showGridLines` property to `true`. The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
+| `showGridLines` | Boolean | No | Adds a border to the `Table` element. Default value: `true` |
 
 To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to the `Image` element, set the `style` property to `RoundedCorners` within the element.
 
@@ -1259,7 +1138,7 @@ To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` eleme
 | `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
 | `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
 
-The following JSON payload shows an Adaptive Card with rounded corners around its elements:
+The following JSON payload shows an Adaptive Card with borders and rounded corners around its elements:
 
 ```json
 {
@@ -1269,23 +1148,25 @@ The following JSON payload shows an Adaptive Card with rounded corners around it
     "body": [
         {
             "type": "TextBlock",
-            "text": "Below is a **ColumnSet** with rounded corners:",
+            "text": "Below is a **ColumnSet** with borders and rounded corners:",
             "wrap": true
         },
         {
             "type": "ColumnSet",
+            "showBorder": true,
             "roundedCorners": true,
             "style": "emphasis",
             "columns": [
                 {
                     "type": "Column",
                     "width": "stretch",
+                    "showBorder": true,
                     "roundedCorners": true,
                     "style": "accent",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "This is a **Column** with rounded corners",
+                            "text": "This is a **Column** with borders and rounded corners",
                             "wrap": true
                         }
                     ]
@@ -1293,12 +1174,13 @@ The following JSON payload shows an Adaptive Card with rounded corners around it
                 {
                     "type": "Column",
                     "width": "stretch",
+                    "showBorder": true,
                     "roundedCorners": true,
                     "style": "good",
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "This is another **Column** with rounded corners",
+                            "text": "This is another **Column** with borders and rounded corners",
                             "wrap": true
                         }
                     ]
@@ -1308,11 +1190,12 @@ The following JSON payload shows an Adaptive Card with rounded corners around it
         {
             "type": "Container",
             "style": "attention",
+            "showBorder": true,
             "roundedCorners": true,
             "items": [
                 {
                     "type": "TextBlock",
-                    "text": "This is a **Container** with rounded corners",
+                    "text": "This is a **Container** with borders and rounded corners",
                     "wrap": true
                 }
             ]
@@ -1347,7 +1230,7 @@ The following JSON payload shows an Adaptive Card with rounded corners around it
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "...has rounded corners",
+                                    "text": "...has borders and rounded corners",
                                     "wrap": true
                                 }
                             ]
@@ -1368,6 +1251,7 @@ The following JSON payload shows an Adaptive Card with rounded corners around it
             "style": "RoundedCorners"
         }
     ]
+}
 }
 ```
 
