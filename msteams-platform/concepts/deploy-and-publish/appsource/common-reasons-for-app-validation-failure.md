@@ -171,7 +171,7 @@ For more information, see [Teams Store validation guidelines for apps with AI-ge
 
 ## See also
 
-* [Distribute your Microsoft Teams app](../apps-publish-overview.md)
+* [Publish your Microsoft Teams app](../apps-publish-overview.md)
 * [Publish your app to the Microsoft Teams Store](publish.md)
 * [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
