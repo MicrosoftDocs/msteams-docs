@@ -156,6 +156,11 @@ To collect the user feedback, you must:
 - Provide the feedback received from the user to the bot
 - Use the feedback to improve the quality of bot responses
 
+You can use one of the following to ensure intelligent context-based conversation:
+
+- Use Teams AI Library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
+- Use the feedback flag in the Bot Framework API to add the feedback button for each message.
+
 ## Next step
 
 ## See also
