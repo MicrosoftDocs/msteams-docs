@@ -91,7 +91,7 @@ You must design your Adaptive Cards to look great on any device to provide an en
 
 ## Overflow menu on Adaptive Cards
 
-Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. For more information, see [Adaptive Cards overflow menu](cards/cards-format.md#adaptive-cards-overflow-menu).
 
 <a name='support-for-azure-ad-object-id-and-upn-in-user-mention'></a>
 
