@@ -141,12 +141,20 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 The following best practices can help enhance the overall effectiveness of a custom engine agent.
 
-- Enable Teams Azure AD (AAD) single sign-on (SSO)**
+- Enable Teams Azure AD (AAD) single sign-on (SSO)
 - Build understanding for conversational history and context
 - Develop responses with feedback buttons so that the app ingests feedback
 - Offer dynamic and contextual suggestion prompts
 
 ### Ensure that bot reponses contain feedback buttons and app ingests user feedback
+
+Develop the capability in the custom engine agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
+
+To collect the user feedback, you must:
+
+- Provide feedback buttons with every response
+- Provide the feedback received from the user to the bot
+- Use the feedback to improve the quality of bot responses
 
 ## Next step
 
