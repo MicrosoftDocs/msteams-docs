@@ -4,7 +4,7 @@ description: Update your Apple Developer Program Team ID in the Microsoft Partne
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 12/15/2022
 ---
 
