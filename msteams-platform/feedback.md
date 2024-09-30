@@ -8,6 +8,8 @@ ms.date: 09/28/2022
 
 # Support and feedback
 
+Connect with our developer community for any support on issues and for sharing the feedback.
+
 ## Product support and service issues
 
 Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-critical issues** that need SLA-based support.
