@@ -133,7 +133,9 @@ You can use one of the following to ensure intelligent context-based conversatio
 
 A custom engine agent must assist users by offering prompt suggestions on how to best utilize the agent. This will help users overcome challenges not only during their initial use but also in subsequent interactions with the agent.
 
-Zero Prompts are the initial prompts that users see when a custom engine agent is added to a new conversation, such as starting a new one-on-one chat, a new session, or adding it to a group chat. These prompts should be tailored to the user's context and the specific conversation thread.
+- **Prompt starters**: Prompts starters are the initial prompts that users see when a custom engine agent is added to a new conversation, such as starting a new one-on-one chat, a new session, or adding it to a group chat. These prompts should be tailored to the user's context and the specific conversation thread.
+- **Contextual prompts**: Contextual prompts are dynamic recommendations offered by a custom engine agent during a user interaction. These prompts surface via contextual flyouts, for instance, the "View Prompts" flyout in one-on-one chats and the @mention flyout in group chats and channels. The suggestions are consistently updated to remain pertinent to the ongoing conversation between the user and the agent.
+-**Suggested action**: Suggested actions are prompts that users see as pills above the compose box in 1:1 chats and as action buttons in the message footer in group chats. These actions are suggestions that the user may want to take in response to the agent’s message. The prompts are sent along with the agent’s response and should be customized to match the content of the response.
 
 ## Next step
 
