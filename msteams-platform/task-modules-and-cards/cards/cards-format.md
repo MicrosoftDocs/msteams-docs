@@ -1028,7 +1028,7 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 Adaptive Cards support a wide variety of elements, but having too many elements clutters the card and hinders readability. You can add borders to various elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
 :::row:::
 :::column span="2":::
@@ -1049,7 +1049,7 @@ Adaptive Cards support a wide variety of elements, but having too many elements 
 
 :::row-end:::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
 :::row:::
 :::column span="2":::
@@ -1074,7 +1074,7 @@ Adaptive Cards support a wide variety of elements, but having too many elements 
 
 You can use Adaptive Cards across multiple hosts. Many of these hosts follow contemporary design systems and frameworks. Adaptive Cards support rounded corners for various elements to maintain consistency with these hosts and keep up with latest design trends. Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow.
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop2)
 
 :::row:::
 :::column span="2":::
@@ -1095,7 +1095,7 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 
 :::row-end:::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile2)
 
 :::row:::
 :::column span="2":::
@@ -1118,7 +1118,15 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 
 ---
 
-You can add borders only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), and [`Table`](https://adaptivecards.io/explorer/Table.html) elements in an Adaptive Card. You can add rounded corners only to the [`Container`](https://adaptivecards.io/explorer/Container.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), [`Column`](https://adaptivecards.io/explorer/Column.html), [`Table`](https://adaptivecards.io/explorer/Table.html), and [`Image`](https://adaptivecards.io/explorer/Image.html) elements in an Adaptive Card:
+You can add borders and rounded corners only to the following elements:
+
+| Element | Borders | Rounded Corners |
+| --- | --- | --- |
+| [`Container`](https://adaptivecards.io/explorer/Container.html) | ✔️ | ✔️ |
+| [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) | ✔️ | ✔️ |
+| [`Column`](https://adaptivecards.io/explorer/Column.html) | ✔️ | ✔️ |
+| [`Table`](https://adaptivecards.io/explorer/Table.html) | ✔️ | ✔️ |
+| [`Image`](https://adaptivecards.io/explorer/Image.html) |  | ✔️ |
 
 ### Implement borders and rounded corners in Adaptive Cards
 
@@ -1249,7 +1257,6 @@ The following JSON payload shows an Adaptive Card with borders and rounded corne
             "style": "RoundedCorners"
         }
     ]
-}
 }
 ```
 
