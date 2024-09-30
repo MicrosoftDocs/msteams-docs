@@ -141,9 +141,9 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 The following best practices can help enhance the overall effectiveness of a custom engine agent.
 
+- Develop responses with feedback buttons so that the app ingests feedback
 - Enable Teams Azure AD (AAD) single sign-on (SSO)
 - Build understanding for conversational history and context
-- Develop responses with feedback buttons so that the app ingests feedback
 - Offer dynamic and contextual suggestion prompts
 
 ### Ensure that bot reponses contain feedback buttons and app ingests user feedback
@@ -160,6 +160,18 @@ You can use one of the following to ensure intelligent context-based conversatio
 
 - Use Teams AI Library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 - Use the feedback flag in the Bot Framework API to add the feedback button for each message.
+
+### Enable Teams Azure AD (AAD) single sign-on (SSO)
+
+You can add single sign-on authentication to your conversation bot. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
+
+### Develop the bot to understand conversational history and context
+
+You can design your custom engine agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate. For more information, see [messages in bot conversations](../conversations/conversation-messages.md).
+
+### Offer dynamic and contextual suggestion prompts
+
+enhance your custom engine agent experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically. To achieve this, the agent must leverage the conversation context and history and prompt suggestions can be timely and fit for the query.
 
 ## Next step
 
