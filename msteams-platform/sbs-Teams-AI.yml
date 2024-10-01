@@ -149,8 +149,8 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new custom engine agent project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
+    1. [How to set up a new custom engine agent project with Teams Toolkit.](#create-your-custom-engine-agent-project-workspace)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-app-source-code)
 
     ## Create your custom engine agent project workspace
 
