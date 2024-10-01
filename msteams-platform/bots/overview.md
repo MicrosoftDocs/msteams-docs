@@ -55,9 +55,9 @@ The following table [**TBD**: Clickable browse path] guides you through building
 | If you want to... | Here's your path |
 | --- | --- |
 | Begin building a bot | [Basic bot concepts, scopes] <br> [Build a basic bot: TTK and Bot SDK] <br> Bring your existing bot to Teams <br> [Build basic AI bot - QS SBS guide] |
-| Configure a basic bot | [Introduction to activity handler, events] <br> [Bot logic] <br> [Manifest configuration] <br> [SBS guides for TTK apps or TTK sample apps + Code samples for Bot SDK for interactive messages, send and receive files, fetching team or chat members, rate limiting, etc.] |
-| Configure an AI bot | [AI concepts and capabilities] <br> [Build basic AI bot (custom engine agent)] <br> [Get started] <br> [Bot logic for an AI bot] <br> [Copilot handoff] |
-| Explore advanced bot features | [SSO] <br> [Access data with MS Graph] <br> [Bot on Mobile] <br> [Build call and media bots] |
+| Build a basic bot | [Introduction to activity handler, events] <br> [Bot logic] <br> [Manifest configuration] <br> [SBS guides for TTK apps or TTK sample apps + Code samples for Bot SDK for interactive messages, send and receive files, fetching team or chat members, rate limiting, etc.] |
+| Build an AI bot | [AI concepts and capabilities] <br> [Build basic AI bot (custom engine agent)] <br> [Get started] <br> [Bot logic for an AI bot] <br> [Copilot handoff] |
+| Explore advanced bot capabilities | [SSO] <br> [Access data with MS Graph] <br> [Bot on Mobile] <br> [Build call and media bots] |
 
 ## Next step
 
