@@ -92,9 +92,9 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
 | count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
-| `associatedInputs` | String | No | Specifies the input values associated with the `Data.Query` object. Allowed values: `auto`, `none` |
+| associatedInputs | String | No | Specifies the input values associated with the `Data.Query` object. Allowed values: `auto`, `none` |
 
-When you define the `associatedInputs` property under the `Data.Query` object, Teams includes the values of the all input values in the card in the data query request sent to the bot. This action allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent dropdowns](#dependent-dropdowns).
+When you define the `associatedInputs` property under the `Data.Query` object, Teams includes the values of the all input values of the card in the data query request sent to the bot. If you set the value of the property to `auto`, Teams includes the input values of all elements in a card in the data query request sent to the bot. If you set the value of the property to `none`, Teams includes no input values in the data query request sent to the bot. This property allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent inputs](#dependent-inputs).
 
 ### Example
 
@@ -413,12 +413,12 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ---
 
-## Dependent dropdowns
+## Dependent inputs
 
 > [!NOTE]
-> Dependent dropdowns aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent dropdowns are dropdown lists where the options in a list depend on the value of another input field. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search.
+Dependent inputs are input fields where one input value depends on the value of another input field. Dependent inputs make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent inputs with dynamic typeahead search.
 
 For example, consider an Adaptive Card with two dropdown lists: one for selecting a country and another for selecting a specific city within that country. The first dropdown list filters the cities shown in the second dropdown list.
 
@@ -428,19 +428,21 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dropdown list with USA and its states.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dependent dropdown with USA and its states.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dropdown list with USA and its states.":::
 
 ---
 
-### How dependent dropdowns work
+### How dependent inputs work
 
-The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent dropdown:
+The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent input:
 
-:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent dropdown." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent input." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
+
+To make inputs depend on each other in an Adaptive Card, use the following properties:
 
 1. When a user changes an input value, the existing input value in the dependent dropdown becomes invalid. Define the [`Action.ResetInputs`](#actionresetinputs) property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
 
@@ -458,175 +460,82 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 
 | Property| Type | Required | Description |
 |---|---|---|---|
-| `valueChangedAction` | Action.ResetInputs | No | Contains the `Action.ResetInputs` property |
-| `Action.ResetInputs` | String | No | Resets the input values |
+| `valueChangedAction` | Action.ResetInputs | Yes | Contains the `Action.ResetInputs` property |
+| `Action.ResetInputs` | String | Yes | Resets the input values |
+| `id` | String | No | A unique identifier for the action |
+| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered and its fallback is rendered, if provided. |
+| `fallback` | Object or String | No | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URI are supported. |
+| `isEnabled` | Boolean | No | Controls the enabled state of the action. A disabled action can't be clicked. If the action is represented as a button, the button's style will reflect this state. |
+| `mode` | String | No | Controls if the action is primary or secondary. Allowed values: `primary`, `secondary` |
+| `style` | String | No | Controls the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive` or `destructive` |
 | `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
-
-#### associatedInputs
-
-The `associatedInputs` property ensures that Teams includes the input values of all elements in a card when a data query request is sent to the bot. You must define the `associatedInputs` property under the `Data.Query` object of the `Input.ChoiceSet` control. If you set the value of the property to `auto`, Teams includes the input values of all elements in a card in the data query request sent to the bot. If you set the value of the property to `none`, Teams includes no input values in the data query request sent to the bot.
-
-| Property| Type | Required | Description |
-|---|---|---|---|
-| `associatedInputs` | String | No | Specifies the inputs that are associated with the `Data.Query` object. Allowed values: `auto`, `none` |
+| `title` | String | No | The title of the action, as it appears on a button |
+| `tooltip` | String | No | The tooltip text to display when a user hovers over the action |
 
 The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
 
-**To be validated**
-
 ```json
 {
-  "type": "AdaptiveCard",
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.6",
-  "body": [
-    {
-      "columns": [
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
         {
-          "width": "auto",
-          "items": [
-            {
-              "size": "extraLarge",
-              "text": "Country Picker",
-              "weight": "bolder",
-              "wrap": true,
-              "type": "TextBlock"
-            }
-          ],
-          "type": "Column"
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "text": "Pick a country/region",
-      "wrap": true,
-      "type": "TextBlock"
-    },
-    {
-      "columns": [
+            "size": "ExtraLarge",
+            "text": "Country Picker",
+            "weight": "Bolder",
+            "wrap": true,
+            "type": "TextBlock"
+        },
         {
-          "width": "auto",
-          "items": [
-            {
-              "text": "Select country/region",
-              "wrap": true,
-              "height": "stretch",
-              "type": "TextBlock"
-            }
-          ],
-          "type": "Column"
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "columns": [
-        {
-          "width": "stretch",
-          "items": [
-            {
-              "choices": [
+            "id": "country",
+            "type": "Input.ChoiceSet",
+            "label": "Select a country or region:",
+            "choices": [
                 {
-                  "title": "USA",
-                  "value": "usa"
+                    "title": "USA",
+                    "value": "usa"
                 },
                 {
-                  "title": "India",
-                  "value": "india"
+                    "title": "France",
+                    "value": "france"
                 },
                 {
-                  "title": "China",
-                  "value": "china"
+                    "title": "India",
+                    "value": "india"
                 }
-              ],
-              "style": "filtered",
-              "placeholder": "Search for a country/region",
-              "id": "choiceCountry",
-              "type": "Input.ChoiceSet"
-            }
-          ],
-          "type": "Column",
-          "valueChangedAction": {
-          "type": "Action.ResetInputs",
-          "targetInputIds": [
-              "choiceCity"
-          ]
-        }
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "columns": [
+            ],
+            "valueChangedAction": {
+                "type": "Action.ResetInputs",
+                "targetInputIds": [
+                    "city"
+                ]
+            },
+            "isRequired": true,
+            "errorMessage": "Please select a country or region"
+        },
         {
-          "width": "auto",
-          "items": [
-            {
-              "text": "Select city/cities",
-              "wrap": true,
-              "height": "stretch",
-              "type": "TextBlock"
-            }
-          ],
-          "type": "Column"
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "columns": [
-        {
-          "width": "stretch",
-          "items": [
-            {
-              "choices": [
-                {
-                  "title": "Static Option 1",
-                  "value": "static_option_1"
-                },
-                {
-                  "title": "Static Option 2",
-                  "value": "static_option_2"
-                },
-                {
-                  "title": "Static Option 3",
-                  "value": "static_option_3"
-                }
-              ],
-              "value": "Static_option_2",
-              "isMultiSelect": true,
-              "style": "filtered",
-
-              "choices.data": {
+            "style": "filtered",
+            "choices.data": {
                 "type": "Data.Query",
-                "dataset": "countries",
+                "dataset": "cities",
                 "associatedInputs": "auto"
-              },
-              "id": "choiceCity",
-              "type": "Input.ChoiceSet"
-            }
-          ],
-          "type": "Column"
+            },
+            "id": "city",
+            "type": "Input.ChoiceSet",
+            "label": "Select a city:",
+            "placeholder": "Type to search for a city in the selected country",
+            "isRequired": true,
+            "errorMessage": "Please select a city"
         }
-      ],
-      "type": "ColumnSet"
-    },
-  ],
-  "actions": [
-    {
-      "data": {
-        "msteams": {
-          "type": "invoke",
-          "value": {
-            "type": "task/submit"
-          }
+    ],
+    "actions": [
+        {
+            "title": "Submit",
+            "type": "Action.Submit"
         }
-      },
-      "title": "Confirm selection",
-      "type": "Action.Submit"
-    }
-  ]
+    ]
 }
 ```
 
@@ -642,20 +551,11 @@ The following code snippet shows an example of a bot invoke request for the card
             "skip": 0,
             "top": 15
         },
-        "dataset": "countries",
-        "data": [
-          {
-            "inputId": "choiceCountry",
-            "inputValue": "<value of the input>"
-          },
-          {
-            "inputId": "choiceCity",
-            "inputValue": "<value of the input>"
-          }
-        ]
+        "dataset": "cities",
+        "data": {
+            "country": "<value of the country input>"
+        }
     },
-    "locale": "en-US",
-    "localTimezone": "America/Los_Angeles"
     // …. other fields
 }
 ```
