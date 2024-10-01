@@ -1121,7 +1121,7 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 You can add borders and rounded corners only to the following elements:
 
 | Element | Borders | Rounded Corners |
-| --- | --- | --- |
+| --- | :---: | :---: |
 | [`Container`](https://adaptivecards.io/explorer/Container.html) | ✔️ | ✔️ |
 | [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) | ✔️ | ✔️ |
 | [`Column`](https://adaptivecards.io/explorer/Column.html) | ✔️ | ✔️ |
