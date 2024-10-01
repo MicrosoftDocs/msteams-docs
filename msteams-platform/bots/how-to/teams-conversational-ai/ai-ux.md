@@ -48,7 +48,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 <details>
 <summary>App manifest update example:</summary>
 
-    ```json
+```json
     "bots": [
 
         { 
@@ -85,7 +85,8 @@ Here's an example for updating the app manifest. You must add the `botID` proper
     
       },
     
-    ```
+```
+
 </details>
 
 ### Stream the custom engine agent response to the user
@@ -146,9 +147,9 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 The following best practices can help enhance the overall effectiveness of a custom engine agent.
 
-- [Develop responses with feedback buttons so that the app ingests feedback](#ensure-that-bot-reponses-contain-feedback-buttons-and-app-ingests-user-feedback).
+- [Ensure that agent's reponse contains feedback button](#ensure-that-agents-reponse-contains-feedback-button).
 - [Enable Teams Azure AD (AAD) single sign-on (SSO)](#enable-teams-azure-ad-aad-single-sign-on-sso).
-- [Develop the bot to understand conversational history and context](#develop-the-bot-to-understand-conversational-history-and-context).
+- [Enable the custom engine agent to understand conversational history and context](#enable-the-custom-engine-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
 
 ### Ensure that agent's reponse contains feedback button
@@ -170,7 +171,7 @@ You can use one of the following to enable feedback collection and usage:
 
 You can add single sign-on authentication to your custom engine agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
 
-### Develop the custom engine agent to understand conversational history and context
+### Enable the custom engine agent to understand conversational history and context
 
 You can design your custom engine agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate. For more information, see [messages in bot conversations](../conversations/conversation-messages.md).
 
