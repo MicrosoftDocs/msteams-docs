@@ -9,7 +9,7 @@ ms.date: 09/27/2024
 
 # Build custom engine agent user experience
 
-A custom engine agent is designed to transform the way we interact with systems. For user experience (UX) designers and developers, creating an outstanding user experience is crucial to fully harness its potential. This article details the necessary steps, principles, and considerations for crafting intuitve, user-centered interfaces that seamlessly integrate AI capabilities.
+A custom engine agent is designed to transform the way we interact with systems. For user experience (UX) designers and developers, creating an outstanding UX is crucial to fully harness its potential. This article details the necessary steps, principles, and considerations for crafting intuitve, user-centered interfaces that seamlessly integrate AI capabilities.
 
 The key objectives to building a great user experience involves simplifying complex tasks, enhancing productivity, enabling personalized experience through adaptive learning.
 
