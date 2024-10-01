@@ -130,7 +130,7 @@ You can use one of the following to ensure intelligent context-based conversatio
   - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
   - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
-### Ensure that the custom engine agent offers prompt starters or welcome card
+### Ensure that the custom engine agent offers prompt starters or a welcome card
 
 A custom engine agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps a user overcome challenges not only during their initial use but also in subsequent interactions with the agent.
 
