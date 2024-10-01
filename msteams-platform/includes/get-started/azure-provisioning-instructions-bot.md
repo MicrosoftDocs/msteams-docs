@@ -80,9 +80,15 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the debug and launch app remotely.":::
 
-1. Select **Add** or use the dropdown menu to add your bot app to a team, chat, or meeting.
+1. Select **Add**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot shows the app being installed in different scopes.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
+
+1. Select **Open** to open the app in personal scope.
+
+   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You successfully added your bot app to the Teams client.
 
