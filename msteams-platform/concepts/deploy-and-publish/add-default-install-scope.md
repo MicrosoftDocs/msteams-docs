@@ -4,7 +4,7 @@ description: Learn how to specify your Teams app's default install options, defa
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/15/2022
+ms.date: 10/03/2024
 ---
 # Configure default options for Teams app
 
@@ -85,7 +85,7 @@ If an app is configured with personal and shared scopes along with a default ins
     > [!NOTE]
     >
     > * The **Recommended** button indicates the scope in which the app provides best usage experience.
-    > * The **View more** option lists the respective channel, chat, and meetings scopes available for the user.
+    > * The **View more** option lists the respective channel, chat, or meeting options available for the user.
 
 </details>
 </br>
