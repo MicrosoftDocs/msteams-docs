@@ -170,7 +170,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Custom Engine copilot**.
+    1. Select **Custom Engine Agent**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-project.png" alt-text="Screenshot shows the wizard to Create New Project.":::
 
@@ -180,7 +180,7 @@ items:
    
     1. Select **TypeScript** as the programming language.
 
-        :::image type="content" source="assets/images/bots/Teams-AI-library-typescript.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/typescript-programming-language.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
 
     1. Select **OpenAI** or **Azure OpenAI**.
     
@@ -218,7 +218,7 @@ items:
 
         After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
     
        
     <details>
