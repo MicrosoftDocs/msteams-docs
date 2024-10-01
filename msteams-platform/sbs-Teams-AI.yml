@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Build your first app using Teams AI library
+title: Build a custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit
 metadata:
-  title: Build your first app using Teams AI library
+  title: Build a custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit
   description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Advanced
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: | 
-   Start Microsoft Teams app development with your first Teams AI library app. 
+   Start Microsoft Teams app development with your custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit. 
     
    You can create a bot for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the Language Model in accurately understanding and executing user intent, aligning it with app actions.
     
@@ -22,7 +22,7 @@ items:
 
    - How to set up a new project with Teams Toolkit.
    - How to import Teams AI library capabilities.
-   - How to deploy your bot in Teams and start a conversation.
+   - How to deploy your bot in Teams and control over light operations.
 
    You can see the following output:
 
@@ -143,23 +143,18 @@ items:
 
     Let's create your first bot app.
     
-    The bot capability of a Teams app creates a AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
-    
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+    The custom engine agent capability of a Teams app creates an AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. An custom engine agent talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using the custom engine agent.
+ 
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the custom engine agent.
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
+    1. [How to set up a new custom engine agent project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
-    ## Create your bot project workspace
+    ## Create your custom engine agent project workspace
 
     If the prerequisites are in place, let's begin!
-
-    > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It might differ depending on your operating system, Teams Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -212,7 +207,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
     
-        Your Teams app with AI Chatbot capability is created in few seconds.
+        Your custom engine agent is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
@@ -250,7 +245,7 @@ items:
 
     ---
 
-    ## Take a tour of the bot app source code
+    ## Take a tour of the app source code
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
@@ -259,7 +254,7 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
-    | `index.ts` |  Main entry point for the bot app. |
+    | `index.ts` |  Main entry point for the app. |
     | `teamsBot.ts` | Teams activity handler. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
@@ -267,14 +262,12 @@ items:
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
 
-    > [!Tip]
-    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
-- title: Build and run your first bot app
+- title: Build and run your first custom engine agent
   durationInMinutes: 1
   content: |
 
-    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your project. Ensure that you've signed in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 
@@ -322,9 +315,9 @@ items:
 
     ---
 
-    ## Update your bot app with Teams AI library capabilities
+    ## Update your custom engine agent with Teams AI library capabilities
 
-    Teams Toolkit is the easiest way to scaffold and get a bot running. Teams Toolkit creates the basic bot structure for you to get started with configuring your bot. 
+    Teams Toolkit is the easiest way to scaffold and get a custom engine agent running. Teams Toolkit creates the basic structure for you to get started with configuring your custom engine agent. 
     
     Let's get started to configure Teams AI library capabilities.
 
@@ -489,7 +482,7 @@ items:
         }
         ```
 
-       The bot uses OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the bot. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the bot's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
+       The custom engine agent uses OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the custom engine agent. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the agent's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
 
     1. Go to the `skprompt.txt` file. Add the following instructions for OpenAI or Azure OpenAI to conduct and facilitate conversation:
 
@@ -504,7 +497,7 @@ items:
 
         The `skprompt.txt` file contains text prompts with which the users interact with OpenAI or Azure OpenAI. OpenAI or Azure OpenAI attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
 
-    1. Go to the `actions.json` file. Add the following code to define the actions for the bot:
+    1. Go to the `actions.json` file. Add the following code to define the actions for the custom engine agent:
 
         ```json
         {
@@ -538,11 +531,11 @@ items:
         }
         ```
 
-        The `actions.json` file contains the actions that the bot can perform. The `ActionPlanner` from the `index.ts` file uses the actions defined in the `actions.json` file to perform the actions.
+        The `actions.json` file contains the actions that the custom engine agent can perform. The `ActionPlanner` from the `index.ts` file uses the actions defined in the `actions.json` file to perform the actions.
 
-    This sample uses OpenAI or Azure OpenAI for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
+    This sample uses OpenAI or Azure OpenAI for all its natural language modelling, the user can talk to the custom engine agent in any language of their choosing. The custom engine agent understands and responds appropriately without extra code.
 
-    ## Build and run your first bot app locally
+    ## Build and run your custom engine agent locally
 
     To build and run your app in the local environment:
 
@@ -567,10 +560,10 @@ items:
         2. Install npm packages.
         3. Starts Dev Tunnel to create an HTTP tunnel.
         4. Registers the app in Microsoft Entra ID and configures the app.
-        5. Registers the bot app in Bot Framework SDK and configures the bot app.
+        5. Registers the app in Bot Framework SDK and configures the app.
         6. Registers the app in Teams Developer Portal and configures the app.
-        7. Starts the bot app.
-        8. Starts Teams in a web browser and uploads the custom bot app.
+        7. Starts the app.
+        8. Starts Teams in a web browser and uploads the app.
 
 
         </details>
@@ -584,15 +577,15 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to upload a custom app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload your app onto Teams on your local machine.
 
         :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
 
-        Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
+        Now the custom engine agent is successfully running on Teams! After the app is loaded, a chat session with the custom engine agent opens.
 
         :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
-        You can type `LightsOn` to start interacting with the bot.
+        You can type `LightsOn` to start interacting with the custom engine agent.
 
       <!-- markdownlint-disable MD033 -->
       <details>
@@ -607,13 +600,13 @@ items:
       > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
       </details> 
       
-- title: Deploy your first Teams app
+- title: Deploy your custom engine agent
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run custom engine agent. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with bot capability on Azure using Teams Toolkit.
+    Let's deploy the custom engine agent on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -622,7 +615,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Open the project folder in which you created the bot app.
+    1. Open the project folder in which you created the app.
     1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
@@ -637,8 +630,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you've created a Teams app! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+        Congratulations, you've created a custom engine agent! 
 
     # [Command line](#tab/cline)
 
@@ -661,13 +653,12 @@ items:
         The account logins are shared between Visual Studio Code and the Teamsapp CLI.
 
         Congratulations, you've signed in your Azure account!
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
 
     ## Deploy your app to Azure
 
-    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
+    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the custom engine agent.
     <br>
     <br>
     <details>
@@ -713,7 +704,7 @@ items:
 
         As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
-        Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+        Now, you can use the same process to deploy your custom engine agent to Azure.
 
     # [Command Line](#tab/cli)
 
@@ -745,7 +736,7 @@ items:
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
 
     1. Select **Add**.
         
@@ -791,10 +782,8 @@ items:
 
     You've done it!
 
-    You've created a Teams AI library bot.
+    You've created a custom engine agent.
 
     :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
-
-    Now that you've learned to create an app using Teams AI library, you can move on to learn about Teams AI capabilities.
 
     You've completed the tutorial.
