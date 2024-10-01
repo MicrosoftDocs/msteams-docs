@@ -47,6 +47,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 <details>
 <summary>App manifest update example</summary>
+
     ```json
     "bots": [
 
@@ -89,7 +90,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 ### Stream the custom engine agent response to the user
 
-A custom engine agent uses LLM to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, the agent must stream its responses, making them appear fast despite the processing time.
+A custom engine agent uses LLM to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, the agent must stream its responses, making them appear fast despite longer processing time.
 
 You can use the following types of updates while streaming responses:
 
