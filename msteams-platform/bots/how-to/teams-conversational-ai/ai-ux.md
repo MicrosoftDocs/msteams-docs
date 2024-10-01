@@ -32,7 +32,7 @@ The following requirements are mandatory for building the custom engine agent UX
 - [Ensure the custom engine agent response contains citations](#ensure-the-custom-engine-agent-response-contains-citations).
 - [Ensure the custom engine agent response contains an AI Label](#ensure-the-custom-engine-agent-response-contains-an-ai-label).
 - [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
-- [Ensure that the custom engine agent offers zero prompts or welcome card](#ensure-that-the-custom-engine-agent-offers-zero-prompts-or-welcome-card).
+- [Ensure that the custom engine agent offers prompt starters or welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-welcome-card).
 
 ### Update the app manifest for custom engine agent
 
@@ -130,7 +130,7 @@ You can use one of the following to ensure intelligent context-based conversatio
   - **Store and pass conversation history**: Determine means of storage and pass some extent of the conversation history to the agent.
   - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to using the LLM and recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
-### Ensure that the custom engine agent offers zero prompts or welcome card
+### Ensure that the custom engine agent offers prompt starters or welcome card
 
 A custom engine agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps a user overcome challenges not only during their initial use but also in subsequent interactions with the agent.
 
