@@ -14,74 +14,33 @@ Microsoft Teams Store provides features that enable you to monetize your apps an
 
 ## Choose a pricing model
 
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app":::
-    :::column-end:::
-    :::column span="2":::
+* **Include a SaaS offer with your app**:
 
-**Include a SaaS offer with your app**
+  With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
 
-With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
+  For more information, see [include a SaaS offer with your Teams app](include-saas-offer.md).
 
-    :::column-end:::
-:::row-end:::
+* **Free trials**:
 
-:::row:::
-    :::column:::
-     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Free trials":::
-    :::column-end:::
-    :::column span="2":::
+  You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
 
-**Free trials**
+* **In-app purchases**:
 
-You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
+  Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
 
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
-    :::column-end:::
-    :::column span="2":::
+  For more information, see [in-app purchases](in-app-purchase-flow.md).
 
-**In-app purchases**
+* **Test preview for monetized app**:
 
-Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
+  With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
 
-[Use in-app purchases](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+  For more information, see [test preview for monetized apps](Test-preview-for-monetized-apps.md).
 
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test preview SaaS offer":::
-    :::column-end:::
-    :::column span="2":::
+* **Set up Microsoft license management**:
 
-**Test preview for monetized app**
+  If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
 
-With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
-
-[Test preview for monetized apps](Test-preview-for-monetized-apps.md)
-
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Manage license for third party apps":::
-    :::column-end:::
-    :::column span="2":::
-
-**Set up Microsoft license management**
-
-If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
-
-[Set up Microsoft license management](manage-third-party-apps-license.md).
-
-:::column-end:::
-:::row-end:::
+  For more information, see [set up Microsoft license management](manage-third-party-apps-license.md).
 
 ## See also
 
