@@ -27,16 +27,11 @@ To achieve this, you must follow some mandatory and recommended steps and requir
 
 The following requirements are mandatory for building the custom engine agent UX:
 
-- [Update the app manifest to connect the bot ID with the custom engine agent node](#update-the-app-manifest-for-custom-engine-agent).
-
+- [Update the app manifest for custom engine agent](#update-the-app-manifest-for-custom-engine-agent).
 - [Stream the custom engine agent response to the user](#stream-the-custom-engine-agent-response-to-the-user).
-
 - [Ensure the custom engine agent response contains citations](#ensure-the-custom-engine-agent-response-contains-citations).
-
 - [Ensure the custom engine agent response contains an AI Label](#ensure-the-custom-engine-agent-response-contains-an-ai-label).
-
 - [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
-
 - [Ensure that the custom engine agent offers zero prompts or welcome card](#ensure-that-the-custom-engine-agent-offers-zero-prompts-or-welcome-card).
 
 ### Update the app manifest for custom engine agent
