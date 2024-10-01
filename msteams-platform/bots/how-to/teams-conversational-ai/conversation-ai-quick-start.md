@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: surbhigupta
-ms.date: 09/18/2024
+ms.date: 10/03/2024
 ---
 
 # Teams AI library quick start guide
