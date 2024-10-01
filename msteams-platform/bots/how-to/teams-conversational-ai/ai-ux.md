@@ -32,7 +32,7 @@ The following requirements are mandatory for building the custom engine agent UX
 - [Ensure the custom engine agent response contains citations](#ensure-the-custom-engine-agent-response-contains-citations).
 - [Ensure the custom engine agent response contains an AI Label](#ensure-the-custom-engine-agent-response-contains-an-ai-label).
 - [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
-- [Ensure that the custom engine agent offers prompt starters or welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-welcome-card).
+- [Ensure that the custom engine agent offers prompt starters or a welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-a-welcome-card).
 
 ### Update the app manifest for custom engine agent
 
