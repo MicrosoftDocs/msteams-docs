@@ -11,17 +11,17 @@ ms.date: 09/27/2024
 
 A custom engine agent is designed to transform the way we interact with systems. For user experience (UX) designers and developers, creating an outstanding UX is crucial to fully harness its potential. This article details the necessary steps, principles, and considerations for crafting intuitve, user-centered interfaces that seamlessly integrate AI capabilities.
 
-The key objectives to building a great user experience involves simplifying complex tasks, enhancing productivity, enabling personalized experience through adaptive learning.
+The primary goals of creating an excellent user experience include simplifying complex tasks, boosting productivity, and providing a personalized experience through adaptive learning.
 
 ## What is a custom engine agent?
 
-A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
+Custom engine agents are advanced conversational Teams bots that leverage the Large Language Models (LLMs) to facilitate seamless user interaction. A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
 
 - **Generative AI integration**: Utilizes advanced AI models to facilitate natural language processing and interaction.
-- **Bots**: Extend or build bots to utilize the LLM and generative AI to provide high quality chat bots experience.
-- **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the custom agent behavior and responses to specific use cases.
+- **Bots**: Enables extending or building bots to utilize LLM and generative AI to provide high quality chat bots experience.
+- **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the agent's behavior and responses to specific use cases.
 
-To meet this goal, you must follow some mandatory and recommended steps and requirements.
+To achieve this, you must follow some mandatory and recommended steps and requirements.
 
 ## Ensure mandatory requirements for custom engine agent
 
@@ -41,7 +41,7 @@ The following requirements are mandatory for building the custom engine agent UX
 
 ### Update the app manifest for custom engine agent
 
-You must update the custom engine agent app manifest to define specific properties and configurations that characterize its capabilities and behavior.
+You must update the app manifest for the custom engine agent to define specific properties and configurations that characterize its capabilities and behavior.
 
 Add the `botID` property to the `copilotExtensions` node in the manifest.
 
@@ -85,12 +85,12 @@ Add the `botID` property to the `copilotExtensions` node in the manifest.
 
 ### Stream the custom engine agent response to the user
 
-A custom engine agent uses a large language model (LLM) to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, custom engine agent must stream its responses, making them appear fast despite the processing time.
+A custom engine agent uses LLM to handle complex user requests, which can cause a delay in generating responses. To prevent this delay from being noticeable to users, the agent must stream its responses, making them appear fast despite the processing time.
 
-To stream the response:
+You can use the following types of updates while streaming responses:
 
-- Informative updates: Send information on the sub-steps the agent as the response is being generated before it sends the final response.
-- Response streaming: Sending the user intermediate states of the final response while the LLM creates its full response.
+- Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
+- Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
 You can use one of the following to stream the resposne:
 
