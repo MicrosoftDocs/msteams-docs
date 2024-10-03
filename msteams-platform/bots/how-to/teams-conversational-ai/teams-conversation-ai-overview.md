@@ -42,13 +42,13 @@ The following are some of the main features available through Teams AI library:
 
 :::row:::
     :::column span="":::
-        :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
+
     :::column-end:::
     :::column span="":::
         [**Conversation management**](#conversation-management)
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
+        
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -67,7 +67,7 @@ The following are some of the main features available through Teams AI library:
         [**Analytics and insight**](#analytics-and-insight)
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
+
     :::column-end:::
     :::column span="":::
         [**Development and deployment**](#development-and-deployment)
