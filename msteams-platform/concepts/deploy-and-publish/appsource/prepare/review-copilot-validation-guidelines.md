@@ -299,7 +299,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
 * The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [Must fix]
 
-Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+   Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
 
    | Pass example | Fail example |
    | --- | --- |
