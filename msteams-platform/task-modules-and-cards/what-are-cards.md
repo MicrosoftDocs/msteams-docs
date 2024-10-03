@@ -69,9 +69,9 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a typeahead static search within a list with limited number of choices. The mobile and desktop clients support typeahead dynamic search experience.
 
-### Dependent dropdowns in Adaptive Cards
+### Dependent inputs in Adaptive Cards
 
-[Dependent dropdowns](cards/dynamic-search.md#dependent-dropdowns) are dropdown lists where the options in a list depend on the value of another input field. You can design Adaptive Cards in Teams that contain dependent dropdowns with dynamic typeahead search. Dependent dropdowns make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries.
+[Dependent inputs](cards/dynamic-search.md#dependent-inputs) are input fields where one input value depends on the value of another input field. Dependent inputs make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent inputs with dynamic typeahead search.
 
 ### Media elements in Adaptive Cards
 
