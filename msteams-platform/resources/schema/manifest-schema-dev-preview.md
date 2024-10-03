@@ -456,7 +456,7 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of `declarativeAgent` objects. |
+|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects defining the declarative agent. |
 
 ### declarativeAgents
 
