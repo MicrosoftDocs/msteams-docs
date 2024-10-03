@@ -143,7 +143,6 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 * A plugin must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
 * Each prompt mustn't exceed 128 characters. [*Must fix*]
 * Two commands within the same plugin mustn't have identical prompts. [*Must fix*]
-* Sample prompts must be generic in nature and not include custom references. For example, project names and task name. [*Must fix*]
 * All sample prompts must be functional and return responses. [*Must fix*]
 * Prompt must be relevant to the commands. [*Must fix*]
 
@@ -153,7 +152,6 @@ Prompt starters guide users on how to start using declarative agents. You must e
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
-* It must be generic in nature and not include custom references, for example, project names and task name. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
