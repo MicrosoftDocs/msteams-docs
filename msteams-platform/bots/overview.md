@@ -25,7 +25,7 @@ The bot app users access and use your bot app within Teams.
 
 [**TBD**: Bot UX infographic or gif]
 
-<!-->
+<!--
 [**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
