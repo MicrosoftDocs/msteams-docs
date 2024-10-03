@@ -8,7 +8,7 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Customize interactive notification bot
+## Build an interactive notification bot
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
@@ -42,7 +42,8 @@ You can send a bot notification in the following scenarios:
 
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
-[Back to top](#interactive-notification-bot-in-teams)
+
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Notification based on events
 
@@ -97,7 +98,7 @@ for (const target of await notificationApp.notification.installations()) {
 
 ---
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Notification bot installation
 
@@ -108,7 +109,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Customize notification
 
@@ -163,7 +164,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts2)
 
-    ```TypeScript
+```TypeScript
     // list all installation targets
     for (const target of await notificationApp.notification.installations()) {
         // "Person" means this bot is installed as Personal app
@@ -172,11 +173,11 @@ You can customize sending the notification to the following targets:
             await target.sendAdaptiveCard(...);
         }
     }
-    ```
+```
 
 # [C#](#tab/csharp2)
 
-    ```C#
+```C#
     // list all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Person" means this bot is installed as Personal app
@@ -186,7 +187,7 @@ You can customize sending the notification to the following targets:
             await target.SendAdaptiveCard(...);
         }
     }
-    ```
+```
 
 ---
 
@@ -194,7 +195,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts3)
 
-    ```TypeScript
+```TypeScript
     // list all installation targets
     for (const target of await notificationApp.notification.installations()) {
         // "Group" means this bot is installed to a Group Chat
@@ -210,11 +211,11 @@ You can customize sending the notification to the following targets:
             }
         
     }
-    ```
+```
 
 # [C#](#tab/csharp3)
 
-    ```C#
+```C#
     // list all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Group" means this bot is installed to a Group Chat
@@ -229,7 +230,7 @@ You can customize sending the notification to the following targets:
             }
         }
     }
-    ```
+```
 
 ---
 
@@ -237,7 +238,7 @@ You can customize sending the notification to the following targets:
 
 # [TypeScript](#tab/ts4)
 
-    ```TypeScript
+```TypeScript
     // list all installation targets
     for (const target of await notificationApp.notification.installations()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -258,11 +259,11 @@ You can customize sending the notification to the following targets:
             }
         }
     }
-    ```
+```
 
 # [C#](#tab/csharp4)
 
-    ```C#
+```C#
     // list all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -284,7 +285,7 @@ You can customize sending the notification to the following targets:
             }
         }
     }
-    ```
+```
 
 ---
 
@@ -314,7 +315,7 @@ You can customize sending the notification to the following targets:
      > [!NOTE]
      > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
- [Back to top](#interactive-notification-bot-in-teams)
+ [Back to top](#build-an-interactive-notification-bot)
 
 ## Customize initialization
 
@@ -364,7 +365,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Customize adapter
 

@@ -8,7 +8,7 @@ ms-author: surbhigupta
 ms.date: 01/29/2023
 ---
 
-# Customize workflow bot
+## Build a workflow bot
 
 A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
@@ -479,7 +479,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <summary><b>How to extend workflow bot with notifications?</b></summary>
 
-Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your app can respond with an Adaptive Card as required. How to extend workflow bot with notifications, see [customize notifications](notification-bot-in-teams.md#customize-notification).
+Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your app can respond with an Adaptive Card as required. How to extend workflow bot with notifications, see [customize notifications](interactive-bot-include.md#customize-notification).
 
 <br>
 
@@ -489,7 +489,7 @@ Notifications add the ability in your app to send Adaptive Cards in response to 
 
 <summary><b>How to extend workflow bot with command and response?</b></summary>
 
-The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](command-bot-in-teams.md#add-command-and-response).
+The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](../conversations/command-bot-in-teams.md#add-command-and-response).
 
 <br>
 

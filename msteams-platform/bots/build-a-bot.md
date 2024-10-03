@@ -27,9 +27,9 @@ Building a bot app involves various phases, from initial concept to final deploy
     * **Bot Framework SDK**:
         The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-          * Use specialized card types like the connector card for Microsoft 365 Groups.
-          * Set Teams-specific channel data on activities.
-          * Process message extension requests.
+        * Use specialized card types like the connector card for Microsoft 365 Groups.
+        * Set Teams-specific channel data on activities.
+        * Process message extension requests.
 
       You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
@@ -61,11 +61,9 @@ Building a bot app involves various phases, from initial concept to final deploy
 
 1. Explore advanced bot capabilities (Call and media bot, access data using MS Graph, and more)
 
-## Teams AI bot
+## Build a bot
 
-A Teams AI bot uses artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations.
-
-Teams AI bots are built using the Bot Framework SDK and leverage the Teams AI library to streamline the process of building intelligent apps. The Teams AI library provides APIs to access and manipulate data, and controls and components to create custom user interfaces.
+[**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
 
 Here's an example of a bot app:
 
@@ -74,10 +72,6 @@ Contoso TravelBuddy: This bot can be deployed on Teams and offers features such 
 The primary goals and purposes of this bot include offering convenience and saving time in making travel plans, personalizing recommendations, providing real-time updates, and ensuring a secure payment process.
 
 To achieve these functionalities, you would need to integrate the bot app with APIs for flight booking, hotel booking, rental booking, weather forecasts, and payment gateways.
-
-[**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
-
-## Build a bot
 
 Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
 
