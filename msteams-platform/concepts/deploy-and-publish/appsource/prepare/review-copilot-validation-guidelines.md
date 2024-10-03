@@ -297,6 +297,19 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
+* The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [Must fix]
+
+Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [Customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+
+    | Pass example | Fail example |
+    | --- | --- |
+    | For a function which searches tickets - "Do you want to allow searching in contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
+    | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
+    | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
+
+* For Declarative Agents, any action with consequences on the external system must NOT have isConsequential flag set as ‘False’. [Must fix]
+
+  For more details, see [Overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
