@@ -30,17 +30,17 @@ You can choose to build any or all of the following capabilities in your bot:
 ## Step-by-step guide
 
 - Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Teams notification bot.
-- Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create Teams conversation bot.
+- Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml) to create Teams conversation bot.
 - Follow the [step-by-step](../../../sbs-gs-workflow-bot.yml) guide to build Teams workflow bot.
 
 ## See also
 
-- [Conversation basics](conversation-basics.md)
+- [Understand conversation basics](conversation-basics.md)
 - [Build bots for Teams](../../what-are-bots.md)
 - [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
-- [Proactive messages](send-proactive-messages.md)
-- [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-- [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
-- [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
+- [Build proactive messages](send-proactive-messages.md)
+- [Use Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+- [Use TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
+- [Use Bot Framework SDK](/azure/bot-service/bot-builder-basics)
 - [Send proactive installation messages](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)
 - [Build your app using C#](../../../sbs-gs-csharp.yml)
