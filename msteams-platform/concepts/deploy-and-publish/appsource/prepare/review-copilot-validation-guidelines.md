@@ -299,7 +299,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
 * The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [Must fix]
 
-Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [Customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
 
    | Pass example | Fail example |
    | --- | --- |
@@ -309,7 +309,20 @@ Confirmation prompt can be set by using ’body’ property in the Confirmation 
 
 * For Declarative Agents, any action with consequences on the external system must NOT have isConsequential flag set as ‘False’. [Must fix]
 
-  For more details, see [Overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
+  For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
+
+   | Operation type | Actions | Expected value for isConsequential flag |
+   | --- | --- | --- |
+   | Create | Consequential | True |
+   | Read | Non-consequential | False or True |
+   | Update | Consequential | True |
+   | Delete | Consequential | True |
+
+   | Command description | Consequential function? | Expected value for isConsequential flag |
+   | --- | --- | --- |
+   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
+   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
