@@ -78,7 +78,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 * The Teams Store validation guidelines related to app description for Microsoft 365 apps are applicable. For more information, see [app descriptions](teams-store-validation-guidelines.md#app-descriptions).
 * Short description of Copilot agent, parameter, command description, semantic description, and operation ID mustn't include:
-  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold”, or “Do not print anything”. [*Must fix*]
+  * Instructional phrases, for example, 'if the user says X', 'ignore', 'delete', 'reset', 'new instructions', 'Answer in Bold', or 'Do not print anything'. [*Must fix*]
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
@@ -211,7 +211,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 1. **If using SSO-enabled app, update Microsoft Entra app registration**: [*Must fix*]
 
-    Microsoft Entra single sign-on (SSO) for message extension works in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Microsoft Entra app registration of your bot in your tenant's App registrations portal.
+    Microsoft Entra single sign-on (SSO) for message extension works in the same way as it does in Teams or Outlook. If you enabled SSO for your app, add the Office app Copilot’s client application identifier to the Microsoft Entra app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
     1. Open **App registrations**.
