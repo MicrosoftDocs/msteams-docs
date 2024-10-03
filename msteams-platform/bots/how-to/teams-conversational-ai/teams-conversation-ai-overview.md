@@ -40,6 +40,31 @@ The following are some of the main features available through Teams AI library:
 
 [Use (clickable, if needed) icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
 
+:::row:::
+    :::column span="":::
+        **Conversation management**
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="":::
+        **User engagement**
+    :::column-end:::
+    :::column span="":::
+        **Teams AI library: All you need to know**
+    :::column-end:::
+    :::column span="":::
+        **Integration**
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="":::
+        **Analytics and insight**
+    :::column-end:::
+    :::column span="":::
+        **Development and deployment**
+    :::column-end:::
+:::row:::
+
 ### Conversation management
 
 :::row:::
