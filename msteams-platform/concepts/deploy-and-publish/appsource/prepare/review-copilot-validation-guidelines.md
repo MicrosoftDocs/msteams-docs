@@ -335,12 +335,12 @@ Custom engine agents are conversational Teams bots that must meet the following 
 1. User can reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
 
-   a. An AI label enables a user to identify that the message was generated using AI. [Must Fix]
-   b. A feedback button enables a user to provide positive or negative feedback to the agent's messages. [Must Fix]
-   c. A citation enables a user to refer to the source of the bot message through in-text citations and references. [Must Fix]
-   d. A sensitivity label enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
-   e. An agent must stream it’s responses to the user. [*Must fix*]
-   f. An agent must include minimum three prompt starters or a welcome message. [*Must fix*]
+   1. An AI label enables a user to identify that the message was generated using AI. [Must Fix]
+   1. A feedback button enables a user to provide positive or negative feedback to the agent's messages. [Must Fix]
+   1. A citation enables a user to refer to the source of the bot message through in-text citations and references. [Must Fix]
+   1. A sensitivity label enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
+   1. An agent must stream it’s responses to the user. [*Must fix*]
+   1. An agent must include minimum three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
