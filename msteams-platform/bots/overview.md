@@ -17,13 +17,23 @@ You can leverage bot capabilities such as chatbots, virtual assistants, workflow
 
 [**TBD**: More details to follow about user scenarios where bots are effective.]
 
-## Why must I build a bot?
+## What does building a bot offer me?
 
-Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
+Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7 without getting tired, and they can handle multiple tasks at once. Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
 The bot app users access and use your bot app within Teams.
 
 [**TBD**: Bot UX infographic or gif]
+
+Building a bot can offer you several benefits:
+
+1. Automation: Bots can handle repetitive tasks, saving you time and effort.
+1. Availability: Bots can work around the clock without needing breaks.
+1. Efficiency: They can manage multiple tasks simultaneously, improving overall efficiency.
+1. Customer Engagement: Bots can interact with customers, providing instant responses and support.
+1. Scalability: As user needs grow, bots can easily scale to handle more tasks or interactions.
+
+In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement. Bots are here to make your life easier by automating tasks and providing assistance whenever you need it.
 
 <!--
 [**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
@@ -46,7 +56,7 @@ The bot app users access and use your bot app within Teams.
 
 ## How do bots work?
 
-Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
+Bots work by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, figures out what you need, and then gives you a response or performs an action. Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
 This article guides you through the developer journey, showcasing how a bot interacts with users or systems, and explaining bot concepts. In addition, you'll explore the capabilities you'll integrate into your bot application.
 

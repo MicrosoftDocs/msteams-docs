@@ -21,6 +21,8 @@ Building a bot app involves various phases, from initial concept to final deploy
 
 [**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
+If you want to create your own bot, here's a list of tools and platforms to help you get started:
+
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
 1. Use any one of the following ways to build a bot for Teams:
 
