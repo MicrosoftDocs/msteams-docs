@@ -385,7 +385,7 @@ const notificationApp = new ConversationBot({
 notificationApp.adapter.onTurnError = ...
 ```
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Add storage
 
@@ -454,7 +454,7 @@ For more information about Azure blob storage, see the [notification storage imp
 > * It's recommended to use your own shared storage for production environment.
 > * If you implement your own Bot Framework SDK's storage, for example, `botbuilder-azure-blobs.BlobsStorage`, you need to implement another storage for notification. You can share the same Blob Connection String with different containers.
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Add authentication for notification API
 
@@ -466,7 +466,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ## Connect to existing APIs
 
@@ -501,7 +501,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)
 
 ### Send activity feed notifications
 
@@ -594,7 +594,7 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-bot-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../../../assets/images/notification-bot/notification-bot-enable.png":::
 
-2. To add command to your bot, follow the instructions in [Command bot in Teams](command-bot-in-teams.md).
+2. To add command to your bot, follow the instructions in [command bot in Teams](../conversations/command-bot-in-teams.md).
 
 <br>
 
@@ -606,10 +606,10 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions that are triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then sends another Adaptive Card in the conversation to respond to the card action.
 
-For more information on how to add adaptive card actions to command bot, see [Workflow bot in Teams](workflow-bot-in-teams.md).
+For more information on how to add adaptive card actions to command bot, see [**Add link - Workflow bot in Teams**].
 
 <br>
 
 </details>
 
-[Back to top](#interactive-notification-bot-in-teams)
+[Back to top](#build-an-interactive-notification-bot)

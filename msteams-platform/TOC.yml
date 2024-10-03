@@ -424,7 +424,7 @@
   - name: Build bot capabilities
     items:
     - name: Build conversation capability
-      href: bots/build-conversation-capability.md
+      href: bots/build-bot-capability.md
   - name: Build AI bots
     items:
     - name: Teams AI library overview

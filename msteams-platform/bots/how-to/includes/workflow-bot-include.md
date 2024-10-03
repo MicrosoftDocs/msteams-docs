@@ -479,7 +479,9 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <summary><b>How to extend workflow bot with notifications?</b></summary>
 
-Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your app can respond with an Adaptive Card as required. How to extend workflow bot with notifications, see [customize notifications](interactive-bot-include.md#customize-notification).
+Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your app can respond with an Adaptive Card as required.
+
+How to extend workflow bot with notifications, see [**Add link: customize notifications**].
 
 <br>
 
