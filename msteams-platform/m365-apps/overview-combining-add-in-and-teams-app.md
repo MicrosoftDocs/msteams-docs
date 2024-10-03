@@ -75,7 +75,7 @@ When the update is accepted, how it becomes available to end users varies. The f
 > Users with certain older versions of Office may end up with the old version of the add-in, even after the new combined app is acquired. Generally, add-ins that use the unified app manifest for Microsoft 365 (formerly Teams app manifest) can be installed only on Microsoft 365 Version 2307 (Build 16626.20132) and later. However, there are two exceptions which enable these add-ins to be installed on older versions of Microsoft 365 and on perpetual license versions of Office.
 >
 > - The user's Microsoft 365 administrator deploys the add-in for all users.
-> - The user installs the add-in in Outlook on the web another Microsoft 365 client app that is Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
+> - The user installs the add-in in Outlook on the web or on another Microsoft 365 client app that is Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
 
 In the future, you only need to the new version of the app. 
 
