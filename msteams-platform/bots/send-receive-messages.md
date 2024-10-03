@@ -10,3 +10,7 @@ ms.date: 10/03/2024
 # Send and receive messages with a bot
 
 Conversational bots communicate with users through messaging, enabling seamless interactions. Sending and receiving messages is the core functionality of a bot. It enables a bot to:
+
+## Next step
+
+## See also
