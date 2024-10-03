@@ -297,7 +297,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
-* The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [Must fix]
+* The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [*Must fix*]
 
    Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
 
@@ -307,7 +307,7 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
    | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
    | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
 
-* For Declarative Agents, any action with consequences on the external system must NOT have isConsequential flag set as ‘False’. [Must fix]
+* For Declarative Agents, any action with consequences on the external system must NOT have isConsequential flag set as ‘False’. [*Must fix*]
 
   For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
@@ -326,22 +326,24 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Bot requirements for Custom Engine Agents
+## Bot requirements for custom engine agents
 
-Custom engine agents are conversational Teams bots that also meet below requirements -
+Custom engine agents are conversational Teams bots that must meet the following requirements:
 
-1. Custom Engine Agents must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction [Must fix]
-1. Bots ID declaration as a CEC node must be same as bot ID defined in the bot node in the manifest [Must fix]
-1. User can reference custom engine agent in Copilot & handoff chat experience in Teams [Recommended fix]
-1. Bot must include below UX design components:
+1. Custom engine agents must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
+1. Bots ID declaration as a custom engine agent node must be same as bot ID defined in the bot node in the manifest. [*Must fix*]
+1. User can reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
+1. Bot must include the following UX design components:
 
-   a. AI label enables users to identify that the message was generated using AI [Must Fix]
-   b. Feedback buttons enables users to provide positive or negative feedback to the bot messages [Must Fix]
-   c. Citations enables users to refer to the source of the bot message through in-text citations and references. [Must Fix]
-   d. Sensitivity label enables users to understand the confidentiality of the bot message. [Suggested fix]
-   e. A bot must streams it’s responses to the user. [Must fix]
-   f. Must include min three Prompt Starters or a welcome message. details included here [Must fix]
-   g. A bot should offer atleast two context-specific suggestions or prompts to the user, rather than generic or fixed ones. Details here. [Must fix]
+   a. An AI label enables a user to identify that the message was generated using AI. [Must Fix]
+   b. A feedback button enables a user to provide positive or negative feedback to the agent's messages. [Must Fix]
+   c. A citation enables a user to refer to the source of the bot message through in-text citations and references. [Must Fix]
+   d. A sensitivity label enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
+   e. An agent must stream it’s responses to the user. [*Must fix*]
+   f. An agent must include minimum three prompt starters or a welcome message. [*Must fix*]
+
+      For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
+   1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 
 ## Copilot agent must have Action or knowledge source
 
