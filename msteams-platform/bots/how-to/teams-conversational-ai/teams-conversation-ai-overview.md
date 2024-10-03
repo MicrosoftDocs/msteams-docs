@@ -63,7 +63,7 @@ The following are some of the main features available through Teams AI library:
     :::column span="":::
         **Development and deployment**
     :::column-end:::
-:::row:::
+:::row-end:::
 
 ### Conversation management
 
