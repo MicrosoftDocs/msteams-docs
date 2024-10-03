@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 04/07/2022
+ms.date: 10/31/2024
 ---
 
 # App caching for your tab app
@@ -16,7 +16,6 @@ App caching is supported for the following:
 
 | Scope | &nbsp; Desktop | iOS | Android |
 | --- | --- | --- | --- |
-| &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)* | *Supported* | *Supported* |
 | Personal | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Chat | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Channel | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
