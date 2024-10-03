@@ -4,7 +4,7 @@ description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. 
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
-ms.date: 09/17/2024
+ms.date: 10/03/2024
 ---
 
 # Create a channel tab or group tab
