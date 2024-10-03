@@ -1171,9 +1171,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * A bot in personal scope must always send welcome message or provide prompt starters. [*Must fix*]
 
-[TBD: Image]
+   [TBD: Image TBA]
 
-If you're using prompt starters, ensure the following guidelines are met:
+   If you're using prompt starters, ensure the following guidelines are met:
 
 Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
@@ -1183,7 +1183,7 @@ Prompt starters help users start a conversation with your bot. To enable prompt 
 * Prompt starters/commands must be relevant to the app functionality. [*Must fix*]
 * Bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
-If your app sends a welcome message, ensure the following guidelines are met:
+   If your app sends a welcome message, ensure the following guidelines are met:
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
