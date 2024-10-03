@@ -326,6 +326,23 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
+## Bot requirements for Custom Engine Agents
+
+Custom engine agents are conversational Teams bots that also meet below requirements -
+
+1. Custom Engine Agents must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction [Must fix]
+1. Bots ID declaration as a CEC node must be same as bot ID defined in the bot node in the manifest [Must fix]
+1. User can reference custom engine agent in Copilot & handoff chat experience in Teams [Recommended fix]
+1. Bot must include below UX design components:
+
+   a. AI label enables users to identify that the message was generated using AI [Must Fix]
+   b. Feedback buttons enables users to provide positive or negative feedback to the bot messages [Must Fix]
+   c. Citations enables users to refer to the source of the bot message through in-text citations and references. [Must Fix]
+   d. Sensitivity label enables users to understand the confidentiality of the bot message. [Suggested fix]
+   e. A bot must streams it’s responses to the user. [Must fix]
+   f. Must include min three Prompt Starters or a welcome message. details included here [Must fix]
+   g. A bot should offer atleast two context-specific suggestions or prompts to the user, rather than generic or fixed ones. Details here. [Must fix]
+
 ## Copilot agent must have Action or knowledge source
 
 Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
