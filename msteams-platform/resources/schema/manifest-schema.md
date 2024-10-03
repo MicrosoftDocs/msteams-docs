@@ -433,19 +433,19 @@ Ensure that your description describes your experience and helps potential custo
 
 Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Maximum size | Required | Description|
+|Name| Type | Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`||✔️|The language tag for the strings in this app manifest file. For example, `en`.|
-|`defaultLanguageFile`|2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
+|`defaultLanguageTag`| String | |✔️|The language tag for the strings in this app manifest file. For example, `en`|
+|`defaultLanguageFile`| String | 2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
 
 An array of objects with the following properties to specify additional language translations.
 
-|Name| Maximum size | Required | Description|
+|Name| Type | Maximum size | Required | Description|
 |---|---|---|---|
-|`languageTag`||✔️|The language tag of the strings in the provided file. For example, `es`.|
-|`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
+|`languageTag`| String | |✔️|The language tag of the strings in the provided file. For example, `es`|
+|`file`| String | 2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## icons
 
@@ -474,16 +474,16 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of `declarativeAgent` objects. |
+|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects defining the declarative agent. |
 
-### declarativeAgent
+### declarativeAgents
 
 Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
-|`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+|`file`| String | 2048 characters |✔️| Relative file path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
 
 ## configurableTabs
 
