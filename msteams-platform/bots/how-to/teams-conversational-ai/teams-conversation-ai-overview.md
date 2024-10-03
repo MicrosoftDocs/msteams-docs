@@ -45,7 +45,7 @@ The following are some of the main features available through Teams AI library:
         :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
     :::column-end:::
     :::column span="":::
-        **Conversation management**
+        [**Conversation management**](#conversation-management)
     :::column-end:::
     :::column span="":::
         :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
@@ -53,24 +53,24 @@ The following are some of the main features available through Teams AI library:
 :::row-end:::
 :::row:::
     :::column span="":::
-        **User engagement**
+        [**User engagement**](#user-engagement)
     :::column-end:::
     :::column span="":::
         **Teams AI library: All you need to know**
     :::column-end:::
     :::column span="":::
-        **Integration**
+        [**Integration**](#integration)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
-        **Analytics and insight**
+        [**Analytics and insight**](#analytics-and-insight)
     :::column-end:::
     :::column span="":::
         :::image type="icon" source="../../../assets/icons/white-bg.png" border="false":::
     :::column-end:::
     :::column span="":::
-        **Development and deployment**
+        [**Development and deployment**](#development-and-deployment)
     :::column-end:::
 :::row-end:::
 
