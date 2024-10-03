@@ -5,7 +5,7 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 04/16/2023
+ms.date: 10/03/2024
 ---
 
 # Upload your app in Teams
