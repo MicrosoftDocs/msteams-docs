@@ -425,6 +425,8 @@
     items:
     - name: Understand bot concepts
       href: bots/bot-concepts.md
+    - name: Send and receive messages
+      href: bots/send-receive-messages.md
     - name: Explore bot capabilities
       href: bots/build-bot-capability.md
   - name: Build AI bots

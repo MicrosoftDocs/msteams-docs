@@ -21,3 +21,9 @@ To develop a bot app that meets your needs, it's important to get to know the bo
 By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and non-AI bot solutions.
 
 ## Bot activity handler
+
+## Bot logic
+
+## Next step
+
+## See also
