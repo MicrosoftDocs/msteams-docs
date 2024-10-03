@@ -1057,7 +1057,7 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |`code.script`| String | | | Don't use when the grandparent is a content runtime object.  |
 |`requestedWidth`| Number | | | The desired initial width in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the width.|
 |`requestedHeight`| Number | | | The desired initial height in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the height.|
-|`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the Office application document. Set to `true` to prevent a snapshot from being saved. Default value is `false`.|
+|`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the Office application document. Set to `true` to prevent a snapshot from being saved. Default value: `false`|
 |`requirements`| Object | | | Don't use when the parent is a content runtime object. |
 
 ### extensions.ribbons
