@@ -36,9 +36,20 @@ The Teams AI Library is available in JavaScript and C# languages allowing you to
 
 ## Teams AI library features
 
-The following are some of the main features available through Teams AI library:
+The Teams AI library is equipped with useful features that make building your AI bot a lot easier. These features help you create smart and engaging conversations, making the user experience even better.
 
-[Use (clickable, if needed) icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
+Let's consider an example:
+
+[Notes: Add user story for the Lightbot code sample + infographic]
+
+As a developer, *I* want to build an intelligent lightbot that responds to the user's command for controlling light.
+
+I'm considering using Teams AI library because it's packed with features that make building my AI bot a breeze.
+I want my AI Lightbot to be allow smart and engaging conversations, making the user experience way better and keeping everyone more involved. How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience.
+
+[Notes: Use (clickable, if needed) icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
+
+To achieve this output, you can leverage the various features of the Teams AI library:
 
 :::row:::
     :::column span="":::
