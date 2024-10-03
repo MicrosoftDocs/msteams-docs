@@ -83,7 +83,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
 | value | String | No | The initial choice (or set of choices) that must be selected. For multi-select, specify a comma-separated string of values. |
 
-### Data.Query definition
+### Data.Query
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -420,9 +420,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 Dependent inputs are input fields where one input value depends on the value of another input field. Dependent inputs make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent inputs with dynamic typeahead search.
 
-For example, consider an Adaptive Card with two dropdown lists: one for selecting a country and another for selecting a specific city within that country. The first dropdown list filters the cities shown in the second dropdown list.
+For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown list filters the cities shown in the second dropdown list.
 
-If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
+If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed. This can be accomplished by making an `Input.ChoiceSet` with dynamic typeahead search depend on one or more other inputs in the card.
 
 **Placeholder for GIF**
 
@@ -444,17 +444,13 @@ The following diagram illustrates how the user, Adaptive Card, the host, and the
 
 To make inputs depend on each other in an Adaptive Card, use the following properties:
 
-1. When a user changes an input value, the existing input value in the dependent dropdown becomes invalid. Define the [`Action.ResetInputs`](#actionresetinputs) property in your card's payload. This action ensures that Teams resets the values in the dropdown list and triggers a data query request to the bot.
+1. The `valueChangedAction` property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInput` action that triggers a data query request to the bot when a user changes the value of the input.
 
-1. The input values in the elements of an Adaptive Card are independent. Hence, Teams doesn't send the input values of the other elements in the data query request to the bot. Define the [`associatedInputs`](#associatedinputs) property under the `Data.Query` object of the dropdown list. This action ensures that the updated input values of all elements are sent to the bot.
+1. The `Action.ResetInputs` action resets the values of the inputs you specify under `targetInputIds` to their default values.
 
-1. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+1. The `associatedInputs` property under the `Data.Query` object. This ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
-### Implement dependent dropdowns
-
-You can build dependent dropdowns where one input value (of any type) is associated with a dropdown list with dynamic typeahead search. Ensure that you define the `Action.ResetInputs` and `associatedInputs` properties in the card's payload.
-
-#### Action.ResetInputs
+### Action.ResetInputs
 
 The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you must reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
 
@@ -463,17 +459,23 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 | `valueChangedAction` | Action.ResetInputs | Yes | Contains the `Action.ResetInputs` property |
 | `Action.ResetInputs` | String | Yes | Resets the input values |
 | `id` | String | No | A unique identifier for the action |
-| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered and its fallback is rendered, if provided. |
+| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered and its fallback is rendered if provided. |
 | `fallback` | Object or String | No | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
-| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URI are supported. |
-| `isEnabled` | Boolean | No | Controls the enabled state of the action. A disabled action can't be clicked. If the action is represented as a button, the button's style will reflect this state. |
+| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URI is supported. |
+| `isEnabled` | Boolean | No | Controls the enabled state of the action. A disabled action can't be clicked. If the action is represented as a button, the button's style reflects this state. |
 | `mode` | String | No | Controls if the action is primary or secondary. Allowed values: `primary`, `secondary` |
-| `style` | String | No | Controls the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive` or `destructive` |
+| `style` | String | No | Controls the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive`, or `destructive` |
 | `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
 | `title` | String | No | The title of the action, as it appears on a button |
 | `tooltip` | String | No | The tooltip text to display when a user hovers over the action |
 
-The following JSON payload shows how to implement dependent dropdowns using the `associatedInputs` and `Action.ResetInputs` properties:
+### Example
+
+The following example shows a card that allows users to pick a country and a city in that country.
+
+* The `valueChangedAction` property is defined along with the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
+* As the `city` input is required, resetting its value forces the user to pick a new city whenever the value of `country` changes.
+* As the user starts typing in the `city` input, the data query request made to the bot includes the value of the `country` input as the `associatedInputs` property is defined. This action allows your bot to return a list of cities for the selected country.
 
 ```json
 {
