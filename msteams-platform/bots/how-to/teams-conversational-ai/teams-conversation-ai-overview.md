@@ -42,7 +42,7 @@ Let's consider an example:
 
 [Notes: Add user story for the Lightbot code sample + infographic]
 
-As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my AI bot a breeze. I want my AI Lightbot to make the user experience way better and keeping them more involved.
+As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my AI bot a breeze. I want my AI Lightbot to make the user experience way better and keep them more involved.
 
 How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience?
 

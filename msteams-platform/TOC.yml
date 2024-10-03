@@ -417,8 +417,6 @@
   items:
   - name: What is a bot?
     href: bots/overview.md
-  - name: How do bots work?
-    href: bots/get-started-bots.md
   - name: Let's build a bot
     href: bots/build-a-bot.md 
   - name: How can I bring my bot to Teams?
