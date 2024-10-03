@@ -1167,9 +1167,25 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 </details>
 </br>
 
-<details><summary>Bot welcome messages</summary>
+<details><summary>Bot first run user experience</summary>
 
-* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
+* A bot in personal scope must always send welcome message or provide prompt starters. [*Must fix*]
+
+[TBD: Image]
+
+If you're using prompt starters, ensure the following guidelines are met:
+
+Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
+
+* Bot must provide atleast one command that let’s user know about the value proposition of the app.[*Must fix*]
+* Prompt starters or commands must be functional and return responses. [*Must fix*]
+* Command description must be coherent & clearly communicate value of the command. [*Must fix*]
+* Prompt starters/commands must be relevant to the app functionality. [*Must fix*]
+* Bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+
+If your app sends a welcome message, ensure the following guidelines are met:
+
+* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
   For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
@@ -1182,10 +1198,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
-
-* Notification only bots must send a welcome message that clarifies that the bot is a notification only bot and users won't be able to interact with the bot. [*Must fix*]
-
-   :::image type="content" source="../../../../assets/images/submission/validation-notification-only-welcome-message-pass.png" alt-text="Graphic shows an example of bot sending a welcome message that it's a notification only bot.":::
 
 * Welcome message mustn't dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Must fix*]
 
