@@ -4,7 +4,7 @@ title: Microsoft Teams developer documentation # < 60 chars
 summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
@@ -54,7 +54,7 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
       - text: Build apps with the Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - text: Build a custom copilot to chat with your data
+      - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
 
 - title: What's new
@@ -84,7 +84,7 @@ landingContent:
 
     - linkListType: reference
       links:
-      - text: Extend Microsoft Copilot for Microsoft 365
+      - text: Extend Microsoft 365 Copilot
         url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
