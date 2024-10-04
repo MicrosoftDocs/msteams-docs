@@ -346,10 +346,10 @@ A custom engine agent is a conversational Teams bot that must meet the following
 1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
 
-   1. An AI label enables a user to identify that the message was generated using AI. [*Must fix*]
-   1. A feedback button enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
-   1. A citation enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
-   1. A sensitivity label enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
+   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. [*Must fix*]
+   1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
+   1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
+   1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
    1. An agent must stream it’s responses to the user. [*Must fix*]
    1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
