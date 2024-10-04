@@ -7,11 +7,11 @@ ms.author: v-sdhakshina
 ms.date: 10/10/2024
 ---
 
-## Third-party cookies deprecation
+# Third-party cookies deprecation
 
 All third-party (3P) cookies set in the top-level domain will be blocked when that domain is embedded in an iframe. This 3P cookie deprecation is starting to roll out for all major browsers, with Chrome currently at 1% rollout and other major browsers like Firefox and Safari to follow. Some common scenarios that will be impacted include when an external app is rendered inside Teams in various entry points like personal apps, channel tabs, chat tabs, etc.
 
-## What is the pop-out authentication scenario, and will this change break pop-out authentication scenarios?
+## Pop-out authentication scenario, and will this change break pop-out authentication scenarios?
 
 Pop-out authentication scenarios are a common method for apps to authenticate using different auth providers like Google Auth, Facebook Auth, etc. In this scenario, the rendered iframe triggers a popup that loads the selected auth provider login page. Once the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes. These cookies are then used inside the embedded iframe to authenticate the user.
 
