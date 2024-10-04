@@ -38,12 +38,13 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
+:::row-end:::
+
+:::row:::
+
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
@@ -53,20 +54,30 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column:::
       :::image type="icon" source="../../../../assets/icons/technical-requirements.png" link="#technical-requirements" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
      :::image type="icon" source="../../../../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
    :::column-end:::
+:::row-end:::
+
+:::row:::
+
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="bot-requirements-for-custom-engine-agents" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -328,9 +339,9 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 ## Bot requirements for custom engine agents
 
-A custom engine agents is a conversational Teams bot that must meet the following requirements:
+A custom engine agent is a conversational Teams bot that must meet the following requirements:
 
-1. Custom engine agents must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
+1. A custom engine agent must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
 1. The bot ID declaration as a custom engine agent node must be same as the bot ID defined in the bot node in the app manifest. [*Must fix*]
 1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
