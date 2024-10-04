@@ -58,20 +58,20 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
      :::image type="icon" source="../../../../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
+      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
 
    :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
@@ -355,6 +355,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+
+[Back to top](#validation-guidelines-for-copilot-agents)
 
 ## Copilot agent must have Action or knowledge source
 
