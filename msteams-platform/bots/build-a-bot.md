@@ -42,14 +42,14 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
       You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
-    * **Teams Toolkit and TeamsFx SDK**:
+    * **Teams Toolkit**:
       Teams Toolkit makes it simple to get started with bot app development for Teams. You can begin with a project template for common custom bot app built for your org (LOB app) scenarios or start from a sample.
 
       For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md).
 
-      TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
+      <!--TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
 
-      For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).
+      For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).-->
 
     * **Azure AI bot service**:
       Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.

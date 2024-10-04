@@ -432,7 +432,7 @@
     - name: Format the bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Send and receive files
-      href: bots-filesv4.md
+      href: bots/how-to/bots-filesv4.md
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
   - name: Build AI bots
@@ -451,6 +451,8 @@
         href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
       - name: Build custom engine agent user experience
         href: bots/how-to/teams-conversational-ai/ai-ux.md
+      - name: Build enhanced conversations
+        href: /bots/how-to/bot-messages-ai-generated-content.md
       - name: Build custom engine agent using Teams Toolkit 
         href: Teams-AI-library-tutorial.yml
     - name: Teams AI library FAQs
