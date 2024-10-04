@@ -71,7 +71,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="bot-requirements-for-custom-engine-agents" border="false":::
+      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
