@@ -13,14 +13,6 @@ ms.author: surbhigupta
 
 You can choose to build any or all of the following capabilities in your bot:
 
-# [Interactive bot](#tab/interactive)
-
-[!INCLUDE [interactive-bot-include](how-to/includes/interactive-bot-include.md)]
-
-# [Conversational bot](#tab/conversational)
-
-[!INCLUDE [conversational-bot-include](how-to/includes/conversational-bot-include.md)]
-
 # [Workflow bot](#tab/workflow)
 
 [!INCLUDE [workflow-bot-include](how-to/includes/workflow-bot-include.md)]

@@ -427,8 +427,8 @@
       href: bots/bot-concepts.md
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
-    - name: Build interactive bots
-      href: bots/how-to-conversations/interactive-notification-bot-in-teams.md   
+    - name: Build notification capability
+      href: bots/build-notification-capability.md   
     - name: Explore workflow and command capabilities
       href: bots/build-bot-capability.md
     - name: Format the bot messages
