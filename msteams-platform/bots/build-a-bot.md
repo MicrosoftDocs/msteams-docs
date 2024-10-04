@@ -26,10 +26,12 @@ If you want to create your own bot, here's a list of tools and platforms to help
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
 1. Use any one of the following ways to build a bot for Teams:
 
-    * **Teams AI bot**:
+    * **Teams AI library**:
       A Teams AI bot uses artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations.
 
-      Teams AI bots are built using the Bot Framework SDK and leverage the Teams AI library to streamline the process of building intelligent apps. The Teams AI library provides APIs to access and manipulate data, and controls and components to create custom user interfaces.
+      Teams AI bots are built using the Bot Framework SDK and can leverage the Teams AI library to streamline the process of building intelligent apps. The Teams AI library provides APIs to access and manipulate data, and controls and components to create custom user interfaces.
+
+      If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [Why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
 
     * **Bot Framework SDK**:
       The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true). These packages extend the basic Bot Builder SDK classes and methods as follows:

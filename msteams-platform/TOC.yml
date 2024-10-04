@@ -429,6 +429,12 @@
       href: bots/send-receive-messages.md
     - name: Explore bot capabilities
       href: bots/build-bot-capability.md
+    - name: Format the bot messages
+      href: bots/how-to/format-your-bot-messages.md
+    - name: Send and receive files
+      href: bots-filesv4.md
+    - name: Get Teams-specific context
+      href: bots/how-to/get-teams-context.md
   - name: Build AI bots
     items:
     - name: Teams AI library overview
