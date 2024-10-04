@@ -94,7 +94,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 | associatedInputs | String | No | Specifies the input values associated with the `Data.Query` object. Allowed values: `auto`, `none` |
 
-When you define the `associatedInputs` property under the `Data.Query` object, Teams includes the values of the all input values of the card in the data query request sent to the bot. If you set the value of the property to `auto`, Teams includes the input values of all elements in a card in the data query request sent to the bot. If you set the value of the property to `none`, Teams includes no input values in the data query request sent to the bot. This property allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent inputs](#dependent-inputs).
+When you define the `associatedInputs` property under the `Data.Query` object and set it to `auto`, Teams includes all input values of the card in the data query request sent to the bot. If you set the value of the property to `none`, Teams doesn't include any input values in the data query request. This property allows the bot to use those values as search filters to refine dynamic typeahead search. For more information, see [dependent inputs](#dependent-inputs).
 
 ### Example
 
@@ -418,11 +418,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > [!NOTE]
 > Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-Dependent inputs are input fields where one input value depends on the value of another input field. Dependent inputs make Adaptive Cards more intuitive by limiting options to relevant choices and preventing invalid data entries. You can design Adaptive Cards in Teams that contain dependent inputs with dynamic typeahead search.
-
-For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown list filters the cities shown in the second dropdown list.
-
-If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed. This can be accomplished by making an `Input.ChoiceSet` with dynamic typeahead search depend on one or more other inputs in the card.
+You can design Adaptive Cards in Teams where the value of an input depends on the value of another input. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown list must filter the cities shown in the second dropdown list. This can be accomplished by making an `Input.ChoiceSet` with dynamic typeahead search depend on one or more other inputs in the card.
 
 **Placeholder for GIF**
 
@@ -436,11 +432,9 @@ If a user selects **USA** as the country in the first dropdown list, the second 
 
 ---
 
-### How dependent inputs work
+Dependent inputs limit options to relevant choices and prevent invalid data entries. If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
 
-The following diagram illustrates how the user, Adaptive Card, the host, and the bot interact in a dependent input:
-
-:::image type="content" source="../../assets/images/adaptive-cards/dependent-dropdown-flow.png" alt-text="Screenshot shows how a user, an Adaptive Card, a host, and a bot interact in a dependent input." lightbox="../../assets/images/adaptive-cards/dependent-dropdown-flow.png":::
+### Implement dependent inputs
 
 To make inputs depend on each other in an Adaptive Card, use the following properties:
 
@@ -448,7 +442,7 @@ To make inputs depend on each other in an Adaptive Card, use the following prope
 
 1. The `Action.ResetInputs` action resets the values of the inputs you specify under `targetInputIds` to their default values.
 
-1. The `associatedInputs` property under the `Data.Query` object. This ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+1. The `associatedInputs` property under the [Data.Query](#dataquery) object. This ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
 ### Action.ResetInputs
 
@@ -471,7 +465,7 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 
 ### Example
 
-The following example shows a card that allows users to pick a country and a city in that country.
+The following example shows a card that allows users to pick a country and a city within that country.
 
 * The `valueChangedAction` property is defined along with the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
 * As the `city` input is required, resetting its value forces the user to pick a new city whenever the value of `country` changes.
