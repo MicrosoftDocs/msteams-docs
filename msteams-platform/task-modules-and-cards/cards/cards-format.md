@@ -3,7 +3,7 @@ title: Text formatting in cards
 description: Learn about card text formatting with Markdown and HTML, the CodeBlock element, borders, rounded corners, and how to design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 10/07/2024
+ms.date: 10/08/2024
 ---
 
 # Format cards in Teams
@@ -1126,7 +1126,7 @@ You can add borders and rounded corners only to the following elements:
 | [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) | ✔️ | ✔️ |
 | [`Column`](https://adaptivecards.io/explorer/Column.html) | ✔️ | ✔️ |
 | [`Table`](https://adaptivecards.io/explorer/Table.html) | ✔️ | ✔️ |
-| [`Image`](https://adaptivecards.io/explorer/Image.html) |  | ✔️ |
+| [`Image`](https://adaptivecards.io/explorer/Image.html) | ❌ | ✔️ |
 
 ### Implement borders and rounded corners in Adaptive Cards
 
