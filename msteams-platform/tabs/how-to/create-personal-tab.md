@@ -1076,5 +1076,4 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Tabs on mobile](../design/tabs-mobile.md)
