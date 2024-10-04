@@ -10,11 +10,16 @@ ms.date: 05/04/2023
 
 # Deep link to an application
 
-Deep links are configured to perform various actions such as opening a tab, initiating an app install dialog, or browsing within the app. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items.
+Deep links are configured to perform various actions such as opening a tab, initiating an app install dialog, or browsing within the app. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items. Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app.
 
-You can create a deep links for a custom app. However, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app. You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+Deep links enable users to gain insights about an app and install it across different scopes. Additionally, you can generate deep links that direct your app users to specific pages within your app.
 
-Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, learn how to create a deep link:
+Here are few deep link scenarios:
+
+* You can generate deep links for a custom app. However, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app. 
+* You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+
+In this article, learn how to create a deep link:
 
 * [To open application install dialog](#deep-link-to-open-application-install-dialog)
 * [To browse within your app](#deep-link-to-browse-within-your-app)
@@ -54,7 +59,7 @@ For more information, see [how to find ID based on the app manifest ID](/graph/a
 
 ### Configure deep link using TeamsJS
 
-Applications can use TeamsJS library to initiate the app install dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app install dialog using TeamsJS within your application:
+Applications can use TeamsJS library to initiate the app install dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app install dialog using TeamsJS within your app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -189,7 +194,9 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
+* For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). 
+* For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. 
+* If needed, directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
