@@ -55,7 +55,7 @@ When you are ready to merge your existing add-in and Teams app, follow these pri
 - Use the Teams app project as the base project for the merged application.
 - Keep configuration files that are applicable to both the add-in and Teams app in the root of the project.
 - Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project.
-- Use the same base domain for the built files of both the add-in and Teams app, for example contoso.com.
+- Use the same base domain for the built files of both the add-in and Teams app; for example, contoso.com.
 - Merge the two manifests into a single manifest. Use the process you went through in step 1 as a guide.
 - The [id](../resources/schema/manifest-schema.md#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
 - Raise the value of the [version](../resources/schema/manifest-schema.md#version) property; for example, raise "1.0.0" to "1.1.0".
@@ -65,19 +65,27 @@ When you are ready to merge your existing add-in and Teams app, follow these pri
 
 To publish the combined app, treat it like an update to the Teams app. For more information, see [Publish updates to your app](../concepts/deploy-and-publish/appsource/post-publish/overview.md#publish-updates-to-your-app).
 
-When the update is accepted, how it becomes available to end users varies. The following are the general principles.
+When the update has been published, how the update becomes available to end users varies. The following are the general principles.
 
-- Users who had previously acquired both the Teams app and the Office add-in have the new version of both available immediately, if the Microsoft 365 administrator consents to the update. Otherwise, users are prompted to consent.
-- Users who had previously acquired only the Teams app have the new version of *both* available immediately, if the Microsoft 365 administrator consents to the update. Otherwise, users are prompted to consent.
-- Users who had previously acquired only the Office add-in must acquire the new combined app as a Teams app.
+> [!NOTE]
+> To be clear about what "available" means, note that Outlook and the Microsoft 365 application have an  **App bar** just as Teams does. In principle, a "Teams app" can be installed from the **Apps** or **More apps** button on any of these three app bars. The installed "Teams app" can be launched from (or separately pinned to) any of the app bars of any of the three applications. A standalone Outlook *add-in*, on the other hand, is installed through the **All Apps** button in the Outlook ribbon. And, regardless of whether it is standalone or combined into a Teams app, an add-in is launched from the Outlook ribbon or launches automatically in response to an event in the open Outlook message or meeting item. These facts are assumed in remainder of this section.
+
+- If the Microsoft 365 administrator consents to the update, then:
+
+   - The updated version of the Teams app is available immediately from **Apps** or **More Apps** in Outlook and the Microsoft 365 application, but not the Teams **Apps**, to users who had previously acquired the Teams app. 
+   - The Outlook add-in is also available immediately to users who had previously acquired the Teams app, regardless of whether they had also previously acquired the add-in.
+   - If a Teams administrator allows the update, then users can individually install it to Teams from the Teams **Apps**.
+
+- If the administrator doesn't consent, then each user who had previously acquired the Teams app must consent to the update and it can only be made available in Teams if the Teams administrator has allowed it.
+- Users who had previously acquired only the Office add-in must acquire the new combined app from the Teams store. It cannot be acquired through **All Apps** button in the Outlook ribbon.
 
 > [!IMPORTANT]
-> Users with certain older versions of Office may end up with the old version of the add-in, even after the new combined app is acquired. Generally, add-ins that use the unified app manifest for Microsoft 365 (formerly Teams app manifest) can be installed only on Microsoft 365 Version 2307 (Build 16626.20132) and later. However, there are two exceptions which enable these add-ins to be installed on older versions of Microsoft 365 and on perpetual license versions of Office.
+> Users with certain older versions of Office may still see the old version of the add-in, even after the new combined app is acquired. Generally, add-ins that use the unified app manifest for Microsoft 365 (formerly Teams app manifest) can be installed only on Microsoft 365 Version 2307 (Build 16626.20132) and later. However, there are two exceptions which enable these add-ins to be installed on older versions of Microsoft 365 and on perpetual license versions of Office.
 >
 > - The user's Microsoft 365 administrator deploys the add-in for all users.
-> - The user installs the add-in in Outlook on the web or on another Microsoft 365 client app that is Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
+> - The user installs the add-in in Outlook on the web, [new Outlook for Windows](https://support.microsoft.com/office/new-and-classic-outlook-for-windows-feature-comparison-de453583-1e76-48bf-975a-2e9cd2ee16dd), or in another Microsoft 365 desktop client app that *is* Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
 
-In the future, you only need to the new version of the app. 
+In the future, you only need to update the new version of the app. 
 
 ## See also
 
