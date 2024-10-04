@@ -1177,11 +1177,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-* Bot must provide atleast one command that let’s user know about the value proposition of the app. [*Must fix*]
+* The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
 * Prompt starters or commands must be functional and return responses. [*Must fix*]
-* Command description must be coherent & clearly communicate value of the command. [*Must fix*]
-* Prompt starters or commands must be relevant to the app functionality. [*Must fix*]
-* Bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+* Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+* Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+* The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
    If your app sends a welcome message, ensure the following guidelines are met:
 

@@ -299,15 +299,15 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
 * The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [*Must fix*]
 
-   Confirmation prompt can be set by using ’body’ property in the Confirmation object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+   Confirmation prompt can be set by using `body` property in the `Confirmation` object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
 
    | Pass example | Fail example |
    | --- | --- |
-   | For a function which searches tickets - "Do you want to allow searching in contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
+   | For a function which searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
    | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
    | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
 
-* For Declarative Agents, any action with consequences on the external system must NOT have isConsequential flag set as ‘False’. [*Must fix*]
+* For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
 
   For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
@@ -328,11 +328,11 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 
 ## Bot requirements for custom engine agents
 
-Custom engine agents are conversational Teams bots that must meet the following requirements:
+A custom engine agents is a conversational Teams bot that must meet the following requirements:
 
 1. Custom engine agents must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
-1. Bots ID declaration as a custom engine agent node must be same as bot ID defined in the bot node in the manifest. [*Must fix*]
-1. User can reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
+1. The bot ID declaration as a custom engine agent node must be same as the bot ID defined in the bot node in the app manifest. [*Must fix*]
+1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
 
    1. An AI label enables a user to identify that the message was generated using AI. [*Must fix*]
@@ -340,7 +340,7 @@ Custom engine agents are conversational Teams bots that must meet the following 
    1. A citation enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    1. A sensitivity label enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
    1. An agent must stream it’s responses to the user. [*Must fix*]
-   1. An agent must include minimum three prompt starters or a welcome message. [*Must fix*]
+   1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
