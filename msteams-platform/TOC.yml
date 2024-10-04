@@ -425,8 +425,8 @@
     items:
     - name: Understand bot concepts
       href: bots/bot-concepts.md
-    - name: Send and receive messages
-      href: bots/send-receive-messages.md
+    - name: Build conversational capability
+      href: bots/build-conversational-capability.md
     - name: Build interactive bots
       href: bots/how-to-conversations/interactive-notification-bot-in-teams.md   
     - name: Explore workflow and command capabilities
