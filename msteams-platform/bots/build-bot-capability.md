@@ -17,6 +17,10 @@ You can choose to build any or all of the following capabilities in your bot:
 
 [!INCLUDE [workflow-bot-include](how-to/includes/workflow-bot-include.md)]
 
+# [Command bot](#tab/command)
+
+[TBD: Command bot and Command menu content]
+
 ---
 
 ## Step-by-step guide

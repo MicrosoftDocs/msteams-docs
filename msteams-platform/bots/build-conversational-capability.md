@@ -30,7 +30,8 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
   - Receive undelete message activity
   - Receive soft delete message activity
   - Send a message
-  - Send suggested actions
+- Send suggested actions
+- Update and delete bot messages
 
 ## Send messages in Teams channel data
 
