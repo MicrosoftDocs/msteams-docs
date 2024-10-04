@@ -1170,11 +1170,15 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-Ratings in Adaptive Cards enable users to visually represent feedback or preferences through a star-based system. Ratings can be used to collect customer feedback or conduct internal employee evaluations, making it a versatile tool for gathering insights in an interactive and visually appealing manner.
-
-You can customize the ratings in an Adaptive Card, including size, color, and the number of stars, to fit the design and needs of your app. You can display a rating in an Adaptive Card with the `Rating` element or use the `Input.Rating` property to get ratings from users.
+You can display a star rating in an Adaptive Card with the `Rating` property or use the `Input.Rating` property to get ratings from users. Ratings enable users to provide feedback or preferences in an interactive and visually appealing manner. You can customize how ratings appear in an Adaptive Card, including size, color, and the number of stars, to fit the design and needs of your app.
 
 ### Rating
+
+The `Rating` property displays a read-only star rating on your Adaptive Card. You can display the number of ratings next to the star rating if you define the `count` property. The read-only rating and rating input are visually different. This helps users distinguish between the read-only and clickable ratings.
+
+**Images**
+
+#### Rating schema
 
 | Property | Required | Type | Allowed values | Description |
 |----|----|----|----|----|
@@ -1187,7 +1191,7 @@ You can customize the ratings in an Adaptive Card, including size, color, and th
 | `horizontalAlignment` | No | String | Left, Center, Right | Aligns the element horizontally. |
 | `spacing` | No | String | `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` | Specifies the spacing around the element. |
 | `targetWidth` | No | String | `VeryNarrow`, `Narrow`, `Standard`, `Wide` | Specifies the width of the element. |
-| `value` | No | Number | | The number of stars selected. Cannot exceed max if max is specified. |
+| `value` | No | Number | | The number of stars selected. Cannot exceed `max` if `max` is specified. |
 | `count` | No | Number | | The number of ratings that make up the average. |
 | `max` | No | Number | | The total number of stars. Maximum and default is 5. |
 | `size` | No | String | `Medium`, `Large` | The size of the stars. |
@@ -1195,6 +1199,12 @@ You can customize the ratings in an Adaptive Card, including size, color, and th
 | `style` | No | String | `Default`, `Compact` | In compact mode, only one star is displayed. |
 
 ### Input.Rating
+
+The `Input.Rating` rating displays a star rating that allows users to hover over it and click to select a rating. You can enable users to select half stars if you set the `allowHalfSteps` to `true`.
+
+**Images**
+
+#### Input.Rating schema
 
 | Property | Required | Type | Allowed Values | Description |
 |----|----|----|----|----|
@@ -1216,6 +1226,75 @@ You can customize the ratings in an Adaptive Card, including size, color, and th
 | `allowHalfSteps` | No | Boolean| | Determines if the user can select half stars. |
 | `size` | No | String | `Medium`, `Large` | The size of the stars. |
 | `colour` | No | String | `Neutral`, `Marigold` | The colour of the stars. |
+
+### Example
+
+The following payload shows an Adaptive Card with read-only and input-enabled star ratings:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Large",
+            "text": "Rating input"
+        },
+        {
+            "type": "Input.Rating",
+            "id": "rating1",
+            "label": "Pick a rating",
+            "size": "medium",
+            "isRequired": true,
+            "errorMessage": "Please pick a rating"
+        },
+        {
+            "type": "Input.Rating",
+            "id": "rating2",
+            "label": "Pick a rating",
+            "allowHalfSteps": true,
+            "size": "large",
+            "isRequired": true,
+            "errorMessage": "Please pick a rating",
+            "color": "marigold",
+            "value": 3
+        },
+        {
+            "type": "TextBlock",
+            "size": "large",
+            "text": "Read-only ratings",
+            "separator": true,
+            "spacing": "extraLarge"
+        },
+        {
+            "type": "Rating",
+            "value": 3.2,
+            "size": "medium"
+        },
+        {
+            "type": "Rating",
+            "max": 20,
+            "value": 3.2,
+            "color": "marigold"
+        },
+        {
+            "type": "Rating",
+            "style": "compact",
+            "value": 3.2,
+            "color": "marigold",
+            "count": 150
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Execute",
+            "title": "Submit"
+        }
+    ]
+}
+```
 
 ## Code samples
 
