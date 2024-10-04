@@ -1120,6 +1120,9 @@
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies
+  - name: Third-party cookies
+    href: resources/third-party-cookies-update.
+    displayname: Cookies, 
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
