@@ -336,8 +336,6 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
 After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
----
-
 ### Receive edit message activity
 
 When you edit a message, the bot gets a notification of the edit message activity.
@@ -440,6 +438,8 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
     "text": "This message has been updated"
 }
 ```
+
+---
 
 ### Receive undelete message activity
 
@@ -545,6 +545,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
     "text": "This message has been updated"
 }
 ```
+---
 
 ### Get soft delete message activity
 
@@ -635,6 +636,7 @@ async onTeamsMessageSoftDelete(context) {
 }
 
 ```
+---
 
 ### Send suggested actions
 
@@ -691,8 +693,6 @@ A typical `channelData` object in an activity sent to your bot contains the foll
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-### Example channelData object
 
 The following code shows an example of channelData object (channelCreated event):
 
