@@ -1,6 +1,6 @@
 ---
 title: Resource-specific Consent for Apps
-description: In this article, learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions.
+description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 03/20/2023
@@ -169,6 +169,7 @@ The following table provides RSC permissions for a user and their applicable dat
 | `MeetingParticipantReaction.Read.User` | Read the user's reactions while participating in a meeting. |Supported |NA |
 | `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |Supported |NA |
 | `TeamsActivity.Send.User` | Send activity notifications to the user. |NA |Supported |
+| `TeamsAppInstallation.Read.User` | Read the apps that are installed in the user's personal scope. | NA | Supported |
 
 ## Next step
 

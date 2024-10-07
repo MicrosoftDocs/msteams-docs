@@ -8,6 +8,8 @@ ms.date: 01/25/2023
 
 # Create Incoming Webhooks
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
 
 * Bots
@@ -53,6 +55,10 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Select **Manage channel**.
 
     :::image type="content" source="../../assets/images/manage-channel-new-teams.png" alt-text="Screenshot shows the Manage channel option under More options for Teams 2.1.":::
+
+    For members who aren't admins of the channel, the **Manage channel** option is available under the **Open channel details** option in the upper-right corner of a channel.
+
+    :::image type="content" source="../../assets/images/Connectors/manage-channel-non-admin-user.png" alt-text="Screenshot of the Manage channel option for non-admin users." lightbox="../../assets/images/Connectors/manage-channel.png":::
 
 1. Select **Edit**.
 
