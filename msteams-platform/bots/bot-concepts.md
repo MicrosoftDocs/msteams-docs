@@ -34,36 +34,34 @@ By understanding the activity handler and bot logic, you can design and implemen
 
 ## Teams activity handler
 
-At the heart of a bots’ functionality lies the activity handler, a component that is pivotal in managing and processing user interactions. It is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled. It acts as an intermediary between the user's input and the bot's response, and enables the bot to respond accordingly.
+The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as a middleman between the user's input and the bot's response. For both AI and non-AI bots, the activity handler:
 
-The key functions that an activity handler facilitates for AI and non-AI bots include:
+- Receives incoming messages.
+- Retrieves key data from user input.
+- Identifies user intent using NLP for AI bots.
+- Maintains conversation context and state.
+- Generates responses based on user input and intent.
 
-- Receiving incoming messages from the user.
-- Retrieving specific or key data from the user input.
-- Identifying the user intent through Natural Language Processing (NLP) for AI bots.
-- Maintaining conversation context and state.
-- Generating bot response based on user input and intent.
+The activity handler improves user experience, efficiency, accuracy, scalability, and flexibility.
 
-Activity handler enables:
-
-- Improved user experience
-- Better efficiency
-- Enhanced accuracy
-- Scalabilty
-- Flexibility
-
-When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the necessary activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the Bot Framework's `ActivityHandler` class.
 
 > [!NOTE]
-> If the bot activity takes more than 15 seconds to process, Teams sends a retry request to bot endpoint. You might see duplicate requests in your bot.
+> If the bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
+.
 
 # [C#](#tab/csharp)
 
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `OnMessageActivityAsync` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `OnConversationUpdateActivityAsync`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
+Bots are built using the Bot Framework. When a bot gets a message, the turn handler is notified and sends it to the `OnMessageActivityAsync` handler. This works the same way in Teams. If the bot gets a conversation update, the turn handler sends it to `OnConversationUpdateActivityAsync`. The Teams activity handler first looks for any Teams-specific events. If there aren't any, it passes them to the Bot Framework's activity handler.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `OnConversationUpdateActivityAsync` and `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` routes all conversation update activities and `OnInvokeActivityAsync` routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers:
+
+- `OnConversationUpdateActivityAsync` routes all conversation update activities.
+- `OnInvokeActivityAsync` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+
+To set up your logic for Teams-specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no default implementation for these handlers, so just add the logic you want in your override.
 
 The code snippets for Teams activity handlers:
 
@@ -236,7 +234,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ## Bot logic
 
-Bot logic refers to the underlying rules and decision-making processes that govern a bot's behavior and interactions. It defines how the bot processes user input, generates responses, and engages in conversations.
+Bot logic incorporates the fundamental rules and decision-making frameworks that dictate a bot's actions and interactions. It outlines how the bot interprets user input, formulates responses, and participates in conversations.
 
 In Teams, the bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
