@@ -116,6 +116,12 @@ The following table lists the activity that your bot can receive and take action
 
 # [Receive a message activity](#tab/1)
 
+To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
+
+The following code shows an example of receiving a message activity:
+
+# [C#](#tab/dotnet1)
+
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
