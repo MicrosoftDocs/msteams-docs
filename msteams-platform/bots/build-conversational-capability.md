@@ -15,14 +15,16 @@ Conversational bots communicate with users through messaging, enabling seamless 
 
 Messages received from or sent to your bot can include different types of message content:
 
-| Format | From user to bot | From bot to user | Notes |
-| --- |:---:|:---:| ---|
-| [Rich text](#use-rich-text-message) | ✔️ | ✔️ | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. |
-| [Pictures](#use-picture-messages) | ✔️ | ✔️ | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
-| [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis | ✔️ | ✔️ | Teams supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Format | From user to bot | From bot to user |
+| --- |:---:|:---:|
+| [Rich text](#use-rich-text-message) | ✔️ | ✔️ |
+| [Pictures](#use-picture-messages) | ✔️ | ✔️ |
+| [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
+| Emojis | ✔️ | ✔️ |
 
 ### Use rich text message
+
+Your Teams bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
 
 ### Use picture messages
 
@@ -39,7 +41,12 @@ A conversational bot can include Adaptive Cards that simplify business workflows
 
 ### Use Adaptive Cards
 
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.
+
+For more information, see:
+
+- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) for.
+- [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
 
 The following code shows an example of sending a simple Adaptive Card:
 
@@ -66,6 +73,10 @@ The following code shows an example of sending a simple Adaptive Card:
     ]
 }
 ```
+
+### Use emojis in your message
+
+Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
 
 ## Send and receive messages
 
