@@ -17,14 +17,14 @@ Messages received from or sent to your bot can include different types of messag
 
 | Format | From user to bot | From bot to user |
 | --- |:---:|:---:|
-| [Rich text](#use-rich-text-message) | ✔️ | ✔️ |
+| [Rich text and Emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
 | [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
 | Emojis | ✔️ | ✔️ |
 
-### Use rich text message
+### Use rich text message and Emojis
 
-Your Teams bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
+Your Teams bot can send rich text and emojis to your bot. Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
 
 ### Use picture messages
 
@@ -75,8 +75,6 @@ The following code shows an example of sending a simple Adaptive Card:
 ```
 
 ### Use emojis in your message
-
-Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
 
 ## Send and receive messages
 
