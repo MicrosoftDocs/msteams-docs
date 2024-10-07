@@ -82,6 +82,7 @@ The following code shows an example of sending a simple Adaptive Card:
 Sending and receiving messages is the core functionality of a bot. It enables a bot to:
 
 [TBD: master procedure:]
+
 - Send and receive messages
   - Receive a message activity
   - Receive a read receipt
@@ -109,8 +110,8 @@ The following table lists the activity that your bot can receive and take action
 | Message type | Payload object | Scope |
 | --- | --- | --- |
 | [Receive a message activity](#receive-a-message-activity) | Message activity | All |
-| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
-| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
+| [Receive edit message activity](#receive-edit-message-activity) | Message edit activity | All |
+| [Receive undelete message activity](#receive-undelete-message-activity) | Message undelete activity | All |
 | [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
 
 ### Receive a message activity
@@ -223,7 +224,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ### Receive a read receipt
 
-The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
 
 - You can configure your bot to send a follow-up message if your app user hasn't read the message in the personal chat.
 
@@ -545,6 +546,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
     "text": "This message has been updated"
 }
 ```
+
 ---
 
 ### Get soft delete message activity
@@ -636,6 +638,7 @@ async onTeamsMessageSoftDelete(context) {
 }
 
 ```
+
 ---
 
 ### Send suggested actions
@@ -683,7 +686,7 @@ The `channelData` object isn't included in messages in personal conversations, a
 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
-- `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
