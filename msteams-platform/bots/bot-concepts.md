@@ -11,11 +11,7 @@ ms.date: 10/03/2024
 
 A bot's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. A bot may request information or enable access to services, and responds to the user.
 
-To develop a bot app that meets your needs, it's important to get to know the Teams activity handler and bot logic.
-
-## Organize conversational logic
-
-The activity handler plays a crucial role in organizing the conversational logic for your bot. In the context of Teams bots, activities are managed through two main components: Teams activity handlers and the bot's logic.
+To create a bot app that meets your needs, understanding Microsoft Teams activity handler and bot logic is essential. These two key components work together to organize conversational logic.
 
 - **Teams activity handlers**:
   Teams activity handlers extend the functionality of standard bots by adding support for Teams-specific events and interactions. These events can include channel creation, team member additions, and other actions unique to the Teams environment. By utilizing Teams activity handlers, bots can provide a more integrated and seamless user experience within the Teams platform.
@@ -23,7 +19,7 @@ The activity handler plays a crucial role in organizing the conversational logic
 - **Bot logic**:
   The bot object, which houses the bot’s conversational logic, is responsible for making decisions based on user input. It exposes a turn handler, which is the method that accepts incoming activities from the bot adapter. The bot logic ensures that each turn of the conversation is handled appropriately, contributing to the bot's overall coherence and effectiveness.
 
-These two components work together to create a smooth and engaging conversational experience. The activity handler processes what the user says, while the bot logic figures out the best response. Together, they enable:
+These two components work together to create an engaging conversational experience. The activity handler processes what the user says, while the bot logic figures out the best response. Together, they enable:
 
 - Understanding the context of the conversation
 - Personalizing interactions
