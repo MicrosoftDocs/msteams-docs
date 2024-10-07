@@ -20,7 +20,19 @@ To develop a bot app that meets your needs, it's important to get to know the bo
 
 By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and non-AI bot solutions.
 
-## Bot activity handler
+## Teams activity handler
+
+An activity handler for bots within Teams is the component that manages and processes user interactions. It acts as an intermediary between the user's input and the bot's response, and enables the bot to respond accordingly.
+
+The key functions that an activity handler facilitates for AI and non-AI bots include:
+
+- Receiving incoming messages from the user.
+- Retrieving specific or key data from the user input.
+- Identifying the user intent through Natural Language Processing (NLP) for AI bots.
+- Maintaining conversation context and state.
+- Generating bot response based on user input and intent.
+
+Activity handler organizes the conversational logic for your bot. For Teams bot, activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
 ## Bot logic
 
