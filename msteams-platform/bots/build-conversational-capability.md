@@ -120,107 +120,107 @@ To receive a text message, use the `Text` property of an `Activity` object. In t
 
 The following code shows an example of receiving a message activity:
 
-# [C#](#tab/dotnet1)
+    # [C#](#tab/dotnet1)
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+    - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+    - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
-```csharp
+    ```csharp
 
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-  // Sends an activity to the sender of the incoming activity.
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
-}
-
-```
-
-# [TypeScript](#tab/typescript1)
-
-- [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
-
-```typescript
-
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            // Sends a message activity to the sender of the incoming activity.
-            await context.sendActivity(`Echo: '${context.activity.text}'`);
-            await next();
-        });
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
     }
-}
 
-```
+    ```
 
-# [Python](#tab/python1)
+    # [TypeScript](#tab/typescript1)
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
+    - [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
+    - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
-```python
+    ```typescript
 
-async def on_message_activity(self, turn_context: TurnContext):
-    // Sends a message activity to the sender of the incoming activity.
-    return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
-
-```
-
-# [JSON](#tab/json1)
-
-```json
-
-{
-    "type": "message",
-    "id": "1485983408511",
-    "timestamp": "2017-02-01T21:10:07.437Z",
-    "localTimestamp": "2017-02-01T14:10:07.437-07:00",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
-    "channelId": "msteams",
-    "from": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen",
-        "aadObjectId": "7faf8ab2-3d56-4244-b585-20c8a42ed2b8"
-    },
-    "conversation": {
-        "conversationType": "personal",
-        "id": "a:17I0kl9EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-"
-    },
-    "recipient": {
-        "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
-    },
-    "textFormat": "plain",
-    "text": "Hello Teams TestBot.Sending bold-italic rich text",
-    "attachments": [
-      {
-            "contentType": "text/html",
-            "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
-      } 
-    ],
-    "entities": [
-      { 
-        "locale": "en-US",
-        "country": "US",
-        "platform": "Windows",
-        "timezone": "America/Los_Angeles",
-        "type": "clientInfo"
-      }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onMessage(async (context, next) => {
+                // Sends a message activity to the sender of the incoming activity.
+                await context.sendActivity(`Echo: '${context.activity.text}'`);
+                await next();
+            });
         }
-    },
-    "locale": "en-US"
-}
+    }
 
-```
+    ```
 
----
+    # [Python](#tab/python1)
+
+    - [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
+    - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
+
+    ```python
+
+    async def on_message_activity(self, turn_context: TurnContext):
+        // Sends a message activity to the sender of the incoming activity.
+        return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
+
+    ```
+
+    # [JSON](#tab/json1)
+
+    ```json
+
+    {
+        "type": "message",
+        "id": "1485983408511",
+        "timestamp": "2017-02-01T21:10:07.437Z",
+        "localTimestamp": "2017-02-01T14:10:07.437-07:00",
+        "serviceUrl": "https://smba.trafficmanager.net/amer/",
+        "channelId": "msteams",
+        "from": {
+            "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+            "name": "Megan Bowen",
+            "aadObjectId": "7faf8ab2-3d56-4244-b585-20c8a42ed2b8"
+        },
+        "conversation": {
+            "conversationType": "personal",
+            "id": "a:17I0kl9EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-"
+        },
+        "recipient": {
+            "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c",
+            "name": "Teams TestBot"
+        },
+        "textFormat": "plain",
+        "text": "Hello Teams TestBot.Sending bold-italic rich text",
+        "attachments": [
+        {
+                "contentType": "text/html",
+                "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+        } 
+        ],
+        "entities": [
+        { 
+            "locale": "en-US",
+            "country": "US",
+            "platform": "Windows",
+            "timezone": "America/Los_Angeles",
+            "type": "clientInfo"
+        }
+        ],
+        "channelData": {
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+        },
+        "locale": "en-US"
+    }
+
+    ```
+
+    ---
 
 ---
 
