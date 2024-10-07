@@ -423,7 +423,7 @@
     href: bots/bring-bot-to-teams.md
   - name: Build bot capabilities
     items:
-    - name: Understand bot concepts
+    - name: Manage user interactions
       href: bots/bot-concepts.md
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
