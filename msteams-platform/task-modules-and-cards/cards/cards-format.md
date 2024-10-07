@@ -306,10 +306,10 @@ Following image illustrates user mention in Incoming Webhook:
 
 Adaptive Cards helps you to present and exchange information in a card-like format, and Fluent icons help make these cards more intuitive and visually engaging. 
 
-||Default|Accent|Good|Warning|Attention|
+| &nbsp; |Default|Accent|Good|Warning|Attention|
 |---|---|
-|Regular| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
-|Filled| |
+|**Regular**| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
+|**Filled**| :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-attention.png"::: |
 
 
 ### People icon in an Adaptive Card
