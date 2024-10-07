@@ -20,7 +20,6 @@ Messages received from or sent to your bot can include different types of messag
 | [Rich text and Emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
 | [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
-| Emojis | ✔️ | ✔️ |
 
 ### Use rich text message and Emojis
 
