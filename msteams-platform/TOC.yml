@@ -439,7 +439,7 @@
       href: bots/how-to/get-teams-context.md
   - name: Build AI bots
     items:
-    - name: Teams AI library overview
+    - name: What is Teams AI library?
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
     - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md

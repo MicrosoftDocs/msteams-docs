@@ -17,7 +17,7 @@ You can leverage bot capabilities such as chatbots, virtual assistants, workflow
 
 [**TBD**: More details to follow about user scenarios where bots are effective.]
 
-## What does building a bot offer me?
+## How does building a bot benefit me?
 
 Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7 without getting tired, and they can handle multiple tasks at once. Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 

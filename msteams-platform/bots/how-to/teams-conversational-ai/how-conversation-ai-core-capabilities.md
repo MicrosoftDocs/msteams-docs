@@ -27,9 +27,7 @@ With Teams AI library, you can focus on:
 Teams AI library supports the following activity handlers:
 
 - [Send or receive message](#send-or-receive-message)
-
 - [Message extension (ME) capabilities](#message-extensions)
-
 - [Adaptive Cards capabilities](#adaptive-cards-capabilities)
 
  You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.

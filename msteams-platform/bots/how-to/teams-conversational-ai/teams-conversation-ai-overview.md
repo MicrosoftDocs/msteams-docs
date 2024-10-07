@@ -34,7 +34,7 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
-## Teams AI library features
+## How do AI library features benefit me?
 
 The Teams AI library is equipped with useful features that make building your AI bot a lot easier.
 
