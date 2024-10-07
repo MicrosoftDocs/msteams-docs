@@ -423,7 +423,7 @@
     href: bots/bring-bot-to-teams.md
   - name: Build bot capabilities
     items:
-    - name: Manage user interactions
+    - name: Manage conversations
       href: bots/bot-concepts.md
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
@@ -445,7 +445,7 @@
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
     - name: Let's build an AI bot
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md    
-    - name: Build core capabilities
+    - name: Manage AI bot conversations
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
     - name: Build custom engine agent
       items: 
