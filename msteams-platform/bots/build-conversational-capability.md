@@ -13,11 +13,11 @@ Conversational bots communicate with users through messaging, enabling seamless 
 
 ## Message content
 
-Messages received from or sent to your bot can include different types of message content:
+Messages interaction between your bot and user can include different types of message content that:
 
-| Format | From user to bot | From bot to user |
+| Content type | From user to bot | From bot to user |
 | --- |:---:|:---:|
-| [Rich text and Emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
+| [Rich text and emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
 | [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
 
@@ -89,6 +89,29 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
   - Send a message
 - Send suggested actions
 - Update and delete bot messages
+
+### Send and receive messages
+
+In a chat, each message is an Activity object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
+
+Basic conversations are managed through the Bot Framework connector, which is a single REST API. This API enables your bot talk to Teams and other channels. The Bot Builder SDK offers the following features:
+
+- Easy access to the Bot Framework connector.
+- Tools to manage conversation flow and state.
+- Simple ways to add cognitive services, like natural language processing (NLP).
+
+Your bot gets messages from Teams using the `Text` property and can send back single or multiple responses to users.
+
+For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
+
+The following table lists the activity that your bot can receive and take action on:
+
+| Message type | Payload object | Scope |
+| --- | --- | --- |
+| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
+| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
+| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
+| [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
 
 ## Send messages in Teams channel data
 
