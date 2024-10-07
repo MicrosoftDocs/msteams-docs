@@ -13,13 +13,14 @@ Are you building a Teams AI bot? Teams AI library supports JavaScript and is des
 
 Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
 
-If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [Why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
+> [!NOTE]
+> If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [Why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
 
 With Teams AI library, you can focus on:
 
 - Understanding the role of [activity handler](#activity-handlers) in conversation management.
 - Designing [bot logic](#bot-logic-for-handling-an-action) for intelligent responses.
-- Integrate Natural Langauge Processing (NLP) for translating user [intents to actions](#intents-to-actions).
+- Integrating Natural Langauge Processing (NLP) for translating user [intents to actions](#intents-to-actions).
 
 ## Activity handlers
 
