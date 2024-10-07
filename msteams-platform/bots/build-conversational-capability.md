@@ -13,12 +13,64 @@ Conversational bots communicate with users through messaging, enabling seamless 
 
 ## Message content
 
-Types on content included in a message:
+Messages received from or sent to your bot can include different types of message content:
 
-- Rich text
-- Pictures
-- Adaptive Cards
+- [Rich text](#rich-text-message)
+- [Pictures](#picture-messages)
+- [Adaptive Cards](#adaptive-cards)
 - Emojis
+
+### Use rich text message
+
+| Format | From user to bot | From bot to user | Notes |
+| --- |:---:|:---:| ---|
+| Rich text | ✔️ | ✔️ | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. |
+| Pictures | ✔️ | ✔️ | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
+| Cards | ❌ | ✔️ | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis | ✔️ | ✔️ | Teams supports emojis through UTF-16, such as U+1F600 for grinning face. |
+
+### Use picture messages
+
+To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+
+Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+
+- Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+- Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+
+### Use Adaptive Cards
+
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+The following code shows an example of sending a simple Adaptive Card:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
 
 ## Send and receive messages
 
