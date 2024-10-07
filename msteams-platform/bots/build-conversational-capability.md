@@ -23,14 +23,14 @@ Messages received from or sent to your bot can include different types of messag
 
 ### Use rich text message and emojis
 
-Your Teams bot can send rich text and emojis to your bot. Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
+Your Teams bot can send rich text and emojis. Teams supports emojis through UTF-16, like U+1F600 for a grinning face.
 
 ### Use picture messages
 
-To enhance your message, you can include pictures as attachments to that message:
+To make bot message pop, the user can add pictures as attachments:
 
-- Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
-- Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+- Pictures can be up to 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIFs aren't supported.
+- You can specify the height and width of each image using XML. In Markdown, the image size defaults to 256×256. For example:
 
   - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
   - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -39,7 +39,7 @@ For more information on attachments, see [add media attachments to messages](/az
 
 ### Use Adaptive Cards
 
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. You can author Adaptive Cards in a bot and shown in multiple apps such as Teams, your website, and so on.
 
 For more information, see:
 
@@ -47,6 +47,9 @@ For more information, see:
 - [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
 
 The following code shows an example of sending a simple Adaptive Card:
+
+<details>
+<summary>Example: Send a simple Adaptive Card</summary>
 
 ```json
 {
@@ -72,7 +75,7 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-### Use emojis in your message
+</details>
 
 ## Send and receive messages
 
