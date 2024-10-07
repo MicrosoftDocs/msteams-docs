@@ -302,6 +302,16 @@ Following image illustrates user mention in Incoming Webhook:
 
 :::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot shows a user mention in Incoming Webhook.":::
 
+### Fluent icon in an Adaptive Card
+
+Adaptive Cards helps you to present and exchange information in a card-like format, and Fluent icons help make these cards more intuitive and visually engaging. 
+
+||Default|Accent|Good|Warning|Attention|
+|---|---|
+|Regular| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
+|Filled| |
+
+
 ### People icon in an Adaptive Card
 
 People icon helps users to view the images of users in an Adaptive Card. You can insert an image and apply all the properties supported on images.
