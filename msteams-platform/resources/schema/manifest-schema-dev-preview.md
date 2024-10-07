@@ -1202,10 +1202,10 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.id`| String | 64 characters | ✔️ | Specifies the ID for the menu control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`menus.controls.items`| Array | | | Configures the items for the menu control. |
 |`menus.controls.items.id`| String | | ✔️ | Specifies the ID for a menu item. |
-|`menus.controls.items.type`| String enum | | ✔️ | Defines the item's control type. <br>Supported values: `button`|
+|`menus.controls.items.type`| String enum | | ✔️ | Defines the item's control type. <br>Supported value: `button`|
 |`menus.controls.items.label`| String | 64 characters | ✔️ | Specifies the text displayed for the item. |
 |`menus.controls.items.icons`| Array | | | Configures the icons for the custom item.|
-|`menus.controls.items.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
+|`menus.controls.items.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, `80`. <br>Required image sizes: `16`, `32`, `80`|
 |`menus.controls.items.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon.|
 |`menus.controls.items.supertip`| | | ✔️ | Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`menus.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
@@ -1213,20 +1213,20 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the menu item. The `actionId` must match with `runtime.actions.id`. |
 |`menus.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`.|
 |`menus.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
-|`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `menu`.|
-|`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, no other "menus.*" child properties may be used because a built-in Office control is not customizable by an add-in.|
+|`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported value: `menu`.|
+|`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, no other `menus.*` child properties may be used because a built-in Office control is not customizable by an add-in.|
 |`menus.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the menu control.|
-|`menus.controls.icons`| Array | | ✔️ | Defines the icons for the menu control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
-|`menus.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
+|`menus.controls.icons`| Array | | ✔️ | Defines the icons for the menu control. There must be at least three child objects; one each with `size` of `16`, `32`, and `80` pixels. |
+|`menus.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, `80`. <br> Required image sizes: `16`, `32`, `80`|
 |`menus.controls.icons.url`| String | 2048 characters | | Specifies the absolute URL to the icon.|
 |`menus.controls.supertip`| Object | | ✔️ | Configures a supertip for the menu control. |
 |`menus.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`menus.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`menus.controls.actionId`| String | 64 characters | | Don't use. The action of the menu control is always the same: it displays the list of menu items.|
-|`menus.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`.|
-|`menus.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`.|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
-|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`menus.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
+|`menus.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets.|
 |`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
