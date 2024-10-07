@@ -21,26 +21,25 @@ Messages received from or sent to your bot can include different types of messag
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
 | [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
 
-### Use rich text message and Emojis
+### Use rich text message and emojis
 
 Your Teams bot can send rich text and emojis to your bot. Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
 
 ### Use picture messages
 
-To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+To enhance your message, you can include pictures as attachments to that message:
 
-Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+- Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+- Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
-Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+  - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+  - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-- Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-- Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
 ### Use Adaptive Cards
 
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.
 
 For more information, see:
 
