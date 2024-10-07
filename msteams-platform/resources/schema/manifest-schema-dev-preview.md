@@ -1002,7 +1002,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", "autoRunEvents", and "contextMenus" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, and `contextMenus` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 | Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
@@ -1213,7 +1213,7 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the menu item. The `actionId` must match with `runtime.actions.id`. |
 |`menus.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`.|
 |`menus.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
-|`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported value: `menu`.|
+|`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported value: `menu`|
 |`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, no other `menus.*` child properties may be used because a built-in Office control is not customizable by an add-in.|
 |`menus.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the menu control.|
 |`menus.controls.icons`| Array | | ✔️ | Defines the icons for the menu control. There must be at least three child objects; one each with `size` of `16`, `32`, and `80` pixels. |
