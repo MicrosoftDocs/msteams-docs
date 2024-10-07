@@ -686,11 +686,11 @@ The `channelData` object isn't included in messages in personal conversations, a
 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
-- `eventType`: Teams event type passed only in cases of **TBD** link: conversation events in your Teams bot - subscribe-to-conversation-events.md.
+- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
+  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
 - `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
   - `id`: GUID for the channel.
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
