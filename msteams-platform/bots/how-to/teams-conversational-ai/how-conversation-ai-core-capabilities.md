@@ -21,12 +21,6 @@ With Teams AI library, you can focus on:
 - Designing [bot logic](#bot-logic-for-handling-an-action) for intelligent responses.
 - Integrate Natural Langauge Processing (NLP) for translating user [intents to actions](#intents-to-actions).
 
-Teams AI library supports the following capabilities:
-
-- [Activity handlers](#activity-handlers)
-- [Bot logic for handling an action](#bot-logic-for-handling-an-action)
-- [Intents to action](#intents-to-actions)
-
 ## Activity handlers
 
 Teams AI library supports the following activity handlers:
