@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.date: 10/03/2024
 ---
 
-# Manage user interactions
+# Build user interactions
 
 A bot's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. A bot may request information or enable access to services, and responds to the user.
 
