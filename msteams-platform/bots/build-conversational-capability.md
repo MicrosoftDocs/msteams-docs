@@ -15,19 +15,14 @@ Conversational bots communicate with users through messaging, enabling seamless 
 
 Messages received from or sent to your bot can include different types of message content:
 
-- [Rich text](#rich-text-message)
-- [Pictures](#picture-messages)
-- [Adaptive Cards](#adaptive-cards)
-- Emojis
-
-### Use rich text message
-
 | Format | From user to bot | From bot to user | Notes |
 | --- |:---:|:---:| ---|
-| Rich text | ✔️ | ✔️ | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. |
-| Pictures | ✔️ | ✔️ | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
-| Cards | ❌ | ✔️ | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| [Rich text](#use-rich-text-message) | ✔️ | ✔️ | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. |
+| [Pictures](#use-picture-messages) | ✔️ | ✔️ | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
+| [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis | ✔️ | ✔️ | Teams supports emojis through UTF-16, such as U+1F600 for grinning face. |
+
+### Use rich text message
 
 ### Use picture messages
 
