@@ -90,6 +90,10 @@ The following images are an example of flat list and grouped intents in a contex
 >
 > The Microsoft 365 platform determines the placement of Actions.
 
+### Validation guidelines
+
+We recommend you to review the validation guidelines for your app to pass the Teams Store submission process. For more information, see [Actions in Microsoft 365](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#actions-in-microsoft-365).
+
 ## Next step
 
 > [!div class="nextstepaction"]
