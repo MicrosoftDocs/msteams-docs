@@ -312,6 +312,9 @@ Adaptive Cards helps you to present and exchange information in a card-like form
 |**Filled**| :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-attention.png"::: |
 
 
+
+
+
 ### People icon in an Adaptive Card
 
 People icon helps users to view the images of users in an Adaptive Card. You can insert an image and apply all the properties supported on images.
