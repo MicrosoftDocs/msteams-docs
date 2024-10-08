@@ -30,21 +30,20 @@ By understanding the activity handler and bot logic, you can design and implemen
 
 ## Teams activity handler
 
-The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as a middleman between the user's input and the bot's response. For both AI and non-AI bots, the activity handler:
+The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as a middleman between the user's input and the bot's response:
 
 - Receives incoming messages.
 - Retrieves key data from user input.
-- Identifies user intent using NLP for AI bots.
+- Identifies user intent using Natural Language Processing (NLP).
 - Maintains conversation context and state.
 - Generates responses based on user input and intent.
 
 The activity handler improves user experience, efficiency, accuracy, scalability, and flexibility.
 
-When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the necessary activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the Bot Framework's `ActivityHandler` class.
+When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the appropriate activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the Bot Framework's `ActivityHandler` class.
 
 > [!NOTE]
-> If the bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
-.
+> If a bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
 
 # [C#](#tab/csharp)
 
