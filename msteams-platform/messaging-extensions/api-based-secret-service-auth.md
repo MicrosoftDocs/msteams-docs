@@ -129,9 +129,8 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 
   Your key's security is still maintained through the **Home Tenant** and **Base URL**. When you're ready to release your app to the world, you need to change the Teams app ID setting to **Existing Teams app** and enter your Teams app ID. Finally, submit your app manifest to the Partner Center for inclusion in the Teams Store. Later, your API secret registration is tied to your specific Teams app and can't be used with others.
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Create API-based message extension](create-api-message-extension.md)
+[Create API-based message extension](create-api-message-extension.md)
 
 

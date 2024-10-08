@@ -25,7 +25,7 @@ You can enable the following authentication methods for your API-based message e
 
 **Microsoft Entra Authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams.
 
-You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`.
+You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. For more information, see [configure your app in Microsoft Entra ID](../bots/how-to/authentication/api-based-microsoft-entra.md).
 
 ## None
 
@@ -38,7 +38,6 @@ Update `none` as a value for `authorization` in an API-based message extension w
     },
 ```
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Create API-based message extension](create-api-message-extension.md)
+[Create API-based message extension](create-api-message-extension.md)

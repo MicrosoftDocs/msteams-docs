@@ -396,3 +396,7 @@ To build an API-based message extension, follow these step-by-step guides:
 
 * [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
+
+## See also
+
+[Authentication for API-based message extensions](build-api-based-message-extension.md)

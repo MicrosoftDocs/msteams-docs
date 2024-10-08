@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 07/16/2024
 ---
 
-# Microsoft Entra for API-based message extension 
+# Configure your API based message extension in Microsoft Entra ID
 
 Microsoft Entra authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. Microsoft Entra SSO enables the app to silently obtain a user token that is issued for its resource by Microsoft Entra. The app can then authenticate this token and retrieve the user profile information without the user's consent.
 
@@ -334,7 +334,6 @@ After the API-based message extension gets a request header with token, perform 
 
 * **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API. For more information on claims reference with details on the claims included in access tokens, see [access token claims](/entra/identity-platform/access-token-claims-reference).
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Create API-based message extension](create-api-message-extension.md)
+[Create API-based message extension](create-api-message-extension.md)
