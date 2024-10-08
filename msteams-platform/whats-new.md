@@ -413,14 +413,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 September**
+**2024 October**
 
-* ***September 30, 2024***: [Configure your app with Approvals APIs to get instant approvals.](samples/approvals-app-api.md).
-* ***September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store.](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
-
-* ***September 16, 2024***: [Explore the development guidance to build Copilot agents.](messaging-extensions/dev-guidelines-copilot-agents.md)
-
-* ***September 03, 2024***: [Introduced nested app authentication for single-page applications that are embedded in host environment.](concepts/authentication/nested-authentication.md)
+***October 08, 2024***: [Configure your app with approvals API to get instant approvals.](samples/approvals-app-api.md).
 
 :::column-end:::
 :::row-end:::
@@ -433,6 +428,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 16/09/2024 | Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. | Distribute your app > Publish to the Teams Store > [Review Copilot validation guidelines](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
+| 16/09/2024 | Explore the development guidance to build Copilot agents. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Guidelines for Copilot agents](messaging-extensions/dev-guidelines-copilot-agents.md) |
+| 03/09/2024 | Introduced nested app authentication for single-page applications that are embedded in host environment. | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md) |
 | 14/06/2024 | Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md) |
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | 23/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine agent.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
