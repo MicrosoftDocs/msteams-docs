@@ -731,26 +731,24 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 
 To enable you bots to get all channel or chat messages, you must:
 
-- Filter the @mention messages
--
+- **Filter the @mention messages**:
+  Enable the bot to use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to filter the @mention messages.
 
-### Filtering at mention messages
-
-```csharp
-// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
-// This code snippet allows the bot to ignore all messages that do not @mention the bot.
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-        // Ignore the message if bot was not mentioned. 
-        // Remove this if block to process all messages received by the bot.
-        if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
-        {
-            return;
-        }
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
-}
-```
+    ```csharp
+    // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
+    // This code snippet allows the bot to ignore all messages that do not @mention the bot.
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+            // Ignore the message if bot was not mentioned. 
+            // Remove this if block to process all messages received by the bot.
+            if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+            {
+                return;
+            }
+            // Sends an activity to the sender of the incoming activity.
+            await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+    }
+    ```
 
 ### RSC permission
 
