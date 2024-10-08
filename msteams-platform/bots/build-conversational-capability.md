@@ -715,6 +715,10 @@ The following code shows an example of channelData object (channelCreated event)
 }
 ```
 
+## Get All Conversation Messages with RSC
+
+With the resource-specific consent (RSC) permissions model, conversation owners can allow a bot to receive all user messages in standard channels and chats without needing to be @mentioned. They can give consent during the app installation or upgrade process after the app updates are published. Originally made for Microsoft Teams Graph APIs, the RSC model is now expanded to include bot scenarios. You can enable this by adding the ChannelMessage.Read.Group or ChatMessage.Read.Chat permission strings in your app manifest (formerly known as the Teams app manifest).
+
 ## Next step
 
 ## See also
