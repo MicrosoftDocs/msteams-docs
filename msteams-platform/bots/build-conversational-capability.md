@@ -722,13 +722,16 @@ With the resource-specific consent (RSC) permissions model, conversation owners 
 > [!NOTE]
 > Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-### Best practices for using RSC permission in your bot
-
-  Ensure that the services that need access to all Teams message data use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
+Ensure that the services needing access to all Teams message data use the Graph APIs to get access to archived data in channels and chats. A bot must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to create engaging experience for users so it can get approved by the Microsoft Teams Store. Additionally, the app description must explain how the bot uses the data it reads. Here are some tips to help you use the RSC permissions correctly for your bot:
 
 - A bot mustn't use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to pull a a large amount of customer data.
 - A bot must be able to get all chat messages using `ChatMessage.Read.Chat` only after they've been re-installed or newly installed into a chat.
 - If your app uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app using the steps in [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and adjust it before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
+
+If your app uses RSC permissions to receive all channel or chat message, you can:
+
+- [Receive all channel or chat messages](#receive-all-channel-or-chat-messages).
+- [Receive only @mention messages from channel or chat](#receive-only-mention-messages-from-channel-or-chat).
 
 ### Receive all channel or chat messages
 
