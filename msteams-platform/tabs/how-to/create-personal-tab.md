@@ -1060,14 +1060,14 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 ## Offline tabs
 
 > [!NOTE]
-> Personal tabs with offline functionality are only supported on Teams for Android devices.
+> Personal tabs with offline functionality are only supported on Teams in Android devices.
 
-You can create a personal tab that works in Teams without an internet connection. When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in the central storage, maintaining data consistency across the organization.
+You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
 
-Creating a personal tab with offline functionality has the following advantages:
+* Record data through forms that can include images and videos.
+* View details of previously submitted requests, incidents, or forms.
 
-* **Accessibility**: Users can access important information, documents, or tools without needing an internet connection, making it easier to work from remote areas or while traveling.
-* **Seamless sync**: Any changes made offline automatically sync once users are back online, ensuring that their work is up-to-date without manual effort.
+When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
 
 :::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
 
