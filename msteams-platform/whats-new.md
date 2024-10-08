@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
+***September 30, 2024***: [Build a personal tab with offline functionality that helps users access information, documents, or tools without an internet connection.](tabs/how-to/create-personal-tab.md#offline-tabs)
 ***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
