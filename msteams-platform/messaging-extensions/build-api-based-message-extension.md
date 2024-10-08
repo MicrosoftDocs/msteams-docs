@@ -168,7 +168,7 @@ Ensure that you adhere to following guidelines for app manifest:
    +      "authorization": {
    +        "authType": "apiSecretServiceAuth ",
    +        "apiSecretServiceAuthConfiguration": {
-   +            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+   +            "apiSecretRegistrationId": "9xxxxxxx-7xxx-4xxx-bxxx-1xxxxxxxxxxx"
    +        }
    +      },
    +      "apiSpecificationFile": "aitools-openapi.yml",
@@ -889,7 +889,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -918,7 +918,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -993,11 +993,10 @@ When validating the token, ensure the following:
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
