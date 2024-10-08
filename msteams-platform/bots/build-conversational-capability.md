@@ -798,11 +798,11 @@ The following steps guide you to upload and validate bot that receives all chat 
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
 
-   :::image type="content" source="../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat."  lightbox="../../../assets/images/bots/chats-manage-apps-entry.png":::
+   :::image type="content" source="../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat."  lightbox="../assets/images/bots/chats-manage-apps-entry.png":::
 
 1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
 
-   :::image type="content" source="../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option." lightbox="../../../assets/images/bots/Chats_Manage_Apps_Page.png":::
+   :::image type="content" source="../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option." lightbox="../assets/images/bots/Chats_Manage_Apps_Page.png":::
 
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
