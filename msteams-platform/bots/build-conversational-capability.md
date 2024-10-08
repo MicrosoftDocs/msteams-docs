@@ -744,9 +744,9 @@ If these RSC permissions are defined for a bot in its app manifest, it is able t
 
 #### Update app manifest
 
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
+For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
-:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
+:::image type="content" source="../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
 
 The following code provides an example of the app manifest:
 
@@ -905,7 +905,7 @@ The following steps guide you to upload and validate bot that receives all chat 
 
 To enable you bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those message where it's @mentioned:
 
-    ```csharp
+```csharp
     // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
     // This code snippet allows the bot to ignore all messages that do not @mention the bot.
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -919,7 +919,7 @@ To enable you bots to get only those channel or chat messages where your bot is 
             // Sends an activity to the sender of the incoming activity.
             await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
     }
-    ```
+```
 
 If you want your bot to receive all messages, then you don't need to filter the @mention messages.
 
