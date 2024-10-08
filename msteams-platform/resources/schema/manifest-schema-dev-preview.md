@@ -1211,7 +1211,7 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`menus.controls.items.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip.|
 |`menus.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the menu item. The `actionId` must match with `runtime.actions.id`. |
-|`menus.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`.|
+|`menus.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`|
 |`menus.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported value: `menu`|
 |`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, no other `menus.*` child properties may be used because a built-in Office control is not customizable by an add-in.|
