@@ -996,7 +996,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
-|`getStartedMessages`| Array | 3 | | Provides information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. |
+|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in various places in Office, such as the callout that appears in Office when an Office Add-in is installed. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1192,7 +1192,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.getStartedMessages
 
-The `extensions.getStartedMessages` array provides information about an Office add-in that appears in various places in Office, such as the callout that appears in Office when an Office add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
+The `extensions.getStartedMessages` array provides information about an Office Add-in that appears in various places in Office, such as the callout that appears in Office when an Office Add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
