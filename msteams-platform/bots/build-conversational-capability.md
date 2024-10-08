@@ -755,8 +755,73 @@ To enable you bots to get all channel or chat messages, you must:
 
   - The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions mustn't be used by bots to extract large amount of customer data.
   - The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` must only be enabled after a re-installation or new installation into a chat.
-  - If you have an app that uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
+  - If you have an app that uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app following the steps in  [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
   - If you don't want your bot to receive all chat messages, implement the code snippet for filtering @mention messages. If no action is taken, your bot receives all messages after new installations.
+
+## Upload a custom app in a conversation
+
+# [Channel messages](#tab/channel)
+
+The following steps guide you to upload and validate bot that receives all channel messages in a Team without being @mentioned:
+
+1. Select or create a team.
+1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
+1. Select **Manage team** from the dropdown menu.
+
+   :::image type="content" source="Media/managing-team.png" alt-text="Screenshot shows the managing team option in Teams application.":::
+
+1. Select **Apps**. Multiple apps appear.
+
+1. Select **Upload a custom app** from the lower right corner.
+
+      :::image type="content" source="Media/uploading-custom-app.png" alt-text="Screenshot shows the upload a custom app option.":::
+  
+1. Select **Open**.
+
+      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
+
+1. Select **Add** from the app details pop-up, to add the bot to your selected team.
+
+      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/adding-bot.png":::
+
+1. Select a channel and enter a message in the channel for your bot.
+
+    The bot receives the message without being @mentioned.
+
+      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
+
+# [Chat messages](#tab/chat)
+
+The following steps guide you to upload and validate bot that receives all chat messages in a chat without being @mentioned:
+
+1. Select or create a group chat.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
+1. Select **Manage apps** from the dropdown menu.
+
+   :::image type="content" source="../../../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat." lightbox="../../../assets/images/bots/chats-manage-apps-entry.png":::
+
+1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
+
+   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option." lightbox="../../../assets/images/bots/Chats_Manage_Apps_Page.png":::
+
+1. Select the app package from the **Open** dialog box.
+1. Select **Open**.
+
+   :::image type="content" source="../../../assets/images/bots/Chats_Sideload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
+
+1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
+
+   :::image type="content" source="../../../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the bot to the group chat.":::
+
+1. Enter a message in the group chat for your bot.
+
+   :::image type="content" source="../../../assets/images/bots/Bot_ReceiveMessage.png" alt-text="Screenshot shows the bot replying to a message.":::
+
+   The bot receives the message without being @mentioned.
+
+   :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the bot replying to a message without a mention.":::
+
+---
 
 ## Next step
 
