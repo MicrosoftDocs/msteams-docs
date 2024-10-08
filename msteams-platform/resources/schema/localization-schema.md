@@ -13,7 +13,7 @@ The Microsoft Teams localization file describes language translations that are s
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "<https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json>".
 
-## Example
+## Localization schema v1.17
 
 Example of localization JSON schema v1.17 is as follows:
 
