@@ -13,7 +13,7 @@ An app package is a file format that has the required resources to install and r
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
 
-To distribute your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
+To publish your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 
 ## Teams doesn't host your app
 
@@ -116,7 +116,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 ## Next step
 
-Choose how you plan to distribute your app:
+Choose how you plan to publish your app:
 
 > [!div class="nextstepaction"]
 > [Upload your custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
