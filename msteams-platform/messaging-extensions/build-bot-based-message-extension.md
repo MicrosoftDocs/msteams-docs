@@ -5,7 +5,7 @@ description: Learn about Bot-based message extension using Bot Framework to inte
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 09/16/2024
 ---
 
 # Build message extensions using Bot Framework
@@ -97,26 +97,26 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Message extension as plugin for Copilot for Teams meetings
 
-Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows you to enhance the Copilot for Teams meetings. Copilot can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
+Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows you to enhance the Copilot for Teams meetings. Copilot for Teams meetings can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
 
-Meetings Copilot is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. Users can ask natural language questions to meeting copilot and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both Copilot for Microsoft 365 and Copilot for Teams meetings.
+Copilot for Teams meetings is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. Users can ask natural language questions to Copilot for Teams meetings and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both Microsoft 365 Copilot and Copilot for Teams meetings.
 
 :::image type="content" source="../assets/images/Copilot/meeting-copilot-extensibility.png" alt-text="Screenshot shows the plugins flyout menu in Copilot for Teams meetings.":::
 
 | Benefits          | Description                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
-| User Empowerment  | Extending Meeting Copilot empowers users with various actions to enhance their meeting experience.                      |
+| User Empowerment  | Extending Copilot for Teams meetings empowers users with various actions to enhance their meeting experience.                      |
 | UI Commands       | Users can easily access features like opening a task module or sharing an app to the stage.                             |
 | Search Commands   | Efficient data retrieval from app databases is made possible, streamlining the search process.                          |
 
 | Scenarios         | Description                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
-| Reactive Commands | Users can directly command Copilot to perform specific actions or provide information.                                  |
-|                   | - Natural Language Prompts: Users can instruct Copilot to carry out search commands.                         |
-|                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot to execute.                                |
-| Proactive Assistance | Copilot proactively listens to meeting signals and assists users by:                                                   |
+| Reactive Commands | Users can directly command Copilot for Teams meetings to perform specific actions or provide information.                                  |
+|                   | - Natural Language Prompts: Users can instruct Copilot for Teams meetings to carry out search commands.                         |
+|                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot for Teams meetings to execute.                                |
+| Proactive Assistance | Copilot for Teams meetings proactively listens to meeting signals and assists users by:                                                   |
 |                   | - Suggesting prompts from apps: Contextually relevant suggestions based on the discussion topics.                      |
-|                   | - Providing assistance without explicit prompts: Copilot can automatically suggest actions based on the discussion.    |
+|                   | - Providing assistance without explicit prompts: Copilot for Teams meetings can automatically suggest actions based on the discussion.    |
 
 ## Next step
 
