@@ -732,7 +732,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 To enable you bots to get all channel or chat messages, you must:
 
 - **Filter the @mention messages**:
-  Enable the bot to use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to filter the @mention messages.
+  Enable the bot to receive only those message where it's @mentioned. If you want your bot to receive all messages, then you don't need to filter the @mention messages.
 
     ```csharp
     // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
@@ -753,10 +753,9 @@ To enable you bots to get all channel or chat messages, you must:
 - **RSC permission**:
   Ensure that the services that need access to all Teams message data use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
 
-  - The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions mustn't be used by bots to extract large amount of customer data.
-  - The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` must only be enabled after a re-installation or new installation into a chat.
-  - If you have an app that uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app following the steps in  [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
-  - If you don't want your bot to receive all chat messages, implement the code snippet for filtering @mention messages. If no action is taken, your bot receives all messages after new installations.
+  - A bot mustn't use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to pull a a large amount of customer data.
+  - A bot must be able to get all chat messages using `ChatMessage.Read.Chat` only after they've been re-installed or newly installed into a chat.
+  - If your app uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app using the steps in [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and adjust it before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
 
 ## Upload a custom app in a conversation
 
