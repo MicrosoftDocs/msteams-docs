@@ -717,7 +717,49 @@ The following code shows an example of channelData object (channelCreated event)
 
 ## Get All Conversation Messages with RSC
 
-With the resource-specific consent (RSC) permissions model, conversation owners can allow a bot to receive all user messages in standard channels and chats without needing to be @mentioned. They can give consent during the app installation or upgrade process after the app updates are published. Originally made for Microsoft Teams Graph APIs, the RSC model is now expanded to include bot scenarios. You can enable this by adding the ChannelMessage.Read.Group or ChatMessage.Read.Chat permission strings in your app manifest (formerly known as the Teams app manifest).
+With the resource-specific consent (RSC) permissions model, conversation owners can allow a bot to receive all user messages in standard channels and chats without needing to be @mentioned. They can give consent during the app installation or upgrade process after the app updates are published. Originally made for Microsoft Teams Graph APIs, the RSC model is now expanded to include bot scenarios. You can enable this by adding the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (formerly known as the Teams app manifest).
+
+> [!NOTE]
+> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+
+## Enable bots to receive all channel or chat messages
+
+The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are available for bots. With user consent and app installation, these permissions:
+
+- Enable a specified graph application access all messages in channels and chats.
+- Enable a bot to get all messages without needing to be @mentioned by defining in its app manifest to receive all conversation messages in the relevant contexts where these permissions apply.
+
+To enable you bots to get all channel or chat messages, you must:
+
+- Filter the @mention messages
+-
+
+### Filtering at mention messages
+
+```csharp
+// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
+// This code snippet allows the bot to ignore all messages that do not @mention the bot.
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+        // Ignore the message if bot was not mentioned. 
+        // Remove this if block to process all messages received by the bot.
+        if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+        {
+            return;
+        }
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+}
+```
+
+### RSC permission
+
+Ensure that the services that need access to all Teams message data use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
+
+- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions mustn't be used by bots to extract large amount of customer data.
+- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` must only be enabled after a re-installation or new installation into a chat.
+- If you have an app that uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
+- If you don't want your bot to receive all chat messages, implement the [code snippet](#filtering-at-mention-messages) for filtering @mention messages. If no action is taken, your bot receives all messages after new installations.
 
 ## Next step
 
