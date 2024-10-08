@@ -56,6 +56,10 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
     :::image type="content" source="../../assets/images/manage-channel-new-teams.png" alt-text="Screenshot shows the Manage channel option under More options for Teams 2.1.":::
 
+    For members who aren't admins of the channel, the **Manage channel** option is available under the **Open channel details** option in the upper-right corner of a channel.
+
+    :::image type="content" source="../../assets/images/Connectors/manage-channel-non-admin-user.png" alt-text="Screenshot of the Manage channel option for non-admin users." lightbox="../../assets/images/Connectors/manage-channel.png":::
+
 1. Select **Edit**.
 
     :::image type="content" source="../../assets/images/edit-connector-new-teams.png" alt-text="Screenshot shows the edit option under Connectors option to add an Incoming Webhook.":::
