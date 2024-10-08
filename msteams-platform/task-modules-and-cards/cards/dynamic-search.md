@@ -1,7 +1,7 @@
 ---
 title: Search Types & Usage in Adaptive Cards
 author: Rajeshwari-v
-description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent dropdowns in Adaptive Cards.
+description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent inputs in Adaptive Cards.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
@@ -418,7 +418,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 > [!NOTE]
 > Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-You can design Adaptive Cards in Teams where the value of an input depends on the value of another input. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown list must filter the cities shown in the second dropdown list. This can be accomplished by making an `Input.ChoiceSet` with dynamic typeahead search depend on one or more other inputs in the card.
+You can design Adaptive Cards in Teams where the value of an input depends on the value of another. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown must filter the cities displayed in the second dropdown. This can be achieved by creating an `Input.ChoiceSet` dropdown with dynamic typeahead search that depends on one or more other inputs in the card.
 
 **Placeholder for GIF**
 
@@ -432,17 +432,15 @@ You can design Adaptive Cards in Teams where the value of an input depends on th
 
 ---
 
-Dependent inputs limit options to relevant choices and prevent invalid data entries. If a user selects **USA** as the country in the first dropdown list, the second dropdown list displays the various states in the USA, such as **CA**, **FL**, and **TX**. If the user changes the selection from **USA** to **India**, the values in the second dropdown are reset, and a new list of states in India is displayed.
-
 ### Implement dependent inputs
 
-To make inputs depend on each other in an Adaptive Card, use the following properties:
+To create dependent inputs in an Adaptive Card, use the following properties:
 
-1. The `valueChangedAction` property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInput` action that triggers a data query request to the bot when a user changes the value of the input.
+1. **`valueChangedAction`**: Define this property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInput` action that triggers a data query request to the bot when a user changes the value of an input in the card.
 
-1. The `Action.ResetInputs` action resets the values of the inputs you specify under `targetInputIds` to their default values.
+1. **`Action.ResetInputs`**: This action resets the values of the inputs you specify under `targetInputIds` to their default values.
 
-1. The `associatedInputs` property under the [Data.Query](#dataquery) object. This ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
+1. **`associatedInputs`**: Define this property under the [Data.Query](#dataquery) object. This property ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card. The bot uses these values to filter the list in the dropdown and dynamically retrieve the associated dataset. This enables the user to pick a new input value from the dropdown list.
 
 ### Action.ResetInputs
 
@@ -465,7 +463,7 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 
 ### Example
 
-The following example shows a card that allows users to pick a country and a city within that country.
+Consider the example from earlier: a card with two `Input.ChoiceSet` dropdowns that allows users to pick a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
 
 * The `valueChangedAction` property is defined along with the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
 * As the `city` input is required, resetting its value forces the user to pick a new city whenever the value of `country` changes.
