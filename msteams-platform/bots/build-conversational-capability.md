@@ -731,7 +731,7 @@ Ensure that the services needing access to all Teams message data use the Graph 
 If your app uses RSC permissions to receive all channel or chat message, you can:
 
 - [Receive all channel or chat messages](#receive-all-channel-or-chat-messages).
-- [Receive only @mention messages from channel or chat](#receive-only-mention-messages-from-channel-or-chat).
+- [Receive only @mention messages from channel or chat](#receive-only-@mention-messages-from-channel-or-chat).
 
 ### Receive all channel or chat messages
 
