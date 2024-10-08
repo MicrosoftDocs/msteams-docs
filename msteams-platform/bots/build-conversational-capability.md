@@ -778,17 +778,17 @@ The following steps guide you to upload and validate bot that receives all chann
   
 1. Select **Open**.
 
-      :::image type="content" source="how-to/conversations/Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
+      :::image type="content" source="how-to/conversations/Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="how-to/conversations/Media/select-apppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="how-to/conversations/Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/adding-bot.png":::
+      :::image type="content" source="how-to/conversations/Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="how-to/conversations/Media/adding-bot.png":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="how-to/conversations/Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
+      :::image type="content" source="how-to/conversations/Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="how-to/conversations/Media/bot-receiving-message.png":::
 
 # [Chat messages](#tab/chat)
 
