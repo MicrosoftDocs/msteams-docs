@@ -38,12 +38,13 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
+:::row-end:::
+
+:::row:::
+
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
@@ -53,12 +54,16 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column:::
       :::image type="icon" source="../../../../assets/icons/technical-requirements.png" link="#technical-requirements" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
      :::image type="icon" source="../../../../assets/icons/action-scenarios.png" link="#user-disclosure-and-confirmation-for-action-scenarios" border="false":::
    :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
    :::column-end:::
@@ -67,6 +72,12 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -78,7 +89,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 * The Teams Store validation guidelines related to app description for Microsoft 365 apps are applicable. For more information, see [app descriptions](teams-store-validation-guidelines.md#app-descriptions).
 * Short description of Copilot agent, parameter, command description, semantic description, and operation ID mustn't include:
-  * Instructional phrases, for example, “if the user says X”, “ignore”, “delete”, “reset”, “new instructions”, “Answer in Bold”, or “Do not print anything”. [*Must fix*]
+  * Instructional phrases, for example, 'if the user says X', 'ignore', 'delete', 'reset', 'new instructions', 'Answer in Bold', or 'Do not print anything'. [*Must fix*]
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
@@ -143,7 +154,6 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 * A plugin must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
 * Each prompt mustn't exceed 128 characters. [*Must fix*]
 * Two commands within the same plugin mustn't have identical prompts. [*Must fix*]
-* Sample prompts must be generic in nature and not include custom references. For example, project names and task name. [*Must fix*]
 * All sample prompts must be functional and return responses. [*Must fix*]
 * Prompt must be relevant to the commands. [*Must fix*]
 
@@ -153,7 +163,6 @@ Prompt starters guide users on how to start using declarative agents. You must e
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
-* It must be generic in nature and not include custom references, for example, project names and task name. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -213,7 +222,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 1. **If using SSO-enabled app, update Microsoft Entra app registration**: [*Must fix*]
 
-    Microsoft Entra single sign-on (SSO) for message extension works in the same way as it does in Teams or Outlook. If you've enabled SSO for your app, add the Office app Copilot’s client application identifier to the Microsoft Entra app registration of your bot in your tenant's App registrations portal.
+    Microsoft Entra single sign-on (SSO) for message extension works in the same way as it does in Teams or Outlook. If you enabled SSO for your app, add the Office app Copilot’s client application identifier to the Microsoft Entra app registration of your bot in your tenant's App registrations portal.
 
     1. Sign in to [Azure portal](https://portal.azure.com/) with your sandbox tenant account.
     1. Open **App registrations**.
@@ -299,6 +308,53 @@ For action scenarios, Copilot agents must share user disclosure and seek user co
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
+* The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [*Must fix*]
+
+   Confirmation prompt can be set by using `body` property in the `Confirmation` object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+
+   | Pass example | Fail example |
+   | --- | --- |
+   | For a function which searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
+   | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
+   | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
+
+* For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
+
+  For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
+
+   | Operation type | Actions | Expected value for `isConsequential` flag |
+   | --- | --- | --- |
+   | Create | Consequential | True |
+   | Read | Non-consequential | False or True |
+   | Update | Consequential | True |
+   | Delete | Consequential | True |
+
+   | Command description | Consequential function? | Expected value for `isConsequential` flag |
+   | --- | --- | --- |
+   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
+   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+
+[Back to top](#validation-guidelines-for-copilot-agents)
+
+## Bot requirements for custom engine agents
+
+A custom engine agent is a conversational Teams bot that must meet the following requirements:
+
+1. A custom engine agent must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
+1. The bot ID declaration as a custom engine agent node must be same as the bot ID defined in the bot node in the app manifest. [*Must fix*]
+1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
+1. Bot must include the following UX design components:
+
+   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. [*Must fix*]
+   1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
+   1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
+   1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
+   1. An agent must stream it’s responses to the user. [*Must fix*]
+   1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
+
+      For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
+   1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 

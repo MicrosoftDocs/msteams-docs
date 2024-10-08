@@ -4,7 +4,7 @@ title: Microsoft Teams developer documentation # < 60 chars
 summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
