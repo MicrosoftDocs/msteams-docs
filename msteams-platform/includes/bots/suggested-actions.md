@@ -47,4 +47,11 @@ The following is an example to implement and experience suggested actions:
 }
 ```
 The following illustrates an example of suggested actions:
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Screenshot that shows the suggested actions in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
+
+# [Desktop](#tab/mobile)
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
