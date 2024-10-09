@@ -1,7 +1,7 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 10/04/2024
+ms.date: 10/10/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -100,7 +100,7 @@ Use the `mutualDependencies` array to group app capabilities that must load toge
 
 ## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
-Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities. 
+Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities.
 
 The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
@@ -109,7 +109,7 @@ The following TeamsJS capabilities can be specified as runtime requirements for 
 - Adaptive Card dialogs ([`dialog.adaptiveCard`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard))
 - Adaptive Card dialogs for Bot Framework ([`dialog.adaptiveCard.bot`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot))
 
-The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots: 
+The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots:
 
 ```json
     "staticTabs": [
@@ -138,6 +138,7 @@ The following JSON snippet shows a static tab that requires its host to support 
 |----------------|-----------------|--------------|
 | Requirements targeting: One-way dependency | Sample app demonstrating how to specify one-way dependency relationships between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-oneway-dependency/nodejs) |
 | Requirements targeting: Mutual dependency | Sample app demonstrating how to specify mutual dependency relationships between app capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-mutual-dependency/nodejs)
+
 ## See also
 
 - [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
