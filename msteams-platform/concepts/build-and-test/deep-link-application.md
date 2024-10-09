@@ -105,9 +105,7 @@ You can configure deep links to browse within your app in the following ways:
 
 ### Configure deep link to browse within your app manually
 
-Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [app manifest](~/resources/schema/manifest-schema.md).
-
-Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
+Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
 
 # [Format](#tab/format)
 
@@ -157,17 +155,17 @@ Here are the examples to create deep link to browse within your app:
 
 **Query parameters**
 
-| Parameter name | Example | Description |
-|:------------|:--------------|:---------------------|
-| `appId`&emsp; | fe4a8eba-2a31-4737-8e33-<br>e5fae6fee194 | The ID from Microsoft Teams admin center. |
-| `entityId`&emsp; | Tasklist 123 | The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the `entityId` as `page.id`. |
-| `entityWebUrl` or `subEntityWebUrl`&emsp; | `https://tasklist.example.com/123` <br> or <br> `https://tasklist.example.com/list123/task456` | An optional field with a fallback URL to use if the client doesn't support rendering the tab. |
-| `entityLabel` or `subEntityLabel`&emsp; | Task List 123 or Task 456 | A label for the item in your tab to use when displaying the deep link. |
-| `context.subEntityId`&emsp; | Task 456 | An ID for the item within the tab. When generating a URL for deep linking, continue to use `subEntityId` as the parameter name in the URL. When configuring the tab, the context object refers to the `subEntityId` as `page.subPageId`. |
-| `context.channelId`&emsp; | 19:<cbe3683f25094106b826c9cada3afbe0<br>@thread.skype> | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.|
-| `context.chatId`&emsp; | 17:b42de192376346a7906a7dd5cb84b673<br>@thread.v2 | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. |
-| `context.contextType`&emsp; | chat | Chat is the only supported `contextType` for meetings. |
-|`openInMeeting`| `false` | Use `openInMeeting` to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. |
+| Parameter name | Example / Description |
+|:------------|:--------------|
+| `appId`&emsp; | - fe4a8eba-2a31-4737-8e33-e5fae6fee194 <br> - The ID from Microsoft Teams admin center. |
+| `entityId`&emsp; | - Tasklist 123 <br> - The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the `entityId` as `page.id`. |
+| `entityWebUrl` or `subEntityWebUrl`&emsp; | `https://tasklist.example.com/123` <br> or <br> `https://tasklist.example.com/list123/task456` <br> - An optional field with a fallback URL to use if the client doesn't support rendering the tab. |
+| `entityLabel` or `subEntityLabel`&emsp; | - Task List 123 or Task 456 <br> - A label for the item in your tab to use when displaying the deep link. |
+| `context.subEntityId`&emsp; | - Task 456 <br> - An ID for the item within the tab. When generating a URL for deep linking, continue to use `subEntityId` as the parameter name in the URL. When configuring the tab, the context object refers to the `subEntityId` as `page.subPageId`. |
+| `context.channelId`&emsp; | - 19:<cbe3683f25094106b826c9cada3afbe0@thread.skype> <br> - Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.|
+| `context.chatId`&emsp; | - 17:b42de192376346a7906a7dd5cb84b673@thread.v2 <br> - Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. |
+| `context.contextType`&emsp; | - chat <br> - Chat is the only supported `contextType` for meetings. |
+|`openInMeeting`| - `false` <br> - Use `openInMeeting` to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. |
 
 > [!IMPORTANT]
 >
@@ -183,11 +181,25 @@ Here are the examples to create deep link to browse within your app:
 
 #### Configure deep link to a tab using TeamsJS
 
+You can configure deep links in your app through TeamsJS to allow the app users browse different pages within your app. The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
+
+1. The target that the deep link points to.
+1. The host where the Teams app is running.
+
+If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app first opens in the browser.
+
+<br>
+
+<details>
+<summary>**Support for Deep Links in TeamsJS**</summary>
+
 TeamsJS enables Teams apps extended across Outlook and Microsoft 365 to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. TeamsJS organizes APIs into capabilities by way of namespaces. For example, before using an API in the `pages` namespace, you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and app's UI.  
 
 For more information about capabilities and the APIs in TeamsJS, see [building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
-You can configure deep links in your app through TeamsJS to allow the app users browse different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
+</details>
+
+The following code demonstrates how to navigate to a specific entity within your Teams app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -213,20 +225,13 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ---
 
-The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
-
-1. The target that the deep link points to.
-1. The host where the Teams app is running.
-
-If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app first opens in the browser.
-
-* For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). 
-* For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. 
+* For information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). 
+* For information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. 
 * To directly open a deep link using the app.openLink(), see [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
 
 ## Deep link to a chat with the application
 
-You can allow app users browse to a personal chat with the application by configuring the deep link manually 
+You can allow app users to browse to a personal chat with the application by configuring the deep link manually.
 
 # [Format](#tab/format1)
 
@@ -259,7 +264,7 @@ Add a **copy link** action to each item in whatever way best suits your UI. When
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
 ```
 
-You must to replace the following parameters with the appropriate information:
+You must replace the following parameters with the appropriate information:
 
 | Parameter name | Description |
 | --- | --- |
@@ -277,7 +282,7 @@ Add a **copy link** action to each item in whatever way best suits your UI. When
 microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
 ```
 
-You must to replace the following parameters with the appropriate information:
+You must replace the following parameters with the appropriate information:
 
 | Parameter name | Description |
 | --- | --- |
@@ -313,11 +318,13 @@ You can use the following deep link format in a bot, connector, or message exten
 > * When a bot sends a `TextBlock` message with a deep link, a new browser tab opens when users select the link. This happens in Chrome and Microsoft Teams desktop app running on Linux.
 > * If the bot sends the same deep link URL in an `Action.OpenUrl`, the Teams tab opens in the current browser when the user selects the link. No new browser tab is opened.
 
+**Query parameters**
+
 | Value |  Description |
-| --- | --- | --- | --- |
-| `APP_ID` | Your manifest ID, for example `fe4a8eba-2a31-4737-8e33-e5fae6fee194`. |
-| `entityID` | The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, `tasklist123`. |
-| `entityWebUrl` | A fallback URL to use if the client doesn't support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`. |
+| --- | --- |
+| `APP_ID` | Your manifest ID <br> Example: `fe4a8eba-2a31-4737-8e33-e5fae6fee194`. |
+| `entityID` | The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). <br> Example: `tasklist123`. |
+| `entityWebUrl` | A fallback URL to use if the client doesn't support rendering of the tab. <br> Example: `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`. |
 | `entityName` | A label for the item in your tab to use when displaying the deep link, such as `Task List 123` or `Task 456`. |
 
 ## Deep link to open a dialog
@@ -353,7 +360,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 > [!NOTE]
 > `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a recommended bot to use as an app's ID and if there is one.
 
-## Generate a deep link to share content to stage in meetings
+## Deep link to share content in meeting stage
 
 You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
 
@@ -400,8 +407,7 @@ You can invoke Stageview through deep link from your tab by wrapping the deep li
 
 ## Best practices
 
-**Deep link charater limit**
-
+* Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 * In Microsoft Windows, Teams can't handle deep links exceeding 2048 characters due to the `INTERNET_MAX_URL_LENGTH` limit in Windows ShellExecuteEx API. 
 * When creating a deep link, ensure that the path to the Teams client and other metadata fit within this limit. 
 * If your deep link contains large amounts of data, include a unique identifier in the link that your app can use to fetch the necessary data from your backend service.
