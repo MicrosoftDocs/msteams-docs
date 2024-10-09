@@ -149,6 +149,8 @@ Use to gather multiple inputs from the user.
 
 :::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." lightbox="../../assets/images/adaptive-cards/choice-set-card.png":::
 
+To explore Adaptive Card templates, see [Teams Adaptive Card starter collection](starter-cards.md).
+
 ## Anatomy
 
 Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest including the following components in every card.

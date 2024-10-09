@@ -269,6 +269,8 @@ The following code shows an example of an Adaptive Card:
 }
 ```
 
+To explore Adaptive Card templates, see [Teams Adaptive Card starter collection](starter-cards.md).
+
 ### Adaptive Cards best practices
 
 Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
