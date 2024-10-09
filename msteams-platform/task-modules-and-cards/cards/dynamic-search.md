@@ -463,7 +463,7 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 
 ### Example
 
-Consider the example from earlier: a card with two `Input.ChoiceSet` dropdowns that allows users to pick a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
+Consider the example from earlier: a card with two `Input.ChoiceSet` dropdowns that allow users to pick a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
 
 * The `valueChangedAction` property is defined along with the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
 * As the `city` input is required, resetting its value forces the user to pick a new city whenever the value of `country` changes.
