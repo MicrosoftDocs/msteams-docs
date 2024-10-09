@@ -1,7 +1,7 @@
 ---
-title: Create and send dialogs
+title: Modal Dialogs in Message Extensions
 author: surbhigupta
-description: Learn how to create and send dialogs (task modules). Handle the initial invoke action and respond with a dialog (task module) from an action message extension command.
+description: Learn to create and send dialogs (task modules). Handle the initial invoke action and respond with a dialog (task module) from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -991,9 +991,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-* [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
-* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Define message extension action commands](define-action-command.md)
 * [Message extensions](../../what-are-messaging-extensions.md)
+* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [Bot configuration experience](../../../bots/how-to/bot-configuration-experience.md)

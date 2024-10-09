@@ -1,6 +1,6 @@
 ---
-title: Use external OAuth providers  
-description: Authenticate your app users using external OAuth providers and learn how to add it to external browser.
+title: Support Third Party OAuth Providers
+description: Learn how to use external OAuth providers, add authentication to external browsers, and about the authenticate API parameters.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 09/01/2022
@@ -45,11 +45,11 @@ The following image provides the flow to add authentication to external browsers
 
 1. Initiate the external auth-login process. The third-party app calls the TeamsJS function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
 
-   The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
+   The passed `url` contains placeholders for `{authId}`, `{oauthRedirectMethod}`, and `{hostRedirectUrl}`.  
 
     ```JavaScript
        authentication.authenticate({
-          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl=${url}&googleId=${googleId}`,
+          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl={hostRedirectUrl}&googleId=${googleId}`,
           isExternal: true
         }).then((result) => {
           this.getGoogleServerSideToken(result);
@@ -59,30 +59,31 @@ The following image provides the flow to add authentication to external browsers
         })
     ```
 
-1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
+1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod`, `authId`, and `hostRedirectUrl` with suitable values.
 
    **Example**
 
    ```http
-    https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890 
+    https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890&hostRedirectUrl=msteams://teams.microsoft.com/l/auth-callback?authId=1234567890&result={result} 
    ```
 
-1. The third-party app server responds. The third-party app server receives and saves the `url` with the following two query parameters:
+1. The third-party app server responds. The third-party app server receives and saves the `url` with the following three query parameters:
 
    | Parameter | Description|
    | --- | --- |
-   | `oauthRedirectMethod` |Indicates how the third-party app must send the response of authentication request back to Teams, with one of the two values: deep link or page.|
-   |`authId` | The request-id Teams creates for this specific authentication request that needs to be sent back to Teams through a deep link.|
+   | `oauthRedirectMethod` |Indicates how the third-party app must send the response of authentication request back to the client, with one of the two values: deep link or page.|
+   |`authId` |The request-id Teams creates for this specific authentication request that needs to be sent back to the client through a deep link.|
+   |`hostRedirectUrl` | The deep link includes the URL schema of the initiating client to redirect after the authentication. |
 
     > [!TIP]
-    > The app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to Teams as described in step 6.
+    > The app can marshal `authId`, `oauthRedirectMethod`, and `hostRedirectUrl` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId`, `oauthRedirectMethod`, and `hostRedirectUrl`, when OAuthProvider redirects to the server and the app uses the values for sending authentication response back to the initiating client as described in step 6.
 
 1. The third-party app server redirects to specified `url`. The third-party app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
 
    **Example**
 
     ```http
-    https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…    &response_type=code&access_type=offline&scope= … 
+    https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…","hostRedirectUrl":"_"}&client_id=…    &response_type=code&access_type=offline&scope= … 
     ```
 
 1. Sign in to external browser. The OAuth providers redirect back to the `redirect_uri` with the auth code and the state object.
@@ -90,20 +91,22 @@ The following image provides the flow to add authentication to external browsers
 1. The third-party app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deep link or through web page that calls `notifySuccess()`.
 
       ```JavaScript
-      const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
-         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}')
+         const clientRedirectUrl: string = state.hostRedirectUrl.replace('{result}', req.query.code)
+         return res.redirect(clientRedirectUrl)
       }
       else {
       // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
       …
       ```
 
-1. The third-party app generates a deep link for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
+   For example, in Teams mobile client, the modified `hostRedirectUrl` results the following:
 
    ```JavaScript
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
+
+   The provided value of `hostRedirectUrl` depends on the client that initiates the external authentication flow.
 
 1. Teams calls the success callback and sends the result (auth code) to the third-party app. The app receives the code in the success callback and uses the code to retrieve the token, then the user information and update the user interface.
 

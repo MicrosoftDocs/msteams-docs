@@ -1,5 +1,5 @@
 ---
-title: Share in Meeting
+title: Use Share in Meeting for Documents/Apps
 description: Learn how to add the share in meeting button, which allows users to share any document or third-party app to the meeting stage.
 ms.topic: reference
 ms.localizationpriority: medium
@@ -241,7 +241,7 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 
 | **Sample name** | **Description** | **.NET** |**Node.js** | Manifest |
 |-----------------|-----------------|----------------|----------------|----------------|
-| Meeting Stage View | This app helps to enable and configure your apps for Teams meetings. It also demonstrates use of share in meeting feature.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest)|
+| Meeting Stageview | This app helps to enable and configure your apps for Teams meetings. It also demonstrates use of share in meeting feature.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest)|
 
 ## See also
 

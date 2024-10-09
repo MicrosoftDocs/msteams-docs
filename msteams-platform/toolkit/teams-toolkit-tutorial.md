@@ -1,17 +1,11 @@
 ---
 title: Teams toolkit tutorial and code samples
-description: The article lists the app that you want to build and the associated guides. 
+description: Learn how to build a basic or scenario-based Teams app with different capabilities and prepare development environment in different languages and frameworks.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 05/16/2023
 ---
-# Teams app tutorials and related code samples
-
-> [!IMPORTANT]
->
-> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4extension will soon be deprecated.
+# Microsoft Teams app tutorials and related code samples
 
 You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 

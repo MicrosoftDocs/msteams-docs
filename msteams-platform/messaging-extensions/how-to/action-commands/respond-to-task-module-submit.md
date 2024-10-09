@@ -1,7 +1,7 @@
 ---
-title: Respond to the dialog submit action
+title: Explore Responses to Action Commands
 author: surbhigupta
-description: Learn how to respond to the dialog (task module) submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Displays the username on the Adaptive Card header of the card response. User attribution for bot.
+description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -21,6 +21,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
+* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#configuration-response).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
@@ -218,7 +219,7 @@ To configure the poll:
 
 1. The user selects the message extension to invoke the dialog.
 1. The user configures the poll with the dialog.
-1. After submitting the dialog, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
+1. When the user submits the dialog, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app isn't a member of the channel, select `Send` to add it.
 
     > [!NOTE]
@@ -588,7 +589,6 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
         ]
     }};
 ```
-
 
 # [JSON](#tab/json-1)
 

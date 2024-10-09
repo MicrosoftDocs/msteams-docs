@@ -1,6 +1,6 @@
 ---
-title: Combine bots with tabs
-description: In this article, you'll learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot, and teams bots tabs development
+title: Integrate and Use Bots with Tabs
+description: In this article, you learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot, and teams bots tabs development.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2023
@@ -14,7 +14,7 @@ Bots and tabs work together, and are often combined into a single back-end servi
 ## Associating user identities across bot and tab
 
 For example:
-Suppose your tab application uses a proprietary ID system to secure its content. Suppose you also have a bot that can interact with the user. Typically, you’ll want to show content in the tab that is specific to the viewing user. The challenge is that the user ID in your system is likely different from the Microsoft Teams user ID. So how do you associate these two identities?
+Suppose your tab application uses a proprietary ID system to secure its content. Suppose you also have a bot that can interact with the user. Typically, you want to show content in the tab that is specific to the viewing user. The challenge is that the user ID in your system is likely different from the Microsoft Teams user ID. So how do you associate these two identities?
 In general, the recommended approach is to sign the user in with the bot using the same identity system used to provide authentication for the tab content. You can implement via the sign in action, which typically signs in the user via an OAuth flow.
 
 This flow works best if your identity provider implements the OAuth 2.0 protocol. You can then associate the Teams user ID with the user’s credentials from your own identity service.
@@ -44,4 +44,4 @@ In both cases, use event notifications wisely and never spam the user with unnec
 
 ## See also
 
-* [Add capabilities of Teams Toolkit v4 to Microsoft Teams app](../../toolkit/toolkit-v4/add-capability-v4.md)
+[Add How-to guides to Microsoft Teams app](../../toolkit/add-how-to-guides-vsc.md)
