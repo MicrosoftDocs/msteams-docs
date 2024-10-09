@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.date: 10/03/2024
 ---
 
-# Build notification capability
+# Send notifications
 
 With the notification capability in bots, you can send alerts, updates, or messages to users through various channels, ensuring timely communication. Utilizing bots for notifications offers several benefits, including enhanced user engagement, timely communication, increased conversation, improved customer experience, and reduced response time.
 

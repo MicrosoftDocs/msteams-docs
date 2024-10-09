@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.date: 10/03/2024
 ---
 
-# Build conversational capability
+# Send and receive messages
 
 Conversational bots communicate with users through messaging, enabling seamless interactions.
 

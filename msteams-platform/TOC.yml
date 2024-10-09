@@ -448,9 +448,9 @@
     items:
     - name: Understand bot concepts
       href: bots/bot-concepts.md
-    - name: Build conversational capability
+    - name: Send and receive messages
       href: bots/build-conversational-capability.md
-    - name: Build notification capability
+    - name: Send notifications
       href: bots/build-notification-capability.md   
     - name: Explore workflow and command capabilities
       href: bots/build-bot-capability.md
