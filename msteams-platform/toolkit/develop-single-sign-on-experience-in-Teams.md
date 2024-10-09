@@ -26,7 +26,7 @@ To enable SSO, configure as follows:
 
 ## Create Microsoft Entra app manifest
 
-Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more inforamtion, see [manifest](/entra/identity-platform/reference-app-manifest).
+Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Update Teams app manifest
 
@@ -127,9 +127,9 @@ function getBasicUserInfo() {
 
 For React projects, ensure the following environment variables are set in your deployment process:
 
-* For javascript project, see [tab javascript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+* For JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
 
-* For typescript project, see [tab typescript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+* For TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
 To update your source code, follow these steps:
 
@@ -148,7 +148,7 @@ For more information, see [sample.](https://github.com/OfficeDev/teams-toolkit-s
 
 ## Create Microsoft Entra app manifest
 
-Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more inforamtion, see [manifest](/entra/identity-platform/reference-app-manifest).
+Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Update Teams app manifest
 
@@ -236,9 +236,9 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
 
 To set up Microsoft Teams related configurations, update in your remote service. The following example shows the config settings on an Azure Webapp.
 
-* M365_CLIENT_ID: Microsoft Entra app client id.
+* M365_CLIENT_ID: Microsoft Entra app client ID.
 * M365_CLIENT_SECRET: Microsoft Entra app client secret.
-* M365_TENANT_ID: Tenant id of Microsoft Entra app.
+* M365_TENANT_ID: Tenant ID of Microsoft Entra app.
 * INITIATE_LOGIN_ENDPOINT: Login start page for authentication.
 * M365_AUTHORITY_HOST: Microsoft Entra app oauth authority host.
 * M365_APPLICATION_ID_URI: IdentifierUri for Microsoft Entra app.
@@ -422,7 +422,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
 
-   1. Install `copyfiles` npm packages in your typescript bot project, add or update the `build` script in `src/package.json` file as follows:
+   1. Install `copyfiles` npm packages in your TypeScript bot project, add, or update the `build` script in `src/package.json` file as follows:
 
       ```bash
       "build": "tsc --build && copyfiles ./public/*.html lib/",
@@ -460,7 +460,7 @@ The Microsoft Teams [manifest](/entra/identity-platform/reference-app-manifest) 
 
 To include additional API permissions to access your desired APIs, see [edit Microsoft Entra manifest](AAD-manifest-customization.md).
 
-To view your Microsoft Entra app in Azure Portal, see [edit Microsoft Entra manifest](AAD-manifest-customization.md).
+To view your Microsoft Entra app in Azure portal, see [edit Microsoft Entra manifest](AAD-manifest-customization.md).
 
 ## Next step
 
