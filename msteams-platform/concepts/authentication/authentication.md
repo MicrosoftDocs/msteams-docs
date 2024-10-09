@@ -22,18 +22,18 @@ Choose to add authentication for your app in one of the following ways:
 
   With the network access account, you can use MSAL.js to obtain tokens for your Teams tab or Office Add-in apps. NAA leverages the capabilities of the Microsoft host to facilitate conditional access and Intune policies, such as registered device policy. These policies might not be supported when hosted within the native webviews.
 
+  > [!NOTE]
+  > * NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+  > * NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
+
 * **Enable authentication for your API based message extensions**:
   You can enable the following authentication methods for your API-based message extension:
 
-  * **None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the authType to “none” in your app manifest.
+  * **None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the `authType` to `none` in your app manifest.
 
   * **Secret Service Auth**: For a more secure method, you can implement secret service authentication, which uses a secret token known only to the app and the API service to authenticate requests. For more information, see [API secret service authentication](../../messaging-extensions/api-based-secret-service-auth.md).
 
   * **Microsoft Entra Authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams. For more information, see [configure your API based message extension in Microsoft Entra ID](../../messaging-extensions/api-based-microsoft-entra.md).
-
-  > [!NOTE]
-  > * NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-  > * NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
 
 ## Select authentication method
 

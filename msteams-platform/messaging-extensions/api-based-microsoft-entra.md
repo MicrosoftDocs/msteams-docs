@@ -336,4 +336,5 @@ After the API-based message extension gets a request header with token, perform 
 
 ## See also
 
-[Create API-based message extension](create-api-message-extension.md)
+* [Create API-based message extension](create-api-message-extension.md)
+* [API secret service authentication](api-based-secret-service-auth.md)

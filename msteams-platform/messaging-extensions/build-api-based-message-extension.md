@@ -19,7 +19,7 @@ Authentication is a fundamental aspect of security and serves as the first line 
 
 You can enable the following authentication methods for your API-based message extension:
 
-**None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the authType to “none” in your app manifest.
+**None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the `authType` to `none` in your app manifest.
 
 **Secret Service Auth**: For a more secure method, you can implement secret service authentication, which uses a secret token known only to the app and the API service to authenticate requests. For more information, see [API secret service authentication](api-based-secret-service-auth.md).
 

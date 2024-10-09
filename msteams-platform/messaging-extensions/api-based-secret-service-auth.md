@@ -131,6 +131,5 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 
 ## See also
 
-[Create API-based message extension](create-api-message-extension.md)
-
-
+* [Create API-based message extension](create-api-message-extension.md)
+* [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)
