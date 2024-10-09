@@ -731,7 +731,7 @@ Ensure that the services needing access to all Teams message data use the Graph 
 If your app uses RSC permissions to receive all channel or chat message, you can:
 
 - [Receive all channel or chat messages](#receive-all-channel-or-chat-messages).
-- [Receive only @mention messages from channel or chat](#receive-only-mention-messages-from-channel-or-chat).
+- [Receive only at-mentioned messages](#receive-only-at-mentioned-messages).
 
 ### Receive all channel or chat messages
 
@@ -904,7 +904,7 @@ The following steps guide you to upload and validate bot that receives all chat 
 
 ---
 
-### Receive messages addressed
+### Receive only at-mentioned messages
 
 To enable you bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those message where it's @mentioned:
 
