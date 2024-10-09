@@ -21,8 +21,18 @@ Building a bot app involves various phases, from initial concept to final deploy
 
 [**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
+:::image type="content" source="../assets/images/bots/m365-bot-decisions.png" alt-text="Infographics depicts a decision tree for building a bot.":::
+
 If you want to create your own bot, here's a list of tools and platforms to help you get started:
 
+| # | Choose ... | Options ... |
+| --- | --- | --- |
+| 1. | Bot capabilities | <br> - AI bot <br> - Non-AI bot: <br> &nbsp;&nbsp; - Conversational capability <br> &nbsp;&nbsp; - Notification capability <br> &nbsp;&nbsp; - Workflow capability <br> &nbsp;&nbsp; - Command capability |
+| 2. | Build environment | - **Teams AI library**: A Teams AI bot uses artificial intelligence (AI) technology to communicate with users in natural language, similar to a human-to-human conversation. These bots can handle a variety of tasks, from answering simple questions to performing complex operations. If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. <br> For more information, see [why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration). <br> - **Bot Framework SDK**: The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true). These packages extend the basic Bot Builder SDK classes and methods as follows: <br> &nbsp;&nbsp; - Use specialized card types like the connector card for Microsoft 365 Groups. <br> &nbsp;&nbsp; - Set Teams-specific channel data on activities. <br> - &nbsp;&nbsp; Process message extension requests. <br> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases. <br> - **Teams Toolkit**: Teams Toolkit makes it simple to get started with bot app development for Teams. You can begin with a project template for common custom bot app built for your org (LOB app) scenarios or start from a sample. <br> For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md). <br> - **Azure AI bot service**: Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack. <br> The Bot Framework Service, which is a component of the Azure AI Bot Service, sends information between the< user's bot-connected app and the bot. Each channel can include additional information in the activities they send. <br> For more information, see [Azure AI bot service](/azure/bot-service/bot-builder-basics). |
+| 3. | Register your bot | - Azure AD <br> - Developer Portal |
+| 4. | Explore advanced bot capabilities | - Call and media bot <br> - Access data using MS Graph <br> - SSO <br> - Bot on Mobile |
+
+<!--
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
 1. Use any one of the following ways to build a bot for Teams:
 
@@ -49,7 +59,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
       <!--TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments.
 
-      For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md).-->
+      For more information, see [TeamsFx SDK](../toolkit/TeamsFx-SDK.md)--
 
     * **Azure AI bot service**:
       Azure AI Bot Service is a cloud platform. It hosts bots and makes them available to channels, such as Microsoft Teams, Facebook, or Slack.
@@ -64,6 +74,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     * Developer Portal
 
 1. Explore advanced bot capabilities (Call and media bot, access data using MS Graph, and more)
+-->
 
 ## Build a bot
 
