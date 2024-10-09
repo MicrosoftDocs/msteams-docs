@@ -460,6 +460,9 @@
       href: bots/how-to/bots-filesv4.md
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
+  - name: Configure bot scope
+    href: bots/how-to/bot-configuration-experience.md
+    displayName: configuration settings, fetchTask, config/fetch, config/submit
   - name: Explore advanced bot capabilities
     items:
     - name: Calls and meetings bots
