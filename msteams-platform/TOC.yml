@@ -842,6 +842,9 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Plan your app experience across Microsoft 365 hosts
+    href: m365-apps/specify-runtime-requirements.md
+    displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
     - name: Enable a Teams personal tab for Microsoft 365
@@ -882,7 +885,6 @@
       - name: Quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
-
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
