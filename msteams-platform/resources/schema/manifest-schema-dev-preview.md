@@ -997,7 +997,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
-|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in various places in Office, such as the callout that appears in Office when an Office Add-in is installed. |
+|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in the callout that opens in Office when an Office Add-in is installed. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1193,11 +1193,11 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.getStartedMessages
 
-The `extensions.getStartedMessages` array provides information about an Office Add-in that appears in various places in Office, such as the callout that appears in Office when an Office Add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
+The `extensions.getStartedMessages` array provides information about an Office Add-in that appears in the callout that opens in Office when an Office Add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`title`|String| 125 characters | ✔️ | The title used for the top of the callout. |
+|`title`|String| 125 characters | ✔️ | The title used for the heading of the callout. |
 |`description`|String| 250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
 |`learnMoreUrl`|String| 2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
@@ -1205,7 +1205,7 @@ The `extensions.getStartedMessages` array provides information about an Office A
 |`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`, `document` |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (Powerpoint), `document` (Word) |
 |`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
