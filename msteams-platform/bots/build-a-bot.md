@@ -19,7 +19,7 @@ Building a bot app involves various phases, from initial concept to final deploy
 
 ## How can I build a bot for Teams?
 
-[**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
+[**WIP**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
 
 :::image type="content" source="../assets/images/bots/m365-bot-decisions.png" alt-text="Infographics depicts a decision tree for building a bot.":::
 
