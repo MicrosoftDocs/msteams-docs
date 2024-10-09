@@ -11,11 +11,11 @@ ms.author: surbhigupta
 
 Building a bot app involves various phases, from initial concept to final deployment. This article offers a detailed guide to help you get started.
 
-1. Plan your bot app: Start by defining your app's goal and purpose to align with your target audience. Also, decide on the platforms you will use, such as messaging or voice.
+<!--1. Plan your bot app: Start by defining your app's goal and purpose to align with your target audience. Also, decide on the platforms you will use, such as messaging or voice.
 1. Choose the tools and SDKs: Select the tools and software development kits that you will use to build your app.
 1. Design the intents and entities: Create dialog flows and plan for various use cases and potential errors.
 1. Develop the bot app: Set up the bot builder, integrate APIs, build a user-friendly interface, and develop the necessary capabilities and automation. Ensure your bot integrates with any external services required to fulfil its purpose.
-1. Test, optimize, and deploy: Thoroughly test your bot app, make necessary optimizations, and then deploy it.
+1. Test, optimize, and deploy: Thoroughly test your bot app, make necessary optimizations, and then deploy it.-->
 
 ## How can I build a bot for Teams?
 
