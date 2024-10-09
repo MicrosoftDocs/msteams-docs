@@ -9,7 +9,7 @@ ms.date: 05/23/2022
 
 Authentication is all about validating app users, and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app.
 
-Choose to add authentication for your app in one of the two ways:
+Choose to add authentication for your app in one of the following ways:
 
 * **Enable single sign-on (SSO) in a Teams app**:
   SSO within Teams is an authentication method that uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
@@ -21,6 +21,15 @@ Choose to add authentication for your app in one of the two ways:
   You can use nested app authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside the supported Microsoft apps. Compared with existing full-trust authentication models and the on-behalf-of (OBO) flow, NAA provides better security and flexibility in app architecture, enabling the creation of rich, client-driven apps.
 
   With the network access account, you can use MSAL.js to obtain tokens for your Teams tab or Office Add-in apps. NAA leverages the capabilities of the Microsoft host to facilitate conditional access and Intune policies, such as registered device policy. These policies might not be supported when hosted within the native webviews.
+
+* **Enable authentication for your API based message extensions**:
+  You can enable the following authentication methods for your API-based message extension:
+
+  * **None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the authType to “none” in your app manifest.
+
+  * **Secret Service Auth**: For a more secure method, you can implement secret service authentication, which uses a secret token known only to the app and the API service to authenticate requests. For more information, see [API secret service authentication](../../messaging-extensions/api-based-secret-service-auth.md).
+
+  * **Microsoft Entra Authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams. For more information, see [configure your API based message extension in Microsoft Entra ID](../../messaging-extensions/api-based-microsoft-entra.md).
 
   > [!NOTE]
   > * NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).

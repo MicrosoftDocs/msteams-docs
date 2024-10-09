@@ -21,7 +21,7 @@ You can enable the following authentication methods for your API-based message e
 
 **None**: If your message extension doesn’t require any authentication for the user to access the API, you can set the authType to “none” in your app manifest.
 
-**Secret Service Auth**: For a more secure method, you can implement secret service authentication, which uses a secret token known only to the app and the API service to authenticate requests. For more information, see [configure your app in Microsoft Entra ID](../bots/how-to/authentication/bot-sso-register-aad.md).
+**Secret Service Auth**: For a more secure method, you can implement secret service authentication, which uses a secret token known only to the app and the API service to authenticate requests. For more information, see [API secret service authentication](api-based-secret-service-auth.md).
 
 **Microsoft Entra Authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams.
 

@@ -781,7 +781,7 @@
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
-  - name: API-based message extensions authentication
+  - name: Enable authentication for API-based message extensions
     items:
     - name: Overview
       href: messaging-extensions/build-api-based-message-extension.md
@@ -789,7 +789,7 @@
     - name: API secret service authentication
       href: messaging-extensions/api-based-secret-service-auth.md
       display name: Secret key, API key registration
-    - name: Configure your API based message extension in Microsoft Entra ID
+    - name: Enable SSO for API based message extensions
       href: messaging-extensions/api-based-microsoft-entra.md
       display name: API key, API secret, API key registration
   - name: Enable nested app authentication
