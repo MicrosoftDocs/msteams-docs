@@ -421,23 +421,7 @@
     href: bots/build-a-bot.md 
   - name: How can I bring my bot to Teams?
     href: bots/bring-bot-to-teams.md
-  - name: Build bot capabilities
-    items:
-    - name: Build user interactions
-      href: bots/bot-concepts.md
-    - name: Build conversational capability
-      href: bots/build-conversational-capability.md
-    - name: Build notification capability
-      href: bots/build-notification-capability.md   
-    - name: Explore workflow and command capabilities
-      href: bots/build-bot-capability.md
-    - name: Format the bot messages
-      href: bots/how-to/format-your-bot-messages.md
-    - name: Send and receive files
-      href: bots/how-to/bots-filesv4.md
-    - name: Get Teams-specific context
-      href: bots/how-to/get-teams-context.md
-  - name: Build AI bots
+  - name: Build an AI bot
     items:
     - name: What is Teams AI library?
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
@@ -455,10 +439,48 @@
         href: bots/how-to/teams-conversational-ai/ai-ux.md
       - name: Build enhanced conversations
         href: /bots/how-to/bot-messages-ai-generated-content.md
+        displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
       - name: Build custom engine agent using Teams Toolkit 
         href: Teams-AI-library-tutorial.yml
     - name: Teams AI library FAQs
       href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md  
+  - name: Build a non-AI bot
+    items:
+    - name: Understand bot concepts
+      href: bots/bot-concepts.md
+    - name: Build conversational capability
+      href: bots/build-conversational-capability.md
+    - name: Build notification capability
+      href: bots/build-notification-capability.md   
+    - name: Explore workflow and command capabilities
+      href: bots/build-bot-capability.md
+    - name: Format the bot messages
+      href: bots/how-to/format-your-bot-messages.md
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md
+    - name: Get Teams-specific context
+      href: bots/how-to/get-teams-context.md
+  - name: Explore advanced bot capabilities
+    items:
+    - name: Calls and meetings bots
+      items:
+      - name: Overview
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+      - name: Real-time media calls and meetings
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+      - name: Register calls and meetings bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+        displayName: How Bot can create call, join meeting and transfer call
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notifications.md
+        displayName: Redirects for region affinity, GeoDNS resolution 
+      - name: Requirements and considerations for application-hosted media bots
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+        displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      - name: Supported media formats for bots
+        href: resources/media-formats.md
+        displayName: codec 
 - name: Build bots
   items:
   - name: Overview
