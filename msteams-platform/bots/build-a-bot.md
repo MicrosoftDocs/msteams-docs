@@ -108,7 +108,7 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 
 ## Next step
 
-- [Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+- [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 - [Understand AI bot concepts](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
 - [Understand bot concepts](bot-concepts.md)
 
