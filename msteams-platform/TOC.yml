@@ -465,12 +465,15 @@
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-    - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events  
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
+  - name: Optimize your bot with rate limiting in Teams
+    href: bots/how-to/rate-limit.md
+    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: Teams bot API changes to fetch team or chat members
+    href: resources/team-chat-member-api-changes.md
   - name: Explore advanced bot capabilities
     items:
     - name: Calls and meetings bots
