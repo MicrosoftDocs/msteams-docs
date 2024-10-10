@@ -168,7 +168,7 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
 
     The `commandLists` includes commands that your bot can suggest to users. If you're using the `teamsFx` bot template, set the following values:
 
-    ```yml
+    ```bash
     {
       "title": "profile",
       "description": "Show user profile using Single Sign On feature"
@@ -177,7 +177,7 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
 
 * The `validDomains` field includes the legitimate domains for websites that the app anticipates loading within the Teams client. If you're using the `teamsFx` bot template, you can set the following values:
 
-    ```yml
+    ```bash
     "validDomains": [
     "${{BOT_DOMAIN}}"
     ]
@@ -247,7 +247,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Open `infra/azure.parameters.json` file and add the following:
 
-    ```yml
+    ```bash
     "m365ClientId": {
       "value": "${{AAD_APP_CLIENT_ID}}"
     },
@@ -264,7 +264,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Open `infra/azure.bicep` file, add the following code after `param location string = resourceGroup().location`:
 
-    ```yml
+    ```bash
     param m365ClientId string
     param m365TenantId string
     param m365OauthAuthorityHost string
@@ -275,7 +275,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Add following code before output:
 
-    ```yml
+    ```bash
     resource webAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
       name: '${webAppName}/appsettings'
       properties: {
@@ -296,7 +296,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
     >
     > * To add additional configurations into your Azure Webapp, add the configurations in the `webAppSettings`.
     > * You might also need to define the default node version by adding the following configuration:
-        ```yml
+        ```bash
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
 
@@ -330,13 +330,13 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
-      ```yml
+      ```bash
       require("isomorphic-fetch");
       ```
 
       1. Add the following command to redirect to auth pages:
 
-      ```yml
+      ```bash
       server.get(
          "/auth-:name(start|end).html",
          restify.plugins.serveStatic({
@@ -347,7 +347,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
       1. update `commandApp.requestHandler` to make auth works with the following code:
 
-      ```yml
+      ```bash
       await commandApp.requestHandler(req, res).catch((err) => {
          // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
          if (!err.message.includes("412")) {
@@ -358,7 +358,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Add `ssoConfig` and `ssoCommands` in conversation bot in `src/internal/initialize`:
 
-      ```yml
+      ```bash
       import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
       
       export const commandBot = new ConversationBot({
