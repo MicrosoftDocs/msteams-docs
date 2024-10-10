@@ -2,7 +2,7 @@
 title: Develop single sign-on experience in Teams
 author: surbhigupta
 description: Learn to how to develop single sign-on experience in Teams.
-ms.topic: how-to-guides
+ms.topic: overview
 ms.localizationpriority: medium
 ---
 
@@ -144,13 +144,13 @@ To update your source code, follow these steps:
 
 For more information, see [sample.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
-# [Bot/Messaging extension app](#tab/tab-app)
+# [Bot/Message extension app](#tab/message-extension-app)
 
-## Create Microsoft Entra app manifest
+## Create Microsoft Entra app manifest for bot/message extension app
 
 Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [manifest](/entra/identity-platform/reference-app-manifest).
 
-## Update Teams app manifest
+## Update Teams app manifest for bot/message extension app
 
 * In the `./appPackages/manifest.json` file, add the `webApplicationInfo` section to provide your Microsoft Entra app ID and Microsoft Graph information.
 
@@ -183,7 +183,7 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
 ]
 ```
 
-## Teams Toolkit configuration files
+## Teams Toolkit configuration files for bot/message extension app
 
 Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml` Update necessary configurations related to Microsoft Entra into these files.
 
@@ -300,9 +300,9 @@ To use the `teamsFx` tab or bot template, follow these steps:
     WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
     ```
 
-## Update Source Code
+## Update Source Code for bot/message extension app
 
-# [Bot](#tab1/bot)
+   # [Bot](#tab/bot)
 
    1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
@@ -377,7 +377,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
       });
       ```
 
-# [Messaging extension](#tab/messaging-extension)
+   # [Messaging extension](#tab/messaging-extension)
 
    Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
@@ -465,4 +465,5 @@ To view your Microsoft Entra app in Azure portal, see [edit Microsoft Entra mani
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add single sign-on to Teams app](../../../../Documents/GitHub/dev%20docs/msteams-docs/msteams-platform/toolkit/add-single-sign-on.md)
+> [Add single sign-on to Teams app](add-single-sign-on.md)
+
