@@ -1,26 +1,28 @@
 ---
-title: Monetize your App Overview
+title: Monetize your App
 description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives and to monetize through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/23/2022
+ms.date: 10/15/2024
 ---
 
 # Monetize your Teams app
 
-App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your apps in Microsoft Partner Center and publish in Teams Store to reach customers with the best solutions.
+App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your apps in Microsoft Partner Center and publish in Teams Store to reach customers with the best solutions. When published, they are available as software as a service (SaaS) offers for purchase from commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store.
 
-Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. When published, they are available as software as a service (SaaS) offers for purchase from commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store.
+Also, Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. 
 
 ## SaaS offer
 
-SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. SaaS apps that are published in commercial marketplace with subscriptions for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase.
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. Apps with SaaS offers that are published in Microsoft commercial marketplace as subscriptions are SaaS apps. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase.
 
 The publishing options available in a SaaS offer by which you can drive app monetization are:
 
-:::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
+<div style="text-align: center;">
+    :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
+</div>
 
 * **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
 
@@ -31,6 +33,16 @@ The publishing options available in a SaaS offer by which you can drive app mone
 * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
 When creating a SaaS offer, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently. For more information on publishing options, see [plan for a SaaS offer](include-saas-offer.md).
+
+To monetize your SaaS app, it's important that you understand the features of a SaaS offer and plan based on your requirements.
+For more information, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer) and [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
+
+
+
+After you create a SaaS offer, perform the following:
+
+1. You must configure the offer based on your requirements. For more information, see [configure the offer](/partner-center/marketplace-offers/create-new-saas-offer-properties).
+1. You must create at least one plan for the SaaS offer, where the plan features facilitate appropriate purchase options for the target users. For more information, see [create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans).
 
 Here are the other features associated with a SaaS offer:
 

@@ -59,9 +59,6 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
-    href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
@@ -984,7 +981,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, private offer
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
   - name: SaaS offer for your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: transactable SaaS offer, create SaaS offer, UsageRights, configure offer, create plan, submit offer

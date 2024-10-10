@@ -42,7 +42,7 @@ You can activate the in-app purchase experience through one of the following way
 
 To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
 
-    ```json
+```json
     
     "authorization": {
         "permissions": {
@@ -54,7 +54,7 @@ To enable the in-app purchase experience, update your Teams app `manifest.json` 
             ]
         }
     }
-    ```
+```
 
 ### Purchase Experience API
 
