@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
+***September 17, 2024***: [Update Bot or Message extension app to use Certificate or MSI for Authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
 ***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
