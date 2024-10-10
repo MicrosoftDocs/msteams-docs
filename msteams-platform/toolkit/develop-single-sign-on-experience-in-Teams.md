@@ -177,11 +177,11 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
 
 * The `validDomains` field includes the legitimate domains for websites that the app anticipates loading within the Teams client. If you're using the `teamsFx` bot template, you can set the following values:
 
-```yml
-"validDomains": [
-  "${{BOT_DOMAIN}}"
-]
-```
+    ```yml
+    "validDomains": [
+    "${{BOT_DOMAIN}}"
+    ]
+    ```
 
 ## Teams Toolkit configuration files for bot/message extension app
 
@@ -292,13 +292,13 @@ To use the `teamsFx` tab or bot template, follow these steps:
     }
     ```
 
-> [!NOTE]
->
-> * To add additional configurations into your Azure Webapp, add the configurations in the `webAppSettings`.
-> * You might also need to define the default node version by adding the following configuration:
-    ```yml
-    WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
-    ```
+    > [!NOTE]
+    >
+    > * To add additional configurations into your Azure Webapp, add the configurations in the `webAppSettings`.
+    > * You might also need to define the default node version by adding the following configuration:
+        ```yml
+        WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
+        ```
 
 ## Update Source Code for bot/message extension app
 
@@ -446,9 +446,9 @@ To use the `teamsFx` tab or bot template, follow these steps:
             ]
         ```
 
-     ---
+   ---
 
- ---
+---
 
 ## Debug Your Application
 
