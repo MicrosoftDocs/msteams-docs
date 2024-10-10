@@ -379,7 +379,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    # [Messaging extension](#tab/messaging-extension)
 
-   Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
+   1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
    1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages by Microsoft Entra.
 
@@ -446,9 +446,9 @@ To use the `teamsFx` tab or bot template, follow these steps:
          ]
       ```
 
-   ---
+     ---
 
----
+ ---
 
 ## Debug Your Application
 
