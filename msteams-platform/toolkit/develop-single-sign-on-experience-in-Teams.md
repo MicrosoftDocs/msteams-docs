@@ -300,7 +300,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
 
-## Update Source Code for bot/message extension app
+   ## Update Source Code for bot/message extension app
 
    # [Bot](#tab/bot)
 
@@ -432,21 +432,20 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
-        ```bash
-            "requiredResourceAccess": [
-                {
-                "resourceAppId": "Microsoft Graph",
-                "resourceAccess": [
-                        {
-                            "id": "User.Read",
-                            "type": "Scope"
-                        }
+            ```bash
+                "requiredResourceAccess": [
+                    {
+                    "resourceAppId": "Microsoft Graph",
+                    "resourceAccess": [
+                            {
+                                "id": "User.Read",
+                                "type": "Scope"
+                            }
+                    ]
+                    }
                 ]
-                }
-            ]
-        ```
-
-   ---
+            ```
+    ---
 
 ---
 
