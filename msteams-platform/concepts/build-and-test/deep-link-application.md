@@ -5,7 +5,7 @@ description: Learn how to create deep links to an application and navigate using
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 05/04/2023
+ms.date: 09/27/2024
 ---
 
 # Deep link to an application
@@ -90,6 +90,7 @@ You can configure deep links to browse within your app in the following ways:
 
 * [Configure deep link to browse within your app manually](#configure-deep-link-to-browse-within-your-app-manually)
 * [Configure deep link to a tab using TeamsJS](#configure-deep-link-to-a-tab-using-teamsjs)
+* [Configure deep link to navigate between tabs](#configure-deep-link-to-navigate-between-tabs)
 
 ### Configure deep link to browse within your app manually
 
@@ -157,7 +158,7 @@ The query parameters are:
 >
 > * Deep link to a Teams application with encoded URI isn't supported in Outlook.
 
-#### Configure deep link to a tab using TeamsJS
+### Configure deep link to a tab using TeamsJS
 
 You can configure deep links in your app through TeamsJS to allow the app users browse different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
 
@@ -175,7 +176,7 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md). For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
+For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -186,13 +187,65 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
 ---
-
 The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
 
 1. The target that the deep link points to.
 1. The host where the Teams app is running.
 
 If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app first opens in the browser.
+
+### Configure deep link to navigate between tabs
+
+The [pages](/javascript/api/@microsoft/teams-js/pages) capability of the TeamsJS library provides support for navigation between tabs within an app. Specifically, the [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace offers a function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and a function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. The following code illustrates how to navigate to a specific and default tab:
+
+# [Specific tab](#tab/specific)
+
+The following code illustrates how to navigate to a specific tab:
+
+```typescript
+if (pages.currentApp.isSupported()) {
+    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId: <subPageId>});
+    navPromise.
+        then((result) => {/*Successful navigation*/}).
+        catch((error) => {/*Failed navigation*/});
+}
+else {/*Handle situation where capability isn't supported*/
+    const navPromise = pages.navigateToApp({appId: <appId>, pageId: <pageId>});
+    navPromise.
+        then((result) => {/*Successful navigation*/}).
+        catch((error) => {/*Failed navigation*/});
+}
+```
+
+# [Default tab](#tab/default)
+
+The following code illustrates how to navigate to the app's default tab:
+
+```typescript
+
+if (pages.currentApp.isSupported()) {
+    const navPromise = pages.currentApp.navigateToDefaultPage();
+    navPromise.
+        then((result) => {/*Successful navigation*/}).
+        catch((error) => {/*Failed navigation*/});
+}
+else {/*Handle situation where capability isn't supported*/}
+```
+
+---
+
+> [!NOTE]
+> The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
+
+#### Configure back button navigation
+
+When an app has multiple tabs, a user can use the Microsoft 365 host app's back button to go backwards through the navigational history. However, the history doesn't include the actions a user performs within a tab. If you want to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This can be accomplished through the `registerBackButtonHandler()` function in the [`pages.backStack`](/javascript/api/@microsoft/teams-js/pages.backstack) namespace.
+
+After you register the handler, it helps you to address the navigational request before the system takes action. If the handler is able to manage the request, it should return `true` so that the system knows no further action is necessary. If the internal stack is empty, it should return `false` so that the system can call the `navigateBack()` function instead and take the appropriate action.
+
+#### Return focus to host app
+
+After the user starts using elements within a tab, by default, the focus remains with the elements of your iFrame until the user selects outside of it. If the iFrame is a part of the user navigating with keyboard shortcuts (the Tab key or the F6 key), you can focus on the host app. You can focus on the host app by using the [`pages.returnFocus()`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-returnfocus) function. The `returnFocus()` function accepts a Boolean indicating the direction to advance focus within the host app; `true` for forward and `false` for backwards. Generally, forward highlights the search bar and backwards highlights the app bar.
 
 ## Deep link to a chat with the application
 
@@ -328,3 +381,4 @@ You can invoke Stageview through deep link from your tab by wrapping the deep li
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 | Deep link consuming Subentity ID | This sample shows how to use a deep link from a bot chat to a tab consuming the Subentity ID. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+| Tab app navigation | This sample shows how to navigate between tabs within the app. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) |
