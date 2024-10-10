@@ -76,11 +76,13 @@ Integrate with usageRights Graph API to manage user permissions when a customer,
 
 <details>
 
-<summary>To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas):</summary>
+<summary>To call usageRights Graph API:</summary>
 
   1. Get [access token on behalf of](/graph/auth-v2-user) a user.
   1. [Use the Microsoft Graph API](/graph/use-the-api) to get the user’s object ID.
   1. Call the [usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true) to determine if the user has a license to the plan.
+
+For more information, see [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas).
 
   > [!NOTE]
   > If the Microsoft Entra app is used for both SaaS Fulfillment APIs and usageRights API, the tenant under which the Microsoft Entra app is created must either be a publishing tenant or an associated tenant in Partner Center.
