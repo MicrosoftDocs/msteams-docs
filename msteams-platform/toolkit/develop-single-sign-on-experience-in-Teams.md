@@ -446,7 +446,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
          ]
       ```
 
-     ---
+    ---
 
  ---
 
