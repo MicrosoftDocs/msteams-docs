@@ -32,7 +32,9 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-* ***October 4, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent)
+* ***October 10, 2024***: [Introducing app manifest v1.19](/resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
+
+* ***October 10, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent)
 
 :::column-end:::
 :::row-end:::
@@ -416,7 +418,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 October**
 
-* ***October 4, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent)
+* ***October 10, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent)
 
 :::column-end:::
 :::row-end:::
