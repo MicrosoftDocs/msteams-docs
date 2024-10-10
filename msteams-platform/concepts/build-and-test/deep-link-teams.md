@@ -112,7 +112,15 @@ The query parameters are:
 * `messageId`: Unique message ID of each message in a chat. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
 * `context`: Specify the contextType as chat.
 
-Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+With deep link, you can start a conversation with a bot with a prepopulated message. Use the bot ID instead of an email address, with a `28:` at the beginning. The format of the deep link is: 
+
+`https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
+
+* `bot guid` is the botId in the manifest.
+
+Example: `https://teams.microsoft.com/l/chat/0/0?users=28:47345678-2134-6534-9143-65146789012&message=This%20message%20was%20triggered%20by%20a%20link!`
+
+The deep link above doesn't send the message to the bot, but just loads it into the chat text box. You must select send button or select **Enter** to send the message.
 
 ## Deep link to navigate to a team
 
