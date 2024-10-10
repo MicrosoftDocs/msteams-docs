@@ -3,7 +3,7 @@ title: Developer Preview App Manifest
 description: Learn about public developer preview manifest schema for Microsoft Teams, sample app manifest, schema properties, and how to enable developer preview.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 09/16/2024
+ms.date: 10/10/2024
 ---
 # Public developer preview app manifest
 
@@ -34,11 +34,12 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "mpnId": "1234567890"
     },
     "localizationInfo": {
-        "defaultLanguageTag": "es-es",
+        "defaultLanguageTag": "en",
+        "defaultLanguageFile": "en.json",
         "additionalLanguages": [
             {
-                "languageTag": "en-us",
-                "file": "en-us.json"
+                "languageTag": "es",
+                "file": "es.json"
             }
         ]
     },
@@ -56,8 +57,8 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "color32x32": "%FILENAME-32x32px%"
     },
     "accentColor": "%HEX-COLOR%",
-    "copilotExtensions": {
-        "declarativeCopilots": [
+    "copilotAgents": {
+        "declarativeAgents": [
             {
                 "id": "agent1",
                 "file": "declarativeAgent1.json"
@@ -386,17 +387,21 @@ We recommend triaging your customer queries in a timely manner and route those i
 
 Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
-|Name| Maximum size | Required | Description|
+|Name| Type | Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`|4 characters|✔️|The language tag of the strings in this top level app manifest file.|
+|`defaultLanguageTag`| String | | ✔️|The language tag for the strings in this app manifest file. For example, `en`|
+|`defaultLanguageFile`| String |2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
 
-An array of objects specifying additional language translations.
+An array of objects with the following properties to specify additional language translations.
 
-|Name| Maximum size | Required | Description|
+|Name| Type | Maximum size | Required | Description|
 |---|---|---|---|
-|`languageTag`|4 characters|✔️|The language tag of the strings in the provided file.|
+|`languageTag`| String | |✔️|The language tag of the strings in the provided file. For example, `es`|
+|`file`| String | 2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
+|---|---|---|---|
+|`languageTag`||✔️|The language tag of the strings in the provided file. For example, `es`.|
 |`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## name
@@ -443,7 +448,7 @@ A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
-## copilotExtensions
+## copilotAgents
 
 **Optional** &ndash; Object
 
@@ -451,9 +456,9 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeCopilots`|Array of objects| 1 |✔️| Array of `declarativeCopilot` objects. |
+|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects defining the declarative agent. |
 
-### declarativeCopilot
+### declarativeAgents
 
 Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
