@@ -432,19 +432,19 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
-            ```bash
-                "requiredResourceAccess": [
-                    {
-                    "resourceAppId": "Microsoft Graph",
-                    "resourceAccess": [
-                            {
-                                "id": "User.Read",
-                                "type": "Scope"
-                            }
-                    ]
-                    }
-                ]
-            ```
+      ```bash
+      "requiredResourceAccess": [
+           {
+           "resourceAppId": "Microsoft Graph",
+           "resourceAccess": [
+                   {
+                       "id": "User.Read",
+                       "type": "Scope"
+                   }
+           ]
+           }
+       ]
+      ```
     ---
 
 ---
