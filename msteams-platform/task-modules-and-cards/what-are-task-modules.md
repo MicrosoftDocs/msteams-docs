@@ -48,7 +48,7 @@ A dialog includes the following as shown in the previous image:
 
 ## Using dialogs in BotFramework
 
-You can integrate dialogs into BotFramework-WebChat to improve user experience. However, WebChat, with its primary focus on chat interactions, doesn't support opening dialogs. To create custom events or components within WebChat, use [BotFramework-WebChat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework Documentation](/azure/bot-service).
+You can integrate dialogs into BotFramework Web Chat to improve user experience. However, Web Chat, with its primary focus on chat interactions, doesn't support opening dialogs. To create custom events or components within Web Chat, use [BotFramework Web Chat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework documentation](/azure/bot-service).
 
 ## Next step
 
