@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn about Teams platform capabilities such as tabs, bots, message extensions, webhooks, connectors, Microsoft Graph, Adaptive Card, and Copilot extensibility.
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 09/26/2024
+ms.date: 10/11/2024
 ---
 
 # Explore Teams platform features
