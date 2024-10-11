@@ -21,26 +21,28 @@ In this article, learn how to create a deep link:
 * [To open a dialog (referred as task module in TeamsJS v1.x)](#deep-link-to-open-a-dialog)
 * [To invoke Stageview](#deep-link-to-invoke-stageview)
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## Deep link scenarios
 
 Here are some of the scenarios where you can use deep link:
 
 * **App installation**: You can use deep links that allow users to know more about an app and install it in different scopes.
 * **Bot and connector**: You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items.
-* **Naviagte to specific page**: You can create deep links for your app users to go to specific pages within your app.
+* **Navigate to specific page**: You can create deep links for the app users to go to specific pages within your app.
 * **Custom app**: You can generate deep links for a custom app. However, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app.
 * **For mobile**: You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ## Deep link to open application install dialog
 
-Deep links allow app users to open an application install dialog to know more information about the app or install it in different contexts. You can create a deep link to application in the following ways:
+Deep links allow app users to open an application install dialog to know any information about the app or install it in different contexts. You can create a deep link to application in the following ways:
 
 * [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id)
 * [Configure deep link using TeamsJS](#configure-deep-link-using-teamsjs)
 
 ### Configure deep link manually using your app ID
 
-You can open an app install dialog from your Teams client using the app ID.
+With deep link, you can open an app installation dialog directly from your Teams client using the app ID.
 
 # [Format](#tab/format)
 
@@ -54,6 +56,9 @@ You can open an app install dialog from your Teams client using the app ID.
 
 ---
 
+<details>
+<summary>App ID for different types of apps</summary>
+
 #### App ID for different types of apps
 
 The following table lists the different types of app IDs used for different types of apps for deep links:
@@ -65,6 +70,8 @@ The following table lists the different types of app IDs used for different type
 | Apps submitted to Teams Store | Store ID |
 
 For more information, see [how to find ID based on the app manifest ID](/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id).
+
+</details>
 
 ### Configure deep link using TeamsJS
 
@@ -105,7 +112,7 @@ You can configure deep links to browse within your app in the following ways:
 
 ### Configure deep link to browse within your app manually
 
-Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
+Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
 
 # [Format](#tab/format)
 
@@ -113,7 +120,7 @@ For creating a deep link in a bot, connector, or message extension card, use the
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?tenantId=<tenantId>&webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>&openInMeeting=false`
 
-* If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Teams desktop app, when they're running on Linux.
+* If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Teams desktop app when they're running on Linux.
 
 * If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab opens in the current browser tab when the user selects the link.
 
@@ -258,7 +265,7 @@ You can share deep links to entities in Teams apps to navigate to the content an
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-sharedeeplink) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-sharedeeplink) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed, and your tab is reloaded.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -355,7 +362,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> - The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
-| `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. Specify `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send it to any bot. |
+| `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. Specify `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send to any bot. |
 
 > [!NOTE]
 > `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a recommended bot to use as an app's ID and if there is one.
@@ -410,7 +417,7 @@ You can invoke Stageview through deep link from your tab by wrapping the deep li
 * Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 * In Microsoft Windows, Teams can't handle deep links exceeding 2048 characters due to the `INTERNET_MAX_URL_LENGTH` limit in Windows ShellExecuteEx API. 
 * When creating a deep link, ensure that the path to the Teams client and other metadata fit within this limit. 
-* If your deep link contains large amounts of data, include a unique identifier in the link that your app can use to fetch the necessary data from your backend service.
+* If your deep link contains large data, include a unique identifier in the link that your app can use to fetch the necessary data from your backend service.
 
 ## Code sample
 
