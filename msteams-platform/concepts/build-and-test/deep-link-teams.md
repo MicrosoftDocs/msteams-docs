@@ -112,11 +112,11 @@ The query parameters are:
 * `messageId`: Unique message ID of each message in a chat. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
 * `context`: Specify the contextType as chat.
 
-You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:`, in place of an email address. The format of the deep link is: 
+You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:` in place of an email address. The format of the deep link is: 
 
 `https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
 
-* `bot guid` is the bot ID in the manifest.
+The query parameter is `bot guid` which is the bot ID attribute in the manifest.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=28:47345678-2134-6534-9143-65146789012&message=This%20message%20was%20triggered%20by%20a%20link!`
 
