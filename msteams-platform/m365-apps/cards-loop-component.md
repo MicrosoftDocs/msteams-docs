@@ -1,9 +1,9 @@
 ---
 title: Adaptive Card-based Loop Component
-description: In this module, learn how to build and test Adaptive Card-based Loop components for collaborative experiences within Microsoft Teams.
+description: Learn how to build and test Adaptive Card-based Loop components for collaborative experiences within Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 01/26/2024
+ms.date: 10/11/2024
 ---
 
 # Adaptive Card-based Loop components
@@ -70,7 +70,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
   }
 ```
 
-### Query parameters
+### Schema
 
 |Property|Type|Description|
 |---|---|---|

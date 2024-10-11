@@ -1,8 +1,8 @@
 ---
 title: Loop Component Key Features
-description: Learn how to design Adaptive Card-based Loop components, its key features, loop component elements, body, header, and border.
+description: Learn how to design Adaptive Card-based Loop components, its key features, and the various elements, such as the body, header, and border.
 ms.author: mobajemu
-ms.date: 01/26/2024
+ms.date: 10/11/2024
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
@@ -76,7 +76,7 @@ The following are the best practices for a Loop component body:
 
 #### Don’t add a separate button to open in browser
 
-The Loop component header provides a standard way to open a browser-based view of the component based on your URL. Thus, there's no need to add a separate button to your component for actions such as, **View Details** or **Open on Web**.
+The Loop component header provides a standard way to open a browser-based view of the component based on your URL. Thus, there's no need to add a separate button to your component for actions such as **View Details** or **Open on Web**.
 
 You can add buttons or links for more specific views, for example, **View Related Items**. When possible, provide the required information and interaction within the card.
 
