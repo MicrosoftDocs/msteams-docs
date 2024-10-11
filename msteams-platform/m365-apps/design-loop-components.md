@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. They allow users to share live content and collaborate with others in Microsoft Teams chats and meetings, Microsoft Outlook emails, Microsoft Whiteboard, or Loop app. You can create Loop components by either updating an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
-Loop components were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
+Loop components were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams?view=o365-worldwide).
 
 ## Loop component key features
 
