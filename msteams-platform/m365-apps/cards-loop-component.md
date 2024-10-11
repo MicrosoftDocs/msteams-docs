@@ -30,9 +30,9 @@ To build an Adaptive Card-based Loop component, follow these steps:
 1. Use [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md) and define the `refresh` property to ensure that the card is always up to date. For more information, see [up-to-date cards](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md).
 
 1. [Extend your message extension across Microsoft 365](extend-m365-teams-message-extension.md). This step includes the following actions:
-   1. [Update your app manifest to version 1.13 or later](extend-m365-teams-message-extension.md#update-your-app-manifest).
-   1. [Add the Microsoft 365 channel for your bot](extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app).
-   1. [Update the Microsoft Entra app registration for single sign-on (SSO)](extend-m365-teams-message-extension.md#update-microsoft-entra-app-registration-for-sso).
+   1. Update your app manifest to version 1.13 or later.
+   1. Add the Microsoft 365 channel for your bot.
+   1. Update the Microsoft Entra app registration for single sign-on (SSO).
 
 1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property. The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
 
