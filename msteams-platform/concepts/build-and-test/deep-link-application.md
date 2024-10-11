@@ -310,10 +310,10 @@ You can use the following deep link format in a bot, connector, or message exten
 
 | Value |  Description |
 | --- | --- |
-| `APP_ID` | Your manifest ID. <br> <br> **Example**: `fe4a8eba-2a31-4737-8e33-e5fae6fee194`. |
-| `entityID` | The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). <br> <br> **Example**: `tasklist123`. |
-| `entityWebUrl` | A fallback URL to use if the client doesn't support rendering of the tab. <br> <br> **Example**: `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`. |
-| `entityName` | A label for the item in your tab to use when displaying the deep link. <br> <br> **Example**: `Task List 123` or `Task 456`. |
+| `APP_ID` | Your manifest ID. <br> <br> **Example**: `fe4a8eba-2a31-4737-8e33-e5fae6fee194` |
+| `entityID` | The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). <br> <br> **Example**: `tasklist123` |
+| `entityWebUrl` | A fallback URL to use if the client doesn't support rendering of the tab. <br> <br> **Example**: `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
+| `entityName` | A label for the item in your tab to use when displaying the deep link. <br> <br> **Example**: `Task List 123` or `Task 456` |
 
 ## Deep link to open a dialog
 
