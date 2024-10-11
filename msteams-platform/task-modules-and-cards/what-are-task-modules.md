@@ -46,9 +46,9 @@ A dialog includes the following as shown in the previous image:
 6. If you're displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object), the padding is added for you. For more information, see [CSS for HTML or JavaScript dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md#css-for-html-or-javascript-dialogs).
 7. Adaptive Card buttons render after you select **Sign up**. When using your own page, create your own buttons. By design, the primary button style (solid) is applied to the last root action in an Adaptive Card.  For all other actions, the default button style is applied.
 
-## Using dialogs in BotFramework
+## Using dialogs in Bot Framework
 
-You can integrate dialogs into BotFramework Web Chat to improve user experience. However, Web Chat, with its primary focus on chat interactions, doesn't support opening dialogs. To create custom events or components within Web Chat, use [BotFramework Web Chat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework documentation](/azure/bot-service).
+You can integrate dialogs into Bot Framework Web Chat to improve user experience. However, Web Chat, with its primary focus on chat interactions, doesn't support opening dialogs. To create custom events or components within Web Chat, use [Bot Framework Web Chat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework documentation](/azure/bot-service).
 
 ## Next step
 
