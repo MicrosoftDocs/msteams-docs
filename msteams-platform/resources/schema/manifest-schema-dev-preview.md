@@ -70,7 +70,7 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
-                "groupchat"
+                "groupChat"
             ],
             "context": []
         }
@@ -95,14 +95,14 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             "scopes": [
                 "team",
                 "personal",
-                "groupchat"
+                "groupChat"
             ],
             "supportsFiles": true,
             "commandLists": [
                 {
                     "scopes": [
                         "team",
-                        "groupchat"
+                        "groupChat"
                     ],
                     "commands": [
                         {
@@ -118,7 +118,7 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
                 {
                     "scopes": [
                         "personal",
-                        "groupchat"
+                        "groupChat"
                     ],
                     "commands": [
                         {
@@ -864,7 +864,7 @@ When a group install scope is selected, it defines the default capability when t
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team`|String|||When the install scope selected is `team`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
-|`groupchat`|String|||When the install scope selected is `groupchat`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|String|||When the install scope selected is `groupChat`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
 |`meetings`|String|||When the install scope selected is `meetings`, this field specifies the default capability available. <br>Options: `tab`, `bot`, or `connector`.|
 
 ## subscriptionOffer
