@@ -1,5 +1,5 @@
 ---
-title: Adaptive Card-based Loop Component
+title: Loop Component in Adaptive Cards
 description: Learn how to build and test Adaptive Card-based Loop components for collaborative experiences within Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
