@@ -237,10 +237,10 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
    ```
 
-1. Enter `teamsfx new` in the terminal.
+1. Enter `teamsapp new` in the terminal.
 
 1. Select **Message Extension**. Use the arrow keys to switch between options.
 
@@ -260,7 +260,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
    ```
-    teamsfx provision --env dev
+    teamsapp provision --env dev
    ```
 
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
@@ -281,7 +281,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
    ```
-    teamsfx preview --env dev
+    teamsapp preview --env dev
    ```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
