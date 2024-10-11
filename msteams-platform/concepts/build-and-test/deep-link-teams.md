@@ -116,7 +116,7 @@ You can start a conversation with a bot using a prepopulated message through a d
 
 `https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
 
-The query parameter is `bot guid`, which is the bot ID attribute in the manifest.
+The query parameter is `bot guid`, which is the bot ID attribute in the app manifest.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=28:47345678-2134-6534-9143-65146789012&message=This%20message%20was%20triggered%20by%20a%20link!`
 
