@@ -22,7 +22,7 @@ API secret service authentication is a secure method for your app to authenticat
 > [!NOTE]
 > The API secret registration ID is not a secret itself and can be retrieved from the Teams app manifest. For more information on securing your secret, see [best practices](#best-practices).
 
-When an API request is initiated, the system retrieves the API key from an encrypted database. This API key is included in the authorization header using the bearer token scheme and sent to the endpoint defined in app manifest.
+When an API request is initiated, the system retrieves the API key from an encrypted database. This API key is included in the authorization header using the bearer token scheme and sent to the endpoint defined in the app manifest.
 
 The following is an example of the payload with the authorization header using the bearer token scheme:
 
