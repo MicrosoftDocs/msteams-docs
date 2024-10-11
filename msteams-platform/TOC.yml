@@ -530,7 +530,7 @@
       displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
-      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visula Studio
+      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
