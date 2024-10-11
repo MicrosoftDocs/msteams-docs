@@ -62,7 +62,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Introduced Adaptive Card templates
-        url: task-modules-and-cards/cards/starter-cards.md
+        url: design-effective-cards.md#adaptive-card-starter-collection
       - text: Analyze your third-party app usage metrics in Developer Portal
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
