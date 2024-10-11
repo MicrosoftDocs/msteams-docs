@@ -1,7 +1,7 @@
 ---
 title: Create a bot in Microsoft Teams
 author: surbhigupta
-description: In this article, learn how to create a bot for Microsoft Teams.
+description: Learn how to use conversational bots in Microsoft Teams to run tasks, share files, and make calls. Explore code samples for various usecases.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
