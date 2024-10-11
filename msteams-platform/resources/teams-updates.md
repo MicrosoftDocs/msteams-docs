@@ -44,8 +44,6 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 
 The following Teams features aren't supported in the new Teams client:
 
-* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
-
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
 * [Generating a deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) isn't supported in the new Teams client.

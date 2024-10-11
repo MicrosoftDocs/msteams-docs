@@ -48,7 +48,7 @@ Global admin can upload and preinstall the app package from [Microsoft admin](ht
 The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) submission process for Teams apps enabled for Outlook and Microsoft 365 app is same as traditional Teams apps. The difference is you need to use app manifest (previously called Teams app manifest) [version 1.13](../tabs/how-to/using-teams-client-library.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
 > [!TIP]
-> Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Partner Network](https://partner.microsoft.com/)).
+> Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Cloud Partner Program](https://partner.microsoft.com/)), formerly known as Microsoft Partner Network.
 
 See the following video to learn more about multitenant apps:
 

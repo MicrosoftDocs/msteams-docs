@@ -4,7 +4,7 @@ title: Microsoft Teams developer documentation # < 60 chars
 summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
@@ -51,16 +51,22 @@ landingContent:
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
       - text: Build apps with the Teams AI library
-        url: bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md
-      - text: Build a custom copilot to chat with your data
+        url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
 
 - title: What's new
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Analyze your third-party app usage metrics in Developer Portal
+        url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
+      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
+        url: concepts/authentication/nested-authentication.md
+      - text: New purchase experience for Teams app subscriptions bought from Teams Store
+        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings
@@ -75,16 +81,10 @@ landingContent:
         url: graph-api/rsc/preapproval-instruction-docs.md
       - text: 32x32 color icon for your app running in Outlook and Microsoft 365
         url: concepts/build-and-test/apps-package.md#outline-icon
-      - text: Authentication in API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md#authentication
-      - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
-        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
-      - text: Bot configuration experience
-        url: bots/how-to/bot-configuration-experience.md
 
     - linkListType: reference
       links:
-      - text: Extend Microsoft Copilot for Microsoft 365
+      - text: Extend Microsoft 365 Copilot
         url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
