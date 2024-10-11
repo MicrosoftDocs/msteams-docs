@@ -27,6 +27,13 @@ You also can start designing your Adaptive Cards directly in the browser.
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
 
+## Adaptive Card starter collection
+
+The Adaptive Card starter collection is a curated set of Adaptive Card templates for Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. The Adaptive Card templates help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. You can use the templates as they are, or customize them for your app's requirements.
+
+> [!div class="nextstepaction"]
+> [Try the Adaptive Cards designer](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main)
+
 ## Types of Adaptive Cards
 
 ### Hero
