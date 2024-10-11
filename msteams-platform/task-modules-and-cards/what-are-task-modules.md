@@ -5,7 +5,7 @@ description: Learn how to add modal to embed a webpage to display surveys, video
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 12/16/2022
+ms.date: 10/11/2024
 ---
 
 # Dialogs
