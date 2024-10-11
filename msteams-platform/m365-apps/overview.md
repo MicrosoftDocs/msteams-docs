@@ -33,7 +33,7 @@ Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/relea
 > Apps with manifest version below 1.13 are exclusive to Teams. However, for those with manifest version of 1.13 or above are compatible with Outlook, Microsoft 365 App, and Teams.
 
 * For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
-* For guidance about the app manifest and TeamsJS versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
+* For guidance about app manifest and TeamsJS versioning, and further details about Teams platform capability support across Microsoft 365, see [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
 ## Personal tabs in Outlook and Microsoft 365 app
 
