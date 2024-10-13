@@ -1,7 +1,7 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 10/10/2024
+ms.date: 10/14/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
