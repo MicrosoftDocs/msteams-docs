@@ -418,7 +418,8 @@
   - name: What is a bot?
     href: bots/overview.md
   - name: Let's build a bot
-    href: bots/build-a-bot.md 
+    href: bots/build-a-bot.md
+    displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
   - name: How can I bring my bot to Teams?
     href: bots/bring-bot-to-teams.md
   - name: Build an AI bot
@@ -466,9 +467,9 @@
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events  
-  - name: Configure bot scope
-    href: bots/how-to/bot-configuration-experience.md
-    displayName: configuration settings, fetchTask, config/fetch, config/submit
+    - name: Configure bot scope
+      href: bots/how-to/bot-configuration-experience.md
+      displayName: configuration settings, fetchTask, config/fetch, config/submit
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
