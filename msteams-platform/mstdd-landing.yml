@@ -72,7 +72,7 @@ landingContent:
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
       - text: Extend bot-based message extension plugins to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
+        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-agent-for-copilot-for-meetings
       - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
