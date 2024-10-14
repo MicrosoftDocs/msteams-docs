@@ -436,7 +436,7 @@ You can design Adaptive Cards in Teams where the value of an input depends on th
 
 To create dependent inputs in an Adaptive Card, use the following properties:
 
-1. **valueChangedAction**: Define this property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInputs` action that triggers a data query request to the bot when a user changes the value of an input in the card.
+1. **valueChangedAction**: Define this property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInputs` action, which triggers a data query request to the bot when a user changes the value of an input in the card.
 
 1. **Action.ResetInputs**: This action resets the values of the inputs you specify under `targetInputIds` to their default values.
 
@@ -452,22 +452,22 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 | `Action.ResetInputs` | String | Yes | Resets the input values |
 | `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
 | `id` | String | No | A unique identifier for the action |
-| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered and its fallback is rendered if provided. |
+| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered, and its fallback is rendered if provided. |
 | `fallback` | Object or String | No | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
-| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URI is supported. |
+| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URIs are supported. |
 | `isEnabled` | Boolean | No | Defines the `enabled` or `disabled` state of the action. A user can't select a disabled action. If the action is represented as a button, the button's style reflects this state. |
 | `mode` | String | No | Defines if the action is primary or secondary. Allowed values: `primary`, `secondary` |
 | `style` | String | No | Defines the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive`, or `destructive` |
-| `title` | String | No | The title of the action, as it appears on a button |
-| `tooltip` | String | No | The tooltip text to display when a user hovers over the action |
+| `title` | String | No | The title of the action, as it appears on a button. |
+| `tooltip` | String | No | The tooltip text to display when a user hovers over the action. |
 
 ### Example
 
-Consider the example from earlier: a card with two `Input.ChoiceSet` dropdowns that allow users to pick a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
+Consider the earlier example: a card with two `Input.ChoiceSet` dropdowns that allow users to select a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
 
-* The `valueChangedAction` property is defined along with the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
-* As the `city` input is required, resetting its value forces the user to pick a new city whenever the value of `country` changes.
-* As the `associatedInputs` property is defined, when Teams sends a data query request to the bot, it includes the value of the `country` input. Hence, when the user starts typing in the `city` input, the card returns a list of cities for the selected country.
+* The `valueChangedAction` property is defined alongside the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
+* Since the `city` input is required, resetting its value forces the user to select a new city whenever the value of `country` changes.
+* With the `associatedInputs` property defined, when Teams sends a data query request to the bot, it includes the value of the `country` input. Thus, when the user starts typing in the `city` input, the card returns a list of cities for the selected country.
 
 ```json
 {
