@@ -38,7 +38,7 @@ To configure the default landing scope in your app manifest:
     1. Add the below properties as the first object of the array.
         1. `entityId` with reserved keyword `conversations`.
         2. `scopes` with the value `personal`.
-    1. Add the details of the `staticTabs` as defined in the [app manifest]((../../resources/schema/manifest-schema.md#statictabs))
+    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs)
     
     ```json
     {
@@ -56,7 +56,7 @@ To configure the default landing scope in your app manifest:
     }
     ```
 1. To configure static tabs as the default landing scope,
-    1. Add the details of the `staticTabs` as defined in the [app manifest]((../../resources/schema/manifest-schema.md#statictabs)) as the first object of the array.
+    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) as the first object of the array.
     1. Add the below properties as the next object.
         1. `entityId` with reserved keyword `conversations`.
         2. `scopes` with the value `personal`.
