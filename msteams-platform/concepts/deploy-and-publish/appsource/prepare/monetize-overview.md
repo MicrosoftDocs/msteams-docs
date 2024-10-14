@@ -32,17 +32,7 @@ The publishing options available in a SaaS offer by which you can drive app mone
 
 * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-When creating a SaaS offer, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently. For more information on publishing options, see [plan for a SaaS offer](include-saas-offer.md).
-
-To monetize your SaaS app, it's important that you understand the features of a SaaS offer and plan based on your requirements.
-For more information, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer) and [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
-
-
-
-After you create a SaaS offer, perform the following:
-
-1. You must configure the offer based on your requirements. For more information, see [configure the offer](/partner-center/marketplace-offers/create-new-saas-offer-properties).
-1. You must create at least one plan for the SaaS offer, where the plan features facilitate appropriate purchase options for the target users. For more information, see [create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans).
+When creating a SaaS offer, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently.
 
 Here are the other features associated with a SaaS offer:
 

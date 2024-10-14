@@ -12,6 +12,15 @@ ms.date: 03/21/2023
 
 Software as a service (SaaS) offers allow you to license software solutions to customers through subscriptions. Microsoft Teams presents unique opportunities for developers to integrate their SaaS solutions to Microsoft Teams Store. This article guides you through the steps to plan, create, and configure a SaaS offer in Microsoft Partner Center.
 
+## Plan, Create, Publish - SaaS offer
+
+To monetize your SaaS app, it's important that you understand the features of a SaaS offer and plan based on your requirements. For more information, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer) and [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
+
+After you create a SaaS offer, perform the following:
+
+1. You must configure the offer based on your requirements. For more information, see [configure the offer](/partner-center/marketplace-offers/create-new-saas-offer-properties).
+1. You must create at least one plan for the SaaS offer, where the plan features facilitate appropriate purchase options for the target users. For more information, see [create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans).
+
 ## Plan a SaaS offer
 
 To monetize your SaaS app, it's important that you understand the features of a SaaS offer and plan based on your requirements. Here's an overview on the major features that aids you to plan better:
