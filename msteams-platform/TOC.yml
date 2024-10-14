@@ -19,7 +19,18 @@
     href: overview-explore.md
   - name: The Teams solution
     href: overview-solution.md
+- name: Get started - revamp updates
+  expanded: true
+  items: 
+    - name: Teams platform overview
+      href: get-started/teams-platform-overview.md
+    - name: Quick start
+      href: get-started/gs-quick-start.md
+    - name: Teams app tutorials and code samples
+      href: get-started/teams-toolkit-tutorial.md     
+
 - name: Get started
+  visual: false
   expanded: false
   items:
   - name: Overview
@@ -35,7 +46,7 @@
     href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
     href: get-started/choose-what-suits-you.md
- 
+
 - name: Plan your app
   items:
   - name: Overview
@@ -413,6 +424,50 @@
   - name: App caching for your tab app
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
+- name: Build bots-revamp
+  expanded: true
+  items:
+  - name: Overview
+    href: bots/bot-overview.md
+  - name: Bot solutions
+    href: bots/bot-solutions.md
+  - name: Bring your bot to Teams
+    href: bots/bring-bot-to-teams.md  
+  - name: Send and receive messages
+    items:
+      - name: Activity handlers
+        href: bots/activity-handlers.md
+      - name: Send and receive messages
+        href: bots/send-receive-messages.md
+      - name: Format bot messages using Adaptive Cards
+        href: bots/format-messages.md
+      - name: Send interactive messages and actions
+        href: bots/interactive-messages.md
+      - name: Send files using a bot
+        href: bots/send-files-in-bot.md
+      - name: Get context data for a bot
+        href: bots/get-bot-context.md
+      - name: Customize a bot
+        href: bots/customize-bots.md  
+  - name: Configure bot scope
+    href: bots/config-bot-scope.md
+  - name: Bot tutorials
+    href: bots/bot-tutorials.md 
+- name: Build AI bots
+  items:
+    - name: Teams AI library
+      href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
+    - name: Teams AI library Core capabilities
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+    - name: Get started with Teams AI library
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+    - name: Basic AI chatbot
+      href: toolkit/build-a-basic-ai-chatbot-in-teams.md
+    - name: Build an AI agent chatbot
+      href: toolkit/build-an-ai-agent-in-teams.md
+    - name: Chat with you data
+      href: Teams-AI-library-tutorial.yml
+
 - name: Build bots
   items:
   - name: Overview
