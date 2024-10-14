@@ -30,6 +30,36 @@ If you want to create your own bot, here's a list of tools and platforms to help
 | 3. | Bot registration service | - Azure AD <br> - Developer Portal |
 | 4. | Advanced bot capabilities | - Call and media bot <br> - Access data using MS Graph <br> - SSO <br> - Bot on Mobile |
 
+## Build a bot
+
+[**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
+
+<!--Here's an example of a bot app:
+
+Contoso TravelBuddy: This bot can be deployed on Teams and offers features such as booking flights, hotels, and car rentals. It can assist in searching for travel destinations, provide weather updates, offer travel recommendations, and track the status of flights or trains.
+
+The primary goals and purposes of this bot include offering convenience and saving time in making travel plans, personalizing recommendations, providing real-time updates, and ensuring a secure payment process.
+
+To achieve these functionalities, you would need to integrate the bot app with APIs for flight booking, hotel booking, rental booking, weather forecasts, and payment gateways.-->
+
+Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
+
+| # | I want to build ... | Here's a sample |
+| --- | --- | --- |
+| 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
+| 2. | Non-AI bot with Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
+| 3. | Non-AI bot with Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
+
+<!--
+* To use Teams Toolkit to build conversational bot, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+* To use Bot Framework SDK V4, see one of the following code samples:
+
+  * [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)
+  * [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)
+  * [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)
+
+* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml).-->
+
 ## Bot configuration experience
 
 Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat post-installation, enhancing operational efficiency from the start. This functionality eliminates the need for repeated user interventions that previously hampered timely benefits realization from apps. Users can now tailor the bot to their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot's ongoing relevance and value.
@@ -302,36 +332,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 1. Explore advanced bot capabilities (Call and media bot, access data using MS Graph, and more)
 -->
-
-## Build a bot
-
-[**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
-
-<!--Here's an example of a bot app:
-
-Contoso TravelBuddy: This bot can be deployed on Teams and offers features such as booking flights, hotels, and car rentals. It can assist in searching for travel destinations, provide weather updates, offer travel recommendations, and track the status of flights or trains.
-
-The primary goals and purposes of this bot include offering convenience and saving time in making travel plans, personalizing recommendations, providing real-time updates, and ensuring a secure payment process.
-
-To achieve these functionalities, you would need to integrate the bot app with APIs for flight booking, hotel booking, rental booking, weather forecasts, and payment gateways.-->
-
-Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
-
-| # | I want to build ... | Here's a sample |
-| --- | --- | --- |
-| 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
-| 2. | Non-AI bot with Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
-| 3. | Non-AI bot with Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
-
-<!--
-* To use Teams Toolkit to build conversational bot, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
-* To use Bot Framework SDK V4, see one of the following code samples:
-
-  * [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)
-  * [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)
-  * [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)
-
-* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml).-->
 
 ## Next step
 
