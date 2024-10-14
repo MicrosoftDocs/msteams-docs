@@ -35,13 +35,13 @@ Deep links allow app users to open an application install dialog to know any inf
 
 With deep link, you can open an app installation dialog directly from your Teams client using the app ID.
 
-# [Format](#tab/format1)
+# [Deep link format](#tab/format1)
 
 `https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
 `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4).
 
-# [Examples](#tab/examples1)
+# [Example](#tab/example1)
 
 `https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
 
@@ -100,7 +100,7 @@ You can configure deep links to browse within your app in the following ways:
 
 Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
 
-# [Format](#tab/format2)
+# [Deep link format](#tab/format2)
 
 For creating a deep link in a bot, connector, or message extension card, use the following format:
 
@@ -226,7 +226,7 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 You can allow app users to browse to a personal chat with the application by configuring the deep link manually.
 
-# [Format](#tab/format3)
+# [Deep link format](#tab/format3)
 
 `https://teams.microsoft.com/l/entity/<appId>/conversations?tenantId=<tenantId>`
 
@@ -289,7 +289,7 @@ You must replace the following parameters with the appropriate information:
 
 Deep links for SharePoint Framework (SPFx) tabs allow users to navigate directly to specific tabs within a SharePoint site or Teams app. This enhances user experience by providing quick access to relevant content and functionality.
 
-# [Format](#tab/format4)
+# [Deep link format](#tab/format4)
 
 You can use the following deep link format in a bot, connector, or message extension card:
 
@@ -319,7 +319,7 @@ You can use the following deep link format in a bot, connector, or message exten
 
 A dialog deep link is a serialization of the `TaskInfo` object with two other details, the `APP_ID` and optionally the `BOT_APP_ID`.
 
-# [Format](#tab/format3)
+# [Deep link format](#tab/format3)
 
 * `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
@@ -342,7 +342,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> - The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
+| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> <br> - The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. Specify `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send to any bot. |
 
 > [!NOTE]
@@ -363,7 +363,7 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 You can generate a deep link to the [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) in a meeting. 
 
-# [Format](#tab/format5)
+# [Deep link format](#tab/format5)
 
 Use the following format for a deep link to the meeting side panel:
 
