@@ -32,7 +32,9 @@ Teams platform features that are available to all app developers.
 
 **2024 September**
 
-***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
+* ***September 18, 2024***: [Add YouTube, Dailymotion, or Vimeo videos in Adaptive Card for enhanced user experience.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
+
+* ***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::
