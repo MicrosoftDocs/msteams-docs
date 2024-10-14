@@ -27,6 +27,56 @@ To configure the default install scope in your app manifest:
     "defaultInstallScope": "meetings",
     ```
 
+## Configure your app's default landing scope
+
+If your app supports both bot and static tabs in personal scope, you can configure the default landing scope for your app. App launch from personal flyout, pinned apps, deep links, and app-store acquisition leads to the default landing scope.
+
+To configure the default landing scope in your app manifest:
+
+1. Open your app manifest and update the `staticTabs` property.
+2. To configure bot as the default landing scope, 
+    1. Add the below properties as the first object of the array.
+        1. `entityId` with reserved keyword `conversations`.
+        2. `scopes` with the value `personal`.
+    1. Add the details of the `staticTabs` as defined in the [app manifest]((../../resources/schema/manifest-schema.md#statictabs))
+    
+    ```json
+    {
+       "staticTabs":[
+          {
+             "entityId":"conversations",
+             "scopes":[
+                "personal"
+             ]
+          },
+          {
+             
+          },
+       ]
+    }
+    ```
+1. To configure static tabs as the default landing scope,
+    1. Add the details of the `staticTabs` as defined in the [app manifest]((../../resources/schema/manifest-schema.md#statictabs)) as the first object of the array.
+    1. Add the below properties as the next object.
+        1. `entityId` with reserved keyword `conversations`.
+        2. `scopes` with the value `personal`.
+
+    ```json
+    {
+        "staticTabs":[
+            {
+                
+            },
+            {
+                "entityId":"conversations",
+                "scopes":[
+                "personal"
+                ]
+            }
+        ]
+    }
+    ```
+
 ## Configure the default capability for shared scopes
 
 Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultgroupcapability).
