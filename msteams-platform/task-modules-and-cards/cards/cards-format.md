@@ -315,7 +315,7 @@ The following are the query parameters to add Fluent icons in an Adaptive Card:
 | `size` | Size of the `Icon`. Supported values are `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge`. If `size` isn't defined the icon is set to standard by deafult.|
 | `color` | Color of the `Icon`. Supported values are `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention`. If `color` isn't defined the icon is set to deafult color.|
 | `style` | Style of the `Icon`. Supported values are `Filled` or `Regular`. |
-| `selectAction.type` | You can also add actions to your `Icon`. Supported actions are [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and `Action.ResetInputs`.|
+| `selectAction.type` | You can also add actions to your `Icon`. Supported actions are [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [`Action.ResetInputs`](~/task-modules-and-cards/cards/dynamic-search.md#actionresetinputs).|
 
 The following table is an example of `regular` and `filled` icons with standard size:
 
