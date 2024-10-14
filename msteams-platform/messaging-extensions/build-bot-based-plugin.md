@@ -1,5 +1,5 @@
 ---
-title: Message Extension as Plugin for Copilot
+title: Message Extension as Agent for Copilot
 author: v-ypalikila
 description: Learn how to build a bot-based message extension agent for Microsoft 365 Copilot using Developer Portal for Teams and Teams Toolkit.
 ms.localizationpriority: medium
@@ -31,7 +31,7 @@ See the video to learn more about extending Microsoft 365 Copilot using Microsof
 
 ## What is a agent?
 
-An agent allows Microsoft 365 Copilot to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Plugins allow Microsoft 365 Copilot to:
+An agent allows Microsoft 365 Copilot to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Agents allow Microsoft 365 Copilot to:
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
@@ -58,7 +58,7 @@ Before you get started, ensure that you're familiar with the following standards
 ## Create bot-based message extension
 
 > [!IMPORTANT]
-> Plugins for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Teams.
+> Agents for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Teams.
 
 Let's create a bot-based search message extension that can search npm registries in Teams and Microsoft 365 Copilot and share results through the compose message area of the Microsoft Teams client.
 
@@ -115,7 +115,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Plugins**.
 1. From the list of agents, turn on the toggle for your message extension.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
@@ -178,7 +178,7 @@ To create a bot-based search message extension agent using Visual Studio, follow
 1. In the debug dropdown menu, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
 1. Select **Add**. The message extension is added to Teams.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-add-app.png" alt-text="Screenshot shows an example of the Add option to add Contoso Pluginlocal app to Teams.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-debug-teams-add-app.png" alt-text="Screenshot shows an example of the Add option to add Contoso Agentlocal app to Teams.":::
 
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
@@ -205,7 +205,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 1. Select **Plugins**.
 1. From the list of agents, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npmsearchlocal.
 
@@ -300,7 +300,7 @@ To trigger the message extension through Microsoft 365 Copilot, follow these ste
 1. Select **Plugins**.
 1. From the list of agents, turn on the toggle for your app.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
