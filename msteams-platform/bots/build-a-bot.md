@@ -60,7 +60,8 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 
 * To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml).-->
 
-## Bot configuration experience
+<details>
+<summary><b>Bot configuration experience</b></summary>
 
 Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat post-installation, enhancing operational efficiency from the start. This functionality eliminates the need for repeated user interventions that previously hampered timely benefits realization from apps. Users can now tailor the bot to their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot's ongoing relevance and value.
 
@@ -288,6 +289,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 * Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
+
+</details>
 
 <!--
 1. Choose your bot core capabilties (conversational, workflow, command, AI)
