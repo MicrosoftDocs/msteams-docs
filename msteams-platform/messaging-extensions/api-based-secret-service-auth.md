@@ -73,7 +73,7 @@ To register an API key, follow these steps:
    * **Existing Teams app**: The **Existing Teams app** option binds the API key registration ID to your specific Teams app.
    * **Any Teams app**: The API key can be used with any Teams app.
 
-<!-- Adding a domain ensures that the key isn't exposed to random endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially allowing unwanted callers authorization to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration. -->
+    <!-- Adding a domain ensures that the key isn't exposed to random endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially allowing unwanted callers authorization to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration. -->
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
 

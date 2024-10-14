@@ -30,8 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 September**
+**2024 October**
 
+***October 16, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
 ***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
