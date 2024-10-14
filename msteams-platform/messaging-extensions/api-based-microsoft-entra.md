@@ -93,7 +93,7 @@ After you've created a new app registration, configure scope (permission) option
 
 To configure scope and authorize trusted client applications, you must:
 
-* [Add App ID URI](#application-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the app ID URI.
+* [Add App ID URI](#app-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the app ID URI.
 * [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
 * [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users don't have the opportunity to decline consent.
 
