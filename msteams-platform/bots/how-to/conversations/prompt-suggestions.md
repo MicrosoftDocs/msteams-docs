@@ -140,6 +140,10 @@ The following illustrates an example of prompt suggestions:
 
 ---
 
+Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enables users to review the prompts while interacting with your bot.
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
+
 You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
 
 ## Handle `commands` in your bot

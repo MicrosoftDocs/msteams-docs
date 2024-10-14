@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 11, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
+***October 15, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
 
 :::column-end:::
 :::row-end:::
