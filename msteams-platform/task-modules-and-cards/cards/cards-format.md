@@ -306,14 +306,75 @@ Following image illustrates user mention in Incoming Webhook:
 
 Adaptive Cards helps you to present and exchange information in a card-like format, and Fluent icons help make these cards more intuitive and visually engaging. 
 
+The following are the query parameters to add Fluent icons in an Adaptive Card:
+
+| Property | Description |
+| --- | --- |
+| `type` | Must be `Icon`|
+| `name` | Name of the `Icon`|
+| `size` | Size of the `Icon`. Supported values are `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge`. If `size` isn't defined the icon is set to standard by deafult.|
+| `color` | Color of the `Icon`. Supported values are `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention`. If `color` isn't defined the icon is set to deafult color.|
+| `style` | Style of the `Icon`. Supported values are `Filled` or `Regular`. |
+| `selectAction.type` | You can also add actions to your `Icon`. Supported actions are [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and `Action.ResetInputs`.|
+
+The following table is an example of `regular` and `filled` icons with standard size:
+
 | &nbsp; |Default|Accent|Good|Warning|Attention|
 |---|---|
 |**Regular**| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
 |**Filled**| :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-attention.png"::: |
 
+The following JSON code is an example of an Adaptive Card with Fluent icons:
 
+```json
+{
+  "type": "AdaptiveCard",
+  "speak": "3 minute energy flow with kayo video",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Image",
+      "url": "https://raw.githubusercontent.com/OfficeDev/Microsoft-Teams-Card-Samples/main/samples/author-highlight-video/assets/video_image.png",
+      "altText": "3 Minute Energy Flow with Kayo Video"
+    },
+    {
+      "type": "TextBlock",
+      "text": "3 Minute Energy Flow with Kayo",
+      "wrap": true,
+      "size": "Large",
+      "weight": "Bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Icon",
+              "name": "Calendar",
+              "size": "Medium",
+              "style": "Filled",
+              "color": "Accent",
+              "selectAction": {
+                "type": "Action.OpenUrl"
+              }
+            }
+          ],
+          "spacing": "Small",
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    }
+ ]
+}
+```
 
+The following image is an example of the Fluent icon in an Adaptive Card:
 
+:::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
 
 ### People icon in an Adaptive Card
 
