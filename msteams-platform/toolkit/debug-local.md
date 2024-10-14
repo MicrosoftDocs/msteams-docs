@@ -1,7 +1,7 @@
 ---
-title: Debug your Teams app locally
+title: Teams Toolkit - Debug your Apps Locally
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app locally in Teams Toolkit.
+description: Learn how to set up Teams Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -92,6 +92,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     devtunnel user login
     ```
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
 
 1. Run the following command to start your local tunnel service:
@@ -106,6 +107,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     BOT_DOMAIN=sample-id-3978.devtunnels.ms
     BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
     ```
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
 
 1. Run the following command to provision the app to Teams:
@@ -113,6 +115,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     teamsapp provision --env local
     ```
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
 
 1. Run the following command to deploy the app to Teams:
@@ -120,6 +123,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     teamsapp deploy --env local
     ```
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
 
 1. Run the following command to preview your application locally:
@@ -133,6 +137,7 @@ If you want to preview a notification bot hosted on Azure Functions, run the fol
 ```cmd
 npm run prepare-storage:teamsapp
 ```
+
 ---
 
 ## Debug your app
@@ -265,6 +270,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env.md)

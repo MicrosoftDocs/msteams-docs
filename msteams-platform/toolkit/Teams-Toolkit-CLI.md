@@ -1,7 +1,7 @@
 ---
-title: Teams Toolkit Command Line Interface
+title: Introduction to Teams Toolkit CLI
 author: MuyangAmigo
-description: In this module, learn Teamsapp Command Line Interface, supported commands, and its scenarios.
+description: Learn about Teams Toolkit Command Line Interface for Teams app development in different versions, supported commands, scenarios, interactive mode, global options.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

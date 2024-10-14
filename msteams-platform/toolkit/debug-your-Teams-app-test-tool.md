@@ -1,7 +1,7 @@
 ---
 title: Debug bot using Teams App Test Tool
 author: surbhigupta 
-description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool.
+description: Learn about Teams app Test Tool in Teams Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -206,7 +206,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
       If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
      ---
-1. Test Tool opens the bot in a webpage.
+   1. Test Tool opens the bot in a webpage.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 

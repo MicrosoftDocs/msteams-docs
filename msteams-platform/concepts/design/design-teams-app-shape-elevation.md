@@ -1,6 +1,6 @@
 ---
 title: Design your app - Shape and elevation
-description: Learn about the basics of shapes and elevation of your Teams app.
+description: Learn about the basics of shapes and elevation of your Teams app such as corner radius and key calls to action. Learn UI components and shadow levels.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar

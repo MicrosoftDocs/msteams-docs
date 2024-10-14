@@ -1,6 +1,6 @@
 ---
 title: Action-based Message Extensions
-description: In this module, learn create Action-based message extensions to allow users to trigger external services.
+description: Learn how to create and configure action-based message extensions for Microsoft Teams using Bot Framework SDK to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 04/02/2023

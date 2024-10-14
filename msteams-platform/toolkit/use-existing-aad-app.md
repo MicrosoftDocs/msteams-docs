@@ -1,7 +1,7 @@
 ---
-title: Use Existing Microsoft Entra App for TeamsFx
+title: Use Existing Microsoft Entra App
 author: surbhigupta
-description:  In this module, learn how to use the existing Microsoft Entra app or manually create Microsoft Entra app for TeamsFx.
+description: Learn how to use an existing Microsoft Entra app in TeamsFx or create a new app for TeamsFx, set up info in TeamsFx project, and upload the app to Azure.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview

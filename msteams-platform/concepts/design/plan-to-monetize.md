@@ -1,6 +1,6 @@
 ---
-title: Plan to monetize your app
-description: Plan to monetize your Microsoft Teams app and also understand the best monetization options for global visibility.
+title: Common Ways of App Monetization
+description: Plan to monetize your Teams app such as subscription, in-app purchase, free trails, test preview, and understand the best monetization options for global visibility.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -35,15 +35,7 @@ In addition to these features, Teams Store also lets you:
 
 Establishing a monetizing option beforehand helps guide the app design, build, and distribution decisions.
 
-## See also
+## Next step
 
-* [Plan your app with Teams features](../app-fundamentals-overview.md)
-* [Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
-* [Microsoft Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
-* [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Build dialogs](../../task-modules-and-cards/what-are-task-modules.md)
-* [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)
-* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
-* [Build bots for Teams](../../bots/what-are-bots.md)
-* [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [Build apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+> [!div class="nextstepaction"]
+> [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)

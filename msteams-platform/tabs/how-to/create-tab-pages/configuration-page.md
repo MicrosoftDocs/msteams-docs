@@ -1,5 +1,5 @@
 ---
-title: Create a configuration page
+title: Create Configuration Page in Tabs
 author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high

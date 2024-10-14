@@ -1,6 +1,6 @@
 ---
 title: Send activity feed notifications
-description: Learn to send activity feed notification to help keep users up to date with changes in the tools and workflows.
+description: Learn how to send and customize activity feed notifications in chat or team, types and use cases of notification cards, and about reversed activity type.
 author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual

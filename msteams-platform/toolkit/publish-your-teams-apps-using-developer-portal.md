@@ -1,7 +1,7 @@
 ---
 title: Publish App using Developer Portal
 author: zyxiaoyuer
-description: Learn how to integrate with Developer Portal in Teams Toolkit.
+description: Learn how to publish the app using Developer Portal in Teams Toolkit from Visual Studio Code, update app manifest, and publish manually.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -42,7 +42,7 @@ If there are any changes related to Teams app's manifest file, you can update th
 
 You can do the following configuration for your app in the Developer Portal:
 
-* **Basic information**: This section shows and allows you to edit the **App names**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
+* **Basic information**: This section shows and allows you to edit the **App names**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID** (CCP ID).
 * **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
 * **App features**: This section allows you to add the following features to your app:
   * Personal app

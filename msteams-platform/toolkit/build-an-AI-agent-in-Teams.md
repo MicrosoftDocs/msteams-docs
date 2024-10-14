@@ -1,11 +1,11 @@
 ---
 title: Build an AI Agent in Teams
 author: surbhigupta
-description:  In this module, learn how to build AI Agent using Teams AI library.
+description: Learn how to build AI Agent in Teams AI library using Assistants API within Teams Toolkit, customize prompt augmentation, and assistant creation.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ganr
-ms.date: 05/21/2024
+ms.author: surbhigupta
+ms.date: 09/16/2024
 ---
 
 # Build an AI agent bot in Teams
@@ -34,9 +34,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.
+1. Select **Custom Engine Agent**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **AI Agent**. 
 
@@ -343,4 +343,4 @@ When the assistant provides a function and its arguments for execution, the SDK 
 
 ## See also
 
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Deep link to an application 
+title: Explore & Configure Deep Links to Apps
 author: v-npaladugu
 description: Learn how to create deep links to an application and navigate using them in your Microsoft Teams apps and tabs and generate deep link to share content to meetings.
 ms.topic: conceptual

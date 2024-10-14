@@ -1,5 +1,5 @@
 ---
-title: Prepare your Microsoft 365 tenant
+title: Get Started with Microsoft 365 Tenant
 description: Learn how to get started with Teams in Microsoft 365, enable Teams for your organization and custom app upload, and create your development environment.
 ms.topic: how-to
 ms.localizationpriority: medium

@@ -1,6 +1,6 @@
 ---
-title: Choose what suits you
-description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app
+title: Explore Ways to Build a Teams App
+description: Learn more about the available tools and SDKs to build a Microsoft Teams app based on the app capabilities, AI capability, UI components, and languages.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
@@ -24,7 +24,7 @@ As a collaborative platform for building apps, Teams offers the full range of ap
 You can use various tools and services to build your app. Following is an example development flow.
 
 1. Plan your project and figure out the requirement.
-1. Design your app. Use Teams UI Kit and UI Library for designing tabs UI.
+1. Design your app. Use Teams UI Kit and Fluent UI React components for designing tabs UI.
 1. Build your app with JavaScript using Teams Toolkit.
 1. Extend functionality by adding more Teams capabilities, send activity feed notifications, and use Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
@@ -48,8 +48,8 @@ To start building your Teams app, you can select the tools and SDKs based on you
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
 | **Tabs** | A full-screen embedded web experience. | VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
-| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
-| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI |  [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI |  [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 
 > [!NOTE]
 >
@@ -72,7 +72,7 @@ The following tools in the Teams platform help you during app development:
 
 | App development phase | Teams platform tools |
 |-----|-----|
-| Design | Teams UI kit and Teams UI library |
+| Design | Teams UI kit and Fluent UI React components |
 | Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
 | Test, deploy, and publish |Microsoft Entra ID and Developer Portal |
 | Distribute | Partner Center and Teams Store |

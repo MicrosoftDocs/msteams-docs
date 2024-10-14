@@ -1,6 +1,6 @@
 ---
 title: Teams toolkit tutorial and code samples
-description: The article lists the app that you want to build and the associated guides. 
+description: Learn how to build a basic or scenario-based Teams app with different capabilities and prepare development environment in different languages and frameworks.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 05/16/2023

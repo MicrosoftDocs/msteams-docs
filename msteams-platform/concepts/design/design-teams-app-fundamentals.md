@@ -1,6 +1,6 @@
 ---
 title: Basic App Design Fundementals
-description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
+description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, type, color scheme, shape and elevation, and copy and content.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.topic: overview

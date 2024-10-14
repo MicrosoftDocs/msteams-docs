@@ -1,6 +1,6 @@
 ---
 title: Microsoft Graph Permissions for Tab
-description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
+description: Learn how to configure API permissions and authentication for different platforms, and get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
@@ -161,7 +161,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```Node.js
 // Exchange client Id side token with server token
