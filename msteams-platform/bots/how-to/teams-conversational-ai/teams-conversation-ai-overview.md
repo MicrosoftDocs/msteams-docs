@@ -260,7 +260,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Simple Teams-centric component scaffolding**
     :::column-end:::
     :::column span="3":::
-        The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
+        The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -270,7 +270,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column span="3":::
         The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
 
-        Bots can run in-context and assist when the bot recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
+        Bots can run in-context and assist when they recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
     :::column-end:::
 :::row-end:::
 :::row:::

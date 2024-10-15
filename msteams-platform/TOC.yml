@@ -415,7 +415,7 @@
     displayName: App caching, caching, launch time, cache
 - name: Build bots - Revamp
   items:
-  - name: What is a bot?
+  - name: Overview
     href: bots/overview.md
   - name: Let's build a bot
     href: bots/build-a-bot.md
