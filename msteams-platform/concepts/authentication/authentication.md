@@ -30,17 +30,17 @@ Choose to add authentication for your app in one of the following ways:
 
   You can enable the following authentication methods for your API-based message extension:
 
-  * **API key authentication**: Implement API key authentication to use a key token known only to the app and the API service to authenticate requests. For more information, see [API key authentication](api-based-secret-service-auth.md).
+  * **API key authentication**: Implement API key authentication to use a key token known only to the app and the API service to authenticate requests. For more information, see [API key authentication](../../messaging-extensions/api-based-secret-service-auth.md)
 
-  * **SSO authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams. For more information, see [enable SSO for API-based message extensions](api-based-microsoft-entra.md).
+  * **SSO authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams. For more information, see [enable SSO for API-based message extensions](../../messaging-extensions/api-based-microsoft-entra.md).
 
   * **None**: Update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
 
-        ```json
-            "authorization": {
-              "authType": "none"
-              }
-        ```
+    ```json
+        "authorization": {
+            "authType": "none"
+        }
+    ```
 
 ## Select authentication method
 
