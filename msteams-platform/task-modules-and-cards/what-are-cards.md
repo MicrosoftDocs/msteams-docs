@@ -61,6 +61,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 [People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, dialogs (referred as task modules in TeamsJS v1.x), and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience.
 
+### Fluent icons in Adaptive Card
+
+Adaptive Cards support Fluent icons, offering an effective and visually appealing method to integrate icons into your cards. Teams mobile and desktop clients support Fluent icons in Adaptive Cards.
+
 ### People icon in an Adaptive Card
 
 [People icon in an Adaptive Card](cards/cards-format.md#people-icon-in-an-adaptive-card) helps users to view the images of users in the Adaptive Card in Teams. You can view the image of a single user or multiple users. People icon is supported in Teams mobile and desktop clients.
