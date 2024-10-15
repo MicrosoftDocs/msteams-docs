@@ -62,7 +62,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Authentication in API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md
+        url: messaging-extensions/api-based-secret-service-auth.md
       - text: Analyze your third-party app usage metrics in Developer Portal
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
