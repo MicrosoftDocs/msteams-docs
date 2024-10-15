@@ -11,11 +11,7 @@ ms.author: surbhigupta
 
 A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligency (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
-## When do I build a bot?
-
 You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education,finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
-
-[**TBD**: More details to follow about user scenarios where bots are effective.]
 
 ## How does building a bot benefit me?
 
@@ -25,7 +21,7 @@ The bot app users access and use your bot app within Teams.
 
 [**TBD**: Bot UX infographic or gif]
 
-Building a bot can offer you several benefits:
+Building a bot can offer benefits in the following scenarios:
 
 1. Automation: Bots can handle repetitive tasks, saving you time and effort.
 1. Availability: Bots can work around the clock without needing breaks.
@@ -34,25 +30,6 @@ Building a bot can offer you several benefits:
 1. Scalability: As user needs grow, bots can easily scale to handle more tasks or interactions.
 
 In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement. Bots are here to make your life easier by automating tasks and providing assistance whenever you need it.
-
-<!--
-[**TBD**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
-
-1. Choose your bot core capabilties (conversational, workflow, command, AI)
-1. Use any one of the following ways to build a bot for Teams:
-
-    * Bot Framework SDK
-    * TeamsFx SDK
-    * Teams AI bot
-    * Azure AI bot service
-
-1. Register your bot with Teams in any one of the following ways:
-
-    * Azure AD
-    * Developer Portal
-
-1. Explore advanced bot capabilities (Call and media bot, access data using MS Graph, and more)
--->
 
 ## How do bots work?
 
@@ -64,7 +41,7 @@ This article guides you through the developer journey, showcasing how a bot inte
 
 Let's see how a basic chatbot works at runtime.
 
-[TBD: A flow diagram that shows how a chatbot interacts with a user followed by explanation.]
+[**TBD**: A flow diagram that shows how a chatbot interacts with a user followed by explanation.]
 
 ### Understand bot basics
 

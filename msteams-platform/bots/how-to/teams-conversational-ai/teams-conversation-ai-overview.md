@@ -270,7 +270,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column span="3":::
         The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
 
-        Bots can run in-context and assist when they recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
+        A bot can run in-context and assist when it recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -304,7 +304,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column span="3":::
         Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-        Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic. This means you can choose to keep your app's content outside the public domain and confined to your preferred LLM model.
+        Teams AI library is built to use OpenAI’s GPT model, but you have the flexibility to swap it with any LLM of your choice without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -312,13 +312,13 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Responsible AI**
     :::column-end:::
     :::column span="3":::
-        Teams AI library allows you to create ethical and responsible conversational apps by:
+        Teams AI library allows you to create ethical and responsible conversational apps using:
 
           * Moderation hooks: To regulate bot responses against any moderation API.
           * Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
           * Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
 
-        Teams AI library offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
+        Teams AI library offers support from low code to complex scenarios. It extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -326,7 +326,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="3":::
-        A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user was out of office and needs to quickly summarize a thread, the library:
+        A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user was out of office and needs to quickly summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
             1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
@@ -338,7 +338,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Action Planner**
     :::column-end:::
     :::column span="3":::
-        Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
+        Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -352,8 +352,6 @@ To achieve this output, you can leverage the various features of the Teams AI li
         Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
-
-
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -361,7 +359,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Prompt management**
     :::column-end:::
     :::column span="3":::
-        Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information.
+        Dynamic prompt management allows the bot to adjust the size and content of the prompt sent to the LLM, based on the available token budget and the data sources or augmentations. It improves the efficiency and accuracy of the prompt by ensuring that it doesn't exceed the context window or include irrelevant information.
     :::column-end:::
 :::row-end:::
 :::row:::
