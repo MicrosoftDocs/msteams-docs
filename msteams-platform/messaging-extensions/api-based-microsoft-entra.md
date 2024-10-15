@@ -335,8 +335,6 @@ To configure app manifest:
   
 1. Save the app manifest file.
 
-For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
-
 ## See also
 
 * [Create API-based message extension](create-api-message-extension.md)
