@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 18, 2024***: [Use the Adaptive Card templates to design engaging and visually appealing Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
+***October 18, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
 
 :::column-end:::
 :::row-end:::
