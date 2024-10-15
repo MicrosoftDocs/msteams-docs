@@ -38,14 +38,11 @@ The Teams AI Library is available in JavaScript and C# languages allowing you to
 
 The Teams AI library is equipped with useful features that make building your AI bot a lot easier.
 
-Let's consider an example:
-
-[Notes: Add user story for the Lightbot code sample + infographic]
-
 As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my AI bot a breeze. I want my AI Lightbot to make the user experience way better and keep them more involved.
 
 How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience?
 
+<!--
 To achieve this output, you can leverage the various features of the Teams AI library:
 
 :::row:::
@@ -256,8 +253,8 @@ To achieve this output, you can leverage the various features of the Teams AI li
         Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
     :::column-end:::
 :::row-end:::
+-->
 
-<!--
 :::row:::
     :::column span="":::
         **Simple Teams-centric component scaffolding**
@@ -356,9 +353,6 @@ To achieve this output, you can leverage the various features of the Teams AI li
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
 
-        | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
-        | --- |
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
 
     :::column-end:::
 :::row-end:::
@@ -392,11 +386,6 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column-end:::
     :::column span="3":::
         Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
-
-        | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
-        | --- |
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Search command message extension code sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. |
-
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -416,7 +405,6 @@ To achieve this output, you can leverage the various features of the Teams AI li
 
     :::column-end:::
 :::row-end:::
--->
 
 ## Updates to Teams AI library
 
