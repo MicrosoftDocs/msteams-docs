@@ -783,7 +783,7 @@
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
     items:
-    - name: API key authentication
+    - name: Enable API key authentication
       href: messaging-extensions/api-based-secret-service-auth.md
       display name: Secret key, API key registration
     - name: Enable SSO for API based message extensions
