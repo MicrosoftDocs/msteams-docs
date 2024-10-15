@@ -367,15 +367,12 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Augmentation**
     :::column-end:::
     :::column span="3":::
-        Efficiently enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, you can tailor your model to your needs, increasing its accuracy and desired outcomes.
+        Enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, tailor your model to your needs to increase its accuracy and desired outcomes.
 
-            * **Retrieval Augmented Generation (RAG)**: Automatically incorporates real-time, dynamic, and specified external data sources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past.
-
+            * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external data sources into your model’s responses to enable up-to-date and contextually accurate results without fine-tuning or re-training your model.
             * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
-
             * **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-
-            * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
+            * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed, increasing response reliability and consistency.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -383,7 +380,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Vector data sources**
     :::column-end:::
     :::column span="3":::
-        Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
+        Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
     :::column-end:::
 :::row-end:::
 :::row:::
