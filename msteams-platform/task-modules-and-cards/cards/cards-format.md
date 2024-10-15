@@ -1170,7 +1170,7 @@ You can test formatting in your own cards by modifying this code.
 
 ## Star ratings in Adaptive Cards
 
-You can display a star rating in an Adaptive Card with the `Rating` property or the `Input.Rating` property to collect ratings from users. Star ratings allow users to provide feedback or preferences in an interactive and visually appealing manner.
+You can display a read-only star rating or collect star ratings from users in Adaptive Cards. The read-only star rating helps you convey user ratings or performance metrics while the rating input allows users to provide feedback or preferences in an interactive and visually appealing manner.
 
 You can customize how star ratings appear in an Adaptive Card, including their size, color, and the number of stars, to fit the design and needs of your app.
 
@@ -1195,8 +1195,8 @@ The `Rating` property displays a read-only star rating on your Adaptive Card. Yo
 | `type` | Yes | String | `Rating` | Specifies the type of rating element. |
 | `value` | No | Number | | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
 | `count` | No | Number | | The number of ratings shown next to the star rating. |
-| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number is 5. |
-| `colour` | No | String | `Neutral`, `Marigold` | The colour of the stars. |
+| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `colour` | No | String | `Neutral`, `Marigold` | The color of the stars. |
 | `size` | No | String | `Medium`, `Large` | The size of the stars. |
 | `style` | No | String | `Default`, `Compact` | In compact mode, only one star is displayed. |
 | `id` | No | String | | Unique identifier for the rating element. |
@@ -1210,17 +1210,15 @@ The `Rating` property displays a read-only star rating on your Adaptive Card. Yo
 
 ### Input.Rating
 
-The `Input.Rating` property displays a star rating that allows users to select a rating. You can allow users to select half stars if you set the `allowHalfSteps` to `true`.
-
-**Placeholder images**
+The `Input.Rating` property displays a star rating that allows users to hover over the stars and select a rating. You can allow users to select half stars if you set the `allowHalfSteps` property to `true`.
 
 # [Desktop](#tab/desktop2)
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on desktop.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
 
 # [Mobile](#tab/mobile2)
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on mobile.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
 
 ---
 
@@ -1230,10 +1228,10 @@ The `Input.Rating` property displays a star rating that allows users to select a
 |----|----|----|----|----|
 | `type` | Yes | String | `Input.Rating` | Specifies the type of input element. |
 | `value` | No | Number | | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
-| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number is 5. |
+| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
 | `allowHalfSteps` | No | Boolean| | Determines if the user can select half stars. |
 | `size` | No | String | `Medium`, `Large` | The size of the stars. |
-| `colour` | No | String | `Neutral`, `Marigold` | The colour of the stars. |
+| `colour` | No | String | `Neutral`, `Marigold` | The color of the stars. |
 | `id` | Yes | String | | Unique identifier for the input element. |
 | `requires` | No | Object | | Dependencies for the input element. |
 | `isVisible` | No | Boolean| | Determines if the element is visible. |
