@@ -28,7 +28,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user.
 * If the user consents, Microsoft Entra generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token and extracts the user information from the token, such as the name, email, and object ID.
-* After successful authentication, user is grated access to the API-based message extension.
+* After successful authentication, user is granted access to the API-based message extension.
 
 To enable SSO authentication for API-based message extension, follow these steps:
 
@@ -57,7 +57,7 @@ To enable SSO authentication for API-based message extension, follow these steps
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Screenshot shows you the app registration page on Microsoft Entra admin center.":::
 
-5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories, or restrict the access to personal Microsoft accounts only.
+5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories or restrict the access to personal Microsoft accounts only.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -123,7 +123,7 @@ To configure scope and authorize trusted client applications, you must:
     > * If you're building an app with a bot, a message extension, and a tab, enter the app ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
     > * If you're building an app with a message extension or tab capabilities without the bot,  enter the app ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra app ID.
     > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the app ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
-    > * **Format for domain name**: Use only lower case letters for domain name.
+    > * **Format for domain name**: Use only lower-case letters for domain name.
 
 1. Select **Save**.
 
@@ -173,7 +173,7 @@ To configure scope and authorize trusted client applications, you must:
 
 ### Configure authorized client application
 
-1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
+1. Move through the **Expose an API** page to the **Authorized client application** section and select **+ Add a client application**.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Screenshot shows you the authorized client application.":::
 
