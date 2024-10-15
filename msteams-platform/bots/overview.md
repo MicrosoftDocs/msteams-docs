@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Overview
+# Bot overview
 
 A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligency (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
