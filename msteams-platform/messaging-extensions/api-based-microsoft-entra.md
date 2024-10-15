@@ -340,4 +340,5 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 ## See also
 
 * [Create API-based message extension](create-api-message-extension.md)
-* [API secret service authentication](api-based-secret-service-auth.md)
+* [API key authentication](api-based-secret-service-auth.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
