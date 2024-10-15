@@ -11,14 +11,6 @@ ms.author: surbhigupta
 
 Building a bot app involves various phases, from initial concept to final deployment. This article offers a detailed guide to help you get started.
 
-<!--1. Plan your bot app: Start by defining your app's goal and purpose to align with your target audience. Also, decide on the platforms you will use, such as messaging or voice.
-1. Choose the tools and SDKs: Select the tools and software development kits that you will use to build your app.
-1. Design the intents and entities: Create dialog flows and plan for various use cases and potential errors.
-1. Develop the bot app: Set up the bot builder, integrate APIs, build a user-friendly interface, and develop the necessary capabilities and automation. Ensure your bot integrates with any external services required to fulfil its purpose.
-1. Test, optimize, and deploy: Thoroughly test your bot app, make necessary optimizations, and then deploy it.-->
-
-[**WIP**: Graphic representation of tools and SDKs available for building bots and helping the developer make informed decisions]
-
 If you want to create your own bot, here's a list of tools and platforms to help you get started:
 
 :::image type="content" source="../assets/images/bots/m365-bot-decisions.png" alt-text="Infographics depicts a decision tree for building a bot.":::
@@ -32,14 +24,6 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 ## Build a bot
 
-<!--Here's an example of a bot app:
-
-Contoso TravelBuddy: This bot can be deployed on Teams and offers features such as booking flights, hotels, and car rentals. It can assist in searching for travel destinations, provide weather updates, offer travel recommendations, and track the status of flights or trains.
-
-The primary goals and purposes of this bot include offering convenience and saving time in making travel plans, personalizing recommendations, providing real-time updates, and ensuring a secure payment process.
-
-To achieve these functionalities, you would need to integrate the bot app with APIs for flight booking, hotel booking, rental booking, weather forecasts, and payment gateways.-->
-
 Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library.
 
 | # | I want to build ... | Here's a sample |
@@ -47,16 +31,6 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 | 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
 | 2. | Non-AI bot with Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 | 3. | Non-AI bot with Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
-
-<!--
-* To use Teams Toolkit to build conversational bot, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
-* To use Bot Framework SDK V4, see one of the following code samples:
-
-  * [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)
-  * [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)
-  * [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)
-
-* To build an AI bot, see [build a custom engine agent](../Teams-AI-library-tutorial.yml).-->
 
 <details>
 <summary><b>Bot configuration experience</b></summary>
