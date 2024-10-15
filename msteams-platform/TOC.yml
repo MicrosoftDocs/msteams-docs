@@ -783,12 +783,15 @@
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
     items:
+    - name: Overview
+      href: messaging-extensions/build-api-based-message-extension.md
+      display name: security, data privacy, secret service
     - name: Enable API key authentication
       href: messaging-extensions/api-based-secret-service-auth.md
       display name: Secret key, API key registration
     - name: Enable SSO for API based message extensions
       href: messaging-extensions/api-based-microsoft-entra.md
-      display name: API key, API key registration, access token, register API key
+      display name: API key, API key registration, access token, register API key, SSO
   - name: Enable nested app authentication
     href: concepts/authentication/nested-authentication.md
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO

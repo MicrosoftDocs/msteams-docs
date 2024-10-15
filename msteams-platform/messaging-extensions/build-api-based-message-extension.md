@@ -17,11 +17,11 @@ Authentication is a fundamental aspect of security and serves as the first line 
 
 * **User Trust**: Builds confidence among users that their interactions with the app are secure, which is essential for user adoption and engagement.
 
-You can enable the following authentication methods for your API-based message extension:
+You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
-* **Secret service authentication**: Implement secret service authentication to use a secret token known only to the app and the API service to authenticate requests. For more information, see [API secret service authentication](api-based-secret-service-auth.md).
+* **API key authentication**: Implement API key authentication to use a key token known only to the app and the API service to authenticate requests. API key authentication involves using a unique key to verify the identity of users or apps accessing your API-based message extension app through an API. The key must be registered in Microsoft Teams. When users interact with your API-based message extension, Teams uses the API key to authenticate with your API. You can register through the Developer Portal for Teams and update the app manifest with the appropriate configuration. For more information, see [API key authentication](../../messaging-extensions/api-based-secret-service-auth.md).
 
-* **Microsoft Entra authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams.
+* **SSO authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams.
 
   You can implement authentication in API-based message extension to provide secure and seamless access to app. If your message extension requires authentication, update your app manifest as follows:
 
@@ -40,4 +40,5 @@ You can enable the following authentication methods for your API-based message e
 
 ## See also
 
-[Create API-based message extension](create-api-message-extension.md)
+* [Create API-based message extension](create-api-message-extension.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
