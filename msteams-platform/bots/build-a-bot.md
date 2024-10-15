@@ -32,8 +32,6 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 ## Build a bot
 
-[**TBD** - example app: to be seen if this example can be used through the module as an example of bot app to which capabilities may be added.]
-
 <!--Here's an example of a bot app:
 
 Contoso TravelBuddy: This bot can be deployed on Teams and offers features such as booking flights, hotels, and car rentals. It can assist in searching for travel destinations, provide weather updates, offer travel recommendations, and track the status of flights or trains.

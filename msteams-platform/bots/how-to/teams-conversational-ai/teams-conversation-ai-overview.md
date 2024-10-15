@@ -79,8 +79,6 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column-end:::
 :::row-end:::
 
-[Notes: Use (clickable, if needed) icons [TBD] in column-based layout for listing features instead of level 2 headings. This layout of heading-after-heading is confusing and overwhelming.]
-
 ### Conversation management
 
 :::row:::

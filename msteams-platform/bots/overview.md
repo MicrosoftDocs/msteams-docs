@@ -86,8 +86,6 @@ You may be just delving into bot apps or bringing your existing bots up to suppo
 
 Let's begin to learn, automate, and innovate with bots.
 
-The following table [**TBD**: Clickable browse path] guides you through building a bot app:
-
 | If you want to... | Here's your path |
 | --- | --- |
 | Begin building a bot | [Basic bot concepts, scopes] <br> [Build a basic bot: TTK and Bot SDK] <br> Bring your existing bot to Teams <br> [Build basic AI bot - QS SBS guide] |
