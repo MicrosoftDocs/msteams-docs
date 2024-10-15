@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 16, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/api-based-secret-service-auth.md).
+***October 16, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md)
 
 :::column-end:::
 :::row-end:::
