@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios. Samples on action and search based message extension.
+description: Learn how to build message extensions and the scenarios where they are used. Explore samples on action and search based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
