@@ -1,47 +1,56 @@
 ---
-title: Monetize your app overview
-description: Monetize your app and enable transactions. Supported pricing models are free trials, in-app purchases, and include a SaaS offer with your app.
+title: Monetize your App
+description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives and to monetize through SaaS offers.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/23/2022
+ms.date: 10/15/2024
 ---
 
-# Monetize your app
+# Monetize your Teams app
 
-Microsoft Teams Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
+App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your apps in Microsoft Partner Center and publish in Teams Store to reach customers with the best solutions. 
 
-## Choose a pricing model
+When published, they are available as software as a service (SaaS) offers for purchase from Microsoft commercial marketplace. If the SaaS offers are linked to Teams app, it can be purchased from Teams Store. Commercial marketplace also facilitates publishing offers through Azure Marketplace and Microsoft AppSource. 
 
-* **Include a SaaS offer with your app**:
+## SaaS offer
 
-  With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams Store listing.
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase. Apps with SaaS offers that are published in Microsoft commercial marketplace as subscriptions are SaaS apps. 
 
-  For more information, see [include a SaaS offer with your Teams app](include-saas-offer.md).
+The publishing options available in a SaaS offer by which you can drive app monetization are:
 
-* **Free trials**:
+:::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
 
-  You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
+* **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
 
-* **In-app purchases**:
+* **Free trial**: You can provide free access to your app for a limited time or functionality. This encourages users to purchase the full version after the trial period.
 
-  Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
+* **Test drive**: You can provide access to preconfigured environment for a fixed period and encourage users to purchase. Test drive and free trials are different, and you can provide one or both the features to the customers.
 
-  For more information, see [in-app purchases](in-app-purchase-flow.md).
+* **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-* **Test preview for monetized app**:
+Here are the other features associated with a SaaS offer:
 
-  With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
+* **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, [in-app purchases](in-app-purchase-flow.md) can generate an ongoing revenue stream. </br>
 
-  For more information, see [test preview for monetized apps](Test-preview-for-monetized-apps.md).
+* **Microsoft license management**: Enable Microsoft to manage app licenses on your behalf to track and manage licenses from the Teams Store. You can either allow Microsoft to manage licenses on your behalf or you can manage licenses on your own. For more information, see [configure your SaaS offer setup details](/partner-center/marketplace-offers/create-new-saas-offer). 
 
-* **Set up Microsoft license management**:
+### Private plans
 
-  If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams Store.
+Private plan provides customized solutions for targeted customers based on their organizational requirements. You can either use an existing offer or a new offer to create a private plan. For more information, see [private plans in commercial marketplace](/partner-center/marketplace/private-plans).
 
-  For more information, see [set up Microsoft license management](manage-third-party-apps-license.md).
+This module guides you through the process of creating a SaaS offer in Partner Center, test the SaaS offer, link the SaaS offer to your app, and publish the SaaS app in the marketplace.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Plan a SaaS offer](include-saas-offer.md)
 
 ## See also
 
-[Microsoft Teams Store validation guidelines](teams-store-validation-guidelines.md)
+* [Microsoft commercial marketplace](/partner-center/marketplace/overview)
+* [Introduction to listing options](/partner-center/marketplace/determine-your-listing-type)
+* [Publishing guide by offer type](/partner-center/marketplace/publisher-guide-by-offer-type)
+* [Why publish your app with Microsoft’s app stores](/partner-center/marketplace-offers/why-publish)
+* [Open an Office account in Partner Center](/partner-center/marketplace-offers/open-a-developer-account)
