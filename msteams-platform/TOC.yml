@@ -435,13 +435,15 @@
       displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop
     - name: Understand AI bot concepts
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
-      displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library bot logic, OpenAI, 
+      displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library bot logic, OpenAI
     - name: Build custom engine agent
       items: 
       - name: Custom engine agent for Microsoft 365 
         href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
+        displayName: AI bot, Teams AI library, custom agent
       - name: Build custom engine agent user experience
         href: bots/how-to/teams-conversational-ai/ai-ux.md
+        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop, 
       - name: Build enhanced conversations
         href: /bots/how-to/bot-messages-ai-generated-content.md
         displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
