@@ -20,7 +20,7 @@ SaaS offers play a crucial role for businesses aiming to leverage their apps to 
 
 The publishing options available in a SaaS offer by which you can drive app monetization are:
 
-:::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options." align="center":::
+:::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
 
 * **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
 
