@@ -416,6 +416,7 @@ Developer preview is a public program that provides early access to unreleased T
 **2024 October**
 
 * ***October 17, 2024***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts.](m365-apps/specify-runtime-requirements.md)
+* ***October 17, 2024***: [`copilotExtensions` renamed to `copilotAgents` in app manifest](./resources/schema/manifest-schema-dev-preview.md#copilotAgents)
 
 :::column-end:::
 :::row-end:::
