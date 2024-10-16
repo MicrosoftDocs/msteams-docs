@@ -482,7 +482,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 - Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
-- Use an access token issued by Microsoft Entra ID. For more information, see [configure SSO for your bot in Microsoft Entra ID](../authentication/bot-sso-register-aad.md).
+- Use an access token issued by Microsoft Entra ID. For more information, see [configure your app in Microsoft Entra ID](how-to/authentication/bot-sso-register-aad.md).
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
@@ -614,7 +614,7 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
     :::image type="content" source="../assets/images/notification-bot/notification-bot-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../assets/images/notification-bot/notification-bot-enable.png":::
 
-2. To add command to your bot, follow the instructions in [Command bot in Teams](command-bot-in-teams.md).
+2. To add command to your bot, follow the instructions in [command bot in Teams](how-to/conversations/command-bot-in-teams.md).
 
 <br>
 
