@@ -18,13 +18,13 @@ When you upgrade your Microsoft Teams personal tab or message extension app to u
 
 For example, consider an app that is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings. The app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
 
-To ensure high-quality app experiences and reach a wider user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
+To ensure that high-quality app experiences reach your intended user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
 
 Specifying your app's runtime requirements is useful in scenarios such as:
 
 - **One-way dependencies**: If your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can ensure that your settings tab doesn't load in hosts that don't support your message extension.
 
-- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities.  
+- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities. 
 
 - **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those capabilities are *seamlessly omitted* (rather than loaded but not functional) from your app experience running in those hosts.
 
