@@ -24,7 +24,7 @@ You can [register an API key](#register-an-api-key) through the Developer Portal
 > [!NOTE]
 > You must ensure to secure the API key registration ID as it can be retrieved from the Teams app manifest. For more information on securing your API key, see [best practices](#best-practices).
 
-When an API request is initiated, the system retrieves the API key from an encrypted database and includes it in the authorization header, using the bearer token scheme. The system sends the authorization header with the encrypted API key to the endpoint defined in the app manifest.
+When an API request is initiated, the system retrieves the API key from an encrypted database and includes it in the authorization header, using the bearer token scheme. The system sends the authorization header with the API key to the endpoint defined in the app manifest.
 
 The following example shows the payload with the authorization header using the bearer token scheme:
 
