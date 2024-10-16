@@ -41,23 +41,23 @@ To enable SSO authentication for API-based message extension, follow these steps
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
-2. Select the **App registrations** icon.
+1. Select the **App registrations** icon.
 
    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Screenshot shows the Microsoft Entra admin center page.":::
 
    The **App registrations** page appears.
 
-3. Select **+ New registration** icon.
+1. Select **+ New registration** icon.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Screenshot shows you the new registration page on Microsoft Entra admin center.":::
 
     The **Register an application** page appears.
 
-4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage if you want to.
+1. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage if you want to.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Screenshot shows you the app registration page on Microsoft Entra admin center.":::
 
-5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories or restrict the access to personal Microsoft accounts only.
+1. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories or restrict the access to personal Microsoft accounts only.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -74,7 +74,7 @@ To enable SSO authentication for API-based message extension, follow these steps
     > [!NOTE]
     > You don't need to enter **Redirect URI** for enabling SSO for an API-based message extension app.
 
-7. Select **Register**.
+1. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
     :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-register.png" alt-text="Screenshot shows an example of the notification after the app registration is successful on Azure portal.":::
@@ -83,7 +83,7 @@ To enable SSO authentication for API-based message extension, follow these steps
 
     :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-app-details.png" alt-text="Screenshot shows the app details page in Azure portal.":::
 
-8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
+1. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
     Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
 
