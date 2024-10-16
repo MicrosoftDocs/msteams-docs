@@ -18,7 +18,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. Go to **[Teams Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
 1. Select **+ New apps**.
-1. Enter a name of the app and select the **Manifest version** as **Latest prerelease (devPreview)**.
+1. Enter a name of the app and select the **Manifest version** as **Public developer preview (devPreview)**.
 1. Select **Add**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-manifest-version.png" alt-text="Screenshot shows the app name and the manifest version selected as Latest prerelease (devPreview) in Developer Portal.":::
@@ -99,6 +99,11 @@ You can add commands and parameters to your message extension, to add commands:
 1. Select **Add**. The command is added successfully.
 
 1. Select **Save**.
+
+1. Under **Authentication**, select any of the following options:
+
+   * **No Authentication**
+   * **API key**
 
 An API-based message extension is created.
 
@@ -187,7 +192,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
+           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](api-based-secret-service-auth.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 
@@ -391,3 +396,7 @@ To build an API-based message extension, follow these step-by-step guides:
 
 * [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
+
+## See also
+
+[Authentication for API-based message extensions](build-api-based-message-extension.md)
