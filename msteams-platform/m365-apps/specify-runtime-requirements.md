@@ -22,11 +22,11 @@ To ensure that high-quality app experiences reach your intended user base, speci
 
 Specifying your app's runtime requirements is useful in scenarios such as:
 
-- **One-way dependencies**: If your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can ensure that your settings tab doesn't load in hosts that don't support your message extension.
+- **One-way dependencies**: When the sole purpose of one app capability is to support another capability in your app, you can ensure it only surfaces if the primary app capability is loaded. For example, if your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can specify that the settings tab doesn't load in hosts that don't support your message extension.
 
-- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities. 
+- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities. For example, if tab, bot, and message extension capabilities all work together to support a core user scenario in your app, you can specify that those capabilities are always loaded together, or not at all.
 
-- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across all applicable Microsoft 365 hosts, you can ensure those capabilities are *seamlessly omitted* (rather than loaded but not functional) from your app experience running in those hosts.
+- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across specific Microsoft 365 hosts, you can ensure those capabilities are *seamlessly omitted* (rather than loaded, but not functional) from your app experience running in those hosts. For example, if your app includes a tab-based dashboard view of items that can each be opened as a dialog, and each dialog contains information that is then submitted to a bot, you can specify that bot-based dialogs are core capabilities required for your app to load in a given host.
 
 ## Microsoft 365 host support
 
