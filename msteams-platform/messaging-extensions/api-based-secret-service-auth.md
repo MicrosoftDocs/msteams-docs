@@ -55,7 +55,7 @@ To register an API key, follow these steps:
 
 1. Under **API key name**, add a meaningful name for the API Key. For example, API key for Contoso message extension.
 
-1. Under **Base URL**, specify a common base URL for all the API endpoints that must be called. This URL must start with https, include a fully qualified domain name, and optionally, a path. Teams transmits the key to URL endpoint that begins with the value in this field. For example, `https://api.yelp.com`. *[Mandatory]*
+1. Under **Base URL**, specify a common base URL for all the API endpoints that must be called. This URL must start with https, include a fully qualified domain name, and optionally, a path. Teams transmits the key to URL endpoint that begins with the value in this field. For example, `https://api.yelp.com`.
 
    Base URL ensures that the key remains secure and isn't leaked to random endpoints, even if another app illicitly acquires the API key registration ID and incorporates it into their own app. If the URL registered in the API key configuration isn't a prefix for the target endpoints defined in the OpenAPI spec, the call gets dropped.
 
