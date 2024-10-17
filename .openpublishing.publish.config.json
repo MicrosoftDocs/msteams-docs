@@ -40,13 +40,13 @@
     },
     {
       "path_to_root": "_msteams-samples-hello-world-nodejs",
-      "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
+      "url": "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs",
       "branch": "master",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_msteams-samples-hello-world-csharp",
-      "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
+      "url": "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp",
       "branch": "master",
       "branch_mapping": {}
     },
