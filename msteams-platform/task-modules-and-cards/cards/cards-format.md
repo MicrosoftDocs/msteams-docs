@@ -1169,19 +1169,19 @@ You can test formatting in your own cards by modifying this code.
 
 ## Star ratings in Adaptive Cards
 
-You can display a read-only star rating or collect star ratings from users in Adaptive Cards. The read-only star rating helps you convey user ratings or performance metrics while the rating input allows users to provide feedback or preferences in an interactive and visually appealing manner.
+You can display a read-only star rating with the `Rating` property or collect star ratings from users using the `Input.Rating` property in Adaptive Cards. The read-only star rating enables you to show user ratings or performance metrics, while the rating input allows users to provide feedback or preferences in a visually appealing manner.
 
 You can customize how star ratings appear in an Adaptive Card, including their size, color, and the number of stars, to fit the design and needs of your app.
 
 ### Rating
 
-The `Rating` property displays a read-only star rating on your Adaptive Card. You can display the number of ratings next to the star rating by defining the `count` property. The read-only star rating and rating input are visually different. This helps users distinguish between the read-only and clickable ratings.
+The `Rating` property shows a read-only star rating on your Adaptive Card. You can show the number of ratings next to the star rating by defining the `count` property. The read-only star rating and rating input are visually different. This helps users distinguish between read-only and clickable ratings.
 
-# [Desktop](#tab/desktop1)
+# [Desktop](#tab/desktop2)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on desktop.":::
 
-# [Mobile](#tab/mobile1)
+# [Mobile](#tab/mobile2)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on mobile.":::
 
@@ -1189,33 +1189,33 @@ The `Rating` property displays a read-only star rating on your Adaptive Card. Yo
 
 #### Rating schema
 
-| Property | Required | Type | Allowed values | Description |
+| Property | Required | Type | Description |
 |----|----|----|----|----|
-| `type` | Yes | String | `Rating` | Specifies the type of rating element. |
-| `value` | No | Number | | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
-| `count` | No | Number | | The number of ratings shown next to the star rating. |
-| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
-| `colour` | No | String | `Neutral`, `Marigold` | The color of the stars. |
-| `size` | No | String | `Medium`, `Large` | The size of the stars. |
-| `style` | No | String | `Default`, `Compact` | In compact mode, only one star is displayed. |
-| `id` | No | String | | Unique identifier for the rating element. |
-| `requires` | No | Object | | Dependencies for the rating element. |
-| `isVisible` | No | Boolean| | Determines if the element is visible. |
-| `separator` | No | Boolean| | Adds a separator line before the element. |
-| `height` | No | String | `Auto`, `Stretch` | Specifies the height of the element. |
-| `horizontalAlignment` | No | String | `Left`, `Center`, `Right` | Aligns the element horizontally. |
-| `spacing` | No | String | `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` | Specifies the spacing around the element. |
-| `targetWidth` | No | String | `VeryNarrow`, `Narrow`, `Standard`, `Wide` | Specifies the width of the element. |
+| `type` | ✔️ | String | Specifies the type of rating element. Allowed value: `Rating` |
+| `value` | | Number | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
+| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `count` | | Number | The number of ratings shown next to the star rating. |
+| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
+| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
+| `style` | | String | In compact mode, only one star is displayed. Allowed values: `Default`, `Compact` |
+| `id` | | String | Unique identifier for the rating element. |
+| `requires` | | Object | Dependencies for the rating element. |
+| `isVisible` | | Boolean| Determines if the element is visible. |
+| `separator` | | Boolean| Adds a separator line before the element. |
+| `height` | | String | Specifies the height of the element. `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
+| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
 
 ### Input.Rating
 
-The `Input.Rating` property displays a star rating that allows users to hover over the stars and select a rating. You can allow users to select half stars if you set the `allowHalfSteps` property to `true`.
+The `Input.Rating` property shows a star rating that allows users to hover over the stars and select a rating. You can allow users to select half stars if you set the `allowHalfSteps` property to `true`.
 
-# [Desktop](#tab/desktop2)
+# [Desktop](#tab/desktop3)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
 
-# [Mobile](#tab/mobile2)
+# [Mobile](#tab/mobile3)
 
 :::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
 
@@ -1223,26 +1223,26 @@ The `Input.Rating` property displays a star rating that allows users to hover ov
 
 #### Input.Rating schema
 
-| Property | Required | Type | Allowed Values | Description |
+| Property | Required | Type | Description |
 |----|----|----|----|----|
-| `type` | Yes | String | `Input.Rating` | Specifies the type of input element. |
-| `value` | No | Number | | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
-| `max` | No | Number | | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
-| `allowHalfSteps` | No | Boolean| | Determines if the user can select half stars. |
-| `size` | No | String | `Medium`, `Large` | The size of the stars. |
-| `colour` | No | String | `Neutral`, `Marigold` | The color of the stars. |
-| `id` | Yes | String | | Unique identifier for the input element. |
-| `requires` | No | Object | | Dependencies for the input element. |
-| `isVisible` | No | Boolean| | Determines if the element is visible. |
-| `separator` | No | Boolean| | Adds a separator line before the element. |
-| `height` | No | String | `Auto`, `Stretch` | Specifies the height of the element. |
-| `horizontalAlignment` | No | String | `Left`, `Center`, `Right` | Aligns the element horizontally. |
-| `spacing` | No | String | `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` | Specifies the spacing around the element. |
-| `targetWidth` | No | String | `VeryNarrow`, `Narrow`, `Standard`, `Wide` | Specifies the width of the element. |
-| `label` | No | String | | Label for the input element. |
-| `isRequired` | No | Boolean| | Marks the input element as required. |
-| `errorMessage` | No | String | | The error message to be displayed if validation fails. |
-| `valueChangedAction` | No | Action | | Action to perform when the value changes. |
+| `type` | ✔️ | String | `Input.Rating` | Specifies the type of input element. Allowed value: `Input.Rating` |
+| `id` | ✔️ | String | Unique identifier for the input element. |
+| `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
+| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `allowHalfSteps` | | Boolean| Determines if the user can select half stars. |
+| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
+| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
+| `requires` | | Object | Dependencies for the input element. |
+| `isVisible` | | Boolean| Determines if the element is visible. |
+| `separator` | | Boolean| Adds a separator line before the element. |
+| `height` | | String | Specifies the height of the element. `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
+| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `label` | | String | Label for the input element. |
+| `isRequired` | | Boolean| Marks the input element as required. |
+| `errorMessage` | | String | The error message to be displayed if validation fails. |
+| `valueChangedAction` | | Action | Action to perform when the value changes. |
 
 ### Example
 
