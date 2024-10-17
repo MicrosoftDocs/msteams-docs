@@ -138,7 +138,7 @@ Here are the examples to create deep link to browse within your app:
 
 **Query parameters**
 
-| Parameter name | Description with example |
+| Parameter name | Description |
 |:------------|:--------------|
 | `appId`&emsp; | The ID from Microsoft Teams admin center. <br> <br> **Example**: fe4a8eba-2a31-4737-8e33-e5fae6fee194 |
 | `entityId`&emsp; | The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the `entityId` as `page.id`. <br> <br> **Example**: Tasklist 123 |
