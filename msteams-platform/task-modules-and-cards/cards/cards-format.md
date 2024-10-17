@@ -965,8 +965,7 @@ In the following example, there are two primary actions and one secondary action
 ```
 
 > [!NOTE]
->
-> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
+> The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
 
 The following image is an example of overflow menu in a bot sent card and a message extension card:
 
