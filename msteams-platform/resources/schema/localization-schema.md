@@ -1,5 +1,5 @@
 ---
-title: Localize JSON schema reference
+title: Localize JSON Schema Reference
 description: Describes the localization schema supported by the localization file for Microsoft Teams using an example schema
 ms.topic: reference
 ms.localizationpriority: medium
