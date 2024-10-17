@@ -509,7 +509,6 @@ Describes an app capability (`element`) in an `elementRelationshipSet`.
 | `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. It maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
 | `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` capability. Use only for message extensions. |
 
-
 ### elementRelationshipSet.oneWayDependency
 
 Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
@@ -537,7 +536,7 @@ Defines one or more agents to Microsoft 365 Copilot (formerly known as `copilotE
 |---|---|---|---|---|
 |`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
 
-### declarativeAgent
+### declarativeAgents
 
 Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
@@ -591,13 +590,11 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ### staticTabs.requirementSet
 
-
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
-
 
 ## bots
 
@@ -665,7 +662,6 @@ An optional list of commands that your bot can recommend to users. The object is
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
-
 
 ## connectors
 
