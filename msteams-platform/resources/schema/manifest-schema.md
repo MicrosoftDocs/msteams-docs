@@ -476,7 +476,7 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 |---|---|---|---|---|
 |`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
 
-### declarativeAgent
+### declarativeAgents
 
 Represents a customization of Microsoft 365 Copilot, as defined by its manifest file.
 
