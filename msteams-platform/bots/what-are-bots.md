@@ -62,7 +62,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 ***Bot icon***: You can add or update the bot icon for the Teams app as follows. The updated bot icon becomes visible only after the user signs out and signs back into Teams. This is because the icons are cached:
 
 * [Microsoft Teams Store app](~/concepts/deploy-and-publish/appsource/publish.md): For Teams Store apps, bot icons are fetched from the app manifest. You can update the bot profile icon by updating it through the app manifest and republishing the app.
-    
+
     ```json
     
     {
@@ -98,6 +98,8 @@ You can use the Teams bot APIs to get information for members of a chat or team.
   * [**Bot Framework portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal, you can update the bot icon in the **SETTINGS** page.
 
     :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
 ## Add SSO authentication to your conversation bots
 
