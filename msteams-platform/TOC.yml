@@ -413,6 +413,112 @@
   - name: App caching for your tab app
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
+- name: Build bots - Revamp
+  items:
+  - name: Overview
+    href: bots/overview.md
+  - name: Let's build a bot
+    href: bots/build-a-bot.md
+    displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
+  - name: How can I bring my bot to Teams?
+    href: bots/bring-bot-to-teams.md
+  - name: Build an AI bot
+    items:
+    - name: What is Teams AI library?
+      href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
+      displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI
+    - name: Quick start guide
+      href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      displayName: custom engine agent, AI bot
+    - name: Let's build an AI bot
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+      displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop
+    - name: Understand AI bot concepts
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+      displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library bot logic, OpenAI
+    - name: Build custom engine agent
+      items: 
+      - name: Custom engine agent for Microsoft 365 
+        href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
+        displayName: AI bot, Teams AI library, custom agent
+      - name: Build custom engine agent user experience
+        href: bots/how-to/teams-conversational-ai/ai-ux.md
+        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+      - name: Build enhanced conversations
+        href: /bots/how-to/bot-messages-ai-generated-content.md
+        displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+      - name: Build custom engine agent using Teams Toolkit 
+        href: Teams-AI-library-tutorial.yml
+    - name: Teams AI library FAQs
+      href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md  
+  - name: Build a non-AI bot
+    items:
+    - name: Understand bot concepts
+      href: bots/bot-concepts.md
+      displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
+    - name: Send and receive messages
+      href: bots/build-conversational-capability.md
+      displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
+    - name: Messages in bot conversations
+      href: bots/build-conversational-capability.md
+    - name: Channel and group chat conversations with a bot
+      href: bots/how-to/conversations/channel-and-group-conversations.md
+      displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Conversation events in your Teams bot
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events      
+    - name: Send notifications
+      href: bots/build-notification-capability.md
+      displayName: Adapter, notifications
+    - name: Send proactive messages
+      href: bots/how-to/conversations/send-proactive-messages.md
+      displayName: conversationId, send message, bot framework, notification,
+    - name: Command bot in Teams
+      href: bots/how-to/conversations/command-bot-in-teams.md
+    - name: Workflow bot in Teams
+      href: bots/how-to/conversations/workflow-bot-in-teams.md
+      displayname: Jira, jira
+    - name: Format the bot messages
+      href: bots/how-to/format-your-bot-messages.md
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md
+    - name: Get Teams-specific context
+      href: bots/how-to/get-teams-context.md
+    - name: Channel and group chat conversations with a bot
+      href: bots/how-to/conversations/channel-and-group-conversations.md
+      displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Conversation events in your Teams bot
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events  
+    - name: Configure bot scope
+      href: bots/how-to/bot-configuration-experience.md
+      displayName: configuration settings, fetchTask, config/fetch, config/submit
+  - name: Optimize your bot with rate limiting in Teams
+    href: bots/how-to/rate-limit.md
+    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: Explore advanced bot capabilities
+    items:
+    - name: Teams bot API changes to fetch team or chat members
+      href: resources/team-chat-member-api-changes.md
+    - name: Calls and meetings bots
+      items:
+      - name: Overview
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+      - name: Real-time media calls and meetings
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+      - name: Register calls and meetings bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+        displayName: How Bot can create call, join meeting and transfer call
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notifications.md
+        displayName: Redirects for region affinity, GeoDNS resolution 
+      - name: Requirements and considerations for application-hosted media bots
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+        displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      - name: Supported media formats for bots
+        href: resources/media-formats.md
+        displayName: codec 
 - name: Build bots
   items:
   - name: Overview
