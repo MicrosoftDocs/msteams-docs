@@ -61,10 +61,6 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Build a personal tab with offline functionality
-        url: tabs/how-to/create-personal-tab.md#offline-tabs      
-      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
-        url: m365-apps/specify-runtime-requirements.md
       - text: Analyze your third-party app usage metrics in Developer Portal
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
@@ -81,6 +77,10 @@ landingContent:
         url: bots/how-to/format-ai-bot-messages.md 
       - text: Static tabs are generally available for chats, channels, and meetings
         url: tabs/what-are-tabs.md
+      - text: Preapproval of RSC permissions (Developer preview)
+        url: graph-api/rsc/preapproval-instruction-docs.md
+      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
+        url: concepts/build-and-test/apps-package.md#outline-icon
 
     - linkListType: reference
       links:

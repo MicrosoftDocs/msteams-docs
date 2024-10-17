@@ -9,13 +9,13 @@ ms.date: 05/23/2022
 
 Authentication is all about validating app users, and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app.
 
-Choose to add authentication for your app in one of the following ways:
+Choose to add authentication for your app in one of the two ways:
 
 * **Enable single sign-on (SSO) in a Teams app**:
-  SSO within Teams is an authentication method that uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+  SSO within Teams is an authentication method that uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
 * **Enable authentication using third-party OAuth provider**:
-  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them with access to your app. Microsoft Entra ID is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
+  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to your app. Microsoft Entra ID is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
 * **Enable SSO for nested apps**:
   You can use nested app authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside the supported Microsoft apps. Compared with existing full-trust authentication models and the on-behalf-of (OBO) flow, NAA provides better security and flexibility in app architecture, enabling the creation of rich, client-driven apps.
@@ -25,22 +25,6 @@ Choose to add authentication for your app in one of the following ways:
   > [!NOTE]
   > * NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
   > * NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
-
-* **Enable authentication for your API based message extensions**:
-
-  You can enable the following authentication methods for your API-based message extension:
-
-  * **API key authentication**: Implement API key authentication to use a key token known only to the app and the API service to authenticate requests. For more information, see [API key authentication](../../messaging-extensions/api-based-secret-service-auth.md)
-
-  * **SSO authentication**: Microsoft Entra is a comprehensive identity and access management solution that provides secure authentication for API-based message extensions. It ensures that only authenticated users can access your app’s features within Microsoft Teams. For more information, see [enable SSO for API-based message extensions](../../messaging-extensions/api-based-microsoft-entra.md).
-
-  * **None**: Update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
-
-    ```json
-        "authorization": {
-            "authType": "none"
-        }
-    ```
 
 ## Select authentication method
 

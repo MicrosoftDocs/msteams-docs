@@ -99,8 +99,6 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
     :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
 
-[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
-
 ## Add SSO authentication to your conversation bots
 
 You can add single sign-on authentication to your conversation bot using the following steps:
