@@ -30,9 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 September**
+**2024 October**
 
-***September 13, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
+***October 17, 2024***: [Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md)
 
 :::column-end:::
 :::row-end:::
@@ -46,6 +46,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app susbscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Distribute your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
@@ -416,7 +417,7 @@ Developer preview is a public program that provides early access to unreleased T
 **2024 October**
 
 * ***October 17, 2024***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts.](m365-apps/specify-runtime-requirements.md)
-* ***October 17, 2024***: [`copilotExtensions` renamed to `copilotAgents` in app manifest](./resources/schema/manifest-schema-dev-preview.md#copilotagents)
+* ***October 17, 2024***: [copilotExtensions renamed to copilotAgents in developer preview app manifest.](./resources/schema/manifest-schema-dev-preview.md#copilotagents)
 
 :::column-end:::
 :::row-end:::
