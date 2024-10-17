@@ -505,9 +505,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 **Optional** &ndash; Array
 
-Defines a set of tabs that can be pinned by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. However, the pinned tabs can be reordered by adding the details of the tab in the same desired order. For more information, see [Reorder static personal tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs).
-
-Similarly, this property can also be used to configure the default landing scope when an app has both the capabilities, static tabs and bot. For more information, see [Configure default landing scope](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-scope).
+Defines a set of tabs that can be pinned by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience.
 
 This item is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
