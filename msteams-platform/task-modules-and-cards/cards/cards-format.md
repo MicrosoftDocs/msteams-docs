@@ -1225,7 +1225,7 @@ The `Input.Rating` property shows a star rating that allows users to hover over 
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `type` | ✔️ | String | `Input.Rating` | Specifies the type of input element. Allowed value: `Input.Rating` |
+| `type` | ✔️ | String | Specifies the type of input element. Allowed value: `Input.Rating` |
 | `id` | ✔️ | String | Unique identifier for the input element. |
 | `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
 | `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
