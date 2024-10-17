@@ -22,16 +22,16 @@ Here are some of the scenarios where you can use a deep link:
 * **Bot and connector**: You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items.
 * **Navigate to specific page**: You can create deep links that allow users to navigate to specific pages within your app.
 * **Custom app**: You can generate deep links for a custom app. However, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app.
-* **For mobile**: You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+* **For mobile**: You can also create a deep link to an app for mobile after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ## Deep link to open an application install dialog
 
 Deep links allow app users to open an application install dialog to know any information about the app or install it in different contexts. You can create a deep link to an application in the following ways:
 
-* [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id)
+* [Configure deep link manually using the app ID](#configure-deep-link-manually-using-the-app-id)
 * [Configure deep link using TeamsJS](#configure-deep-link-using-teamsjs)
 
-### Configure deep link manually using your app ID
+### Configure deep link manually using the app ID
 
 With deep link, you can open an app installation dialog directly from your Teams client using the app ID.
 
@@ -61,7 +61,7 @@ For more information, see [how to find ID based on the app manifest ID](/graph/a
 
 ### Configure deep link using TeamsJS
 
-Applications can use TeamsJS library to initiate the app install dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app install dialog using TeamsJS within your app:
+Applications can use the Microsoft Teams JavaScript client library (TeamsJS) to initiate the app install dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app install dialog using TeamsJS within your app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -89,7 +89,7 @@ For more information, see [appInstallDialog module](/javascript/api/@microsoft/t
 
 ## Deep link to browse within your app
 
-App users can browse through content in Teams from your tab using TeamsJS. You can use a deep link to browse within your app if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. In a few instances, navigation can also be accomplished using TeamsJS and we recommend you to use typed capabilities of TeamsJS wherever possible.
+App users can browse content in Teams from your tab using TeamsJS. You can use a deep link to browse within your app if your tab needs to connect users with other content in Teams, such as a channel, message, another tab, or to open a scheduling dialog. In a few instances, navigation can also be accomplished using TeamsJS, and we recommend using the typed capabilities of TeamsJS wherever possible.
 
 You can configure deep links to browse within your app in the following ways:
 
@@ -114,33 +114,23 @@ For creating a deep link in a bot, connector, or message extension card, use the
 
 Here are the examples to create deep link to browse within your app:
 
-* Static (personal) tab
-    
-    Example of deep link to a static (personal) tab itself:
+* Deep link to a static (personal) tab itself:
         
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
     
-* Task item in static (personal) tab
-    
-    Example of deep link to a task item within the static (personal) tab:
+* Deep link to a task item within the static (personal) tab:
         
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
     
-* Configurable tab
-    
-    Example of deep link to a configurable tab itself:
+* Deep link to a configurable tab itself:
         
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
     
-* Task item in configurable tab
-    
-    Example of deep link to a task item within the configurable tab:
+* Deep link to a task item within the configurable tab:
         
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
     
-* Tab app
-    
-    Example of deep link to a tab app added to a meeting or group chat:
+* Deep link to a tab app added to a meeting or group chat:
         
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
@@ -395,7 +385,7 @@ You can invoke Stageview through a deep link from your tab by wrapping the deep 
 
 ## Best practices
 
-* Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
+* Deep links work properly only if the tab was configured using the library v0.4 or later, as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 * In Microsoft Windows, Teams can't handle deep links exceeding 2048 characters due to the `INTERNET_MAX_URL_LENGTH` limit in Windows ShellExecuteEx API. 
 * When creating a deep link, ensure that the path to the Teams client and other metadata fit within this limit. 
 * If your deep link contains large data, include a unique identifier in the link that your app can use to fetch the necessary data from your backend service.
