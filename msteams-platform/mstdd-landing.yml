@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Tab app caching is generally available for chats, meetings, and channels
+        url: tabs/how-to/app-caching.md
       - text: Build a personal tab with offline functionality
         url: tabs/how-to/create-personal-tab.md#offline-tabs      
       - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
@@ -78,9 +80,7 @@ landingContent:
       - text: Extend bot-based message extension plugins to Teams meetings
         url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
       - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
-        url: bots/how-to/format-ai-bot-messages.md 
-      - text: Static tabs are generally available for chats, channels, and meetings
-        url: tabs/what-are-tabs.md
+        url: bots/how-to/format-ai-bot-messages.md
 
     - linkListType: reference
       links:

@@ -32,7 +32,8 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 17, 2024***: [Build a personal tab with offline functionality.](tabs/how-to/create-personal-tab.md#offline-tabs)
+* ***October 24, 2024***: [Tab app caching is generally available for chats, meetings, and channels.](tabs/how-to/app-caching.md)
+* ***October 17, 2024***: [Build a personal tab with offline functionality.](tabs/how-to/create-personal-tab.md#offline-tabs)
 
 :::column-end:::
 :::row-end:::
