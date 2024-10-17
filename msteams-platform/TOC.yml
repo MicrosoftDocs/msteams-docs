@@ -371,7 +371,7 @@
     displayName: clickjacking, device permissions for tabs
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs, channel, or group custom tab
+    displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
@@ -523,15 +523,14 @@
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
+    expanded: false 
     items:
     - name: Overview
       href: messaging-extensions/api-based-overview.md
       displayName: OpenAPI Description, Search, single parameter, search based message extension
-    - name: Build API-based message extension
-      href: messaging-extensions/build-api-based-message-extension.md
-      display name: Response rendering template, OpenAPI Description, Search, single parameter
-    - name: Create API-based message extension
-      href: messaging-extensions/create-api-message-extension.md  
+    - name: Create API-based message extensions
+      href: messaging-extensions/create-api-message-extension.md
+      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
@@ -782,6 +781,17 @@
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+  - name: Enable authentication for API-based message extensions
+    items:
+    - name: Overview
+      href: messaging-extensions/build-api-based-message-extension.md
+      display name: security, data privacy, secret service
+    - name: Enable API key authentication
+      href: messaging-extensions/api-based-secret-service-auth.md
+      display name: Secret key, API key registration
+    - name: Enable SSO for API based message extensions
+      href: messaging-extensions/api-based-microsoft-entra.md
+      display name: API key, API key registration, access token, register API key, SSO
   - name: Enable nested app authentication
     href: concepts/authentication/nested-authentication.md
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
@@ -842,6 +852,9 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Plan your app experience across Microsoft 365 hosts
+    href: m365-apps/specify-runtime-requirements.md
+    displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
     - name: Enable a Teams personal tab for Microsoft 365
@@ -882,7 +895,6 @@
       - name: Quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
-
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs

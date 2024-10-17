@@ -33,8 +33,7 @@ Teams platform features that are available to all app developers.
 **2024 October**
 
 * ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
-
-* ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent)
+* ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
 
 :::column-end:::
 :::row-end:::
@@ -48,7 +47,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.| Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) | 
+| 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app.| Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app subscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Distribute your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
@@ -63,7 +62,7 @@ Teams platform features that are available to all app developers.
 | 21/05/2024 | Introduced a step-by-step guide to build a custom engine agent to chat with your data using the Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom engine agent > [Build custom engine agent using Teams Toolkit](teams-ai-library-tutorial.yml)|
 | 21/05/2024 | Use Live Share sessions to enable seamless collaboration in Teams meetings, chats, and channels. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share collaborative contexts](apps-in-teams-meetings/teams-live-share-overview.md#live-share-collaborative-contexts)|
 |17/05/2024|Deploy Teams app to container service.|Tools and SDKs > Teams Toolkit for Visual Studio Code > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md)|
-|12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
+|12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md)|
 |12/04/2024|Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards.|[App manifest](resources/schema/manifest-schema.md)|
 |12/04/2024|Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.|App manifest > [extensions.requirements](resources/schema/manifest-schema.md#extensionsrequirements)|
 |12/04/2024|Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information|App manifest > [dashboardCards](resources/schema/manifest-schema.md#dashboardcards)|
