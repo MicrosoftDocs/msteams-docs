@@ -1,5 +1,5 @@
 ---
-title: App templates for Microsoft Teams
+title: Open-source App Template Code Samples
 description: Learn about app templates for Teams that includes Microsoft 365 Learning Pathways and Company Communicator with deployment and installation instructions.
 ms.topic: reference
 ms.localizationpriority: medium

@@ -1,7 +1,7 @@
 ---
 title: Extend Personal Tab to Microsoft 365
 description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
-ms.date: 02/28/2023
+ms.date: 10/17/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial
@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Extend a Teams personal tab across Microsoft 365
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications too. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook and Microsoft 365 app (desktop and web experiences), and the Microsoft 365 for Android app too.
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. Personal tabs can light up within other Microsoft 365 applications too. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run across Microsoft 365 applications.
 
 Updating your Teams personal app to run in other Microsoft 365 applications involves these steps:
 
@@ -108,7 +108,9 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
+You can use Teams Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
 ## Update TeamsJS references
 
@@ -327,7 +329,6 @@ Teams Toolkit (`F5`) doesn't support debugging Android apps in Microsoft 365. He
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365 app) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Sample static tab (Microsoft 365 app) | Demonstrates SSO authentication and the TeamsJS library capabilities as available in different hosts. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 | Northwind Orders app | Demonstrates how to use the TeamsJS library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step

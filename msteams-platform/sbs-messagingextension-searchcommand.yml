@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build search based message extension
 metadata:
-  title: Build search based message extension
+  title: Build Search-based Message Extension
   description: Learn how to build and add a search based message extension for Microsoft Teams, which allows users to search external systems directly from message area.
   audience: Developer
   level: Beginner

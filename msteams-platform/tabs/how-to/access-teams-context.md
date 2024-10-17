@@ -1,5 +1,5 @@
 ---
-title: Get context for your tab
+title: Get Contextual Information for Tabs
 description: Learn to context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to

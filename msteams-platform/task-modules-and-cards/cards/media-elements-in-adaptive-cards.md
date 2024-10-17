@@ -1,5 +1,5 @@
 ---
-title: Media Elements in Adaptive Card
+title: Add Audio/Video Clips in Adaptive Cards
 author: v-sdhakshina
 description: Learn how the media elements are supported in the Adaptive Card and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high

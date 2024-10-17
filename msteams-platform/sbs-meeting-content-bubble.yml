@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Generate in-meeting notifications
 metadata:
-  title: Generate in-meeting notifications
+  title: In-meeting Notification for Meeting Tab
   description: In this module, learn how to create and add in-meeting notifications app and interact with the app using a bot in Microsoft Teams.
   audience: Developer
   level: Beginner

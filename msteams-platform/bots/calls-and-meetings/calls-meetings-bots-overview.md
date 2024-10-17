@@ -1,5 +1,5 @@
 ---
-title: Calls and online meetings bots
+title: Bots for Teams Calls and Online Meeting
 description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -19,6 +19,18 @@ To use these Graph APIs in a Teams app, you create a bot and specify some additi
 In addition, the Real-time Media Platform enables bots to interact with Teams calls and meetings using real-time voice, video, and screen sharing. A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with few extra features used to register the bot.
 
 The Teams [app manifest](../../resources/schema/manifest-schema.md#bots) with two more settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams support only a specific set of media formats for audio and video content.
+
+## Functions of calls and online meeting bots
+
+Bots can perform the following functions by calling Microsoft Graph APIs for calls and online meetings:
+
+| Capabilities | Functions |
+| ------| -------------|
+| Core capabilities | &bull; Initiate a one-to-one call between two users. <br> &bull; Initiate a group call with more than two users (up to 350 users). <br> &bull; Upgrade a one-to-one call with two users into a group call with more than two users. <br> &bull; Join a group call after it starts. <br> &bull; Invite a Voice over Internet Protocol (VoIP) participant to join an ongoing group call. |
+| Mid-call control | &bull; Turn the video on or off. <br> &bull; Mute or unmute the microphone. <br> &bull; Switch between cameras. <br> &bull; Put the call on hold or resume locally. <br> &bull; Active speaker. <br> &bull; Choose speaker for calls. <br> &bull; Choose microphone for calls. <br> &bull; Show the state of a participant, such as idle, early media, connecting, connected, on hold, in lobby, or disconnected. <br> &bull; Show the state of a call, such as early media, incoming, connecting, ringing, connected, on hold, disconnecting, or disconnected. <br> &bull; Show if a participant is on mute. <br> &bull; Show the reason why a participant left a call. |
+| Screen sharing | &bull; Share the entire screen from within the app. <br> &bull; Share a specific app (from the list of running apps). <br> &bull; Share a web browser tab from the list of open tabs. <br> &bull; Share system audio during screen sharing. <br> &bull; Participant can view remote screen share. |
+| Roster | &bull; List the participants in a call. <br> &bull; Remove a participant from a call. |
+| Public Switched Telephone Network (PSTN) | &bull; Place a one-to-one call with a PSTN participant. <br> &bull; Place a group call with PSTN participants. <br> &bull; Upgrade a one-to-one call with a PSTN participant into a group call. <br> &bull; Dial-out from a group call as a PSTN participant. <br> &bull; Support for early media. |
 
 Now, you must understand some core concepts, terminology, and conventions.
 
@@ -97,11 +109,9 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
-* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Microsoft Graph SDK overview](/graph/sdks/sdks-overview)
 * [Add Graph permissions](registering-calling-bot.md#add-graph-permissions)
-* [Develop calling and online meeting bots on your local PC](debugging-local-testing-calling-meeting-bots.md)
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
-* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
 * [Teams recording policy](/microsoftteams/teams-recording-policy)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

@@ -1,5 +1,5 @@
 ---
-title: Create and send messages
+title: Create & Send Actionable Messages
 author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
@@ -9,9 +9,7 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
-> [!IMPORTANT]
->
-> The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 

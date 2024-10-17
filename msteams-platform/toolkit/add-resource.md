@@ -66,5 +66,5 @@ You can add cloud resources in the following ways:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
-* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)

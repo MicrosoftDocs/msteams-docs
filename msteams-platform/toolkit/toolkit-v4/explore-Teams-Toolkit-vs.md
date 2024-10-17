@@ -1,5 +1,5 @@
 ---
-title: Explore Teams Toolkit in Visual Studio
+title: Explore Teams Toolkit UI & Features
 author: zyxiaoyuer
 description: Learn about Teams Toolkit UI in Visual Studio, and functions such as app dependencies, manifest update, and authentication code to build and develop your app.
 ms.author: zhany
@@ -62,4 +62,4 @@ After you've created your Teams app project, you can use the following options t
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project-vs.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
-* [Prepare to build apps using Teams Toolkit](build-environments-v4.md)
+* [Prepare to build apps using Teams Toolkit](build-environments-vs.md)

@@ -1,5 +1,5 @@
 ---
-title: Use external OAuth providers  
+title: Support Third Party OAuth Providers
 description: Learn how to use external OAuth providers, add authentication to external browsers, and about the authenticate API parameters.
 ms.topic: how-to
 ms.localizationpriority: high

@@ -1,5 +1,5 @@
 ---
-title: Bots and SDKs
+title: Tools and Bot Framework SDKs for Bots
 author: surbhigupta
 description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
 ms.topic: overview
@@ -75,7 +75,7 @@ Bots work better in a channel in the following cases:
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
 
-In the cases where bots work better in a channel also work better in a group chat.
+Bots that work better in a channel also work better in a group chat.
 
 ### In a one-to-one chat
 
@@ -228,7 +228,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```javascript
 this.onMessage(async (context, next) => {
     // MessageFactory.text(): Specifies the type of text data in a message attachment.
-    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await context.sendActivity(MessageFactory.text("Your message is: " + context.activity.text));
     await next();
 });
 ```
@@ -240,7 +240,7 @@ this.onMessage(async (context, next) => {
 |Sample name | Description | .NETCore | Node.js | Python| Manifest
 |----------------|-----------------|--------------|----------------|-------|-------|
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
-| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Bot samples | Set of bot framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 

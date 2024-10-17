@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab or group tab
+title: How to Create Channel/Group Tab
 description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
@@ -74,7 +74,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
-    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and must be used only if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
 * **What do you want to add to your project?**
 
@@ -655,7 +655,7 @@ Here's a list of tools you require for building and deploying your app.
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls - all in one place. |
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 ## Prepare development environment
 
