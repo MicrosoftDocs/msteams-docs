@@ -455,6 +455,7 @@
     items:
     - name: Understand bot concepts
       href: bots/bot-concepts.md
+      displayName: Microsoft Bot Framework SDK, 
     - name: Send and receive messages
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
