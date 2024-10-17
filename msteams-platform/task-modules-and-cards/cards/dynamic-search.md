@@ -448,18 +448,18 @@ The `Action.ResetInputs` property resets the values of the inputs in an Adaptive
 
 | Property| Type | Required | Description |
 |---|---|---|---|
-| `valueChangedAction` | Action.ResetInputs | Yes | Contains the `Action.ResetInputs` property |
-| `Action.ResetInputs` | String | Yes | Resets the input values |
-| `targetInputIds` | Array of strings | No | Defines the IDs of the input values to be reset |
-| `id` | String | No | A unique identifier for the action |
-| `requires` | Object | No | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered, and its fallback is rendered if provided. |
-| `fallback` | Object or String | No | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
-| `iconUrl` | String | No | A URL to an image to be displayed on the left of the action's title. Data URIs are supported. |
-| `isEnabled` | Boolean | No | Defines the `enabled` or `disabled` state of the action. A user can't select a disabled action. If the action is represented as a button, the button's style reflects this state. |
-| `mode` | String | No | Defines if the action is primary or secondary. Allowed values: `primary`, `secondary` |
-| `style` | String | No | Defines the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive`, or `destructive` |
-| `title` | String | No | The title of the action, as it appears on a button. |
-| `tooltip` | String | No | The tooltip text to display when a user hovers over the action. |
+| `valueChangedAction` | Action.ResetInputs | ✔️ | Contains the `Action.ResetInputs` property. |
+| `Action.ResetInputs` | String | ✔️ | Resets the input values. |
+| `targetInputIds` | Array of strings | | Defines the IDs of the input values to be reset. |
+| `id` | String | | A unique identifier for the action. |
+| `requires` | Object | | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered, and its fallback is rendered if provided. |
+| `fallback` | Object or String | | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `iconUrl` | String | | A URL to an image to be displayed on the left of the action's title. Data URIs are supported. |
+| `isEnabled` | Boolean | | Defines the `enabled` or `disabled` state of the action. A user can't select a disabled action. If the action is represented as a button, the button's style reflects this state. |
+| `mode` | String | | Defines if the action is primary or secondary. Allowed values: `primary`, `secondary` |
+| `style` | String | | Defines the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive`, or `destructive` |
+| `title` | String | | The title of the action, as it appears on a button. |
+| `tooltip` | String | | The tooltip text to display when a user hovers over the action. |
 
 ### Example
 
