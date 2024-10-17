@@ -38,7 +38,7 @@ After you handle rate limits for bots, you can handle `HTTP 429` responses using
 
 ## Handle `HTTP 429` responses
 
-In general, you must take simple precautions to avoid receiving `HTTP 429` responses. For example, avoid issuing multiple requests to the same personal or channel conversation. Instead, create a batch of the API requests.
+You must take simple precautions to avoid receiving `HTTP 429` responses. For example, avoid issuing multiple requests to the same personal or channel conversation. Instead, create a batch of the API requests.
 
 Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
 
