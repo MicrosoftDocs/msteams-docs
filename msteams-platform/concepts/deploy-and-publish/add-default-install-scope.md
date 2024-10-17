@@ -29,7 +29,7 @@ To configure the default install scope in your app manifest:
 
 ## Configure your app's default landing scope
 
-If your app supports both bot and static tabs in personal scope, you can configure the default landing scope for your app. App launch from personal flyout, pinned apps, deep links, and app-store acquisition leads to the default landing scope.
+If your app supports both the app capabilities, bot and static tabs in personal scope, you can configure the default landing scope for your app. App launch from personal flyout, pinned apps, deep links, and app-store acquisition leads to the default landing scope.
 
 To configure the default landing scope in your app manifest:
 
@@ -37,8 +37,8 @@ To configure the default landing scope in your app manifest:
 2. To configure bot as the default landing scope, 
     1. Add the below properties as the first object of the array.
         1. `entityId` with reserved keyword `conversations`.
-        2. `scopes` with the value `personal`.
-    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs)
+        2. `scopes` as an object with value `personal`.
+    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) as the next object.
     
     ```json
     {
@@ -59,7 +59,7 @@ To configure the default landing scope in your app manifest:
     1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) as the first object of the array.
     1. Add the below properties as the next object.
         1. `entityId` with reserved keyword `conversations`.
-        2. `scopes` with the value `personal`.
+        2. `scopes` as an object with value `personal`.
 
     ```json
     {
