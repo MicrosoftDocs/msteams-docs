@@ -57,7 +57,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
-| Concise individual interactions | @mention to bot  | Q&A bots |
+| Concise individual interactions | @mention to bot | Q&A bots |
 | @mention to bot | Similar to channel | Bots that tell jokes and take notes |
 
 ### In a channel
