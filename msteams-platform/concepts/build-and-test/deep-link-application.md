@@ -16,17 +16,17 @@ Deep links in Microsoft Teams are powerful tools that allow users to navigate di
 
 ## Deep link scenarios
 
-Here are some of the scenarios where you can use deep link:
+Here are some of the scenarios where you can use a deep link:
 
 * **App installation**: You can use deep links that allow users to know more about an app and install it in different scopes.
 * **Bot and connector**: You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items.
-* **Navigate to specific page**: You can create deep links for the app users to go to specific pages within your app.
+* **Navigate to specific page**: You can create deep links that allow users to navigate to specific pages within your app.
 * **Custom app**: You can generate deep links for a custom app. However, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app.
 * **For mobile**: You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
-## Deep link to open application install dialog
+## Deep link to open an application install dialog
 
-Deep links allow app users to open an application install dialog to know any information about the app or install it in different contexts. You can create a deep link to application in the following ways:
+Deep links allow app users to open an application install dialog to know any information about the app or install it in different contexts. You can create a deep link to an application in the following ways:
 
 * [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id)
 * [Configure deep link using TeamsJS](#configure-deep-link-using-teamsjs)
@@ -89,7 +89,7 @@ For more information, see [appInstallDialog module](/javascript/api/@microsoft/t
 
 ## Deep link to browse within your app
 
-App users can browse through content in Teams from your tab using TeamsJS. You can use a deep link to browse within your app if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. In few instances, navigation can also be accomplished using TeamsJS and we recommend to use typed capabilities of TeamsJS wherever possible.
+App users can browse through content in Teams from your tab using TeamsJS. You can use a deep link to browse within your app if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. In a few instances, navigation can also be accomplished using TeamsJS and we recommend you to use typed capabilities of TeamsJS wherever possible.
 
 You can configure deep links to browse within your app in the following ways:
 
@@ -174,7 +174,7 @@ Here are the examples to create deep link to browse within your app:
 
 #### Configure deep link to a tab using TeamsJS
 
-You can configure deep links in your app through TeamsJS to allow the app users browse different pages within your app. The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
+You can configure deep links in your app through TeamsJS to allow users to browse different pages within your app. The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
 
 1. The target that the deep link points to.
 1. The host where the Teams app is running.
@@ -240,7 +240,7 @@ You can replace the placeholder values with your actual `appId` and `tenantId` t
 
 ---
 
-## Share deep link for a tab
+## Share a deep link for a tab
 
 You can share deep links to entities in Teams apps to navigate to the content and information within your tab app. For example, if your tab app contains a task list, team members can create and share links to individual tasks. When the app user selects the link, it navigates to your tab that focuses on the specific item.
 
@@ -391,7 +391,7 @@ A deep link doesn't open in the meeting side panel in the following scenarios:
 
 ## Deep link to invoke Stageview
 
-You can invoke Stageview through deep link from your tab by wrapping the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. The `openMode` property defined in the API determines the Stageview response. For more information, see [invoke Stageview through deep link](../../tabs/tabs-link-unfurling.md#invoke-from-deep-link).
+You can invoke Stageview through a deep link from your tab by wrapping the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. The `openMode` property defined in the API determines the Stageview response. For more information, see [invoke Stageview through deep link](../../tabs/tabs-link-unfurling.md#invoke-from-deep-link).
 
 ## Best practices
 
