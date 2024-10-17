@@ -32,7 +32,8 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 17, 2024***: [Build a personal tab with offline functionality.](tabs/how-to/create-personal-tab.md#offline-tabs)
+* ***October 31, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
+* ***October 17, 2024***: [Build a personal tab with offline functionality.](tabs/how-to/create-personal-tab.md#offline-tabs)
 
 :::column-end:::
 :::row-end:::
