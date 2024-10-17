@@ -2,7 +2,7 @@
 title: Troubleshoot your app
 description: Learn about different issues or error scenarios while building apps for Microsoft Teams and how to troubleshoot the issues for bots, tabs, and app package.
 keywords: teams apps development troubleshooting
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: troubleshooting
 ms.date: 07/09/2018
 ---
@@ -11,9 +11,9 @@ ms.date: 07/09/2018
 
 ## To troubleshoot tabs
 
-### Access DevTools
+### Access Dev Tools
 
-You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
+You can open [Dev Tools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
 
 ### Blank tab screen
 
