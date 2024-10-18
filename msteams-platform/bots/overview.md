@@ -41,7 +41,7 @@ This article guides you through the developer journey, showcasing how a bot inte
 
 Let's see how a basic chatbot works at runtime.
 
-[**TBD**: A flow diagram that shows how a chatbot interacts with a user followed by explanation.]
+:::image type="content" source="../assets/images/bots/chatbot-dev-ux.png" alt-text="Image shows developer experience for a chatbot.":::
 
 ### Understand bot basics
 
