@@ -65,7 +65,7 @@ To set up the pipeline with GitHub, follow these steps:
       build:
         runs-on: ubuntu-latest
         env:
-          TEAMSAPP_CLI_VERSION: "3.0.3-alpha.2c2c942b7.0"
+          TEAMSAPP_CLI_VERSION: "3.0.4"
           # Add extra environment variables here so that teamsapp cli can use them.
     
         steps:
@@ -120,7 +120,7 @@ To set up the pipeline with GitHub, follow these steps:
       build:
         runs-on: ubuntu-latest
         env:
-          TEAMSAPP_CLI_VERSION: "3.0.3-alpha.2c2c942b7.0"
+          TEAMSAPP_CLI_VERSION: "3.0.4"
           # Add extra environment variables here so that teamsapp cli can use them.
     
         steps:
@@ -243,7 +243,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
       vmImage: ubuntu-latest
     
     variables:
-      TEAMSAPP_CLI_VERSION: 3.0.3-alpha.2c2c942b7.0
+      TEAMSAPP_CLI_VERSION: 3.0.4
     
     steps:
       - task: NodeTool@0
@@ -288,7 +288,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
       vmImage: ubuntu-latest
     
     variables:
-      TEAMSAPP_CLI_VERSION: 3.0.3-alpha.2c2c942b7.0
+      TEAMSAPP_CLI_VERSION: 3.0.4
     
     steps:
       - task: NodeTool@0
