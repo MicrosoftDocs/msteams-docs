@@ -330,6 +330,8 @@ Being Channel Ready places, ISVs in the best position to be successful matched a
 
 </details>
 
+</br>
+
 <details>
 
 <summary>Are partners able to provide a minimum number of licenses available to purchase as part of a subscription?</summary>
@@ -340,6 +342,8 @@ Yes. For more information, see [subscription purchase experience](#subscription-
 
 </details>
 
+</br>
+
 <details>
 
 <summary>How can subscribers upgrade, downgrade, or cancel their subscriptions?  Can they upgrade from monthly to annual?</summary>
@@ -349,6 +353,8 @@ Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more infor
 </br>
 
 </details>
+
+</br>
 
 <details>
 
@@ -362,5 +368,5 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 
 ## See also
 
-[Monetize your app](monetize-overview.md)
-[ISV to customer private offers](/partner-center/marketplace-offers/isv-customer)
+* [Monetize your app](monetize-overview.md)
+* [ISV to customer private offers](/partner-center/marketplace-offers/isv-customer)
