@@ -249,10 +249,10 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
    ```
 
-1. Type `teamsfx new` in the terminal
+1. Type `teamsapp new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -276,7 +276,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsfx provision --env dev```
+   ```teamsapp provision --env dev```
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
 1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
@@ -285,7 +285,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```Preview the app: teamsfx preview --env dev```
+   ```Preview the app: teamsapp preview --env dev```
 
  A new browser window with Teams web client opens. You can add your app to Teams.
 
