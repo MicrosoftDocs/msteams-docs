@@ -39,7 +39,7 @@ This article guides you through the developer journey, showcasing how a bot inte
 
 ### Bots - the developer experience
 
-Let's see how a basic chatbot works at runtime.
+Let's consider an example: As a developer, you must build a bot to automate repetitive tasks to enhance efficiency and user engagement. The following image shows how a developer can build a bot app to meet the user requirements:
 
 :::image type="content" source="../assets/images/bots/chatbot-dev-ux.png" alt-text="Image shows developer experience for a chatbot.":::
 
