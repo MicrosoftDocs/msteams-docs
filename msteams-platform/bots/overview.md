@@ -13,7 +13,7 @@ A bot is a software application that performs automated tasks by interacting wit
 
 You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education,finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
 
-## How does building a bot benefit me?
+## What are the benefits of a bot?
 
 Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7 without getting tired, and they can handle multiple tasks at once. Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
@@ -60,24 +60,27 @@ For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot
 You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams Toolkit to build these capabilities in your bot.
 
 * **AI bot**:
-  An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more.
+  An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more. You can build the following types of bots:
 
-  For more information, see build a custom copilot to chat with your data using Teams AI library and Teams Toolkit.
+  * Teams AI bot: Teams AI bot is integrated within Microsoft Teams and utlilizes Microsoft Teams AI library and Natural Language Processing (NLP).
+  * Custom engine agent for Microsoft 365 Copilot: This is a custom engine copilot is an AI-powered bot. It is build using custom AI models. You can integrate a custom engine copilot for Microsoft 365 Copilot with various systems.
+
+  For more information, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
 
 * **Notification bot**:
   A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as, sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
 
-  For more information, see build notification bot with JavaScript.
+  For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 
 * **Workflow bot**:
   You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
 
-  For more information, see build command bot with JavaScript.
+  For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
 * **Conversational bot**:
   A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
 
-  For more information, see create Teams conversation bot.
+  For more information, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 
 ## How can I learn more?
 
