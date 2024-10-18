@@ -36,7 +36,7 @@ A plugin allows Microsoft 365 Copilot to interact directly with third-party data
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 
-Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offer a clear and concise summary of the app’s features:
+Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offers a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
 * **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
@@ -318,7 +318,7 @@ To create a bot-based message extension using Developer Portal for Teams, follow
 1. Select **+ New apps**.
 1. In the **Add apps** page, update the name and select the manifest version as **Public developer preview (devPreview)**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the messaging extension option in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
@@ -333,7 +333,7 @@ To create a bot-based message extension using Developer Portal for Teams, follow
 
    1. If you don't have a Bot ID, you can select **Create a new bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for message extension app feature in Developer Portal for Teams.":::
 
 1. Select **Save**.
 
@@ -356,13 +356,13 @@ To create a bot-based message extension using Developer Portal for Teams, follow
 
 A bot-based search message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the message extension created and listed in the App features page in Developer Portal for Teams.":::
 
-To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
+To test your bot-based message extension created in Developer Portal for Teams, you can use the following methods:
 
 * **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
-* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
+* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to Teams and test the message extension.
 
 ---
 
