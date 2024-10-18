@@ -79,7 +79,7 @@ conceptualContent:
           text: Extend Teams apps across Microsoft 365
         - url: /microsoft-365-copilot/extensibility/
           itemType: concept
-          text: Extend Microsoft Copilot for Microsoft 365
+          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities

@@ -26,18 +26,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps | Traditional Teams Microsoft Entra SSO | NAA |
-| --- | --- | --- |
-| Expose redirect URI | ✔️ | ✔️ SPA redirect URI necessary |
-| Register API in Microsoft Entra ID | ✔️ |  |
-| Define a custom scope in Microsoft Entra ID | ✔️ |  |
-| Authorize Teams client apps | ✔️ |  |
-| Revise app manifest (previously called Teams app manifest) | ✔️ | Helps IT admins to provide consent through Teams admin center. |
-| Acquire access token through TeamsJS SDK | ✔️ |  |
-| Solicit user consent for more permissions | ✔️ |  |
-| Conduct an OBO exchange on the server | ✔️ |  |
+| Steps required for development | Traditional Teams Entra SSO | NAA |
+| --- |:---:|:---:|
+| Expose redirect URI | Required | Required |
+| Register API in Microsoft Entra ID | Required |  |
+| Define a custom scope in Microsoft Entra ID | Required |  |
+| Authorize Teams client apps | Required |  |
+| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
+| Acquire access token through TeamsJS SDK | Required |  |
+| Solicit user consent for more permissions | Required |  |
+| Conduct an OBO exchange on the server | Required |  |
 
-The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
+* The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
 ## Use cases for NAA
 
@@ -72,26 +72,27 @@ If your add-in requires additional app registration beyond NAA and SSO, see [reg
 To configure nested app authentication, your app must actively configure a redirect URI for your app. The redirect URI indicates to the Microsoft identity platform that your app can be brokered by supported hosts. The redirect URI of the app must be of type **Single-page application** and conform to the following scheme:
 
 ```
-brk-<broker_application_id>://<your_domain>
+brk-multihub://<your_domain>
 ```
 
 Where,
 
-* <broker_application_id> is the alias of the broker or brokers you want to trust
+* `brk-multihub` enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
 * <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
-If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
+<!--If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
 ```http
 brk-multihub://<your_domain>
 ```
-
+-->
 Your domain must include only the origin and not its subpaths. For example:
 
 ✔️ brk-multihub://myapp.teams.microsoft.com <br>
 ❌ brk-multihub://myapp.teams.microsoft.com/go
 
-For more information on domain, see [enable SSO in an Office Add-in using NAA](/office/dev/add-ins/develop/enable-nested-app-authentication-in-your-add-in#add-a-trusted-broker-through-spa-redirect).
+For more information on upgrading your Teams app to run in Outlook and Microsoft365.com, see
+[extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Initialize public client app
 
@@ -251,3 +252,4 @@ fetch(graphEndpoint, options)
 
 * [Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow)
 * [Caching in MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/caching.md)
+* [Introducing Nested App Authentication: An improved authentication protocol for your Teams app](https://devblogs.microsoft.com/microsoft365dev/introducing-nested-app-authentication-an-improved-authentication-protocol-for-your-teams-app/)

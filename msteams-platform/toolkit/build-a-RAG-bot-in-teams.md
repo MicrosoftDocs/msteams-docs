@@ -5,7 +5,7 @@ description: Learn how to build basic AI chatbot using Teams AI library in Teams
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 05/21/2024
+ms.date: 09/16/2024
 ---
 
 # Build a RAG bot in Teams
@@ -38,9 +38,9 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.
+1. Select **Custom Engine Agent**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **Chat With Your Data**.
 
@@ -883,7 +883,7 @@ class MyDataSource(DataSource):
 
 ## Add more API for Custom API as data source
 
-Follow these steps to extend the custom copilot from Custom API template with more APIs.
+Follow these steps to extend the custom engine agent from Custom API template with more APIs.
 
 1. Update `./appPackage/apiSpecificationFile/openapi.*`.
 
