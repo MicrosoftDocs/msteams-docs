@@ -63,6 +63,10 @@ landingContent:
       links:
       - text: Tab app caching is generally available for chats, meetings, and channels
         url: tabs/how-to/app-caching.md
+      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
+        url: ./resources/schema/manifest-schema.md
+      - text: Localize your Copilot agents
+        url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
       - text: Build a personal tab with offline functionality
         url: tabs/how-to/create-personal-tab.md#offline-tabs      
       - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
@@ -77,10 +81,6 @@ landingContent:
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
-      - text: Extend bot-based message extension plugins to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
-      - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
-        url: bots/how-to/format-ai-bot-messages.md
 
     - linkListType: reference
       links:
