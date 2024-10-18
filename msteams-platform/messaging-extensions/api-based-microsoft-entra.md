@@ -335,6 +335,8 @@ To configure app manifest:
   
 1. Save the app manifest file.
 
+Congratulations! You've enabled SSO for your API-based message extensions.
+
 ## See also
 
 * [Create API-based message extension](create-api-message-extension.md)
