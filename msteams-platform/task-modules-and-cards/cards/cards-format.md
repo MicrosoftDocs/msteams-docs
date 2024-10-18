@@ -1023,19 +1023,21 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ## Scrollable containers in Adaptive Cards
 
-A container with many elements might lead to a long, unreadable card. If you define the `maxHeight` property of the container and if the total height of the container’s content exceeds the value of `maxHeight`, the container’s height is limited to the value of `maxHeight` and the elements inside the container are displayed in a vertically scrollable area.
+A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the limit of the container’s height. If the container’s height content exceeds this limit, the elements inside the container are displayed in a vertically scrollable area.
 
 | Property name | Type | Description |
 | --- | --- | --- |
 | `maxHeight` | String | Defines the maximum height of the container. You must define the value in the `<number> px` format. |
 
+**Placeholder images**
+
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-scrollable-container.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-scrollable-container.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card.":::
 
 ---
 
