@@ -12,7 +12,7 @@ ms.date: 01/31/2023
 
 In-app purchases are upgrade options where users can upgrade from free to paid plans within your app. Microsoft Teams provides APIs to implement in-app purchases. The in-app purchase option is applicable only if the app is enabled with a transactable SaaS offer.
 
-Users can buy new paid subscriptions through in-app purchases. However, they can't purchase additional or different licenses with existing paid subscriptions. To change plans, users must first cancel their current subscription before acquiring a new plan through in-app purchases.
+Users can buy new paid subscriptions through in-app purchases. However, they can't purchase additional or different licenses with existing paid subscriptions. To change plans, users must first cancel their current subscription before acquiring a new plan through in-app purchase.
 
 > [!NOTE]
 > In-app purchases are supported only in [personal app contexts](~/concepts/design/app-structure.md#personal-apps).
@@ -110,4 +110,4 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
+* [App manifest](../../../../resources/schema/manifest-schema-dev-preview.md)

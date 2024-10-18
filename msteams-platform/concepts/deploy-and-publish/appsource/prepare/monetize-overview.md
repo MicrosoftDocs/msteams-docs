@@ -14,7 +14,7 @@ App monetization is an essential phase in the app development process, and Micro
 
 ## SaaS offer
 
-SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. As a publisher, you can create your marketplace offers in Partner Center, link the offer to your app, and publish the SaaS app for purchase. Apps with SaaS offers that are published in Microsoft commercial marketplace as subscriptions are SaaS apps. 
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. As a publisher, you can create your marketplace offers in Microsoft Partner Center, link the offer to your app, and publish the SaaS app for purchase. Apps with SaaS offers that are published in Microsoft commercial marketplace as subscriptions are SaaS apps. 
 
 The publishing options available in a SaaS offer by which you can drive app monetization are:
 

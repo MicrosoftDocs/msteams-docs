@@ -43,14 +43,14 @@ You must create at least one plan for the SaaS offer, where the plan features fa
 
 ### Submit the offer
 
-After you create the plan, review the offer and [sumbit to publish](/partner-center/marketplace-offers/test-publish-saas-offer). 
+After you create the plan, review the offer and [submit to publish](/partner-center/marketplace-offers/test-publish-saas-offer). 
 
 * The offer goes through a series of automated validation checks and preview offers are created.
 * When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under **Go live**, to test the offer.
 
 For more information on validation and certification, check [review and publish offers](/partner-center/marketplace/review-publish-offer).
 
-We recommended you to test the offer with the given preview links before you publish the offer in the marketplace.
+We recommended that you test the offer with the given preview links before you publish the offer in the marketplace.
 
 ## Next step
 

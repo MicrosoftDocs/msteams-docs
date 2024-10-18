@@ -267,7 +267,7 @@ It's not mandatory but a good practice to implement it.
 
 <details>
 
-<summary>If the app is transactable on Azure marketplace, will it also be available in Appsource or Teams by default?</summary>
+<summary>If the app is transactable on Azure marketplace, will it also be available in Microsoft AppSource or Teams by default?</summary>
 
 No. Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource, must have a linked transactable offer, and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy** button.
 
