@@ -1021,6 +1021,93 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ---
 
+## Scrollable containers in Adaptive Cards
+
+A container with many elements might lead to a long, unreadable card. If you define the `maxHeight` property of the container and if the total height of the container’s content exceeds the value of `maxHeight`, the container’s height is limited to the value of `maxHeight` and the elements inside the container are displayed in a vertically scrollable area.
+
+| Property name | Type | Description |
+| --- | --- | --- |
+| `maxHeight` | String | Defines the maximum height of the container. You must define the value in the `<number> px` format. |
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
+
+---
+
+The following card payload shows a container with a scroll bar:
+
+```json
+Example:
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Below is a scrollable container",
+            "wrap": true,
+            "size": "ExtraLarge",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "showBorder": true,
+            "maxHeight": "200px",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Item 1",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 2",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 3",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 4",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 5",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 6",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 7",
+                    "size": "ExtraLarge"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Click me"
+        }
+    ]
+}
+```
+
 ## Format cards with HTML
 
 The following card types support HTML formatting in Teams:
