@@ -10,14 +10,14 @@ ms.date: 12/26/2022
 
 # Test your SaaS offer
 
-Testing your app before publishing helps to understand the user issues, rectify them, and improve user experience. Let's learn in detail on the steps to create a test or preview offer, configure your app with the preview offer, and understand error scenarios with their respective fixes.
+Testing your app before publishing helps to understand the user issues, rectify them, and improve user experience. Let's learn in detail on the steps to create a test or preview offer, configure your app with the preview offer ID, and understand error scenarios with their respective fixes.
 
->[!NOTE]
+> [!NOTE]
 > Users added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
 ## Generate a preview offer ID
 
-Create the preview offer ID from the **AppSource preview** link in the Partner Center. Ensure the SaaS offer is in the Preview creation phase. To generate the preview offer ID:
+Create the preview offer ID from the **AppSource preview** link in Partner Center. Ensure the SaaS offer is in the **Preview creation** phase. To generate the preview offer ID:
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -50,9 +50,9 @@ After you generate the preview offer ID, link the preview offer ID to your Teams
 1. Under **Advanced**, select **Plans and pricing**.
 1. Enter the **Publisher ID** and **Offer ID**. Ensure the offer ID has *-preview* as suffix.
 1. Select **View** to preview your subscription plans.
-1. Review the plans listed under **Apps Subscription** and select **Save**.
+1. Review the plans listed under **Apps subscription** and select **Save**.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Screenshot shows the plan and pricing screen to add offer ID." :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Screenshot shows the plan and pricing screen to add offer ID."  lightbox="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png":::
 
 You must add the `subscriptionOffer` property to your [app manifest](../../../../resources/schema/manifest-schema.md#subscriptionoffer).
 
@@ -62,7 +62,7 @@ You must add the `subscriptionOffer` property to your [app manifest](../../../..
      }
 ```
 
->[!NOTE]
+> [!NOTE]
 >
 > * Check for the *Preview offer* label next to **Apps subscription** to confirm if the offer is a preview offer.
 > * The manifest schema version 1.10 or later supports the `subscriptionOffer` property.
@@ -75,7 +75,7 @@ If `offerId` is specified in the app manifest and the preview audience is define
 
 :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="Screenshot shows the Buy a subscription option.":::
 
-For more information, see [Upload your app in Teams](../../apps-upload.md).
+For more information, see [upload your app in Teams](../../apps-upload.md).
 
 ### Error scenarios
 
@@ -91,7 +91,7 @@ For more information, see [Upload your app in Teams](../../apps-upload.md).
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the not a preview offer warning." :::
 
-Upon successful testing, you can push the offer to Go live where app validations are done before publishing.
+Upon successful testing, you can push the offer to go live where app validations are done before publishing.
 
 ## Code sample
 

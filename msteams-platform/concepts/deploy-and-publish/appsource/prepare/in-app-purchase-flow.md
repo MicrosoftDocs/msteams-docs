@@ -83,7 +83,6 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 # [TeamsJS v1](#tab/jsonV1)
 
 ```javascript
-
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
 <button onclick="openPurchaseExperience()">openPurchaseExperience</button>

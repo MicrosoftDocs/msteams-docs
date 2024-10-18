@@ -27,7 +27,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In the app details dialog, select **Buy a subscription**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app." lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
 
 1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
