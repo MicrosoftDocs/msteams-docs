@@ -421,8 +421,6 @@
   - name: Let's build a bot
     href: bots/build-a-bot.md
     displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
-  - name: How can I bring my bot to Teams?
-    href: bots/bring-bot-to-teams.md
   - name: Build an AI bot
     items:
     - name: What is Teams AI library?

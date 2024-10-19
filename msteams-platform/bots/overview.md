@@ -21,7 +21,7 @@ The bot app users access and use your bot app within Teams.
 
 [**TBD**: Bot UX infographic or gif]
 
-Building a bot can offer benefits in the following scenarios:
+Bot apps offer a range of business advantages:
 
 1. Automation: Bots can handle repetitive tasks, saving you time and effort.
 1. Availability: Bots can work around the clock without needing breaks.
