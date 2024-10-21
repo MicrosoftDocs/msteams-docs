@@ -11,7 +11,9 @@ ms.author: surbhigupta
 
 A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligency (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
-You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education,finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
+You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
+
+Microsoft 365 Copilot and Teams offer a transformative platform for developers to elevate their AI bot into custom engine agent experience. You can make your bot available across various systems where the bot can help the users make informed decisions, automate tasks, and generate information.
 
 ## What are the benefits of a bot?
 
@@ -24,10 +26,10 @@ The bot app users access and use your bot app within Teams.
 Bot apps offer a range of business advantages:
 
 1. Automation: Bots can handle repetitive tasks, saving you time and effort.
-1. Availability: Bots can work around the clock without needing breaks.
+1. Availability: Bots can work round-the-clock without needing breaks.
 1. Efficiency: They can manage multiple tasks simultaneously, improving overall efficiency.
-1. Customer Engagement: Bots can interact with customers, providing instant responses and support.
-1. Scalability: As user needs grow, bots can easily scale to handle more tasks or interactions.
+1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
+1. Scalability: As user needs grow, bots can be easily scaled to handle more tasks or interactions.
 
 In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement. Bots are here to make your life easier by automating tasks and providing assistance whenever you need it.
 
