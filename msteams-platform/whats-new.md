@@ -32,7 +32,10 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
-***October 16, 2024***: [Use Fluent icons in Adaptive Cards for an effective user experience.](task-modules-and-cards/cards/cards-format.md)
+* ***October 21, 2024***: [Use Fluent icons in Adaptive Cards for an effective user experience](task-modules-and-cards/cards/cards-format.md).
+* ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
+* ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
+* ***October 17, 2024***: [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs).
 
 :::column-end:::
 :::row-end:::
@@ -46,7 +49,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Developer Portal for Teams > [Analyze app usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
+| 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app susbscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Distribute your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
@@ -414,13 +417,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 September**
+**2024 October**
 
-* ***September 16, 2024***: [Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store.](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
-
-* ***September 16, 2024***: [Explore the development guidance to build Copilot agents.](messaging-extensions/dev-guidelines-copilot-agents.md)
-
-* ***September 03, 2024***: [Introduced nested app authentication for single-page applications that are embedded in host environment.](concepts/authentication/nested-authentication.md)
+* ***October 17, 2024***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts.](m365-apps/specify-runtime-requirements.md)
+* ***October 17, 2024***: [copilotExtensions renamed to copilotAgents in developer preview app manifest.](./resources/schema/manifest-schema-dev-preview.md#copilotagents)
 
 :::column-end:::
 :::row-end:::
@@ -433,6 +433,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 16/09/2024 | Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
+| 16/09/2024 | Explore the development guidance to build Copilot agents. | Build message extensions > Bot Framework > Search commands > [Guidelines to create and upgrade Copilot agents](messaging-extensions/dev-guidelines-copilot-agents.md) |
+| 03/09/2024 | Introduced nested app authentication for single-page applications that are embedded in host environment. | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md)|
 | 14/06/2024 | Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md) |
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | 23/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine agent.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
