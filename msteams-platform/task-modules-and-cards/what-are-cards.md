@@ -63,7 +63,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 ### Fluent icons in Adaptive Card
 
-Adaptive Cards support Fluent icons, offering an effective and visually appealing method to integrate icons into your cards. Teams mobile and desktop clients support Fluent icons in Adaptive Cards.
+[Adaptive Cards support Fluent icons](~/task-modules-and-cards/cards/cards-format.md#fluent-icon-in-an-adaptive-card), offering an effective and visually appealing method to integrate icons into your cards. Teams mobile and desktop clients support Fluent icons in Adaptive Cards.
 
 ### People icon in an Adaptive Card
 
