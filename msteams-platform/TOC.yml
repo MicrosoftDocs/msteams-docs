@@ -495,6 +495,8 @@
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: How can I bring my bot to Teams?
+    href: bots/bring-bot-to-teams.md
   - name: Explore advanced bot capabilities
     items:
     - name: Teams bot API changes to fetch team or chat members
