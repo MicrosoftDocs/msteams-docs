@@ -29,20 +29,20 @@ To configure the default install scope in your app manifest:
 
 ## Configure your app's default landing scope
 
-If your app supports both the app capabilities, bot and static tabs in personal scope, you can configure the default landing scope for your app. App launch from personal flyout, pinned apps, deep links, and app-store acquisition leads to the default landing scope.
+If your app supports bot and static tab in personal scope, you can configure the default landing scope for your app. App opens in the configured scope when opened from Microsoft Teams Store, app flyout displayed when a user selects **More** icon on Teams, deep links, and pinned apps.
 
-To configure the default landing scope in your app manifest:
+You can configure your app's dedefault landing scope by updating the `staticTabs` property in the app manifest. `staticTabs` property is used to pin personal tabs. However, the same property can be used to set the default landing scope.
 
-1. Open your app manifest and update the `staticTabs` property.
-2. To configure bot as the default landing scope, 
-    1. Add the below properties as the first object of the array.
-        1. `entityId` with reserved keyword `conversations`.
-        2. `scopes` as an object with value `personal`.
-    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) as the next object.
+To configure bot as the default landing scope:
+
+1. Open your app manifest.
+1. Under `staticTabs` property, add the bot details as the first object of the array.
+    1. `entityId` with reserved keyword `conversations`.
+    1. `scopes` as an array with the value `personal`.
+1.  Add the details of the the tab as the next object. Refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs) to define the properties of a tab.
     
     ```json
-    {
-       "staticTabs":[
+    "staticTabs":[
           {
              "entityId":"conversations",
              "scopes":[
@@ -50,32 +50,43 @@ To configure the default landing scope in your app manifest:
              ]
           },
           {
-             
-          },
-       ]
-    }
-    ```
-1. To configure static tabs as the default landing scope,
-    1. Add the details of the `staticTabs` as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) as the first object of the array.
-    1. Add the below properties as the next object.
-        1. `entityId` with reserved keyword `conversations`.
-        2. `scopes` as an object with value `personal`.
-
-    ```json
-    {
-        "staticTabs":[
-            {
-                
-            },
-            {
-                "entityId":"conversations",
-                "scopes":[
+            "entityId": "com.contoso.helloworld.hellotab",
+            "name": "Hello Tab",
+            "contentUrl": "https://p4p9bjg0-7130.inc1.devtunnels.ms/hello",
+            "scopes": [
                 "personal"
-                ]
-            }
-        ]
-    }
+            ]
+        }
+    ]
+    
     ```
+To configure static tabs as the default landing scope:
+
+1.  Open your app manifest.
+1. Under `staticTabs` property, add the tab details as the first object of the array.
+   Refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs) to define the properties of a tab.
+    1. Add the bot details as the next object.
+        1. `entityId` with reserved keyword `conversations`.
+        2. `scopes` as an array with value `personal`.
+
+```json
+    "staticTabs": [
+        {
+            "entityId": "com.contoso.helloworld.hellotab",
+            "name": "Hello Tab",
+            "contentUrl": "https://p4p9bjg0-7130.inc1.devtunnels.ms/hello",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId":"conversations",
+             "scopes":[
+                "personal"
+             ]
+        }
+    ]
+```
 
 ## Configure the default capability for shared scopes
 
