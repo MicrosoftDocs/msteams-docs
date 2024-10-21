@@ -304,7 +304,7 @@ Following image illustrates user mention in Incoming Webhook:
 
 ### Fluent icon in an Adaptive Card
 
-Adaptive Cards support Fluent icons, offering an effective and visually appealing method to integrate icons into your cards.
+Adaptive Cards support Fluent icons that offer an effective and visually appealing method to integrate icons into your cards.
 
 The following are the query parameters to add Fluent icons in an Adaptive Card:
 
