@@ -195,7 +195,7 @@
             href: toolkit/debug-local.md
           - name: Debug apps in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
-            displayName: bots, Copilot plugin, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code           
+            displayName: debug, desktop client, bots, Copilot plugin, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code           
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
