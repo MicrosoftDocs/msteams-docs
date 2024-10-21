@@ -28,9 +28,9 @@ Streaming UX has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
-## Enable streaming in bots
+## Streaming REST API
 
-To enable streaming in bots, you must have the following query parameters:
+When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDK's send activity method to confirm that the previous call was successfully transmitted. In some scenarios, the bot might not receive an error status code, but it can receive an error message.
 
 |Property|Type|Description|
 |---|---|---|
@@ -41,6 +41,8 @@ To enable streaming in bots, you must have the following query parameters:
 | `streamld` | String | {TBD}|
 
 To enable streaming in bots, follow these steps:
+
+
 
 1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
 
