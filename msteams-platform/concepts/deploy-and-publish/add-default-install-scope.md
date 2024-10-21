@@ -31,7 +31,7 @@ To configure the default install scope in your app manifest:
 
 If your app supports both bot and static tab functionalities in personal scope, you can configure the default landing capability for your app. When launched from the Microsoft Teams Store, the app flyout that appears after a user selects the **More** icon on Teams, deep links, or pinned apps, your application opens in the pre-configured capability. 
 
-Configure your app's default landing capability by using the `staticTabs` property in the app manifest. The `staticTabs` property, used to pin personal tabs, is also used to establish the default landing.
+Set up the default landing capability by using the `staticTabs` property in the app manifest. The `staticTabs` property, which pins personal tabs, also sets up the default landing.
 
 To configure bot as the default landing capability:
 
