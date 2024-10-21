@@ -371,7 +371,7 @@
     displayName: clickjacking, device permissions for tabs
   - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs, channel, or group custom tab
+    displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
@@ -836,6 +836,9 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Plan your app experience across Microsoft 365 hosts
+    href: m365-apps/specify-runtime-requirements.md
+    displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
     - name: Enable a Teams personal tab for Microsoft 365
@@ -876,7 +879,6 @@
       - name: Quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
-
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
