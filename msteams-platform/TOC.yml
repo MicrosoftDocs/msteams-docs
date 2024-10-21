@@ -178,6 +178,7 @@
             href: toolkit/use-existing-aad-app.md
           - name: Update Bot or Message extension app to use Certificate or MSI for Authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
+            displayName: MSI, certificate, bot, message extension, authentication
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
