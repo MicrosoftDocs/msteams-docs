@@ -13,7 +13,7 @@ A bot is a software application that performs automated tasks by interacting wit
 
 You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
 
-Microsoft 365 Copilot and Teams offer a transformative platform for developers to elevate their AI bot into custom engine agent experience. You can make your bot available across various systems where the bot can help the users make informed decisions, automate tasks, and generate information.
+Microsoft 365 Copilot and Teams offer a transformative platform for developers to take their AI bots to the next level - transforming them into custom engine agents. You can make your bot accessible across various systems. This means your bot can help users make informed decisions, automate tasks, and generate valuable information seamlessly.
 
 ## What are the benefits of a bot?
 
