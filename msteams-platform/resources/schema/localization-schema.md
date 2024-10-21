@@ -55,7 +55,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`activities.activityTypes\\[\\b([0-9]&#124;[1-8][0-9]&#124;9[0-9]&#124;1[01][0-9]&#124;12[0-7])\\b]\\.description`|String|128|A brief description of the notification.||
 |`activities.activityTypes\\[\\b([0-9]&#124;[1-8][0-9]&#124;9[0-9]&#124;1[01][0-9]&#124;12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
-|`\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]`|String|4000| Represents custom tokenized keys, for example with [localized Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).||
+|`localizationKeys\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]`|String|4000| Represents custom tokenized keys, for example with [localized Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).||
 |`meetingExtensionDefinition.scenes\\[[0-9]\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest. ||
 |`extensions\\[[0]\\]\\.audienceClaimUrl$`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.ribbons\\[[0-9]\\]\\.tabs\\[[1]?[0-9]\\]\\.label`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
