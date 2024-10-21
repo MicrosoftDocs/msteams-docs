@@ -65,6 +65,10 @@ await context.sendActivity({
 
 After an AI label is added, your bot’s message displays an **AI generated** label next to the bot’s name with a hover-over disclaimer stating, **AI-generated content may be incorrect**. The AI label and disclaimer can't be customized for AI-powered bots.
 
+> [!NOTE]
+>
+> The **AI generated** label is available only when you send a new message using `SendActivity`. If you update a message using `UpdateActivity`, the **Edited** label is added.
+
 ### Error handling
 
 | Error code | Description |
