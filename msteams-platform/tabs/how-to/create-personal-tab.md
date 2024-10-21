@@ -993,7 +993,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
-Similar to reordering tabs, you can also set the default landing scope for your app allowing your app to open as a bot or a tab on app launch. For more information, see [Configure default landing scope](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-scope).
+Similar to reordering tabs, you can also set the default landing capability for your app enabling your app to open as a bot or a tab on app launch. For more information, see [Configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Extend static tabs to group chat, channels, and meetings
 
