@@ -107,7 +107,7 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: messaging-extensions/build-bot-based-plugin.md
+        - url: messaging-extensions/build-bot-based-agent.md
           itemType: concept
           text: Build bot-based search message extension plugin
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md

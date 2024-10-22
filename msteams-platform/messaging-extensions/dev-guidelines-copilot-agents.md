@@ -683,14 +683,14 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Message extension plugins in Microsoft 365 Copilot apps
+## Message extension agents in Microsoft 365 Copilot apps
 
 [*Must fix*]
 
 > [!IMPORTANT]
-> Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> Message extension agents in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
-Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
+Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension agents facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
 
  If you've developed a plugin for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 
@@ -698,9 +698,9 @@ Copilot agents customize and extend the Microsoft 365 Copilot experience by brin
 
 | Sample name | Description | TypeScript |
 |----------------|-----------------|--------------|
-| Northwind inventory message extension | This sample demonstrates how to use a Teams message extension as a plugin in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
+| Northwind inventory message extension | This sample demonstrates how to use a Teams message extension as a agent in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
 ## See also
 
-* [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend bot-based message extension as agent](build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
