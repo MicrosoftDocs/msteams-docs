@@ -1200,12 +1200,12 @@ The `extensions.getStartedMessages` array provides information about an Office A
 |`title`|String| 125 characters | ✔️ | The title used for the heading of the callout. |
 |`description`|String| 250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
 |`learnMoreUrl`|String| 2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. |
 |`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (Powerpoint), `document` (Word) |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (PowerPoint), `document` (Word) |
 |`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
