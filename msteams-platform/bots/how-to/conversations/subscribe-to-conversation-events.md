@@ -19,7 +19,9 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a notification when a bot message is liked by a user.
 * Identify the default channel for your bot from user input (selection) during installation.
 
-The following video on conversation bot showcases how it enhances customer engagement with seamless, intelligent interactions:
+The following video demonstrates how a conversation bot can improve customer engagement through smooth, intelligent interactions:
+
+<br>
 
 > [!VIDEO https://www.youtube.com/embed/HWw99yPsAes]
 
