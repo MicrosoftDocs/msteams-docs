@@ -21,7 +21,7 @@ Bots can save you time and effort by handling tasks that would otherwise take up
 
 The bot app users access and use your bot app within Teams.
 
-[**TBD**: Bot UX infographic or gif]
+:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
 
 Bot apps offer a range of business advantages:
 
