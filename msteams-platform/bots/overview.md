@@ -1,5 +1,5 @@
 ---
-title: What is a bot
+title: Overview to bots
 description: Learn about bots, the application of bots across industry, build familiarity with bots in Teams environment and bot development SDKs and libraries. It offers a map through the module to help you navigate through various tasks for building a bot.
 ms.localizationpriority: high
 ms.date: 09/20/2024
