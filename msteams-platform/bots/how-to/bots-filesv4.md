@@ -25,7 +25,7 @@ The following video on bot demonstrates how it simplifies sending and receiving 
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/UeDi5X3qWk]
+> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
 
 ## Use the Graph APIs
 
