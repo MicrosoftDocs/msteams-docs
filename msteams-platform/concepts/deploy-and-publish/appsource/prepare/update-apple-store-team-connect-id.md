@@ -12,7 +12,7 @@ ms.date: 12/15/2022
 
 To enable end-users to install your app on the Teams iOS platform, update your Apple Developer Program Team ID in the Microsoft Partner Center. The Apple Developer Program Team ID is shared with Apple. To update your Apple App Store Connect Team ID, follow these steps:
 
-1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
+1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the Global Administrator credentials.
 1. Select the settings icon from the upper right corner of the page.
 1. Go to the **Legal info** section under **Organization profile** from the left pane.
 1. Select the **Developer** tab.

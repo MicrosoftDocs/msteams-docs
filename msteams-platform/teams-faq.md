@@ -696,7 +696,7 @@ You received this error message because your [account verification status](/part
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-If you're the primary contact, global admin, or account admin, you can monitor verification status and track progress on your profile page.
+If you're the primary contact, Global Administrator or account admin, you can monitor verification status and track progress on your profile page.
 
 After the verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
