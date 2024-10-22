@@ -537,6 +537,63 @@ The following is an example of the incoming activity to a bot when user types so
 
 The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
+### Conditional enablement of action buttons in Adaptive Cards
+
+In Adaptive Cards, there are scenarios where users might not fill inputs that have `isRequired` property set to `true`. Despite this, action buttons such as `Action.Submit` and `Action.Execute` stay enabled. To avoid incomplete submissions, use the `conditionallyEnabled` property to ensure that action buttons are disabled until the user provides the required inputs.
+
+| Property| Type | Required | Description |
+|-----------|------|----------|-------------|
+| `conditionallyEnabled` | Boolean | Yes | Determines if the action button remains disabled until the user starts interacting with the inputs. |
+
+You can use `associatedInputs` property to associate `Action.Submit` and `Action.Execute` to other inputs in the card. For more information, see [Data.Query definition](../../../Documents/GitHub/dev docs/msteams-docs/msteams-platform/task-modules-and-cards/cards/dynamic-search.md#dataquery-definition).
+
+Place holder for images
+
+The following JSON payload shows an Adaptive Card with conditional enabled button:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Required text input",
+            "isRequired": true,
+            "id": "text"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Required date input",
+            "isRequired": true,
+            "id": "date"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "conditionallyEnabled": true
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Permanently disabled button",
+            "isEnabled": false
+        }
+    ]
+}
+```
+
+### Permanently disabled buttons in Adaptive Cards
+
+You can permanently disable an action button in an Adaptive Card if you set the `isEnabled` property to `false`. You can apply this property to actions on containers, images, and other elements. If you apply this property to any element, Teams renders it unclickable. In a conditionally enabled button, when `isEnabled` property is set to `false`, it takes precedence, overriding any conditions that might enable an action due to dirty input values.
+
+| Property| Type | Required | Description |
+|-----------|------|----------|-------------|
+| `isEnabled` | Boolean | No | Enables a button to remain disabled, irrespective of user input. |
+
 #### Form completion feedback
 
 You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
