@@ -80,7 +80,7 @@ landingContent:
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
       - text: Extend bot-based message extension as agents to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-agent-for-copilot-for-meetings
+        url: messaging-extensions/build-bot-based-agent.md#enable-message-extension-as-a-agent-for-copilot-for-meetings
 
     - linkListType: reference
       links:

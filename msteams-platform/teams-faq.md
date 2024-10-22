@@ -341,7 +341,7 @@ Developers are encouraged to certify their new plugin after successfully complet
 <details>
 <summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+ You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
 </details>
 
 ## Microsoft Graph

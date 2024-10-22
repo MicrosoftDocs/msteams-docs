@@ -561,7 +561,7 @@
         href: messaging-extensions/dev-guidelines-copilot-agents.md
         displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
       - name: Extend bot-based message extension as agent
-        href: messaging-extensions/build-bot-based-plugin.md
+        href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
       - name: Debug a Microsoft 365 Copilot plugin with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin

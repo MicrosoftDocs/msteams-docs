@@ -212,7 +212,7 @@ You must implement the following:
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
     * We recommend that you set the width of the image, though some scenarios might allow for exceptions.
 
-For more information to create agents for teams meetings, see [enable message extension as a agent for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-agent-for-copilot-for-meetings).
+For more information to create agents for teams meetings, see [enable message extension as a agent for Copilot for meetings](../../../../messaging-extensions/build-bot-based-agent.md#enable-message-extension-as-a-agent-for-copilot-for-meetings).
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -391,5 +391,5 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
 * [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
-* [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-plugin.md)
+* [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
