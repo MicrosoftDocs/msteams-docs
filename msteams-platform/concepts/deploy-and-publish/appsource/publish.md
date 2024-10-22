@@ -179,6 +179,6 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
-* [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
+* [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#publish-to-teams-store)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
 * [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)
