@@ -926,6 +926,14 @@ To enable you bots to get only those channel or chat messages where your bot is 
 
 If you want your bot to receive all messages, then you don't need to filter the @mention messages.
 
+### Step-by-step guide
+
+Follow the [step-by-step](../sbs-teams-conversation-bot.yml) guide to create a Teams conversation bot.
+
 ## Next step
 
+[Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)
+
 ## See also
+
+[Conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md)
