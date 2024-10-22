@@ -32,56 +32,83 @@ Streaming UX has two types of updates:
 
 When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDK's send activity method to confirm that the previous call was successfully transmitted. In some scenarios, the bot might not receive an error status code, but it can receive an error message.
 
-|Property|Type|Description|
+To enable streaming in bots, follow these steps:
+
+> [!div class="checklist"]
+>
+> * [Start streaming](#start-streaming)
+> * [Continue streaming]
+> * [Final streaming]
+
+### Start streaming
+
+1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
+
+The bot sends either informative message or streaming as the first message. The response will contain the `streamId` which is needed to make subsequent calls.  The bot can also send citation here.  
+
+Notes: Provide Informative Updates 
+
+An informative update provides insight into what your bot is currently doing. Use these updates before your bot has started generating its final response to the user.  
+
+Examples of this include:  
+
+“Scanning through documents”, “Summarizing Content”, “Found relevant work items”.  
+
+While this is one step, you can send multiple informative updates as your bot makes progress on the user’s request.
+
+The following are the query parameters to start streaming:
+
+|Property|Required|Description|
 |---|---|---|
-| `type` | String | {TBD}|
+| `type` | ✔️ | {TBD}|
 | `text` | String | {TBD}|
 | `streamType` | String | {TBD}|
 | `streamSequence` | Integer| {TBD} |
 | `streamld` | String | {TBD}|
 
-To enable streaming in bots, follow these steps:
+```json
+//Ex: A bot sends the second request with content && the content is informative loading message.
 
-
-
-1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
-
-   ```json
-   //Ex: A bot sends the second request with content && the content is informative loading message.
-    
-   POST /conversations/<conversationId>/activities HTTP/1.1 
-   {
-      "type": "typing",
-      " serviceurl": "<https://smba.trafficmanager.net/amer/> ",
-      "channelId": "msteams",
-      "from": {
-        "id": "<botId>",
-        "name": "BotName>"
-      },
-      "conversation": {
-        "conversationType": "personal",
-        "id : (conversationId)"
-      },
-      "recipient": {
-        "id": "recipientId>",
-        "name": "<recipientName>",
-        "aadObjectId": "<recipient aad objecID>"
-      },
-      "locale": "en-US",
-      "text": "Searching through documents.", // First informative loading message.
-      "channelData": { 
-        "streamType": "informative", // informative or streaming(name needs to be finalized); default: streaming.
-        "streamSequence": 1 // (required) incremental integer; must be present for any streaming request.
-      }
+POST /conversations/<conversationId>/activities HTTP/1.1 
+{
+  "type": "typing",
+  " serviceurl": "https://smba.trafficmanager.net/amer/",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id": "<conversationId>"
+  },
+  "recipient": {
+    "id": "<recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en-US",
+  "text": "Searching through documents...", //(required) first informative loading message.
+  "entities":[
+    {
+      "type": "streaminfo",
+      "streamType": "informative", // informative or streaming(name needs to be finalized); default= streaming.
+      "streamSequence": 1 // (required) incremental integer; must be present for any streaming request.
     }
+  ],
+  "channelData": { 
+    //Add the same entities data to prevent breaking changes in near future.
+    "streamType": "informative",
+    "streamSequence": 1,
+  }
+}
+201 created {a-0000l} // return activity id
 
-    201 created {a-0000l} // return activity id
+```
 
-   ```
-  
-   The following image is an example of start streaming:
+The following image is an example of start streaming:
 
-   :::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows the UX of start streaming." lightbox="../assets/images/bots/start_streaming.png":::
+:::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows the UX of start streaming." lightbox="../assets/images/bots/start_streaming.png":::
 
 2. **Provide informative updates**: Before the bot produces its final response, provide insights into the bot's ongoing actions such as, **Scanning through documents** or **Summarizing Content**. To provide these insights, set the `streamType` to `informative` and the `streamSequence` to `2`. Associate a `streamId` and the required display `text` with the request.
 
