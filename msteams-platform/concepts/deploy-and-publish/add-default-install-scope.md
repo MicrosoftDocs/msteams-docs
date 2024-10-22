@@ -29,20 +29,22 @@ To configure the default install scope in your app manifest:
 
 ## Configure your app's default landing capability
 
-If your app supports both bot and static tab functionalities in personal scope, you can configure the default landing capability for your app. When launched from the Microsoft Teams Store, the app flyout that appears after a user selects the **More** icon on Teams, deep links, or pinned apps, your application opens in the pre-configured capability. 
+If your app supports both bot and static tab capabilities in personal scope, you can configure the default landing capability for your app. When a user opens an app, the app opens in the pre-configured capability. 
 
-Set up the default landing capability by using the `staticTabs` property in the app manifest. The `staticTabs` property, which pins personal tabs, also sets up the default landing.
+`staticTabs` property in the app manifest sets up the default landing capability. The first object added within this property is considered as the default landing capability.
+
+This property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 To configure bot as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, add the bot details as the first object of the array.
-    1. `entityId` with reserved keyword `conversations`.
-    1. `scopes` as an array with the value `personal`.
-1.  Add the details of the the tab as the next object. Refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs) to define the properties of a tab.
+1. Under `staticTabs` property, add the following details as the first object of the array:
+    1. Set `entityId` as `conversations`. 
+    1. Add `scopes` as an array with the value `personal`.
+1.  Add tab as the next object. Set the properties of a tab as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) 
 
 
-The following code is an example for configuring bot as the default landing capability.
+The following code is an example for configuring bot as the default landing capability:
 ```json
     "staticTabs":[
           {
@@ -65,13 +67,12 @@ The following code is an example for configuring bot as the default landing capa
 To configure tab as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, add the tab details as the first object of the array.
-   Refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs) to define the properties of a tab.
-1. Add the bot details as the next object.
-    1. `entityId` with reserved keyword `conversations`.
-    2. `scopes` as an array with value `personal`.
-
-The following code is an example for tab as the default landing capability.
+1. Under `staticTabs` property, add the tab details as the first object of the array. Set the properties of a tab as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+1. Add bot as the next object.
+    1.  Set `entityId` as `conversations`. 
+    1. Add `scopes` as an array with the value `personal`.
+    
+The following code is an example for tab as the default landing capability:
 ```json
     "staticTabs": [
         {
