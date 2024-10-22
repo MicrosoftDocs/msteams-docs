@@ -997,7 +997,7 @@ The `extensions` property specifies Office Add-ins within an app manifest and si
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
-|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document. |
+|`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) within an open Office document. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1193,14 +1193,14 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 ### extensions.contextMenus
 
-A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document. Currently valid only for Word, Excel, and PowerPoint.
+A context menu is a shortcut menu that appears when you right-click (or select and hold) in an open Office document. This feature is supported for Word, Excel, and PowerPoint.
 
 |Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`menus`| Array | | ✔️ | Configures the context menus. |
 |`menus.entryPoint`| String enum | | ✔️ | Defines the method for opening the context menu. Use `text` if the context menu should open when a user right-clicks (or selects and holds) on the selected text. Use `cell` if the context menu should open when the user right-clicks (or selects and holds) on a cell in an Excel spreadsheet. |
 |`menus.controls`| Array | | ✔️ | Configures the menu buttons. |
-|`menus.controls.id`| String | 64 characters | ✔️ | Specifies the ID for the menu control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
+|`menus.controls.id`| String | 64 characters | ✔️ | Specifies the ID for the menu control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control ID defined in the manifest.|
 |`menus.controls.items`| Array | | | Configures the items for the menu control. |
 |`menus.controls.items.id`| String | | ✔️ | Specifies the ID for a menu item. |
 |`menus.controls.items.type`| String enum | | ✔️ | Defines the item's control type. <br>Supported value: `button`|
@@ -1215,7 +1215,7 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`|
 |`menus.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`menus.controls.type`| String | | ✔️ | Defines the control type. <br>Supported value: `menu`|
-|`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, no other `menus.*` child properties may be used because a built-in Office control is not customizable by an add-in.|
+|`menus.controls.builtInControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups). If this property is present, you cannot use any other `menus.*` child properties may be used because a built-in Office control is not customizable by an add-in.|
 |`menus.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the menu control.|
 |`menus.controls.icons`| Array | | ✔️ | Defines the icons for the menu control. There must be at least three child objects; one each with `size` of `16`, `32`, and `80` pixels. |
 |`menus.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, `80`. <br> Required image sizes: `16`, `32`, `80`|
@@ -1223,15 +1223,15 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`menus.controls.supertip`| Object | | ✔️ | Configures a supertip for the menu control. |
 |`menus.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`menus.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`menus.controls.actionId`| String | 64 characters | | Don't use. The action of the menu control is always the same: it displays the list of menu items.|
+|`menus.controls.actionId`| String | 64 characters | | Don't use `actionId` for `menus.controls` as the action of the menu control, to display the list of menu items, is always the same. |
 |`menus.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`menus.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
-|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the context menus to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
 |`requirements.capabilities`| Array | | | Identifies the requirement sets.|
 |`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `workbook` (Excel). <br>Supported values: `workbook`, `presentation`, `document` |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (PowerPoint), `document` (Word)|
 |`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ## actions
