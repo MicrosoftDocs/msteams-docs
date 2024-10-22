@@ -830,6 +830,64 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
+## CompoundButton in Adaptive Cards
+
+If you want to emulate the suggested prompts UI as in Microsoft 365 Copilot to your Adaptive Card, you can use the CompoundButton element that provides an out-of-the-box solution for creating such buttons. 
+
+Here's an example of how the CompoundButton element can be used in an Adaptive Card: 
+
+```json
+{ 
+    "type": "AdaptiveCard", 
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+    "version": "1.5", 
+    "body": [ 
+        { 
+            "type": "CompoundButton", 
+            "title": "Summarize", 
+            "icon": { 
+                "name": "TextBulletList" 
+            }, 
+            "subTitle": "Review key points in file", 
+            "height": "stretch", 
+            "badge": "New" 
+        } 
+    ] 
+} 
+```
+
+This element simplifies the process for developers, allowing them to create intuitive and responsive UI components with minimal effort.
+
+### CompoundButton schema
+
+The following table lists the parameters the CompoundButton element:
+
+| Property name | Required | Type | Description |
+|---------|---------|---------|---------|
+| `type` | ✔️ | String | It must be CompoundButton and it's an inherited property. |
+| `id` |  | String | It's an inherited property. |
+| `requires` |  | Object | It's an inherited property. |
+| `isVisible` |  | Boolean | It's an inherited property. |
+| `separator ` |  | Boolean | It's an inherited property. |
+| `height ` |  | String | Auto, Stretch <br> It's an inherited property. |
+| `horizontalAlignment ` | Yes | String | Left, Center, Right <br> It's an inherited property. |
+| `Spacing ` |  | String | None, Small, Default, Medium, Large, ExtraLarge <br> It's an inherited property. |
+| `targetWidth ` |  | String | VeryNarrow, Narrow, Standard, Wide <br> It's an inherited property. |
+| `icon ` |  | String | IconInfo object in the next table. |
+| `badge ` |  | String | Markdown is not supported. |
+| `title ` | ✔️ | String | Markdown is not supported. |
+| `description ` |  | String | Markdown is not supported. |
+| `select Action` |  |  | Action object. All actions allowed except Action.ShowCard. |
+
+The following table lists the `iconInfo` object properties:
+
+| Property name | Required | Type | Description |
+|---------|---------|---------|---------|
+| `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. Same as the name of the new Icon element. |
+| `size` |  | String | xxSmall, xSmall, Small, Standard, Medium, Large, xLarge, xxLarge |
+| `style` |  | String | Regular, Filled |
+| `color` |  | String | default, dark, light, accent, good, warning, attention |
+
 ## CodeBlock in Adaptive Cards
 
 The `CodeBlock` element enables you to share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings. Adaptive Cards with the `CodeBlock` element make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the programming language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Microsoft Visual Studio or Microsoft Visual Studio Code.
