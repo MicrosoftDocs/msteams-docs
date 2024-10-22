@@ -1139,6 +1139,10 @@
       {
         "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
+      },
+      {
+        "source_path":"msteams-platform/messaging-extensions/build-bot-based-agent.md",
+        "redirect_url":"/microsoftteams/platform/messaging-extensions/how-to/build-bot-based-agent"
       }
     ]
 }
