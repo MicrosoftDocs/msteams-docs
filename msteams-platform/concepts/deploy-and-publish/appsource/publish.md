@@ -9,7 +9,7 @@ ms.date: 12/15/2022
 ---
 # Publish your app to the Teams Store
 
-You can distribute your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
+You can publish your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
@@ -179,6 +179,6 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
-* [Distribute tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
+* [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#publish-to-teams-store)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
 * [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)
