@@ -1,15 +1,17 @@
 ---
-title: Update bot or message extension app to use certificate or MSI for authentication
+title: Use Certificate or MSI for Authentication
 author: surbhigupta
-description: Learn how to update bot or message extension app to use certificate or MSI for authentication.
+description: Learn how to use certificate or MSI-based authentication for your bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.topic: overview
+ms.date: 10/22/2024
 ---
 
 # Update bot or message extension app to use certificate or MSI for authentication
 
-You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+You can use certificate or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
@@ -221,3 +223,6 @@ Your bot app now uses MSI for authentication.
 ---
 
 ## See Also
+
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
