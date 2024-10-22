@@ -370,7 +370,7 @@ For more on testing your agent in Microsoft 365 Copilot, see [debugging agent se
 
 ## Enable message extension as a agent for Copilot for meetings
 
-Ensure that you've created a bot-based message extension and extended it as a agent for Microsoft 365 Copilot. Before you get started, follow the guidelines listed in [ensure your Copilot agents work in Teams meetings](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#ensure-your-copilot-plugins-work-in-teams-meetings) to extend your agent for Copilot for meetings.
+Ensure that you've created a bot-based message extension and extended it as a agent for Microsoft 365 Copilot. Before you get started, follow the guidelines listed in [ensure your Copilot agents work in Teams meetings](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#ensure-your-copilot-agents-work-in-teams-meetings) to extend your agent for Copilot for meetings.
 
 To enable message extension as a agent for Copilot for meetings, follow these steps:
 
