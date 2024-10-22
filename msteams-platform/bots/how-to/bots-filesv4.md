@@ -21,6 +21,8 @@ There are two ways to send files to and receive files from a bot:
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
 
+The video on [bot](https://www.youtube.com/watch?v=-UeDi5X3qWk) demonstrates how it simplifies sending and receiving files with ease and efficiency.
+
 ## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
