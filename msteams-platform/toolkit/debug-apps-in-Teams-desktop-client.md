@@ -1,10 +1,11 @@
 ---
-title: Debug your Teams Toolkit apps in Teams Desktop Client
+title: Debug your apps in Teams Desktop Client
 author: surbhigupta
 description: Learn how to debug your bot, Copilot plugin, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
-ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.topic: overview
+ms.date: 10/22/2024
 ---
 
 # Debug apps in Teams Desktop Client
@@ -120,4 +121,4 @@ You can continue to debug your custom engine agent app in Teams desktop client.
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Debug background process](debug-background-process.md)
+* [Debug for mobile](debug-mobile.md)
