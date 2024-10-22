@@ -401,12 +401,6 @@
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
-  - name: Build tabs with Adaptive Cards
-    href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
-  - name: Create conversational tabs
-    href: tabs/how-to/conversational-tabs.md
-    displayName: configurable
   - name: Send activity feed notifications
     href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
