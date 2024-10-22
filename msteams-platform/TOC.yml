@@ -375,7 +375,7 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
-  - name: Advanced tab features
+  - name: Tab features
     items:
     - name: Open content in multi-window
       href: tabs/open-content-in-stageview.md
