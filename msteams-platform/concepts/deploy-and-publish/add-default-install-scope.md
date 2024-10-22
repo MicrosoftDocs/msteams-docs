@@ -52,19 +52,16 @@ To configure details in app manifest:
     ```
 ## Configure your app's default landing capability
 
-If your app supports both bot and static tab capabilities in personal scope, you can configure the default landing capability for your app. When a user opens an app, the app opens in the pre-configured capability. To switch to the other capability, the user can select the respective options pinned at the top.
-
+If your app supports both bot and static tab capabilities in personal scope, you can now configure the default landing capability for your app. Your app can open either as a bot or as a tab based on this configuration. 
 (Image to be added here)
 
-`staticTabs` property in the app manifest sets up the default landing capability. The first object added within this property is considered as the default landing capability.
-
-This property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
+To set up the default landing capability, configure the `staticTabs` property in the app manifest. The first object added within this property is considered as the default landing capability.
 
 To configure bot as the default landing capability:
 
 1. Open your app manifest.
 1. Under `staticTabs` property, add the following details as the first object in the array:
-    1. `entityId`: Set as `conversations`
+    1. `entityId`: Set as `conversations`. 
     1. `scopes`: Add value `personal`.
 1.  Add tab as the second object. Set the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) 
 
@@ -116,6 +113,7 @@ The following code is an example for tab as the default landing capability:
         }
     ]
 ```
+The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
