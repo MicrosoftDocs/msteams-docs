@@ -21,7 +21,11 @@ There are two ways to send files to and receive files from a bot:
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
 
-The video on [bot](https://www.youtube.com/watch?v=-UeDi5X3qWk) demonstrates how it simplifies sending and receiving files with ease and efficiency.
+The following video on bot demonstrates how it simplifies sending and receiving files with ease and efficiency:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/UeDi5X3qWk]
 
 ## Use the Graph APIs
 

@@ -17,7 +17,9 @@ Apps published to the Teams Store also automatically list on [the Microsoft comm
 
 If your app is production ready, you can begin the process of getting it listed on the Teams Store.
 
-The video on [publish your Teams app to Teams Store](https://www.youtube.com/watch?v=cFqAuLy0JaE) outlines the steps involved in the app publishing process.
+The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process.
+
+> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]
 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
