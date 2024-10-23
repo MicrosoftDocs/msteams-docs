@@ -1,10 +1,10 @@
 ---
 title: Configure default options for your app
-description: Learn how to specify your Teams app's default install options, default capability for shared scopes and block apps by default.
+description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/15/2022
+ms.date: 10/23/2024
 ---
 # Configure default options for Teams app
 
@@ -50,6 +50,85 @@ To configure details in app manifest:
         "meetings": "tab"
     }
     ```
+## Configure your app's default landing capability
+
+You can configure the default landing capability for an app that supports both bot and tab capabilities in personal scope. Based on this configuration, the app opens either as a bot or a tab by default.
+
+To set default landing capability, you must configure the `staticTabs` property in the app manifest. The first capability defined in `staticTabs` becomes the default landing capability. The second capability defined is pinned to the app's personal experience for easy switching.
+
+You can configure any one of the following:
+* [Bot as default landing capability](#bot-as-default-landing-capability)
+* [Tab as default landing capability](#tab-as-default-landing-capability)
+
+### Bot as default landing capability
+
+To set bot as the default landing capability:
+
+1. Open your app manifest.
+1. Under `staticTabs` property:
+    1. Add the following bot properties:
+        1. Set `entityId` as `conversations`. 
+        1. Add `scopes` as `personal`.
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+
+The following code snippet is an example for configuring bot as the default landing capability:
+```json
+"staticTabs":[
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      },
+      {
+        "entityId": "com.contoso.helloworld.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
+        "scopes": [
+            "personal"
+        ]
+    }
+]
+```
+The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab.
+
+:::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
+
+### Tab as default landing capability
+
+To configure tab as the default landing capability:
+
+1. Open your app manifest.
+1. Under `staticTabs` property: 
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+    1. Add the following bot properties:
+        1. Set `entityId` as `conversations`.
+        1. Add `scopes` as `personal`.
+ 
+The following code snippet is an example for tab as the default landing capability:
+```json
+"staticTabs": [
+    {
+        "entityId": "com.contoso.helloworld.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
+        "scopes": [
+            "personal"
+        ]
+    },
+    {
+        "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+    }
+]
+```
+The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot.
+
+:::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
+
+The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 

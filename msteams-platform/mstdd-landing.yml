@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.date: 10/23/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -61,7 +61,9 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
+      - text: Introducing default landing capability for personal tab and bot apps
+        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
+      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile
         url: ./resources/schema/manifest-schema.md
       - text: Localize your Copilot agents
         url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
@@ -79,9 +81,6 @@ landingContent:
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Screen share content to meetings
         url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
-      - text: Extend bot-based message extension plugins to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
-
     - linkListType: reference
       links:
       - text: Extend Microsoft 365 Copilot
