@@ -42,77 +42,10 @@ As a developer, I want to build an intelligent lightbot that controls the light 
 
 How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience?
 
-<!--
-To achieve this output, you can leverage the various features of the Teams AI library:
-
-:::row:::
-    :::column span="":::
-
-    :::column-end:::
-    :::column span="":::
-        [**Conversation management**](#conversation-management)
-    :::column-end:::
-    :::column span="":::
-        
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        [**User engagement**](#user-engagement)
-    :::column-end:::
-    :::column span="":::
-        **Teams AI library: All you need to know**
-    :::column-end:::
-    :::column span="":::
-        [**Integration**](#integration)
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        [**Analytics and insight**](#analytics-and-insight)
-    :::column-end:::
-    :::column span="":::
-
-    :::column-end:::
-    :::column span="":::
-        [**Development and deployment**](#development-and-deployment)
-    :::column-end:::
-:::row-end:::
-
-### Conversation management
-
-:::row:::
-    :::column span="":::
-        **Natural language modeling**
+        **Localization**
     :::column-end:::
     :::column span="3":::
-        The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
-
-        Bots can run in-context and assist when the bot recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Prompt engineering**
-    :::column-end:::
-    :::column span="3":::
-        Prompt engineering helps you to design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Prompt management**
-    :::column-end:::
-    :::column span="3":::
-        Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Conversational session history**
-    :::column-end:::
-    :::column span="3":::
-        Teams AI library remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
+        Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, it's translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -122,187 +55,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
     :::column span="3":::
         Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-        Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic. This means you can choose to keep your app's content outside the public domain and confined to your preferred LLM model.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Action Planner**
-    :::column-end:::
-    :::column span="3":::
-        Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
-    :::column-end:::
-:::row-end:::
-
-### User engagement
-
-:::row:::
-    :::column span="":::
-        **Responsible AI**
-    :::column-end:::
-    :::column span="3":::
-        Teams AI library allows you to create ethical and responsible conversational apps by:
-
-          * Moderation hooks: To regulate bot responses against any moderation API.
-          * Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
-          * Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
-
-        Teams AI library offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Feedback loop**
-    :::column-end:::
-    :::column span="3":::
-        Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
-
-    :::column-end:::
-:::row-end:::
-
-### Integration
-
-:::row:::
-    :::column span="":::
-        **Assistants API**
-    :::column-end:::
-    :::column span="3":::
-        > [!NOTE]
-        > Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
-
-        Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
-
-        Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
-
-        | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
-        | --- |
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Math tutor assistant code sample shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. |
-
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Augmentation**
-    :::column-end:::
-    :::column span="3":::
-        Efficiently enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, you can tailor your model to your needs, increasing its accuracy and desired outcomes.
-
-            * **Retrieval Augmented Generation (RAG)**: Automatically incorporates real-time, dynamic, and specified external data sources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past.
-
-            * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
-
-            * **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-
-            * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Vector data sources**
-    :::column-end:::
-    :::column span="3":::
-        Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
-
-        | **Try it out**: | [.NET](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) / [Node.js](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) / [Python](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
-        | --- |
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Search command message extension code sample shows how to incorporate a basic message extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. |
-
-    :::column-end:::
-:::row-end:::
-
-### Analytics and insight
-
-:::row:::
-    :::column span="":::
-        **Predictive engine for mapping intents to actions**
-    :::column-end:::
-    :::column span="3":::
-        A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user was out of office and needs to quickly summarize a thread, the library:
-
-            1. Understands the intent as summarization.
-            1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
-            1. Provides actions to summarize chat content for users to consume.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Enhanced reasoning**
-    :::column-end:::
-    :::column span="3":::
-        Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, the system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses before sending. The introspection allows the bot to identify inaccuracies and correct its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
-    :::column-end:::
-:::row-end:::
-
-### Development and deployment
-
-:::row:::
-    :::column span="":::
-        **Simple Teams-centric component scaffolding**
-    :::column-end:::
-    :::column span="3":::
-        The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Localization**
-    :::column-end:::
-    :::column span="3":::
-        Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
-    :::column-end:::
-:::row-end:::
--->
-
-:::row:::
-    :::column span="":::
-        **Simple Teams-centric component scaffolding**
-    :::column-end:::
-    :::column span="3":::
-        The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Natural language modeling**
-    :::column-end:::
-    :::column span="3":::
-        The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
-
-        A bot can run in-context and assist when it recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Prompt engineering**
-    :::column-end:::
-    :::column span="3":::
-        Prompt engineering helps you to design prompts considering user's intent, context of the conversation, and the bot personality. Bots can be personalized and customized to meet user needs.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Conversational session history**
-    :::column-end:::
-    :::column span="3":::
-        Teams AI library remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **Localization**
-    :::column-end:::
-    :::column span="3":::
-        Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        **LLM modularity**
-    :::column-end:::
-    :::column span="3":::
-        Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
-
-        Teams AI library is built to use OpenAI’s GPT model, but you have the flexibility to swap it with any LLM of your choice without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
+        Teams AI library is built to use OpenAI’s GPT model. You have the flexibility to swap it with any LLM of your choice without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -324,11 +77,11 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="3":::
-        A simple interface for actions and predictions allows bots to react when the bot has confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user was out of office and needs to quickly summarize a thread, the Teams AI library:
+        A simple interface for actions and predictions allows bots to react when it can take an action. Ambient presence lets a bot learn intent, use prompts based on business logic, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
-            1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
-            1. Provides actions to summarize chat content for users to consume.
+            1. Allows prompts to make summarizations over a period of time focused on the user’s interactions.
+            1. Provides actions to summarize the chat content.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -336,7 +89,7 @@ To achieve this output, you can leverage the various features of the Teams AI li
         **Action Planner**
     :::column-end:::
     :::column span="3":::
-        Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
+        Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Add more plugins for other models like Llama-2 to give you the flexibility to choose the best model for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
     :::column-end:::
 :::row-end:::
 :::row:::
