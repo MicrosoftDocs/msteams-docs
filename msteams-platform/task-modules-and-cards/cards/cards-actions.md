@@ -535,11 +535,9 @@ The following is an example of the incoming activity to a bot when user types so
 }
  ```
 
-The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
-
 ### Conditional enablement of action buttons in Adaptive Cards
 
-In an Adaptive Cards, there are scenarios where users might not fill inputs that have `isRequired` property set to `true`. Despite this, action buttons such as `Action.Submit` and `Action.Execute` stay enabled. To avoid incomplete submissions, use the `conditionallyEnabled` property to ensure that action buttons are disabled until the user provides the required inputs.
+In Adaptive Cards, there are scenarios where users might not fill inputs that have `isRequired` property set to `true`. Despite this, action buttons such as `Action.Submit` and `Action.Execute` stay enabled. Use the `conditionallyEnabled` property to ensure that action buttons are disabled until the user provides the required inputs.
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -591,7 +589,7 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 
 ---
 
-The following JSON payload shows an Adaptive Card with conditional enabled button:
+The following JSON payload shows an Adaptive Card with a conditionally enabled buttons:
 
 ```json
 {
