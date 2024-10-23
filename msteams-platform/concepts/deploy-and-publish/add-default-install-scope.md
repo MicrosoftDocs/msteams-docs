@@ -52,7 +52,7 @@ To configure details in app manifest:
     ```
 ## Configure your app's default landing capability
 
-If your app supports both bot and tab in personal scope, you can configure how the app must open, either as a bot or as a tab by default. This ability to set how an open must open by default based on its capability is termed as default landing capability.
+If your app supports both bot and tab in personal scope, you can configure how the app must open, either as a bot or as a tab . This ability to set the default landing of an app based on its capability is termed as default landing capability.
 
 To set default landing capability, you must configure the `staticTabs` property in the app manifest. 
 
@@ -83,8 +83,9 @@ The following code is an example for configuring bot as the default landing capa
             ]
         }
     ]
-    
 ```
+(GIF to be added)
+
 To configure tab as the default landing capability:
 
 1. Open your app manifest.
@@ -113,6 +114,8 @@ The following code is an example for tab as the default landing capability:
         }
     ]
 ```
+(GIF to be added)
+
 The first entry added in `staticTabs` array will be considered for default landing and the second entry added will be pinned to the app's personal experience for easy switching.
 
 The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
