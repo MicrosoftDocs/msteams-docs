@@ -993,7 +993,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
-This property also enables you to set the default landing capability for your app, enabling the app to open as a bot or tab by default. For more information, see [Configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+This property also enables you to set the default landing capability for your app, enabling the app to open as a bot or tab by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Extend static tabs to group chat, channels, and meetings
 

@@ -124,7 +124,7 @@ The following code is an example for tab as the default landing capability:
 ```
 (GIF to be added)
 
-The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
+The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
