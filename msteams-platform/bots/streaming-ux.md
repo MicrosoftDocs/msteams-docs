@@ -30,7 +30,9 @@ Streaming bot messages has two types of updates:
 
 ## Streaming REST API
 
-When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDKs send activity method to confirm that the previous call was successfully transmitted. In some scenarios, the bot might not receive an error status code, but it can receive an error message.
+When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDKs send activity method to confirm that the previous call was successfully transmitted. 
+
+In some scenarios, the bot might not receive an error status code, but it can receive an error message. Ensure the bot calls the streaming API at a consistent pace during streaming, we  recommend that a bot streams one message at a time. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
 To enable streaming in bots, follow these steps:
 
@@ -54,7 +56,10 @@ The following are the query parameters for streaming REST API:
 | `channelData.streamType` | ✔️ | Must be the same value as `entities.streamType`|
 | `channelData.streamSequence ` | ✔️ | Must be the same value as `entities.streamSequence` |
 
-Streaming also supports attachments and citations. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [citations](~/bots/how-to/bot-messages-ai-generated-content.md#citations).
+> [!NOTE]
+> You must insert the streaming metadata into both `entities` and `ChannelData`.
+
+Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
 
 ### Start streaming
 
@@ -333,3 +338,10 @@ The following are the success and error codes:
 
 * [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
 * [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+
+## Sample code
+
+| Sample name | Description | Node.js | c# |
+| --- | --- | --- | --- |
+| {TBD} | This is a conversational streaming bot with REST API. | {TBD} | {TBD} |
+| Conversational streaming bot | This is a conversational streaming bot with Teams AI library for Teams that thinks it's a chef to help you cook Teams apps. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) |
