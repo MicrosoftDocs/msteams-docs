@@ -481,12 +481,9 @@
       href: bots/how-to/bots-filesv4.md
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
-    - name: Channel and group chat conversations with a bot
-      href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Teams conversational bots, mention, tag mention, user mention
-    - name: Conversation events in your Teams bot
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events  
+      displayName: Fetch roster or user profile
+    - name: Teams bot API changes to fetch team or chat members
+      href: resources/team-chat-member-api-changes.md  
     - name: Configure bot scope
       href: bots/how-to/bot-configuration-experience.md
       displayName: configuration settings, fetchTask, config/fetch, config/submit
