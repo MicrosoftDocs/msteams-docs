@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 10/22/2024
 ---
 
-# Debug apps in Teams Desktop Client
+# Debug apps in Teams desktop client
 
 Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, opens debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
 
@@ -46,7 +46,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Custom Engine Agent**.
 
