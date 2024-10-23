@@ -63,7 +63,7 @@ landingContent:
       links:
       - text: Introducing default landing capability for personal tab and bot apps
         url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
-      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
+      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile
         url: ./resources/schema/manifest-schema.md
       - text: Localize your Copilot agents
         url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
