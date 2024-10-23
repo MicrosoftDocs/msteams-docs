@@ -52,71 +52,69 @@ To configure details in app manifest:
     ```
 ## Configure your app's default landing capability
 
-If your app supports both bot and tab in personal scope, you can configure how the app must open, either as a bot or as a tab . This ability to set the default landing of an app based on its capability is termed as default landing capability.
+You can configure the default landing capability for an app that supports both bot and tab capabilities in personal scope. Based on this configuration, the app opens either as a bot or as a tab by default.
 
-To set default landing capability, you must configure the `staticTabs` property in the app manifest. 
+To set default landing capability, you must configure the `staticTabs` property in the app manifest. The first capability defined in `staticTabs` becomes the default landing capability and the second capability is pinned to the app's personal experience for easy switching. 
 
 To set bot as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, 
-    1. Add the following properties:
+1. Under `staticTabs` property:
+    1. Add the following bot properties:
         1. Set `entityId` as `conversations`. 
         1. Add `scopes` as `personal`.
-    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) 
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 The following code is an example for configuring bot as the default landing capability:
 ```json
-    "staticTabs":[
-          {
-             "entityId":"conversations",
-             "scopes":[
-                "personal"
-             ]
-          },
-          {
-            "entityId": "com.contoso.helloworld.hellotab",
-            "name": "Hello Tab",
-            "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
-            "scopes": [
-                "personal"
-            ]
-        }
-    ]
+"staticTabs":[
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      },
+      {
+        "entityId": "com.contoso.helloworld.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
+        "scopes": [
+            "personal"
+        ]
+    }
+]
 ```
 (GIF to be added)
 
 To configure tab as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, 
+1. Under `staticTabs` property: 
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
-    1. Add the following properties:
+    1. Add the following bot properties:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
  
 The following code is an example for tab as the default landing capability:
 ```json
-    "staticTabs": [
-        {
-            "entityId": "com.contoso.helloworld.hellotab",
-            "name": "Hello Tab",
-            "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId":"conversations",
-             "scopes":[
-                "personal"
-             ]
-        }
-    ]
+"staticTabs": [
+    {
+        "entityId": "com.contoso.helloworld.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
+        "scopes": [
+            "personal"
+        ]
+    },
+    {
+        "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+    }
+]
 ```
 (GIF to be added)
-
-The first entry added in `staticTabs` array will be considered for default landing and the second entry added will be pinned to the app's personal experience for easy switching.
 
 The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
 
