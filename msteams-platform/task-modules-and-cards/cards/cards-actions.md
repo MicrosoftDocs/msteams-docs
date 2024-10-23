@@ -554,7 +554,7 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 
 **Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client." lightbox="../../assets/images/adaptive-cards/desktop-enabled.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client.":::
 
 :::column-end:::
 
@@ -562,7 +562,7 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 
 **Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client." lightbox="../../assets/images/adaptive-cards/desktop-disabled.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client.":::
 
 :::column-end:::
 
@@ -575,7 +575,7 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 
 **Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client." lightbox="../../assets/images/adaptive-cards/mobile-enabled.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client.":::
 
 :::column-end:::
 
@@ -583,7 +583,7 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 
 **Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client." lightbox="../../assets/images/adaptive-cards/mobile-disabled.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client.":::
 
 :::column-end:::
 
