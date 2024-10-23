@@ -547,7 +547,49 @@ In an Adaptive Cards, there are scenarios where users might not fill inputs that
 
 You can use `associatedInputs` property to associate `Action.Submit` and `Action.Execute` to other inputs in the card. For more information, see [Data.Query definition](dynamic-search.md#dataquery-definition).
 
-Place holder for images
+# [Desktop](#tab/desktop1)
+
+:::row:::
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client." lightbox="../../assets/images/adaptive-cards/ac-no-border.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client." lightbox="../../assets/images/adaptive-cards/ac-border.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+# [Mobile](#tab/mobile1)
+
+:::row:::
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client." lightbox="../../assets/images/adaptive-cards/ac-no-border-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client." lightbox="../../assets/images/adaptive-cards/ac-border-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
 
 The following JSON payload shows an Adaptive Card with conditional enabled button:
 
