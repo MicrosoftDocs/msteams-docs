@@ -132,9 +132,10 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Vector data sources**
     :::column-end:::
     :::column span="3":::
-        Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
+        Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
     :::column-end:::
 :::row-end:::
+
 :::row:::
     :::column span="":::
         **Enhanced reasoning**
