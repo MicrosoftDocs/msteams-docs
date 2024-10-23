@@ -52,19 +52,18 @@ To configure details in app manifest:
     ```
 ## Configure your app's default landing capability
 
-If your app supports both bot and static tab capabilities in personal scope, you can now configure the default landing capability for your app. Your app can open either as a bot or as a tab based on this configuration. 
-(Image to be added here)
+If your app supports both bot and tab in personal scope, you can configure how the app must open, either as a bot or as a tab by default. This ability to set how an open must open by default based on its capability is termed as default landing capability.
 
-To set up the default landing capability, configure the `staticTabs` property in the app manifest. The first object added within this property is considered as the default landing capability.
+To set default landing capability, you must configure the `staticTabs` property in the app manifest. 
 
-To configure bot as the default landing capability:
+To set bot as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, add the following details as the first object in the array:
-    1. `entityId`: Set as `conversations`. 
-    1. `scopes`: Add value `personal`.
-1.  Add tab as the second object. Set the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) 
-
+1. Under `staticTabs` property, 
+    1. Add the following properties:
+        1. Set `entityId` as `conversations`. 
+        1. Add `scopes` as `personal`.
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs) 
 
 The following code is an example for configuring bot as the default landing capability:
 ```json
@@ -89,11 +88,12 @@ The following code is an example for configuring bot as the default landing capa
 To configure tab as the default landing capability:
 
 1. Open your app manifest.
-1. Under `staticTabs` property, add the tab details as the first object of the array. Set the properties of a tab as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
-1. Add bot as the second object.
-    1.  Set `entityId` as `conversations`. 
-    1. Add `scopes` as an array with the value `personal`.
-    
+1. Under `staticTabs` property, 
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+    1. Add the following properties:
+        1. Set `entityId` as `conversations`.
+        1. Add `scopes` as `personal`.
+ 
 The following code is an example for tab as the default landing capability:
 ```json
     "staticTabs": [
@@ -113,6 +113,8 @@ The following code is an example for tab as the default landing capability:
         }
     ]
 ```
+The first entry added in `staticTabs` array will be considered for default landing and the second entry added will be pinned to the app's personal experience for easy switching.
+
 The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [App manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
