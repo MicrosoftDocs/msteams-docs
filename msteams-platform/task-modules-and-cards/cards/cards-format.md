@@ -832,7 +832,9 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ## CompoundButton in Adaptive Cards
 
-If you want to emulate the suggested prompts UI as in Microsoft 365 Copilot to your Adaptive Card, you can use the CompoundButton element that provides an out-of-the-box solution for creating such buttons. 
+The Compoundbutton element in an Adaptive Card offers a user experience similar to that of suggested prompts in an AI bot. This feature in Adaptive Card provides an out-of-the-box solution for creating these buttons.
+
+<image placeholder>
 
 Here's an example of how the CompoundButton element can be used in an Adaptive Card: 
 
@@ -856,37 +858,41 @@ Here's an example of how the CompoundButton element can be used in an Adaptive C
 } 
 ```
 
-This element simplifies the process for developers, allowing them to create intuitive and responsive UI components with minimal effort.
+This element simplifies the process for developers allowing them to create intuitive and responsive UI components with minimal effort.
 
-### CompoundButton schema
+**CompoundButton schema**
 
 The following table lists the parameters the CompoundButton element:
 
 | Property name | Required | Type | Description |
 |---------|---------|---------|---------|
-| `type` | ✔️ | String | It must be CompoundButton and it's an inherited property. |
+| `type` | ✔️ | String | It must be `CompoundButton` and it's an inherited property. |
 | `id` |  | String | It's an inherited property. |
 | `requires` |  | Object | It's an inherited property. |
 | `isVisible` |  | Boolean | It's an inherited property. |
 | `separator ` |  | Boolean | It's an inherited property. |
-| `height ` |  | String | Auto, Stretch <br> It's an inherited property. |
-| `horizontalAlignment ` | Yes | String | Left, Center, Right <br> It's an inherited property. |
-| `Spacing ` |  | String | None, Small, Default, Medium, Large, ExtraLarge <br> It's an inherited property. |
-| `targetWidth ` |  | String | VeryNarrow, Narrow, Standard, Wide <br> It's an inherited property. |
-| `icon ` |  | String | IconInfo object in the next table. |
-| `badge ` |  | String | Markdown is not supported. |
-| `title ` | ✔️ | String | Markdown is not supported. |
-| `description ` |  | String | Markdown is not supported. |
-| `select Action` |  |  | Action object. All actions allowed except Action.ShowCard. |
+| `height ` |  | String | `auto`, `stretch` <br> It's an inherited property. |
+| `horizontalAlignment ` |  | String | `left`, `center`, `right` <br> It's an inherited property. |
+| `Spacing ` |  | String | `None`, `small`, `default`, `medium`, `large`, `extraLarge` <br> It's an inherited property. |
+| `targetWidth ` |  | String | `veryNarrow`, `narrow`, `standard`, `wide` <br> It's an inherited property. |
+| `icon ` |  | String | The iconInfo object are `name`, `size`, `style`, and `color`. |
+| `icon.name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. Same as the name of the new Icon element. |
+| `icon.size` |  | String | `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `icon.style` |  | String | `Regular`, `Filled` |
+| `icon.color` |  | String | `default`, `dark`, `light`, `accent`, `good`, `warning`, `attention` |
+| `badge ` |  | String | Markdown isn't supported. |
+| `title ` | ✔️ | String | Markdown isn't supported. |
+| `description ` |  | String | Markdown isn't supported. |
+| `select Action` |  |  | It's an action object. All actions are allowed except Action.ShowCard. |
 
 The following table lists the `iconInfo` object properties:
 
 | Property name | Required | Type | Description |
 |---------|---------|---------|---------|
 | `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. Same as the name of the new Icon element. |
-| `size` |  | String | xxSmall, xSmall, Small, Standard, Medium, Large, xLarge, xxLarge |
-| `style` |  | String | Regular, Filled |
-| `color` |  | String | default, dark, light, accent, good, warning, attention |
+| `size` |  | String | `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style` |  | String | `Regular`, `Filled` |
+| `color` |  | String | `default`, `dark`, `light`, `accent`, `good`, `warning`, `attention` |
 
 ## CodeBlock in Adaptive Cards
 
