@@ -56,7 +56,7 @@ You can configure the default landing capability for an app that supports both b
 
 To set default landing capability, you must configure the `staticTabs` property in the app manifest. The first capability defined in `staticTabs` becomes the default landing capability. The second capability defined is pinned to the app's personal experience for easy switching.
 
-You can configure:
+You can configure any one of the following:
 * [Bot as default landing capability](#bot-as-default-landing-capability)
 * [Tab as default landing capability](#tab-as-default-landing-capability)
 
@@ -71,7 +71,7 @@ To set bot as the default landing capability:
         1. Add `scopes` as `personal`.
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
-The following code is an example for configuring bot as the default landing capability:
+The following code snippet is an example for configuring bot as the default landing capability:
 ```json
 "staticTabs":[
       {
@@ -90,7 +90,7 @@ The following code is an example for configuring bot as the default landing capa
     }
 ]
 ```
-The following GIF demonstrates opening an app with bot as default landing capability and how a user can transition to a tab.
+The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab.
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
@@ -105,7 +105,7 @@ To configure tab as the default landing capability:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
  
-The following code is an example for tab as the default landing capability:
+The following code snippet is an example for tab as the default landing capability:
 ```json
 "staticTabs": [
     {
@@ -124,7 +124,7 @@ The following code is an example for tab as the default landing capability:
     }
 ]
 ```
-The following GIF demonstrates opening an app with tab as default landing capability and how a user can transition to a bot.
+The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot.
 
 :::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
