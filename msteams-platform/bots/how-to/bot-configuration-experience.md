@@ -23,7 +23,7 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
-To configure bot as the default capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Build bot configuration experience
 
