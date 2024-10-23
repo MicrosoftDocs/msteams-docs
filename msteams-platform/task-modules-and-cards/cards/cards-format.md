@@ -832,37 +832,13 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ## CompoundButton in Adaptive Cards
 
-The Compoundbutton element in an Adaptive Card offers a user experience similar to that of suggested prompts in an AI bot. This feature in Adaptive Card provides an out-of-the-box solution for creating these buttons.
+The `CompoundButton` element in an Adaptive Card offers a user experience similar to that of suggested prompts in an AI bot. This feature in Adaptive Cards provide an out-of-the-box solution for creating intuitive and responsive UI components.
 
-<image placeholder>
-
-Here's an example of how the CompoundButton element can be used in an Adaptive Card: 
-
-```json
-{ 
-    "type": "AdaptiveCard", 
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-    "version": "1.5", 
-    "body": [ 
-        { 
-            "type": "CompoundButton", 
-            "title": "Summarize", 
-            "icon": { 
-                "name": "TextBulletList" 
-            }, 
-            "subTitle": "Review key points in file", 
-            "height": "stretch", 
-            "badge": "New" 
-        } 
-    ] 
-} 
-```
-
-This element simplifies the process for developers allowing them to create intuitive and responsive UI components with minimal effort.
+image placeholder
 
 **CompoundButton schema**
 
-The following table lists the parameters the CompoundButton element:
+The following table lists the parameters the `CompoundButton` element:
 
 | Property name | Required | Type | Description |
 |---------|---------|---------|---------|
@@ -883,16 +859,29 @@ The following table lists the parameters the CompoundButton element:
 | `badge ` |  | String | Markdown isn't supported. |
 | `title ` | ✔️ | String | Markdown isn't supported. |
 | `description ` |  | String | Markdown isn't supported. |
-| `select Action` |  |  | It's an action object. All actions are allowed except Action.ShowCard. |
+| `select Action` |  |  | It's an action object. All actions are allowed except `Action.ShowCard`. |
 
-The following table lists the `iconInfo` object properties:
+Here's an example of how the `CompoundButton` element can be used in an Adaptive Card: 
 
-| Property name | Required | Type | Description |
-|---------|---------|---------|---------|
-| `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. Same as the name of the new Icon element. |
-| `size` |  | String | `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
-| `style` |  | String | `Regular`, `Filled` |
-| `color` |  | String | `default`, `dark`, `light`, `accent`, `good`, `warning`, `attention` |
+```json
+{ 
+    "type": "AdaptiveCard", 
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+    "version": "1.5", 
+    "body": [ 
+        { 
+            "type": "CompoundButton", 
+            "title": "Summarize", 
+            "icon": { 
+                "name": "TextBulletList" 
+            }, 
+            "subTitle": "Review key points in file", 
+            "height": "stretch", 
+            "badge": "New" 
+        } 
+    ] 
+} 
+```
 
 ## CodeBlock in Adaptive Cards
 
