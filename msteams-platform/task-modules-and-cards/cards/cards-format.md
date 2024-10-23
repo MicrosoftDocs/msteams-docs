@@ -832,34 +832,39 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ## CompoundButton in Adaptive Cards
 
-The `CompoundButton` element in an Adaptive Card offers a user experience similar to that of suggested prompts in an AI bot. This feature in Adaptive Cards provide an out-of-the-box solution for creating intuitive and responsive UI components.
+The `CompundButton` element allows you to integrate multiple elements within a button in an Adaptive Card. It provides an optimal solution for implementing user experience similar to that of prompt starters in an AI bot.
 
 image placeholder
 
 **CompoundButton schema**
 
-The following table lists the parameters the `CompoundButton` element:
+The following table lists the properties of the `CompoundButton` element:
 
-| Property name | Required | Type | Description |
+| Property | Required | Type | Description |
 |---------|---------|---------|---------|
-| `type` | ✔️ | String | It must be `CompoundButton` and it's an inherited property. |
-| `id` |  | String | It's an inherited property. |
-| `requires` |  | Object | It's an inherited property. |
-| `isVisible` |  | Boolean | It's an inherited property. |
-| `separator ` |  | Boolean | It's an inherited property. |
-| `height ` |  | String | `auto`, `stretch` <br> It's an inherited property. |
-| `horizontalAlignment ` |  | String | `left`, `center`, `right` <br> It's an inherited property. |
+| `type` | ✔️ | String | It must be set to `CompoundButton`. |
+| `id` |  | String | A unique identifier for the element or action. |
+| `requires` |  | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element is not rendered (or its fallback is rendered if provided). |
+| `isVisible` |  | Boolean | Controls the visibility of the button. |
+| `separator ` |  | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator will be displayed for the first element in a container, even if this property is set to true. |
+| `height ` |  | String | The height of the element. When set to stretch, the element will use the remaining vertical space in its container. The allowed values are `auto`, `stretch`. |
+| `horizontalAlignment ` |  | String | Controls how the element should be horizontally aligned. The allowed values are `left`, `center`, `right` |
 | `Spacing ` |  | String | `None`, `small`, `default`, `medium`, `large`, `extraLarge` <br> It's an inherited property. |
-| `targetWidth ` |  | String | `veryNarrow`, `narrow`, `standard`, `wide` <br> It's an inherited property. |
-| `icon ` |  | String | The iconInfo object are `name`, `size`, `style`, and `color`. |
-| `icon.name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. Same as the name of the new Icon element. |
-| `icon.size` |  | String | `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
-| `icon.style` |  | String | `Regular`, `Filled` |
-| `icon.color` |  | String | `default`, `dark`, `light`, `accent`, `good`, `warning`, `attention` |
-| `badge ` |  | String | Markdown isn't supported. |
-| `title ` | ✔️ | String | Markdown isn't supported. |
-| `description ` |  | String | Markdown isn't supported. |
-| `select Action` |  |  | It's an action object. All actions are allowed except `Action.ShowCard`. |
+| `targetWidth ` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. The allowed values are `veryNarrow`, `narrow`, `standard`, `wide` <br> It's an inherited property. |
+| `icon` |  | String | The icon shown in the button and the `iconInfo` object are discussed in the next table. |
+| `badge ` |  | String | The badge shown on the button. Markdown isn't supported. |
+| `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
+| `description ` |  | String | The description text of the button. Markdown isn't supported. |
+| `selectAction` |  |  | An action that gets invoked when the button is selected. All actions are allowed except `Action.ShowCard`. |
+
+The following table lists the properties of the `iconInfo` object:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
+| `size` |  | String | The size of the icon. The allowed values are `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge`. |
+| `style` |  | String | The style of the icon. The allowed values are `Regular`, `Filled`. |
+| `color` |  | String | The color of the icon. The allowed values are `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention`. |
 
 Here's an example of how the `CompoundButton` element can be used in an Adaptive Card: 
 
