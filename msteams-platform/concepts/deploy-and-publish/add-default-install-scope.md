@@ -1,10 +1,10 @@
 ---
 title: Configure default options for your app
-description: Learn how to specify your Teams app's default install options, default capability for shared scopes and block apps by default.
+description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/15/2022
+ms.date: 10/23/2024
 ---
 # Configure default options for Teams app
 
@@ -128,7 +128,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
-The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
