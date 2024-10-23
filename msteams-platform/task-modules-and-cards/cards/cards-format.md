@@ -1042,7 +1042,6 @@ A container with many elements might lead to a long, unreadable card. Use the `m
 The following card payload shows a container with a scroll bar:
 
 ```json
-Example:
 {
     "type": "AdaptiveCard",
     "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
