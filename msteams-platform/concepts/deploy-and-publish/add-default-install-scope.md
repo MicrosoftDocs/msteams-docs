@@ -90,7 +90,9 @@ The following code is an example for configuring bot as the default landing capa
     }
 ]
 ```
-(GIF to be added)
+The following GIF demonstrates opening an app with bot as default landing capability and how a user can transition to a tab.
+
+:::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
 ### Tab as default landing capability
 
@@ -122,7 +124,9 @@ The following code is an example for tab as the default landing capability:
     }
 ]
 ```
-(GIF to be added)
+The following GIF demonstrates opening an app with tab as default landing capability and how a user can transition to a bot.
+
+:::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
 The `staticTabs` property is also used to pin personal tabs and reorder tabs. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
