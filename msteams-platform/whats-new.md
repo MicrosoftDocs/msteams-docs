@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
+* ***October 21, 2024***: [Use Fluent icons in Adaptive Cards for an effective user experience](task-modules-and-cards/cards/cards-format.md).
 * ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
 * ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
 * ***October 17, 2024***: [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs).
