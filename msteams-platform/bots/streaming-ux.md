@@ -30,51 +30,48 @@ Streaming UX has two types of updates:
 
 ## Streaming REST API
 
-When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDK's send activity method to confirm that the previous call was successfully transmitted. In some scenarios, the bot might not receive an error status code, but it can receive an error message.
+When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDKs send activity method to confirm that the previous call was successfully transmitted. In some scenarios, the bot might not receive an error status code, but it can receive an error message.
 
 To enable streaming in bots, follow these steps:
 
 > [!div class="checklist"]
 >
 > * [Start streaming](#start-streaming)
-> * [Continue streaming]
-> * [Final streaming]
+> * [Continue streaming](#continue-streaming)
+> * [Final streaming](#final-streaming)
 
-### Start streaming
-
-1. **Start streaming**: Initiate the streaming process by setting the `streamType` as `informative` and `streamSequence` to `1`. 
-
-The bot sends either informative message or streaming as the first message. The response will contain the `streamId` which is needed to make subsequent calls. The bot can also send citation here.  
-
-Notes: Provide Informative Updates 
-
-An informative update provides insight into what your bot is currently doing. Use these updates before your bot has started generating its final response to the user.  
-
-Examples of this include:  
-
-“Scanning through documents”, “Summarizing Content”, “Found relevant work items”.  
-
-While this is one step, you can send multiple informative updates as your bot makes progress on the user’s request.
-
-The following are the query parameters to start streaming:
+The following are the query parameters for streaming REST API:
 
 |Property|Required|Description|
 |---|---|---|
 | `type` | ✔️ | Must be `typing`|
-| `text` | ✔️ | The contents of the message that requires streaming. |
+| `text` | ✔️ | The contents of the message that is to be streamed. |
 | `entities.type` | ✔️ | Must be `streamInfo`|
-| `entities.streamType` | | Type of streaming updates. Supported values are either `informative` or `streaming` while default value is `streaming`. |
+| `entities.streamId` | ✔️ | `streamId` from the initial streaming request that is start streaming. |
+| `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. |
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
+| `ChannelData.streamId` | ✔️ | Must be the same value as `entities.streamId`.|
 | `channelData.streamType` | ✔️ | Must be the same value as `entities.streamType`|
 | `channelData.streamSequence ` | ✔️ | Must be the same value as `entities.streamSequence` |
 
+Streaming also supports attachments and citations. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [citations](~/bots/how-to/bot-messages-ai-generated-content.md#citations).
+
+### Start streaming
+
+The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId` which is important for executing subsequent calls. 
+
+Your bot can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your bot generates its final response to the user.
+
+The bot can also send citation for streaming. For more information, see [citations](~/bots/how-to/bot-messages-ai-generated-content.md#citations)
+
 ```json
-//Ex: A bot sends the second request with content && the content is informative loading message.
+
+//Ex: A bot sends the first request with content && the content is informative loading message.
 
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
   "type": "typing",
-  " serviceurl": "https://smba.trafficmanager.net/amer/",
+  "serviceurl": "https://smba.trafficmanager.net/amer/",
   "channelId": "msteams",
   "from": {
     "id": "<botId>",
@@ -104,7 +101,8 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "streamSequence": 1,
   }
 }
-201 created {a-0000l} // return activity id
+
+201 created { "id": "a-0000l" } // return stream id
 
 ```
 
@@ -114,9 +112,7 @@ The following image is an example of start streaming:
 
 ### Continue streaming 
 
-Use the `streamId` that you received from the first request. The bot sends either informative message or streaming. Make the subsequent calls after the bot receives 2xx from the previous calls. The bot can also send citation here. 
-
-2. **Provide informative updates**: Before the bot produces its final response, provide insights into the bot's ongoing actions such as, **Scanning through documents** or **Summarizing Content**. To provide these insights, set the `streamType` to `informative` and the `streamSequence` to `2`. Associate a `streamId` and the required display `text` with the request.
+Use the `streamId` that you've received from the initial request to send either informative or streaming message. Ensure that you make subsequent calls only after the bot receives successful response from the previous calls.
 
 ```json
 
@@ -124,168 +120,214 @@ Use the `streamId` that you received from the first request. The bot sends eithe
 
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
-      "type": "typing",
-      " serviceurl": "<https://smba.trafficmanager.net/amer/> ",
-      "channelId": "msteams",
-      "from": {
-        "id": "<botId>",
-        "name": "<BotName>"
-      },
-      "conversation": {
-        "conversationType": "personal",
-        "id" : "<conversationId>"
-      },
-      "recipient": {
-        "id": "<recipientId>",
-        "name": "<recipientName>",
-        "aadObjectId": "<recipient aad objecID>"
-      },
-      "locale": "en -US",
-      "text ": "Searching through emails...", // (required) second informative loading message.
-      "channelData": {
-        "streamld ": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
-        "streamType": "informative",
-        "streamSequence": 2, // (required) incremental integer; must be present for any streaming request.
-      }
-    } 
-    200 0K
-
-   ```
-
-   The following image is an example of a bot providing informative updates:
-
-   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
-
-Notes: Switch to Response Streaming 
-
-Once your bot is ready to start generating its final message to the user, switch from informative updates to response streaming.  
-
-For each response streaming update, the content of the message should be the latest version of the final message. This means that your bot should take any new tokens generated by the LLM, append it to the previous version of the message, and then send it to the user. 
-
-When the bot sends a streaming request, please make sure the bot sends the request at minimum 1 request per second.  
-
-3. **Switch to response streaming**: After the bot is ready to generate the final message, transition to response streaming by setting `streamType` to `streaming`. Ensure each `text` update includes the latest version of the final message. During this transition, update the `streamSequence` to `3` and associate a `streamId` with the request. In the subsequent messages, add new tokens generated by the Large Language Models (LLMs) to the previous `text` message content.
-
-   ```json
-
-   // Ex: A bot sends the second request with content & the content is informative loading message.
-
-    POST /conversations/<conversationId>/activities HTTP/1.1
+  "type": "typing",
+  " serviceurl": "https://smba.trafficmanager.net/amer/",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id" : "<conversationId>"
+  },
+  "recipient": {
+    "id": "<recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en -US",
+  "text ": "Searching through emails...", // (required) second informative loading message.
+  "entities":[
     {
-     "type": "typing",
-     " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
-     "channelId": "msteams",
-     "from": {
-        "id": "<botId>",
-        "name": "<BotName>"
-       },
-     "conversation": {
-        "conversationType": "personal",
-        "id" : "<conversationId>"
-      },
-     "recipient": {
-      "id" : "<recipientId>",
-      "name": "<recipientName>",
-      "aadObjectId": "<recipient aad objecID>"
-      },
-      "locale": "en-US" ,
-      "text ": "A brown fox" // (required) first streaming content.
-      "channelData": {
-        "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-        "streamType": "streaming",
-        "streamSequence": 3, // (required) incremental integer; must be present for any streaming request.
-       }
+      "type": "streaminfo",
+      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
+      "streamType": "informative", // informative or streaming(name needs to be finalized); default= streaming.
+      "streamSequence": 2 // (required) incremental integer; must be present for any streaming request.
     }
-    200 0K
+  ],
+  "channelData": {
+    // Add the same entities data to prevent breaking changes in near future.
+    "streamld ": "a-0000l",
+    "streamType": "informative",
+    "streamSequence": 2, 
+  }
+} 
+200 0K { }
 
-   ```
-  
-   Add the new `text` tokens, generated by the LLM, to the existing message content. During this transition, update the `streamSequence` to `4` and link a `streamId` to the request.
+```
 
-   ```json
+The following image is an example of a bot providing informative updates:
 
-   // Ex: A bot sends the second request with content & the content is informative loading message.
+:::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the UX of informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
 
-    POST /conversations/<conversationId>/activities HTTP/1.1
+After your bot is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your bot should incorporate any new tokens generated by the Large Language Models (LLMs), append these to the previous message version, and then send it to the user.
+
+When the bot dispatches a streaming request, ensure the bot sends the request at a minimum rate of one request per second.
+
+```json
+
+// Ex: A bot sends the third request with content & the content is actual streaming content.
+
+POST /conversations/<conversationId>/activities HTTP/1.1
+{
+  "type": "typing",
+  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id" : "<conversationId>"
+  },
+  "recipient": {
+    "id" : "<recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en-US" ,
+  "text ": "A brown fox", // (required) first streaming content.
+  "entities":[
     {
-     "type": "typing",
-     " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
-     "channelId": "msteams",
-     "from": {
-        "id": "<botId>",
-        "name": "<BotName>"
-       },
-     "conversation": {
-        "conversationType": "personal",
-        "id" : "<conversationId>"
-        },
-     "recipient": {
-      "id" : "<recipientId>",
-      "name": "<recipientName>",
-      "aadObjectId": "<recipient aad objecID>"
-      },
-      "locale": "en-US" ,
-      "text ": "A brown fox jumped over ", // (required) second streaming content.
-      "channelData": {
-        "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-        "streamType": "streaming",
-        "streamSequence": 4, // (required) incremental integer; must be present for any streaming request.
-       }
+      "type": "streaminfo",
+      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
+      "streamType": "streaming", // informative or streaming(name needs to be finalized); default= streaming.
+      "streamSequence": 3 // (required) incremental integer; must be present for any streaming request.
     }
-    200 0K
-   ```
+  ],
+  "channelData": 
+  {
+    // Add the same entities data to prevent breaking changes in near future.
+    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
+    "streamType": "streaming",
+    "streamSequence": 3, // (required) incremental integer; must be present for any streaming request.
+  }
+}
+200 0K{ }
 
-   The following image is an example of a bot providing updates in chunks:
+```
 
-   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
+```json
+
+// Ex: A bot sends the fourth request with content & the content is actual streaming content.
+
+POST /conversations/<conversationId>/activities HTTP/1.1
+{
+  "type": "typing",
+  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id" : "<conversationId>"
+  },
+  "recipient": {
+    "id" : "<recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en-US" ,
+  "text ": "A brown fox jumped over the fence", // (required) second streaming content.
+  "entities":[
+    {
+      "type": "streaminfo",
+      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
+      "streamType": "streaming", // informative or streaming(name needs to be finalized); default= streaming.
+      "streamSequence": 4 // (required) incremental integer; must be present for any streaming request.
+    }
+  ],
+  "channelData": 
+  {
+    // Add the same entities data to prevent breaking changes in near future.
+    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
+    "streamType": "streaming",
+    "streamSequence": 4, // (required) incremental integer; must be present for any streaming request.
+  }
+}
+200 0K{ }
+```
+
+The following image is an example of a bot providing updates in chunks:
+
+:::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the UX of response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
 ### Final Streaming 
 
-Once your bot has completed generating its message, send the end streaming signal along with the final message & its contents. Please note the type of activity is message. Here, the bot sets any fields that are allowed for the regular message activity. Only ‘final’ is allowed as a streamType value.  
+After your bot has completed generating its message, send the end streaming signal along with the final message and its contents. For the final message, the `type` of activity is `message`. Here, the bot sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
 
-4. **End streaming and send the final message**: To conclude the streaming with an end signal, set `type` as `message` and deliver the final `text` message to the user. In this final message, update the `streamType` to `final` and associate a `streamId` with the request.
+```json
 
-    ```json
+// Ex: A bot sends the second request with content && the content is informative loading message.
 
-       // Ex: A bot sends the second request with content && the content is informative loading message.
+POST /conversations/<conversationId>/activities HTTP/1.1
+{
+  "type": "message",
+  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id" : "<conversationId>"
+  },
+  "recipient": {
+    "id" : "recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en-US",
+  "text ": "A brown fox jumped over the fence.", // (required) final full streamed content.
+  "entities":[
+    {
+      "type": "streaminfo",
+      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
+      "streamType": "final", // (required) final is only allowed for the last message of the streaming.
+    }
+  ],
+  "channelData": 
+  {
+    // Add the same entities data to prevent breaking changes in near future.
+    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
+    "streamType": "final"
+  }
+}
+200 0K{ }
 
-        POST /conversations/<conversationId>/activities HTTP/1.1
-        {
-         "type": "message",
-         " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
-         "channelId": "msteams",
-         "from": {
-            "id": "<botId>",
-            "name": "BotName>"
-           },
-         "conversation": {
-            "conversationType": "personal",
-            "id : (conversationId>"
-            },
-         "recipient": {
-          "id" : "recipientId>",
-          "name": "<recipientName>",
-          "aadObjectId": "<recipient aad objecID>"
-          },
-          "locale": "en-US" ,
-          "text ": "A brown fox jumped over the fence.", // (required) final full streamed content.
-          "channelData": {
-            "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-            "streamType": "final",
-           }
-        }
-        200 0K
+```
 
-       ```
+The following image is an example of the bot's final response:
 
-   The following image is an example of the bot's final response:
+:::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the UX of final streamed message." lightbox="../assets/images/bots/streaming_final.png":::
 
-   :::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the UX of final streamed message." lightbox="../assets/images/bots/streaming_final.png":::
+## Response codes
 
-## Limitations
+The following are the success and error codes:
 
-* Ensure no attachments are included during streaming.
-* Maintain only one stream per thread.
+### Success codes
+
+| Http status code | Return value | Description |
+| --- | --- | --- |
+| `201` | `streamId`, this is the same as `activityId` such as `{"id":"1728640934763"}` | The bot returns this value after sending the initial streaming request. </br> For any subsequent streaming requests, the `streamId` is required. |
+| `202` | `{}`| Success code for any subsequent streaming requests. |
+
+### Error codes
+
+| Http status code | Error code | Error message | Description |
+|--- |--- |--- |--- |
+| `202`|`ContentStreamSequenceOrderPreConditionFailed`| `PreCondition failed exception when processing streaming activity.` | Few streaming requests might arrive out of sequence and consequently, get dropped. The most recent streaming request, determined by `streamSequence`, is used when requests are received in a disordered manner. Ensure to send each request in a sequential manner.|
+| `400`| `BadRequest`| Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
+| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed`| The streaming API feature isn't allowed for the user or bot.|
+| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on a already completed streamed message`| A bot can't continuously stream on a message that has already been streamed and completed.|
+| `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
+| `403`| `ContentStreamNotAllowed`| `Message size too large”`| The bot sent a message that exceeds the current message size restriction. |
+| `429`| | `API calls quota exceeded`| The bot sent an excessive number of streaming requests. |
 
 ## See also
 
