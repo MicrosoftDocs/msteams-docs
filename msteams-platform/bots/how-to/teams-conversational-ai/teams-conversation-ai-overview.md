@@ -123,7 +123,8 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
             * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external data sources into your model’s responses to enable up-to-date and contextually accurate results without fine-tuning or re-training your model.
             * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
             * **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-            * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed, increasing response reliability and consistency.
+            * **Functions**: Produce structured responses from your model by employing customizable user-defined functions. Use JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema and makes repairs to increase response reliability and consistency.
+
     :::column-end:::
 :::row-end:::
 :::row:::
