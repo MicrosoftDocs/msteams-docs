@@ -96,7 +96,7 @@ If you want to build basic tab app, select the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose what suits you](choose-what-suits-you.md)
+> [Know what suits you to build your Teams app and create tutorials](Know-what-suits-you-to-build-your-Teams-app-and-create-tutorials.md)
 
 ## See also
 
