@@ -1027,15 +1027,15 @@ A container with many elements might lead to a long, unreadable card. Use the `m
 
 | Property name | Type | Description |
 | --- | --- | --- |
-| `maxHeight` | String | Defines the maximum height of the container. You must define the value in the `<number> px` format. |
+| `maxHeight` | String | Defines the maximum height of the container. You must define the value in the `<number>px` format. |
 
-# [Desktop](#tab/desktop2)
+# [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-desktop.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-desktop.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
 
-# [Mobile](#tab/mobile2)
+# [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-mobile.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-mobile.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams mobile client.":::
 
 ---
 
