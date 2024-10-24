@@ -537,11 +537,15 @@ The following is an example of the incoming activity to a bot when user types so
 
 ### Conditional enablement of action buttons in Adaptive Cards
 
-In Adaptive Cards, there are scenarios where users might not fill inputs that have `isRequired` property set to `true`. Despite this, action buttons such as `Action.Submit` and `Action.Execute` stay enabled. Use the `conditionallyEnabled` property to ensure that action buttons are disabled until the user provides the required inputs.
+In Adaptive Cards, action buttons stay enabled despite users not filling required inputs.
+For example, if you're creating an Adaptive Card for a feedback form, you want to ensure that users provide a rating before they can submit their feedback. Use the `conditionallyEnabled` property to disable the action buttons until the user provides a rating.
+
+The `conditionallyEnabled` property can only be used with `Action.Submit` and `Action.Execute`. For a conditionally enabled button, if the `isEnabled` property is set to `false`, no actions will be enabled, regardless of the input values.
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| `conditionallyEnabled` | Boolean | Yes | Determines if the action button remains disabled until the user starts interacting with the inputs. |
+| `conditionallyEnabled` | Boolean | ✔️ | Determines if the action button remains disabled until the user starts interacting with the inputs. |
+| `isEnabled` | Boolean |  | Enables a button to remain disabled, irrespective of user input. |
 
 You can use `associatedInputs` property to associate `Action.Submit` and `Action.Execute` to other inputs in the card. For more information, see [Data.Query definition](dynamic-search.md#dataquery-definition).
 
@@ -550,17 +554,18 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 :::row:::
 :::column span="2":::
 
-**Enabled**
+**Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client.":::
+
 
 :::column-end:::
 
 :::column span="2":::
 
-**Disabled**
+**Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client.":::
 
 :::column-end:::
 
@@ -571,17 +576,18 @@ You can use `associatedInputs` property to associate `Action.Submit` and `Action
 :::row:::
 :::column span="2":::
 
-**Enabled**
+**Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client.":::
+
 
 :::column-end:::
 
 :::column span="2":::
 
-**Disabled**
+**Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client.":::
 
 :::column-end:::
 
@@ -625,14 +631,6 @@ The following JSON payload shows an Adaptive Card with a conditionally enabled b
     ]
 }
 ```
-
-### Permanently disabled buttons in Adaptive Cards
-
-You can permanently disable an action button in an Adaptive Card if you set the `isEnabled` property to `false`. You can apply this property to actions on containers, images, and other elements. If you apply this property to any element, Teams renders it unclickable. In a conditionally enabled button, when `isEnabled` property is set to `false`, it takes precedence, overriding any conditions that might enable an action due to dirty input values.
-
-| Property| Type | Required | Description |
-|-----------|------|----------|-------------|
-| `isEnabled` | Boolean | No | Enables a button to remain disabled, irrespective of user input. |
 
 #### Form completion feedback
 
