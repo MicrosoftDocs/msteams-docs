@@ -100,7 +100,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         > [!NOTE]
         > Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
 
-        Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
+        Assistants API allows you to create powerful AI assistants capable of performing a tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
     :::column-end:::
@@ -123,8 +123,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
             * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external data sources into your model’s responses to enable up-to-date and contextually accurate results without fine-tuning or re-training your model.
             * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
             * **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-            * **Functions**: Produce structured responses from your model by employing customizable user-defined functions. Use JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema and makes repairs to increase response reliability and consistency.
-
+            * **Functions**: Produce structured responses from your model by employing customizable user-defined functions. Use JSON schemas to define the parameters and their format. The Action Planner assesses model responses against the schema and makes repairs to increase response reliability and consistency.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -141,16 +140,16 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Enhanced reasoning**
     :::column-end:::
     :::column span="3":::
-        Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, the system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses before sending. The introspection allows the bot to identify inaccuracies and correct its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
+        Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, it prompts the bot to critically evaluate its potential responses before sending. The bot identifies inaccuracies and corrects its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment that builds trust in the product and increases user engagement.
     :::column-end:::
 :::row-end:::
+
 :::row:::
     :::column span="":::
         **Feedback loop**
     :::column-end:::
     :::column span="3":::
-        Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
-
+        Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns, and provides feedback on errors or missing information. The model attempts to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
     :::column-end:::
 :::row-end:::
 
