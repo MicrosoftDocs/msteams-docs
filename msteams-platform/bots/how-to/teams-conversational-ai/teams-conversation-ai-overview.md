@@ -46,7 +46,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Localization**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, it's translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
     :::column-end:::
 :::row-end:::
@@ -54,7 +54,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **LLM modularity**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
         Teams AI library is built to use OpenAI’s GPT model. You have the flexibility to swap it with any LLM of your choice without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
@@ -64,7 +64,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Responsible AI**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Teams AI library allows you to create ethical and responsible conversational apps using:
 
           * Moderation hooks: To regulate bot responses against any moderation API.
@@ -78,7 +78,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Predictive engine for mapping intents to actions**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         A simple interface for actions and predictions allows bots to react when it can take an action. Ambient presence lets a bot learn intent, use prompts based on business logic, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
@@ -90,7 +90,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Action Planner**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Add more plugins for other models like Llama-2 to give you the flexibility to choose the best model for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
     :::column-end:::
 :::row-end:::
@@ -98,7 +98,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Assistants API**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         > [!NOTE]
         > Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
 
@@ -111,7 +111,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Prompt management**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Dynamic prompt management allows the bot to adjust the size and content of the prompt sent to the LLM, based on the available token budget and the data sources or augmentations. It improves the efficiency and accuracy of the prompt by ensuring that it doesn't exceed the context window or include irrelevant information.
     :::column-end:::
 :::row-end:::
@@ -119,7 +119,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Augmentation**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, tailor your model to your needs to increase its accuracy and desired outcomes.
 
             * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external data sources into your model’s responses to enable up-to-date and contextually accurate results without fine-tuning or re-training your model.
@@ -132,7 +132,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Vector data sources**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
     :::column-end:::
 :::row-end:::
@@ -141,7 +141,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Enhanced reasoning**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, it prompts the bot to critically evaluate its potential responses before sending. The bot identifies inaccuracies and corrects its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment that builds trust in the product and increases user engagement.
     :::column-end:::
 :::row-end:::
@@ -150,7 +150,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column span="":::
         **Feedback loop**
     :::column-end:::
-    :::column span="3":::
+    :::column span="4":::
         Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns, and provides feedback on errors or missing information. The model attempts to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
     :::column-end:::
 :::row-end:::
