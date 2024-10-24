@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title:  Build API-based message extension
+title:  API-Based message extension for beginners
 metadata:
   title: API-based Message Extension for beginners
   description: In this module, learn about a message extension using an OpenAPI Description (OAD) document with Teams Toolkit and build an API-based message extension.
