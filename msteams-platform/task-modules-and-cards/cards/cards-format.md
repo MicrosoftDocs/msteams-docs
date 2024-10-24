@@ -845,8 +845,7 @@ The following table lists the properties of the `CompoundButton` element:
 | `type` | ✔️ | String | It must be set to `CompoundButton`. |
 | `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
 | `id` |  | String | A unique identifier for the element or action. |
-| `requires` |  | Object | A set of features that the element needs the host application to support. 
-If the host application doesn't support at least one of the listed capabilities, the element isn't rendered (or its fallback is rendered if provided). |
+| `requires` |  | Object | A set of features that the element needs the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered (or its fallback is rendered if provided). |
 | `isVisible` |  | Boolean | Controls the visibility of the button. |
 | `separator ` |  | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to true. |
 | `height ` |  | String | The height of the element. When set to stretch, the element uses the remaining vertical space in its container. Allowed values: `auto`, `stretch` |
