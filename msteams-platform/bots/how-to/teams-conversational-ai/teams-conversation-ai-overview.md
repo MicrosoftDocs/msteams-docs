@@ -42,6 +42,8 @@ As a developer, I want to build an intelligent lightbot that controls the light 
 
 How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience?
 
+:::row:::
+    :::column span="":::
         **Localization**
     :::column-end:::
     :::column span="3":::
