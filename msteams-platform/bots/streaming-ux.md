@@ -30,20 +30,20 @@ Streaming bot messages has two types of updates:
 
 ## Stream message through REST API
 
-Bot messsages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
+Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
 
-When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDKs send activity method to confirm that the previous call was successfully transmitted. 
+When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted. 
 
-In some scenarios, the bot might not receive an error status code, but it can receive an error message. Ensure the bot calls the streaming API at a consistent pace during streaming, we  recommend that a bot streams one message at a time. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
+In some scenarios, the bot receives an error message without the error status code. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
-The following are the query parameters for streaming REST API:
+The following are the query parameters for streaming:
 
 |Property|Required|Description|
 |---|---|---|
-| `type` | ✔️ | Supported values are either `typing` or `message`. Use `typing` when streaming the message and `message` for the final streamed message. |
+| `type` | ✔️ | Supported values are either `typing` or `message`. </br> • `typing`: Use when streaming the message. </br> • `message`: Use for the final streamed message. |
 | `text` | ✔️ | The contents of the message that is to be streamed. |
 | `entities.type` | ✔️ | Must be `streamInfo`|
-| `entities.streamId` | ✔️ | `streamId` from the initial streaming request that is start streaming. |
+| `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
 | `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. |
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
 | `ChannelData.streamId` | ✔️ | Must be the same value as `entities.streamId`.|
@@ -61,15 +61,13 @@ To enable streaming in bots, follow these steps:
 
 ### Start streaming
 
-The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId` which is important for executing subsequent calls. 
+The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls. 
 
 Your bot can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your bot generates its final response to the user.
 
-The bot can also send citation for streaming. For more information, see [citations](~/bots/how-to/bot-messages-ai-generated-content.md#citations)
-
 ```json
 
-//Ex: A bot sends the first request with content && the content is informative loading message.
+//Ex: A bot sends the first request with content & the content is informative loading message.
 
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
@@ -115,7 +113,7 @@ The following image is an example of start streaming:
 
 ### Continue streaming 
 
-Use the `streamId` that you've received from the initial request to send either informative or streaming message. Ensure that you make subsequent calls only after the bot receives successful response from the previous calls.
+Use the `streamId` that you've received from the initial request to send either an informative or streaming message. Ensure that you make subsequent calls only after the bot receives successful response from the previous calls.
 
 ```json
 
@@ -164,7 +162,7 @@ The following image is an example of a bot providing informative updates:
 
 :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
 
-After your bot is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your bot should incorporate any new tokens generated by the Large Language Models (LLMs), append these to the previous message version, and then send it to the user.
+After your bot is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your bot should incorporate any new tokens generated by the Large Language Models (LLMs). Append these tokens to the previous message version and then send it to the user.
 
 When the bot dispatches a streaming request, ensure the bot sends the request at a minimum rate of one request per second.
 
@@ -339,7 +337,7 @@ The following are the success and error codes:
 
 ## Sample code
 
-| Sample name | Description | Node.js | c# |
+| Sample name | Description | Node.js | C# |
 | --- | --- | --- | --- |
 | {TBD} | This is a conversational streaming bot with REST API. | {TBD} | {TBD} |
 | Conversational streaming bot | This is a conversational streaming bot with Teams AI library for Teams that thinks it's a chef to help you cook Teams apps. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) |
