@@ -9,9 +9,9 @@ ms.date: 05/24/2023
 
 # Understand AI bot concepts
 
-Are you building a Teams AI bot? Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade your existing Teams apps with these features.
+Are you building a Teams AI bot? Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade your existing Teams apps with these features.
 
-Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
+Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate building a bot that interacts with Microsoft Teams. One of the key features of Teams AI library is the AI support that customers can utilize. The initial objective might be to upgrade the current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
 
 > [!NOTE]
 > If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [Why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
@@ -243,7 +243,7 @@ async def search_command(
 
 ### Adaptive Cards capabilities
 
-You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card, submit buttons on the Adaptive Cards.
+You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card and submit buttons on the Adaptive Cards.
 
 # [.NET](#tab/dotnet4)
 
@@ -334,7 +334,7 @@ async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
 
 ## Bot logic for handling an action
 
-The Bot responds to the user's input with the action `LightsOn` to turn the lights on.
+The bot responds to the user's input with the action `LightsOn` to turn the lights on.
 
 The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
