@@ -70,7 +70,7 @@ The Teams App Test Tool makes debugging your bot-based apps effortless. You can 
 
 ### Debug apps in Teams desktop client
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [Debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
 ## Prepare for debug
 

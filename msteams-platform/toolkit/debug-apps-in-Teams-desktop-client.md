@@ -22,10 +22,10 @@ The following are the advantages of Teams desktop client:
 
 Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by the Teams Toolkit:
 
-* Bot
-* Copilot plugin
-* Custom engine agent
-* Message extension
+* Bot.
+* Copilot plugin.
+* Custom engine agent.
+* Message extension.
 
 ## Prerequisites
 
@@ -111,7 +111,7 @@ Ensure you install the following tools for building and deploying your app in Te
     >
     > :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
-1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes. In the following example the breakpoint is highlighted with the red dot next to the row number.
+1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes. In the following example, the breakpoint is highlighted with the red dot next to the row number.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
 
