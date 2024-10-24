@@ -843,20 +843,20 @@ The following table lists the properties of the `CompoundButton` element:
 | Property | Required | Type | Description |
 |---------|---------|---------|---------|
 | `type` | ✔️ | String | It must be set to `CompoundButton`. |
+| `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
 | `id` |  | String | A unique identifier for the element or action. |
 | `requires` |  | Object | A set of features that the element needs the host application to support. 
 If the host application doesn't support at least one of the listed capabilities, the element isn't rendered (or its fallback is rendered if provided). |
 | `isVisible` |  | Boolean | Controls the visibility of the button. |
 | `separator ` |  | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to true. |
 | `height ` |  | String | The height of the element. When set to stretch, the element uses the remaining vertical space in its container. Allowed values: `auto`, `stretch` |
-| `horizontalAlignment ` |  | String | Controls how the element should be horizontally aligned. Allowed values: `left`, `center`, `right` |
-| `Spacing ` |  | String | Controls the amount of space between one element and the previous one. No space is added for the first element in a container. Allowed values: `None`, `small`, `default`, `medium`, `large`, `extraLarge` |
-| `targetWidth ` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. Allowed values: `veryNarrow`, `narrow`, `standard`, `wide` |
-| `icon` |  | String | The icon shown in the button and the `iconInfo` object are discussed in the next table. |
+| `horizontalAlignment ` |  | String | Controls how the element should be horizontally aligned. Allowed values: `Left`, `Center`, `Right` |
+| `Spacing ` |  | String | Controls the amount of space between one element and the previous one. No space is added for the first element in a container. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth ` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. Allowed values: `veryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon` |  | String | The icon shown in the button and the `iconInfo` objects are discussed in the next table. |
 | `badge ` |  | String | The badge shown on the button. Markdown isn't supported. |
-| `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
 | `description ` |  | String | The description text of the button. Markdown isn't supported. |
-| `selectAction` |  |  | An action that gets invoked when the button is selected. All actions are allowed except `Action.ShowCard`. |
+| `selectAction` |  |  | An Action that gets invoked when the button is selected. All actions are allowed except `Action.ShowCard`. |
 
 The following table lists the properties of the `iconInfo` object:
 
