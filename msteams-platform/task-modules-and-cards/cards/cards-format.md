@@ -830,6 +830,64 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
+## CompoundButton in Adaptive Cards
+
+The `CompundButton` element allows you to integrate multiple elements within a button in an Adaptive Card. It provides an optimal solution for implementing user experience similar to that of prompt starters in an AI bot.
+
+image placeholder
+
+**CompoundButton schema**
+
+The following table lists the properties of the `CompoundButton` element:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `type` | ✔️ | String | It must be set to `CompoundButton`. |
+| `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
+| `id` |  | String | A unique identifier for the element or action. |
+| `requires` |  | Object | A set of features that the element needs the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered (or its fallback is rendered if provided). |
+| `isVisible` |  | Boolean | Controls the visibility of the button. |
+| `separator ` |  | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to true. |
+| `height ` |  | String | The height of the element. When set to stretch, the element uses the remaining vertical space in its container. Allowed values: `auto`, `stretch` |
+| `horizontalAlignment ` |  | String | Controls how the element should be horizontally aligned. Allowed values: `Left`, `Center`, `Right` |
+| `Spacing ` |  | String | Controls the amount of space between one element and the previous one. No space is added for the first element in a container. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth ` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. Allowed values: `veryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon` |  | String | The icon shown in the button and the `iconInfo` objects are discussed in the next table. |
+| `badge ` |  | String | The badge shown on the button. Markdown isn't supported. |
+| `description ` |  | String | The description text of the button. Markdown isn't supported. |
+| `selectAction` |  |  | An Action that gets invoked when the button is selected. All actions are allowed except `Action.ShowCard`. |
+
+The following table lists the properties of the `iconInfo` object:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
+| `size` |  | String | The size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style` |  | String | The style of the icon. Allowed values: `Regular`, `Filled` |
+| `color` |  | String | The color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
+
+Here's an example of how the `CompoundButton` element can be used in an Adaptive Card: 
+
+```json
+{ 
+    "type": "AdaptiveCard", 
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+    "version": "1.5", 
+    "body": [ 
+        { 
+            "type": "CompoundButton", 
+            "title": "Summarize", 
+            "icon": { 
+                "name": "TextBulletList" 
+            }, 
+            "subTitle": "Review key points in file", 
+            "height": "stretch", 
+            "badge": "New" 
+        } 
+    ] 
+} 
+```
+
 ## CodeBlock in Adaptive Cards
 
 The `CodeBlock` element enables you to share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings. Adaptive Cards with the `CodeBlock` element make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the programming language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Microsoft Visual Studio or Microsoft Visual Studio Code.
