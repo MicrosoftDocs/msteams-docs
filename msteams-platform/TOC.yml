@@ -453,7 +453,7 @@
     - name: Bot messages with AI-generated content
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
-    - name: Streaming bot messages
+    - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation
     - name: Update and delete messages sent from bot

@@ -1,5 +1,5 @@
 ---
-title: Streaming bot messages
+title: Stream bot messages
 description: Learn how to enhance the user experience in bots using streaming techniques.
 ms.date: 10/23/2024
 ms.topic: conceptual
@@ -8,13 +8,13 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Streaming bot messages
+# Stream bot messages
 
 >[!NOTE]
 >
 > Streaming bot messages is only available for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Streaming bot messages refers to the process of delivering parts of the bot’s response to the user in real-time, as the response is being generated. Bots often exhibit a slow response generation time, without any updates on the response in the user interface, results in a less engaging user experience.
+Streaming bot messages refers to the process of delivering parts of the bot's response to the user in real-time, as the response is being generated. Bots often exhibit a slow response generation time, without any updates on the response in the user interface, results in a less engaging user experience.
 
 Streaming bot messages enhances the response generation time into an engaging and informative interaction. It enables users to witness the bot processing their request in real time, which could potentially increase user satisfaction and trust. Perceived responsiveness and transparency can enhance the user engagement, leading to a decrease in conversation abandonment with the bot.
 
@@ -28,19 +28,13 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
-## Streaming REST API
+## Stream message through REST API
+
+Bot messsages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
 
 When your bot invokes the streaming API through REST, ensure to call another streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the SDKs send activity method to confirm that the previous call was successfully transmitted. 
 
 In some scenarios, the bot might not receive an error status code, but it can receive an error message. Ensure the bot calls the streaming API at a consistent pace during streaming, we  recommend that a bot streams one message at a time. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
-
-To enable streaming in bots, follow these steps:
-
-> [!div class="checklist"]
->
-> * [Start streaming](#start-streaming)
-> * [Continue streaming](#continue-streaming)
-> * [Final streaming](#final-streaming)
 
 The following are the query parameters for streaming REST API:
 
@@ -59,7 +53,11 @@ The following are the query parameters for streaming REST API:
 > [!NOTE]
 > You must insert the streaming metadata into both `entities` and `ChannelData`.
 
-Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
+To enable streaming in bots, follow these steps:
+
+1. [Start streaming](#start-streaming)
+2. [Continue streaming](#continue-streaming)
+3. [Final streaming](#final-streaming)
 
 ### Start streaming
 
