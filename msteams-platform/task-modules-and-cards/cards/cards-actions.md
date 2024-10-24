@@ -535,7 +535,102 @@ The following is an example of the incoming activity to a bot when user types so
 }
  ```
 
-The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
+### Conditional enablement of action buttons in Adaptive Cards
+
+In Adaptive Cards, action buttons stay enabled despite users not filling required inputs.
+For example, if you're creating an Adaptive Card for a feedback form, you want to ensure that users provide a rating before they can submit their feedback. Use the `conditionallyEnabled` property to disable the action buttons until the user provides a rating.
+
+The `conditionallyEnabled` property can only be used with `Action.Submit` and `Action.Execute`. For a conditionally enabled button, if the `isEnabled` property is set to `false`, no actions will be enabled, regardless of the input values.
+
+| Property| Type | Required | Description |
+|-----------|------|----------|-------------|
+| `conditionallyEnabled` | Boolean | ✔️ | Determines if the action button remains disabled until the user starts interacting with the inputs. |
+| `isEnabled` | Boolean |  | Enables a button to remain disabled, irrespective of user input. |
+
+You can use `associatedInputs` property to associate `Action.Submit` and `Action.Execute` to other inputs in the card. For more information, see [Data.Query definition](dynamic-search.md#dataquery-definition).
+
+# [Desktop](#tab/desktop1)
+
+:::row:::
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client.":::
+
+
+:::column-end:::
+
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client.":::
+
+:::column-end:::
+
+:::row-end:::
+
+# [Mobile](#tab/mobile1)
+
+:::row:::
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client.":::
+
+
+:::column-end:::
+
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client.":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
+
+The following JSON payload shows an Adaptive Card with a conditionally enabled buttons:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Required text input",
+            "isRequired": true,
+            "id": "text"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Required date input",
+            "isRequired": true,
+            "id": "date"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "conditionallyEnabled": true
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Permanently disabled button",
+            "isEnabled": false
+        }
+    ]
+}
+```
 
 #### Form completion feedback
 
