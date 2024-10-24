@@ -14,13 +14,13 @@ Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app 
 
 The following are the advantages of Teams desktop client:
 
-* Improves performance
-* Reduces time-to-F5
-* Improves coverage of debug targets
+* Improves performance.
+* Reduces time-to-F5.
+* Improves coverage of debug targets.
 
 ## Capabilities of Teams desktop client
 
-Teams desktop client incorporates debugging capabilities in the app templates scaffolded by the Teams Toolkit:
+Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by the Teams Toolkit:
 
 * Bot
 * Copilot plugin
@@ -101,16 +101,17 @@ Ensure you install the following tools for building and deploying your app in Te
 
     A chat window opens.
 
-1. In the message compose area, send a message to invoke the bot.
+1. From the message compose area, send a message to invoke the bot.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows the app added to Teams desktop client.":::
 
     > [!NOTE]
     >
     > The system level notification for account matching appears only once per project. In subsequent debug sessions, Teams Toolkit sends reminders about the account through VS Code notifications.
+    >
     > :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
-1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes.
+1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes. In the following example the breakpoint is highlighted with the red dot next to the row number.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
 
