@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.date: 11/27/2023
 ---
 
-# Get started with Teams AI library
+# Let's build an AI bot
 
 Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
@@ -803,4 +803,4 @@ A feedback loop consists of the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library quick start guide](conversation-ai-quick-start.md)
+> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
