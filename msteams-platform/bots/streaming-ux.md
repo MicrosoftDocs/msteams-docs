@@ -40,7 +40,7 @@ The following are the query parameters for streaming REST API:
 
 |Property|Required|Description|
 |---|---|---|
-| `type` | ✔️ | Must be `typing`|
+| `type` | ✔️ | Supported values are either `typing` or `message`. Use `typing` when streaming the message and `message` for the final streamed message. |
 | `text` | ✔️ | The contents of the message that is to be streamed. |
 | `entities.type` | ✔️ | Must be `streamInfo`|
 | `entities.streamId` | ✔️ | `streamId` from the initial streaming request that is start streaming. |
