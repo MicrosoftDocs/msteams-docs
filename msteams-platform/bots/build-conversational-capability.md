@@ -9,7 +9,7 @@ ms.date: 10/03/2024
 
 # Send and receive messages
 
-Conversational bots communicate with users through messaging, enabling seamless interactions.
+Conversational bots communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that bot conversations are interactive, dynamic, adaptive, and user friendly.
 
 ## Message content
 
