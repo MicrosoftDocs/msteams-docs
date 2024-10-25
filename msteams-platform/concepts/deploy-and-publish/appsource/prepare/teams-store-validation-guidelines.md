@@ -71,6 +71,7 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
 :::row-end:::
+
 :::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
@@ -79,13 +80,13 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/mobile-experience-icon.png" link="#mobile-experience" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+     :::image type="icon" source="../../../../assets/icons/apps-extended-across-Microsoft-365-clients.png" link="#apps-extended-across-microsoft-365-clients" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::image type="icon" source="../../../../assets/icons/Teams-apps-extensible-plugin-for-Microsoft.png" link="#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" link="#mobile-experience" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -1790,6 +1791,24 @@ Teams apps extensible across Microsoft 365 clients must be fully responsive and 
 * Microsoft 365 on desktop, web and Android.
 * Microsoft Teams on desktop and web.
 * Microsoft Teams on Android and iOS.
+
+### Actions in Microsoft 365
+
+Use the following guidelines to name an app:
+
+1. Display name:
+
+    1. Must incorporate the app name instead of only using a generic verb.
+    1. Must incorporate the term that describes the action, typically represented by a verb, when using custom intend. For example, **View related suppliers** instead of **Related suppliers**.
+    1. For proper case usage, only the first letter of the intent or brand name must be capitalized.
+
+1. Functionality:
+
+    1. Seamless experience for user without need to reupload the content file to complete the action.
+    1. Actions must function on the objects defined in the manifest.
+    1. The intent and functionality must be accurate as described.
+    1. Tabs opened through actions must show contextual information for the action taken (a tab is mandatory).
+    1. There must be well-handled, graceful messaging for any failures.
 
 ### Mobile experience
 
