@@ -5,6 +5,7 @@ description: Learn how to create and handle a prompt starter and suggested actio
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.date: 10/25/2024
 ---
 
 # Create prompt suggestions
