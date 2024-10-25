@@ -39,7 +39,7 @@ Features supported by the Live Share core package include:
 - Synchronize a countdown timer with `LiveTimer`.
 - Send real-time events to other clients in the session with `LiveEvent`.
 - Present to and follow other users with `LiveFollowMode`.
-- Use any feature of Fluid Framework, such as `SharedMap` and `SharedString`.
+- Use any feature of Fluid Framework, such as `SharedTree`.
 
 You can find more information about this package on the [core capabilities page](./teams-live-share-capabilities.md).
 
@@ -75,6 +75,7 @@ Features supported by Live Share canvas include:
 - Follow along with real-time mouse cursors.
 - Configure settings for variable devices and view states.
 - Use fully supported mouse, touch, and stylus inputs.
+- Undo and redo changes to the canvas.
 
 You can find more information about this package on the [Live Share canvas page](./teams-live-share-canvas.md).
 
@@ -118,16 +119,13 @@ Live Share provides a turn-key Azure Fluid Relay service backed by the security 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, LivePresence } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { presence: LivePresence },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -135,17 +133,13 @@ const { container } = await liveShare.joinContainer(schema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { LiveShareClient, LivePresence } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: { presence: LivePresence },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -169,7 +163,7 @@ For more information, see the custom Azure Fluid Relay service [how-to guide](./
 
 ## Live Share collaborative contexts
 
-Live Share sessions enable seamless collaboration in meetings, chats, and channels. When you connect to a session  through the `joinContainer()` API, Teams connects your user to the appropriate Fluid container. While you don't need to write any context-specific code, you should understand the differences in user scenarios for each tab surface.
+Live Share sessions enable seamless collaboration in meetings, chats, and channels. When you connect to a session through the `join()` API, Teams connects your user to the appropriate Fluid container. While you don't need to write any context-specific code, you should understand the differences in user scenarios for each tab surface.
 
 > [!NOTE]
 > Live Share sessions used across different contexts should connect to the same Fluid container. If you want to synchronize data differently across different contexts, you can create different distributed-data objects (DDS) for each context and only listen to changes for those that are relevant to your scenario.
@@ -198,11 +192,9 @@ if (!liveShare.isSupported()) return;
 
 // Join the Fluid container for the current scope
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { followMode: LiveFollowMode },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
+const followMode = await client.getDDS("follow-mode", LiveFollowMode);
 
 // Get teamsJs context
 const context = await app.getContext();
@@ -235,18 +227,15 @@ switch (context.page?.frameContext) {
 ```TypeScript
 import { LiveShareClient, LiveFollowMode } from "@microsoft/live-share";
 import { app, liveShare, LiveShareHost, FrameContexts } from "@microsoft/teams-js";
-import { ContainerSchema } from "fluid-framework";
 
 // Check if Live Share is supported in the current host / context
 if (!liveShare.isSupported()) return;
 
 // Join the Fluid container for the current scope
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: { followMode: LiveFollowMode },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
+const followMode = await client.getDDS("follow-mode", LiveFollowMode);
 
 // Get teamsJs context
 const context: app.Context = await app.getContext();

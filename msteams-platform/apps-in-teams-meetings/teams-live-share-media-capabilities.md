@@ -62,14 +62,11 @@ import {
 import { LiveMediaSession } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
 
-// Setup the Fluid container
+// Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { mediaSession: LiveMediaSession },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { mediaSession } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+const mediaSession = await client.getDDS("media", LiveMediaSession);
 
 // Get the player from your document and create synchronizer
 const player = document.getElementById("player");
@@ -96,18 +93,12 @@ import {
 } from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: { mediaSession: LiveMediaSession },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const mediaSession = container.initialObjects.mediaSession as unknown as LiveMediaSession;
+const client = new LiveShareClient(host);
+await client.join();
+const mediaSession = await client.getDDS("media", LiveMediaSession);
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;

@@ -25,7 +25,7 @@ In the Dice Roller sample app, users are shown dice with a button to roll it. Wh
 
 You can start by importing the required modules. The sample uses the [LiveState DDS](/javascript/api/@microsoft/live-share/livestate) and [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a LiveState to store the current dice value that was rolled.
+The sample uses a `LiveState` class to store the current dice value that was rolled.
 
 Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This function helps to render and perform any necessary initialization. The app supports running both locally in a web browser and from within a Teams meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
 
@@ -36,16 +36,14 @@ In addition to the `inTeams=true` query parameter, you can use a `view=content|c
 
 ```js
 import { app, pages, LiveShareHost } from "@microsoft/teams-js";
-import { LiveShareClient, TestLiveShareHost, LiveState } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  TestLiveShareHost,
+  LiveState,
+} from "@microsoft/live-share";
 
 const searchParams = new URL(window.location).searchParams;
 const root = document.getElementById("content");
-
-// Define container schema
-
-const containerSchema = {
-  initialObjects: { diceState: LiveState },
-};
 
 // STARTUP LOGIC
 
@@ -69,8 +67,8 @@ async function start() {
       break;
     case "stage":
     default:
-      const { container } = await joinContainer();
-      renderStage(container.initialObjects.diceState, root);
+      const client = await getClient();
+      await renderStage(client, root);
       break;
   }
 }
@@ -78,16 +76,16 @@ async function start() {
 start().catch((error) => console.error(error));
 ```
 
-## Join a Fluid container
+## Create client and join the Fluid container
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _might_ need collaborative features, and the `config` view should _never_ need collaborative features. For views that need collaborative features, you must join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as initializing the `LiveShareClient` with a `LiveShareHost` instance from the Teams Client SDK, and then calling its `joinContainer()` method.
+Joining the container for the meeting is as simple as initializing the `LiveShareClient` with a `LiveShareHost` instance from the Teams Client SDK, and then calling its `join()` method.
 
 When running locally, you can initialize `LiveShareClient` with a `TestLiveShareHost` instance instead.
 
 ```js
-async function joinContainer() {
+async function getClient() {
   // Are we running in Teams? If so, use LiveShareHost, otherwise use TestLiveShareHost
   const host = !!searchParams.get("inTeams")
     ? LiveShareHost.create()
@@ -95,7 +93,8 @@ async function joinContainer() {
   // Create client
   const client = new LiveShareClient(host);
   // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  await client.join();
+  return client;
 }
 ```
 
@@ -120,7 +119,9 @@ stageTemplate["innerHTML"] = `
     <button class="roll"> Roll </button>
   </div>
 `;
-function renderStage(diceState, elem) {
+async function renderStage(client, elem) {
+  // Get LiveState instance to synchronize dice value
+  const diceState = await client.getDDS("dice-state", LiveState);
   elem.appendChild(stageTemplate.content.cloneNode(true));
   const rollButton = elem.querySelector(".roll");
   const dice = elem.querySelector(".dice");
@@ -145,8 +146,7 @@ To begin using Live Share in the application, the first thing to change is what 
 This pattern is common in Fluid and Live Share distributed data structures because it enables the view to behave the same way for both local and remote changes.
 
 ```js
-rollButton.onclick = () =>
-  diceState.set(Math.floor(Math.random() * 6) + 1);
+rollButton.onclick = () => diceState.set(Math.floor(Math.random() * 6) + 1);
 ```
 
 ### Rely on Fluid data
@@ -181,7 +181,7 @@ updateDice();
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app before sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the Stageview is connected to. This container can then be used to communicate with the Stageview. Ensure that you're communicating with everyone's Stageview and side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app before sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `join()` from the side panel view connects to the same Fluid container the Stageview is connected to. This container can then be used to communicate with the Stageview. Ensure that you're communicating with everyone's Stageview and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -210,7 +210,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
-> The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
+> The Live Share's' `join()` is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
@@ -339,8 +339,8 @@ After you're ready to deploy your code, you can use Teams Toolkit or the Teams D
 
 ## Code samples
 
-| Sample name | Description | JavaScript |
-| :----- | -------------- | ----------- |
+| Sample name | Description                                                     | JavaScript                                                                                      |
+| :---------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/01.dice-roller) |
 
 ## Next step

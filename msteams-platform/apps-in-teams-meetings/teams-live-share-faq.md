@@ -181,6 +181,40 @@ Yes, Live Share supports Fluid Framework version `^2.0.0-rc` and later in previe
 
 </details>
 
+<details>
+<summary><b>How do I access Fluid telemetry logs?</b></summary>
+
+You should log Fluid errors to your telemetry service. Add the following code to track and log Fluid errors:
+
+```ts
+import {
+  ITelemetryBaseLogger,
+  ITelemetryBaseEvent,
+  LogLevel,
+} from "@fluidframework/core-interfaces";
+import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+export class CustomLogger implements ITelemetryBaseLogger {
+  send(event: ITelemetryBaseEvent, logLevel?: LogLevel) {
+    if (logLevel === LogLevel.error) {
+      // TODO: Send event to your server
+    }
+  }
+}
+
+const host = LiveShareHost.create();
+const client = new LiveShareClient(host, {
+  logger: new CustomLogger(),
+});
+```
+
+Find more information on logging and telemetry in Fluid Framework [here](https://fluidframework.com/docs/testing/telemetry/).
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).

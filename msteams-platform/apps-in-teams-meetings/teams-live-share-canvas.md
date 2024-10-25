@@ -60,12 +60,9 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
 const host = LiveShareHost.create(host);
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { liveCanvas: LiveCanvas },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { liveCanvas } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+const liveCanvas = await client.getDDS("live-canvas", LiveCanvas);
 
 // Get the canvas host element
 const canvasHostElement = document.getElementById("canvas-host");
@@ -83,18 +80,12 @@ inkingManager.activate();
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
 const host = LiveShareHost.create(host);
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: { liveCanvas: LiveCanvas },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const liveCanvas = container.initialObjects.liveCanvas as unknown as LiveCanvas;
+const client = new LiveShareClient(host);
+await client.join();
+const liveCanvas = await client.getDDS("live-canvas", LiveCanvas);
 
 // Get the canvas host element
 const canvasHostElement = document.getElementById("canvas-host");

@@ -100,8 +100,8 @@ To enable the Live Share SDK for your tab extension, you must first add the foll
 
 Follow the steps to join a session that's associated with a user's meeting, chat, or channel:
 
-1. Initialize `LiveShareClient`.
-2. Define the data structures you want to synchronize. For example, `LiveState` or `SharedMap`.
+1. Create `LiveShareHost`.
+2. Initialize `LiveShareClient`.
 3. Join the container.
 
 Example:
@@ -109,20 +109,13 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, LiveState } from "@microsoft/live-share";
+import { LiveShareClient } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    liveState: LiveState,
-    sharedMap: SharedMap,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -132,18 +125,11 @@ const { container } = await liveShare.joinContainer(schema);
 ```TypeScript
 import { LiveShareClient, LiveState } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema, SharedMap } from "fluid-framework";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: {
-    exampleMap: SharedMap,
-    liveState: LiveState,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -162,7 +148,6 @@ export const App = () => {
   // Create the host as React state so that it doesn't get reset on mount
   const [host] = useState(LiveShareHost.create());
 
-  // Live Share for React does not require that you define a custom Fluid schema
   return (
     <LiveShareProvider host={host} joinOnLoad>
       <LiveShareLoading />
@@ -203,7 +188,7 @@ The Live Share SDK includes a set of new distributed-data structures that extend
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
 
-The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as profile picture, the identifier for content they're viewing, and more. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.update()` methods, you can assign custom metadata for that user, such as profile picture, the identifier for content they're viewing, and more. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
 
 The following are a few examples in which `LivePresence` can be used in your application:
 
@@ -225,14 +210,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const presence = container.initialObjects.presence;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LivePresence instance
+const presence = await client.getDDS("presence", LivePresence);
 
 // Register listener for changes to each user's presence.
 // This should be done before calling `.initialize()`.
@@ -281,16 +262,10 @@ interface ICustomUserData {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    presence: LivePresence<ICustomUserData>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const presence = container.initialObjects.presence as unknown as LivePresence<ICustomUserData>;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LivePresence instance
+const presence = await preesence.getDDS("presence", LivePresence<ICustomUserData>);
 
 // Register listener for changes to each user's presence.
 // This should be done before calling `.initialize()`.
@@ -401,12 +376,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { appState: LiveState },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { appState } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveState instance
+const appState = await client.getDDS("app-state", LiveState);
 
 // Register listener for changes to the state.
 // This should be done before calling `.initialize()`.
@@ -445,16 +418,10 @@ enum PlanetName {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    appState: LiveState<PlanetName>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const appState = container.initialObjects.appState as unknown as LiveState<PlanetName>;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveState instance
+const appState = await client.getDDS("app-state", LiveState<PlanetName>);
 
 // Register listener for changes to the state.
 // This should be done before calling `.initialize()`.
@@ -533,12 +500,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { customReactionEvent: LiveEvent },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { customReactionEvent } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveEvent instance
+const customReactionEvent = await client.getDDS("custom-event", LiveEvent);
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
@@ -575,16 +540,10 @@ interface ICustomReaction {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    customReactionEvent: LiveEvent<ICustomEvent>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const customReactionEvent = container.initialObjects.customReactionEvent as unknown as LiveEvent<ICustomReaction>;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveEvent instance
+const customReactionEvent = await client.getDDS("custom-event", LiveEvent<ICustomReaction>);
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
@@ -657,12 +616,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { timer: LiveTimer },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { timer } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveTimer instance
+const timer = await client.getDDS("timer", LiveTimer);
 
 // Register listeners for timer changes
 // This should be done before calling `.initialize()`.
@@ -722,14 +679,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { timer: LiveTimer },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const timer = container.initialObjects.timer as unknown as LiveTimer;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveTimer instance
+const timer = await client.getDDS("timer", LiveTimer);
 
 // Register listeners for timer changes
 // This should be done before calling `.initialize()`.
@@ -855,14 +808,10 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    followMode: LiveFollowMode,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const followMode = container.initialObjects.followMode;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveFollowMode instance
+const followMode = await client.getDDS("follow-mode", LiveFollowMode);
 
 // As an example, we will assume there is a button in the application document
 const button = document.getElementById("action-button");
@@ -1031,16 +980,10 @@ interface ICameraPosition {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    followMode: LiveFollowMode<ICameraPosition>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const followMode = container.initialObjects.followMode as unknown as LiveFollowMode<ICameraPosition>;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveFollowMode instance
+const followMode = await client.getDDS("follow-mode", LiveFollowMode<ICameraPosition>);
 
 // As an example, we will assume there is a button in the application document
 const button = document.getElementById("action-button");
@@ -1332,14 +1275,9 @@ import {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    followMode: LiveFollowMode,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const followMode = container.initialObjects.followMode;
+const client = new LiveShareClient(host);
+await client.join();
+const followMode = await client.getDDS("follow-mode", LiveFollowMode);
 
 // Get teamsJs context
 const context = await app.getContext();
@@ -1375,16 +1313,10 @@ import {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    followMode: LiveFollowMode,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
-// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
-const followMode = container.initialObjects.followMode as unknown as LiveFollowMode;
+const client = new LiveShareClient(host);
+await client.join();
+// Construct LiveFollowMode instance
+const followMode = await client.getDDS("follow-mode", LiveFollowMode);
 
 // Get teamsJs context
 const context: app.Context = await app.getContext();
@@ -1424,7 +1356,7 @@ export const MyLiveFollowMode = () => {
   const [isShareInitiator, setIsShareInitiator] = useState(false);
 
   // Check if user is using app in meeting stage and is the initial presenter
-  useEffect(() => {    
+  useEffect(() => {
     // Get teamsJs context
     app.getContext()
       .then(async (context: app.Context) => {
@@ -1477,12 +1409,9 @@ import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { appState: LiveState },
-};
-const { container } = await liveShare.joinContainer(schema);
-const { appState } = container.initialObjects;
+const client = new LiveShareClient(host);
+await client.join();
+const appState = await client.getDDS("app-state", LiveState);
 
 // Register listener for changes to state
 appState.on("stateChanged", (state, local) => {
@@ -1532,14 +1461,9 @@ interface ICustomState {
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    appState: LiveState<ICustomState>,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<ICustomState>;
+const client = new LiveShareClient(host);
+await client.join();
+const appState = await client.getDDS("app-state", LiveState<ICustomState>);
 
 // Register listener for changes to state
 appState.on("stateChanged", (state: ICustomState, local: boolean) => {
@@ -1638,6 +1562,7 @@ Fluid Framework officially supports the following types of distributed data stru
 
 | Shared Object                                                                       | Description                                                                                                                             |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [SharedTree](https://fluidframework.com/docs/api/v2/tree)                   | Automatically synchronize JavaScript objects, using familiar JavaScript APIs for getting/setting object properties. |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | A distributed-string sequence optimized for editing the text of documents or text areas.                                                |
@@ -1649,16 +1574,13 @@ Let's see how `SharedMap` works. In this example, we've used `SharedMap` to buil
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { SharedMap } from "fluid-framework";
+import { SharedMap } from "fluid-framework/legacy";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: { playlistMap: SharedMap },
-};
-const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap;
+const client = new LiveShareClient(host);
+await client.join();
+const playlistMap = await client.getDDS("playlist-map", SharedMap);
 
 // Register listener for changes to values in the map
 playlistMap.on("valueChanged", (changed, local) => {
@@ -1677,16 +1599,13 @@ function onClickAddToPlaylist(video) {
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
+import { SharedMap, IValueChanged } from "fluid-framework";
 
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: { playlistMap: SharedMap },
-};
-const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap as unknown as SharedMap;
+const client = new LiveShareClient(host);
+await client.join();
+const playlistMap = await client.getDDS("playlist-map", SharedMap);
 
 // Declare interface for object being stored in map
 interface IVideo {
@@ -1757,14 +1676,9 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import {
-  LiveShareClient,
-  TestLiveShareHost,
-  LiveState,
-} from "@microsoft/live-share";
+import { LiveShareClient, TestLiveShareHost } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { SharedMap } from "fluid-framework";
-
+Í;
 /**
  * Detect whether you are in Teams or local environment using your preferred method.
  * Options for this include: environment variables, URL params, Teams FX, etc.
@@ -1772,14 +1686,8 @@ import { SharedMap } from "fluid-framework";
 const inTeams = process.env.IN_TEAMS;
 // Join the Fluid container
 const host = inTeams ? LiveShareHost.create() : TestLiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema = {
-  initialObjects: {
-    liveState: LiveState,
-    sharedMap: SharedMap,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -1790,11 +1698,9 @@ const { container } = await liveShare.joinContainer(schema);
 import {
   LiveShareClient,
   TestLiveShareHost,
-  LiveState,
   ILiveShareHost,
 } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { ContainerSchema, SharedMap } from "fluid-framework";
 
 /**
  * Detect whether you are in Teams or local environment using your preferred method.
@@ -1805,14 +1711,8 @@ const inTeams = process.env.IN_TEAMS;
 const host: ILiveShareHost = inTeams
   ? LiveShareHost.create()
   : TestLiveShareHost.create();
-const liveShare = new LiveShareClient(host);
-const schema: ContainerSchema = {
-  initialObjects: {
-    exampleMap: SharedMap,
-    liveState: LiveState,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -1840,7 +1740,6 @@ export const App = () => {
     inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
   );
 
-  // Live Share for React does not require that you define a custom Fluid schema
   return (
     <LiveShareProvider host={host} joinOnLoad>
       <LiveShareLoading />
