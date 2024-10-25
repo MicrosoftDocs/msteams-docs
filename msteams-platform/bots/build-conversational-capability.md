@@ -81,8 +81,6 @@ The following code shows an example of sending a simple Adaptive Card:
 
 Sending and receiving messages is the core functionality of a bot. It enables a bot to:
 
-[TBD: master procedure:]
-
 - Send and receive messages
   - Receive a message activity
   - Receive a read receipt
