@@ -614,7 +614,7 @@ After you've installed the required tools, set up the development environment.
 
 The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
 
-# [Latest version of the Visual Studio](#tab/vs)
+<details><summary><b>Latest version of the Visual Studio</b></summary>
 
 You can use the latest version of the Visual Studio to develop Teams apps with Blazor Server in .NET.
 
@@ -624,7 +624,7 @@ To install the Microsoft Teams Toolkit extension:
 1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
 
 1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -632,11 +632,13 @@ To install the Microsoft Teams Toolkit extension:
 
 1. Select **Install**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
-    Your Visual Studio is installed in a few minutes.
+   Your Visual Studio is installed in a few minutes.
 
-# [Command line](#tab/cli)
+</details>
+
+<details><summary><b>Command line<summary><b>
 
 To install the TeamsFx CLI, use the `npm` package manager:
 
@@ -648,7 +650,7 @@ Depending on your configuration, you may need to use `sudo` to install the CLI:
 
 ``` bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
- ```
+```
 
 This condition is more common on Linux and macOS systems.
 
@@ -659,7 +661,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 > [!CAUTION]
 > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
----
+</details>
 
 ## Set up your Teams development tenant
 
@@ -972,6 +974,7 @@ You've completed the tutorial to build a tab app with Blazor.
 </details>
 
 # [`configurableTabs`](#tab/configurable)
+
 
 
 ---
