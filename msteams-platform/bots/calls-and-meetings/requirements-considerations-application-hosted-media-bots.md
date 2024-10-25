@@ -8,7 +8,7 @@ ms.date: 11/16/2018
 
 # Requirements and considerations for application-hosted media bots
 
-An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. For production, deploy application-hosted media bots on a Windows Server guest Operating System (OS) in Azure. For non-production purposes such as development or testing, you might deploy bots on an on-premise Windows Server.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. Production application-hosted media bots must be deployed on a Windows Server guest Operating System (OS) in Azure. For non-production purposes such as development or testing, you might deploy bots on an on-premise Windows Server.
 
 > [!NOTE]
 >
@@ -18,7 +18,6 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 ## C# or .NET and Windows Server for development
 
 An application-hosted media bot has the following requirements:
-
 
 * The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
 
