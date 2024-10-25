@@ -21,7 +21,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-::: zone pivot="node-java-script"
+<details><summary><b>"node-java-script"</b></summary>
 
 ## Create a tab with Node.js
 
@@ -263,7 +263,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tabs in Teams.
 
-::: zone-end
+</details>
 
 ::: zone pivot="razor-csharp"
 
