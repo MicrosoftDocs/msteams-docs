@@ -230,7 +230,7 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab app":::
 
 1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your tab.
 
@@ -584,9 +584,9 @@ ngrok http 3978 --host-header=localhost
   
     Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-::: zone-end
+</details>
 
-::: zone pivot="blazor-app"
+<details><summary><b>"blazor-app"</b></summary>
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
