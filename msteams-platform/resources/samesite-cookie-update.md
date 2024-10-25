@@ -80,25 +80,27 @@ Android WebView is a Chrome system component that allows Android apps to display
 > * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 > * You must declare third party cookies as `SameSite=None; Secure`.
 
-## Third-party Cookies Deprecation
+## Third-party cookies deprecation
 
 All third-party (3P) cookies set in the top-level domain will be blocked when that domain is embedded in an iframe. This 3P cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
 
-Some common scenarios that are impacted include when an external app is rendered inside Teams in various entry points like personal apps, channel tabs, and chat tabs.
+This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
 
-### Pop-out Authentication Scenario
+### Pop-out authentication scenario
 
-Pop-out authentication scenarios are a common method for apps to authenticate using different providers like Google Auth, Facebook Auth, etc. Here's how it works:
+Pop-out authentication scenarios are a common method for apps to authenticate using different identity providers like Google Auth and Facebook Auth. Here's how it works:
 
 1. The rendered iframe triggers a popup that loads the selected authentication provider login page.
-1. Once the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes.
-1. These cookies are then used inside the embedded iframe to authenticate the user.
+1. After the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes.
+1. These cookies are used inside the embedded iframe to authenticate the user.
 
-Pop-out authentication won't break with 3P cookie deprecation. Chromium-based browsers like Chrome, Edge, and Firefox (though not Chromium-based, they align their cookie deprecation with Chromium browsers) have heuristics that:
+Pop-out authentication won't break with 3P cookie deprecation because:
 
-* Allow access to cookies that are unpartitioned, secure, and `SameSite=None` when set in a popped-out window from the iframe to be accessible in the iframe.
+* Chromium-based browsers like Chrome, Edge, and Firefox allow access to cookies that are unpartitioned, secure, and `SameSite=None`. This is true when the cookies are set in a popped-out window from the iframe to be accessible in the iframe.
 
-You can use the cookie app below to simulate this scenario:
+* The browsers that aren't Chromium-based align their cookie deprecation with Chromium-based browsers.
+
+The cookie app simulate this scenerio. To use the cookie app:
 
 1. Embed the cookie app in an iframe.
 1. Use the pop-out button to pop it out as a first-party domain.
@@ -109,9 +111,9 @@ This action sets multiple cookies with a combination of secure, SameSite, and pa
 
 The following screenshot represents the cookies accessible in the embedded iframe when set from the top-level popped-out window of the iframe’s URL.
 
-### Actions Required for Cookies Set by iframe
+### Actions required for cookies set by iframe
 
-Any cookies set by the embedded iframe now need to pass the partitioned attribute as false. Chromium browsers enable CHIPS (Cookies Having Independent Partitioned State), and cookies with a missing partitioned attribute won't be set.
+Any cookies set by the embedded iframe must pass the partitioned attribute as false. As chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), cookies that have a missing partitioned attribute won't be set.
 
 ## See also
 
