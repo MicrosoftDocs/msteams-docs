@@ -11,7 +11,7 @@ ms.date: 10/25/2024
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams and a good way to begin developing for Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-tab.png" alt-text="Screenshot shows you the conceptual tab app in Teams client.":::
+:::image type="content" border="false" source="~/assets/images/get-started/get-started-tab.png" alt-text="Screenshot shows you the conceptual tab app in Teams client.":::
 
 ## Get started
 
@@ -25,47 +25,47 @@ Ensure that you've all the prerequisites to build your tab app.
 # [Visual Studio Code](#tab/vsc)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Teams Toolkit :::image type="icon" source="~/msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Tab** to create a new tab project.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
 1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
 1. Select **JavaScript** as the programming language.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
     
 1. Select **Default folder** to store your project root folder in default location.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
    Follow the steps to change the default location:
 
    1. Select **Browse**.
 
-             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
+      :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
 
    1. Select the location for project workspace.
 
    1. Select the **Select folder**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
+      :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
 
 1. Enter a suitable name for your app and then select **Enter**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
    The Teams tab app is created in few seconds. After your app is created, Teams Toolkit displays the following message:
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-tab.png" alt-text="Screenshot shows to preview project.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/preview-project-tab.png" alt-text="Screenshot shows to preview project.":::
         
    You can select **Local debug** to preview your project. 
       
@@ -110,7 +110,7 @@ Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 
 # [Visual Studio Code](#tab/viscode1)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select the Teams Toolkit :::image type="icon" source="~/msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to M365** using your credentials.
 
 Your default web browser opens to let you sign in to the account.
@@ -120,7 +120,7 @@ Your default web browser opens to let you sign in to the account.
 
    The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
    Now you're ready to build the app and run it in the local environment!
 
@@ -188,7 +188,7 @@ To build and run your app locally:
 
    Or select **Continue**, depending on your operating system:
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
    Teams web client opens in a browser window.
 
@@ -199,11 +199,11 @@ To build and run your app locally:
 
 1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
 
 1. Congratulations, your first app is running on Teams!
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+   :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="~/msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
 
    > [!NOTE]
    > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
@@ -224,7 +224,7 @@ Content page is the base level webpage that is rendered within Microsoft Teams c
 * **A custom tab**: In this case, the content page is the first page the user encounters.
 * **A [dialog](~/task-modules-and-cards/what-are-task-modules.md)**: You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
-If you need to add your tab, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
+If you need to add your tab, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](~/resources/schema/manifest-schema.md#statictabs).
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
@@ -295,7 +295,7 @@ The following code is an example of how your page and the Teams client communica
 
 ***
 
-For more information on how to create and add a content page to a personal tab, see [add a content page to the tab](../create-personal-tab.md#add-a-content-page-to-the-tab).
+For more information on how to create and add a content page to a personal tab, see [add a content page to the tab](~/create-personal-tab.md#add-a-content-page-to-the-tab).
 
 The following images show the configuration of an HTML content page and the output of content page in tab:
 
@@ -330,7 +330,7 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 ### Show a native loading indicator
 
-You can configure and show a native loading indicator to a tab. You can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+You can configure and show a native loading indicator to a tab. You can provide a [native loading indicator](~/resources/schema/manifest-schema.md#showloadingindicator) starting with [manifest schema v1.7](~/resources/schema/manifest-schema.md). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md), [removal page](~/tabs/how-to/create-tab-pages/removal-page.md), and [dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 >
