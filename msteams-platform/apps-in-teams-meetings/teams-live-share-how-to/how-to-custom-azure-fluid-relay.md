@@ -29,7 +29,6 @@ When calling initializing `LiveShareClient`, you can define your own `AzureConne
 ```javascript
 import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
@@ -46,14 +45,8 @@ const options = {
 };
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host, options);
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host, options);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -67,7 +60,6 @@ import {
   LivePresence,
 } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
@@ -84,14 +76,8 @@ const options: ILiveShareClientOptions = {
 };
 // Join the Fluid container
 const host = LiveShareHost.create();
-const liveShare = new LiveShareClient(host, options);
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
-const { container } = await liveShare.joinContainer(schema);
+const client = new LiveShareClient(host, options);
+await client.join();
 
 // ... ready to start app sync logic
 ```
@@ -130,25 +116,17 @@ Live Share's live data structures such as `LivePresence`, `LiveState`, and `Live
 
 For more information, see [core capabilities](../teams-live-share-capabilities.md) page.
 
-## Use Live Share without LiveShareClient
+## Use Live Share with AzureLiveShareClient
 
-You can still use Live Share even if you use don't want to use the `LiveShareClient` class for your custom Azure Fluid Relay service. This is helpful if you want to control when a container is created or how it's shared with meeting participants.
+You can still use Live Share even if you use don't want to use the `LiveShareClient` class for your custom Azure Fluid Relay service with the `AzureLiveShareClient` class. This is helpful if you want to control when a container is created or how it's shared with meeting participants.
 
 The following is an example of how you might do this in your application:
 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import {
-  LiveShareClient,
-  LivePresence,
-  getLiveShareContainerSchemaProxy,
-} from "@microsoft/live-share";
-import { SharedMap } from "fluid-framework";
-import {
-  AzureFunctionTokenProvider,
-  AzureClient,
-} from "@fluidframework/azure-client";
+import { AzureLiveShareClient } from "@microsoft/live-share";
+import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 import { LiveShareHost } from "@microsoft/teams-js";
 
 // Define a custom connection for your app
@@ -163,26 +141,12 @@ const options = {
     type: "remote",
   },
 };
-// Initialize your AzureClient instance
-const client = new AzureClient(options);
-// Define your Fluid schema
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
 // Create your host
 const host = LiveShareHost.create();
-// Create the LiveShareRuntime, which is needed for `LiveDataObject` instances to work
-const runtime = new LiveShareRuntime(this._host);
-// Inject the LiveShareRuntime dependency into the ContainerSchema
-const injectedSchema = getLiveShareContainerSchemaProxy(
-    schema,
-    runtime,
-);
+// Initialize your AzureClient instance
+const client = new AzureLiveShareClient(options, host);
 // Create (or get) your container
-const { container } = await client.createContainer(injectedSchema);
+await client.createContainer();
 
 // ... ready to start app sync logic
 ```
@@ -190,16 +154,7 @@ const { container } = await client.createContainer(injectedSchema);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import {
-  LiveShareClient,
-  ILiveShareClientOptions,
-  LivePresence,
-  getLiveShareContainerSchemaProxy,
-} from "@microsoft/live-share";
-import {
-  SharedMap,
-  ContainerSchema,
-} from "fluid-framework";
+import { AzureLiveShareClient } from "@microsoft/live-share";
 import {
     AzureFunctionTokenProvider,
     AzureClientProps,
@@ -218,26 +173,11 @@ const options: AzureClientProps = {
     type: "remote",
   },
 };
-// Initialize your AzureClient instance
-const client = new AzureClient(options);
-// Define your Fluid schema
-const schema: ContainerSchema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
 // Create your host
 const host = LiveShareHost.create();
-// Create the LiveShareRuntime, which is needed for `LiveDataObject` instances to work
-const runtime = new LiveShareRuntime(this._host);
-// Inject the LiveShareRuntime dependency into the ContainerSchema
-const injectedSchema: ContainerSchema = getLiveShareContainerSchemaProxy(
-    schema,
-    runtime,
-);
-// Create (or get) your container
-const { container } = await client.createContainer(injectedSchema);
+// Initialize your AzureClient instance
+const client = new AzureLiveShareClient(options, host);
+await client.createContainer();
 
 // ... ready to start app sync logic
 ```
@@ -250,16 +190,10 @@ Alternatively, you can use or override the `AzureLiveShareHost`. This allows you
 
 ```javascript
 import {
-  LiveShareClient,
-  LivePresence,
+  AzureLiveShareClient,
   AzureLiveShareHost,
-  getLiveShareContainerSchemaProxy,
 } from "@microsoft/live-share";
-import { SharedMap } from "fluid-framework";
-import {
-  AzureFunctionTokenProvider,
-  AzureClient,
-} from "@fluidframework/azure-client";
+import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
 const options = {
@@ -273,28 +207,12 @@ const options = {
     type: "remote",
   },
 };
-// Initialize your AzureClient instance
-const client = new AzureClient(options);
-// Define your Fluid schema
-const schema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
 // Create your AzureLiveShareHost
 const host = AzureLiveShareHost.create();
-// Create the LiveShareRuntime, which is needed for `LiveDataObject` instances to work
-const runtime = new LiveShareRuntime(this._host);
-// Inject the LiveShareRuntime dependency into the ContainerSchema
-const injectedSchema = getLiveShareContainerSchemaProxy(
-    schema,
-    runtime,
-);
+// Initialize your AzureLiveShareClient instance
+const client = new AzureLiveShareClient(options, host);
 // Create (or get) your container
-const { container } = await client.createContainer(injectedSchema);
-// Set AzureAudience into the AzureLiveShareHost
-host.setAudience(services.audience);
+await client.createContainer();
 
 // ... ready to start app sync logic
 ```
@@ -303,16 +221,9 @@ host.setAudience(services.audience);
 
 ```TypeScript
 import {
-  LiveShareClient,
-  ILiveShareClientOptions,
-  LivePresence,
+  AzureLiveShareClient,
   AzureLiveShareHost,
-  getLiveShareContainerSchemaProxy,
 } from "@microsoft/live-share";
-import {
-  SharedMap,
-  ContainerSchema,
-} from "fluid-framework";
 import {
     AzureFunctionTokenProvider,
     AzureClientProps,
@@ -330,28 +241,13 @@ const options: AzureClientProps = {
     type: "remote",
   },
 };
-// Initialize your AzureClient instance
-const client = new AzureClient(options);
-// Define your Fluid schema
-const schema: ContainerSchema = {
-  initialObjects: {
-    presence: LivePresence,
-    ticTacToePositions: SharedMap,
-  },
-};
 // Create your AzureLiveShareHost
 const host = AzureLiveShareHost.create();
-// Create the LiveShareRuntime, which is needed for `LiveDataObject` instances to work
-const runtime = new LiveShareRuntime(this._host);
-// Inject the LiveShareRuntime dependency into the ContainerSchema
-const injectedSchema: ContainerSchema = getLiveShareContainerSchemaProxy(
-    schema,
-    runtime,
-);
+// Initialize your AzureLiveShareClient instance
+const client = new AzureLiveShareClient(options, host);
+
 // Create (or get) your container
-const { container, services } = await client.createContainer(injectedSchema);
-// Set AzureAudience into the AzureLiveShareHost
-host.setAudience(services.audience);
+await client.createContainer();
 
 // ... ready to start app sync logic
 ```
