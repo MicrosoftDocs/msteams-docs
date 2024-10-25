@@ -438,6 +438,9 @@
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
+    - name: Create prompt suggestions
+      href: bots/how-to/conversations/prompt-suggestions.md
+      displayName: prompt starter, suggested actions 
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
