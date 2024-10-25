@@ -88,9 +88,9 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
   - [Receive undelete message activity](#receive-undelete-message-activity).
   - [Receive soft delete message activity](#receive-soft-delete-message-activity).
   - [Send a message](#send-a-message).
+  - [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
 - [Send suggested actions](#send-suggested-actions).
--
-- [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
+- [Send messages in Teams channel data](#send-messages-in-teams-channel-data)
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
@@ -972,80 +972,6 @@ async onTeamsMessageSoftDelete(context) {
 
 ---
 
-### Send suggested actions
-
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
-
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-
-The following is an example for implementation and experience of suggested actions:
-
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
-```
-
-The following illustrates an example of suggested actions:
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> - `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> - `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> - `imBack` is the only supported action type and Teams display up to six suggested actions.
-
-## Send messages in Teams channel data
-
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
-
-A typical `channelData` object in an activity sent to your bot contains the following information:
-
-- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
-- `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
-- `team`: Passed only in channel contexts, not in personal chat.
-  - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
-- `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
-  - `id`: GUID for the channel.
-  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-- `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
-- `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-The following code shows an example of channelData object (channelCreated event):
-
-```json
-"channelData": {
-    "eventType": "channelCreated",
-    "tenant": {
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "channel": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
-        "name": "My New Channel"
-    },
-    "team": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
-    }
-}
-```
-
 ### Update and delete messages sent from bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
@@ -1271,6 +1197,80 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 | N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---
+
+## Send suggested actions
+
+The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
+When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
+
+To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
+
+The following is an example for implementation and experience of suggested actions:
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+The following illustrates an example of suggested actions:
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+
+> [!NOTE]
+>
+> - `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
+> - `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
+> - `imBack` is the only supported action type and Teams display up to six suggested actions.
+
+## Send messages in Teams channel data
+
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
+
+The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
+
+A typical `channelData` object in an activity sent to your bot contains the following information:
+
+- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
+- `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
+- `team`: Passed only in channel contexts, not in personal chat.
+  - `id`: GUID for the channel.
+  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
+- `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
+  - `id`: GUID for the channel.
+  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+- `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+
+The following code shows an example of channelData object (channelCreated event):
+
+```json
+"channelData": {
+    "eventType": "channelCreated",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    },
+    "channel": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
+        "name": "My New Channel"
+    },
+    "team": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
+    }
+}
+```
 
 ## Receive conversation messages with RSC
 
