@@ -87,8 +87,9 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
   - [Receive edit message activity](#receive-edit-message-activity).
   - [Receive undelete message activity](#receive-undelete-message-activity).
   - [Receive soft delete message activity](#receive-soft-delete-message-activity).
-  - Send a message
+  - [Send a message](#send-a-message).
 - [Send suggested actions](#send-suggested-actions).
+-
 - [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
@@ -426,6 +427,338 @@ async onTeamsMessageEdit(context) {
 ```
 
 # [HTTP](#tab/http1)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
+---
+
+### Send a message
+
+To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
+
+The following code shows an example of sending a message when a user is added to a conversation:
+
+# [C#](#tab/dotnet2)
+
+- [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+
+```csharp
+
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+  // Sends an activity to the sender of the incoming activity.
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
+}
+
+```
+
+# [TypeScript](#tab/typescript2)
+
+- [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
+
+```typescript
+
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+              
+                // Sends an activity to the sender of the incoming activity.
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
+
+```
+
+# [Python](#tab/python2)
+
+- [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-send-activity)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
+
+```python
+
+async def on_members_added_activity(
+    self, members_added: [ChannelAccount], turn_context: TurnContext
+):
+    for member in teams_members_added:
+        // Sends a message activity to the sender of the incoming activity.
+        await turn_context.send_activity(f"Welcome your new team member {member.id}")
+    return
+
+```
+
+# [JSON](#tab/json2)
+
+```json
+
+{
+    "type": "message",
+    "from": {
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
+    },
+    "conversation": {
+        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+   },
+   "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
+    },
+    "text": "My bot's reply",
+    "replyToId": "1632474074231"
+}
+
+```
+
+# [HTTP](#tab/http)
+
+```http
+HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activities
+```
+
+```json
+{
+    "type": "message",
+    "from": {
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
+    },
+    "conversation": {
+        "id":"a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+    },
+    "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
+    },
+    "text": "My bot's reply"
+}
+```
+
+---
+
+> [!NOTE]
+>
+>- Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+>- Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
+
+Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+
+### Get edit message activity
+
+When you edit a message, the bot gets a notification of the edit message activity.
+
+To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
+
+Following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
+
+# [C#](#tab/dotnet3)
+
+```csharp
+
+protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is updated"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
+# [JSON](#tab/json3)
+
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
+    "name":"Mike Wilber",
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"caching
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
+},
+"recipient":{
+    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
+    "name":"TestBot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"editMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
+# [JavaScript](#tab/javascript3)
+
+You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
+
+**​Event function registration**:
+
+```javascript
+
+this.onTeamsMessageEditEvent(async (context, next) => {
+  let editedMessage = context.activity.text;
+  await context.sendActivity(`The edited message is ${editedMessage}"`);
+  next();
+})
+
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageEdit(context) {
+    let editedMessage = context.activity.text;
+    await context.sendActivity(`The edited message is ${editedMessage}"`);
+}
+
+```
+
+# [HTTP](#tab/http1)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
+---
+
+## Get undelete message activity
+
+When you undelete a message, the bot gets a notification of the undelete message activity.
+
+To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+
+The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
+
+# [C#](#tab/dotnet4)
+
+```csharp
+
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
+# [JSON](#tab/json4)
+
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
+    "name":"Testbot"
+},
+"entities":[
+    {
+           "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"undeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
+# [JavaScript](#tab/javascript4)
+
+You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
+
+**​Event function registration**:
+
+```javascript
+
+this.onTeamsMessageUndeleteEvent(async (context, next) => {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+next();
+})
+
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageUndelete(context) {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+}
+
+```
+
+# [HTTP](#tab/http2)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
