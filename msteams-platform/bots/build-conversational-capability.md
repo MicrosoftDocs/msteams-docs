@@ -81,15 +81,15 @@ The following code shows an example of sending a simple Adaptive Card:
 
 Sending and receiving messages is the core functionality of a bot. It enables a bot to:
 
-- Send and receive messages
-  - Receive a message activity
-  - Receive a read receipt
-  - Receive edit message activity
-  - Receive undelete message activity
-  - Receive soft delete message activity
-  - Send a message
-- Send suggested actions
-- Update and delete bot messages
+- Send and receive messages.
+  - [Receive a message activity](#receive-a-message-activity).
+  - [Receive a read receipt](#receive-a-read-receipt).
+  - [Receive edit message activity](#receive-edit-message-activity).
+  - [Receive undelete message activity](#receive-undelete-message-activity).
+  - [Receive soft delete message activity](#receive-soft-delete-message-activity).
+  - [Send a message]
+- [Send suggested actions](#send-suggested-actions).
+- Update and delete bot messages.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
@@ -547,7 +547,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-### Get soft delete message activity
+### Receive soft delete message activity
 
 When you soft delete a message, the bot gets a notification of the soft delete message activity.
 
