@@ -4,8 +4,7 @@ author: laujan
 description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.
 ms.localizationpriority: high
 ms.topic: quickstart
-zone_pivot_groups: teams-app-environment
-ms.date: 10/17/2024
+ms.date: 10/25/2024
 ---
 
 # Create a tab
@@ -265,7 +264,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 </details>
 
-::: zone pivot="razor-csharp"
+<details><summary><b>"razor-csharp"</b></summary>
 
 ## Create a tab with ASP.NET Core
 
@@ -416,9 +415,9 @@ ngrok http 3978 --host-header=localhost
 
    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-::: zone-end
+</details>
 
-::: zone pivot="mvc-csharp"
+<details><summary><b>"mvc-csharp"</b></summary>
 
 ## Create a tab with ASP.NET Core MVC
 
@@ -968,7 +967,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 You've completed the tutorial to build a tab app with Blazor.
 
-::: zone-end
+</details>
 
 ## Reorder tabs
 
