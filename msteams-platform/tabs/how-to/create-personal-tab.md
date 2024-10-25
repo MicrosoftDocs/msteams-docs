@@ -804,7 +804,6 @@ Teams Toolkit creates a scaffolding for your project based on the capabilities y
 | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
 
 You can add backend functionality by adding other ASP.NET Core controllers to your application.
-</details>
 
 ## Build and run your first Teams tab app
 
