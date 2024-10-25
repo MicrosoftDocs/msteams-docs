@@ -479,8 +479,6 @@
     displayname: Jira, jira
   - name: Format the bot messages
     href: bots/how-to/format-your-bot-messages.md
-  - name: Update and delete messages sent from bot
-    href: bots/how-to/update-and-delete-bot-messages.md      
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
   - name: Get Teams-specific context
