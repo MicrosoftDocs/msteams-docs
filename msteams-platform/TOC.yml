@@ -463,10 +463,10 @@
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events      
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
   - name: Send notifications
     items:
-    - name: Build notification bot  
+    - name: Build notification capability
       href: bots/build-notification-capability.md
       displayName: Adapter, notifications
     - name: Send proactive messages
