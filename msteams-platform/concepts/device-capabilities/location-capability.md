@@ -180,6 +180,31 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API isn't present. Upgrading the build should resolve the issue.|
 
+## Drag-srop files to third-party storage
+
+In order for Teams app to support drag-drop: 
+
+* Use the latest version of the Teams SDK. 
+
+* Admins must configure the third-party cloud storage provider's App ID. For more information, see [Admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
+
+* The app manifest should have the first action as Upload (This auto opens the app in upload mode when files are dragdropped in compose) 
+ 
+sample code placeholder
+
+The third-party app calls thirdPartyCloudStorage API to get the drag-dropped files with the following parameters: 
+
+1. Concatenate two values to get the unique ID/cache ID: const uniqueIdForChats = replyToId + id (that is, thread ID). Note, if replyToId is not present in the context, then the unique ID will be ""+threadId 
+
+> [!NOTE]
+> All the above value is present in application contest, if commandContext value is thirdParty, that means the app is opened programmatically and you need to call SDK API to fetch the dragdropped files.  
+
+2. Callback: (files: FilesFor3PStorage[], error?: SdkError): void;** 
+
+    sample code placeholder
+
+For more API information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage). For more Teams SDK information, see [@microsoft/teams-js package](/javascript/api/@microsoft/teams-js). 
+
 ### Code sample
 
 |Sample name | Description | .NET | Node.js | Manifest
