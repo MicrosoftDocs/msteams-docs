@@ -10,7 +10,7 @@ ms.date: 10/22/2024
 
 # Update bot or message extension app to use certificate or MSI for authentication
 
-You can use certificate or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ Ensure that you have a Teams bot app deployed to Azure with the following resour
 * An Entra ID with a secret used for bot authentication.
 * A resource that hosts your bot app, such as Azure App Service, Azure Functions.
 
-# [Update to certificate based Authentication](#tab/certificate)
+# [Update to certificate-based Authentication](#tab/certificate)
 
-To update your bot app to use certificate based authentication:
+To update your bot app to use certificate-based authentication:
 
 1. [Create and upload certificate in Azure AD](#create-and-upload-certificate-in-azure-ad)
 1. [Update the bot app code](#update-the-bot-app-code)
@@ -116,9 +116,9 @@ To delete the bot secret:
 
 Your bot app now uses the certificate for authentication.
 
-# [Update to MSI based authentication](#tab/msi)
+# [Update to MSI-based authentication](#tab/msi)
 
-To update your bot app to use MSI based authentication:
+To update your bot app to use MSI-based authentication:
 
 1. [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
 1. [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
@@ -157,7 +157,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Under **Microsoft App ID**, select **Type of App** as **User-Assigned Managed Identity**.
 
-1. In the **Creation type**, select **Create new Microsoft App ID**.
+1. From the **Creation type**, select **Create new Microsoft App ID**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
 
@@ -214,8 +214,21 @@ To update the bot app code for MSI, follow these steps:
 
 ## Delete the previous bot details
 
+Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
+
+To delete the bot secret:
+
 1. Go to [Azure portal](https://ms.portal.azure.com).
-1. Delete the old Azure bot and the Entra ID.
+1. Select **App registrations**.
+
+    :::image type="content" source="../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+
+1. Select your registered app.
+
+1. In the left pane, under **Manage**, select **Certificates & secrets**.
+1. Delete the secrets from Entra.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
 Your bot app now uses MSI for authentication.
 
@@ -225,3 +238,4 @@ Your bot app now uses MSI for authentication.
 
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
