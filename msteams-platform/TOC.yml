@@ -450,12 +450,12 @@
         href: Teams-AI-library-tutorial.yml
     - name: Teams AI library FAQs
       href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md  
-  - name: Build a non-AI bot
+  - name: Understand bot concepts
+    href: bots/bot-concepts.md
+    displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
+  - name: Send and receive messages
     items:
-    - name: Understand bot concepts
-      href: bots/bot-concepts.md
-      displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
-    - name: Send and receive messages
+    - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
     - name: Channel and group chat conversations with a bot
@@ -464,31 +464,33 @@
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events      
-    - name: Send notifications
+  - name: Send notifications
+    items:
+    - name: Build notification bot  
       href: bots/build-notification-capability.md
       displayName: Adapter, notifications
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId, send message, bot framework, notification,
-    - name: Command bot in Teams
-      href: bots/how-to/conversations/command-bot-in-teams.md
-    - name: Workflow bot in Teams
-      href: bots/how-to/conversations/workflow-bot-in-teams.md
-      displayname: Jira, jira
-    - name: Format the bot messages
-      href: bots/how-to/format-your-bot-messages.md
-    - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md      
-    - name: Send and receive files
-      href: bots/how-to/bots-filesv4.md
-    - name: Get Teams-specific context
-      href: bots/how-to/get-teams-context.md
-      displayName: Fetch roster or user profile
-    - name: Teams bot API changes to fetch team or chat members
-      href: resources/team-chat-member-api-changes.md  
-    - name: Configure bot scope
-      href: bots/how-to/bot-configuration-experience.md
-      displayName: configuration settings, fetchTask, config/fetch, config/submit
+  - name: Command bot in Teams
+    href: bots/how-to/conversations/command-bot-in-teams.md
+  - name: Workflow bot in Teams
+    href: bots/how-to/conversations/workflow-bot-in-teams.md
+    displayname: Jira, jira
+  - name: Format the bot messages
+    href: bots/how-to/format-your-bot-messages.md
+  - name: Update and delete messages sent from bot
+    href: bots/how-to/update-and-delete-bot-messages.md      
+  - name: Send and receive files
+    href: bots/how-to/bots-filesv4.md
+  - name: Get Teams-specific context
+    href: bots/how-to/get-teams-context.md
+    displayName: Fetch roster or user profile
+  - name: Teams bot API changes to fetch team or chat members
+    href: resources/team-chat-member-api-changes.md  
+  - name: Configure bot scope
+    href: bots/how-to/bot-configuration-experience.md
+    displayName: configuration settings, fetchTask, config/fetch, config/submit
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
