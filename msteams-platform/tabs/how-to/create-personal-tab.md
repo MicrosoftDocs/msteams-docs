@@ -638,7 +638,7 @@ To install the Microsoft Teams Toolkit extension:
 
 </details>
 
-<details><summary><b>Command line<summary></b>
+<details><summary><b>Command line</summary></b>
 
 To install the TeamsFx CLI, use the `npm` package manager:
 
