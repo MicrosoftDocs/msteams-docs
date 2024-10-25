@@ -20,6 +20,8 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
+# [`staticTabs`](#tab/static)
+
 <details><summary><b>"node-java-script"</b></summary>
 
 ## Create a tab with Node.js
@@ -968,6 +970,11 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 You've completed the tutorial to build a tab app with Blazor.
 
 </details>
+
+# [`configurableTabs`](#tab/configurable)
+
+
+---
 
 ## Reorder tabs
 
