@@ -85,12 +85,13 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
   - [Receive a message activity](#receive-a-message-activity).
   - [Receive a read receipt](#receive-a-read-receipt).
   - [Receive edit message activity](#receive-edit-message-activity).
+  - [Send a message](#send-a-message).
+- [Get undelete message activity](#get-undelete-message-activity).
   - [Receive undelete message activity](#receive-undelete-message-activity).
   - [Receive soft delete message activity](#receive-soft-delete-message-activity).
-  - [Send a message](#send-a-message).
-  - [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
+- [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
 - [Send suggested actions](#send-suggested-actions).
-- [Send messages in Teams channel data](#send-messages-in-teams-channel-data)
+- [Send messages in Teams channel data](#send-messages-in-teams-channel-data).
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
@@ -560,111 +561,6 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
 >- Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
-
-### Get edit message activity
-
-When you edit a message, the bot gets a notification of the edit message activity.
-
-To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
-
-Following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
-
-# [C#](#tab/dotnet3)
-
-```csharp
-
-protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
-{ 
-var replyActivity = MessageFactory.Text("message is updated"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} 
-
-```
-
-# [JSON](#tab/json3)
-
-```json
-
-{
-"type":"messageUpdate",
-"timestamp":"2022-10-28T17:19:39.4615413Z",
-"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
-"id":"1666977568748",
-"channelId":"msteams",
-"serviceUrl":"https://canary.botapi.skype.com/amer/",
-"from": {
-    "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
-    "name":"Mike Wilber",
-    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"caching
-},
-"conversation":{
-    "conversationType":"personal",
-    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
-},
-"recipient":{
-    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
-    "name":"TestBot"
-},
-"entities":[
-    {
-        "locale":"en-US",
-        "country":"US",
-        "platform":"Web",
-        "timezone":"America/Los_Angeles",
-        "type":"clientInfo"
-    }
-],
-"channelData":{
-    "eventType":"editMessage",
-    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-},
-"locale":"en-US",
-"localTimezone":"America/Los_Angeles"
-}  
-
-```
-
-# [JavaScript](#tab/javascript3)
-
-You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
-
-**​Event function registration**:
-
-```javascript
-
-this.onTeamsMessageEditEvent(async (context, next) => {
-  let editedMessage = context.activity.text;
-  await context.sendActivity(`The edited message is ${editedMessage}"`);
-  next();
-})
-
-```
-
-**​Method override**:
-
-```javascript
-
-async onTeamsMessageEdit(context) {
-    let editedMessage = context.activity.text;
-    await context.sendActivity(`The edited message is ${editedMessage}"`);
-}
-
-```
-
-# [HTTP](#tab/http1)
-
-```http
-PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
-```
-
-```json
-{
-    "type": "message",
-    "text": "This message has been updated"
-}
-```
-
----
 
 ## Get undelete message activity
 
