@@ -321,14 +321,18 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
     :::image type="content" source="~/assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
-    > [!NOTE]
-    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
+1. In the left panel, select **Certificates & secrets** to create a client secret for your application.
 
-1. Update the `.evn` file with the bot secret.
+   1. Under **Client secrets**, select &#x2795; **New client secret**.
+   1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
+   1. Set **Expires** to your selection.
+   1. Select **Add**.
 
-1. Provision or deploy the app.
+1. Update the `.env` file with the bot secret.
 
-1. If your app is already deployed, ensure you update the app service configuration in Azure resource with the newly created app or bot secret.
+1. Provision or deploy the app as required.
+
+1. If your app is already deployed, ensure you update the app service configuration in Azure resource with the newly created bot secret.
 
 </details>
 
