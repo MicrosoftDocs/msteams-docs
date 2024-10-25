@@ -467,6 +467,14 @@ For more information on how to add Adaptive Card actions to command bot, see [Wo
 
 </details>
 
+## Code sample
+
+The following table provides a simple code sample for building a command capability for a bot:
+
+| **Sample Name** | **Description** | **JavaScript** |
+| --- | --- | --- |
+| Teams Search Command Message Extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
+
 ## Step-by-step guide
 
 Follow the [step-by-step](../../../sbs-gs-commandbot.yml) guide to build Teams Command bot.
