@@ -80,9 +80,9 @@ Android WebView is a Chrome system component that allows Android apps to display
 > * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 > * You must declare third party cookies as `SameSite=None; Secure`.
 
-## Third-party cookies deprecation
+## Third party cookies deprecation
 
-All third-party (3P) cookies set in the top-level domain are blocked when that domain is embedded in an iframe. This 3P cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
+All third party cookies set in the top-level domain are blocked when that domain is embedded in an iframe. This third party cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
 
 This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
 
@@ -94,7 +94,7 @@ Pop-out authentication scenarios are a common method for apps to authenticate us
 1. After the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes.
 1. These cookies are used inside the embedded iframe to authenticate the user.
 
-Pop-out authentication doesn't break with 3P cookie deprecation because:
+Pop-out authentication doesn't break with third party cookie deprecation because:
 
 * Chromium-based browsers like Chrome, Microsoft Edge, and Firefox allow access to cookies that are unpartitioned, secure, and `SameSite=None`. This is true when the cookies are set in a popped-out window from the iframe to be accessible in the iframe.
 
