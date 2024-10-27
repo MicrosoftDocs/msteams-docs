@@ -135,7 +135,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 1. Go to **Home**.
 1. Select **+ Create a resource**.
 1. In the search box, enter **Azure Bot**.
-1. Select **Enter**.
+1. Select the **Enter** key.
 1. Select **Azure Bot**.
 1. Select **Create**.
 
