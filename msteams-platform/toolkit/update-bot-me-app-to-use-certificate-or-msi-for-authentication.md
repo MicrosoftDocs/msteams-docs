@@ -122,7 +122,7 @@ To update your bot app to use MSI-based authentication:
 
 1. [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
 1. [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
-1. [Delete the previous bot details](#delete-the-previous-bot-details)
+1. [Delete bot secret](#delete-bot-secret)
 
 > [!NOTE]
 > The **Azure Bot** service ID and type can't be modified after creation.
@@ -212,7 +212,7 @@ To update the bot app code for MSI, follow these steps:
 
 1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
 
-## Delete the previous bot details
+## Delete bot secret
 
 Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
 
