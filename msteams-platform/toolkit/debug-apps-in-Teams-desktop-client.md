@@ -66,6 +66,8 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Enter the OpenAI service key.
 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/openai-key.png" alt-text="Screenshot shows to enter openai service key in Visual Studio Code.":::
+
 1. Select **Default folder**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
