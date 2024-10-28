@@ -532,15 +532,14 @@
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
+    expanded: false 
     items:
     - name: Overview
       href: messaging-extensions/api-based-overview.md
       displayName: OpenAPI Description, Search, single parameter, search based message extension
-    - name: Build API-based message extension
-      href: messaging-extensions/build-api-based-message-extension.md
-      display name: Response rendering template, OpenAPI Description, Search, single parameter
-    - name: Create API-based message extension
-      href: messaging-extensions/create-api-message-extension.md  
+    - name: Create API-based message extensions
+      href: messaging-extensions/create-api-message-extension.md
+      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
@@ -791,6 +790,17 @@
     - name: Add third party IdP authentication to Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+  - name: Enable authentication for API-based message extensions
+    items:
+    - name: Overview
+      href: messaging-extensions/build-api-based-message-extension.md
+      display name: security, data privacy, secret service
+    - name: Enable API key authentication
+      href: messaging-extensions/api-based-secret-service-auth.md
+      display name: Secret key, API key registration
+    - name: Enable SSO for API based message extensions
+      href: messaging-extensions/api-based-microsoft-entra.md
+      display name: API key, API key registration, access token, register API key, SSO
   - name: Enable nested app authentication
     href: concepts/authentication/nested-authentication.md
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
