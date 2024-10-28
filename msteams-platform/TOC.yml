@@ -945,7 +945,7 @@
       href: graph-api/rsc/test-team-rsc-json-file.md
     - name: Resource-specific consent for chat JSON test file
       href: graph-api/rsc/test-chat-rsc-json-file.md
-- name: Distribute your app
+- name: Publish your app
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md

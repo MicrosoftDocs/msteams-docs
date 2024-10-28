@@ -238,13 +238,13 @@ landingContent:
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
 
-- title: Publish and distribute
+- title: Publish Teams app
   linkLists:
   - linkListType: concept
     links:
     - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Distribution
+    - text: Publish your Teams apps
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
