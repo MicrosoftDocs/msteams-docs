@@ -103,6 +103,7 @@ The following code snippet is an example for configuring bot as the default land
     }
 ]
 ```
+---
 
 ### Tab as default landing capability
 
