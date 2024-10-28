@@ -13,6 +13,12 @@ You can distribute your app directly to the Microsoft Teams Store inside Microso
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
+The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]
+
 ## Understand the publishing process
 
 If your app is production ready, you can begin the process of getting it listed on the Teams Store.
@@ -47,9 +53,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
   * Details of failures or issues with policy links and categorization:
 
-    * Mandatory fix: Issues must be fixed prior to app approval.
+    * Must fix: Issues must be fixed prior to app approval.
 
-    * Suggested fix: Issues can be fixed post app approval as the issues are recommendations to improve your app’s experience.
+    * Good-to-fix: Issues can be fixed post app approval as the issues are recommendations to improve your app’s experience.
 
     * Blocker: Issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
 

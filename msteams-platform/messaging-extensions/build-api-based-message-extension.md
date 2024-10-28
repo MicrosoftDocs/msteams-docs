@@ -138,8 +138,8 @@ Ensure that you adhere to following guidelines for app manifest:
 
   ```json
    {
-   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-   +  "manifestVersion": "devPreview",
+   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+   +  "manifestVersion": "1.17",
    "version": "1.0.0",
    "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
    "packageName": "com.microsoft.teams.extension",
@@ -168,7 +168,7 @@ Ensure that you adhere to following guidelines for app manifest:
    +      "authorization": {
    +        "authType": "apiSecretServiceAuth ",
    +        "apiSecretServiceAuthConfiguration": {
-   +            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+   +            "apiSecretRegistrationId": "9xxxxxxx-7xxx-4xxx-bxxx-1xxxxxxxxxxx"
    +        }
    +      },
    +      "apiSpecificationFile": "aitools-openapi.yml",
@@ -632,7 +632,6 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
-* The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
@@ -830,7 +829,7 @@ Update the following properties in the app manifest file:
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications.
+* `authorization.microsoftEntraConfiguration`: Enables single sign-on (SSO) authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and reduce the need for multiple authentications. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
 
 To configure app manifest:
 
@@ -870,10 +869,6 @@ To configure app manifest:
     },
     ```
 
-1. Update the subdomain URL in the following properties:
-   1. `contentUrl`
-   2. `configurationUrl`
-  
 1. Save the app manifest file.
 
 For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
@@ -894,7 +889,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -923,7 +918,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -957,6 +952,20 @@ After the API-based message extension gets a request header with token, perform 
   > [!NOTE]
   > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
+For more information on how to validate an access token, see [validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+
+There are several libraries to validate JSON Web Tokens (JWT). For basic validation, ensure that you check the following:
+
+* The token is well-formed.
+* The token was issued by the intended authority.
+* The token is targeted to the web API.
+
+When validating the token, ensure the following:
+
+* Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+* The `aud1` parameter in the token must match the app ID from Microsoft Entra app registration.
+* The token's `scp` parameter is set to `access_as_user`.
+
 </details>
 <br/>
 
@@ -984,11 +993,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-

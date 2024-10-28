@@ -3,7 +3,7 @@ title: App Localization - Factors to Consider
 description: Learn considerations for localizing your Microsoft Teams app, localize strings in your app manifest, and handle localized text submissions from your users.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/15/2018
+ms.date: 10/17/2024
 ---
 # Localize your app
 
@@ -43,6 +43,8 @@ Add the `localizationInfo` property with the default language that your applicat
 
 > [!NOTE]
 > Manifest version must be same for both manifest.json and localization.json files.
+
+Starting with app manifest v1.19, Copilot agents are also localizable. For more information, see [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) in Microsoft 365 Copilot extensibility documentation.
 
 ### Example manifest.json change
 
