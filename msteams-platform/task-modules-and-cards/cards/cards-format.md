@@ -832,11 +832,9 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ## CompoundButton in Adaptive Cards
 
-The `CompundButton` element allows you to integrate multiple elements within a button in an Adaptive Card. It provides an optimal solution for implementing user experience similar to that of prompt starters in an AI bot.
+`CompoundButton` is an element in an Adaptive Card that allows you to integrate multiple elements within the button. The `CompoundButton` element provides an optimal solution to implement the look and feel of [prompt starters](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions) in an Adaptive Card.
 
-image placeholder
-
-**CompoundButton schema**
+:::image type="content" source="../../assets/images/Cards/compoundbutton.png" alt-text="Screenshot of desktop and mobile view of Compound buttons in an Adaptive Card. ":::
 
 The following table lists the properties of the `CompoundButton` element:
 
