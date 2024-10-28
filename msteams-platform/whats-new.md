@@ -33,7 +33,8 @@ Teams platform features that are available to all app developers.
 **2024 October**
 
 * ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
-* ***October 28, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
+* ***October 28, 2024***: [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md).
+* ***October 25, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
 * ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
 * ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
 * ***October 17, 2024***: [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs).
