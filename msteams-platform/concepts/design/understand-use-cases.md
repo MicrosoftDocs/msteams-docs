@@ -130,6 +130,8 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Webhooks and connectors
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 [Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
 
    :::column-end:::
