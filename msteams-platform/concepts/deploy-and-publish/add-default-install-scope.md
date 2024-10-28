@@ -62,7 +62,7 @@ You can configure any one of the following:
 
 To set bot as the default landing capability:
 
-# [Desktop](#tab/botdesktop)
+# [Desktop](#tab/bot_desktop)
 1. Open your app manifest.
 1. Under `bots` property, add `scopes` as `personal`.
 
@@ -74,7 +74,7 @@ To set bot as the default landing capability:
             "personal"
             ]
     ```
-1. Alternatively, you can update `staticTabs` with the following properties as the first entry of the array:
+    Alternatively, you can update `staticTabs` with the following properties as the first entry of the array:
     1. Set `entityId` as `conversations`. 
     1. Add `scopes` as `personal`.
 
@@ -91,7 +91,7 @@ The following example demonstrates opening an app with bot as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
-# [Mobile](#tab/botmobile)
+# [Mobile](#tab/bot_mobile)
 1. Open your app manifest.
 1. Under `staticTabs` property:
     1. Add the following properties as the first entry of the array:
@@ -124,7 +124,7 @@ The following code snippet is an example for configuring bot as the default land
 
 To configure tab as the default landing capability:
 
-# [Desktop](#tab/tabdesktop)
+# [Desktop](#tab/tab_desktop)
 1. Open your app manifest.
 1. Under `staticTabs` property: 
     1. Add the tab properties as the first entry of the array. To define tab properties, refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
@@ -155,7 +155,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
-# [Mobile](#tab/tabmobile)
+# [Mobile](#tab/tab_mobile)
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
