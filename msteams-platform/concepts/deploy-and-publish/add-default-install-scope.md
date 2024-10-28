@@ -174,7 +174,7 @@ The following code snippet is an example for setting tab as the default landing 
 ]
 ```
 
-In mobile, users can transition to desktop using the bot icon present at the top-right.
+In mobile, users can transition to bot using the bot icon present at the top-right.
 
 ---
 The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
