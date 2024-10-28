@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 10/22/2024
 ---
 
-# Debug apps in Teams desktop client
+# Debug in Teams desktop client
 
 Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, opens debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
 
