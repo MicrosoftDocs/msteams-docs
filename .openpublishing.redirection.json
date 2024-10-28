@@ -1135,6 +1135,10 @@
       {
         "source_path": "msteams-platform/samples/collaboration-controls-limitations.md",
         "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       }
     ]
 }
