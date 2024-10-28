@@ -54,8 +54,6 @@ To configure details in app manifest:
 
 You can configure the default landing capability for an app that supports both bot and tab capabilities in personal scope. Based on this configuration, the app opens either as a bot or a tab by default.
 
-To set default landing capability, you must configure the `staticTabs` property in the app manifest. The first capability defined in `staticTabs` becomes the default landing capability. The second capability defined is pinned to the app's personal experience for easy switching.
-
 You can configure any one of the following:
 * [Bot as default landing capability](#bot-as-default-landing-capability)
 * [Tab as default landing capability](#tab-as-default-landing-capability)
@@ -64,9 +62,24 @@ You can configure any one of the following:
 
 To set bot as the default landing capability:
 
+# [Desktop](#tab/desktop)
+1. Open your app manifest.
+1. Under `bots` property, add `scopes` as `personal`.
+```json
+"bots": [
+        "scopes": [
+        "personal"
+        ]
+```
+
+The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
+
+:::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
+
+# [Mobile](#tab/mobile)
 1. Open your app manifest.
 1. Under `staticTabs` property:
-    1. Add the following bot properties:
+    1. Add the following properties:
         1. Set `entityId` as `conversations`. 
         1. Add `scopes` as `personal`.
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
@@ -90,22 +103,20 @@ The following code snippet is an example for configuring bot as the default land
     }
 ]
 ```
-The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab.
-
-:::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
 ### Tab as default landing capability
 
 To configure tab as the default landing capability:
 
+# [Desktop](#tab/desktop)
 1. Open your app manifest.
 1. Under `staticTabs` property: 
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
-    1. Add the following bot properties:
+    1. To pin bot to the app's personal experience for easy transition, add the following bot properties:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
  
-The following code snippet is an example for tab as the default landing capability:
+The following code snippet is an example for setting tab as the default landing capability with pinned bot:
 ```json
 "staticTabs": [
     {
@@ -128,6 +139,13 @@ The following example demonstrates opening an app with tab as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
+# [Mobile](#tab/mobile)
+1. Open your app manifest.
+1. Under `staticTabs` property, add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+
+In mobile, users can transition to desktop using the bot icon present at the top.
+
+---
 The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
