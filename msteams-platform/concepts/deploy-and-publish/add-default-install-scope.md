@@ -62,7 +62,7 @@ You can configure any one of the following:
 
 To set bot as the default landing capability:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/botdesktop)
 1. Open your app manifest.
 1. Under `bots` property, add `scopes` as `personal`.
 ```json
@@ -76,7 +76,7 @@ The following example demonstrates opening an app with bot as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/botmobile)
 1. Open your app manifest.
 1. Under `staticTabs` property:
     1. Add the following properties:
@@ -108,7 +108,7 @@ The following code snippet is an example for configuring bot as the default land
 
 To configure tab as the default landing capability:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/tabdesktop)
 1. Open your app manifest.
 1. Under `staticTabs` property: 
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
@@ -139,7 +139,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
 :::image type="content" source="../../assets/images/default-scope/tab-default.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability.":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/tabmobile)
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
