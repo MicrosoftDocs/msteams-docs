@@ -71,7 +71,19 @@ To set bot as the default landing capability:
         "personal"
         ]
 ```
+1. Alternatively, you can update `staticTabs` property with the following properties:
+    1. Set `entityId` as `conversations`. 
+    1. Add `scopes` as `personal`.
 
+```json
+"staticTabs":[
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+```
 The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
@@ -84,7 +96,7 @@ The following example demonstrates opening an app with bot as default landing ca
         1. Add `scopes` as `personal`.
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
-The following code snippet is an example for configuring bot as the default landing capability:
+The following code snippet is an example for configuring bot as the default landing capability for mobile:
 ```json
 "staticTabs":[
       {
@@ -113,7 +125,7 @@ To configure tab as the default landing capability:
 1. Open your app manifest.
 1. Under `staticTabs` property: 
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
-    1. To pin bot to the app's personal experience for easy transition, add the following bot properties:
+    1. To pin bot to the app's personal experience for easy transition, add the following properties:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
  
@@ -143,6 +155,21 @@ The following example demonstrates opening an app with tab as default landing ca
 # [Mobile](#tab/tabmobile)
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+
+The following code snippet is an example for setting tab as the default landing capability for mobile:
+
+```json
+"staticTabs":[
+      {
+        "entityId": "com.contoso.helloworld.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://p4p9bji0-7130.inc1.devtunnels.ms/hello",
+        "scopes": [
+            "personal"
+        ]
+    }
+]
+```
 
 In mobile, users can transition to desktop using the bot icon present at the top.
 
