@@ -5,7 +5,7 @@ description: Learn how to create deep links to an application and navigate using
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 10/14/2024
+ms.date: 10/28/2024
 ---
 
 # Deep link to an application
