@@ -69,11 +69,12 @@ To set bot as the default landing capability:
     ```json
     "bots": [
         {
+            "botId":"<botId>",
             "scopes": [
             "personal"
             ]
     ```
-1. Alternatively, you can update `staticTabs` with the following properties:
+1. Alternatively, you can update `staticTabs` with the following properties as the first entry of the array:
     1. Set `entityId` as `conversations`. 
     1. Add `scopes` as `personal`.
 
@@ -93,7 +94,7 @@ The following example demonstrates opening an app with bot as default landing ca
 # [Mobile](#tab/botmobile)
 1. Open your app manifest.
 1. Under `staticTabs` property:
-    1. Add the following properties:
+    1. Add the following properties as the first entry of the array:
         1. Set `entityId` as `conversations`. 
         1. Add `scopes` as `personal`.
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
@@ -126,7 +127,7 @@ To configure tab as the default landing capability:
 # [Desktop](#tab/tabdesktop)
 1. Open your app manifest.
 1. Under `staticTabs` property: 
-    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+    1. Add the tab properties  as the first entry of the array. To define tab properties, refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
     1. To pin bot to the app's personal experience for easy transition, add the following properties:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
@@ -173,7 +174,7 @@ The following code snippet is an example for setting tab as the default landing 
 ]
 ```
 
-In mobile, users can transition to desktop using the bot icon present at the top.
+In mobile, users can transition to desktop using the bot icon present at the top-right.
 
 ---
 The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
