@@ -45,3 +45,7 @@ Enhance the user experience for your bot app by adding AI to your existing bot a
 * [Understand bot concepts](bot-concepts.md)
 
 ## See also
+
+* [Understand bot concepts](bot-concepts.md)
+* [Send and receive messages](build-conversational-capability.md)
+* [Send notifications](build-notification-capability.md)
