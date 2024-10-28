@@ -68,6 +68,7 @@ To set bot as the default landing capability:
 
     ```json
     "bots": [
+        {
             "scopes": [
             "personal"
             ]
