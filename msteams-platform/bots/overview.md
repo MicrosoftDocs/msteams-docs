@@ -102,5 +102,3 @@ Let's begin to learn, automate, and innovate with bots.
 ## Next step
 
 [Let's build a bot](build-a-bot.md)
-
-## See also
