@@ -9,7 +9,9 @@ ms.author: surbhigupta
 
 # Let's build a bot
 
-Building a bot app involves various phases, from initial concept to final deployment. This article offers a summary of your options to help you get started.
+Building a bot app involves various phases, from initial concept to final deployment. This article gives you a quick overview of your options to get started. It walks you through building a basic bot app and then shows you how to level it up to an AI bot.
+
+## Choose the tools and platforms
 
 If you want to create your own bot, here's a list of tools and platforms to help you get started:
 
