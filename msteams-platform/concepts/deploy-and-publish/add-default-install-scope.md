@@ -65,25 +65,26 @@ To set bot as the default landing capability:
 # [Desktop](#tab/botdesktop)
 1. Open your app manifest.
 1. Under `bots` property, add `scopes` as `personal`.
-```json
-"bots": [
-        "scopes": [
-        "personal"
-        ]
-```
-1. Alternatively, you can update `staticTabs` property with the following properties:
+
+    ```json
+    "bots": [
+            "scopes": [
+            "personal"
+            ]
+    ```
+1. Alternatively, you can update `staticTabs` with the following properties:
     1. Set `entityId` as `conversations`. 
     1. Add `scopes` as `personal`.
 
-```json
-"staticTabs":[
-      {
-         "entityId":"conversations",
-         "scopes":[
-            "personal"
-         ]
-      }
-```
+    ```json
+    "staticTabs":[
+          {
+             "entityId":"conversations",
+             "scopes":[
+                "personal"
+             ]
+          }
+    ```
 The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
