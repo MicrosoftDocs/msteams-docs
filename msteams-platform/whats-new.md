@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 **2024 October**
 
 * ***October 28, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
+* ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
 * ***October 28, 2024***: [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md).
 * ***October 25, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
 * ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
