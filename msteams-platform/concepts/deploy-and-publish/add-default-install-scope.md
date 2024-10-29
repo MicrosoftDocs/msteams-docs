@@ -127,7 +127,7 @@ To configure tab as the default landing capability:
 1. Open your app manifest.
 1. Under `staticTabs` property: 
     1. Add the tab properties as the first entry of the array. To define tab properties, refer the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
-    1. To pin bot to the app's personal experience for easy transition, add the following properties:
+    1. Add the following properties:
         1. Set `entityId` as `conversations`.
         1. Add `scopes` as `personal`.
  
