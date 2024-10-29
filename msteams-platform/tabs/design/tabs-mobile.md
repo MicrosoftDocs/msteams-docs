@@ -37,7 +37,7 @@ Mobile clients function with low bandwidth and intermittent connections. Your ap
 
 You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet.
 
-## Distribution
+## Publish to Teams Store
 
 Apps listed on the Teams Store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depends on whether your app is approved.
 
