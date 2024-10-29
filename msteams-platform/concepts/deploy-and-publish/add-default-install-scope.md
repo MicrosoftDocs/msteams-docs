@@ -131,13 +131,13 @@ The following code snippet is an example for configuring bot as the default land
 
    An example of an app with bot as default landing capability in android.
 
-     :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
+   :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
 
    # [iOS](#tab/ios)
 
    An example of an app with bot as default landing capability in iOS.
 
-     :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
+   :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
 
    ---
 
