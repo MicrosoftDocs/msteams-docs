@@ -32,6 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 October**
 
+* ***October 29, 2024***: [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md).
 * ***October 28, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
 * ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
 * ***October 28, 2024***: [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md).
