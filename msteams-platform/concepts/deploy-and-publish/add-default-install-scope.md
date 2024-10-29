@@ -189,9 +189,9 @@ To configure tab as the default landing capability:
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
- The following code snippet is an example for setting tab as the default landing capability  for mobile:
+The following code snippet is an example for setting tab as the default landing capability  for mobile:
 
- ```json
+```json
  "staticTabs":[
       {
         "entityId": "com.contoso.helloworld.hellotab",
@@ -202,12 +202,12 @@ To configure tab as the default landing capability:
         ]
     }
  ]
- ```
+```
 
- The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
+The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
 
- * Android
- * iOS
+* Android
+* iOS
 
    # [Android](#tab/android1)
 
@@ -222,12 +222,11 @@ To configure tab as the default landing capability:
    :::image type="content" source="../../assets/images/default-scope/ios-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in iOS.":::
 
    ---
-1. 
 
- > [!NOTE]
- > Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
+> [!NOTE]
+> Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
 
- In mobile, users can transition to bot using the bot icon present at the top-right.
+In mobile, users can transition to bot using the bot icon present at the top-right.
 
 ---
 
