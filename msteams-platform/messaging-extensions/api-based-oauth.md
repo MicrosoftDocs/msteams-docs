@@ -173,3 +173,9 @@ Ensure that the OAuth implementation in your app can handle error cases such as,
 For more information, see the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
 
 Implementing OAuth 2.0 for API message extensions and plugins in Microsoft Teams enhances the security of your app. It provides a secure way to access user data from third-party applications without exposing user credentials.
+
+## See also
+
+* [Create API-based message extension](create-api-message-extension.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)

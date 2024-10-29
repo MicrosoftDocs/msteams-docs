@@ -44,3 +44,4 @@ You can implement authentication in API-based message extensions to provide secu
 
 * [Create API-based message extension](create-api-message-extension.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Enable OAuth authentication for API based message extension](api-based-oauth.md)

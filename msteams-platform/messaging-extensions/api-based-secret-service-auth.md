@@ -135,3 +135,4 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 * [Create API-based message extension](create-api-message-extension.md)
 * [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Enable OAuth authentication for API based message extension](api-based-oauth.md)
