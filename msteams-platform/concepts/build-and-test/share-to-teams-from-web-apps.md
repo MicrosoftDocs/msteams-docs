@@ -3,12 +3,12 @@ title: Embed Share to Teams on Web Apps
 description: Learn to add the Share to Teams embedded button on third-party websites, with a website preview, using launcher script and code samples.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 09/18/2024
+ms.date: 10/29/2024
 ---
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed the Share to Teams button on their webpages. When users select **Share to Teams**, the Share to Teams dialog appears and prompts the user to provide the required details to share the content.
+Share to Teams from web apps allows users to share content directly to a chat, channel, or meeting without switching context. Third-party websites can use the launcher script to embed the **Share to Teams** button on their webpages. When the user selects **Share to Teams**, the Share to Teams dialog appears and prompts the user to provide the required details to share the content.
 
 The following image displays the dialog that appears when the user selects **Share to Teams**:
 

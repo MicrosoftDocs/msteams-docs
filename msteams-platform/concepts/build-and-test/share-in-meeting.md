@@ -4,7 +4,7 @@ description: Learn how to add the share in meeting button, which allows users to
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
-ms.date: 09/18/2024
+ms.date: 10/29/2024
 ---
 # Share in meeting
 

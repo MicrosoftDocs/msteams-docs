@@ -5,7 +5,7 @@ description: Learn how to build apps for Teams meeting stage, share to stage API
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 09/18/2024
+ms.date: 10/29/2024
 ---
 
 # Build apps for Teams meeting stage
@@ -18,7 +18,7 @@ In addition to screen sharing, Microsoft Teams offers various tools designed to 
 
 The following table lists the scenarios to use Screen share and Share to stage features:
 
-| Feature |  Share to stage | Screen share content to stage  |
+| Feature | Share to stage | Screen share content to stage |
 | --- | --- | --- |
 | **Interaction Level** | Allows attendees to interact with the content. | View-only mode of the app or content.  |
 | **Scenarios** | Collaborative experiences, such as whiteboarding. |  Coconsumption scenarios, such as reviewing dashboards in a scrum meeting.  |
@@ -87,11 +87,11 @@ The following image shows the share to stage option in the Teams mobile client:
 
 Use the following APIs to share specific part of the app:
 
-|Method| Description| Source|
+| Method| Description | Source |
 |---|---|----|
-|**Share app content to stage**| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-|**Get app content stage sharing state**| Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
-|**Get app content stage sharing capabilities**| Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
+| **Share app content to stage** | Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| **Get app content stage sharing state** | Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+| **Get app content stage sharing capabilities** | Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
 # [Share app content to stage](#tab/app-content)
 
