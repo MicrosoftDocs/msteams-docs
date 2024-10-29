@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 06/19/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/high-quality-message-extension.md
+  nextTutorialHref: messaging-extensions/dev-guidelines-copilot-agents.md
   nextTutorialTitle: Bot-based message extension plugin guidelines
   ms.custom: mvc
   ms.localizationpriority: high

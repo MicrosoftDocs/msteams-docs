@@ -43,7 +43,7 @@ Descriptions enhance the usability and effectiveness of a message extension plug
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
 * **Semantic description**: Semantic description helps Microsoft 365 Copilot generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
 
-For more information, see [Descriptions](high-quality-message-extension.md#description).
+For more information, see [guidelines to create and upgrade Copilot agents](dev-guidelines-copilot-agents.md).
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Microsoft 365 Copilot.
 
@@ -53,7 +53,7 @@ Before you get started, ensure that you're familiar with the following standards
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot).
 
-* [Guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](../messaging-extensions/high-quality-message-extension.md).
+* [Guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](dev-guidelines-copilot-agents.md).
 
 ## Create bot-based message extension
 
@@ -237,10 +237,10 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
    ```
 
-1. Enter `teamsfx new` in the terminal.
+1. Enter `teamsapp new` in the terminal.
 
 1. Select **Message Extension**. Use the arrow keys to switch between options.
 
@@ -260,7 +260,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
    ```
-    teamsfx provision --env dev
+    teamsapp provision --env dev
    ```
 
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
@@ -281,7 +281,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
    ```
-    teamsfx preview --env dev
+    teamsapp preview --env dev
    ```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
@@ -370,7 +370,7 @@ For more on testing your plugin in Microsoft 365 Copilot, see [debugging plugin 
 
 ## Enable message extension as a plugin for Copilot for meetings
 
-Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, follow the guidelines listed in [ensure your Copilot plugins work in Teams meetings](high-quality-message-extension.md#ensure-your-copilot-plugins-work-in-teams-meetings) to extend your plugin for Copilot for meetings.
+Ensure that you've created a bot-based message extension and extended it as a plugin for Microsoft 365 Copilot. Before you get started, follow the guidelines listed in [ensure your Copilot plugins work in Teams meetings](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#ensure-your-copilot-plugins-work-in-teams-meetings) to extend your plugin for Copilot for meetings.
 
 To enable message extension as a plugin for Copilot for meetings, follow these steps:
 
