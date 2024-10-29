@@ -105,7 +105,7 @@ The following example demonstrates opening an app with bot as default landing ca
         1. Add `scopes` as `personal`.
     1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
-* The following code snippet is an example for configuring bot as the default landing capability for mobile:
+The following code snippet is an example for configuring bot as the default landing capability for mobile:
 
 ```json
 "staticTabs":[
