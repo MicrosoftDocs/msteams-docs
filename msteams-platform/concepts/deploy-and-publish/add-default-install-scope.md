@@ -222,6 +222,7 @@ To configure tab as the default landing capability:
    :::image type="content" source="../../assets/images/default-scope/ios-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in iOS.":::
 
    ---
+1. 
 
  > [!NOTE]
  > Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
