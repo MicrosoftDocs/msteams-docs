@@ -223,12 +223,12 @@ The following example demonstrates opening an app with tab as default landing ca
 
    ---
 
-> [!NOTE]
-> Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
+ > [!NOTE]
+ > Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
 
-In mobile, users can transition to bot using the bot icon present at the top-right.
+ In mobile, users can transition to bot using the bot icon present at the top-right.
 
----
+ ---
 
 The `staticTabs` property is also used to pin personal tabs and [reorder static personal tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
