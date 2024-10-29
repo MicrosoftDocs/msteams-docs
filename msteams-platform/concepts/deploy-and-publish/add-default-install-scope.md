@@ -230,7 +230,7 @@ In mobile, users can transition to bot using the bot icon present at the top-rig
 
 ---
 
-The `staticTabs` property is also used to pin personal tabs and [reorder tabs](~/tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+The `staticTabs` property is also used to pin personal tabs and [reorder static personal tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
