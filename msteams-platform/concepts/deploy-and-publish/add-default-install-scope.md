@@ -126,13 +126,15 @@ The following code snippet is an example for configuring bot as the default land
 ```
 The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
 
-   # [Android](#tab/android)
+  # [Android](#tab/android)
 
       :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
 
-   # [iOS](#tab/ios)
+  # [iOS](#tab/ios)
 
       :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
+
+  ---
 ---
 
 ### Tab as default landing capability
@@ -195,15 +197,15 @@ The following code snippet is an example for setting tab as the default landing 
 
 The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot.
 
-   # [Android](#tab/android)
+  # [Android](#tab/android)
 
       :::image type="content" source="../../assets/images/default-scope/android-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in android.":::
 
-   # [iOS](#tab/ios)
+  # [iOS](#tab/ios)
 
       :::image type="content" source="../../assets/images/default-scope/ios-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in iOS.":::
 
-    ---
+  ---
 
 Even if you don't specify `entityId` as `conversations` in `staticTabs` property, tab will act as the default landing capability in mobile.
 
