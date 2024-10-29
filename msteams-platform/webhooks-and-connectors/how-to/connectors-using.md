@@ -317,7 +317,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
 * [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
