@@ -125,7 +125,7 @@ The following code snippet is an example for configuring bot as the default land
     }
 ]
 ```
-The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab:
+ The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab:
 
    # [Android](#tab/android)
 
