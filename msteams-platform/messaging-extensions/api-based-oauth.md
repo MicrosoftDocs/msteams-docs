@@ -14,6 +14,9 @@ By using Open Authorization (OAuth), your client application can obtain authoriz
 
 For more information about OAuth 2.0, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow).
 
+<details>
+<summary>Select for more information on OAuth 2.0</summary>
+
 OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can grant access only to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
 
 :::image type="content" source="../assets/images/authentication/oauth-authentication-flow.png" alt-text="Image shows the OAuth authentication flow.":::
@@ -25,6 +28,8 @@ OAuth 2.0 in your Teams app provides a secure way to access user data from third
 * **Resource owner**: The resource owner in an auth flow is usually the application user, or the user. The user "owns" the protected resource (their data), which your app accesses on their behalf. The resource owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the user owns on the external system, and the user can consent to or deny your app's request to access their data.
 
 * **Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
+
+</details>
 
 ## Implement OAuth
 
