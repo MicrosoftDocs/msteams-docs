@@ -385,6 +385,227 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 ---
 
+## Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date.
+
+# [App manifest](#tab/app-manifest)
+
+You can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `name` and `id` properties in  `parameters` must match the values in the OpenAPI Description document.
+
+**Example**
+
+```json
+"composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "apiSpecificationFile": "apiSpecificationFiles/openapi.json",
+            "commands": [
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search Animes",
+                    "id": "getAnimeSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available anime types",
+                            "choices": [
+                                {
+                                    "title": "TV",
+                                    "value": "tv"
+                                },
+                                {
+                                    "title": "OVA",
+                                    "value": "ova"
+                                },
+                                {
+                                    "title": "Movie",
+                                    "value": "movie"
+                                },
+                                {
+                                    "title": "Special",
+                                    "value": "special"
+                                },
+                                {
+                                    "title": "ONA",
+                                    "value": "ona"
+                                },
+                                {
+                                    "title": "Music",
+                                    "value": "music"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available airing statuses",
+                            "choices": [
+                                {
+                                    "title": "Airing",
+                                    "value": "airing"
+                                },
+                                {
+                                    "title": "Completed",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rating",
+                            "inputType": "choiceset",
+                            "title": "Rating",
+                            "description": "Available ratings",
+                            "choices": [
+                                {
+                                    "title": "G",
+                                    "value": "g"
+                                },
+                                {
+                                    "title": "PG",
+                                    "value": "pg"
+                                },
+                                {
+                                    "title": "PG-13",
+                                    "value": "pg13"
+                                },
+                                {
+                                    "title": "R",
+                                    "value": "r17"
+                                },
+                                {
+                                    "title": "R+",
+                                    "value": "r"
+                                },
+                                {
+                                    "title": "Rx",
+                                    "value": "rx"
+                                }
+                            ]
+                        }
+                    ],
+                    "description": "Search animes",
+                    "apiResponseRenderingTemplateFile": "response_json/getAnimeSearch.json"
+                },
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search mangas",
+                    "id": "getMangaSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available manga types",
+                            "choices": [
+                                {
+                                    "title": "Manga",
+                                    "value": "manga"
+                                },
+                                {
+                                    "title": "Novel",
+                                    "value": "novel"
+                                },
+                                {
+                                    "title": "Light Novel",
+                                    "value": "lightnovel"
+                                },
+                                {
+                                    "title": "One Shot",
+                                    "value": "oneshot"
+                                },
+                                {
+                                    "title": "Doujin",
+                                    "value": "doujin"
+                                },
+                                {
+                                    "title": "Manhwa",
+                                    "value": "manhwa"
+                                },
+                                {
+                                    "title": "Manhua",
+                                    "value": "manhua"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available manga statuses",
+                            "choices": [
+                                {
+                                    "title": "Publishing",
+                                    "value": "publishing"
+                                },
+                                {
+                                    "title": "Complete",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Hiatus",
+                                    "value": "hiatus"
+                                },
+                                {
+                                    "title": "Discontinued",
+                                    "value": "discontinued"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "start_date",
+                            "title": "Start Date",
+                            "description": "Start date of the manga",
+                            "inputType": "date"
+                        },
+                        {
+                            "name": "end_date",
+                            "title": "End Date",
+                            "description": "End date of the manga",
+                            "inputType": "date"
+                        }
+                    ],
+```
+
+---
+
+# [Teams Toolkit](#tab/teams-toolkit)
+
+werdfghio;.,jmhngg
+---
+
 ## Step-by-step guides
 
 To build an API-based message extension, follow these step-by-step guides:
