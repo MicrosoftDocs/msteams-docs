@@ -220,7 +220,7 @@ During submission, you're asked to categorize your app. App category helps impro
 | Maps and feeds |
 | Other |
 
-### Distribute your app to specific countries or regions
+### Publish your app to specific countries or regions
 
 If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams Store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams Store for the users in the US and Canada.
 
