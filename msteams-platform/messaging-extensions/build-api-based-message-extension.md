@@ -30,7 +30,7 @@ You can implement authentication in API-based message extensions to provide secu
 
     For more information, see [configure your app in Microsoft Entra ID](api-based-microsoft-entra.md).
 
-* **OAuth authentication**:
+* **OAuth authentication**: OAuth 2.0 in your Teams app is a great way to securely access user data from third-party applications without having to expose user credentials. You can choose to grant access only to the specific data you need, and the user has to give their consent before your app can access their data.
 
 * **None**: Update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
 
