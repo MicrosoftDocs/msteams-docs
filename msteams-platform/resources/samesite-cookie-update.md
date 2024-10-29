@@ -109,7 +109,9 @@ The cookie app simulates this scenario. To use the cookie app:
 
 This action sets multiple cookies with a combination of secure, SameSite, and partitioned attributes. Only `SameSite=None`, secure, and unpartitioned cookies are accessible within the iframe.
 
-The following screenshot represents the cookies accessible in the embedded iframe when set from the top-level popped-out window of the iframe’s URL.
+The following screenshot represents the cookies accessible in the embedded iframe when set from the top-level popped-out window of the iframe’s URL:
+
+:::image type="content" source="../assets/images/3p-cookies.png" alt-text="Screenshot shows you the third party cookies app in Microsoft Teams.":::
 
 ### Actions required for cookies set by iframe
 
