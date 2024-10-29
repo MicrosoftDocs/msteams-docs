@@ -994,7 +994,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 > [!NOTE]
-> In mobile, though tabs are reordered as defined in `staticTabs`, bot, if present in personal scope, will always act as the first pinned option.
+> In mobile, tabs are reordered as defined in `staticTabs`.
 
 This property also enables you to set the default landing capability for your app. You can configure the app to open as a tab or a bot by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 

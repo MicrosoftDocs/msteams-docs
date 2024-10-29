@@ -74,25 +74,24 @@ To set bot as the default landing capability:
             "personal"
             ]
     ```
-    Alternatively, you can update `staticTabs` with the following properties as the first entry of the array:
-    1. Set `entityId` as `conversations`. 
-    1. Add `scopes` as `personal`.
+Even if you don't specify `entityId` as `conversations` in `staticTabs` property, bot will act as the default landing capability when defined in personal scope.
 
-    ```json
-    "staticTabs":[
-          {
-             "entityId":"conversations",
-             "scopes":[
-                "personal"
-             ]
-          }
-    ```
 The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
 # [Mobile](#tab/mobile)
 1. Open your app manifest.
+1. Under `bots` property, add `scopes` as `personal`.
+
+    ```json
+    "bots": [
+        {
+            "botId":"<botId>",
+            "scopes": [
+            "personal"
+            ]
+    ```
 1. Under `staticTabs` property:
     1. Add the following properties as the first entry of the array:
         1. Set `entityId` as `conversations`. 
@@ -173,6 +172,7 @@ The following code snippet is an example for setting tab as the default landing 
     }
 ]
 ```
+Even if you don't specify `entityId` as `conversations` in `staticTabs` property, tab will act as the default landing capability in mobile.
 
 In mobile, users can transition to bot using the bot icon present at the top-right.
 
