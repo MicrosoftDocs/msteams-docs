@@ -189,10 +189,10 @@ The following example demonstrates opening an app with tab as default landing ca
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
-The following code snippet is an example for setting tab as the default landing capability for mobile:
+ The following code snippet is an example for setting tab as the default landing capability  for mobile:
 
-```json
-"staticTabs":[
+ ```json
+ "staticTabs":[
       {
         "entityId": "com.contoso.helloworld.hellotab",
         "name": "Hello Tab",
@@ -201,13 +201,13 @@ The following code snippet is an example for setting tab as the default landing 
             "personal"
         ]
     }
-]
-```
+ ]
+ ```
 
-The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
+ The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
 
-* Android
-* iOS
+ * Android
+ * iOS
 
    # [Android](#tab/android1)
 
@@ -228,7 +228,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
  In mobile, users can transition to bot using the bot icon present at the top-right.
 
- ---
+---
 
 The `staticTabs` property is also used to pin personal tabs and [reorder static personal tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
