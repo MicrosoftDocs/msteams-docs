@@ -204,7 +204,7 @@ The following code snippet is an example for setting tab as the default landing 
 ]
 ```
 
-The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab for:
+The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
 
 * Android
 * iOS
