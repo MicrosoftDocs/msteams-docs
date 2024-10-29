@@ -125,21 +125,21 @@ The following code snippet is an example for configuring bot as the default land
     }
 ]
 ```
- The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab:
+1. The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab:
 
-   # [Android](#tab/android)
+    # [Android](#tab/android)
 
-   An example of an app with bot as default landing capability in android.
+    An example of an app with bot as default landing capability in android.
 
-   :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
+    :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
 
-   # [iOS](#tab/ios)
+    # [iOS](#tab/ios)
 
-   An example of an app with bot as default landing capability in iOS.
+    An example of an app with bot as default landing capability in iOS.
 
-   :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
+    :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
 
-   ---
+    ---
 
 ---
 
