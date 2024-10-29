@@ -237,7 +237,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
    > [!NOTE]
    >
    > * If the app isn't already added in the meeting scope, an app consent disclaimer appears within the Share to Teams dialog.
-   > * If there's no ongoing meeting, the user can select **Meet Now** to begin a meeting and share content.
+   > * If there's no ongoing meeting, the user can select **Meet now** to begin a meeting and share content.
 
 1. Select **Start sharing**.
 

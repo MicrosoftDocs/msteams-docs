@@ -24,7 +24,7 @@ You can enable Share to Teams in the following scopes:
 
 You can embed Share to Teams on the web apps that allows users to share the content from the web apps to any chat, group chat, meeting, or channel in Teams, without switching the context.
 
-In addition to Share to Teams, the **Present Now** option in a meeting stage allows users to share the content in live meetings or Meet Now scenarios. The users can share content and also present it live for real-time collaboration and discussion.
+In addition to Share to Teams, the **Present Now** option in a meeting stage allows users to share the content in live meetings or Meet now scenarios. The users can share content and also present it live for real-time collaboration and discussion.
 
 For more information, see [Share to Teams from web apps](share-to-teams-from-web-apps.md).
 

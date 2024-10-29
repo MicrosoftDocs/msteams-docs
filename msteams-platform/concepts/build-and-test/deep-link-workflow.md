@@ -193,7 +193,7 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
 
 # [Teams web](#tab/web)
 
-**Teams web**: Use the following format to launch a deep link from the Teams web to share content on stage:
+Use the following format to launch a deep link from the Teams web to share content on stage:
 
 `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
 
@@ -206,7 +206,7 @@ Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn
 
 # [Teams desktop or mobile](#tab/desktopmobile)
 
-**Teams desktop or mobile client**: Use the following format to launch a deep link from the Teams desktop or mobile client to share content on stage:
+Use the following format to launch a deep link from the Teams desktop or mobile client to share content on stage:
 
 `msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink&appContext={encoded app context}`
 
