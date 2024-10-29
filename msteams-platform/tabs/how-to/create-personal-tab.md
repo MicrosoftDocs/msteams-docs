@@ -1,11 +1,11 @@
 ---
-title: Create a personal tab
+title: Methods to Build Personal Tab App
 author: laujan
-description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
+description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 02/27/2023
+ms.date: 10/17/2024
 ---
 
 # Create a personal tab
@@ -69,7 +69,7 @@ Following are the steps to create a personal tab:
 
     * **Where do you want to place the files?**
 
-      You're currently in your project directory. Select **Enter**.
+      You're in your project directory. Select **Enter**.
 
     * **Title of your Microsoft Teams app project?**
 
@@ -89,7 +89,7 @@ Following are the steps to create a personal tab:
 
     * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
-      This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+      This field isn't required and must be used only if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
     * **What do you want to add to your project?**
 
@@ -261,7 +261,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+   Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
 ::: zone-end
 
@@ -415,7 +415,6 @@ ngrok http 3978 --host-header=localhost
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
-
 
 ::: zone-end
 
@@ -584,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
 ::: zone-end
 
@@ -592,7 +591,7 @@ ngrok http 3978 --host-header=localhost
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after after the step-by-step Blazor guide is successfully completed.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
 > [!NOTE]
 > Teams Toolkit doesn't support the message extension capability.
@@ -604,7 +603,7 @@ Here's a list of tools you require for building and deploying your app.
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 ## Prepare development environment
 
@@ -863,7 +862,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -998,13 +997,11 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
-> * Extending static tab to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
-> * To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
+> To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
 Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
@@ -1060,11 +1057,50 @@ pages.config.setConfig({
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
+## Offline tabs
+
+> [!NOTE]
+> Personal tabs with offline functionality are only supported on Teams in Android devices.
+
+You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
+
+* Record data through forms that can include images and videos.
+* View details of previously submitted requests, incidents, or forms.
+
+When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
+
+:::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
+
+### Build an offline tab
+
+Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
+
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
+
+1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
+
+1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
+
+   :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code." lightbox="../../assets/images/tabs/open-tab-sample-vsc.png":::
+
+1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
+
+1. Select the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
+
+1. Sign in with your Microsoft 365 account, if prompted.
+
+1. Select **Add** when a dialog box opens to let you add the tab app to Teams.
+
+   :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
+
+Congratulations! You've successfully created a Teams tab with offline functionality.
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal| Sample app, which showcases custom personal Tab with ASP.NET core for group chat, channels, and meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Tab personal| Sample app, which showcases custom personal Tab with ASP.NET core for group chat, channels, and meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal-quickstart/js) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Offline personal tab | The sample app showcases a personal tab app that functions offline within Microsoft Teams. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-support-offline/nodejs/demo-manifest/tab-support-offline.zip)|
 
 ## Next step
 

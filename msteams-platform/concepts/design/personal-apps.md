@@ -55,7 +55,7 @@ You can add multiple actions to the upper-right NavBar and build an overflow men
 |1|NavBar|
 |2|Overflow menu|
 
-To **Configure and add multiple actions in NavBar**, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
+To **Configure and add multiple actions in NavBar**, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus#@microsoft-teams-js-microsoftteams-menus-setnavbarmenu) API and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
 
 Based on the requirements and space available in the NavBar, set `displayMode enum` considering one of the following.
 
@@ -132,11 +132,11 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Configure back button
 
-When you select the back button in a Teams app, you will return to the Teams platform without navigating inside the app.
+When you select the back button in a Teams app, you return to the Teams platform without navigating inside the app.
 
 To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app.
 
-To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack) API, which handles the functionality of the back button depending on one of the following conditions:
+To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack#@microsoft-teams-js-pages-backstack-registerbackbuttonhandler) API, which handles the functionality of the back button depending on one of the following conditions:
 
 * When `registerBackButtonHandler` is set to `false`, TeamsJS calls the `navigateBack` API and the Teams platform handles the back button.
 * When `registerBackButtonHandler` is set to `true`, the app handles the functionality of back button (you can go back to previous steps and navigate within the app), and the Teams platform takes no further actions.
@@ -268,5 +268,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack#@microsoft-teams-js-pages-backstack-registerbackbuttonhandler)
 * [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)

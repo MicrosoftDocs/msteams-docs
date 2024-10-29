@@ -10,9 +10,7 @@ ms.author: anclear
 # Create a commands menu
 
 > [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
+> We’ve enhanced the command menu experience as prompt starters. We recommend you to refer to [prompt starters](~/bots/how-to/conversations/prompt-suggestions.md).
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
@@ -27,6 +25,11 @@ To define a set of core commands that your bot can respond to, you can add a com
 * * *
 
 ## Create a command menu for your bot
+
+> [!NOTE]
+> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
+
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
@@ -55,13 +58,13 @@ To create a command menu for your bot using Developer Portal:
 1. Select the **Scope** check box and then select **Add**.
    This defines where the command menu must appear.
 
-   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
 ### Create a command menu for your bot by editing Manifest.json
 
 Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
-* Each menu supports up to ten commands.
+* Each menu supports up to 10 commands.
 * Create a single command menu that works in all scopes.
 * Create a different command menu for each scope.
 
@@ -159,18 +162,18 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+Bots in a group or channel respond only when they're mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
 
 The C# code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -182,11 +185,11 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # [JavaScript](#tab/javascript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-removementiontext&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-removementiontext)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `removeMentionText`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
 
 The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -197,11 +200,11 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-remove-recipient-mention&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-remove-recipient-mention)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
 
 The Python code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -224,6 +227,7 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+
 
 ## Next step
 

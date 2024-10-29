@@ -1,6 +1,6 @@
 ---
-title: Messages in bot conversations
-description: Learn how to send, receive, edit, undelete, and soft delete a message in bot conversations with suggested actions, notification, attachments, images, Adaptive Card, and status error code responses.
+title: Bot Conversations & Message Activity
+description: Learn to send, receive, edit, undelete, soft delete a message with suggested actions, notification, attachments, images, Adaptive Card, status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -53,7 +53,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript](#tab/typescript1)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
@@ -73,7 +73,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python1)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
 ```python
@@ -260,7 +260,7 @@ The following code shows an example of sending a message when a user is added to
 
 # [C#](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
@@ -276,7 +276,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 # [TypeScript](#tab/typescript2)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
@@ -299,7 +299,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 # [Python](#tab/python2)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-send-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
 ```python
@@ -678,40 +678,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ## Send suggested actions
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
-
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-
-The following is an example for implementation and experience of suggested actions:
-
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
-```
-
-The following illustrates an example of suggested actions:
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to six suggested actions.
+[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
 
 ## Teams channel data
 
@@ -761,7 +728,7 @@ Messages received from or sent to your bot can include different types of messag
 | Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
 | Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
 | Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Emojis    | ✔️                | ✔️                | Teams supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ### Picture messages
 
@@ -824,7 +791,7 @@ The following code shows an example of adding notifications to your message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
@@ -842,7 +809,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L36)
 
@@ -862,7 +829,7 @@ this.onMessage(async (turnContext, next) => {
 
 # [Python](#tab/python)
 
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teams-notify-user)
 
 ```python
 

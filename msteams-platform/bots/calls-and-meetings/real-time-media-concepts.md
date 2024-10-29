@@ -1,5 +1,5 @@
 ---
-title: Real-time media calls and online meetings with Microsoft Teams
+title: Real-time Media Call & Meeting for Bots
 description: Learn how bot interacts with Teams calls and online meetings. Explore media sessions, frame rate, audio and video format, active speakers, and video subscription. 
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -44,13 +44,13 @@ The next section provides details about which meeting participants are speaking 
 
 ## Active and dominant speakers
 
-When joined to a Teams meeting consisting of multiple participants, a bot can identify which meeting participants are currently speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are currently most active or dominant in the group conversation, though their voice isn't heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
+When joined to a Teams meeting consisting of multiple participants, a bot can identify which meeting participants are speaking. Active speakers identify which participants are being heard in each received audio frame. Dominant speakers identify which participants are most active or dominant in the group conversation, though their voice isn't heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
 
 The next section provides details about video subscription requests made by a bot.
 
 ## Video subscription
 
-In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant’s main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is currently screen sharing.
+In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant’s main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is screen sharing.
 
 The next section provides details about what you must install and the requirements to develop an application-hosted media bot.
 

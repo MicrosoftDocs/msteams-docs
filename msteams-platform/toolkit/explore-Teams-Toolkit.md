@@ -1,7 +1,7 @@
 ---
-title: Explore Teams Toolkit 
+title: Explore Teams Toolkit in VS Code
 author: zyxiaoyuer
-description: Learn about Teams Toolkit UI elements and task pane for Visual Studio Code.
+description: Learn about Teams Toolkit UI in Visual Studio Code, explore and know about the functionality and details of each element in the task pane, and how-to guides.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

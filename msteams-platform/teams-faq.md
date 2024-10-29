@@ -1,7 +1,8 @@
 ---
-title: Frequently asked questions for Teams developer document
-description: Frequently asked questions for Teams developer document
+title: Teams Developer Documentation - FAQs
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
+ms.date: 09/16/2024
 ms.localizationpriority: high
 ---
 
@@ -33,19 +34,20 @@ No, Adaptive Card Previewer is available in Visual Studio Code only.
 &nbsp;
 </details>
 
+<!--
 ## App validation
 
 <details>
-<summary>How can I connect Microsoft Entra ID to an MPN account?</summary>
+<summary>How can I connect Microsoft Entra ID to CCP ID for Microsoft Cloud Partner Program?</summary>
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
-
+<!--
 Follow the steps in the pages given here:
 
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution - Connect Microsoft Entra ID to MPN settings](/partner-center/mpn-benefits-azure-cloud).
+Resolution - Connect Microsoft Entra ID to Microsoft Cloud Partner Program](/partner-center/mpn-benefits-azure-cloud)
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -125,7 +127,7 @@ Live Share supports scheduled meetings, one-on-one calls, group calls, and meet 
 <details>
 <summary>Will Live Share's media package work with DRM content?</summary>
 
-Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+Live Share's media package doesn't work with DRM content. Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
 
 For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
@@ -134,28 +136,28 @@ For more information, you can [track the issue here](https://github.com/microsof
 <details>
 <summary>How many people can attend a Live Share session?</summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I use Live Share's data structures outside of Teams?</summary>
 
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I use multiple Fluid containers?</summary>
 
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 <br>
 &nbsp;
 </details>
 <details>
 <summary>Can I change my Fluid container schema after creating the container?</summary>
 
-Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
@@ -168,7 +170,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
 > [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+> Live Share doesn't support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
 
 <br>
 &nbsp;
@@ -213,15 +215,15 @@ No, Live Share doesn't support meeting recordings.
 
 </details>
 
-## Microsoft 365 Chat
+## Microsoft 365 Copilot
 
 <details>
 
-<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Copilot including my plugin in a response?</summary>
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -290,9 +292,9 @@ Here's an example description that work for NPM Finder.
 </details>
 <details>
 
-<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Copilot includes my plugin in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -303,16 +305,16 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 </details>
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Copilot? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
 
 </details>
 <details>
-<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
+<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365.
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Microsoft 365 Copilot.
 
 </details>
 <details>
@@ -334,12 +336,12 @@ After the app passes the proactive validation, developers of both existing and n
 
 <summary> How are new plugins certified?</summary>
 
-Developers will be encouraged to certify their new plugin after successfully completing validation.
+Developers are encouraged to certify their new plugin after successfully completing validation.
 </details>
 <details>
-<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
+<summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
+ You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
 </details>
 
 ## Microsoft Graph
@@ -537,7 +539,7 @@ For support and help on the product and services issues or developer community h
 ## Notifications
 
 <details>
-<summary>How can I save conservation reference in a proactive bot?</summary>
+<summary>How can I save conversation reference in a proactive bot?</summary>
 
 It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 
@@ -610,9 +612,9 @@ No, the landscape mode support in Teams doesn't have any negative effect on app 
 ## Partner Center
 
 <details>
-<summary>Where do you find MPN ID?</summary>
+<summary>Where do you find CCP ID?</summary>
 
-You can find your MPN ID by fetching the Partner Center ID.
+You can find your CCP ID by fetching the Partner Center ID.
 <br>
 &nbsp;
 </details>
@@ -631,7 +633,7 @@ For more information about raising a ticket, see [Get help or open a support tic
 You can create a Partner Center account one of the following ways:
 
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
-* If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+* If you're already enrolled in the Microsoft Cloud Partner Program, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
 
 &nbsp;
@@ -978,7 +980,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
 <br>
 &nbsp;
 </details>
@@ -1006,7 +1008,7 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
+> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
 
 <br>
 &nbsp;

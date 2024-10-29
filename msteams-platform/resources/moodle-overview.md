@@ -1,6 +1,6 @@
 ---
-title: Moodle learning management system
-description: Learn Moodle LMS integration with Teams, Moodle learning management, mConnect and deep links, accessibility, and user requirement scenarios. This integration provides Audio, video calls, chat, courses and activity management, analytical insights, and more.
+title: Introduction to Moodle LMS
+description: Integrate Moodle LMS with Teams for audio/video calls, chat, course management, insights and ensure accessibility and user scenarios with mConnect and deep links.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta

@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable custom app upload.
+  description: In this tutorial, learn to build Hello World app with SPFx, install Teams Toolkit, setup development tenant, and enable custom app upload.
   audience: Developer
   level: Beginner
   ms.date: 05/09/2022
@@ -24,7 +24,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
+    > Teams Toolkit offers only the tab capability in a Teams app built with SharePoint Framework. The bot and message extension capabilities aren't available.
 
 - title: Prerequisites
   durationInMinutes: 1

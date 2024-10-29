@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build action based message extension
 metadata:
-  title: Build action based message extension
+  title: Action-based Message Extension Tutorial
   description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner

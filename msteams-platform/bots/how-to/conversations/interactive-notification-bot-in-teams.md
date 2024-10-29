@@ -1,7 +1,7 @@
 ---
-title: Interactive notification bot in Teams
+title: Interactive Notification Bot Overview
 author: surbhigupta
-description: Learn how an interactive notification bot works in Teams, and to customize notification behavior.
+description: Learn how interactive notification bot works in Teams, notification based events, installation, customize notification and add authentication for notification API.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -326,7 +326,7 @@ You need to create `ConversationBot` to send notification.
 
 # [JavaScript/TypeScript](#tab/jsts)
 
-```JS/TS
+```JavaScript / TypeScript
 /** Javascript/Typescript: src/internal/initialize.*s **/
 const notificationApp = new ConversationBot({
     // The bot id and password to create CloudAdapter.

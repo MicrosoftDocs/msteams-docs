@@ -1,6 +1,6 @@
 ---
-title: Share to Teams from personal app or tab
-description: Learn how to enable the Share to Teams button on your personal app or tab, limitations, and end user experience.
+title: Share Content from Personal App or Tab
+description: Learn how to enable the Share to Teams button on your personal app or tab, limitations, response codes, and end user experience.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 12/13/2022

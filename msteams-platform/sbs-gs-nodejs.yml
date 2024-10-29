@@ -16,7 +16,7 @@ items:
   content: |
     Start Microsoft Teams app development by building your first app with a tab, a bot, and a message extension capability.
 
-    > This app will have all capabilities and each has its own UI and UX:
+    > This app has all capabilities and each has its own UI and UX:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Screenshot of diagram showing this app has three features.":::
 
@@ -126,7 +126,7 @@ items:
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can upload a custom apps in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
@@ -632,7 +632,7 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
+    > External developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
 

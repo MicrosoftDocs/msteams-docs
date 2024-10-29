@@ -1,7 +1,7 @@
 ---
-title: Bot configuration experience
+title: Configure & Customize Bot Settings
 author: surbhigupta
-description: Learn about bot configuration experience.
+description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high

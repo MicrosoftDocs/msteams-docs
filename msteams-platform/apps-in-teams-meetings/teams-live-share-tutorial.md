@@ -1,7 +1,7 @@
 ---
 title: Live Share code tutorial
 author: surbhigupta
-description: In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK
+description: Learn how to get started with Live Share SDK, build Dice Roller sample using Live Share SDK, connect meeting Stageview to Live Share, and code sample (JavaScript).
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown dice with a button to roll it. When the dice are rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -27,7 +27,7 @@ You can start by importing the required modules. The sample uses the [LiveState 
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a LiveState to store the current dice value that was rolled.
 
-Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This helps to render and perform any initialization that's required. The app supports running both locally in a web browser and from within a Teams meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
+Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This function helps to render and perform any necessary initialization. The app supports running both locally in a web browser and from within a Teams meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
 
 > [!NOTE]
 > When running in Teams, your application needs to call `app.initialize()` prior to calling any other teams-js methods.
@@ -80,7 +80,7 @@ start().catch((error) => console.error(error));
 
 ## Join a Fluid container
 
-Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
+Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _might_ need collaborative features, and the `config` view should _never_ need collaborative features. For views that need collaborative features, you must join a Fluid container associated with the current meeting.
 
 Joining the container for the meeting is as simple as initializing the `LiveShareClient` with a `LiveShareHost` instance from the Teams Client SDK, and then calling its `joinContainer()` method.
 
@@ -88,7 +88,7 @@ When running locally, you can initialize `LiveShareClient` with a `TestLiveShare
 
 ```js
 async function joinContainer() {
-  // Are we running in teams? If so, use LiveShareHost, otherwise use TestLiveShareHost
+  // Are we running in Teams? If so, use LiveShareHost, otherwise use TestLiveShareHost
   const host = !!searchParams.get("inTeams")
     ? LiveShareHost.create()
     : TestLiveShareHost.create();
@@ -99,11 +99,11 @@ async function joinContainer() {
 }
 ```
 
-When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
+When you're testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
 
 ## Write the Stageview
 
-Many Teams Meeting Extensibility applications are designed to use React for their view framework, but this isn't required. For example, this sample uses standard HTML/DOM methods to render a view.
+Many Teams Meeting Extensibility applications are designed to use React for their view framework, but it isn't required. For example, this sample uses standard HTML/DOM methods to render a view.
 
 ### Start with a static view
 
@@ -170,9 +170,9 @@ diceState.on("stateChanged", updateDice);
 
 ### Initialize LiveState
 
-Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state that was sent by other users.
+Before you can begin receiving the Live Share changes in the application, you must first call `initialize()` on your `LiveState` object with an initial value. This initial value doesn't overwrite any existing state sent by other users.
 
-After you've initialized `LiveState`, the `stateChanged` event you registered earlier starts to trigger whenever a change is made. However, to update the UI within the initial value, call `updateDice()`.
+After you initialize `LiveState`, the `stateChanged` event you registered earlier starts to trigger whenever a change is made. However, to update the UI within the initial value, call `updateDice()`.
 
 ```js
 await diceState.initialize(1);
@@ -181,7 +181,7 @@ updateDice();
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the Stageview is connected to. This container can then be used to communicate with the Stageview. Ensure that you're communicating with everyone's Stageview and side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app before sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the Stageview is connected to. This container can then be used to communicate with the Stageview. Ensure that you're communicating with everyone's Stageview and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -207,7 +207,7 @@ function renderSidePanel(elem) {
 
 ## Write the settings view
 
-The settings view, loaded through `configurationUrl` in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
+The settings view, loaded through `configurationUrl` in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
 > The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
@@ -254,7 +254,7 @@ You can test your app locally, using `npm run start`. For more information, see 
 
 ## Test in Teams
 
-After you've started running your app locally with `npm run start`, you can then test your app on Teams. If you want to test your app without deployment, download and use the [`ngrok`](https://ngrok.com/) tunneling service.
+After you start running your app locally with `npm run start`, you can then test your app on Teams. If you want to test your app without deployment, download and use the [`ngrok`](https://ngrok.com/) tunneling service.
 
 ### Create a ngrok tunnel to allow Teams to reach your app
 

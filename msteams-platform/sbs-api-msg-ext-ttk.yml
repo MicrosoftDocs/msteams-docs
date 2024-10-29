@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title:  Build API-based message extension
+title:  API-Based message extension for beginners
 metadata:
-  title: Build API-based message extension 
-  description: In this learn module, learn about a message extension with OpenAPI Description (OAD) document with Teams Toolkit.
+  title: API-based Message Extension for beginners
+  description: In this module, learn about a message extension using an OpenAPI Description (OAD) document with Teams Toolkit and build an API-based message extension.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -17,7 +17,8 @@ items:
 
     > [!NOTE]
     >
-    > API-based message extensions only support search commands.
+    > * API-based message extensions only support search commands.
+    > * Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
     
     Message extensions built using an API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
 
@@ -34,7 +35,7 @@ items:
    |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   |[Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app to your organization or the Microsoft Teams Store. |
@@ -49,7 +50,7 @@ items:
 
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
 
 
    # [Visual Studio Code](#tab/vscode)
@@ -71,11 +72,11 @@ items:
 
    # [Command line](#tab/cli)
 
-   To install the TeamsFx CLI, use the `npm` package manager:
+   To install the Teamsapp CLI, use the `npm` package manager:
 
    ``` cmd
 
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
 
    ```
 
@@ -83,7 +84,7 @@ items:
 
    ```cmd
 
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+   sudo npm install -g --unsafe-perm @microsoft/teamsapp-cli
 
    ```
 
@@ -91,10 +92,10 @@ items:
 
    Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
 
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+   You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
 
    > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
+   > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
 
    ---
 
@@ -173,27 +174,27 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with the Teamsapp CLI:
 
         ```cmd
 
-        teamsfx account login m365
+        teamsapp account login m365
 
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with the Teamsapp CLI:
 
         ```cmd
 
-        teamsfx account login azure
+        teamsapp account login azure
 
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
 
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
@@ -302,7 +303,11 @@ items:
 
     ```
     </details>
-    
+
+    > [!NOTE]
+    >
+    > Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
+
     Now that you have your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
 
      The following code is an example of the response rendering template: <br/>

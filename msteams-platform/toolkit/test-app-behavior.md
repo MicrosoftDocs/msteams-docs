@@ -1,7 +1,7 @@
 ---
-title: Test app behavior in different environment
+title: Test App in Local & Cloud Environments
 author: surbhigupta
-description: In this module, learn how to test app behavior in different environment.
+description: Learn about the prerequisites and how to test app behavior in local and cloud environments using Teams Toolkit after integration with Teams.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview

@@ -1,5 +1,5 @@
 ---
-title: Tabs on mobile
+title: Tab Functions on Mobile Devices
 description: Learn how tab functions on Android and iOS Microsoft Teams clients (mobile), their authentication, low bandwidth connection, testing, or distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -37,7 +37,7 @@ Mobile clients function with low bandwidth and intermittent connections. Your ap
 
 You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet.
 
-## Distribution
+## Publish to Teams Store
 
 Apps listed on the Teams Store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depends on whether your app is approved.
 
@@ -56,7 +56,7 @@ The following table describes tab availability and behavior when the app is list
 
 | Capability | Mobile availability? | Mobile behavior |
 |----------|-----------|------------|
-|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace). |
+|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#pagesconfig). |
 |Personal app|No|Not applicable|
 
 > [!NOTE]

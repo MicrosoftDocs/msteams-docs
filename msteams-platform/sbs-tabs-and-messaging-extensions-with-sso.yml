@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: SSO for tabs and message extension
 metadata:
-  title: SSO for tabs and message extension
-  description: In this module, learn how to set up Microsoft Entra Single sign-on (Microsoft Entra SSO) for tabs.
+  title: Add SSO to Tab & Message Extension App
+  description: In this module, learn how to set up Microsoft Entra single sign-on (SSO) authentication for tabs and message extensions.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021

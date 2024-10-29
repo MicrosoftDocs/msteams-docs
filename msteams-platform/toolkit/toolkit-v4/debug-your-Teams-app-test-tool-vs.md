@@ -1,7 +1,7 @@
 ---
-title: Debug bot using Teams App Test Tool Visual Studio
+title: Debug Bot with Teams App Test Tool
 author: v-ganr
-description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool in Visual Studio.
+description: Learn how to build, configure, and deploy bot using Teams App Test Tool in Visual Studio, and to mock an activity using predefined and custom activity triggers.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta

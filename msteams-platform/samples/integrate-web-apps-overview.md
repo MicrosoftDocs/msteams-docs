@@ -1,5 +1,5 @@
 ---
-title: Integrate web apps
+title: Integrate Web App Experience in Teams
 author: Rajeshwari-v
 description: Learn to integrate device capabilities. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual

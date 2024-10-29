@@ -1,7 +1,7 @@
 ---
 title: Install Teams Toolkit in Visual Studio
 author: zyxiaoyuer
-description: Learn about installation of Teams Toolkit of different versions in Visual Studio, and marketplace.
+description: Learn how to install Microsoft Teams Toolkit for Visual Studio and to use Visual Studio installer to install the required version of Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -40,6 +40,6 @@ The Visual Studio 2022 window appears.
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
-* [Prepare to build apps](build-environments-v4.md)
+* [Prepare to build apps](build-environments-vs.md)
 * [Provision cloud resources](provision-vs.md)
-* [Deploy Teams app to the cloud](deploy-vs.md)s
+* [Deploy Teams app to the cloud](deploy-vs.md)

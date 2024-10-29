@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to implement the design guidelines and use the UI templates to design a meeting extension for Teams.
+description: Learn to implement the design guidelines, use UI templates to design a meeting extension for Teams. Use in-meeting tab, in-meeting dialog and share meeting stage.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022

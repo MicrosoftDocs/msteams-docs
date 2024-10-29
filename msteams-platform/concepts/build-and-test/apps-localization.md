@@ -1,9 +1,9 @@
 ---
-title: Localize your app
-description: Learn considerations for localizing your Microsoft Teams app and localize strings in your app manifest.
+title: App Localization - Factors to Consider
+description: Learn considerations for localizing your Microsoft Teams app, localize strings in your app manifest, and handle localized text submissions from your users.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/15/2018
+ms.date: 10/17/2024
 ---
 # Localize your app
 
@@ -15,7 +15,7 @@ Consider the following factors to localize your Microsoft Teams app:
 
 ## Localize your AppSource listing
 
-If you're publishing the app to the Microsoft Teams Store, provide metadata (descriptions, screenshots, name) in the languages that you would like your app to be listed in, and explicitly specify these languages on the **Marketplace listings** page in Partner Center. For more information, see [localized Microsoft AppSource fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). To support localized listings in the Teams Store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. Currently, the default language is English.
+If you're publishing the app to the Microsoft Teams Store, provide metadata (descriptions, screenshots, name) in the languages that you would like your app to be listed in, and explicitly specify these languages on the **Marketplace listings** page in Partner Center. For more information, see [localized Microsoft AppSource fronts](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). To support localized listings in the Teams Store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. The default language is English.
 
 ### Configure localization
 
@@ -43,6 +43,8 @@ Add the `localizationInfo` property with the default language that your applicat
 
 > [!NOTE]
 > Manifest version must be same for both manifest.json and localization.json files.
+
+Starting with app manifest v1.19, Copilot agents are also localizable. For more information, see [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) in Microsoft 365 Copilot extensibility documentation.
 
 ### Example manifest.json change
 

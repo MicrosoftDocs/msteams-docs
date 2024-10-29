@@ -1,5 +1,5 @@
 ---
-title: Publish Teams apps using Teams Toolkit
+title: Publish Custom Apps with Teams Toolkit
 author: zyxiaoyuer
 description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or custom app upload permission.
 ms.localizationpriority: medium

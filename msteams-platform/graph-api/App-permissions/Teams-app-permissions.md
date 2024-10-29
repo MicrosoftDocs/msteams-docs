@@ -1,7 +1,7 @@
 ---
 title: Manage Teams app permissions
 author: surbhigupta
-description: In this module, learn how Teams apps are managed in different places based on the feature.
+description: Learn how Teams apps are managed in Microsoft Entra ID and resource-specific consent (RSC) based on the feature and capability wise management.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur

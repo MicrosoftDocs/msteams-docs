@@ -1,5 +1,5 @@
 ---
-title: Receive all conversation messages with RSC
+title: Get All Conversation Messages with RSC
 author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
@@ -44,7 +44,7 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
-* If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot will receive all messages after new installations.
+* If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installations.
 
 ## Update app manifest
 

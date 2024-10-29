@@ -1,5 +1,5 @@
 ---
-title: Overview - Publish your app to the Microsoft Teams Store
+title: Publish App on Teams Store
 description: Publish your app to Microsoft Teams Store or AppSource. What to expect after you submit, tips for rapid approval and publishing apps linked to a SaaS offer.
 ms.topic: overview
 author: heath-hamilton
@@ -9,9 +9,15 @@ ms.date: 12/15/2022
 ---
 # Publish your app to the Teams Store
 
-You can distribute your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
+You can publish your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
+
+The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]
 
 ## Understand the publishing process
 
@@ -37,7 +43,7 @@ If your app is production ready, you can begin the process of getting it listed 
 * **Deep functional and experience tests**
 
   Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies).
-  There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
+  There's a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 
@@ -47,9 +53,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
   * Details of failures or issues with policy links and categorization:
 
-    * Mandatory fix: Issues must be fixed prior to app approval.
+    * Must fix: Issues must be fixed prior to app approval.
 
-    * Suggested fix: Issues can be fixed post app approval as the issues are recommendations to improve your app’s experience.
+    * Good-to-fix: Issues can be fixed post app approval as the issues are recommendations to improve your app’s experience.
 
     * Blocker: Issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
 
@@ -63,7 +69,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   If there are issues remaining or regression issues observed in your app, the validation team shares an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few resubmissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams Store.
 
-  After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams Store.
+  After all reported issues are closed and final submission is made in the Partner Center, the validation team approves and publish your app. Allow at least one business day for the app to be available in the Teams Store.
 
 * **Analyze app usage**
 
@@ -173,6 +179,6 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
-* [Distribute tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
+* [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#publish-to-teams-store)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
 * [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)

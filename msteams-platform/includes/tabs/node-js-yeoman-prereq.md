@@ -4,7 +4,7 @@ You must have an understanding of the following prerequisites:
 
 - You must have a Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you don't have a Microsoft 365 account, you can sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following tools installed in your development environment:
 
@@ -46,7 +46,7 @@ In addition, this project requires that you have the following tools installed i
 
     **Where do you want to place the files?**
 
-    You're currently in your project directory. Press enter.
+    You're in your project directory. Press enter.
 
     **Title of your Microsoft Teams app project?**
 
@@ -66,7 +66,7 @@ In addition, this project requires that you have the following tools installed i
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and should only be used if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
     **What do you want to add to your project?**
 

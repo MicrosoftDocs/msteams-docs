@@ -1,5 +1,5 @@
 ---
-title: Bots and SDKs
+title: Tools and Bot Framework SDKs for Bots
 author: surbhigupta
 description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
 ms.topic: overview
@@ -75,7 +75,7 @@ Bots work better in a channel in the following cases:
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
 
-In the cases where bots work better in a channel also work better in a group chat.
+Bots that work better in a channel also work better in a group chat.
 
 ### In a one-to-one chat
 
@@ -142,7 +142,7 @@ The following code provides an example of a bot activity for a channel team scop
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-onmessageactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-imessageactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
 
@@ -169,7 +169,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onmessage&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onmessage)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
@@ -201,7 +201,7 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
@@ -222,13 +222,13 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
 
 ```javascript
 this.onMessage(async (context, next) => {
     // MessageFactory.text(): Specifies the type of text data in a message attachment.
-    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await context.sendActivity(MessageFactory.text("Your message is: " + context.activity.text));
     await next();
 });
 ```
@@ -240,7 +240,7 @@ this.onMessage(async (context, next) => {
 |Sample name | Description | .NETCore | Node.js | Python| Manifest
 |----------------|-----------------|--------------|----------------|-------|-------|
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
-| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Bot samples | Set of bot framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 

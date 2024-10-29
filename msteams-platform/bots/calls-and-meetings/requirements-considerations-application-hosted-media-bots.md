@@ -1,5 +1,5 @@
 ---
-title: Requirements and considerations for application-hosted media bots
+title: Build Application-hosted Media Bots
 description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for different remote and local media scenarios. 
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -19,7 +19,8 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 
 An application-hosted media bot has the following requirements:
 
-* The bot must be developed in C# and the standard .NET Framework and deployed in Microsoft Azure. The Graph Communications SDK supports .NET 6 and .NET Core frameworks. You can't use C++ or Node.js APIs to access real-time media.
+
+* The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
 
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
@@ -59,7 +60,7 @@ The next section provides details on scalability and performance considerations 
 The application-hosted media bots require the following scalability and performance considerations:
 
 * Application-hosted media bots require more compute and network (bandwidth) capacity than messaging bots and may incur higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot doesn't accept more simultaneous calls than it can manage. A video-enabled bot may be able to sustain only one or two concurrent media sessions per CPU core (if using the "raw" RGB24 or NV12 video formats).
-* The Real-time Media Platform doesn't currently take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding/decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot may take advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
+* The Real-time Media Platform doesn't take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding/decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot may take advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
 * The VM instance hosting the real-time media bot must have at least two CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with four virtual CPUs (vCPU) is the minimum size required. Detailed information about Azure VM types is available in the [Azure documentation](/azure/virtual-machines/windows/sizes-general).
 
 ## Code sample

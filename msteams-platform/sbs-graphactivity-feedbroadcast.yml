@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Send activity feed notification
 metadata:
-  title: Send activity feed notification
-  description: In this tutorial, you'll learn to broadcast a message to all members of organization using activity feed notification.
+  title: Create Activity Feed Broadcast App
+  description: In this module, learn how to create and send activity feed notifications in Teams and use notification APIs in Microsoft Graph to send activity messages.
   audience: Developer
   level: Beginner
   ms.date: 04/08/2022 

@@ -1,7 +1,7 @@
 ---
-title: Respond to the dialog submit action
+title: Explore Responses to Action Commands
 author: surbhigupta
-description: Learn how to respond to the dialog (task module) submit action from a message extension action command with Proactive message. Define search commands and respond to searches. Displays the username on the Adaptive Card header of the card response. User attribution for bot.
+description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear

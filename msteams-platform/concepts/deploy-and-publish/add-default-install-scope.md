@@ -32,7 +32,7 @@ To configure the default install scope in your app manifest:
 Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultgroupcapability).
 
 > [!NOTE]
-> `defaultGroupCapability` provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+> `defaultGroupCapability` provides the default capability that's added to the team, group chat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 
 To configure details in app manifest:
 

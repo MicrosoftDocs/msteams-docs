@@ -78,7 +78,7 @@ To access apps through **Manage your apps**, follow the steps:
 
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Screenshot shows the list of scopes where the app is installed.":::
 
-1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view currently.
+1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view.
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 

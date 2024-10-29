@@ -1,5 +1,5 @@
 ---
-title: Dialogs
+title: Build Dialog in Tabs with Adaptive Card
 author: surbhigupta
 description: Learn how to add modal to embed a webpage to display surveys, videos to collect or display information to your users from Teams apps
 ms.localizationpriority: medium

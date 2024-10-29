@@ -1,7 +1,7 @@
 ---
-title: Open content in multi-window
+title: Multi-window Experience for App Content
 author: Rajeshwari-v
-description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
+description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -304,6 +304,12 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 </br>
 
 </details>
+
+## Code sample
+
+|Sample name | Description | .NET | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Teams tab Stageview | This sample app demonstrates a tab in Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 
 ## See also
 

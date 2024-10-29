@@ -1,9 +1,9 @@
 ---
-title: Facilitate adoption of your app and help customers promote your app
+title: Facilitate App Adoption
 author: ashishguptaiitb
 ms.author: guptaashish
 manager: prkosh
-description: Learn about the best practices and guidance for app adoption and promotion.
+description: Learn about the best practices and guidance for app adoption and promotion, understand how to drive app adoption and track app usage analytics.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 01/04/2024

@@ -1,5 +1,5 @@
 ---
-title: Create Virtual Assistant 
+title: Create Virtual Assistant Bot in Teams
 description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -118,7 +118,7 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
 
 ### Handle interruptions
 
-Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills:
+Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/switch-skills-prompt.png" alt-text="Screenshot of the confirmation prompt when switching to a new skill.":::
 
@@ -529,7 +529,7 @@ The allowed callers array can restrict which skill consumers can access the skil
 "AllowedCallers": [ "*" ],
 ```
 
-For more information on adding claims validation to a skill, see [add claims validation to skill](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
+For more information on adding claims validation to a skill, see [add claims validation to skill](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs&preserve-view=true#claims-validator).
 
 ### Limitation of card refresh
 
@@ -568,7 +568,7 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 * **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there's no clear state where conversation is ended. Hence we haven't sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can do that by `start over` command.  
 * **Card refresh**: Card refresh isn't yet supported through Virtual Assistant.  
 * **Message extensions**:
-  * Currently, a Virtual Assistant can support a maximum of 10 commands for message extensions.
+  * A Virtual Assistant can support a maximum of 10 commands for message extensions.
   * Configuration of message extensions isn't scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
   * Message extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 

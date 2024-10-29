@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Grant tab device permission
 metadata:
-  title: Grant tab device permission
-  description: Learn how to give tab device permissions such as location, camera and microphone access for Microsoft Teams apps.
+  title: Integrate Tab Device Permission
+  description: Learn how to create and add a tab device permission app to Microsoft Teams that allows you to grant and manage device permissions.
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021

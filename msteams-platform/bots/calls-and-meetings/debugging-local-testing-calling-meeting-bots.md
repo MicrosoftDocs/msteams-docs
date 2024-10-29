@@ -1,6 +1,6 @@
 ---
-title: Debug your calling and meeting bot locally
-description: In this module, learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
+title: Debug Calling & Meeting Bots Locally
+description: Learn how to configure ngrok, set up signaling, set up local media, and start ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/18/2018

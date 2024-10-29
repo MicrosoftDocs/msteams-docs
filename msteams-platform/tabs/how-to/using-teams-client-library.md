@@ -1,6 +1,6 @@
 ---
 title: Teams JavaScript client library SDK
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (previously called Office), and Outlook.
+description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.author: mosdevdocs
 author: erikadoyle
@@ -19,7 +19,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
-Here's the current versioning guidance for various app scenarios:
+Here's the versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
@@ -27,7 +27,7 @@ The remainder of this article walks you through the structure and latest updates
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -145,6 +145,13 @@ async function example() {
 > [!TIP]
 > When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
 
+Cross-cloud communication through SDK is restricted for security reasons; hence, Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, specify the Teams operated by 21Vianet domain during the SDK initialization in your app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
+
+```js
+import { app } from '@microsoft/teams-js';
+app.initialize(["https://teams.microsoftonline.cn"]);
+```
+
 ### APIs organized into capabilities
 
 A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365 app, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
@@ -166,6 +173,9 @@ The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-b
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
 * **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Microsoft 365* when running in Microsoft 365 on the web, and *Manage your tasks in Teams* when running in Teams.
+
+> [!TIP]
+> The best practice is to specify the runtime requirements and dependencies of your app in a host-agnostic way, rather than special casing your app code with host-specific logic. For more information, see [how to specify Microsoft 365 host runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 #### Namespaces
 
@@ -274,7 +284,7 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
@@ -358,7 +368,7 @@ To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm pa
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
-After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility updates your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` are updated with:
 
 > [!div class="checklist"]
 >
@@ -369,7 +379,7 @@ After completion, the utility will have updated your `package.json` file with th
 > * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code inside html files is not supported by the upgrade tooling and will require manual changes.
+> Code inside html files is not supported by the upgrade tooling and requires manual changes.
 
 ### 3. Update the app manifest (optional)
 

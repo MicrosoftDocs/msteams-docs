@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
+description: In this module, learn how to create your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference

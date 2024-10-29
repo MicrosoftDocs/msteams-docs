@@ -8,6 +8,8 @@ ms.date: 01/25/2023
 
 # Create Incoming Webhooks
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
 
 * Bots
@@ -37,7 +39,7 @@ The following table provides the features and description of an Incoming Webhook
 
 > [!NOTE]
 >
-> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, iOS, and so on. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 > * For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create an Incoming Webhook
@@ -53,6 +55,10 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Select **Manage channel**.
 
     :::image type="content" source="../../assets/images/manage-channel-new-teams.png" alt-text="Screenshot shows the Manage channel option under More options for Teams 2.1.":::
+
+    For members who aren't admins of the channel, the **Manage channel** option is available under the **Open channel details** option in the upper-right corner of a channel.
+
+    :::image type="content" source="../../assets/images/Connectors/manage-channel-non-admin-user.png" alt-text="Screenshot of the Manage channel option for non-admin users." lightbox="../../assets/images/Connectors/manage-channel.png":::
 
 1. Select **Edit**.
 
@@ -232,7 +238,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 1. Under Incoming Webhook, select **1 Configured**.
 
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your connectors.":::
 
 1. Select **Manage**.
 
@@ -260,7 +266,7 @@ The webhook is now removed from the Teams channel.
 1. In the left pane, select **Configured**.
 1. Under Incoming Webhook, select **1 Configured**.
 
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your current connectors.":::
+   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your connectors.":::
 
 1. Select **Manage**.
 
