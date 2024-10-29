@@ -16,7 +16,7 @@ For more information about OAuth 2.0, see [Microsoft identity platform and OAuth
 
 OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can grant access only to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
 
-:::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Image shows the oauth authorization flow.":::
+:::image type="content" source="../assets/images/authentication/oauth-authentication-flow.png" alt-text="Image shows the OAuth authentication flow.":::
 
 * **Authorization server**: The identity platform is the authorization server, also called an identity provider or IDP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
 
