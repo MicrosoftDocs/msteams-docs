@@ -37,7 +37,7 @@ When a user attempts to use a message action on a newly installed Teams app that
 
 If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client then renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
 
-## Prerequisites
+### Prerequisites
 
 Before you start, you need to have:
 
@@ -69,20 +69,20 @@ To register OAuth for your API-based message extensions, follow these steps:
       * **My organization only**
       * **Any Microsoft 365 organization**
 
-      | Option | When to use | Description |
-      | --- | --- | --- |
-      | **My organization only** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key is only usable within the tenant where the API is registered. |
-      | **Any Microsoft 365 organization** | After you've completed testing the app and want to enable the app across different tenants. <br> Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
+          | Option | When to use | Description |
+          | --- | --- | --- |
+          | **My organization only** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key is only usable within the tenant where the API is registered. |
+          | **Any Microsoft 365 organization** | After you've completed testing the app and want to enable the app across different tenants. <br> Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
 
    1. Under **Restrict usage by app**, select any of the following:
 
       * **Any Teams app**
       * **Existing Teams app ID**
 
-      | Option | When to use | Description |
-      | --- | --- |--- |
-      | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your organization. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your organization have IDs generated after app upload. |
-      |**Existing Teams app ID** | After you've completed testing your app within your tenant as a custom app or custom app built for your organization. <br> Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+          | Option | When to use | Description |
+          | --- | --- |--- |
+          | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your organization. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your organization have IDs generated after app upload. |
+          |**Existing Teams app ID** | After you've completed testing your app within your tenant as a custom app or custom app built for your organization. <br> Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
 1. Under **OAuth settings**, update the following:
 
@@ -106,7 +106,7 @@ To register OAuth for your API-based message extensions, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
 
-**Add **OAuth client registration ID** in API-based message extension**
+### Add OAuth client registration ID in API-based message extension
 
 To update **OAuth client registration ID** in API-based message extension, follow these steps:
 
