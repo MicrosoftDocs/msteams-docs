@@ -78,9 +78,10 @@ To set bot as the default landing capability:
             ]
     ```
 
-Even if you don't specify `entityId` as `conversations` in `staticTabs` property, bot acts as the default landing capability when defined in personal scope.
+> [!NOTE]
+> Bot acts as the default landing capability if it is defined as personal scope, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
 
-The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab (if present).
+The following example demonstrates opening an app with bot as default landing capability and how a user can transition to a tab:
 
 :::image type="content" source="../../assets/images/default-scope/bot-default.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability.":::
 
@@ -130,15 +131,15 @@ The following example demonstrates opening an app with bot as default landing ca
 
    An example of an app with bot as default landing capability in android.
 
-      :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
+   :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
 
    # [iOS](#tab/ios)
 
    An example of an app with bot as default landing capability in iOS.
 
-      :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
+   :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
 
-    ---
+   ---
 
 ---
 
