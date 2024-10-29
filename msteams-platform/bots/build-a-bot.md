@@ -36,9 +36,11 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 | 2. | Conversational bot with Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 | 3. | Conversational bot with Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
 
-### Add AI layer to your Teams bot
+### Elevate your Teams bot to AI
 
 Enhance the user experience for your bot app by adding AI to your existing bot app.
+
+For more information, see [Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md).
 
 ## Next step
 

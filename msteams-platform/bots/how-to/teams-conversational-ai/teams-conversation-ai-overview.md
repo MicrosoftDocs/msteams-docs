@@ -8,7 +8,7 @@ author: michaelmaillot
 ms.date: 02/12/2024
 ---
 
-# What is Teams AI library
+# Teams AI library
 
 Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines which, moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs).
 
