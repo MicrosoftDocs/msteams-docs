@@ -701,7 +701,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`|String|128 characters||Registration ID returned when developer submits the API key through Developer Portal.|
 |`authorization.oAuthConfiguration`||Object|||
 |`authorization.oAuthConfiguration.oAuthConfigurationId`|String|128 characters|||
-|`apiSpecificationFile`|String|2048 characters|||A relative file path to the api specification file in the manifest package.|
+|`apiSpecificationFile`|String|2048 characters||A relative file path to the api specification file in the manifest package.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true`|
 |`commands`|Array of objects|10||Array of commands the message extension supports.|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
