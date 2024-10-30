@@ -832,7 +832,7 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ## Compound Button element in Adaptive Cards
 
-Use the `CompoundButton` element in an Adaptive Card to integrate multiple elements within a button. It brings the look and feel of [prompt starters](/microsoftteams/platform/bots/how-to/conversations/prompt-suggestions) to an Adaptive Card.
+In Adaptive Cards, you can emulate AI-powered chats using the `CompoundButton` element. It enables you to integrate multiple elements within a button, and brings the look and feel of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) to an Adaptive Card.
 
 :::image type="content" source="../../assets/images/Cards/compoundbutton.png" alt-text="Screenshot of desktop and mobile view of Compound buttons in an Adaptive Card.":::
 
@@ -841,18 +841,18 @@ The following table lists the properties of the `CompoundButton` element:
 | Property | Required | Type | Description |
 |---------|---------|---------|---------|
 | `type` | ✔️ | String | It must be set to `CompoundButton`. |
-| `title ` | ✔️ | String | The title of the button. Markdown isn't supported. |
+| `title` | ✔️ | String | The title of the button. Markdown isn't supported. |
 | `id` |  | String | A unique identifier for the element or action. |
 | `requires` |  | Object | Mandatory set of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
 | `isVisible` |  | Boolean | Controls the visibility of the button. |
-| `separator ` |  | Boolean | Controls whether a separator is displayed between elements. No separator is displayed for the first element in a container, even if this property is set to true. |
-| `height ` |  | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. Allowed values: `auto`, `stretch`. |
-| `horizontalAlignment ` |  | String | Controls how the element must be horizontally aligned. Allowed values: `Left`, `Center`, `Right`. |
-| `Spacing ` |  | String | Controls the amount of space between elements. No space is added for the first element in a container. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`. |
-| `targetWidth ` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Use `targetWidth` to author responsive cards that adapt their layout to the available horizontal space. Allowed values: `veryNarrow`, `Narrow`, `Standard`, `Wide`. |
+| `separator` |  | Boolean | Controls whether a separator is displayed between elements. No separator is displayed for the first element in a container, even if this property is set to true. |
+| `height` |  | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. Allowed values: `auto`, `stretch`. |
+| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. Allowed values: `Left`, `Center`, `Right`. |
+| `Spacing` |  | String | Controls the amount of space between elements. No space is added for the first element in a container. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`. |
+| `targetWidth` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Use `targetWidth` to author responsive cards that adapt their layout to the available horizontal space. Allowed values: `veryNarrow`, `Narrow`, `Standard`, `Wide`. |
 | `icon` |  | String | The icon shown in the button and the `iconInfo` objects are discussed in the next table. |
-| `badge ` |  | String | The badge shown on the button. Markdown isn't supported. |
-| `description ` |  | String | The description text of the button. Markdown isn't supported. |
+| `badge` |  | String | The badge shown on the button. Markdown isn't supported. |
+| `description` |  | String | The description text of the button. Markdown isn't supported. |
 | `selectAction` |  |  | An Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
 
 The following table lists the properties of the `iconInfo` object:
@@ -864,7 +864,7 @@ The following table lists the properties of the `iconInfo` object:
 | `style` |  | String | The style of the icon. Allowed values: `Regular`, `Filled` |
 | `color` |  | String | The color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
 
-Here's an example of how the `CompoundButton` element can be used in an Adaptive Card: 
+Here's an example of how the `CompoundButton` element can be used in an Adaptive Card:
 
 ```json
 { 
