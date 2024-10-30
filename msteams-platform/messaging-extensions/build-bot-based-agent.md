@@ -112,10 +112,10 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 
 1. Select **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
-1. Select **Plugins**.
-1. From the list of agents, turn on the toggle for your message extension.
+1. Select **Panel** from the top-right corner.
+1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/message-extension-agent" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
@@ -202,12 +202,12 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 
 1. Go to **Teams web client** > **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
-1. Select **Plugins**.
-1. From the list of agents, turn on the toggle for your app.
+1. Select **Panel** from the top-right corner.
+1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/message-extension-agent" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
-1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npmsearchlocal.
+1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the agent prompt and the Adaptive Card response with content and preview card from Microsoft 365 Copilot. The response contains a list of four products with Contoso product name. ":::
 
@@ -293,21 +293,21 @@ To create a bot-based search message extension agent using Teams Toolkit CLI, fo
 
 **Trigger message extension in Microsoft 365 Copilot**
 
-To trigger the message extension through Microsoft 365 Copilot, follow these steps:
+To trigger the message extension as agent in Microsoft 365 Copilot in Teams, follow these steps:
 
 1. Select **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
-1. Select **Plugins**.
-1. From the list of agents, turn on the toggle for your app.
+1. Select **Panel** from the top-right corner.
+1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/Copilot/message-extension-agent" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
 
 > [!NOTE]
-> This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message tagged with [MessageExtension].
+> This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
