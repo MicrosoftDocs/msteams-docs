@@ -306,7 +306,7 @@ Following image illustrates user mention in Incoming Webhook:
 
 Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element.
 
-The following are the properties of the `Icon` element:
+Here are the properties of the `Icon` element:
 
 | Property | Description |
 | --- | --- |
