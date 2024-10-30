@@ -115,7 +115,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
@@ -205,7 +205,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
@@ -300,7 +300,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right-rail.
 
-   :::image type="content" source="../assets/images/Copilot/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent.":::
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
