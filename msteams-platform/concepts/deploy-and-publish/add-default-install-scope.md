@@ -205,6 +205,11 @@ The following code snippet is an example for setting tab as the default landing 
  ]
 ```
 
+> [!NOTE]
+> Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
+
+In mobile client, users can transition to bot using the bot icon present at the top-right.
+
 The following example demonstrates opening an app with tab as default landing capability and how a user can transition to a bot for:
 
 * Android
@@ -224,14 +229,9 @@ The following example demonstrates opening an app with tab as default landing ca
 
    ---
 
-   > [!NOTE]
-   > Tab acts as the default landing capability in mobile, even if you don't specify `entityId` as `conversations` in `staticTabs` property.
-
-   In mobile client, users can transition to bot using the bot icon present at the top-right.
-
 ---
 
-The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
