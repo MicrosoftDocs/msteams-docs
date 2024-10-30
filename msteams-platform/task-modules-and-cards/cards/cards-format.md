@@ -317,7 +317,7 @@ The following are the query parameters to add Fluent icons in an Adaptive Card:
 | `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
 | `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
 | `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
-| `selectAction.type` | You can also add actions to your `Icon`. </br> Supported actions: [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [`Action.ResetInputs`](~/task-modules-and-cards/cards/dynamic-search.md#actionresetinputs) |
+| `selectAction.type` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
 
 The following table is an example of `regular` and `filled` calendar icons with `Standard` size:
 
