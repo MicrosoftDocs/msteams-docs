@@ -845,8 +845,8 @@
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
-    href: samples\approvals-app-api.md
-    displayName: Approvals, Approvals API, Get approvals
+    href: /graph/approvals-app-api
+    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
