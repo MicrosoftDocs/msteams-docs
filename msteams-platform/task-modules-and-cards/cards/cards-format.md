@@ -304,7 +304,7 @@ Following image illustrates user mention in Incoming Webhook:
 
 ### Icons in Adaptive Card
 
-You can use icons in an Adaptive Card from the Fluent icon library by adding the `Icon` element. It uses icons via `iconUrl` property of actions and is an effictive way to integrate icons into your cards. For example, here's a calendar icon:
+Adaptive Cards support adding icons from the Fluent icon library using the `Icon` element. It's an effective way to integrate icons into your cards. For example, here's a calendar icon:
 
 :::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
 
@@ -314,12 +314,12 @@ The following are the query parameters to add Fluent icons in an Adaptive Card:
 | --- | --- |
 | `type` | Must be `Icon`. |
 | `name` | Name of the `Icon`. For example, `calendar`.|
-| `size` | Size of the `Icon`. Supported values are `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge`. </br> If the `size` property isn't defined in the Adaptive Card schema, the icon is set to `Standard` size by default. |
-| `color` | Color of the `Icon`. Supported values are `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention`. </br> If the `color` property isn't defined in the Adaptive Card schema, the icon is set to `Default` color.|
-| `style` | Style of the `Icon`. Supported values are `Filled` or `Regular`. |
-| `selectAction.type` | You can also add actions to your `Icon`. Supported actions are [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [`Action.ResetInputs`](~/task-modules-and-cards/cards/dynamic-search.md#actionresetinputs).|
+| `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
+| `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
+| `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
+| `selectAction.type` | You can also add actions to your `Icon`. </br> Supported actions: [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [`Action.ResetInputs`](~/task-modules-and-cards/cards/dynamic-search.md#actionresetinputs) |
 
-The following table is an example of `regular` and `filled` icons with `Standard` size:
+The following table is an example of `regular` and `filled` calendar icons with `Standard` size:
 
 | &nbsp; |Default|Accent|Good|Warning|Attention|
 |---|---|
