@@ -75,7 +75,7 @@ To register OAuth for your API based message extensions, follow these steps:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
 
-   1. <b>Registration name</b>: A descriptive name for your OAuth client registration.
+   1. <b>Registration name</b>: This is a descriptive name for your OAuth client registration.
    1. <b>Base URL</b>: Teams transmits the secret to URL endpoints that begin with the value in this field.
    1. Under **Restrict usage by org**, select any of the following:
 
@@ -119,14 +119,12 @@ To register OAuth for your API based message extensions, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
 
-You've now successfully configured OAuth in Developer Portal.
-
 > [!IMPORTANT]
-> When setting up your OAuth application with a third-party authentication provider, ensure that you add https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect to the list of allowed redirect endpoints. These providers maintain a list of these endpoints to call for their application, making it crucial to include this URL to ensure seamless functionality.
+> When setting up your OAuth application with a third-party authentication provider, ensure that you add https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect to the list of allowed redirect endpoints. These providers maintain a list of such endpoints to call for their application, making it crucial to include this URL to ensure seamless functionality.
 
 ### Add OAuth client registration ID in API based message extension
 
-To update **OAuth client registration ID** in API based message extension, follow these steps:
+To update OAuth client registration ID in API based message extension, follow these steps:
 
 1. Go to Teams Developer Portal.
 
@@ -143,6 +141,8 @@ To update **OAuth client registration ID** in API based message extension, follo
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-add-oauth-registration.png" alt-text="Screenshot shows the OAuth to add the registration ID copied earlier to the message extension in Developer Portal for Teams.":::
 
   Your API based message extension is configured with OAuth authentication.
+
+You've now successfully configured OAuth for your API based messsage extension in Developer Portal. Next, you must update the app manifest for your app.
 
 ### Update app manifest
 
@@ -185,17 +185,21 @@ Update your Teams app manifest schema to include the new auth type: `oAuth` and 
 
 ## Handle errors
 
-Ensure that the OAuth implementation in your app can handle error cases such as, missing token, expired token, invalid token, user fails to log-in or the permission isn't granted, user closes the dialog box, invoke request fails due to a network issue, the service is down, the service is unable to fetch the app, endpoint returns any error other than 401 or 403, the resource server returns 401 or 403.
+Ensure that the OAuth implementation in your app can handle error cases such as: 
+
+- Token error cases: Missing token, expired token, or invalid token.
+- User login or permission error cases: User fails to log-in, the permission isn't granted, or user closes the dialog box.
+- Network and service error cases: Invoke request fails due to a network issue, service is down, service is unable to fetch the app, endpoint returns any error codes other than 401 or 403, or resource server returns 401 or 403.
 
 ## Limitations and best practices
 
-* After an OAuth configuration is saved, it becomes read-only, except for updating the allowed app ID or allowed tenant, the description, and the domain.
-* Developers must not update the OAuth configuration frequently, even during the initial development process.
-* If a developer wants to make any changes to configuration such as, adding a scope or authorization URL, they must register a new OAuth configuration, which generates a new unique ID.
+* Once you save an OAuth configuration, it becomes read-only. However, you can still update the allowed app ID, allowed tenant, description, and domain.
+* You mustn't update the OAuth configuration frequently, even during the initial development process.
+* If you want to make any changes to configuration such as, adding a scope or authorization URL, you must register a new OAuth configuration, which generates a new unique ID.
 
 For more information, see the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
 
-Implementing OAuth 2.0 for API message extensions and plugins in Microsoft Teams enhances the security of your app. It provides a secure way to access user data from third-party applications without exposing user credentials.
+Implementing OAuth 2.0 for API message extensions and plugins in Microsoft Teams significantly enhances the security of your application. You can ensure secure data access and protection of user credentials.
 
 ## See also
 
