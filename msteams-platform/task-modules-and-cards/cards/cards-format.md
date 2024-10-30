@@ -1023,21 +1023,13 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ## Scrollable containers in Adaptive Cards
 
-A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the limit of the container's height. If the container's height exceeds this limit, then the container’s height is capped at `maxHeight` and the elements inside the container are displayed in a vertically scrollable area.
+A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the limit of the container's height. If the maximum height exceeds the limit defined, the element inside the container are displayed in a vertically scrollable area.
+
+Here is the property of the `Container` element:
 
 | Property name | Type | Description |
 | --- | --- | --- |
 | `maxHeight` | String | Defines the maximum height of the container. You must define the value in the `<number>px` format. |
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-desktop.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-mobile.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams mobile client.":::
-
----
 
 The following card payload shows a container with a scroll bar:
 
@@ -1106,6 +1098,16 @@ The following card payload shows a container with a scroll bar:
     ]
 }
 ```
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-desktop.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-mobile.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams mobile client.":::
+
+---
 
 ## Format cards with HTML
 
