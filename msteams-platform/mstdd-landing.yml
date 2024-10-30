@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introducing default landing capability for personal tab and bot apps
+      - text: Introducing default landing capability for tab and bot apps
         url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
       - text: Share content to live and upcoming meetings with Share to Teams
         url: concepts/build-and-test/share-to-teams-from-web-apps.md

@@ -31,7 +31,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 Teams platform features that are available to all app developers.
 
 **2024 October**
-* ***October 31, 2024***: [Configure default landing capability for your personal bot and tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+* ***October 31, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 * ***October 29, 2024***: [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md).
 * ***October 28, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
 * ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
