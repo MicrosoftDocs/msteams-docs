@@ -1169,14 +1169,11 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-In Adaptive Card, you can add ratings using the [`Input.Rating`](#inputrating) property that allow users to provide rating or use the [`Rating`](#rating) property to view the ratings. 
-
-* The rating input allows users to provide feedback or preferences in a visually appealing manner.
-* The read-only star rating enables you to show user ratings or performance metrics.
+In Adaptive Card, you can enable ratings using the [`Input.Rating`](#inputrating) property that allows users to provide ratings. You can also use the [`Rating`](#rating) property that allows users to view the ratings.
 
 ### Input.Rating
 
-The `Input.Rating` property displays a star rating that allows users to hover over the stars and select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`. 
+The `Input.Rating` property displays a star rating that allows users to select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`.
 
 # [Desktop](#tab/desktop3)
 
@@ -1196,7 +1193,7 @@ The `Input.Rating` property displays a star rating that allows users to hover ov
 | `id` | ✔️ | String | Unique identifier for the input element. |
 | `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
 | `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
-| `allowHalfSteps` | | Boolean| Determines if the user can select half stars. |
+| `allowHalfSteps` | | Boolean| Determines if the user can select a half star. |
 | `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
 | `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
 | `requires` | | Object | Dependencies for the input element. |
@@ -1213,7 +1210,7 @@ The `Input.Rating` property displays a star rating that allows users to hover ov
 
 ### Rating
 
-The `Input.Rating` property displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property.
+The `Rating` property displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property.
 
 # [Desktop](#tab/desktop2)
 
