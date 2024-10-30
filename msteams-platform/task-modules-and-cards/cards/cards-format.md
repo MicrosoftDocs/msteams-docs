@@ -1173,19 +1173,7 @@ In Adaptive Card, you can enable star ratings using the [`Input.Rating`](#inputr
 
 ### Input.Rating
 
-The `Input.Rating` property displays a star rating that allows users to provide ratings. To allow users to select half star, you can set the `allowHalfSteps` property to `true`.
-
-# [Desktop](#tab/desktop3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
-
-# [Mobile](#tab/mobile3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
-
----
-
-The following are the query parameters to configure `Input.Rating`:
+Here are the properties of the `Input.Rating` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
@@ -1208,21 +1196,19 @@ The following are the query parameters to configure `Input.Rating`:
 | `errorMessage` | | String | The error message to be displayed if validation fails. |
 | `valueChangedAction` | | Action | Action to perform when the value changes. |
 
-### Rating
+# [Desktop](#tab/desktop3)
 
-The `Rating` property displays a read-only star rating on Adaptive Card. To show the average number of ratings next to the star rating, you can define the `count` property.
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
 
-# [Desktop](#tab/desktop2)
+# [Mobile](#tab/mobile3)
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on desktop.":::
-
-# [Mobile](#tab/mobile2)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on mobile.":::
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
 
 ---
 
-The following are the query parameters to configure `Rating`:
+### Rating
+
+Here are the properties of the `Rating` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
@@ -1310,6 +1296,16 @@ The following payload shows an Adaptive Card with read-only and input-enabled st
     ]
 }
 ```
+
+# [Desktop](#tab/desktop2)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on desktop.":::
+
+# [Mobile](#tab/mobile2)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on mobile.":::
+
+---
 
 ## Code samples
 
