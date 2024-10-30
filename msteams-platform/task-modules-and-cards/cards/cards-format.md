@@ -304,11 +304,9 @@ Following image illustrates user mention in Incoming Webhook:
 
 ### Icons in Adaptive Card
 
-Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. It's an effective way to integrate icons into your cards. For example, here's a calendar icon:
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element.
 
-:::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
-
-The following are the query parameters to add Fluent icons in an Adaptive Card:
+The following are the properties of the `Icon` element:
 
 | Property | Description |
 | --- | --- |
@@ -317,14 +315,7 @@ The following are the query parameters to add Fluent icons in an Adaptive Card:
 | `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
 | `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
 | `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
-| `selectAction.type` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
-
-The following table is an example of `regular` and `filled` calendar icons with `Standard` size:
-
-| &nbsp; |Default|Accent|Good|Warning|Attention|
-|---|---|
-|**Regular**| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
-|**Filled**| :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-attention.png"::: |
+| `selectAction` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
 
 The following JSON code is an example of an Adaptive Card schema with a Fluent icon:
 
