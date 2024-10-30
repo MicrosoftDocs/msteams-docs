@@ -1169,11 +1169,11 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-In Adaptive Card, you can enable ratings using the [`Input.Rating`](#inputrating) property that allows users to provide ratings. You can also use the [`Rating`](#rating) property that allows users to view the ratings.
+In Adaptive Card, you can enable star ratings using the [`Input.Rating`](#inputrating) property that allows users to provide ratings. You can also use the [`Rating`](#rating) property that allows users to view ratings.
 
 ### Input.Rating
 
-The `Input.Rating` property displays a star rating that allows users to select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`.
+The `Input.Rating` property displays a star rating that allows users to provide ratings. To allow users to select half star, you can set the `allowHalfSteps` property to `true`.
 
 # [Desktop](#tab/desktop3)
 
@@ -1185,24 +1185,24 @@ The `Input.Rating` property displays a star rating that allows users to select a
 
 ---
 
-#### Input.Rating schema
+The following are the query parameters to configure `Input.Rating`:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `type` | ✔️ | String | Specifies the type of input element. Allowed value: `Input.Rating` |
+| `type` | ✔️ | String | Specifies the type of input element. <br> Supported value: `Input.Rating` |
 | `id` | ✔️ | String | Unique identifier for the input element. |
 | `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
-| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `max` | | Number | The total number of stars to be displayed. The default and maximum supported number of stars is five. |
 | `allowHalfSteps` | | Boolean| Determines if the user can select a half star. |
-| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
-| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
+| `colour` | | String | The color of the stars. <br> Supported values: `Neutral`, `Marigold` |
+| `size` | | String | The size of the stars. <br> Supported values: `Medium`, `Large` |
 | `requires` | | Object | Dependencies for the input element. |
 | `isVisible` | | Boolean| Determines if the element is visible. |
 | `separator` | | Boolean| Adds a separator line before the element. |
-| `height` | | String | Specifies the height of the element. Allowed values: `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
-| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `height` | | String | Specifies the height of the element. Supported values: `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Aligns the element horizontally. Supported values: `Left`, `Center`, `Right` |
+| `spacing` | | String | Specifies the spacing around the element. Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Specifies the width of the element. Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
 | `label` | | String | Label for the input element. |
 | `isRequired` | | Boolean| Marks the input element as required. |
 | `errorMessage` | | String | The error message to be displayed if validation fails. |
@@ -1222,25 +1222,25 @@ The `Rating` property displays a read-only star rating on Adaptive Card. To show
 
 ---
 
-#### Rating schema
+The following are the query parameters to configure `Rating`:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `type` | ✔️ | String | Specifies the type of rating element. Allowed value: `Rating` |
+| `type` | ✔️ | String | Specifies the type of rating element. <br> Supported value: `Rating` |
 | `value` | | Number | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
-| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `max` | | Number | The total number of stars to be displayed. The default and maximum supported number of stars is five. |
 | `count` | | Number | The number of ratings shown next to the star rating. |
-| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
-| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
-| `style` | | String | In compact mode, only one star is displayed. Allowed values: `Default`, `Compact` |
+| `colour` | | String | The color of the stars. <br> Supported values: `Neutral`, `Marigold` |
+| `size` | | String | The size of the stars. <br> Supported values: `Medium`, `Large` |
+| `style` | | String | In compact mode, only one star is displayed. <br> Supported values: `Default`, `Compact` |
 | `id` | | String | Unique identifier for the rating element. |
 | `requires` | | Object | Dependencies for the rating element. |
 | `isVisible` | | Boolean| Determines if the element is visible. |
 | `separator` | | Boolean| Adds a separator line before the element. |
 | `height` | | String | Specifies the height of the element. `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
-| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `horizontalAlignment` | | String | Aligns the element horizontally. <br> Supported values: `Left`, `Center`, `Right` |
+| `spacing` | | String | Specifies the spacing around the element. <br> Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Specifies the width of the element. <br> Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
 
 ### Example
 
