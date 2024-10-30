@@ -44,6 +44,12 @@ Before you start, you need to have:
 * A Microsoft Teams app with API Message Extensions or Plugins.
 * An OAuth 2.0 client ID and client secret from the third-party authorization server.
 
+To enable Oauth for your API based message extension:
+
+* [Configure OAuth in Developer Portal](#configure-oauth-in-developer-portal).
+* [Add OAuth client registration ID in API-based message extension](#add-oauth-client-registration-id-in-api-based-message-extension).
+* [Update app manifest](#update-app-manifest).
+
 ### Configure OAuth in Developer Portal
 
 You can register OAuth client configurations for your API-based message extensions and Copilot plugins in Teams Developer Portal.
