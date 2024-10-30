@@ -1,7 +1,7 @@
 ---
 title: OAuth for API based Message Extension
 author: surbhigupta12
-description: Learn about the requirements for implementing OAuth for an API-based message extension and its limitation and best practices.
+description: Learn about the requirements for implementing OAuth for an API based message extension and its limitation and best practices.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -43,25 +43,25 @@ When a user attempts to use a message action on a newly installed Teams app that
 
 If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
 
-To enable Oauth for your API based message extension:
+To enable OAuth for your API based message extension:
 
 * [Ensure prerequisites](#ensure-prerequisites).
 * [Configure OAuth in Developer Portal](#configure-oauth-in-developer-portal).
-* [Add OAuth client registration ID in API-based message extension](#add-oauth-client-registration-id-in-api-based-message-extension).
+* [Add OAuth client registration ID in API based message extension](#add-oauth-client-registration-id-in-api-based-message-extension).
 * [Update app manifest](#update-app-manifest).
 
 ### Ensure prerequisites
 
-Before you start, ensure that you have:
+Before you start, you must have:
 
 * A Microsoft Teams app with API Message Extensions or Plugins.
 * An OAuth 2.0 client ID and client secret from the third-party authorization server.
 
 ### Configure OAuth in Developer Portal
 
-You can register OAuth client configurations for your API-based message extensions and Copilot plugins in Teams Developer Portal.
+You can register OAuth client configurations for your API based message extensions and Copilot plugins in Teams Developer Portal.
 
-To register OAuth for your API-based message extensions, follow these steps:
+To register OAuth for your API based message extensions, follow these steps:
 
 1. Go to Teams Developer Portal.
 
@@ -75,8 +75,8 @@ To register OAuth for your API-based message extensions, follow these steps:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
 
-   1. <b>Registration name</b>
-   1. <b>Base URL</b>
+   1. <b>Registration name</b>: A descriptive name for your OAuth client registration.
+   1. <b>Base URL</b>: Teams transmits the secret to URL endpoints that begin with the value in this field.
    1. Under **Restrict usage by org**, select any of the following:
 
       * **My organization only**
@@ -119,9 +119,14 @@ To register OAuth for your API-based message extensions, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
 
-### Add OAuth client registration ID in API-based message extension
+You've now successfully configured OAuth in Developer Portal.
 
-To update **OAuth client registration ID** in API-based message extension, follow these steps:
+> [!IMPORTANT]
+> When setting up your OAuth application with a third-party authentication provider, ensure that you add https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect to the list of allowed redirect endpoints. These providers maintain a list of these endpoints to call for their application, making it crucial to include this URL to ensure seamless functionality.
+
+### Add OAuth client registration ID in API based message extension
+
+To update **OAuth client registration ID** in API based message extension, follow these steps:
 
 1. Go to Teams Developer Portal.
 
@@ -137,7 +142,7 @@ To update **OAuth client registration ID** in API-based message extension, follo
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-add-oauth-registration.png" alt-text="Screenshot shows the OAuth to add the registration ID copied earlier to the message extension in Developer Portal for Teams.":::
 
-  Your API-based message extension is configured with OAuth authentication.
+  Your API based message extension is configured with OAuth authentication.
 
 ### Update app manifest
 
@@ -194,6 +199,6 @@ Implementing OAuth 2.0 for API message extensions and plugins in Microsoft Teams
 
 ## See also
 
-* [Create API-based message extension](create-api-message-extension.md)
+* [Create API based message extension](create-api-message-extension.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)
