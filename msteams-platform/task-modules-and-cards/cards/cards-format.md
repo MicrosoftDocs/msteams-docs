@@ -304,7 +304,7 @@ Following image illustrates user mention in Incoming Webhook:
 
 ### Icons in Adaptive Card
 
-Adaptive Cards support adding icons from the Fluent icon library using the `Icon` element. It's an effective way to integrate icons into your cards. For example, here's a calendar icon:
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. It's an effective way to integrate icons into your cards. For example, here's a calendar icon:
 
 :::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
 
