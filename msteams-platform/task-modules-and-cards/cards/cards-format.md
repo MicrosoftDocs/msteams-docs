@@ -1169,15 +1169,51 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-In Adaptive Card, you can use the following properties to add ratinga.
+In Adaptive Card, you can add ratings using the [`Input.Rating`](#inputrating) property that allow users to provide rating or use the [`Rating`](#rating) property to view the ratings. 
 
-add ratings using the `Input.Rating` property that allow users to provide rating or use the `Rating` property to view the ratings.
+* The rating input allows users to provide feedback or preferences in a visually appealing manner.
+* The read-only star rating enables you to show user ratings or performance metrics.
 
-* `Input.Rating`: Displays a star rating that allows users to hover over the stars and select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`. The rating input allows users to provide feedback or preferences in a visually appealing manner.
+### Input.Rating
 
-* `Rating`: Displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property. The read-only star rating enables you to show user ratings or performance metrics.
+The `Input.Rating` property displays a star rating that allows users to hover over the stars and select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`. 
+
+# [Desktop](#tab/desktop3)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
+
+# [Mobile](#tab/mobile3)
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
+
+---
+
+#### Input.Rating schema
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Specifies the type of input element. Allowed value: `Input.Rating` |
+| `id` | ✔️ | String | Unique identifier for the input element. |
+| `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
+| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
+| `allowHalfSteps` | | Boolean| Determines if the user can select half stars. |
+| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
+| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
+| `requires` | | Object | Dependencies for the input element. |
+| `isVisible` | | Boolean| Determines if the element is visible. |
+| `separator` | | Boolean| Adds a separator line before the element. |
+| `height` | | String | Specifies the height of the element. Allowed values: `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
+| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `label` | | String | Label for the input element. |
+| `isRequired` | | Boolean| Marks the input element as required. |
+| `errorMessage` | | String | The error message to be displayed if validation fails. |
+| `valueChangedAction` | | Action | Action to perform when the value changes. |
 
 ### Rating
+
+The `Input.Rating` property displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property.
 
 # [Desktop](#tab/desktop2)
 
@@ -1208,41 +1244,6 @@ add ratings using the `Input.Rating` property that allow users to provide rating
 | `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
 | `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
 | `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
-
-### Input.Rating
-
-# [Desktop](#tab/desktop3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
-
-# [Mobile](#tab/mobile3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
-
----
-
-#### Input.Rating schema
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Specifies the type of input element. Allowed value: `Input.Rating` |
-| `id` | ✔️ | String | Unique identifier for the input element. |
-| `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
-| `max` | | Number | The total number of stars to be displayed. The default and maximum allowed number of stars is five. |
-| `allowHalfSteps` | | Boolean| Determines if the user can select half stars. |
-| `colour` | | String | The color of the stars. Allowed values: `Neutral`, `Marigold` |
-| `size` | | String | The size of the stars. Allowed values: `Medium`, `Large` |
-| `requires` | | Object | Dependencies for the input element. |
-| `isVisible` | | Boolean| Determines if the element is visible. |
-| `separator` | | Boolean| Adds a separator line before the element. |
-| `height` | | String | Specifies the height of the element. `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Aligns the element horizontally. Allowed values: `Left`, `Center`, `Right` |
-| `spacing` | | String | Specifies the spacing around the element. Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
-| `label` | | String | Label for the input element. |
-| `isRequired` | | Boolean| Marks the input element as required. |
-| `errorMessage` | | String | The error message to be displayed if validation fails. |
-| `valueChangedAction` | | Action | Action to perform when the value changes. |
 
 ### Example
 
