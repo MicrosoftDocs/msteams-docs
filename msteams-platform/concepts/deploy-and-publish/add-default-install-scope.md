@@ -133,19 +133,13 @@ The following example demonstrates opening an app with bot as default landing ca
 
   # [Android](#tab/android)
 
-    **App with bot as default landing capability**
-
-    1. The app opens by default as bot.
-    2. A user can transition to tab using the tab icon available at the top-right corner.
+    The app opens by default as a bot. A user can transition to the tab using the tab icon available at the top-right corner.
 
     :::image type="content" source="../../assets/images/default-scope/android-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in android.":::
 
   # [iOS](#tab/ios)
 
-    **App with bot as default landing capability**
-
-    1. The app opens by default as bot.
-    1. A user can transition to tab either by selecting the back button or by pulling down the bot overlay.
+    The app opens by default as a bot. A user can transition to the tab either by selecting the back button or by pulling down the bot overlay.
 
     :::image type="content" source="../../assets/images/default-scope/ios-bot.gif" alt-text="Graphic shows the process of opening an app with bot as default landing capability in iOS.":::
 
@@ -221,19 +215,13 @@ The following example demonstrates opening an app with tab as default landing ca
 
   # [Android](#tab/android1)
 
-    **App with tab as default landing capability**
-
-    1. The app opens by default as tab.
-    2. A user can transition to bot using the bot icon available at the top-right corner.
+    The app opens by default as a tab. A user can transition to the bot using the bot icon available at the top-right corner.
 
    :::image type="content" source="../../assets/images/default-scope/android-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in android.":::
 
   # [iOS](#tab/ios1)
 
-    **App with tab as default landing capability**
-
-    1. The app opens by default as tab.
-    1. A user can transition to bot using the bot icon available at the top-right corner.
+    The app opens by default as a tab. A user can transition to the bot using the bot icon available at the top-right corner.
 
    :::image type="content" source="../../assets/images/default-scope/ios-tab.gif" alt-text="Graphic shows the process of opening an app with tab as default landing capability in iOS.":::
 
