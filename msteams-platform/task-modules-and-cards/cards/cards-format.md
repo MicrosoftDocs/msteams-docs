@@ -302,17 +302,19 @@ Following image illustrates user mention in Incoming Webhook:
 
 :::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot shows a user mention in Incoming Webhook.":::
 
-### Fluent icon in an Adaptive Card
+### Icons in Adaptive Card
 
-Adaptive Cards support Fluent icons that offer an effective and visually appealing method to integrate icons into your cards.
+You can use icons in an Adaptive Card from the Fluent icon library by adding the `Icon` element. It uses icons via `iconUrl` property of actions and is an effictive way to integrate icons into your cards. For example, here's a calendar icon:
+
+:::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
 
 The following are the query parameters to add Fluent icons in an Adaptive Card:
 
 | Property | Description |
 | --- | --- |
-| `type` | Must be `Icon`|
-| `name` | Name of the `Icon`|
-| `size` | Size of the `Icon`. Supported values are `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge`. </br> If the `size` property isn't defined in the Adaptive Card schema, the icon is set to `Standard` size by default.|
+| `type` | Must be `Icon`. |
+| `name` | Name of the `Icon`. For example, `calendar`.|
+| `size` | Size of the `Icon`. Supported values are `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge`. </br> If the `size` property isn't defined in the Adaptive Card schema, the icon is set to `Standard` size by default. |
 | `color` | Color of the `Icon`. Supported values are `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention`. </br> If the `color` property isn't defined in the Adaptive Card schema, the icon is set to `Default` color.|
 | `style` | Style of the `Icon`. Supported values are `Filled` or `Regular`. |
 | `selectAction.type` | You can also add actions to your `Icon`. Supported actions are [`Action.Submit`](https://adaptivecards.io/explorer/Action.Submit.html), [`Action.OpenUrl`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.Execute`](https://adaptivecards.io/explorer/Action.Execute.html), [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [`Action.ResetInputs`](~/task-modules-and-cards/cards/dynamic-search.md#actionresetinputs).|
@@ -324,7 +326,7 @@ The following table is an example of `regular` and `filled` icons with `Standard
 |**Regular**| :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/regular-icon-attention.png"::: |
 |**Filled**| :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-accent.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-good.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-warning.png"::: | :::image type="icon" source="~/assets/images/adaptive-cards/filled-icon-attention.png"::: |
 
-The following JSON code is an example of an Adaptive Card schema with Fluent icon:
+The following JSON code is an example of an Adaptive Card schema with a Fluent icon:
 
 ```json
 {
@@ -371,10 +373,6 @@ The following JSON code is an example of an Adaptive Card schema with Fluent ico
  ]
 }
 ```
-
-The following image is an example of the Fluent icon in an Adaptive Card:
-
-:::image type="content" source="../../assets/images/adaptive-cards/calendar-icons-ac.png" alt-text="Screenshot shows an example of the Fluent calendar icon in an Adaptive Card.":::
 
 ### People icon in an Adaptive Card
 
