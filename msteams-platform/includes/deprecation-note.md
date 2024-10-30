@@ -4,7 +4,7 @@
 >
 > **How can you create a webhook in Teams**?
 >
-> * To automatically post to a chat or channel when a webhook request is received, use the predefined workflow templates or create a workflow from scratch using the **When a Teams webhook request is received** trigger. For more information, see [post a workflow when a webhook request is received in Microsoft Teams.](https://prod.support.services.microsoft.com/en-us/office/post-a-workflow-when-a-webhook-request-is-received-in-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498).
+> * To automatically post to a chat or channel when a webhook request is received, use the predefined workflow templates or create a workflow from scratch using the **When a Teams webhook request is received** trigger. For more information, see [post a workflow when a webhook request is received in Microsoft Teams.](https://support.microsoft.com/en-u/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498).
 >
 > * For more information about the **When a Teams webhook request is received** trigger, see [Microsoft Teams - Webhook.](/connectors/teams#microsoft-teams-webhook)
 >
