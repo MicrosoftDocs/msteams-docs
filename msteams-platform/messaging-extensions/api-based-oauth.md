@@ -10,20 +10,20 @@ ms.date: 10/29/2024
 
 # Enable OAuth authentication for API based message extension
 
-Integrating OAuth 2.0 into your Teams application ensures a secure method for accessing user data from third-party applications without exposing user credentials. This protocol allows you to grant access solely to the specific data required, with the prerequisite that the user consents before the application can access their data. It's beneficial for applications that need to access individual items for a user.
+Integrating Open Authorization (OAuth) 2.0 into your Teams application ensures a secure method for accessing user data from third-party applications without exposing user credentials. This protocol allows you to grant access solely to the specific data required, with the prerequisite that the user consents before the application can access their data. It's beneficial for applications that need to access individual items for a user.
 
-By using Open Authorization (OAuth), your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
+By using OAuth 2.0, your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
 
 <br>
 
 <details>
-<summary>Select for more information on OAuth 2.0</summary>
+<summary>Select for more information on OAuth 2.0.</summary>
 
-OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. When apps use the OAuth 2.0 authorization code flow, they get an access token to include in requests to resources protected by the Microsoft identity platform (like APIs). They can also request new ID and access tokens for previously authenticated entities using a refresh mechanism.
+Leverage OAuth 2.0 to securely access user data without exposing their credentials. When apps use the OAuth 2.0 authorization code flow, they get an access token to include in requests to resources that are protected by the Microsoft identity platform (like APIs). They can also request new ID and access tokens for previously authenticated entities using a refresh mechanism.
 
 Here's a diagram for a high-level view of the authentication flow:
 
-:::image type="content" source="../assets/images/authentication/oauth-authentication-flow.png" alt-text="Image shows the OAuth authentication flow.":::
+:::image type="content" source="../assets/images/authentication/oauth-authentication-flow.png" alt-text="Image shows the OAuth authentication flow." lightbox="../assets/images/authentication/oauth-authentication-flow.png":::
 
 * **Authorization server**: The identity platform is the authorization server, also called an identity provider or IDP. It ensures secure handling of the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
 
@@ -41,20 +41,21 @@ For more information about OAuth 2.0, see [Microsoft identity platform and OAuth
 
 When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke request where the app ID is used to check if there's a valid access token. If a valid token is available, it triggers the sign-in flow.
 
-If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client then renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
-
-### Prerequisites
-
-Before you start, you need to have:
-
-* A Microsoft Teams app with API Message Extensions or Plugins.
-* An OAuth 2.0 client ID and client secret from the third-party authorization server.
+If the token acquisition fails, then it triggers the sign-in flow, and the Teams Client renders the OAuth card in a pop-up. The user signs into the third-party service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback URL on the Teams Graph Service (TGS). The TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS shares.
 
 To enable Oauth for your API based message extension:
 
+* [Ensure prerequisites](#ensure-prerequisites).
 * [Configure OAuth in Developer Portal](#configure-oauth-in-developer-portal).
 * [Add OAuth client registration ID in API-based message extension](#add-oauth-client-registration-id-in-api-based-message-extension).
 * [Update app manifest](#update-app-manifest).
+
+### Ensure prerequisites
+
+Before you start, ensure that you have:
+
+* A Microsoft Teams app with API Message Extensions or Plugins.
+* An OAuth 2.0 client ID and client secret from the third-party authorization server.
 
 ### Configure OAuth in Developer Portal
 
