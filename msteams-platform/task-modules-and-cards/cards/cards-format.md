@@ -1167,15 +1167,17 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
-## Star ratings in Adaptive Cards
+## Ratings in Adaptive Cards
 
-You can display a read-only star rating with the `Rating` property or collect star ratings from users using the `Input.Rating` property in Adaptive Cards. The read-only star rating enables you to show user ratings or performance metrics, while the rating input allows users to provide feedback or preferences in a visually appealing manner.
+In Adaptive Card, you can use the following properties to add ratinga.
 
-You can customize how star ratings appear in an Adaptive Card, including their size, color, and the number of stars, to fit the design and needs of your app.
+add ratings using the `Input.Rating` property that allow users to provide rating or use the `Rating` property to view the ratings.
+
+* `Input.Rating`: Displays a star rating that allows users to hover over the stars and select a rating. To allow users to select half star, you can set the `allowHalfSteps` property to `true`. The rating input allows users to provide feedback or preferences in a visually appealing manner.
+
+* `Rating`: Displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property. The read-only star rating enables you to show user ratings or performance metrics.
 
 ### Rating
-
-The `Rating` property shows a read-only star rating on your Adaptive Card. You can show the number of ratings next to the star rating by defining the `count` property. The read-only star rating and rating input are visually different. This helps users distinguish between read-only and clickable ratings.
 
 # [Desktop](#tab/desktop2)
 
@@ -1208,8 +1210,6 @@ The `Rating` property shows a read-only star rating on your Adaptive Card. You c
 | `targetWidth` | | String | Specifies the width of the element. Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
 
 ### Input.Rating
-
-The `Input.Rating` property shows a star rating that allows users to hover over the stars and select a rating. You can allow users to select half stars if you set the `allowHalfSteps` property to `true`.
 
 # [Desktop](#tab/desktop3)
 
