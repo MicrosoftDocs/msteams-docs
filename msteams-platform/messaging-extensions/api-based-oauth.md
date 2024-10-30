@@ -10,6 +10,8 @@ ms.date: 10/29/2024
 
 # Enable OAuth authentication for API based message extension
 
+Integrating OAuth 2.0 into your Teams application ensures a secure method for accessing user data from third-party applications without exposing user credentials. This protocol allows you to grant access solely to the specific data required, with the prerequisite that the user consents before the application can access their data. It's beneficial for applications that need to access individual items for a user.
+
 By using Open Authorization (OAuth), your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
 
 For more information about OAuth 2.0, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow).
@@ -17,7 +19,9 @@ For more information about OAuth 2.0, see [Microsoft identity platform and OAuth
 <details>
 <summary>Select for more information on OAuth 2.0</summary>
 
-OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can grant access only to the specific data you need, and the user must consent before the application can access their data, which is useful for apps that need to access individual items for a user.
+OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. When apps use the OAuth 2.0 authorization code flow, they get an access token to include in requests to resources protected by the Microsoft identity platform (like APIs). They can also request new ID and access tokens for previously authenticated entities using a refresh mechanism.
+
+Here's a diagram for a high-level view of the authentication flow:
 
 :::image type="content" source="../assets/images/authentication/oauth-authentication-flow.png" alt-text="Image shows the OAuth authentication flow.":::
 
