@@ -1210,7 +1210,7 @@ The following are the query parameters to configure `Input.Rating`:
 
 ### Rating
 
-The `Rating` property displays a read-only star rating on Adaptive Card. To show the number of ratings next to the star rating, you can define the `count` property.
+The `Rating` property displays a read-only star rating on Adaptive Card. To show the average number of ratings next to the star rating, you can define the `count` property.
 
 # [Desktop](#tab/desktop2)
 
@@ -1229,7 +1229,7 @@ The following are the query parameters to configure `Rating`:
 | `type` | ✔️ | String | Specifies the type of rating element. <br> Supported value: `Rating` |
 | `value` | | Number | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
 | `max` | | Number | The total number of stars to be displayed. The default and maximum supported number of stars is five. |
-| `count` | | Number | The number of ratings shown next to the star rating. |
+| `count` | | Number | The average number of ratings shown next to the star rating. |
 | `colour` | | String | The color of the stars. <br> Supported values: `Neutral`, `Marigold` |
 | `size` | | String | The size of the stars. <br> Supported values: `Medium`, `Large` |
 | `style` | | String | In compact mode, only one star is displayed. <br> Supported values: `Default`, `Compact` |
