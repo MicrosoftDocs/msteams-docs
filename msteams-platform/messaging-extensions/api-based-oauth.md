@@ -13,7 +13,9 @@ ms.date: 10/29/2024
 Integrating OAuth 2.0 into your Teams application ensures a secure method for accessing user data from third-party applications without exposing user credentials. This protocol allows you to grant access solely to the specific data required, with the prerequisite that the user consents before the application can access their data. It's beneficial for applications that need to access individual items for a user.
 
 By using Open Authorization (OAuth), your client application can obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP). It uses access tokens to prove app user's identity and allow interaction with another service on their behalf.
+
 <br>
+
 <details>
 <summary>Select for more information on OAuth 2.0</summary>
 
