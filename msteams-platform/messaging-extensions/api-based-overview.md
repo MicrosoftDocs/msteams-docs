@@ -11,7 +11,9 @@ ms.date: 10/19/2023
 # API-based message extension
 
 > [!NOTE]
-> API-based message extensions only support search commands.
+>
+> * API-based message extensions only support search commands.
+> * API-based message extensions aren't supported in Microsoft 365 Copilot. If you want to create API-based message extensions compatible with Microsoft 365 Copilot, see [API plugins for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins).
 
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration. API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With API-based message extension, you can:
 
