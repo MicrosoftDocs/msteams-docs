@@ -39,9 +39,9 @@ For more information about OAuth 2.0, see [Microsoft identity platform and OAuth
 
 ## Implement OAuth
 
-When a user tries to use a message action on a new Teams app with OAuth, Teams makes an invoke request to check if there's a valid access token using the app ID. If a valid token is available, Teams triggers the sign-in flow.
+When a user tries to use a message action on a new Teams app with OAuth, Teams makes an invoke request to check if there's a valid access token using the app ID. If a valid token is available, Teams sends this bearer token with the HTTP request to resource API.
 
-If acquiring the token fails, Teams Client starts the sign-in process and shows the OAuth card in a pop-up. The user signs into the third-party service and approves the requested access. The third-party server sends an authorization code to the callback URL on the Teams Graph Service (TGS), which then exchanges the code for a token.
+If there is no valid token available, Teams Client starts the sign-in process and shows the OAuth card in a pop-up. The user signs into the third-party service and approves the requested access. The third-party server sends an authorization code to the callback URL on the Teams Graph Service (TGS), which then exchanges the code for a token.
 
 To enable OAuth for your API based message extension:
 
@@ -56,6 +56,7 @@ Before you start, you must have:
 
 * A Microsoft Teams app with API Message Extensions or Plugins.
 * An OAuth 2.0 client ID and client secret from the third-party authorization server.
+* When setting up your OAuth app with a third-party authentication provider, ensure that you add <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the list of allowed redirect endpoints. These providers maintain a list of such endpoints to call for their app, making it crucial to include this URL to ensure seamless functionality.
 
 ### Configure OAuth in Developer Portal
 
@@ -120,7 +121,7 @@ To register OAuth for your API based message extensions, follow these steps:
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
 
 > [!IMPORTANT]
-> When setting up your OAuth app with a third-party authentication provider, ensure that you add https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect to the list of allowed redirect endpoints. These providers maintain a list of such endpoints to call for their app, making it crucial to include this URL to ensure seamless functionality.
+> When setting up your OAuth app with a third-party authentication provider, ensure that you add <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the list of allowed redirect endpoints. These providers maintain a list of such endpoints to call for their app, making it crucial to include this URL to ensure seamless functionality.
 
 ### Add OAuth client registration ID in API based message extension
 
@@ -187,11 +188,11 @@ The following code snippet is an example of app manifest update for configuring 
 
 ## Handle errors
 
-Ensure that the OAuth implementation in your app can handle error cases, such as: 
+Ensure that the OAuth implementation in your app can handle error cases, such as:
 
-- Token error cases: Missing token, expired token, or invalid token.
-- User login or permission error cases: User fails to log-in, the permission isn't granted, or user closes the dialog box.
-- Network and service error cases: Invoke request fails due to a network issue, service is down, service is unable to fetch the app, endpoint returns any error codes other than 401 or 403, or resource server returns 401 or 403.
+* Token error cases: Missing token, expired token, or invalid token.
+* User login or permission error cases: User fails to log-in, the permission isn't granted, or user closes the dialog box.
+* Network and service error cases: Invoke request fails due to a network issue, service is down, service is unable to fetch the app, endpoint returns any error codes other than 401 or 403, or resource server returns 401 or 403.
 
 ## Limitations and best practices
 
@@ -206,3 +207,4 @@ Implementing OAuth 2.0 for API message extensions and plugins in Teams significa
 * [Create API based message extension](create-api-message-extension.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)
+* [Developer Portal for Teams](https://dev.teams.microsoft.com/)
