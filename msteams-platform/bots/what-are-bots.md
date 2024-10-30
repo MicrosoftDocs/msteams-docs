@@ -1,7 +1,7 @@
 ---
 title: Create a bot in Microsoft Teams
 author: surbhigupta
-description: In this article, learn how to create a bot for Microsoft Teams.
+description: Learn how to use conversational bots in Microsoft Teams to run tasks, share files, and make calls. Explore code samples for various usecases.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
@@ -98,6 +98,8 @@ You can use the Teams bot APIs to get information for members of a chat or team.
   * [**Bot Framework portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal, you can update the bot icon in the **SETTINGS** page.
 
     :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
 ## Add SSO authentication to your conversation bots
 
