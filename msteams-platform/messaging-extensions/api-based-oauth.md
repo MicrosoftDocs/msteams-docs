@@ -189,7 +189,11 @@ Ensure that the OAuth implementation in your app can handle error cases, such as
 
 * Token error cases: Missing token, expired token, or invalid token.
 * User login or permission error cases: User fails to log-in, the permission isn't granted, or user closes the dialog box.
-* Network and service error cases: Invoke request fails due to a network issue, service is down, service is unable to fetch the app, endpoint returns any error codes other than 401 or 403, or resource server returns 401 or 403.
+* If you get 401 or 403 error, ensure that you've:
+
+  * Added all the necessary scopes for your app.
+  * Entered all endpoints correctly.
+  * Added <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the allowed redirect URLs.
 
 ## Limitations and best practices
 
