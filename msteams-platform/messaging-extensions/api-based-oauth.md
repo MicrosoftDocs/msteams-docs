@@ -189,7 +189,7 @@ Ensure that the OAuth implementation in your app can handle error cases, such as
 
 * Token error cases: Missing token, expired token, or invalid token.
 * User login or permission error cases: User fails to log-in, the permission isn't granted, or user closes the dialog box.
-* If you get 401 or 403 error, ensure that you've:
+* If you encounter 401 or 403 error, ensure that you've:
 
   * Added all the necessary scopes for your app.
   * Entered all endpoints correctly.
