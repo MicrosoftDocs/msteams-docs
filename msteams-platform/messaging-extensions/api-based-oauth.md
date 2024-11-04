@@ -193,7 +193,7 @@ Ensure that the OAuth implementation in your app can handle error cases, such as
 
   * Added all the necessary scopes for your app.
   * Entered all endpoints correctly.
-  * Added <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the allowed redirect URLs.
+  * Added `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the allowed redirect URLs.
 
 ## Limitations and best practices
 
