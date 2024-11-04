@@ -1025,11 +1025,11 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the maximum height of the container. When the container has the maximum height and its content exceeds that height, a vertical scrollbar appears.
 
-Here is how the `maxHeight` property is defined:
+Here's how the `maxHeight` property is defined:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `maxHeight` | String | Defines the maximum height of the container. This property is available in container, column, table cell, and in other containers as well. <br> You must define the value in the `<number>px` format. |
+| `maxHeight` | String | Defines the maximum height of the container. This property is available in `Container`, `Column`, `TableCell`, and in other containers as well.<br>You must define the value in the `<number>px` format. |
 
 The following card payload shows a container with a scroll bar:
 
@@ -1041,7 +1041,7 @@ The following card payload shows a container with a scroll bar:
     "body": [
         {
             "type": "TextBlock",
-            "text": "Below is a scrollable container",
+            "text": "This is a scrollable container",
             "wrap": true,
             "size": "ExtraLarge",
             "weight": "Bolder"
@@ -1076,24 +1076,8 @@ The following card payload shows a container with a scroll bar:
                     "type": "TextBlock",
                     "text": "Item 5",
                     "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 6",
-                    "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 7",
-                    "size": "ExtraLarge"
                 }
             ]
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.OpenUrl",
-            "title": "Click me"
         }
     ]
 }
