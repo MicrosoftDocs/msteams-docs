@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Share content to live and upcoming meetings with Share to Teams
+        url: concepts/build-and-test/share-to-teams-from-web-apps.md
       - text: Authentication for your API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md
       - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
@@ -79,8 +81,14 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
       - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
-      - text: Screen share content to meetings
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
+
+    - linkListType: reference
+      links:
+      - text: Extend Microsoft 365 Copilot
+        url: /microsoft-365-copilot/extensibility/
+      - text: Community chat room for Microsoft Teams app developers
+        url: https://gitter.im/OfficeDev/home
+
 
 - title: Get started
   linkLists:
