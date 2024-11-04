@@ -420,17 +420,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 You can design Adaptive Cards in Teams where the value of an input depends on the value of another. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown must filter the cities displayed in the second dropdown. This can be achieved by creating an `Input.ChoiceSet` dropdown with dynamic typeahead search that depends on one or more other inputs in the card.
 
-**Placeholder for GIF**
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dropdown list with USA and its states.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows a dropdown list with USA and its states.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/ac-dependent-dropdown-usa.jpg" alt-text="Screenshot shows an Adaptive Card with dependent inputs.":::
 
 ### Implement dependent inputs
 

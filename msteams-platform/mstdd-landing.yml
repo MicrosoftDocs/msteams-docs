@@ -239,8 +239,6 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
