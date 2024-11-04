@@ -28,11 +28,18 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
+You can implement streaming bot messages in your app in one of the following ways:
+
+* Stream using Teams AI library
+* Stream using REST API
+
+## Stream message through Teams AI library
+
 ## Stream message through REST API
 
 Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
 
-When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted. 
+When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
 In some scenarios, the bot receives an error message without the error status code. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
@@ -48,7 +55,7 @@ The following are the query parameters for streaming:
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
 | `ChannelData.streamId` | ✔️ | Must be the same value as `entities.streamId`.|
 | `channelData.streamType` | ✔️ | Must be the same value as `entities.streamType`|
-| `channelData.streamSequence ` | ✔️ | Must be the same value as `entities.streamSequence` |
+| `channelData.streamSequence` | ✔️ | Must be the same value as `entities.streamSequence` |
 
 > [!NOTE]
 > You must insert the streaming metadata into both `entities` and `ChannelData`.
@@ -61,7 +68,7 @@ To enable streaming in bots, follow these steps:
 
 ### Start streaming
 
-The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls. 
+The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls.
 
 Your bot can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your bot generates its final response to the user.
 
@@ -111,7 +118,7 @@ The following image is an example of start streaming:
 
 :::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows start streaming." lightbox="../assets/images/bots/start_streaming.png":::
 
-### Continue streaming 
+### Continue streaming
 
 Use the `streamId` that you've received from the initial request to send either informative or streaming messages. You can [start with informative updates](#start-with-informative-updates) and later [switch to response streaming](#switch-to-response-streaming) when the final response is ready.
 
@@ -263,7 +270,7 @@ The following image is an example of a bot providing updates in chunks:
 
 :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
 
-### Final Streaming 
+### Final Streaming
 
 After your bot has completed generating its message, send the end streaming signal along with the final message and its contents. For the final message, the `type` of activity is `message`. Here, the bot sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
 
