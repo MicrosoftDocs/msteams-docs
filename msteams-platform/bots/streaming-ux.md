@@ -64,7 +64,7 @@ You can configure streaming with your bot by following these steps:
 
 The following code snippet shows an example of streaming bot message:
 
-# C#(#tab/csharp)
+# [C#](#tab/csharp)
 
 ```C#
     // Create OpenAI Model
@@ -123,7 +123,7 @@ ResponseReceivedHandler endStreamHandler = new((object sender, ResponseReceivedE
     );
 ```
 
-# JavaScript/TypeScript(#tab/jsts)
+# [JavaScript/TypeScript](#tab/jsts)
 
 ```JavaScript
 const model = new OpenAIModel({
@@ -153,7 +153,6 @@ Ther following limitations are valid when you're using Azure Open AI and Open AI
 
 * Streaming is only available in 1:1 chats.
 * `SendActivity` requests are restricted to 1 RPS. Our SDK buffers to 1.5 seconds.
-*
 
 ## Stream message through REST API
 
