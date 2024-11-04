@@ -40,7 +40,7 @@ SameSite cookie attributes are as follows:
 
 |Setting | Enforcement | Value |Attribute Specification |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookies are sent automatically only in a **first party** context and with HTTP GET requests. SameSite cookies are withheld on cross site sub requests, such as calls to load images or iframes. They sent when a user navigates to the URL from an external site, for example, by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Cookies are sent automatically only in a **first party** context and with HTTP GET requests. SameSite cookies are withheld on cross site sub requests, such as calls to load images or `iframes`. They sent when a user navigates to the URL from an external site, for example, by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |The browser only sends cookies for first party context requests. These are requests originating from the site that set the cookie. If the request originated from a different URL than that of the current location, none of the cookies tagged with the `Strict` attribute are sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
 | **None** | Cookies are sent in both first party context and cross origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute, which requires an encrypted connection. Cookies that don't adhere to that requirement are **rejected**. <br/>**Both attributes are required together**. If  **`None`** is specified without **`Secure`**  or if the HTTPS protocol isn't used, then the third party cookies are rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
@@ -82,40 +82,40 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## Third party cookies deprecation
 
-All third party cookies set in the top-level domain are blocked when that domain is embedded in an iframe. This third party cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
+All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`. This third party cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
 
 This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
 
 ### Pop-out authentication scenario
 
-Pop-out authentication scenarios are a common method for apps to authenticate using different identity providers like Google Auth and Facebook Auth. Here's how it works:
+Pop-out authentication scenarios are a common method for apps to authenticate using different identity providers like Facebook Login and Google Identity. Here's how it works:
 
-1. The rendered iframe triggers a popup that loads the selected authentication provider sign-in page.
+1. The rendered `iframe` triggers a popup that loads the selected authentication provider sign-in page.
 1. After the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes.
-1. These cookies are used inside the embedded iframe to authenticate the user.
+1. These cookies are used inside the embedded `iframe` to authenticate the user.
 
-Pop-out authentication doesn't break with third party cookie deprecation because:
+Pop-out authentication isn't affected by third-party cookie deprecation, for the following reasons:
 
-* Chromium-based browsers like Chrome, Microsoft Edge, and Firefox allow access to cookies that are unpartitioned, secure, and `SameSite=None`. This is true when the cookies are set in a popped-out window from the iframe to be accessible in the iframe.
+* Chromium-based browsers like Google Chrome and Microsoft Edge allow access to cookies that are unpartitioned, secure, and `SameSite=None`. This is true when the cookies are set in a popped-out window from the `iframe` to be accessible in the `iframe`.
 
-* The browsers that aren't Chromium-based align their cookie deprecation with Chromium-based browsers.
+* The browsers that aren't Chromium-based such as Firefox align their cookie deprecation with Chromium-based browsers.
 
 The cookie app simulates this scenario. To use the cookie app:
 
-1. Embed the cookie app in an iframe.
+1. Embed the cookie app in an `iframe`.
 1. Use the pop-out button to pop it out as a first-party domain.
 1. Navigate to the partitioned cookie page.
 1. Select **Set Cookies Using API**.
 
-This action sets multiple cookies with a combination of secure, SameSite, and partitioned attributes. Only `SameSite=None`, secure, and unpartitioned cookies are accessible within the iframe.
+This action sets multiple cookies with a combination of secure, SameSite, and partitioned attributes. Only `SameSite=None`, secure, and unpartitioned cookies are accessible within the `iframe`.
 
-The following screenshot represents the cookies accessible in the embedded iframe when set from the top-level popped-out window of the iframe’s URL:
+The following screenshot represents the cookies accessible in the embedded `iframe` when set from the top-level popped-out window of the `iframe`’s URL:
 
 :::image type="content" source="../assets/images/3p-cookies.png" alt-text="Screenshot shows you the third party cookies app in Microsoft Teams.":::
 
 ### Actions required for cookies set by iframe
 
-Any cookies set by the embedded iframe must pass the partitioned attribute as false. As chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), cookies that have a missing partitioned attribute won't be set.
+Embedded `iframes` must set cookies with the partitioned attribute as false. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
 
 ## See also
 
