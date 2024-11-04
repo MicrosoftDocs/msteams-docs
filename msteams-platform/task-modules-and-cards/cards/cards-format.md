@@ -834,6 +834,34 @@ The following code shows an example of formatting for Markdown connector cards:
 
 You can integrate multiple elements within a button using the `CompoundButton` element. It allows you to replicate the appearance and interaction of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.
 
+The following table lists the properties of the `CompoundButton` element:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `type` | ✔️ | String | Must be set to `CompoundButton`. |
+| `title` | ✔️ | String | Title of the button. Markdown isn't supported. |
+| `id` |  | String | Unique identifier for the element or action. |
+| `requires` |  | Object | A set of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
+| `isVisible` |  | Boolean | Controls the visibility of the element. |
+| `separator` |  | Boolean | Controls whether a separator must be displayed between elements. No separator is displayed for the first element in a container, even if this property is set to `true`. |
+| `height` |  | String | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch` |
+| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right` |
+| `Spacing` |  | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Use `targetWidth` to author responsive cards that adapt their layout to the available horizontal space. <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon` |  | String | Icon shown on the button and the `iconInfo` objects are discussed in the next table. |
+| `badge` |  | String | Badge shown on the button. Markdown isn't supported. |
+| `description` |  | String | Description text of the button. Markdown isn't supported. |
+| `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard` |
+
+The following table lists the properties of the `iconInfo` object:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `name` | ✔️ | String | Name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
+| `size` |  | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style` |  | String | Style of the icon. Allowed values: `Regular`, `Filled` |
+| `color` |  | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
+
 Here's an example of how the `CompoundButton` element can be added:
 
 ```json
@@ -857,34 +885,6 @@ Here's an example of how the `CompoundButton` element can be added:
 ```
 
 :::image type="content" source="../../assets/images/Cards/compoundbutton.png" alt-text="Screenshot of desktop and mobile view of Compound buttons in an Adaptive Card.":::
-
-The following table lists the properties of the `CompoundButton` element:
-
-| Property | Required | Type | Description |
-|---------|---------|---------|---------|
-| `type` | ✔️ | String | Must be set to `CompoundButton`. |
-| `title` | ✔️ | String | Title of the button. Markdown isn't supported. |
-| `id` |  | String | Unique identifier for the element or action. |
-| `requires` |  | Object | Mandatory set of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
-| `isVisible` |  | Boolean | Controls the visibility of the button. |
-| `separator` |  | Boolean | Controls whether a separator is displayed between elements. No separator is displayed for the first element in a container, even if this property is set to true. |
-| `height` |  | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. Supported values: `auto`, `stretch`. |
-| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. Supported values: `Left`, `Center`, `Right`. |
-| `Spacing` |  | String | Controls the amount of space between elements. No space is added for the first element in a container. Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`. |
-| `targetWidth` |  | String | Controls the card width of the element that's displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Use `targetWidth` to author responsive cards that adapt their layout to the available horizontal space. Supported values: `veryNarrow`, `Narrow`, `Standard`, `Wide`. |
-| `icon` |  | String | Icon shown in the button and the `iconInfo` objects are discussed in the next table. |
-| `badge` |  | String | Badge shown on the button. Markdown isn't supported. |
-| `description` |  | String | Description text of the button. Markdown isn't supported. |
-| `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
-
-The following table lists the properties of the `iconInfo` object:
-
-| Property | Required | Type | Description |
-|---------|---------|---------|---------|
-| `name` | ✔️ | String | The name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
-| `size` |  | String | The size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
-| `style` |  | String | The style of the icon. Allowed values: `Regular`, `Filled` |
-| `color` |  | String | The color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
 
 ## CodeBlock in Adaptive Cards
 
