@@ -375,50 +375,44 @@
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking, device permissions for tabs
-  - name: Create a personal tab
+  - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
-  - name: Create a channel tab
-    href: tabs/how-to/create-channel-group-tab.md
-    displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
-  - name: Create a content page
-    href: tabs/how-to/create-tab-pages/content-page.md
-    displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
-  - name: Open content in multi-window
-    href: tabs/open-content-in-stageview.md
-    displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
-  - name: Create a configuration page
-    href: tabs/how-to/create-tab-pages/configuration-page.md
-    displayName: configurationUrl
-  - name: Create a removal page
-    href: tabs/how-to/create-tab-pages/removal-page.md
-    displayName: Reconfigure tab, register remove handler
-  - name: Tabs on mobile
-    href: tabs/design/tabs-mobile.md
-    displayName: Teams Store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
-  - name: Navigate within your tab
-    href: tabs/how-to/tab-navigation.md
-  - name: Build a dashboard tab app
-    href: tabs/how-to/Build-a-dashboard-tab-app.md
-    displayName: Dashboard, widget, Graph API call
-  - name: Build apps for shared channels
-    href: concepts/build-and-test/shared-channels.md
-    displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
-  - name: Build tabs with Adaptive Cards
-    href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
-  - name: Create conversational tabs
-    href: tabs/how-to/conversational-tabs.md
-    displayName: configurable
-  - name: Send activity feed notifications
-    href: /graph/teams-send-activityfeednotifications
-    displayName: activity feed, notification, customize notification
-  - name: App caching for your tab app
-    href: tabs/how-to/app-caching.md
-    displayName: App caching, caching, launch time, cache
+  - name: Tab features
+    items:
+    - name: Open content in multi-window
+      href: tabs/open-content-in-stageview.md
+      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
+    - name: Create a configurable tab
+      href: tabs/how-to/create-channel-group-tab.md
+      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+    - name: Create a content page
+      href: tabs/how-to/create-tab-pages/content-page.md
+      displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
+    - name: Create a configuration page
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+      displayName: configurationUrl
+    - name: Create a removal page
+      href: tabs/how-to/create-tab-pages/removal-page.md
+      displayName: Reconfigure tab, register remove handler
+    - name: Tabs on mobile
+      href: tabs/design/tabs-mobile.md
+      displayName: Teams Store apps approved by Microsoft for mobile 
+    - name: Build apps for shared channels
+      href: concepts/build-and-test/shared-channels.md
+      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+    - name: Send activity feed notifications
+      href: /graph/teams-send-activityfeednotifications
+      displayName: activity feed, notification, customize notification
+    - name: App caching for your tab app
+      href: tabs/how-to/app-caching.md
+      displayName: App caching, caching, launch time, cache
+    - name: Build a dashboard tab app
+      href: tabs/how-to/Build-a-dashboard-tab-app.md
+      displayName: Dashboard, widget, Graph API call
 - name: Build bots
   items:
   - name: Overview
@@ -850,6 +844,9 @@
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
+  - name: Approvals app APIs
+    href: /graph/approvals-app-api
+    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -1101,7 +1098,7 @@
       href: concepts/build-and-test/share-to-teams-overview.md
     - name: Share to Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
-      displayName: Share to Teams for Education
+      displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
