@@ -537,71 +537,35 @@ The following is an example of the incoming activity to a bot when user types so
 
 ### Conditional enablement of action buttons in Adaptive Cards
 
-Action buttons stay enabled despite users not filling required inputs.
-Use the `conditionallyEnabled` property to disable the action buttons until the user provides a rating. For a conditionally enabled button, if the `isEnabled` property is set to `false`, no actions will be enabled, regardless of the input values.
+You can use the `conditionallyEnabled` property to disable the action buttons until the user provides the required input.
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| `conditionallyEnabled` | Boolean | ✔️ | Determines if the action button remains disabled until the user starts interacting with the inputs. |
-| `isEnabled` | Boolean |  | Enables a button to remain disabled, irrespective of user input. |
+| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
+| `isEnabled` | Boolean |  | Controls the enabled state of the action. A disabled action cannot be clicked. If the action is represented as a button, the button's style will reflect this state. |
 
-You can use `associatedInputs` property to associate `Action.Submit` and `Action.Execute` to other inputs in the card. For more information, see [Data.Query definition](dynamic-search.md#dataquery-definition).
-
-# [Desktop](#tab/desktop1)
-
-:::row:::
-:::column span="2":::
-
-**Disabled**
-
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams desktop client.":::
-
-
-:::column-end:::
-
-:::column span="2":::
-
-**Enabled**
-
-:::image type="content" source="../../assets/images/adaptive-cards/desktop-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams desktop client.":::
-
-:::column-end:::
-
-:::row-end:::
-
-# [Mobile](#tab/mobile1)
-
-:::row:::
-:::column span="2":::
-
-**Disabled**
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams mobile client.":::
-
-
-:::column-end:::
-
-:::column span="2":::
-
-**Enabled**
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams mobile client.":::
-
-:::column-end:::
-
-:::row-end:::
-
----
-
-The following JSON payload shows an Adaptive Card with a conditionally enabled buttons:
+The following card payload shows a conditionally enabled buttons:
 
 ```json
 {
     "type": "AdaptiveCard",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.5",
-    "body":
-    ...
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Required text input",
+            "isRequired": true,
+            "id": "text"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Required date input",
+            "isRequired": true,
+            "id": "date"
+        }
+    ],
     "actions": [
         {
             "type": "Action.Submit",
@@ -616,6 +580,26 @@ The following JSON payload shows an Adaptive Card with a conditionally enabled b
     ]
 }
 ```
+
+:::row:::
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams.":::
+
+
+:::column-end:::
+
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams.":::
+
+:::column-end:::
+
+:::row-end:::
 
 #### Form completion feedback
 
