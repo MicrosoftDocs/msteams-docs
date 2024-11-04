@@ -1169,67 +1169,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-You can enable star ratings using the [`Input.Rating`](#inputrating) property to allow users to provide ratings. You can also use the [`Rating`](#rating) property that allows users to view ratings.
+You can add star rating input with the [`Input.Rating`](#inputrating) element. You can also use the [`Rating`](#rating) element to display view-only star ratings.
 
-### Input.Rating
-
-Here are the properties of the `Input.Rating` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Input.Rating` |
-| `allowHalfSteps` | | Boolean | Determines if the user can select half stars. Default value: `false` |
-| `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
-| `errorMessage` | | String | The error message to display when the input fails validation. |
-| `fallback` | | One object or string | An alternate element to render if the type of this one is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
-| `height` | | String | Specifies the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `auto`, `stretch`<br>Default value: `auto` |
-| `id` | | String | A unique identifier for the input element. |
-| `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
-| `isVisible` | | Boolean | Determines if the element is visible.<br>Default value: `true` |
-| `label` | | String | The label of the input element. |
-| `lang` | | String | The locale associated with the input element. |
-| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
-| `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `size` | | String | The size of the stars.<br>Supported values: `Medium`, `Large`<br>Default value: `Large` |
-| `spacing` | | String | Specifies the amount of space between this element and the previous one. No space is added for the first element in a container. Supported values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Specifies the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
-| `valueChangedAction` | | Action | The action to perform when the value changes. Supported value: `Action.ResetInputs` |
-
-# [Desktop](#tab/desktop3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on desktop.":::
-
-# [Mobile](#tab/mobile3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/ac-input-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the rating input element on mobile.":::
-
----
-
-### Rating
-
-Here are the properties of the `Rating` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Rating` |
-| `color` | | String | The color of the stars. Supported values: `Neutral`, `Marigold` |
-| `value` | | Number | The number of selected stars. This value can't exceed `max`, if `max` is specified. |
-| `max` | | Number | The total number of stars to be displayed. The default and maximum supported number of stars is five. |
-| `count` | | Number | The average number of ratings shown next to the star rating. |
-| `size` | | String | The size of the stars. <br> Supported values: `Medium`, `Large` |
-| `style` | | String | In compact mode, only one star is displayed. <br> Supported values: `Default`, `Compact` |
-| `id` | | String | Unique identifier for the rating element. |
-| `requires` | | Object | Dependencies for the rating element. |
-| `isVisible` | | Boolean| Determines if the element is visible. |
-| `separator` | | Boolean| Adds a separator line before the element. |
-| `height` | | String | Specifies the height of the element. `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Aligns the element horizontally. <br> Supported values: `Left`, `Center`, `Right` |
-| `spacing` | | String | Specifies the spacing around the element. <br> Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` | | String | Specifies the width of the element. <br> Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
-
-### Example
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-rating.png" alt-text="Screenshot shows an Adaptive Card with the input rating and read-only star ratings.":::
 
 The following payload shows an Adaptive Card with read-only and input-enabled star ratings:
 
@@ -1249,44 +1191,22 @@ The following payload shows an Adaptive Card with read-only and input-enabled st
             "id": "rating1",
             "label": "Pick a rating",
             "size": "medium",
+            "color": "marigold",
             "isRequired": true,
             "errorMessage": "Please pick a rating"
         },
         {
-            "type": "Input.Rating",
-            "id": "rating2",
-            "label": "Pick a rating",
-            "allowHalfSteps": true,
-            "size": "large",
-            "isRequired": true,
-            "errorMessage": "Please pick a rating",
-            "color": "marigold",
-            "value": 3
-        },
-        {
             "type": "TextBlock",
             "size": "large",
-            "text": "Read-only ratings",
+            "text": "Read-only rating",
             "separator": true,
             "spacing": "extraLarge"
-        },
-        {
-            "type": "Rating",
-            "value": 3.2,
-            "size": "medium"
         },
         {
             "type": "Rating",
             "max": 20,
             "value": 3.2,
             "color": "marigold"
-        },
-        {
-            "type": "Rating",
-            "style": "compact",
-            "value": 3.2,
-            "color": "marigold",
-            "count": 150
         }
     ],
     "actions": [
@@ -1298,15 +1218,56 @@ The following payload shows an Adaptive Card with read-only and input-enabled st
 }
 ```
 
-# [Desktop](#tab/desktop2)
+### Input.Rating
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-desktop.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on desktop.":::
+Here are the properties of the `Input.Rating` element:
 
-# [Mobile](#tab/mobile2)
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Input.Rating` |
+| `allowHalfSteps` | | Boolean | Determines if the user can select half stars. Default value: `false` |
+| `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `errorMessage` | | String | The error message to display when the input fails validation. |
+| `fallback` | | One object or string | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `height` | | String | Specifies the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `auto`, `stretch`<br>Default value: `auto` |
+| `id` | | String | A unique identifier for the input element. |
+| `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
+| `isVisible` | | Boolean | Determines if the element is visible.<br>Default value: `true` |
+| `label` | | String | The label of the input element. |
+| `lang` | | String | The locale associated with the input element. |
+| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
+| `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `size` | | String | The size of the stars.<br>Supported values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Specifies the amount of space between this element and the previous one. No space is added for the first element in a container. Supported values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Specifies the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `value` | | Number | The number of stars selected by default. This value can't exceed `max`, if `max` is specified. |
+| `valueChangedAction` | | Action | The action to perform when the value changes. Supported value: `Action.ResetInputs` |
 
-:::image type="content" source="../../assets/images/adaptive-cards/ac-rating-mobile.png" alt-text="Screenshot shows an Adaptive Card with the read-only star rating element on mobile.":::
+### Rating
 
----
+Here are the properties of the `Rating` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Rating` |
+| `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `count` | | Number | The number of "votes" associated with the rating. |
+| `fallback` | | One object or string | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Determines how the element should be horizontally aligned. Supported values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the element. |
+| `isVisible` | | Boolean | Determines if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the element. |
+| `max` | | Number | The number of stars to be display. The default and maximum supported number of stars is five. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
+| `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `size` | | String | The size of the stars.<br>Supported values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Specifies the amount of space between this element and the previous one. No space is added for the first element in a container. Supported values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Specifies the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `style` | | String | The style of the stars. In compact mode, only one star is displayed.<br>Supported values: `Default`, `Compact`<br>Default value: `Default` |
+| `targetWidth` | | String | Specifies the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `value` | | Number | The value of the rating. This value can't exceed `max`, if `max` is specified. |
 
 ## Code samples
 
