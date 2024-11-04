@@ -56,11 +56,11 @@ After `endStream()` is called, the stream is considered ended and no further upd
 Follow these steps to configure streaming bot messages:
 
 1. Use the `DefaultAugmentation` class.
-1. Set stream: true in the `OpenAIModel` declaration.
-1. Optional: You can also configure the following:
-    1. Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
-    1. Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
-    1. Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
+1. Set `stream` to true in the `OpenAIModel` declaration.
+1. [*Optional*] You can also configure the following:
+    * Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
+    * Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
+    * Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
 
 The following code snippet shows an example of streaming bot message:
 
