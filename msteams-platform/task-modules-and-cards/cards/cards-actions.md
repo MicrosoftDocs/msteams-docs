@@ -537,10 +537,8 @@ The following is an example of the incoming activity to a bot when user types so
 
 ### Conditional enablement of action buttons in Adaptive Cards
 
-In Adaptive Cards, action buttons stay enabled despite users not filling required inputs.
-For example, if you're creating an Adaptive Card for a feedback form, you want to ensure that users provide a rating before they can submit their feedback. Use the `conditionallyEnabled` property to disable the action buttons until the user provides a rating.
-
-The `conditionallyEnabled` property can only be used with `Action.Submit` and `Action.Execute`. For a conditionally enabled button, if the `isEnabled` property is set to `false`, no actions will be enabled, regardless of the input values.
+Action buttons stay enabled despite users not filling required inputs.
+Use the `conditionallyEnabled` property to disable the action buttons until the user provides a rating. For a conditionally enabled button, if the `isEnabled` property is set to `false`, no actions will be enabled, regardless of the input values.
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -602,21 +600,8 @@ The following JSON payload shows an Adaptive Card with a conditionally enabled b
     "type": "AdaptiveCard",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.5",
-    "body": [
-        {
-            "type": "Input.Text",
-            "placeholder": "Placeholder text",
-            "label": "Required text input",
-            "isRequired": true,
-            "id": "text"
-        },
-        {
-            "type": "Input.Date",
-            "label": "Required date input",
-            "isRequired": true,
-            "id": "date"
-        }
-    ],
+    "body":
+    ...
     "actions": [
         {
             "type": "Action.Submit",
