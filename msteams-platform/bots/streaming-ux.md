@@ -30,8 +30,8 @@ Streaming bot messages has two types of updates:
 
 You can implement streaming bot messages in your app in one of the following ways:
 
-* Stream using Teams AI library
-* Stream using REST API
+* [Stream using Teams AI library](#stream-message-through-teams-ai-library).
+* [Stream using REST API](#stream-message-through-rest-api).
 
 ## Stream message through Teams AI library
 
