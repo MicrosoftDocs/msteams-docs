@@ -41,9 +41,9 @@ Through streaming, your bot can offer an experience that is engaging and respons
 
 ### Streaming response class
 
-The `StreamingResponse` class is the helper class for streaming responses to the client. The class is used to send a series of updates to the client in a single response. If you are using your own custom model, you can directly instantiate and manage this class to stream responses.
+The `StreamingResponse` class is the helper class for streaming responses to the client. It allows you send a series of updates in one go, making the interaction smoother and more engaging. If you're using your own custom model, you can easily set up and manage this class to stream responses seamlessly. It's a great way to keep the user engaged.
 
-The expected sequence of calls is:
+Streaming bot messages follows the sequence:
 
 * `queueInformativeUpdate()`
 * `queueTextChunk()`
@@ -53,7 +53,7 @@ After `endStream()` is called, the stream is considered ended and no further upd
 
 ### Set up streaming messages
 
-You can configure streaming with your bot by following these steps:
+Follow these steps to configure streaming bot messages:
 
 1. Use the `DefaultAugmentation` class.
 1. Set stream: true in the `OpenAIModel` declaration.
@@ -123,7 +123,7 @@ ResponseReceivedHandler endStreamHandler = new((object sender, ResponseReceivedE
     );
 ```
 
-# [JavaScript/TypeScript](#tab/jsts)
+# [JavaScript or TypeScript](#tab/jsts)
 
 ```JavaScript
 const model = new OpenAIModel({
