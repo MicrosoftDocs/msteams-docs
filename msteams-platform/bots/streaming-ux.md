@@ -35,6 +35,126 @@ You can implement streaming bot messages in your app in one of the following way
 
 ## Stream message through Teams AI library
 
+Teams AI library offers you the capability to stream messages for AI-powered bots to overcome the response time lag while the LLM generates the full response. The main factors that can cause slow response time are multiple preprocessing steps like RAG or function calls and the time the LLM takes to generate a full response.
+
+Through streaming, your bot can offer an experience that is engaging and responsive.
+
+### Streaming response class
+
+The `StreamingResponse` class is the helper class for streaming responses to the client. The class is used to send a series of updates to the client in a single response. If you are using your own custom model, you can directly instantiate and manage this class to stream responses.
+
+The expected sequence of calls is:
+
+* `queueInformativeUpdate()`
+* `queueTextChunk()`
+* `endStream()`
+
+After `endStream()` is called, the stream is considered ended and no further updates can be sent.
+
+### Set up streaming messages
+
+You can configure streaming with your bot by following these steps:
+
+1. Use the `DefaultAugmentation` class.
+1. Set stream: true in the `OpenAIModel` declaration.
+1. Optional: You can also configure the following:
+    1. Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
+    1. Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
+    1. Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
+
+The following code snippet shows an example of streaming bot message:
+
+# C#(#tab/csharp)
+
+```C#
+    // Create OpenAI Model
+    builder.Services.AddSingleton<OpenAIModel > (sp => new(
+        new OpenAIModelOptions(config.OpenAI.ApiKey, "gpt-4o")
+        {
+            LogRequests = true,
+            Stream = true,              // Set stream toggle
+        },
+        sp.GetService<ILoggerFactory>()
+    ));
+
+ResponseReceivedHandler endStreamHandler = new((object sender, ResponseReceivedEventArgs args) =>
+    {
+        StreamingResponse? streamer = args.Streamer;
+
+        if (streamer == null)
+        {
+            return;
+        }
+
+        AdaptiveCard adaptiveCard = new("1.6")
+        {
+            Body = [new AdaptiveTextBlock(streamer.Message) { Wrap = true }]
+        };
+
+        var adaptiveCardAttachment = new Attachment()
+        {
+            ContentType = "application/vnd.microsoft.card.adaptive",
+            Content = adaptiveCard,
+        };
+
+
+        streamer.Attachments = [adaptiveCardAttachment];    // Set attachments
+
+    });
+
+
+    // Create ActionPlanner
+    ActionPlanner<TurnState> planner = new(
+        options: new(
+            model: sp.GetService<OpenAIModel>()!,
+            prompts: prompts,
+            defaultPrompt: async (context, state, planner) =>
+            {
+                PromptTemplate template = prompts.GetPrompt("Chat");
+                return await Task.FromResult(template);
+            }
+        )
+        {
+            LogRepairs = true,
+            StartStreamingMessage = "Loading stream results...", // Set informative message
+            EndStreamHandler = endStreamHandler // Set final chunk handler
+        },
+        loggerFactory: loggerFactory
+    );
+```
+
+# JavaScript/TypeScript(#tab/jsts)
+
+```JavaScript
+const model = new OpenAIModel({
+    // ...Setup OpenAI or AzureOpenAI
+    stream: true,                                         // Set stream toggle
+});
+
+const endStreamHandler: PromptCompletionModelResponseReceivedEvent = (ctx, memory, response, streamer) => {
+    // ... Setup attachments
+    streamer.setAttachments([...cards]);                      // Set attachments
+};
+
+const planner = new ActionPlanner({
+    model,
+    prompts,
+    defaultPrompt: 'default',
+    startStreamingMessage: 'Loading stream results...', // Set informative message
+    endStreamHandler: endStreamHandler                  // Set final chunk handler
+});
+```
+
+---
+
+### Limitations of using Azure Open AI or Open AI
+
+Ther following limitations are valid when you're using Azure Open AI and Open AI for streaming bot messages:
+
+* Streaming is only available in 1:1 chats.
+* `SendActivity` requests are restricted to 1 RPS. Our SDK buffers to 1.5 seconds.
+*
+
 ## Stream message through REST API
 
 Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
