@@ -1230,7 +1230,7 @@ Here are the properties of the `Input.Rating` element:
 | `errorMessage` | | String | The error message to display when the input fails validation. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
 | `height` | | String | Specifies the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `auto`, `stretch`<br>Default value: `auto` |
-| `id` | | String | A unique identifier for the input element. |
+| `id` | ✔️ | String | A unique identifier for the input element. |
 | `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
 | `isVisible` | | Boolean | Determines if the element is visible.<br>Default value: `true` |
 | `label` | | String | The label of the input element. |
