@@ -456,9 +456,6 @@
     - name: Bot messages with AI-generated content
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
-    - name: Stream bot messages
-      href: bots/streaming-ux.md
-      displayName: Streaming, response generation
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot
@@ -515,6 +512,9 @@
         href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      - name: Stream bot messages
+        href: bots/streaming-ux.md
+        displayName: Streaming, response generation, AI library, AI SDK, REST API
       - name: Build custom engine agent
         items: 
           - name: Custom engine agent for Microsoft 365 
