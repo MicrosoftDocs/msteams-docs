@@ -37,9 +37,7 @@ You can implement streaming bot messages in your app in one of the following way
 
 Teams AI library offers you the capability to stream messages for AI-powered bots to overcome the response time lag while the LLM generates the full response. The main factors that can cause slow response time are multiple preprocessing steps like RAG or function calls and the time the LLM takes to generate a full response.
 
-Through streaming, your bot can offer an experience that is engaging and responsive.
-
-To configure streaming messages for your AI-powered bot app:
+Through streaming, your bot can offer an experience that is engaging and responsive. To configure streaming messages for your AI-powered bot app:
 
 * **Enable streaming for AI SDK Bot**:
   Bot messages can be streamed through Teams AI library. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
@@ -54,9 +52,15 @@ To configure streaming messages for your AI-powered bot app:
   * **Summarizing content**
   * **Finding relevant work items**
 
-### Edit the final streamed message
+  The following example shows the information updates in an AI-powered bot:
 
-### Enable AI-powered features for final message
+  :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI bot.":::
+
+* **Edit the final streamed message**:
+
+  You can format text messages and simple markdown while the messages are being streamed. The formatting for adaptive cards, images, or rich HTML is possible only after the final message is done.
+
+* **Enable AI-powered features for final message**:
 
 ### Configure streaming bot messages
 
