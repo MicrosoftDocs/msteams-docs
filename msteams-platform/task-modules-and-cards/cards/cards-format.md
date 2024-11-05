@@ -302,69 +302,6 @@ Following image illustrates user mention in Incoming Webhook:
 
 :::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot shows a user mention in Incoming Webhook.":::
 
-### Icons in Adaptive Card
-
-Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element.
-
-Here are the properties of the `Icon` element:
-
-| Property | Description |
-| --- | --- |
-| `type` | Must be `Icon`. |
-| `name` | Name of the `Icon`. For example, `calendar`.|
-| `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
-| `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
-| `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
-| `selectAction` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
-
-The following JSON code is an example of an Adaptive Card schema with a Fluent icon:
-
-```json
-{
-  "type": "AdaptiveCard",
-  "speak": "3 minute energy flow with kayo video",
-  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Image",
-      "url": "https://raw.githubusercontent.com/OfficeDev/Microsoft-Teams-Card-Samples/main/samples/author-highlight-video/assets/video_image.png",
-      "altText": "3 Minute Energy Flow with Kayo Video"
-    },
-    {
-      "type": "TextBlock",
-      "text": "3 Minute Energy Flow with Kayo",
-      "wrap": true,
-      "size": "Large",
-      "weight": "Bolder"
-    },
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "width": "stretch",
-          "items": [
-            {
-              "type": "Icon",
-              "name": "Calendar",
-              "size": "Medium",
-              "style": "Filled",
-              "color": "Accent",
-              "selectAction": {
-                "type": "Action.OpenUrl"
-              }
-            }
-          ],
-          "spacing": "Small",
-          "verticalContentAlignment": "Center"
-        }
-      ]
-    }
- ]
-}
-```
-
 ### People icon in an Adaptive Card
 
 People icon helps users to view the images of users in an Adaptive Card. You can insert an image and apply all the properties supported on images.
@@ -1229,6 +1166,46 @@ The images in the previous section were created using Teams **App Studio**, wher
 You can test formatting in your own cards by modifying this code.
 
 ---
+
+## Icons in Adaptive Card
+
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element.
+
+Here are the properties of the `Icon` element:
+
+| Property | Description |
+| --- | --- |
+| `type` | Must be `Icon`. |
+| `name` | Name of the `Icon`. For example, `calendar`.|
+| `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
+| `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
+| `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
+| `selectAction` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
+
+The following card payload shows an Adaptive Card with a Fluent icon:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Below is an Icon element"
+    },
+    {
+ "type": "Icon",
+        "name": "Calendar",
+        "size": "Medium",
+        "style": "Filled",
+        "color": "Accent"
+    }
+ ]
+}
+```
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-fluent-icon.png" alt-text="Screenshot shows an Adaptive Card with a Fluent icon.":::
 
 ## Code samples
 
