@@ -41,16 +41,18 @@ Through streaming, your bot can offer an experience that is engaging and respons
 
 To configure streaming messages for your AI-powered bot app:
 
-* [Enable streaming for AI SDK Bot](#enable-streaming-for-ai-sdk-bot).
-* [Set informative message](#set-informative-message).
-* [Edit the final streamed message](#edit-the-final-streamed-message).
-* [Enable AI-powered features for final message](#enable-ai-powered-features-for-final-message)
+* **Enable streaming for AI SDK Bot**:
+  Bot messages can be streamed through Teams AI library. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
 
-### Enable streaming for AI SDK Bot
+* **Set informative message**:
 
-Bot messages can be streamed through Teams AI library. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
+  You can set a single informative messages for an AI-powered bot. The message that you set repeatedly appears to the user each time the bot sends a new message update.
 
-### Set informative message
+  Here are some examples for informative messages that you can set in your app:
+
+  * **Scanning through documents**
+  * **Summarizing content**
+  * **Finding relevant work items**
 
 ### Edit the final streamed message
 
