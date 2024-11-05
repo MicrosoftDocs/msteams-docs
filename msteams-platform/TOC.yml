@@ -691,7 +691,7 @@
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
-    - name: Responsive layout in Adaptive Cards container
+    - name: Container layouts in Adaptive Cards
       href: task-modules-and-cards/container-layouts.md
       displayName: Container layout
     - name: People Picker in Adaptive Cards

@@ -1,21 +1,21 @@
 ---
-title: Responsive layout in Adaptive Cards container
+title: Container Layouts in Adaptive Cards
 author: surbhigupta
-description: Learn about container layouts in Adaptive Cards, including `Layout.Flow`, `Layout.AreaGrid`, and `Layout.Stack`, to create responsive and flexible card designs.
+description: Learn about container layouts in Adaptive Cards, including Layout.Flow, Layout.AreaGrid, and Layout.Stack, to create responsive and flexible card designs.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-sdhakshina
 ms.date: 11/07/2024
 ---
 
-# Responsive layout in Adaptive Cards container
+# Container layouts
 
 By default, elements in containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself are laid out in a top-to-bottom stack. This type of layout is appropriate for many scenarios, but sometimes it's a bit constraining. To split the horizontal space of a card into different areas, one would typically use the `ColumnSet` element which, while powerful, comes with its set of challenges and gotchas.
 
 Adaptive Cards support two types of layouts that can be applied to any container:
 
 * `Layout.Flow` which spreads elements horizontally and wraps them across multiple rows, as needed,
-* `Layout.AreaGrid` which divides the container into named `areas` in to which elements can be placed via the `grid.area` property which can be set on any element.
+* `Layout.AreaGrid` which divides the container into named `areas` in to which elements can be placed via the `grid.area` property which can be set on any element. To assign an element in the container to a specific area in the grid, its `grid.area` property should be set.
 
 An explicit `Layout.Stack` layout is also available.
 
