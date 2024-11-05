@@ -35,12 +35,12 @@ You can implement streaming bot messages in your app in one of the following way
 
 ## Stream message through Teams AI library
 
-The library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response times include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
+The Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response times include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
 > [!NOTE]
 >
-> * You can stream bot messages only in a personal one-on-one chat.
-> * Streaming is not available with tools and the o1 model.
+> * You can stream bot messages only in a personal 1:1 chat.
+> * Streaming is not available with tools and the `o1` model.
 
 Through streaming, your AI bot can offer an experience that is engaging and responsive. To configure streaming messages for your AI-powered bot app:
 
