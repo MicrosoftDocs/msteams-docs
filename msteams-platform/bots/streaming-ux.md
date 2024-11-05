@@ -55,9 +55,9 @@ To configure streaming messages for your AI-powered bot app:
 
     You can set up just one informative message for your AI-powered bot. This message appears for the user every time the bot sends an update. Here are some examples for informative messages that you can set in your app:
 
-* **Scanning through documents**
-* **Summarizing content**
-* **Finding relevant work items**
+    * **Scanning through documents**
+    * **Summarizing content**
+    * **Finding relevant work items**
 
     To set informative message, set it in the ActionPlanner using the `StartStreamingMessage` config.
 
@@ -73,7 +73,7 @@ To configure streaming messages for your AI-powered bot app:
 
     :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI bot.":::
 
-  The following example shows the streaming response in an AI-powered bot:
+    The following example shows the streaming response in an AI-powered bot:
 
     :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI bot.":::
 
