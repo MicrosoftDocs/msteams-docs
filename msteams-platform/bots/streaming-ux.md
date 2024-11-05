@@ -39,18 +39,27 @@ Teams AI library offers you the capability to stream messages for AI-powered bot
 
 Through streaming, your bot can offer an experience that is engaging and responsive.
 
-### Enable Streaming for AI SDK Bot
+### Enable streaming for AI SDK Bot
 
 Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
 
 Follow these steps to configure streaming bot messages:
 
-1. Use the `DefaultAugmentation` class.
+1. Use the `DefaultAugmentation` class in the config.json and in the main application class. Update one of the following, as needed:
+    * For a C# bot app: Update `program.cs`.
+    * For a JavaScript app: Update `index.ts`.
+    * For a Python app: `bot.py`.
 1. Set `stream` to true in the `OpenAIModel` declaration.
 1. [*Optional*] You can also configure the following:
     * Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
     * Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
     * Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
+
+### Set informative Message
+
+### Edit the final streamed message
+
+### Enabl AI-powered features for final message
 
 The following code snippet shows an example of streaming bot message:
 
