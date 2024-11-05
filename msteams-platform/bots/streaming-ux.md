@@ -37,15 +37,19 @@ You can implement streaming bot messages in your app in one of the following way
 
 The Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response times include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
+Through streaming, your AI bot can offer an experience that is engaging and responsive for the user.
+
 > [!NOTE]
 >
-> * Streaming bot messages isn't available with tools and the `o1` model.
+> Streaming bot messages isn't available with tools and the `o1` model.
 
-Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. To configure streaming messages for your AI-powered bot app:
+To configure streaming messages for your AI-powered bot app:
 
 1. **Enable streaming for AI SDK Bot**:
 
   Bot messages can be streamed through Teams AI library. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
+
+  To enable streaming for AI SDK, use the `DefaultAugmentation` class in `config.json` and the main application class.
 
 1. **Set informative message**:
 
@@ -54,6 +58,8 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 * **Scanning through documents**
 * **Summarizing content**
 * **Finding relevant work items**
+
+  To set informative message, set it in the ActionPlanner using the `StartStreamingMessage` config.
 
     The following example shows the information updates in an AI-powered bot:
 
@@ -282,6 +288,11 @@ The following are the query parameters for streaming:
 
 > [!NOTE]
 > You must insert the streaming metadata into both `entities` and `ChannelData`.
+> Here are some requirements to use streamSequence for REST APIs:
+>
+> * First one must be number '1'.
+> * Subsequent numbers (except final) must be a monotonic increasing integer (For example, 1->2->3).
+> * For the final message, `streamSequence` must not be set.
 
 To enable streaming in bots, follow these steps:
 
