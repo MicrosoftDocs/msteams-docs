@@ -1220,24 +1220,24 @@ Here are the properties of the `Input.Rating` element:
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Input.Rating`. |
 | `allowHalfSteps` | | Boolean | Controls if the user can select half stars. Default value: `false` |
-| `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
 | `errorMessage` | | String | The error message to display when the input fails validation. |
-| `fallback` | | One of Object or String | An alternate element to render if the type of this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Supported values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `fallback` | | One of Object or String | An alternate element to render if the type of this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `auto`, `stretch`<br>Default value: `auto` |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
 | `id` | ✔️ | String | A unique identifier for the element or action. |
 | `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
 | `isVisible` | | Boolean | Determines the visibility of the element.<br>Default value: `true` |
 | `label` | | String | The label of the input. |
 | `lang` | | String | The locale associated with the element. |
 | `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported values: `HostCapabilities` |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities` |
 | `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `size` | | String | The size of the stars.<br>Supported values: `Medium`, `Large`<br>Default value: `Large` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `value` | | Number | The default value of the input. This value can't exceed `max`, if `max` is specified. |
-| `valueChangedAction` | | Action | An `Action.ResetInputs` action that will be executed when the value of the input changes.<br>Supported value: `Action.ResetInputs` |
+| `valueChangedAction` | | Action | An `Action.ResetInputs` action that will be executed when the value of the input changes.<br>Allowed value: `Action.ResetInputs` |
 
 ### Rating
 
@@ -1246,22 +1246,22 @@ Here are the properties of the `Rating` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Rating`. |
-| `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
 | `count` | | Number | The number of "votes" associated with the rating. |
-| `fallback` | | One of Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Supported values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `fallback` | | One of Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Supported values: `Left`, `Center`, `Right` |
+| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the element or action. |
 | `isVisible` | | Boolean | Controls the visibility of the element.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the element. |
 | `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed value: `HostCapabilities` |
 | `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `size` | | String | The size of the stars.<br>Supported values: `Medium`, `Large`<br>Default value: `Large` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Supported values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `style` | | String | The style of the stars. In compact mode, only one star is displayed.<br>Supported values: `Default`, `Compact`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Supported values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `style` | | String | The style of the stars. In compact mode, only one star is displayed.<br>Allowed values: `Default`, `Compact`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `value` | | Number | The value of the rating. This value must be between zero and `max`, if `max` is specified. |
 
 ## Code samples
