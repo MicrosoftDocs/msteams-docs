@@ -1169,7 +1169,7 @@ You can test formatting in your own cards by modifying this code.
 
 ## Ratings in Adaptive Cards
 
-You can add star rating input to an Adaptive Card with the [`Input.Rating`](#inputrating) element. You can also use the [`Rating`](#rating) element to add view-only star ratings.
+You can add star rating input to an Adaptive Card with the [`Input.Rating`](#inputrating) element. You can also use the [`Rating`](#rating) element to add read-only star ratings.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-rating.png" alt-text="Screenshot shows an Adaptive Card with the input rating and read-only star ratings.":::
 
@@ -1225,14 +1225,15 @@ Here are the properties of the `Input.Rating` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Input.Rating` |
-| `allowHalfSteps` | | Boolean | Determines if the user can select half stars. Default value: `false` |
+| `allowHalfSteps` | | Boolean | Controls if the user can select half stars. Default value: `false` |
 | `color` | | String | The color of the stars.<br>Supported values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
 | `errorMessage` | | String | The error message to display when the input fails validation. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Specifies the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Supported values: `auto`, `stretch`<br>Default value: `auto` |
 | `id` | ✔️ | String | A unique identifier for the input element. |
 | `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
-| `isVisible` | | Boolean | Determines if the element is visible.<br>Default value: `true` |
+| `isVisible` | | Boolean | Determines the visibility of the element.<br>Default value: `true` |
 | `label` | | String | The label of the input element. |
 | `lang` | | String | The locale associated with the input element. |
 | `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
