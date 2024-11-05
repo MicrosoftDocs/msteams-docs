@@ -95,62 +95,7 @@ You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. 
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-|`color` | | String | The color to use for the data point.<br>Supported values: `good`, `warning`, `attention`,
-"neutral"
-,
-"categoricalRed"
-,
-"categoricalPurple"
-,
-"categoricalLavender"
-,
-"categoricalBlue"
-,
-"categoricalLightBlue"
-,
-"categoricalTeal"
-,
-"categoricalGreen"
-,
-"categoricalLime"
-,
-"categoricalMarigold"
-,
-"sequential1"
-,
-"sequential2"
-,
-"sequential3"
-,
-"sequential4"
-,
-"sequential5"
-,
-"sequential6"
-,
-"sequential7"
-,
-"sequential8"
-,
-"divergingBlue"
-,
-"divergingLightBlue"
-,
-"divergingCyan"
-,
-"divergingTeal"
-,
-"divergingYellow"
-,
-"divergingPeach"
-,
-"divergingLightRed"
-,
-"divergingRed"
-,
-"divergingMaroon"
-,
-"divergingGray" |
+|`color` | | String | The color to use for the data point.<br>Supported values: `good`, `warning`, `attention`,`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
 
 ## Gauge Chart
 
