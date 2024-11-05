@@ -541,10 +541,10 @@ The following are the success and error codes:
 
 ## Sample code
 
-| Sample name | Description | Node.js | C# |
-| --- | --- | --- | --- |
+| Sample name | Description | Node.js | C# | Python |
+| --- | --- | --- | --- | --- |
 | {TBD} | This is a conversational streaming bot with REST API. | {TBD} | {TBD} |
-| Conversational streaming bot | This is a conversational streaming bot with Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) |
+| Conversational streaming bot | This is a conversational streaming bot with Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
