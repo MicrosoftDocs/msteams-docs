@@ -1192,7 +1192,7 @@ Here's an Adaptive Card example that uses the `Icon` element:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Below is an Icon element"
+      "text": "Here's an Icon element"
     },
     {
   "type": "Icon",
