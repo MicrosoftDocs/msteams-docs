@@ -39,13 +39,28 @@ Teams AI library offers you the capability to stream messages for AI-powered bot
 
 Through streaming, your bot can offer an experience that is engaging and responsive.
 
+To configure streaming messages for your AI-powered bot app:
+
+* [Enable streaming for AI SDK Bot](#enable-streaming-for-ai-sdk-bot).
+* [Set informative message](#set-informative-message).
+* [Edit the final streamed message](#edit-the-final-streamed-message).
+* [Enable AI-powered features for final message](#enable-ai-powered-features-for-final-message)
+
 ### Enable streaming for AI SDK Bot
 
-Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
+Bot messages can be streamed through Teams AI library. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
+
+### Set informative message
+
+### Edit the final streamed message
+
+### Enable AI-powered features for final message
+
+### Configure streaming bot messages
 
 Follow these steps to configure streaming bot messages:
 
-1. Use the `DefaultAugmentation` class in the config.json and in the main application class. Update one of the following, as needed:
+1. Use the `DefaultAugmentation` class in the `config.json` and in the main application class. Update one of the following, as needed:
     * For a C# bot app: Update `program.cs`.
     * For a JavaScript app: Update `index.ts`.
     * For a Python app: `bot.py`.
@@ -54,12 +69,6 @@ Follow these steps to configure streaming bot messages:
     * Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
     * Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
     * Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
-
-### Set informative Message
-
-### Edit the final streamed message
-
-### Enabl AI-powered features for final message
 
 The following code snippet shows an example of streaming bot message:
 
