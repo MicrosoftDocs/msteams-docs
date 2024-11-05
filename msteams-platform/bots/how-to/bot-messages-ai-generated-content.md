@@ -3,7 +3,7 @@ title: Bot messages with AI-generated content
 description: Learn how to add an AI label, sensitivity labels, citations, and feedback buttons to bots with AI-generated content with Teams AI library and Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 10/31/2024
+ms.date: 11/18/2024
 ---
 
 # Bot messages with AI-generated content
@@ -56,7 +56,7 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `additionalType` | Array | Yes | Enables the AI label in the bot message. The only allowed value is `AIGeneratedContent`. |
+| `additionalType` | Array | ✔️ | Enables the AI label in the bot message. The only allowed value is `AIGeneratedContent`. |
 
 After an AI label is added, your bot’s message displays an **AI generated** label next to the bot’s name with a hover-over disclaimer stating, **AI-generated content may be incorrect**. The AI label and disclaimer can't be customized for AI-powered bots.
 
@@ -69,7 +69,7 @@ After an AI label is added, your bot’s message displays an **AI generated** la
 
 ## Citations
 
-It's important to cite the sources of the bot message to help users ask follow-up xstions or conduct independent research. Cite data sources, such as files, messages, emails, and work items, to provide valuable insights to users. Citations are important for bots using techniques such as Retrieval Augmented Generation (RAG).
+It's important to cite the sources of the bot message to help users ask follow-up questions or conduct independent research. Cite data sources, such as files, messages, emails, and work items, to provide valuable insights to users. Citations are important for bots using techniques such as Retrieval Augmented Generation (RAG).
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with in-text citation.":::
 
