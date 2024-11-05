@@ -88,15 +88,15 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
 Follow these steps to configure streaming bot messages:
 
-1. Use the `DefaultAugmentation` class in the `config.json` and in the main application class. Update one of the following, as needed:
+1. **Enable streaming for AI bot**: Use the `DefaultAugmentation` class in the `config.json` and in the main application class. Update one of the following, as needed:
     * For a C# bot app: Update `program.cs`.
     * For a JavaScript app: Update `index.ts`.
     * For a Python app: `bot.py`.
 1. Set `stream` to true in the `OpenAIModel` declaration.
 1. [*Optional*] You can also configure the following:
-    * Set the informative message in the `ActionPlanner` declaration via the `StartStreamingMessage config`.
-    * Set the feedback loop toggle in the `AIOptions` object in the app declaration and specify a handler.
-    * Set attachments in the final chunk via the `EndStreamHandler` in the `ActionPlanner` declaration.
+    * **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
+    * **Edit the final streamed message**: Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler.
+    * **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
 
 The following code snippet shows an example of streaming bot message:
 
