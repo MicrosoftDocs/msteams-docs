@@ -1169,7 +1169,7 @@ You can test formatting in your own cards by modifying this code.
 
 ## Icons in Adaptive Card
 
-Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. You can also use Fluent icons on action buttons by setting its `iconUrl` property to a value in the format of `icon:<icon name>[,regular|filled]`.
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. You can also use Fluent icons on action buttons by setting the action's `iconUrl` property to a value in the format of `icon:<icon name>[,regular|filled]`.
 
 Here are the properties of the `Icon` element:
 
