@@ -261,7 +261,7 @@ Here's a list of limitations when using Azure OpenAI or OpenAI to stream bot mes
 - Streaming isn't available with AI SDK's function calls yet.
 - Here are some requirements to use `streamSequence` for AI SDK:
   - The sequence must start with number '1'.
-  - Subsequent numbers (except final) must be a monotonic increasing integer (For example, 1->2->3).
+  - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
   - For the final message, `streamSequence` must not be set.
 
 ## Stream message through REST API
@@ -291,7 +291,7 @@ The following are the properties for streaming bot messages:
 > Here are some requirements for using `streamSequence` for REST APIs:
 >
 > - First one must be number '1'.
-> - Subsequent numbers (except final) must be a monotonic increasing integer (For example, 1->2->3).
+> - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
 > - For the final message, `streamSequence` must not be set.
 
 To enable streaming in bots, follow these steps:
