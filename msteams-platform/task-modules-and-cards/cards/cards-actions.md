@@ -535,16 +535,17 @@ The following is an example of the incoming activity to a bot when user types so
 }
  ```
 
-### Conditional enablement of action buttons in Adaptive Cards
+### Conditional enablement of action buttons
 
-You can use the `conditionallyEnabled` property to disable the action buttons until the user provides the required input.
+You can use the `conditionallyEnabled` property to disable action buttons until the user provides the required input. For a conditionally enabled button, if the `isEnabled` property is set to `false`, actions are disabled regardless of the input.
+
+Here's how the `conditionallyEnabled` property is defined:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
-| `isEnabled` | Boolean |  | Controls the enabled state of the action. A disabled action cannot be clicked. If the action is represented as a button, the button's style will reflect this state. |
+| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. This property can only be used with `Action.Submit` and `Action.Execute` actions. |
 
-The following card payload shows a conditionally enabled buttons:
+The following card payload shows a conditionally enabled button:
 
 ```json
 {
@@ -587,7 +588,6 @@ The following card payload shows a conditionally enabled buttons:
 **Disabled**
 
 :::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams.":::
-
 
 :::column-end:::
 
