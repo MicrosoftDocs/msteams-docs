@@ -26,7 +26,8 @@ Container layouts can be used to easily implement responsive layouts, as it's po
 Let's say we want to define a card with a typical layout:
 
 * An image on the left,
-* And some text on the right of the image
+* And some text on the right of the image.
+
 But, we want the text to show below the image when there isn't enough horizontal space.
 
 This can be done easily using `Layout.AreaGrid`:
@@ -82,6 +83,8 @@ This can be done easily using `Layout.AreaGrid`:
     ]
 }
 ```
+
+:::image type="content" source="../assets/images/adaptive-cards/adaptive-card-container.png" alt-text="Screenshot shows you the adaptive card container.":::
 
 ## How does it work?
 
