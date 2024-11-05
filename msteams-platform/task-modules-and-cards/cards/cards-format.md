@@ -1023,7 +1023,7 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
 
 ## Scrollable containers in Adaptive Cards
 
-A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the maximum height of the container. When the container has the maximum height and its content exceeds that height, a vertical scrollbar appears.
+A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the maximum height of the container. When the container has a maximum height and its content exceeds that height, a vertical scrollbar appears.
 
 Here's how the `maxHeight` property is defined:
 
