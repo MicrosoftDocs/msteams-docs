@@ -830,11 +830,11 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
-## Compound Button in Adaptive Cards
+## Compound button in Adaptive Cards
 
-You can integrate multiple elements within a button using the `CompoundButton` element. It allows you to replicate the appearance and interaction of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.
+You can integrate multiple elements within a button using the `CompoundButton` element. This element allows you to replicate the appearance and interaction of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.
 
-The following table lists the properties of the `CompoundButton` element:
+Here are the properties of the `CompoundButton` element:
 
 | Property | Required | Type | Description |
 |---------|---------|---------|---------|
@@ -853,7 +853,8 @@ The following table lists the properties of the `CompoundButton` element:
 | `description` |  | String | Description text of the button. Markdown isn't supported. |
 | `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard` |
 
-The following table lists the properties of the `iconInfo` object:
+
+Here are the properties of the `icon` element:
 
 | Property | Required | Type | Description |
 |---------|---------|---------|---------|
@@ -862,7 +863,7 @@ The following table lists the properties of the `iconInfo` object:
 | `style` |  | String | Style of the icon. Allowed values: `Regular`, `Filled` |
 | `color` |  | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
 
-Here's an example of how the `CompoundButton` element can be added:
+Here's an Adaptive Card example that uses the `CompoundButton` element:
 
 ```json
 { 
@@ -872,16 +873,25 @@ Here's an example of how the `CompoundButton` element can be added:
     "body": [ 
         { 
             "type": "CompoundButton", 
-            "title": "Summarize", 
+            "title": "Summary", 
             "icon": { 
                 "name": "TextBulletList" 
             }, 
-            "subTitle": "Review key points in file", 
+            "description": "Review key points", 
             "height": "stretch", 
             "badge": "New" 
+        },
+        { 
+            "type": "CompoundButton", 
+            "title": "Photos", 
+            "icon": { 
+                "name": "Camera" 
+            }, 
+            "description": "Add photos", 
+            "height": "stretch"
         } 
     ] 
-} 
+}
 ```
 
 :::image type="content" source="../../assets/images/Cards/compoundbutton.png" alt-text="Screenshot of desktop and mobile view of Compound buttons in an Adaptive Card.":::
