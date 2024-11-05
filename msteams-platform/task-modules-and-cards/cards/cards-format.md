@@ -1176,13 +1176,13 @@ Here are the properties of the `Icon` element:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Icon`. |
-| `name` | Name of the `Icon`. For example, `calendar`.|
-| `size` | Size of the `Icon`. </br> Supported values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
-| `color` | Color of the `Icon`. </br> Supported values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
-| `style` | Style of the `Icon`. </br> Supported values: `Filled` or `Regular` |
-| `selectAction` | You can add actions to your `Icon`, and make it clickable. When the icon is clicked, the action is executed. All action types, except `Action.ShowCard`, are supported. |
+| `name` | Name of the icon. For example, `calendar`.|
+| `size` | Size of the icon. </br> Allowed values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
+| `color` | Color of the icon. </br> Allowed values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
+| `style` | Style of the icon. </br> Allowed values: `Filled`, `Regular` |
+| `selectAction` | You can add actions to your icon and make it clickable. When the icon is clicked, the action is executed. All Action types are supported except `Action.ShowCard`. |
 
-The following card payload shows an Adaptive Card with a Fluent icon:
+Here's an Adaptive Card example that uses the `Icon` element:
 
 ```json
 {
@@ -1195,7 +1195,7 @@ The following card payload shows an Adaptive Card with a Fluent icon:
       "text": "Below is an Icon element"
     },
     {
- "type": "Icon",
+  "type": "Icon",
         "name": "Calendar",
         "size": "Medium",
         "style": "Filled",
