@@ -250,12 +250,9 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 
 ## Code sample
 
-The following code sample demonstrates how to configure default landing capability for an app that supports both bot and tab capabilities in personal scope.
-
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|-----------|
-| Hello world | This sample shows how to configure default landing capability as a bot or a tab for an app | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
-
+| Hello world | This sample demonstrates how to configure default landing capability for an app that supports both bot and tab capabilities in personal scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
 
 
 ## Next step
