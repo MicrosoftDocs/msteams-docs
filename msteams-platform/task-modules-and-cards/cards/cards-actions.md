@@ -537,13 +537,13 @@ The following is an example of the incoming activity to a bot when user types so
 
 ### Conditional enablement of action buttons
 
-You can use the `conditionallyEnabled` property to disable action buttons until the user provides the required input. For a conditionally enabled button, if the `isEnabled` property is set to `false`, actions are disabled regardless of the input.
+You can use the `conditionallyEnabled` property to disable action buttons until the user changes the value of at least one of the required inputs. This property can only be used with `Action.Submit` and `Action.Execute` actions. For a conditionally enabled button, if the `isEnabled` property is set to `false`, actions are disabled regardless of the input.
 
 Here's how the `conditionallyEnabled` property is defined:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. This property can only be used with `Action.Submit` and `Action.Execute` actions. |
+| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
 
 The following card payload shows a conditionally enabled button:
 
