@@ -30,16 +30,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 October**
+**2024 November**
 
-* ***October 29, 2024***: [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md).
-* ***October 28, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
-* ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
-* ***October 28, 2024***: [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md).
-* ***October 25, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
-* ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
-* ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
-* ***October 17, 2024***: [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs).
+***November 07, 2024***: Placehoder.
 
 :::column-end:::
 :::row-end:::
@@ -53,6 +46,14 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| *October 29, 2024*** | [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) | [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| October 28, 2024 | [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md) | [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
+| October 28, 2024 | [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) | [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
+| October 28, 2024 | [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md) |  |
+| October 25, 2024 | [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md) |  |
+| October 17, 2024 | [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile |  |
+| October 17, 2024 | [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |  |
+| October 17, 2024 | [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs) |  |
 | 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app susbscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
