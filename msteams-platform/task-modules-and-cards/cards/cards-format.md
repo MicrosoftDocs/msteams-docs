@@ -1176,11 +1176,11 @@ Here are the properties of the `Icon` element:
 | Property | Description |
 | --- | --- |
 | `type` | Must be `Icon`. |
-| `name` | Name of the icon. For example, `calendar`.|
+| `name` | Name of the icon to display. For example, `calendar`. |
 | `size` | Size of the icon. </br> Allowed values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
 | `color` | Color of the icon. </br> Allowed values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
 | `style` | Style of the icon. </br> Allowed values: `Filled`, `Regular` |
-| `selectAction` | You can add actions to your icon and make it clickable. When the icon is clicked, the action is executed. All Action types are supported except `Action.ShowCard`. |
+| `selectAction` | Action that's invoked when the icon is tapped or selected. All Action types are supported except `Action.ShowCard`. <br> Allowed values: `Action.Execute`, `Action.OpenUrl`, `Action.Popover`, `Action.ResetInputs`, `Action.Submit`, `Action.ToggleVisibility` |
 
 Here's an Adaptive Card example that uses the `Icon` element:
 
