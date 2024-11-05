@@ -14,9 +14,9 @@ ms.localizationpriority: high
 >
 > Streaming bot messages is available only for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Streaming bot message is the process of delivering the bot's response in parts to the user in real-time while the complete response is being generated. Bots often exhibit a slow response generation time, without any updates in the user interface, that results in a less engaging user experience.
+Streaming bot messages involve delivering the bot's response in parts to the user in real-time while the complete response is being generated. This approach can significantly enhance the user experience. Often, bots exhibit a slow response generation time without any updates in the user interface, which can result in a less engaging experience.
 
-Streaming bot messages enhances the response generation time into an engaging and informative interaction. It enables users to witness the bot processing their request in real time, which could potentially increase user satisfaction and trust. Perceived responsiveness and transparency can enhance the user engagement, leading to a decrease in conversation abandonment with the bot.
+Use streaming bot messages to enhance the response generation time, turning it into an engaging and informative interaction. When users see the bot processing their request in real time, it can potentially increase their satisfaction and trust. This perceived responsiveness and transparency can enhance user engagement, leading to a decrease in conversation abandonment with the bot.
 
 Streaming bot messages has two types of updates:
 
