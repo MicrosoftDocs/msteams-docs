@@ -39,19 +39,9 @@ Teams AI library offers you the capability to stream messages for AI-powered bot
 
 Through streaming, your bot can offer an experience that is engaging and responsive.
 
-### Streaming response class
+### Enable Streaming for AI SDK Bot
 
-The `StreamingResponse` class is the helper class for streaming responses to the client. It allows you send a series of updates in one go, making the interaction smoother and more engaging. If you're using your own custom model, you can easily set up and manage this class to stream responses seamlessly. It's a great way to keep the user engaged.
-
-Streaming bot messages follows the sequence:
-
-* `queueInformativeUpdate()`
-* `queueTextChunk()`
-* `endStream()`
-
-After `endStream()` is called, the stream is considered ended and no further updates can be sent.
-
-### Set up streaming messages
+Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. The AI bot sends chunks to the user as the model generates the response.
 
 Follow these steps to configure streaming bot messages:
 
@@ -145,7 +135,60 @@ const planner = new ActionPlanner({
 });
 ```
 
+# [Python](#tab/python)
+
+```Python
+model = OpenAIModel(
+        OpenAIModelOptions(api_key=config.OPENAI_KEY, default_model="gpt-4o", stream=True)
+    )
+
+def end_stream_handler(
+    context: TurnContext,
+    state: MemoryBase,
+    response: PromptResponse[str],
+    streamer: StreamingResponse,
+):
+    if not streamer:
+        return
+
+    card = CardFactory.adaptive_card(
+        {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.6",
+            "type": "AdaptiveCard",
+            "body": [{"type": "TextBlock", "wrap": True, "text": streamer.message}],
+        }
+    )
+
+    streamer.set_attachments([card])
+
+planner=ActionPlanner(
+                ActionPlannerOptions(
+                    model=model,
+                    prompts=prompts,
+                    default_prompt="tools",
+                    enable_feedback_loop=True,                                      # Enable the feedback loop
+                    start_streaming_message="Loading streaming results...",         # Set the informative message
+                    end_stream_handler=end_stream_handler,                          # Set the final chunk handler
+                )
+            ),
+```
+
 ---
+
+### Custom Planner and Model Development
+
+#### Streaming response class
+
+The `StreamingResponse` class is the helper class for streaming responses to the client. It allows you send a series of updates in one go, making the interaction smoother and more engaging. If you're using your own custom model, you can easily set up and manage this class to stream responses seamlessly. It's a great way to keep the user engaged.
+
+Streaming bot messages follows the sequence:
+
+* `queueInformativeUpdate()`
+* `queueTextChunk()`
+* `endStream()`
+
+After `endStream()` is called, the stream is considered ended and no further updates can be sent.
 
 ### Limitations of using Azure Open AI or Open AI
 
