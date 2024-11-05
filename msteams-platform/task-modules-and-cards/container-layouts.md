@@ -19,7 +19,7 @@ Adaptive Cards now support two types of layouts that can be applied to any conta
 
 An explicit `Layout.Stack` layout is also available.
 
-## Implement responsive layout using container layouts
+## Using Container layouts to implement responsive layout
 
 Container layouts can be used to easily implement responsive layouts, as it's possible to associate multiple layouts with a single container, each dedicated to a specific card width. At runtime, the appropriate layout is automatically used to optimally arrange elements given the available width. Let's take an example.
 
