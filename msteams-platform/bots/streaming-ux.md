@@ -260,7 +260,7 @@ Here's a list of limitations when using Azure Open AI or Open AI to stream bot m
 - Attachments can only be sent in the final streamed chunk.
 - Streaming is not available in conjunction with AI SDK's function calls yet.
 - Streaming does not work with OpenAI's `o1` models.
-- Here are some requirements to use streamSequence for REST APIs:
+- Here are some requirements to use streamSequence for AI SDK:
 
   - First one must be number '1'.
   - Subsequent numbers (except final) must be a monotonic increasing integer (For example, 1->2->3).
