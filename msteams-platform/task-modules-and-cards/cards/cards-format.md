@@ -1050,7 +1050,7 @@ The following card payload shows a container with a scroll bar:
             "type": "Container",
             "style": "emphasis",
             "showBorder": true,
-            "maxHeight": "200px",
+            "maxHeight": "100px",
             "items": [
                 {
                     "type": "TextBlock",
@@ -1066,16 +1066,6 @@ The following card payload shows a container with a scroll bar:
                     "type": "TextBlock",
                     "text": "Item 3",
                     "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 4",
-                    "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 5",
-                    "size": "ExtraLarge"
                 }
             ]
         }
@@ -1083,15 +1073,7 @@ The following card payload shows a container with a scroll bar:
 }
 ```
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-desktop.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll-mobile.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams mobile client.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
 
 ## Format cards with HTML
 
