@@ -1200,8 +1200,20 @@ Here's an Adaptive Card example that uses the `Icon` element:
         "size": "Medium",
         "style": "Filled",
         "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Here's an Icon element in a button"
     }
- ]
+ ],
+ "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Filled icon",
+            "url": "https://www.microsoft.com",
+            "iconUrl": "icon:AccessTime,filled"
+        }
+    ]
 }
 ```
 
