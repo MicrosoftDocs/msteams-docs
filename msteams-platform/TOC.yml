@@ -691,6 +691,9 @@
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
+    - name: Charts in Adaptive Cards
+      href: task-modules-and-cards/cards/charts-in-adaptive-cards.md
+      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart  
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead, persona, persona set
