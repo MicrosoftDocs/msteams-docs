@@ -194,650 +194,6 @@ Here are the properties of the `Chart.Gauge` element:
 | `value` | | Number | The value of the gauge.<br>Default value: 0|
 | `valueFormat` | | String | The format used to display the gauge's value.<br>Valid values: `Percentage`, `Fraction`<br>Default value: `Percentage` |
 
-## Horizontal Bar Chart
-
-You can use the `Chart.HorizontalBar` element to add a horizontal bar chart in an Adaptive Card.
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-chart.png" alt-text="Screenshot shows a horizontal bar chart in an Adaptive Card.":::
-
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Standard with displayMode = AbsoluteWithAxis",
-      "size": "large"
-    },
-    {
-      "type": "Chart.HorizontalBar",
-      "title": "Sample",
-      "xAxisTitle": "Days",
-      "yAxisTitle": "Sales",
-      "colorSet": "diverging",
-      "data": [
-        {
-          "x": "Pear",
-          "y": 59
-        },
-        {
-          "x": "Banana",
-          "y": 292
-        },
-        {
-          "x": "Apple",
-          "y": 143
-        },
-        {
-          "x": "Peach",
-          "y": 98
-        },
-        {
-          "x": "Kiwi",
-          "y": 179
-        },
-        {
-          "x": "Grapefruit",
-          "y": 20
-        }
-      ]
-    },
-    {
-      "type": "TextBlock",
-      "text": "Standard with displayMode = AbsoluteNoAxis",
-      "size": "large",
-      "spacing": "large",
-      "separator": true
-    },
-    {
-      "type": "Chart.HorizontalBar",
-      "title": "Sample",
-      "displayMode": "AbsoluteNoAxis",
-      "data": [
-        {
-          "x": "Pear",
-          "y": 59
-        },
-        {
-          "x": "Banana",
-          "y": 292
-        },
-        {
-          "x": "Apple",
-          "y": 143
-        },
-        {
-          "x": "Peach",
-          "y": 98
-        },
-        {
-          "x": "Kiwi",
-          "y": 179
-        },
-        {
-          "x": "Grapefruit",
-          "y": 20
-        }
-      ]
-    },
-    {
-      "type": "TextBlock",
-      "text": "Standard with displayMode = PartToWhole",
-      "size": "large",
-      "spacing": "large",
-      "separator": true
-    },
-    {
-      "type": "TextBlock",
-      "text": "Learning - Have you defined your goal for today's Day of learning"
-    },
-    {
-      "type": "Chart.HorizontalBar",
-      "title": "Sample",
-      "displayMode": "PartToWhole",
-      "color": "categoricalPurple",
-      "data": [
-        {
-          "x": "Yes, I have defined my day of learning goal",
-          "y": 15
-        },
-        {
-          "x": "No, I haven't yet had time to do it",
-          "y": 24
-        },
-        {
-          "x": "I am not interested in learning",
-          "y": 2
-        }
-      ]
-    }
-  ]
-}
-
-```
-
-Here are the properties of the `Chart.HorizontalBar` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
-| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
-| `displayMode` | | String | Controls how the chart should be visually laid out. <br>Valid values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the input element or action. |
-| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `title` | | String | The title of the chart. |
-| `xAxisTitle` | | String | The title of the x axis.|
-| `yAxisTitle` | | String | The title of the y axis. |
-
-## Stacked Horizontal Bar Chart
-
-You can use the `Chart.HorizontalBar.Stacked` element to add a stacked horizontal bar chart in an Adaptive Card.
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-stacked-chart.png" alt-text="Screenshot shows a stacked horizontal bar chart in an Adaptive Card.":::
-
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Chart.HorizontalBar.Stacked",
-      "title": "Sample",
-      "data": [
-        {
-          "title": "Outlook",
-          "data": [
-            {
-              "legend": "2023-05-01",
-              "value": 24,
-              "color": "good"
-            },
-            {
-              "legend": "2023-05-02",
-              "value": 27,
-              "color": "warning"
-            },
-            {
-              "legend": "2023-05-03",
-              "value": 18,
-              "color": "attention"
-            }
-          ]
-        },
-        {
-          "title": "Teams",
-          "data": [
-            {
-              "legend": "2023-05-01",
-              "value": 9,
-              "color": "good"
-            },
-            {
-              "legend": "2023-05-02",
-              "value": 100,
-              "color": "warning"
-            },
-            {
-              "legend": "2023-05-03",
-              "value": 22,
-              "color": "attention"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-
-```
-
-Here are the properties of the `Chart.HorizontalBar.Stacked` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.HorizontalBar.Stacked`. |
-| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the input element or action. |
-| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `title` | | String | The title of the chart. |
-| `xAxisTitle` | | String | The title of the x axis.|
-| `yAxisTitle` | | String | The title of the y axis. |
-
-## Line Chart
-
-You can use the `Chart.HorizontalBar.Stacked` element to add a line chart in an Adaptive Card.
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/line-chart.png" alt-text="Screenshot shows a line chart in an Adaptive Card.":::
-
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Chart.Line",
-      "title": "Sample",
-      "xAxisTitle": "Days",
-      "yAxisTitle": "Sales",
-      "colorSet": "categorical",
-      "data": [
-        {
-          "legend": "Outlook",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 99
-            },
-            {
-              "x": "2023-05-02",
-              "y": 6
-            },
-            {
-              "x": "2023-05-03",
-              "y": 63
-            },
-            {
-              "x": "2023-05-04",
-              "y": 64
-            },
-            {
-              "x": "2023-05-05",
-              "y": 63
-            },
-            {
-              "x": "2023-05-06",
-              "y": 78
-            }
-          ]
-        },
-        {
-          "legend": "Teams",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 12
-            },
-            {
-              "x": "2023-05-02",
-              "y": 82
-            },
-            {
-              "x": "2023-05-03",
-              "y": 12
-            },
-            {
-              "x": "2023-05-04",
-              "y": 33
-            },
-            {
-              "x": "2023-05-05",
-              "y": 1
-            },
-            {
-              "x": "2023-05-06",
-              "y": 80
-            }
-          ]
-        },
-        {
-          "legend": "Office",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 66
-            },
-            {
-              "x": "2023-05-02",
-              "y": 93
-            },
-            {
-              "x": "2023-05-03",
-              "y": 65
-            },
-            {
-              "x": "2023-05-04",
-              "y": 13
-            },
-            {
-              "x": "2023-05-05",
-              "y": 90
-            },
-            {
-              "x": "2023-05-06",
-              "y": 48
-            }
-          ]
-        },
-        {
-          "legend": "Windows",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 9
-            },
-            {
-              "x": "2023-05-02",
-              "y": 19
-            },
-            {
-              "x": "2023-05-03",
-              "y": 0
-            },
-            {
-              "x": "2023-05-04",
-              "y": 61
-            },
-            {
-              "x": "2023-05-05",
-              "y": 21
-            },
-            {
-              "x": "2023-05-06",
-              "y": 72
-            }
-          ]
-        },
-        {
-          "legend": "Exchange",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 35
-            },
-            {
-              "x": "2023-05-02",
-              "y": 11
-            },
-            {
-              "x": "2023-05-03",
-              "y": 91
-            },
-            {
-              "x": "2023-05-04",
-              "y": 97
-            },
-            {
-              "x": "2023-05-05",
-              "y": 97
-            },
-            {
-              "x": "2023-05-06",
-              "y": 45
-            }
-          ]
-        },
-        {
-          "legend": "SharePoint",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 26
-            },
-            {
-              "x": "2023-05-02",
-              "y": 99
-            },
-            {
-              "x": "2023-05-03",
-              "y": 16
-            },
-            {
-              "x": "2023-05-04",
-              "y": 26
-            },
-            {
-              "x": "2023-05-05",
-              "y": 91
-            },
-            {
-              "x": "2023-05-06",
-              "y": 22
-            }
-          ]
-        },
-        {
-          "legend": "Copilot",
-          "values": [
-            {
-              "x": "2023-05-01",
-              "y": 96
-            },
-            {
-              "x": "2023-05-02",
-              "y": 37
-            },
-            {
-              "x": "2023-05-03",
-              "y": 27
-            },
-            {
-              "x": "2023-05-04",
-              "y": 5
-            },
-            {
-              "x": "2023-05-05",
-              "y": 45
-            },
-            {
-              "x": "2023-05-06",
-              "y": 59
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-
-Here are the properties of the `Chart.Line` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.Line`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the input element or action. |
-| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `title` | | String | The title of the chart. |
-| `xAxisTitle` | | String | The title of the x axis.|
-| `yAxisTitle` | | String | The title of the y axis. |
-
-## Pie Chart
-
-You can use the `Chart.HorizontalBar.Stacked` element to add a pie chart in an Adaptive Card.
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/pie-chart.png" alt-text="Screenshot shows a pie chart in an Adaptive Card.":::
-
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Chart.Pie",
-      "colorSet": "categorical",
-      "data": [
-        {
-          "legend": "Pear",
-          "value": 59
-        },
-        {
-          "legend": "Banana",
-          "value": 292
-        },
-        {
-          "legend": "Apple",
-          "value": 143
-        },
-        {
-          "legend": "Peach",
-          "value": 98
-        },
-        {
-          "legend": "Kiwi",
-          "value": 179
-        },
-        {
-          "legend": "Grapefruit",
-          "value": 50
-        },
-        {
-          "legend": "Orange",
-          "value": 212
-        },
-        {
-          "legend": "Cantaloupe",
-          "value": 68
-        }
-      ]
-    }
-  ]
-}
-
-```
-
-Here are the properties of the `Chart.Pie` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.Pie`.|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data to display in the chart. <br>Supported value: `DonutChartData` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the input element or action. |
-| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `title` | | String | The title of the chart. |
-
-## Vertical Bar Chart
-
-You can use the `Chart.HorizontalBar.Stacked` element to add a vertical bar chart in an Adaptive Card.
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-chart.png" alt-text="Screenshot shows a vertical bar chart in an Adaptive Card.":::
-
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-    {
-      "type": "Chart.VerticalBar",
-      "title": "Sample",
-      "xAxisTitle": "Days",
-      "yAxisTitle": "Sales",
-      "colorSet": "categorical",
-      "data": [
-        {
-          "x": "Pear",
-          "y": 59
-        },
-        {
-          "x": "Banana",
-          "y": 292
-        },
-        {
-          "x": "Apple",
-          "y": 143
-        },
-        {
-          "x": "Peach",
-          "y": 98
-        },
-        {
-          "x": "Kiwi",
-          "y": 179
-        },
-        {
-          "x": "Grapefruit",
-          "y": 20
-        },
-        {
-          "x": "Orange",
-          "y": 212
-        },
-        {
-          "x": "Cantaloupe",
-          "y": 68
-        },
-        {
-          "x": "Grape",
-          "y": 102
-        },
-        {
-          "x": "Tangerine",
-          "y": 38
-        }
-      ]
-    }
-  ]
-}
-```
-
-Here are the properties of the `Chart.VerticalBar` element:
-
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.VerticalBar`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the input element or action. |
-| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `showBarValues` | | Boolean | Controls if the bar values should be displayed.<br>Default value: `false` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `title` | | String | The title of the chart. |
-| `xAxisTitle` | | String | The title of the x axis.|
-| `yAxisTitle` | | String | The title of the y axis. |
-
 ## Grouped Vertical Bar Chart
 
 You can use the `Chart.HorizontalBar.Stacked` element to add a grouped vertical bar chart in an Adaptive Card.
@@ -1187,6 +543,650 @@ Here are the properties of the `Chart.VerticalBar.Grouped` element:
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar.Grouped`. |
 | `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
+| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the input element or action. |
+| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the input element. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `showBarValues` | | Boolean | Controls if the bar values should be displayed.<br>Default value: `false` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `title` | | String | The title of the chart. |
+| `xAxisTitle` | | String | The title of the x axis.|
+| `yAxisTitle` | | String | The title of the y axis. |
+
+## Horizontal Bar Chart
+
+You can use the `Chart.HorizontalBar` element to add a horizontal bar chart in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-chart.png" alt-text="Screenshot shows a horizontal bar chart in an Adaptive Card.":::
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Standard with displayMode = AbsoluteWithAxis",
+      "size": "large"
+    },
+    {
+      "type": "Chart.HorizontalBar",
+      "title": "Sample",
+      "xAxisTitle": "Days",
+      "yAxisTitle": "Sales",
+      "colorSet": "diverging",
+      "data": [
+        {
+          "x": "Pear",
+          "y": 59
+        },
+        {
+          "x": "Banana",
+          "y": 292
+        },
+        {
+          "x": "Apple",
+          "y": 143
+        },
+        {
+          "x": "Peach",
+          "y": 98
+        },
+        {
+          "x": "Kiwi",
+          "y": 179
+        },
+        {
+          "x": "Grapefruit",
+          "y": 20
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Standard with displayMode = AbsoluteNoAxis",
+      "size": "large",
+      "spacing": "large",
+      "separator": true
+    },
+    {
+      "type": "Chart.HorizontalBar",
+      "title": "Sample",
+      "displayMode": "AbsoluteNoAxis",
+      "data": [
+        {
+          "x": "Pear",
+          "y": 59
+        },
+        {
+          "x": "Banana",
+          "y": 292
+        },
+        {
+          "x": "Apple",
+          "y": 143
+        },
+        {
+          "x": "Peach",
+          "y": 98
+        },
+        {
+          "x": "Kiwi",
+          "y": 179
+        },
+        {
+          "x": "Grapefruit",
+          "y": 20
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Standard with displayMode = PartToWhole",
+      "size": "large",
+      "spacing": "large",
+      "separator": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Learning - Have you defined your goal for today's Day of learning"
+    },
+    {
+      "type": "Chart.HorizontalBar",
+      "title": "Sample",
+      "displayMode": "PartToWhole",
+      "color": "categoricalPurple",
+      "data": [
+        {
+          "x": "Yes, I have defined my day of learning goal",
+          "y": 15
+        },
+        {
+          "x": "No, I haven't yet had time to do it",
+          "y": 24
+        },
+        {
+          "x": "I am not interested in learning",
+          "y": 2
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+Here are the properties of the `Chart.HorizontalBar` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
+| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
+| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `displayMode` | | String | Controls how the chart should be visually laid out. <br>Valid values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the input element or action. |
+| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the input element. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `title` | | String | The title of the chart. |
+| `xAxisTitle` | | String | The title of the x axis.|
+| `yAxisTitle` | | String | The title of the y axis. |
+
+## Line Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a line chart in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/line-chart.png" alt-text="Screenshot shows a line chart in an Adaptive Card.":::
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Chart.Line",
+      "title": "Sample",
+      "xAxisTitle": "Days",
+      "yAxisTitle": "Sales",
+      "colorSet": "categorical",
+      "data": [
+        {
+          "legend": "Outlook",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 99
+            },
+            {
+              "x": "2023-05-02",
+              "y": 6
+            },
+            {
+              "x": "2023-05-03",
+              "y": 63
+            },
+            {
+              "x": "2023-05-04",
+              "y": 64
+            },
+            {
+              "x": "2023-05-05",
+              "y": 63
+            },
+            {
+              "x": "2023-05-06",
+              "y": 78
+            }
+          ]
+        },
+        {
+          "legend": "Teams",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 12
+            },
+            {
+              "x": "2023-05-02",
+              "y": 82
+            },
+            {
+              "x": "2023-05-03",
+              "y": 12
+            },
+            {
+              "x": "2023-05-04",
+              "y": 33
+            },
+            {
+              "x": "2023-05-05",
+              "y": 1
+            },
+            {
+              "x": "2023-05-06",
+              "y": 80
+            }
+          ]
+        },
+        {
+          "legend": "Office",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 66
+            },
+            {
+              "x": "2023-05-02",
+              "y": 93
+            },
+            {
+              "x": "2023-05-03",
+              "y": 65
+            },
+            {
+              "x": "2023-05-04",
+              "y": 13
+            },
+            {
+              "x": "2023-05-05",
+              "y": 90
+            },
+            {
+              "x": "2023-05-06",
+              "y": 48
+            }
+          ]
+        },
+        {
+          "legend": "Windows",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 9
+            },
+            {
+              "x": "2023-05-02",
+              "y": 19
+            },
+            {
+              "x": "2023-05-03",
+              "y": 0
+            },
+            {
+              "x": "2023-05-04",
+              "y": 61
+            },
+            {
+              "x": "2023-05-05",
+              "y": 21
+            },
+            {
+              "x": "2023-05-06",
+              "y": 72
+            }
+          ]
+        },
+        {
+          "legend": "Exchange",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 35
+            },
+            {
+              "x": "2023-05-02",
+              "y": 11
+            },
+            {
+              "x": "2023-05-03",
+              "y": 91
+            },
+            {
+              "x": "2023-05-04",
+              "y": 97
+            },
+            {
+              "x": "2023-05-05",
+              "y": 97
+            },
+            {
+              "x": "2023-05-06",
+              "y": 45
+            }
+          ]
+        },
+        {
+          "legend": "SharePoint",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 26
+            },
+            {
+              "x": "2023-05-02",
+              "y": 99
+            },
+            {
+              "x": "2023-05-03",
+              "y": 16
+            },
+            {
+              "x": "2023-05-04",
+              "y": 26
+            },
+            {
+              "x": "2023-05-05",
+              "y": 91
+            },
+            {
+              "x": "2023-05-06",
+              "y": 22
+            }
+          ]
+        },
+        {
+          "legend": "Copilot",
+          "values": [
+            {
+              "x": "2023-05-01",
+              "y": 96
+            },
+            {
+              "x": "2023-05-02",
+              "y": 37
+            },
+            {
+              "x": "2023-05-03",
+              "y": 27
+            },
+            {
+              "x": "2023-05-04",
+              "y": 5
+            },
+            {
+              "x": "2023-05-05",
+              "y": 45
+            },
+            {
+              "x": "2023-05-06",
+              "y": 59
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+Here are the properties of the `Chart.Line` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Chart.Line`. |
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
+| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the input element or action. |
+| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the input element. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `title` | | String | The title of the chart. |
+| `xAxisTitle` | | String | The title of the x axis.|
+| `yAxisTitle` | | String | The title of the y axis. |
+
+## Pie Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a pie chart in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/pie-chart.png" alt-text="Screenshot shows a pie chart in an Adaptive Card.":::
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Chart.Pie",
+      "colorSet": "categorical",
+      "data": [
+        {
+          "legend": "Pear",
+          "value": 59
+        },
+        {
+          "legend": "Banana",
+          "value": 292
+        },
+        {
+          "legend": "Apple",
+          "value": 143
+        },
+        {
+          "legend": "Peach",
+          "value": 98
+        },
+        {
+          "legend": "Kiwi",
+          "value": 179
+        },
+        {
+          "legend": "Grapefruit",
+          "value": 50
+        },
+        {
+          "legend": "Orange",
+          "value": 212
+        },
+        {
+          "legend": "Cantaloupe",
+          "value": 68
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+Here are the properties of the `Chart.Pie` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Chart.Pie`.|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
+| `data` | | Array of Object | The data to display in the chart. <br>Supported value: `DonutChartData` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the input element or action. |
+| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the input element. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `title` | | String | The title of the chart. |
+
+## Stacked Horizontal Bar Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a stacked horizontal bar chart in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-stacked-chart.png" alt-text="Screenshot shows a stacked horizontal bar chart in an Adaptive Card.":::
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Chart.HorizontalBar.Stacked",
+      "title": "Sample",
+      "data": [
+        {
+          "title": "Outlook",
+          "data": [
+            {
+              "legend": "2023-05-01",
+              "value": 24,
+              "color": "good"
+            },
+            {
+              "legend": "2023-05-02",
+              "value": 27,
+              "color": "warning"
+            },
+            {
+              "legend": "2023-05-03",
+              "value": 18,
+              "color": "attention"
+            }
+          ]
+        },
+        {
+          "title": "Teams",
+          "data": [
+            {
+              "legend": "2023-05-01",
+              "value": 9,
+              "color": "good"
+            },
+            {
+              "legend": "2023-05-02",
+              "value": 100,
+              "color": "warning"
+            },
+            {
+              "legend": "2023-05-03",
+              "value": 22,
+              "color": "attention"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+Here are the properties of the `Chart.HorizontalBar.Stacked` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Chart.HorizontalBar.Stacked`. |
+| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
+| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the input element or action. |
+| `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the input element. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using targetWidth makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `title` | | String | The title of the chart. |
+| `xAxisTitle` | | String | The title of the x axis.|
+| `yAxisTitle` | | String | The title of the y axis. |
+
+## Vertical Bar Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a vertical bar chart in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-chart.png" alt-text="Screenshot shows a vertical bar chart in an Adaptive Card.":::
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Chart.VerticalBar",
+      "title": "Sample",
+      "xAxisTitle": "Days",
+      "yAxisTitle": "Sales",
+      "colorSet": "categorical",
+      "data": [
+        {
+          "x": "Pear",
+          "y": 59
+        },
+        {
+          "x": "Banana",
+          "y": 292
+        },
+        {
+          "x": "Apple",
+          "y": 143
+        },
+        {
+          "x": "Peach",
+          "y": 98
+        },
+        {
+          "x": "Kiwi",
+          "y": 179
+        },
+        {
+          "x": "Grapefruit",
+          "y": 20
+        },
+        {
+          "x": "Orange",
+          "y": 212
+        },
+        {
+          "x": "Cantaloupe",
+          "y": 68
+        },
+        {
+          "x": "Grape",
+          "y": 102
+        },
+        {
+          "x": "Tangerine",
+          "y": 38
+        }
+      ]
+    }
+  ]
+}
+```
+
+Here are the properties of the `Chart.VerticalBar` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Chart.VerticalBar`. |
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
