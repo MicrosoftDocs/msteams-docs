@@ -207,11 +207,9 @@ You can use the `Chart.VerticalBar.Grouped` element to add a grouped or a stacke
 
 # [Card](#tab/card3)
 
-:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a gauge chart in an Adaptive Card.":::
+:::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-grouped-chart.png" alt-text="Screenshot shows a grouped vertical bar chart in an Adaptive Card.":::
 
 # [Payload](#tab/payload3)
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-grouped-chart.png" alt-text="Screenshot shows a grouped vertical bar chart in an Adaptive Card.":::
 
 ```json
 {
