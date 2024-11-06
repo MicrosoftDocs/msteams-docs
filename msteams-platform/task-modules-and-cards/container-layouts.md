@@ -21,14 +21,14 @@ An explicit `Layout.Stack` layout is also available.
 
 ## Layout.Stack
 
-A layout that stacks elements on top of each other. `Layout.Stack` is the default layout used by `AdaptiveCard` and all containers.
+A layout that stacks elements on top of each other. `Layout.Stack` is the default layout used by an Adaptive Card and all containers.
 
 Here are the properties of the `Layout.Stack` layout:
 
 | Name | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Layout.Stack`. |
-| `targetWidth` | | String | Controls the card width for which the layout should be used.<br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `targetWidth` | | String | Controls the card width for which the layout must be used. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 
 ## Layout.Flow
 
@@ -195,15 +195,15 @@ Here are the properties of the `Layout.Stack` layout:
 | Name | Type | Default | Description |
 |-----------|------|----------|-------------|
 | `type` | String |  | Must be `Layout.Stack`. |
-| `columnSpacing` | String | "Default" | The space between items.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
-| horizontalItemsAlignment | String| "Center" | Controls how the content of the container should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
-| `itemFit` | String | "Fit" | Controls how item should fit inside the container.<br>Valid values: `Fit`, `Fill` |
-| `itemWidth` | String | | The width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if `maxItemWidth` and/or `minItemWidth` are set.<br>Valid values: `<number>px` |
-| maxItemWidth | String | | The maximum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `<number>px` |
-| `minItemWidth` | String | 0 | The minimum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `<number>px` |
-| `rowSpacing` | String | `Default` | The space between rows of items.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
-| `targetWidth` | String | | Controls for which card width the layout should be used.<br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `verticalItemsAlignment` | String | `Top` | Controls how the content of the container should be vertically aligned.<br>Valid values: `Top`, `Center`, `Bottom` |
+| `columnSpacing` | String | "Default" | The space between items.<br>Allowed values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
+| horizontalItemsAlignment | String| "Center" | Controls how the content of the container should be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
+| `itemFit` | String | "Fit" | Controls how item should fit inside the container.<br>Allowed values: `Fit`, `Fill` |
+| `itemWidth` | String | | The width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if `maxItemWidth` and/or `minItemWidth` are set.<br>Allowed values: `<number>px` |
+| maxItemWidth | String | | The maximum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Allowed values: `<number>px` |
+| `minItemWidth` | String | 0 | The minimum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Allowed values: `<number>px` |
+| `rowSpacing` | String | `Default` | The space between rows of items.<br>Allowed values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
+| `targetWidth` | String | | Controls for which card width the layout should be used. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `verticalItemsAlignment` | String | `Top` | Controls how the content of the container should be vertically aligned.<br>Allowed values: `Top`, `Center`, `Bottom` |
 
 ## Layout.AreaGrid
 
@@ -373,11 +373,11 @@ Here are the properties of the `Layout.AreaGrid` layout:
 | Name | Type | Default | Description |
 |-----------|------|----------|-------------|
 | `type` | String |  | Must be `Layout.AreaGrid`. |
-| `areas` | Array of objects |  | The areas in the grid layout. <br> Valid values: `"GridArea"` |
+| `areas` | Array of objects |  | The areas in the grid layout. <br> Allowed values: `GridArea` |
 | `columns` | Array of numbers or strings |  | The columns in the grid layout, defined as a percentage of the available width or in pixels using the `<number>px` format. |
-| `columnSpacing` | String | `"Default"` | The space between columns. <br> Valid values: `"None"`, `"ExtraSmall"`, `"Small"`, `"Default"`, `"Medium"`, `"Large"`, `"ExtraLarge"`, `"Padding"`. |
-| `rowSpacing` | String | `"Default"` | The space between rows. <br> Valid values: `"None"`, `"ExtraSmall"`, `"Small"`, `"Default"`, `"Medium"`, `"Large"`, `"ExtraLarge"`, `"Padding"`.|
-| `targetWidth` | String | | Controls for which card width the layout should be used. Shouldn't be used if `itemWidth` is set. <br> Valid values: `"VeryNarrow"`, `"Narrow"`, `"Standard"`, `"Wide"`, `"atLeast:VeryNarrow"`, `"atMost:VeryNarrow"`, `"atLeast:Narrow"`, `"atMost:Narrow"`, `"atLeast:Standard"`, `"atMost:Standard"`, `"atLeast:Wide"`, `"atMost:Wide"` |
+| `columnSpacing` | String | `Default` | The space between columns. <br> Allowed values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`. |
+| `rowSpacing` | String | `Default` | The space between rows. <br> Allowed values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`.|
+| `targetWidth` | String | | Controls for which card width the layout should be used. Shouldn't be used if `itemWidth` is set. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).<br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 
 ### GridArea
 
@@ -492,7 +492,7 @@ Here, the `layouts` property is defined on the whole card:
 Which means:
 
 * Organize elements in the card in a grid layout only when the width of the card is at least `standard` (which corresponds to the typical width of a card in a Teams chat, for example).
-  * If the width of the card is less than `standard`, use the default layout, namely `Layout.Stack`
+  * If the width of the card is less than `standard`, use the default layout, namely `Layout.Stack`.
 * The grid layout has at least one column that should use 60% of the available space. The grid might have other columns (depending on how `areas` are defined) but because they aren't explicitly defined they each share an equal portion of the remaining space.
 * Two areas are defined:
   * One for the image, which implicitly maps to the first column and first row of the grid.
