@@ -61,8 +61,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Add borders and rounded corners to Adaptive Card elements
-        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
+      - text: Build dependent inputs with typeahead search in Adaptive Cards
+        url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
+      - text: Introduced Adaptive Card templates
+        url: task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection
       - text: Share content to live and upcoming meetings with Share to Teams
         url: concepts/build-and-test/share-to-teams-from-web-apps.md
       - text: Authentication for your API-based message extension
@@ -81,11 +83,6 @@ landingContent:
         url: concepts/authentication/nested-authentication.md
       - text: New purchase experience for Teams app subscriptions bought from Teams Store
         url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-
-    - linkListType: reference
-      links:
-      - text: Extend Microsoft 365 Copilot
-        url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
 
@@ -239,8 +236,6 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
