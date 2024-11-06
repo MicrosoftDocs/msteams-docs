@@ -183,7 +183,7 @@ Here are the properties of the `Chart.Gauge` element:
 | `max` | | Number | The maximum value of the gauge. |
 | `min` | | Number | The minimum value of the gauge. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
-| `segments` | | Array of Object | The segments to display in the gauge. <br>Supported value: `GaugeChartLegend`|
+| `segments` | | Array of objects | The segments to display in the gauge. |
 | `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
 | `showLegend` | | Boolean | Controls if the legend should be displayed.<br>Default value: `true` |
 | `showMinMax` | | Boolean | Controls if the min or max values should be displayed.<br>Default value: `true` |
@@ -193,6 +193,14 @@ Here are the properties of the `Chart.Gauge` element:
 | `title` | | String | The title of the chart. |
 | `value` | | Number | The value of the gauge.<br>Default value: 0|
 | `valueFormat` | | String | The format used to display the gauge's value.<br>Valid values: `Percentage`, `Fraction`<br>Default value: `Percentage` |
+
+Here are the properties of the `segments` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the segment.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `legend` | | String | The legend text associated with the segment. |
+| `value` | | Number | The size of the segment.<br>Default value: `0` |
 
 ## Grouped Vertical Bar Chart
 
@@ -544,7 +552,7 @@ Here are the properties of the `Chart.VerticalBar.Grouped` element:
 | `type` | ✔️ | String | Must be `Chart.VerticalBar.Grouped`. |
 | `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `data` | | Array of objects | The data points in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -560,6 +568,21 @@ Here are the properties of the `Chart.VerticalBar.Grouped` element:
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `legend` | | String | The legend of the chart. |
+| `values` | | Number | The data points in the series. |
+
+Here are the properties of the `values` integer:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `x` | | String | The x axis value of the data point. |
+| `y` | | Number | The y axis value of the data point. |
 
 ## Horizontal Bar Chart
 
@@ -691,7 +714,7 @@ Here are the properties of the `Chart.HorizontalBar` element:
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
 | `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `data` | | Array of objects | The data points in the chart. |
 | `displayMode` | | String | Controls how the chart should be visually laid out. <br>Valid values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
@@ -707,6 +730,14 @@ Here are the properties of the `Chart.HorizontalBar` element:
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `x` | | String | The x axis value of the data point. |
+| `y` | | Number | The y axis value of the data point. |
 
 ## Line Chart
 
@@ -940,9 +971,9 @@ Here are the properties of the `Chart.Line` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Line`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `data` | | Array of objects | The data points in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -957,6 +988,21 @@ Here are the properties of the `Chart.Line` element:
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `legend` | | String | The legend of the chart. |
+| `values` | | Array of objects | The data points in the series. |
+
+Here are the properties of the `values` integer:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `x` | | One of number of string | The x axis value of the data point. |
+| `y` | | Number | The y axis value of the data point. |
 
 ## Pie Chart
 
@@ -1018,7 +1064,7 @@ Here are the properties of the `Chart.Pie` element:
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Pie`.|
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data to display in the chart. <br>Supported value: `DonutChartData` |
+| `data` | | Array of objects | The data to display in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -1031,6 +1077,14 @@ Here are the properties of the `Chart.Pie` element:
 | `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
 | `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `legend` | | String | The legend of the chart. |
+| `value` | | Number | The value associated with the data point. |
 
 ## Stacked Horizontal Bar Chart
 
@@ -1099,9 +1153,9 @@ Here are the properties of the `Chart.HorizontalBar.Stacked` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar.Stacked`. |
-| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `color` | | String | The color to use for all data points.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `data` | | Array of objects | The data points in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -1116,6 +1170,21 @@ Here are the properties of the `Chart.HorizontalBar.Stacked` element:
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `data` | | Array of objects | The data points in the series. |
+| `title` | | String | The title of the series. |
+
+Here are the properties of the nested `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `legend` | | String | The legend associated with the data point. |
+| `value` | | Number | The value of the data point. |
 
 ## Vertical Bar Chart
 
@@ -1186,9 +1255,9 @@ Here are the properties of the `Chart.VerticalBar` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
+| `data` | | Array of objects | The data points in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
 | `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -1204,6 +1273,14 @@ Here are the properties of the `Chart.VerticalBar` element:
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
+
+Here are the properties of the `data` array:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `x` | | One of number of string | The x axis value of the data point. |
+| `y` | | Number | The y axis value of the data point. |
 
 ## Code sample
 
