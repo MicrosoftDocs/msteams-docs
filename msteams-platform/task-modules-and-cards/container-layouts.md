@@ -495,6 +495,9 @@ Which means:
   * One for the image, which maps to the first column and first row of the grid.
   * One for the text, which covers the second column and first row.
 
+> [!TIP]
+> Specifying the `layouts` property is not required. When no explicit layout is specified, the container will use a `Layout.Stack` layout.
+
 The elements in the card's body are assigned a grid area through the `grid.area` property:
 
 ```json
