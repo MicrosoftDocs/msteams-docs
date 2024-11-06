@@ -724,7 +724,7 @@ Here are the properties of the `Chart.HorizontalBar` element:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
-| `color` | | String | The color to use for all data points.<br>Allowed values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `color` | | String | The color to use for all data points.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
 | `displayMode` | | String | Controls how the chart must be visually laid out. <br>Allowed values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
