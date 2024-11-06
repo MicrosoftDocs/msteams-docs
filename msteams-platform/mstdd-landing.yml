@@ -81,8 +81,11 @@ landingContent:
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
         url: concepts/authentication/nested-authentication.md
-      - text: New purchase experience for Teams app subscriptions bought from Teams Store
-        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+
+    - linkListType: reference
+      links:
+      - text: Extend Microsoft 365 Copilot
+        url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
 
