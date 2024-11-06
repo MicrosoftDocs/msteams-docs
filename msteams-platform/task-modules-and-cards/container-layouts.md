@@ -10,7 +10,7 @@ ms.date: 11/07/2024
 
 # Container layouts
 
-Elements in containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself are laid out in a top-to-bottom stack by default. This type of layout is appropriate for many scenarios, but sometimes it's a bit constraining. To split the horizontal space of a card into different areas, one would typically use the `ColumnSet` element which, while powerful, comes with its set of challenges.
+Elements in containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself are laid out in a top-to-bottom stack by default. This type of layout is appropriate for many scenarios, but sometimes it's a bit constraining. To split the horizontal space of a card into different areas, you can use the `ColumnSet` element which, while powerful, comes with its set of challenges.
 
 Adaptive Cards support two types of layouts that can be applied to any container:
 
@@ -34,7 +34,7 @@ Here are the properties of the `Layout.Stack` layout:
 
 A layout that spreads elements horizontally and wraps them across multiple rows, as needed.
 
-Use `Layout.Flow` to layout lists of elements such as images without having to worry about the amount of horizontal space available. The width and alignment of elements can be tuned as desired. Each row automatically gets the appropriate height, and spacing between columns and rows is configurable and automatically enforced.
+Use `Layout.Flow` to lay out lists of elements such as images without having to worry about the amount of horizontal space available. The width and alignment of elements can be tuned as desired. Each row automatically gets the appropriate height, and spacing between columns and rows is configurable and automatically enforced.
 
 ### Examples
 
@@ -209,7 +209,7 @@ Here are the properties of the `Layout.Stack` layout:
 
 A layout that divides a container into named areas into which elements can be placed.
 
-Use `Layout.AreaGrid` to easily organize elements in a container (be it the Adaptive Card itself, a `Container`, a `Column`, or a `TableCell`) into a grid. `Layout.AreaGrid` is useful for easily designing responsive cards: define multiple `Layout.AreaGrid` layouts on a single container and target them at different card widths to automatically switch from one layout to another at runtime according to the available width.
+Use `Layout.AreaGrid` to easily organize elements in an Adaptive Card, `Container`, `Column`, or `TableCell` into a grid. `Layout.AreaGrid` is useful for designing responsive cards: define multiple `Layout.AreaGrid` layouts on a single container and target them at different card widths to automatically switch from one layout to another at runtime according to the available width.
 
 ### Example
 
@@ -372,7 +372,7 @@ Here are the properties of the `Layout.AreaGrid` layout:
 
 | Name | Type | Default | Description |
 |-----------|------|----------|-------------|
-| `type` | String |  | Must be **Layout.AreaGrid**. |
+| `type` | String |  | Must be `Layout.AreaGrid`. |
 | `areas` | Array of objects |  | The areas in the grid layout. <br> Valid values: `"GridArea"` |
 | `columns` | Array of numbers or strings |  | The columns in the grid layout, defined as a percentage of the available width or in pixels using the `<number>px` format. |
 | `columnSpacing` | String | `"Default"` | The space between columns. <br> Valid values: `"None"`, `"ExtraSmall"`, `"Small"`, `"Default"`, `"Medium"`, `"Large"`, `"ExtraLarge"`, `"Padding"`. |
@@ -395,7 +395,7 @@ Here are the properties of the `GridArea` array:
 
 ## Using Container layouts to implement responsive layout
 
-Container layouts can be used to easily implement responsive layouts, as it's possible to associate multiple layouts with a single container, each dedicated to a specific card width. At runtime, the appropriate layout is automatically used to optimally arrange elements given the available width.
+Container layouts can be used to easily implement responsive layouts, as it's possible to associate multiple layouts with a single container, each dedicated to a specific card width. At runtime, the appropriate layout is automatically used to optimally arrange elements in the available width.
 
 Let's say we want to define a card with a typical layout:
 
@@ -466,9 +466,9 @@ This can be done easily using `Layout.AreaGrid`:
 
 ---
 
-### How does it work?
+### How it works
 
-Notice the `layouts` property defined on the whole card:
+Here, the `layouts` property is defined on the whole card:
 
 ```json
 {
@@ -498,7 +498,7 @@ Which means:
   * One for the image, which implicitly maps to the first column and first row of the grid.
   * One for the text, which covers the second column and first row.
 
-Notice how elements in the card's body are assigned a grid area through the `grid.area` property:
+The elements in the card's body are assigned a grid area through the `grid.area` property:
 
 ```json
 {
