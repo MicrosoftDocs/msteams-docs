@@ -464,6 +464,10 @@
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+    - name: Format the bot messages
+      href: bots/how-to/format-your-bot-messages.md
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md  
   - name: Send notifications
     items:
     - name: Build notification capability
@@ -477,10 +481,6 @@
   - name: Workflow bot in Teams
     href: bots/how-to/conversations/workflow-bot-in-teams.md
     displayname: Jira, jira
-  - name: Format the bot messages
-    href: bots/how-to/format-your-bot-messages.md
-  - name: Send and receive files
-    href: bots/how-to/bots-filesv4.md
   - name: Get Teams-specific context
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
