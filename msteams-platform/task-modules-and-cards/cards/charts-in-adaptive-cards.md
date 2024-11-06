@@ -960,7 +960,7 @@ Here are the properties of the `Chart.Line` element:
 
 ## Pie Chart
 
-You can use the `Chart.HorizontalBar.Stacked` element to add a pie chart in an Adaptive Card.
+You can use the `Chart.Pie` element to add a pie chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/pie-chart.png" alt-text="Screenshot shows a pie chart in an Adaptive Card.":::
 
@@ -1119,7 +1119,7 @@ Here are the properties of the `Chart.HorizontalBar.Stacked` element:
 
 ## Vertical Bar Chart
 
-You can use the `Chart.HorizontalBar.Stacked` element to add a vertical bar chart in an Adaptive Card.
+You can use the `Chart.VerticalBar` element to add a vertical bar chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-chart.png" alt-text="Screenshot shows a vertical bar chart in an Adaptive Card.":::
 
