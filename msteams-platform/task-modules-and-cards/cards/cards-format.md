@@ -1182,7 +1182,7 @@ Here are the properties of the `Icon` element:
 | `style` | Style of the icon. </br> Allowed values: `Filled`, `Regular` |
 | `selectAction` | Action that's invoked when the icon is tapped or selected. All Action types are supported except `Action.ShowCard`. <br> Allowed values: `Action.Execute`, `Action.OpenUrl`, `Action.Popover`, `Action.ResetInputs`, `Action.Submit`, `Action.ToggleVisibility` |
 
-Here's an Adaptive Card example that uses the `Icon` element:
+Here's an Adaptive Card example that uses the `Icon` element and the `iconUrl` property in an action button:
 
 ```json
 {
