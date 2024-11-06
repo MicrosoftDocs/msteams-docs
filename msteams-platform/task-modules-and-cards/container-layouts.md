@@ -188,22 +188,22 @@ Use `Layout.Flow` to layout lists of elements such as images without having to w
 ---
 
 > [!TIP]
-> Don't use the `maxItemWidth` property with `"itemFit": "fill"`. By definition, `maxItemWidth` prevents items from exceeding a certain width, which is incompatible with filling the remaining available space on a row by slightly enlarging each element in that row. Use the `itemWidth` property instead.
+> Don't use the `maxItemWidth` property with `itemFit: fill`. By definition, `maxItemWidth` prevents items from exceeding a certain width, which is incompatible with filling the remaining available space on a row by slightly enlarging each element in that row. Use the `itemWidth` property instead.
 
 Here are the properties of the `Layout.Stack` layout:
 
 | Name | Type | Default | Description |
 |-----------|------|----------|-------------|
 | `type` | String |  | Must be `Layout.Stack`. |
-| `columnSpacing` | string | "Default" | The space between items. <br> Valid values: `"None"`, `"ExtraSmall"`, `"Small"`, `"Default"`, `"Medium"`, `"Large"`, `"ExtraLarge"`, `"Padding"`.|
-| horizontalItemsAlignment | string| "Center" | Controls how the content of the container should be horizontally aligned. <br> Valid values: `"Left"`, `"Center"`, `"Right"`. |
-| `itemFit` | string | "Fit" | Controls how item should fit inside the container. <br> Valid values: `"Fit"`, `"Fill"`. |
-| `itemWidth` | string | | The width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if `maxItemWidth` and/or `minItemWidth` are set.<br>Valid values: `"<number>px"` |
-| maxItemWidth | string | | The maximum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `"<number>px"` |
-| `minItemWidth` | string | 0 | The minimum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `"<number>px"` |
-| `rowSpacing` | string | "Default" | The space between rows of items. <br> Valid values: `"None"`, `"ExtraSmall"`, `"Small"`, `"Default"`, `"Medium"`, `"Large"`, `"ExtraLarge"`, `"Padding"` |
-| `targetWidth` | string | | Controls for which card width the layout should be used. <br> Valid values: `"VeryNarrow"`, `"Narrow"`, `"Standard"`, `"Wide"`, `"atLeast:VeryNarrow"`, `"atMost:VeryNarrow"`, `"atLeast:Narrow"`, `"atMost:Narrow"`, `"atLeast:Standard"`, `"atMost:Standard"`, `"atLeast:Wide"`, `"atMost:Wide"` |
-| `verticalItemsAlignment` | string | "Top" | Controls how the content of the container should be vertically aligned. <br> Valid values: `"Top"`, `"Center"`, `"Bottom"` |
+| `columnSpacing` | String | "Default" | The space between items.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
+| horizontalItemsAlignment | String| "Center" | Controls how the content of the container should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `itemFit` | String | "Fit" | Controls how item should fit inside the container.<br>Valid values: `Fit`, `Fill` |
+| `itemWidth` | String | | The width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if `maxItemWidth` and/or `minItemWidth` are set.<br>Valid values: `<number>px` |
+| maxItemWidth | String | | The maximum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `<number>px` |
+| `minItemWidth` | String | 0 | The minimum width, in pixels, of each item, in the `<number>px` format. Shouldn't be used if itemWidth is set.<br>Valid values: `<number>px` |
+| `rowSpacing` | String | `Default` | The space between rows of items.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding` |
+| `targetWidth` | String | | Controls for which card width the layout should be used.<br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `verticalItemsAlignment` | String | `Top` | Controls how the content of the container should be vertically aligned.<br>Valid values: `Top`, `Center`, `Bottom` |
 
 ## Layout.AreaGrid
 
@@ -386,10 +386,10 @@ Defines an area in a `Layout.AreaGrid` layout.
 Here are the properties of the `GridArea` array:
 
 | Name | Type | Default | Description |
-|-----------|------|----------|-------------|
+|----|----|----|----|
 | `columns` | Number | 1 | The start column index of the area. Column indices start at 1. |
 | `columnSpan` | Number | 1 | Defines how many columns the area should span. |
-| `name | String | | The name of the area. To place an element in this area, set its `grid.area` property to match the name of the area. |
+| `name` | String | | The name of the area. To place an element in this area, set its `grid.area` property to match the name of the area. |
 | `row` | Number | 1 | The start row index of the area. Row indices start at 1. |
 | `rowSpan` | Number | 1 | Defines how many rows the area should span. |
 
