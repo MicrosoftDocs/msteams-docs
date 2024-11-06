@@ -10,11 +10,10 @@ ms.date: 11/07/2024
 
 # Container layouts
 
-Elements in containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself are laid out in a top-to-bottom stack by default. This type of layout is appropriate for many scenarios, but sometimes it's a bit constraining. To split the horizontal space of a card into different areas, you can use the `ColumnSet` element which, while powerful, comes with its set of challenges.
+Elements in containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself are laid out in a top-to-bottom stack by default. This type of layout, [Layout.Stack](#layoutstack), is appropriate for many scenarios, but sometimes it's a bit constraining. To split the horizontal space of a card into different areas, you can use the `ColumnSet` element which, while powerful, comes with its set of challenges.
 
-Adaptive Cards support three types of layouts that can be applied to any container:
+Adaptive Cards support two additional types of layouts that can be applied to any container:
 
-* [Layout.Stack](#layoutstack) stacks elements on top of each other and is the default layout.
 * [Layout.Flow](#layoutflow) spreads elements horizontally and wraps them across multiple rows, as needed.
 * [Layout.AreaGrid](#layoutareagrid) divides the container into named `areas` in to which elements can be placed through the `grid.area` property which can be set on any element.
 
