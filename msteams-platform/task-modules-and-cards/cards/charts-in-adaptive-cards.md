@@ -23,7 +23,11 @@ You can visually represent data through charts in Adaptive Cards. The following 
 
 You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. You can use donut charts to represent market share, budget allocation, or sales distribution figures.
 
+# [Chart](#tab/chart)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/donut-chart.png" alt-text="Screenshot shows a donut chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload)
 
 ```json
 {
@@ -70,6 +74,7 @@ You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. 
   ]
 }
 ```
+---
 
 ### Chart.Donut schema
 
