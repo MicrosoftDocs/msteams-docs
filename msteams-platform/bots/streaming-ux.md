@@ -86,7 +86,7 @@ Follow these steps to configure streaming bot messages:
 
 1. **Enable streaming for AI bot**:
 
-    a. Use the `DefaultAugmentation` class in the `config.json` file, and in one of the following main application class of your bot app:
+    a. Use the `DefaultAugmentation` class in the `config.json` file, and in one of the following main application classes of your bot app:
       - For a C# bot app: Update `program.cs`.
       - For a JavaScript app: Update `index.ts`.
       - For a Python app: Update `bot.py`.
@@ -255,7 +255,7 @@ Here's a list of limitations when you use Azure OpenAI or OpenAI to stream bot m
 - The model renders the informative message only at the beginning of each message returned from the LLM.
 - Attachments can be sent only in the final streamed chunk.
 - Streaming isn't available with AI SDK's function calls yet.
-- Here are some requirements to use `streamSequence` for AI SDK:
+- Here are the requirements to use `streamSequence` for AI SDK:
   - The sequence must start with number '1'.
   - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
   - For the final message, `streamSequence` mustn't be set.
@@ -284,7 +284,7 @@ The following are the properties for streaming bot messages:
 
 > [!NOTE]
 > You must insert the streaming metadata into both `entities` and `ChannelData`.
-> Here are some requirements for using `streamSequence` for REST APIs:
+> Here are the requirements for using `streamSequence` for REST APIs:
 >
 > - First one must be number '1'.
 > - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
@@ -568,7 +568,7 @@ The following are the success and error codes:
 | `202`|`ContentStreamSequenceOrderPreConditionFailed`| `PreCondition failed exception when processing streaming activity.` | Few streaming requests might arrive out of sequence and get dropped. The most recent streaming request, determined by `streamSequence`, is used when requests are received in a disordered manner. Ensure to send each request in a sequential manner.|
 | `400`| `BadRequest`| Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
 | `403`|`ContentStreamNotAllowed` | `Content stream is not allowed`| The streaming API feature isn't allowed for the user or bot.|
-| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on a already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
+| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
 | `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
 | `403`| `ContentStreamNotAllowed`| `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
