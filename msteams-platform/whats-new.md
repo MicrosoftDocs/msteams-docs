@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
-***November 07, 2024***: Placehoder.
+***November 07, 2024***: [Add a Compound button with icon, title, and description in an Adaptive Card](task-modules-and-cards/cards/cards-format.md#compound-button-in-adaptive-cards).
 
 :::column-end:::
 :::row-end:::
@@ -46,14 +46,14 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| *October 29, 2024*** | [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) | [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| October 28, 2024 | [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md) | [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
-| October 28, 2024 | [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) | [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
-| October 28, 2024 | [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md) |  |
-| October 25, 2024 | [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md) |  |
-| October 17, 2024 | [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile |  |
-| October 17, 2024 | [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |  |
-| October 17, 2024 | [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs) |  |
+| 29/10/2024 | Share content to live and upcoming meetings with Share to Teams. | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 28/10/2024 | Enable API key and SSO authentication for your API-based message extension. | Add authentication > Enable authentication for API-based message extensions > [Overview](messaging-extensions/build-api-based-message-extension.md) |
+| 28/10/2024 | Update bot or message extension app to use certificate or MSI for authentication. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Develop your Teams app > [Use certificate or MSI for app authentication](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
+| 28/10/2024 | Debug apps in Teams desktop client to improve debugging performance and efficiency. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug in Teams desktop client](toolkit/debug-apps-in-Teams-desktop-client.md) |
+| 25/10/2024 | Introduced prompt suggestions for bots to create an engaging and insightful bot experience. | Build bots > Bot conversations > [Create prompt suggestions](bots/how-to/conversations/prompt-suggestions.md) |
+| 17/10/2024 | Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile. | App manifest > [App manifest](/microsoftteams/platform/resources/schema/manifest-schema) |
+| 17/10/2024 | Localize your Copilot agents. | Microsoft 365 Copilot extensibility > Work with the Copilot ecosystem > Agents are apps for Microsoft 365 > [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |
+| 17/10/2024 | Build a personal tab with offline functionality. | Build tabs > Create a tab > [Offline tabs](tabs/how-to/create-personal-tab.md#offline-tabs) |
 | 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app susbscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
