@@ -10,7 +10,7 @@ ms.date: 11/07/2024
 
 You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more.
 
-## Donut Chart
+## Donut chart
 
 You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card.
 
@@ -75,30 +75,34 @@ Here are the properties of the `Chart.Donut` element:
 | `type` | ✔️ | String | Must be `Chart.Donut`. |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | ✔️ | Array of objects | The data to display in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `fallback` | | Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the element or action. |
 | `isVisible` | | Boolean | Controls the visibility of the element.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 
 Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend of the chart. |
 | `value` | | Number | The value associated with the data point. |
 
-## Gauge Chart
+## Gauge chart
 
 You can use the `Chart.Gauge` element to add a gauge chart in an Adaptive Card.
+
+# [Card](#tab/card2)
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a gauge chart in an Adaptive Card.":::
 
 # [Payload](#tab/payload2)
 
@@ -158,12 +162,7 @@ You can use the `Chart.Gauge` element to add a gauge chart in an Adaptive Card.
     }
   ]
 }
-
 ```
-
-# [Card](#tab/card2)
-
-:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a gauge chart in an Adaptive Card.":::
 
 ---
 
@@ -173,38 +172,44 @@ Here are the properties of the `Chart.Gauge` element:
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Gauge`. |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `fallback` | | Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `fallback` | | Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `max` | | Number | The maximum value of the gauge. |
 | `min` | | Number | The minimum value of the gauge. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Valid values: `HostCapabilities` |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities` |
 | `segments` | | Array of objects | The segments to display in the gauge. |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `showLegend` | | Boolean | Controls if the legend should be displayed.<br>Default value: `true` |
-| `showMinMax` | | Boolean | Controls if the min or max values should be displayed.<br>Default value: `true` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `showLegend` | | Boolean | Controls if the legend must be displayed.<br>Default value: `true` |
+| `showMinMax` | | Boolean | Controls if the min or max values must be displayed.<br>Default value: `true` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
 | `subLabel` | | String | The sub-label of the gauge. |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
-| `value` | | Number | The value of the gauge.<br>Default value: 0|
-| `valueFormat` | | String | The format used to display the gauge's value.<br>Valid values: `Percentage`, `Fraction`<br>Default value: `Percentage` |
+| `value` | | Number | The value of the gauge.<br>Default value: 0 |
+| `valueFormat` | | String | The format used to display the gauge's value.<br>Allowed values: `Percentage`, `Fraction`<br>Default value: `Percentage` |
 
 Here are the properties of the `segments` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the segment.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the segment.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend text associated with the segment. |
 | `value` | | Number | The size of the segment.<br>Default value: `0` |
 
-## Grouped Vertical Bar Chart
+## Grouped vertical bar chart
 
-You can use the `Chart.VerticalBar.Stacked` element to add a grouped vertical bar chart in an Adaptive Card.
+You can use the `Chart.VerticalBar.Grouped` element to add a grouped or a stacked vertical bar chart in an Adaptive Card.
+
+# [Card](#tab/card3)
+
+:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a gauge chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload3)
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-grouped-chart.png" alt-text="Screenshot shows a grouped vertical bar chart in an Adaptive Card.":::
 
@@ -545,26 +550,28 @@ You can use the `Chart.VerticalBar.Stacked` element to add a grouped vertical ba
 }
 ```
 
+---
+
 Here are the properties of the `Chart.VerticalBar.Grouped` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar.Grouped`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `color` | | String | The color to use for all data points.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `showBarValues` | | Boolean | Controls if the bar values should be displayed.<br>Default value: `false` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `showBarValues` | | Boolean | Controls if the bar values must be displayed.<br>Default value: `false` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
@@ -573,22 +580,26 @@ Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend of the chart. |
 | `values` | | Number | The data points in the series. |
 
-Here are the properties of the `values` integer:
+Here are the properties of `values`:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `x` | | String | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
-## Horizontal Bar Chart
+## Horizontal bar chart
 
 You can use the `Chart.HorizontalBar` element to add a horizontal bar chart in an Adaptive Card.
 
+# [Card](#tab/card4)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-chart.png" alt-text="Screenshot shows a horizontal bar chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload4)
 
 ```json
 {
@@ -704,29 +715,30 @@ You can use the `Chart.HorizontalBar` element to add a horizontal bar chart in a
     }
   ]
 }
-
 ```
+
+---
 
 Here are the properties of the `Chart.HorizontalBar` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
-| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `color` | | String | The color to use for all data points.<br>Allowed values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
-| `displayMode` | | String | Controls how the chart should be visually laid out. <br>Valid values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `displayMode` | | String | Controls how the chart must be visually laid out. <br>Allowed values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
@@ -735,15 +747,19 @@ Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `x` | | String | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
-## Line Chart
+## Line chart
 
 You can use the `Chart.Line` element to add a line chart in an Adaptive Card.
 
+# [Card](#tab/card5)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/line-chart.png" alt-text="Screenshot shows a line chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload5)
 
 ```json
 {
@@ -966,25 +982,27 @@ You can use the `Chart.Line` element to add a line chart in an Adaptive Card.
 }
 ```
 
+---
+
 Here are the properties of the `Chart.Line` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Line`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `color` | | String | The color to use for all data points. <br>Allowed values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
@@ -993,22 +1011,26 @@ Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend of the chart. |
 | `values` | | Array of objects | The data points in the series. |
 
-Here are the properties of the `values` integer:
+Here are the properties of `values`:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `x` | | One of number or string | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
-## Pie Chart
+## Pie chart
 
 You can use the `Chart.Pie` element to add a pie chart in an Adaptive Card.
 
+# [Card](#tab/card6)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/pie-chart.png" alt-text="Screenshot shows a pie chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload6)
 
 ```json
 {
@@ -1058,39 +1080,45 @@ You can use the `Chart.Pie` element to add a pie chart in an Adaptive Card.
 
 ```
 
+---
+
 Here are the properties of the `Chart.Pie` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `type` | ✔️ | String | Must be `Chart.Pie`.|
+| `type` | ✔️ | String | Must be `Chart.Pie`. |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data to display in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 
 Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend of the chart. |
 | `value` | | Number | The value associated with the data point. |
 
-## Stacked Horizontal Bar Chart
+## Stacked horizontal bar chart
 
 You can use the `Chart.HorizontalBar.Stacked` element to add a stacked horizontal bar chart in an Adaptive Card.
 
+# [Card](#tab/card7)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-stacked-chart.png" alt-text="Screenshot shows a stacked horizontal bar chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload7)
 
 ```json
 {
@@ -1145,28 +1173,29 @@ You can use the `Chart.HorizontalBar.Stacked` element to add a stacked horizonta
     }
   ]
 }
-
 ```
+
+---
 
 Here are the properties of the `Chart.HorizontalBar.Stacked` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar.Stacked`. |
-| `color` | | String | The color to use for all data points.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for all data points.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
@@ -1182,15 +1211,19 @@ Here are the properties of the nested `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `legend` | | String | The legend associated with the data point. |
 | `value` | | Number | The value of the data point. |
 
-## Vertical Bar Chart
+## Vertical bar chart
 
 You can use the `Chart.VerticalBar` element to add a vertical bar chart in an Adaptive Card.
 
+# [Card](#tab/card8)
+
 :::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-chart.png" alt-text="Screenshot shows a vertical bar chart in an Adaptive Card.":::
+
+# [Payload](#tab/payload8)
 
 ```json
 {
@@ -1250,26 +1283,28 @@ You can use the `Chart.VerticalBar` element to add a vertical bar chart in an Ad
 }
 ```
 
+---
+
 Here are the properties of the `Chart.VerticalBar` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar`. |
-| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `color` | | String | The color to use for all data points. <br>Allowed values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of objects | The data points in the chart. |
-| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Valid values: `Left`, `Center`, `Right` |
+| `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
 | `id` | | String | A unique identifier for the input element or action. |
 | `isVisible` | | Boolean | Controls if the element is visible.<br>Default value: `true` |
 | `lang` | | String | The locale associated with the input element. |
 | `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Supported value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
-| `showBarValues` | | Boolean | Controls if the bar values should be displayed.<br>Default value: `false` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Valid values: `None`, `ExtraSmall`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. <br>Valid values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`|
+| `showBarValues` | | Boolean | Controls if the bar values must be displayed.<br>Default value: `false` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element must be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space.<br>For more information, see [Adaptive Card responsive layout](cards-format.md#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
 | `title` | | String | The title of the chart. |
 | `xAxisTitle` | | String | The title of the x axis.|
 | `yAxisTitle` | | String | The title of the y axis. |
@@ -1278,7 +1313,7 @@ Here are the properties of the `data` array:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
+| `color` | | String | The color to use for the data point.<br>Allowed values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
 | `x` | | One of number or string | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
