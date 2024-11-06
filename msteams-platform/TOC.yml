@@ -696,7 +696,7 @@
       displayName: Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: Static and dynamic typeahead search  
+      displayName: Static and dynamic typeahead search, Input.ChoiceSet, dependent inputs, valueChangedAction, Action.ResetInputs, associatedInputs   
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       displayName: media elements, media files, Adaptive Card, command bot        
