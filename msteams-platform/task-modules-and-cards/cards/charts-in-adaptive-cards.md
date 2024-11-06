@@ -8,22 +8,13 @@ ms.date: 11/07/2024
 
 # Charts in Adaptive Cards
 
-You can visually represent data through charts in Adaptive Cards. The following types of charts are available in Adaptive Cards:
-
-* [Donut Chart](#donut-chart)
-* [Gauge Chart](#gauge-chart)
-* [Horizontal Bar Chart](#horizontal-bar-chart)
-* [Stacked Horizontal Bar Chart](#stacked-horizontal-bar-chart)
-* [Line Chart](#line-chart)
-* [Pie Chart](#pie-chart)
-* [Vertical Bar Chart](#vertical-bar-chart)
-* [Grouped Vertical Bar Chart](#grouped-vertical-bar-chart)
+You can visually represent data through charts in Adaptive Cards.
 
 ## Donut Chart
 
 You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. You can use donut charts to represent market share, budget allocation, or sales distribution figures.
 
-# [Chart](#tab/chart)
+# [Card](#tab/card)
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/donut-chart.png" alt-text="Screenshot shows a donut chart in an Adaptive Card.":::
 
@@ -104,7 +95,7 @@ You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. 
 
 ## Gauge Chart
 
-:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a guage chart in an Adaptive Card.":::
+# [Payload](#tab/payload1)
 
 ```json
 {
@@ -164,6 +155,10 @@ You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. 
 }
 
 ```
+# [Card](#tab/card1)
+:::image type="content" source="../../assets/images/adaptive-cards/charts/guage-chart.png" alt-text="Screenshot shows a guage chart in an Adaptive Card.":::
+
+---
 
 ### Chart.Gauage schema
 
