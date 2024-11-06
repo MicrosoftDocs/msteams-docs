@@ -4,7 +4,8 @@ author: surbhigupta
 description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.date: 11/06/2024
 ---
 # Link unfurling
 
