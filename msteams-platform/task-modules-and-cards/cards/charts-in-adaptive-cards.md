@@ -1001,7 +1001,7 @@ Here are the properties of the `values` integer:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
-| `x` | | One of number of string | The x axis value of the data point. |
+| `x` | | One of number or string | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
 ## Pie Chart
@@ -1279,7 +1279,7 @@ Here are the properties of the `data` array:
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `color` | | String | The color to use for the data point.<br>Valid values: `good`, `warning`, `attention`, `neutral`, `categoricalRed`, `categoricalPurple`, `categoricalLavender`, `categoricalBlue`, `categoricalLightBlue`, `categoricalTeal`, `categoricalGreen`, `categoricalLime`, `categoricalMarigold`, `sequential1`, `sequential2`, `sequential3`, `sequential4`, `sequential5`, `sequential6`, `sequential7`, `sequential8`, `divergingBlue`, `divergingLightBlue`, `divergingCyan`, `divergingTeal`, `divergingYellow`, `divergingPeach`, `divergingLightRed`, `divergingRed`, `divergingMaroon`, `divergingGray` |
-| `x` | | One of number of string | The x axis value of the data point. |
+| `x` | | One of number or string | The x axis value of the data point. |
 | `y` | | Number | The y axis value of the data point. |
 
 ## Code sample
