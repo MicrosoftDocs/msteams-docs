@@ -573,11 +573,11 @@ The following are the success and error codes:
 | `403`| `ContentStreamNotAllowed`| `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
 
-## Sample code
+## Code sample
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| {TBD} | This is a conversational streaming bot with REST API. | {TBD} | {TBD} |
+| {TBD} | This is a conversational streaming bot with REST API. | {TBD} | {TBD} | {TBD}  |
 | Conversational streaming bot | This is a conversational streaming bot with Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
