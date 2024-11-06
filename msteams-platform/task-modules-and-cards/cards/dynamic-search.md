@@ -5,7 +5,7 @@ description: In this module, learn how to use Input.ChoiceSet to implement stati
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 10/31/2024
+ms.date: 11/06/2024
 ---
 
 # Typeahead search in Adaptive Cards
