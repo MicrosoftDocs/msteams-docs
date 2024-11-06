@@ -8,11 +8,11 @@ ms.date: 11/07/2024
 
 # Charts in Adaptive Cards
 
-You can visually represent data through charts in Adaptive Cards.
+You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more.
 
 ## Donut Chart
 
-You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. You can use donut charts to represent market share, budget allocation, or sales distribution figures.
+You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card.
 
 # [Card](#tab/card1)
 
@@ -68,13 +68,13 @@ You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card. 
 
 ---
 
-Here are the properties of the `Chat.Donut` element:
+Here are the properties of the `Chart.Donut` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Donut`. |
 | `colorSet` | | String | The name of the set of colors to use to render the chart. |
-| `data` | ✔️ | Array of objects | The data to display in the chart. For more information, see [data schema](#data-schema). |
+| `data` | ✔️ | Array of objects | The data to display in the chart. |
 | `fallback` | | Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
 | `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Valid values: `auto`, `stretch`<br>Default value: `auto` |
@@ -97,6 +97,8 @@ Here are the properties of the `data` array:
 | `value` | | Number | The value associated with the data point. |
 
 ## Gauge Chart
+
+You can use the `Chart.Gauge` element to add a gauge chart in an Adaptive Card.
 
 # [Payload](#tab/payload2)
 
@@ -165,7 +167,7 @@ Here are the properties of the `data` array:
 
 ---
 
-Here are the properties of the `Chat.Gauge` element:
+Here are the properties of the `Chart.Gauge` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
@@ -193,6 +195,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `valueFormat` | | String | The format used to display the gauge's value.<br>Valid values: `Percentage`, `Fraction`<br>Default value: `Percentage` |
 
 ## Horizontal Bar Chart
+
+You can use the `Chart.HorizontalBar` element to add a horizontal bar chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-chart.png" alt-text="Screenshot shows a horizontal bar chart in an Adaptive Card.":::
 
@@ -313,13 +317,13 @@ Here are the properties of the `Chat.Gauge` element:
 
 ```
 
-### Chart.HorizontalBar schema
+Here are the properties of the `Chart.HorizontalBar` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar`. |
-| `color` | | String | The color to use for all data points. Refer to chart color schema for more details. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `displayMode` | | String | Controls how the chart should be visually laid out. <br>Valid values: `AbsoluteWithAxis`,`AbsoluteNoAxis`,`PartToWhole` <br>Default value: `AbsoluteWithAxis` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
@@ -338,6 +342,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `yAxisTitle` | | String | The title of the y axis. |
 
 ## Stacked Horizontal Bar Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a stacked horizontal bar chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/horizontalbar-stacked-chart.png" alt-text="Screenshot shows a stacked horizontal bar chart in an Adaptive Card.":::
 
@@ -397,13 +403,13 @@ Here are the properties of the `Chat.Gauge` element:
 
 ```
 
-### Chart.HorizontalBar.Stacked  schema
+Here are the properties of the `Chart.HorizontalBar.Stacked` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.HorizontalBar.Stacked`. |
-| `color` | | String | The color to use for all data points. Refer to chart color schema for more details. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `color` | | String | The color to use for all data points.<br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
@@ -421,6 +427,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `yAxisTitle` | | String | The title of the y axis. |
 
 ## Line Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a line chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/line-chart.png" alt-text="Screenshot shows a line chart in an Adaptive Card.":::
 
@@ -645,13 +653,13 @@ Here are the properties of the `Chat.Gauge` element:
 }
 ```
 
-### Chart.Line schema
+Here are the properties of the `Chart.Line` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Line`. |
-| `color` | | String | The color to use for all data points. Refer to chart color schema for more details. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
@@ -669,6 +677,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `yAxisTitle` | | String | The title of the y axis. |
 
 ## Pie Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a pie chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/pie-chart.png" alt-text="Screenshot shows a pie chart in an Adaptive Card.":::
 
@@ -720,12 +730,12 @@ Here are the properties of the `Chat.Gauge` element:
 
 ```
 
-### Chart.Pie schema
+Here are the properties of the `Chart.Pie` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.Pie`.|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data to display in the chart. <br>Supported value: `DonutChartData` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
@@ -741,6 +751,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `title` | | String | The title of the chart. |
 
 ## Vertical Bar Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a vertical bar chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-chart.png" alt-text="Screenshot shows a vertical bar chart in an Adaptive Card.":::
 
@@ -802,13 +814,13 @@ Here are the properties of the `Chat.Gauge` element:
 }
 ```
 
-### Chart.Vertical Bar schema
+Here are the properties of the `Chart.VerticalBar` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar`. |
-| `color` | | String | The color to use for all data points. Refer to chart color schema for more details. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
@@ -827,6 +839,8 @@ Here are the properties of the `Chat.Gauge` element:
 | `yAxisTitle` | | String | The title of the y axis. |
 
 ## Grouped Vertical Bar Chart
+
+You can use the `Chart.HorizontalBar.Stacked` element to add a grouped vertical bar chart in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/charts/verticalbar-grouped-chart.png" alt-text="Screenshot shows a grouped vertical bar chart in an Adaptive Card.":::
 
@@ -1167,13 +1181,13 @@ Here are the properties of the `Chat.Gauge` element:
 }
 ```
 
-### Chart.VerticalBar.Grouped schema
+Here are the properties of the `Chart.VerticalBar.Grouped` element:
 
 | Property | Required | Type | Description |
 |----|----|----|----|
 | `type` | ✔️ | String | Must be `Chart.VerticalBar.Grouped`. |
-| `color` | | String | The color to use for all data points. Refer to chart color schema for more details. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray``divergingGray`|
-| `colorSet` | | String | The name of the set of colors to use to render the chart. Refer to chart color schema for more details. |
+| `color` | | String | The color to use for all data points. <br>Valid values:`good`,`warning`,`attention`,`neutral`,`categoricalRed`,`categoricalPurple`,`categoricalLavender`,`categoricalBlue`,`categoricalLightBlue`,`categoricalTeal`,`categoricalGreen`,`categoricalLime`,`categoricalMarigold`,`sequential1`,`sequential2`,`sequential3`,`sequential4`,`sequential5`,`sequential6`,`sequential7`,`sequential8`,`divergingBlue`,`divergingLightBlue`,`divergingCyan`,`divergingTeal`,`divergingYellow`,`divergingPeach`,`divergingLightRed`,`divergingRed`,`divergingMaroon`,`divergingGray` |
+| `colorSet` | | String | The name of the set of colors to use to render the chart. |
 | `data` | | Array of Object | The data points in the chart.<br>Supported value: `HorizontalBarChartDataValue` |
 | `fallback` | | Object or String | An alternate element to render if this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Valid values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
 | `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element should be displayed. |
