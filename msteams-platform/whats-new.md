@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 **2024 November**
 
 * ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
+* ***November 07, 2024***: [Create engaging Adaptive Cards with borders, rounded corners, and scroll bars in containers, compound buttons, star ratings, and Fluent icon support.](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards)
 * ***November 07, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
 * ***November 07, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
 
