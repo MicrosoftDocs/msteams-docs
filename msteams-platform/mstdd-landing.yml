@@ -63,6 +63,10 @@ landingContent:
       links:
       - text: Build responsive Container layouts in Adaptive Cards
         url: task-modules-and-cards/container-layouts.md
+      - text: Visually represent data with charts in Adaptive Cards
+        url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
+      - text: Add borders, rounded corners, and scroll bars in containers, compound buttons, star ratings, and Fluent icons in Adaptive Cards
+        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
       - text: Build dependent inputs with typeahead search in Adaptive Cards
         url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
       - text: Introduced Adaptive Card templates
@@ -76,11 +80,7 @@ landingContent:
       - text: Localize your Copilot agents
         url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
       - text: Build a personal tab with offline functionality
-        url: tabs/how-to/create-personal-tab.md#offline-tabs      
-      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
-        url: m365-apps/specify-runtime-requirements.md
-      - text: Analyze your third-party app usage metrics in Developer Portal
-        url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
+        url: tabs/how-to/create-personal-tab.md#offline-tabs
 
     - linkListType: reference
       links:
