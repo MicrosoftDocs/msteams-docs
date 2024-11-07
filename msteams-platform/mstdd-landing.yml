@@ -4,7 +4,7 @@ title: Microsoft Teams developer documentation # < 60 chars
 summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
@@ -61,26 +61,26 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Build dependent inputs with typeahead search in Adaptive Cards
+        url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
+      - text: Introduced Adaptive Card templates
+        url: task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection
+      - text: Share content to live and upcoming meetings with Share to Teams
+        url: concepts/build-and-test/share-to-teams-from-web-apps.md
+      - text: Authentication for your API-based message extension
+        url: messaging-extensions/build-api-based-message-extension.md
+      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
+        url: ./resources/schema/manifest-schema.md
+      - text: Localize your Copilot agents
+        url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
+      - text: Build a personal tab with offline functionality
+        url: tabs/how-to/create-personal-tab.md#offline-tabs      
+      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
+        url: m365-apps/specify-runtime-requirements.md
       - text: Analyze your third-party app usage metrics in Developer Portal
         url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
         url: concepts/authentication/nested-authentication.md
-      - text: New purchase experience for Teams app subscriptions bought from Teams Store
-        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
-        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
-      - text: Screen share content to meetings
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
-      - text: Extend bot-based message extension plugins to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
-      - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
-        url: bots/how-to/format-ai-bot-messages.md 
-      - text: Static tabs are generally available for chats, channels, and meetings
-        url: tabs/what-are-tabs.md
-      - text: Preapproval of RSC permissions (Developer preview)
-        url: graph-api/rsc/preapproval-instruction-docs.md
-      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
-        url: concepts/build-and-test/apps-package.md#outline-icon
 
     - linkListType: reference
       links:
@@ -239,20 +239,18 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
 
-- title: Publish and distribute
+- title: Publish Teams app
   linkLists:
   - linkListType: concept
     links:
     - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Distribution
+    - text: Publish your Teams apps
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md

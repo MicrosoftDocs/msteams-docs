@@ -1,9 +1,9 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams, format cards with Markdown, and design responsive Adaptive Cards.
+description: Learn about card text formatting with Markdown and HTML, the CodeBlock element, borders, rounded corners, and how to design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 06/25/2021
+ms.date: 10/08/2024
 ---
 
 # Format cards in Teams
@@ -20,6 +20,8 @@ Formatting support differs between card types. Rendering of the card can differ 
 You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images aren't supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
+
+You can add borders and rounded corners to various elements in Adaptive Cards. For more information, see [borders and rounded corners in Adaptive Cards](#borders-and-rounded-corners-in-adaptive-cards).
 
 ## Format cards with Markdown
 
@@ -965,8 +967,7 @@ In the following example, there are two primary actions and one secondary action
 ```
 
 > [!NOTE]
->
-> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
+> The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
 
 The following image is an example of overflow menu in a bot sent card and a message extension card:
 
@@ -1021,6 +1022,242 @@ When a user selects the overflow menu on mobile, Adaptive Card displays the butt
   :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
 
 ---
+
+## Borders and rounded corners in Adaptive Cards
+
+Adaptive Cards support a wide variety of elements, but having too many elements clutters the card and hinders readability. You can add borders to various elements in an Adaptive Card to delineate them, making it easier for users to distinguish between them.
+
+# [Desktop](#tab/desktop1)
+
+:::row:::
+:::column span="2":::
+
+**Without borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-border.png" alt-text="Screenshot shows an Adaptive Card with no borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-no-border.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border.png" alt-text="Screenshot shows an Adaptive Card with borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-border.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+# [Mobile](#tab/mobile1)
+
+:::row:::
+:::column span="2":::
+
+**Without borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-border-mobile.png" alt-text="Screenshot shows an Adaptive Card with no borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-no-border-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With borders**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-border-mobile.png" alt-text="Screenshot shows an Adaptive Card with borders around its elements." lightbox="../../assets/images/adaptive-cards/ac-border-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
+
+You can use Adaptive Cards across multiple hosts. Many of these hosts follow contemporary design systems and frameworks. Adaptive Cards support rounded corners for various elements to maintain consistency with these hosts and keep up with latest design trends. Rounded corners make the card design look more modern and visually appealing, creating a softer visual flow.
+
+# [Desktop](#tab/desktop2)
+
+:::row:::
+:::column span="2":::
+
+**Without rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card without rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-no-rounded-corner.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-rounded-corner.png" alt-text="Screenshot shows an Adaptive Card with rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-rounded-corner.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+# [Mobile](#tab/mobile2)
+
+:::row:::
+:::column span="2":::
+
+**Without rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-no-rounded-corner-mobile.png" alt-text="Screenshot shows an Adaptive Card without rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-no-rounded-corner-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**With rounded corners**
+
+:::image type="content" source="../../assets/images/adaptive-cards/ac-rounded-corner-mobile.png" alt-text="Screenshot shows an Adaptive Card with rounded corners to its elements." lightbox="../../assets/images/adaptive-cards/ac-rounded-corner-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
+
+You can add borders and rounded corners only to the following elements:
+
+| Element | Borders | Rounded Corners |
+| --- | :---: | :---: |
+| [`Container`](https://adaptivecards.io/explorer/Container.html) | ✔️ | ✔️ |
+| [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) | ✔️ | ✔️ |
+| [`Column`](https://adaptivecards.io/explorer/Column.html) | ✔️ | ✔️ |
+| [`Table`](https://adaptivecards.io/explorer/Table.html) | ✔️ | ✔️ |
+| [`Image`](https://adaptivecards.io/explorer/Image.html) | ❌ | ✔️ |
+
+### Implement borders and rounded corners in Adaptive Cards
+
+To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table` element, set the `showGridLines` property to `true`. The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
+| `showGridLines` | Boolean | No | Adds a border to the `Table` element. Default value: `true` |
+
+To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to the `Image` element, set the `style` property to `RoundedCorners` within the element.
+
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
+| `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
+
+The following JSON payload shows an Adaptive Card with borders and rounded corners around its elements:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Below is a **ColumnSet** with borders and rounded corners:",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "showBorder": true,
+            "roundedCorners": true,
+            "style": "emphasis",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "showBorder": true,
+                    "roundedCorners": true,
+                    "style": "accent",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "This is a **Column** with borders and rounded corners",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "showBorder": true,
+                    "roundedCorners": true,
+                    "style": "good",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "This is another **Column** with borders and rounded corners",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "style": "attention",
+            "showBorder": true,
+            "roundedCorners": true,
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "This is a **Container** with borders and rounded corners",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Table",
+            "roundedCorners": true,
+            "columns": [
+                {
+                    "width": 1
+                },
+                {
+                    "width": 1
+                }
+            ],
+            "rows": [
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "This **Table**...",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "...has borders and rounded corners",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "The below **Image** has rounded corners:",
+            "wrap": true
+        },
+        {
+            "type": "Image",
+            "url": "https://media.licdn.com/dms/image/C4E03AQF5uhIghtPzrA/profile-displayphoto-shrink_400_400/0/1517690039090?e=2147483647&v=beta&t=g1DFilNHZhah2fhaTS9ylBxGGGb2XyPA2C7LZptk4QE",
+            "width": "100px",
+            "style": "RoundedCorners"
+        }
+    ]
+}
+```
 
 ## Format cards with HTML
 
