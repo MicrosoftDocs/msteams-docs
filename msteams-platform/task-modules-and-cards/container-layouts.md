@@ -520,6 +520,12 @@ The elements in the card's body are assigned a grid area through the `grid.area`
 }
 ```
 
+## Code sample
+
+| Name | Description |.Node.js | .NET |
+|---|---|---|---|
+| Cards Formatting | This sample app demonstrates the various container layouts in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) |
+
 ## See also
 
 * [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout)

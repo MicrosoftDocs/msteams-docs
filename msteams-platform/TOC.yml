@@ -693,7 +693,7 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
     - name: Container layouts in Adaptive Cards
       href: task-modules-and-cards/container-layouts.md
-      displayName: Container layout
+      displayName: Container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead, persona, persona set
