@@ -1109,7 +1109,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
-|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in the callout that opens in Office when an Office Add-in is installed. |
+|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in the callout that opens in the Office application (such as Excel, Outlook, PowerPoint, or Word) when an Office Add-in is installed. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
