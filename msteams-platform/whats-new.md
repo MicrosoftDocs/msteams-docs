@@ -30,16 +30,13 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 October**
+**2024 November**
 
-* ***October 29, 2024***: [Share content to live and upcoming meetings with Share to Teams](concepts/build-and-test/share-to-teams-from-web-apps.md).
-* ***October 28, 2024***: [Enable API key and SSO authentication for your API-based message extension](messaging-extensions/build-api-based-message-extension.md).
-* ***October 28, 2024***: [Update bot or message extension app to use certificate or MSI for authentication.](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md)
-* ***October 28, 2024***: [Debug apps in Teams desktop client to improve debugging performance and efficency](toolkit/debug-apps-in-Teams-desktop-client.md).
-* ***October 25, 2024***: [Introduced prompt suggestions for bots to create an engaging and insightful bot experience.](bots/how-to/conversations/prompt-suggestions.md)
-* ***October 17, 2024***: [Introducing app manifest v1.19](./resources/schema/manifest-schema.md) with copilotAgents, declarativeAgents, and defaultLanguageFile.
-* ***October 17, 2024***: [Localize your Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).
-* ***October 17, 2024***: [Build a personal tab with offline functionality](tabs/how-to/create-personal-tab.md#offline-tabs).
+* ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
+* ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
+* ***November 07, 2024***: [Create engaging Adaptive Cards with borders, rounded corners, and scroll bars in containers, compound buttons, star ratings, and Fluent icon support.](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards)
+* ***November 07, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
+* ***November 07, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
 
 :::column-end:::
 :::row-end:::
@@ -53,8 +50,16 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 29/10/2024 | Share content to live and upcoming meetings with Share to Teams. | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 28/10/2024 | Enable API key and SSO authentication for your API-based message extension. | Add authentication > Enable authentication for API-based message extensions > [Overview](messaging-extensions/build-api-based-message-extension.md) |
+| 28/10/2024 | Update bot or message extension app to use certificate or MSI for authentication. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Develop your Teams app > [Use certificate or MSI for app authentication](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
+| 28/10/2024 | Debug apps in Teams desktop client to improve debugging performance and efficiency. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug in Teams desktop client](toolkit/debug-apps-in-Teams-desktop-client.md) |
+| 25/10/2024 | Introduced prompt suggestions for bots to create an engaging and insightful bot experience. | Build bots > Bot conversations > [Create prompt suggestions](bots/how-to/conversations/prompt-suggestions.md) |
+| 17/10/2024 | Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile. | App manifest > [App manifest](/microsoftteams/platform/resources/schema/manifest-schema) |
+| 17/10/2024 | Localize your Copilot agents. | Microsoft 365 Copilot extensibility > Work with the Copilot ecosystem > Agents are apps for Microsoft 365 > [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |
+| 17/10/2024 | Build a personal tab with offline functionality. | Build tabs > Create a tab > [Offline tabs](tabs/how-to/create-personal-tab.md#offline-tabs) |
 | 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
-| 26/08/2024 | Enhanced user experience for Teams app susbscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
+| 26/08/2024 | Enhanced user experience for Teams app subscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
 | 22/08/2024 | Dev Tools for Teams tabs are available in the new Microsoft Teams client. | Test your app > Tabs > [Dev Tools for Microsoft Teams Tab](tabs/how-to/developer-tools.md) |
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Publish your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
 | 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Publish](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
