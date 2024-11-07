@@ -1167,11 +1167,11 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
 |`code.page`| String | 2048 charaters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
-|`code.script`| String | | | Don't use this property under `extensions.contentRuntimes`.|
+|`code.script`| String | | | Not applicable under `extensions.contentRuntimes`.|
 |`requestedWidth`| Number | | | The desired initial width in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the width.|
 |`requestedHeight`| Number | | | The desired initial height in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the height.|
 |`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the Office application document. Set to `true` to prevent a snapshot from being saved. Default value: `false`|
-|`requirements`| Object | | | Don't use this property under `extensions.contentRuntimes`. |
+|`requirements`| Object | | | Not applicable under `extensions.contentRuntimes`. |
 
 ### extensions.ribbons
 
