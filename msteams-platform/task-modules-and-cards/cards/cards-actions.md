@@ -3,7 +3,7 @@ title: Add card actions in a bot
 description: Learn about card actions such as openUrl, messageBack, imBack, invoke, and signin, and Adaptive Card actions such as Action.Submit.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 05/04/2023
+ms.date: 11/07/2024
 ---
 
 # Card actions
@@ -535,6 +535,72 @@ The following is an example of the incoming activity to a bot when user types so
   "localTimezone": "America/Los_Angeles"
 }
  ```
+
+### Conditional enablement of action buttons
+
+You can use the `conditionallyEnabled` property to disable action buttons until the user changes the value of at least one of the required inputs. This property can only be used with `Action.Submit` and `Action.Execute` actions. For a conditionally enabled button, if the `isEnabled` property is set to `false`, actions are disabled regardless of the input.
+
+Here's how the `conditionallyEnabled` property is defined:
+
+| Property| Type | Required | Description |
+|-----------|------|----------|-------------|
+| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
+
+The following card payload shows a conditionally enabled button:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Required text input",
+            "isRequired": true,
+            "id": "text"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Required date input",
+            "isRequired": true,
+            "id": "date"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "conditionallyEnabled": true
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Permanently disabled button",
+            "isEnabled": false
+        }
+    ]
+}
+```
+
+:::row:::
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams.":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams.":::
+
+:::column-end:::
+
+:::row-end:::
 
 #### Form completion feedback
 
