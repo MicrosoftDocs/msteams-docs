@@ -21,8 +21,6 @@ You can include an inline image with any Teams card. Supported image formats are
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
-You can add borders and rounded corners to various elements in Adaptive Cards. For more information, see [borders and rounded corners in Adaptive Cards](#borders-and-rounded-corners-in-adaptive-cards).
-
 ## Format cards with Markdown
 
 The following card types support Markdown formatting in Teams:
