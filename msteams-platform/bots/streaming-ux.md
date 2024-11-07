@@ -95,10 +95,11 @@ Follow these steps to configure streaming bot messages:
       - For a Python app: Update `bot.py`.
 
     b. Set `stream` to true in the `OpenAIModel` declaration.
-1. Configure the following features:
-    - **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
-    - **Format the final streamed message**: Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler. For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object.
-    - **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
+1. **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
+1. **Format the final streamed message**:
+    - Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler.
+    - For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object.
+1. **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
 
 The following code snippet shows an example of streaming bot messages:
 
