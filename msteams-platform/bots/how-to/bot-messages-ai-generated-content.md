@@ -76,13 +76,13 @@ It's important to cite the sources of the bot message to help users ask follow-u
 Citations in your bot's message include in-text citations, details of the citation reference, and sensitivity labels for the content referenced.
 
 * **In-text citations** denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
-* **Details of the citation reference** include the title, icon, keywords, an abstract, hyperlink, and sensitivity information. References appear as pop-up windows for each in-text citation.
+* **Details of the citation reference** include the title, icon, keywords, abstract, hyperlink, sensitivity information and button for opening the modal window with additional content. References appear as pop-up windows for each in-text citation.
 * **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
 
 > [!NOTE]
 >
 > * A maximum of 20 citations are displayed in a message.
-> * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the bot's message.
+> * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the bot's message or in the modal window accessible from the pop-up window.
 
 ### Add citations
 
@@ -120,16 +120,16 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `citation` | Object | Yes | Details of the citation. |
-| `citation.@type` | String | Yes | Object of the citation. The only allowed value is `Claim`. |
-| `citation.position` | Integer | Yes | Displays the citation number. The values are limited to less than eight. |
-| `citation.appearance` | Object | Yes | Information about the appearance of the citation. |
-| `citation.appearance.@type` | String | Yes | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
-| `citation.appearance.name` | String | Yes | Title of the referenced content. Maximum characters: 80 |
-| `citation.appearance.url` | String | No | URL of the referenced content. |
-| `citation.appearance.abstract` | String | No | Extract of the referenced content. Maximum characters: 160 |
-| `citation.appearance.keywords` | Array | No | Keywords from the referenced content. You can't add more than three keywords. Each keyword can only contain 28 characters. |
-| `citation.appearance.encodingFormat` | String | No | Media type of the citation source. It renders the citation icon in the details of the citation reference. |
+| `citation` | Object | ✔️ | Details of the citation. |
+| `citation.@type` | String | ✔️ | Object of the citation. The only allowed value is `Claim`. |
+| `citation.position` | Integer | ✔️ | Displays the citation number. |
+| `citation.appearance` | Object | ✔️ | Information about the appearance of the citation. |
+| `citation.appearance.@type` | String | ✔️ | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
+| `citation.appearance.name` | String | ✔️ | Title of the referenced content. Maximum characters: 80 |
+| `citation.appearance.url` | String | | URL of the referenced content. |
+| `citation.appearance.abstract` | String | | Extract of the referenced content. Maximum characters: 160 |
+| `citation.appearance.keywords` | Array | | Keywords from the referenced content. You can't add more than three keywords. Each keyword can only contain 28 characters. |
+| `citation.appearance.encodingFormat` | String | | Media type of the citation source. It renders the citation icon in the details of the citation reference. |
 
 <br>
 <details>
@@ -216,7 +216,7 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `feedbackLoopEnabled` | Boolean | Yes | Enables feedback buttons in the bot's message |
+| `feedbackLoopEnabled` | Boolean | ✔️ | Enables feedback buttons in the bot's message |
 
 ### Handle feedback
 
@@ -360,10 +360,10 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `usageInfo.@type` | String | Yes | Enables the sensitivity label in the bot message. |
-| `citation.usageInfo.@id` | String | Yes | Enables the sensitivity label in the citation reference. It's required when adding sensitivity label to citation reference. |
-| `usageInfo.name` | String | Yes | Specifies the title of the sensitivity label. |
-| `usageInfo.description` | String | No | Specifies the pop-up window message that appears when a user hovers over the sensitivity label. |
+| `usageInfo.@type` | String | ✔️ | Enables the sensitivity label in the bot message. |
+| `citation.usageInfo.@id` | String | ✔️ | Enables the sensitivity label in the citation reference. It's required when adding sensitivity label to citation reference. |
+| `usageInfo.name` | String | ✔️ | Specifies the title of the sensitivity label. |
+| `usageInfo.description` | String | | Specifies the pop-up window message that appears when a user hovers over the sensitivity label. |
 
 After the sensitivity label is added, your bot message contains a shield icon. Users can hover over the icon to find a disclaimer on the sensitivity of the message.
 
@@ -390,7 +390,7 @@ app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, stat
 
 For more information about `PredictedSayCommand`, see [PredictedSayCommand interface](/javascript/api/%40microsoft/teams-ai/predictedsaycommand?view=msteams-client-js-latest&preserve-view=true).
 
-## Code sample
+## Code samples
 
 | Sample name | Description | Node.js | C# |
 |:--|--|--|
