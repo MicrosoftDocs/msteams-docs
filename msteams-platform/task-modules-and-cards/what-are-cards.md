@@ -94,6 +94,10 @@ Share code snippets as richly formatted Adaptive Cards in Teams chats, channels,
 
 You must design your Adaptive Cards to look great on any device to provide an enhanced user experience across chat, channels, and meeting chat. Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).
 
+### Borders and rounded corners in Adaptive Cards
+
+You can add borders to the `Container`, `ColumnSet`, `Column`, and `Table` elements in Adaptive Cards to delineate different sections of the card. You can add rounded corners to the `Container`, `ColumnSet`, `Column`, `Table`, and `Image` elements in Adaptive Cards to make the card design look modern and visually appealing. For more information, see [borders and rounded corners in Adaptive Cards](cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards).
+
 ## Overflow menu on Adaptive Cards
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
