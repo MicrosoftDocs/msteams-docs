@@ -41,7 +41,7 @@ The Teams AI library provides the capability to stream messages for AI-powered b
 > [!NOTE]
 > Streaming bot messages is not available with function calling.
 
-Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. Configure the following to stream bot messages:
+Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app::
 
 1. **Enable streaming for AI bot**:
 
@@ -95,7 +95,7 @@ Follow these steps to configure streaming bot messages:
       - For a Python app: Update `bot.py`.
 
     b. Set `stream` to true in the `OpenAIModel` declaration.
-1. Configure the following AI-powered features:
+1. Configure the following features:
     - **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
     - **Format the final streamed message**: Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler. For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object.
     - **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
@@ -257,7 +257,7 @@ Here's a list of limitations when you use Azure OpenAI or OpenAI to stream bot m
   - **Finding relevant work items**
 - The model renders the informative message only at the beginning of each message returned from the LLM.
 - Attachments can be sent only in the final streamed chunk.
-- Streaming isn't available with AI SDK's function calls yet.
+- Streaming isn't available with AI SDK's function calls and AOAI/OAI's o1 model yet.
 - Here are the requirements to use `streamSequence` for AI SDK:
   - The sequence must start with number '1'.
   - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
