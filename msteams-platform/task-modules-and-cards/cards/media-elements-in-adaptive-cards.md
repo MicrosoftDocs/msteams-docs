@@ -188,9 +188,10 @@ For Teams desktop clients, Adaptive Card supports inline and full screen playbac
 
 ## Code samples
 
-|Sample name| Description|.NET|
+|Sample name| Description|.NET|Node.js|
 |-------|------------------|-----|
-| Media elements in Adaptive Card | This sample shows how you can send Adaptive Cards with media files. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|
+| Media elements in Adaptive Card | This sample shows how you can send Adaptive Cards with media files. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|NA|
+|Bot Formatting|This sample demonstrates YouTube, Vimeo, and Dailymotion videos in Adaptive Cards.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) |
 
 ## See also
 
