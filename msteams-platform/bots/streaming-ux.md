@@ -38,7 +38,10 @@ You can implement streaming bot messages in your app in one of the following way
 
 The Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
-Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. To configure streaming messages for your AI-powered bot app:
+> [!NOTE]
+> Streaming bot messages is not available with function calling.
+
+Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. Configure the following to stream bot messages:
 
 1. **Enable streaming for AI bot**:
 
@@ -46,7 +49,7 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
 2. **Set informative message**:
 
-    You can define just one informative message for your AI-powered bot. This message appears for the user every time the bot sends an update. Here are some examples for informative messages that you can set in your app:
+    You can define an informative message for your AI-powered bot. This message appears for the user every time the bot sends an update. Here are some examples for informative messages that you can set in your app:
 
     - **Scanning through documents**
     - **Summarizing content**
