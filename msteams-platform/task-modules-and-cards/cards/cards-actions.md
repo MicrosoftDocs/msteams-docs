@@ -1,6 +1,6 @@
 ---
 title: Add card actions in a bot
-description: Learn about card actions in Microsoft Teams, action types such as openAI, messageBack, imBack, invoke, and signin, and how to use card actions in bots.
+description: Learn about card actions such as openUrl, messageBack, imBack, invoke, and signin, and Adaptive Card actions such as Action.Submit.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/04/2023
@@ -417,13 +417,14 @@ CardFactory.actions([
 
 ## Adaptive Cards actions
 
-Adaptive Cards support four action types:
+Adaptive Cards support the following six action types:
 
 * [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Open the specified url.
 * [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
 * [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
 * [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
+* [Action.ResetInputs](dynamic-search.md#actionresetinputs): Resets the values of the inputs in an Adaptive Card.
 
 ### Action.Submit
 
