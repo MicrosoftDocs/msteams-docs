@@ -4,17 +4,18 @@ author: surbhigupta12
 description: Learn how the media files are added and supported in the Adaptive Card, and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high
 ms.topic: reference
+ms.date: 11/07/2024
 ---
 
 # Media elements in Adaptive Card
 
 Adaptive Card media element is a component that is used to embed audio and video files directly into your Adaptive Card. Media elements enhance the user experience by making the cards more interactive and engaging. Your app users can view and play media files directly within Adaptive Cards in Teams. Here are few benefits about media elements in Adaptive Card:
 
-* ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture app users attention more effectively. 
+* ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture app users attention more effectively.
 
-* ***Improved Communication***: Media elements can convey information more effectively with rich posters than text alone. 
+* ***Improved Communication***: Media elements can convey information more effectively with rich posters than text alone.
 
-* ***Versatility***: Media elements can be used in various scenarios, such as tutorials, announcements, or feedback requests. 
+* ***Versatility***: Media elements can be used in various scenarios, such as tutorials, announcements, or feedback requests.
 
 You can add the media files available in OneDrive, SharePoint, YouTube, Dailymotion, or Vimeo to your Adaptive Card.
 
@@ -55,9 +56,9 @@ Add media files into an existing or new Adaptive Card either through [Developer 
      1. Get a URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
 
         :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can copy a link.":::
-   
+
         You can also create a URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
-        
+
     </details>
 
    * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
@@ -98,9 +99,9 @@ Add media files into an existing or new Adaptive Card either through [Developer 
      1. Get a URL using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
 
         :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can copy a link.":::
-   
+
         You can also create a URL for a DriveItem. For more information, see [DriveItem](/graph/api/driveitem-createlink).
-        
+
     </details>
 
    * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
@@ -179,7 +180,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
 | `sources.url`| The URL to a media file. Supports data URI in version 1.2+. |
 | `sources.mimeType`| Mime type of associated media, such as `video/mp4`. `mimeType` is a required field for Teams web and desktop clients.|
 
-For more information, see [Adaptive Cards `media` ](https://www.adaptivecards.io/explorer/Media.html).
+For more information, see [Adaptive Cards `media`](https://www.adaptivecards.io/explorer/Media.html).
 
 ## Limitations
 
