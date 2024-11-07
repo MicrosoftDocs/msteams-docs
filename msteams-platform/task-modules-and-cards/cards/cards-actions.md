@@ -3,7 +3,7 @@ title: Add card actions in a bot
 description: Learn about card actions such as openUrl, messageBack, imBack, invoke, and signin, and Adaptive Card actions such as Action.Submit.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 05/04/2023
+ms.date: 11/07/2024
 ---
 
 # Card actions
