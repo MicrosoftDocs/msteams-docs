@@ -14,8 +14,8 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extension plugins are in preview.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
+> * Message extension agents are in preview.
+> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
@@ -34,17 +34,17 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 [*Must fix*]
 
-A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Copilot.
+A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension agent must be invoked from Microsoft 365 Copilot.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Copilot, modify the app description to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a agent in Microsoft 365 Copilot, modify the app description to suit the following agent requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension agent in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following code snippets show the short description examples for each category:
@@ -511,7 +511,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a plugin.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
 > [!NOTE]
 >
@@ -562,7 +562,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 [*Must fix*]
 
-Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
+Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension agent must function effectively, appear rich, and meet the following requirements:
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
