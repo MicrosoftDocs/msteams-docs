@@ -1317,9 +1317,9 @@ Here are the properties of the `data` array:
 
 ## Code sample
 
-|**Sample name** | **Description** | **Node.js** | **NET** |
-|----|----|----|----|----|
-| Chart in Adaptive Cards | The sample demonstrates the various types of charts in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) |
+| Name | Description |.Node.js | .NET |
+|---|---|---|---|
+| Cards Formatting | This sample app demonstrates the various charts in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) |
 
 ## See also
 
