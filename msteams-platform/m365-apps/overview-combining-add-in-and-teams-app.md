@@ -1,7 +1,7 @@
 ---
-title: General guidance for combining an Office add-in and a Teams app
+title: General Guidance for Combining an Office add-in and a Teams App
 description: Get high-level general guidance about combining an existing Office Add-in with an existing Teams app.
-ms.date: 10/10/2024
+ms.date: 11/08/2024
 ms.author: mosdevdocs
 author: rickki
 ms.topic: conceptual
@@ -14,17 +14,17 @@ ms.subservice: m365apps
 When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and Microsoft 365 tenant administrators to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
 > [!NOTE]
-> Currently, Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We are working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
+> Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We are working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
 
 There can be no algorithmic procedure for merging an add-in and a Teams app for the following reasons:
 
-- An algorithm would have to make assumptions about the folder and file structure of the existing Teams app. But these structures vary depending on which tool was used to create the app project and what version of that tool. And, or course, the developer of the app may have changed the structure after the project was created.
+- An algorithm will have to make assumptions about the folder and file structure of the existing Teams app. But these structures vary depending on which tool was used to create the app project and what version of that tool. And, of course, the developer of the app might have changed the structure after the project was created.
 - The preceding bullet also applies to the add-in project.
-- An algorithm would have to make assumptions about the settings in various configuration files. But these settings would also vary depending on how the project was created and changes made to the configuration since it was created.
-- An algorithm would have to make an assumption about which language, TypeScript or JavaScript, was used for the client-side source code of the web application.
+- An algorithm will have to make assumptions about the settings in various configuration files. But these settings will also vary depending on how the project was created and changes made to the configuration since it was created.
+- An algorithm will have to make an assumption about which language, TypeScript or JavaScript, was used for the client-side source code of the web application.
 
 > [!NOTE]
-> In addition to these bullets, note also that there are two basic families of web application frameworks on which either the add-in or the Teams app may have been created. 
+> In addition to these bullets, note also that there are two basic families of web application frameworks on which either the add-in or the Teams app might have been created. 
 >
 > - **IIS/.NET**: 
 >
@@ -80,7 +80,7 @@ When the update has been published, how the update becomes available to end user
 - Users who had previously acquired only the Office add-in must acquire the new combined app from the Teams store. It cannot be acquired through **All Apps** button in the Outlook ribbon.
 
 > [!IMPORTANT]
-> Users with certain older versions of Office may still see the old version of the add-in, even after the new combined app is acquired. Generally, add-ins that use the unified app manifest for Microsoft 365 (formerly Teams app manifest) can be installed only on Microsoft 365 Version 2307 (Build 16626.20132) and later. However, there are two exceptions which enable these add-ins to be installed on older versions of Microsoft 365 and on perpetual license versions of Office.
+> Users with certain older versions of Office might still see the old version of the add-in, even after the new combined app is acquired. Generally, add-ins that use the unified app manifest for Microsoft 365 (formerly Teams app manifest) can be installed only on Microsoft 365 Version 2307 (Build 16626.20132) and later. However, there are two exceptions which enable these add-ins to be installed on older versions of Microsoft 365 and on perpetual license versions of Office.
 >
 > - The user's Microsoft 365 administrator deploys the add-in for all users.
 > - The user installs the add-in in Outlook on the web, [new Outlook for Windows](https://support.microsoft.com/office/new-and-classic-outlook-for-windows-feature-comparison-de453583-1e76-48bf-975a-2e9cd2ee16dd), or in another Microsoft 365 desktop client app that *is* Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
