@@ -3,7 +3,7 @@ title: Create & Explore Card Types in Teams
 description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 06/13/2023
+ms.date: 09/16/2024
 ---
 
 # Types of cards
@@ -112,6 +112,8 @@ After identifying the common properties for all cards, you can now work with Ada
 ## Adaptive Card
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+
+To explore Adaptive Card templates, see [Adaptive Card starter collection](design-effective-cards.md#adaptive-card-starter-collection).
 
 ### Support for Adaptive Cards
 
@@ -277,7 +279,7 @@ Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls
 
   * Avoid defining ColumnSets with more than three columns.
   * Don’t use explicit pixel width on more than one column in the set.
-  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Copilot).
+  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Microsoft 365 Copilot).
   * In general, 48 pixels is about the maximum explicit width you’d want to use, although there may be exceptions depending on the scenario.
 
 * **Sizing images**
@@ -464,7 +466,7 @@ The following code shows an example of a list card:
 
 ## Connector card for Microsoft 365 Groups
 
-You can work with an connector cards for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groupsd](#additional-information-on-the-connector-card-for-microsoft-365-groups).
+You can work with a connector card for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groups](#additional-information-on-the-connector-card-for-microsoft-365-groups).
 
 ### Support for connector cards for Microsoft 365 Groups
 

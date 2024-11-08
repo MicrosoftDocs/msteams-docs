@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2024-05-01T04:15:01+05:30</updated>
+	<updated>2024-10-01T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Ensure a secure and user-friendly experience for app users with Nested App Authentication]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11548</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Excited to introduce Nested app authentication (NAA) for single-page applications that are embedded in host environment. NAA ensures that users can seamlessly interact with integrated apps within a primary app. It offers all this while maintaining security and enhancing user experience without requiring multiple logins. Use NAA to enable Single Sign-On (SSO) for apps embedded within supported Microsoft apps. NAA improves security by offering better security and flexibility. This allows for the creation of rich, client-driven apps while ensuring a secure and user-friendly experience for app users.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Introduced App analytics for third-party apps in Developer Portal]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11610</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you're an ISV developer, you now have the capability to access and analyze your app's usage metrics, including monthly, daily, and weekly data, through the Developer Portal. Additionally, you can import your existing or published apps to the Developer Portal to view detailed usage data, such as trends over time, usage by region or country, app usage across different host products and Microsoft 365 (M365) workloads, and the usage of various app capabilities. This enhancement aims to provide full visibility and explore app usage metrics to build better apps and to provide detailed insights into your app performance.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Be proactive in following validation guidelines for your Copilot agent and publish it swiftly!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11611</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We’ve introduced comprehensive validation guidelines to help publish your Copilot agents swiftly. By following these guidelines, developers can significantly improve their chances of getting their agents approved and published to the Store faster. Be sure to refer to the updated page for all the details.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Announcing the launch of the enhanced App validation tool in Developer Portal!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11459</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed"/>
+		<updated>2024-07-31T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you're an ISV developer, our updated App validation tool lets you evaluate your app packages using the same test cases Microsoft uses for reviews. It identifies errors or warnings in app manifests, basic info, and bot capabilities, providing clear guidelines for resolution. Developers now get detailed success, error, and warning statuses based on new bot capability scenarios, helping them fix issues before submission.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[App validation update: Common reasons for app validation failure]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10819</id>
@@ -89,35 +121,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-api-based-message-extension?tabs=developer-portal-for-teams%2Cnew-api%2Cnew-api2?referrer=whats.new.rssfeed"/>
 		<updated>2024-02-16T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience. You can now build API-based message extension using Developer Portal for Teams.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Version%20Independent%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Content%3A%20%5BBuild%20API-based%20message%20extension%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fbuild-api-based-message-extension%3Ftabs%3Ddeveloper-portal-for-teams%252Cnew-api%252Cnew-api2)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-ypalikila%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introduced Teams Toolkit CLI v3]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three?referrer=whats.new.rssfeed"/>
-		<updated>2024-01-22T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. We recommend that you use Teams Toolkit CLI v3 to build your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Version%20Independent%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Content%3A%20%5BTeams%20Toolkit%20Command%20Line%20Interface%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-cli%3Fpivots%3Dversion-three)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40MuyangAmigo%0A*%20Microsoft%20Alias%3A%20**zhany**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Extend a Teams message extension across Microsoft 365]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-27T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Message extensions allow users to interact with your web service using buttons and forms. Users can search or initiate actions in an external system from Microsoft Teams and Outlook by extending your Teams apps across Microsoft 365. There are two types of message extensions:Search-based and Action-based message extensions.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%202f0e2f61-c2b6-13c5-c367-283c55ae1be0%0A*%20Version%20Independent%20ID%3A%202f0e2f61-c2b6-13c5-c367-283c55ae1be0%0A*%20Content%3A%20%5BExtend%20a%20Teams%20message%20extension%20across%20Microsoft%20365%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dttk%252Csearch-based-message-extension)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md)%0A*%20Service%3A%20**msteams**%0A*%20Sub-service%3A%20**m365apps**%0A*%20GitHub%20Login%3A%20%40erikadoyle%0A*%20Microsoft%20Alias%3A%20**mosdevdocs**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: The captureImage API]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/media-capabilities?tabs=mobile#media-capability-apis</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/media-capabilities?tabs=mobile#media-capability-apis?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[The captureImage API enables users to activate the camera and capture an image or select media from the gallery. When the captureImage callback is triggered, the image is shared as a file. The API restricts users to either select or capture a single image for sharing and is compatible only with mobile clients.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Version%20Independent%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Content%3A%20%5BIntegrate%20media%20capabilities%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities%3Ftabs%3Dmobile)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You donâ€™t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Version%20Independent%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Content%3A%20%5BDebug%20bot%20using%20Teams%20App%20Test%20Tool%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
