@@ -9,7 +9,7 @@ ms.date: 09/16/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Guidelines to create and upgrade Copilot agents
+# Guidelines to create and upgrade agents
 
 > [!IMPORTANT]
 >
@@ -19,7 +19,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+> For more information about validation guidelines for agents to increase their chance for being listed on the Team Store, see [validation guidelines for agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
 Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
@@ -690,7 +690,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 > [!IMPORTANT]
 > Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
-Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
+Agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
 
  If you've developed a plugin for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 

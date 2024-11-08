@@ -43,7 +43,7 @@ Descriptions enhance the usability and effectiveness of a message extension plug
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
 * **Semantic description**: Semantic description helps Microsoft 365 Copilot generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
 
-For more information, see [guidelines to create and upgrade Copilot agents](dev-guidelines-copilot-agents.md).
+For more information, see [guidelines to create and upgrade agents](dev-guidelines-copilot-agents.md).
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Microsoft 365 Copilot.
 

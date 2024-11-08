@@ -431,7 +431,7 @@ Allows the specification of a default language, and pointers to additional langu
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`defaultLanguageTag`| String | | ✔️|The language tag for the strings in this app manifest file. For example, `en`|
-|`defaultLanguageFile`| String |2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
+|`defaultLanguageFile`| String |2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
 

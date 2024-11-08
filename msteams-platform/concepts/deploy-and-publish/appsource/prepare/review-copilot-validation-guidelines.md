@@ -1,5 +1,5 @@
 ---
-title: Guidelines to Validate Copilot Agents
+title: Guidelines to Validate Agents
 description: Learn how to increase the chances of your message extension as an agent or plugin for Microsoft 365 Copilot to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
@@ -9,7 +9,7 @@ ms.date: 09/16/2024
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Validation guidelines for Copilot agents
+# Validation guidelines for agents
 
 > [!IMPORTANT]
 >
@@ -83,12 +83,12 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
 
 ## Description
 
-A good description offers a clear and concise summary of the Copilot agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
+A good description offers a clear and concise summary of the agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
 
-You must ensure to meet the following guidelines for Copilot agents:
+You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to app description for Microsoft 365 apps are applicable. For more information, see [app descriptions](teams-store-validation-guidelines.md#app-descriptions).
-* Short description of Copilot agent, parameter, command description, semantic description, and operation ID mustn't include:
+* Short description of agent, parameter, command description, semantic description, and operation ID mustn't include:
   * Instructional phrases, for example, 'if the user says X', 'ignore', 'delete', 'reset', 'new instructions', 'Answer in Bold', or 'Do not print anything'. [*Must fix*]
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
@@ -100,7 +100,7 @@ You must ensure to meet the following guidelines for Copilot agents:
   > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
-* App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
+* App long description must clearly call out that the agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
 
@@ -112,16 +112,16 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 ## Screenshots
 
-You must ensure to meet the following guidelines for Copilot agents:
+You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
-* Apps with Copilot agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
+* Apps with agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Copilot agent name
+## Agent name
 
-You must ensure to meet the following guidelines for Copilot agents:
+You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to app name for Microsoft 365 apps are applicable. For more information, see [app name](teams-store-validation-guidelines.md#app-name).
 * For declarative agent, ensure that the following parameters are identical: [*Must fix*]
@@ -133,7 +133,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 ## Compound utterances
 
-Copilot agents must support atleast three unique compound utterances by handling three or more parameters.
+Agents must support atleast three unique compound utterances by handling three or more parameters.
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
@@ -168,13 +168,13 @@ Prompt starters guide users on how to start using declarative agents. You must e
 
 ## Adaptive Card response
 
-Copilot agent responses provided as an Adaptive Card must meet the following requirements:
+Agent responses provided as an Adaptive Card must meet the following requirements:
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Copilot app response contains preview and content in the same response.":::
 
-* Apart from the Copilot agent logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes such as data modified, author, status, and flags. [*Must fix*]
+* Apart from the agent logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes such as data modified, author, status, and flags. [*Must fix*]
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
@@ -185,7 +185,7 @@ Copilot agent responses provided as an Adaptive Card must meet the following req
 
 ## Compatibility
 
-Copilot agents must be fully responsive and functional on the latest versions of these clients: [*Must fix*]
+Agents must be fully responsive and functional on the latest versions of these clients: [*Must fix*]
 
 * Microsoft Teams on desktop and web
 * copilot.microsoft.com on web
@@ -216,9 +216,9 @@ For more information to create plugins for teams meetings, see [enable message e
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-### Ensure your Copilot agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
-You must ensure to meet the following guidelines for Copilot agents:
+You must ensure to meet the following guidelines for agents:
 
 1. **If using SSO-enabled app, update Microsoft Entra app registration**: [*Must fix*]
 
@@ -256,7 +256,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 1. **Configure Content Security Policy headers** [*Must fix*]
 
-    If your Copilot agent makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
+    If your agent makes use of [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) headers, ensure that all the following [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) are included in your CSP headers:
 
     | Microsoft 365 App | `frame-ancestors` permission |
     | --- | --- |
@@ -283,14 +283,14 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 ## Technical requirements
 
-For a Copilot agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
+For a agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
 |---|---|
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
-| Zero regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
+| Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
@@ -301,7 +301,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 
 :::image type="content" source="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" alt-text="The image shows an example of user disclosure and user confirmation." lightbox="../../../../assets/images/Copilot/dc-user-disclosure-confirmation.png" :::
 
-For action scenarios, Copilot agents must share user disclosure and seek user confirmation:
+For action scenarios, agents must share user disclosure and seek user confirmation:
 
 * Data shown in third-party service (through dialogue) must be reflective of confirmation provided by the user. [*Must fix*]
 * A confirmation of the completion of the action must be shared by the plugin in the form of a card. [*Must fix*]
@@ -358,19 +358,19 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
-## Copilot agent must have Action or knowledge source
+## Agent must have Action or knowledge source
 
-Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
+Your agent must have nodes defined as actions or Graph connectors in the app manifest. This ensures that the agent's responses are grounded in a data source. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
 ## Graceful error handling
 
-All Copilot agents must handle the following scenarios gracefully, that is, the agent must reject the user request and provide a way forward: [*Must fix*]
+All agents must handle the following scenarios gracefully, that is, the agent must reject the user request and provide a way forward: [*Must fix*]
 
 * For incorrect search parameters
 * For misuse or inappropriate language
-* For topics in which the Copilot agent doesn’t specialize
+* For topics in which the agent doesn’t specialize
 
   For example, graceful error message with way forward for declarative agent:
 
@@ -380,7 +380,7 @@ All Copilot agents must handle the following scenarios gracefully, that is, the 
 
 ## Security requirements for OpenAPI spec URL
 
-Copilot agents that use OpenAPI specs must ensure the following security standards:
+Agents that use OpenAPI specs must ensure the following security standards:
 
 * All API calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
@@ -390,6 +390,6 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 ## See also
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
-* [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
+* [Guidelines to create and upgrade agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
 * [Extend bot-based message extension as plugin for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-plugin.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
