@@ -149,7 +149,7 @@ After you enable citations, the bot message includes in-text citations and refer
 | --- | --- |
 | 400 | Multiple root message entities found under `entities` array |
 | 400 | Error parsing message entity from `entities` array |
-| 400 | Bot message with more than 10 citations |
+| 400 | Bot message with more than 20 citations |
 | 400 | The `appearance` object is empty |
 | 400 | Error while parsing citation entity with ID: X |
 
@@ -214,7 +214,7 @@ If you set `feedbackLoop.type` to `default`, the default feedback form appears w
 }
 ```
 
-You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `fetch/task` invoke.
+You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke.
 
 ### Handle feedback
 
