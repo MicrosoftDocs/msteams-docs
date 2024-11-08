@@ -76,7 +76,7 @@ It's important to cite the sources of the bot message to help users ask follow-u
 Citations in your bot's messages can include the following:
 
 * **In-text citations** denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
-* **Details of the citation reference** include the title, icon, keywords, abstract, hyperlink, sensitivity information and button for opening the modal window with additional content. References appear as pop-up windows for each in-text citation.
+* **Details of the citation reference** include the title, icon, keywords, abstract, hyperlink, sensitivity information, and a button to open the modal window with additional content. References appear as pop-up windows for each in-text citation.
 * **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
 * **Modal window with additional content** renders an Adaptive Card without any interactive items.
 
@@ -185,7 +185,7 @@ Feedback buttons in bot messages are crucial for measuring user engagement, iden
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot.":::
 
-When the user selects a feedback button, a feedback form appears based on the user's selection.
+When the user selects a feedback button, a feedback form appears based on the user's selection. You can either use the default feedback form or customize it to suit your app's needs.
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
@@ -207,21 +207,40 @@ For more information, see the [const app variable](https://github.com/microsoft/
 
 After you enable feedback buttons, all SAY commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
 
-To enable feedback buttons in a bot built using **Bot Framework SDK**, add a `channelData` object in your bot message and set the value of `feedbackLoopEnabled` to `true`.
+To enable feedback buttons in a bot built using **Bot Framework SDK**, define a `feedbackLoop` object under the `channelData` object of your bot message.
 
 ```javascript
 await context.sendActivity({
   type: ActivityTypes.Message,
   text: `Hey! I'm a friendly AI bot!`,
   channelData: {
-    feedbackLoopEnabled: true // Enable feedback buttons
+    feedbackLoop: { // Enable feedback buttons
+        type: "custom"
   },
 });
 ```
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `feedbackLoopEnabled` | Boolean | ✔️ | Enables feedback buttons in the bot's message |
+| `feedbackLoop` | Object | ✔️ | Enables feedback buttons in the bot's message. |
+| `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when user selects the feedback buttons. Allowed values: `custom`, `default` |
+
+If you set `feedbackLoop.type` to `default`, the default feedback form provided by Microsoft appears when a user selects the feedback buttons. If you set `feedbackLoop.type` to `custom`, the following invoke request is sent to the bot to retrieve a custom form which is then displayed to the user:
+
+```JavaScript
+{
+    "type": "invoke",
+    "name": "message/fetchTask",
+    "value": {
+        "actionName": "feedback",
+        "actionValue": {
+            "reaction": "like" // like or dislike
+        }
+    }
+}
+```
+
+You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x) that is the same response to a `fetch/task` invoke.
 
 ### Handle feedback
 
