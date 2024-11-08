@@ -127,18 +127,18 @@ await context.sendActivity({
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `citation` | Object | ✔️ | Details of the citation. |
-| `citation.@type` | String | ✔️ | Object of the citation. The only allowed value is `Claim`. |
+| `citation.@type` | String | ✔️ | Object of the citation.<br>Allowed value: `Claim` |
 | `citation.position` | Integer | ✔️ | Displays the citation number. |
 | `citation.appearance` | Object | ✔️ | Information about the appearance of the citation. |
-| `citation.appearance.@type` | String | ✔️ | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
+| `citation.appearance.@type` | String | ✔️ | Object of the citation appearance.<br>Allowed value: `DigitalDocument` |
 | `citation.appearance.name` | String | ✔️ | Title of the referenced content. Maximum characters: 80 |
 | `citation.appearance.url` | String | | URL of the referenced content. |
 | `citation.appearance.abstract` | String | | An abstract of the referenced content. Maximum characters: 160 |
 | `citation.appearance.text` | String | | A stringified Adaptive Card with additional information about the citation. Its rendered within the modal window accessible from the pop-up window. |
 | `citation.appearance.keywords` | Array | | Keywords from the referenced content. You can't add more than three keywords. Each keyword can only contain 28 characters. |
-| `citation.appearance.encodingFormat` | String | | The encoding format of the `citation.appearance.text` field. The only allowed value is `application/vnd.microsoft.card.adaptive`. |
+| `citation.appearance.encodingFormat` | String | | The encoding format of the `citation.appearance.text` field.<br>Allowed value: `application/vnd.microsoft.card.adaptive` |
 | `citation.appearance.image` | Object | | Information about the citation's icon. |
-| `citation.appearance.image.@type` | String | ✔️ | Must be `ImageObject`. |
+| `citation.appearance.image.@type` | String | ✔️ | The object of the citation icon. Must be `ImageObject`. |
 | `citation.appearance.image.name` | String | ✔️ | The name of the predefined icon. It renders the citation icon in the details of the citation reference. |
 
 <br>
