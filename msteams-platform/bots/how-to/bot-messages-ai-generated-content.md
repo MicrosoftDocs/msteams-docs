@@ -76,14 +76,14 @@ It's important to cite the sources of the bot message to help users ask follow-u
 Citations in your bot's messages can include the following:
 
 * **In-text citations** denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
-* **Details of the citation reference** include the title, icon, keywords, abstract, hyperlink, sensitivity information, and a button to open the modal window with additional content. References appear as pop-up windows for each in-text citation.
+* **Details of the citation reference** include the title, icon, keywords, abstract, hyperlink, sensitivity information, and a button to open a modal window with additional content. References appear as pop-up windows for each in-text citation.
 * **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
 * **Modal window with additional content** renders an Adaptive Card without any interactive items.
 
 > [!NOTE]
 >
 > * A maximum of 20 citations are displayed in a message.
-> * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the bot's message or in the modal window accessible from the pop-up window.
+> * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the bot's message or in the citation's modal window accessible from the pop-up window.
 
 ### Add citations
 
@@ -225,9 +225,9 @@ await context.sendActivity({
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `feedbackLoop` | Object | ✔️ | Enables feedback buttons in the bot's message. |
-| `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when user selects the feedback buttons. Allowed values: `custom`, `default` |
+| `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when a user selects the feedback buttons.<br>Allowed values: `custom`, `default` |
 
-If you set `feedbackLoop.type` to `default`, the default feedback form provided by Microsoft appears when a user selects the feedback buttons. If you set `feedbackLoop.type` to `custom`, the following invoke request is sent to the bot to retrieve a custom form which is then displayed to the user:
+If you set `feedbackLoop.type` to `default`, the default feedback form appears when a user selects the feedback buttons. If you set `feedbackLoop.type` to `custom`, the following invoke request is sent to the bot to retrieve a custom form to be displayed to the user:
 
 ```JSON
 {
@@ -242,7 +242,7 @@ If you set `feedbackLoop.type` to `default`, the default feedback form provided 
 }
 ```
 
-You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x) that is the same response to a `fetch/task` invoke.
+You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `fetch/task` invoke.
 
 ### Handle feedback
 
