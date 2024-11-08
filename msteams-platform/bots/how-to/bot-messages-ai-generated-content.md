@@ -109,9 +109,14 @@ await context.sendActivity({
         name: "AI bot", // Title
         url: "https://example.com/claim-1", // Hyperlink on the title
         abstract: "Excerpt description", // Appears in the citation pop-up window
+        text: "{\"type\":\"AdaptiveCard\",\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.6\",\"body\":[{\"type\":\"TextBlock\",\"text\":\"Adaptive Card text\"}]}", // Appears as a stringified Adaptive Card
         keywords: ["keyword 1", "keyword 2", "keyword 3"], // Appears in the citation pop-up window
-        encodingFormat: "docx",
+        encodingFormat: "application/vnd.microsoft.card.adaptive",
+        image: {
+          "@type": "ImageObject",
+          name: "Microsoft Word"
         },
+       },
       },
     ],
   },
@@ -128,42 +133,39 @@ await context.sendActivity({
 | `citation.appearance.@type` | String | ✔️ | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
 | `citation.appearance.name` | String | ✔️ | Title of the referenced content. Maximum characters: 80 |
 | `citation.appearance.url` | String | | URL of the referenced content. |
-| `citation.appearance.abstract` | String | | An abstract or summary of the referenced content. Maximum characters: 160 |
+| `citation.appearance.abstract` | String | | An abstract of the referenced content. Maximum characters: 160 |
 | `citation.appearance.text` | String | | A stringified Adaptive Card with additional information about the citation. Its rendered within the modal window accessible from the pop-up window. |
 | `citation.appearance.keywords` | Array | | Keywords from the referenced content. You can't add more than three keywords. Each keyword can only contain 28 characters. |
-| `citation.appearance.encodingFormat` | String | | The encoding format of the `citation.appearance.text` field. The only allowed value is `application/vnd.microsoft.card.adaptive` |
+| `citation.appearance.encodingFormat` | String | | The encoding format of the `citation.appearance.text` field. The only allowed value is `application/vnd.microsoft.card.adaptive`. |
 | `citation.appearance.image` | Object | | Information about the citation's icon. |
 | `citation.appearance.image.@type` | String | ✔️ | Must be `ImageObject`. |
 | `citation.appearance.image.name` | String | ✔️ | The name of the predefined icon. It renders the citation icon in the details of the citation reference. |
 
 <br>
 <details>
-<summary>List of supported icons allowed in the `citation.appearance.image.name` property</summary>
+<summary>List of supported icons allowed in the <b>citation.appearance.image.name</b> property</summary>
 
-| Icon | Extension (File format) |
-|--|--|
-| Microsoft Word | docx, doc, docm, dotx, dot, dotm, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.wordprocessingml.template, application/vnd.ms-word.document.macroenabled.12, application/vnd.ms-word.template.macroenabled.12 |
-| Microsoft Excel | xlsx, xlsb, xls, xlsm, csv, ods, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.openxmlformats-officedocument.spreadsheetml.template, application/vnd.ms-excel.sheet.macroenabled.12, application/vnd.ms-excel.template.macroenabled.12, application/vnd.ms-excel.addin.macroenabled.12, application/vnd.ms-excel.sheet.binary.macroenabled.12 |
-| Microsoft PowerPoint | pptx, potm, ppt, pptm, pot, potx, pps, ppsm, ppsx, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.openxmlformats-officedocument.presentationml.template, application/vnd.openxmlformats-officedocument.presentationml.slideshow, application/vnd.ms-powerpoint.addin.macroenabled.12, application/vnd.ms-powerpoint.presentation.macroenabled.12, application/vnd.ms-powerpoint.template.macroenabled.12, application/vnd.ms-powerpoint.slideshow.macroenabled.12 |
-| Microsoft SharePoint | sppage, splist, splistform, splistitem, splistplaylist |
-| Microsoft OneNote | note, one, onenote, onepkg, notebk, onetoc2 |
-| Microsoft Loop | fluid, loop |
-| Microsoft Visio | vsdx, vsdm, vsd |
-| Microsoft Whiteboard | whiteboard |
-| Source Code | js, cs, html, htm, cmd, c, class, xml, cpp |
-| Sketch | sketch |
-| Adobe Illustrator | ai, ait, eps |
-| Adobe Flash | fla, swf, as |
-| Adobe Photoshop | psd, pdd |
-| Adobe InDesign | indd, indl, indt, indb |
-| Adobe After Effects | aep, aet, aaf, aepx |
-| PDF | pdf, application/pdf |
-| Text | txt |
-| ZIP | zip, rar |
-| Image | png, jpg, jpeg, bmp, tiff, tif, image/png, image/jpg, image/jpeg |
-| GIF | gif, image/gif |
-| Audio | mp3, wav, m4a, wma |
-| Video | 3g2, 3gp, 3gpp, asf, avi, m2ts, m4v, mkv, mp4v, mts, ts, mp4, mov, wmv, webm |
+* `Microsoft Word`
+* `Microsoft Excel`
+* `Microsoft PowerPoint`
+* `Microsoft OneNote`
+* `Microsoft SharePoint`
+* `Microsoft Visio`
+* `Microsoft Loop`
+* `Microsoft Whiteboard`
+* `Source Code`
+* `Sketch`
+* `Adobe Illustrator`
+* `Adobe Photoshop`
+* `Adobe InDesign`
+* `Adobe Flash`
+* `Image`
+* `GIF`
+* `Video`
+* `Sound`
+* `ZIP`
+* `Text`
+* `PDF`
 
 </details>
 
@@ -227,7 +229,7 @@ await context.sendActivity({
 
 If you set `feedbackLoop.type` to `default`, the default feedback form provided by Microsoft appears when a user selects the feedback buttons. If you set `feedbackLoop.type` to `custom`, the following invoke request is sent to the bot to retrieve a custom form which is then displayed to the user:
 
-```JavaScript
+```JSON
 {
     "type": "invoke",
     "name": "message/fetchTask",
