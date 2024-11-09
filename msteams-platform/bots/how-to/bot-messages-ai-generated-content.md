@@ -214,7 +214,7 @@ If you set `feedbackLoop.type` to `default`, the default feedback form appears w
 }
 ```
 
-You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke.
+You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke. For more information regarding invoking dialogs in bots, see [use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 ### Handle feedback
 
