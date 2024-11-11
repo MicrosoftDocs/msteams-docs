@@ -141,6 +141,76 @@ The following table lists the updates to the Teams AI library:
 | Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️|✔️|
 |Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ |✔️|✔️|
 
+## Function calls using AI SDK
+
+Using function calls, AI models can unlock many capabilities, driving innovation and efficiency in different areas. Function calls have been implemented within AI SDK to enable the AI model to generate accurate responses smoothly. Function calls allow models to connect directly with external tools, making AI even more powerful. This means AI can integrate more deeply with different applications, leading to enhanced capabilities. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
+
+To set up function calls:
+
+1. Instantiate the planner where the default prompt uses the Tools Augmentation.
+
+    * `index.ts` for JS
+    * `Program.cs` for C#
+    * `bot.py` for Python
+
+# [JavaScript](#tab/javascript)
+
+```
+const planner = new ActionPlanner({
+    model,
+    prompts,
+    defaultPrompt: 'tools'
+});
+```
+
+# [C#](#tab/dotnet)
+
+```
+ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
+{ 
+    Model = model,
+    Prompts = prompts,
+    async (context, state, planner) =>
+    {
+        return await Task.FromResult(prompts.GetPrompt("Tools"));
+    } 
+}
+ActionPlanner<TurnState> planner = new ActionPlanner(options)
+```
+
+# [Python](#tab/python)
+
+```
+
+planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
+```
+
+---
+
+1. Specify tools augmentation in the `config.json`.
+
+    * To mandate the model to always call at least one function, you can set `tool_choice` to `required`. It's default value is `auto`. You can also set it to a specific function using its definition, or to `none`.
+    * You can also ensure that `parallel_tool_calls` is set to `true` to enable a more efficient parallel function calling.
+
+```
+{
+    "schema": 1.1,
+    "description": "",
+    "type": "",
+    "completion": {
++       "tool_choice": "auto",
++       "parallel_tool_calls": true,
+    },
++    "augmentation": {
++        "augmentation_type": "tools"
++    }
+}
+```
+
+1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
+
+1.
+
 ## Code samples
 
 | Sample name                            | Description                                                                                                                                                                                                                                                           | .NET                                                                                                        | Node.js                                                                                                                | Python                                                                                                   |
