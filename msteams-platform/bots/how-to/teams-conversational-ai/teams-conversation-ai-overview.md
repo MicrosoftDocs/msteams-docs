@@ -150,11 +150,13 @@ Using function calls, AI models can unlock many capabilities, driving innovation
 
 To use function calling with the Chat Completions API:
 
-1. Instantiate the `ToolsAugmentation` class, a server-side augmention.
+1. Instantiate the planner where the default prompt uses the Tools Augmentation.
 
     * `index.ts` for JavaScript
     * `Program.cs` for C#
     * `bot.py` for Python
+
+   The following code snippet shows how to instantiate the `ToolsAugmentation` class, which is a server-side augmention:
 
         # [JavaScript](#tab/javascript)
 
@@ -189,7 +191,9 @@ To use function calling with the Chat Completions API:
 
         ---
 
-1. Specify `tools` augmentation in the `config.json`.
+1. Specify tools augmentation in the `config.json`.
+
+   The following code snippet shows how to specify 
 
         ```JSON
         {
@@ -208,6 +212,8 @@ To use function calling with the Chat Completions API:
 
 1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
+  The following code snippet shows how to specify `function definitions`:
+
     ```JSON
     [{
         "name": "CreateList",
@@ -221,6 +227,8 @@ To use function calling with the Chat Completions API:
     * The function call must return a string, which will be the output of the function call.
     * After all functions have been executed, these outputs are then returned to the model.
 If the model requests to invoke any function(s), these are internally mapped to DO commands within a Plan, which are then invoked in our AI class' run function. These outputs are then returned to the model with tool call IDs to indicate that the tools were called.
+
+   The following code snippet shows how to register `handlers`:
 
         # [JavaScript](#tab/javascript1)
 
@@ -277,13 +285,15 @@ You can enable the following tool options:
     
 * **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` is set to `true`.
 
-```JSON
-    {
+The following code snippet shows how to enable tool choice and to toggle parallel tool calls.
 
-        "schema": 1.1,
-        "description": "",
-        "type": "",
-        "completion": {
+```JSON
+{
+
+    "schema": 1.1,
+    "description": "",
+    "type": "",
+    "completion": {
 +       "tool_choice": "auto",
 +       "parallel_tool_calls": true,
     },
