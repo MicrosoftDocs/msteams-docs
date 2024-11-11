@@ -152,9 +152,9 @@ To use function calling with the Chat Completions API:
 
 1. Instantiate the planner where the default prompt uses the Tools Augmentation. Update one of the following main application files of your bot app:
 
-    * For a JavaScript app: Update index.ts.
-    * For a C# bot app: Update Program.cs.
-    * For a Python app: Update bot.py.
+    * For a JavaScript app: Update `index.ts`.
+    * For a C# bot app: Update `Program.cs`.
+    * For a Python app: Update `bot.py`.
 
    The following code snippet shows how to instantiate the `ToolsAugmentation` class, which is a server-side augmention:
 
