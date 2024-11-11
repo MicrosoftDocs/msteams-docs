@@ -291,6 +291,7 @@ You can enable the following tool options:
 +        "augmentation_type": "tools"
 +    }
 }
+```
 
 
 ## Code samples
