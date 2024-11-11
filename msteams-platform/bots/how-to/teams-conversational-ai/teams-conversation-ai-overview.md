@@ -158,57 +158,57 @@ To use function calling with the Chat Completions API:
 
    The following code snippet shows how to instantiate the `ToolsAugmentation` class, which is a server-side augmention:
 
-        # [JavaScript](#tab/javascript)
+    # [JavaScript](#tab/javascript)
 
-        ```JavaScript
-        const planner = new ActionPlanner({
-            model,
-            prompts,
-            defaultPrompt: 'tools'
-        });
+    ```JavaScript
+    const planner = new ActionPlanner({
+        model,
+        prompts,
+        defaultPrompt: 'tools'
+    });
         ```
 
-        # [C#](#tab/dotnet)
+    # [C#](#tab/dotnet)
 
-        ```C#
-        ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
-        { 
-            Model = model,
-            Prompts = prompts,
-            async (context, state, planner) =>
-            {
-                return await Task.FromResult(prompts.GetPrompt("Tools"));
-            } 
-        }
-        ActionPlanner<TurnState> planner = new ActionPlanner(options)
-        ```
+    ```C#
+    ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
+    { 
+        Model = model,
+        Prompts = prompts,
+        async (context, state, planner) =>
+        {
+            return await Task.FromResult(prompts.GetPrompt("Tools"));
+        } 
+    }
+    ActionPlanner<TurnState> planner = new ActionPlanner(options)
+    ```
 
-        # [Python](#tab/python)
+    # [Python](#tab/python)
 
-        ```Python
-        planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
-        ```
+    ```Python
+    planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
+    ```
 
-        ---
+    ---
 
 1. Specify tools augmentation in the `config.json`.
 
    The following code snippet shows how to specify 
 
-        ```JSON
-        {
-            "schema": 1.1,
-            "description": "",
-            "type": "",
-            "completion": {
-        +       "tool_choice": "auto",
-        +       "parallel_tool_calls": true,
-            },
-        +    "augmentation": {
-        +        "augmentation_type": "tools"
-        +    }
-        }
-        ```
+    ```JSON
+    {
+        "schema": 1.1,
+        "description": "",
+        "type": "",
+        "completion": {
+    +       "tool_choice": "auto",
+    +       "parallel_tool_calls": true,
+        },
+    +    "augmentation": {
+    +        "augmentation_type": "tools"
+    +    }
+    }
+    ```
 
 1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
@@ -230,44 +230,44 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
    The following code snippet shows how to register `handlers`:
 
-        # [JavaScript](#tab/javascript1)
+    # [JavaScript](#tab/javascript1)
 
-        ```JavaScript
-        app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-        // Ex. create a list with name "Grocery Shopping".
-        ensureListExists(state, parameters.list);
-        return `list created and items added. think about your next action`;
-        });
-        ```
+    ```JavaScript
+    app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    // Ex. create a list with name "Grocery Shopping".
+    ensureListExists(state, parameters.list);
+    return `list created and items added. think about your next action`;
+    });
+    ```
 
-        # [C#](#tab/dotnet1)
+    # [C#](#tab/dotnet1)
 
-        ```C#
-        [Action("CreateList")]
-        public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
-        {
-            ArgumentNullException.ThrowIfNull(turnState);
-            ArgumentNullException.ThrowIfNull(parameters);
+    ```C#
+    [Action("CreateList")]
+    public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+    {
+        ArgumentNullException.ThrowIfNull(turnState);
+        ArgumentNullException.ThrowIfNull(parameters);
 
-            string listName = GetParameterString(parameters, "list");
+        string listName = GetParameterString(parameters, "list");
 
-            EnsureListExists(turnState, listName);
+        EnsureListExists(turnState, listName);
 
-            return "list created. think about your next action";
-        }
-        ```
+        return "list created. think about your next action";
+    }
+    ```
 
-        # [Python](#tab/python1)
+    # [Python](#tab/python1)
 
-        ```Python
-        @app.ai.action("createList")
-        async def create_list(context: ActionTurnContext, state: AppTurnState):
-        ensure_list_exists(state, context.data["list"])
-        # Continues exectuion of next command in the plan.
-        return ""
-        ```
+    ```Python
+    @app.ai.action("createList")
+    async def create_list(context: ActionTurnContext, state: AppTurnState):
+    ensure_list_exists(state, context.data["list"])
+    # Continues exectuion of next command in the plan.
+    return ""
+    ```
 
-        ---
+    ---
 
     If the model requests to invoke any function, these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
 
