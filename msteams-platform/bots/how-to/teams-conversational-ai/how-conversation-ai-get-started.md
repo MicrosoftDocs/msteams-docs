@@ -818,6 +818,12 @@ You can build an AI bot or elevate your existing conventional bot to be powered 
 > [!NOTE]
 > If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
 
+## Code sample
+
+| **Sample name** | **Description** |**.NET** |**Node.js** |
+| --- | --- | --- | --- |
+| Action mapping lightbot | This example showcases how the LightBot understands user intent, accurately interpreting commands to effortlessly control light bot. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)
+
 ## Next step
 
 > [!div class="nextstepaction"]
