@@ -99,7 +99,7 @@ Follow these steps to configure streaming bot messages:
 1. **Format the final streamed message**:
     - Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler.
     - For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object in addition to the `AIOptions` object.
-1. **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
+    - Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
 
 The following code snippet shows an example of streaming bot messages:
 
