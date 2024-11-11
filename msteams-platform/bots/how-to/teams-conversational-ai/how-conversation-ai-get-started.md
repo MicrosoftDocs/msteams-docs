@@ -800,6 +800,24 @@ A feedback loop consists of the following:
 
 **Handle Complex Commands**: Once the model has learned from its mistakes, it becomes capable of handling more complex commands and returning the desired plan.
 
+## Build an AI-powered Teams bot app
+
+You can build an AI bot or elevate your existing conventional bot to be powered by AI.
+
+| # | I want to build ... | Here's a sample |
+| --- | --- | --- |
+| 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
+| 2. | Migrate bot to use Teams AI library | [Migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration) |
+
+### Elevate your conventional bot to use AI
+
+[Code sample](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L86)
+
+### Migrate your bot to use Teams AI library
+
+> [!NOTE]
+> If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. For more information, see [why you should migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration).
+
 ## Next step
 
 > [!div class="nextstepaction"]
