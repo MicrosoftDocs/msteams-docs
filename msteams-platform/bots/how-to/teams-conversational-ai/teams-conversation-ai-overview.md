@@ -215,7 +215,7 @@ To set up function calls:
         "description": "Creates a list"
     }]
 
-```
+    ```
 
 1. Register your `handlers` in your `application` class.
 
