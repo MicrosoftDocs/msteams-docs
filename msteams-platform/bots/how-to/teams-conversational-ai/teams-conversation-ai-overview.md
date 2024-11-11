@@ -3,9 +3,9 @@ title: Introduction to Teams AI Library
 description: Learn about Teams AI library, Teams-centric component scaffolding, natural language modeling, prompt engineering, LLM, action planner, assistants API, augmentation.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-ypalikila
-author: michaelmaillot
-ms.date: 02/12/2024
+ms.author: surbhigupta12
+author: surbhigupta
+ms.date: 11/12/2024
 ---
 
 # Teams AI library
