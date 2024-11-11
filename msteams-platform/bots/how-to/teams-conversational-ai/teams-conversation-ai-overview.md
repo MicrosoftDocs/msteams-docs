@@ -192,7 +192,7 @@ planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, defau
     * To mandate the model to always call at least one function, you can set `tool_choice` to `required`. It's default value is `auto`. You can also set it to a specific function using its definition, or to `none`.
     * You can also ensure that `parallel_tool_calls` is set to `true` to enable a more efficient parallel function calling.
 
-```
+```JSON
 {
     "schema": 1.1,
     "description": "",
@@ -209,23 +209,76 @@ planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, defau
 
 1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
-1.
+```JSON
+[{
+    "name": "CreateList",
+    "description": "Creates a list"
+}]
+```
+
+1. Register your `handlers` in your `application` class.
+
+    * Each handler is a callback function that runs when a specific event happens. The function call handler's job is to execute code in response to the event.
+    * The function call must return a string, which will be the output of the function call.
+    * After all functions have been executed, these outputs are then returned to the model.
+If the model requests to invoke any function(s), these are internally mapped to DO commands within a Plan, which are then invoked in our AI class' run function. These outputs are then returned to the model with tool call IDs to indicate that the tools were called.
+
+# [JavaScript](#tab/javascript1)
+
+```
+app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+// Ex. create a list with name "Grocery Shopping".
+ensureListExists(state, parameters.list);
+return `list created and items added. think about your next action`;
+});
+```
+
+# [C#](#tab/dotnet1)
+
+```
+[Action("CreateList")]
+public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+{
+    ArgumentNullException.ThrowIfNull(turnState);
+    ArgumentNullException.ThrowIfNull(parameters);
+
+    string listName = GetParameterString(parameters, "list");
+
+    EnsureListExists(turnState, listName);
+
+    return "list created. think about your next action";
+}
+```
+
+# [Python](#tab/python1)
+
+```
+@app.ai.action("createList")
+async def create_list(context: ActionTurnContext, state: AppTurnState):
+ensure_list_exists(state, context.data["list"])
+# Continues exectuion of next command in the plan.
+return ""
+```
+
+---
+
+If the model requests to invoke any function(s), these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
 
 ## Code samples
 
-| Sample name                            | Description                                                                                                                                                                                                                                                           | .NET                                                                                                        | Node.js                                                                                                                | Python                                                                                                   |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Echo bot                               | This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                                                     | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)                        | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)            |
-| Search command message extension       | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                                                   | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)|
-| Typeahead bot                          | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                            | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)      | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)      | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)|
-| Conversational bot with AI: Teams chef | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.                                       | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot)                           |
-| Message extensions: GPT-ME             | This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts.                                                                                                                             | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME)      | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions)                     | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
-| Light bot                              | This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions.                        | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)       | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)             | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot)    |
-| List bot                               | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot harnesses the power of AI to simplify your workflow and bring order to your daily tasks and showcases the action chaining capabilities.                          | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)       | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)             |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)|
-| DevOps bot                             | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot uses the gpt-3.5-turbo model to chat with Teams users and perform DevOps action such as create, update, triage and summarize work items.                         | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.e.chainedActions.devOpsBot)     | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/b.devOpsBot)                              |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.e.chainedActions.devOpsBot)|
-| Twenty questions                       | This sample shows showcases the incredible capabilities of language models and the concept of user intent. Challenge your skills as the human player and try to guess a secret within 20 questions, while the AI-powered bot answers your queries about the secret.   | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.e.twentyQuestions)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/a.twentyQuestions)                    |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.a.twentyQuestions)|
-| Math tutor assistant                   | This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math.                                                                            | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot)              | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot)                     |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot)|
-| Food ordering assistant                | This example shows how to create a conversational assistant that uses tools to call actions in your bots code. It's a food ordering assistant for a fictional restaurant called The Pub and is capable of complex interactions with the user as it takes their order. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.b.orderBot)             | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/e.assistants-orderBot)                    |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.b.orderBot)|
+| Sample name | Description | .NET | Node.js | Python |
+| --- | --- | --- | --- | --- |
+| Echo bot  | This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot) |
+| Search command message extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
+| Typeahead bot | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot) |
+| Conversational bot with AI: Teams chef | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot) |
+| Message extensions: GPT-ME | This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
+| Light bot | This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot) |
+| List bot | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot harnesses the power of AI to simplify your workflow and bring order to your daily tasks and showcases the action chaining capabilities. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot) |
+| DevOps bot | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot uses the gpt-3.5-turbo model to chat with Teams users and perform DevOps action such as create, update, triage and summarize work items. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.e.chainedActions.devOpsBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/b.devOpsBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.e.chainedActions.devOpsBot) |
+| Twenty questions | This sample shows showcases the incredible capabilities of language models and the concept of user intent. Challenge your skills as the human player and try to guess a secret within 20 questions, while the AI-powered bot answers your queries about the secret. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.e.twentyQuestions) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/a.twentyQuestions) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.a.twentyQuestions) |
+| Math tutor assistant | This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
+| Food ordering assistant | This example shows how to create a conversational assistant that uses tools to call actions in your bots code. It's a food ordering assistant for a fictional restaurant called The Pub and is capable of complex interactions with the user as it takes their order. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.b.orderBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/e.assistants-orderBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.b.orderBot) |
 
 ## Next step
 
