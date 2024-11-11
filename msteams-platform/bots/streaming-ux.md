@@ -90,7 +90,7 @@ Follow these steps to configure streaming bot messages:
 1. **Enable streaming for AI bot**:
 
     a. Use the `DefaultAugmentation` class in the `config.json` file, and in one of the following main application classes of your bot app:
-      - For a C# bot app: Update `program.cs`.
+      - For a C# bot app: Update `Program.cs`.
       - For a JavaScript app: Update `index.ts`.
       - For a Python app: Update `bot.py`.
 
@@ -98,7 +98,7 @@ Follow these steps to configure streaming bot messages:
 1. **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
 1. **Format the final streamed message**:
     - Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler.
-    - For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object.
+    - For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object in addition to the `AIOptions` object.
 1. **Enable AI-powered features for final message**: Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
 
 The following code snippet shows an example of streaming bot messages:
@@ -257,7 +257,7 @@ Here's a list of limitations when you use Azure OpenAI or OpenAI to stream bot m
   - **Summarizing content**
   - **Finding relevant work items**
 - The model renders the informative message only at the beginning of each message returned from the LLM.
-- Attachments can be sent only in the final streamed chunk.
+- Attachments can be sent only in the final chunk.
 - Streaming isn't available with AI SDK's function calls and AOAI/OAI's o1 model yet.
 - Here are the requirements to use `streamSequence` for AI SDK:
   - The sequence must start with number '1'.
