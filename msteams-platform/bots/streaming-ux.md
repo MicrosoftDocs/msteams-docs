@@ -268,7 +268,7 @@ Bot messages can be streamed through REST API. Streaming messages support rich t
 
 When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
-In some scenarios, the bot receives an error message without the error status code. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
+When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
 The following are the properties for streaming bot messages:
 
@@ -278,14 +278,10 @@ The following are the properties for streaming bot messages:
 | `text` | ✔️ | The contents of the message that is to be streamed. |
 | `entities.type` | ✔️ | Must be `streamInfo`|
 | `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
-| `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. |
+| `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. `final` is used only in the final message. |
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
-| `ChannelData.streamId` | ✔️ | Must be the same value as `entities.streamId`.|
-| `channelData.streamType` | ✔️ | Must be the same value as `entities.streamType`|
-| `channelData.streamSequence` | ✔️ | Must be the same value as `entities.streamSequence` |
 
 > [!NOTE]
-> You must insert the streaming metadata into both `entities` and `ChannelData`.
 > Here are the requirements for using `streamSequence` for REST APIs:
 >
 > - First one must be number '1'.
@@ -331,15 +327,10 @@ POST /conversations/<conversationId>/activities HTTP/1.1
   "entities":[
     {
       "type": "streaminfo",
-      "streamType": "informative", // informative or streaming(name needs to be finalized); default= streaming.
-      "streamSequence": 1 // (required) incremental integer; must be present for any streaming request.
+      "streamType": "informative", // informative or streaming; default= streaming.
+      "streamSequence": 1 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
     }
   ],
-  "channelData": { 
-    //Add the same entities data to prevent breaking changes in near future.
-    "streamType": "informative",
-    "streamSequence": 1,
-  }
 }
 
 201 created { "id": "a-0000l" } // return stream id
@@ -385,19 +376,13 @@ POST /conversations/<conversationId>/activities HTTP/1.1
   "entities":[
     {
       "type": "streaminfo",
-      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "informative", // informative or streaming(name needs to be finalized); default= streaming.
-      "streamSequence": 2 // (required) incremental integer; must be present for any streaming request.
+      "streamId": "a-0000l", // (required) must be present for start and continue streaming request, but must not be set for final streaming request.
+      "streamType": "informative", // informative or streaming; default= streaming.
+      "streamSequence": 2 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
     }
   ],
-  "channelData": {
-    // Add the same entities data to prevent breaking changes in near future.
-    "streamld ": "a-0000l",
-    "streamType": "informative",
-    "streamSequence": 2, 
-  }
 } 
-200 0K { }
+202 0K { }
 
 ```
 
@@ -434,24 +419,17 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
-  "text ": "A brown fox", // (required) first streaming content.
+  "text ": "A brown fox", // (required) must be present for start and continue streaming request, but must not be set for final streaming request.
   "entities":[
     {
       "type": "streaminfo",
-      "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "streaming", // informative or streaming(name needs to be finalized); default= streaming.
-      "streamSequence": 3 // (required) incremental integer; must be present for any streaming request.
+      "streamId": "a-0000l", // (required) must be present for start and continue streaming request, but must not be set for final streaming request.
+      "streamType": "streaming", // informative or streaming; default= streaming.
+      "streamSequence": 3 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
     }
   ],
-  "channelData": 
-  {
-    // Add the same entities data to prevent breaking changes in near future.
-    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-    "streamType": "streaming",
-    "streamSequence": 3, // (required) incremental integer; must be present for any streaming request.
-  }
 }
-200 0K{ }
+202 0K{ }
 
 ```
 
@@ -478,24 +456,17 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
-  "text ": "A brown fox jumped over the fence", // (required) second streaming content.
+  "text ": "A brown fox jumped over the fence", // (required) must be present for start and continue streaming request, but must not be set for final streaming request.
   "entities":[
     {
       "type": "streaminfo",
       "streamId": "a-0000l", // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "streaming", // informative or streaming(name needs to be finalized); default= streaming.
+      "streamType": "streaming", // informative or streaming; default= streaming.
       "streamSequence": 4 // (required) incremental integer; must be present for any streaming request.
     }
   ],
-  "channelData": 
-  {
-    // Add the same entities data to prevent breaking changes in near future.
-    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-    "streamType": "streaming",
-    "streamSequence": 4, // (required) incremental integer; must be present for any streaming request.
-  }
 }
-200 0K{ }
+202 0K{ }
 ```
 
 The following image is an example of a bot providing updates in chunks:
@@ -504,7 +475,7 @@ The following image is an example of a bot providing updates in chunks:
 
 ### Final Streaming
 
-After your bot completes generating its message, send the end streaming signal along with the final message and its contents. For the final message, the `type` of activity is `message`. Here, the bot sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
+After your bot completes generating its message, send the end streaming signal along with the final message. For the final message, the `type` of activity is `message`. Here, the bot sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
 
 ```json
 
@@ -529,7 +500,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US",
-  "text ": "A brown fox jumped over the fence.", // (required) final full streamed content.
+  "text ": "A brown fox jumped over the fence.", // (required) must be present for start and continue streaming request, but must not be set for final streaming request.
   "entities":[
     {
       "type": "streaminfo",
@@ -537,14 +508,8 @@ POST /conversations/<conversationId>/activities HTTP/1.1
       "streamType": "final", // (required) final is only allowed for the last message of the streaming.
     }
   ],
-  "channelData": 
-  {
-    // Add the same entities data to prevent breaking changes in near future.
-    "streamld ": "a-0000l", // (required) must be present for any subsequence request after the first chunk.
-    "streamType": "final"
   }
-}
-200 0K{ }
+202 0K{ }
 
 ```
 
