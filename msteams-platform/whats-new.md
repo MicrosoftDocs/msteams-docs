@@ -32,6 +32,11 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
+* ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
+* ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
+* ***November 07, 2024***: [Add conditionally enabled action buttons in Adaptive Cards.](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons)
+* ***November 07, 2024***: [Media elements in Adaptive Cards.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
+* ***November 07, 2024***: Create engaging Adaptive Cards with [borders and rounded corners](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards), [scrollable containers](task-modules-and-cards/cards/cards-format.md#scrollable-containers-in-adaptive-cards), [compound button](task-modules-and-cards/cards/cards-format.md#compound-button-in-adaptive-cards), [Icons](task-modules-and-cards/cards/cards-format.md#icons-in-adaptive-card), and [star ratings](task-modules-and-cards/cards/cards-format.md#ratings-in-adaptive-cards).
 * ***November 07, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
 * ***November 07, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
 
