@@ -32,17 +32,18 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 
 | # | I want to build ... | Here's a sample |
 | --- | --- | --- |
-| 1. | Conversational bot with Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
-| 2. | Conversational bot with Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
+| 1. | Conversational bot using Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
+| 2. | Conversational bot using Teams Toolkit | [Create Teams conversation bot](../sbs-teams-conversation-bot.yml) |
 
 ### Build an AI-powered Teams bot app
 
 You can build an AI bot or elevate your existing conventional bot to be powered by AI.
 
-| # | I want to build ... | Here's a sample |
+| # | I want to build ... | Here's how... |
 | --- | --- | --- |
 | 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
-| 2. | Migrate bot to use Teams AI library | [Migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration) |
+| 2. | Elevate your conventional bot to AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
+| 3. | Migrate bot to use Teams AI library | [Migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration) |
 
 ## Next step
 
