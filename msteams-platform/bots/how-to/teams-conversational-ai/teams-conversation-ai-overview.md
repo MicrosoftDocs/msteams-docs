@@ -155,7 +155,7 @@ To set up function calls:
 
         # [JavaScript](#tab/javascript)
 
-        ```
+        ```JavaScript
         const planner = new ActionPlanner({
             model,
             prompts,
@@ -165,7 +165,7 @@ To set up function calls:
 
         # [C#](#tab/dotnet)
 
-        ```
+        ```C#
         ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
         { 
             Model = model,
@@ -180,7 +180,7 @@ To set up function calls:
 
         # [Python](#tab/python)
 
-        ```
+        ```Python
         planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
         ```
 
@@ -224,7 +224,7 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
         # [JavaScript](#tab/javascript1)
 
-        ```
+        ```JavaScript
         app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
         // Ex. create a list with name "Grocery Shopping".
         ensureListExists(state, parameters.list);
@@ -234,7 +234,7 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
         # [C#](#tab/dotnet1)
 
-        ```
+        ```C#
         [Action("CreateList")]
         public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
         {
@@ -250,8 +250,8 @@ If the model requests to invoke any function(s), these are internally mapped to 
         ```
 
         # [Python](#tab/python1)
-        ```
-
+        
+        ```Python
         @app.ai.action("createList")
         async def create_list(context: ActionTurnContext, state: AppTurnState):
         ensure_list_exists(state, context.data["list"])
