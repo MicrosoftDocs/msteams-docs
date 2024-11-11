@@ -145,9 +145,12 @@ The following table lists the updates to the Teams AI library:
 
 Using function calls, AI models can unlock many capabilities, driving innovation and efficiency in different areas. Function calls have been implemented within AI SDK to enable the AI model to generate accurate responses smoothly. Function calls allow models to connect directly with external tools, making AI even more powerful. This means AI can integrate more deeply with different applications, leading to enhanced capabilities. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
 
-To set up function calls:
+> [!NOTE]
+> Structured Outputs are not supported.
 
-1. Instantiate the planner where the default prompt uses the Tools Augmentation.
+To use function calling with the Chat Completions API:
+
+1. Instantiate the `ToolsAugmentation` class, a server-side augmention.
 
     * `index.ts` for JavaScript
     * `Program.cs` for C#
@@ -186,10 +189,7 @@ To set up function calls:
 
         ---
 
-1. Specify tools augmentation in the `config.json`.
-
-    * To mandate the model to always call at least one function, you can set `tool_choice` to `required`. It's default value is `auto`. You can also set it to a specific function using its definition, or to `none`.
-    * You can also ensure that `parallel_tool_calls` is set to `true` to enable a more efficient parallel function calling.
+1. Specify `tools` augmentation in the `config.json`.
 
         ```JSON
         {
@@ -250,7 +250,7 @@ If the model requests to invoke any function(s), these are internally mapped to 
         ```
 
         # [Python](#tab/python1)
-        
+
         ```Python
         @app.ai.action("createList")
         async def create_list(context: ActionTurnContext, state: AppTurnState):
@@ -262,6 +262,36 @@ If the model requests to invoke any function(s), these are internally mapped to 
         ---
 
     If the model requests to invoke any function, these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
+
+
+### Enable tool options
+
+You can enable the following tool options:
+
+* **Enable Tool Choice**: You can allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
+    
+    - Set `tool_choice` to `required`to mandate the model to always call at least one function. 
+    - Set `tool_choice` to a specific function using its definition, or to `none`.
+
+  Default value of `tool_choice` is `auto`.
+    
+* **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` is set to `true`.
+
+```JSON
+    {
+
+        "schema": 1.1,
+        "description": "",
+        "type": "",
+        "completion": {
++       "tool_choice": "auto",
++       "parallel_tool_calls": true,
+    },
++    "augmentation": {
++        "augmentation_type": "tools"
++    }
+}
+
 
 ## Code samples
 
