@@ -153,7 +153,7 @@ To set up function calls:
     * `Program.cs` for C#
     * `bot.py` for Python
 
-   # [JavaScript](#tab/javascript)
+    # [JavaScript](#tab/javascript)
 
     ```
     const planner = new ActionPlanner({
@@ -163,7 +163,7 @@ To set up function calls:
     });
     ```
 
-   # [C#](#tab/dotnet)
+    # [C#](#tab/dotnet)
 
     ```
     ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
@@ -178,10 +178,9 @@ To set up function calls:
     ActionPlanner<TurnState> planner = new ActionPlanner(options)
     ```
 
-   # [Python](#tab/python)
+    # [Python](#tab/python)
 
     ```
-    
     planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
     ```
 
@@ -214,7 +213,6 @@ To set up function calls:
         "name": "CreateList",
         "description": "Creates a list"
     }]
-
     ```
 
 1. Register your `handlers` in your `application` class.
@@ -227,19 +225,16 @@ If the model requests to invoke any function(s), these are internally mapped to 
     # [JavaScript](#tab/javascript1)
 
     ```
-
     app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
     // Ex. create a list with name "Grocery Shopping".
     ensureListExists(state, parameters.list);
     return `list created and items added. think about your next action`;
     });
-
     ```
 
     # [C#](#tab/dotnet1)
 
     ```
-
     [Action("CreateList")]
     public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
     {
@@ -252,11 +247,9 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
         return "list created. think about your next action";
     }
-
     ```
 
     # [Python](#tab/python1)
-
     ```
 
     @app.ai.action("createList")
@@ -264,7 +257,6 @@ If the model requests to invoke any function(s), these are internally mapped to 
     ensure_list_exists(state, context.data["list"])
     #<&nbsp>Continues exectuion of next command in the plan.
     return ""
-
     ```
 
     ---
