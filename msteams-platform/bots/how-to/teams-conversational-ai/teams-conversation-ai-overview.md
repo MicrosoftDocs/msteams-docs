@@ -166,7 +166,7 @@ To use function calling with the Chat Completions API:
         prompts,
         defaultPrompt: 'tools'
     });
-        ```
+    ```
 
     # [C#](#tab/dotnet)
 
@@ -212,7 +212,7 @@ To use function calling with the Chat Completions API:
 
 1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
-  The following code snippet shows how to specify `function definitions`:
+    The following code snippet shows how to specify `function definitions`:
 
     ```JSON
     [{
