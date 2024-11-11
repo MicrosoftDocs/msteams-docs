@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
-* ***November 11, 2024***: [Tab app caching is generally available for chats, meetings, and channels.](tabs/how-to/app-caching.md)
+* ***November 12, 2024***: [Tab app caching is generally available for chats, meetings, and channels.](tabs/how-to/app-caching.md)
 * ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
 * ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
 * ***November 07, 2024***: [Add conditionally enabled action buttons in Adaptive Cards.](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons)
