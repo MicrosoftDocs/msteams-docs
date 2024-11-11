@@ -149,7 +149,7 @@ To set up function calls:
 
 1. Instantiate the planner where the default prompt uses the Tools Augmentation.
 
-    * `index.ts` for JS
+    * `index.ts` for JavaScript
     * `Program.cs` for C#
     * `bot.py` for Python
 
@@ -261,7 +261,7 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
         ---
 
-If the model requests to invoke any function(s), these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
+    If the model requests to invoke any function, these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
 
 ## Code samples
 
