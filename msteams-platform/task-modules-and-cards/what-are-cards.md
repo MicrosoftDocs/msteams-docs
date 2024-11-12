@@ -20,6 +20,7 @@ The bots for Microsoft Teams support the following types of cards:
 - Sign in card
 - Thumbnail card
 - Card collections
+- Overflow menu on Adaptive Cards
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
@@ -119,7 +120,7 @@ You can use the `conditionallyEnabled` property to disable action buttons until 
 
 ## Overflow menu on Adaptive Cards
 
-Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. For more information, see [Adaptive Cards overflow menu](cards/cards-format.md#adaptive-cards-overflow-menu).
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
 
 <a name='support-for-azure-ad-object-id-and-upn-in-user-mention'></a>
 
