@@ -3,7 +3,8 @@ title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
 ms.localizationpriority: high
-zone_pivot_groups: What-new-features
+zone_pivot_groups: What-new-
+ms-date: 12/11/2024
 ---
 
 # What's new for developers in Microsoft Teams
