@@ -4,7 +4,7 @@ description: Learn about new Microsoft Teams developer features and updates to e
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-
-ms-date: 12/11/2024
+ms.date: 12/11/2024
 ---
 
 # What's new for developers in Microsoft Teams
