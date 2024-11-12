@@ -127,7 +127,7 @@ function getBasicUserInfo() {
 
 For React projects, ensure the following environment variables are set in your deployment process:
 
-* For JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+* For JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/sso/InitTeamsFx.tsx#L12)
 
 * For TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
