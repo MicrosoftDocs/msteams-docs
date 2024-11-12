@@ -3,6 +3,7 @@ title: Develop single sign-on experience in Teams
 author: surbhigupta
 description: Learn to how to develop single sign-on experience in Teams.
 ms.topic: overview
+ms.date: 11/12/2024
 ms.localizationpriority: medium
 ---
 
