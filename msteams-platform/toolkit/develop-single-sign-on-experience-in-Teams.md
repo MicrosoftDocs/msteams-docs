@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Enable single sign-on for tab app
 
-Microsoft Teams allows an app to acquire the token of the signed-in Teams user. This token can be used to access Microsoft Graph and other APIs. The Teams Toolkit simplifies this process by encapsulating some of the Microsoft Entra flows and integrations within straightforward, high-level APIs. As a result, you can effortlessly incorporate single sign-on (SSO) capabilities into your Teams application.
+Microsoft Teams allows an app to acquire the token of the signed-in Teams user. This token can be used to access Microsoft Graph and other APIs. The Teams Toolkit simplifies this process by encapsulating some of the Microsoft Entra flows and integrations within straightforward, high-level APIs. As a result, you can effortlessly incorporate single sign-on (SSO) capabilities into your Teams app.
 
 ## Key Configurations
 
@@ -446,13 +446,14 @@ To use the `teamsFx` tab or bot template, follow these steps:
            }
        ]
       ```
+
     ---
 
 ---
 
 ## Debug Your Application
 
-You can debug your app by pressing F5. Teams Toolkit will use the Microsoft Entra manifest to register an SSO-enabled application. For more information, see [debug your Teams app locally.]
+You can debug your app by pressing F5. Teams Toolkit will use the Microsoft Entra manifest to register an SSO-enabled application. For more information, see [debug your Teams app locally.](debug-local.md)
 
 ## Customize Microsoft Entra apps
 
@@ -466,4 +467,3 @@ To view your Microsoft Entra app in Azure portal, see [edit Microsoft Entra mani
 
 > [!div class="nextstepaction"]
 > [Add single sign-on to Teams app](add-single-sign-on.md)
-
