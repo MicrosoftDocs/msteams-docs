@@ -1144,6 +1144,7 @@
         "source_path": "/microsoftteams/platform/get-started/choose-what-suits-you.md",
         "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
       },
+      {
         "source_path": "msteams-platform/tabs/how-to/tab-navigation.md",
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/deep-link-application"
       },
