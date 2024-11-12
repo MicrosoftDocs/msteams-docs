@@ -156,7 +156,7 @@ To use function calling with the Chat Completions API:
     * For a C# bot app: Update `Program.cs`.
     * For a Python app: Update `bot.py`.
 
-   The following code snippet shows how to set up the `ToolsAugmentation` class, which is a server-side augmention:
+   The following code snippet shows how to set up the `ToolsAugmentation` class:
 
     # [JavaScript](#tab/javascript)
 
@@ -270,9 +270,9 @@ You can enable the following tool options:
 
 * **Enable Tool Choice**: To allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
 
-    - Set `tool_choice` to `required`to mandate the model to always call at least one function. 
+    - Set `tool_choice` as `required` to mandate the model to always call at least one function. 
     - Set `tool_choice` to a specific function using its definition for using that function. 
-    - Set  `tool_choice` to `none` to disable tool choice.
+    - Set  `tool_choice` as `none` to disable tool choice.
 
   Default value of `tool_choice` is `auto`.
 
