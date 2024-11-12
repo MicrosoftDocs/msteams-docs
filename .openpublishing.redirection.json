@@ -1141,7 +1141,7 @@
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       },
       {
-        "source_path": "/microsoftteams/platform/get-started/choose-what-suits-you.md",
+        "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
         "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
       },
       {
