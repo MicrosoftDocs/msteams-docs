@@ -5,7 +5,7 @@ description: Learn how to create deep links to an application and navigate using
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 10/28/2024
+ms.date: 11/12/2024
 ---
 
 # Deep link to an application
@@ -197,8 +197,6 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
-
 # [TeamsJS v1](#tab/teamsjs-v1)
 
 To trigger a deep link from your tab, call:
@@ -209,16 +207,9 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ---
 
-* For information about navigation within a tab app, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md).
-* For information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options.
+* For more information, see [navigate within a tab app](../../tabs/how-to/tab-navigation.md).
+* For more information on the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options.
 * To directly open a deep link using app.openLink(), see [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
-
-The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
-
-1. The target that the deep link points to.
-1. The host where the Teams app is running.
-
-If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app first opens in the browser.
 
 ### Configure deep link to navigate between tabs
 
@@ -281,7 +272,7 @@ You can allow app users to browse to a personal chat with the application by con
 
 `https://teams.microsoft.com/l/entity/<appId>/conversations?tenantId=<tenantId>`
 
-`appId` is your application ID. To know about different app IDs used, see [App ID for different types of apps](#app-id-for-different-types-of-apps).
+`appId` is your application ID. For more information, see [app ID for different types of apps](#app-id-for-different-types-of-apps).
 
 # [Example](#tab/example3)
 
@@ -455,6 +446,5 @@ You can invoke Stageview through a deep link from your tab by wrapping the deep 
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-| Deep link consuming `subEntityId` | This sample shows how to use a deep link from a bot chat to a tab consuming the `subEntityId`. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
-| Deep link consuming Subentity ID | This sample shows how to use a deep link from a bot chat to a tab consuming the Subentity ID. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+| Deep link consuming `subEntityId` | This sample shows how to use a deep link from a bot chat to a tab consuming the `subEntityId`. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
 | Tab app navigation | This sample shows how to navigate between tabs within the app. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) |
