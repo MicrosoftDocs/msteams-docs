@@ -143,20 +143,20 @@ The following table lists the updates to the Teams AI library:
 
 ## Function calls using AI SDK
 
-Using function calls, AI models can unlock many capabilities, driving innovation and efficiency in different areas. Function calls have been implemented within AI SDK to enable the AI model to generate accurate responses smoothly. Function calls allow models to connect directly with external tools, making AI even more powerful. This means AI can integrate more deeply with different applications, leading to enhanced capabilities. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
+Function calls, implemented within the AI SDK, unlock numerous capabilities, enabling the AI model to generate accurate responses seamlessly. It enables direct connection with external tools, thereby making AI even more powerful. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
 
 > [!NOTE]
-> Structured Outputs are not supported.
+> Structured outputs aren't supported.
 
 To use function calling with the Chat Completions API:
 
-1. Instantiate the planner where the default prompt uses the Tools Augmentation. Update one of the following main application files of your bot app:
+1. Set up the planner where the default prompt uses the Tools Augmentation. Update one of the following files of your bot app:
 
     * For a JavaScript app: Update `index.ts`.
     * For a C# bot app: Update `Program.cs`.
     * For a Python app: Update `bot.py`.
 
-   The following code snippet shows how to instantiate the `ToolsAugmentation` class, which is a server-side augmention:
+   The following code snippet shows how to set up the `ToolsAugmentation` class, which is a server-side augmention:
 
     # [JavaScript](#tab/javascript)
 
@@ -191,9 +191,7 @@ To use function calling with the Chat Completions API:
 
     ---
 
-1. Specify tools augmentation in the `config.json`.
-
-   The following code snippet shows how to specify 
+1. Specify tools augmentation in the `config.json` file.
 
     ```JSON
     {
@@ -210,9 +208,7 @@ To use function calling with the Chat Completions API:
     }
     ```
 
-1. Specify all your `function definitions` in the `actions.json` file in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
-
-    The following code snippet shows how to specify `function definitions`:
+1. Specify all your `function definitions` in the `actions.json` file, which is in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
     ```JSON
     [{
@@ -223,10 +219,9 @@ To use function calling with the Chat Completions API:
 
 1. Register your `handlers` in your `application` class.
 
-    * Each handler is a callback function that runs when a specific event happens. The function call handler's job is to execute code in response to the event.
-    * The function call must return a string, which will be the output of the function call.
-    * After all functions have been executed, these outputs are then returned to the model.
-If the model requests to invoke any function(s), these are internally mapped to DO commands within a Plan, which are then invoked in our AI class' run function. These outputs are then returned to the model with tool call IDs to indicate that the tools were called.
+    * Each handler is a callback function that runs when a specific event happens. The function call handler executes code in response to the event.
+    * The function call must return a string as the output of the function call.
+    * After all functions are executed, the outputs are returned to the model. When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and are invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs to show that the tools were used.
 
    The following code snippet shows how to register `handlers`:
 
@@ -269,23 +264,21 @@ If the model requests to invoke any function(s), these are internally mapped to 
 
     ---
 
-    If the model requests to invoke any function, these are internally mapped to `DO` commands within a `Plan`, which are then invoked in our AI class' `run` function. These outputs are then returned to the model.
-
-
 ### Enable tool options
 
 You can enable the following tool options:
 
-* **Enable Tool Choice**: You can allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
-    
+* **Enable Tool Choice**: To allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
+
     - Set `tool_choice` to `required`to mandate the model to always call at least one function. 
-    - Set `tool_choice` to a specific function using its definition, or to `none`.
+    - Set `tool_choice` to a specific function using its definition for using that function. 
+    - Set  `tool_choice` to `none` to disable tool choice.
 
   Default value of `tool_choice` is `auto`.
-    
-* **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` is set to `true`.
 
-The following code snippet shows how to enable tool choice and to toggle parallel tool calls.
+* **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, you can set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` parameter is set to `true`.
+
+The following code snippet shows how to enable tool choice and to toggle parallel tool calls:
 
 ```JSON
 {
