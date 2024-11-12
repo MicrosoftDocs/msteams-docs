@@ -130,8 +130,6 @@ items:
 
     Message extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message extension is highlighted.":::
-
     There are two types of Teams **message extensions**:
 
     - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
@@ -357,10 +355,10 @@ items:
     1. Select **F5** to build and run your app in Microsoft 365 Copilot.
     1. Go to **Microsoft Teams** > **Apps**.
     1. Search for **Copilot** and open the app.
-    1. Select **Plugins**.
-    1. From the list of agents, turn on the toggle for your app.
+    1. Select **Panel** from the top-right corner.
+    1. From the list of agents, select the required agent from the right-rail.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local plugin.":::
+       :::image type="content" source="assets/images/messaging-extension/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 
     1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
