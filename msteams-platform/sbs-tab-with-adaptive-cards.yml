@@ -5,7 +5,7 @@ metadata:
   description: Learn how to build tab with Adaptive Cards on desktop and mobile for Microsoft Teams, set up local environment, and register the app.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 11/12/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on tab authentication

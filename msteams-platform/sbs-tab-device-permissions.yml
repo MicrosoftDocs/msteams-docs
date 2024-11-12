@@ -5,7 +5,7 @@ metadata:
   description: Learn how to create and add a tab device permission app to Microsoft Teams that allows you to grant and manage device permissions.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 11/12/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
   nextTutorialTitle: Read more on Device permissions for browser

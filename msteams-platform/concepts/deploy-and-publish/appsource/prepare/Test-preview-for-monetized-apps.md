@@ -5,7 +5,7 @@ description: Create and test SaaS Preview offers for Teams app before pushing th
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.date: 12/26/2022
+ms.date: 11/12/2024
 ---
 
 # Test preview for monetized apps
