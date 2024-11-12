@@ -31,8 +31,6 @@
     href: get-started/build-interactive-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
-  - name: Teams app tutorials and code samples
-    href: get-started/teams-toolkit-tutorial.md
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
  
