@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/03/2024
+ms.date: 11/12/2024
 ---
 # Teams Store validation guidelines
 
