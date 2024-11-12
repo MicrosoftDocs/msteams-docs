@@ -1,12 +1,12 @@
 ---
-title: Tool options and code samples
+title: Tool Options and Code Samples
 description: Learn about tools, SDKs, tutorials, and code samples to build apps with various capabilities such as AI, UI, and various languages, to prepare your environment.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
 ---
 
-# Choose what suits you
+# Explore tools and code samples
 
 You've built your first tab app, interactive notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
 
