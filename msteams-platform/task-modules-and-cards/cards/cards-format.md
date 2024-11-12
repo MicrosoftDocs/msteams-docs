@@ -382,9 +382,9 @@ The following image is an example of the people icon in an Adaptive Card:
 
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows an example of the persona and persona set type people icon in an Adaptive Card.":::
 
-#### Query parameters
+#### Schema
 
-The following table lists the query parameters:
+The following table lists the properties of the `Component` element:
 
 | Property name | Description |
 |---------|---------|
