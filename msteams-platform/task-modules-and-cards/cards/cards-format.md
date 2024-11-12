@@ -137,10 +137,10 @@ Adaptive Cards support emojis. The following card payload shows an Adaptive Card
 }
 ```
 
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive Card with an emoji.":::
+
 > [!NOTE]
 > If you use REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
-
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive Card with an emoji.":::
 
 ### Mention support within Adaptive Cards
 
