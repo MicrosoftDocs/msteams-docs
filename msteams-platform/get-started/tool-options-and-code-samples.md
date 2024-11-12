@@ -1,5 +1,5 @@
 ---
-title: Explore Ways to Build a Teams App and Create Tutorials
+title: Tool options and code samples
 description: Learn about tools, SDKs, tutorials, and code samples to build apps with various capabilities such as AI, UI, and various languages, to prepare your environment.
 ms.localizationpriority: high
 ms.date: 06/07/2023
