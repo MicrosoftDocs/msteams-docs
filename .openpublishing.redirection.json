@@ -1139,6 +1139,18 @@
       {
         "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/tab-navigation.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/deep-link-application"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
+        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
+        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
       }
     ]
 }
