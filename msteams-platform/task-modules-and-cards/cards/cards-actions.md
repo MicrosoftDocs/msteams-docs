@@ -588,7 +588,7 @@ The following card payload shows a conditionally enabled button:
 
 **Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams.":::
+:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/disabled.png":::
 
 :::column-end:::
 
@@ -596,7 +596,7 @@ The following card payload shows a conditionally enabled button:
 
 **Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams.":::
+:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/enabled.png":::
 
 :::column-end:::
 
