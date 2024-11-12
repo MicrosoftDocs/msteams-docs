@@ -1451,7 +1451,7 @@ The following payload shows an Adaptive Card with input-enabled and read-only st
             "size": "large",
             "text": "Read-only rating",
             "separator": true,
-            "spacing": "extraLarge"
+            "spacing": "ExtraLarge"
         },
         {
             "type": "Rating",
