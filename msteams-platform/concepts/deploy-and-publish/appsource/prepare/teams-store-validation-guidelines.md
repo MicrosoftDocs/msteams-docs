@@ -1175,15 +1175,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-   * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
-   * Prompt starters or commands must be functional and return responses. [*Must fix*]
-   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
-   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
-   * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * Prompt starters or commands must be functional and return responses. [*Must fix*]
+  * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+  * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+  * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
    If your app sends a welcome message, ensure the following guidelines are met:
 
-   * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
+  * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
@@ -1821,13 +1821,13 @@ The app must terminate the user account instance when the user is switched or lo
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Teams apps extensible as plugin for Microsoft 365 Copilot
+## Teams apps extensible as agent for Microsoft 365 Copilot
 
 * App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
-* App must meet the [plugin compatible criteria](review-copilot-validation-guidelines.md).
+* App must meet the [agent compatible criteria](review-copilot-validation-guidelines.md).
 
-### Plugin must not manipulate LLM behavior
+### Agent must not manipulate LLM behavior
 
 The short descriptions of an app, parameter, and command must not include the following:
 
@@ -1843,11 +1843,11 @@ The long description of an app must clearly call out the following:
 
 * App's compatibility with Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks.
 
-* Provide at least one prompt of how users can use a message extension plugin in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one prompt of how users can use a message extension agent in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
 ### Response Quality
 
