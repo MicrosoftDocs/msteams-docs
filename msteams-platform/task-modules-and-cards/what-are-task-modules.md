@@ -5,7 +5,7 @@ description: Learn how to create a modal pop-up experience and embed a webpage t
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/28/2024
+ms.date: 11/12/2024
 ---
 
 # Dialogs
