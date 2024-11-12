@@ -1155,6 +1155,10 @@
       {
         "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
         "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/copilot-agent-faq"
       }
     ]
 }
