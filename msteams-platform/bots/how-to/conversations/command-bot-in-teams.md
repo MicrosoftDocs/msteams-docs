@@ -5,7 +5,7 @@ description: Learn about command bot, installation, customize initialization, ad
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 10/03/2024
+ms.date: 11/12/2024
 ---
 
 # Command bot in Teams

@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build a command bot for Microsoft Teams using Teams Toolkit in Visual Studio Code to automate tasks with Adaptive Cards.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 11/12/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
