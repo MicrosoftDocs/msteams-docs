@@ -51,7 +51,7 @@ All bot-based message extensions that are eligible for agent support must meet [
 
 Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension agents for Microsoft 365 Copilot:
 
-* Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot).
+* Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agent-for-microsoft-365-copilot).
 
 * [Guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](dev-guidelines-copilot-agents.md).
 
