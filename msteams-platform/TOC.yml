@@ -33,8 +33,8 @@
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
-  - name: Know what suits you to build your Teams app and create tutorials
-    href: get-started/Know-what-suits-you-to-build-your-Teams-app-and-create-tutorials.md
+  - name: Tool options and code samples
+    href: get-started/tool-options-and-code-samples.md
  
 - name: Plan your app
   items:
