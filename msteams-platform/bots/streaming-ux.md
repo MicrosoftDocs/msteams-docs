@@ -28,7 +28,7 @@ Streaming bot messages has two types of updates:
 
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
-  :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_responsive.png" border="false":::
+  :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
 You can implement streaming bot messages in your app in one of the following ways:
 
@@ -471,7 +471,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of a bot providing updates in chunks:
 
-:::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_responsive.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
 ### Final Streaming
 
