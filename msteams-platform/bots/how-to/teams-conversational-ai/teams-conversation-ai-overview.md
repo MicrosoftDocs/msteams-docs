@@ -221,7 +221,7 @@ To use function calling with the Chat Completions API:
 
     * Each handler is a callback function that runs when a specific event happens. The function call handler executes code in response to the event.
     * The function call must return a string as the output of the function call.
-    * After all functions are executed, the outputs are returned to the model. When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and are invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs to show that the tools were used.
+    * When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and are invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs to show that the tools were used.
 
    The following code snippet shows how to register `handlers`:
 
@@ -272,7 +272,7 @@ You can enable the following tool options:
 
     - Set `tool_choice` as `required` to mandate the model to always call at least one function. 
     - Set `tool_choice` to a specific function using its definition for using that function. 
-    - Set  `tool_choice` as `none` to disable tool choice.
+    - Set  `tool_choice` as `none` to disable tool.
 
   Default value of `tool_choice` is `auto`.
 
