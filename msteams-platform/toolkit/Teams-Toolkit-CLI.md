@@ -1053,16 +1053,16 @@ Preview the current application from local or remote.
 
 ### Parameters for `teamsfx preview`
 
-| Parameter           | Required | Description                                                                                                                                                           |
-| :------------------ | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--local`           | No       | Preview the application from local. `--local` is exclusive with `--remote`.                                                                                           |
-| `--remote`          | No       | Preview the application from remote. `--remote` is exclusive with `--local`.                                                                                          |
-| `--env`             | No       | Select an existing environment for the project when parameter `--remote` is appended.                                                                                 |
-| `--folder`          | No       | Project root directory. The default value is `./`.                                                                                                                    |
-| `--browser`         | No       | The browser to open Teams web client. The options are `chrome`, `edge` and `default` such as system default browser and the value is `default`.                       |
-| `--browser-arg`     | No       | Argument to pass to the browser, requires --browser, can be used multiple times, for example, --browser-args="--guest"                                                |
-| `--sharepoint-site` | No       | SharePoint site URL, such as `{your-tenant-name}.sharepoint.com` for SPFx project remote preview.                                                                     |
-| `--m365-host`       | No       | Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
+| Parameter  | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--local`| No | Preview the application from local. `--local` is exclusive with `--remote`. |
+|`--remote`| No | Preview the application from remote. `--remote` is exclusive with `--local`. |
+|`--env`| No | Select an existing environment for the project when parameter `--remote` is appended. |
+|`--folder`| No | Project root directory. The default value is `./`. |
+|`--browser`| No | The browser to open Teams web client. The options are `chrome`, `edge` and `default` such as system default browser and the value is `default`. |
+|`--browser-arg`| No | Argument to pass to the browser, requires --browser, can be used multiple times, for example, --browser-args="--guest" |
+|`--sharepoint-site`| No | SharePoint site URL, such as `{your-tenant-name}.sharepoint.com` for SPFx project remote preview. |
+|`--m365-host`| No |Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
 
 ### Scenarios for `teamsfx preview`
 
@@ -1095,18 +1095,18 @@ The following list provides the common scenarios for`teamsfx preview:
 
 The configuration data is either in user scope or project scope.
 
-| Command                               | Description                               |
-| :------------------------------------ | :---------------------------------------- |
-| `teamsfx config get [option]`         | View the configuration value of option.   |
+|  Command  | Description |
+|:----------------  |:-------------|
+| `teamsfx config get [option]` | View the configuration value of option. |
 | `teamsfx config set <option> <value>` | Update the configuration value of option. |
 
 ### Parameters for `teamsfx config`
 
-| Parameter  | Required | Description                                                                                                                                                                                                                                                   |
-| :--------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `--env`    | Yes      | Select an existing environment for the project.                                                                                                                                                                                                               |
-| `--folder` | No       | Project directory used for get or set project configuration. The default value is `./`.                                                                                                                                                                       |
-| `--global` | No       | Scope of configuration. If true, the scope is limited to user scope instead of project scope. The default value is `false`. Now, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
+| Parameter  | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--env`| Yes | Select an existing environment for the project. |
+|`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
+|`--global`| No | Scope of configuration. If true, the scope is limited to user scope instead of project scope. The default value is `false`. Now, the supported global configurations include `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
 
 ### Scenarios for `teamsfx config`
 
@@ -1146,9 +1146,9 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 * View all the configuration in project
 
-  ```bash
-  teamsfx config get --env dev
-  ```
+    ```bash
+    teamsfx config get --env dev
+    ```
 
   > [!NOTE]
   > The secret is automatically decrypted.
@@ -1163,24 +1163,24 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
-| command                                  | Description                                                                                           |
-| :--------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+|  command | Description |
+|:------------------------------|-------------|
 | `teamsfx permission grant --env --email` | Grant permission for collaborator's Microsoft 365 account for the project of a specified environment. |
-| `teamsfx permission status`              | Show permission status for the project                                                                |
+| `teamsfx permission status` | Show permission status for the project |
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameter | Required | Description                                                                                                               |
-| :-------- | :------- | :------------------------------------------------------------------------------------------------------------------------ |
-| `--env`   | Yes      | Provide env name.                                                                                                         |
-| `--email` | Yes      | Provide collaborator's Microsoft 365 email address. Ensure the collaborator's account is in the same tenant with creator. |
+| Parameter  | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--env`| Yes | Provide env name. |
+|`--email`| Yes | Provide collaborator's Microsoft 365 email address. Ensure the collaborator's account is in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameter                  | Required | Description                                                                 |
-| :------------------------- | :------- | :-------------------------------------------------------------------------- |
-| `--env`                    | Yes      | Provide env name.                                                           |
-| `--list-all-collaborators` | No       | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--env`| Yes | Provide env name. |
+|`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
 
 ### Scenarios for `teamsfx permission`
 
@@ -1287,9 +1287,9 @@ The following list provides required permissions for `TeamsFx` projects:
 1. Create an SSO enabled tab.
 2. Provision your project:
 
-   ```bash
-   teamsfx provision
-   ```
+      ```bash
+      teamsfx provision
+      ```
 
 3. Run `npm install` and `npm run build:teamsfx:dev` in `tabs` or `api folder` to install added packages.
 
