@@ -142,7 +142,7 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 The following best practices can help enhance the overall effectiveness of a custom engine agent.
 
-- [Ensure that agent's response contains feedback button](#ensure-that-agents-reponse-contains-feedback-button).
+- [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD (AAD) single sign-on (SSO)](#enable-teams-azure-ad-aad-single-sign-on-sso).
 - [Enable the custom engine agent to understand conversational history and context](#enable-the-custom-engine-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
