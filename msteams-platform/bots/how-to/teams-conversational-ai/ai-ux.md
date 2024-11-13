@@ -9,9 +9,9 @@ ms.date: 09/27/2024
 
 # Build custom engine agent user experience
 
-A custom engine agent is designed to transform the way we interact with systems. For user experience (UX) designers and developers, creating an outstanding UX is crucial to fully harness its potential. This article details the necessary steps, principles, and considerations for crafting intuitve, user-centered interfaces that seamlessly integrate AI capabilities.
+A custom engine agent is designed to transform the way we interact with systems. For UX designers and developers, crafting an exceptional user experience is essential to unlocking its full potential. This article details the necessary steps, principles, and considerations for crafting intuitive, user-centered interfaces that seamlessly integrate AI capabilities.
 
-The primary goals of creating an excellent user experience include simplifying complex tasks, boosting productivity, and providing a personalized experience through adaptive learning.
+The primary goals of creating excellent user experience include simplifying complex tasks, boosting productivity, and providing a personalized experience through adaptive learning.
 
 ## What is a custom engine agent?
 
@@ -93,7 +93,7 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-You can use one of the following to stream the resposne:
+You can use one of the following to stream the response:
 
 - Use Teams AI Library to add streaming to the agent.
 - Call the Bot Framework APIs directly for streaming.
@@ -126,7 +126,7 @@ You can use one of the following to ensure intelligent context-based conversatio
 - Use Bot Framework API to:
 
   - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
-  - **Identify conversation location**: Ensure the agent is aware of the platform in which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side-pane, or a group chat.
+  - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side-pane, or a group chat.
   - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
   - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
@@ -142,12 +142,12 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 The following best practices can help enhance the overall effectiveness of a custom engine agent.
 
-- [Ensure that agent's reponse contains feedback button](#ensure-that-agents-reponse-contains-feedback-button).
+- [Ensure that agent's response contains feedback button](#ensure-that-agents-reponse-contains-feedback-button).
 - [Enable Teams Azure AD (AAD) single sign-on (SSO)](#enable-teams-azure-ad-aad-single-sign-on-sso).
 - [Enable the custom engine agent to understand conversational history and context](#enable-the-custom-engine-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
 
-### Ensure that agent's reponse contains feedback button
+### Ensure that agent's response contains feedback button
 
 Develop the capability in the custom engine agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
 
@@ -168,7 +168,7 @@ You can add single sign-on authentication to your custom engine agent. For more 
 
 ### Enable the custom engine agent to understand conversational history and context
 
-You can design your custom engine agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate. For more information, see [messages in bot conversations](../conversations/conversation-messages.md).
+You can design your custom engine agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate. For more information, see [messages in bot conversations](../conversations/conversation-messages.md).
 
 ### Offer dynamic and contextual suggestion prompts
 

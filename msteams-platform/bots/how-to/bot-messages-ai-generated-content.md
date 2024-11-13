@@ -28,8 +28,8 @@ The following screenshots show how bot messages can be enhanced with AI labels, 
 
 > [!NOTE]
 >
-> * AI label, citations, feedback buttons, and sensitivity labels are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
-> * AI label, citations, feedback buttons, and sensitivity labels are available only in Teams web and desktop clients.
+> * AI label, citation, feedback button, and sensitivity label are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
+> * AI label, citation, feedback button, and sensitivity label are available only in Teams web and desktop clients.
 > * AI label, citations, feedback buttons, and sensitivity labels are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 ## AI label
@@ -82,11 +82,11 @@ It's important to cite the sources of the bot message to help users ask follow-u
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with in-text citation.":::
 
-Citations to your bot message include in-text citations, details to citation reference, and sensitivity labels for the content referenced.
+Citations to your bot message include in-text citations, details of citation reference, and sensitivity labels for the content referenced.
 
-* **In-text citations** denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
-* **Details to citation reference** include the title, keywords, an abstract, hyperlink, and sensitivity information. References appear as pop-up windows for each in-text citation.
-* **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
+* In-text citations denote the citation numbers added to the bot message in the [#] format, each corresponding to a reference. A citation can be inserted anywhere within the text.
+* Details of citation reference include the title, keywords, abstract, hyperlink, and sensitivity information. References appear as pop-up windows for each in-text citation.
+* Sensitivity labels to citations indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [add sensitivity label](#add-sensitivity-label).
 
 > [!NOTE]
 >
@@ -129,10 +129,10 @@ await context.sendActivity({
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `citation` | Object | Yes | Details of the citation. |
-| `citation.@type` | String | Yes | Object of the citation. The only allowed value is `Claim`. |
+| `citation.@type` | String | Yes | Object of the citation. The only value allowed  is `Claim`. |
 | `citation.position` | Integer | Yes | Displays the citation number. The values are limited to less than eight. |
 | `citation.appearance` | Object | Yes | Information about the appearance of the citation. |
-| `citation.appearance.@type` | String | Yes | Object of the citation appearance. The only allowed value is `DigitalDocument`. |
+| `citation.appearance.@type` | String | Yes | Object of the citation appearance. The only value allowed is `DigitalDocument`. |
 | `citation.appearance.name` | String | Yes | Title of the referenced content. |
 | `citation.appearance.url` | String | No | URL of the referenced content. |
 | `citation.appearance.abstract` | String | No | Extract of the referenced content and is limited to less than 1,000 characters. |
@@ -160,7 +160,7 @@ When the user selects a feedback button, a respective feedback form appears base
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
-Feedback buttons are located at the footer of the bot’s message, and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user to choose from. You can collect feedback on bot responses from one-on-one and group chats.
+Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user to choose. You can collect feedback on bot responses from one-on-one and group chats.
 
 ### Add feedback buttons
 
@@ -198,7 +198,7 @@ await context.sendActivity({
 
 The bot receives the user's input, received in the feedback form, through a bot invoke flow.
 
-For a bot built using **Teams AI library**, the bot invoke received is automatically handled. To handle feedback, use the `app.feedbackLoop` method to register a feedback loop handler called when the user provides feedback.
+For a bot built using **Teams AI library**, the bot invoke request received is automatically handled. To handle feedback, use the `app.feedbackLoop` method to register a feedback loop handler called when the user provides feedback.
 
 ```javascript
 app.feedbackLoop(async (context, state, feedbackLoopData) => {
@@ -243,10 +243,10 @@ public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
  };
 ```
 
-It’s important to store feedback after you receive it. Hence, ensure that you store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
+It’s important to store feedback after you receive it. Hence, ensure that you store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke request containing feedback, match the message ID of the bot’s message with the corresponding feedback.
 
 > [!NOTE]
-> Teams neither stores nor processes feedback, nor does it provide an API or a storage mechanism.
+> Teams doesn't store or process feedback. It doesn't provide an API or a storage mechanism.
 
 If a user uninstalls your bot and still has access to the bot chat, Teams removes the feedback buttons from the bot messages to prevent the user from providing feedback to the bot.
 
@@ -337,7 +337,7 @@ await context.sendActivity({
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `usageInfo.@type` | String | Yes | Enables the sensitivity label in the bot message. |
-| `citation.usageInfo.@id` | String | Yes | Enables the sensitivity label in the citation reference. It's required when adding sensitivity label to citation reference. |
+| `citation.usageInfo.@id` | String | Yes | Enables the sensitivity label in the citation reference. It's required when adding a sensitivity label to citation reference. |
 | `usageInfo.name` | String | Yes | Specifies the title of the sensitivity label. |
 | `usageInfo.description` | String | No | Specifies the pop-up window message that appears when a user hovers over the sensitivity label. |
 
@@ -354,7 +354,7 @@ After the sensitivity label is added, your bot message contains a shield icon. U
 
 ## Modify `PredictedSayCommand`
 
-For a bot built using Teams AI library, the `PredictedSayCommand` provides control on how AI label, citations, feedback buttons, and sensitivity labels are added to the bot's activity. Following is the code snippet to modify `PredictedSayCommand`:
+For a bot built using Teams AI library, the `PredictedSayCommand` provides control on how AI label, citation, feedback button, and sensitivity label are added to the bot's activity. Following is the code snippet to modify `PredictedSayCommand`:
 
 ```JavaScript
 app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, state, data, action) => {
