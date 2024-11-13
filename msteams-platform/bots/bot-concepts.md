@@ -26,11 +26,11 @@ These two components work together to create an engaging conversational experien
 - Retrieving information efficiently
 - Maintaining an adaptive conversational flow
 
-By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and non-AI bot solutions.
+By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and conventional bot solutions.
 
 ## Teams activity handler
 
-The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as a middleman between the user's input and the bot's response:
+The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as an intermediary between the user's input and the bot's response:
 
 - Receives incoming messages.
 - Retrieves key data from user input.
