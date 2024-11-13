@@ -1,11 +1,11 @@
 ---
 title: In-app Purchases for App Monetization
-description: Learn the basic tasks and concepts needed to implement in-app purchases such as app manifest update, purchase experience API and trial functionality in Teams apps.
+description: Learn the basic tasks and concepts needed to implement in-app purchases such as app manifest update, purchase experience API, and trial functionality in Teams apps.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 01/31/2023
+ms.date: 11/14/2024
 ---
 
 # Configure in-app purchases

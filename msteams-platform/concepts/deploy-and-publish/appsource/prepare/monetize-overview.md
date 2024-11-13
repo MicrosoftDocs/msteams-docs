@@ -1,11 +1,11 @@
 ---
 title: Monetize your App
-description: Learn about monetizing your app and the supported pricing models such as free trials, in-app purchases, and test drives and to monetize through SaaS offers.
+description: Learn about monetizing your app through SaaS offers and other supported options such as free trials, in-app purchases, test drives, and private plans.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/15/2024
+ms.date: 11/14/2024
 ---
 
 # Monetize your Teams app

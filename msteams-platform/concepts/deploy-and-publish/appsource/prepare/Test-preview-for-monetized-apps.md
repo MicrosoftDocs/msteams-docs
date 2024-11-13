@@ -1,11 +1,11 @@
 ---
 title: Test Saas Preview Offer for Teams App
 author: v-ypalikila
-description: Learn to create and test SaaS preview offers for Teams app. Create a preview offer ID, configure your app with the preview offer ID, and upload.
+description: Learn to create and test SaaS preview offers for Teams app. Generate a preview offer ID and configure your app with the preview offer ID to test the offer.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 12/26/2022
+ms.date: 11/14/2024
 ---
 
 # Test your SaaS offer
