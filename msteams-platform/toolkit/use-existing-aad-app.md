@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/09/2023
 ---
 
-# Use existing Microsoft Entra app in TeamsFx project
+# Use existing Entra app in TeamsFx
 
 This section provides information for using existing Microsoft Entra app or manually creates Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required info is properly set in your TeamsFx project.
 

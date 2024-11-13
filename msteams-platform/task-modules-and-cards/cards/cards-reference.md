@@ -113,6 +113,8 @@ After identifying the common properties for all cards, you can now work with Ada
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
+To explore Adaptive Card templates, see [Adaptive Card starter collection](design-effective-cards.md#adaptive-card-starter-collection).
+
 ### Support for Adaptive Cards
 
 The following table provides the features that support Adaptive Cards:
@@ -464,7 +466,7 @@ The following code shows an example of a list card:
 
 ## Connector card for Microsoft 365 Groups
 
-You can work with an connector cards for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groupsd](#additional-information-on-the-connector-card-for-microsoft-365-groups).
+You can work with a connector card for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groups](#additional-information-on-the-connector-card-for-microsoft-365-groups).
 
 ### Support for connector cards for Microsoft 365 Groups
 
