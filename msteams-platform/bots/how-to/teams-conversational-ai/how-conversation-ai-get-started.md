@@ -899,6 +899,15 @@ In Teams AI library, the `Application` object replaces the traditional `Activity
 - Calling into the Teams AI library's system for creating bots that use LLM and other AI capabilities.
 - Configuring user authentication for accessing third-party user data.
 
+Use one of the following to migrate your bot app to use Teams AI library:
+
+| To migrate a Bot Framework SDK app ... | Use ... |
+| --- | --- |
+| A bot app built using JavaScript | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/01.JS.md) |
+| A bot app built using C# | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/02.DOTNET.md) |
+| A bot app using Python | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/03.PYTHON.md) |
+
+
 ## Code sample
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |
