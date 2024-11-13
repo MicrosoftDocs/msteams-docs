@@ -887,17 +887,17 @@ server.post('/api/messages', async (req, res) => {
 
 ## Migrate your bot to use Teams AI library
 
-If you've built your bot app using Bot Framework SDK, you can migrate your bot to use Teams AI library to utilize its advanced AI capabilities. Migrating your app to use Teams AI library offers the following benefits:
+If you created your bot app with Bot Framework SDK, you can switch to Teams AI library to use its advanced AI features. This migration provides the following benefits:
 
-- Advanced AI system to build complex LLM-powered Teams applications.
-- User authentication is built right into the library, simplifying the set up process.
-- The library builds on top of fundamental Bot Framework SDK tools and concepts. This means that your existing knowledge is transferrable.
-- The library continues to support latest tools and APIs in the Large Language Models (LLM) space.
+- Advanced AI system for creating complex Teams applications powered by LLM.
+- User authentication is integrated into the library, making setup easier.
+- Built on Bot Framework SDK tools and concepts, enabling the existing knowledge to be transferable.
+- Supports the latest tools and APIs in the LLM space.
 
-The Teams AI library provides the `Application` object which replaces the traditional `ActivityHandler` object. It supports a simpler fluent style of authoring bots versus the inheritance based approach used by the `ActivityHandler` class. The `Application` object has built-in support for calling into the library's AI system which can be used to create bots that leverage LLM and other AI capabilities. It also has built-in support for configuring user authentication to access user data from third-party services.
+In Teams AI library, the `Application` object replaces the traditional `ActivityHandler` object, supporting a simpler, fluent style of bot authoring compared to the inheritance-based `ActivityHandler` class. It includes built-in support for: 
 
-
-
+- Calling into the Teams AI library's system for creating bots that use LLM and other AI capabilities.
+- Configuring user authentication for accessing third-party user data.
 
 ## Code sample
 
