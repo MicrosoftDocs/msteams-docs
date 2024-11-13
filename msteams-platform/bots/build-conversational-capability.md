@@ -297,7 +297,7 @@ You can also add RSC permissions through Graph API. For more information, see [`
     }
     ```
 
-    Following is an example of read receipts event request that a bot receives:
+    The following example shows a read receipts event request that a bot receives:
 
     ```json
     {
@@ -342,7 +342,7 @@ When you edit a message, the bot gets a notification of the edit message activit
 
 To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
 
-Following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
+The following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
 # [C#](#tab/dotnet3)
 
@@ -674,7 +674,7 @@ When you soft delete a message, the bot gets a notification of the soft delete m
 
 To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
-Following is an example of a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+The following example shows a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 
@@ -1069,7 +1069,7 @@ With the resource-specific consent (RSC) permissions model, conversation owners 
 
 Ensure that the services needing access to all Teams message data use the Graph APIs to get access to archived data in channels and chats. A bot must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to create engaging experience for users so it can get approved by the Microsoft Teams Store. Additionally, the app description must explain how the bot uses the data it reads. Here are some tips to help you use the RSC permissions correctly for your bot:
 
-- A bot mustn't use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to pull a a large amount of customer data.
+- A bot mustn't use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to pull a large amount of customer data.
 - A bot must be able to get all chat messages using `ChatMessage.Read.Chat` only after they've been re-installed or newly installed into a chat.
 - If your app uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app using the steps in [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and adjust it before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
 
@@ -1085,7 +1085,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 - Enable a specified graph application access all messages in channels and chats.
 - Enable a bot to get all messages without needing to be @mentioned by defining in its app manifest to receive all conversation messages in the relevant contexts where these permissions apply.
 
-If these RSC permissions are defined for a bot in its app manifest, it is able to receive all messages from a channel or a chat where it's installed. To receive all channel or chat messages, you must:
+If these RSC permissions are defined for a bot in its app manifest, it can receive all messages from a channel or a chat where it's installed. To receive all channel or chat messages, you must:
 
 - [Update app manifest](#update-app-manifest).
 - [Upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation).
