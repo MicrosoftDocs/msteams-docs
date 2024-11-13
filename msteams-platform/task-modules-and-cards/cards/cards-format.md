@@ -1,9 +1,9 @@
 ---
-title: Text formatting in cards
-description: Learn about card text formatting with Markdown and HTML, the CodeBlock element, borders, rounded corners, and how to design responsive Adaptive Cards.
+title: Format Text in Cards
+description: Learn about card text formatting with Markdown and HTML, how to design responsive Adaptive Cards, and other elements to create actionable Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 10/08/2024
+ms.date: 11/07/2024
 ---
 
 # Format cards in Teams
@@ -20,8 +20,6 @@ Formatting support differs between card types. Rendering of the card can differ 
 You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images aren't supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
-
-You can add borders and rounded corners to various elements in Adaptive Cards. For more information, see [borders and rounded corners in Adaptive Cards](#borders-and-rounded-corners-in-adaptive-cards).
 
 ## Format cards with Markdown
 
@@ -1258,6 +1256,264 @@ The following JSON payload shows an Adaptive Card with borders and rounded corne
     ]
 }
 ```
+
+## Scrollable containers in Adaptive Cards
+
+A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the maximum height of the container. When the container has a maximum height and its content exceeds that height, a vertical scrollbar appears.
+
+Here's how the `maxHeight` property is defined:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `maxHeight` | String | Defines the maximum height of the container. This property is available in `Container`, `Column`, `TableCell`, and in other containers as well.<br>You must define the value in the `<number>px` format. |
+
+The following card payload shows a container with a scroll bar:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This is a scrollable container",
+            "wrap": true,
+            "size": "ExtraLarge",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "showBorder": true,
+            "maxHeight": "100px",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Item 1",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 2",
+                    "size": "ExtraLarge"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Item 3",
+                    "size": "ExtraLarge"
+                }
+            ]
+        }
+    ]
+}
+```
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-container-scroll.png" alt-text="Screenshot shows a scrollable container in an Adaptive Card on the Teams desktop client.":::
+
+## Compound button in Adaptive Cards
+
+Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.
+
+Here are the properties of the `CompoundButton` element:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `type` | ✔️ | String | Must be `CompoundButton`. |
+| `title` | ✔️ | String | Title of the button. Markdown isn't supported. |
+| `id` |  | String | Unique identifier for the element or action. |
+| `requires` |  | Object | A list of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
+| `isVisible` |  | Boolean | Controls the visibility of the element. |
+| `separator` |  | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`. |
+| `height` |  | String | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch` |
+| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right` |
+| `Spacing` |  | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` |  | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout). <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon` |  | String | Icon shown on the button. |
+| `badge` |  | String | Badge shown on the button. Markdown isn't supported. |
+| `description` |  | String | Description text of the button. Markdown isn't supported. |
+| `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
+
+Here are the properties of the `icon` element:
+
+| Property | Required | Type | Description |
+|---------|---------|---------|---------|
+| `name` | ✔️ | String | Name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
+| `size` |  | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style` |  | String | Style of the icon. Allowed values: `Regular`, `Filled` |
+| `color` |  | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
+
+Here's an Adaptive Card example that uses the `CompoundButton` element:
+
+```json
+{ 
+    "type": "AdaptiveCard", 
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+    "version": "1.5", 
+    "body": [ 
+        { 
+            "type": "CompoundButton", 
+            "title": "Photos", 
+            "icon": { 
+                "name": "Camera" 
+            }, 
+            "description": "Add photos", 
+            "height": "stretch"
+        } 
+    ] 
+}
+```
+
+:::image type="content" source="../../assets/images/Cards/compoundbutton.png" alt-text="Screenshot of desktop and mobile view of Compound buttons in an Adaptive Card.":::
+
+## Icons in Adaptive Card
+
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. You can also use Fluent icons on action buttons by setting the action's `iconUrl` property to a value in the format of `icon:<icon name>[,regular|filled]`.
+
+Here are the properties of the `Icon` element:
+
+| Property | Description |
+| --- | --- |
+| `type` | Must be `Icon`. |
+| `name` | Name of the icon to display. For example, `calendar`. |
+| `size` | Size of the icon. </br> Allowed values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
+| `color` | Color of the icon. </br> Allowed values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
+| `style` | Style of the icon. </br> Allowed values: `Filled`, `Regular` |
+| `selectAction` | Action that's invoked when the icon is tapped or selected. All Action types are supported except `Action.ShowCard`. <br> Allowed values: `Action.Execute`, `Action.OpenUrl`, `Action.Popover`, `Action.ResetInputs`, `Action.Submit`, `Action.ToggleVisibility` |
+
+Here's an Adaptive Card example that uses the `Icon` element and the `iconUrl` property in an action button:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Here's an Icon element"
+    },
+    {
+  "type": "Icon",
+        "name": "Calendar",
+        "size": "Medium",
+        "style": "Filled",
+        "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Here's an Icon element in a button"
+    }
+ ],
+ "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Filled icon",
+            "url": "https://www.microsoft.com",
+            "iconUrl": "icon:AccessTime,filled"
+        }
+    ]
+}
+```
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-fluent-icon.png" alt-text="Screenshot shows an Adaptive Card with a Fluent icon.":::
+
+## Ratings in Adaptive Cards
+
+You can add a star rating input to your Adaptive Card using the [`Input.Rating`](#inputrating) element. You can also include a read-only star rating using the [`Rating`](#rating) element.
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-rating.png" alt-text="Screenshot shows an Adaptive Card with the input rating and read-only star ratings.":::
+
+The following payload shows an Adaptive Card with input-enabled and read-only star ratings:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Large",
+            "text": "Rating input"
+        },
+        {
+            "type": "Input.Rating",
+            "id": "rating1",
+            "label": "Pick a rating",
+            "size": "medium",
+            "color": "marigold",
+            "isRequired": true,
+            "errorMessage": "Please pick a rating"
+        },
+        {
+            "type": "TextBlock",
+            "size": "large",
+            "text": "Read-only rating",
+            "separator": true,
+            "spacing": "extraLarge"
+        },
+        {
+            "type": "Rating",
+            "max": 20,
+            "value": 3.2,
+            "color": "marigold"
+        }
+    ]
+}
+```
+
+### Input.Rating
+
+Here are the properties of the `Input.Rating` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Input.Rating`. |
+| `allowHalfSteps` | | Boolean | Controls if the user can select half stars. Default value: `false` |
+| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `errorMessage` | | String | The error message to display when the input fails validation. |
+| `fallback` | | One of Object or String | An alternate element to render if the type of this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
+| `id` | ✔️ | String | A unique identifier for the element or action. |
+| `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
+| `isVisible` | | Boolean | Determines the visibility of the element.<br>Default value: `true` |
+| `label` | | String | The label of the input. |
+| `lang` | | String | The locale associated with the element. |
+| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities` |
+| `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `value` | | Number | The default value of the input. This value can't exceed `max`, if `max` is specified. |
+| `valueChangedAction` | | Action | An `Action.ResetInputs` action that will be executed when the value of the input changes.<br>Allowed value: `Action.ResetInputs` |
+
+### Rating
+
+Here are the properties of the `Rating` element:
+
+| Property | Required | Type | Description |
+|----|----|----|----|
+| `type` | ✔️ | String | Must be `Rating`. |
+| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
+| `count` | | Number | The number of "votes" associated with the rating. |
+| `fallback` | | One of Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
+| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `Auto`, `Stretch` |
+| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
+| `id` | | String | A unique identifier for the element or action. |
+| `isVisible` | | Boolean | Controls the visibility of the element.<br>Default value: `true` |
+| `lang` | | String | The locale associated with the element. |
+| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
+| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed value: `HostCapabilities` |
+| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
+| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
+| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
+| `style` | | String | The style of the stars. In compact mode, only one star is displayed.<br>Allowed values: `Default`, `Compact`<br>Default value: `Default` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
+| `value` | | Number | The value of the rating. This value must be between zero and `max`, if `max` is specified. |
 
 ## Format cards with HTML
 

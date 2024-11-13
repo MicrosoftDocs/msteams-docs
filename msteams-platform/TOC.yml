@@ -691,6 +691,12 @@
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
+    - name: Container layouts in Adaptive Cards
+      href: task-modules-and-cards/container-layouts.md
+      displayName: Container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout
+    - name: Charts in Adaptive Cards
+      href: task-modules-and-cards/cards/charts-in-adaptive-cards.md
+      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart  
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead, persona, persona set
@@ -887,9 +893,14 @@
       - name: Build Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
-  - name: Add an Outlook Add-in to a Teams app
-    href: m365-apps/combine-office-add-in-and-teams-app.md
-    displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+  - name: Combine Teams apps and Outlook Add-ins
+    items:
+      - name: Overview
+        href: m365-apps/overview-combining-add-in-and-teams-app.md
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+      - name: Add an Outlook Add-in to a Teams app
+        href: m365-apps/combine-office-add-in-and-teams-app.md
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
   - name: Actions in Microsoft 365
     items:
       - name: Overview
