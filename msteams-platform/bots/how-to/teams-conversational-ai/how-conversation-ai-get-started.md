@@ -901,7 +901,7 @@ In Teams AI library, the `Application` object replaces the traditional `Activity
 
 Use one of the following to migrate your bot app to use Teams AI library:
 
-| To migrate a Bot Framework SDK app ... | Use ... |
+| Migrate a Bot Framework SDK app ... | To use Teams AI library ... |
 | --- | --- |
 | A bot app built using JavaScript | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/01.JS.md) |
 | A bot app built using C# | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/02.DOTNET.md) |
