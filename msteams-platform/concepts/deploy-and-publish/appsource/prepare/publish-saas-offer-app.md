@@ -10,7 +10,7 @@ ms.date: 07/11/2023
 
 # Publish your SaaS app
 
-After you create and test a software as a service (SaaS) offer, submit the offer to [go live](/partner-center/marketplace/test-publish-saas-offer). Upon successful final validation checks, the offer is published live in the Microsoft commercial marketplace. When the offer is published live, link the live SaaS offer to your Microsoft Teams app and publish the SaaS app.
+After you create and test a software as a service (SaaS) offer, submit the offer to [go live](/partner-center/marketplace/test-publish-saas-offer). Upon successful validation, the offer is published live in the Microsoft commercial marketplace. You can then link the live SaaS offer to your Microsoft Teams app and publish the SaaS app.
 
 :::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="Screenshot shows the Go live and offer publishing phase.":::
 
@@ -56,7 +56,7 @@ After linking the offer to your app, you can submit your monetized app through P
 > * Even if your app is already listed on the Teams Store, you must still go through the validation process again to include your SaaS offer.
 > * Flat rate offers created without the offer ID and publisher ID in the app manifest should be updated and resubmitted for validation.
 
-After the SaaS app is published, users can view the **Buy a subscription** option in the app details dialog when the user adds your app to Teams. SaaS app with suitable offers is available in the Teams Store and the marketplace to purchase subscriptions.
+After the SaaS app is published, users can view the **Buy a subscription** option in the app details dialog when the user adds your app to Teams. SaaS app with suitable offers is available in the Teams Store to purchase subscriptions.
 
 :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 

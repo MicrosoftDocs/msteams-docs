@@ -10,13 +10,11 @@ ms.date: 10/15/2024
 
 # Monetize your Teams app
 
-App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. Apps published with SaaS offers can be purchased from the Microsoft commercial marketplace that includes Azure Marketplace and Microsoft AppSource. If the SaaS offers are linked to a Teams app, they can also be purchased from the Teams Store.
+App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. Apps published with SaaS offers can be purchased from the Microsoft commercial marketplace that includes Azure Marketplace and Microsoft AppSource. To purchase from Teams Store, you can link the SaaS offers to a Teams app.
 
 ## SaaS offer
 
-SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. As a publisher, you can create your marketplace offers in Microsoft Partner Center, link the offer to your app, and publish the SaaS app for purchase. Apps with SaaS offers that are published in Microsoft commercial marketplace as subscriptions are SaaS apps. 
-
-The publishing options available in a SaaS offer by which you can drive app monetization are:
+SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. Apps with SaaS offers that are published in Microsoft commercial marketplace are SaaS apps. The publishing options available in a SaaS offer by which you can drive app monetization are:
 
 :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
 
@@ -28,7 +26,9 @@ The publishing options available in a SaaS offer by which you can drive app mone
 
 * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-Here are some key features associated with a SaaS offer:
+As a publisher, you can create your marketplace offers in Microsoft Partner Center. You can then link the offer to your app and publish the SaaS app for purchase.  
+
+Here are few key features associated with a SaaS offer:
 
 * **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, [in-app purchases](in-app-purchase-flow.md) can generate an ongoing revenue stream. </br>
 
