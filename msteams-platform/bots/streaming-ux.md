@@ -58,7 +58,7 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
     The following example shows the information updates in an AI-powered bot:
 
-    :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI bot.":::
+    :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI bot." border="false":::
 
 3. **Format the final streamed message**:
 
