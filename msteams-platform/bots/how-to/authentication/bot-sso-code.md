@@ -4,6 +4,7 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
+ms.date: 11/13/2024
 ---
 # Add code to enable SSO in your bot app
 

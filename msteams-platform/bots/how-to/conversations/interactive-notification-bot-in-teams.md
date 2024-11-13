@@ -5,6 +5,7 @@ description: Learn how interactive notification bot works in Teams, notification
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 11/13/2024
 ---
 
 # Interactive notification bot in Teams
