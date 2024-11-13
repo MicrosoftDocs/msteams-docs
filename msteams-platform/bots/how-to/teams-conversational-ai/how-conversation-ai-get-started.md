@@ -538,14 +538,14 @@ The following table includes the query parameters:
 |`completion_type`|The type of completion you would like to use for your model. Given a prompt, the model will return one or more predicted completions along with the probabilities of alternative tokens at each position. Supported options are `chat` and `text`. Default is `chat`.|
 |`include_history`|Boolean value. If you want to include history. Each prompt gets its own separate conversation history to make sure that the model doesn't get confused.|
 |`include_input`|Boolean value. If you want to include user's input in the prompt. How many tokens for the prompt.|
-|`max_input_tokens`|The maximum number of tokens for input. Max tokens supported is 4000.|
+|`max_input_tokens`|The maximum number of tokens for input. Maximum tokens supported is 4000.|
 |`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
 |`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
 |`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
-|`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue` and `tools`.|
+|`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue`, and `tools`.|
 
 ### Prompt management
 
@@ -607,9 +607,9 @@ Action handlers help users achieve the goals, which is shared in the user intent
 
 One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
 
-You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
+You must register a handler for each action listed in the prompt and add a handler to deal with unknown actions.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return a `string`. If you require the bot to return time, you don't need to parse the time and convert it to a number. The `PauseParameters` property ensures that it returns time in number format without pausing the prompt.
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause` action. Every time an action is called, you return a `string`. If you require the bot to return time, you don't need to parse the time and convert it to a number. The `PauseParameters` property ensures that it returns time in number format without pausing the prompt.
 
 # [.NET](#tab/dotnet4)
 
@@ -739,7 +739,7 @@ async def on_pause(
 
 ---
 
-If you use either `sequence`, `monologue` or `tools` augmentation, it's impossible for the model to hallucinate an invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action. Sequence augmentation is suitable for tasks that require multiple steps or complex logic.
+If you use either `sequence`, `monologue`, or `tools` augmentation, it's impossible for the model to hallucinate an invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action. Sequence augmentation is suitable for tasks that require multiple steps or complex logic.
 Monologue augmentation is suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
 
 In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
@@ -788,7 +788,7 @@ You can use the `MaxHistoryMessages` and `MaxConversationHistoryTokens` argument
 
 ### Feedback loop
 
-A feedback loop allows you to monitor and improve the bot’s interactions over time, leading to more effective and user-friendly applications. The feedback received can be used to make adjustments and improvements, ensuring that the bot consistently meets user needs and expectations.
+A feedback loop allows you to monitor and improve the bot’s interactions over time, leading to more effective and user-friendly applications. The feedback received can be used to adjust and improve the bot consistently to meet user needs and expectations.
 
 A feedback loop consists of the following:
 
