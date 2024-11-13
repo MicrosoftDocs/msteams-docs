@@ -162,7 +162,7 @@ The following table lists the cloud service accounts for Teams application:
 |:----------------  |:-------------|
 | `teamsapp auth list` | Display all connected Microsoft 365 and Azure accounts. |
 | `teamsapp auth login`  | Log in to the selected cloud service. The available options are Microsoft 365 or Azure. |
-| `teamsapp auth logout`| Log out of selected cloud service. The available options are Microsoft 365 or Azure. |
+| `teamsapp auth logout`  | Log out of selected cloud service. The available options are Microsoft 365 or Azure. |
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-auth.png" alt-text="Screenshot shows the teamsapp auth commands.":::
 
@@ -541,24 +541,24 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Supported commands
 
-| Command              | Description                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `teamsfx new`        | Create a new Teams application.                                                                                           |
-| `teamsfx add`        | Add a feature to your Teams application.                                                                                  |
-| `teamsfx account`    | Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365.                        |
-| `teamsfx env`        | Manage environments.                                                                                                      |
-| `teamsfx help`       | Show Teams Toolkit CLI help.                                                                                              |
-| `teamsfx list`       | List the available Teams application templates and samples.                                                               |
-| `teamsfx provision`  | Run the provision stage in teamsapp.yml or teamsapp.local.yml.                                                            |
-| `teamsfx deploy`     | Run the deploy stage in teamsapp.yml or teamsapp.local.yml.                                                               |
-| `teamsfx package`    | Build your Teams app into a package for publishing.                                                                       |
-| `teamsfx validate`   | Validate the Teams app using the app manifest schema or validation rules.                                                 |
-| `teamsfx publish`    | Run the publish stage in teamsapp.yml.                                                                                    |
-| `teamsfx preview`    | Preview the current application.                                                                                          |
-| `teamsfx m365`       | Manage Microsoft 365 app.                                                                                                 |
-| `teamsfx permission` | Check, grant, and list permissions for users who can access and manage Teams application and Microsoft Entra application. |
-| `teamsfx update`     | Update the specific application app manifest file.                                                                        |
-| `teamsfx upgrade`    | Upgrade the project to work with the latest version of Microsoft Teams Toolkit.                                           |
+| Command | Description |
+|----------------|-------------|
+| `teamsfx new`| Create a new Teams application.|
+| `teamsfx add`| Add a feature to your Teams application.|
+| `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365. |
+| `teamsfx env` | Manage environments. |
+| `teamsfx help` | Show Teams Toolkit CLI help. |
+| `teamsfx list` | List the available Teams application templates and samples. |
+| `teamsfx provision` | Run the provision stage in teamsapp.yml or teamsapp.local.yml.|
+| `teamsfx deploy` | Run the deploy stage in teamsapp.yml or teamsapp.local.yml. |
+| `teamsfx package` | Build your Teams app into a package for publishing.|
+| `teamsfx validate` | Validate the Teams app using the app manifest schema or validation rules. |
+| `teamsfx publish` | Run the publish stage in teamsapp.yml.|
+| `teamsfx preview` | Preview the current application. |
+| `teamsfx m365`  | Manage Microsoft 365 app. |
+| `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Teams application and Microsoft Entra application. |
+| `teamsfx update` | Update the specific application app manifest file. |
+| `teamsfx upgrade` | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
 
 ## Interactive mode
 
@@ -568,23 +568,23 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 By default, `teamsfx new` is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
-| Command                     | Description                              |
-| :-------------------------- | :--------------------------------------- |
-| `teamsfx new template`      | Create an app from an existing template. |
-| `teamsfx new template list` | List all the available templates.        |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx new template` | Create an app from an existing template. |
+| `teamsfx new template list` | List all the available templates. |
 
 ### Parameters for `teamsfx new`
 
-| Parameter                 | Required | Description                                                                                                                                                                                                      |
-| :------------------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--app-name`              | Yes      | Name of your Teams application.                                                                                                                                                                                  |
-| `--interactive`           | No       | Select the options interactively. The options are `true` and `false` and default value is `true`.                                                                                                                |
-| `--capabilities`          | No       | Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`. |
-| `--programming-language`  | No       | Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.                                                                                            |
-| `--folder`                | No       | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.                                                                                                    |
-| `--spfx-framework-type`   | No       | Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.                                                                 |
-| `--spfx-web part-name`    | No       | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".                                                                                                                              |
-| `--bot-host-type-trigger` | No       | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.                                           |
+| Parameter | Required | Description |
+|:---------------- |:-------------|:-------------|
+|`--app-name` | Yes| Name of your Teams application.|
+|`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
+|`--capabilities`| No| Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`.|
+|`--programming-language`| No| Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.|
+|`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
+|`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
+|`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
+|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.|
 
 ### Scenarios for `teamsfx new`
 
@@ -612,28 +612,28 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 The following table lists different features to your Teams application along with their description.
 
-| Command                   | Description                                             |
-| :------------------------ | :------------------------------------------------------ |
+| Command | Description |
+|:----------------  |:-------------|
 | `teamsfx add SPFxWebPart` | Autohosted SPFx web part tightly integrated with Teams. |
 
 ## `teamsfx account`
 
 The following table lists the cloud service accounts, such as Azure and Microsoft 365.
 
-| Command                  | Description                                                                       |
-| :----------------------- | :-------------------------------------------------------------------------------- |
+| Command | Description |
+|:----------------  |:-------------|
 | `teamsfx account login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsfx account logout` | Log out of selected cloud service. Service options are Microsoft 365 or Azure.    |
-| `teamsfx account show`   | Display all connected cloud accounts information.                                 |
+| `teamsfx account logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account show` | Display all connected cloud accounts information. |
 
 ## `teamsfx env`
 
 Manage environments.
 
-| Command            | Description                                                      |
-| :----------------- | :--------------------------------------------------------------- |
+|  Command  | Description |
+|:----------------  |:-------------|
 | `teamsfx env add`  | Add a new environment by copying from the specified environment. |
-| `teamsfx env list` | List all environments.                                           |
+| `teamsfx env list` | List all environments. |
 
 ### Scenarios for `teamsfx env`
 
@@ -651,10 +651,10 @@ Running `teamsfx provision --env local` triggers the provision stage in `teamsap
 
 ### Parameters for `teamsfx provision`
 
-| Parameters | Required | Description                                         |
-| :--------- | :------- | :-------------------------------------------------- |
-| `--env`    | Yes      | Select an environment for the project.              |
-| `--folder` | No       | Select root folder of the project. Defaults to `./` |
+| Parameters | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./` |
 
 ## `teamsfx deploy`
 
@@ -664,10 +664,10 @@ Running `teamsfx deploy --env local` triggers the deploy stage in `teamsapp.loca
 
 ### Parameters for `teamsfx deploy`
 
-| Parameter  | Required | Description                                          |
-| :--------- | :------- | :--------------------------------------------------- |
-| `--env`    | Yes      | Select an environment for the project.               |
-| `--folder` | No       | Select root folder of the project. Defaults to `./`. |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx validate`
 
@@ -675,12 +675,12 @@ Validate the Teams app using the app manifest schema or validation rules.
 
 ### Parameters for `teamsfx validate`
 
-| Parameter                 | Required | Description                                                                                                                                                  |
-| :------------------------ | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--env`                   | Yes      | Select an existing environment for the project.                                                                                                              |
-| `--manifest-path`         | No       | Select the input the app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This app manifest is validated using the app manifest schema. |
-| `--app-package-file-path` | No       | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package is validated with validation rules.   |
-| `--folder`                | No       | Select root folder of the project. Defaults to `./`.                                                                                                         |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--manifest-path` | No | Select the input the app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This  app manifest is validated using the app manifest schema. |
+|`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package is validated with validation rules. |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx publish`
 
@@ -690,10 +690,10 @@ Running `teamsfx publish --env local` triggers the publish stage in `teamsapp.lo
 
 ### Parameters for `teamsfx publish`
 
-| Parameter  | Required | Description                                          |
-| :--------- | :------- | :--------------------------------------------------- |
-| `--env`    | Yes      | Select an environment for the project.               |
-| `--folder` | No       | Select root folder of the project. Defaults to `./`. |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an environment for the project. |
+| `--folder` | No |Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx package`
 
@@ -701,13 +701,13 @@ Build your Teams app into a package for publishing.
 
 ### Parameters for `teamsfx package`
 
-| Parameter                | Required | Description                                                                                                                                                                                                  |
-| :----------------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--env`                  | Yes      | Select an existing environment for the project.                                                                                                                                                              |
-| `--teams-manifest-file`  | No       | Specifies the app manifest template file path, it can be either absolute path or relative path to project root folder, defaults to './appPackage/manifest.json' Default value: "./appPackage/manifest.json". |
-| `--output-zip-path`      | No       | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.                                                                                            |
-| `--output-manifest-path` | No       | Select the output path of the generated app manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json`.                                                                                    |
-| `--folder`               | No       | Select root folder of the project. Defaults to `./`.                                                                                                                                                         |
+|Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--teams-manifest-file` | No | Specifies the app manifest template file path, it can be either absolute path or relative path to project root folder, defaults to './appPackage/manifest.json' Default value: "./appPackage/manifest.json". |
+| `--output-zip-path` | No | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
+| `--output-manifest-path` | No | Select the output path of the generated app manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx preview`
 
@@ -715,18 +715,18 @@ Preview the current application.
 
 ### Parameters for `teamsfx preview`
 
-| Parameter               | Required | Description                                                                                                                                                                                                                                              |
-| :---------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--folder`              | No       | Select root folder of the project. Defaults to `./`.                                                                                                                                                                                                     |
-| `--env`                 | No       | Select an existing env for the project. Defaults to `local`.                                                                                                                                                                                             |
-| `--teams-manifest-file` | No       | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`.                                                                                                                                                             |
-| `--run-command`         | No       | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` skips starting local service.   |
-| `--running-pattern`     | No       | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
-| `--open-only`           | No       | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`.                                                                                                                               |
-| `--m365-host`           | No       | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`.                                                                                                               |
-| `--browser`             | No       | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`.                                                                                                                                          |
-| `--browser-arg`         | No       | Argument to pass to the browser, for example, --browser-args="--guest.                                                                                                                                                                                   |
-| `--exec-path`           | No       | The paths that are added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`.                                                                                                                    |
+| Parameter | Required | Description |
+|:---------------- | :------------- | :------------- |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
+| `--env` | No | Select an existing env for the project. Defaults to `local`. |
+| `--teams-manifest-file` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
+| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` skips starting local service. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
+| `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
+| `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
+| `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
+| `--browser-arg` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
+| `--exec-path` | No | The paths that are added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`. |
 
 ### Scenarios for `teamsfx preview`
 
@@ -763,40 +763,40 @@ Manage Microsoft 365 app.
 
 ### Parameters for `teamsfx m365`
 
-| Command                 | Description                                                                                                 |
-| :---------------------- | :---------------------------------------------------------------------------------------------------------- |
+| Command | Description |
+|:----------------  |:-------------|
 | `sideloading [options]` | Sideloading a Microsoft 365 App with corresponding information specified in the given app manifest package. |
-| `unacquire [options]`   | Remove an acquired Microsoft 365 App.                                                                       |
-| `launchinfo [options]`  | Get launch information of an acquired Microsoft 365 App.                                                    |
+| `unacquire [options]` | Remove an acquired Microsoft 365 App. |
+| `launchinfo [options]` | Get launch information of an acquired Microsoft 365 App. |
 
 ## `teamsfx permission`
 
 Check, grant, and list user permission.
 
-| Command                     | Description                             |
-| :-------------------------- | :-------------------------------------- |
-| `teamsfx permission grant`  | Check user's permission.                |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx permission grant` | Check user's permission. |
 | `teamsfx permission status` | Show permission status for the project. |
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameter              | Required | Description                                          |
-| :--------------------- | :------- | :--------------------------------------------------- |
-| `--env`                | Yes      | Select an existing environment for the project.      |
-| `--folder`             | No       | Select root folder of the project. Defaults to `./`. |
-| `--email`              | No       | Input email address of collaborator.                 |
-| `--teams-app-manifest` | No       | App manifest of Your Teams app.                      |
-| `--aad-app-manifest`   | No       | App manifest of your Microsoft Entra app.            |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
+| `--email` | No | Input email address of collaborator. |
+| `--teams-app-manifest` | No | App manifest of Your Teams app. |
+| `--aad-app-manifest` | No | App manifest of your Microsoft Entra app. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameter                  | Required | Description                                          |
-| :------------------------- | :------- | :--------------------------------------------------- |
-| `--env`                    | Yes      | Select an existing environment for the project.      |
-| `--folder`                 | No       | Select root folder of the project. Defaults to `./`. |
-| `--teams-app-manifest`     | No       | App manifest of Your Teams app.                      |
-| `--aad-app-manifest`       | No       | App manifest of your Microsoft Entra app.            |
-| `--list-all-collaborators` | No       | To list all collaborators.                           |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
+| `--teams-app-manifest` | No | App manifest of Your Teams app. |
+| `--aad-app-manifest` | No | App manifest of your Microsoft Entra app. |
+| `--list-all-collaborators` | No | To list all collaborators. |
 
 ### Scenarios for `teamsfx permission`
 
@@ -830,10 +830,10 @@ Check, grant, and list user permission.
 
 Update the specific app manifest file.
 
-| Command                    | Description                                                |
-| :------------------------- | :--------------------------------------------------------- |
-| `teamsfx update aad-app`   | Update the Microsoft Entra App in the current application. |
-| `teamsfx update teams-app` | Update the app manifest file to Teams Developer Portal.    |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
+| `teamsfx update teams-app` | Update the app manifest file to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
 
