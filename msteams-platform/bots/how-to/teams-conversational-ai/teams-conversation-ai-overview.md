@@ -10,7 +10,7 @@ ms.date: 02/12/2024
 
 # Teams AI library
 
-Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines which, moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs).
+Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines, which moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs).
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
@@ -18,9 +18,9 @@ The AI library provides a simple capabilities-driven approach and helps you to c
 
 ## Why use Teams AI library?
 
-The AI Library is a Teams-centric interface to Large Language Models. Your apps can use LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
+The AI Library is a Teams-centric interface to Large Language Models. Your apps can use LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your app's skills.
 
-You can focus on writing your business logic, and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
+You can focus on writing your business logic and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
 
 :::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
@@ -32,7 +32,7 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
-The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
+The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages of your choice to make the best experiences possible for your customers on Teams.
 
 ## How do AI library features benefit me?
 
@@ -79,7 +79,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="2":::
-        A simple interface for actions and predictions allows bots to react when it can take an action. Ambient presence lets a bot learn intent, use prompts based on business logic, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
+        A simple interface for actions and predictions allows a bot to react when it can take an action. Ambient presence lets a bot learn intent, use prompts based on business logic, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
             1. Allows prompts to make summarizations over a period of time focused on the user’s interactions.
@@ -102,7 +102,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         > [!NOTE]
         > Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
 
-        Assistants API allows you to create powerful AI assistants capable of performing a tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
+        Assistants API allows you to create powerful AI assistants capable of performing tasks that're difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
     :::column-end:::
@@ -112,7 +112,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Prompt management**
     :::column-end:::
     :::column span="2":::
-        Dynamic prompt management allows the bot to adjust the size and content of the prompt sent to the LLM, based on the available token budget and the data sources or augmentations. It improves the efficiency and accuracy of the prompt by ensuring that it doesn't exceed the context window or include irrelevant information.
+        Dynamic prompt management allows the bot to adjust the size and content of the prompt sent to the LLM, based on the available token budget and the data sources or augmentations. It improves the efficiency and accuracy of the prompt by ensuring that it doesn't include irrelevant information or exceed the context window.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -133,7 +133,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Vector data sources**
     :::column-end:::
     :::column span="2":::
-        Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
+        Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embedding in the database.
     :::column-end:::
 :::row-end:::
 
@@ -151,7 +151,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Feedback loop**
     :::column-end:::
     :::column span="2":::
-        Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns, and provides feedback on errors or missing information. The model attempts to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
+        The feedback loop allows a bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns and provides feedback on errors or missing information. The model attempts to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
     :::column-end:::
 :::row-end:::
 
@@ -171,17 +171,17 @@ The following table lists the updates to the Teams AI library:
 
 | Sample name | Description | .NET | Node.js | Python |
 | --- | --- | --- | --- | --- |
-| Echo bot | This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot) |
+| Echo bot | This sample shows how to incorporate a conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot) |
 | Search command message extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
 | Typeahead bot | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)|
-| Conversational bot with AI: Teams chef | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot) |
-| Message extensions: GPT-ME | This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
+| Conversational bot with AI: Teams chef | This sample shows how to incorporate a conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot) |
+| Message extensions: GPT-ME | This sample is a message extension for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
 | Light bot | This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot) |
-| List bot | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot harnesses the power of AI to simplify your workflow and bring order to your daily tasks and showcases the action chaining capabilities. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)|
-| DevOps bot | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot uses the gpt-3.5-turbo model to chat with Teams users and perform DevOps action such as create, update, triage and summarize work items. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.e.chainedActions.devOpsBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/b.devOpsBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.e.chainedActions.devOpsBot) |
-| Twenty questions | This sample shows showcases the incredible capabilities of language models and the concept of user intent. Challenge your skills as the human player and try to guess a secret within 20 questions, while the AI-powered bot answers your queries about the secret. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.e.twentyQuestions) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/a.twentyQuestions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.a.twentyQuestions) |
-| Math tutor assistant | This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
-| Food ordering assistant | This example shows how to create a conversational assistant that uses tools to call actions in your bots code. It's a food ordering assistant for a fictional restaurant called The Pub and is capable of complex interactions with the user as it takes their order. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.b.orderBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/e.assistants-orderBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.b.orderBot) |
+| List bot | This sample shows how to incorporate a conversational bot behavior in Microsoft Teams. The bot harnesses the power of AI to simplify your workflow and bring order to your daily tasks and showcases the action chaining capabilities. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)|
+| DevOps bot | This sample shows how to incorporate a conversational bot behavior in Microsoft Teams. The bot uses the gpt-3.5-turbo model to chat with Teams users and perform DevOps action such as create, update, triage and summarize work items. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.e.chainedActions.devOpsBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/b.devOpsBot) |[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.e.chainedActions.devOpsBot) |
+| Twenty questions | This sample shows showcases the incredible capabilities of language models and the concept of user intent. Challenge your skills as a human player and try to guess a secret within 20 questions, while the AI-powered bot answers your queries about the secret. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.e.twentyQuestions) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/a.twentyQuestions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.a.twentyQuestions) |
+| Math tutor assistant | This example shows how to create a conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/d.assistants-mathBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.a.mathBot) |
+| Food ordering assistant | This example shows how to create a conversational assistant that uses tools to call actions in your bot's code. It's a food ordering assistant for a fictional restaurant called The Pub and is capable of complex interactions with the user as it takes their order. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.b.orderBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/e.assistants-orderBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/06.assistants.b.orderBot) |
 
 ## Next step
 
