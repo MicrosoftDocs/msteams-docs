@@ -1147,6 +1147,18 @@
       {
         "source_path": "msteams-platform/concepts/design/plan-to-monetize.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/tab-navigation.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/deep-link-application"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
+        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
+        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
       }
     ]
 }
