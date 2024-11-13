@@ -837,19 +837,19 @@ Update the specific app manifest file.
 
 ### Parameters for `teamsfx update aad-app`
 
-| Parameter               | Required | Description                                                                                                                                |
-| :---------------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| `--env`                 | Yes      | Select an existing environment for the project.                                                                                            |
-| `--folder`              | No       | Select root folder of the project. Defaults to `./`                                                                                        |
-| `--teams-manifest-file` | No       | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| Parameter | Required |Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./` |
+| `--teams-manifest-file` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsfx update teams-app`
 
-| Parameter               | Required | Description                                                                                                                       |
-| :---------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------- |
-| `--env`                 | Yes      | Select an existing environment for the project.                                                                                   |
-| `--folder`              | No       | Select root folder of the project. Defaults to `./`                                                                               |
-| `--teams-manifest-file` | No       | Enter the app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--folder` | No | Select root folder of the project. Defaults to `./` |
+| `--teams-manifest-file` | No | Enter the app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
 
 ## `teamsfx upgrade`
 
@@ -857,9 +857,9 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 ### Parameters for `teamsfx upgrade`
 
-| Parameter | Required | Description                                                                                      |
-| :-------- | :------- | :----------------------------------------------------------------------------------------------- |
-| `--force` | No       | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults to `false`. |
+|Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--force` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults to `false`. |
 
 ::: zone-end
 
@@ -888,42 +888,42 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Supported commands
 
-| Command              | Description                                                                                  |
-| -------------------- | -------------------------------------------------------------------------------------------- |
-| `teamsfx new`        | Create new Teams application.                                                                |
-| `teamsfx add`        | Adds features to your Teams application.                                                     |
-| `teamsfx account`    | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
-| `teamsfx env`        | Manage environments.                                                                         |
-| `teamsfx provision`  | Provision cloud resources in the current application.                                        |
-| `teamsfx deploy`     | Deploy the current application.                                                              |
-| `teamsfx package`    | Build your Teams app into package for publishing.                                            |
-| `teamsfx validate`   | Validate the current application.                                                            |
-| `teamsfx publish`    | Publish the app to Teams.                                                                    |
-| `teamsfx preview`    | Preview the current application.                                                             |
-| `teamsfx config`     | Manage the configuration data.                                                               |
-| `teamsfx permission` | Collaborate with other developers in same project.                                           |
+| Command | Description |
+|----------------|-------------|
+| `teamsfx new`| Create new Teams application.|
+| `teamsfx add`| Adds features to your Teams application.|
+| `teamsfx account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsfx env` | Manage environments. |
+| `teamsfx provision` | Provision cloud resources in the current application.|
+| `teamsfx deploy` | Deploy the current application.  |
+| `teamsfx package` | Build your Teams app into package for publishing.|
+| `teamsfx validate` | Validate the current application.|
+| `teamsfx publish` | Publish the app to Teams.|
+| `teamsfx preview` | Preview the current application. |
+| `teamsfx config`  | Manage the configuration data. |
+| `teamsfx permission`| Collaborate with other developers in same project.|
 
 ## `teamsfx new`
 
 By default, `teamsfx new` is in interactive mode and guides to create new Teams application. You can work in the non-interactive mode by setting `--interactive` flag to `false`.
 
-| Command                                | Description                             |
-| :------------------------------------- | :-------------------------------------- |
-| `teamsfx new template <template-name>` | Create an app from an existing template |
-| `teamsfx new template list`            | List all the available templates        |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx new template <template-name>`     | Create an app from an existing template |
+| `teamsfx new template list`     | List all the available templates |
 
 ### `teamsfx new` parameters
 
-| Parameter                 | Required | Description                                                                                                                                                                                                      |
-| :------------------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--app-name`              | Yes      | Name of your Teams application.                                                                                                                                                                                  |
-| `--interactive`           | No       | Select the options interactively. The options are `true` and `false` and default value is `true`.                                                                                                                |
-| `--capabilities`          | No       | Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`. |
-| `--programming-language`  | No       | Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.                                                                                            |
-| `--folder`                | No       | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.                                                                                                    |
-| `--spfx-framework-type`   | No       | Applicable if the `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.                                                             |
-| `--spfx-web part-name`    | No       | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".                                                                                                                              |
-| `--bot-host-type-trigger` | No       | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.                                           |
+| Parameter | Required | Description |
+|:---------------- |:-------------|:-------------|
+|`--app-name` | Yes| Name of your Teams application.|
+|`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
+|`--capabilities`| No| Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`.|
+|`--programming-language`| No| Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.|
+|`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
+|`--spfx-framework-type`| No| Applicable if the `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
+|`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
+|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.|
 
 ### `teamsfx new` scenarios
 
@@ -951,40 +951,40 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 The following table lists different features to your Teams application along with their description.
 
-| Command                                  | Description                                                                     |
-| :--------------------------------------- | :------------------------------------------------------------------------------ |
-| `teamsfx add notification`               | Send notification to Teams through various triggers.                            |
-| `teamsfx add command-and-response`       | Respond to simple commands in the Teams chat.                                   |
-| `teamsfx add sso-tab`                    | Teams identity aware webpages embedded in Teams.                                |
-| `teamsfx add tab`                        | Hello world webpages embedded in Teams.                                         |
-| `teamsfx add bot`                        | Hello world chatbot to run simple and repetitive tasks by user.                 |
-| `teamsfx add message-extension`          | Hello world message extension allowing interactions through buttons and forms.  |
-| `teamsfx add azure-function`             | A serverless, event-driven compute solution that allows you to write less code. |
-| `teamsfx add azure-apim`                 | A hybrid, multicloud management platform for APIs across all environments.      |
-| `teamsfx add azure-sql`                  | An always-up-to-date relational database service built for the cloud.           |
-| `teamsfx add azure-keyvault`             | A cloud service for securely storing and accessing secrets.                     |
-| `teamsfx add sso`                        | Develop a single sign-on (SSO) feature for Teams tabs and bot capability.       |
-| `teamsfx add api-connection [auth-type]` | Connect to an API with authentication support using TeamsFx SDK.                |
-| `teamsfx add cicd`                       | Add CI/CD Workflows for GitHub, Azure DevOps or Jenkins.                        |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx add notification` | Send notification to Teams through various triggers. |
+| `teamsfx add command-and-response` | Respond to simple commands in the Teams chat.|
+| `teamsfx add sso-tab` | Teams identity aware webpages embedded in Teams.|
+| `teamsfx add tab` | Hello world webpages embedded in Teams.|
+| `teamsfx add bot` | Hello world chatbot to run simple and repetitive tasks by user. |
+| `teamsfx add message-extension` | Hello world message extension allowing interactions through buttons and forms. |
+| `teamsfx add azure-function`| A serverless, event-driven compute solution that allows you to write less code. |
+| `teamsfx add azure-apim` | A hybrid, multicloud management platform for APIs across all environments.|
+| `teamsfx add azure-sql` | An always-up-to-date relational database service built for the cloud. |
+| `teamsfx add azure-keyvault` | A cloud service for securely storing and accessing secrets. |
+| `teamsfx add sso` | Develop a single sign-on (SSO) feature for Teams tabs and bot capability. |
+| `teamsfx add api-connection [auth-type]` | Connect to an API with authentication support using TeamsFx SDK. |
+| `teamsfx add cicd` | Add CI/CD Workflows for GitHub, Azure DevOps or Jenkins.|
 
 ## `teamsfx account`
 
 The following table lists the cloud service accounts, such as Azure and Microsoft 365.
 
-| Command                              | Description                                                                       |
-| :----------------------------------- | :-------------------------------------------------------------------------------- |
-| `teamsfx account login <service>`    | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsfx account logout <service>`   | log out of selected cloud service. Service options are Microsoft 365 or Azure.    |
-| `teamsfx account set --subscription` | Update account settings to set a subscription ID.                                 |
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsfx account login <service>`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout <service>`  | log out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account set --subscription` | Update account settings to set a subscription ID. |
 
 ## `teamsfx env`
 
 The following table lists the different environments.
 
-| Command                                                    | Description                                                      |
-| :--------------------------------------------------------- | :--------------------------------------------------------------- |
+|  Command  | Description |
+|:----------------  |:-------------|
 | `teamsfx env add <new_env_name> --env <existing_env_name>` | Add a new environment by copying from the specified environment. |
-| `teamsfx env list`                                         | List all environments.                                           |
+| `teamsfx env list` | List all environments. |
 
 ### Scenarios for `teamsfx env`
 
@@ -998,19 +998,19 @@ teamsfx env add staging --env dev
 
 Provision the cloud resources in the current application.
 
-| Command                      | Description                                                                                                              |
-| :--------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| Command | Description |
+|:----------------  |:-------------|
 | `teamsfx provision manifest` | Provision a Teams app in Teams Developer portal with corresponding information specified in the given app manifest file. |
 
 ### Parameters for `teamsfx provision`
 
-| Parameter          | Required | Description                                                                 |
-| :----------------- | :------- | :-------------------------------------------------------------------------- |
-| `--env`            | Yes      | Select an environment for the project.                                      |
-| `--subscription`   | No       | Specify an Azure Subscription ID.                                           |
-| `--resource-group` | No       | Set the name of an existing resource group.                                 |
-| `--sql-admin-name` | No       | Applicable when there's SQL resource in the project. Admin name of SQL.     |
-| `--sql-password`   | No       | Applicable when there's SQL resource in the project. Admin password of SQL. |
+| Parameter  | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--env`| Yes| Select an environment for the project. |
+|`--subscription`| No | Specify an Azure Subscription ID. |
+|`--resource-group`| No | Set the name of an existing resource group. |
+|`--sql-admin-name`| No | Applicable when there's SQL resource in the project. Admin name of SQL.|
+|`--sql-password`| No| Applicable when there's SQL resource in the project. Admin password of SQL.|
 
 ## `teamsfx deploy`
 
@@ -1018,14 +1018,14 @@ The `teamsfx deploy` command is used to deploy the current application. By defau
 
 ### Parameters for `teamsfx deploy`
 
-| Parameter                | Required | Description                                                                                                                                                      |
-| :----------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--env`                  | Yes      | Select an existing environment for the project.                                                                                                                  |
-| `--open-api-document`    | No       | Applicable when there's APIM resource in the project. The OpenAPI document file path.                                                                            |
-| `--api-prefix`           | No       | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
-| `--api-version`          | No       | Applicable when there's APIM resource in the project. The API version.                                                                                           |
-| `--include-app-manifest` | No       | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`.                                                        |
-| `--include-aad-manifest` | No       | Whether to deploy Microsoft Entra manifest. Options are `yes` and `not`. The default value is `no`.                                                              |
+| Parameter  | Required | Description |
+|:----------------  |:-------------|:-------------|
+|`--env`| Yes| Select an existing environment for the project. |
+|`--open-api-document`| No | Applicable when there's APIM resource in the project. The OpenAPI document file path. |
+|`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
+|`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
+|`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
+|`--include-aad-manifest`| No | Whether to deploy Microsoft Entra manifest. Options are `yes` and `not`. The default value is `no`. |
 
 ## `teamsfx validate`
 
