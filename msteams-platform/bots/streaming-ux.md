@@ -14,6 +14,7 @@ ms.localizationpriority: high
 >
 > - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > - Streaming bot messages isn't available with Tools and the `o1` model.
+> - Streaming bot messages is supported on web, desktop, and android. It isn't supported on iOS yet.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
@@ -23,11 +24,11 @@ Streaming bot messages has two types of updates:
 
 - **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat. It informs the user about the bot's ongoing actions while a response is being generated.
 
-  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
+  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
-  :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
+  :::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_responsive.png" border="false":::
 
 You can implement streaming bot messages in your app in one of the following ways:
 
@@ -65,11 +66,11 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
     The following example shows the streaming response in an AI-powered bot:
 
-    :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI bot.":::
+    :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI bot." border="false":::
 
     The following example shows the final streamed response in an AI-powered bot:
 
-    :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI bot.":::
+    :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI bot." border="false":::
 
 4. **Enable AI-powered features for final message**:
 
@@ -338,7 +339,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of start streaming:
 
-:::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows start streaming." lightbox="../assets/images/bots/start_streaming.png":::
+:::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows start streaming." lightbox="../assets/images/bots/start_streaming.png" border="false":::
 
 ### Continue streaming
 
@@ -387,7 +388,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of a bot providing informative updates:
 
-:::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png":::
+:::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
 #### Switch to response streaming
 
@@ -470,7 +471,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of a bot providing updates in chunks:
 
-:::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_responsive.png":::
+:::image type="content" source="../assets/images/bots/stream_type_responsive.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_responsive.png" border="false":::
 
 ### Final Streaming
 
@@ -514,7 +515,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of the bot's final response:
 
-:::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/streaming_final.png":::
+:::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/streaming_final.png" border="false":::
 
 ## Response codes
 
