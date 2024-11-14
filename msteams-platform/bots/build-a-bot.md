@@ -37,13 +37,13 @@ Let's start by building a conversational bot. You can use Teams Toolkit, Bot Fra
 
 ### Build an AI-powered Teams bot app
 
-You can build an AI bot or elevate your existing conventional bot to be powered by AI.
+You can build a new AI bot or elevate your existing conventional bot to be powered by AI.
 
 | # | I want to build ... | Here's how... |
 | --- | --- | --- |
 | 1. | AI bot with Teams AI library and Teams Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
-| 2. | Elevate your conventional bot to AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
-| 3. | Migrate bot to use Teams AI library | [Migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration) |
+| 2. | Elevate your conventional bot built with with Bot framework adapter to use AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
+| 3. | Migrate your bot built with Bot framework to use Teams AI Library | [Migrate to the Teams AI library](https://github.com/microsoft/teams-ai/tree/main/getting-started/migration) |
 
 ## Next step
 
