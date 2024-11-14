@@ -347,7 +347,7 @@ Developers are encouraged to certify their new agent after successfully completi
 
 <summary>What happens to my published message extension agents? </summary>
 
- Any message extension agent published will be promoted to an agent in late November. Depending on the partner's ability to have an API, they may either be content with this promotion or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](message-extensions/api-based-overview.md).
+ Any message extension agent published will be promoted to an agent in late November. Depending on the partner's ability to have an API, they may either be content with this promotion or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](messaging-extensions/api-based-overview.md).
 </details>
 <details>
 
