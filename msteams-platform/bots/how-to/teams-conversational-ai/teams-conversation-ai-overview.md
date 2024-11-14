@@ -272,9 +272,9 @@ You can enable the following tool options:
 
     - Set `tool_choice` as `required` to mandate the model to always call at least one function. 
     - Set `tool_choice` to a specific function using its definition for using that function. 
-    - Set  `tool_choice` as `none` to disable tool.
+    - Set `tool_choice` as `none` to disable tool.
 
-  Default value of `tool_choice` is `auto`.
+  The default value of `tool_choice`is `auto`. It enables the model to select the functions that it must call.
 
 * **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, you can set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` parameter is set to `true`.
 
