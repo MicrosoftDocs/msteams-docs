@@ -136,6 +136,10 @@ You can visually represent data through charts in Adaptive Cards. You can use ch
 
 You can design responsive containers for different Adaptive Card widths with the `Layout.Stack`, `Layout.Flow`, and `Layout.AreaGrid` layouts. For more information, see [Container layouts](container-layouts.md).
 
+## User mention
+
+[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
+
 ## Next step
 
 > [!div class="nextstepaction"]

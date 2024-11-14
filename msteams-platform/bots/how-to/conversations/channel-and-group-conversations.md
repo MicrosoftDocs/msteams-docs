@@ -5,6 +5,7 @@ description: Learn how to create new conversation threads, user and tag mentions
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 11/14/2024
 ---
 # Channel and group chat conversations with a bot
 
@@ -171,6 +172,9 @@ There are two types of mentions:
 
 #### User mention
 
+[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
+
+<!--
 Your bot can mention other users in messages posted in channels.
 
 The `Mention` object has two properties that you must set using the following:
@@ -296,6 +300,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 * * *
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
+-->
 
 #### Tag mention
 
