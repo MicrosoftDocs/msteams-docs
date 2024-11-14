@@ -138,7 +138,7 @@ You can design responsive containers for different Adaptive Card widths with the
 
 ## User mention
 
-[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
+[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
 
 ## Next step
 
