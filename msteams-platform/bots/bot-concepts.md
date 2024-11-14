@@ -11,32 +11,71 @@ ms.date: 10/03/2024
 
 A bot's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. A bot may request information or enable access to services, and responds to the user.
 
+## Bot scopes
+
+Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+
+| In a channel | In a group chat | In a one-to-one chat |
+| :-- | :-- | :-- |
+| Massive reach | Fewer members | Traditional way |
+| Concise individual interactions | @mention to bot | Q&A bots |
+| @mention to bot | Similar to channel | Bots that tell jokes and take notes |
+
+### In a channel
+
+Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+
+Bots work better in a channel in the following cases:
+
+* Notifications, where you provide an interactive card for users to take additional information.
+* Feedback scenarios, such as polls and surveys.
+* Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
+* Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
+
+### In a group chat
+
+Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
+
+Bots that work better in a channel also work better in a group chat.
+
+### In a one-to-one chat
+
+One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
+
+* Q&A bots
+* bots that initiate workflows in other systems.
+* bots that tell jokes.
+* bots that take notes.
+Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+
+## Activity handler and bot logic
+
 To create a bot app that meets your needs, understanding Microsoft Teams activity handler and bot logic is essential. These two key components work together to organize conversational logic.
 
-- **Teams activity handlers**:
+* [Teams activity handler](#teams-activity-handler):
   Teams activity handlers extend the functionality of standard bots by adding support for Teams-specific events and interactions. These events can include channel creation, team member additions, and other actions unique to the Teams environment. By utilizing Teams activity handlers, bots can provide a more integrated and seamless user experience within the Teams platform.
 
-- **Bot logic**:
+* [Bot logic](#bot-logic):
   The bot object, which houses the bot’s conversational logic, is responsible for making decisions based on user input. It exposes a turn handler, which is the method that accepts incoming activities from the bot adapter. The bot logic ensures that each turn of the conversation is handled appropriately, contributing to the bot's overall coherence and effectiveness.
 
 These two components work together to create an engaging conversational experience. The activity handler processes what the user says, while the bot logic figures out the best response. Together, they enable:
 
-- Understanding the context of the conversation
-- Personalizing interactions
-- Retrieving information efficiently
-- Maintaining an adaptive conversational flow
+* Understanding the context of the conversation
+* Personalizing interactions
+* Retrieving information efficiently
+* Maintaining an adaptive conversational flow
 
 By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and conventional bot solutions.
 
-## Teams activity handler
+### Teams activity handler
 
 The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as an intermediary between the user's input and the bot's response:
 
-- Receives incoming messages.
-- Retrieves key data from user input.
-- Identifies user intent using Natural Language Processing (NLP).
-- Maintains conversation context and state.
-- Generates responses based on user input and intent.
+* Receives incoming messages.
+* Retrieves key data from user input.
+* Identifies user intent using Natural Language Processing (NLP).
+* Maintains conversation context and state.
+* Generates responses based on user input and intent.
 
 The activity handler improves user experience, efficiency, accuracy, scalability, and flexibility.
 
@@ -51,8 +90,8 @@ Bots are built using the Bot Framework. When a bot gets a message, the turn hand
 
 In the Teams activity handler class, there are two primary Teams activity handlers:
 
-- `OnConversationUpdateActivityAsync` routes all conversation update activities.
-- `OnInvokeActivityAsync` routes all Teams invoke activities.
+* `OnConversationUpdateActivityAsync` routes all conversation update activities.
+* `OnInvokeActivityAsync` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
@@ -227,7 +266,106 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ---
 
-## Bot logic
+#### Example of bot activity handler
+
+The following code provides an example of a bot activity for a channel team scope:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        // EncodeName: Converts the name to a valid XML name.
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+    
+    // MessageFactory.Text(): Specifies the type of text data in a message attachment.
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    // Sends a message activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
+# [Node.js](#tab/nodejs)
+
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onmessage)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
+```javascript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+
+        // TextEncoder().encode(): Encodes the supplied characters.
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+---
+
+The following code provides an example of bot activity for a one-to-one chat:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Remove recipient mention text from Text property.
+    // Use with caution because this function is altering the text on the Activity.
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+
+    // Sends a message activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
+
+```javascript
+this.onMessage(async (context, next) => {
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
+    await context.sendActivity(MessageFactory.text("Your message is: " + context.activity.text));
+    await next();
+});
+```
+
+---
+
+### Bot logic
 
 Bot logic incorporates the fundamental rules and decision-making frameworks that dictate a bot's actions and interactions. It outlines how the bot interprets user input, formulates responses, and participates in conversations.
 
@@ -239,8 +377,8 @@ In Teams, the bot logic processes incoming activities from one or more of your b
 
 >[!NOTE]
 >
->- Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
->- `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
+>* Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+>* `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
@@ -408,6 +546,33 @@ The invoke activities listed in this section are for conversational bots in Team
 ---
 
 Now that you've familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
+
+## Recommendations
+
+An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
+
+* **Avoid multi-turn experiences in chat**
+  An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+
+    USER: Schedule a meeting with Megan.
+
+    BOT: I’ve found 200 results, include a first and last name.
+
+    USER: Schedule a meeting with Megan Bowen.
+
+    BOT: OK, what time would you like to meet with Megan Bowen?
+
+    USER: 1:00 pm.
+
+    BOT: On which day?
+
+* **Support six or less frequent commands**
+  As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
+
+* **Optimize size of knowledgebase for quicker interaction**
+  One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+
+## Explore other bot features
 
 ## Code sample
 
