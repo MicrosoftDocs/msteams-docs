@@ -571,10 +571,6 @@
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
         displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot
-      - name: Microsoft 365 Copilot agent FAQ
-        href: messaging-extensions/copilot-agent-faq.md
-        displayName: M365, Microsoft 365 Copilot, FAQ, bot-based message extension, agent
-
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache

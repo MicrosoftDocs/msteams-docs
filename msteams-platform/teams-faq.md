@@ -347,7 +347,7 @@ Developers are encouraged to certify their new agent after successfully completi
 
 <summary>What happens to my published message extension agents? </summary>
 
- Any message extension agent published will be promoted to an agent in late November. Depending on the partner's ability to have an API, they may either be content with this promotion or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](api-based-overview.md).
+ Any message extension agent published will be promoted to an agent in late November. Depending on the partner's ability to have an API, they may either be content with this promotion or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](message-extension/api-based-overview.md).
 </details>
 <details>
 
@@ -371,7 +371,7 @@ Developers are encouraged to certify their new agent after successfully completi
 
 <summary>Can partners submit both an message extension Copilot and a declarative agent?</summary>
 
-  You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and require approval by app store validation. For more information, see [Validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+  You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and require approval by app store validation. For more information, see [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
 </details>
 <details>
 
@@ -379,7 +379,6 @@ Developers are encouraged to certify their new agent after successfully completi
 
    Yes, declarative agents require a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents will start appearing in app chat.
 </details>
-
 
 ## Microsoft Graph
 
