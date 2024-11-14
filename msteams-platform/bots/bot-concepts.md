@@ -574,6 +574,12 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ## Explore other bot features
 
+You can also explore advanced bot features:
+
+* [Teams bot API changes to fetch team or chat members](../resources/team-chat-member-api-changes.md).
+* [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
+* [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
+
 ## Code sample
 
 |Sample name | Description | .NET | Node.js | Python|
