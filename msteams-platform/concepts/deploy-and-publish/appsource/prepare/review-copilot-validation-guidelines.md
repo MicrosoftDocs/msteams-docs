@@ -97,7 +97,7 @@ You must ensure to meet the following guidelines for Copilot agents:
 
   > [!NOTE]
   > * In case of declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
-  > * For API based agents, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
+  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
 * App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
