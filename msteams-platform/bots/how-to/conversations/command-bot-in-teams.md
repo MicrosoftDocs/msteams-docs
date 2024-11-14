@@ -407,7 +407,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 You can perform the following steps to build command and response using Adaptive Card with dynamic content:
 
 1. Add your Adaptive Card template JSON file under `bot/adaptiveCards` folder.
-1. In the code file where the commnad handler exists, for example `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
+1. In the code file where the command handler exists, for example, `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
