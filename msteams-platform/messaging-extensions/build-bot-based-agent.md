@@ -377,3 +377,4 @@ Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.y
 * [Build message extensions using API](api-based-overview.md)
 * [Define message extension action commands](how-to/action-commands/define-action-command.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
+* [Microsoft 365 Copilot agent FAQ](../teams-faq.md#microsoft-365-copilot)

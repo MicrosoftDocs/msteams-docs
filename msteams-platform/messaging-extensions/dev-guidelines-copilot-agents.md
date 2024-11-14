@@ -704,3 +704,4 @@ Agents customize and extend the Microsoft 365 Copilot experience by bringing mor
 
 * [Extend bot-based message extension as agent](build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
+* [Microsoft 365 Copilot agent FAQ](../teams-faq.md#microsoft-365-copilot)
