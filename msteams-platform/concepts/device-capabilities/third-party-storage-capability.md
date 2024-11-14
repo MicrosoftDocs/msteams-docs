@@ -1,7 +1,7 @@
 ---
 title: Third-party Storage Capability
 description: Learn how to set third-party app storage for your app for the files that are gragged and dropped in the Teams chat.
-localization_priority: medium
+ms.localization_priority: medium
 ms.topic: how-to
 ms.date: 11/13/2024
 ---
