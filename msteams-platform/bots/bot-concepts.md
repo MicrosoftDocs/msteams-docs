@@ -574,7 +574,7 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ## Explore other bot features
 
-You can also explore advanced bot features:
+In addition to conventional bot features, you can also explore advanced features available in a Teams bot app:
 
 * [Teams bot API changes to fetch team or chat members](../resources/team-chat-member-api-changes.md).
 * [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
