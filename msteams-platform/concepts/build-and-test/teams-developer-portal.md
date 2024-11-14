@@ -74,7 +74,7 @@ For more information about how admins can import and take ownership of apps in D
 
 You might have published apps in Teams Store that wasn't registered in Developer Portal. If you want to monitor app analytics or validate your app, you must import your app into Developer Portal. While importing your published app, you might face the following error:
 
-:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal."::: 
 
 To resolve this error, we recommend that you ask your Teams tenant admin or global admin to raise a [support ticket](../../feedback.md) to Microsoft with the following details:
 
