@@ -138,6 +138,9 @@ You can design responsive containers for different Adaptive Card widths with the
 
 ## User mention
 
+> [!NOTE]
+> User mention is supported for both text message and Adaptive Card.
+
 [!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
 
 ## Next step
