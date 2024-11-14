@@ -64,17 +64,17 @@ Follow the steps to import and manage your existing app in Developer Portal:
    * If you import an app that is already published in [Teams admin center](https://admin.teams.microsoft.com/) and registered in Developer Portal, the portal creates a duplicate app with a new, unique app ID. You can’t edit or provide an ID of your choice, which prevents duplicate app IDs for multiple apps. You're the sole owner of the duplicate app and it isn't related to the previously registered app in any way.
    * You can't import or take ownership of an app that is already published in Teams admin center but isn't registered in Developer Portal.
    * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in Developer Portal.
-   * You can import an existing app to Developer Portal that was created in App Studio. If an app in your tenant doesn't have an owner, the Teams tenant admin or global admin can take ownership of the app from Developer Portal.
+   * You can import an existing app to Developer Portal that was created in App Studio. If an app in your tenant doesn't have an owner, the Teams Tenant admin or Global admin can take ownership of the app from Teams Developer Portal.
 
-     :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Developer Portal.":::
+     :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
 
-For more information about how tenant or global admins can import and take ownership of apps in Developer Portal, see ***placeholder link***.
+For more information about how admins can import and take ownership of apps in Developer Portal, see [manage Microsoft Teams app ownership in Developer Portal](/microsoftteams/app-ownership-developer-portal).
 
 #### Steps to import a published app that's not registered in Developer Portal
 
 You might have published apps in Teams Store that wasn't registered in Developer Portal. If you want to monitor app analytics or validate your app, you must import your app into Developer Portal. While importing your published app, you might face the following error:
 
-:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal.":::
 
 To resolve this error, we recommend that you ask your Teams tenant admin or global admin to raise a [support ticket](../../feedback.md) to Microsoft with the following details:
 
@@ -91,13 +91,13 @@ Changelog for Developer Portal allows you to stay engaged with the latest update
 
 To view **Changelog**, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
-:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in Developer Portal highlighted in red.":::
+:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
 
 The updates for Changelog in Developer Portal are categorized based on the following:
 
 * **Added**: Updates on a service or feature that's a new feature or capability.
 * **Changed**: Updates on a service or API that's modified.
-* **Removed**: Updates on a service or API that's removed and might be replaced with a new and updated service.
+* **Removed**: Updates on a service or API that's removed and may be replaced with a new and updated service.
 * **Fixed**: Updates on a service or API that was previously identified as a high-priority or breaking-change issue that's fixed or mitigated.
 * **Deprecated**: Updates on a service or API at the end of its life and deprecated.
 * **Security**: Updates on important and critical security patch.
