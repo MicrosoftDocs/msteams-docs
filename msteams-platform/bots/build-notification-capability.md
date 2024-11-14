@@ -24,7 +24,7 @@ By integrating notification capabilities, bots can effectively communicate with 
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
-The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up-to-date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
+The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up to date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
 :::image type="content" source="../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="Image shows a weather forecast sample notification scenario" lightbox="../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -534,7 +534,7 @@ Teams sends an event only at the first installation. If the bot app is already i
 You can resolve this issue in the following ways:
 
 - Send a message to your personal bot or mention your bot in group chat or channel, which helps you to reach the bot service again with correct installation information.
-- Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
+- Uninstall the bot app from Teams then debug or relaunch it. You can resend the installation event to bot service.
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `.notification.localstore.json`.
 
@@ -549,12 +549,12 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why Bad Request or Bad Argument error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
+If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One of the causes for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
 
 You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up to date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
 
 > [!NOTE]
-> In case of local storage the default location is `.notification.localstore.json`.
+> In case of local storage, the default location is `.notification.localstore.json`.
 
 <br>
 
@@ -562,7 +562,7 @@ You can resolve this issue by cleaning your notification storage. After cleaning
 
 <details>
 
-<summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
+<summary><b>Why is notification target lost after restarting or redeploying the bot app?</b></summary>
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. It's recommended to use your own shared storage for production environment.
 
@@ -574,7 +574,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why is undefined error returned when using the API `findChannel`()?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the `General` channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the `General` channel.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the `General` channel. To fix this error, you can uninstall the bot app from Teams and debug and relaunch it. After you've debug and relaunched, ensure that the bot app is installed into the `General` channel.
 
 <br>
 
