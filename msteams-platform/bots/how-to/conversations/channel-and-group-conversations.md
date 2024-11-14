@@ -366,7 +366,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
