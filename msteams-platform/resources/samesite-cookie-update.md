@@ -88,7 +88,7 @@ This deprecation impacts a common scenario in which the external app is rendered
 
 ### Pop-out authentication scenario
 
-Pop-out authentication scenarios are a common method for apps to authenticate using different identity providers like Facebook Login and Google Identity. Here's how it works:
+Pop-out authentication scenarios are a common method for apps to authenticate using different identity providers such as any external auth. Here's how it works:
 
 1. The rendered `iframe` triggers a popup that loads the selected authentication provider sign-in page.
 1. After the user logs in, the popup redirects to the domain of the opening app, where an authentication cookie is set, and the popup closes.
