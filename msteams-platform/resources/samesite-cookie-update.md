@@ -102,10 +102,22 @@ Pop-out authentication isn't affected by third-party cookie deprecation, for the
 
 The cookie app simulates this scenario. To use the cookie app:
 
-1. Embed the cookie app in an `iframe`.
-1. Use the pop-out button to pop it out as a first-party domain.
-1. Navigate to the partitioned cookie page.
-1. Select **Set Cookies Using API**.
+1. Upload and open cookie app in an `iframe`.
+1. Select **Partitioned Cookies**.
+
+    :::image type="content" source="../assets/images/partitioned-cookies.png" alt-text="Screenshots show you the partitioned cookies in cookies app.":::
+
+1. Select the **popOutApp** button to pop it out as a first-party domain.
+
+    :::image type="content" source="../assets/images/cookies-popout.png" alt-text="Screenshot shows you the popoutapp option in cookies app.":::
+
+1. Select **Set Partitioned Cookies from API**.
+
+    :::image type="content" source="../assets/images/cookies-from-api.png" alt-text="Screenshot shows you how to set partitioned cookies from API.":::
+
+Now you can navigate to cookies tab in the Teams window and see that only `partitioned:false` and `secure:true` cookies are available:
+
+   :::image type="content" source="../assets/images/cookies-final.png" alt-text="Screenshot shows you the cookies tab with partitioned to false and secure to true cookies are available":::
 
 This action sets multiple cookies with a combination of secure, SameSite, and partitioned attributes. Only `SameSite=None`, secure, and unpartitioned cookies are accessible within the `iframe`.
 
