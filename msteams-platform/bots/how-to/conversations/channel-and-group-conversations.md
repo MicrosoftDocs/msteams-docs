@@ -388,7 +388,7 @@ The following table lists the throttling limits for tag mentions in a bot:
 
 ### Support for Microsoft Entra Object ID and UPN in user mention
 
-[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
+[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
 
 The following code snippet shows an example of mentioning users with Entra Object Id and UPN in a text message:
 
