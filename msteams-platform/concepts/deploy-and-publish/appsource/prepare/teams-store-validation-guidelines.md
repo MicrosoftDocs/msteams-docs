@@ -1821,13 +1821,13 @@ The app must terminate the user account instance when the user is switched or lo
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Teams apps extensible as plugin for Microsoft 365 Copilot
+## Teams apps extensible as agent for Microsoft 365 Copilot
 
 * App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
-* App must meet the [plugin compatible criteria](review-copilot-validation-guidelines.md).
+* App must meet the [agent compatible criteria](review-copilot-validation-guidelines.md).
 
-### Plugin must not manipulate LLM behavior
+### Agent must not manipulate LLM behavior
 
 The short descriptions of an app, parameter, and command must not include the following:
 
@@ -1843,11 +1843,11 @@ The long description of an app must clearly call out the following:
 
 * App's compatibility with Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks.
 
-* Provide at least one prompt of how users can use a message extension plugin in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one prompt of how users can use a message extension agent in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
 ### Response Quality
 

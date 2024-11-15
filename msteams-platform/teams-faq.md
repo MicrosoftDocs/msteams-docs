@@ -219,9 +219,9 @@ No, Live Share doesn't support meeting recordings.
 
 <details>
 
-<summary>Why isn't Microsoft 365 Copilot including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Copilot including my agent in a response?</summary>
 
-Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in agent matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
 If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
@@ -292,7 +292,7 @@ Here's an example description that work for NPM Finder.
 </details>
 <details>
 
-<summary> Microsoft 365 Copilot includes my plugin in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Copilot includes my agent in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
 
@@ -312,36 +312,72 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 
 </details>
 <details>
-<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft 365 Copilot? </summary>
+<summary>What are the guidelines for Teams apps extensible as agent for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Microsoft 365 Copilot.
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agent-for-microsoft-365-copilot) for Teams apps extensible as agent for Microsoft 365 Copilot.
 
 </details>
 <details>
 
 <summary> What is the certification process?</summary>
 
-After publishing the plugin, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the plugin, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
+After publishing the agent, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the agent, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
 
-To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
+To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the agent and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your agent on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
 
 </details>
 <details>
 
-<summary> How are plugins certified?</summary>
+<summary> How are agents certified?</summary>
 
-After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their plugin. This is communicated through an email confirming their message extension is validated.
+After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their agent. This is communicated through an email confirming their message extension is validated.
 </details>
 <details>
 
-<summary> How are new plugins certified?</summary>
+<summary> How are new agents certified?</summary>
 
-Developers are encouraged to certify their new plugin after successfully completing validation.
+Developers are encouraged to certify their new agent after successfully completing validation.
 </details>
 <details>
-<summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
+<summary>How can I create or upgrade a message extension agent for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+ You can [create or upgrade a message extension as an agent in Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+</details>
+<details>
+
+<summary>What happens to my published message extension agents? </summary>
+
+ Any message extension agent published will be promoted to an agent in late November. Depending on the partner's ability to have an API, they may either be content with this promotion or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](messaging-extensions/api-based-overview.md).
+</details>
+<details>
+
+<summary>What should partners do if they want to build a more robust agent?</summary>
+
+   If a partner wants to build a more powerful agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions.
+</details>
+<details>
+
+<summary>Will declarative agents and custom engine agents have the same user experience and features?</summary>
+
+ Yes, both declarative agents and custom engine agents will have the same invocation and session history user experience, and ZQL will be supported for both.
+</details>
+<details>
+
+<summary>Can ISVs enhance their wrapped declarative agents moving forward?</summary>
+
+ ISVs can continue to improve their message extension agent and submit through standard methods or channels. However, they will be limited in terms of adding other instructions or knowledge to their agent.
+</details>
+<details>
+
+<summary>Can partners submit both an message extension Copilot and a declarative agent?</summary>
+
+  You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and require approval by app store validation. For more information, see [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
+</details>
+<details>
+
+<summary>Do declarative agents require a Copilot license?</summary>
+
+   Yes, declarative agents require a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents will start appearing in app chat.
 </details>
 
 ## Microsoft Graph

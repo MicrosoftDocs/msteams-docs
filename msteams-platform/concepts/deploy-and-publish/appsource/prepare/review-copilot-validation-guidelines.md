@@ -1,6 +1,6 @@
 ---
 title: Guidelines to Validate Copilot Agents
-description: Learn how to increase the chances of your message extension as an agent or plugin for Microsoft 365 Copilot to pass the Teams Store submission process.
+description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
+> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
@@ -102,9 +102,9 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 * App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a agent in Microsoft 365 Copilot.":::
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -145,15 +145,15 @@ You must ensure the following guidelines for sample prompts and prompt starters.
 
 ### Sample prompts
 
-The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various plugins in Microsoft 365 Copilot.
+The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various agents in Microsoft 365 Copilot.
 
-:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
 Sample prompts are specified using `samplePrompts` property in the app manifest. These prompts must meet the following requirements:
 
-* A plugin must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
+* An agent must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
 * Each prompt mustn't exceed 128 characters. [*Must fix*]
-* Two commands within the same plugin mustn't have identical prompts. [*Must fix*]
+* Two commands within the same agent mustn't have identical prompts. [*Must fix*]
 * All sample prompts must be functional and return responses. [*Must fix*]
 * Prompt must be relevant to the commands. [*Must fix*]
 
@@ -190,31 +190,6 @@ Copilot agents must be fully responsive and functional on the latest versions of
 * Microsoft Teams on desktop and web
 * copilot.microsoft.com on web
 * Microsoft 365 Copilot in Word
-
-### Ensure your Copilot plugins work in Teams meetings
-
-You must implement the following:
-
-* Adaptive Cards mustn't display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width: [*Must fix*]
-
-  * **ColumnSets**
-
-    * Don't define `ColumnSets` with more than three columns.
-    * Don’t use explicit pixel width on more than one column in the set.
-    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Microsoft 365 Copilot.
-    * Generally, an explicit width mustn't exceed 48 pixels, though some scenarios might allow for exceptions.
-
-  * **Sizing images**
-
-    * When using an image inside a `ColumnSet` with more than one column, specify the size of the column containing an image rather than the image itself.
-    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
-    * If you want to define an explicit width in pixels, ensure that it doesn’t exceed three-fourths of the narrowest card width.
-    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
-    * We recommend that you set the width of the image, though some scenarios might allow for exceptions.
-
-For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
-
-[Back to top](#validation-guidelines-for-copilot-agents)
 
 ### Ensure your Copilot agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
@@ -289,7 +264,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 |---|---|
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
@@ -304,7 +279,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation:
 
 * Data shown in third-party service (through dialogue) must be reflective of confirmation provided by the user. [*Must fix*]
-* A confirmation of the completion of the action must be shared by the plugin in the form of a card. [*Must fix*]
+* A confirmation of the completion of the action must be shared by the agent in the form of a card. [*Must fix*]
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
@@ -391,5 +366,5 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
 * [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
-* [Extend bot-based message extension as plugin for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-plugin.md)
+* [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
