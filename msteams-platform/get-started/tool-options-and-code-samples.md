@@ -73,10 +73,10 @@ The following tools in the Teams platform help you during app development:
 
 | App development phase | Teams platform tools |
 |-----|-----|
-| Design | Teams UI kit and Fluent UI React components |
-| Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
-| Test, deploy, and publish |Microsoft Entra ID and Developer Portal |
-| Distribute | Partner Center and Teams Store |
+| Design | [Teams UI kit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-kit) and [Fluent UI React components](../concepts/design/design-teams-app-ui-templates.md#fluent-ui-react-components) |
+| Build | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
+| Test, deploy, and publish |Microsoft Entra ID and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) |
+| Distribute | [Partner Center](/partner-center/enroll/overview) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
 
 ## Teams app tutorials and code samples
 
