@@ -128,13 +128,6 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 
 Bots with Adaptive Cards support user mention IDs, such as Microsoft Entra Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Microsoft Entra Object ID and UPN.
 
-### User mention
-
-> [!NOTE]
-> User mention is supported for both text message and Adaptive Card.
-
-[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
-
 ## Charts in Adaptive Cards
 
 You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more. For more information, see [charts in Adaptive Cards](cards/charts-in-adaptive-cards.md).

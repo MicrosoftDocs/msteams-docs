@@ -169,12 +169,13 @@ There are two types of mentions:
 
 * [User mention](#user-mention)
 * [Tag mention](#tag-mention)
+* [Support for Microsoft Entra Object ID and UPN in user mention](#support-for-microsoft-entra-object-id-and-upn-in-user-mention).
+
+> [!NOTE]
+> User mention and tag mention is supported for both text message and Adaptive Card.
 
 #### User mention
 
-[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
-
-<!--
 Your bot can mention other users in messages posted in channels.
 
 The `Mention` object has two properties that you must set using the following:
@@ -300,7 +301,6 @@ async def _mention_activity(self, turn_context: TurnContext):
 * * *
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
--->
 
 #### Tag mention
 
@@ -385,6 +385,41 @@ The following table lists the throttling limits for tag mentions in a bot:
 * Tag mentions aren't supported in shared and private channels.
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in a bot.
+
+### Support for Microsoft Entra Object ID and UPN in user mention
+
+[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in a text message:
+
+```C#
+var userId = "Adele@microsoft.com"; //User Principle Name
+var mention = new ChannelAccount(userId, "Adele"); 
+var mentionObj = new Mention 
+{
+    Mentioned = mention,
+    Text = $"<at>{mention.Name}</at>" ,
+    Type = "mention"
+}; 
+
+// Returns a simple text message.var replyActivity = MessageFactory.Text($"Hello {mentionObj.Text}.");replyActivity.Entities = new List<Entity> { mentionObj };
+
+// Sends an activity to the sender of the incoming activity.await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+
+```
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in an Adaptive Card:
+
+```JSON
+{
+    "type": "mention",
+    "text": "<at>Adele</at>",
+    "mentioned": {
+            "id": "Adele@microsoft.com" ,// User Principle Name
+            "name": "Adele"
+    }
+} 
+```
 
 ## Send a message on installation
 
