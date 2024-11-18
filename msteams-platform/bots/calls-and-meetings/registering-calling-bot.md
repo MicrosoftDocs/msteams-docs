@@ -91,7 +91,7 @@ You must configure the application permissions for your bot in advance by using 
 
 ### Get tenant administrator consent
 
-For apps using the Azure AD v1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Microsoft Entra ID, your app can request tokens without having to request consent again.
+For apps using the Azure AD v1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. After Microsoft Entra ID records administrator consent, your app can request tokens without having to request consent again.
 
 You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD v2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 

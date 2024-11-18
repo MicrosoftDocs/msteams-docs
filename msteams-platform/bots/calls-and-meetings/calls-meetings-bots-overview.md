@@ -66,7 +66,7 @@ Following are the different call types and permissions required for the call:
 
 ### Signals
 
-There are two types of signals, incoming call and in-call. Following are the different features of signals:
+There are two types of signals, incoming call, and in-call. Following are the different features of signals:
 
 * To receive an incoming call, you enter an endpoint in your bot settings. This endpoint receives a notification when an incoming call is initiated. You can answer the call, reject it, or redirect it to someone else.
 

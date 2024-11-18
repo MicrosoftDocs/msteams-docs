@@ -1,0 +1,74 @@
+---
+title: Overview to bots
+description: Learn about bots, the application of bots across industry, build familiarity with bots in Teams environment and bot development SDKs and libraries. It offers a map through the module to help you navigate through various tasks for building a bot.
+ms.localizationpriority: high
+ms.date: 11/18/2024
+ms.topic: conceptual
+ms.author: surbhigupta
+---
+
+# Bot overview
+
+Bots are software applications that interact with users through text-based conversations. Simple bots follow predefined rules to answer questions or provide basic support. AI-powered bots, however, use artificial intelligence to understand natural language, engage in complex conversations, and perform a wider range of tasks.
+
+Teams bots can be built as virtual assistants within Microsoft Teams and Microsoft 365, with or without AI, to enhance productivity by automating tasks, providing constant support, and enhancing customer engagement. 
+
+A range of business advantages includes:
+
+1. Automation: Bots can handle repetitive tasks, saving you time and effort.
+1. Availability: Bots can work round-the-clock without needing breaks.
+1. Efficiency: They can manage multiple tasks simultaneously, improving overall efficiency.
+1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
+1. Scalability: As user needs grow, bots can be easily scaled to handle more tasks or interactions.
+
+## How do bots work?
+
+A Teams bot works by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, figures out what you need, and then gives you a response or performs an action.
+
+Here's an example of a simple bot on Teams that takes short commands from a user:
+
+:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
+
+### Bots - the developer experience
+
+Let's consider an example: As a developer, you must build a bot to automate repetitive tasks and enhance efficiency and user engagement. The following image shows how a developer can build a bot app to meet the user requirements:
+
+:::image type="content" source="../assets/images/bots/chatbot-dev-ux.png" alt-text="Image shows developer experience for a chatbot.":::
+
+### Understand bot development basics
+
+Let's learn about some common bot elements and how they work together to make a bot effective within Teams.
+
+* **Activity handler**: This component manages and processes events or activities from users interacting with the bot. These activities can include text or image messages, bot events like users joining or leaving, @mentions, user actions like booking or ordering, and handling errors.
+* **Events**: Events happen when a user interacts with a bot, causing it to respond or take action. For example, events can occur when a user sends a message, clicks a button, or provides input.
+* **Conversation**: This is an interactive exchange between a user and a bot, which can include text or voice messaging. The conversation involves user inputs, the bot's responses, the context (such as conversation history and state), the intent (user's goal or purpose), and can be a multi-turn dialog.
+* **Bot logic**: It's a key part of conversation logic. It works alongside the activity handler to define how decisions are made. This includes integrating rules, conditions, and other factors to determine how the bot should respond.
+* **Bot scope**: This refers to what a bot can do and how it interacts with users within Microsoft Teams. A bot can be deployed in Teams in three ways: as a personal chatbot, within a group chat, or within a channel.
+
+### Explore bot capabilities
+
+Use either Bot Framework SDK or Teams AI Library with Teams Toolkit to build these bots with various capabilities in your bot.
+
+* **Agents**:
+  An agent is a bot that uses artificial intelligence to perform automated tasks. They understand natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. AI-enabled Teams bots, known as **custom engine agents**, can be built using custom AI models of your choice.
+
+  To learn how to build one, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
+
+* **Conversational bot**:
+  A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
+
+  For more information, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+
+* **Notification bot**:
+  A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
+
+  For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
+
+* **Workflow bot**:
+  You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
+
+  For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
+
+## Next step
+> [!div class="nextstepaction"]
+> [What types of bots can you build?](build-a-bot.md)

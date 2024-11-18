@@ -5,6 +5,7 @@ description: Learn about command bot, installation, customize initialization, ad
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 11/13/2024
 ---
 
 # Command bot in Teams
@@ -406,7 +407,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 You can perform the following steps to build command and response using Adaptive Card with dynamic content:
 
 1. Add your Adaptive Card template JSON file under `bot/adaptiveCards` folder.
-1. In the code file where the commnad handler exists, for example `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
+1. In the code file where the command handler exists, for example, `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
@@ -466,6 +467,14 @@ For more information on how to add Adaptive Card actions to command bot, see [Wo
 <br>
 
 </details>
+
+## Code sample
+
+The following table provides a simple code sample for building a command capability for a bot:
+
+| **Sample Name** | **Description** | **JavaScript** |
+| --- | --- | --- |
+| Teams Search Command Message Extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
 
 ## Step-by-step guide
 

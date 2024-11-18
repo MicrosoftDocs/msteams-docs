@@ -4,6 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 11/14/2024
 ---
 # Proactive messages
 
@@ -19,7 +20,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 >
 > * To send proactive message, it's recommended to start with [building notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. For more information, see [Teams Toolkit documents](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
+> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages, the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 
@@ -63,7 +64,7 @@ Create the conversation, after you have the user or channel information.
 
 ## Create the conversation
 
-You can create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
+You can create the conversation if it doesn't exist, or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
 To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#create-conversation), you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
@@ -157,13 +158,13 @@ A good welcome message can include the following:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 
 * What was the result? It must be clear, what item is updated to get the notification.
 
-* Who or what triggered it? Who or what took action, which caused the notification to be sent.
+* Who or what triggered it? Who or what took action which caused the notification to be sent.
 
 * What can users do in response? Make it easy for your users to take actions based on your notifications.
 
@@ -179,7 +180,7 @@ To update or delete a proactive message sent by a notification only bot:
 
 ### Scheduled messages
 
-When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
+When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages include:
 
 * Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
 
