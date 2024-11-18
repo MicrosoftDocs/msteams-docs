@@ -728,6 +728,7 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
+      displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
