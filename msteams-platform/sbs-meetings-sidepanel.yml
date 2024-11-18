@@ -81,7 +81,7 @@ items:
       ```
 
       > [!TIP]
-      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http 5130 --host-header="localhost:5130` command.
+      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then, run the `ngrok http 5130 --host-header="localhost:5130` command.
 
       The window shows the HTTPS URL.
 
