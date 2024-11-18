@@ -362,9 +362,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Copilot agent must have Action or knowledge source
 
-* Your Copilot agent must have nodes defined as actions in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
-
-* All agents must have a core use case that's served through API actions. [*Must fix*]
+Your Copilot agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
