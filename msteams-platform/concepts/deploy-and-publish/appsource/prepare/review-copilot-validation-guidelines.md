@@ -143,6 +143,10 @@ Copilot agents must support atleast three unique compound utterances by handling
 
 You must ensure the following guidelines for sample prompts and prompt starters.
 
+For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include at least one sentence on how to use that capability within the context of the agent. [*Must fix*]
+
+:::image type="content" source="../../../../assets/images/prompts-copilot.png" alt-text="Screenshot shows you the prompts with the cappabilities in Copilot.":::
+
 ### Sample prompts
 
 The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various plugins in Microsoft 365 Copilot.
@@ -163,8 +167,6 @@ Prompt starters guide users on how to start using declarative agents. You must e
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
-
-For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include at least one sentence on how to use that capability within the context of the agent.
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -364,7 +366,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 Your Copilot agent must have nodes defined as actions in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
 
-Each agent must support its core use case through API actions.
+All agent must have a core use case that's served through API actions.
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
