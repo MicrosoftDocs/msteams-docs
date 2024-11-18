@@ -421,9 +421,9 @@
   - name: Types of bots
     href: bots/build-a-bot.md
     displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
-  - name: Build custom engine agentBuild custom engine agents
+  - name: Build custom engine agent
     items:
-    - name: Overview of Custom engine agent
+    - name: Custom engine agent overview
       href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: AI bot, Teams AI library, custom agent
     - name: What is Teams AI library?
