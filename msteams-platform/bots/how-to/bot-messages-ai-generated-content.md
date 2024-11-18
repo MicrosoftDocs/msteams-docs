@@ -3,6 +3,7 @@ title: Bot messages with AI-generated content
 description: Learn how to format your bot with an AI label, sensitivity labels, citations, and feedback buttons built using Teams AI library or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/11/2024
 ---
 
 # Bot messages with AI-generated content
@@ -378,3 +379,4 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 * [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
 * [Get started with Teams AI library](teams-conversational-ai/how-conversation-ai-get-started.md)
+* [Streaming UX in bots](~/bots/streaming-ux.md)
