@@ -84,21 +84,6 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
   For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
-<!--
-## How can I learn more?
-
-You may be just delving into bot apps or bringing your existing bots up to supporting AI, this article provides an overview of bots and covers building, configuring, and customizing bots.
-
-Let's begin to learn, automate, and innovate with bots.
-
-| If you want to... | Here's your path |
-| --- | --- |
-| Begin building a bot |   [Basic bot concepts, scopes] <br> [Build a basic bot: TTK and Bot SDK] <br> Bring your existing bot to Teams <br> [Build basic AI bot - QS SBS guide] |
-| Build an AI bot | [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md) > [Teams AI library quick start guide](how-to/teams-conversational-ai/conversation-ai-quick-start.md) > <br> [Build basic AI bot (custom engine agent)] <br> [Get started] <br> [Bot logic for an AI bot] <br> [Copilot handoff] |
-| Build a non-AI bot | [Introduction to activity handler, events] <br> [Bot logic] <br> [Manifest configuration] <br> [SBS guides for TTK apps or TTK sample apps + Code samples for Bot SDK for interactive messages, send and receive files, fetching team or chat members, rate limiting, etc.] |
-| Explore advanced bot capabilities | [SSO] <br> [Access data with MS Graph] <br> [Bot on Mobile] <br> [Build call and media bots] |
--->
-
 ## Next step
 
 [Let's build a bot](build-a-bot.md)
