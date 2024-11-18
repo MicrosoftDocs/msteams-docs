@@ -431,7 +431,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 November**
 
-* ***Movember 18, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
+* ***November 18, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
 
 :::column-end:::
 :::row-end:::
