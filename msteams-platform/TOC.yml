@@ -963,7 +963,7 @@
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
   - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options 
+    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options, open as tab, open as bot, default landing 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
