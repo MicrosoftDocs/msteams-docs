@@ -429,11 +429,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 October**
+**2024 November**
 
-* ***October 22, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
-* ***October 17, 2024***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts.](m365-apps/specify-runtime-requirements.md)
-* ***October 17, 2024***: [copilotExtensions renamed to copilotAgents in developer preview app manifest.](./resources/schema/manifest-schema-dev-preview.md#copilotagents)
+* ***Movember 18, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
 
 :::column-end:::
 :::row-end:::
@@ -446,6 +444,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 17/10/2024 | Learn about runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | Extend your app across Microsoft 365 > [Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
+| 17/10/2024 | Learn about copilotExtensions renamed to copilotAgents in developer preview app manifest. | App manifest > Public developer preview app manifest > [copilotAgents](resources/schema/manifest-schema-dev-preview.md#copilotagents) |
 | 16/09/2024 | Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
 | 16/09/2024 | Explore the development guidance to build Copilot agents. | Build message extensions > Bot Framework > Search commands > [Guidelines to create and upgrade Copilot agents](messaging-extensions/dev-guidelines-copilot-agents.md) |
 | 03/09/2024 | Introduced nested app authentication for single-page applications that are embedded in host environment. | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md)|
