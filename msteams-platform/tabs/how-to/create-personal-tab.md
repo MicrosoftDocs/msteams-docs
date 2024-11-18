@@ -5,7 +5,7 @@ description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NE
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 10/17/2024
+ms.date: 11/18/2024
 ---
 
 # Create a tab
@@ -974,7 +974,7 @@ You've completed the tutorial to build a tab app with Blazor.
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array. 
 
 ``` JSON
 
@@ -993,6 +993,10 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
+> [!NOTE]
+> In mobile, tabs are reordered as defined in `staticTabs`.
+
+This property also enables you to set the default landing capability for your app. You can configure the app to open as a tab or a bot by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Extend static tabs to group chat, channels, and meetings
 
