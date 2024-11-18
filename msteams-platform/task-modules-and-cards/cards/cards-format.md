@@ -114,16 +114,33 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
-Adaptive Cards support emoji. The following code shows an example of Adaptive Cards with an emoji:
+Adaptive Cards support emojis. The following card payload shows an Adaptive Card with an emoji:
 
 ``` json
-{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Publish Adaptive Card with emojis 🥰",
+          "weight": "bolder",
+          "size": "medium"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-> [!NOTE]
-> If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive Card with an emoji.":::
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive card emoji.":::
+> [!NOTE]
+> If you use REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
 ### Mention support within Adaptive Cards
 
