@@ -141,11 +141,9 @@ Copilot agents must support atleast three unique compound utterances by handling
 
 ## Prompts
 
-You must ensure the following guidelines for sample prompts and prompt starters.
-
 For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include at least one sentence on how to use that capability within the context of the agent. [*Must fix*]
 
-:::image type="content" source="../../../../assets/images/prompts-copilot.png" alt-text="Screenshot shows you the prompts with the cappabilities in Copilot.":::
+You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
@@ -364,9 +362,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Copilot agent must have Action or knowledge source
 
-Your Copilot agent must have nodes defined as actions in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
+* Your Copilot agent must have nodes defined as actions in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
 
-All agent must have a core use case that's served through API actions.
+* All agents must have a core use case that's served through API actions. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
