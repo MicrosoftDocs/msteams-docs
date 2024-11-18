@@ -9,17 +9,17 @@ ms.author: surbhigupta
 
 # Bot overview
 
-A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tools to sophisticated artificial intelligence (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks and enhancing efficiency.
+A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tools to sophisticated artificial intelligence (AI) powered apps, bots have transformed the way users interact with technology. Bots can streamline tasks and enhance efficiency.
 
-You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
+You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability. With AI bots, you can offer tailored experiences for the users.
 
 Microsoft 365 Copilot and Teams offer a platform for developers to take their AI bots to the next level - transforming them into custom engine agents. You can make your bot accessible across various systems. This means your bot can help users make informed decisions, automate tasks, and generate valuable information seamlessly.
 
 ## What are the benefits of a bot?
 
-Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7 without getting tired, and they can handle multiple tasks at once. Bots transform how developers engage with users, streamline tasks, and boost efficiency. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
+Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7, and can handle multiple tasks at once. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
-The bot app users access and use your bot app within Teams.
+The bot app users can access and use your bot app within Teams.
 
 :::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
 
