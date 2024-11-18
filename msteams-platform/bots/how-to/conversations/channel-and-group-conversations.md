@@ -168,7 +168,6 @@ def get_mentions(activity: Activity) -> List[Mention]:
 There are two types of mentions:
 
 * [User mention](#user-mention)
-* [Support for Microsoft Entra Object ID and UPN in user mention](#support-for-microsoft-entra-object-id-and-upn-in-user-mention).
 * [Tag mention](#tag-mention)
 
 > [!NOTE]
@@ -302,7 +301,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
 
-### Support for Microsoft Entra Object ID and UPN in user mention
+##### Support for Microsoft Entra Object ID and UPN in user mention
 
 [!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
 
