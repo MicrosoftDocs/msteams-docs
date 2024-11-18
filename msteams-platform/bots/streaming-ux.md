@@ -13,7 +13,7 @@ ms.localizationpriority: high
 >[!NOTE]
 >
 > - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-> - Streaming bot messages isn't available with Tools and the `o1` model.
+> - Streaming bot messages isn't available with function calling and the OpenAI `o1` model.
 > - Streaming bot messages is supported on web, desktop, and Mobile (Android). It isn't supported on iOS.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
@@ -551,3 +551,4 @@ The following are the success and error codes:
 
 - [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
 - [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+- [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)
