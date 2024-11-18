@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 11/13/2024
+ms.date: 11/18/2024
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
-* ***November 13, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+* ***November 18, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 * ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
 * ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
 * ***November 07, 2024***: [Add conditionally enabled action buttons in Adaptive Cards.](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons)
