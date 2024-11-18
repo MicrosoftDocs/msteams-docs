@@ -19,7 +19,7 @@ Microsoft 365 Copilot and Teams offer a platform for developers to take their AI
 
 Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7, and can handle multiple tasks at once. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
 
-The bot app users can access and use your bot app within Teams.
+Bot app users can access and use your bot app within Teams.
 
 :::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
 
@@ -31,7 +31,7 @@ Bot apps offer a range of business advantages:
 1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
 1. Scalability: As user needs grow, bots can be easily scaled to handle more tasks or interactions.
 
-In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement. Bots are here to make your life easier by automating tasks and providing assistance whenever you need it.
+In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement.
 
 ## How do bots work?
 
