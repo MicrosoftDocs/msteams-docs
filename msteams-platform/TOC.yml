@@ -512,6 +512,9 @@
         href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      - name: Stream bot messages
+        href: bots/streaming-ux.md
+        displayName: Streaming, response generation, AI library, AI SDK, REST API
       - name: Build custom engine agent
         items: 
           - name: Custom engine agent for Microsoft 365 
