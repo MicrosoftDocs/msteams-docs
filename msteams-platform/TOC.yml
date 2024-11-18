@@ -443,7 +443,7 @@
     - name: Custom engine agent user experience
       href: bots/how-to/teams-conversational-ai/ai-ux.md
       displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
-    - name: AI-generated content gest practices
+    - name: AI-generated content best practices
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit  
     - name: Teams AI library FAQs
