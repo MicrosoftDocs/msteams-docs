@@ -169,7 +169,7 @@ items:
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
-     1. Go to the `config.json` file under `prompts/chat`. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name` and `key` values with your Azure AI Search resource details:
+     1. Go to the `config.json` file under `prompts/chat`. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name`, and `key` values with your Azure AI Search resource details:
 
         ```json
            "data_sources": [

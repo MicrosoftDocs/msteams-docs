@@ -9,9 +9,9 @@ ms.author: surbhigupta
 
 # Bot overview
 
-A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tool to sophisticated artificial intelligence (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
+A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tools to sophisticated artificial intelligence (AI) powered apps, bots have transformed the way users interact with technology, streamlining tasks, and enhancing efficiency.
 
-You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as, healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
+You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability, and with AI bots you can offer tailored experiences for the users.
 
 Microsoft 365 Copilot and Teams offer a platform for developers to take their AI bots to the next level - transforming them into custom engine agents. You can make your bot accessible across various systems. This means your bot can help users make informed decisions, automate tasks, and generate valuable information seamlessly.
 
@@ -65,7 +65,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
   An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more. You can build the following types of bots:
 
   * Teams AI bot: Teams AI bot is integrated within Microsoft Teams and utilizes Microsoft Teams AI library and Natural Language Processing (NLP).
-  * Custom engine agent for Microsoft 365 Copilot: This is a custom engine copilot is an AI-powered bot. It is build using custom AI models. You can integrate a custom engine copilot for Microsoft 365 Copilot with various systems.
+  * Custom engine agent for Microsoft 365 Copilot: This is a custom engine copilot is an AI-powered bot. It's built using custom AI models. You can integrate a custom engine copilot for Microsoft 365 Copilot with various systems.
 
   For more information, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
 
@@ -75,7 +75,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
   For more information, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 
 * **Notification bot**:
-  A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as, sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
+  A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
 
   For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 

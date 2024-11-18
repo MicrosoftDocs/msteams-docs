@@ -15,7 +15,7 @@ You can easily integrate Teams AI library, prompt management, and safety moderat
 
 ## Initial setup
 
-Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
+Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of the initial setup, it's important to import the Bot Framework SDK functionalities.
 
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
@@ -485,13 +485,13 @@ export class VectraDataSource implements DataSource {
 
 Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts helps reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
-A new object based prompt system breaks a prompt into sections and each section can be given a token budget that's either a fixed set of tokens, or proportional to the overall remaining tokens. You can generate prompts for both Text Completion and Chat Completion style APIs.
+A new object-based prompt system breaks a prompt into sections and each section can be given a token budget that's either a fixed set of tokens, or proportional to the overall remaining tokens. You can generate prompts for both Text Completion and Chat Completion style APIs.
 
 The following are a few guidelines to create prompts:
 
 * Provide instructions, examples, or both.
 * Provide quality data. Ensure that there are enough examples and proofread your examples. The model is smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional, and it might affect the response.
-* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
+* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response. A higher value such as 0.8 makes the output random, while a lower value such as 0.2 makes the output focused and deterministic.
 
 Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
 
@@ -540,7 +540,7 @@ The following table includes the query parameters:
 |`include_input`|Boolean value. If you want to include user's input in the prompt. How many tokens for the prompt.|
 |`max_input_tokens`|The maximum number of tokens for input. Maximum tokens supported is 4000.|
 |`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
-|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
+|`temperature`    | What sampling temperature to use, between 0 and 2. A higher values like 0.8 makes the output more random, while a lower values like 0.2 makes it more focused and deterministic.        |
 |`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
@@ -603,9 +603,9 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 
 ### Register Action Handlers
 
-Action handlers help users achieve the goals, which is shared in the user intents.
+Action handlers help users achieve the goals, which are shared in the user intents.
 
-One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
+One of the key aspects in action handlers is that you must first register the actions in the prompts and then help users achieve the goal.
 
 You must register a handler for each action listed in the prompt and add a handler to deal with unknown actions.
 
@@ -889,15 +889,15 @@ server.post('/api/messages', async (req, res) => {
 
 If you created your bot app with Bot Framework SDK, you can switch to Teams AI library to use its advanced AI features. This migration provides the following benefits:
 
-- Advanced AI system for creating complex Teams applications powered by LLM.
-- User authentication is integrated into the library, making setup easier.
-- Built on Bot Framework SDK tools and concepts, enabling the existing knowledge to be transferable.
-- Supports the latest tools and APIs in the LLM space.
+* Advanced AI system for creating complex Teams applications powered by LLM.
+* User authentication is integrated into the library, making setup easier.
+* Built on Bot Framework SDK tools and concepts, enabling the existing knowledge to be transferable.
+* Supports the latest tools and APIs in the LLM space.
 
-In Teams AI library, the `Application` object replaces the traditional `ActivityHandler` object, supporting a simpler, fluent style of bot authoring compared to the inheritance-based `ActivityHandler` class. It includes built-in support for: 
+In Teams AI library, the `Application` object replaces the traditional `ActivityHandler` object, supporting a simpler, fluent style of bot authoring compared to the inheritance-based `ActivityHandler` class. It includes built-in support for:
 
-- Calling into the Teams AI library's system for creating bots that use LLM and other AI capabilities.
-- Configuring user authentication for accessing third-party user data.
+* Calling into the Teams AI library's system for creating bots that use LLM and other AI capabilities.
+* Configuring user authentication for accessing third-party user data.
 
 Use one of the following to migrate your bot app to use Teams AI library:
 
@@ -906,7 +906,6 @@ Use one of the following to migrate your bot app to use Teams AI library:
 | A bot app built using JavaScript | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/01.JS.md) |
 | A bot app built using C# | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/02.DOTNET.md) |
 | A bot app using Python | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/03.PYTHON.md) |
-
 
 ## Code sample
 
