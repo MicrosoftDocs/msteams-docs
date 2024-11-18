@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title:  Build API-based message extension
+title:  Advanced tutorial to build API-based message extension
 metadata:
   title: API-based Message Extension - Tutorial
   description: In this learn module, learn to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
@@ -17,12 +17,11 @@ items:
 
     > [!NOTE]
     >
-    > * API-based message extensions only support search commands.
-    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+    > API-based message extensions only support search commands.
 
     Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -81,7 +80,7 @@ items:
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   You have all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -105,12 +104,12 @@ items:
     * Only one required parameter without a default value is allowed.
     * Only POST and GET HTTP methods are supported.
     * The OpenAPI Description document must have an `operationId`.
-    * The operation mustn't have required Header or Cookie parameters without default values.
+    * The operation mustn't require Header or Cookie parameters without default values.
     * A command must have exactly one parameter.
     * Ensure that there are no remote references in the OpenAPI Description document.
     * A required parameter with a default value is considered optional.
 
-    We've used the following OpenAPI Description as an example for this tutorial:
+    We used the following OpenAPI Description as an example for this tutorial:
 
     <details><summary>OpenAPI Description</summary>
     
@@ -133,7 +132,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, a search for "tool to create music" provides a list of tools that can create music.
           responses:
             "200":
               description: OK
@@ -280,7 +279,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
             "wrap": true
             },
             {
@@ -313,7 +312,7 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. Go to **Select host app** and from the dropdown, select **Microsoft Teams**.
+       1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
        1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
        1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
@@ -337,7 +336,13 @@ items:
             "subtitle": "$${if(price, price, 'N/A')}",
         } 
     ```
-    Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+    Create an if condition for the `title` and `subtitle`, where:
+
+    * If name exists, the bot uses the name.
+    * If name doesn't exist, the bot uses NA.
+    
+    For example, `"title": "Name: ${if(name, name, 'N/A')}"`. 
+    Save the preview card template for future reference.
     </details>
 
 
@@ -495,8 +500,8 @@ items:
             "full": "Search ME API full"
         },
         "description": {
-            "short": "product app for testing API MEs",
-            "full": "product app for testing API MEs"
+            "short": "product app for testing API Message Extensions",
+            "full": "product app for testing API Message Extensions"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
@@ -569,10 +574,10 @@ items:
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
 
-    1. Go to a chat and from the message compose area, select **+** and search for your app.
+    1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
@@ -583,6 +588,6 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've done it! 
-    You've learned to create a API-based message extension using OpenAPI Description document.
+    You did it! 
+    You learned to create a API-based message extension using OpenAPI Description document.
 
