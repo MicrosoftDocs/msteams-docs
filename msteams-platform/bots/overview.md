@@ -70,5 +70,5 @@ Use either Bot Framework SDK or Teams AI Library with Teams Toolkit to build the
   For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
 ## Next step
-
-[What types of bots can you build?](build-a-bot.md)
+> [!div class="nextstepaction"]
+> [What types of bots can you build?](build-a-bot.md)
