@@ -24,7 +24,7 @@ You can focus on writing your business logic and allow Teams to handle the compl
 
 :::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
-* The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
+* Use prebuilt templates to add Teams app capabilities.
 
 * Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
 
@@ -32,7 +32,7 @@ You can focus on writing your business logic and allow Teams to handle the compl
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
-The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages of your choice to make the best experiences possible for your customers on Teams.
+The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams. You can use the programming language you're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages of your choice to make the best experiences possible for your customers on Teams.
 
 ## How do AI library features benefit me?
 
@@ -102,7 +102,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         > [!NOTE]
         > Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
 
-        Assistants API allows you to create powerful AI assistants capable of performing tasks that're difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
+        Assistants API allows you to create powerful AI assistants capable of performing tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
 
         Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
     :::column-end:::
@@ -165,7 +165,7 @@ The following table lists the updates to the Teams AI library:
 | Embeddings | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings. | ❌ | ✔️ | ✔️ |
 | Prompts | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window. | ✔️ | ✔️ | ✔️ |
 | Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️ | ✔️ |
-| Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |
+| Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the names of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |
 
 ## Function calls using AI SDK
 
@@ -294,11 +294,11 @@ To use function calling with the Chat Completions API:
 
 You can enable the following tool options:
 
-* **Enable Tool Choice**: To allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
+* **Enable Tool Choice**: To allow the model to select the function, it must call by enabling tool selection. In the `config.json` file:
 
   * Set `tool_choice` as `required` to mandate the model to always call at least one function.
   * Set `tool_choice` to a specific function using its definition for using that function.
-  * Set `tool_choice` as `none` to disable tool.
+  * Set `tool_choice` as `none` to disable the tool.
 
   The default value of `tool_choice`is `auto`. It enables the model to select the functions that it must call.
 
