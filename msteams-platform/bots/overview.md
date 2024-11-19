@@ -9,9 +9,7 @@ ms.author: surbhigupta
 
 # Bot overview
 
-Bots are software applications that interact with users through text-based conversations. Simple bots follow predefined rules to answer questions or provide basic support. AI-powered bots, however, use artificial intelligence to understand natural language, engage in complex conversations, and perform a wider range of tasks.
-
-Teams bots can be built as virtual assistants within Microsoft Teams and Microsoft 365, with or without AI, to enhance productivity by automating tasks, providing constant support, and enhancing customer engagement.
+Bots are software apps that chat with users through text. They follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
 
 Bot apps offer a range of business advantages:
 
