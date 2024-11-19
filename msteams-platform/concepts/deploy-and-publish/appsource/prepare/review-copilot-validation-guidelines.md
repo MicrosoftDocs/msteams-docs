@@ -1,6 +1,6 @@
 ---
 title: Guidelines to Validate Copilot Agents
-description: Learn how to increase the chances of your message extension as an agent or plugin for Microsoft 365 Copilot to pass the Teams Store submission process.
+description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
@@ -13,8 +13,8 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
+> * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
+> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
@@ -102,9 +102,9 @@ You must ensure to meet the following guidelines for Copilot agents:
 
 * App long description must clearly call out that the Copilot agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -141,19 +141,19 @@ Copilot agents must support atleast three unique compound utterances by handling
 
 ## Prompts
 
-You must ensure the following guidelines for sample prompts and prompt starters.
+You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various plugins in Microsoft 365 Copilot.
+The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various agents in Microsoft 365 Copilot.
 
-:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
 Sample prompts are specified using `samplePrompts` property in the app manifest. These prompts must meet the following requirements:
 
-* A plugin must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
+* An agent must have at least three prompts and maximum of five prompts for each command. [*Must fix*]
 * Each prompt mustn't exceed 128 characters. [*Must fix*]
-* Two commands within the same plugin mustn't have identical prompts. [*Must fix*]
+* Two commands within the same agent mustn't have identical prompts. [*Must fix*]
 * All sample prompts must be functional and return responses. [*Must fix*]
 * Prompt must be relevant to the commands. [*Must fix*]
 
@@ -289,7 +289,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 |---|---|
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
@@ -304,7 +304,7 @@ For a Copilot agent to be validated, invoked, and to work seamlessly, ensure tha
 For action scenarios, Copilot agents must share user disclosure and seek user confirmation:
 
 * Data shown in third-party service (through dialogue) must be reflective of confirmation provided by the user. [*Must fix*]
-* A confirmation of the completion of the action must be shared by the plugin in the form of a card. [*Must fix*]
+* A confirmation of the completion of the action must be shared by the agent in the form of a card. [*Must fix*]
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
@@ -360,7 +360,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Copilot agent must have Action or knowledge source
 
-Your Copilot agent must have nodes defined as actions or Graph connectors in the app manifest. This ensures that the Copilot agent's responses are grounded in a data source. [*Must fix*]
+* Your Copilot agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
+
+* For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-copilot-agents)
 
@@ -391,5 +393,5 @@ Copilot agents that use OpenAPI specs must ensure the following security standar
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
 * [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
-* [Extend bot-based message extension as plugin for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-plugin.md)
+* [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
