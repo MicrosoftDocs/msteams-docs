@@ -4,7 +4,7 @@ author: surbhigupta
 description: In this module, learn more about Teams AI library frequently asked questions related to OpenAI models, Large Language Models (LLMs), and ODSL.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: surbhigupta12
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
