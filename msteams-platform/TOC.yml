@@ -440,6 +440,9 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library bot logic, OpenAI
     - name: Build custom engine agent using Teams Toolkit 
       href: Teams-AI-library-tutorial.yml      
+    - name: Stream bot messages
+      href: bots/streaming-ux.md
+      displayName: Streaming, response generation, AI library, AI SDK, REST API      
     - name: Build bot messages with AI-generated content
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit  
