@@ -35,7 +35,7 @@ In short, bots can make your life easier by automating tasks, providing constant
 
 ## How do bots work?
 
-A bot works by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, figures out what you need, and then gives you a response or performs an action.
+A bot works by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, determines what you need, and then provides a response or performs an action.
 
 This article guides you through the developer journey, showcasing how a bot interacts with users or systems, and explaining bot concepts. In addition, you'll explore the capabilities you'll integrate into your bot application.
 
@@ -59,8 +59,13 @@ For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot
 
 ### Explore bot capabilities
 
-You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams Toolkit to build these capabilities in your bot.
+You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams AI library with Teams Toolkit to build these capabilities in your bot.
 
+* **Custom engine agent**: A custom engine agent is a bot that uses artificial intelligence to perform automated tasks. They understand natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
+
+  For more information, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
+
+<!--
 * **AI bot**:
   An AI bot uses artificial intelligence to perform the tasks it is automated to do. It understands natural language and can engage in conversation and answer questions. You can use it for virtual assistance, language translation, predictive analysis, and more. You can build the following types of bots:
 
@@ -68,7 +73,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
   * Custom engine agent for Microsoft 365 Copilot: This is a custom engine copilot is an AI-powered bot. It's built using custom AI models. You can integrate a custom engine copilot for Microsoft 365 Copilot with various systems.
 
   For more information, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
-
+-->
 * **Conversational bot**:
   A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
 
