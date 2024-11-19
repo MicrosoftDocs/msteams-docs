@@ -33,7 +33,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/screenshots.png" link="#screenshots" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="icon" source="../../../../assets/icons/copilot-agent-name.png" link="#agent-name" border="false":::
+     :::image type="icon" source="../../../../assets/icons/agent-name.png" link="#agent-name" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
