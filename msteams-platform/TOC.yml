@@ -198,7 +198,7 @@
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
-            displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code           
+            displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
@@ -512,6 +512,9 @@
         href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      - name: Stream bot messages
+        href: bots/streaming-ux.md
+        displayName: Streaming, response generation, AI library, AI SDK, REST API
       - name: Build custom engine agent
         items: 
           - name: Custom engine agent for Microsoft 365 
@@ -561,16 +564,16 @@
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for Copilot agents
         href: messaging-extensions/dev-guidelines-copilot-agents.md
-        displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents
+        displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
       - name: Debug a Microsoft 365 Copilot agent with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
-        displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details
+        displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
-        displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot
+        displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot, plugins
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
@@ -721,6 +724,7 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
+      displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
@@ -959,7 +963,7 @@
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
   - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options 
+    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options, open as tab, open as bot, default landing 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
@@ -978,7 +982,7 @@
       displayName: validDomain, valid domain, validdomain, logo, Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy
     - name: Review Copilot validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
-      displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, customize Microsoft 365 Copilot, declarative agent
+      displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, customize Microsoft 365 Copilot, declarative agent, plugins
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
@@ -1117,7 +1121,7 @@
       displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deeplink for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
       displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   

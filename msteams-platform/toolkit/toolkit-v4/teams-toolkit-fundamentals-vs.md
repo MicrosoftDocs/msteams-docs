@@ -96,7 +96,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot agent from preview feature.":::
 
-Enhance the capabilities of Microsoft 365 Copilot by converting your app into a agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit Copilot agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
+Enhance the capabilities of Microsoft 365 Copilot by converting your app into an agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit Copilot agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
 
 #### TeamsFx .NET SDK reference
 

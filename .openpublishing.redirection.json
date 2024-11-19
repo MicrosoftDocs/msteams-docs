@@ -1158,7 +1158,7 @@
       },
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq"
+        "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
       }
     ]
 }
