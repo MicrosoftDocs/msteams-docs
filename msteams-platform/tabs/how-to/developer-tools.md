@@ -3,7 +3,7 @@ title: Dev Tools for Teams Desktop & Mobile
 description: Learn about Dev Tools for Microsoft Teams tabs and how to access and debug Dev Tools using Teams desktop or mobile client (Android).
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 08/22/2024
+ms.date: 11/12/2024
 ---
 
 # Dev Tools for Microsoft Teams tabs
@@ -21,7 +21,8 @@ When Teams is running in a browser, it's easy to access the browser's Dev Tools.
 
 While the web version and the desktop version of Teams are almost same, there are some differences with authentication. Sometimes the only way to figure out what's going on is to use Dev Tools. To use Dev Tools in the desktop client, follow these steps:
 
-1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-or-web-client).
+1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-or-web-client). You must restart Teams to view the Dev Tools option.
+
 1. Open a tab to inspect with Dev Tools.
 1. Open Dev Tools in one of the following ways:
     - On Windows: Open the desktop tray and right-click to select the Microsoft Teams icon. Select **Open Dev Tools**:
@@ -43,7 +44,7 @@ You can enable DevTools in the Teams Android client. To enable DevTools, follow 
 
    :::image type="content" source="~/assets/images/tabs/android-beta-dev-tools.png" alt-text="Screenshot shows the option to join the beta.":::
 
-1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#mobile-client).
+1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#mobile-client). You must restart Teams to view the Dev Tools option.
 1. Connect your device to your desktop computer, and set up your Teams Android client for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Select **inspect** under the tab you wish to debug, as in the following image:

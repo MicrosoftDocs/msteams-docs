@@ -170,6 +170,9 @@ There are two types of mentions:
 * [User mention](#user-mention)
 * [Tag mention](#tag-mention)
 
+> [!NOTE]
+> User mention and tag mention is supported for both text message and Adaptive Card.
+
 #### User mention
 
 Your bot can mention other users in messages posted in channels.
@@ -298,12 +301,44 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
 
+##### Support for Microsoft Entra Object ID and UPN in user mention
+
+[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in a text message:
+
+```C#
+var userId = "Adele@microsoft.com"; //User Principle Name
+var mention = new ChannelAccount(userId, "Adele"); 
+var mentionObj = new Mention 
+{
+    Mentioned = mention,
+    Text = $"<at>{mention.Name}</at>" ,
+    Type = "mention"
+}; 
+
+// Returns a simple text message.var replyActivity = MessageFactory.Text($"Hello {mentionObj.Text}.");replyActivity.Entities = new List<Entity> { mentionObj };
+
+// Sends an activity to the sender of the incoming activity.await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+
+```
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in an Adaptive Card:
+
+```JSON
+{
+    "type": "mention",
+    "text": "<at>Adele</at>",
+    "mentioned": {
+            "id": "Adele@microsoft.com" ,// User Principle Name
+            "name": "Adele"
+    }
+} 
+```
+
 #### Tag mention
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
-
-> [!NOTE]
-> Tag mentions aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DoD) tenants.
 
 ##### Mention tags in a text message
 

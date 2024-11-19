@@ -725,6 +725,7 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
+      displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
@@ -1121,7 +1122,7 @@
       displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deeplink for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
       displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   

@@ -4,8 +4,8 @@ description: Learn about Teams AI library, Teams-centric component scaffolding, 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-author: michaelmaillot
-ms.date: 02/12/2024
+author: surbhigupta12
+ms.date: 11/12/2024
 ---
 
 # Teams AI library
@@ -166,6 +166,161 @@ The following table lists the updates to the Teams AI library:
 | Prompts | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window. | ✔️ | ✔️ | ✔️ |
 | Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️ | ✔️ |
 | Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |
+
+## Function calls using AI SDK
+
+Function calls, implemented within the AI SDK, unlock numerous capabilities, enabling the AI model to generate accurate responses seamlessly. It enables direct connection with external tools, thereby making AI even more powerful. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
+
+> [!NOTE]
+> Structured outputs aren't supported.
+
+To use function calling with the Chat Completions API:
+
+1. Set up the planner where the default prompt uses the Tools Augmentation. Update one of the following files of your bot app:
+
+    * For a JavaScript app: Update `index.ts`.
+    * For a C# bot app: Update `Program.cs`.
+    * For a Python app: Update `bot.py`.
+
+   The following code snippet shows how to set up the `ToolsAugmentation` class:
+
+   # [JavaScript](#tab/javascript)
+
+    ```JavaScript
+    const planner = new ActionPlanner({
+        model,
+        prompts,
+        defaultPrompt: 'tools'
+    });
+    ```
+
+   # [C#](#tab/dotnet)
+
+    ```C#
+    ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
+    { 
+        Model = model,
+        Prompts = prompts,
+        async (context, state, planner) =>
+        {
+            return await Task.FromResult(prompts.GetPrompt("Tools"));
+        } 
+    }
+    ActionPlanner<TurnState> planner = new ActionPlanner(options)
+    ```
+
+   # [Python](#tab/python)
+
+    ```Python
+    planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
+    ```
+
+    ---
+
+1. Specify tools augmentation in the `config.json` file.
+
+    ```JSON
+    {
+        "schema": 1.1,
+        "description": "",
+        "type": "",
+        "completion": {
+    +       "tool_choice": "auto",
+    +       "parallel_tool_calls": true,
+        },
+    +    "augmentation": {
+    +        "augmentation_type": "tools"
+    +    }
+    }
+    ```
+
+1. Specify all your `function definitions` in the `actions.json` file, which is in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
+
+    ```JSON
+    [{
+        "name": "CreateList",
+        "description": "Creates a list"
+    }]
+    ```
+
+1. Register your `handlers` in your `application` class.
+
+    * Each handler is a callback function that runs when a specific event happens. The function call handler executes code in response to the event.
+    * The function call must return a string as the output of the function call.
+    * When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and are invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs to show that the tools were used.
+
+   The following code snippet shows how to register `handlers`:
+
+   # [JavaScript](#tab/javascript1)
+
+    ```JavaScript
+    app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    // Ex. create a list with name "Grocery Shopping".
+    ensureListExists(state, parameters.list);
+    return `list created and items added. think about your next action`;
+    });
+    ```
+
+   # [C#](#tab/dotnet1)
+
+    ```C#
+    [Action("CreateList")]
+    public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+    {
+        ArgumentNullException.ThrowIfNull(turnState);
+        ArgumentNullException.ThrowIfNull(parameters);
+
+        string listName = GetParameterString(parameters, "list");
+
+        EnsureListExists(turnState, listName);
+
+        return "list created. think about your next action";
+    }
+    ```
+
+   # [Python](#tab/python1)
+
+    ```Python
+    @app.ai.action("createList")
+    async def create_list(context: ActionTurnContext, state: AppTurnState):
+    ensure_list_exists(state, context.data["list"])
+    # Continues exectuion of next command in the plan.
+    return ""
+    ```
+
+    ---
+
+### Enable tool options
+
+You can enable the following tool options:
+
+* **Enable Tool Choice**: To allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
+
+  * Set `tool_choice` as `required` to mandate the model to always call at least one function.
+  * Set `tool_choice` to a specific function using its definition for using that function.
+  * Set `tool_choice` as `none` to disable tool.
+
+  The default value of `tool_choice`is `auto`. It enables the model to select the functions that it must call.
+
+* **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, you can set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` parameter is set to `true`.
+
+The following code snippet shows how to enable tool choice and to toggle parallel tool calls:
+
+```JSON
+{
+
+    "schema": 1.1,
+    "description": "",
+    "type": "",
+    "completion": {
++       "tool_choice": "auto",
++       "parallel_tool_calls": true,
+    },
++    "augmentation": {
++        "augmentation_type": "tools"
++    }
+}
+```
 
 ## Code samples
 
