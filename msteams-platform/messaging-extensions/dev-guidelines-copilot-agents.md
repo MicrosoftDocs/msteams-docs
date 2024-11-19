@@ -38,11 +38,11 @@ A good description offers a clear and concise summary of the app’s features an
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a agent in Microsoft 365 Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a agent in Microsoft 365 Copilot, modify the app description to suit the following agent requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as an agent in Microsoft 365 Copilot, modify the app description to suit the following agent requirements:
 
 * Long description must clearly explain the functionality and usage of the message extension agent in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
@@ -140,7 +140,7 @@ The following code snippets show the short description examples for each categor
 
 ### Search command description
 
-Command description maps user intent and utterance to search command inside a agent and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
+Command description maps user intent and utterance to search command inside an agent and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
 
 * Focus on what and how the command searches (detailed list) in natural language.
 * Include verbs and synonyms, if applicable.
@@ -509,7 +509,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 [*Must fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a agent.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables an agent.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
