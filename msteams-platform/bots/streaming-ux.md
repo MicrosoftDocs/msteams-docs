@@ -551,3 +551,4 @@ The following are the success and error codes:
 
 - [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
 - [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+- [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)
