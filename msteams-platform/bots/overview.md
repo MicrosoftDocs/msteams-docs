@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Bot overview
 
-Bots are software apps that chat with users through text. They follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
+Bots are software apps that chat with users through text. Bots follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
 
 Bot apps offer a range of business advantages:
 
 1. Automation: Bots can handle repetitive tasks, saving you time and effort.
 1. Availability: Bots can work round-the-clock without needing breaks.
-1. Efficiency: They can manage multiple tasks simultaneously, improving overall efficiency.
+1. Efficiency: Bots can manage multiple tasks simultaneously, improving overall efficiency.
 1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
-1. Scalability: As user needs grow, bots can be easily scaled to handle more tasks or interactions.
+1. Scalability: Bots can be easily scaled to handle more tasks or interactions as user needs evolve.
 
 ## How do bots work?
 
@@ -29,7 +29,7 @@ Here's an example of a simple bot on Teams that takes short commands from a user
 
 ### Bots - the developer experience
 
-Let's consider an example: As a developer, you must build a bot to automate repetitive tasks and enhance efficiency and user engagement. The following image shows how a developer can build a bot app to meet the user requirements:
+Let's consider an example: As a developer, you must build a bot to automate repetitive tasks and enhance efficiency and user engagement. The following image shows how you can build a bot app to meet the user requirements:
 
 :::image type="content" source="../assets/images/bots/chatbot-dev-ux.png" alt-text="Image shows developer experience for a chatbot.":::
 
@@ -49,7 +49,7 @@ For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot
 
 You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams AI library with Teams Toolkit to build these capabilities in your bot.
 
-* **Custom engine agent**: A custom engine agent is a bot that uses artificial intelligence to perform automated tasks. They understand natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
+* **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. They understand natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
   For more information, see [build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit](../Teams-AI-library-tutorial.yml).
 
