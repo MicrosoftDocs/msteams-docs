@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
+* ***November 19, 2024***: Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot.
 * ***November 18, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 * ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
 * ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
