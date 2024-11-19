@@ -444,7 +444,7 @@ Developer preview is a public program that provides early access to unreleased T
 <summary><b>2024</b></summary>
 
 | **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
+| -------- | --------- | ---------------- |
 | 17/10/2024 | Learn about runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | Extend your app across Microsoft 365 > [Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
 | 17/10/2024 | Learn about copilotExtensions renamed to copilotAgents in developer preview app manifest. | App manifest > Public developer preview app manifest > [copilotAgents](resources/schema/manifest-schema-dev-preview.md#copilotagents) |
 | 16/09/2024 | Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
