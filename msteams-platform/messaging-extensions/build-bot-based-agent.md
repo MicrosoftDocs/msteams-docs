@@ -19,7 +19,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Bot-based search message extension agent is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 > * Only *bot-based* message extensions with *search* commands can be extended as agents for Microsoft 365 Copilot.
 
-Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a agent in Microsoft 365 Copilot, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Microsoft 365 Copilot. You can achieve this extension by developing a agent or connecting to an external data source.
+Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as an agent in Microsoft 365 Copilot, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Microsoft 365 Copilot. You can achieve this extension by developing an agent or connecting to an external data source.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
@@ -29,7 +29,7 @@ See the video to learn more about extending Microsoft 365 Copilot using Microsof
 
 > [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE?si=1jS5gsLuJFPANzoi]
 
-## What is a agent?
+## What is an agent?
 
 An agent allows Microsoft 365 Copilot to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Agents allow Microsoft 365 Copilot to:
 
@@ -39,13 +39,13 @@ An agent allows Microsoft 365 Copilot to interact directly with third-party data
 Descriptions enhance the usability and effectiveness of a message extension agent. The following description offer a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
-* **Command description**: Command description maps user intent and utterance to search command inside a agent and must be built based on the analysis of the user intent and keywords.
+* **Command description**: Command description maps user intent and utterance to search command inside an agent and must be built based on the analysis of the user intent and keywords.
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
 * **Semantic description**: Semantic description helps Microsoft 365 Copilot generate content by providing a conceptual understanding of the agent's capabilities and scenarios where it can help achieve user goals and match user’s intent with the agent's capabilities.
 
 For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
-All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a agent in Microsoft 365 Copilot.
+All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 

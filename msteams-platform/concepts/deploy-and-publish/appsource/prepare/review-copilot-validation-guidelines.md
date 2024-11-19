@@ -283,7 +283,7 @@ You must ensure to meet the following guidelines for agents:
 
 ## Technical requirements
 
-For a agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
+For an agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
 |---|---|
