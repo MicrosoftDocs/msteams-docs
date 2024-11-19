@@ -47,9 +47,12 @@ You can build a new AI bot or elevate your existing conventional bot to be power
 
 ## Next step
 
-* [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
-* [Understand AI bot concepts](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
-* [Understand bot concepts](bot-concepts.md)
+> [!div class="nextstepaction"]
+> [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+> [!div class="nextstepaction"]
+> [Understand AI bot concepts](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
+> [!div class="nextstepaction"]
+> [Understand bot concepts](bot-concepts.md)
 
 ## See also
 

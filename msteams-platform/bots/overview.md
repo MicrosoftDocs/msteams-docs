@@ -81,4 +81,5 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
 ## Next step
 
-[Let's build a bot](build-a-bot.md)
+> [!div class="nextstepaction"]
+> [Let's build a bot](build-a-bot.md)
