@@ -314,7 +314,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 <details>
 <summary>What are the guidelines for Teams apps extensible as agent for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agent-for-microsoft-365-copilot) for Teams apps extensible as agent for Microsoft 365 Copilot.
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-an-agent-for-microsoft-365-copilot) for Teams apps extensible as agent for Microsoft 365 Copilot.
 
 </details>
 <details>
