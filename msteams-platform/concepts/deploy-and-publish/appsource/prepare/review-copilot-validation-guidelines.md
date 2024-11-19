@@ -33,7 +33,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/screenshots.png" link="#screenshots" border="false":::
    :::column-end:::
    :::column span="":::
-     :::image type="icon" source="../../../../assets/icons/copilot-agent-name.png" link="#copilot-agent-name" border="false":::
+     :::image type="icon" source="../../../../assets/icons/copilot-agent-name.png" link="#agent-name" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
@@ -65,7 +65,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
 :::row:::
 
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#copilot-agent-must-have-action-or-knowledge-source" border="false":::
+      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#agent-must-have-action-or-knowledge-source" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
@@ -108,7 +108,7 @@ You must ensure to meet the following guidelines for agents:
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Screenshots
 
@@ -117,7 +117,7 @@ You must ensure to meet the following guidelines for agents:
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
 * Apps with agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Agent name
 
@@ -129,7 +129,7 @@ You must ensure to meet the following guidelines for agents:
   * `name` in declarativeAgent1.json
   * `name_for_human` in plugin.json files
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Compound utterances
 
@@ -137,7 +137,7 @@ Agents must support atleast three unique compound utterances by handling three o
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Prompts
 
@@ -164,7 +164,7 @@ Prompt starters guide users on how to start using declarative agents. You must e
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Adaptive Card response
 
@@ -181,7 +181,7 @@ Agent responses provided as an Adaptive Card must meet the following requirement
 * Adaptive Card must be well-formatted to suit the desktop, web, and mobile (iOS and Android) clients. [*Must fix*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Compatibility
 
@@ -214,7 +214,7 @@ You must implement the following:
 
 For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
@@ -279,7 +279,7 @@ You must ensure to meet the following guidelines for agents:
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Technical requirements
 
@@ -295,7 +295,7 @@ For a agent to be validated, invoked, and to work seamlessly, ensure that it mee
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## User disclosure and confirmation for action scenarios
 
@@ -335,7 +335,7 @@ For action scenarios, agents must share user disclosure and seek user confirmati
    | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
    | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Bot requirements for custom engine agents
 
@@ -356,7 +356,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Agent must have Action or knowledge source
 
@@ -364,7 +364,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Graceful error handling
 
@@ -378,7 +378,7 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
   :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## Security requirements for OpenAPI spec URL
 
@@ -387,7 +387,7 @@ Agents that use OpenAPI specs must ensure the following security standards:
 * All API calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-copilot-agents)
+[Back to top](#validation-guidelines-for-agents)
 
 ## See also
 

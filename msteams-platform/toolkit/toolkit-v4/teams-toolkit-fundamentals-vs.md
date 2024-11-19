@@ -37,7 +37,7 @@ The following are the key features of Teams Toolkit:
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
 * [CodeLens to trigger Teams Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
 * [Teams Toolkit documentation](#teams-toolkit-documentation)
-* [Agent for Microsoft 365 Copilot](#microsoft-365-copilot-agent)
+* [Agent for Microsoft 365 Copilot](#agent-for-microsoft-365-copilot)
 
 > [!NOTE]
 > CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation, and agent for Microsoft 365 Copilot is available in public developer preview.
