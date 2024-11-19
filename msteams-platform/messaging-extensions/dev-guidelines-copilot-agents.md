@@ -13,15 +13,15 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extension plugins are in preview.
-> * Message extensions plugins in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
+> * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
+> * Message extension agents are in preview.
+> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > For more information about validation guidelines for Copilot agents to increase their chance for being listed on the Team Store, see [validation guidelines for Copilot agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
+Microsoft 365 agents provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension agents allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
@@ -34,17 +34,17 @@ We recommend that you build or upgrade your existing message extensions to maxim
 
 [*Must fix*]
 
-A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Copilot.
+A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Copilot to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension agent must be invoked from Microsoft 365 Copilot.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Copilot, modify the app description to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as an agent in Microsoft 365 Copilot, modify the app description to suit the following agent requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension agent in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following code snippets show the short description examples for each category:
@@ -140,7 +140,7 @@ The following code snippets show the short description examples for each categor
 
 ### Search command description
 
-Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
+Command description maps user intent and utterance to search command inside an agent and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
 
 * Focus on what and how the command searches (detailed list) in natural language.
 * Include verbs and synonyms, if applicable.
@@ -251,7 +251,7 @@ The following code snippets show the command and semantic description examples f
 
 > [!IMPORTANT]
 >
-> For activating the OAuth sign-in link in the plugin, ensure that you set the `initialRun` property to `true` for search commands within the app manifest.
+> For activating the OAuth sign-in link in the agent, ensure that you set the `initialRun` property to `true` for search commands within the app manifest.
 
 ### Parameter description
 
@@ -509,9 +509,9 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 [*Must fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables a plugin.
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables an agent.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
 > [!NOTE]
 >
@@ -562,7 +562,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 [*Must fix*]
 
-Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
+Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension agent must function effectively, appear rich, and meet the following requirements:
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Must fix*]
 
@@ -683,24 +683,25 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Message extension plugins in Microsoft 365 Copilot apps
+## Message extension agents in Microsoft 365 Copilot apps
 
 [*Must fix*]
 
 > [!IMPORTANT]
-> Message extension plugins in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
+> Message extension agents in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
-Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using plugins, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension plugins facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the plugin is activated.
+Copilot agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using agents, which are a subset of Copilot agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension agents facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the agent is activated.
 
- If you've developed a plugin for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
+ If you've developed an agent for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 
 ## Code samples
 
 | Sample name | Description | TypeScript |
 |----------------|-----------------|--------------|
-| Northwind inventory message extension | This sample demonstrates how to use a Teams message extension as a plugin in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
+| Northwind inventory message extension | This sample demonstrates how to use a Teams message extension as an agent in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
 ## See also
 
-* [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend bot-based message extension as agent](build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
+* [Microsoft 365 Copilot agent FAQ](../teams-faq.md#microsoft-365-copilot)
