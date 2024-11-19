@@ -1,5 +1,5 @@
 ---
-title: Guidelines to Validate Copilot Agents
+title: Guidelines to Validate Agents
 description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
@@ -290,7 +290,7 @@ For a agent to be validated, invoked, and to work seamlessly, ensure that it mee
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
-| Zero regressions | If you need to resubmit your Copilot agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
+| Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
@@ -360,7 +360,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Agent must have Action or knowledge source
 
-* Your Copilot agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
+* Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
@@ -392,6 +392,6 @@ Agents that use OpenAPI specs must ensure the following security standards:
 ## See also
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
-* [Guidelines to create and upgrade Copilot agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
+* [Guidelines to create and upgrade agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
 * [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)
