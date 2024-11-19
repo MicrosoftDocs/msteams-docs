@@ -66,17 +66,17 @@ You can choose one or more of the following capabilities for your bot app. Use e
 * **Conventional bots**:
 
   * **Conversational bot**:
-    A conversational bot is a chat bot that can simulate conversation with users, who can use it to interact with a web service. The conversation is made possible through text, interactive cards, and dialogs. This bot can understand user inputs and respond accordingly. You can use it to help users with virtual assistance, customer service, and more.
+    A conversational bot simulates interactions with users, allowing them to engage with a web service through text, interactive cards, and dialogs. It understands user input and responds accordingly, making it useful for virtual assistance, customer service, and more.
 
     For more information, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 
   * **Notification bot**:
-    A notification bot is an automated bot that sends notifications to users in a Teams channel, group chat, or personal chat. You can use notification bots for user scenarios such as sending reminders or alerts, or sharing news or updates. Users can also interact with interactive notification bots by responding to options or links within the notification or even sharing input or feedback.
+    A notification bot is an automated tool that sends alerts to users in Teams channels, group chats, or personal chats. It can be used for scenarios like sending reminders, alerts, or updates. Users can also interact with the bot by responding to options or links within the notification or by providing feedback.
 
-      For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
+    For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 
   * **Workflow bot**:
-    You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
+    A workflow bot automates and streamlines business processes by interacting with users, applications, and data to manage tasks and workflows. It can automate repetitive tasks, assign work, track progress, and more, improving efficiency by reducing manual effort.
 
     For more information, see [build command bot with JavaScript](../sbs-gs-workflow-bot.yml).
 
