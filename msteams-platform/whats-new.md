@@ -431,7 +431,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 November**
 
-* ***November 18, 2024***: [Introduced optional `abbreviated` property for app display name on the app bar.](m365-apps/specify-runtime-requirements.md)
+* ***November 19, 2024***: [Introduced optional `abbreviated` property for app display name on the app bar.](./resources/schema/manifest-schema-dev-preview.md#name)
 
 :::column-end:::
 :::row-end:::
