@@ -43,7 +43,7 @@ Descriptions enhance the usability and effectiveness of a message extension agen
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
 * **Semantic description**: Semantic description helps Microsoft 365 Copilot generate content by providing a conceptual understanding of the agent's capabilities and scenarios where it can help achieve user goals and match user’s intent with the agent's capabilities.
 
-For more information, see [guidelines to create and upgrade agents](dev-guidelines-copilot-agents.md).
+For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
 All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a agent in Microsoft 365 Copilot.
 
@@ -53,7 +53,7 @@ Before you get started, ensure that you're familiar with the following standards
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agents-for-microsoft-365-copilot).
 
-* [Guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](dev-guidelines-copilot-agents.md).
+* [Guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](dev-guidelines-agents.md).
 
 ## Create bot-based message extension
 

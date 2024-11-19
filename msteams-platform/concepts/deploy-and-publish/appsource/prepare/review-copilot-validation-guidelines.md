@@ -392,6 +392,6 @@ Agents that use OpenAPI specs must ensure the following security standards:
 ## See also
 
 * [Teams Store validation guidelines](teams-store-validation-guidelines.md)
-* [Guidelines to create and upgrade agents](../../../../messaging-extensions/dev-guidelines-copilot-agents.md)
+* [Guidelines to create and upgrade agents](../../../../messaging-extensions/dev-guidelines-agents.md)
 * [Extend bot-based message extension as agent for Microsoft 365 Copilot](../../../../messaging-extensions/build-bot-based-agent.md)
 * [Extend Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/)

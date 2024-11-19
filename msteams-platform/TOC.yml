@@ -563,7 +563,7 @@
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for agents
-        href: messaging-extensions/dev-guidelines-copilot-agents.md
+        href: messaging-extensions/dev-guidelines-agents.md
         displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
