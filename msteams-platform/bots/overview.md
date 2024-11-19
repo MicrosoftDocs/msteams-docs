@@ -9,19 +9,9 @@ ms.author: surbhigupta
 
 # Bot overview
 
-A bot is a software application that performs automated tasks by interacting with systems or users. From simple automation tools to sophisticated artificial intelligence (AI) powered apps, bots have transformed the way users interact with technology. Bots can streamline tasks and enhance efficiency.
+Bots are software applications that interact with users through text-based conversations. Simple bots follow predefined rules to answer questions or provide basic support. AI-powered bots, however, use artificial intelligence to understand natural language, engage in complex conversations, and perform a wider range of tasks.
 
-You can leverage bot capabilities such as chatbots, virtual assistants, workflow, and have diverse applications across industries such as healthcare, customer service, education, finance, and more. Bots bring efficiency in automation, scalability, continual availability. With AI bots, you can offer tailored experiences for the users.
-
-Microsoft 365 Copilot and Teams offer a platform for developers to take their AI bots to the next level - transforming them into custom engine agents. You can make your bot accessible across various systems. This means your bot can help users make informed decisions, automate tasks, and generate valuable information seamlessly.
-
-## What are the benefits of a bot?
-
-Bots can save you time and effort by handling tasks that would otherwise take up your time. They can work 24/7, and can handle multiple tasks at once. As a developer, you'll craft interactive and intelligent solutions to enhance user experiences.
-
-Bot app users can access and use your bot app within Teams.
-
-:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
+Teams bots can be built as virtual assistants within Microsoft Teams and Microsoft 365, with or without AI, to enhance productivity by automating tasks, providing constant support, and enhancing customer engagement.
 
 Bot apps offer a range of business advantages:
 
@@ -31,13 +21,13 @@ Bot apps offer a range of business advantages:
 1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
 1. Scalability: As user needs grow, bots can be easily scaled to handle more tasks or interactions.
 
-In short, bots can make your life easier by automating tasks, providing constant support, and enhancing customer engagement.
-
 ## How do bots work?
 
-A bot works by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, determines what you need, and then provides a response or performs an action.
+A Teams bot works by following a set of rules or using AI to understand and respond to your requests. When you send a message to a bot, it processes your input, determines what you need, and then provides a response or performs an action.
 
-This article guides you through the developer journey, showcasing how a bot interacts with users or systems, and explaining bot concepts. In addition, you'll explore the capabilities you'll integrate into your bot application.
+Here's an example of a simple bot on Teams that takes short commands from a user:
+
+:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
 
 ### Bots - the developer experience
 
@@ -45,7 +35,7 @@ Let's consider an example: As a developer, you must build a bot to automate repe
 
 :::image type="content" source="../assets/images/bots/chatbot-dev-ux.png" alt-text="Image shows developer experience for a chatbot.":::
 
-### Understand bot basics
+### Understand bot development basics
 
 Let's learn about some common bot elements and how they work together to make a bot effective within Teams.
 
