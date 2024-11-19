@@ -186,6 +186,8 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 
 To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
+
+
 :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="Screenshot shows how to clear the app data in iOS mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
 # [Android](#tab/android2)
