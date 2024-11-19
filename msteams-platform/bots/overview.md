@@ -80,7 +80,12 @@ You can choose one or more of the following capabilities for your bot app. Use e
   * **Workflow bot**:
     You use a workflow bot to automate or streamline business processes. This bot can interact with users, applications, and data to progress tasks and workflows. You can use workflow bots to automate repetitive tasks, assign tasks to team members, track progress, and more. They're used to bring efficiency through automation and reduction of manual effort.
 
-    For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
+    For more information, see [build command bot with JavaScript](../sbs-gs-workflow-bot.yml).
+
+  * **Command bot**:
+    Use a command bot to automate responses for simple commands in a chat. With Teams Toolkit, you can easily create a command bot template that displays the UI using an Adaptive Card.
+
+    For more information, see [Build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
 ## Next step
 
