@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Bot overview
 
-Bots are software apps that chat with users through text. Bots follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
+Bots are software applications that interact with users through text-based conversations. Bots follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
 
 Bot apps offer a range of business advantages:
 
-1. Automation: Bots can handle repetitive tasks, saving you time and effort.
-1. Availability: Bots can work round-the-clock without needing breaks.
-1. Efficiency: Bots can manage multiple tasks simultaneously, improving overall efficiency.
-1. Customer Engagement: Bots can interact with customers and provide instant responses and support.
-1. Scalability: Bots can be easily scaled to handle more tasks or interactions as user needs evolve.
+1. Automation: Bots handle repetitive tasks, saving you time and effort.
+1. Availability: Bots work round-the-clock without needing breaks.
+1. Efficiency: Bots manage multiple tasks simultaneously, improving overall efficiency.
+1. Customer Engagement: Bots interact with customers and provide instant responses and support.
+1. Scalability: Bots can be scaled to handle more tasks or interactions as user needs evolve.
 
 ## How do bots work?
 

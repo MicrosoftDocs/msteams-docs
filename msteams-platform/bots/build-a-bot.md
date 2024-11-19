@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Let's build a bot
 
-When deciding how to develop your bot, it's important to know your options. You need to choose between an AI-enabled bot or a conventional one. This article gives a quick overview to help you start. It shows you how to build a basic bot app and then enhance it into a custom engine agent.
+When deciding how to develop your bot, it's important to know your options. You must choose between an AI-enabled bot or a conventional one. This article gives a quick overview to help you start. It shows you how to build a basic bot app and then enhance it into a custom engine agent.
 
 ## Choose the tools and platforms
 
@@ -26,7 +26,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 ## Build a bot
 
-Let's start by building a conversational bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library. After you build a conventional Teams bot app, you can add the AI layer to your bot.
+Let's start by building a bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library. After you build a conventional Teams bot app, you can add the AI layer to your bot.
 
 ### Build a conventional Teams bot app
 
