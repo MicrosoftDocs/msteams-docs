@@ -400,3 +400,4 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 * [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
 * [Get started with Teams AI library](teams-conversational-ai/how-conversation-ai-get-started.md)
+* [Streaming UX in bots](~/bots/streaming-ux.md)
