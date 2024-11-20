@@ -5,6 +5,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 11/18/2024
 ---
 
 # Bot configuration experience
@@ -22,6 +23,8 @@ Here's an example, where a user adds the bot to a group chat and then configures
 **Reconfigure**
 
 :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+
+To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Build bot configuration experience
 
