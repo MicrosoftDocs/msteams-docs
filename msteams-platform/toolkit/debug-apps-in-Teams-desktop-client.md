@@ -1,7 +1,7 @@
 ---
 title: Debug your apps in Teams Desktop Client
 author: surbhigupta
-description: Learn how to debug your bot, Copilot plugin, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
+description: Learn how to debug your bot, Copilot agent, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -23,7 +23,7 @@ The following are the advantages of Teams desktop client:
 Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by the Teams Toolkit:
 
 * Bot.
-* Copilot plugin.
+* Copilot agent.
 * Custom engine agent.
 * Message extension.
 
