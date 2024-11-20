@@ -452,7 +452,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |---|---|---|---|---|
 |`short`|String|30 characters|✔️|The short display name for the app.|
 |`full`|String|100 characters|✔️|The full name of the app. It's used if the full app name exceeds 30 characters.|
-|`abbreviated`|String|15 characters| |Abbreviated name for the app; used as the display name on the app bar. If not specified, `short` name is used on the app bar.|
+|`abbreviated`|String|15 characters| |Abbreviated name for the app; used as the display name on the app bar on the left hand side of the UI. If not specified, `short` name is used on the app bar.|
 
 ## description
 
