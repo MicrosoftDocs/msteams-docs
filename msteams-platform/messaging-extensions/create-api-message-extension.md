@@ -620,7 +620,7 @@ To test your API-based message extension created in the Developer Portal for Tea
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
+1. From the left pane, select **Teams Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
@@ -730,7 +730,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
-1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
@@ -890,60 +890,6 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 ## Multi parameters
 
 Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date.
-
-# [Teams Toolkit](#tab/teams-toolkit)
-
-To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
-
-1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
-1. Select **Create a New App**.
-1. Select **Message Extension**.
-
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
-
-1. Select **Custom Search Results**.
-
-1. Select one of the following options:
-    1. To build from the beginning, select **Start with a new API**.
-    1. If you already have an OpenAPI description document, select **Start with an OpenAPI Description Document**.
-
-     :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
-
-1. Enter or browse the OpenAPI Description document location.
-
-      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI Description document location.":::
-
-1. From the API list, select the required APIs and select **OK**.
-
-      > [!NOTE]
-      > GET and POST APIs are supported for API-based message extensions.
-
-1. Select **Default folder**.
-1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
-1. Under **LIFECYCLE**, select **Provision**.
-1. From the left pane, select **Teams Toolkit**.
-1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
-
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
-
-1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
-1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
-1. Select your message extension from the list and enter a search command in the search box.
-1. Select the required parameter from the **PetId** dropdown and enter required details as the secondary parameter in the **Text** box.
-
-    :::image type="content" source="../assets/images/messaging-extension/me-petid.png" alt-text="Screenshot shows you the message extension card in Teams to add petId and text.":::
-
-1. Select **Search** and then select the output from the flyout menu.
-
-    :::image type="content" source="../assets/images/messaging-extension/me-plugin-petid.png" alt-text="Screenshot shows you the message extension in Teams plugins.":::
-
-1. The Adaptive Card with required detail appears in the message compose area. Select **Enter**.
-
-    :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
-
-Now you've succesfully created multi paramter in message extension.
 
 # [App manifest](#tab/app-manifest)
 
@@ -1154,6 +1100,60 @@ You can specify the input types, titles, descriptions, and required fields for t
                         }
                     ],
 ```
+
+# [Teams Toolkit](#tab/teams-toolkit)
+
+To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
+
+1. Open **Visual Studio Code**.
+1. From the left pane, select **Teams Toolkit**.
+1. Select **Create a New App**.
+1. Select **Message Extension**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
+
+1. Select **Custom Search Results**.
+
+1. Select one of the following options:
+    1. To build from the beginning, select **Start with a new API**.
+    1. If you already have an OpenAPI description document, select **Start with an OpenAPI Description Document**.
+
+     :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
+
+1. Enter or browse the OpenAPI Description document location.
+
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI Description document location.":::
+
+1. From the API list, select the required APIs and select **OK**.
+
+      > [!NOTE]
+      > GET and POST APIs are supported for API-based message extensions.
+
+1. Select **Default folder**.
+1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
+1. Under **LIFECYCLE**, select **Provision**.
+1. From the left pane, select **Teams Toolkit**.
+1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
+1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
+1. Select your message extension from the list and enter a search command in the search box.
+1. Select the required parameter from the **PetId** dropdown and enter required details as the secondary parameter in the **Text** box.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-petid.png" alt-text="Screenshot shows you the message extension card in Teams to add petId and text.":::
+
+1. Select **Search** and then select the output from the flyout menu.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-plugin-petid.png" alt-text="Screenshot shows you the message extension in Teams plugins.":::
+
+1. The Adaptive Card with required detail appears in the message compose area. Select **Enter**.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
+
+Now you've succesfully created multi paramter in message extension.
 
 ---
 
