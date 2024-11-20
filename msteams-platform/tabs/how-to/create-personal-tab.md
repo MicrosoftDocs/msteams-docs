@@ -1,29 +1,29 @@
 ---
-title: Methods to Build Personal Tab App
+title: Methods to Build Tab App
 author: laujan
-description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
+description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 02/27/2023
+ms.date: 11/18/2024
 ---
 
-# Create a personal tab
+# Create a tab
 
-Personal tabs, along with personally scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
+Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
 
 > [!IMPORTANT]
 >
 > * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 > * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
-Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
-## Create a personal tab with Node.js
+## Create a tab with Node.js
 
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
@@ -37,18 +37,18 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
     npm install generator-teams --global
     ```
 
-Following are the steps to create a personal tab:
+Following are the steps to create a tab:
 
-1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
-1. [Add a content page to the personal tab](#add-a-content-page-to-the-personal-tab)
+1. [Generate your application with a tab](#generate-your-application-with-a-tab)
+1. [Add a content page to the tab](#add-a-content-page-to-the-tab)
 1. [Create your app package](#create-your-app-package)
 1. [Build and run your application](#build-and-run-your-application)
-1. [Establish a secure tunnel to your personal tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
 1. [Upload your application to Teams](#upload-your-application-to-teams)
 
-### Generate your application with a personal tab
+### Generate your application with a tab
 
-1. At the command prompt, create a new directory for your personal tab.
+1. At the command prompt, create a new directory for your tab.
 
 1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
@@ -134,9 +134,9 @@ Following are the steps to create a personal tab:
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
 
-### Add a content page to the personal tab
+### Add a content page to the tab
 
-Create a content page and update the existing files of the personal tab application:
+Create a content page and update the existing files of the tab application:
 
 1. Create a new **personal.html** file in your Visual Studio Code with the following markup:
 
@@ -233,7 +233,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
-1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
+1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your tab.
 
     :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
 
@@ -253,21 +253,21 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your tab":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded":::
 
-1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
+1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your tab.
 
-   Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tabs in Teams.
 
 ::: zone-end
 
 ::: zone pivot="razor-csharp"
 
-## Create a personal tab with ASP.NET Core
+## Create a tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -277,15 +277,15 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Following are the steps to create a personal tab:
+Following are the steps to create a tab:
 
-1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab-1)
+1. [Generate your application with a tab](#generate-your-application-with-a-tab-1)
 1. [Update and run your application](#update-and-run-your-application)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-1)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
 
-### Generate your application with a personal tab
+### Generate your application with a tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -414,13 +414,13 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
 
-## Create a personal tab with ASP.NET Core MVC
+## Create a tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -430,15 +430,15 @@ ngrok http 3978 --host-header=localhost
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Following are the steps to create a personal tab:
+Following are the steps to create a tab:
 
-1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab-2)
+1. [Generate your application with a tab](#generate-your-application-with-a-tab-2)
 1. [Update and run application](#update-and-run-your-application-1)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
 1. [Preview your app in Teams](#preview-your-app-in-teams-1)
 
-### Generate your application with a personal tab
+### Generate your application with a tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -583,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your personal tab is successfully created and added in Teams. You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
@@ -786,7 +786,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you've the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you've the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -970,11 +970,11 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
-## Reorder static personal tabs
+## Reorder tabs
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array. 
 
 ``` JSON
 
@@ -993,6 +993,10 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
+> [!NOTE]
+> In mobile, tabs are reordered as defined in `staticTabs`.
+
+This property also enables you to set the default landing capability for your app. You can configure the app to open as a tab or a bot by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Extend static tabs to group chat, channels, and meetings
 
@@ -1057,11 +1061,50 @@ pages.config.setConfig({
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
+## Offline tabs
+
+> [!NOTE]
+> Personal tabs with offline functionality are only supported on Teams in Android devices.
+
+You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
+
+* Record data through forms that can include images and videos.
+* View details of previously submitted requests, incidents, or forms.
+
+When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
+
+:::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
+
+### Build an offline tab
+
+Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
+
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
+
+1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
+
+1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
+
+   :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code." lightbox="../../assets/images/tabs/open-tab-sample-vsc.png":::
+
+1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
+
+1. Select the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
+
+1. Sign in with your Microsoft 365 account, if prompted.
+
+1. Select **Add** when a dialog box opens to let you add the tab app to Teams.
+
+   :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
+
+Congratulations! You've successfully created a Teams tab with offline functionality.
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
 |Tab personal| Sample app, which showcases custom personal Tab with ASP.NET core for group chat, channels, and meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal-quickstart/js) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Offline personal tab | The sample app showcases a personal tab app that functions offline within Microsoft Teams. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-support-offline/nodejs/demo-manifest/tab-support-offline.zip)|
 
 ## Next step
 
@@ -1075,5 +1118,4 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Tabs on mobile](../design/tabs-mobile.md)

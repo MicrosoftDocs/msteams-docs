@@ -79,7 +79,7 @@ conceptualContent:
           text: Extend Teams apps across Microsoft 365
         - url: /microsoft-365-copilot/extensibility/
           itemType: concept
-          text: Extend Microsoft Copilot for Microsoft 365
+          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities
@@ -107,9 +107,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: messaging-extensions/build-bot-based-plugin.md
+        - url: messaging-extensions/build-bot-based-agent.md
           itemType: concept
-          text: Build bot-based search message extension plugin
+          text: Build bot-based search message extension agent
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library
