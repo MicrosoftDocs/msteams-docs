@@ -113,12 +113,11 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Augmentation**
     :::column-end:::
     :::column span="2":::
-        Enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, tailor your model to your needs to increase its accuracy and desired outcomes.
-
-            * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external data sources into your model’s responses. This enables up-to-date and contextually accurate results without fine-tuning or re-training your model.
-            * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
-            * **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-            * **Functions**: Produce structured responses from your model by employing customizable user-defined functions. Use JSON schemas to define the parameters and their format. The Action Planner assesses model responses against the schema and makes repairs to increase response reliability and consistency.
+        Enhance your AI model’s responses with Augmentation. Tailor your model using different modes for accuracy and desired outcomes:
+            • **Retrieval Augmented Generation (RAG)**: Incorporate real-time, dynamic external data sources for up-to-date, accurate results without re-training.
+            • **Monologue**: Create AutoGPT-style agents for multi-step actions with full schema validation and automatic repair.
+            • **Sequence**: Enable your AI assistant to return a sequence of actions with schema validation for reliability.
+            • **Functions**: Produce structured responses using customizable user-defined functions. The Action Planner assesses and repairs model responses for reliability and consistency.
     :::column-end:::
 :::row-end:::
 :::row:::
