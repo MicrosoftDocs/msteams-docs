@@ -1,5 +1,5 @@
 ---
-title: Introduction to Teams AI Library
+title: Introduction to Teams AI library
 description: Learn about Teams AI library, Teams-centric component scaffolding, natural language modeling, prompt engineering, LLM, action planner, assistants API, augmentation.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/12/2024
 
 # Teams AI library
 
-Teams AI Library is a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
+Teams AI library is a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
@@ -18,9 +18,9 @@ You can leverage prebuilt, reusable code snippets that allow you to quickly buil
 
 ## Why use Teams AI library?
 
-The AI Library is a Teams-centric interface to Large Language Models. Your apps can use LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your app's skills.
+The Teams AI library enables your apps to engage users in natural, conversational interactions. These interactions can be guided toward specific app functionalities or tasks, allowing your app to better understand and process user intent.
 
-You can focus on writing your business logic and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
+You can rely on Teams' built-in conversational bot capabilities (such as Power Virtual Agents or the Bot Framework) to handle the complexities of natural language processing.
 
 :::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
@@ -32,7 +32,7 @@ You can focus on writing your business logic and allow Teams to handle the compl
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
-The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams. You can use the programming language you're most comfortable with. We're committed to a mindset where you build AI products with the tools and languages of your choice to make the best experiences possible for your customers on Teams.
+The Teams AI library supports both JavaScript and C#. It allows you to harness AI capabilities to build intelligent, user-friendly applications for Microsoft Teams. You can choose the programming language that best suits your project needs. The Teams AI library provides the flexibility to create AI-powered experiences using the tools and languages you're most comfortable with, and ensures the best possible outcomes for your Teams users.
 
 ## How do AI library features benefit me?
 
@@ -142,7 +142,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Enhanced reasoning**
     :::column-end:::
     :::column span="2":::
-        Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, it prompts the bot to critically evaluate its potential responses before sending. The bot identifies inaccuracies and corrects its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment that builds trust in the product and increases user engagement.
+        Teams AI library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, it prompts the bot to critically evaluate its potential responses before sending. The bot identifies inaccuracies and corrects its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment that builds trust in the product and increases user engagement.
     :::column-end:::
 :::row-end:::
 
