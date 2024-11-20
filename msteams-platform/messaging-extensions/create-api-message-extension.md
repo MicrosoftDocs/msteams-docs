@@ -718,7 +718,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
         :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
-      > The API key must be a string with 10 to 2,048 characters.
+      > The API key must be a string with 10 to 2048 characters.
 
     ---
 

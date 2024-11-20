@@ -112,7 +112,7 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 ## Best practices
 
 * **API key**:
-  * The API key must have at least 10 characters and at most 2,048 characters.
+  * The API key must have at least 10 characters and at most 2048 characters.
   * After you update the API key, it takes up to one hour for the key to reflect throughout the system.
 
 * **Base URL**:
