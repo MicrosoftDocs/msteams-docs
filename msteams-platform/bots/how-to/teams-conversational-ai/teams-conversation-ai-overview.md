@@ -36,7 +36,7 @@ The Teams AI library supports both JavaScript and C#. It allows you to harness A
 
 ## How do AI library features benefit me?
 
-The Teams AI library is equipped with useful features that make building your AI bot a lot easier.
+The Teams AI library offers a variety of features that can simplify the development of your AI bot.
 
 As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my AI bot a breeze. I want my AI Lightbot to make the user experience way better and keep them more involved.
 
@@ -47,7 +47,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Localization**
     :::column-end:::
     :::column span="2":::
-        Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, it's translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
+        The Teams AI library uses OpenAI's GPT model for localization. User inputs in any language are translated to intents, entities, and actions. This approach eliminates the need for maintaining localization records.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -55,9 +55,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **LLM modularity**
     :::column-end:::
     :::column span="2":::
-        Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
-
-        Teams AI library is built to use OpenAI’s GPT model. You have the flexibility to swap it with any LLM of your choice without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
+        An LLM generates coherent and diverse natural language text using latent variables. The Teams AI library uses OpenAI's GPT model but allows you to swap it with any LLM without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -65,13 +63,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Responsible AI**
     :::column-end:::
     :::column span="2":::
-        Teams AI library allows you to create ethical and responsible conversational apps using:
-
-          * Moderation hooks: To regulate bot responses against any moderation API.
-          * Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
-          * Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
-
-        Teams AI library offers support from low code to complex scenarios. It extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
+        The Teams AI library helps build conversational apps with moderation hooks, conversation sweeping, and feedback loops. It supports both low code and complex scenarios and extends capabilities with AI constructs for natural language modeling, user intent, personalization, and automated context-aware conversations.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -79,12 +71,12 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="2":::
-        A simple interface for actions and predictions allows a bot to react when it can take an action. Ambient presence lets a bot learn intent, use prompts based on business logic, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
+        A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
-            1. Allows prompts to make summarizations over a period of time focused on the user’s interactions.
+            1. Uses prompts to make summarizations over time focused on the user’s interactions.
             1. Provides actions to summarize the chat content.
-    :::column-end:::
+:::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
@@ -92,6 +84,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column-end:::
     :::column span="2":::
         Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Add more plugins for other models like Llama-2 to give you the flexibility to choose the best model for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
+
     :::column-end:::
 :::row-end:::
 :::row:::
