@@ -4,7 +4,7 @@ description: Learn how to integrate Moodle LMS with Teams for audio/video calls,
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 06/17/2022
+ms.date: 11/22/2024
 ---
 
 # Moodle learning management system
