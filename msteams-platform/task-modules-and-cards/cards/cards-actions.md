@@ -419,7 +419,7 @@ CardFactory.actions([
 
 Adaptive Cards support the following six action types:
 
-* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Open the specified url.
+* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Opens the specified url.
 * [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
 * [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
 * [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
@@ -588,7 +588,7 @@ The following card payload shows a conditionally enabled button:
 
 **Disabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams.":::
+:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/disabled.png":::
 
 :::column-end:::
 
@@ -596,7 +596,7 @@ The following card payload shows a conditionally enabled button:
 
 **Enabled**
 
-:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams.":::
+:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/enabled.png":::
 
 :::column-end:::
 
