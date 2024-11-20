@@ -740,7 +740,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
 1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 
