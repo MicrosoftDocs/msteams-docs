@@ -1159,6 +1159,10 @@
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/resources/partner-apps-for-moodle.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodle-overview.md"
       }
     ]
 }
