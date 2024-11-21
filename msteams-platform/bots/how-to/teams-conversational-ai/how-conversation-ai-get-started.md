@@ -726,8 +726,12 @@ async def on_pause(
 
 ---
 
-If you use either `sequence`, `monologue`, or `tools` augmentation, it's impossible for the model to hallucinate an invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action. Sequence augmentation is suitable for tasks that require multiple steps or complex logic.
-Monologue augmentation is suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
+Using sequence, monologue, or tools augmentation prevents the model from hallucinating invalid function names, action names, or parameters. Create an actions file to:
+
+* Define actions for prompt augmentation.
+* Indicate when to perform actions.
+
+Sequence augmentation is ideal for multi-step or complex tasks, while monologue augmentation suits tasks needing natural language understanding, flexibility, and creativity.
 
 In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
 
