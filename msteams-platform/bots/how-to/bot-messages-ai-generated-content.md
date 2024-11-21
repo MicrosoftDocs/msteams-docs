@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 11/13/2024
 ---
 
-# Bot messages with AI-generated content
+# Enhance AI-generated bot messages
 
 AI label, citation, feedback buttons, and sensitivity label in your bot’s messages improve user engagement and foster transparency and trust.
 
