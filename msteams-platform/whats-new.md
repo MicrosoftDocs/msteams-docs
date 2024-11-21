@@ -532,7 +532,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***October 30, 2024***: Top-level domain third-party cookies in iframes are blocked, with deprecation rolling out on Chrome (1%) and soon Firefox and Safari.
+* ***November 25, 2024***: Future-proof your app for third-party cookie deprecation across major browsers.
 
 * ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
 

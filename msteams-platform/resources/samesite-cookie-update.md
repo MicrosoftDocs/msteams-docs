@@ -82,7 +82,7 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## Third party cookies deprecation
 
-All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`. This third party cookie deprecation is starting to roll out for all major browsers, with Chrome currently at a 1% rollout and other major browsers like Firefox and Safari to follow.
+Third-party cookies are in the process of being deprecated across all major browsers. All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`. 
 
 This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
 
@@ -100,9 +100,9 @@ Pop-out authentication isn't affected by third-party cookie deprecation, for the
 
 * The browsers that aren't Chromium-based such as Firefox align their cookie deprecation with Chromium-based browsers.
 
-The cookie app simulates this scenario. To use the cookie app:
+The app simulates this scenario. To use an app with cookies:
 
-1. Upload and open cookie app in an `iframe`.
+1. Upload and open your app in an `iframe`.
 1. Select **Partitioned Cookies**.
 
     :::image type="content" source="../assets/images/partitioned-cookies.png" alt-text="Screenshots show you the partitioned cookies in cookies app.":::
@@ -115,7 +115,7 @@ The cookie app simulates this scenario. To use the cookie app:
 
     :::image type="content" source="../assets/images/cookies-from-api.png" alt-text="Screenshot shows you how to set partitioned cookies from API.":::
 
-Now you can navigate to cookies tab in the Teams window and see that only `partitioned:false` and `secure:true` cookies are available:
+    Now you can navigate to cookies tab in the Teams window and see that only `partitioned:false` and `secure:true` cookies are available:
 
    :::image type="content" source="../assets/images/cookies-final.png" alt-text="Screenshot shows you the cookies tab with partitioned to false and secure to true cookies are available":::
 
@@ -127,7 +127,7 @@ The following screenshot represents the cookies accessible in the embedded `ifra
 
 ### Actions required for cookies set by iframe
 
-Embedded `iframes` must set cookies with the partitioned attribute as false. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
+Embedded `iframes` must set cookies with the partitioned attribute as true. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
 
 ## See also
 
