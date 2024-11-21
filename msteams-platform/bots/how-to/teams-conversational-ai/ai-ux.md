@@ -167,7 +167,3 @@ You can design your custom engine agent to understand and refer to conversationa
 ### Offer dynamic and contextual suggestion prompts
 
 Enhance your custom engine agent experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically. To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
-
-## Next step
-
-## See also
