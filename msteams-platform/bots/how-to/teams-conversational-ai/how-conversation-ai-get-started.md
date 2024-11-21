@@ -283,7 +283,7 @@ The application object automatically manages the conversation and user state of 
     });
 ```
 
-`TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor.
+`TurnStateFactory` allows you to create a custom state class for your app to store extra information or logic for your bot. You can override default properties like user input, bot output, or conversation history. To use it, create a class that extends the default turn state and pass a function that creates an instance of your class to the app constructor.
 
 # [JavaScript](#tab/javascript3)
 
@@ -301,7 +301,7 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
-The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+The `MemoryStorage()` function stores your bot's state. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt, and history. The `ai` object is then passed into the `Application`, which receives the AI components and the default prompt defined earlier.
 
 # [Python](#tab/python3)
 
@@ -325,7 +325,7 @@ app = Application[AppTurnState](
 
 ## Register data sources
 
-A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file.
+A vector data source simplifies adding RAG to any prompt. Register a named data source with the planner and specify it in the prompt's `config.json` file to augment the prompt. This allows AI to inject relevant information from external sources like vector databases or cognitive search into the prompt.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L118)
 
