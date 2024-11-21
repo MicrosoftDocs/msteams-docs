@@ -542,13 +542,11 @@ The following table includes the query parameters:
 
 ### Prompt management
 
-Prompt management helps adjust the size and content of the prompt sent to the language model, considering the available token budget and the data sources or augmentations.
-
-If a bot has a maximum of 4,000 tokens where 2,800 tokens are for input and 1,000 tokens are for output, the model can manage the overall context window and ensure that it never processes more than 3,800 tokens. The model starts with a text of about 100 tokens, adds in the data source of another 1,200 tokens, and then looks at the remaining budget of 1,500 tokens. The system allocates the remaining 1,500 tokens to the conversation history and input. The conversation history is then condensed to fit the remaining space, ensuring the model never surpasses 2,800 tokens.
+Prompt management adjusts the size and content of prompts based on the token budget and data sources. For a bot with a 4,000-token limit, where 2,800 tokens are for input and 1,000 tokens are for output, the model manages the context window to stay within 3,800 tokens. It starts with 100 tokens of text and adds 1,200 tokens from data sources. It allocates the remaining 1,500 tokens to conversation history and input and ensures the model never exceeds 2,800 tokens.
 
 ### Prompt actions
 
-Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
+Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint determines the necessary actions, extracts entities, and passes them as arguments to the action call.
 
 ```text
 The following is a conversation with an AI assistant.
@@ -560,7 +558,7 @@ The lights are currently {{getLightStatus}}.
 
 ### Prompt template
 
-Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
+A prompt template is a simple and powerful way to define and compose AI functions using plain text. You can create natural language prompts, generate responses, extract information, invoke other prompts, or perform any text-based task.
 
 The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and executes the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
