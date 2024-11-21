@@ -416,6 +416,6 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started with Teams AI library](how-conversation-ai-get-started.md)
+> [Build with Teams AI library](how-conversation-ai-get-started.md)
 > [!div class="nextstepaction"]
 > [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
