@@ -9,13 +9,13 @@ ms.date: 09/27/2024
 
 # Build custom engine agent user experience
 
-A custom engine agent transforms system interactions. For UX designers and developers, creating an exceptional user experience is key to its success. This article outlines the steps, principles, and considerations for designing intuitive, user-centered interfaces that integrate AI capabilities seamlessly. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
+A custom engine agent transforms system interactions. For UX designers and developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent includes features that enhance its functionality and integration within the Microsoft ecosystem:
 
-- **Generative AI integration**: Utilizes advanced AI models to facilitate natural language processing and interaction.
-- **Bots**: Enables extending or building bots to utilize LLM and generative AI to provide high quality chat bots experience.
-- **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the agent's behavior and responses to specific use cases.
+- **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
+- **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.
+- **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
 
-To achieve this, you must follow some mandatory requirements and best practices.
+To achieve this, you must follow mandatory requirements and best practices.
 
 ## Ensure mandatory requirements for custom engine agent
 
