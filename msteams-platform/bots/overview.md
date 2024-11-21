@@ -13,11 +13,11 @@ Bots are software applications that interact with users through text-based conve
 
 Bot apps offer a range of business advantages:
 
-1. Automation: Bots handle repetitive tasks, saving you time and effort.
-1. Availability: Bots work round-the-clock without needing breaks.
-1. Efficiency: Bots manage multiple tasks simultaneously, improving overall efficiency.
-1. Customer Engagement: Bots interact with customers and provide instant responses and support.
-1. Scalability: Bots can be scaled to handle more tasks or interactions as user needs evolve.
+1. **Automation**: Bots handle repetitive tasks, saving you time and effort.
+1. **Availability**: Bots work round-the-clock without needing breaks.
+1. **Efficiency**: Bots manage multiple tasks simultaneously, improving overall efficiency.
+1. **Customer engagement**: Bots interact with customers and provide instant responses and support.
+1. **Scalability**: Bots can be scaled to handle more tasks or interactions as user needs evolve.
 
 ## How do bots work?
 
@@ -83,7 +83,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
   * **Command bot**:
     Use a command bot to automate responses for simple commands in a chat. With Teams Toolkit, you can easily create a command bot template that displays the UI using an Adaptive Card.
 
-    For more information, see [Build command bot with JavaScript](../sbs-gs-commandbot.yml).
+    For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
 ## Next step
 
