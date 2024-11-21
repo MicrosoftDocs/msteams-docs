@@ -9,9 +9,7 @@ ms.date: 11/27/2023
 
 # Let's build an AI bot
 
-Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
-
-You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
+The Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access and custom UI creation. You can easily integrate prompt management and safety moderation and create bots using OpenAI or Azure OpenAI for an AI-driven experience.
 
 ## Initial setup
 
