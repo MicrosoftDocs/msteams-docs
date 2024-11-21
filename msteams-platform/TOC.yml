@@ -449,9 +449,6 @@
     - name: Build custom engine agent user experience
       href: bots/how-to/teams-conversational-ai/ai-ux.md
       displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
-    - name: Teams AI library FAQs
-      href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md  
-
   - name: Understand bot concepts
     href: bots/bot-concepts.md
     displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
