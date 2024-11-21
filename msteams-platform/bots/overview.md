@@ -25,7 +25,7 @@ A Teams bot works by following a set of rules or using AI to understand and resp
 
 Here's an example of a simple bot on Teams that takes short commands from a user:
 
-:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot.":::
+:::image type="content" source="../assets/images/bots/chat-bot-ux.gif" alt-text="Graphical representation shows the user experience in a chat bot." Lightbox="../assets/images/bots/chat-bot-ux.gif":::
 
 ### Bots - the developer experience
 
