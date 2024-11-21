@@ -907,4 +907,4 @@ Use one of the following to migrate your bot app to use Teams AI library:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
+> [Understand Teams AI library](how-conversation-ai-core-capabilities.md)
