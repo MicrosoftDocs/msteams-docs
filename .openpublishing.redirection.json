@@ -1161,7 +1161,7 @@
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
       },
       {
-        "source_path": "msteams-platform/messaging-extensions/coversational-ai-faq.md",
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
       }
     ]
