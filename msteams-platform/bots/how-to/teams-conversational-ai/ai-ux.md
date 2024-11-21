@@ -13,9 +13,7 @@ A custom engine agent is designed to transform the way we interact with systems.
 
 The primary goals of creating excellent user experience include simplifying complex tasks, boosting productivity, and providing a personalized experience through adaptive learning.
 
-## What is a custom engine agent?
-
-Custom engine agents are advanced conversational Teams bots that leverage the Large Language Models (LLMs) to facilitate seamless user interaction. A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
+A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
 
 - **Generative AI integration**: Utilizes advanced AI models to facilitate natural language processing and interaction.
 - **Bots**: Enables extending or building bots to utilize LLM and generative AI to provide high quality chat bots experience.
