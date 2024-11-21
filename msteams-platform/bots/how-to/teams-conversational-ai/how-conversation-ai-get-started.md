@@ -481,17 +481,16 @@ export class VectraDataSource implements DataSource {
 
 Prompts are text pieces used to create conversational experiences, such as starting conversations, asking questions, and generating responses. They simplify the process of creating engaging interactions. A new object-based prompt system divides prompts into sections, each with its own token budget, which can either be a fixed set or proportional to the remaining tokens. You can generate prompts for both the Text Completion and Chat Completion style APIs.
 
-The following are a few guidelines to create prompts:
+To create effective prompts, follow these guidelines:
 
 * Provide instructions, examples, or both.
-* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional, and it might affect the response.
-* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response. A higher value such as 0.8 makes the output random, while a lower value such as 0.2 makes the output focused and deterministic.
+* Ensure quality data with enough examples and proofread them. While the model can identify spelling errors, it might assume intentionality in spelling mistakes, affecting responses.
+* Adjust prompt settings using `temperature` and `top_p` to control the model's response. Higher temperature such as 0.8 makes output random, while lower such as 0.2 makes it focused and deterministic.
 
-Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
+Create a folder called prompts and define your prompts there. When the user interacts with the bot using a text prompt, it responds with a text completion. Create the following files in the prompts folder:
 
-* `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
-  
-* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
+* `skprompt.txt`: Contains the prompts text and supports template variables and functions.
+* `config.json`: Contains the prompt model settings that ensure bot responses align with your requirements
 
    [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/tools/config.json)
 
