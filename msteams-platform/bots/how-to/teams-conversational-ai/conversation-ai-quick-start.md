@@ -417,7 +417,5 @@ You can also use the following tools to run and set up a sample:
 
 > [!div class="nextstepaction"]
 > [Get started with Teams AI library](how-conversation-ai-get-started.md)
-
-## See also
-
-[Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
+> [!div class="nextstepaction"]
+> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
