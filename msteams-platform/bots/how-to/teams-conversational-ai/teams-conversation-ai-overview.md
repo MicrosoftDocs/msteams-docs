@@ -337,4 +337,5 @@ The following code snippet shows how to enable tool choice and to toggle paralle
 
 ## See also
 
-[Copilot handoff](../conversations/bot-copilot-handoff.md)
+* [Copilot handoff](../conversations/bot-copilot-handoff.md)
+* [Teams AI library FAQs](../../../teams-faq.md#teams-ai-library)

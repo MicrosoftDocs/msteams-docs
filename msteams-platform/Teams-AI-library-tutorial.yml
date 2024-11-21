@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit
+title: Build a custom engine agent
 metadata:
   title: Tutorial - Build Custom Engine Agent
   description: Learn how to create a custom engine agent using Teams AI library and Teams Toolkit, set up data in Azure OpenAI, and configure custom engine agent.
