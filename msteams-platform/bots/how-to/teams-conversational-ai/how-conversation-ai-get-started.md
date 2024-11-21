@@ -779,9 +779,7 @@ You can use the `MaxHistoryMessages` and `MaxConversationHistoryTokens` argument
 
 ### Feedback loop
 
-A feedback loop helps monitor and improve the bot’s interactions, leading to more effective and user-friendly applications. Feedback is used to adjust and enhance the bot to meet user needs and expectations.
-
-A feedback loop includes:
+A feedback loop helps monitor and improve the bot’s interactions, leading to more effective and user-friendly applications. Feedback is used to adjust and enhance the bot to meet user needs and expectations. A feedback loop includes:
 
 * **Repair Loop**: It triggers if the model's response is inadequate. The conversation history forks, allowing the system to try different solutions without affecting the main conversation.
 * **Validation**: It verifies the corrected response and reinserts it into the main conversation if the response is validated successfully.
