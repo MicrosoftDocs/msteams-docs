@@ -9,17 +9,13 @@ ms.date: 09/27/2024
 
 # Build custom engine agent user experience
 
-A custom engine agent is designed to transform the way we interact with systems. For UX designers and developers, crafting an exceptional user experience is essential to unlocking its full potential. This article details the necessary steps, principles, and considerations for crafting intuitive, user-centered interfaces that seamlessly integrate AI capabilities.
-
-The primary goals of creating excellent user experience include simplifying complex tasks, boosting productivity, and providing a personalized experience through adaptive learning.
-
-A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
+A custom engine agent transforms system interactions. For UX designers and developers, creating an exceptional user experience is key to its success. This article outlines the steps, principles, and considerations for designing intuitive, user-centered interfaces that integrate AI capabilities seamlessly. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent encompasses the following features that aid its functionality and integration within the Microsoft ecosystem:
 
 - **Generative AI integration**: Utilizes advanced AI models to facilitate natural language processing and interaction.
 - **Bots**: Enables extending or building bots to utilize LLM and generative AI to provide high quality chat bots experience.
 - **Customizable orchestration**: Offers extensive customization options, allowing developers to tailor the agent's behavior and responses to specific use cases.
 
-To achieve this, you must follow some mandatory and recommended steps and requirements.
+To achieve this, you must follow some mandatory requirements and best practices.
 
 ## Ensure mandatory requirements for custom engine agent
 
