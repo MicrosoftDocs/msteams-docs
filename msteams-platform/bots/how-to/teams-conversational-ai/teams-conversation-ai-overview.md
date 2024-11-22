@@ -18,7 +18,7 @@ You can leverage prebuilt, reusable code snippets that allow you to quickly buil
 
 ## Why use Teams AI library?
 
-The Teams AI library enables your apps to engage users in natural and conversational interactions. These interactions can be guided toward specific app functionalities or tasks, allowing your app to better understand and process user intent.
+Teams AI library enables your apps to engage users in natural and conversational interactions. These interactions can be guided toward specific app functionalities or tasks, allowing your app to better understand and process user intent.
 
 You can rely on the built-in conversational bot capabilities in Teams (such as Power Virtual Agents or the Bot Framework) to handle the complexities of natural language processing.
 
@@ -39,14 +39,14 @@ Teams AI library offers a variety of features that can simplify the development 
 
 As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my custom engine agent a breeze. I want my AI-powered lightbot to make the user experience better and keep them more involved.
 
-How can I use the Teams AI library to make sure my custom engine agent runs smoothly and gives users a fun and interactive experience?
+How can I use Teams AI library to make sure my custom engine agent runs smoothly and gives users a fun and interactive experience?
 
 :::row:::
     :::column span="":::
         **Localization**
     :::column-end:::
     :::column span="2":::
-        The Teams AI library uses OpenAI's GPT model for localization. User inputs in any language are translated to intents, entities, and actions. This approach eliminates the need for maintaining localization records.
+        Teams AI library uses OpenAI's GPT model for localization. User inputs in any language are translated to intents, entities, and actions. This approach eliminates the need for maintaining localization records.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -70,7 +70,7 @@ How can I use the Teams AI library to make sure my custom engine agent runs smoo
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="2":::
-        A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to summarize a thread, the Teams AI library:
+        A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to summarize a thread, Teams AI library:
 
             1. Understands the intent as summarization.
             1. Uses prompts to make summarizations over time, focused on the user’s interactions.
@@ -113,7 +113,7 @@ How can I use the Teams AI library to make sure my custom engine agent runs smoo
     :::column span="2":::
         Enhance your AI model’s responses with Augmentation. Tailor your model using different modes for accuracy and desired outcomes:
 
-            * **Retrieval Augmented Generation (RAG)**: Incorporate real-time, dynamic external data sources for up-to-date, accurate results without re-training.
+            * **Retrieval-Augmented Generation (RAG)**: Incorporate real-time, dynamic external data sources for up-to-date, accurate results without re-training.
             * **Monologue**: Create AutoGPT-style agents for multi-step actions with full schema validation and automatic repair.
             * **Sequence**: Enable your AI assistant to return a sequence of actions with schema validation for reliability.
             * **Functions**: Produce structured responses using customizable user-defined functions. The Action Planner assesses and repairs model responses for reliability and consistency.
@@ -148,7 +148,7 @@ How can I use the Teams AI library to make sure my custom engine agent runs smoo
 
 ## Updates to Teams AI library
 
-The following table lists the updates to the Teams AI library:
+The following table lists the updates to Teams AI library:
 
 | Type | Description | .NET | JavaScript | Python |
 | --- | --- |:---:|:---:|:---:|
@@ -317,9 +317,9 @@ The following code snippet shows how to enable tool choice and to toggle paralle
 
 | Sample name | Description | .NET | Node.js | Python |
 | --- | --- | --- | --- | --- |
-| Echo bot | This sample shows how to incorporate a conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot) |
-| Search command message extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
-| Typeahead bot | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)|
+| Echo bot | This sample shows how to incorporate a conversational flow into a Microsoft Teams application using Bot Framework and Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot) |
+| Search command message extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
+| Typeahead bot | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)|
 | Conversational bot with AI: Teams chef | This sample shows how to incorporate conversational bot behavior into Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot) |
 | Message extensions: GPT-ME | This sample is a message extension for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
 | Light bot | This sample illustrates more complex conversational bot behavior into Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot) |

@@ -924,7 +924,7 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 
 <br>
 <details>
-<summary>What does the Teams AI library do?</summary>
+<summary>What does Teams AI library do?</summary>
 
 Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>

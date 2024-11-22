@@ -43,8 +43,6 @@ Let's learn about some common bot elements and how they work together to make a 
 * **Bot logic**: It's a key part of conversation logic. It works alongside the activity handler to define how decisions are made. This includes integrating rules, conditions, and other factors to determine how the bot must respond.
 * **Bot scope**: This refers to what a bot can do and how it interacts with users within Microsoft Teams. A bot can be deployed in Teams in three ways: as a personal chatbot, within a group chat, or within a channel.
 
-For more information, see [how Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
-
 ### Explore bot capabilities
 
 You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams AI library with Teams Toolkit to build these capabilities in your bot.
@@ -78,4 +76,4 @@ You can choose one or more of the following capabilities for your bot app. Use e
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Let's build a bot](build-a-bot.md)
+> [Types of bots](build-a-bot.md)

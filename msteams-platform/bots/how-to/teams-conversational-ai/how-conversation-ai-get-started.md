@@ -9,7 +9,7 @@ ms.date: 11/27/2023
 
 # Build with Teams AI library
 
-The Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access and custom UI creation. You can easily integrate prompt management and safety moderation, and create bots using OpenAI or Azure OpenAI for an AI-driven experience.
+Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access and custom UI creation. You can easily integrate prompt management and safety moderation, and create bots using OpenAI or Azure OpenAI for an AI-driven experience.
 
 ## Initial setup
 
@@ -110,7 +110,7 @@ app = Application[TurnState](
 
 ### Import Teams AI library
 
-Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
+Import all the classes from `@microsoft/teams-ai` to build your bot and use Teams AI library capabilities.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L13)
 
@@ -879,7 +879,7 @@ If you created your bot app with Bot Framework SDK, you can switch to Teams AI l
 
 In Teams AI library, the `Application` object replaces the traditional `ActivityHandler` object, supporting a simpler, fluent style of bot authoring compared to the inheritance-based `ActivityHandler` class. It includes built-in support for:
 
-* Calling into the Teams AI library's system for creating bots that use LLM and other AI capabilities.
+* Calling into Teams AI library's system for creating bots that use LLM and other AI capabilities.
 * Configuring user authentication for accessing third-party user data.
 
 Use one of the following to migrate your bot app to use Teams AI library:
