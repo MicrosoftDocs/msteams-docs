@@ -14,33 +14,32 @@ Teams AI library is a Teams-centric interface for integrating GPT-based language
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
-You can leverage prebuilt, reusable code snippets that allow you to quickly build intelligent apps. This capabilities-driven approach lets you focus on business logic rather than learning the intricacies of Microsoft Teams' conversational frameworks.
+You can leverage prebuilt, reusable code snippets that allow you to quickly build intelligent apps. This capabilities-driven approach allows you to focus on business logic rather than learning the intricacies of Microsoft Teams conversational frameworks.
 
 ## Why use Teams AI library?
 
-The Teams AI library enables your apps to engage users in natural, conversational interactions. These interactions can be guided toward specific app functionalities or tasks, allowing your app to better understand and process user intent.
+The Teams AI library enables your apps to engage users in natural and conversational interactions. These interactions can be guided toward specific app functionalities or tasks, allowing your app to better understand and process user intent.
 
-You can rely on Teams' built-in conversational bot capabilities (such as Power Virtual Agents or the Bot Framework) to handle the complexities of natural language processing.
+You can rely on the built-in conversational bot capabilities in Teams (such as Power Virtual Agents or the Bot Framework) to handle the complexities of natural language processing.
 
 :::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
+You can leverage Teams AI library to:
+
 * Use prebuilt templates to add Teams app capabilities.
-
 * Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
+* Use the library's planning engine that allows the model to identify the user's intent and then maps that intent to actions that you implement.
+* Add support for any LLM of your choice without changing the bot logic.
 
-* The library includes a planning engine that lets the model identify the user's intent and then maps that intent to actions that you implement.
+Teams AI library supports both JavaScript and C#. It allows you to harness AI capabilities to build intelligent, user-friendly applications for Microsoft Teams. The library provides the flexibility to create AI-powered experiences using the tools and languages that best suits your project needs and ensures the best possible outcomes for your Teams users.
 
-* You can easily add support for any LLM of your choice without changing the bot logic.
+## How do Teams AI library features benefit me?
 
-The Teams AI library supports both JavaScript and C#. It allows you to harness AI capabilities to build intelligent, user-friendly applications for Microsoft Teams. You can choose the programming language that best suits your project needs. The Teams AI library provides the flexibility to create AI-powered experiences using the tools and languages you're most comfortable with, and ensures the best possible outcomes for your Teams users.
+Teams AI library offers a variety of features that can simplify the development of your custom engine agent.
 
-## How do AI library features benefit me?
+As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my custom engine agent a breeze. I want my AI-powered lightbot to make the user experience better and keep them more involved.
 
-The Teams AI library offers a variety of features that can simplify the development of your AI bot.
-
-As a developer, I want to build an intelligent lightbot that controls the light in response to the user's command. I'm considering using Teams AI library because of its features that can make building my AI bot a breeze. I want my AI Lightbot to make the user experience way better and keep them more involved.
-
-How can I use the Teams AI library to make sure my bot runs smoothly and gives users a fun and interactive experience?
+How can I use the Teams AI library to make sure my custom engine agent runs smoothly and gives users a fun and interactive experience?
 
 :::row:::
     :::column span="":::
@@ -55,7 +54,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **LLM modularity**
     :::column-end:::
     :::column span="2":::
-        An LLM generates coherent and diverse natural language text using latent variables. The Teams AI library uses OpenAI's GPT model but allows you to swap it with any LLM without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
+        An LLM generates coherent and diverse natural language text using latent variables. Teams AI library uses OpenAI's GPT model but it allows you to swap it with any LLM without changing the bot logic. This means you can keep your app's content outside the public domain and confined to your preferred LLM model.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -63,7 +62,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Responsible AI**
     :::column-end:::
     :::column span="2":::
-        The Teams AI library helps build conversational apps with moderation hooks, conversation sweeping, and feedback loops. It supports both low code and complex scenarios and extends capabilities with AI constructs for natural language modeling, user intent, personalization, and automated context-aware conversations.
+        Teams AI library helps build conversational apps with moderation hooks, conversation sweeping, and feedback loops. It supports both low code and complex scenarios. The library extends capabilities with AI constructs for natural language modeling, user intent, personalization, and automated context-aware conversations.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -71,10 +70,10 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Predictive engine for mapping intents to actions**
     :::column-end:::
     :::column span="2":::
-        A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to quickly summarize a thread, the Teams AI library:
+        A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to summarize a thread, the Teams AI library:
 
             1. Understands the intent as summarization.
-            1. Uses prompts to make summarizations over time focused on the user’s interactions.
+            1. Uses prompts to make summarizations over time, focused on the user’s interactions.
             1. Provides actions to summarize the chat content.
 :::column-end:::
 :::row-end:::
@@ -84,7 +83,6 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column-end:::
     :::column span="2":::
         Action Planner is the main component that calls your LLM and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Add more plugins for other models like Llama-2 to give you the flexibility to choose the best model for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
-
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -97,7 +95,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
 
         Assistants API allows you to create powerful AI assistants capable of performing tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction to enable the development of assistants that can understand and respond in a conversational manner.
 
-        Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
+        Follow the [quick start guide for Assistants API](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -114,10 +112,11 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
     :::column-end:::
     :::column span="2":::
         Enhance your AI model’s responses with Augmentation. Tailor your model using different modes for accuracy and desired outcomes:
-            • **Retrieval Augmented Generation (RAG)**: Incorporate real-time, dynamic external data sources for up-to-date, accurate results without re-training.
-            • **Monologue**: Create AutoGPT-style agents for multi-step actions with full schema validation and automatic repair.
-            • **Sequence**: Enable your AI assistant to return a sequence of actions with schema validation for reliability.
-            • **Functions**: Produce structured responses using customizable user-defined functions. The Action Planner assesses and repairs model responses for reliability and consistency.
+
+            * **Retrieval Augmented Generation (RAG)**: Incorporate real-time, dynamic external data sources for up-to-date, accurate results without re-training.
+            * **Monologue**: Create AutoGPT-style agents for multi-step actions with full schema validation and automatic repair.
+            * **Sequence**: Enable your AI assistant to return a sequence of actions with schema validation for reliability.
+            * **Functions**: Produce structured responses using customizable user-defined functions. The Action Planner assesses and repairs model responses for reliability and consistency.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -125,7 +124,7 @@ How can I use the Teams AI library to make sure my bot runs smoothly and gives u
         **Vector data sources**
     :::column-end:::
     :::column span="2":::
-        Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embedding in the database.
+        Vector databases are designed to store vectors to enable efficient search. They return the most relevant results for a user's query. They allow RAG to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input is transformed into an embedding, and vector search techniques are used to find the most similar embedding in the database.
     :::column-end:::
 :::row-end:::
 
@@ -153,8 +152,8 @@ The following table lists the updates to the Teams AI library:
 
 | Type | Description | .NET | JavaScript | Python |
 | --- | --- |:---:|:---:|:---:|
-| OpenAIModel | The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2. | ✔️ | ✔️ | ✔️ |
-| Embeddings | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings. | ❌ | ✔️ | ✔️ |
+| OpenAIModel | The OpenAIModel class allows you to call both OpenAI and Azure OpenAI with one single component. New models can be defined for other model types like Llama2. | ✔️ | ✔️ | ✔️ |
+| Embeddings | The OpenAIEmbeddings class allows you to generate embeddings using either OpenAI or Azure OpenAI. New embeddings can be defined for things like OSS Embeddings. | ❌ | ✔️ | ✔️ |
 | Prompts | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window. | ✔️ | ✔️ | ✔️ |
 | Augmentation | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️ |✔️ | ✔️ |
 | Data Sources | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the names of the data sources they wish to augment the prompt. | ❌ | ✔️ | ✔️ |

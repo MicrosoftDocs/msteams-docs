@@ -428,7 +428,7 @@
       displayName: AI bot, Teams AI library, custom agent
     - name: What is Teams AI library?
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-      displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI
+      displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
     - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       displayName: custom engine agent, AI bot
