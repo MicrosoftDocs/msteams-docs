@@ -128,9 +128,7 @@ A custom engine agent must assist users by offering prompt suggestions on how to
 
 - **Prompt starters**: Prompt starters are the initial prompts users see when a custom engine agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
 - **Contextual prompts**: Contextual prompts are dynamic recommendations from a custom engine agent during user interactions. These prompts appear via contextual flyouts, like **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
-- **Suggested action**: Suggested actions are prompts that users see as pills above the compose box in 1:1 chats and as action buttons in the message footer in group chats. These actions are suggestions that a user may want to take in response to the agent’s message. The prompts are sent along with the agent’s response and must be customized to match the content of the response.
-
-Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and should be customized to match the response
+- **Suggested action**: Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and must be customized to match the response.
 
 ## Best practices for custom engine agent
 
