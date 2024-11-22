@@ -55,13 +55,14 @@ Choose one of the following as a next step:
 > to learn more about the Teams AI library.
 > [!div class="nextstepaction"]
 > [Understand Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
-> to learn about the core concepts of Teams AI library.
+> to learn about the core capabilities of Teams AI library.
 > [!div class="nextstepaction"]
 > [Understand bot concepts](bot-concepts.md)
 > to learn more about developing a bot app.
 
 ## See also
 
-* [Understand bot concepts](bot-concepts.md)
 * [Send and receive messages](build-conversational-capability.md)
 * [Send notifications](build-notification-capability.md)
+* [Workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md)
+* [Command bot in Teams](how-to/conversations/command-bot-in-teams.md)
