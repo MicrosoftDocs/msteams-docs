@@ -196,4 +196,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Assistants API](teams-conversation-ai-overview.md#how-do-ai-library-features-benefit-me)
+> [Assistants API](teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me)

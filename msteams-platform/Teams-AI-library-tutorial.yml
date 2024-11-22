@@ -36,14 +36,14 @@ items:
    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
-   | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+   | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
-     1. Select the Azure OpenAI service that you created in the prerequisite.
+     1. Select the Azure OpenAI service that you created. For more information, see [Prerequisites](#Prerequisites).
 
      1. Select **Go to Azure OpenAI Studio**.
         
