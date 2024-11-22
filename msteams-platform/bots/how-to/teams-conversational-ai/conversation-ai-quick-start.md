@@ -418,9 +418,9 @@ You can also use the following tools to run and set up a sample:
 Choose one of the following as a next step:
 
 > [!div class="nextstepaction"]
->
-> [Build with Teams AI library](how-conversation-ai-get-started.md) <br> to learn how to use Teams AI library to create an AI-powered bot.
+> If you want to learn how to use Teams AI library to create an AI-powered bot, select the following:<br>
+> [Build with Teams AI library](how-conversation-ai-get-started.md)
 >
 > [!div class="nextstepaction"]
->
-> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml) <br> for a step-by-step guide on building a custom engine agent using Teams Toolkit.
+> If you want to build a a custom engine agent using Teams Toolkit, select the following:<br>
+> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
