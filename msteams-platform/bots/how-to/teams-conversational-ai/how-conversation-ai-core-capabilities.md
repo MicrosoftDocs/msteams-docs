@@ -9,9 +9,9 @@ ms.date: 05/24/2023
 
 # Understand Teams AI library
 
-Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade your existing Teams apps with these features.
+Teams AI library supports JavaScript and simplifies building bots for Microsoft Teams. It also facilitates the migration of existing bots. It supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
 
-Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate building a bot that interacts with Microsoft Teams. One of the key features of Teams AI library is the AI support that customers can utilize. The initial objective might be to upgrade the current bot without AI. After you upgrade, the bot can connect to AI or Large Language Models (LLMs) available in the AI library.
+Previously, you used the BotBuilder SDK to create bots for Teams. Teams AI library is designed to make this process easier and includes AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
 
 With Teams AI library, you can focus on:
 
@@ -33,7 +33,7 @@ In the following section, we've used  the samples from the [AI library](https://
 
 ### Send or receive message
 
-You can send and receive messages using the Bot Framework. The app listens for the user to send a message, and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
+You can send and receive messages using the Bot Framework. The app listens for user messages, deletes the conversation state upon receipt, and replies. It also tracks the number of messages in a conversation and echoes back the user's message with the count.
 
 # [.NET](#tab/dotnet6)
 
@@ -92,7 +92,7 @@ async def on_message(context: TurnContext, _state: TurnState):
 
 ### Message extensions
 
-In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of Hero Cards displaying package information. The result is used to display the search results in the messaging extension.
+In the Bot Framework SDK's `TeamsActivityHandler`, set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps. It formats search results as Hero Cards displaying package information, and displays them in the messaging extension.
 
 # [.NET](#tab/dotnet5)
 
@@ -145,7 +145,7 @@ In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Mess
 
 # [JavaScript](#tab/javascript5)
 
-Now, the app class has `messageExtensions` features to simplify creating the handlers:
+Now, the app class has `messageExtensions` features to simplify creating the handlers:
 
 - `context`: `TurnContext`
 - `state`: `TurnState`
@@ -184,7 +184,7 @@ app.messageExtensions.query('searchCmd', async (context: TurnContext, state: Tur
 });
 ```
 
-Similarly, `selectItem` listener would be set up as:
+Similarly, `selectItem` listener would be set up as:
 
 ```typescript
 app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, item) => {
@@ -240,7 +240,7 @@ async def search_command(
 
 ### Adaptive Cards capabilities
 
-You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card and submit buttons on the Adaptive Cards.
+Register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages with `static` or `dynamic` keywords and returns an Adaptive Card using `StaticMessageHandler()` or `DynamicMessageHandler()`. It also listens for queries from a dynamic search card and submit buttons.
 
 # [.NET](#tab/dotnet4)
 
@@ -562,7 +562,7 @@ elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
 
 ### Message extension query
 
-The Teams AI library offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+The Teams AI library provides a more intuitive way to create handlers for message-extension query commands, working alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how you can structure the code to handle a message-extension query for the `searchCmd` command.
 
@@ -710,9 +710,10 @@ async def select_item(_context: TurnContext, _state: AppTurnState, item: Any):
 
 ## Intents to actions
 
-A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
+A simple interface for actions and predictions allows bots to react confidently. Ambient presence helps bots learn intent, use prompts based on business logic, and generate responses.
+With the Teams AI library, the prompt outlines the bot's actions and provides examples.
 
-With the Teams AI library, the prompt only needs to outline the bot's supported actions and provide a few-shot example of how to use them. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
+Conversation history enables natural dialogue, like *add cereal to groceries list*, followed by *also add coffee*, indicating coffee should be added to the list.
 
 The following is a conversation with an AI assistant. The AI assistant can manage lists and recognizes the following commands:
 
