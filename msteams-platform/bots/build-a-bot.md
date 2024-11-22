@@ -51,14 +51,11 @@ You can build a new custom engine agent or elevate your existing conventional bo
 Choose one of the following as a next step:
 
 > [!div class="nextstepaction"]
-> [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
-> to learn more about the Teams AI library.
+> [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md) <br> to learn more about the Teams AI library.
 > [!div class="nextstepaction"]
-> [Understand Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
-> to learn about the core capabilities of Teams AI library.
+> [Understand Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md) <br> to learn about the core capabilities of Teams AI library.
 > [!div class="nextstepaction"]
-> [Understand bot concepts](bot-concepts.md)
-> to learn more about developing a bot app.
+> [Understand bot concepts](bot-concepts.md) <br> to learn more about developing a bot app.
 
 ## See also
 
