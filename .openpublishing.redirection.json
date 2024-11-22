@@ -1161,8 +1161,12 @@
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
       },
       {
-        "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md", 
+        "source_path": "msteams-platform/toolkit/teams-toolkit-tutorial.md", 
         "redirect_url": "/microsoftteams/platform/get-started/teams-toolkit-tutorial"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-api-connection.md", 
+        "redirect_url": "/microsoftteams/platform/toolkit/add-resource"
       }
     ]
 }
