@@ -52,10 +52,12 @@ Choose one of the following as a next step:
 
 > [!div class="nextstepaction"]
 > If you want to learn more about the Teams AI library, select the following: <br>
-> [What is Teams AI library](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+> [What is Teams AI library?](how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+>
 > [!div class="nextstepaction"]
 > If you want to learn about the core capabilities of Teams AI library, select the following: <br>
 > [Understand Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md)
+>
 > [!div class="nextstepaction"]
 > If you want to learn more about developing a bot app, select the following: <br>
 > [Understand bot concepts](bot-concepts.md)
