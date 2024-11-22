@@ -417,7 +417,7 @@
   items:
   - name: Overview
     href: bots/overview.md
-    displayName: AI bots, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot
+    displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Types of bots
     href: bots/build-a-bot.md
     displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
