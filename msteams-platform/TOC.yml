@@ -420,7 +420,7 @@
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Types of bots
     href: bots/build-a-bot.md
-    displayName: Bot samples, advantages of bots, Teams AI library, Microsoft Bot Framework, build a bot, Build AI bot, configure bot scope, update app manifest
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
   - name: Build custom engine agent
     items:
     - name: Custom engine agent overview
