@@ -43,7 +43,7 @@ items:
   content: | 
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
-     1. Select the Azure OpenAI service that you created. For more information, see [Prerequisites](#Prerequisites).
+     1. Select the Azure OpenAI service that you created.
 
      1. Select **Go to Azure OpenAI Studio**.
         
