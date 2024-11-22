@@ -64,7 +64,7 @@ await context.sendActivity({
 |--|--|--|--|
 | `additionalType` | Array | Yes | Enables the AI label in the bot message. <br> Allowed value: `AIGeneratedContent`. |
 
-After adding an AI label, your bot’s message will show an "AI generated" label next to the bot’s name. A disclaimer hovers stating, "AI-generated content may be incorrect." The AI label and disclaimer cannot be customized for AI-powered bots.
+After adding an AI label, your bot’s message shows an "AI generated" label next to the bot’s name. A disclaimer hovers stating, "AI-generated content may be incorrect." The AI label and disclaimer cannot be customized for AI-powered bots.
 
 > [!NOTE]
 >
@@ -79,7 +79,7 @@ After adding an AI label, your bot’s message will show an "AI generated" label
 
 ## Citations
 
-Citing sources in bot messages helps users ask follow-up questions or conduct independent research. Cite data sources like files, messages, emails, and work items to provide valuable insights. Citations are crucial for bots using techniques like Retrieval Augmented Generation (RAG).
+Citing sources in bot messages helps users ask follow-up questions or conduct independent research. Cite data sources like files, messages, emails, and work items to provide valuable insights. Citations are crucial for bots using techniques like Retrieval-Augmented Generation (RAG).
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with in-text citation.":::
 
