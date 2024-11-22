@@ -9,9 +9,9 @@ ms.date: 05/24/2023
 
 # Understand Teams AI library
 
-Teams AI library supports JavaScript and simplifies building bots for Microsoft Teams. It also facilitates the migration of existing bots. It supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
+Teams AI library supports JavaScript and simplifies building bots that can interact with Microsoft Teams. It also facilitates the migration of existing bots to use AI-powered features. It supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
 
-Previously, you used the BotBuilder SDK to create bots for Teams. Teams AI library is designed to make this process easier and includes AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
+Earlier, you used the BotBuilder SDK to create bots for Teams. Teams AI library is designed to make this process easier and includes AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
 
 With Teams AI library, you can focus on:
 
@@ -27,9 +27,7 @@ Teams AI library supports the following activity handlers:
 - [Message extension (ME) capabilities](#message-extensions)
 - [Adaptive Cards capabilities](#adaptive-cards-capabilities)
 
- You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file.
-
-In the following section, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration:
+ You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file. In the subsequent sections, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration.
 
 ### Send or receive message
 
@@ -145,7 +143,7 @@ In the Bot Framework SDK's `TeamsActivityHandler`, set up the Message extensions
 
 # [JavaScript](#tab/javascript5)
 
-Now, the app class has `messageExtensions` features to simplify creating the handlers:
+The app class has `messageExtensions` features to simplify creating the handlers:
 
 - `context`: `TurnContext`
 - `state`: `TurnState`
@@ -333,7 +331,7 @@ async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
 
 The bot responds to the user's input with the action `LightsOn` to turn the lights on.
 
-The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
+The following example shows how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
 # [.NET](#tab/dotnet3)
 
@@ -562,9 +560,9 @@ elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
 
 ### Message extension query
 
-The Teams AI library provides a more intuitive way to create handlers for message-extension query commands, working alongside the existing Teams Bot Framework SDK.
+Teams AI library provides a more intuitive way to create handlers for message extension query commands, working alongside the existing Teams Bot Framework SDK.
 
-The following is an example of how you can structure the code to handle a message-extension query for the `searchCmd` command.
+The following is an example of how you can structure the code to handle a message extension query for the `searchCmd` command.
 
 # [.NET](#tab/dotnet2)
 
@@ -711,9 +709,9 @@ async def select_item(_context: TurnContext, _state: AppTurnState, item: Any):
 ## Intents to actions
 
 A simple interface for actions and predictions allows bots to react confidently. Ambient presence helps bots learn intent, use prompts based on business logic, and generate responses.
-With the Teams AI library, the prompt outlines the bot's actions and provides examples.
+With Teams AI library, the prompt outlines the bot's actions and provides examples.
 
-Conversation history enables natural dialogue, like *add cereal to groceries list*, followed by *also add coffee*, indicating coffee should be added to the list.
+Conversation history enables natural dialogue, such as *add cereal to groceries list*, followed by *also add coffee*, indicating coffee should be added to the list.
 
 The following is a conversation with an AI assistant. The AI assistant can manage lists and recognizes the following commands:
 
@@ -726,7 +724,7 @@ The following actions are supported:
 - `removeItem list="<list name>" item="<text>"`
 - `summarizeLists`
 
-All entities are required parameters to actions.
+All entities are required parameters for actions.
 
 - Current list names:
 
@@ -775,7 +773,7 @@ All entities are required parameters to actions.
     {{conversation.listNames}}
     ```
 
-- AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinct separation between actions and the prompts guiding the AI on how to execute the actions and prompts serves as a powerful tool.
+- AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinction between actions and the prompts serves as a powerful tool as it guides AI to execute the actions and prompts.
 
 # [.NET](#tab/dotnet1)
 
