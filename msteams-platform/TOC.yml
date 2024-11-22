@@ -445,7 +445,7 @@
       displayName: Streaming, response generation, AI library, AI SDK, REST API
     - name: Enhance AI-generated bot messages
       href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit, 
     - name: Custom engine agent user experience
       href: bots/how-to/teams-conversational-ai/ai-ux.md
       displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
