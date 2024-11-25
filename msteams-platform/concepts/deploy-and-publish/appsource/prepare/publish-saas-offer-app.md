@@ -5,7 +5,7 @@ author: v-preethah
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/14/2024
+ms.date: 11/25/2024
 ---
 
 # Publish your SaaS app
