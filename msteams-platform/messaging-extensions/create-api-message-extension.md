@@ -14,8 +14,6 @@ ms.date: 09/16/2024
 
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
-## Prerequisites
-
 Before you get started, ensure that you meet the following requirements:
 
 </br>
@@ -364,7 +362,7 @@ Let's say you have the following JSON for a list of products and you want to cre
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview the Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
+Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
 Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
 
 #### Schema mapping
@@ -512,7 +510,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
-# [Developer Portal](#tab/developer-portal)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API-based message extension using Developer Portal, follow these steps:
 
@@ -567,15 +565,13 @@ You can add commands and parameters to your message extension, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-add-commands.png":::
 
-   An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
+   An **Add a command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
 
-   A **Command details** appears.
-
-1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
+1. Under **Response template**, select **Upload now**.
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the Adaptive Card template in for the command.":::
 
