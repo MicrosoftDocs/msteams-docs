@@ -13,7 +13,9 @@ ms.subservice: m365apps
 With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, Microsoft 365 app, Word (preview), Excel (preview), and PowerPoint(preview) environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
+
 The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, Microsoft 365 as application hosts, Word, Excel, and PowerPoint):
+
 | Teams app features| App manifest element | Teams support |Outlook support |Microsoft 365 app support |Word, Excel, PowerPoint support (preview)| Notes |
 |--|--|--|--|--|--|--|
 | [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web, Desktop, Mobile (Android, iOS) | Web, Desktop, Mobile (Android, iOS)|-|Channel and group scopes aren't supported for Microsoft 365. For more information, see [Teams JavaScript client library](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
@@ -80,7 +82,7 @@ You can now define and deploy Outlook Add-ins in [version 1.17 and later](../res
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### Word, Excel, PowerPoint Add-ins (preview)
-You can now define and deploy Word, Excel, PowerPoint Add-ins in [version 1.20 and later](../resources/schema/manifest-schema-dev-preview.md) of the app manifest.
+You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [developer preview](../resources/schema/manifest-schema-dev-preview.md) unified manifest for Microsoft 365.
 
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
