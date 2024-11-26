@@ -5,7 +5,7 @@ description: Learn to create and test SaaS preview offers for Teams app. Generat
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/25/2024
+ms.date: 11/26/2024
 ---
 
 # Test your SaaS offer
@@ -17,7 +17,7 @@ Testing your app before publishing helps to understand the user issues, rectify 
 
 ## Generate a preview offer ID
 
-Create the preview offer ID from the **AppSource preview** link in Partner Center. Ensure the SaaS offer is in the **Preview creation** phase. To generate the preview offer ID:
+Create the preview offer ID from the **AppSource preview** link in Microsoft Partner Center. Ensure the SaaS offer is in the **Preview creation** phase. To generate the preview offer ID:
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.

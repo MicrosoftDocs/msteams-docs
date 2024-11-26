@@ -5,16 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/25/2024
+ms.date: 11/26/2024
 ---
 
 # Monetize your Teams app
 
-App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. Apps published with SaaS offers can be purchased from the Microsoft commercial marketplace that includes Azure Marketplace and Microsoft AppSource. To purchase from Teams Store, you can link the SaaS offers to a Teams app.
+App monetization is an essential phase in the app development process, and Microsoft Teams Store provides a platform to monetize your app. Apps published with subscriptions can be purchased from the Microsoft commercial marketplace that includes Azure Marketplace and Microsoft AppSource. To purchase from Teams Store, you can link the SaaS offers to a Teams app.
 
 ## SaaS offer
 
-SaaS offers play a crucial role for businesses aiming to leverage their apps to generate revenue. Apps with SaaS offers that are published in Microsoft commercial marketplace are SaaS apps. The publishing options available in a SaaS offer by which you can drive app monetization are:
+Software as a service (SaaS) offers play a crucial role for businesses aiming to leverage their apps to generate revenue. Apps with SaaS offers that are published in Microsoft commercial marketplace are SaaS apps. The publishing options available in a SaaS offer by which you can drive app monetization are:
 
 :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
 
@@ -32,7 +32,7 @@ Here are few key features associated with a SaaS offer:
 
 * **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, [in-app purchases](in-app-purchase-flow.md) can generate an ongoing revenue stream. </br>
 
-* **Microsoft license management**: Enables Microsoft to track and manage app licenses on your behalf from the Teams Store. You can either allow Microsoft to manage licenses on your behalf or you can manage licenses on your own. For more information, see [configure your SaaS offer setup details](/partner-center/marketplace-offers/create-new-saas-offer). 
+* **Microsoft license management**: Enables Microsoft to track and manage app licenses on your behalf from the Teams Store. You can either allow Microsoft to manage licenses on your behalf or you can manage licenses on your own. For more information, see [configure your SaaS offer setup details](/partner-center/marketplace-offers/create-new-saas-offer).
 
 ### Private plans
 

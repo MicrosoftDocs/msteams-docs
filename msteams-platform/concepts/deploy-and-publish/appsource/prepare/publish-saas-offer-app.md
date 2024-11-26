@@ -5,7 +5,7 @@ author: v-preethah
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/25/2024
+ms.date: 11/26/2024
 ---
 
 # Publish your SaaS app
@@ -16,7 +16,7 @@ After you create and test a software as a service (SaaS) offer, submit the offer
 
 ## Configure SaaS offer to your app
 
-For the users to view your subscription plan in Microsoft Teams Store, link the published SaaS offer to your app that's published from Partner Center. There are two ways you can link the SaaS offer to your Teams app:
+For the users to view your subscription plan in Microsoft Teams Store, link the published SaaS offer to your app that's published from Microsoft Partner Center. There are two ways you can link the SaaS offer to your Teams app:
 
 * Developer Portal for Teams
 * App manifest
@@ -24,7 +24,7 @@ For the users to view your subscription plan in Microsoft Teams Store, link the 
 > [!NOTE]
 > You need the publisher ID and offer ID from Partner Center to configure the SaaS offer to your app.
 
-**To configure from Developer Portal for Teams, follow these steps**:
+**To configure from Developer Portal for Teams**:
 
 1. Go to **Developer Portal** and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.

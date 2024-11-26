@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/25/2024
+ms.date: 11/26/2024
 ---
 
 # SaaS offer for your Teams app
@@ -22,7 +22,7 @@ Based on the publishing option that you choose, there are different technical re
 
 :::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option." lightbox="../../../../assets/images/saas-offer/tech-config-offer.png":::
 
-Here's the basic information on the key technical requirements:
+Information on the key technical requirements:
 
 * **Create a landing page**: After a user purchases a subscription plan, the user is redirected to the offer landing page to manage the subscription. To create a landing page, see [build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
 
@@ -35,7 +35,7 @@ For more information, see [technical requirements](/partner-center/marketplace-o
 ## Create a SaaS offer
 
 > [!NOTE]
-> Before you create a SaaS offer, you must publish your app via Partner Center. For more information, see [store step-by-step submission guide](/partner-center/marketplace/add-in-submission-guide).
+> Before you create a SaaS offer, you must publish your app via Microsoft Partner Center. For more information, see [store step-by-step submission guide](/partner-center/marketplace/add-in-submission-guide).
 
 Offers sold through Microsoft are transactable offers, which means Microsoft facilitates the financial transactions for the license on the publisher's behalf. To sell your SaaS app in Teams Store, you must [create and configure an offer in Microsoft Partner Center](/partner-center/marketplace-offers/create-new-saas-offer).
 
