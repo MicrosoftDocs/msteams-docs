@@ -9,7 +9,7 @@ ms.date: 09/27/2024
 
 # Custom engine agent user experience
 
-A custom engine agent transforms system interactions. For UX designers and developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent includes features that enhance its functionality and integration within the Microsoft ecosystem:
+A custom engine agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent includes features that enhance its functionality and integration within the Microsoft ecosystem:
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
 - **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.
@@ -115,7 +115,7 @@ A custom engine agent must track a conversation's context and history to provide
 You can use one of the following to ensure intelligent context-based conversation:
 
 - Use Teams AI library to manage and pass conversational history and context to the LLM.
-- Use Bot Framework API to:
+- Use Bot Framework SDK to:
 
   - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
   - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
