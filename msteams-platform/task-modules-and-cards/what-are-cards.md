@@ -130,7 +130,7 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Entra Objec
 
 ## Charts in Adaptive Cards
 
-You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more. For more information, see [charts in Adaptive Cards](cards/charts-in-adaptive-cards.md).
+[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
 
 ## Container layouts in Adaptive Cards
 
