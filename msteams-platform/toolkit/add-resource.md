@@ -1,14 +1,14 @@
 ---
-title: Add Resources and API connection to Teams apps
+title: Add Resources and API Connection to Teams apps
 author: MuyangAmigo
-description: Learn how to add cloud resources such as Azure Functions, Azure SQL Database, Azure API Management, Azure Key Vault using Teams Toolkit in Visual Studio Code.
+description: Learn how to add cloud resources such as Azure Functions, Azure API Management and integrate API connections using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources and API Connection to Teams app
+# Add cloud resources and API connection
 
 Microsoft Teams Toolkit enables you to provision cloud resources for hosting your app, tailored to your development needs. By adding more cloud resources in TeamsFx, you can autogenerate all configuration files and seamlessly connect to the Microsoft Teams app using the Toolkit. Additionally, Teams Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams apps.
 
@@ -84,6 +84,5 @@ Add a connection to an existing third-party API using the following steps:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
-* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)

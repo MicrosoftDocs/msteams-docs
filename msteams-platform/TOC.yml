@@ -166,7 +166,7 @@
           - name: Create How-to Guides
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
-          - name: Create cloud resources and API connection
+          - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
           - name: Add single sign-on to Teams app
