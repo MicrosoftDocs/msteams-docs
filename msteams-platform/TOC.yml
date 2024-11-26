@@ -1093,12 +1093,10 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-      displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps
+      displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
       displayName: OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
-    - name: Partner apps for Moodle
-      href: resources/partner-apps-for-moodle.md
     - name: Install Moodle LMS
       href: resources/moodleInstructions.md  
     - name: Moodle FAQ
