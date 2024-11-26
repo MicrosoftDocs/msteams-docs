@@ -184,7 +184,7 @@ items:
     | `appPackage/` | Templates for the Teams application manifest. |
     | `adaptiveCards/` | The adaptive cards sent back by bot. |
     | `infra/` | Templates for provisioning Azure resources. |
-    | `index.js` | Application entry point and `restify` handler. |
+    | `index.js` | Application entry point and `express` handler. |
     | `teamsBot.js` | Teams activity handler. |
 
 
