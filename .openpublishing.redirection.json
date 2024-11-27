@@ -1162,7 +1162,11 @@
       },
       {
         "source_path": "msteams-platform/resources/media-formats.md",
-        "redirect_url": "/microsoftteams/platform/resources//platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/request-headers-of-the-bot.md",
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/how-to/conversations/conversation-messages"
       }
     ]
 }
