@@ -6,13 +6,13 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.date: 05/24/2021
 ---
-# Teams app that fits
+# Build Teams app that fits
 
 Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users.
 
 Apps can be personal or shared. A personal app enables a one-on-one communication and a shared app lets multiple users share app space to collaborate.
 
-## Driving organizational goals
+## Drive organizational goals
 
 Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
 
