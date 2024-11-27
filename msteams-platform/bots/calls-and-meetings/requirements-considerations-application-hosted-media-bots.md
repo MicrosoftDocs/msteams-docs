@@ -1,9 +1,9 @@
 ---
 title: Build Application-hosted Media Bots
-description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for different remote and local media scenarios. 
+description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for remote and local media scenarios. upported media formats for bots- Vorbis, Ogg, Matroska, WAV, AAC, H264, MP3, Opus, MP4, PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/16/2018
+ms.date: 11/27/2018
 ---
 
 # Requirements and considerations for application-hosted media bots
