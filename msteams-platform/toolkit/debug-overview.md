@@ -1,5 +1,5 @@
 ---
-title: Debug your Teams app
+title: Debug Teams App using Teams Toolkit
 author: surbhigupta 
 description: Learn how to prepare and debug Teams app locally and in Teams App Test tool, customize debug settings in Teams Toolkit, and its key features.
 ms.author: surbhigupta 
@@ -34,6 +34,7 @@ Teams Toolkit supports the following debug features:
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 * [Teams App Test Tool](#teams-app-test-tool)
+* [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
 Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
 
@@ -66,6 +67,10 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 ### Teams App Test Tool
 
 The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-Teams-app-test-tool.md).
+
+### Debug apps in Teams desktop client
+
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
 ## Prepare for debug
 

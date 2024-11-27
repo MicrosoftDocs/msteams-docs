@@ -1,5 +1,5 @@
 ---
-title: Messages in bot conversations
+title: Bot Conversations & Message Activity
 description: Learn to send, receive, edit, undelete, soft delete a message with suggested actions, notification, attachments, images, Adaptive Card, status error code responses.
 ms.topic: overview
 ms.author: anclear
@@ -678,40 +678,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ## Send suggested actions
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
-
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-
-The following is an example for implementation and experience of suggested actions:
-
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
-```
-
-The following illustrates an example of suggested actions:
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to six suggested actions.
+[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
 
 ## Teams channel data
 

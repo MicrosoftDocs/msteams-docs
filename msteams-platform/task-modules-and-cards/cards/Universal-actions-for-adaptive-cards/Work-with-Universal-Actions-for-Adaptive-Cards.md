@@ -1,5 +1,5 @@
 ---
-title: Use Universal Actions for Cards
+title: Use Universal Actions for Adaptive Card
 description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -70,7 +70,7 @@ The following are the features of UserIds in refresh:
 
 * You can fetch Teams conversation member's user MRIs. For more information on how to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
- You can get the user MRI for channel, Group Chat or 1:1 chat using the following example:
+ You can get the user MRI for personal chats, group chats, or channels using the following example:
 
  1. Using TurnContext  
 

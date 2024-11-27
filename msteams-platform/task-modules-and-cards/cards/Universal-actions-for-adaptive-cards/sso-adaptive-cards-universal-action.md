@@ -1,6 +1,6 @@
 ---
 title: SSO for Adaptive Card Universal Actions
-description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
+description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -46,7 +46,7 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 
 The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Microsoft Entra ID.
 
-The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Microsoft Entra ID doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
+The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Microsoft Entra ID doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. We recommend that you provide a sign-in URL in the response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
@@ -132,4 +132,3 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 * [Enable SSO for your bot app](../../../bots/how-to/authentication/bot-sso-overview.md)
 * [Update app manifest for SSO and preview your app](../../../bots/how-to/authentication/bot-sso-manifest.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
-

@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Generate meeting token
+title:  Generate meeting token
 metadata:
-  title: Generate meeting token
+  title: Generate Meeting Token for Participants
   description: With this learning module, learn how to generate a meeting token for all the participants to interact in the meeting for Teams.
   audience: Developer
   level: Beginner

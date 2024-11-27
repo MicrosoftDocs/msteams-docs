@@ -1,6 +1,6 @@
 ---
 title: Microsoft Graph Permissions for Tab
-description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
+description: Learn how to configure API permissions and authentication for different platforms, and get access token with Microsoft Graph to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope

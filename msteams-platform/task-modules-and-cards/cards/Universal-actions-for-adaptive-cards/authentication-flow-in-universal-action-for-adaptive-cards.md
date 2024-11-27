@@ -1,6 +1,6 @@
 ---
 title: Add Third Party Authentication
-description: In this module, learn how to add third party authentication to your Adaptive Cards Universal Actions.
+description: Learn how to add third party authentication to Adaptive Cards Universal Actions, its scenarios, and about authentication flow.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -23,7 +23,7 @@ You can enable the following scenarios with `Action.Execute` on your Adaptive Ca
 
 To learn more about Adaptive Cards Universal Actions, see [Adaptive Cards Universal Actions](Overview.md).
 
-If you want to add user-specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user may need to be authenticated.
+If you want to add user-specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user might need to be authenticated.
 
 In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. To communicate with the bot, user would need to switch from the group chat or channel that would disturb the flow.
 
@@ -35,7 +35,7 @@ Bots can respond with sign-in request in response to `Action.Execute` for:
 
 * Adaptive Cards sent by bot in a one-on-one chat, group chat, or a channel.
 * Adaptive Cards sent by app user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
-* Adaptive Cards present in compose or preview area while the user is composing the message. In the compose area, refresh in Adaptive Card works and the bot may want to use a token to provide user-specific view to the app user before they send the card to the chat.
+* Adaptive Cards present in compose or preview area while the user is composing the message. In the compose area, refresh in Adaptive Card works and the bot might want to use a token to provide user-specific view to the app user before they send the card to the chat.
 
 ## Getting started with OAuth or nominal sign-on flow
 
@@ -71,7 +71,7 @@ For an OAuth or nominal sign-on experience in which the user is presented with a
     ```
 
     * Senders must include a value that adheres to the OAuthCard format.
-    * Senders must include a `connectionName`. Receivers may ignore sign in requests with an empty or missing `connectionName`.
+    * Senders must include a `connectionName`. Receivers might ignore sign in requests with an empty or missing `connectionName`.
     * Senders must include a `button` that has a non-empty buttons array.
 
 1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where user can sign in.
@@ -106,7 +106,7 @@ For an OAuth or nominal sign-on experience in which the user is presented with a
 
 1. The channel delivers this invoke to the bot, which uses the authentication code to retrieve the token from the Token Service. The Token Service delivers the user's access token to the bot.
 
-    Receivers may ignore the `adaptiveCard/action` invoke or reply with an error if there's a missing or empty `state` field.
+    Receivers might ignore the `adaptiveCard/action` invoke or reply with an error if there's a missing or empty `state` field.
 
     If the value in the `state` field is incorrect, the bot returns an error to the Teams client as follows:
 

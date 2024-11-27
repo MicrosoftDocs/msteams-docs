@@ -1,5 +1,5 @@
 ---
-title: Send and receive files using bot
+title: Bots to Send and Receive Files
 description: Learn how to send and receive files through the bot using Microsoft Graph APIs for personal, channel and groupchat scopes. Code samples (.NET, Node.js, Python).
 ms.date: 04/17/2023
 ms.localizationpriority: medium
@@ -20,6 +20,12 @@ There are two ways to send files to and receive files from a bot:
   * `groupchat`
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
+
+The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
 
 ## Use the Graph APIs
 

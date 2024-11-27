@@ -47,7 +47,6 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
         * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.
         * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
@@ -163,7 +162,7 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo in the format `https://www.example.com/123456789`.
+A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos in the format `https://www.youtube.com/watch?v=:id` or `https://youtu.be/:id` for YouTube and `https://vimeo.com/:id` for Vimeo.
 
 For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
@@ -221,7 +220,7 @@ During submission, you're asked to categorize your app. App category helps impro
 | Maps and feeds |
 | Other |
 
-### Distribute your app to specific countries or regions
+### Publish your app to specific countries or regions
 
 If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams Store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams Store for the users in the US and Canada.
 

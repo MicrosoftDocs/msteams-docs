@@ -1,5 +1,5 @@
 ---
-title: Deploy Teams app to container service
+title: Deploy App to Azure Container Service
 author: MuyangAmigo
 description: Learn how to deploy a Teams bot or tab to Azure Container Apps, Azure Kubernetes Services, and on-premises Kubernetes Cluster, and its architecture.
 ms.author: ruhe

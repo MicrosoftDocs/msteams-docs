@@ -40,6 +40,6 @@ The Visual Studio 2022 window appears.
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
-* [Prepare to build apps](build-environments-v4.md)
+* [Prepare to build apps](build-environments-vs.md)
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)

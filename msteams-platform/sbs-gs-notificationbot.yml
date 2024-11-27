@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Build notification bot with JavaScript
 metadata:
-  title: Build notification bot with JavaScript
-  description: In this tutorial, you can learn to send notification by creating a new notification bot with Teams Toolkit.
+  title: Create Notification Bot in JavaScript
+  description: Learn how to build a Teams notification bot using Teams Toolkit in Visual Studio Code to send notification messages in channel, group, or personal chats.
   audience: Developer
   level: Beginner
   ms.date: 01/07/2024
@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
    
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -67,7 +67,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
-    1. Select **HTTP Trigger Restify Server** as the trigger. 
+    1. Select **HTTP Trigger Express Server** as the trigger. 
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 

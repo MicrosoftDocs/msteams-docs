@@ -1,23 +1,21 @@
 ---
-title: Create a channel tab or group tab
-description: Create custom channel, group tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
+title: How to Create Configurable Tab
+description: Create custom configurable tabs with Node.js, ASP.NET Core, MVC. Build apps, packages, run secret tunnels, upload to Teams, and develop your first Blazor app.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
 ms.date: 02/27/2023
 ---
 
-# Create a channel tab or group tab
+# Create a configurable tab
 
-Channel or group tabs deliver content to channels and group chats, which help to create collaborative spaces around dedicated web-based content.
-
-Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your configurable tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
-## Create a custom channel or group tab with Node.js
+## Create a configurable tab with Node.js
 
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
@@ -31,9 +29,9 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
     npm install generator-teams --global
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
-1. At the command prompt, create a new directory for your channel or group tab.
+1. At the command prompt, create a new directory for your configurable tab.
 
 1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
@@ -74,7 +72,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
-    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and must be used only if you're already part of the [Microsoft Cloud Partner Program](https://partner.microsoft.com), formerly known as Microsoft Partner Network.
 
 * **What do you want to add to your project?**
 
@@ -199,18 +197,18 @@ gulp ngrok-serve
    "composeExtensions": [],
    ```
 
-1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There's a custom configuration dialog for your configurable tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-uploaded.png" alt-text="Screenshot shows the uploaded channel tab in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="razor-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core
+## Create a custom configurable tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -220,7 +218,7 @@ gulp ngrok-serve
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -420,13 +418,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core MVC
+## Create a custom configurable tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -436,7 +434,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -635,7 +633,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
@@ -655,7 +653,7 @@ Here's a list of tools you require for building and deploying your app.
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls - all in one place. |
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 ## Prepare development environment
 
@@ -1030,9 +1028,9 @@ You've completed the tutorial to build a tab app with Blazor.
 >
 > To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat, channels, and meetings. In static tabs, there is no configuration dialog, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. You can update your existing configurable tab to a static tab and add different scopes to the static tab.
+Static tab capability is extended to support group chat, channels, and meetings. In static tabs, there's no configuration dialog, enabling users to pin the tab instantly. You have the option to configure your tab after it's pinned, as the `setConfig` APIs allow you to modify the `contentUrl`, which can be useful to change the landing page if needed. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
-To change your configurable tab to static tab:
+You can update your existing configurable tab to a static tab and add different scopes to the static tab. To change your configurable tab to static tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
@@ -1076,6 +1074,5 @@ If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configur
 * [Build tabs for Teams](../what-are-tabs.md)
 * [Create a personal tab](create-personal-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
-* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

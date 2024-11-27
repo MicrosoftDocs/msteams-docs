@@ -1,5 +1,5 @@
 ---
-title: Meeting apps APIs
+title: Enhance Meeting Experience with APIs
 author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
@@ -91,8 +91,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "v-prkamble@microsoft.com",
-          "userPrincipalName": "v-prkamble@microsoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
            "teamsSku": "enterprise"
@@ -171,8 +171,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "isCallingAllowed": null,
            "isPSTNCallingAllowed": null,
            "licenseType": "Unknown",
-           "loginHint": "admin@M365x94626565.onmicrosoft.com",
-           "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+           "loginHint": "user@contoso.com",
+           "userPrincipalName": "user@contoso.com",
            "tenant": {
             "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
             "teamsSku": "enterprise"
@@ -189,11 +189,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "team": null,
           "sharePointSite": {
            "teamSiteUrl": "",
-           "teamSiteDomain": "m365x94626565.sharepoint.com",
+           "teamSiteDomain": "contoso.sharepoint.com",
            "teamSitePath": "",
            "teamSiteId": null,
-           "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
-           "mySiteDomain": "m365x94626565-my.sharepoint.com"
+           "mySitePath": "/personal/contoso_microsoft_com",
+           "mySiteDomain": "contoso-my.sharepoint.com"
           }
   }
 
@@ -232,8 +232,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "user": {
             "id": "4ebcc4d0-291b-4154-a85f-a89cd77aefa8",
             "licenseType": "Unknown",
-            "loginHint": "admin@M365x654992.onmicrosoft.com",
-            "userPrincipalName": "admin@M365x654992.onmicrosoft.com",
+            "loginHint": "user@contoso.com",
+            "userPrincipalName": "user@contoso.com",
             "tenant": {
               "id": "36a708ef-700d-4d60-9de0-0a5f7b7693df",
               "teamsSku": "unknown"
@@ -247,10 +247,10 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           },
           "sharePointSite": {
             "teamSiteUrl": "",
-            "teamSiteDomain": "m365x654992.sharepoint.com",
+            "teamSiteDomain": "contoso.sharepoint.com",
             "teamSitePath": "",
-            "mySitePath": "/personal/admin_m365x654992_onmicrosoft_com",
-            "mySiteDomain": "m365x654992-my.sharepoint.com"
+            "mySitePath": "/personal/contoso_microsoft_com",
+            "mySiteDomain": "contoso-my.sharepoint.com"
           }
   }
   ```
@@ -301,8 +301,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "isCallingAllowed": undefined,
            "isPSTNCallingAllowed": undefined,
            "licenseType": "Unknown",
-           "loginHint": "v-prkamble@microsoft.com",
-           "userPrincipalName": "v-prkamble@microsoft.com",
+           "loginHint": "user@microsoft.com",
+           "userPrincipalName": "user@microsoft.com",
            "tenant": {
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
             "teamsSku": "enterprise"
@@ -322,7 +322,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "teamSiteDomain": "microsoft.sharepoint.com",
            "teamSitePath": "",
            "teamSiteId": undefined,
-           "mySitePath": "/personal/v-prkamble_microsoft_com",
+           "mySitePath": "/personal/user_microsoft_com",
            "mySiteDomain": "microsoft-my.sharepoint.com"
           }
     }
@@ -412,8 +412,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "id": "aeee11b1-7838-4b4a-8064-12ce5b01258f",
           "displayName": "",
           "licenseType": "Unknown",
-          "loginHint": "v-hrajandira@microsoft.com",
-          "userPrincipalName": "v-hrajandira@microsoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
            "teamsSku": "enterprise"
@@ -481,8 +481,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "admin@M365x94626565.onmicrosoft.com",
-          "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
            "teamsSku": "unknown"
@@ -499,7 +499,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          "team": undefined,
          "sharePointSite": {
           "teamSiteUrl": undefined,
-          "teamSiteDomain": "m365x94626565.sharepoint.com",
+          "teamSiteDomain": "microsoft.sharepoint.com",
           "teamSitePath": undefined,
           "teamSiteId": undefined,
           "mySitePath": undefined,
@@ -553,8 +553,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "admin@M365x94626565.onmicrosoft.com",
-          "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
            "teamsSku": "unknown"
@@ -571,7 +571,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          "team": undefined,
          "sharePointSite": {
           "teamSiteUrl": undefined,
-          "teamSiteDomain": "m365x94626565.sharepoint.com",
+          "teamSiteDomain": "microsoft.sharepoint.com",
           "teamSitePath": undefined,
           "teamSiteId": undefined,
           "mySitePath": undefined,
@@ -1551,7 +1551,9 @@ The following examples show how to capture the participant join and leave events
 
 # [Participant join event](#tab/participant-join-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+ * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+ * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 //Invoked on participant join a meeting
@@ -1564,7 +1566,9 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 
 # [Participant leave event](#tab/participant-leave-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+ * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+ * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 //Invoked on participant leave a meeting

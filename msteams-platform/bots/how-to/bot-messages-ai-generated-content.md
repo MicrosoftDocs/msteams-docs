@@ -3,6 +3,7 @@ title: Bot messages with AI-generated content
 description: Learn how to format your bot with an AI label, sensitivity labels, citations, and feedback buttons built using Teams AI library or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 12/11/2024
 ---
 
 # Bot messages with AI-generated content
@@ -64,6 +65,10 @@ await context.sendActivity({
 | `additionalType` | Array | Yes | Enables the AI label in the bot message. The only allowed value is `AIGeneratedContent`. |
 
 After an AI label is added, your bot’s message displays an **AI generated** label next to the bot’s name with a hover-over disclaimer stating, **AI-generated content may be incorrect**. The AI label and disclaimer can't be customized for AI-powered bots.
+
+> [!NOTE]
+>
+> The **AI generated** label is available only when you send a new message using `SendActivity`. If you update a message using `UpdateActivity`, the **Edited** label is added.
 
 ### Error handling
 
@@ -373,4 +378,5 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 
 * [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
-* [Get started with Teams AI library](Teams%20conversational%20AI/how-conversation-ai-get-started.md)
+* [Get started with Teams AI library](teams-conversational-ai/how-conversation-ai-get-started.md)
+* [Streaming UX in bots](~/bots/streaming-ux.md)

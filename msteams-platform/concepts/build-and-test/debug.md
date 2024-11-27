@@ -78,5 +78,5 @@ To load and run your experience within Teams, you need to create a package and u
 ## See also
 
 * [Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-* [DevTools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)
+* [Dev Tools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)
 * [Test app behavior in different environment](../../toolkit/test-app-behavior.md)

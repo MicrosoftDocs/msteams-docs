@@ -1,8 +1,8 @@
 ---
-title: Use Fluid with Teams
+title: Fluid-powered Tab App in Teams
 author: timtwang
 ms.author: mobajemu
-description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application.
+description: Learn how to integrate Fluid-powered real-time collaboration features into a Microsoft Teams tab app, its functions and parameters, and Fluid containers.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 12/13/2022
@@ -35,7 +35,7 @@ This tutorial requires familiarity with the following concepts and resources:
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, for example, `/My Microsoft Teams Projects`.
-1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs):
+1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-configurable-tab-with-nodejs):
 
     ```cmd
     yo teams
