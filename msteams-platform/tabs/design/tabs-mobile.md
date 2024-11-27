@@ -76,7 +76,6 @@ If you're uploading your custom app or publishing to an organization's app catal
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
-* [Build tabs with Adaptive Cards](../how-to/build-adaptive-card-tabs.md)
 * [Create a personal tab](../how-to/create-personal-tab.md)
 * [Plan responsive tabs for Teams mobile](../../concepts/design/plan-responsive-tabs-for-teams-mobile.md)
 * [Design your tab for Microsoft Teams](tabs.md)
