@@ -1,12 +1,12 @@
 ---
-title: Third-party Storage Capability
+title: Enable Third-party Storage Capability
 description: Learn how to set third-party app storage for your app for the files that are dragged and dropped in the Teams chat or channel.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 11/28/2024
 ---
 
-# Third-party storage
+# Third-party storage capability
 
 Microsoft Teams now allows you to modify the default storage from OneDrive and SharePoint to a third-party storage provider app of your preference. This can be accomplished using the Teams SDK. If a file is dragged and dropped into a Teams chat, the file can be stored in third-party storage by integrating this feature into your Teams application.
 
@@ -39,7 +39,7 @@ The third-party app calls `thirdPartyCloudStorage` API to get the drag-dropped f
     :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present.":::
 
     > [!NOTE]
-    > All the above value is present in application contest. If`"commandContext" = "thirdParty"`, it helps third party cloud storage apps to determine that their app is opened programmatically and they need to call `getDragAndDropFiles` API to get the files that were dropped in the compose area of a chat or channel.
+    > All the above value is present in application contest. If `"commandContext" = "thirdParty"`, it helps third party cloud storage apps to determine that their app is opened programmatically and they need to call `getDragAndDropFiles` API to get the files that were dropped in the compose area of a chat or channel.
 
 2. Callback: (files: FilesFor3PStorage[], error?: SdkError): void;** 
 

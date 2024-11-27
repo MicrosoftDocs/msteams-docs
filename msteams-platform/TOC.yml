@@ -824,6 +824,9 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: Attendance
+  - name: Third-party storage capability
+    href: concepts/device-capabilities/third-party-storage-capability.md
+    displayName: third party storage, drag drop, cloud storage
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
