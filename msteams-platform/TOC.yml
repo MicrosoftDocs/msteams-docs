@@ -59,9 +59,6 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
-    href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
@@ -1013,21 +1010,22 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: Include a SaaS offer with your Teams app
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
+  - name: SaaS offer for your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: license, Transactable Software-as-a-Service, Recloud app
-  - name: In-app purchases
-    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test preview for monetized apps
+    displayName: transactable SaaS offer, create SaaS offer, UsageRights, configure offer, create plan, submit offer, SaaS Fulfillment API
+  - name: Test your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee 
-  - name: Set up Microsoft license management
-    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Purchase and manage app subscriptions and licenses
+    displayName: preview offer ID, configure preview offer, error scenarios
+  - name: Publish your SaaS app
+    href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
+    displayName: go live, configure, SaaS app, SaaS offer, publish, remove offer, post purchase
+  - name: Configure in-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    displayName: manifest, purchase experience API, purchase
+  - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-    displayName: Purchase, Teams apps, License, manage, buy subscriptions
+    displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
