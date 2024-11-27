@@ -554,13 +554,13 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
-      - name: Guidelines for Copilot agents
-        href: messaging-extensions/dev-guidelines-copilot-agents.md
+      - name: Guidelines for agents
+        href: messaging-extensions/dev-guidelines-agents.md
         displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
-      - name: Debug a Microsoft 365 Copilot agent with developer mode
+      - name: Debug an agent for Microsoft 365 Copilot with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
       - name: Copilot handoff

@@ -1175,6 +1175,8 @@
       {
         "source_path": "msteams-platform/bots/how-to/conversations/request-headers-of-the-bot.md",
         "redirect_url": "/microsoftteams/platform/resources/platform/bots/how-to/conversations/conversation-messages"
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
       }
     ]
 }
