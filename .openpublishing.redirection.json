@@ -1159,6 +1159,10 @@
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/resources/media-formats.md",
+        "redirect_url": "/microsoftteams/platform/resources//platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
       }
     ]
 }

@@ -488,7 +488,7 @@
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
       displayName: Redirects for region affinity, GeoDNS resolution 
-    - name: Requirements and considerations for application-hosted media bots
+    - name: Application-hosted media bots
       href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
       displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public, codec 
   - name: Bot configuration experience
