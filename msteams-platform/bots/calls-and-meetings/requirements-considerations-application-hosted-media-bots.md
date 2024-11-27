@@ -19,7 +19,6 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 
 An application-hosted media bot has the following requirements:
 
-
 * The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
 
 * The bot can be hosted within one of the following Azure service environments:
@@ -62,6 +61,23 @@ The application-hosted media bots require the following scalability and performa
 * Application-hosted media bots require more compute and network (bandwidth) capacity than messaging bots and may incur higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot doesn't accept more simultaneous calls than it can manage. A video-enabled bot may be able to sustain only one or two concurrent media sessions per CPU core (if using the "raw" RGB24 or NV12 video formats).
 * The Real-time Media Platform doesn't take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding/decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot may take advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
 * The VM instance hosting the real-time media bot must have at least two CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with four virtual CPUs (vCPU) is the minimum size required. Detailed information about Azure VM types is available in the [Azure documentation](/azure/virtual-machines/windows/sizes-general).
+
+## Supported media formats for bots
+
+Bots on Microsoft Teams support only the following media formats for audio and video content:
+
+| Format | More information |
+| --- | --- |
+| Vorbis | <http://www.vorbis.com/> |
+| PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW | <https://wiki.multimedia.cx/?title=PCM> |
+| Ogg | <http://www.vorbis.com/> |
+| Matroska | <https://matroska.org/> |
+| WAV | <https://en.wikipedia.org/wiki/WAV> |
+| AAC | <https://en.wikipedia.org/wiki/Advanced_Audio_Coding> |
+| H264 | <https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC> |
+| MP3 | <https://en.wikipedia.org/wiki/MP3> |
+| Opus | <http://opus-codec.org/> |
+| MP4 | <https://en.wikipedia.org/wiki/MPEG-4> |
 
 ## Code sample
 
