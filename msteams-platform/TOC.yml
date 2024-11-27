@@ -458,8 +458,6 @@
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
-    - name: Request headers of the bot
-      href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams
       href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
       displayName: Adapter, notification, bot
