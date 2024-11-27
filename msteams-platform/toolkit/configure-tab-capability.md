@@ -19,7 +19,7 @@ Ensure the following prerequisites are met to configure a tab in Teams app:
 * The app manifest file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 
-> [!Tip]
+> [!TIP]
 > Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
 
 ## Configure tab in Teams app
@@ -46,7 +46,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
              "contentUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
              "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
              "scopes": [
-                 "personal"
+                 "personal",
                  "groupChat",
                  "team"
              ]
@@ -54,7 +54,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
      ],
    ```
 
-1. Update the `manifest.json` file with tab domain to the `validDomains` field:
+1. Update the value of `validDomains` with your tab's domain:
 
    ```JSON
    "validDomains": [
@@ -62,11 +62,12 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
    ],
    ```
 
-   `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They're replaced with the true endpoint in runtime based on your current environment.
+   > [!TIP]
+   > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
 
 ### Setup local debug environment
 
-1. Update your tab app code into your project in Microsoft Visual Studio Code. If you don't have one, you can create a new tab app project with Teams Toolkit and copy the source code into your current project. For example, your folder structure as follows:
+1. Bring your tab app code into your project in Microsoft Visual Studio Code. If you don't have one, you can create a new tab app with Teams Toolkit and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
 
    ```bash
        .
@@ -82,7 +83,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
        |-- teamsapp.yml
    ```
 
-   We recommend you to reorganize the folder structure as follows:
+   We recommend that you reorganize the folder structure as follows:
 
    ```bash
        .
@@ -259,7 +260,7 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
 
 1. To host your tab app in Azure Static Web Apps, add the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
 
-   ```json
+   ```yaml
     provision:
       ...
       - uses: arm/deploy
