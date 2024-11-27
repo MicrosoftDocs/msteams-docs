@@ -49,7 +49,6 @@ Application-hosted media bots must be directly accessible on the internet. These
 * The service hosting an application-hosted media bot must also configure each VM instance with a public-facing port, which maps to the specific instance.
   * For an Azure Cloud Service, this requires an instance input endpoint. For more information, see [enable communication for role instances in Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * For a VM Scale Set, a NAT rule on the load balancer must be configured. For more information, see [virtual networks and virtual machines in Azure](/azure/virtual-machines/windows/network-overview).
-
 * Bot Framework Emulator doesn't support application-hosted media bots.
 
 The next section provides details on scalability and performance considerations of application-hosted media bots.
@@ -88,12 +87,9 @@ Application-hosted media bots samples are as follows:
 | Local media sample | Sample that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Remote media sample | Sample that illustrates different remote media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Supported media formats for bots](../../resources/media-formats.md)
-
 ## See also
 
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 * [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
+* [Integrate media capabilities](../../concepts/device-capabilities/media-capabilities.md)
+* [Teams bot API changes to fetch team or chat members](../../resources/team-chat-member-api-changes.md)
