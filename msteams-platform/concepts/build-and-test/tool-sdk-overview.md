@@ -5,6 +5,7 @@ description: Learn more about the tools such as Teams Toolkit, Teams Toolkit CLI
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 11/28/2024
 ---
 
 # Tools and SDKs
@@ -49,7 +50,7 @@ Teams Platform brings you different SDKs, libraries, and APIs to build and devel
 
 The following flow diagram explains the different SDKs, libraries, and its relations:
 
-:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps." lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
 :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Library that requires another library to build apps. Your project automatically pulls into another library.</br>
 :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: Library that passes your app a reference to another library. </br>
