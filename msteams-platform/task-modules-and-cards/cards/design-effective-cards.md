@@ -1,9 +1,9 @@
 ---
 title: Designing Adaptive Cards for your app
-description: Learn about the types of Adaptive Cards, how to design Adaptive Cards for Teams app using Adaptive Card designer and Microsoft Teams UI Kit.
+description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 04/25/2023
+ms.date: 11/07/2024
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 
@@ -26,6 +26,13 @@ You also can start designing your Adaptive Cards directly in the browser.
 
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+
+## Adaptive Card starter collection
+
+The Adaptive Card starter collection is a curated set of Adaptive Card templates for Teams. These templates serve as a practical starting point to inspire you to design your own Adaptive Card. The templates help you understand Microsoft’s design principles, offer insights into the correct structure, and help explore interaction patterns in Adaptive Cards. You can use the templates as they are, or customize them for your app's requirements.
+
+> [!div class="nextstepaction"]
+> [Adaptive Card templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main)
 
 ## Types of Adaptive Cards
 
@@ -151,27 +158,21 @@ Use to gather multiple inputs from the user.
 
 ## Anatomy
 
-Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest including the following components in every card.
+Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest including the following components in every card:
+
+|Counter|Description|
+|----------|-----------|
+|A|**Header**: Make your headers clear and concise.|
+|B|**Body copy**: Convey details that are either too long or not important enough to include in the header.|
+|C|**Primary actions**: As a best practice, include 1-3 primary actions. You can have up to six.|
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile.":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Header**: Make your headers clear and concise.|
-|B|**Body copy**: Convey details that are either too long or not important enough to include in the header.|
-|C|**Primary actions**: As a best practice, include 1-3 primary actions. You can have up to six.|
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="The screenshot shows Adaptive Card anatomy on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy.":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Header**: Make your headers clear and concise.|
-|B|**Body copy**: Convey details that are either too long or not important enough to include in the header.|
-|C|**Primary actions**: As a best practice, include 1-3 primary actions. You can have up to six.|
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="The screenshot shows the anatomy of an Adaptive Card.":::
 
 ## Best practices
 
@@ -187,7 +188,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
   * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
 * `"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
   * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that are all 50 pixels wide.
-* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns will take up 10, 40, and 50 percent of the available width.
+* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns take up 10, 40, and 50 percent of the available width.
 * `"width": "<number>px"`: Sizes columns to a specific pixel width. This approach is useful when creating tables.
   * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
   * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
