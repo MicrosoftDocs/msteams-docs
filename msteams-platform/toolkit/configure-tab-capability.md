@@ -213,7 +213,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
 ### Provision app to Azure
 
 > [!TIP]
-> To develop a server-side tab app, you don't need to update your bicep files or Azure infrastructure. Your can host your tab app in the same Azure App Service as your bot.
+> To develop a server-side tab app, you don't need to update your bicep files or Azure infrastructure. You can host your tab app in the same Azure App Service as your bot.
 
 1. To provision an Azure Static Web App for your tab app, add the following code to your `azure.bicep` file:
 
