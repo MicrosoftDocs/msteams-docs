@@ -5,6 +5,7 @@ description: Learn about conversation update, message reaction, app installation
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 11/14/2024
 ---
 
 # Conversation events in your Teams bot
@@ -64,7 +65,7 @@ The following table shows a list of Teams conversation update events with more d
 
 The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
-The following code shows an example of channel created event:
+The following code shows an example of a channel created event:
 
 # [C#](#tab/dotnet)
 
@@ -163,7 +164,7 @@ async def on_teams_channel_created(
 
 The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
 
-The following code shows an example of channel renamed event:
+The following code shows an example of a channel renamed event:
 
 # [C#](#tab/dotnet)
 
@@ -255,7 +256,7 @@ async def on_teams_channel_renamed(
 
 The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
-The following code shows an example of channel deleted event:
+The following code shows an example of a channel deleted event:
 
 # [C#](#tab/dotnet)
 
@@ -351,7 +352,7 @@ async def on_teams_channel_deleted(
 
 The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
-The following code shows an example of channel restored event:
+The following code shows an example of a channel restored event:
 
 # [C#](#tab/dotnet)
 
@@ -459,9 +460,9 @@ A member added event is sent to your bot in the following scenarios:
 The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
 > [!TIP]
-> Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
+> Use the [`InstallationUpdate` event](#installation-update-event) to determine when your bot is added or removed from a conversation.
 
-The following code shows an example of team members added event:
+The following code shows an example of a team members added event:
 
 # [C#](#tab/dotnet)
 
@@ -637,7 +638,7 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
-The following code shows an example of team members removed event:
+The following code shows an example of a team members removed event:
 
 # [C#](#tab/dotnet)
 
@@ -755,7 +756,7 @@ async def on_teams_members_removed(
 
 Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
 
-The following code shows an example of team renamed event:
+The following code shows an example of a team renamed event:
 
 # [C#](#tab/dotnet)
 
@@ -848,7 +849,7 @@ async def on_teams_team_renamed(
 
 The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
 
-The following code shows an example of team deleted event:
+The following code shows an example of a team deleted event:
 
 # [C#](#tab/dotnet)
 
@@ -932,7 +933,7 @@ async def on_teams_team_deleted(
 
 The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
 
-The following code shows an example of team restored event:
+The following code shows an example of a team restored event:
 
 # [C#](#tab/dotnet)
 
@@ -1114,7 +1115,7 @@ async def on_teams_team_archived(
 
 The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.
 
-The following code shows an example of team unarchived event:
+The following code shows an example of a team unarchived event:
 
 # [C#](#tab/dotnet)
 
@@ -1618,7 +1619,7 @@ When you uninstall an app, the bot is also uninstalled. When a user sends a mess
 
 ## Event handling for install and uninstall events
 
-When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
 * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
