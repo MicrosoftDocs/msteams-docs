@@ -66,7 +66,7 @@ Following are a few benefits of static tabs in chats, channels, and meetings:
 The following table helps you determine best fit for your app:
 
 | &nbsp; | Personal | Channels | Group chat | Meetings | Calling |
-|---|---|---| --- |
+|:---|:---:|:---:|:---:|:---:|:---:|
 |[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️| ✔️ |
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ✔️ |
 
