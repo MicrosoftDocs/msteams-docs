@@ -313,6 +313,8 @@ The following code snippet shows how to enable tool choice and to toggle paralle
 }
 ```
 
+If you want to share feedback for AI SDK, see [Support and feedback](../../../feedback.md) or raise a ticket to [seek support](https://github.com/microsoft/teams-ai/issues/new?template=bug.yml).
+
 ## Code samples
 
 | Sample name | Description | .NET | Node.js | Python |
