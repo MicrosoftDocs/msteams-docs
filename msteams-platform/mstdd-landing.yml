@@ -51,8 +51,8 @@ landingContent:
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
-      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+      - text: Build apps with Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
