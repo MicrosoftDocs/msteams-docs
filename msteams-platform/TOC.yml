@@ -59,9 +59,6 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
-    href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification, activity feed, message, alert, notify
@@ -416,113 +413,109 @@
 - name: Build bots
   items:
   - name: Overview
-    href: bots/what-are-bots.md
-  - name: Bots and SDKs
-    href: bots/bot-features.md
-    displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
-  - name: Bot activity handlers
-    href: bots/bot-basics.md
-    displayName: OnMessageActivityAsync, Bot logic, core Bot Framework handlers
-  - name: Bot conversations
+    href: bots/overview.md
+    displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
+  - name: Types of bots
+    href: bots/build-a-bot.md
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
+  - name: Build custom engine agent
     items:
-    - name: Overview
-      href: bots/how-to/conversations/conversation-basics.md
-      displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
-    - name: Messages in bot conversations
-      href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, send messages from bot
-      items:
-      - name: Receive all conversation messages
-        href: bots/how-to/conversations/channel-messages-with-rsc.md
-        displayName: mention, send messages from bot, receive chat messages, bot messages, bots with RSC permissions
-    - name: Create a commands menu
-      href: bots/how-to/create-a-bot-commands-menu.md
-      displayName: compose
-    - name: Create prompt suggestions
-      href: bots/how-to/conversations/prompt-suggestions.md
-      displayName: prompt starter, suggested actions 
+    - name: Custom engine agent overview
+      href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: AI bot, Teams AI library, custom agent
+    - name: What is Teams AI library?
+      href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
+      displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
+    - name: Quick start guide
+      href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams Toolkit
+    - name: Build with Teams AI library
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+      displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent,
+    - name: Understand Teams AI library
+      href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+      displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
+    - name: Build custom engine agent using Teams Toolkit
+      href: Teams-AI-library-tutorial.yml
+    - name: Stream bot messages
+      href: bots/streaming-ux.md
+      displayName: Streaming, response generation, AI library, AI SDK, REST API
+    - name: Enhance AI-generated bot messages
+      href: bots/how-to/bot-messages-ai-generated-content.md
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit, 
+    - name: Custom engine agent user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+  - name: Understand bot concepts
+    href: bots/bot-concepts.md
+    displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
+  - name: Send and receive messages
+    items:
+    - name: Build conversational capability
+      href: bots/build-conversational-capability.md
+      displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-    - name: Proactive messages
-      href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, send message, bot framework
-    - name: Format your bot messages
+    - name: Format the bot messages
       href: bots/how-to/format-your-bot-messages.md
-      displayName: Interactive elements, UTF-16, Base64, hyperlink
-    - name: Bot messages with AI-generated content
-      href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
-    - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md
-    - name: Request headers of the bot
-      href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Interactive notification bot in Teams
-      href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
-      displayName: Adapter, notification, bot
-    - name: Command bot in Teams
-      href: bots/how-to/conversations/command-bot-in-teams.md
-    - name: Workflow bot in Teams
-      href: bots/how-to/conversations/workflow-bot-in-teams.md
-      displayname: Jira, jira
-  - name: Get Teams specific context for your bot
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md  
+  - name: Send notifications
+    items:
+    - name: Build notification capability
+      href: bots/build-notification-capability.md
+      displayName: Adapter, notifications
+    - name: Send proactive messages
+      href: bots/how-to/conversations/send-proactive-messages.md
+      displayName: conversationId, send message, bot framework, notification,
+  - name: Command bot in Teams
+    href: bots/how-to/conversations/command-bot-in-teams.md
+  - name: Create prompt suggestions
+    href: bots/how-to/conversations/prompt-suggestions.md
+    displayName: prompt starter, suggested actions
+  - name: Workflow bot in Teams
+    href: bots/how-to/conversations/workflow-bot-in-teams.md
+    displayname: Jira, jira
+  - name: Get Teams-specific context
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
-  - name: Send and receive files using bot
-    href: bots/how-to/bots-filesv4.md
-    displayName: send, File consent and upload files to Teams from a bot
+  - name: Teams bot API changes to fetch team or chat members
+    href: resources/team-chat-member-api-changes.md  
+  - name: Configure bot scope
+    href: bots/how-to/bot-configuration-experience.md
+    displayName: configuration settings, fetchTask, config/fetch, config/submit
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
-  - name: Calls and meetings bots
+  - name: Request headers of the bot
+    href: bots/how-to/conversations/request-headers-of-the-bot.md
+  - name: Explore advanced bot capabilities
     items:
-    - name: Overview
-      href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media calls and meetings
-      href: bots/calls-and-meetings/real-time-media-concepts.md
-      displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
-    - name: Register calls and meetings bot
-      href: bots/calls-and-meetings/registering-calling-bot.md
-      displayName: How Bot can create call, join meeting and transfer call
-    - name: Incoming call notifications
-      href: bots/calls-and-meetings/call-notifications.md
-      displayName: Redirects for region affinity, GeoDNS resolution 
-    - name: Requirements and considerations for application-hosted media bots
-      href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-      displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
-    - name: Supported media formats for bots
-      href: resources/media-formats.md
-      displayName: codec 
-  - name: Bot configuration experience
-    href: bots/how-to/bot-configuration-experience.md
-    displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Teams bot API changes to fetch team or chat members
-    href: resources/team-chat-member-api-changes.md
-  - name: Teams AI library
-    items:
+    - name: Teams bot API changes to fetch team or chat members
+      href: resources/team-chat-member-api-changes.md
+    - name: Calls and meetings bots
+      items:
       - name: Overview
-        href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
-      - name: Core capabilities
-        href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
-      - name: Get started
-        href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      - name: Quick start guide
-        href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - name: Stream bot messages
-        href: bots/streaming-ux.md
-        displayName: Streaming, response generation, AI library, AI SDK, REST API
-      - name: Build custom engine agent
-        items: 
-          - name: Custom engine agent for Microsoft 365 
-            href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
-          - name: Build custom engine agent using Teams Toolkit 
-            href: Teams-AI-library-tutorial.yml
-      - name: Teams AI library FAQs
-        href: bots/how-to/teams-conversational-ai/coversational-ai-faq.md
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+      - name: Real-time media calls and meetings
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+      - name: Register calls and meetings bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+        displayName: How Bot can create call, join meeting and transfer call
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notifications.md
+        displayName: Redirects for region affinity, GeoDNS resolution 
+      - name: Requirements and considerations for application-hosted media bots
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+        displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      - name: Supported media formats for bots
+        href: resources/media-formats.md
+        displayName: codec 
 - name: Build message extensions
   items:
   - name: Overview
@@ -562,13 +555,13 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
-      - name: Guidelines for Copilot agents
-        href: messaging-extensions/dev-guidelines-copilot-agents.md
+      - name: Guidelines for agents
+        href: messaging-extensions/dev-guidelines-agents.md
         displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
-      - name: Debug a Microsoft 365 Copilot agent with developer mode
+      - name: Debug an agent for Microsoft 365 Copilot with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
       - name: Copilot handoff
@@ -1013,21 +1006,22 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, purchase experience, Price
-  - name: Include a SaaS offer with your Teams app
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
+  - name: SaaS offer for your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: license, Transactable Software-as-a-Service, Recloud app
-  - name: In-app purchases
-    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-  - name: Test preview for monetized apps
+    displayName: transactable SaaS offer, create SaaS offer, UsageRights, configure offer, create plan, submit offer, SaaS Fulfillment API
+  - name: Test your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee 
-  - name: Set up Microsoft license management
-    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Purchase and manage app subscriptions and licenses
+    displayName: preview offer ID, configure preview offer, error scenarios
+  - name: Publish your SaaS app
+    href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
+    displayName: go live, configure, SaaS app, SaaS offer, publish, remove offer, post purchase
+  - name: Configure in-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    displayName: manifest, purchase experience API, purchase
+  - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-    displayName: Purchase, Teams apps, License, manage, buy subscriptions
+    displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app

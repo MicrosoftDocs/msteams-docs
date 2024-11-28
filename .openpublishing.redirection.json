@@ -931,7 +931,7 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
-      },
+      }, 
       {
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
         "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
@@ -1141,6 +1141,14 @@
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       },
       {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/plan-to-monetize.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md"
+      },
+      {
         "source_path":"msteams-platform/messaging-extensions/build-bot-based-plugin.md",
         "redirect_url":"/microsoftteams/platform/messaging-extensions/how-to/build-bot-based-agent"
       },
@@ -1159,6 +1167,14 @@
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
+      },
+      {  
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
       }
     ]
 }
