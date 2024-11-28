@@ -298,7 +298,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
 
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
 
-1. Go to **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 
 1. Select the **F5** key to debug and preview your Teams app.
 
