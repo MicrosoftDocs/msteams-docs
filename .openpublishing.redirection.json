@@ -1171,6 +1171,14 @@
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
+      },
+      {  
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
       }
     ]
 }
