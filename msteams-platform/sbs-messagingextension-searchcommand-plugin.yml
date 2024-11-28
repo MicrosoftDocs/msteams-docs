@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 06/19/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/dev-guidelines-agents.md
-  nextTutorialTitle: Bot-based message extension agent guidelines
+  nextTutorialHref: messaging-extensions/build-bot-based-agent.md
+  nextTutorialTitle: Extend bot-based message extension as agent for Microsoft 365 Copilot
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -358,7 +358,7 @@ items:
     1. Select **Panel** from the top-right corner.
     1. From the list of agents, select the required agent from the right-rail.
 
-       :::image type="content" source="assets/images/messaging-extension/message-extension-agent.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
+       :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the Agent option, list of agents, and the toggle enabled for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 
     1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
