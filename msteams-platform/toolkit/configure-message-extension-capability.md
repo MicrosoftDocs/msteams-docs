@@ -1,22 +1,22 @@
 ---
-title: Configure message extension capability
+title: Configure Message Extension Capability
 author: surbhigupta
-description: Learn how to configure message extension capability within Teams app.
+description: Learn how to configure the message extension capability within a Teams app with the Teams Toolkit for Visual Studio Code.
 ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 03/01/2024
+ms.date: 11/28/2024
 ---
 
 # Configure message extension capability within Teams app
 
-Message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
+A message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
 Message extensions are built on the bot support architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
-To configure message extension as an additional capability, ensure the following prerequisites are met:
+To configure message extension as an additional capability in your app, ensure the following prerequisites are met:
 
 * The app manifest (previously called Teams app manifest) file.
 * [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
@@ -128,9 +128,9 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
 ## Add message extension code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
+1. You can add your message extension app code into your project. If you don't have an app, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
 
-   ```yml
+   ```
    |--.vscode/
    |--appPackage/
    |--env/
@@ -154,9 +154,9 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    |--teamsapp.yml
    ```
 
-   Use the command `npm init -y` to create a root `package.json` file. We recommend you to reorganize the folder structure as follows:
+   We recommend you to reorganize the folder structure as follows:
 
-   ```yml
+   ```
    |--.vscode/
    |--appPackage/
    |--env/
@@ -180,6 +180,9 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    |--teamsapp.local.yml
    |--teamsapp.yml
    ```
+
+   > [!TIP]
+   > Use the command `npm init -y` to create a root `package.json` file.
 
 1. Add the following code to your root `package.json`:
 
@@ -300,7 +303,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ]
    ```
 
-1. Add the actions `botAadApp/create` and `botFramework/create` under provision in the `teamsapp.local.yml` file.
+1. Add the actions `botAadApp/create` and `botFramework/create` under `provision` in the `teamsapp.local.yml` file.
 1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
 
    ```yml
@@ -346,14 +349,16 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
 1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
-1. Select the F5 key to debug and preview your Teams app locally.
+
+1. Select the **F5** key to debug and preview your Teams app locally.
 
 ## Provision your app to Azure
 
 1. Copy the `botRegistration/` folder and add under `infra/`.
-1. Add following code to the bicep file:
 
-   ```yml
+1. Add following code to the `azure.bicep` file:
+
+   ```bicep
    param resourceBaseName2 string
    param webAppName2 string = resourceBaseName2
    @maxLength(42)
@@ -445,9 +450,10 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ```
 
 1. Add `botAadApp/create` action under the provision section in the `teamsapp.yml` file.
+
 1. Add the following code in the **deploy** section:
 
-   ```yml
+   ```yaml
    deploy:
      - uses: cli/runNpmCommand # Run npm command
        with:
@@ -487,12 +493,12 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Enter `Teams: Provision` to apply the bicep to Azure.
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
-1. Select **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Under **Run and Debug Activity Panel**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 1. Press **F5** to debug and preview your Teams app.
 
 # [Add message extension to bot app](#tab/botapp)
 
-You can add message extension to a bot app more easily than adding it to a tab app as message extension use the bot support framework.
+You can add the message extension capability to a bot app easily as message extensions use the bot support framework.
 
 To add a message extension to a bot app, follow these steps:
 
@@ -625,3 +631,14 @@ When incorporating message extensions into a bot app, ensure that you've a class
        async function shareMessageCommand(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionResponse> {
      }
    ```
+
+---
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Add How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md)
+
+## See also
+
+[Set up CI/CD pipelines](use-CICD-template.md)
