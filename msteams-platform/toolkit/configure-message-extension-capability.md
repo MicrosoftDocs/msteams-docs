@@ -16,11 +16,11 @@ Message extensions are built on the Bot Framework architecture in Teams. For mor
 
 ## Prerequisites
 
-To configure message extension as an additional capability in your app, ensure the following prerequisites are met:
+To configure the message extension capability in your app, ensure the following prerequisites are met:
 
-* The app manifest (previously called Teams app manifest) file.
-* [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* [Microsoft Azure account](/azure/storage/common/storage-account-create).
+* A Teams app and its manifest (previously called Teams app manifest) file.
+* A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
+* A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
 ## Add message extension to Teams app
 
@@ -126,9 +126,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
 ]
 ```
 
-## Add message extension code to your project
+### Add message extension code to your project
 
-1. Add your message extension app code into your project. If you don't have an app, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
+1. If you don't have a message extension app, create one with Teams Toolkit and copy the source code into the current project. Copy the code from the message extension app into the `bot/` folder of your current project. Your project's folder structure must look as follows:
 
    ```
    |--.vscode/
@@ -154,7 +154,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    |--teamsapp.yml
    ```
 
-   Reorganize the folder structure as follows:
+1. Reorganize the folder structure as follows:
 
    ```
    |--.vscode/
@@ -206,9 +206,13 @@ You can configure the message extension capability in the `appPackage/manifest.j
    > [!NOTE]
    > In a JavaScript project, a `build` folder isn't required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
-## Setup local debug environment
+### Setup local debug environment
 
-1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the `Start application` task's `dependOn` to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn`:
+1. Update `.vscode/tasks.json` as follows:
+   1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`
+   1. Update the `Start application` task's `dependOn` property to include `Start bot` and `Start frontend`
+   1. Configure the `cwd` option for `Start bot` and `Start frontend` as the code for the tab and bot are present in their respective folders.
+   1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn` property.
 
    ```json
    "tasks":[
@@ -303,8 +307,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    ]
    ```
 
-1. Add the actions `botAadApp/create` and `botFramework/create` under `provision` in the `teamsapp.local.yml` file.
-1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
+1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code to the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
 
    ```yml
    provision:
@@ -346,9 +349,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
-1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
+1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
 1. Select the **F5** key to debug and preview your Teams app locally.
 
@@ -488,17 +491,15 @@ You can configure the message extension capability in the `appPackage/manifest.j
          resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
    ```
 
-   For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
-
-1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
 1. Enter `Teams: Provision` to apply the bicep to Azure.
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
-1. Under **Run and Debug Activity Panel**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
-1. Press **F5** to debug and preview your Teams app.
+1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Select the **F5** key to debug and preview your Teams app.
 
 # [Add message extension to bot app](#tab/botapp)
 
-You can add the message extension capability to a bot app easily as message extensions use the bot support framework.
+You can add the message extension capability to a bot app easily as message extensions are built on Bot Framework.
 
 To add a message extension to a bot app, follow these steps:
 
@@ -506,13 +507,13 @@ To add a message extension to a bot app, follow these steps:
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to project](#add-message-extension-code-to-project)
 
-## Create a bot app using Teams Toolkit
+### Create a bot app using Teams Toolkit
 
 To create a bot app, see [create a bot app with Teams Toolkit](create-new-project.md).
 
-## Configure message extension in app manifest
+### Configure message extension in app manifest
 
-1. You can configure message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). For example:
+1. You can configure a message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
    ```json
    "composeExtensions": [
@@ -598,9 +599,9 @@ To create a bot app, see [create a bot app with Teams Toolkit](create-new-projec
    ]
    ```
 
-## Add message extension code to project
+### Add message extension code to project
 
-When incorporating message extensions into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from an earlier created message extension app into your class. The following code is an example:
+When adding a message extension into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. You can incorporate your message extension functions or duplicate functions from an earlier message extension app into your class. The following code is an example:
 
    ```javascript
      public class YourHandler extends TeamsActivityHandler{
@@ -631,6 +632,12 @@ When incorporating message extensions into a bot app, ensure that you've a class
        async function shareMessageCommand(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionResponse> {
      }
    ```
+
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
+1. Enter `Teams: Provision` to apply the bicep to Azure.
+1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Select the **F5** key to debug and preview your Teams app.
 
 ---
 
