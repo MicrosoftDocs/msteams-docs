@@ -12,7 +12,7 @@ ms.date: 11/28/2024
 
 A message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
-Message extensions are built on the bot support architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+Message extensions are built on the Bot Framework architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -29,18 +29,18 @@ To configure message extension as an additional capability in your app, ensure t
 To add a message extension to a tab app, follow these steps:
 
 1. [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
-1. [Configure message extension within your Teams app](#configure-message-extension-in-app-manifest)
+1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Provision your app to Azure](#provision-your-app-to-azure)
 
-## Create tab app using Microsoft Teams Toolkit
+### Create tab app using Microsoft Teams Toolkit
 
 To create tab app with Teams Toolkit, see [create new tab app with Teams Toolkit](create-new-project.md).
 
-## Configure message extension in app manifest
+### Configure message extension in app manifest
 
-You can configure message extension in the `appPackage/manifest.json` file. The following code snippet is an example:
+You can configure the message extension capability in the `appPackage/manifest.json` file. The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +128,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
 
 ## Add message extension code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
+1. Add your message extension app code into your project. If you don't have an app, use the message extension app you have created earlier and copy the source code into the current project. We suggest you to copy the code into the `bot/` folder. The following folder structure is an example of how your project's folder structure must look like:
 
    ```
    |--.vscode/
@@ -154,7 +154,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    |--teamsapp.yml
    ```
 
-   We recommend you to reorganize the folder structure as follows:
+   Reorganize the folder structure as follows:
 
    ```
    |--.vscode/
@@ -204,7 +204,7 @@ You can configure message extension in the `appPackage/manifest.json` file. The 
    ```
 
    > [!NOTE]
-   > In a JavaScript project, a `build` folder is not required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, a `build` folder isn't required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
@@ -602,7 +602,7 @@ To create a bot app, see [create a bot app with Teams Toolkit](create-new-projec
 
 When incorporating message extensions into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from an earlier created message extension app into your class. The following code is an example:
 
-   ```yml
+   ```javascript
      public class YourHandler extends TeamsActivityHandler{
        /**
         * your own code
