@@ -28,7 +28,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png"
 ---
 
 # [Channel](#tab/channel)
@@ -39,7 +39,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png"
 ---
 
 # [Meeting](#tab/meeting)
@@ -53,7 +53,6 @@ The following images show tabs added to different contexts in Teams:
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
 ***
 
-
 Following are a few benefits of static tabs in chats, channels, and meetings:
 
 * **Pinnable and instant**: You can pin apps with static tabs from the add a tab **+** icon in chats, channels, and meetings. These tabs can be unpinned and don't have the mandatory configuration dialog, which allows you to create tabs that function more like apps.
@@ -66,10 +65,10 @@ Following are a few benefits of static tabs in chats, channels, and meetings:
 
 The following table helps you determine best fit for your app:
 
-| &nbsp; | Personal | Channels | Group chat | Meetings |
-|---|---|---|
-|[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
+| &nbsp; | Personal | Channels | Group chat | Meetings | Calling |
+|---|---|---| --- |
+|[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️| ✔️ |
+|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ✔️ |
 
 >[!NOTE]
 > If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific scope, Teams pins the static tab by default.

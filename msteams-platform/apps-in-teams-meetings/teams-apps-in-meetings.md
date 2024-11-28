@@ -86,7 +86,7 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in a group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 * [**Webinar**](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3): Webinar initiated through **Webinar** button under **New Meeting** dropdown.
-* [**Calling**](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options): Use Teams Phone to initiate calls outside rhe organization through PSTN connectivity.
+* [**Calling**](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options): Extend Teams Phone to initiate calls outside the organization through PSTN connectivity.
 
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
