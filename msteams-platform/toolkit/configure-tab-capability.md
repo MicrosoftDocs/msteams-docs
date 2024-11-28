@@ -14,13 +14,14 @@ Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `ifr
 
 ## Prerequisites
 
-Ensure the following prerequisites are met to configure a tab in Teams app:
+Ensure the following prerequisites are met to configure the tab capability in a Teams app:
 
-* The app manifest file.
+* A Teams app and its app manifest file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
+* A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
 > [!TIP]
-> Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
+> If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Teams Toolkit.
 
 ## Configure tab in Teams app
 
@@ -29,8 +30,6 @@ The following steps help you to configure the tab capability in a Teams app:
 1. [Update app manifest](#update-app-manifest)
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Provision app to Azure](#provision-app-to-azure)
-
-If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Teams Toolkit.
 
 For a complete example on how to configure a tab in Teams bot app, see [Hello World bot with tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
@@ -69,7 +68,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
 
 1. Bring your tab app code into your project in Microsoft Visual Studio Code. If you don't have one, you can create a new tab app with Teams Toolkit and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
 
-   ```bash
+   ```
        .
        |-- appPackage/
        |-- env/
@@ -83,9 +82,9 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
        |-- teamsapp.yml
    ```
 
-   We recommend that you reorganize the folder structure as follows:
+   Reorganize the folder structure as follows:
 
-   ```bash
+   ```
        .
        |-- appPackage/
        |-- infra/
@@ -99,7 +98,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
        |-- teamsapp.yml
    ```
 
-   Ensure that you update the `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure. For example:
+1. Update the `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure. For example:
 
    ```yaml
        deploy:
@@ -168,9 +167,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
    }
    ```
 
-   You can find a complete example [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/.vscode).
-
-1. Add the following new actions to the `teamsapp.local.yml` file to enable your tab project to work seamlessly with Teams Toolkit:
+1. Add the following actions to the `teamsapp.local.yml` file to enable your tab project to work seamlessly with Teams Toolkit:
 
    ```yaml
    provision:
@@ -208,7 +205,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
    ```
 
-1. After you configure your project and update the necessary files, debug your app locally in Visual Studio Code.
+1. Select the **F5** key to debug your app locally in Visual Studio Code.
 
 ### Provision app to Azure
 
@@ -242,7 +239,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
    output TAB_ENDPOINT string = 'https://${siteDomain}'
    ```
 
-1. Update the `azure.parameters.json` file to ensure that necessary parameters are set correctly.
+1. To ensure that the necessary parameters are set correctly, update the `azure.parameters.json` file as follows:
 
    ```json
    {
@@ -259,7 +256,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
    }
    ```
 
-1. To host your tab app in Azure Static Web Apps, add the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
+1. To host your tab app in Azure Static Web Apps, define the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
 
    ```yaml
     provision:
@@ -275,11 +272,11 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
       ...
    ```
 
-1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
 
 1. Enter `Teams: Provision` command to apply the bicep to Azure.
 
-1. To automate build and deployment of your tab app, add the following `build` and `deploy` actions to your `teamsapp.yml` file:
+1. To automate the build and deployment of your tab app, add the following `build` and `deploy` actions to your `teamsapp.yml` file:
 
    ```yaml
      - uses: cli/runNpmCommand # Run npm command
@@ -297,11 +294,11 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
           args: '@azure/static-web-apps-cli deploy ./build -d ${{SECRET_TAB_SWA_DEPLOYMENT_TOKEN}} --env production'
    ```
 
-1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
 
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
 
-1. Under **Run and Debug Activity Panel**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+1. Go to **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 
 1. Select the **F5** key to debug and preview your Teams app.
 
