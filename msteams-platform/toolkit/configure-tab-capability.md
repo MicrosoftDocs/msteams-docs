@@ -24,7 +24,7 @@ Ensure the following prerequisites are met to configure a tab in Teams app:
 
 ## Configure tab in Teams app
 
-The following steps help you to configure the tab in a Teams app:
+The following steps help you to configure the tab capability in a Teams app:
 
 1. [Update app manifest](#update-app-manifest)
 1. [Setup local debug environment](#setup-local-debug-environment)
@@ -62,7 +62,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
    ],
    ```
 
-   > [!TIP]
+   > [!NOTE]
    > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
 
 ### Setup local debug environment
@@ -216,7 +216,7 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
 
 1. To provision an Azure Static Web App for your tab app, add the following code to your bicep file:
 
-   ```json
+   ```bicep
    @maxLength(20)
    @minLength(4)
    param resourceBaseName string
@@ -302,7 +302,7 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
 
 1. Under **Run and Debug Activity Panel**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 
-1. Press **F5** to debug and preview your Teams app.
+1. Select the **F5** key to debug and preview your Teams app.
 
 ## Next step
 
