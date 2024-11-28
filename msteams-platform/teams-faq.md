@@ -391,7 +391,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 
 <summary>Do we support in-app purchases?</summary>
 
-Yes, we support in-app purchases. For more information, see [in-app purchases](in-app-purchase-flow.md).
+Yes, we support in-app purchases. For more information, see [in-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md).
 
 </br>
 
@@ -400,7 +400,7 @@ Yes, we support in-app purchases. For more information, see [in-app purchases](i
 
 <summary>How the flow is handled by CSP who makes the purchase for enterprise?</summary>
 
-CSP can make purchases for enterprise from Teams Store. For more information, see [third-party app purchase](#subscription-purchase-experience).
+CSP can make purchases for enterprise from Teams Store. For more information, see [third-party app purchase](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience).
 
 </br>
 
@@ -418,7 +418,7 @@ Microsoft charges a 3% transaction fee whenever a payment is processed. So, if i
 
 <summary>Can I test the offer before publishing?</summary>
 
-Yes, you can test the offer before publishing. For more information, see [test your SaaS offer](Test-preview-for-monetized-apps.md).
+Yes, you can test the offer before publishing. For more information, see [test your SaaS offer](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md).
 
 </br>
 
@@ -488,7 +488,7 @@ Being Channel Ready places, ISVs in the best position to be successful matched a
 
 <summary>Are partners able to provide a minimum number of licenses available to purchase as part of a subscription?</summary>
 
-Yes. For more information, see [subscription purchase experience](#subscription-purchase-experience).
+Yes. For more information, see [subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md).
 
 </br>
 
@@ -497,7 +497,7 @@ Yes. For more information, see [subscription purchase experience](#subscription-
 
 <summary>How can subscribers upgrade, downgrade, or cancel their subscriptions?  Can they upgrade from monthly to annual?</summary>
 
-Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](#license-and-subscriptions-management-experience).
+Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#license-and-subscriptions-management-experience).
 
 </br>
 
