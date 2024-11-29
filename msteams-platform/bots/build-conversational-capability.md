@@ -929,7 +929,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp1)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
@@ -944,7 +944,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript](#tab/typescript1)
+# [TypeScript](#tab/ts1)
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-deleteactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
@@ -958,7 +958,7 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# [Python](#tab/python1)
+# [Python](#tab/py1)
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-delete-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L227)
@@ -971,7 +971,7 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
-# [REST API](#tab/rest1)
+# [REST API](#tab/rst1)
 
 To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
 
