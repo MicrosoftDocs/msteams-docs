@@ -851,7 +851,6 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 ---
----
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
