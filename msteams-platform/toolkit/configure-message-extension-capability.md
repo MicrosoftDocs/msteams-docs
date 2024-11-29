@@ -28,19 +28,19 @@ To configure the message extension capability in your app, ensure the following 
 
 To add a message extension to a tab app, follow these steps:
 
-1. [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
+1. [Create message extension app using Microsoft Teams Toolkit](#create-message-extension-app-using-microsoft-teams-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Provision your app to Azure](#provision-your-app-to-azure)
 
-### Create tab app using Microsoft Teams Toolkit
+### Create message extension app using Microsoft Teams Toolkit
 
-To create tab app with Teams Toolkit, see [create new tab app with Teams Toolkit](create-new-project.md).
+To create a message extension app with Teams Toolkit, see [create new a message extension app with Teams Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in the `appPackage/manifest.json` file. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md). The following code snippet is an example:
+You can configure the message extension capability in the `appPackage/manifest.json` file. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +128,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 ### Add message extension code to your project
 
-1. If you don't have a message extension app, [create a message extension app with Teams Toolkit](create-new-project.md) and copy the source code into the into the `bot/` folder of your current project. Your project's folder structure must look as follows:
+1. If you don't have a message extension app, [create a message extension app with Teams Toolkit](create-new-project.md). Create a `bot/` folder in your current project and copy the source code of the message extension app into the into the folder. Your project's folder structure must look as follows:
 
    ```
    |--.vscode/
@@ -349,7 +349,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -452,7 +452,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    }
    ```
 
-1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file.
+1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
 
 1. Add the following code under the `deploy` section:
 
@@ -507,13 +507,13 @@ You can add the message extension capability to a bot app easily as message exte
 
 To add a message extension to a bot app, follow these steps:
 
-1. [Create a bot app using Teams Toolkit](#create-a-bot-app-using-teams-toolkit)
+1. [Create a message extension app using Teams Toolkit](#create-a-message-extension-using-teams-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to project](#add-message-extension-code-to-project)
 
-### Create a bot app using Teams Toolkit
+### Create a message extension using Teams Toolkit
 
-To create a bot app, see [create a bot app with Teams Toolkit](create-new-project.md).
+To create a message extension app, see [create a bot app with Teams Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
