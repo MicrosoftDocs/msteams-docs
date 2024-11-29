@@ -775,7 +775,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -859,7 +859,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet3)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -930,7 +930,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet4)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
@@ -1072,7 +1072,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
+  - `name`: Name of the team passed only in cases of (how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
 - `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
   - `id`: GUID for the channel.
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -1115,7 +1115,7 @@ If you want to generate an arbitrary notification without sending a message to t
 
 The following code shows an example of adding notifications to your message:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
@@ -1252,7 +1252,7 @@ Two non-standard request header fields are added to all the requests sent to bot
 
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
-:::image type="content" source="../../../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
+:::image type="content" source="../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
 
 ## Receive conversation messages with RSC
 
