@@ -20,11 +20,11 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true#installing-the-azure-ad-module).
 
 > [!NOTE]
-> You must have global admin permissions in the tenant to run the scripts.
+> You must have Global Administrator permissions in the tenant to run the scripts.
 
 ## Allow users to upload apps
 
-By default, only global admins or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
+By default, only Global Administrator or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels for testing
 
@@ -162,7 +162,7 @@ By default, only global admins or Teams service admins can upload the custom app
 
         try {
 
-            # 1. Login with the global administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the Global Administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 
