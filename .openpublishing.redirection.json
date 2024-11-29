@@ -1181,6 +1181,14 @@
         "redirect_url": "/microsoftteams/platform/resources/platform/bots/how-to/conversations/conversation-messages"
       },
       {  
+        "source_path": "msteams-platform/toolkit/teams-toolkit-tutorial.md", 
+        "redirect_url": "/microsoftteams/platform/get-started/teams-toolkit-tutorial"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-api-connection.md", 
+        "redirect_url": "/microsoftteams/platform/toolkit/add-resource"
+      },
+      {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
       },

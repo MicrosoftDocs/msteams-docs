@@ -161,12 +161,9 @@
           - name: Create How-to Guides
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app 
-          - name: Create capability based cloud resources
+          - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
-            displayName: application 
-          - name: Integrate existing third party APIs
-            href: toolkit/add-API-connection.md
-            displayName: endpoint
+            displayName: application, endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
