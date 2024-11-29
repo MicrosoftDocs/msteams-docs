@@ -1,11 +1,11 @@
 ---
 title: Configure Message Extension Capability
 author: surbhigupta
-description: Learn how to configure the message extension capability within a Teams app with the Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the message extension capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
 ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/28/2024
+ms.date: 11/29/2024
 ---
 
 # Configure message extension capability within Teams app
@@ -40,7 +40,7 @@ To create tab app with Teams Toolkit, see [create new tab app with Teams Toolkit
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in the `appPackage/manifest.json` file. The following code snippet is an example:
+You can configure the message extension capability in the `appPackage/manifest.json` file. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md). The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +128,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 ### Add message extension code to your project
 
-1. If you don't have a message extension app, create one with Teams Toolkit and copy the source code into the current project. Copy the code from the message extension app into the `bot/` folder of your current project. Your project's folder structure must look as follows:
+1. If you don't have a message extension app, [create a message extension app with Teams Toolkit](create-new-project.md) and copy the source code into the into the `bot/` folder of your current project. Your project's folder structure must look as follows:
 
    ```
    |--.vscode/
@@ -156,6 +156,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 1. Reorganize the folder structure as follows:
 
+   > [!TIP]
+   > Use the command `npm init -y` to create a root `package.json` file.
+
    ```
    |--.vscode/
    |--appPackage/
@@ -180,9 +183,6 @@ You can configure the message extension capability in the `appPackage/manifest.j
    |--teamsapp.local.yml
    |--teamsapp.yml
    ```
-
-   > [!TIP]
-   > Use the command `npm init -y` to create a root `package.json` file.
 
 1. Add the following code to your root `package.json`:
 
@@ -209,10 +209,10 @@ You can configure the message extension capability in the `appPackage/manifest.j
 ### Setup local debug environment
 
 1. Update `.vscode/tasks.json` as follows:
-   1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`
-   1. Update the `Start application` task's `dependOn` property to include `Start bot` and `Start frontend`
-   1. Configure the `cwd` option for `Start bot` and `Start frontend` as the code for the tab and bot are present in their respective folders.
-   1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn` property.
+   1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`.
+   1. Update the `Start application` task's `dependsOn` array to include `Start bot` and `Start frontend`.
+   1. Configure the `cwd` option for `Start bot` and `Start frontend` as you've already moved the code for the tab and bot into their respective folders.
+   1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependsOn` array.
 
    ```json
    "tasks":[
@@ -359,7 +359,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 1. Copy the `botRegistration/` folder and add under `infra/`.
 
-1. Add following code to the `azure.bicep` file:
+1. Add the following code to the `azure.bicep` file:
 
    ```bicep
    param resourceBaseName2 string
@@ -424,7 +424,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    output BOT_DOMAIN string = webApp2.properties.defaultHostName
    ```
 
-1. To ensure the necessary parameters correctly update the `azure.parameters.json` file with the following code:
+1. To ensure that the necessary parameters are set correctly, update the `azure.parameters.json` file with the following code:
 
    ```json
    {
@@ -452,9 +452,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
    }
    ```
 
-1. Add `botAadApp/create` action under the provision section in the `teamsapp.yml` file.
+1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file.
 
-1. Add the following code in the **deploy** section:
+1. Add the following code under the `deploy` section:
 
    ```yaml
    deploy:
@@ -492,9 +492,13 @@ You can configure the message extension capability in the `appPackage/manifest.j
    ```
 
 1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
+
 1. Enter `Teams: Provision` to apply the bicep to Azure.
+
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+
 1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+
 1. Select the **F5** key to debug and preview your Teams app.
 
 # [Add message extension to bot app](#tab/botapp)
@@ -513,7 +517,7 @@ To create a bot app, see [create a bot app with Teams Toolkit](create-new-projec
 
 ### Configure message extension in app manifest
 
-1. You can configure a message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure a message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
    ```json
    "composeExtensions": [
@@ -601,42 +605,59 @@ To create a bot app, see [create a bot app with Teams Toolkit](create-new-projec
 
 ### Add message extension code to project
 
-When adding a message extension into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. You can incorporate your message extension functions or duplicate functions from an earlier message extension app into your class. The following code is an example:
+1. Your bot app contains a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from a previously created message extension app into this class. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
 
    ```javascript
-     public class YourHandler extends TeamsActivityHandler{
-       /**
-        * your own code
-       */
+     class YourHandler extends TeamsActivityHandler {
+     /**
+      * your own code
+      */
 
-       //message extension code
-       // Action.
-       public async handleTeamsMessagingExtensionSubmitAction(
+     //message extension code
+     // Action.
+     public async handleTeamsMessagingExtensionSubmitAction(
        context: TurnContext,
        action: any
      ): Promise<any> {}
 
-       // Search.
-       public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {}
+     // Search.
+     public async handleTeamsMessagingExtensionQuery(
+       context: TurnContext,
+       query: any
+     ): Promise<any> {}
 
-       public async handleTeamsMessagingExtensionSelectItem(
-         context: TurnContext,
-         obj: any
-       ): Promise<any> {}
+     public async handleTeamsMessagingExtensionSelectItem(
+       context: TurnContext,
+       obj: any
+     ): Promise<any> {}
 
-       // Link Unfurling.
-       public async handleTeamsAppBasedLinkQuery(context: TurnContext, query: any): Promise<any> {}
-     }
-       async function createCardCommand(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionResponse> {
-     }
-       async function shareMessageCommand(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionResponse> {
-     }
+     // Link Unfurling.
+     public async handleTeamsAppBasedLinkQuery(
+       context: TurnContext,
+       query: any
+     ): Promise<any> {}
+   }
+
+   async function createCardCommand(
+     context: TurnContext,
+     action: MessagingExtensionAction
+   ): Promise<MessagingExtensionResponse> {}
+
+   async function shareMessageCommand(
+     context: TurnContext,
+     action: MessagingExtensionAction
+   ): Promise<MessagingExtensionResponse> {}
+
    ```
 
 1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
+
 1. Enter `Teams: Provision` to apply the bicep to Azure.
+
 1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+
 1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+
 1. Select the **F5** key to debug and preview your Teams app.
 
 ---
