@@ -775,7 +775,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
-# [C#](#tab/dotnet2)
+# [C#](#tab/csharp2)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
