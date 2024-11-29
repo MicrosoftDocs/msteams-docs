@@ -57,7 +57,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
-| Concise individual interactions | @mention to bot  | Q&A bots |
+| Concise individual interactions | @mention to bot | Q&A bots |
 | @mention to bot | Similar to channel | Bots that tell jokes and take notes |
 
 ### In a channel
@@ -237,10 +237,10 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python| Manifest
-|----------------|-----------------|--------------|----------------|-------|-------|
-| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
-| Bot samples | Set of bot framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Sample name | Description | .NETCore | Node.js | Python| Manifest |
+| --- | --- | --- | --- | --- | --- |
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Bot samples | Set of bot framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Next step
 
