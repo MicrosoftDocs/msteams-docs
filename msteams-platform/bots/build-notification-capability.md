@@ -521,6 +521,107 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 If you want to send activity feed notifications for your app, you can use the activity feed notification APIs in Microsoft Graph. For more information, see [Send activity feed notifications to users in Microsoft Teams](../tabs/send-activity-feed-notification.md).
 
+## Add notifications to your message
+
+There are two ways to send a notification from your application:
+
+- By setting the `Notification.Alert` property on bot message.
+- By sending an activity feed notification using the Graph API.
+
+You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
+
+If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
+
+> [!NOTE]
+> The **Summary** field displays any text from the user as a notification message in the feed.
+
+The following code shows an example of adding notifications to your message:
+
+# [C#](#tab/dotnet)
+
+- [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  // Returns a simple text message.
+  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
+  message.TeamsNotifyUser();
+
+  // Sends an activity to the sender of the incoming activity.
+  await turnContext.SendActivityAsync(message);
+}
+
+```
+
+# [TypeScript](#tab/typescrpt)
+
+- [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L36)
+
+```typescript
+
+this.onMessage(async (turnContext, next) => {
+    let message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(message);
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.sendActivity(message);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+# [Python](#tab/python)
+
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teams-notify-user)
+
+```python
+
+async def on_message_activity(self, turn_context: TurnContext):
+    message = MessageFactory.text("You'll get a notification, if you've turned them on.")
+    teams_notify_user(message)
+    // Sends an activity to the sender of the incoming activity.
+    await turn_context.send_activity(message)
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "timestamp": "2017-04-24T21:46:00.9663655Z",
+  "localTimestamp": "2017-04-24T14:46:00.9663655-07:00",
+  "serviceUrl": "https://callback.com",
+  "channelId": "msteams",
+  "from": {
+    "id": "28:e4fda94a-4b80-40eb-9bf0-6314491bc793",
+    "name": "The bot"
+  },
+  "conversation": {
+    "id": "a:1pL6i0oY3C0K8oAj8"
+  },
+  "recipient": {
+    "id": "29:1rsVJmSSFMScF0YFyCXpvNWlo",
+    "name": "User"
+  },
+  "text": "John Phillips assigned you a weekly todo",
+  "summary": "Don't forget to meet with Marketing next week",
+  "channelData": {
+    "notification": {
+      "alert": true
+    }
+  },
+  "replyToId": "1493070356924"
+}
+```
+
+---
+
 ## FAQ
 
 <br>
