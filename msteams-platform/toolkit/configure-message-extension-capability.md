@@ -36,7 +36,7 @@ To add a message extension to a tab app, follow these steps:
 
 ### Create message extension app using Microsoft Teams Toolkit
 
-To create a message extension app with Teams Toolkit, see [create new a message extension app with Teams Toolkit](create-new-project.md).
+To create a message extension app with Teams Toolkit, see [create a message extension app with Teams Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
@@ -128,7 +128,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 ### Add message extension code to your project
 
-1. If you don't have a message extension app, [create a message extension app with Teams Toolkit](create-new-project.md). Create a `bot/` folder in your current project and copy the source code of the message extension app into the into the folder. Your project's folder structure must look as follows:
+1. Create a `bot/` folder in your tab project and copy the source code of the message extension app into the into the folder. Your tab project's folder structure must look as follows:
 
    ```
    |--.vscode/
@@ -513,11 +513,11 @@ To add a message extension to a bot app, follow these steps:
 
 ### Create a message extension using Teams Toolkit
 
-To create a message extension app, see [create a bot app with Teams Toolkit](create-new-project.md).
+To create a message extension app, see [create a message extension app with Teams Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
-You can configure a message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure the message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
    ```json
    "composeExtensions": [
@@ -605,7 +605,7 @@ You can configure a message extension in `appPackage/manifest.json`. If you need
 
 ### Add message extension code to project
 
-1. Your bot app contains a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from a previously created message extension app into this class. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
+1. Your bot app contains a class that extends `TeamsActivityHandler`. Copy your message extension functions from the message extension app into this class. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
 
    ```javascript
      class YourHandler extends TeamsActivityHandler {
