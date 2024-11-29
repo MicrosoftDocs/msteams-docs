@@ -320,7 +320,7 @@ Yes. For more information, see [pricing and offers](/partner-center/pricing/pric
 
 <summary>What are CSPs looking for when matching with ISVs?</summary>
 
-Being Channel Ready places, ISVs in the best position to be successful matched as CSPs must look look for:​
+Being Channel Ready places, ISVs in the best position to be successfully matched as CSPs must look for:​
 
 1. Complementary apps to add to their bundles solutions and services​.
 1. An attractive margin, balancing their effort with potential revenue​.
@@ -346,7 +346,7 @@ Yes. For more information, see [subscription purchase experience](#subscription-
 
 <details>
 
-<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions?  Can they upgrade from monthly to annual?</summary>
+<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions? Can they upgrade from monthly to annual?</summary>
 
 Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](#license-and-subscriptions-management-experience).
 

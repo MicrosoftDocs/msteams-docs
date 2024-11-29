@@ -407,7 +407,7 @@ CSP can make purchases for enterprise from Teams Store. For more information, se
 </details>
 <details>
 
-<summary>What's the percentage fee which is taken by Microsoft?</summary>
+<summary>What's the percentage fee that is taken by Microsoft?</summary>
 
 Microsoft charges a 3% transaction fee whenever a payment is processed. So, if it's a monthly subscription, then the 3% is applied on a monthly basis. This charge applies for both credit card transactions and invoice billing.
 
@@ -434,7 +434,7 @@ It's not mandatory but a good practice to implement it.
 </details>
 <details>
 
-<summary>If the app is transactable on Azure marketplace, will it also be available in Microsoft AppSource or Teams by default?</summary>
+<summary>If the app is transactable on Azure Marketplace, will it also be available in Microsoft AppSource or Teams by default?</summary>
 
 No. Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource, must have a linked transactable offer, and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy** button.
 
@@ -475,7 +475,7 @@ Yes. For more information, see [pricing and offers](/partner-center/pricing/pric
 
 <summary>What are CSPs looking for when matching with ISVs?</summary>
 
-Being Channel Ready places, ISVs in the best position to be successful matched as CSPs must look look for:​
+Being Channel Ready places, ISVs in the best position to be successfully matched as CSPs must look for:​
 
 1. Complementary apps to add to their bundles solutions and services​.
 1. An attractive margin, balancing their effort with potential revenue​.
@@ -495,7 +495,7 @@ Yes. For more information, see [subscription purchase experience](concepts/deplo
 </details>
 <details>
 
-<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions?  Can they upgrade from monthly to annual?</summary>
+<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions? Can they upgrade from monthly to annual?</summary>
 
 Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#license-and-subscriptions-management-experience).
 
