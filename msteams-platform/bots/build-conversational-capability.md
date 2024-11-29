@@ -907,7 +907,7 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 ```
 
-# [REST API](#tab/rest)
+# [REST API](#tab/restapi)
 
 > [!NOTE]
 > You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
