@@ -1,12 +1,12 @@
 ---
-title: Explore Ways to Build a Teams App
-description: Learn more about the available tools and SDKs to build a Microsoft Teams app based on the app capabilities, AI capability, UI components, and languages.
+title: Tool Options and Code Samples
+description: Learn about tools, SDKs, tutorials, and code samples to build apps with various capabilities such as AI, UI, and various languages, to prepare your environment.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
 ---
 
-# Choose what suits you
+# Explore tools and code samples
 
 You've built your first tab app, interactive notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
 
@@ -16,6 +16,7 @@ This section takes you through the various options for building your Teams app.
 
 * [Teams collaborative platform](#teams-collaborative-platform)
 * [Tools and SDKs](#tools-and-sdks)
+* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
 
 ## Teams collaborative platform
 
@@ -72,10 +73,27 @@ The following tools in the Teams platform help you during app development:
 
 | App development phase | Teams platform tools |
 |-----|-----|
-| Design | Teams UI kit and Fluent UI React components |
-| Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
-| Test, deploy, and publish |Microsoft Entra ID and Developer Portal |
-| Distribute | Partner Center and Teams Store |
+| Design | [Teams UI kit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-kit) and [Fluent UI React components](../concepts/design/design-teams-app-ui-templates.md#fluent-ui-react-components) |
+| Build | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
+| Test, deploy, and publish |[Microsoft Entra ID](/entra/fundamentals/whatis) and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) |
+| Distribute | [Partner Center](../concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
+
+## Teams app tutorials and code samples
+
+You can build your own Microsoft Teams app with different capabilities using the following tutorials and code samples.
+
+### Teams app tutorials
+
+To start building your Teams app, use the following languages or frameworks and prepare your development environment.
+
+| &nbsp; | **Tab** | **Bot** | **Message extension** |
+| --- | --- | --- | --- |
+| **Basic app** | • [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) <br> •  [Build your first app using C#](../sbs-gs-csharp.yml) <br> • [Build your first app with SPFx](../sbs-gs-spfx.yml) | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)|
+| **Scenario-based app** | NA | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA |
+
+### Code samples
+
+Code samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
 ## See also
 
