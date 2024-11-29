@@ -858,7 +858,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet4)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -874,7 +874,7 @@ activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript4)
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -890,7 +890,7 @@ message.id = context.activity.replyToId;
 await context.updateActivity(message);
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -906,7 +906,7 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 ```
 
-# [REST API](#tab/restapi)
+# [REST API](#tab/restapi4)
 
 > [!NOTE]
 > You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
