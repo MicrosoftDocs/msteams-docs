@@ -1060,6 +1060,200 @@ The following code shows an example of channelData object (channelCreated event)
 }
 ```
 
+## Teams channel data
+
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
+
+The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
+
+A typical `channelData` object in an activity sent to your bot contains the following information:
+
+- `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
+- `team`: Passed only in channel contexts, not in personal chat.
+  - `id`: GUID for the channel.
+  - `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
+- `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
+  - `id`: GUID for the channel.
+  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+- `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+
+### Example channelData object
+
+The following code shows an example of channelData object (channelCreated event):
+
+```json
+"channelData": {
+    "eventType": "channelCreated",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    },
+    "channel": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
+        "name": "My New Channel"
+    },
+    "team": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
+    }
+}
+```
+
+## Add notifications to your message
+
+There are two ways to send a notification from your application:
+
+- By setting the `Notification.Alert` property on bot message.
+- By sending an activity feed notification using the Graph API.
+
+You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
+
+If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
+
+> [!NOTE]
+> The **Summary** field displays any text from the user as a notification message in the feed.
+
+The following code shows an example of adding notifications to your message:
+
+# [C#](#tab/dotnet)
+
+- [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  // Returns a simple text message.
+  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
+  message.TeamsNotifyUser();
+
+  // Sends an activity to the sender of the incoming activity.
+  await turnContext.SendActivityAsync(message);
+}
+
+```
+
+# [TypeScript](#tab/typescript)
+
+- [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L36)
+
+```typescript
+
+this.onMessage(async (turnContext, next) => {
+    let message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(message);
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.sendActivity(message);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+# [Python](#tab/python)
+
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teams-notify-user)
+
+```python
+
+async def on_message_activity(self, turn_context: TurnContext):
+    message = MessageFactory.text("You'll get a notification, if you've turned them on.")
+    teams_notify_user(message)
+    // Sends an activity to the sender of the incoming activity.
+    await turn_context.send_activity(message)
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "timestamp": "2017-04-24T21:46:00.9663655Z",
+  "localTimestamp": "2017-04-24T14:46:00.9663655-07:00",
+  "serviceUrl": "https://callback.com",
+  "channelId": "msteams",
+  "from": {
+    "id": "28:e4fda94a-4b80-40eb-9bf0-6314491bc793",
+    "name": "The bot"
+  },
+  "conversation": {
+    "id": "a:1pL6i0oY3C0K8oAj8"
+  },
+  "recipient": {
+    "id": "29:1rsVJmSSFMScF0YFyCXpvNWlo",
+    "name": "User"
+  },
+  "text": "John Phillips assigned you a weekly todo",
+  "summary": "Don't forget to meet with Marketing next week",
+  "channelData": {
+    "notification": {
+      "alert": true
+    }
+  },
+  "replyToId": "1493070356924"
+}
+```
+
+---
+
+## Status codes from bot conversational APIs
+
+Ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
+
+| Status code | Error code and message values | Description | Retry request | Developer action |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot is added again.|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot isn't installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
+| 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
+| 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it is deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or is deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
+| 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the bot. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+
+### Status codes retry guidance
+
+The general retry guidance for each status code is listed in the following table, bot must avoid retrying status codes that aren't specified:
+
+|Status code | Retry strategy |
+|----------------|-----------------|
+| 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
+| 412 | Retry using exponential backoff. |
+| 429 | Retry using `Retry-After` header to determine the wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 502 | Retry using exponential backoff. |
+| 503 | Retry using exponential backoff. |
+| 504 | Retry using exponential backoff. |
+
+## Request headers of the bot
+
+The current outgoing requests to the bot don't contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
+
+### Request header fields
+
+Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
+
+| Field key | Value |
+|----------------|-----------------|
+| x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
+| x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
+
+If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
+
+:::image type="content" source="../../../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
+
 ## Receive conversation messages with RSC
 
 With the resource-specific consent (RSC) permissions model, conversation owners can allow a bot to receive all user messages in standard channels and chats without needing to be @mentioned. They can give consent during the app installation or upgrade process after the app updates are published. Originally made for Microsoft Teams Graph APIs, the RSC model is now expanded to include bot scenarios. You can enable this by adding the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (formerly known as the Teams app manifest).
