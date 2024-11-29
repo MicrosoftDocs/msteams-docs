@@ -114,16 +114,33 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
-Adaptive Cards support emoji. The following code shows an example of Adaptive Cards with an emoji:
+Adaptive Cards support emojis. The following card payload shows an Adaptive Card with an emoji:
 
 ``` json
-{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Publish Adaptive Card with emojis 🥰",
+          "weight": "bolder",
+          "size": "medium"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-> [!NOTE]
-> If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive Card with an emoji.":::
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive card emoji.":::
+> [!NOTE]
+> If you use REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
 ### Mention support within Adaptive Cards
 
@@ -382,9 +399,9 @@ The following image is an example of the people icon in an Adaptive Card:
 
 :::image type="content" source="../../assets/images/adaptive-cards/people-icon-persona-persona-set.png" alt-text="Screenshot shows an example of the persona and persona set type people icon in an Adaptive Card.":::
 
-#### Query parameters
+#### Schema
 
-The following table lists the query parameters:
+The following table lists the properties of the `Component` element:
 
 | Property name | Description |
 |---------|---------|
@@ -1451,7 +1468,7 @@ The following payload shows an Adaptive Card with input-enabled and read-only st
             "size": "large",
             "text": "Read-only rating",
             "separator": true,
-            "spacing": "extraLarge"
+            "spacing": "ExtraLarge"
         },
         {
             "type": "Rating",

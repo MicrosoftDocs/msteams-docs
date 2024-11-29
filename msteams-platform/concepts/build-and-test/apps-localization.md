@@ -44,7 +44,7 @@ Add the `localizationInfo` property with the default language that your applicat
 > [!NOTE]
 > Manifest version must be same for both manifest.json and localization.json files.
 
-Starting with app manifest v1.19, Copilot agents are also localizable. For more information, see [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) in Microsoft 365 Copilot extensibility documentation.
+Starting with app manifest v1.19, agents are also localizable. For more information, see [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) in Microsoft 365 Copilot extensibility documentation.
 
 ### Example manifest.json change
 
