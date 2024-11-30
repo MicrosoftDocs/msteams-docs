@@ -47,6 +47,9 @@ Before you start work merging your two existing extensions, get a sense of how t
 - How the single unified manifest is created.
 - The differences in how the add-in and the Teams app are sideloaded and debugged.
 
+> [!NOTE]
+> Although the article uses an Outlook add-in, the general process of combining an add-in with a Teams app also applies to Excel, PowerPoint, and Word add-ins.
+
 ## Follow proper principles for combining Teams apps and add-ins
 
 When you are ready to merge your existing add-in and Teams app, follow these principles:
