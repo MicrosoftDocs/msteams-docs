@@ -556,8 +556,8 @@ Represents a conversational Teams bot that uses custom AI language models and or
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent.  Must match the `id` specified in the `bots` section of the manifest, and be of *personal* scope. |
-|`type`|String| |✔️| Type of the custom engine agent. Supported values: `bot`. |
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 
 
 ## configurableTabs
