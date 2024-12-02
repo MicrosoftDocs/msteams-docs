@@ -18,16 +18,19 @@ This integration is simple. You can create a new personal tab app or update an e
 
 Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with relevant context property to configure the different tab views. The static tab app capabilities are declared in your app manifest using the scopes and context arrays under the `staticTabs` section.
 
-### Configure tab app for PSTN calls
+* [Update app manifest](#update-app-manifest)
+* [Pin your personal tab app in PSTN calls](#pin-your-personal-tab-app-in-pstn-calls)
 
-You can integrate PSTN calls in personal tab apps using the `meetingSidePanel` contexts. To configure calling in your personal tab app for one-on-one calls in the `staticTabs` array:
+### Update app manifest
+
+You can integrate PSTN calls in personal tab apps using the `meetingSidePanel` contexts. To configure calling in your personal tab app for one-on-one calls in the `staticTabs` section:
 
 1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
 
 The following code snippet is an example of a personal tab app for Teams call:
 
-```manifest
+```Manifest
 
 "staticTabs":[
 {
@@ -42,3 +45,75 @@ The following code snippet is an example of a personal tab app for Teams call:
 }
 ],
 ```
+
+Here's an example of the app manifest file:
+
+<details>
+<summary>Select to view a sample app manifest.</summary>
+
+```Manifest
+{
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "version": "1.1.5", 
+  "manifestVersion": "devPreview",
+  "id": "25407c29-8335-68a3-bfdb-4384580a1858",
+  "packageName": "",
+  "name": { "short": "Packing List - PersMSP", "full": "Packing List - PersonalAndMeetingSidePanel" },
+  "developer": {
+    "name": "Microsoft Corporation",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://packing-list.azurewebsites.net/privacy.html",
+    "termsOfUseUrl": "https://packing-list.azurewebsites.net/tou.html"
+  },
+  "description": {
+    "short": "Packing list app",
+    "full": "Test app to test static tabs flow"
+  },
+  "icons": { "outline": "outline.png", "color": "color.png" },
+  "accentColor": "#eff9fc",
+  "staticTabs": [
+    {
+      "entityId": "54d496e0-2b51-4210-bf7d-21d0b5821d9c",
+      "name": "Packing List - PersonalAndMeetingSidePanel",
+      "contentUrl": "https://packing-list.azurewebsites.net",
+      "websiteUrl": "https://packing-list.azurewebsites.net",
+      "scopes": ["personal"],
+      "context": [
+        "meetingSidePanel"
+      ]
+    }
+  ],
+  "validDomains": ["packing-list.azurewebsites.net"],
+  "webApplicationInfo": { "id": "25407c29-8335-68a3-bfdb-4384580a1858" },
+  "showLoadingIndicator": true,
+  "authorization": {
+    "permissions": {
+      "orgWide": [],
+      "resourceSpecific": [
+        { "name": "OnlineMeeting.ReadBasic.Chat", "type": "Delegated" },
+        { "name": "MeetingStage.Write.Chat", "type": "Delegated" },
+        { "name": "OnlineMeetingParticipant.Read.Chat", "type": "Delegated" },
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        },
+        { "name": "ChannelMeetingStage.Write.Group", "type": "Delegated" },
+        { "name": "ChannelMeeting.ReadBasic.Group", "type": "Delegated" }
+      ]
+    }
+  }
+}
+```
+
+</details>
+
+### Pin your personal tab app in PSTN calls
+
+Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application in PSTN calls, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during PSTN calls.
+
+Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for PSTN calls:
+
+1. Go to the pinned apps section in the app setup policy.
+1. Pin your application, and assign it to users who need access during PSTN calls.
+
+:::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
