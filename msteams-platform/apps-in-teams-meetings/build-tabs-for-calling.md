@@ -14,16 +14,31 @@ You can now create personal scope apps that integrate seamlessly with Public Swi
 
 This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. It ensures calling functionality across different communication mediums. Although PSTN traditionally doesn't support apps due to the lack of a chat thread, passing the caller ID to the app allows it to display relevant information such as active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
 
+### Prerequisites
+
+Ensure the following requirements are in place before you create or update a tab app for supporting PSTN:
+
+* **App eligibility**: Applications that are made using static tabs and marked as Personal scope and MeetingSidePanel context can be integrated with Teams PSTN calling.
+* **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
+
+  * OnlineMeetingParticipant.Read.Chat
+  * OnlineMeeting.ReadBasic.Chat
+* **Teams JS SDK required**: Min version for TeamsJS SDK required is 2.29.0
+
+  * [Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0) Overview
+
+* **Caller ID information** App should utilize the getMeetingDetailsVerbose instead of getMeetingDetails to get the calling related information. App will get caller ID details like phone number and email ID (if applicable) for show relevant customer information.  
+
 ## Enable PSTN calls for your tabs
 
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with relevant context property to configure the different tab views. The static tab app capabilities are declared in your app manifest using the scopes and context arrays under the `staticTabs` section.
+To enable PSTN calling extensibility for your tab app:
 
 * [Update app manifest](#update-app-manifest)
 * [Pin your personal tab app in PSTN calls](#pin-your-personal-tab-app-in-pstn-calls)
 
 ### Update app manifest
 
-You can integrate PSTN calls in personal tab apps using the `meetingSidePanel` contexts. To configure calling in your personal tab app for one-on-one calls in the `staticTabs` section:
+Update your [app manifest]((/microsoftteams/platform/resources/schema/manifest-schema#statictabs)) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
 
 1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
