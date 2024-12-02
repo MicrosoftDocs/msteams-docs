@@ -4,7 +4,8 @@ author: surbhigupta
 description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.date: 11/06/2024
 ---
 # Link unfurling
 
@@ -18,7 +19,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Link unfurling supports Adaptive Cards version 1.3 and earlier.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
+> * Link unfurling doesn't require message extension commands. If you define `messagehandlers` within `composeExtensions` in the app manifest, there's no need to add `commands`. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 > * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
