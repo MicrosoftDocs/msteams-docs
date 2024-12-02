@@ -68,7 +68,7 @@ The following table helps you determine best fit for your app:
 | &nbsp; | Personal | Channels | Group chat | Meetings | Calling |
 |:---|:---:|:---:|:---:|:---:|:---:|
 |[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️| ✔️ |
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ✔️ |
+|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ❌ |
 
 >[!NOTE]
 > If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific scope, Teams pins the static tab by default.
