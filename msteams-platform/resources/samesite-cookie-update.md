@@ -8,7 +8,7 @@ ms.author: lomeybur
 ms.date: 05/18/2022
 ---
 
-# SameSite cookie attribute
+# Cookies and local storage
 
 Cookies are text strings sent from websites and stored on a computer by the web browser. They're used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties.
 
@@ -82,7 +82,7 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## Third party cookies deprecation
 
-Third-party cookies are in the process of being deprecated across all major browsers. All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`. 
+Third-party cookies are in the process of being deprecated across all major browsers. All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`.
 
 This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
 
@@ -127,7 +127,13 @@ The following screenshot represents the cookies accessible in the embedded `ifra
 
 ### Actions required for cookies set by iframe
 
-Embedded `iframes` must set cookies with the partitioned attribute as true. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
+Embedded `iframes` must set cookies with the partitioned attribute as false. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
+
+### Storage partitioning
+
+Storage partitioning, a fully implemented change in Chrome, essentially implies that any local storage set in the first-party context won't be accessible in the third-party context within iframes, and vice versa.
+
+This alteration might disrupt scenarios such as external authentication in browsers if it depends on storing data in the first-party context's local storage and subsequently accessing it in the third-party context. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
 
 ## See also
 
