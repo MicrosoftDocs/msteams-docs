@@ -38,7 +38,7 @@ To enable PSTN calling extensibility for your tab app:
 
 ### Update app manifest
 
-Update your [app manifest]((/microsoftteams/platform/resources/schema/manifest-schema#statictabs)) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
 
 1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
