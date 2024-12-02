@@ -10,7 +10,7 @@ ms.date: 11/28/2024
 
 # Configure tab capability within Teams app
 
-Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app in a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ For a complete example of a bot app with the tab capability, see [Hello World bo
 
 ### Update app manifest
 
-1. To configure your tab within a personal, group chat, or channel scopes, update the `manifest.json` file with the following code:
+1. To configure your tab within a personal chat, group chat, or channel, update the `manifest.json` file with the following code:
 
    ```JSON
      "staticTabs": [
@@ -96,7 +96,7 @@ For a complete example of a bot app with the tab capability, see [Hello World bo
        |-- teamsapp.yml
    ```
 
-1. Update the `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure. For example:
+1. Update the following code in `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure:
 
    ```yaml
        deploy:
@@ -107,7 +107,7 @@ For a complete example of a bot app with the tab capability, see [Hello World bo
              workingDirectory: ./bot
    ```
 
-1. To configure the debug profile for your new tab project, add the following code to the `tasks.json` file:
+1. To configure the debug profile for your tab project, add the following code to the `tasks.json` file:
 
    ```json
    {
@@ -165,7 +165,7 @@ For a complete example of a bot app with the tab capability, see [Hello World bo
    }
    ```
 
-1. Add the following actions to the `teamsapp.local.yml` file to enable your tab project to work seamlessly with Teams Toolkit:
+1. To enable your tab project to work with Teams Toolkit, add the following actions to the `teamsapp.local.yml` file:
 
    ```yaml
    provision:
