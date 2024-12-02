@@ -18,7 +18,7 @@ Message extensions are built on the Bot Framework architecture in Teams. For mor
 
 To configure the message extension capability in your app, ensure the following prerequisites are met:
 
-* A Teams app and its manifest (previously called Teams app manifest) file.
+* A Teams tab or bot app and its manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
@@ -40,7 +40,7 @@ To create a message extension app with Teams Toolkit, see [create a message exte
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in the `appPackage/manifest.json` file. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure the message extension capability in the `appPackage/manifest.json` file. For more information on how to configure the message extension capability, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +128,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 ### Add message extension code to your project
 
-1. Create a `bot/` folder in your tab project and copy the source code of the message extension app into the into the folder. Your tab project's folder structure must look as follows:
+1. Create a `bot/` folder in your tab project and copy the source code of the message extension app into the folder. Your project's folder structure looks as follows:
 
    ```
    |--.vscode/
@@ -204,14 +204,14 @@ You can configure the message extension capability in the `appPackage/manifest.j
    ```
 
    > [!NOTE]
-   > In a JavaScript project, a `build` folder isn't required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, you can run the project without a `build` folder. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ### Setup local debug environment
 
 1. Update `.vscode/tasks.json` as follows:
    1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`.
    1. Update the `Start application` task's `dependsOn` array to include `Start bot` and `Start frontend`.
-   1. Configure the `cwd` option for `Start bot` and `Start frontend` as you've already moved the code for the tab and bot into their respective folders.
+   1. Configure the `cwd` option for `Start bot` and `Start frontend`. This action is needed you've previously moved the code for the tab and bot into their respective folders while reorganizing the folder structure.
    1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependsOn` array.
 
    ```json
@@ -307,7 +307,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    ]
    ```
 
-1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code to the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
+1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code of the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
 
    ```yml
    provision:
@@ -452,9 +452,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
    }
    ```
 
-1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
-
-1. Add the following code under the `deploy` section:
+1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
 
    ```yaml
    deploy:
@@ -517,7 +515,7 @@ To create a message extension app, see [create a message extension app with Team
 
 ### Configure message extension in app manifest
 
-You can configure the message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure the message extension capability in `appPackage/manifest.json`. For more information on how to configure the message extension capability, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
    ```json
    "composeExtensions": [
