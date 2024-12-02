@@ -21,13 +21,12 @@ Ensure the following requirements are in place before you create or update a tab
 * **App eligibility**: Applications that are made using static tabs and marked as Personal scope and MeetingSidePanel context can be integrated with Teams PSTN calling.
 * **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
 
-  * OnlineMeetingParticipant.Read.Chat
-  * OnlineMeeting.ReadBasic.Chat
-* **Teams JS SDK required**: Min version for TeamsJS SDK required is 2.29.0
+  * `OnlineMeetingParticipant.Read.Chat`
+  * `OnlineMeeting.ReadBasic.Chat`
 
-  * [Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0) Overview
+* **Teams JS SDK required**: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0) Overview
 
-* **Caller ID information** App should utilize the getMeetingDetailsVerbose instead of getMeetingDetails to get the calling related information. App will get caller ID details like phone number and email ID (if applicable) for show relevant customer information.  
+* **Caller ID information** App must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to obtain the calling related information. The App can get caller ID details such as phone number and email ID (if applicable) for relevant customer information.
 
 ## Enable PSTN calls for your tabs
 
