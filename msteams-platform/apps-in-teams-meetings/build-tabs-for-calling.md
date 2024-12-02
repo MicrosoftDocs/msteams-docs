@@ -14,7 +14,7 @@ You can now create personal scope apps that integrate seamlessly with Public Swi
 
 This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. It ensures calling functionality across different communication mediums. Although PSTN traditionally doesn't support apps due to the lack of a chat thread, passing the caller ID to the app allows it to display relevant information such as active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
 
-### Prerequisites
+## Prerequisites
 
 Ensure the following requirements are in place before you create or update a tab app for supporting PSTN:
 
