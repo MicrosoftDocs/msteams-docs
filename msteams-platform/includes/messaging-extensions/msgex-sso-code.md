@@ -232,7 +232,7 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
-> - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
+> - If the Teams administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
