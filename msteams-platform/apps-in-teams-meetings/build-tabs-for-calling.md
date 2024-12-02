@@ -28,23 +28,23 @@ You can integrate PSTN calls in personal tab apps using the `meetingSidePanel` c
 1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
 
-The following code snippet is an example of a personal tab app for Teams call:
+    The following code snippet is an example of a personal tab app for Teams call:
 
-```Manifest
-
-"staticTabs":[
-{
-    "entityId": "contoso",
-    "scopes": ["personalTab"],
-    "context":[
-        "meetingSidePanel",
+    ```Manifest
+    
+    "staticTabs":[
+    {
+        "entityId": "contoso",
+        "scopes": ["personalTab"],
+        "context":[
+            "meetingSidePanel",
+        ],
+        "name": "Contoso"
+        "contentUrl": "http://contoso.com/content",
+        "websiteUrl": "http://contoso.com/content"
+    }
     ],
-    "name": "Contoso"
-    "contentUrl": "http://contoso.com/content",
-    "websiteUrl": "http://contoso.com/content"
-}
-],
-```
+    ```
 
 Here's an example of the app manifest file:
 
