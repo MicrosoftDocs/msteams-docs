@@ -16,21 +16,21 @@ This integration is simple. You can create a new personal tab app or update an e
 
 ## Prerequisites
 
-Ensure the following requirements are in place before you create or update a tab app for supporting PSTN:
+Ensure the following requirements are in place before you create or update a tab app for supporting PSTN calls:
 
-* **App eligibility**: Applications that are made using static tabs and marked as Personal scope and MeetingSidePanel context can be integrated with Teams PSTN calling.
+* **App eligibility**: Tab apps that are made using static tabs and marked as personal scope and `MeetingSidePanel` context can be integrated with PSTN calling.
 * **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
 
   * `OnlineMeetingParticipant.Read.Chat`
   * `OnlineMeeting.ReadBasic.Chat`
 
-* **Teams JS SDK required**: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0) Overview
+* **Teams JS SDK required**: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
 
-* **Caller ID information** App must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to obtain the calling related information. The App can get caller ID details such as phone number and email ID (if applicable) for relevant customer information.
+* **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID, if required, for relevant customer information.
 
 ## Enable PSTN calls for your tabs
 
-To enable PSTN calling extensibility for your tab app:
+To enable PSTN calling extensibility for your personal tab app:
 
 * [Update app manifest](#update-app-manifest)
 * [Pin your personal tab app in PSTN calls](#pin-your-personal-tab-app-in-pstn-calls)
