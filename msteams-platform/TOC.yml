@@ -932,9 +932,9 @@
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
       displayName: Postman app
-    - name: Resource-specific consent for team JSON test file
+    - name: JSON test file for team RSC
       href: graph-api/rsc/test-team-rsc-json-file.md
-    - name: Resource-specific consent for chat JSON test file
+    - name: JSON test file for chat RSC
       href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Publish your app
   items:
