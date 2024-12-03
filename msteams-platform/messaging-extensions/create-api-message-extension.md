@@ -545,7 +545,7 @@ To create an API-based message extension using Developer Portal, follow these st
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-upload.png":::
 
 1. Select the OpenAPI Description document in the JSON or YAML format and select **Open**.
 
