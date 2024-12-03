@@ -753,7 +753,7 @@
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+      - name: Enable SSO for Adaptive Cards in bot
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
@@ -763,7 +763,7 @@
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Add third party IdP authentication to tab app
+    - name: Third party IdP authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Add third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
