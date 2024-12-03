@@ -1162,15 +1162,15 @@
       },
       {
         "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+        "redirect_url": "/microsoftteams/platform/teams-faq#microsoft-365-copilot"
       },
       {
         "source_path": "msteams-platform/resources/media-formats.md",
@@ -1190,7 +1190,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-ai-library"
       },
       {  
         "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
