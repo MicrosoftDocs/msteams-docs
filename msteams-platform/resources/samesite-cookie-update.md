@@ -84,7 +84,7 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 Third-party cookies are in the process of being deprecated across all major browsers. All third party cookies set in the top-level domain are blocked when that domain is embedded in an `iframe`.
 
-This deprecation impacts a common scenario in which the external app is rendered within Teams in various entry points like personal apps, channel tabs, and conversational tabs.
+This deprecation affects a common scenario where the external app is rendered within Teams at various entry points, including personal apps, channel tabs, and conversational tabs, across web, desktop, and mobile Teams clients.
 
 ### Pop-out authentication scenario
 
