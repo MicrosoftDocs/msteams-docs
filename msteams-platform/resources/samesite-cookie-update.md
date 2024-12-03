@@ -109,7 +109,7 @@ The app simulates this scenario. To use an app with cookies:
 
 1. Select the **popOutApp** button to pop it out as a first-party domain.
 
-    :::image type="content" source="../assets/images/cookies-popout.png" alt-text="Screenshot shows you the popoutapp option in cookies app.":::
+    :::image type="content" source="../assets/images/cookies-popout.png" alt-text="Screenshot shows you the popout app option in cookies app.":::
 
 1. Select **Set Partitioned Cookies from API**.
 
@@ -133,7 +133,7 @@ Embedded `iframes` must set cookies with the partitioned attribute as false. Chr
 
 Storage partitioning is fully implemented in Google Chrome. It implies that any local storage set in the first-party context won't be accessible in the third-party context within iframes, and vice versa.
 
-This change might disrupt scenarios like external authentication in browsers. It can happen if they rely on storing data in the first-party context's local storage. Subsequently, accessing this data in the third-party context can also be affected. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
+This change might disrupt scenarios like external authentication in browsers. It can happen if they rely on storing data in the first-party context's local storage. After, accessing this data in the third-party context can also be affected. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
 
 ## See also
 
