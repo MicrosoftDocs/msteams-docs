@@ -1162,11 +1162,11 @@
       },
       {
         "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
-        "redirect_url": "/microsoftteams/platform/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
-        "redirect_url": "/microsoftteams/platform/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
