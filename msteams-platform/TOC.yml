@@ -765,12 +765,12 @@
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Third party IdP authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add third party IdP authentication to bot app
+    - name: Third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
-    - name: Add third party IdP authentication to message extension app
+    - name: IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+    - name: IdP authentication for Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
@@ -794,7 +794,7 @@
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
     displayName: Camera, microphone, gallery, QR, barcode scanner, location
-  - name: Request device permissions for Teams app
+  - name: Device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
@@ -830,7 +830,7 @@
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
       displayName: Permissions, delegated, user, team, chat, application
-  - name: Proactive installation of apps using Graph API to send messages
+  - name: Send proactive installation messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
@@ -852,10 +852,10 @@
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
-    - name: Enable a Teams personal tab for Microsoft 365
+    - name: Enable Teams personal tab for Microsoft 365
       href: m365-apps/extend-m365-teams-personal-tab.md
       displayName: Microsoft 365, Office 365
-    - name: TeamsJS capability support across Microsoft 365
+    - name: TeamsJS capability across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
   - name: Teams meeting apps in Outlook
     href: m365-apps/extend-m365-meeting-app.md
