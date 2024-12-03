@@ -266,7 +266,7 @@
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
-      - name: Migrate Teams Toolkit project from 17.9 to 17.10+
+      - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, migration
     - name: Teams Toolkit CLI
