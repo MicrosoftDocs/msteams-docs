@@ -587,13 +587,13 @@ You can add commands and parameters to your message extension, to add commands:
    * Parameter name
    * Parameter description
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
-
 1. Under **Details**, update the **Command description**.
 
    1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
 
 1. Select **Save**.
 
