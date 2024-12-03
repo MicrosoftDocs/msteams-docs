@@ -533,7 +533,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***November 25, 2024***: Future-proof your app for third-party cookie deprecation across major browsers.
+* ***December 03, 2024***: [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation)
 
 * ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
 
