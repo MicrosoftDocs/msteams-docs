@@ -131,9 +131,9 @@ Embedded `iframes` must set cookies with the partitioned attribute as false. Chr
 
 ### Storage partitioning
 
-Storage partitioning, a fully implemented change in Chrome, essentially implies that any local storage set in the first-party context won't be accessible in the third-party context within iframes, and vice versa.
+Storage partitioning is fully implemented in Google Chrome. It implies that any local storage set in the first-party context won't be accessible in the third-party context within iframes, and vice versa.
 
-This alteration might disrupt scenarios such as external authentication in browsers if it depends on storing data in the first-party context's local storage and subsequently accessing it in the third-party context. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
+This change might disrupt scenarios like external authentication in browsers. It can happen if they rely on storing data in the first-party context's local storage. Subsequently, accessing this data in the third-party context can also be affected. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
 
 ## See also
 
