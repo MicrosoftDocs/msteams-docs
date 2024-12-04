@@ -516,7 +516,7 @@ To create an API-based message extension using Developer Portal, follow these st
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
-1. Select **+ New apps**.
+1. Select **+ New app**.
 1. Enter a name of the app and select the **Manifest version** as **Public developer preview (devPreview)**.
 1. Select **Add**.
 
@@ -576,9 +576,9 @@ You can add commands and parameters to your message extension, to add commands:
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the Adaptive Card template in for the command.":::
 
    > [!NOTE]
-   > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
+   > If you have more than one API, ensure that you upload the Adaptive Card response template for each API.
 
-1. Select the Adaptive Card template file in JSON format and select **Open**.
+1. Select the Adaptive Card response template file in JSON format and select **Open**.
 
    The following attributes are updated automatically from the Adaptive Card template:
    * Command Type
@@ -589,7 +589,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run the command when a user opens the extension** toggle.
+1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run this command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
@@ -597,10 +597,11 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Select **Save**.
 
-1. Under **Authentication**, select any of the following options:
+1. Under **Authentication and authorization**, select any of the following options:
 
-   * **No Authentication**
+   * **No Authentication (not recommended)**
    * **API key**
+   * **OAuth**
 
 An API-based message extension is created.
 
