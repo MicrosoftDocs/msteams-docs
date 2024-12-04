@@ -919,17 +919,17 @@
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
-    - name: Test and debug your bot locally with IDE
+    - name: Test and debug locally with IDE
       displayName: Bot Emulator
       href: bots/how-to/debug/locally-with-an-ide.md
-    - name: Debug your bot with inspection middleware
+    - name: Debug with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug your calling and meeting bot locally
+    - name: Debug a calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
   - name: Microsoft Graph
     items:
-    - name: Test resource-specific consent permissions
+    - name: Test RSC permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
       displayName: Postman app
     - name: Resource-specific consent for team JSON test file
@@ -1028,7 +1028,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Gain traction for your collaborative app in the market
+      - name: Gain traction for collaborative apps
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
