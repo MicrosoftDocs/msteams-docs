@@ -823,7 +823,7 @@ The following table includes the response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the Teams Administrator disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
 ## Targeted meeting notification and app icon badging API
