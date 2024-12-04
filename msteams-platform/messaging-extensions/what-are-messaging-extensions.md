@@ -1,11 +1,11 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios. Samples on action and search based message extension.
+description: Learn how to build message extensions and the scenarios where they are used. Explore samples on action and search based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 02/24/2023
+ms.date: 09/16/2024
 ---
 # Build message extensions
 
@@ -19,7 +19,7 @@ The article provides an overview of message extensions, use cases, functionality
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
-> 
+>
 > * @mentioning message extensions in the compose box isn't supported.
 > * Message extension options aren't supported for group chats with external users.
 
@@ -128,11 +128,11 @@ The following table helps you select a message extension type to get started:
 **Select an option to start building a message extension:**
 
 :::row:::
-    :::column:::
-        :::image type="content" source="../assets/images/Copilot/build-message-extension-API-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md" border="false":::
+    :::column span="4":::
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/Copilot/build-message-extension-api-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md" border="false":::
     :::column-end:::
-    :::column:::
-        :::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md" border="false":::
+    :::column span="4":::
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md" border="false":::
     :::column-end:::
 :::row-end:::
 
@@ -144,4 +144,4 @@ The following table helps you select a message extension type to get started:
 | Message extension with search-based commands | This sample shows how to build a Search-based Message Extension. It searches NuGet packages and displays the results in search based messaging extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 |Message extension action for task scheduling|This sample shows how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp/demo-manifest/msgext-message-reminder.zip)|
-| Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as a plugin in Microsoft Copilot for Microsoft 365. | NA |[View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |NA |NA
+| Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as an agent in Microsoft 365 Copilot. | NA |[View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |NA |NA

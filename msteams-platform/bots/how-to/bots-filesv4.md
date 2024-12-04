@@ -21,6 +21,12 @@ There are two ways to send files to and receive files from a bot:
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
 
+The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
+
 ## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
@@ -127,7 +133,7 @@ The following table describes the content properties of the attachment:
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to the bot when a user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following code shows an example of a concise version of the invoke activity that the bot receives:
 
