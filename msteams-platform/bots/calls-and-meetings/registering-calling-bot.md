@@ -11,7 +11,7 @@ A bot that participates in audio or video calls and online meetings is a regular
 
 * There's a new version of app manifest (previously called Teams app manifest) with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [app manifest](../../resources/schema/manifest-schema.md#bots).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
-* The Graph calls and online meetings APIs permissions require Teams administrator consent.
+* The Graph calls and online meetings APIs permissions require admin consent.
 
 ## New app manifest settings
 
@@ -61,7 +61,7 @@ The following table provides RSC application permissions for calls:
 
 ### Application permissions for calls
 
-The application permissions for calls are used by apps that run without a signed-in user present. A Teams administrator must grant consent to application permissions.
+The application permissions for calls are used by apps that run without a signed-in user present. An admin must grant consent to application permissions.
 
 The following table provides a list of application permissions for calls:
 
@@ -89,14 +89,14 @@ The following table provides a list of application permissions for online meetin
 
 You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://portal.azure.com) if you prefer to use the [Azure Active Directory (Azure AD) v1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
-### Get Teams administrator consent
+### Get admin consent
 
-For apps using the Azure AD v1 endpoint, a Teams administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. After Microsoft Entra ID records administrator consent, your app can request tokens without having to request consent again.
+For apps using the Azure AD v1 endpoint, an admin can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. After Microsoft Entra ID records administrator consent, your app can request tokens without having to request consent again.
 
 You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD v2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
-> To construct the Teams administrator consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
+> To construct the admin consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.

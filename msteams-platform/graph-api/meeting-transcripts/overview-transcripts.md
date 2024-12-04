@@ -36,7 +36,7 @@ Your app must have the required permissions for fetching transcripts and recordi
 
 ### Use organization-wide application permissions
 
-You can configure your app to access meeting transcripts and recordings across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the Teams administrator authorizes the organization-wide application permissions, your app can read and access transcripts and recordings for all meetings in the tenant.
+You can configure your app to access meeting transcripts and recordings across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the admin authorizes the organization-wide application permissions, your app can read and access transcripts and recordings for all meetings in the tenant.
 
 For more information about the organization-wide application permissions that can be granted to your app, see [online meeting permissions](/graph/permissions-reference#online-meetings-permissions).
 
