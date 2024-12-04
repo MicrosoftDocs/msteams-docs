@@ -1,13 +1,13 @@
 ---
-title: Configure bot capability
+title: Configure Bot Capability
 author: surbhigupta
-description: Learn how to configure bot capability within Teams app.
+description: Learn how to configure the bot capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
 nextTutorialHref: ~/toolkit/add-How-to-guides-v5.md
 nextTutorialTitle: Back to Add How-to guides to Microsoft Teams app
-ms.date: 02/16/2024
+ms.date: 12/06/2024
 ---
 
 # Configure bot capability within Teams app
@@ -18,31 +18,29 @@ A bot, also known as a chatbot or conversational bot, is an app that responds to
 
 To configure bot as an additional capability, ensure the following prerequisites are met:
 
-* The app manifest (previously called Teams app manifest) file.
+* A Teams tab or message extension app and its app manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* [Microsoft Azure account](/azure/storage/common/storage-account-create).
-
-## Add bot to Teams app
+* A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
 # [Add bot to tab app](#tab/tabapp)
 
 The following steps help you to add bot to a tab app:
 
-* [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
+* [Create bot app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit)
 * [Configure bot in app manifest](#configure-bot-in-app-manifest)
 * [Add bot code to your project](#add-bot-code-to-your-project)
 * [Setup local debug environment](#setup-local-debug-environment)
 * [Provision the app to Azure](#provision-the-app-to-azure)
 
-## Create tab app using Microsoft Teams Toolkit
+## Create bot app using Microsoft Teams Toolkit
 
-To create a tab app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
+To create a bot app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
 
 ## Configure bot in app manifest
 
-You can configure message extension in `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+You can configure the bot capability in the `appPackage/manifest.json` file. For more information on how to configure the bot capability, see [app manifest schema](../resources/schema/manifest-schema.md#bots). The following code snippet is an example:
 
-```JSON
+```json
     "bots": [
         {
             "botId": "${{BOT_ID}}",
@@ -78,9 +76,9 @@ You can configure message extension in `appPackage/manifest.json` file. For more
 
 ## Add bot code to your project
 
-1. You can add your message extension app code into your project. If you don't have an app code, use the message extension app you have created earlier and copy the source code into the current project. We recommend you to copy the code into the bot/ folder. The following folder structure is an example of how your project's folder structure must look like:
+1. Create a `bot/` folder in your tab project and copy the source code of the tab app into the folder. Your project's folder structure looks as follows:
 
-   ```yml
+   ```
        |-- .vscode/
        |-- appPackage/
        |-- env/
@@ -105,9 +103,12 @@ You can configure message extension in `appPackage/manifest.json` file. For more
        |-- teamsapp.yml
    ```
 
-1. Use the command `npm init -y` to create a root `package.json` file. We recommend you to reorganize the folder structure as follows:
+1. 1. Reorganize the folder structure as follows:
 
-   ```yml
+   > [!TIP]
+   > Use the command `npm init -y` to create a root `package.json` file.
+
+   ```
        |-- .vscode/
        |-- appPackage/
        |-- env/
@@ -153,11 +154,15 @@ You can configure message extension in `appPackage/manifest.json` file. For more
    ```
 
    > [!NOTE]
-   > In a JavaScript project, a build folder is not required to run the project. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, you can run the project without a `build` folder. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
-1. Modify `.vscode/tasks.json` by adding three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`. Update the Start application task's `dependOn` to include `Start bot` and `Start frontend`. For `Start bot` and `Start frontend`, configure the cwd option due to the separation of the tab and bot code into tab and bot folders, respectively. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependOn`:
+1. Update `.vscode/tasks.json` as follows:
+   1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`.
+   1. Update the `Start application` task's `dependsOn` array to include `Start bot` and `Start frontend`.
+   1. Configure the `cwd` option for `Start bot` and `Start frontend`. This action is needed as you've previously moved the code for the tab and bot into their respective folders while reorganizing the folder structure.
+   1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependsOn` array.
 
    ```json
        "tasks":[
@@ -252,10 +257,9 @@ You can configure message extension in `appPackage/manifest.json` file. For more
        ]
    ```
 
-1. Add the actions `botAadApp/create` and `botFramework/create` under provision in `teamsapp.local.yml` file.
-1. Update the following code in `file/createOrUpdateEnvironmentFile` action under deploy as follows:
+1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code of the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
 
-   ```yml
+   ```yaml
     provision:
       - uses: botAadApp/create
         with:
@@ -295,17 +299,19 @@ You can configure message extension in `appPackage/manifest.json` file. For more
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
 
-1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
-1. Press **F5** to debug and preview your Teams app.
+1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
+
+1. Select the **F5** key to debug and preview your Teams app locally.
 
 ## Provision the app to Azure
 
 1. Copy the `botRegistration/` folder from bot to `infra/`.
-1. Add following code to the bicep file:
 
-   ```yml
+1. Add the following code to the `azure.bicep` file:
+
+   ```bicep
     param resourceBaseName2 string
     param webAppName2 string = resourceBaseName2
     @maxLength(42)
@@ -368,7 +374,7 @@ You can configure message extension in `appPackage/manifest.json` file. For more
     output BOT_DOMAIN string = webApp2.properties.defaultHostName
    ```
 
-1. Update the `azure.parameters.json` file with the following code to ensure that necessary parameters are set correctly:
+1. To ensure that the necessary parameters are set correctly, update the `azure.parameters.json` file with the following code:
 
    ```json
     {
@@ -397,10 +403,9 @@ You can configure message extension in `appPackage/manifest.json` file. For more
     }
    ```
 
-1. Add `botAadApp/create` action under `provision` section in the `teamsapp.yml` file.
-1. Add the following code in `deploy` section:
+1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
 
-   ```yml
+   ```yaml
     deploy:
       - uses: cli/runNpmCommand # Run npm command
         with:
@@ -435,30 +440,33 @@ You can configure message extension in `appPackage/manifest.json` file. For more
           resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
    ```
 
-   For more information, see [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
 
 1. Enter `Teams: Provision` to apply the bicep to Azure.
-1. Enter `Teams: Deploy` to deploy your app code to Azure.
-1. Select **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
-1. Press **F5** to debug and preview your Teams app.
 
-# [Add bot to Teams message extension app](#tab/messageextensionapp)
+1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
 
-You can add a bot to a message extension app more easily than adding it to a tab app, as message extensions use the bot support framework.
+1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 
-The following steps help you to add bot to a message extension app:
+1. Select the **F5** key to debug and preview your Teams app.
 
-* [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit)
-* [Update manifest file](#add-bot-in-app-manifest)
+# [Add bot to message extension app](#tab/messageextensionapp)
+
+You can add the bot capability to a message extension app easily as message extensions are built on Bot Framework.
+
+The following steps help you to add the bot capability to a message extension app:
+
+* [Create bot app using Teams Toolkit](#create-bot-app-using-teams-toolkit)
+* [Update manifest file](#update-manifest-file)
 * [Add bot code to project](#add-bot-code-to-project)
 
-## Create message extension app using Teams Toolkit
+## Create bot app using Teams Toolkit
 
-To create a message extension app with Teams Toolkit, see [create a new Teams app](create-new-project.md).
+To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-new-project.md).
 
-## Add bot in app manifest
+## Update manifest file
 
-1. You can configure bot in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+1. You can configure the bot capability in the `appPackage/manifest.json` file. For more information on how to configure the bot capability, see [app manifest schema](../resources/schema/manifest-schema.md#bots). The following code snippet is an example:
 
    ```json
     "bots": [
@@ -496,9 +504,9 @@ To create a message extension app with Teams Toolkit, see [create a new Teams ap
 
 ## Add bot code to project
 
-When incorporating message extensions into a bot app, ensure that you've a class that extends `TeamsActivityHandler`. Incorporate your message extension functions or duplicate functions from an earlier created message extension app into your class. The following code is an example:
+1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class. The following code is an example of a message extension that contains functions from a bot app created in Teams Toolkit:
 
-   ```yml
+   ```javascript
       public class YourHandler extends TeamsActivityHandler{
     
         // bot code
@@ -516,3 +524,24 @@ When incorporating message extensions into a bot app, ensure that you've a class
         */
       }
    ```
+
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
+
+1. Enter `Teams: Provision` to apply the bicep to Azure.
+
+1. Enter `Teams: Deploy` to deploy your tab app code to Azure.
+
+1. Under **Run and Debug**, select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
+
+1. Select the **F5** key to debug and preview your Teams app.
+
+---
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Add How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md)
+
+## See also
+
+[Set up CI/CD pipelines](use-CICD-template.md)
