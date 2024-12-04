@@ -873,7 +873,7 @@
       - name: Design your Loop component
         href: m365-apps/design-loop-components.md
         displayName: loop component
-      - name: Build Adaptive Card-based Loop component
+      - name: Build your Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
   - name: Combine Teams apps and Outlook Add-ins
