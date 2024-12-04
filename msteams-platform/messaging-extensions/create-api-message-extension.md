@@ -1,11 +1,11 @@
 ---
-title: Create API-based message extension
+title: Create API-based Message Extension
 author: v-ypalikila
-description: Learn how to create or build an API-based message extension using Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
+description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/16/2024
+ms.date: 12/05/2024
 ---
 # Create an API-based message extension
 
@@ -537,7 +537,7 @@ To create an API-based message extension using Developer Portal, follow these st
 1. Select **App features**.
 1. Select **Message extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-app-feature.png":::
 
 1. Under **Message extension type**, select **API**.
 
