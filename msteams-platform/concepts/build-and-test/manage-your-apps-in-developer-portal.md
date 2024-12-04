@@ -70,7 +70,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **Owners**
 
-    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app. If there are no active owners for an app, Tenant admins can own the apps by entering the app ID in Teams Developer Portal.
+    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app. If there are no active owners for an app, Teams Administrators can own the apps by entering the app ID in Teams Developer Portal.
 
     To add an owner:
 
@@ -111,7 +111,7 @@ In the **Advanced** section, you can see the following components to manage your
 * **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
   * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
-  * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
+  * **Block app by default**: You can block your app by default for users until a Teams Administrator selects to enable it.
 
 ## Develop
 
