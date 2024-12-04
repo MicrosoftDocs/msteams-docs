@@ -27,7 +27,7 @@
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build an interactive notification bot app
+  - name: Build an interactive notification bot 
     href: get-started/build-interactive-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
@@ -55,7 +55,7 @@
         href: concepts/design/overview-analytics.md
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
-      - name: Plan code instrumentation using analytics service
+      - name: Plan code instrumentation using analytics
         href: concepts/design/plan-code-instrumentation.md
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
@@ -146,10 +146,10 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Build apps with Teams Toolkit 
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create Teams App
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -166,7 +166,7 @@
             displayName: application, endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
-          - name: Using existing Microsoft Entra app in TeamsFx project
+          - name: Use a Microsoft Entra App in TeamsFx
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
@@ -209,7 +209,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-          - name: Test app behavior in different environment
+          - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
@@ -232,10 +232,10 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Build apps for Visual Studio Code
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create Teams App for Visual Studio Code
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -266,7 +266,7 @@
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
-      - name: Migrate Teams Toolkit project from 17.9 to 17.10+
+      - name: Migrate Project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, migration
     - name: Teams Toolkit CLI
@@ -282,7 +282,7 @@
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
-      - name: Analyze your apps usage in Developer Portal
+      - name: Analyze apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
     - name: Adaptive Card Previewer for Visual Studio Code
@@ -449,7 +449,7 @@
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
-    - name: Channel and group chat conversations with a bot
+    - name: Create group chat and channel with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
@@ -744,7 +744,7 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest for SSO and preview app
+      - name: Preview and update app manifest for SSO
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
@@ -1014,7 +1014,7 @@
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Grow your app
   items:
-    - name: Strategize and execute growth for your app
+    - name: Strategize and execute app growth
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       displayName: growth, investment, monetize, market
     - name: Guide to grow your app
@@ -1028,7 +1028,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Gain traction for your collaborative app in the market
+      - name: Gain traction for your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
@@ -1046,7 +1046,7 @@
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
+        - name: Preview app manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Integrate with Teams
@@ -1137,7 +1137,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-  - name: Introducing the new Microsoft Teams client
+  - name: New Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
