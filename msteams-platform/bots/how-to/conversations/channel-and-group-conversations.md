@@ -340,6 +340,9 @@ The following code snippet shows an example of mentioning users with Entra Objec
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
 
+> [!NOTE]
+> Tag mentions aren't supported in Teams operated by 21Vianet.
+
 ##### Mention tags in a text message
 
 In the `mention.properties` object, add the property `'type': 'tag'`. If the property `'type': 'tag'` isn't added, the bot treats the mention as a user mention.
