@@ -33,7 +33,7 @@ Ensure the following requirements are in place before you create or update a tab
 To enable PSTN calling extensibility for your personal tab app:
 
 * [Update app manifest](#update-app-manifest)
-* [Pin your personal tab app in PSTN calls](#pin-your-personal-tab-app-in-pstn-calls)
+* [Pin your personal tab app for enabling PSTN calls](#pin-your-personal-tab-app-for-enabling-pstn-calls)
 
 ### Update app manifest
 
