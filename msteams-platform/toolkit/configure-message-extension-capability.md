@@ -18,7 +18,7 @@ Message extensions are built on the Bot Framework architecture in Teams. For mor
 
 To configure the message extension capability in your app, ensure the following prerequisites are met:
 
-* A Teams tab or bot app and its manifest (previously called Teams app manifest) file.
+* A Teams app and its manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
