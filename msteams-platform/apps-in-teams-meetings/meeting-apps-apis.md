@@ -964,7 +964,9 @@ The meeting details API enables your app to get a meeting's static metadata. The
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-The function `getMeetingDetailsVerbose` extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
+**Use `getMeetingDetailsVerbose` for PSTN call extensibility**
+
+The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
 
 > [!NOTE]
 > The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
@@ -1236,6 +1238,20 @@ The JSON response body for meeting details API is as follows:
     
     ```
 
+**Example for enabling PSTN calls in a personal tab**:
+
+```JS
+const GetMeetingDetailsVerbose = (): React.ReactElement =>
+    ApiWithoutInput ({
+        name: 'getMeetingDetailsVerbose'
+        title: 'Get Meeting Details Verbose'
+        onClick: async () => {
+            const result = await meeting.getMeetingDetailsVerbose();
+            return JSON.stringify (result);
+        };
+});
+```
+
 ---
 
 | Property name | Description |
@@ -1253,6 +1269,7 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
+|
 
 In case of recurring meeting type:
 
