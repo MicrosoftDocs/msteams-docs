@@ -971,7 +971,7 @@ The `getMeetingDetailsVerbose` function extends the functionality of the `getMee
 > [!NOTE]
 > The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
 
-### Prerequisite
+### Prerequisites
 
 * To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
