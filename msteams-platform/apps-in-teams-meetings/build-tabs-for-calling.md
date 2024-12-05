@@ -37,6 +37,7 @@ To enable PSTN calling extensibility for your personal tab app:
 
 ### Update app manifest
 
+Teams reuses the meeting side panel context for adding calling context in the manifest schema.
 Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
 
 1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
@@ -121,9 +122,9 @@ Here's an example of the app manifest file:
 
 </details>
 
-### Pin your personal tab app in PSTN calls
+### Pin your personal tab app for enabling PSTN calls
 
-Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application in PSTN calls, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during PSTN calls.
+Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application in PSTN calls, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during PSTN calls. Administrators can leverage meeting extensions to pin personal calling apps.
 
 Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for PSTN calls:
 
@@ -131,3 +132,8 @@ Teams client users can access your application only if it is pinned by the Teams
 1. Pin your application, and assign it to users who need access during PSTN calls.
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
+
+## Limitations
+
+* This feature is dependent on chat thread of platform architecture.
+*
