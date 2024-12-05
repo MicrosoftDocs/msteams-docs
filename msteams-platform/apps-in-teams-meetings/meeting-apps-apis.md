@@ -977,6 +977,8 @@ The `getMeetingDetailsVerbose` function extends the functionality of the `getMee
 
 * To enable PSTN calls, ensure that you've obtained the OnlineMeetingParticipant.Read.Chat RSC permission
 
+* Teams JS SDK required for enabling PSTN calling extensibility: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
+
 <br>
 
 <details>
