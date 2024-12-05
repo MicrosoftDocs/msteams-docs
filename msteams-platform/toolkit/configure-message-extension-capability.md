@@ -211,7 +211,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 1. Update `.vscode/tasks.json` as follows:
    1. Add three new tasks: `Start local tunnel`, `Start bot`, and `Start frontend`.
    1. Update the `Start application` task's `dependsOn` array to include `Start bot` and `Start frontend`.
-   1. Configure the `cwd` option for `Start bot` and `Start frontend`. This action is needed you've previously moved the code for the tab and bot into their respective folders while reorganizing the folder structure.
+   1. Configure the `cwd` option for `Start bot` and `Start frontend`. This action is needed as you've previously moved the code for the tab and bot into their respective folders while reorganizing the folder structure.
    1. Add `Start local tunnel` to the `Start Teams App Locally` task's `dependsOn` array.
 
    ```json
@@ -309,7 +309,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code of the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
 
-   ```yml
+   ```yaml
    provision:
      - uses: botAadApp/create
        with:
