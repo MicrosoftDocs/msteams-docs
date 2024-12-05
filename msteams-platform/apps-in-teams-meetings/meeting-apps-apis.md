@@ -1100,6 +1100,20 @@ this.onMessage(async(context, next) =>{
 
 ```
 
+**Example for enabling PSTN calls in a personal tab**:
+
+```JavaScript
+const GetMeetingDetailsVerbose = (): React.ReactElement =>
+    ApiWithoutInput ({
+        name: 'getMeetingDetailsVerbose'
+        title: 'Get Meeting Details Verbose'
+        onClick: async () => {
+            const result = await meeting.getMeetingDetailsVerbose();
+            return JSON.stringify (result);
+        };
+});
+```
+
 # [JSON](#tab/json)
 
 ```http
@@ -1237,20 +1251,6 @@ The JSON response body for meeting details API is as follows:
     }
     
     ```
-
-**Example for enabling PSTN calls in a personal tab**:
-
-```JS
-const GetMeetingDetailsVerbose = (): React.ReactElement =>
-    ApiWithoutInput ({
-        name: 'getMeetingDetailsVerbose'
-        title: 'Get Meeting Details Verbose'
-        onClick: async () => {
-            const result = await meeting.getMeetingDetailsVerbose();
-            return JSON.stringify (result);
-        };
-});
-```
 
 ---
 
