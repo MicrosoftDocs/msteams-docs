@@ -125,7 +125,7 @@ items:
         > [!NOTE]
         > If you're using the Windows PowerShell PSI for the first time, execute the following commands:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-        >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
+        >   * Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
      1. Replace the following fields in **Windows PowerShell** script:
 
