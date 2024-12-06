@@ -975,9 +975,9 @@ The `getMeetingDetailsVerbose` function extends the functionality of the `getMee
 
 * To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-* To enable PSTN calls, ensure that you've obtained the OnlineMeetingParticipant.Read.Chat RSC permission
+* To enable calling, ensure that you've obtained the `OnlineMeetingParticipant.Read.Chat` RSC permission.
 
-* Teams JS SDK required for enabling PSTN calling extensibility: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
+* Teams JS SDK required: [TeamsJS SDK release latest release](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0).
 
 <br>
 
@@ -1070,9 +1070,9 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 The following table lists the query parameter:
 
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library.|
+| Value | Type | Required | Description |
+| --- | --- | --- | --- |
+| **meetingId** | String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library. |
 
 ### Example
 
@@ -1102,7 +1102,7 @@ this.onMessage(async(context, next) =>{
 
 ```
 
-**Example for enabling PSTN calls in a personal tab**:
+**Example for enabling personal tab for calling extensibility**:
 
 ```JavaScript
 const GetMeetingDetailsVerbose = (): React.ReactElement =>
