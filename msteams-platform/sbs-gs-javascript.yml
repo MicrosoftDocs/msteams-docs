@@ -180,7 +180,7 @@ items:
     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src/`| The source code for the notification Teams application. |
-    | `src/app.js` | Application entry point and `restify` handlers for website. |
+    | `src/app.js` | Application entry point and `express` handlers for website. |
     | `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
     | `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |

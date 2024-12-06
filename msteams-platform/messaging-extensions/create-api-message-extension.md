@@ -624,7 +624,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -718,7 +718,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
         :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
-      > The API key must be a string with 10 to 128 characters.
+      > The API key must be a string with 10 to 2048 characters.
 
     ---
 
@@ -740,7 +740,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
 1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 
