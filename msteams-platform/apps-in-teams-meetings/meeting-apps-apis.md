@@ -31,7 +31,6 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| Get meeting details verbose | TBD: description | TBD: JS SDK link |
 
 ## Get user context API
 
@@ -964,7 +963,7 @@ The meeting details API enables your app to get a meeting's static metadata. The
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-**Use `getMeetingDetailsVerbose` for one-to-one calling**
+**Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
 
 The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
 
@@ -1102,7 +1101,7 @@ this.onMessage(async(context, next) =>{
 
 ```
 
-**Example for enabling personal tab for calling extensibility**:
+**Example for enabling personal tab for calling**:
 
 ```JavaScript
 const GetMeetingDetailsVerbose = (): React.ReactElement =>
@@ -1271,7 +1270,6 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
-|
 
 In case of recurring meeting type:
 

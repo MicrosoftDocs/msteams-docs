@@ -12,7 +12,7 @@ ms.date: 12/02/2024
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
-This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. Apps get access to caller ID to display relevant information such as active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
+This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. Apps can access caller ID for a specific caller and display relevant information such as their active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ To enable personal tab app for one-to-one calls:
 ### Update app manifest
 
 Teams reuses the meeting side panel context for adding calling context in the manifest schema.
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the `staticTabs` section. To configure calling in your personal tab app for one-on-one calls, update the `staticTabs` section as follows:
 
 1. Set the `scope` as `personal` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
@@ -125,12 +125,10 @@ Here's an example of the app manifest file:
 
 ### Pin your personal tab app to enable calling
 
-Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application for calling, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during one-to-one calls. Administrators can leverage meeting extensions to pin personal calling apps.
-
-Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for calling:
+Teams client users can access your application only if it's pinned by the Teams administrator. Administrators can leverage meeting extensions to pin personal calling apps. To pin an application for calling:
 
 1. Go to the pinned apps section in the app setup policy.
-1. Pin your application, and assign it to users who need access during  calls.
+1. Pin your application, and assign it to users who need access during one-on-one calls.
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
 
