@@ -29,9 +29,9 @@ Ensure the following requirements are in place before you create or update a tab
 
   For more information, see [get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
-## Enable personal tab apps for PSTN calls
+## Enable personal tab apps for calling
 
-To enable PSTN calling extensibility for your personal tab app:
+To enable personal tab app for calling extensibility:
 
 * [Update app manifest](#update-app-manifest)
 * [Pin your personal tab app for enabling PSTN calls](#pin-your-personal-tab-app-for-enabling-pstn-calls)
@@ -127,10 +127,10 @@ Here's an example of the app manifest file:
 
 Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application in PSTN calls, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during PSTN calls. Administrators can leverage meeting extensions to pin personal calling apps.
 
-Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for PSTN calls:
+Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for calling:
 
 1. Go to the pinned apps section in the app setup policy.
-1. Pin your application, and assign it to users who need access during PSTN calls.
+1. Pin your application, and assign it to users who need access during  calls.
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
 

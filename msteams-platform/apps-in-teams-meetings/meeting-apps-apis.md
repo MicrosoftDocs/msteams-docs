@@ -964,7 +964,7 @@ The meeting details API enables your app to get a meeting's static metadata. The
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-**Use `getMeetingDetailsVerbose` for PSTN call extensibility**
+**Use `getMeetingDetailsVerbose` for one-to-one calling**
 
 The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
 
