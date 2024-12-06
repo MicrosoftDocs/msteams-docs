@@ -51,12 +51,12 @@ After you've configured the permissions, configure your app to receive [change n
 
 You can use the following types of change notification for your app:
 
-| Use | When... |
-| --- | --- |
-|Tenant level| A transcript or recording is available for any online meeting for a tenant​.|
-|Meeting level| A transcript or recording is available for a specific online meeting.​ |
-|User-scoped| A transcript or recording is available for any online meeting organized by a specific user.​|
-|App-scoped| A transcript or recording is available for any meeting in which a specific teams-app is installed.|
+| Use | When... |Supported resource paths|
+| --- | --- | --- |
+|Tenant level| A transcript or recording is available for any online meeting for a tenant​.|• All transcripts in an organization: `communications/onlineMeetings/getAllTranscripts`<br> • All recordings in an organization: `communications/onlineMeetings/getAllRecordings`|
+|Meeting level| A transcript or recording is available for a specific online meeting.​ | • All transcripts for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/transcripts` <br> • All recordings for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/recordings` |
+|User-scoped| A transcript or recording is available for any online meeting organized by a specific user.​| • A call transcript that becomes available in a meeting organized by a specific user: `users/{userId}/onlineMeetings/getAllTranscripts` <br> • A call recording that becomes available in a meeting organized by a specific user: `users/{userId}/onlineMeetings/getAllRecordings` |
+|App-scoped| A transcript or recording is available for any meeting in which a specific teams-app is installed.| • A call transcript that becomes available in a meeting where a particular Teams app is installed: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllTrancripts` <br> • A call recording that becomes available in a meeting where a particular Teams app is installed: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllRecordings` |
 
 For more information about how your app can know when a transcript or recording is available after the online meeting ends, see [get notified when transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
