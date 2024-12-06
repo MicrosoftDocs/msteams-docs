@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 12/02/2024
 ---
 
-# Build tabs for PSTN calling extensibility
+# Build tabs for calling
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
@@ -29,7 +29,7 @@ Ensure the following requirements are in place before you create or update a tab
 
   For more information, see [get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
-## Enable PSTN calls for your tabs
+## Enable personal tab apps for PSTN calls
 
 To enable PSTN calling extensibility for your personal tab app:
 
@@ -51,7 +51,7 @@ Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-sc
     "staticTabs":[
     {
         "entityId": "contoso",
-        "scopes": ["personalTab"],
+        "scopes": ["personal"],
         "context":[
             "meetingSidePanel",
         ],
@@ -133,10 +133,6 @@ Teams client users can access your application only if it is pinned by the Teams
 1. Pin your application, and assign it to users who need access during PSTN calls.
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
-
-## Limitations
-
-This feature is dependent on chat thread of platform architecture.
 
 ## See also
 

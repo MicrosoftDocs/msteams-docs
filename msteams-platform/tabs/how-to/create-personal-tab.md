@@ -1049,7 +1049,7 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ]
 ```
 
-## Enable PSTN calls for personal tab apps
+## Enable personal tab apps for PSTN calls
 
 You can now create personal scope apps that integrate seamlessly with PSTN and Teams-to-Teams calls. By using the right scope and context, you can build apps that effectively utilize tab type, static scope, personal context, and meeting side panels.
 
