@@ -483,7 +483,7 @@
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Optimize your bot with rate limiting in Teams
+  - name: Optimize bots with rate limits in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Explore advanced bot capabilities
