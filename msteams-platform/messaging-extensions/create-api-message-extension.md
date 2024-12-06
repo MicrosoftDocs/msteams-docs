@@ -896,7 +896,7 @@ Multi parameters allow API-based message extensions to have more than one input 
 You can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
 
 * The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
-* The `name` and `id` properties in  `parameters` must match the values in the OpenAPI Description document.
+* The `name` property of the `parameters` field in the app manifest must match the `id` field in the OpenAPI Description document for the corresponding parameter.
 
 **Example**
 
