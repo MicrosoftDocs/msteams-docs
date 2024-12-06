@@ -1091,8 +1091,6 @@
       href: resources/faqs.md
   - name: Share to Teams
     items:
-    - name: Overview
-      href: concepts/build-and-test/share-to-teams-overview.md
     - name: Share to Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
       displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
