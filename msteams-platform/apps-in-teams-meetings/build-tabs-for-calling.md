@@ -12,7 +12,7 @@ ms.date: 12/02/2024
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
-This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. Apps can access caller ID for a specific caller and display relevant information such as their active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
+This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. Apps can access caller ID for specific callers and display relevant information, such as their active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Ensure the following requirements are in place before you create or update a tab
 
 * **Teams JS SDK required**: [TeamsJS SDK Release latest version](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
 
-* **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID, if required, for relevant customer information.
+* **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID.
 
   For more information, see [get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
@@ -38,13 +38,13 @@ To enable personal tab app for one-to-one calls:
 
 ### Update app manifest
 
-Teams reuses the meeting side panel context for adding calling context in the manifest schema.
-Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the `staticTabs` section. To configure calling in your personal tab app for one-on-one calls, update the `staticTabs` section as follows:
+Teams uses the meeting side panel context for adding calling context in the manifest schema.
+Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the `staticTabs` section. To configure your  personal tab app for one-on-one calls, update the `staticTabs` section as follows:
 
 1. Set the `scope` as `personal` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
 
-    The following code snippet is an example of a personal tab app for Teams call:
+    Here's an example of the update in the `staticTabs` section of app manifest:
 
     ```Manifest
     
@@ -125,12 +125,12 @@ Here's an example of the app manifest file:
 
 ### Pin your personal tab app to enable calling
 
-Teams client users can access your application only if it's pinned by the Teams administrator. Administrators can leverage meeting extensions to pin personal calling apps. To pin an application for calling:
+Teams client users can access your application only if it's pinned by the Teams administrator. Administrators can leverage **Calling extensions** to pin personal calling tab apps. To pin an application for calling:
 
 1. Go to the pinned apps section in the app setup policy.
 1. Pin your application, and assign it to users who need access during one-on-one calls.
 
-:::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling.":::
+:::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling." lightbox="../assets/images/tab-images/pin-tab-calling.png":::
 
 ## See also
 

@@ -1101,7 +1101,7 @@ this.onMessage(async(context, next) =>{
 
 ```
 
-**Example for enabling personal tab for calling**:
+**Example for enabling personal tab for calling extensibility**:
 
 ```JavaScript
 const GetMeetingDetailsVerbose = (): React.ReactElement =>
