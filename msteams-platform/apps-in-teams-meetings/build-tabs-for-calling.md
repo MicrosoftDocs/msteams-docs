@@ -16,14 +16,14 @@ This integration is simple. You can create a new personal tab app or update an e
 
 ## Prerequisites
 
-Ensure the following requirements are in place before you create or update a tab app for supporting PSTN calls:
+Ensure the following requirements are in place before you create or update a tab app for supporting one-to-one calls:
 
 * **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
 
   * `OnlineMeetingParticipant.Read.Chat`
   * `OnlineMeeting.ReadBasic.Chat`
 
-* **Teams JS SDK required**: [TeamsJS SDK Release v2.29.0](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
+* **Teams JS SDK required**: [TeamsJS SDK Release latest version](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
 
 * **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID, if required, for relevant customer information.
 
@@ -31,17 +31,17 @@ Ensure the following requirements are in place before you create or update a tab
 
 ## Enable personal tab apps for calling
 
-To enable personal tab app for calling extensibility:
+To enable personal tab app for one-to-one calls:
 
 * [Update app manifest](#update-app-manifest)
-* [Pin your personal tab app for enabling PSTN calls](#pin-your-personal-tab-app-for-enabling-pstn-calls)
+* [Pin your personal tab app to enable calling](#pin-your-personal-tab-app-to-enable-calling)
 
 ### Update app manifest
 
 Teams reuses the meeting side panel context for adding calling context in the manifest schema.
 Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the staticTabs section. To configure calling in your personal tab app for one-on-one calls, update the staticTabs section:
 
-1. Set the `scope` as `personalTab` to make your app available in a personal scope and enables the app to make a call.
+1. Set the `scope` as `personal` to make your app available in a personal scope and enables the app to make a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
 
     The following code snippet is an example of a personal tab app for Teams call:
@@ -125,7 +125,7 @@ Here's an example of the app manifest file:
 
 ### Pin your personal tab app to enable calling
 
-Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application in PSTN calls, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during PSTN calls. Administrators can leverage meeting extensions to pin personal calling apps.
+Teams client users will get access to your application only if they are pinned for them by Teams administrator. For pinning an application for calling, navigate to pinned apps section in app setup policy and pin your application, assign it users that require access to the app during one-to-one calls. Administrators can leverage meeting extensions to pin personal calling apps.
 
 Teams client users can access your application only if it is pinned by the Teams administrator. To pin an application for calling:
 
