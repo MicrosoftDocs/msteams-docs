@@ -1199,6 +1199,10 @@
       {  
         "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
         "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
       }
     ]
 }
