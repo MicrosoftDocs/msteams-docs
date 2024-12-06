@@ -125,10 +125,10 @@ Here's an example of the app manifest file:
 
 ### Pin your personal tab app to enable calling
 
-Teams client users can access your application only if it's pinned by the Teams administrator. Administrators can leverage **Calling extensions** to pin personal calling tab apps. To pin an application for calling:
+Teams client users can access your personal tab app only if it's pinned by the Teams administrator. Administrators can leverage **Calling extensions** to pin personal calling tab apps. To pin an app for calling:
 
 1. Go to the pinned apps section in the app setup policy.
-1. Pin your application, and assign it to users who need access during one-on-one calls.
+1. Pin your app and assign it to users who need access during one-on-one calls.
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling." lightbox="../assets/images/tab-images/pin-tab-calling.png":::
 
