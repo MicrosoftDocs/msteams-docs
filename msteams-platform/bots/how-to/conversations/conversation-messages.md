@@ -3,6 +3,7 @@ title: Bot Conversations & Message Activity
 description: Learn to send, receive, edit, undelete, soft delete a message with suggested actions, notification, attachments, images, Adaptive Card, status error code responses.
 ms.topic: overview
 ms.author: anclear
+ms.date: 11/27/2024
 ms.localizationpriority: medium
 ---
 
@@ -678,40 +679,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ## Send suggested actions
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
-
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-
-The following is an example for implementation and experience of suggested actions:
-
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
-```
-
-The following illustrates an example of suggested actions:
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to six suggested actions.
+[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
 
 ## Teams channel data
 
@@ -943,6 +911,23 @@ The general retry guidance for each status code is listed in the following table
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
+
+## Request headers of the bot
+
+The current outgoing requests to the bot don't contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
+
+### Request header fields
+
+Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
+
+| Field key | Value |
+|----------------|-----------------|
+| x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
+| x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
+
+If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
+
+:::image type="content" source="../../../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
 
 ## Code sample
 

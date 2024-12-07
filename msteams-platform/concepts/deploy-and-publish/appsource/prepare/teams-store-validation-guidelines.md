@@ -16,7 +16,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
-> * Other guidelines are marked as [*Good-to-fix*]. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
+> * Other guidelines are marked as *Good-to-fix*. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -469,7 +469,7 @@ App packages must be correctly formatted and include all required information an
 >   * **Clearly describe limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 >   * **Emphasis on any considerations** for testers while validating your app submission.
 >   * **Prepopulate the test accounts with dummy data** to aid testing.
->   * If you are providing your test accounts, ensure that you enable third-party integration. Also, disable two-factor or multi-factor authentication.
+>   * If you are providing your test accounts, ensure that you enable third-party integration.
 
 [Back to top](#teams-store-validation-guidelines)
 
@@ -505,7 +505,7 @@ The app manifest defines your app's configuration.
 
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Must fix*]
 
-* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Good-to-Fix*]
+* We recommend that you declare the Microsoft Cloud Partner Program ID (CCP ID), formerly known as Microsoft Partner Network (MPN ID) in the app manifest. The CCP ID helps identify the partner organization that builds the app. [*Good-to-fix*]
 
 * Scopes and/or context declared in app manifest must be visible within the app. [*Must fix*]
 
@@ -1080,7 +1080,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
-* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Must fix*]
+* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, date of birth, place, and designation instead of using multi-turn conversations. [*Must fix*]
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Must fix*]
 
@@ -1167,25 +1167,35 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 </details>
 </br>
 
-<details><summary>Bot welcome messages</summary>
+<details><summary>Bot first run user experience</summary>
 
-* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
+* A bot in personal scope must always send welcome message or provide prompt starters. [*Must fix*]
 
-  For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+   If you're using prompt starters, ensure the following guidelines are met:
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
+   Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
+   * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+   * Prompt starters or commands must be functional and return responses. [*Must fix*]
+   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+   * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+
+   If your app sends a welcome message, ensure the following guidelines are met:
+
+   * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
+
+     For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+
+     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
+
+     :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot mustn't send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
-
-* Notification only bots must send a welcome message that clarifies that the bot is a notification only bot and users won't be able to interact with the bot. [*Must fix*]
-
-   :::image type="content" source="../../../../assets/images/submission/validation-notification-only-welcome-message-pass.png" alt-text="Graphic shows an example of bot sending a welcome message that it's a notification only bot.":::
 
 * Welcome message mustn't dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Must fix*]
 
@@ -1811,13 +1821,13 @@ The app must terminate the user account instance when the user is switched or lo
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Teams apps extensible as plugin for Microsoft 365 Copilot
+## Teams apps extensible as agents for Microsoft 365 Copilot
 
 * App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
 * App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
-* App must meet the [plugin compatible criteria](../../../../messaging-extensions/high-quality-message-extension.md).
+* App must meet the [agent compatible criteria](review-copilot-validation-guidelines.md).
 
-### Plugin must not manipulate LLM behavior
+### Agent must not manipulate LLM behavior
 
 The short descriptions of an app, parameter, and command must not include the following:
 
@@ -1833,11 +1843,11 @@ The long description of an app must clearly call out the following:
 
 * App's compatibility with Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks.
 
-* Provide at least one prompt of how users can use a message extension plugin in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+* Provide at least one prompt of how users can use a message extension agent in Microsoft 365 Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
-  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Copilot.":::
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as an agent in Microsoft 365 Copilot.":::
 
 ### Response Quality
 
