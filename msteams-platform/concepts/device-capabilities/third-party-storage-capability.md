@@ -30,7 +30,7 @@ For Teams app to support drag and drop:
 
 * The app manifest must have the first action as upload. This auto opens the app in upload mode when files are dragged and dropped in the compose message area.
 
-* Admins must configure the third-party cloud storage provider's app ID. For more information, see [admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
+* Admins must configure the third-party cloud storage provider's app ID. Search for the property named `defaultFilesUploadAppId` and configure the app ID. It must be a plain string and mustn't use inverted commas. For more information, see [admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
 
 ## Drag-drop files to third-party storage
 
