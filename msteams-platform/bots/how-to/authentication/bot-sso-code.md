@@ -4,6 +4,7 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
+ms.date: 11/13/2024
 ---
 # Add code to enable SSO in your bot app
 
@@ -150,7 +151,7 @@ To update your app's code:
         const ENV_FILE = path.join(__dirname, '.env');
         require('dotenv').config({ path: ENV_FILE });
         
-        const restify = require('restify');
+        const express = require("express");
         
         // Import required bot services.
         // See https://learn.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
@@ -216,18 +217,18 @@ To update your app's code:
         // Create the bot that will handle incoming messages.
         const bot = new TeamsBot(conversationState, userState, dialog);
         
-        // Create HTTP server.
-        const server = restify.createServer();
-        server.use(restify.plugins.bodyParser());
-        
-        server.listen(process.env.port || process.env.PORT || 3978, function() {
-            console.log(`\n${ server.name } listening to ${ server.url }`);
+        // Create express application.
+        const expressApp = express();
+        expressApp.use(express.json());
+
+        const server = expressApp.listen(process.env.port || process.env.PORT || 3978, () => {
+            console.log(`\n${ expressApp.name } listening to`, server.address());
             console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
             console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
         });
         
         // Listen for incoming requests.
-        server.post('/api/messages', async (req, res) => {
+        expressApp.post('/api/messages', async (req, res) => {
             // Route received a request to adapter for processing.
             await adapter.process(req, res, (context) => bot.run(context));
         });
