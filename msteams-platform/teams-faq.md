@@ -696,7 +696,7 @@ You received this error message because your [account verification status](/part
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-If you're the primary contact, global admin, or account admin, you can monitor verification status and track progress on your profile page.
+If you're the primary contact, Global Administrator or account admin, you can monitor verification status and track progress on your profile page.
 
 After the verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
@@ -924,32 +924,36 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 
 <br>
 <details>
-<summary>What does the Teams AI library do?</summary>
+<summary>What does Teams AI library do?</summary>
 
 Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
+</br>
 
 <details>
-<summary>Can we use the AI library with other Large Language Models (LLMs) apart from OpenAI?</summary>
+<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
 
 Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library integrate with ODSL?</summary>
@@ -957,16 +961,19 @@ Yes, Teams AI library provides abstractions to simplify utilization of Large Lan
 The two are independent and can't be integrated.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+</br>
 
-Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
+</br>
 
 <details>
-<summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
+<summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
 Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>

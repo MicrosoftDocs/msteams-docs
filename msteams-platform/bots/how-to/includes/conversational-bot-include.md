@@ -1,13 +1,14 @@
 ---
-title: Channel/Group Conversation Chat Bot
+title: Build an conversational bot
 author: surbhigupta
-description: Learn how to create new conversation threads, user and tag mentions, and send message on installation. Explore Teams file upload sample (.NET, JavaScript, Python).
-ms.topic: conceptual
-ms.localizationpriority: medium
-ms.author: anclear
-ms.date: 11/14/2024
+description: Learn about creating a conversational bot
+ms.topic: overview
+ms.localizationpriority: high
+ms-author: surbhigupta
+ms.date: 01/29/2023
 ---
-# Channel and group chat conversations with a bot
+
+## Build a conversational bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -18,9 +19,8 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > [!NOTE]
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Using resource-specific consent (RSC), a bot can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC].
 > * Posting a message or Adaptive Card to a private channel isn't supported.
-
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
@@ -85,7 +85,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
-    
+
     // Resolves the mentions from the entities activity.
     const mentions = TurnContext.getMentions(turnContext.activity);
     if (mentions){
@@ -153,12 +153,12 @@ this.onMessage(async (turnContext, next) => {
 @staticmethod
 // Resolves the mentions from the entities of this activity.
 def get_mentions(activity: Activity) -> List[Mention]:
-    result: List[Mention] = []
-    if activity.entities is not None:
-        for entity in activity.entities:
-            if entity.type.lower() == "mention":
-                    result.append(entity)
-     return result
+    result: List[Mention] = []
+    if activity.entities is not None:
+        for entity in activity.entities:
+            if entity.type.lower() == "mention":
+                    result.append(entity)
+     return result
 ```
 
 * * *
@@ -169,9 +169,6 @@ There are two types of mentions:
 
 * [User mention](#user-mention)
 * [Tag mention](#tag-mention)
-
-> [!NOTE]
-> User mention and tag mention is supported for both text message and Adaptive Card.
 
 #### User mention
 
@@ -301,45 +298,13 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
 
-##### Support for Microsoft Entra Object ID and UPN in user mention
-
-[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
-
-The following code snippet shows an example of mentioning users with Entra Object Id and UPN in a text message:
-
-```C#
-var userId = "Adele@microsoft.com"; //User Principle Name
-var mention = new ChannelAccount(userId, "Adele"); 
-var mentionObj = new Mention 
-{
-    Mentioned = mention,
-    Text = $"<at>{mention.Name}</at>" ,
-    Type = "mention"
-}; 
-
-// Returns a simple text message.var replyActivity = MessageFactory.Text($"Hello {mentionObj.Text}.");replyActivity.Entities = new List<Entity> { mentionObj };
-
-// Sends an activity to the sender of the incoming activity.await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-
-```
-
-The following code snippet shows an example of mentioning users with Entra Object Id and UPN in an Adaptive Card:
-
-```JSON
-{
-    "type": "mention",
-    "text": "<at>Adele</at>",
-    "mentioned": {
-            "id": "Adele@microsoft.com" ,// User Principle Name
-            "name": "Adele"
-    }
-} 
-```
-
 #### Tag mention
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
 
+> [!NOTE]
+> Tag mentions aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DoD) tenants.
+>
 ##### Mention tags in a text message
 
 In the `mention.properties` object, add the property `'type': 'tag'`. If the property `'type': 'tag'` isn't added, the bot treats the mention as a user mention.
@@ -402,7 +367,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
@@ -428,7 +393,6 @@ You can send a personal message to each member of the team when the bot is added
 
 >[!NOTE]
 > Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
-
 Don't send a message in the following cases:
 
 * When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
@@ -437,18 +401,3 @@ Don't send a message in the following cases:
 * A team member is added to a group or channel.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create Teams conversation bot.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-
-## See also
-
-* [Get Teams context](~/bots/how-to/get-teams-context.md)
-* [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
-* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
