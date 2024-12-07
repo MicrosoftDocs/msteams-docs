@@ -5,7 +5,7 @@ description: Learn how interactive notification bot works in Teams, notification
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/12/2024
+ms.date: 11/13/2024
 ---
 
 # Interactive notification bot in Teams
@@ -126,7 +126,7 @@ You can make the following customizations to extend the notification template to
 
 You can customize the following triggers:
 
-* `Restify` based notification:
+* `Express` based notification:
 
   * When an HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
@@ -134,7 +134,7 @@ You can customize the following triggers:
     * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
     > [!NOTE]
-    > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
+    > By default Teams Toolkit scaffolds a single `express` entry point in `src/index.js`.
 
 * Azure Functions based notification:
 

@@ -7,18 +7,13 @@ ms.author: surbhigupta
 ms.date: 11/27/2023
 ---
 
-# Get started with Teams AI library
+# Build with Teams AI library
 
-Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
-
-You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
+Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access and custom UI creation. You can easily integrate prompt management and safety moderation, and create bots using OpenAI or Azure OpenAI for an AI-driven experience.
 
 ## Initial setup
 
-Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
-
-> [!NOTE]
-> The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
+Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of the initial setup, it's important to import the Bot Framework SDK functionalities. The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
 
 # [.NET](#tab/dotnet1)
 
@@ -115,7 +110,7 @@ app = Application[TurnState](
 
 ### Import Teams AI library
 
-Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
+Import all the classes from `@microsoft/teams-ai` to build your bot and use Teams AI library capabilities.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L13)
 
@@ -136,13 +131,13 @@ import { VectraDataSource } from './VectraDataSource';
 
 ## Create AI components
 
-Add AI capabilities to your existing app or a new Bot Framework app.
+Create AI components in an existing bot app or in a new Bot Framework app:
 
-**OpenAIModel**: The OpenAIModel class provides a way to access the OpenAI API or any other service, which adheres to the OpenAI REST format. It's compatible with both OpenAI and Azure OpenAI language models.
+* **OpenAIModel**: The OpenAIModel class provides a way to access the OpenAI API or any other service, which adheres to the OpenAI REST format. It's compatible with both OpenAI and Azure OpenAI language models.
 
-**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
+* **Prompt manager**: The prompt manager handles prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
-**ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. It's responsible for generating and executing plans based on the user's input and the available actions.
+* **ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. It's responsible for generating and executing plans based on the user's input and the available actions.
 
 # [.NET](#tab/dotnet2)
 
@@ -266,7 +261,7 @@ The application object automatically manages the conversation and user state of 
 
 * **Storage**: Create a storage provider to store the conversation and the user state for your bot.
 
-* **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
+* **Application**: Register actions or activity handlers for the app in the `Application` class, which has all the information and bot logic required for your app.
 
 # [.NET](#tab/dotnet3)
 
@@ -285,7 +280,7 @@ The application object automatically manages the conversation and user state of 
     });
 ```
 
-`TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor.
+`TurnStateFactory` allows you to create a custom state class for your app to store extra information or logic for your bot. You can override default properties like user input, bot output, or conversation history. To use it, create a class that extends the default turn state and pass a function that creates an instance of your class to the app constructor.
 
 # [JavaScript](#tab/javascript3)
 
@@ -303,7 +298,7 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
-The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+The `MemoryStorage()` function stores your bot's state. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt, and history. The `ai` object is then passed into the `Application`, which receives the AI components and the default prompt defined earlier.
 
 # [Python](#tab/python3)
 
@@ -327,7 +322,7 @@ app = Application[AppTurnState](
 
 ## Register data sources
 
-A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file.
+A vector data source simplifies adding RAG to any prompt. Register a named data source with the planner and specify it in the prompt's `config.json` file to augment the prompt. This allows AI to inject relevant information from external sources such as vector databases or cognitive search into the prompt.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L118)
 
@@ -342,9 +337,7 @@ planner.prompts.addDataSource(new VectraDataSource({
 
 ### Embeddings
 
-An Embedding is a kind of Vector generated by an LLM that represents a piece of text. The text could be a word, sentence, or an entire document. Since the model understands the syntax and semantics of language the Embedding can capture the semantic meaning of the text in a compact form. Embeddings are often used in natural language processing tasks, such as text classification or sentiment analysis, but also be used for search.
-
-The model for generating Embeddings is different from the foundational LLMs. For example, OpenAI provides an embedding model called **text-embedding-ada-002**, which returns a list of 1536 numbers that represents the input text. The system creates embeddings for text within the documents and stores them in a Vector Database. Now from our Chat application we can implement the RAG pattern by first retrieving relevant data about the documents from the Vector Database, and then augmenting the Prompt with this retrieved information.
+An Embedding is a vector generated by an LLM that represents text, capturing its semantic meaning in a compact form. It's used in tasks like text classification, sentiment analysis, and search. The model for generating Embeddings is different from the foundational LLMs. OpenAI's **text-embedding-ada-002** model, for example, returns a list of 1536 numbers representing the input text. These embeddings are stored in a vector database. In a custom engine agent, the RAG pattern can be implemented by retrieving relevant data from the vector database and augmenting the prompt with this information.
 
 <br/>
 <details> <summary> The following is an example of a VectraDataSource and OpenAIEmbeddings:</summary>
@@ -481,23 +474,20 @@ export class VectraDataSource implements DataSource {
 
 </details>
 
-## Prompt
+## Prompts
 
-Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts helps reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are text pieces used to create conversational experiences, such as starting conversations, asking questions, and generating responses. They simplify the process of creating engaging interactions. A new object-based prompt system divides prompts into sections, each with its own token budget, which can either be a fixed set or proportional to the remaining tokens. You can generate prompts for both the Text Completion and Chat Completion style APIs.
 
-A new object based prompt system breaks a prompt into sections and each section can be given a token budget that's either a fixed set of tokens, or proportional to the overall remaining tokens. You can generate prompts for both Text Completion and Chat Completion style APIs.
-
-The following are a few guidelines to create prompts:
+To create effective prompts, follow these guidelines:
 
 * Provide instructions, examples, or both.
-* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional, and it might affect the response.
-* Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
+* Ensure quality data with enough examples and proofread them. While the model can identify spelling errors, it might assume intentionality in spelling mistakes, affecting responses.
+* Adjust prompt settings using `temperature` and `top_p` to control the model's response. Higher temperature such as 0.8 makes output random, while lower such as 0.2 makes it focused and deterministic.
 
-Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
+Create a folder called prompts and define your prompts there. When the user interacts with the bot using a text prompt, it responds with a text completion. Create the following files in the prompts folder:
 
-* `skprompt.txt`:  Contains the prompts text and supports template variables and functions. Define all your text prompts in the `skprompt.txt` file.
-  
-* `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
+* `skprompt.txt`: Contains the prompts text and supports template variables and functions.
+* `config.json`: Contains the prompt model settings that ensure bot responses align with your requirements
 
    [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/tools/config.json)
 
@@ -535,27 +525,25 @@ The following table includes the query parameters:
 |**Value**  |**Description**  |
 |---------|---------|
 |`model`|ID of the model to use.|
-|`completion_type`|The type of completion you would like to use for your model. Given a prompt, the model will return one or more predicted completions along with the probabilities of alternative tokens at each position. Supported options are `chat` and `text`. Default is `chat`.|
-|`include_history`|Boolean value. If you want to include history. Each prompt gets its own separate conversation history to make sure that the model doesn't get confused.|
-|`include_input`|Boolean value. If you want to include user's input in the prompt. How many tokens for the prompt.|
-|`max_input_tokens`|The maximum number of tokens for input. Max tokens supported is 4000.|
-|`max_tokens`     | The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length.        |
-|`temperature`    | What sampling temperature to use, between 0 and 2. Higher values like 0.8 makes the output more random, while lower values like 0.2 makes it more focused and deterministic.        |
-|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
+|`completion_type`|The type of completion you would like to use for your model. Given a prompt, the model returns one or more predicted completions along with the probabilities of alternative tokens at each position. <br> Supported options: `chat` and `text`. <br> Default: `chat`.|
+|`include_history`| Boolean value. If you want to include history. Each prompt gets its own separate conversation history to make sure that the model doesn't get confused.|
+|`include_input`|Boolean value. If you want to include user's input in the prompt. |
+|`max_input_tokens`|The maximum number of tokens for input. Maximum tokens supported is 4000.|
+|`max_tokens` | The maximum number of tokens to generate in the completion. The token count of your prompt plus `max_tokens` can't exceed the model's context length. |
+|`temperature` | Sampling temperature to use between 0 and 2. A higher value such as 0.8 makes the output more random, while a lower value such as 0.2 makes it more focused and deterministic.        |
+|`top_p`    |An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `top_p` probability mass. Therefore, 0.1 means only the tokens comprising the top 10% probability mass are considered.         |
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
-|`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue` and `tools`.|
+|`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue`, and `tools`.|
 
 ### Prompt management
 
-Prompt management helps adjust the size and content of the prompt sent to the language model, considering the available token budget and the data sources or augmentations.
-
-If a bot has a maximum of 4,000 tokens where 2,800 tokens are for input and 1,000 tokens are for output, the model can manage the overall context window and ensure that it never processes more than 3,800 tokens. The model starts with a text of about 100 tokens, adds in the data source of another 1,200 tokens, and then looks at the remaining budget of 1,500 tokens. The system allocates the remaining 1,500 tokens to the conversation history and input. The conversation history is then condensed to fit the remaining space, ensuring the model never surpasses 2,800 tokens.
+Prompt management adjusts the size and content of prompts based on the token budget and data sources. For a bot with a 4,000-token limit, where 2,800 tokens are for input and 1,000 tokens are for output, the model manages the context window to stay within 3,800 tokens. It starts with 100 tokens of text and adds 1,200 tokens from data sources. It allocates the remaining 1,500 tokens to conversation history and input and ensures the model never exceeds 2,800 tokens.
 
 ### Prompt actions
 
-Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
+Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint determines the necessary actions, extracts entities, and passes them as arguments to the action call.
 
 ```text
 The following is a conversation with an AI assistant.
@@ -567,7 +555,7 @@ The lights are currently {{getLightStatus}}.
 
 ### Prompt template
 
-Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
+A prompt template is a simple and powerful way to define and compose AI functions using plain text. You can create natural language prompts, generate responses, extract information, invoke other prompts, or perform any text-based task.
 
 The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and executes the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
@@ -603,13 +591,9 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 
 ### Register Action Handlers
 
-Action handlers help users achieve the goals, which is shared in the user intents.
+Action handlers help users achieve the goals, which are shared in the user intents. One of the key aspects in action handlers is that you must first register the actions in the prompts and then register a handler for each action listed in the prompt, including the unknown actions.
 
-One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
-
-You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
-
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return a `string`. If you require the bot to return time, you don't need to parse the time and convert it to a number. The `PauseParameters` property ensures that it returns time in number format without pausing the prompt.
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause` action. Every time an action is called, you return a `string`. If you require the bot to return time, you don't need to parse the time and convert it to a number. The `PauseParameters` property ensures that it returns time in number format without pausing the prompt.
 
 # [.NET](#tab/dotnet4)
 
@@ -739,8 +723,12 @@ async def on_pause(
 
 ---
 
-If you use either `sequence`, `monologue` or `tools` augmentation, it's impossible for the model to hallucinate an invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action. Sequence augmentation is suitable for tasks that require multiple steps or complex logic.
-Monologue augmentation is suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
+Using sequence, monologue, or tools augmentation prevents the model from hallucinating invalid function names, action names, or parameters. Create an actions file to:
+
+* Define actions for prompt augmentation.
+* Indicate when to perform actions.
+
+Sequence augmentation is ideal for multi-step or complex tasks, while monologue augmentation suits tasks needing natural language understanding, flexibility, and creativity.
 
 In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
 
@@ -788,19 +776,127 @@ You can use the `MaxHistoryMessages` and `MaxConversationHistoryTokens` argument
 
 ### Feedback loop
 
-A feedback loop allows you to monitor and improve the bot’s interactions over time, leading to more effective and user-friendly applications. The feedback received can be used to make adjustments and improvements, ensuring that the bot consistently meets user needs and expectations.
+A feedback loop helps monitor and improve the bot’s interactions, leading to more effective and user-friendly applications. Feedback is used to adjust and enhance the bot to meet user needs and expectations. A feedback loop includes:
 
-A feedback loop consists of the following:
+* **Repair Loop**: Triggers if the model's response is inadequate. The conversation history forks, allowing the system to try different solutions without affecting the main conversation.
+* **Validation**: Verifies the corrected response and reinserts it into the main conversation if the response is validated successfully.
+* **Learn from Mistakes**: The model learns from correct behavior examples to avoid similar mistakes in the future.
+* **Handle Complex Commands**: The model becomes capable of handling more complex commands after learning from its mistakes.
 
-**Repair Loop**: If the model's response falls short of expectations, it triggers a repair loop. The conversation history forks, enabling the system to try various solutions without impacting the main conversation.
+## Elevate your conventional bot to use AI
 
-**Validation**: Validation verifies the corrected response. If it successfully passes validation, the system unforks the conversation and reinserts the repaired structure into the main conversation.
+You can elevate your existing conventional bot to be powered by AI. After you build your bot, you can add an AI layer to enable AI-powered features for your bot.
 
-**Learn from Mistakes**: Once the model sees an example of correct behavior, it learns to avoid making similar mistakes in the future.
+The following code snippet demonstrates how you can add AI components to a bot. In this example, the bot uses the Bot framework adapter to handle incoming requests and then runs the AI layer using the `app` object.
 
-**Handle Complex Commands**: Once the model has learned from its mistakes, it becomes capable of handling more complex commands and returning the desired plan.
+```JavaScript
+// Create AI components
+const model = new OpenAIModel({
+    // OpenAI Support
+    apiKey: process.env.OPENAI_KEY!,
+    defaultModel: 'gpt-4o',
+
+    // Azure OpenAI Support
+    azureApiKey: process.env.AZURE_OPENAI_KEY!,
+    azureDefaultDeployment: 'gpt-4o',
+    azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
+    azureApiVersion: '2023-03-15-preview',
+
+    // Request logging
+    logRequests: true
+});
+
+const prompts = new PromptManager({
+    promptsFolder: path.join(__dirname, '../src/prompts')
+});
+
+// Define a prompt function for getting the current status of the lights
+prompts.addFunction('getLightStatus', async (context: TurnContext, memory: Memory) => {
+    return memory.getValue('conversation.lightsOn') ? 'on' : 'off';
+});
+
+const planner = new ActionPlanner({
+    model,
+    prompts,
+    defaultPrompt: 'tools'
+});
+
+// Define storage and application
+const storage = new MemoryStorage();
+const app = new Application<ApplicationTurnState>({
+    storage,
+    ai: {
+        planner
+    }
+});
+
+app.ai.action('LightStatus', async (context: TurnContext, state: ApplicationTurnState) => {
+    const status = state.conversation.lightsOn ? 'on' : 'off';
+    return `the lights are ${status}`;
+});
+
+// Register action handlers
+app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = true;
+    await context.sendActivity(`[lights on]`);
+    return `the lights are now on`;
+});
+
+app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = false;
+    await context.sendActivity(`[lights off]`);
+    return `the lights are now off`;
+});
+
+interface PauseParameters {
+    time: number;
+}
+
+app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
+    await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
+    await new Promise((resolve) => setTimeout(resolve, parameters.time));
+    return `done pausing`;
+});
+
+// Listen for incoming server requests.
+server.post('/api/messages', async (req, res) => {
+    // Route received a request to adapter for processing
+    await adapter.process(req, res as any, async (context) => {
+        // Dispatch to application for routing
+        await app.run(context);
+    });
+});
+```
+
+## Migrate your bot to use Teams AI library
+
+If you created your bot app with Bot Framework SDK, you can switch to Teams AI library to use its advanced AI features. This migration provides the following benefits:
+
+* Advanced AI system for creating complex Teams applications powered by LLM.
+* User authentication is integrated into the library, making setup easier.
+* Built on Bot Framework SDK tools and concepts, enabling the existing knowledge to be transferable.
+* Supports the latest tools and APIs in the LLM space.
+
+In Teams AI library, the `Application` object replaces the traditional `ActivityHandler` object, supporting a simpler, fluent style of bot authoring compared to the inheritance-based `ActivityHandler` class. It includes built-in support for:
+
+* Calling into Teams AI library's system for creating bots that use LLM and other AI capabilities.
+* Configuring user authentication for accessing third-party user data.
+
+Use one of the following to migrate your bot app to use Teams AI library:
+
+| Migrate a Bot Framework SDK app ... | To use Teams AI library ... |
+| --- | --- |
+| A bot app built using JavaScript | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/01.JS.md) |
+| A bot app built using C# | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/02.DOTNET.md) |
+| A bot app using Python | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/03.PYTHON.md) |
+
+## Code sample
+
+| **Sample name** | **Description** |**.NET** |**Node.js** |
+| --- | --- | --- | --- |
+| Action mapping lightbot | This example showcases how the LightBot understands user intent, accurately interpreting commands to effortlessly control light bot. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library quick start guide](conversation-ai-quick-start.md)
+> [Understand Teams AI library](how-conversation-ai-core-capabilities.md)
