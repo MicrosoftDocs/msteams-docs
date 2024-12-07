@@ -1,12 +1,12 @@
 ---
 title: Teams AI Library - Lightbot Sample
 author: surbhigupta
-description: In this module, learn how to quickly try the Teams AI library using the LightBot sample, which creates apps that control lights.
+description: In this module, learn how to quickly try Teams AI library using the LightBot sample, which creates apps that control lights.
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: surbhigupta
-ms.date: 10/03/2024
+ms.date: 12/06/2022
 ---
 
 # Teams AI library quick start guide
@@ -24,8 +24,8 @@ To get started, ensure that you have the following tools:
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
-| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with apps for chat, meetings, and call all in one place.|
+| [Node.js](https://nodejs.org/en) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with them through apps for chat, meetings, and call all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
@@ -68,7 +68,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. In the terminal window, run the following command to go to the **js** folder:
 
-   ```
+   ```terminal
    cd .\js\
    ```
 
@@ -154,7 +154,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
             }
          ```
 
-      ---
+    ---
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -201,7 +201,7 @@ To get started, ensure that you have the following tools:
 | [Visual Studio](https://visualstudio.microsoft.com/downloads/) | C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with them through apps for chats, meetings, and calls all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
@@ -238,7 +238,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Select **LightBot.sln**. The solution opens in Visual Studio.
 
-1. In Visual Studio, update your OpenAI related settings in the `appsettings.Development.json` file.
+1. In Visual Studio, update your OpenAI-related settings in the `appsettings.Development.json` file.
 
       ```json
       "Azure": {
@@ -332,7 +332,7 @@ To get started, ensure that you have the following tools:
 | [Poetry](https://python-poetry.org/docs/#installing-with-pipx) | Dependency management and packaging tool for Python.|
 | [Python VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provides rich support for Python on VSCode. |
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with them through apps for chats, meetings, and calls all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
@@ -439,5 +439,12 @@ You can also use the following tools to run and set up a sample:
 
 ## Next step
 
+Choose one of the following as a next step:
+
 > [!div class="nextstepaction"]
-> [Teams AI library FAQ](coversational-ai-faq.md)
+> If you want to learn how to use Teams AI library to create an AI-powered bot, select the following:<br>
+> [Build with Teams AI library](how-conversation-ai-get-started.md)
+>
+> [!div class="nextstepaction"]
+> If you want to build a a custom engine agent using Teams Toolkit, select the following:<br>
+> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
