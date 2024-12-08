@@ -301,6 +301,46 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 </details>
 
+<details>
+<summary><b>Update the expired client secret ID for the existing apps</b></summary>
+
+1. Go to [Azure portal](https://ms.portal.azure.com/).
+
+1. Select **App registrations**.
+
+    :::image type="content" source="~/assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+
+1. Select **+ New registration**.
+
+    :::image type="content" source="~/assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
+
+1. Enter the name of your app.
+
+1. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)**.
+
+1. Select **Register**.
+
+    :::image type="content" source="~/assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
+
+    Your app is registered in Microsoft Entra ID. The app overview page appears.
+
+    :::image type="content" source="~/assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
+
+1. In the left panel, select **Certificates & secrets** to create a client secret for your application.
+
+   1. Under **Client secrets**, select &#x2795; **New client secret**.
+   1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
+   1. Set **Expires** to your selection.
+   1. Select **Add**.
+
+1. Update the `.env` file with the bot secret.
+
+1. Provision or deploy the app as required.
+
+1. If your app is already deployed, ensure you update the app service configuration in Azure resource with the newly created bot secret.
+
+</details>
+
 ## Next
 
 > [!div class="nextstepaction"]
