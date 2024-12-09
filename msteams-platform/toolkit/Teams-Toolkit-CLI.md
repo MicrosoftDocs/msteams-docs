@@ -97,7 +97,7 @@ The `teamsapp doctor` command checks for the prerequisites needed to build Teams
 The `teamsapp new` command operates in an interactive mode by default and provides guidance to create a new Teams application. To work `teamsapp new` in a non-interactive mode, set the `--interactive` flag to `false`.
 
 ```bash
-teamsapp new   
+teamsapp new
 teamsapp new -i false
 ```
 
@@ -584,16 +584,16 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 |`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
 |`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
-|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
+|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.|
 
 ### Scenarios for `teamsfx new`
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsfx new`:
 
-* HTTP triggered notification bot with restify server.
+* HTTP triggered notification bot with express server.
 
   ```bash
-  teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name       MyAppName
+  teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-express" --programming-language "typescript" --folder "./" --app-name       MyAppName
   ```
 
 * Teams command and response bot.
@@ -923,16 +923,16 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 |`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type`| No| Applicable if the `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
 |`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
-|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
+|`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-express`, `http-functions`, and `timer-functions`. The default value is `http-express`.|
 
 ### `teamsfx new` scenarios
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsfx new`:
 
-* HTTP triggered notification bot with restify server.
+* HTTP triggered notification bot with express server.
 
   ```bash
-  teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name       MyAppName
+  teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-express" --programming-language "typescript" --folder "./" --app-name       MyAppName
   ```
 
 * Teams command and response bot.
