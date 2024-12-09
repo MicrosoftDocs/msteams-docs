@@ -21,7 +21,7 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual
 
 * Tab
 * Bot
-* Notification bot: restify server
+* Notification bot: express server
 * Command bot
 * Workflow bot
 * Message extension
