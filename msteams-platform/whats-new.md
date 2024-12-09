@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 November**
 
+* ***November 27, 2024***: [Enhanced user experience for Teams app installed from Teams Store or custom upload.](concepts/deploy-and-publish/add-default-install-scope.md)
 * ***November 27, 2024***: Terminology update. **Copilot agent** is referred to as **agent**.
 * ***November 19, 2024***: Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot.
 * ***November 18, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
