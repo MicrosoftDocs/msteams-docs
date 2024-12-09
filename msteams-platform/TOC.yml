@@ -373,7 +373,7 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
-  - name: Types of tab capabilities
+  - name: Tab capabilities
     items:
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
