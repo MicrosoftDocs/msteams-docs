@@ -19,6 +19,9 @@ Tabs in chats, channels, or meetings behave more like apps, as you can pin only 
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your tab.
 
+Ensure that you've followed the prerequisites.
+Select to view the prerequisites:
+
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
@@ -974,7 +977,7 @@ You've completed the tutorial to build a tab app with Blazor.
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array. 
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array.
 
 ``` JSON
 
@@ -993,6 +996,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
+
 > [!NOTE]
 > In mobile, tabs are reordered as defined in `staticTabs`.
 

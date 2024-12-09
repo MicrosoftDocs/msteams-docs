@@ -101,7 +101,6 @@ The tab features are as follows:
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-<!--
 ## Understand how tabs work
 
 You can use one of the following methods to create tabs:
@@ -123,13 +122,14 @@ For channel or group tabs, you can also create an extra configuration page. This
 For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
 
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
--->
 
 ## Build a tab app
 
-You can build a personal tab app or a configurable tab app.
+You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
 
-### Prerequisites
+For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
+
+### Best practices
 
 Ensure that you adhere to the following prerequisites while building your Teams personal and channel or group tab:
 
@@ -167,6 +167,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
+<!--
 ## Tools to build tabs
 
 | &nbsp; | Install | For using... |
@@ -182,6 +183,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab
+-->
 
 Now let's build your tab. But first select your choice of tab to build:
 
