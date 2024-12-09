@@ -18,7 +18,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > [!NOTE]
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> * Using resource-specific consent (RSC), a bot can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 > * Posting a message or Adaptive Card to a private channel isn't supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
@@ -402,7 +402,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 
