@@ -374,11 +374,6 @@ The following image shows the dark theme option in the Teams:
 :---------------------|:--------------|:---------|
 |Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
