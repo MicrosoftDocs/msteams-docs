@@ -373,12 +373,8 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
-  - name: Tab features
+  - name: Types of tab capabilities
     items:
-    - name: Open content in multi-window
-      href: tabs/open-content-in-stageview.md
-      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
-
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
@@ -388,6 +384,14 @@
     - name: Create a removal page
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: Reconfigure tab, register remove handler
+    - name: Build a dashboard tab app
+      href: tabs/how-to/Build-a-dashboard-tab-app.md
+      displayName: Dashboard, widget, Graph API call      
+  - name: Tab features
+    items:
+    - name: Open content in multi-window
+      href: tabs/open-content-in-stageview.md
+      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
       displayName: Teams Store apps approved by Microsoft for mobile 
@@ -400,9 +404,6 @@
     - name: App caching for your tab app
       href: tabs/how-to/app-caching.md
       displayName: App caching, caching, launch time, cache
-    - name: Build a dashboard tab app
-      href: tabs/how-to/Build-a-dashboard-tab-app.md
-      displayName: Dashboard, widget, Graph API call
 - name: Build bots
   items:
   - name: Overview
