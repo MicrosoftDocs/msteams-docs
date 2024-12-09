@@ -18,7 +18,7 @@ A bot, also known as a chatbot or conversational bot, is an app that responds to
 
 To configure bot as an additional capability, ensure the following prerequisites are met:
 
-* A Teams tab or message extension app and its app manifest (previously called Teams app manifest) file.
+* A Teams app and its app manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * A [Microsoft Azure account](/azure/storage/common/storage-account-create).
 
@@ -76,7 +76,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
 
 ## Add bot code to your project
 
-1. Create a `bot/` folder in your tab project and copy the source code of the tab app into the folder. Your project's folder structure looks as follows:
+1. Create a `bot/` folder in your project and copy the source code of the bot app into the folder. Your project's folder structure looks as follows:
 
    ```
        |-- .vscode/
