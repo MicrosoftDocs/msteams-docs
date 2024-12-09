@@ -28,7 +28,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png"
 ---
 
 # [Channel](#tab/channel)
@@ -39,7 +39,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png"
 ---
 
 # [Meeting](#tab/meeting)
@@ -52,7 +52,6 @@ The following images show tabs added to different contexts in Teams:
 
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
 ***
-
 
 Following are a few benefits of static tabs in chats, channels, and meetings:
 
@@ -102,6 +101,7 @@ The tab features are as follows:
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel or group tab with deep linking to individual items.
 
+<!--
 ## Understand how tabs work
 
 You can use one of the following methods to create tabs:
@@ -123,11 +123,72 @@ For channel or group tabs, you can also create an extra configuration page. This
 For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
 
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
+-->
 
-### Tools to build tabs
+## Build a tab app for Teams
 
-* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
+You can build a personal tab app or a configurable tab app.
+
+### Prerequisites
+
+Ensure that you adhere to the following prerequisites while building your Teams personal and channel or group tab:
+
+* Enable discovery of your tab pages in an iFrame by utilizing X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
+
+* Ensure that all Teams app pages are hosted on HTTPS endpoints.
+
+* Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
+
+  [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+
+  [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
+
+  > [!NOTE]
+  > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
+
+* For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
+
+* Sign-in pages don't render in iFrames as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
+
+    > [!NOTE]
+    > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
+
+* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](../../resources/schema/manifest-schema.md#validdomains) when loading or communicating with the tab.
+
+* Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
+
+* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) using script tags. After your page loads, make a call to `app.initialize()`, or else your page isn't displayed.
+
+* For authentication to work on mobile clients, you must upgrade to TeamsJS version 1.4.1 or later.
+
+* If you choose to have your channel or group tab to appear on Teams mobile client, the `setConfig()` configuration must have a value for the `websiteUrl` property.
+
+* Microsoft Teams tab doesn't support the ability to load intranet websites that use self-signed certificates.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
+## Tools to build tabs
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
+| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+
+### Build your Teams tab
+
+Now let's build your tab. But first select your choice of tab to build:
+
+> [!div class="nextstepaction"]
+> [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Build a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 
 ## Next step
 
@@ -144,3 +205,5 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
 * [Microsoft Teams update](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
+* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
