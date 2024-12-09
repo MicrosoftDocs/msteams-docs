@@ -363,13 +363,13 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
-  - name: Prerequisites
-    href: tabs/how-to/tab-requirements.md
-    displayName: clickjacking, device permissions for tabs
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs, clickjacking, device permissions for tabs
   - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
+  - name: Create a configurable tab
+    href: tabs/how-to/create-channel-group-tab.md
+    displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor  
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
@@ -378,9 +378,7 @@
     - name: Open content in multi-window
       href: tabs/open-content-in-stageview.md
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
-    - name: Create a configurable tab
-      href: tabs/how-to/create-channel-group-tab.md
-      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab

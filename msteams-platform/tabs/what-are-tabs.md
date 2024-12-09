@@ -125,7 +125,7 @@ For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. T
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
 -->
 
-## Build a tab app for Teams
+## Build a tab app
 
 You can build a personal tab app or a configurable tab app.
 
