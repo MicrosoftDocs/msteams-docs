@@ -98,7 +98,7 @@ If you want to build basic tab app, select the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose what suits you](choose-what-suits-you.md)
+> [Tool options and code samples](tool-options-and-code-samples.md)
 
 ## See also
 
