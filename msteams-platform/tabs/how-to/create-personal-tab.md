@@ -29,11 +29,11 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Ensure that all Teams app pages are hosted on HTTPS endpoints.
 
-* Set Content Security Policy headers to allow Teams and any other [host applications](../m365-apps/overview.md) of your app:
+* Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
   [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
-  [!INCLUDE [ocdi-warning](../includes/tabs/ocdi-warning.md)]
+  [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
   > [!NOTE]
   > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
@@ -43,9 +43,9 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 * Sign-in pages don't render in iFrames as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
 
     > [!NOTE]
-    > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../resources/samesite-cookie-update.md).
+    > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
 
-* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](../resources/schema/manifest-schema.md#validdomains) when loading or communicating with the tab.
+* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](../../resources/schema/manifest-schema.md#validdomains) when loading or communicating with the tab.
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
