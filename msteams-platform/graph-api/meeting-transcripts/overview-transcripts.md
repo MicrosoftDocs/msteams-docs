@@ -47,11 +47,13 @@ If you want your app to fetch transcripts and recordings only for the Teams meet
 
 For more information about the meeting-specific RSC permissions, see [RSC permissions for a chat or meeting](../rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting).
 
+## Get notified when a transcript or recording is available
+
 After you've configured the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings available events or all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
 
 You can use the following types of change notification for your app:
 
-| Use | When... |Supported resource paths|
+| Subscription Scope | Description | Supported resource paths |
 | --- | --- | --- |
 |Tenant level| A transcript or recording is available for any online meeting for a tenant​.|• All transcripts in an organization: `communications/onlineMeetings/getAllTranscripts`<br> • All recordings in an organization: `communications/onlineMeetings/getAllRecordings`|
 |Meeting level| A transcript or recording is available for a specific online meeting.​ | • All transcripts for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/transcripts` <br> • All recordings for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/recordings` |
