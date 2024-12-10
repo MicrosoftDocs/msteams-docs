@@ -64,7 +64,7 @@ Before you start to learn how to build Incoming Webhooks, you may also want to k
 Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using connector cards for Microsoft 365 Groups and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level. For more information, see [create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md).
 
 > [!NOTE]
-> You can distribute the connector for Microsoft 365 Groups Teams app to our AppStore.
+> You can publish the connector for Microsoft 365 Groups Teams app to our AppStore.
 
 ## Create and send messages
 
