@@ -1283,7 +1283,7 @@ In case of recurring meeting type:
 
 ## getMeetingDetailsVerbose API
 
-The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. This new function requires an additional Resource Specific Consent (RSC) permission, specifically `OnlineMeetingParticipant.Read.Chat`. By leveraging this new permission, the function extends the capabilities of the original API.
+The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. This new function requires an additional RSC permission, specifically `OnlineMeetingParticipant.Read.Chat`. By leveraging this new permission, the function extends the capabilities of the original API.
 
 The `getMeetingDetailsVerbose` function calls the existing `getMeetingDetails` hub-sdk endpoint with a new optional parameter, `shouldGetVerboseDetails`, set to `true`. This enables the function to retrieve more detailed information about the meeting.
 
