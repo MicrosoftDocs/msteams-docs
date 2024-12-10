@@ -1283,9 +1283,9 @@ In case of recurring meeting type:
 
 ## getMeetingDetailsVerbose API
 
-The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. This new function requires an additional RSC permission, specifically `OnlineMeetingParticipant.Read.Chat`. By leveraging this new permission, the function extends the capabilities of the original API.
+The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. It leverages the RSC permission `OnlineMeetingParticipant.Read.Chat`to extend the capabilities of the `getMeetingDetails` API.
 
-The `getMeetingDetailsVerbose` function calls the existing `getMeetingDetails` hub-sdk endpoint with a new optional parameter, `shouldGetVerboseDetails`, set to `true`. This enables the function to retrieve more detailed information about the meeting.
+The `getMeetingDetailsVerbose` function calls the existing `getMeetingDetails` hub-sdk endpoint. It's parameter, `shouldGetVerboseDetails`, must be set to `true` to enable the function to retrieve detailed information about the meeting.
 
 The function returns the original `IMeetingDetailsResponse` object, along with additional call details, providing a more comprehensive view of the meeting information.
 
