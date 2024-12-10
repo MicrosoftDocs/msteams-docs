@@ -710,7 +710,7 @@ The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants aren't available.|
@@ -823,7 +823,7 @@ The following table includes the response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
 ## Targeted meeting notification and app icon badging API
