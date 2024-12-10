@@ -26,7 +26,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**getMeetingDetailsVerbose**]() | Get caller ID details such as phone number and email ID |  |
+| [**getMeetingDetailsVerbose**](#getmeetingdetailsverbose-api) | Get caller ID details such as phone number and email ID |  |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 |[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -1273,7 +1273,7 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
-| **shouldGetVerboseDetails** | Boolean indicating that the host must return additional call details in the response if it's set to `true`. |
+| **shouldGetVerboseDetails** | Optional boolean indicating that the host must return additional call details in the response if it's set to `true`. |
 
 In case of recurring meeting type:
 
