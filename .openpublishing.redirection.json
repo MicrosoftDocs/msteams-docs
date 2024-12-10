@@ -1173,6 +1173,10 @@
         "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
       },
       {
+        "source_path": "msteams-platform/resources/partner-apps-for-moodle.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodle-overview#partner-apps-for-moodle"
+      },
+      {
         "source_path": "msteams-platform/resources/media-formats.md",
         "redirect_url": "/microsoftteams/platform/resources/platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
       },
@@ -1195,6 +1199,10 @@
       {  
         "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
         "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
       }
     ]
 }
