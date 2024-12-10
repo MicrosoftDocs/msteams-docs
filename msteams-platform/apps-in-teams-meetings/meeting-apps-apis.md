@@ -26,6 +26,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**getMeetingDetailsVerbose**]() | Get caller ID details such as phone number and email ID |  |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 |[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -1278,6 +1279,20 @@ In case of recurring meeting type:
 **startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
 **endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
+
+## getMeetingDetailsVerbose API
+
+The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. This new function requires an additional Resource Specific Consent (RSC) permission, specifically `OnlineMeetingParticipant.Read.Chat`. By leveraging this new permission, the function extends the capabilities of the original API.
+
+The `getMeetingDetailsVerbose` function calls the existing `getMeetingDetails` hub-sdk endpoint with a new optional parameter, `shouldGetVerboseDetails`, set to `true`. This enables the function to retrieve more detailed information about the meeting.
+
+The function returns the original `IMeetingDetailsResponse` object, along with additional call details, providing a more comprehensive view of the meeting information.
+
+### Prerequisite
+
+To use `getMeetingDetailsVerbose` function, you must obtain an additional RSC permission, that is `OnlineMeetingParticipant.Read.Chat`.
+
+### Query parameter
 
 ## Send real-time captions API
 
