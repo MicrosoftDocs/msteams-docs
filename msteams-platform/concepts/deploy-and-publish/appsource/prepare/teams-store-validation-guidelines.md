@@ -244,7 +244,7 @@ If your app authenticates users with an external service, follow these guideline
   * When users sign out, they must sign out only from the app and remain signed in to Teams. [*Must fix*]
   * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services.
   Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page). [*Must fix*]
-  * Apps that require admin to complete one-time setup must call out dependency on the admin to configure the app (before any other tenant user can install and use the app).
+  * Apps that require an admin to complete one-time setup must call out the dependency on the admin to configure the app (before any other tenant user can install and use the app).
   Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, compose extensions, or static tab content. [*Must fix*]
   
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to unshare content must be present in your Teams app.

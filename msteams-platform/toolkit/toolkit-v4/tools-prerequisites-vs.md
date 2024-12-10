@@ -133,7 +133,7 @@ If custom app upload option isn’t visible in Teams Toolkit extension in Visual
 
 You must enable custom app upload for your app in Teams:
 
-* If you're a Teams Administrator, enable the custom app upload setting for your tenant or organization in the Teams admin center.
+* If you're a Teams Administrator, enable the custom app upload setting for your tenant or organization in Teams admin center.
 * If you aren't a Teams Administrator, contact your admin to enable custom app upload.
 
 If you have admin rights, you can enable custom app upload:
