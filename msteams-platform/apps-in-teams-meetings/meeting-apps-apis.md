@@ -1273,6 +1273,7 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
+| **shouldGetVerboseDetails** | Boolean indicating that the host must return additional call details in the response if it's set to `true`. |
 
 In case of recurring meeting type:
 
@@ -1293,6 +1294,57 @@ The function returns the original `IMeetingDetailsResponse` object, along with a
 To use `getMeetingDetailsVerbose` function, you must obtain an additional RSC permission, that is `OnlineMeetingParticipant.Read.Chat`.
 
 ### Query parameter
+
+### Example
+
+```JavaScript
+interface IMeetingOrCallDetailsBase <T> {
+  /**
+   * Scheduled start time of the meeting or start time of the call
+   */
+  scheduledStartTime: string;
+
+  /**
+   * url to join the current call or meeting
+   */
+  joinUrl?: string;
+
+  /**
+   * type of the meeting or call
+   */
+  type?: T;
+}
+
+interface ICallDetails
+  extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
+  originalCallerInfo?: ICallParticipantIdentifiers;
+  dialedEntityInfo?: ICallParticipantIdentifiers;
+  trackingID?: string;
+  callID?: string;
+}
+
+interface iConversation {
+  id: string;
+}
+
+interface IOrganizer {
+  id?: string;
+  tenantId?: string;
+}
+
+export interface IMeetingDetailsResponse {
+  details: IMeetingDetails | ICallDetails;
+  conversation: IConversation;
+  organizer: IOrganizer;
+}
+```
+
+| Property name | Description |
+| --- | --- |
+| `originalCaller` | MRI for the original caller of a call. |
+| `dialedEntity` | MRI that the original called dialed |
+| `trackingId` | A persistent ID that references a call and all of its related calls. |
+|
 
 ## Send real-time captions API
 
