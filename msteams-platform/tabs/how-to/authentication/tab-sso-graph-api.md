@@ -209,9 +209,9 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 ## Obtain consent
 
-Your app can obtain consent for Graph permissions globally from the tenant administrator, or individually per user.
+You can obtain app consent for Graph permissions globally from the admin, or individually per user.
 
-### From the tenant administrator
+### From the administrator
 
  A simple way of [consenting on behalf of an organization](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by obtaining [admin consent](/azure/active-directory/manage-apps/grant-admin-consent).
 
