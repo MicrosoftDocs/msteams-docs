@@ -212,7 +212,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Privacy URL](../resources/schema/manifest-schema.md#developer)| A property in the app manifest file (`privacyUrl`). The HTTPS URL to the page that provides privacy information for the app.|
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
-| [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page.|
+| [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Admins get documentation about the app at this URL. Teams admin center displays the URL in the **App Details** page. |
 
 ## R
 
