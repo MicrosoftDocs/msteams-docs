@@ -31,7 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 November**
+**2024 December**
+
+* ***December 13, 2024***: [Learn to extend bot-based message extension as agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
 
 * ***November 27, 2024***: Terminology update. **Copilot agent** is referred to as **agent**.
 * ***November 19, 2024***: Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot.
