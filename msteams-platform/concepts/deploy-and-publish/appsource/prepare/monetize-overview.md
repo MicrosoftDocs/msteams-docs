@@ -26,7 +26,7 @@ Software as a service (SaaS) offers play a crucial role for businesses aiming to
 
 * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquiries.
 
-As a publisher, you can create your marketplace offers in Microsoft Partner Center. You can then link the offer to your app and publish the SaaS app for purchase.  
+As a publisher, you can create your marketplace offers in Microsoft Partner Center. You can then link the offer to your app and publish the SaaS app for purchase.
 
 Here are few key features associated with a SaaS offer:
 
