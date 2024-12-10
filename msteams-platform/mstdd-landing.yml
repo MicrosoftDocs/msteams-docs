@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.date: 11/18/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -51,8 +51,8 @@ landingContent:
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
-      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+      - text: Build apps with Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
@@ -61,26 +61,36 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introducing default landing capability for tab and bot apps
+        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
+      - text: Build responsive Container layouts in Adaptive Cards
+        url: task-modules-and-cards/container-layouts.md
+      - text: Visually represent data with charts in Adaptive Cards
+        url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
+      - text: Add conditionally enabled action buttons on Adaptive Cards
+        url: task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons
+      - text: Add YouTube, Dailymotion, or Vimeo videos in Adaptive Cards.
+        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
+      - text: Add borders, rounded corners, scrollable containers, compound buttons, Fluent icons, and star ratings in Adaptive Cards
+        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
+      - text: Build dependent inputs with typeahead search in Adaptive Cards
+        url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
+      - text: Introduced Adaptive Card templates
+        url: task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection
+      - text: Share content to live and upcoming meetings with Share to Teams
+        url: concepts/build-and-test/share-to-teams-from-web-apps.md
       - text: Authentication for your API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
-        url: ./resources/schema/manifest-schema.md
-      - text: Localize your Copilot agents
-        url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
-      - text: Build a personal tab with offline functionality
-        url: tabs/how-to/create-personal-tab.md#offline-tabs      
-      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
-        url: m365-apps/specify-runtime-requirements.md
-      - text: Analyze your third-party app usage metrics in Developer Portal
-        url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
-      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
-        url: concepts/authentication/nested-authentication.md
-      - text: New purchase experience for Teams app subscriptions bought from Teams Store
-        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
-        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
-      - text: Screen share content to meetings
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
+
+
+    - linkListType: reference
+      links:
+      - text: Extend Microsoft 365 Copilot
+        url: /microsoft-365-copilot/extensibility/
+      - text: Community chat room for Microsoft Teams app developers
+        url: https://gitter.im/OfficeDev/home
+
+
 
 - title: Get started
   linkLists:
@@ -231,8 +241,6 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams

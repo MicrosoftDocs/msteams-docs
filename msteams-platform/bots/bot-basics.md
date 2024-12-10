@@ -8,7 +8,7 @@ ms.author: anclear
 ms.date: 01/22/2023
 ---
 
-# Bot activity handlers
+# Understand bot basics
 
 This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
