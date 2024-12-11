@@ -1118,6 +1118,8 @@ const GetMeetingDetailsVerbose = (): React.ReactElement =>
 });
 ```
 
+**getMeetingDetailsVerbose**:
+
 ```JavaScript
 interface IMeetingOrCallDetailsBase <T> {
   /**
