@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create and set up bot for Teams link unfurling to get card response and receive an invoke activity.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/link-unfurling.md
   nextTutorialTitle: Read more on link unfurling
