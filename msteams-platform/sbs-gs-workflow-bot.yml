@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, you'll learn to create a workflow bot in Microsoft Teams with the Adaptive Card action handler feature.
   audience: Developer
   level: Beginner
-  ms.date: 28/09/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
@@ -88,9 +88,16 @@ items:
     
     1. Select **Start Debugging**.
     
-    1. Select **Add** or use the dropdown menu to add your workflow bot app to a team, chat, or meeting.
+    1. Select **Add**.
 
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
+       :::image type="content" source="~/assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="Screenshot of the app details dialog to add your workflow bot app.":::
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="~/assets/images/sbs-workflow-bot/workflowbot-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
     ### Take tour of source code
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
     
