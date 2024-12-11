@@ -1103,7 +1103,9 @@ this.onMessage(async(context, next) =>{
 
 ```
 
-**Example for enabling personal tab for calling extensibility**:
+**Calling extensibility**:
+
+* **Example for enabling personal tab for calling extensibility**:
 
 ```JavaScript
 const GetMeetingDetailsVerbose = (): React.ReactElement =>
@@ -1117,7 +1119,7 @@ const GetMeetingDetailsVerbose = (): React.ReactElement =>
 });
 ```
 
-**`getMeetingDetailsVerbose()` to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps:
+* **`getMeetingDetailsVerbose()` to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls**:
 
 ```JavaScript
 interface IMeetingOrCallDetailsBase <T> {
