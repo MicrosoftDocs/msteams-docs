@@ -356,7 +356,7 @@ items:
     1. Go to **Microsoft Teams** > **Apps**.
     1. Search for **Copilot** and open the app.
     1. Select **Panel** from the top-right corner.
-    1. From the list of agents, select the required agent from the right-rail.
+    1. From the list of agents, select the required agent from the right pane.
 
        :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 

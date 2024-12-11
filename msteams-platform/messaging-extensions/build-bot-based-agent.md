@@ -107,7 +107,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
 1. Select **Panel** from the top-right corner.
-1. Select the required agent from the right-rail.
+1. Select the required agent from the right pane.
 
    :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
@@ -197,7 +197,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 1. Go to **Teams web client** > **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
 1. Select **Panel** from the top-right corner.
-1. Select the required agent from the right-rail.
+1. Select the required agent from the right pane.
 
    :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
@@ -292,7 +292,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Apps**.
 1. Search for **Copilot** and open Microsoft 365 Copilot.
 1. Select **Panel** from the top-right corner.
-1. Select the required agent from the right-rail.
+1. Select the required agent from the right pane.
 
    :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
