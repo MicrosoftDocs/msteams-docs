@@ -4,10 +4,10 @@ author: surbhigupta
 description: Learn how to configure the bot capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
 ms.author: v-preethah
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: reference
 nextTutorialHref: ~/toolkit/add-How-to-guides-v5.md
 nextTutorialTitle: Back to Add How-to guides to Microsoft Teams app
-ms.date: 12/06/2024
+ms.date: 12/12/2024
 ---
 
 # Configure bot capability within Teams app
@@ -18,9 +18,9 @@ A bot, also known as a chatbot or conversational bot, is an app that responds to
 
 To configure bot as an additional capability, ensure the following prerequisites are met:
 
-* A Teams app and its app manifest (previously called Teams app manifest) file.
-* A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* A [Microsoft Azure account](/azure/storage/common/storage-account-create).
+* Teams app and its app manifest (previously called Teams app manifest) file
+* [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the app
+* [Microsoft Azure account](/azure/storage/common/storage-account-create)
 
 # [Add bot to tab app](#tab/tabapp)
 
@@ -103,7 +103,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
        |-- teamsapp.yml
    ```
 
-1. 1. Reorganize the folder structure as follows:
+1. Reorganize the folder structure as follows:
 
    > [!TIP]
    > Use the command `npm init -y` to create a root `package.json` file.
@@ -154,7 +154,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
    ```
 
    > [!NOTE]
-   > In a JavaScript project, you can run the project without a `build` folder. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > In a JavaScript project, you can run the project without a `build` folder. You must remove the `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ## Setup local debug environment
 
@@ -299,7 +299,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -403,7 +403,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
     }
    ```
 
-1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [Hello World Bot with Tab sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
+1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
 
    ```yaml
     deploy:
@@ -540,7 +540,7 @@ To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md)
+> [How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
 
 ## See also
 
