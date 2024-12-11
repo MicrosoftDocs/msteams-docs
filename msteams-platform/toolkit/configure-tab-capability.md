@@ -4,8 +4,8 @@ author: surbhigupta
 description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
 ms.author: v-bvishnu
 ms.localizationpriority: medium
-ms.topic: overview
-ms.date: 12/06/2024
+ms.topic: reference
+ms.date: 12/12/2024
 ---
 
 # Configure tab capability within Teams app
@@ -18,9 +18,9 @@ Before you start, we recommend that you create and go through a tab app. For mor
 
 Ensure the following prerequisites are met to configure the tab capability in a Teams app:
 
-* A Teams app and its app manifest file.
-* A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* A [Microsoft Azure account](/azure/storage/common/storage-account-create).
+* Teams app and its app manifest file
+* [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the app
+* [Microsoft Azure account](/azure/storage/common/storage-account-create)
 
 ## Configure tab in Teams app
 
@@ -33,7 +33,7 @@ The following steps help you to configure the tab capability in a Teams app:
 > [!TIP]
 > If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Teams Toolkit.
 
-For a complete example, see [Hello World bot with tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
+For a complete example, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
 ### Update app manifest
 
@@ -167,7 +167,7 @@ For a complete example, see [Hello World bot with tab](https://github.com/Office
    }
    ```
 
-   For more information on how to configure the debug profile, see [Hello World Bot with Tab](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
+   For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
 
 1. To enable your tab project to work with Teams Toolkit, add the following actions to the `teamsapp.local.yml` file:
 
@@ -306,7 +306,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md)
+> [How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
 
 ## See also
 
