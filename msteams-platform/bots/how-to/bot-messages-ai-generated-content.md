@@ -161,7 +161,7 @@ When the user selects a feedback button, a feedback form appears based on the us
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
-Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user chooses. You can collect feedback on bot responses from one-on-one and group chats.
+Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user to choose. You can collect feedback on bot responses from one-on-one and group chats.
 
 ### Add feedback buttons
 
@@ -196,7 +196,9 @@ await context.sendActivity({
 |--|--|--|--|
 | `feedbackLoop` | Object | ✔️ | Enables feedback buttons in the bot's message. |
 | `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when a user selects the feedback buttons.<br>Allowed values: `custom`, `default` |
+
 If you set `feedbackLoop.type` to `default`, the default feedback form appears when a user selects the feedback buttons. If you set `feedbackLoop.type` to `custom`, the following invoke request is sent to the bot to retrieve a custom form to be displayed to the user:
+
 ```JSON
 {
     "type": "invoke",
@@ -209,6 +211,7 @@ If you set `feedbackLoop.type` to `default`, the default feedback form appears w
     }
 }
 ```
+
 You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke. For more information regarding invoking dialogs in bots, see [use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 ### Handle feedback
