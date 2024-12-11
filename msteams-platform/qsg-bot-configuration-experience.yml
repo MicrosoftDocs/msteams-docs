@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build and run the configurable bot for Teams using Teams Toolkit in Visual Studio Code and reconfigure the bot.
   audience: Developer
   level: Beginner
-  ms.date: 04/07/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bot-configuration-experience.md
   nextTutorialTitle: Bot configuration experience
@@ -80,17 +80,17 @@ items:
 
         A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-     1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
+     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot shows add your bot to chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of app details dialog to add bot configuration sample app.":::
 
-     1. Enter the name of a chat in the search field.
+     1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
-     1. Select **Set up a bot**.
+     1. Configure the bot settings and select **Submit**.
 
-        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot shows set up a bot in chat.":::
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot of configuration options for Bot configuration sample app.":::
 
          The bot is installed in the chat.
 

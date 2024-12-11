@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create basic conversation bot, set up bot connection, and interact with bot in Microsoft Teams app.
   audience: Developer
   level: Beginner
-  ms.date: 09/16/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
   nextTutorialTitle: Channel and group chat conversations with a bot
@@ -266,9 +266,15 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot shows the app added into Teams.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot of TeamsConversationBot installation with Add option highlighted.":::
 
-        You can interact with the bot.
+    1. Select **Open** to use the app in personal scope.
+    
+       Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+       
+       :::image type="content" source="./assets/images/conversation-bot/open-app-teams.png" alt-text="Screenshot of TeamsConversationBot with personal and shared scope options.":::
+
+       You can interact with the bot.
 
 - title: Interact with the conversation bot
   durationInMinutes: 2
