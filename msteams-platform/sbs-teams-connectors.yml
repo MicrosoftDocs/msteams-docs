@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build, configure, and test Connectors for Microsoft Teams app in Visual Studio and to enable developer preview in Teams admin center.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
   nextTutorialTitle: Read more on Webhooks and Connectors

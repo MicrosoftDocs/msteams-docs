@@ -5,7 +5,7 @@ metadata:
   description: Learn how to set up and share meeting stage in Microsoft Teams to enhance collaboration and interact by adding status details of tasks.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings

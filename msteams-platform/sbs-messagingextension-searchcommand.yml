@@ -5,7 +5,7 @@ metadata:
   description: Learn how to build and add a search based message extension for Microsoft Teams, which allows users to search external systems directly from message area.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/search-commands/define-search-command.md
   nextTutorialTitle: Read more on search commands
