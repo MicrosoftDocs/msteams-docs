@@ -1,14 +1,14 @@
 ---
-title: Add How-to guides to Your Teams apps
+title: How-to Guides to Teams Apps
 author: surbhigupta
 description: Learn to add How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook Add-in capabilities.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 12/12/2024
 ---
 
-# Add How-to guides to Microsoft Teams app
+# How-to guides to Microsoft Teams app
 
 Microsoft Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
@@ -17,7 +17,7 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
 |**Capability** | **How-to Guide** |
 |----------|----------|
 | Configure Tab Capability | [How to configure Tab capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Tab-capability-within-your-Teams-app) |
-| Configure Bot Capability | [How to configure Bot capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app) |
+| Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
 | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Message-Extension-capability-within-your-Teams-app) |
 | Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
 
