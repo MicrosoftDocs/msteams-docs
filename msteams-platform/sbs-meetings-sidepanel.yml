@@ -5,7 +5,7 @@ metadata:
   description: Learn how to generate meeting side panel to enhance Microsoft Teams meetings experience and interact in the side panel to add and share agendas.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
@@ -74,7 +74,18 @@ items:
 
       # [ngrok](#tab/ngrok)
       
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+      ```bash
+      ngrok http --host-header=localhost 5130
+      ```
+
+      > [!TIP]
+      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then, run the `ngrok http 5130 --host-header="localhost:5130` command.
+
+      The window shows the HTTPS URL.
+
+      :::image type="content" source="~/assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
 
       ---     
 
@@ -100,7 +111,52 @@ items:
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+    **To add a messaging endpoint**
+
+    # [dev tunnel](#tab/dev)
+
+    1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
+
+        :::image type="content" source="~/assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
+
+    1. In the left pane, under **Settings**, select **Configuration**.
+
+    1. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
+
+        :::image type="content" source="~/assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+
+    1. Select **Apply**.
+
+        You've successfully set up a bot in Azure Bot service.
+
+        > [!NOTE]
+        > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
+
+    # [ngrok](#tab/ngrok1)
+
+    1. From ngrok, copy the HTTPS URL.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/ngrok-tunnel.png" alt-text="Screenshot shows the HTTPS ngrok URL.":::
+
+        > [!NOTE]
+        > The HTTPS URL in your ngrok is your fully qualified domain name.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+
+    1. In the left pane, under **Settings**, select **Configuration**.
+
+    1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
+
+        :::image type="content" source="~/assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+
+    1. Select **Apply**.
+
+        You have successfully set up a bot in Azure Bot service.
+
+        > [!NOTE]
+        > If the **Application Insights Instrumentation key** shows an error update with **App ID**.
+
+    ---
+
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -111,9 +167,9 @@ items:
 
     1. Open the **appsettings.json** file in Visual Studio and update the following information:  
 
-         * Replace `<<Microsoft-App-ID>>` to your bot's **Microsoft App ID**.
-         * Replace `<<Microsoft-App-Secret>>` to **Value** of your bot's **Client secret**.
-         * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
+         * Replace `<<MicrosoftAppId>>` to your bot's **Microsoft App ID**.
+         * Replace `<<MicrosoftAppPassword>>` to **Value** of your bot's **Client secret**.
+         * Replace `<<BaseUrl>>` to the ngrok or dev tunnel domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_file.png" alt-text="Screenshot shows the appsettings JSON file with appsettings highlighted in red.":::
           
@@ -150,7 +206,8 @@ items:
        1. Go to **samples** > **meetings-sidepanel** > **csharp** > **ClientApp** folder and run the following command:
 
            ```bash
-           npx @fluidframework/azure-local-service@latest
+           npm install
+           npm start
            ```
     
        1. Select **Yes** if the following dialog appears:
@@ -171,7 +228,7 @@ items:
     
     A webpage appears with a message, **Your bot is ready!**
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
+    :::image type="content" source="~/assets/images/meetings-side-panel/app-is-ready.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
 
 - title: Add meeting side panel to Teams
   durationInMinutes: 1
@@ -206,7 +263,13 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot shows the option to add the side panel app."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of the app details dialog to add the side panel app."::: 
+
+    1. Select **Open** to open the app in personal scope.
+
+        Alternatively, you can either search and select the required scope or select a chat or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/select-app-scope.png" alt-text="Screenshot of the scope selection dialog to select the scope to which you want to add the side panel app."::: 
 
        The **Manage apps** section displays the list of applications.
    
