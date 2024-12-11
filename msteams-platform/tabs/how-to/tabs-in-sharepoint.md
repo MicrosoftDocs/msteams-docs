@@ -3,7 +3,7 @@ title: Integrate Teams Tab to SharePoint
 description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 06/08/2023
+ms.date: 12/11/2024
 ---
 
 # Add Teams tab to SharePoint
@@ -44,13 +44,15 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 1. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
 
-1. Under the **Add** dropdown, select **Add to a team**.
+1. Select **Add**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot of the app details dialog to add the sample app to Teams.":::
 
-1. Select the team where you want to install the app and select **Set up**.
+1. Select **Open** to open the app in personal scope. 
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set up a tab in a team.":::
+   Alternatively, you can either search and select the required scope or select a channel or meeting from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
 
 1. A new static tab is added to your Teams channel.
 
