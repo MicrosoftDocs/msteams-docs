@@ -5,7 +5,7 @@ description: Learn how to set up dev tunnel for bots and message extensions and 
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 
 # Debug your Microsoft Teams app locally using Microsoft Visual Studio

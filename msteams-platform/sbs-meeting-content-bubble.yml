@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create and add in-meeting notifications app and interact with the app using a bot in Microsoft Teams.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings 
