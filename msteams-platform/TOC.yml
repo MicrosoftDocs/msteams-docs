@@ -352,7 +352,7 @@
           href: resources/bot-v3/bots-test.md
       - name: Message extensions SDK (v3)
         items:
-        - name: Message extensions SDK (v3)
+        - name: Message extensions SDK overview
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
@@ -612,11 +612,11 @@
       displayName: Loop, Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets
     - name: Getting started
       items:
-      - name: Quick start guide
+      - name: Get started with Actions in Microsoft 365
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
-    - name: Core capabilities
+    - name: Live share capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
       displayName: Live Share data structures, broadcast
     - name: Media synchronization
@@ -729,10 +729,10 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Configure your tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Add code to enable SSO
+      - name: Add code to enable SSO for tab
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
-      - name: Update app manifest for SSO and preview app
+      - name: Preview and update app manifest for SSO
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
@@ -744,7 +744,7 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest for SSO and preview app
+      - name: SSO app manifest update and preview
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
@@ -892,7 +892,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Quick start guide
+      - name: Live Share quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
@@ -913,11 +913,11 @@
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
     displayName: Allow users to upload apps
-  - name: Tabs
+  - name: Test yout tab
     items:
     - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
-  - name: Bots
+  - name: Test your bot
     items:
     - name: Test and debug your bot locally with IDE
       displayName: Bot Emulator
