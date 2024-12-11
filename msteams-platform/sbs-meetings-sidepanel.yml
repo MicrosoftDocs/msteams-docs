@@ -5,7 +5,7 @@ metadata:
   description: Learn how to generate meeting side panel to enhance Microsoft Teams meetings experience and interact in the side panel to add and share agendas.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
@@ -263,7 +263,13 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot shows the option to add the side panel app."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of the app details dialog to add the side panel app."::: 
+
+    1. Select **Open** to open the app in personal scope.
+
+        Alternatively, you can either search and select the required scope or select a chat or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/select-app-scope.png" alt-text="Screenshot of the scope selection dialog to select the scope to which you want to add the side panel app."::: 
 
        The **Manage apps** section displays the list of applications.
    
