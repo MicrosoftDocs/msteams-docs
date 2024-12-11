@@ -40,7 +40,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
+> * A Microsoft Entra admin must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
