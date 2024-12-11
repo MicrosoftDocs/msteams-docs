@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner
-  ms.date: 24/02/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md
   nextTutorialTitle: Read more to enable message extension action commands
@@ -186,6 +186,16 @@ items:
     1. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+       
+    1. Select **Add**.
+
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
+    
+    1. Select **Open** to open the app in personal scope.
+
+       Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+    
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope."::: 
                       
 - title: Interact with the app in Teams
   durationInMinutes: 1
