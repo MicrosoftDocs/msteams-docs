@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, learn how to generate a meeting token for all the participants to interact in the meeting for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings

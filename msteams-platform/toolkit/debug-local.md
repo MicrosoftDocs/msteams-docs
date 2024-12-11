@@ -5,7 +5,7 @@ description: Learn how to set up Teams Toolkit to debug Teams app in Visual Stud
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 
 # Debug your Teams app locally

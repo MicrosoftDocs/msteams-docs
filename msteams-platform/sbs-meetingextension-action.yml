@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md
   nextTutorialTitle: Read more to enable message extension action commands
