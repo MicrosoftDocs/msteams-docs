@@ -531,11 +531,12 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot (formerly known as `copilotExtensions`). [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models (formerly known as `declarativeCopilots`).
+Defines one or more agents to Microsoft 365 Copilot (formerly known as `copilotExtensions`). [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models (formerly known as `declarativeCopilots`). [Custom engine agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) are conversational Teams bots that use custom AI language models and orchestration, yet are selectable (along with installed declarative agents) as **Agents** from the Microsoft 365 Copilot side panel.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
+|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
+|`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
 
 ### declarativeAgents
 
@@ -545,6 +546,19 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
 |`file`|String| |✔️| Relative path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+
+### customEngineAgents
+
+> [!NOTE]
+> Custom engine agents support in Microsoft 365 Copilot is currently in limited private preview and not all developers have access during the staged rollout.
+
+Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
+
 
 ## configurableTabs
 
