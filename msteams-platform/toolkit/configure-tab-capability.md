@@ -306,7 +306,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
+> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
 
 ## See also
 
