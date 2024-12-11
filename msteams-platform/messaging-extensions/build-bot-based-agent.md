@@ -23,12 +23,6 @@ Microsoft 365 Copilot, powered by an advanced processing and orchestration engin
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
-See the video to learn more about extending Microsoft 365 Copilot using Microsoft Teams message extensions:
-</br>
-</br>
-
-> [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE?si=1jS5gsLuJFPANzoi]
-
 ## What is an agent?
 
 An agent allows Microsoft 365 Copilot to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Agents allow Microsoft 365 Copilot to:
@@ -60,7 +54,7 @@ Before you get started, ensure that you're familiar with the following standards
 > [!IMPORTANT]
 > Agents for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Teams.
 
-Let's create a bot-based search message extension that can search npm registries in Teams and Microsoft 365 Copilot and share results through the compose message area of the Microsoft Teams client.
+Let's create a bot-based search message extension agent for Teams and Microsoft 365 Copilot and share results through the compose message area of the Microsoft Teams client.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
