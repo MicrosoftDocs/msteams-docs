@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, learn to build Hello World app with SPFx, install Teams Toolkit, setup development tenant, and enable custom app upload.
   audience: Developer
   level: Beginner
-  ms.date: 11/12/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
