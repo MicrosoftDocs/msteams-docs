@@ -10,6 +10,9 @@ ms.date: 12/02/2024
 
 # Build tabs for calling
 
+> [!NOTE]
+> Calling extensibility is available only for one-on-one chats and in [public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
+
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
 This integration is simple. You can create a new personal tab app or update an existing tab app with personal scope and the appropriate context. Apps can access caller ID for specific callers and display relevant information, such as their active cases or billing issues. This enhances the app's utility and provides a richer experience for users during calls.

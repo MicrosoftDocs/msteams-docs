@@ -1107,61 +1107,61 @@ this.onMessage(async(context, next) =>{
 
 * **Example for enabling personal tab for calling extensibility**:
 
-```JavaScript
-const GetMeetingDetailsVerbose = (): React.ReactElement =>
-    ApiWithoutInput ({
-        name: 'getMeetingDetailsVerbose'
-        title: 'Get Meeting Details Verbose'
-        onClick: async () => {
-            const result = await meeting.getMeetingDetailsVerbose();
-            return JSON.stringify (result);
-        };
-});
-```
+    ```JavaScript
+    const GetMeetingDetailsVerbose = (): React.ReactElement =>
+        ApiWithoutInput ({
+            name: 'getMeetingDetailsVerbose'
+            title: 'Get Meeting Details Verbose'
+            onClick: async () => {
+                const result = await meeting.getMeetingDetailsVerbose();
+                return JSON.stringify (result);
+            };
+    });
+    ```
 
 * **`getMeetingDetailsVerbose()` to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls**:
 
-```JavaScript
-interface IMeetingOrCallDetailsBase <T> {
-  /**
-   * Scheduled start time of the meeting or start time of the call
-   */
-  scheduledStartTime: string;
-
-  /**
-   * url to join the current call or meeting
-   */
-  joinUrl?: string;
-
-  /**
-   * type of the meeting or call
-   */
-  type?: T;
-}
-
-interface ICallDetails
-  extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
-  originalCallerInfo?: ICallParticipantIdentifiers;
-  dialedEntityInfo?: ICallParticipantIdentifiers;
-  trackingID?: string;
-  callID?: string;
-}
-
-interface iConversation {
-  id: string;
-}
-
-interface IOrganizer {
-  id?: string;
-  tenantId?: string;
-}
-
-export interface IMeetingDetailsResponse {
-  details: IMeetingDetails | ICallDetails;
-  conversation: IConversation;
-  organizer: IOrganizer;
-}
-```
+    ```JavaScript
+    interface IMeetingOrCallDetailsBase <T> {
+      /**
+       * Scheduled start time of the meeting or start time of the call
+       */
+      scheduledStartTime: string;
+    
+      /**
+       * url to join the current call or meeting
+       */
+      joinUrl?: string;
+    
+      /**
+       * type of the meeting or call
+       */
+      type?: T;
+    }
+    
+    interface ICallDetails
+      extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
+      originalCallerInfo?: ICallParticipantIdentifiers;
+      dialedEntityInfo?: ICallParticipantIdentifiers;
+      trackingID?: string;
+      callID?: string;
+    }
+    
+    interface iConversation {
+      id: string;
+    }
+    
+    interface IOrganizer {
+      id?: string;
+      tenantId?: string;
+    }
+    
+    export interface IMeetingDetailsResponse {
+      details: IMeetingDetails | ICallDetails;
+      conversation: IConversation;
+      organizer: IOrganizer;
+    }
+    ```
 
 # [JSON](#tab/json)
 
