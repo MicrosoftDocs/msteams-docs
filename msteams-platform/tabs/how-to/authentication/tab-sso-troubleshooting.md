@@ -38,7 +38,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>1. Error: consent missing.</summary>
 <br>
-When Microsoft Entra ID receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Microsoft Entra ID sends an error message to your web service.
+When Microsoft Entra ID receives a request for accessing a Microsoft Graph resource, it checks if the app user or admin has given consent for this resource. If there's no record of consent from the user or administrator, Microsoft Entra ID sends an error message to your web service.
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 

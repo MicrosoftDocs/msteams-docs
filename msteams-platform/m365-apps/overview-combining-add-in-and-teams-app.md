@@ -11,7 +11,7 @@ ms.subservice: m365apps
 
 # General guidance for combining an Office add-in and a Teams app
 
-When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and Microsoft 365 tenant administrators to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and admins to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
 > [!NOTE]
 > Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We are working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
@@ -74,9 +74,9 @@ When the update has been published, how the update becomes available to end user
 
    - The updated version of the Teams app is available immediately from **Apps** or **More Apps** in Outlook and the Microsoft 365 application, but not the Teams **Apps**, to users who had previously acquired the Teams app. 
    - The Outlook add-in is also available immediately to users who had previously acquired the Teams app, regardless of whether they had also previously acquired the add-in.
-   - If a Teams administrator allows the update, then users can individually install it to Teams from the Teams **Apps**.
+   - If a Teams Administrator allows the update, then users can individually install it to Teams from the Teams **Apps**.
 
-- If the administrator doesn't consent, then each user who had previously acquired the Teams app must consent to the update and it can only be made available in Teams if the Teams administrator has allowed it.
+- If the administrator doesn't consent, then each user who had previously acquired the Teams app must consent to the update and it can only be made available in Teams if the Teams Administrator has allowed it.
 - Users who had previously acquired only the Office add-in must acquire the new combined app from the Teams store. It cannot be acquired through **All Apps** button in the Outlook ribbon.
 
 > [!IMPORTANT]
