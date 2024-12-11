@@ -5,7 +5,7 @@ metadata:
   description: Learn how to create a file upload bot using Microsoft Teams API and interact with the bot to upload files to Teams and receive file as attachment.
   audience: Developer
   level: Beginner
-  ms.date: 28/12/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bots-filesv4.md
   nextTutorialTitle: Read more on send and receive files through the bot
@@ -215,7 +215,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to upload the custom app in Teams."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot of the app details dialog to add the file upload bot in Teams."::: 
+
+    1. Select **Open**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
