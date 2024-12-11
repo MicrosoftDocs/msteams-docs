@@ -3,7 +3,7 @@ title: Integrate Teams Tab to SharePoint
 description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 
 # Add Teams tab to SharePoint

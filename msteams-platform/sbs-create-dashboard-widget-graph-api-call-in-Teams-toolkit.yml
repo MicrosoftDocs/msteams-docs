@@ -5,7 +5,7 @@ metadata:
   description: Learn how to create a dashboard tab app using Teams Toolkit in Visual Studio Code. Learn to add a new widget and implement Graph API call.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/build-a-dashboard-tab-app.md
   nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
