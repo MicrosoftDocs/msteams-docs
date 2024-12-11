@@ -165,7 +165,7 @@ Feedback buttons are located at the footer of the bot’s message and include a 
 
 ### Add feedback buttons
 
-For a bot built using **Teams AI library**, Teams enables feedback buttons to all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
+For a bot built using **Teams AI library**, Teams enables feedback buttons for all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
 
 ```javascript
 export const app = new Application<ApplicationTurnState>({
@@ -175,7 +175,7 @@ export const app = new Application<ApplicationTurnState>({
     },
 ```
 
-For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L42).
+For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L65).
 
 After you enable feedback buttons, all `SAY` commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
 
@@ -212,7 +212,7 @@ If you set `feedbackLoop.type` to `default`, the default feedback form appears w
 }
 ```
 
-You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke. For more information regarding invoking dialogs in bots, see [use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you respond to a `task/fetch` invoke. For more information regarding invoking dialogs in bots, see [use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 ### Handle feedback
 
