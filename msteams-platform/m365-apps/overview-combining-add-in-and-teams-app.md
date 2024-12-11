@@ -42,7 +42,7 @@ However, we can make some general recommendations about combining an add-in with
 
 ## Learn about the manifest and structure of a combined Teams app and Office add-in
 
-Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Teams toolkit and then following the instructions in [Add an Outlook Add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
+Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Teams toolkit and then following the instructions in [Add an Outlook add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
 
 - How the single unified manifest is created.
 - The differences in how the add-in and the Teams app are sideloaded and debugged.
