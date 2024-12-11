@@ -663,7 +663,7 @@ You can configure the message extension capability in `appPackage/manifest.json`
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How-to guides to Microsoft Teams app](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
+> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
 
 ## See also
 
