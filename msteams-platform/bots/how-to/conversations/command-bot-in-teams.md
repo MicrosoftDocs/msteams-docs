@@ -5,7 +5,7 @@ description: Learn about command bot, installation, customize initialization, ad
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/13/2024
+ms.date: 12/11/2024
 ---
 
 # Command bot in Teams
@@ -24,11 +24,14 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 ## Command bot installation
 
-A command bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
+A command bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot.
 
-:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
+* To open the bot in personal scope, select **Open**.
+* To open the bot in a shared scope, select the required channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
+
+For more install options, see [configure default install options](../../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
 ## Command and response
