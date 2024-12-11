@@ -2,7 +2,7 @@
 title: Build Interactive Notification Bot
 description: Learn to build an interactive notification bot with the help of GitHub codespaces which sends messages in Teams channel, group chat, or personal chat.
 ms.localizationpriority: medium
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ms.topic: reference
 ---
 

@@ -2,7 +2,7 @@
 title: Build Message Extension in Codespaces
 description: Learn how to build your first message extension for your Teams app with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: medium
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ms.topic: reference
 ---
 

@@ -2,7 +2,7 @@
 title: Create Basic Tab App
 description: Learn how to build your basic tab app in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: high
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ms.topic: reference
 ---
 
