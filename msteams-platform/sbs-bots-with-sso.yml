@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create a conversational bot that uses single sign-on (SSO) authentication methods to streamline user authentication.
   audience: Developer
   level: Beginner
-  ms.date: 08/24/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on bot authentication
@@ -264,8 +264,12 @@ items:
 
       1. Select **Add** to add the bot to your chat.
 
-         :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of conversation bot with Add option highlighted.":::
 
+      1. Select **Open**.
+
+         :::image type="content" source="~/assets/images/bots/conversation-bot-open.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+   
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
       1. Send a message to the bot. The conversation bot asks for consent for the first time.
