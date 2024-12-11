@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build and run the configurable bot for Teams using Teams Toolkit in Visual Studio Code and reconfigure the bot.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bot-configuration-experience.md
   nextTutorialTitle: Bot configuration experience

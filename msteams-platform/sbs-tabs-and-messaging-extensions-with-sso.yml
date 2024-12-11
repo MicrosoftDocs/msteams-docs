@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to set up Microsoft Entra single sign-on (SSO) authentication for tabs and message extensions.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on SSO authentication for tabs.

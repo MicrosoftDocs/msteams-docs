@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create basic conversation bot, set up bot connection, and interact with bot in Microsoft Teams app.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
   nextTutorialTitle: Channel and group chat conversations with a bot

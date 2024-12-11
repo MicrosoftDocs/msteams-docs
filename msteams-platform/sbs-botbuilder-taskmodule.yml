@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create an Azure bot for Task Module app to invoke Teams dialogs using Adaptive Cards or Bot Framework cards.
   audience: Developer
   level: Beginner
-  ms.date: 10/03/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
   nextTutorialTitle: Read more on dialogs from bots
