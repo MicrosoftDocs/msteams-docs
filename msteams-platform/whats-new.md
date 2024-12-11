@@ -31,18 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 November**
+**2024 December**
 
-* ***November 27, 2024***: Terminology update. **Copilot agent** is referred to as **agent**.
-* ***November 19, 2024***: Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot.
-* ***November 18, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
-* ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
-* ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
-* ***November 07, 2024***: [Add conditionally enabled action buttons in Adaptive Cards.](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons)
-* ***November 07, 2024***: [Media elements in Adaptive Cards.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
-* ***November 07, 2024***: Create engaging Adaptive Cards with [borders and rounded corners](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards), [scrollable containers](task-modules-and-cards/cards/cards-format.md#scrollable-containers-in-adaptive-cards), [compound button](task-modules-and-cards/cards/cards-format.md#compound-button-in-adaptive-cards), [Icons](task-modules-and-cards/cards/cards-format.md#icons-in-adaptive-card), and [star ratings](task-modules-and-cards/cards/cards-format.md#ratings-in-adaptive-cards).
-* ***November 07, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
-* ***November 07, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
+***December 13, 2024***: [Learn to extend bot-based message extension as agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
 
 :::column-end:::
 :::row-end:::
@@ -56,6 +47,16 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 27/11/2024 | Terminology update. **Copilot agent** is referred to as **agent**. ||
+| 19/11/2024 | Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot. ||
+| 18/11/2024 | Configure default landing capability for your bot or tab app to open your app with the default capability | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability)|
+| 07/11/2024 | Build responsive Container layouts in Adaptive Cards. | Build cards and dialogs > Build cards > [Container layouts](task-modules-and-cards/container-layouts.md)|
+| 07/11/2024 | Visually represent data with charts in Adaptive Cards. | Build cards and dialogs > Build cards > [Charts in Adaptive Cards](task-modules-and-cards/cards/charts-in-adaptive-cards.md) |
+| 07/11/2024 | Add conditionally enabled action buttons in Adaptive Cards. | Build cards and dialogs > Build cards > [Card actions](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons) |
+| 07/11/2024 | Media elements in Adaptive Cards. | Build cards and dialogs > Build cards > [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md) |
+| 07/11/2024 | Create engaging Adaptive Cards with borders and rounded corners, scrollable containers, compound button, Icons, and star ratings. | Build cards and dialogs > Build cards > [Format cards in Teams](task-modules-and-cards/cards/cards-format.md) |
+| 07/11/2024 | Build dependent inputs with typeahead search in Adaptive Cards. | Build cards and dialogs > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs) |
+| 07/11/2024 | Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards. | Design your app > UI components > [Adaptive Card](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection) |
 | 29/10/2024 | Share content to live and upcoming meetings with Share to Teams. | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 28/10/2024 | Enable API key and SSO authentication for your API-based message extension. | Add authentication > Enable authentication for API-based message extensions > [Overview](messaging-extensions/build-api-based-message-extension.md) |
 | 28/10/2024 | Update bot or message extension app to use certificate or MSI for authentication. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Develop your Teams app > [Use certificate or MSI for app authentication](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
@@ -70,7 +71,6 @@ Teams platform features that are available to all app developers.
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Publish your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
 | 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Publish](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
 | 03/07/2024 | share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Share to stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
-| 02/07/2024 | Extend bot-based message extension plugins to Teams meetings. | Build message extensions > Build message extensions using Bot Framework > Search Commands > [Enable message extension as a plugin for Copilot for meetings](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings) |
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|

@@ -642,7 +642,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|||Type of the command. One of `query` or `action`. <br>Default value: `query` |
-|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the plugin to the user.|
+|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the agent to the user.|
 |`samplePrompts.text`|String|128 characters|✔️|Content of the sample prompt.|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
 |`context`|Array of strings|3 ||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
