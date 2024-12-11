@@ -5,7 +5,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/18/2024
+ms.date: 12/11/2024
 ---
 
 # Bot configuration experience
