@@ -966,7 +966,7 @@ The meeting details API must have a bot registration and bot ID. It requires Bot
 
 **Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
 
-The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
+The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details. The function returns the original `IMeetingDetailsResponse` object, along with additional call details, providing a more comprehensive view of the meeting information.
 
 For more information, see [build tabs for calling](build-tabs-for-calling.md).
 
@@ -1116,6 +1116,48 @@ const GetMeetingDetailsVerbose = (): React.ReactElement =>
             return JSON.stringify (result);
         };
 });
+```
+
+```JavaScript
+interface IMeetingOrCallDetailsBase <T> {
+  /**
+   * Scheduled start time of the meeting or start time of the call
+   */
+  scheduledStartTime: string;
+
+  /**
+   * url to join the current call or meeting
+   */
+  joinUrl?: string;
+
+  /**
+   * type of the meeting or call
+   */
+  type?: T;
+}
+
+interface ICallDetails
+  extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
+  originalCallerInfo?: ICallParticipantIdentifiers;
+  dialedEntityInfo?: ICallParticipantIdentifiers;
+  trackingID?: string;
+  callID?: string;
+}
+
+interface iConversation {
+  id: string;
+}
+
+interface IOrganizer {
+  id?: string;
+  tenantId?: string;
+}
+
+export interface IMeetingDetailsResponse {
+  details: IMeetingDetails | ICallDetails;
+  conversation: IConversation;
+  organizer: IOrganizer;
+}
 ```
 
 # [JSON](#tab/json)
@@ -1274,77 +1316,15 @@ The JSON response body for meeting details API is as follows:
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
 | **shouldGetVerboseDetails** | Optional boolean indicating that the host must return additional call details in the response if it's set to `true`. |
+| **originalCaller** | MRI for the original caller of a call. |
+| **dialedEntity** | MRI that the original called dialed |
+| **trackingId** | A persistent ID that references a call and all of its related calls. |
 
 In case of recurring meeting type:
 
 **startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
 **endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
-
-## getMeetingDetailsVerbose API
-
-The `getMeetingDetailsVerbose` function is an enhanced version of the existing getMeetingDetails API. It leverages the RSC permission `OnlineMeetingParticipant.Read.Chat`to extend the capabilities of the `getMeetingDetails` API.
-
-The `getMeetingDetailsVerbose` function calls the existing `getMeetingDetails` hub-sdk endpoint. It's parameter, `shouldGetVerboseDetails`, must be set to `true` to enable the function to retrieve detailed information about the meeting.
-
-The function returns the original `IMeetingDetailsResponse` object, along with additional call details, providing a more comprehensive view of the meeting information.
-
-### Prerequisite
-
-To use `getMeetingDetailsVerbose` function, you must obtain an additional RSC permission, that is `OnlineMeetingParticipant.Read.Chat`.
-
-### Query parameter
-
-### Example
-
-```JavaScript
-interface IMeetingOrCallDetailsBase <T> {
-  /**
-   * Scheduled start time of the meeting or start time of the call
-   */
-  scheduledStartTime: string;
-
-  /**
-   * url to join the current call or meeting
-   */
-  joinUrl?: string;
-
-  /**
-   * type of the meeting or call
-   */
-  type?: T;
-}
-
-interface ICallDetails
-  extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
-  originalCallerInfo?: ICallParticipantIdentifiers;
-  dialedEntityInfo?: ICallParticipantIdentifiers;
-  trackingID?: string;
-  callID?: string;
-}
-
-interface iConversation {
-  id: string;
-}
-
-interface IOrganizer {
-  id?: string;
-  tenantId?: string;
-}
-
-export interface IMeetingDetailsResponse {
-  details: IMeetingDetails | ICallDetails;
-  conversation: IConversation;
-  organizer: IOrganizer;
-}
-```
-
-| Property name | Description |
-| --- | --- |
-| `originalCaller` | MRI for the original caller of a call. |
-| `dialedEntity` | MRI that the original called dialed |
-| `trackingId` | A persistent ID that references a call and all of its related calls. |
-|
 
 ## Send real-time captions API
 
