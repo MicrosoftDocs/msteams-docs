@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 12/05/2024
+ms.date: 12/12/2024
 ---
 
 # Update Apple Developer Program Team ID
@@ -30,7 +30,7 @@ To get Apple Developer Program Team ID from Apple Developer portal, follow these
 1. Select **Account** and go to **Membership**.
 1. Under **Membership**, access **Apple Developer Program Team ID**.
 
-You can also refer to Apple's official documentation to locate Apple Developer Program Team ID from here - <https://developer.apple.com/help/account/manage-your-team/locate-your-team-id>
+You can also refer to Apple's official documentation to locate Apple Developer Program Team ID from here - https://developer.apple.com/help/account/manage-your-team/locate-your-team-id
 
 ## Next step
 
