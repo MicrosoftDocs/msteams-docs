@@ -5,7 +5,7 @@ metadata:
   description: Learn how to build an in-meeting document signing app in Microsoft Teams to sign document in real-time during meetings using electronic signatures.
   audience: Developer
   level: Beginner
-  ms.date: 27/07/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
   nextTutorialTitle: Read more to build apps for Teams meeting stage
@@ -253,6 +253,10 @@ items:
     1. Select **Add**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Screenshot shows how to add the app.":::
+
+    1. Search or select the required meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-scope.png" alt-text="Screenshot shows how to add the app.":::
 
        Now the meeting signing app is added to the meeting.
 
