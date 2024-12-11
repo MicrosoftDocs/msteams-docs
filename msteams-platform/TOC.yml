@@ -98,7 +98,7 @@
     - name: Personal apps
       href: concepts/design/personal-apps.md
       displayName: logo
-    - name: Tabs
+    - name: Design tab for Teams
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
