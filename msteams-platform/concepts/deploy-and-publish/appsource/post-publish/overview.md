@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 # Maintain your published Microsoft Teams app
 
