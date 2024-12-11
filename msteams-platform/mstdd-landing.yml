@@ -62,7 +62,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Multi parameters for API-based message extensions
-        url: (messaging-extensions/create-api-message-extension.md#multi-parameters).
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
       - text: New app installation flow for Teams app installed from Teams Store or custom upload
         url: concepts/deploy-and-publish/add-default-install-scope.md
       - text: Introducing default landing capability for tab and bot apps
