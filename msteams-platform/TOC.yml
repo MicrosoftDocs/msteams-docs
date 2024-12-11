@@ -146,7 +146,7 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Build apps with Teams Toolkit 
+      - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams App
@@ -232,10 +232,10 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Build apps for Visual Studio Code
+      - name: Build apps with Teams Toolkit 
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
-        - name: Prerequisites to create Teams App for Visual Studio Code
+        - name: Prerequisites to create Teams app using VSC
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -285,7 +285,7 @@
       - name: Analyze apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
-    - name: Adaptive Card Previewer for Visual Studio Code
+    - name: Adaptive Card Previewer for VSC
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
@@ -293,7 +293,7 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
-    - name: Adaptive Card Previewer for Visual Studio
+    - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md
       displayName: ACP 
     - name: Yeoman generator for Teams (GitHub)
@@ -449,7 +449,7 @@
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
-    - name: Create group chat and channel with a bot
+    - name: Channel conversation with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
@@ -732,9 +732,9 @@
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
-      - name: Update app manifest for SSO and preview app
+      - name: Update  app manifest and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Grant Microsoft Graph permissions and scopes
+      - name: Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
     - name: Enable SSO for your bot and message extension app
       items:
@@ -744,9 +744,9 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Preview and update app manifest for SSO
+      - name: Preview app manifest schema
         href: bots/how-to/authentication/bot-sso-manifest.md
-      - name: Grant Microsoft Graph permissions and scopes
+      - name: Microsoft Graph permissions for tab app
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Enable SSO for your Adaptive Cards Universal Actions in bot
       items:
@@ -1028,7 +1028,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Gain traction for your collaborative app
+      - name: Duplicate of line 61
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
@@ -1133,7 +1133,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-  - name: New Microsoft Teams client
+  - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
