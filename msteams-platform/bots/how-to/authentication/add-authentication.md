@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 
 # Add authentication to your Teams bot

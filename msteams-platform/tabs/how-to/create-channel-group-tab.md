@@ -4,7 +4,7 @@ description: Create custom configurable tabs with Node.js, ASP.NET Core, MVC. Bu
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
-ms.date: 10/03/2024
+ms.date: 12/11/2024
 ---
 
 # Create a configurable tab
