@@ -100,7 +100,7 @@
       displayName: logo
     - name: Design tab for Teams
       href: tabs/design/tabs.md
-    - name: Bots
+    - name: Design bot for Teams
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
@@ -141,20 +141,20 @@
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
-      - name: Install Teams Toolkit
+      - name: Install Toolkit for VSC
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
-      - name: Explore Teams Toolkit
+      - name: Explore Toolkit for VSC
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Prepare to build apps
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create apps
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
-        - name: Create a new Teams app project
+        - name: New Teams app project using VSC
           href: toolkit/create-new-project.md
-        - name: Develop your Teams app
+        - name: Develop your app using VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
@@ -164,40 +164,40 @@
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
-          - name: Add single sign-on to Teams app
+          - name: Add SSO for Teams app using VSC
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
             displayName: MSI, certificate, bot, message extension, authentication
-        - name: Customize Manifest
+        - name: Customize Teams app manifest
           items:
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
-        - name: Debug your Teams app
+        - name: Debug your app
           items:
           - name: Overview
             href: toolkit/debug-overview.md
-          - name: Debug bot using Teams App Test Tool
+          - name: Debug using Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
             href: toolkit/debug-message-extension-app-in-test-tool.md            
-          - name: Debug your Teams app locally
+          - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
             displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
-          - name: Debug background process
+          - name: Debug process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
             href: toolkit/debug-mobile.md        
-        - name: Host your app on Azure
+        - name: Host your Teams app in Azure
           items:    
-          - name: Provision cloud resources
+          - name: Provision cloud resources in VSC
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
