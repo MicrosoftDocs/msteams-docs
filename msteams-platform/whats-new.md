@@ -532,6 +532,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
+* ***December 11, 2024***: Copilot plugin as a message extension in Teams meeting is deprecated.
+
 * ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
 
 * ***July 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
