@@ -85,10 +85,10 @@ The following image shows the share to stage option in the Teams mobile client:
 
 ---
 
-If you use an Advanced share to stage API, the button text is under your control: 
+If you use an Advanced share to stage API, the button text is under your control. Here are the guidelines for the button text:
   
-* Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users since **Share** consistently means **Share to stage** in Teams meetings.  
-* However, more specific button text can be more meaningful in some scenarios. Text like **Watch together** or **Play together** is encouraged if your app offers videos or casual games. 
+* Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users as **Share** consistently means **Share to stage** in Teams meetings.  
+* Use more specific button text to provide meaningful context in few scenarios. Text such as **Watch together** or **Play together** can be used if your app offers videos or casual games. 
 
 Use the following APIs to share specific part of the app:
 
