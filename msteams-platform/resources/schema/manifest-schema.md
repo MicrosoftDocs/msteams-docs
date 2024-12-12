@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 11/27/2024
+ms.date: 12/11/2024
 ---
 
 # App manifest
@@ -829,7 +829,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** &ndash; String
 
-Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The default install scope is denoted with a Recommended option adjacent to the corresponding scope in the scope selection dialog, after the user adds the app. The options are:
 
 * `personal`
 * `team`

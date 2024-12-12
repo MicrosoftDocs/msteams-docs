@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create and add in-meeting notifications app and interact with the app using a bot in Microsoft Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/03/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings 
@@ -188,7 +188,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-add.png" alt-text="Screenshot shows the Targeted notification with Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-add.png" alt-text="Screenshot of the Targeted notification app with the Add option highlighted."::: 
+
+    1. Search and select the required scope or select a chat or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/meeting-content-bubble/add-app-scope.png" alt-text="Screenshot of the Targeted notification app scope selection dialog to select the meeting."::: 
 
     1. The **Manage apps** section displays the list of applications.
 
