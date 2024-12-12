@@ -433,15 +433,15 @@
       href: Teams-AI-library-tutorial.yml
   - name: Bot user experience
     items:
+    - name: Custom engine agent user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
     - name: Enhance AI-generated bot messages
       href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit, 
-    - name: Custom engine agent user experience
-      href: bots/how-to/teams-conversational-ai/ai-ux.md
-      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
   - name: Understand bot concepts
     href: bots/bot-concepts.md
     displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
