@@ -33,7 +33,6 @@
     href: get-started/build-message-extension.md
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
- 
 - name: Plan your app
   items:
   - name: Overview
@@ -367,6 +366,9 @@
   - name: Create a static tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
+  - name: Get context for your tab
+    href: tabs/how-to/access-teams-context.md
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes    
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab    
@@ -390,9 +392,7 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Tab features
     items:
-    - name: Get context for your tab
-      href: tabs/how-to/access-teams-context.md
-      displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
+
     - name: Open content in multi-window
       href: tabs/open-content-in-stageview.md
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
