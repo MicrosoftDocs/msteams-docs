@@ -64,7 +64,7 @@ await context.sendActivity({
 |--|--|--|--|
 | `additionalType` | Array | Yes | Enables the AI label in the bot message. <br> Allowed value: `AIGeneratedContent`. |
 
-After adding an AI label, your bot’s message shows an **AI generated** label next to the bot’s name. A disclaimer hovers stating, **AI-generated content may be incorrect**. The AI label and disclaimer can't be customized for AI-powered bots.
+After adding an AI label, your bot's message shows an **AI generated** label next to the bot's name. A disclaimer hovers stating, **AI-generated content may be incorrect.**. The AI label and disclaimer can't be customized for AI-powered bots.
 
 > [!NOTE]
 >
