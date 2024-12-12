@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to work with custom Together Mode scenes in Microsoft Teams, build scene using Scene studio, share scene using Scene studio, and its sample.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
@@ -180,8 +180,7 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
 Before you start, you must create a new Teams meeting to test and launch Custom Together Mode scenes in Teams.
 
 > [!NOTE]
->
-> You can apply a Custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+> You can apply a Custom Together Mode scene that is deployed by your Teams Administrator only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
 Join the Teams meeting and follow these steps to test the Custom Together Mode:
 
