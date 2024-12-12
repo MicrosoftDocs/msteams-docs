@@ -177,7 +177,7 @@ export const app = new Application<ApplicationTurnState>({
 
 For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L65).
 
-After you enable feedback buttons, all `SAY` commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
+After you enable feedback buttons, all `SAY` commands from the bot have `feedbackLoopEnabled` in the `channelData` object automatically set to `true`.
 
 To enable feedback buttons in a bot built using **Bot Framework SDK**, define a `feedbackLoop` object under the `channelData` object of your bot message.
 
