@@ -33,7 +33,6 @@
     href: get-started/build-message-extension.md
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
- 
 - name: Plan your app
   items:
   - name: Overview
@@ -432,6 +431,8 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
+  - name: Bot user experience
+    items:
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
