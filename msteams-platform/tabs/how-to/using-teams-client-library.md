@@ -7,7 +7,7 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
-ms.date: 05/05/2023
+ms.date: 12/12/2024
 ---
 
 # Teams JavaScript client library
@@ -28,6 +28,40 @@ The remainder of this article walks you through the structure and latest updates
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+
+### Improve app performance with tree shaking
+
+Starting with TeamsJS version 2.31.0, the library is fully tree-shakeable. Tree shaking is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
+
+#### How to use tree shaking with TeamsJS
+
+Taking advantage of tree shaking when you bundle your app package just requires a bundler, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking), that supports tree shaking. When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
+
+```typescript
+export function scanBarCode(barCodeConfig: BarCodeConfig): Promise<string> {
+   //implementation omitted
+}
+
+export function hasPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function requestPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function isSupported(): boolean {
+   //implementation omitted
+}
+```
+
+Assume the **barCode** module in TeamsJS contains the four functions `hasPermission()`, `isSupported()`, `requestPermission()`, and `scanBarCode(BarCodeConfig)`. If an app only uses the `hasPermission()` function, then after tree shaking the other three functions would be excluded from the app bundle. This ensures that apps stay as lightweight as possible and only include the code they need.
+
+> [!IMPORTANT]
+> When using tree shaking, keep in mind the following considerations:
+>
+> 1. If your app uses the CDN to consume the TeamsJS library, then the library version used is not tree shakable.
+> 1. The TeamsJS library type was changed from UMD (Universal Module Definition) to ESM (ECMAScript Modules) in order to support tree shaking. However, the UMD version is still offered. If a bundler supports ESM the tree-shakable ESM package of TeamsJS is used, otherwise the UMD package is used.
 
 ## What's new in TeamsJS version 2.x.x
 
