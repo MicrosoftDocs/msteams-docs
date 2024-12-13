@@ -216,7 +216,7 @@ For more information to create plugins for teams meetings, see [enable message e
 
 [Back to top](#validation-guidelines-for-agents)
 
-### Ensure your Copilot agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
 You must ensure to meet the following guidelines for agents:
 
