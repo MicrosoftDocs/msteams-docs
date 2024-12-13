@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 December**
 
-* ***December 13, 2024***: [Learn to extend bot-based message extension as agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
+* ***December 13, 2024***: [Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
 * ***December 11, 2024***: [Enhanced user experience for Teams app installed from Teams Store or custom upload.](concepts/deploy-and-publish/add-default-install-scope.md)
 
 :::column-end:::

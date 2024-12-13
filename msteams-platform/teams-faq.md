@@ -371,7 +371,7 @@ All published message extension plugins will now appear as agents in the right p
 
 <summary>What can partners do to build a more robust agent?</summary>
 
-If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions.  For more information, see [extend bot-based message extension as agent for Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md).
+If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [extend bot-based message extension as agent for Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md).
 <br>
 &nbsp;
 </details>
@@ -379,7 +379,7 @@ If a partner wants to build a more robust agent, they can deprecate their existi
 
 <summary>Will declarative agents and custom engine agents have the same user experience and features?</summary>
 
-Yes, both declarative agents and custom engine agents will have the same invocation and session history user experience, and ZQL will be supported for both.
+Yes, both declarative agents and custom engine agents will have the same invocation and session history user experience, and ZQL (query language) will be supported for both.
 <br>
 &nbsp;
 </details>
@@ -387,7 +387,7 @@ Yes, both declarative agents and custom engine agents will have the same invocat
 
 <summary>Can Independent Software Vendors (ISVs) enhance their existing wrapped declarative agents moving forward?</summary>
 
-ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they will be limited in terms of adding other instructions or knowledge to their agent.
+ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they will be limited in terms of adding new instructions or knowledge to their agent.
 <br>
 &nbsp;
 </details>
@@ -395,15 +395,15 @@ ISVs can continue to improve their message extension agent and submit their app 
 
 <summary>Can partners submit both a message extension Copilot and a declarative agent?</summary>
 
-You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and require approval by app store validation. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md)
+You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and would require approval as per app store validation guidelines. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 <br>
 &nbsp;
 </details>
 <details>
 
-<summary>Do a declarative agents require a Copilot license?</summary>
+<summary>Does a declarative agent require a Copilot license?</summary>
 
-Yes, declarative agents require a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents start appearing in app chat.
+Yes, a declarative agent requires a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents appear in the app chat.
 </details>
 
 ## Microsoft Graph
