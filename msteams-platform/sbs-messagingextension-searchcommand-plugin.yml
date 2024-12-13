@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
 title: Build a bot-based message extension agent for Microsoft 365 Copilot
 metadata:
-  title: Build Message Extension Copilot Agent
+  title: Build Message Extension Agent for Microsoft 365 Copilot
   description: In this tutorial, learn to build a bot-based message extension and extend it as an agent in Microsoft 365 Copilot.
   audience: Developer
   level: Beginner
   ms.date: 06/19/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/build-bot-based-agent.md
-  nextTutorialTitle: Extend bot-based message extension as agent for Microsoft 365 Copilot
+  nextTutorialTitle: Extend bot-based message extension as an agent for Microsoft 365 Copilot
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -16,12 +16,12 @@ items:
   content: |
     > [!NOTE]
     >
-    > * Bot-based search message extension agent is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as an agent in Microsoft 365 Copilot.
-    > * Agents for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Microsoft Teams.
-    
+    > * The bot-based search message extension agent is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
+    > * Only a bot-based search message extension can be extended as an agent in Microsoft 365 Copilot.
+    > * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Microsoft Teams.
+  
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a bot-based message extension agent with Teams using JavaScript.  
+    You can create a bot-based message extension agent using JavaScript.  
     
     In this tutorial, you'll learn:
 
@@ -30,7 +30,7 @@ items:
     - How to deploy your app.
     - Trigger your bot-based message extension agent in Microsoft 365 Copilot.
 
-    This step-by-step guide helps you to build  bot-based message extension agent with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This step-by-step guide helps you to build bot-based message extension agent with Teams Toolkit. You'll see the following output after you've completed this guide:
 
      :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
 
@@ -142,7 +142,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as an agent for Microsoft 365 Copilot.
+    > * Only a bot-based search message extension can be extended as an agent for Microsoft 365 Copilot.
 
 
     In this tutorial, you'll learn:
@@ -358,11 +358,11 @@ items:
     1. Select **Panel** from the top-right corner.
     1. From the list of agents, select the required agent from the right pane.
 
-       :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
+       :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents in Microsoft 365." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 
-    1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
+    1. From the message compose area, send a message to Microsoft 365 Copilot to search for the latest update from Teams and Microsoft 365 Copilot.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="assets/images/Copilot/bot-based-message-extension-agent.png":::
 
     > [!NOTE]
     > This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Microsoft 365 Copilot response and leave a message.

@@ -363,7 +363,7 @@ You can [create or upgrade a message extension as an agent in Microsoft 365 Copi
 <details>
 <summary>What happens to my published message extension plugins? </summary>
 
-All published message extension plugins will now appear as agents in the right pane. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a custom engine agent or an API-based plugin. For more information, see [API-based message extension](messaging-extensions/api-based-overview.md).
+All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) or an [API-based plugin](messaging-extensions/api-based-overview.md).
 <br>
 &nbsp;
 </details>

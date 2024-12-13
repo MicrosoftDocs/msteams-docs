@@ -109,14 +109,14 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right pane.
 
-   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents in Microsoft 365." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
-1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
+1. From the message compose area, send a message to Microsoft 365 Copilot to search for the latest update from Teams and Microsoft 365 Copilot.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
-> This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
+> This prompt might not always ensure a response from your message extension in Microsoft 365 Copilot. If this occurs, try different prompts or provide feedback by downvoting the Microsoft 365 Copilot response and leaving a message.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -199,14 +199,14 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right pane.
 
-   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents in Microsoft 365." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
-1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
+1. From the message compose area, send a message to Microsoft 365 Copilot to search for the latest update from Teams and Microsoft 365 Copilot.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
-> This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
+> This prompt might not always ensure a response from your message extension in Microsoft 365 Copilot. If this occurs, try different prompts or provide feedback by downvoting the Microsoft 365 Copilot response and leaving a message.
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
@@ -294,14 +294,14 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 1. Select **Panel** from the top-right corner.
 1. Select the required agent from the right pane.
 
-   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
+   :::image type="content" source="../assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents in Microsoft 365." lightbox="../assets/images/messaging-extension/message-extension-agent.png":::
 
-1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
+1. From the message compose area, send a message to Microsoft 365 Copilot to search for the latest update from Teams and Microsoft 365 Copilot.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
-> This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
+> This prompt might not always ensure a response from your message extension in Microsoft 365 Copilot. If this occurs, try different prompts or provide feedback by downvoting the Microsoft 365 Copilot response and leaving a message.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -321,13 +321,13 @@ To create a bot-based message extension using Developer Portal for Teams, follow
 
    1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**. Select **Yes, change**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
+       :::image type="content" source="../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
    1. If you don't have a Bot ID, you can select **Create a new bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
+       :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
 
 1. Select **Save**.
 
