@@ -753,7 +753,7 @@
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Enable SSO for Adaptive Cards in bot
+      - name: Add code to enable SSO
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
@@ -763,14 +763,14 @@
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Third party IdP authentication to tab app
+    - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Third party IdP authentication to bot app
+    - name: Add authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
-    - name: IdP authentication to message extension app
+    - name: Add authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-    - name: IdP authentication for Adaptive Cards Universal Actions
+    - name: Add authentication for Adaptive Cards Universal Actions
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
