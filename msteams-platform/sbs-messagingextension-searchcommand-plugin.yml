@@ -360,9 +360,9 @@ items:
 
        :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents for bot-based-ME-test-local agent." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 
-    1. From the message compose area, send a message to Microsoft 365 Copilot to search for npm package information in Teams and Microsoft 365 Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+    1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
 
     > [!NOTE]
     > This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Microsoft 365 Copilot response and leave a message.
