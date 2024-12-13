@@ -2,7 +2,7 @@
 title: Build a bot-based message extension agent for Microsoft 365 Copilot
 metadata:
   title: Build Message Extension Copilot Agent
-  description: In this tutorial, learn to build a bot-based message extension and extend it as a agent in Microsoft 365 Copilot.
+  description: In this tutorial, learn to build a bot-based message extension and extend it as an agent in Microsoft 365 Copilot.
   audience: Developer
   level: Beginner
   ms.date: 06/19/2024
@@ -17,7 +17,7 @@ items:
     > [!NOTE]
     >
     > * Bot-based search message extension agent is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a agent in Microsoft 365 Copilot.
+    > * Only bot-based search message extension can be extended as an agent in Microsoft 365 Copilot.
     > * Agents for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
@@ -142,7 +142,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as a agent for Microsoft 365 Copilot.
+    > * Only bot-based search message extension can be extended as an agent for Microsoft 365 Copilot.
 
 
     In this tutorial, you'll learn:
@@ -477,7 +477,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've created a bot-based message extension and extended the message extension as a agent in Microsoft 365 Copilot.
+    You've created a bot-based message extension and extended the message extension as an agent in Microsoft 365 Copilot.
 
     
 
