@@ -52,7 +52,7 @@ Before you get started, ensure that you're familiar with the following standards
 ## Create bot-based message extension
 
 > [!IMPORTANT]
-> Agents for Microsoft 365 Copilot are in preview and only work in Microsoft 365 Copilot in Teams.
+> Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Teams.
 
 Let's create a bot-based search message extension agent for Teams and Microsoft 365 Copilot and share results through the compose message area of the Microsoft Teams client.
 
@@ -360,7 +360,7 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-For more on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365-copilot/extensibility/debugging-copilot-plugin).
+For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365-copilot/extensibility/debugging-copilot-plugin).
 
 ## Enable message extension as a plugin for Copilot for meetings
 
