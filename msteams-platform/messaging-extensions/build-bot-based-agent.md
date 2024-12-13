@@ -113,7 +113,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
 > This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
@@ -203,7 +203,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot, follow these
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
 > This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
@@ -298,7 +298,7 @@ To trigger the message extension as agent in Microsoft 365 Copilot in Teams, fol
 
 1. From the message compose area, send a message to Microsoft 365 Copilot to search for latest update from Teams and Microsoft 365 Copilot.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="../assets/images/Copilot/bot-based-message-extension-agent.png":::
 
 > [!NOTE]
 > This prompt might not always make Microsoft 365 Copilot include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Microsoft 365 Copilot response and leave a message.
