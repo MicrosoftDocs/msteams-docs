@@ -368,48 +368,48 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
+    displayName: tab features, use cases, app manifest, tab benefits, static tabs
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
-    displayName: clickjacking, device permissions for tabs
+    displayName: tools for tabs, build Teams tabs
   - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
+    displayName: create a tab, Teams app generator, run your app, upload your app, extend tabs, customize your tabs
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
+    displayName: URL placeholders, Teams JavaScript library, private channels, shared channels
   - name: Tab features
     items:
     - name: Open content in multi-window
       href: tabs/open-content-in-stageview.md
-      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
+      displayName: Collaborative Stageview, Stageview Multi-window, invoke stageview, stageview API, deep link
     - name: Create a configurable tab
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+      displayName: configurable tab, build your app, run your app, upload app to teams, app migrations
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
-      displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
+      displayName: design guidelines, code integrations, page configuration, native loading indicator
     - name: Create a configuration page
       href: tabs/how-to/create-tab-pages/configuration-page.md
-      displayName: configurationUrl
+      displayName: configure your tab, tab settings, query strings, retrieve context, remove a tab
     - name: Create a removal page
       href: tabs/how-to/create-tab-pages/removal-page.md
-      displayName: Reconfigure tab, register remove handler
+      displayName: reconfigure tab, tab removal, tab deletion process,  tab authentication
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
-      displayName: Teams Store apps approved by Microsoft for mobile 
+      displayName: mobile client testing, publish apps, handle app timeouts, unapproved apps
     - name: Build apps for shared channels
       href: concepts/build-and-test/shared-channels.md
-      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+      displayName: apps for shared channels, context for shared channel, apps and permissions, Microsoft Entra native identity
     - name: Send activity feed notifications
       href: /graph/teams-send-activityfeednotifications
-      displayName: activity feed, notification, customize notification
+      displayName: activity feed components, API notification requirements, app updates, activity response, notifications
     - name: App caching for your tab app
       href: tabs/how-to/app-caching.md
-      displayName: App caching, caching, launch time, cache
+      displayName: app caching, examples, best practices, limitations, troubleshooting
     - name: Build a dashboard tab app
       href: tabs/how-to/Build-a-dashboard-tab-app.md
-      displayName: Dashboard, widget, Graph API call
+      displayName: add new dashboard, customize dashboard tab, customize layout, add new route, add a widget, graph API call
 - name: Build bots
   items:
   - name: Overview
