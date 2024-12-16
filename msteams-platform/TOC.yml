@@ -142,50 +142,58 @@
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
-    displayName: Tools and SDKs
+    displayName: SDK and libraries, tools and SDKs, libraries to build apps
   - name: Tools 
     items:
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
+        displayName: Teams ToolKit, Common custom app built, Developer portal
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
-        displayName: download
+        displayName: Install teams toolkit, Teams toolkit with VSC, pre-release version, 
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
+        displayName: Explore toolkit, visual studio code, debug teams
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/build-environments.md
+        displayName: build apps with VSC, build environment, apps using javascript, create app using SPx, Azure functions
         items:
         - name: Prerequisites for creating your Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: Prerequisites for app, Install tools, Microsoft Developer account, Create developer account
         - name: Create a new Teams app project
           href: toolkit/create-new-project.md
+          displayName: New teams project, Create Teams app, different app types, directory structure
         - name: Develop your Teams app
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
+            displayName: manage environment, local environment, create environment manually, targeting environment
           - name: Create How-to Guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app 
+            displayName: guides from Teams, add capabilities, app capabilities, multiple capabilities
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
+            displayName: add SSO to teams, SSO Teams, SSO Support, SSO using VSC, create SSO Experience
           - name: Using existing Microsoft Entra app in TeamsFx project
             href: toolkit/use-existing-aad-app.md
+            displayName: Existing Entra app, TeamsFx project, create access
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
-            displayName: MSI, certificate, bot, message extension, authentication
+            displayName: MSI, App authentication, Authentication certification, create certificate
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+            displayName: App manifest, customize teams, preview app manifest, Manifest in VSC, validate app, app manifest schema
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
+            displayName: Customize Entra manifest, application CodeLens, Template placeholder
         - name: Debug your Teams app
           items:
           - name: Overview
