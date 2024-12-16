@@ -363,7 +363,7 @@ You can [create or upgrade a message extension as an agent in Microsoft 365 Copi
 <details>
 <summary>What happens to my published message extension plugins? </summary>
 
-All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) or an [API-based plugin](messaging-extensions/api-based-overview.md).
+All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) or an [API-based plugin](messaging-extensions/api-based-overview.md).
 <br>
 &nbsp;
 </details>
@@ -395,7 +395,7 @@ ISVs can continue to improve their message extension agent and submit their app 
 
 <summary>Can partners submit both a message extension Copilot and a declarative agent?</summary>
 
-You can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and would require approval as per app store validation guidelines. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+Partners can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and would require approval as per app store validation guidelines. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 <br>
 &nbsp;
 </details>
