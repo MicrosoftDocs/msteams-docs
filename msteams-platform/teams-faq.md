@@ -224,7 +224,8 @@ No, Live Share doesn't support meeting recordings.
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in agent matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
 If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
-
+<br>
+&nbsp;
 </details>
 <details>
 
@@ -289,19 +290,24 @@ Here's an example description that work for NPM Finder.
 
 ```
 
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> Microsoft 365 Copilot includes my agent in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
-
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> Can I build my own Teams message extension? </summary>
 
 Yes, you can. Ensure that you have a descriptive app manifest and upload the app to Outlook and interacted with it.</br>
+<br>
+&nbsp;
 </details>
 <details>
 
@@ -309,13 +315,16 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
+<br>
 
+&nbsp;
 </details>
 <details>
 <summary>What are the guidelines for Teams apps extensible as agent for Microsoft 365 Copilot? </summary>
 
 You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agents-for-microsoft-365-copilot) for Teams apps extensible as agent for Microsoft 365 Copilot.
-
+<br>
+&nbsp;
 </details>
 <details>
 
@@ -324,24 +333,77 @@ You can read the [Teams Store validation guidelines](concepts/deploy-and-publish
 After publishing the agent, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the agent, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
 
 To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the agent and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your agent on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
-
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> How are agents certified?</summary>
 
 After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their agent. This is communicated through an email confirming their message extension is validated.
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> How are new agents certified?</summary>
 
 Developers are encouraged to certify their new agent after successfully completing validation.
+<br>
+&nbsp;
 </details>
 <details>
+<br>
 <summary>How can I create or upgrade a message extension agent for Microsoft 365 Copilot?</summary>
 
 You can [create or upgrade a message extension as an agent in Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>What happens to my published message extension plugins? </summary>
+
+All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) or an [API-based plugin](messaging-extensions/api-based-overview.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>What can partners do to build a more robust agent?</summary>
+
+If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [extend bot-based message extension as agent for Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Will declarative agents and custom engine agents have the same user experience and features?</summary>
+
+Yes, both declarative agents and custom engine agents will have the same invocation and session history user experience, and ZQL (query language) will be supported for both.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Can Independent Software Vendors (ISVs) enhance their existing wrapped declarative agents moving forward?</summary>
+
+ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they will be limited in terms of adding new instructions or knowledge to their agent.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Can partners submit both a message extension Copilot and a declarative agent?</summary>
+
+Partners can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and would require approval as per app store validation guidelines. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Does a declarative agent require a Copilot license?</summary>
+
+Yes, a declarative agent requires a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents appear in the app chat.
 </details>
 
 ## Microsoft Graph
@@ -696,7 +758,7 @@ You received this error message because your [account verification status](/part
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-If you're the primary contact, global admin, or account admin, you can monitor verification status and track progress on your profile page.
+If you're the primary contact, Global Administrator or account admin, you can monitor verification status and track progress on your profile page.
 
 After the verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
@@ -924,32 +986,36 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 
 <br>
 <details>
-<summary>What does the Teams AI library do?</summary>
+<summary>What does Teams AI library do?</summary>
 
 Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
+</br>
 
 <details>
-<summary>Can we use the AI library with other Large Language Models (LLMs) apart from OpenAI?</summary>
+<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
 
 Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library integrate with ODSL?</summary>
@@ -957,16 +1023,19 @@ Yes, Teams AI library provides abstractions to simplify utilization of Large Lan
 The two are independent and can't be integrated.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+</br>
 
-Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
+</br>
 
 <details>
-<summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
+<summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
 Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>

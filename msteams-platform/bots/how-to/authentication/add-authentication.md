@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 12/11/2024
 ---
 
 # Add authentication to your Teams bot
@@ -435,13 +436,14 @@ and when for these, and just reference that from here, along with the set of ste
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
 1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
-The following window appears:
+1. Select **Add** to install the app to Teams.
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="Screenshot shows an example of the bot after it's uploaded into Teams.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with the Add option highlighted.":::
 
-1. Select the **Add to a team** button.
-1. In the next window, select the team where you want to use the bot.
-1. Select the **Set up a bot** button.
+1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
+
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list

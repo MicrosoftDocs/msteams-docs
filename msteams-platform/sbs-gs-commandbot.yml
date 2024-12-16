@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build a command bot for Microsoft Teams using Teams Toolkit in Visual Studio Code to automate tasks with Adaptive Cards.
   audience: Developer
   level: Beginner
-  ms.date: 05/05/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
 
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -107,9 +107,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
 
-    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    1. Select **Add**.
     
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::    
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot of the app details dialog to add the command bot app.":::    
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="~/assets/images/sbs-command-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     1. Select the **command bot**.
     
@@ -138,7 +144,7 @@ items:
     | `appPackage/` | Templates for the Teams application manifest. |
     | `infra/` | Templates for provisioning Azure resources. |
     | `src/` | The source code for the application. |
-    | `src/index.js` | Application entry point and `restify` handlers for command and response. |
+    | `src/index.js` | Application entry point and `express` handlers for command and response. |
     | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
     | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
     | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
@@ -218,9 +224,15 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
 
-    1. Select **Add** or use the dropdown menu to add your command bot app to a team, chat, or meeting.
+    1. Select **Add**.
+
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot of the app details dialog to add the command bot app.":::    
     
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="~/assets/images/sbs-command-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     1. Select the **command bot**.
     1. Select **Enter**.  
