@@ -2,7 +2,7 @@
 title: Build Message Extension in Codespaces
 description: Learn how to build your first message extension for your Teams app with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: medium
-ms.date: 06/07/2023
+ms.date: 12/11/2024
 ms.topic: reference
 ---
 
@@ -62,11 +62,13 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
       GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in a separate browser tab.
 
-   Your message extension app is uploaded to Teams.
+1. Select **Add** to install your message extension in Teams.
 
-1. Once the app dialog appears in Teams, select **Add** to install your message extension in Teams.
+   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot of the app details dialog to add the message extension app in Teams.":::
 
-   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot shows you the message extension loaded in the Teams client.":::
+1. Select **Open** to open the app in personal scope.
+
+   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
    You've successfully created the search-based message extension and loaded in the Teams client.
 
@@ -96,7 +98,7 @@ If you want to build basic tab app, select the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose what suits you](choose-what-suits-you.md)
+> [Tool options and code samples](tool-options-and-code-samples.md)
 
 ## See also
 

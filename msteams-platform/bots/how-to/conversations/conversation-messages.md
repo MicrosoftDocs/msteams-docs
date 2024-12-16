@@ -3,6 +3,7 @@ title: Bot Conversations & Message Activity
 description: Learn to send, receive, edit, undelete, soft delete a message with suggested actions, notification, attachments, images, Adaptive Card, status error code responses.
 ms.topic: overview
 ms.author: anclear
+ms.date: 11/27/2024
 ms.localizationpriority: medium
 ---
 
@@ -149,7 +150,7 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 >
 > * Read receipts are supported only in user to bot chat scenarios.
 > * Read receipts for bots doesn’t support team, channel, and group chat scopes.
-> * If a tenant admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
+> * If an admin or a user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
 
 To receive read receipts events for your bot, ensure the following:
 
@@ -248,7 +249,7 @@ You can also add RSC permissions through Graph API. For more information, see [`
     
     ```
 
-* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user must enable or disable the read receipt setting.
+* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. An admin or the user must enable or disable the read receipt setting.
 
 After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
@@ -678,40 +679,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ## Send suggested actions
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
-
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-
-The following is an example for implementation and experience of suggested actions:
-
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
-```
-
-The following illustrates an example of suggested actions:
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to six suggested actions.
+[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
 
 ## Teams channel data
 
@@ -915,7 +883,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 |----------------|-----------------|-----------------|----------------|----------------|
 | 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Admin blocked interactions between user and the bot app. Admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot is added again.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
 | 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot isn't installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
@@ -943,6 +911,23 @@ The general retry guidance for each status code is listed in the following table
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
+
+## Request headers of the bot
+
+The current outgoing requests to the bot don't contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
+
+### Request header fields
+
+Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
+
+| Field key | Value |
+|----------------|-----------------|
+| x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
+| x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
+
+If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
+
+:::image type="content" source="../../../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
 
 ## Code sample
 
