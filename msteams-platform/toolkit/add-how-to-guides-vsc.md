@@ -1,11 +1,11 @@
 ---
 title: How-to Guides for Teams Apps
 author: surbhigupta
-description: Learn to add How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook Add-in capabilities.
+description: Learn to view How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, and Outlook Add-in capabilities.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 12/12/2024
+ms.date: 12/16/2024
 ---
 
 # How-to guides to Microsoft Teams app
