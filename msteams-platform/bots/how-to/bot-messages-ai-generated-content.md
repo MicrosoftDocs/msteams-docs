@@ -3,7 +3,7 @@ title: Bot Messages with AI-generated Content
 description: Learn how to format your bot with an AI label, sensitivity labels, citations, and feedback buttons built using Teams AI library or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 12/12/2024
+ms.date: 12/16/2024
 ---
 
 # Enhance AI-generated bot messages
