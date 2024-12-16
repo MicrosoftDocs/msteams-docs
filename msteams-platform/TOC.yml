@@ -64,71 +64,76 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-    displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
+    displayName: design principles, app capabilities, UI templates, UI kit, UI documentation
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
+    displayName: plan your app, design tools, design system, UI templates, design resources
   - name: Design system
     items:
     - name: Overview
       href: concepts/design/design-teams-app-fundamentals.md
-      displayName: icons, Font, Color 
+      displayName: design layout, icons, colors, content
     - name: Layout and scaling
       href: concepts/design/design-teams-app-layout-scaling.md
-      displayName: layout, scaling 
+      displayName: design layout, scaling, page orientation 
     - name: App icons for Teams Store and app bar
       href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: icons, Font, Color 
+      displayName: app icons, layout, design guidelines 
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork 
+      displayName: app templates, artwork, best practices 
     - name: Type
       href: concepts/design/design-teams-app-type.md
-      displayName: type 
+      displayName: font, scale, weight, usage 
     - name: Color
       href: concepts/design/design-teams-app-color.md
-      displayName: Color 
+      displayName: color guidelines, color palette, best practices 
     - name: Shape and elevation
       href: concepts/design/design-teams-app-shape-elevation.md
-      displayName: shape, elevation
+      displayName: shape, forms, best practices
   - name: App capabilities
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
-      displayName: best practices
+      displayName: personal app, meeting extensions, tabs, bots
     - name: Personal apps
       href: concepts/design/personal-apps.md
-      displayName: logo
+      displayName: personal app, UI templates, manage tabs
     - name: Tabs
       href: tabs/design/tabs.md
+      displayName: setup a tab, design tab, tab notifications, collaborate
     - name: Bots
       href: bots/design/bots.md
-      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
+      displayName: Teams UI kit, group chats, design your bot, use cases, manage a bot
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: commands      
+      displayName: message extension types, using an extension, managing extensions      
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+      displayName: design UI templates, use cases, in-meeting dialogues, shared meetings
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
+    displayName: dashboard, data visualization, filter data, mobile responsiveness 
   - name: UI components
     items:
     - name: Basic UI components
       href: concepts/design/design-teams-app-basic-ui-components.md
-      displayName: dropdown
+      displayName: UI basics, breadcrumb, hyperlinks
     - name: Advanced UI components
       href: concepts/design/design-teams-app-advanced-ui-components.md
+      displayName: use cases, stageview, mobile-friendly, desktop view
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
-      displayName: Adaptive Cards, Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards
+      displayName: adaptive card designer, adaptive card types, adaptive cards anatomy, best practices
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
-      displayname: Forms
+      displayname: design dialogs, design with UI templates, gallery, polls, best practices
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
-      displayName: hide page layout  
+      displayName: lightbox anatomy, component sizing, best practices  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
-      displayName: notify, notification
+      displayName: anatomy of notifications, types of notifications, feed notifications, system notifications
 - name: Tools and SDKs
   items:
   - name: Overview
