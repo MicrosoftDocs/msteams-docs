@@ -394,7 +394,7 @@
       displayName: configure your tab, tab settings, query strings, retrieve context, remove a tab
     - name: Create a removal page
       href: tabs/how-to/create-tab-pages/removal-page.md
-      displayName: reconfigure tab, tab removal, tab deletion process,  tab authentication
+      displayName: reconfigure tab, tab removal, tab deletion process, tab authentication
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
       displayName: mobile client testing, publish apps, handle app timeouts, unapproved apps
