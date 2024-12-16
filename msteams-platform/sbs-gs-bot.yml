@@ -5,7 +5,7 @@ metadata:
   description: With this learning module, you learn how to build Hello World app with JavaScript by setting up a new project with Teams Toolkit, build and deploy a bot app.
   audience: Developer
   level: Beginner
-  ms.date: 10/21/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: ~/toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
@@ -184,7 +184,7 @@ items:
     | `appPackage/` | Templates for the Teams application manifest. |
     | `adaptiveCards/` | The adaptive cards sent back by bot. |
     | `infra/` | Templates for provisioning Azure resources. |
-    | `index.js` | Application entry point and `restify` handler. |
+    | `index.js` | Application entry point and `express` handler. |
     | `teamsBot.js` | Teams activity handler. |
 
 
@@ -284,9 +284,15 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to upload the custom bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
+    1. Select **Add** to upload the custom bot app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the bot app to Teams.":::
+    
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 

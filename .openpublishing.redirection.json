@@ -931,7 +931,7 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
-      },
+      }, 
       {
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
         "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
@@ -1141,8 +1141,20 @@
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       },
       {
-        "source_path":"msteams-platform/messaging-extensions/build-bot-based-plugin.md",
-        "redirect_url":"/microsoftteams/platform/messaging-extensions/how-to/build-bot-based-agent"
+        "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      { 
+        "source_path": "msteams-platform/messaging-extensions/build-bot-based-plugin.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/build-bot-based-agent"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/plan-to-monetize.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md"
       },
       {
         "source_path": "msteams-platform/tabs/how-to/tab-navigation.md",
@@ -1150,15 +1162,51 @@
       },
       {
         "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+        "redirect_url": "/microsoftteams/platform/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/resources/partner-apps-for-moodle.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodle-overview#partner-apps-for-moodle"
+      },
+      {
+        "source_path": "msteams-platform/resources/media-formats.md",
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/request-headers-of-the-bot.md",
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/how-to/conversations/conversation-messages"
+      },
+      {  
+        "source_path": "msteams-platform/toolkit/teams-toolkit-tutorial.md", 
+        "redirect_url": "/microsoftteams/platform/get-started/teams-toolkit-tutorial"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-api-connection.md", 
+        "redirect_url": "/microsoftteams/platform/toolkit/add-resource"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-ai-library"
+      },
+      {  
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-with-rsc.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#receive-conversation-messages-with-rsc"
       }
     ]
 }
