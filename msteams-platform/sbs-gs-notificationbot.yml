@@ -5,7 +5,7 @@ metadata:
   description: Learn how to build a Teams notification bot using Teams Toolkit in Visual Studio Code to send notification messages in channel, group, or personal chats.
   audience: Developer
   level: Beginner
-  ms.date: 01/07/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
@@ -42,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Teams Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
    
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -67,7 +67,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
-    1. Select **HTTP Trigger Restify Server** as the trigger. 
+    1. Select **HTTP Trigger Express Server** as the trigger. 
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
@@ -114,7 +114,13 @@ items:
 
     1. Select **Add**.
     
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output1"border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
        Your notification bot app is uploaded into Teams client.
 
@@ -232,18 +238,17 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Teams Toolkit.":::
 
-        You get the following output in Teams.
+        A dialog appears in Teams to upload the app.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation":::
+    1. Select **Add**.
+    
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
-    1. Select **Add to a team** in the dropdown list.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation-add.png" alt-text="Screenshot shows the option to add the custom app in Teams.":::
-
-    1. In **Search box**, add any **channel**.
-    1. Select **Set up a bot**.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot":::
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
        The following screen appears:
 

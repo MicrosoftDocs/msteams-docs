@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 11/18/2024
+ms.date: 12/11/2024
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -31,17 +31,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 November**
+**2024 December**
 
-* ***November 19, 2024***: Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot.
-* ***November 18, 2024***: [Configure default landing capability for your bot or tab app to open your app with the default capability](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
-* ***November 07, 2024***: [Build responsive Container layouts in Adaptive Cards.](task-modules-and-cards/container-layouts.md)
-* ***November 07, 2024***: [Visually represent data with charts in Adaptive Cards.](task-modules-and-cards/cards/charts-in-adaptive-cards.md)
-* ***November 07, 2024***: [Add conditionally enabled action buttons in Adaptive Cards.](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons)
-* ***November 07, 2024***: [Media elements in Adaptive Cards.](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md)
-* ***November 07, 2024***: Create engaging Adaptive Cards with [borders and rounded corners](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards), [scrollable containers](task-modules-and-cards/cards/cards-format.md#scrollable-containers-in-adaptive-cards), [compound button](task-modules-and-cards/cards/cards-format.md#compound-button-in-adaptive-cards), [Icons](task-modules-and-cards/cards/cards-format.md#icons-in-adaptive-card), and [star ratings](task-modules-and-cards/cards/cards-format.md#ratings-in-adaptive-cards).
-* ***November 07, 2024***: [Build dependent inputs with typeahead search in Adaptive Cards.](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs)
-* ***November 07, 2024***: [Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards.](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection)
+* ***December 13, 2024***: [Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
+* ***December 11, 2024***: [Enhanced user experience for Teams app installed from Teams Store or custom upload.](concepts/deploy-and-publish/add-default-install-scope.md)
 
 :::column-end:::
 :::row-end:::
@@ -55,13 +48,23 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 27/11/2024 | Terminology update. **Copilot agent** is referred to as **agent**. |  |
+| 19/11/2024 | Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot. |  |
+| 18/11/2024 | Configure default landing capability for your bot or tab app to open your app with the default capability. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability) |
+| 07/11/2024 | Build responsive Container layouts in Adaptive Cards. | Build cards and dialogs > Build cards > [Container layouts in Adaptive Cards](task-modules-and-cards/container-layouts.md) |
+| 07/11/2024 | Visually represent data with charts in Adaptive Cards. | Build cards and dialogs > Build cards > [Charts in Adaptive Cards](task-modules-and-cards/cards/charts-in-adaptive-cards.md) |
+| 07/11/2024 | Add conditionally enabled action buttons in Adaptive Cards. | Build cards and dialogs > Build cards > [Card actions](task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons) |
+| 07/11/2024 | Media elements in Adaptive Cards. | Build cards and dialogs > Build cards > [Media elements in Adaptive Card](task-modules-and-cards/cards/media-elements-in-adaptive-cards.md) |
+| 07/11/2024 | Create engaging Adaptive Cards with borders and rounded corners, scrollable containers, compound button, Icons, and star ratings. | Build cards and dialogs > Build cards > [Borders and rounded corners](task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards), [scrollable containers](task-modules-and-cards/cards/cards-format.md#scrollable-containers-in-adaptive-cards), [compound button](task-modules-and-cards/cards/cards-format.md#compound-button-in-adaptive-cards), [Icons](task-modules-and-cards/cards/cards-format.md#icons-in-adaptive-card), and [star ratings](task-modules-and-cards/cards/cards-format.md#ratings-in-adaptive-cards) |
+| 07/11/2024 | Build dependent inputs with typeahead search in Adaptive Cards. | Build cards and dialogs > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md#dependent-inputs) |
+| 07/11/2024 | Use Adaptive Card templates to design visually appealing and actionable Adaptive Cards. | Design your app > UI components > [Adaptive Cards](task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection) |
 | 29/10/2024 | Share content to live and upcoming meetings with Share to Teams. | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 28/10/2024 | Enable API key and SSO authentication for your API-based message extension. | Add authentication > Enable authentication for API-based message extensions > [Overview](messaging-extensions/build-api-based-message-extension.md) |
 | 28/10/2024 | Update bot or message extension app to use certificate or MSI for authentication. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Develop your Teams app > [Use certificate or MSI for app authentication](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
 | 28/10/2024 | Debug apps in Teams desktop client to improve debugging performance and efficiency. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug in Teams desktop client](toolkit/debug-apps-in-Teams-desktop-client.md) |
 | 25/10/2024 | Introduced prompt suggestions for bots to create an engaging and insightful bot experience. | Build bots > Bot conversations > [Create prompt suggestions](bots/how-to/conversations/prompt-suggestions.md) |
 | 17/10/2024 | Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile. | App manifest > [App manifest](/microsoftteams/platform/resources/schema/manifest-schema) |
-| 17/10/2024 | Localize your Copilot agents. | Microsoft 365 Copilot extensibility > Work with the Copilot ecosystem > Agents are apps for Microsoft 365 > [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |
+| 17/10/2024 | Localize your agents. | Microsoft 365 Copilot extensibility > Work with the Copilot ecosystem > Agents are apps for Microsoft 365 > [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |
 | 17/10/2024 | Build a personal tab with offline functionality. | Build tabs > Create a tab > [Offline tabs](tabs/how-to/create-personal-tab.md#offline-tabs) |
 | 13/09/2024 | Use app analytics in Developer Portal to analyze your app usage metrics to gain valuable insights into how users interact with your app. | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze your apps usage in Developer Portal](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 26/08/2024 | Enhanced user experience for Teams app subscriptions purchased from Teams Store. | Monetize your app > Purchase and manage app subscriptions and licenses > [Subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience) |
@@ -74,8 +77,8 @@ Teams platform features that are available to all app developers.
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
 | 21/05/2024 | Introduced Assistants API to create powerful AI assistants capable of performing a variety of tasks. | Build bots > Teams AI library > [Overview](bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api) |
-| 21/05/2024 | Get started with the process of building apps with the Teams AI library using the LightBot sample. | Build bots > Teams AI library > [Quick start guide](bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md)|
-| 21/05/2024 | Introduced a step-by-step guide to build a custom engine agent to chat with your data using the Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom engine agent > [Build custom engine agent using Teams Toolkit](teams-ai-library-tutorial.yml)|
+| 21/05/2024 | Get started with the process of building apps with Teams AI library using the LightBot sample. | Build bots > Teams AI library > [Quick start guide](bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md)|
+| 21/05/2024 | Introduced a step-by-step guide to build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom engine agent > [Build custom engine agent using Teams Toolkit](teams-ai-library-tutorial.yml)|
 | 21/05/2024 | Use Live Share sessions to enable seamless collaboration in Teams meetings, chats, and channels. | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Live Share collaborative contexts](apps-in-teams-meetings/teams-live-share-overview.md#live-share-collaborative-contexts)|
 |17/05/2024|Deploy Teams app to container service.|Tools and SDKs > Teams Toolkit for Visual Studio Code > Host your app on Azure > [Deploy Teams app to container service](toolkit/deploy-Teams-app-to-container-service.md)|
 |12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > [Authentication](messaging-extensions/build-api-based-message-extension.md)|
@@ -433,6 +436,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 November**
 
+* ***November 19, 2024***: [Introduced optional `abbreviated` property for app display name on the app bar.](./resources/schema/manifest-schema-dev-preview.md#name)
 * ***November 18, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
 
 :::column-end:::
@@ -445,11 +449,11 @@ Developer preview is a public program that provides early access to unreleased T
 <summary><b>2024</b></summary>
 
 | **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
+| -------- | --------- | ---------------- |
 | 17/10/2024 | Learn about runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | Extend your app across Microsoft 365 > [Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
 | 17/10/2024 | Learn about copilotExtensions renamed to copilotAgents in developer preview app manifest. | App manifest > Public developer preview app manifest > [copilotAgents](resources/schema/manifest-schema-dev-preview.md#copilotagents) |
-| 16/09/2024 | Learn about requirements for the validation of your Copilot agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for Copilot agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
-| 16/09/2024 | Explore the development guidance to build Copilot agents. | Build message extensions > Bot Framework > Search commands > [Guidelines to create and upgrade Copilot agents](messaging-extensions/dev-guidelines-copilot-agents.md) |
+| 16/09/2024 | Learn about requirements for the validation of your agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
+| 16/09/2024 | Explore the development guidance to build agents. | Build message extensions > Bot Framework > Search commands > [Guidelines to create and upgrade agents](messaging-extensions/dev-guidelines-agents.md) |
 | 03/09/2024 | Introduced nested app authentication for single-page applications that are embedded in host environment. | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md)|
 | 14/06/2024 | Introduced preapproval of RSC permissions for admins to control RSC permissions for app installation. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md) |
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
@@ -471,7 +475,7 @@ Developer preview is a public program that provides early access to unreleased T
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |27/11/2023| Extend an action-based Teams message extension across Microsoft 365. | Extend your app across Microsoft 365 > [Extend m365 teams message extension](~/m365-apps/extend-m365-teams-message-extension.md)|
-|14/11/2023| Build a bot-based message extension and extend the message extension as agent for Microsoft 365 Copilot and also check the guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) and [Guidelines for Copilot agents](messaging-extensions/dev-guidelines-copilot-agents.md) |
+|14/11/2023| Build a bot-based message extension and extend the message extension as agent for Microsoft 365 Copilot and also check the guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) and [Guidelines for agents](messaging-extensions/dev-guidelines-agents.md) |
 |02/11/2023| Introduced Adaptive Card Previewer in public developer preview. | Tools > [Adaptive Card Previewer](concepts/build-and-test/adaptive-card-previewer.md)|
 |25/10/2023| Introduced the `extensions` property in public developer preview app manifest schema. | App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#extensions)|
 |25/10/2023| Build message extensions using API (API-based) to interact directly with third-party data, apps, and services. | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md)|
