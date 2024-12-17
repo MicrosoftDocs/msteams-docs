@@ -5,7 +5,7 @@ description: Learn to add How-to guides from Teams Toolkit in Visual Studio Code
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 12/12/2024
+ms.date: 12/17/2024
 ---
 
 # How-to guides to Microsoft Teams app

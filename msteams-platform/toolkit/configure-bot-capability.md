@@ -5,12 +5,10 @@ description: Learn how to configure the bot capability within a Teams app with M
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: reference
-nextTutorialHref: ~/toolkit/add-How-to-guides-v5.md
-nextTutorialTitle: Back to Add How-to guides to Microsoft Teams app
-ms.date: 12/12/2024
+ms.date: 12/17/2024
 ---
 
-# Configure bot capability within Teams app
+# Add bot capability to Teams app
 
 A bot, also known as a chatbot or conversational bot, is an app that responds to straightforward commands in a chat setting, providing relevant responses. Bots are commonly used for various tasks, such as notifying about build failures, supplying weather updates, bus schedules, or travel information. Bot interactions can range from simple question-and-answer exchanges to complex conversations. As a cloud application, a bot can offer secure and valuable access to cloud services and corporate resources. For more information, see [build bots for Microsoft Teams](../bots/what-are-bots.md).
 
@@ -38,7 +36,9 @@ To create a bot app using Teams Toolkit, see [create a bot app with Teams Toolki
 
 ## Configure bot in app manifest
 
-You can configure the bot capability in the `appPackage/manifest.json` file. For more information on how to configure the bot capability, see [app manifest schema](../resources/schema/manifest-schema.md#bots). The following code snippet is an example:
+You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+
+The following code snippet is an example:
 
 ```json
     "bots": [
@@ -76,7 +76,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
 
 ## Add bot code to your project
 
-1. Create a `bot/` folder in your project and copy the source code of the bot app into the folder. Your project's folder structure looks as follows:
+1. Create a `bot/` folder in your project and copy the source code of the bot app into the folder in Visual Studio Code. Your project's folder structure looks as follows:
 
    ```
        |-- .vscode/
@@ -257,7 +257,9 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
        ]
    ```
 
-1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code of the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
+1. Under the `teamsapp.local.yml` file:
+   1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
+   1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action as follows:
 
    ```yaml
     provision:
@@ -299,7 +301,7 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -403,7 +405,9 @@ You can configure the bot capability in the `appPackage/manifest.json` file. For
     }
    ```
 
-1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
+1. Under the `teamsapp.yml` file:
+   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
+   1. Under the `deploy` section, add the following code:
 
    ```yaml
     deploy:
@@ -466,7 +470,9 @@ To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-
 
 ## Update manifest file
 
-1. You can configure the bot capability in the `appPackage/manifest.json` file. For more information on how to configure the bot capability, see [app manifest schema](../resources/schema/manifest-schema.md#bots). The following code snippet is an example:
+1. You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+
+The following code snippet is an example:
 
    ```json
     "bots": [
@@ -504,7 +510,7 @@ To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-
 
 ## Add bot code to project
 
-1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class. The following code is an example of a message extension that contains functions from a bot app created in Teams Toolkit:
+1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class in Visual Studio Code. The following code is an example of a message extension that contains functions from a bot app created in Teams Toolkit:
 
    ```javascript
       public class YourHandler extends TeamsActivityHandler{
