@@ -11,12 +11,14 @@ ms.date: 10/19/2023
 # API-based message extension
 
 > [!NOTE]
-> API-based message extensions only support search commands.
+>
+> * API-based message extensions support only search commands.
+> * API-based message extensions aren't supported in Microsoft 365 Copilot. If you want to create API-based message extensions compatible with Microsoft 365 Copilot, see [API agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-api-plugins).
 
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration. API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With API-based message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma
+* Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
 </br>
@@ -581,3 +583,8 @@ The following data types in the OpenAPI description document are converted into 
 
 > [!div class="nextstepaction"]
 > [Build API-based message extension](build-api-based-message-extension.md)
+
+## See also
+
+* [Build a custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json)
+* [Build a declarative agent](/microsoft-365-copilot/extensibility/overview-declarative-agent)
