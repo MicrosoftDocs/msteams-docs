@@ -35,17 +35,17 @@ To enable SSO, configure your Teams app as follows:
 
 In the `./appPackages/manifest.json` file, add the following code:
 
-    ```json
-    "webApplicationInfo": {
-      "id": "${{AAD_APP_CLIENT_ID}}",
-      "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-    }
-    ```
+```json
+"webApplicationInfo": {
+  "id": "${{AAD_APP_CLIENT_ID}}",
+  "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+}
+```
 
 `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
 
-    > [!NOTE]
-    > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
+> [!NOTE]
+> You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
 ## Update Teams Toolkit configuration files
 
