@@ -106,7 +106,7 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
 
 ## Update source code
 
-After implementing the above changes, your environment is prepared. You can now update your code to incorporate SSO into your Teams app.
+With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams app.
 
 #### Vanilla JavaScript
 
@@ -258,7 +258,7 @@ Update Microsoft Entra-related configurations in your remote service. The follow
 
 To use the `teamsFx` tab or bot template, follow these steps:
 
-1. Open `infra/azure.parameters.json` file and add the following:
+1. Open the `infra/azure.parameters.json` file and add the following code:
 
     ```json
     "m365ClientId": {
@@ -319,7 +319,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
-   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
    1. Run the following command in `./` folder:
 
@@ -339,7 +339,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
       ```
 
-      The HTML pages used for auth redirect will be copied when building this bot project.
+      The HTML pages used for auth redirect are copied when building this bot project.
 
    1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
@@ -394,7 +394,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
-   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
    1. Update your `src/index` file to add the appropriate `restify`:
 
@@ -441,7 +441,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
       "build": "tsc --build && copyfiles ./public/*.html lib/",
       ```
 
-      The HTML pages used for auth redirect will be copied when building this bot project.
+      The HTML pages used for auth redirect are copied when building this bot project.
 
    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
