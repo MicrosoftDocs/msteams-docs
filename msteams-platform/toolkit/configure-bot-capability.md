@@ -25,7 +25,7 @@ To configure bot as an additional capability, ensure the following prerequisites
 The following steps help you to add bot to a tab app:
 
 * [Create bot app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit)
-* [Configure bot in app manifest](#configure-bot-capability-in-app-manifest)
+* [Configure bot capability in app manifest](#configure-bot-capability-in-app-manifest)
 * [Add bot code to your project](#add-bot-code-to-your-project)
 * [Setup local debug environment](#setup-local-debug-environment)
 * [Provision the app to Azure](#provision-the-app-to-azure)
@@ -470,7 +470,7 @@ To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-
 
 ## Update manifest file
 
-1. You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
 
 The following code snippet is an example:
 
