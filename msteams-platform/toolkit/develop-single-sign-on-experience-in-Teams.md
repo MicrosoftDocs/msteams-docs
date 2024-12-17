@@ -31,29 +31,29 @@ To enable SSO, configure as follows:
 
 1. Add the downloaded app manifest code to `./aad.manifest.json` file.
 
-This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+    This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Teams app manifest
 
-In the `./appPackages/manifest.json` file, add the following code:
+1. In the `./appPackages/manifest.json` file, add the following code:
 
-```json
-"webApplicationInfo": {
-  "id": "${{AAD_APP_CLIENT_ID}}",
-  "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-}
-```
+    ```json
+    "webApplicationInfo": {
+      "id": "${{AAD_APP_CLIENT_ID}}",
+      "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+    }
+    ```
 
-`webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+1. `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
 
-> [!NOTE]
-> You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
+    > [!NOTE]
+    > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
 ## Teams Toolkit configuration files
 
-Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update the required configurations related with Microsoft Entra in these files.
+1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update the required configurations related with Microsoft Entra in these files.
 
-* Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra app used for SSO. For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate):
+1. Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra app used for SSO. For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate):
   
     ```yaml
     - uses: aadApp/create
@@ -72,7 +72,7 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
     > [!NOTE]
     > Replace the `name` value with the desired name for your Teams app.
 
-* Add the following code `aadApp/update` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app. For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate):
+1. Add the following code `aadApp/update` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app. For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate):
 
     ```yaml
     - uses: aadApp/update
@@ -85,9 +85,9 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
     > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
     > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
 
-* For React project, update `cli/runNpmCommand` under `deploy`.
+1. For React project, update `cli/runNpmCommand` under `deploy`.
 
-* If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file. Then, add the following environment variable:
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file. Then, add the following environment variable:
 
     ```yml
     env:
@@ -95,7 +95,7 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
-* If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deploy in `teamsapp.local.yml` and add the following env:
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deploy in `teamsapp.local.yml` and add the following env:
 
     ```yml
     envs:
