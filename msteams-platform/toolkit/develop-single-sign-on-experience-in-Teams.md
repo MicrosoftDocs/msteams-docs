@@ -29,7 +29,7 @@ To enable SSO, configure your Teams app as follows:
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
 
-1. Add the downloaded app manifest code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Update Teams app manifest
 
@@ -89,7 +89,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 1. For a React project, update `cli/runNpmCommand` under `deploy`.
 
-1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file. Then, add the following environment variable:
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file and add the following environment variable:
 
     ```yaml
     env:
@@ -97,7 +97,7 @@ In the `./appPackages/manifest.json` file, add the following code:
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
-1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `teamsapp.local.yml` file and add the following environment:
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `teamsapp.local.yml` file and add the following environment variable:
 
     ```yaml
     envs:
@@ -112,7 +112,7 @@ With the above changes implemented, your environment is prepared. You can now up
 
 ### Vanilla JavaScript
 
-Use the following code to retrieve the SSO token and user information:
+For a tab app that doesn't uses React, use the following code as a basic example to obtain the SSO token:
 
 ```javascript
 function getSSOToken() {
@@ -136,7 +136,7 @@ function getBasicUserInfo() {
 
 For React projects, ensure the following environment variables are set in your deployment process:
 
-* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts/sso/InitTeamsFx.tsx#L12)
+* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
 
 * For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
@@ -151,7 +151,7 @@ To update your source code, follow these steps:
 
 1. Import and add `InitTeamsFx` in `Welcome.*`.
 
-For more information, see [sample app.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
 # [Bot/message extension app](#tab/message-extension-app)
 
@@ -159,7 +159,7 @@ For more information, see [sample app.](https://github.com/OfficeDev/teams-toolk
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
 
-1. Add the downloaded app manifest code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Update Teams app manifest
 
@@ -437,7 +437,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
       "build": "tsc --build && copyfiles ./public/*.html lib/",
       ```
 
-     The HTML pages used for auth redirect are copied when building this bot project.
+      The HTML pages used for auth redirect are copied when building this bot project.
 
    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
