@@ -10,6 +10,10 @@ ms.date: 12/17/2024
 
 # How-to guides for Microsoft Teams apps
 
+Microsoft Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
+
+## How-to guides for adding capabilities
+
 |**Capability** | **How-to Guide** |
 |----------|----------|
 | Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
