@@ -247,7 +247,7 @@ This allows you to customize different aspects of your app registration and upda
 
 ## Update Infra
 
-Update Microsoft Entra-related configurations in your remote service. The following example shows the configuration settings on an Azure web app:
+Update Microsoft Entra-related configurations in your remote service. The following example shows the configuration settings on an Azure Web App:
 
 * `M365_CLIENT_ID`: Microsoft Entra app client ID
 * `M365_CLIENT_SECRET`: Microsoft Entra app client secret
@@ -286,7 +286,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
     param m365ClientSecret string
     ```
 
-1. Add the following code before output:
+1. Add the following code before output in the `infra/azure.bicep` file:
 
     ```bicep
     resource webAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
@@ -307,7 +307,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
     > [!NOTE]
     >
-    > * To add additional configurations into your Azure web app, add the configurations in the `webAppSettings`.
+    > * To add additional configurations into your Azure Web App, add the configurations in the `webAppSettings`.
     > * You might also need to define the default node version by adding the following configuration:
         ```bash
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
@@ -465,7 +465,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 ## Debug your app
 
-Debug your app by pressing **F5**. Teams Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally.](debug-local.md)
+To debug your app, select the **F5** key. Teams Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally.](debug-local.md)
 
 ## Customize Microsoft Entra apps
 
