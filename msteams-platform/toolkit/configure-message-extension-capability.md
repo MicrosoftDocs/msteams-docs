@@ -310,7 +310,7 @@ The following code snippet is an example:
 
 1. Under the `teamsapp.local.yml` file:
    1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
-   1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action as follows:
+   1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action.
 
    ```yaml
    provision:
