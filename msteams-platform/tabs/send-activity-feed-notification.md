@@ -4,6 +4,7 @@ description: Learn how to send and customize activity feed notifications in chat
 author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.date: 12/17/2024
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
