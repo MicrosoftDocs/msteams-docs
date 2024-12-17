@@ -317,9 +317,9 @@ To use the `teamsFx` tab or bot template, follow these steps:
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
 
-## Update Source Code
+   ## Update Source Code
 
-# [Bot](#tab/bot)
+   # [Bot](#tab/bot)
 
    1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
@@ -331,70 +331,64 @@ To use the `teamsFx` tab or bot template, follow these steps:
       npm install copyfiles --save-dev
       ```
 
-   1. Replace the following command in `package.json` file:
+   1. Update the following command in `package.json` file:
 
-      ```json
-      "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
-      ```
-
-      With
-
-      ```json
-      "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
-      ```
+       ```json
+       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+       ```
 
       The HTML pages used for auth redirect are copied when building this bot project.
 
    1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
-      ```bash
-      require("isomorphic-fetch");
-      ```
+       ```bash
+        require("isomorphic-fetch");
+       ```
 
-      1. Add the following command to redirect to auth pages:
+   1. Add the following command to redirect to auth pages:
 
-      ```bash
-      server.get(
-         "/auth-:name(start|end).html",
-         restify.plugins.serveStatic({
-            directory: path.join(__dirname, "public"),
-         })
-      );
-      ```
+        ```bash
+        server.get(
+            "/auth-:name(start|end).html",
+            restify.plugins.serveStatic({
+              directory: path.join(__dirname, "public"),
+            })
+        );
+        ```
 
-      1. Update `commandApp.requestHandler` to ensure auth works with the following code:
+   1. Update `commandApp.requestHandler` to ensure auth works with the following code:
 
-      ```bash
-      await commandApp.requestHandler(req, res).catch((err) => {
-         // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
-         if (!err.message.includes("412")) {
-         throw err;
-         }
-      });
-      ```
+        ```bash
+        await commandApp.requestHandler(req, res).catch((err) => {
+            // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+            if (!err.message.includes("412")) {
+            throw err;
+            }
+        });
+        ```
 
-   1. Add `ssoConfig` and `ssoCommands` in conversation bot in `src/internal/initialize`:
+   1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
 
-      ```bash
-      import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
-      
-      export const commandBot = new ConversationBot({
-         ...
-         // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
-         ssoConfig: {
-         aad :{
-            scopes:["User.Read"],
-         },
-         },
-         command: {
-         enabled: true,
-         commands: [new HelloWorldCommandHandler() ],
-         ssoCommands: [new ProfileSsoCommandHandler()],
-         },
-      });
-      ```
+        ```bash
+        import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+        
+        export const commandBot = new ConversationBot({
+            ...
+            // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+            ssoConfig: {
+            aad :{
+              scopes:["User.Read"],
+            },
+            },
+            command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler() ],
+            ssoCommands: [new ProfileSsoCommandHandler()],
+            },
+        });
+        ```
 
-# [Messaging extension](#tab/messaging-extension)
+   # [Messaging extension](#tab/messaging-extension)
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
@@ -404,34 +398,32 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
       ```bash
       const path = require("path");
-      
+       
       // Listen for incoming requests.
       server.post("/api/messages", async (req, res) => {
-         await adapter.process(req, res, async (context) => {
-         await bot.run(context);
-         }).catch((err) => {
-         // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
-         if(!err.message.includes("412")) {
-               throw err;
+          await adapter.process(req, res, async (context) => {
+          await bot.run(context);
+          }).catch((err) => {
+          // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+          if(!err.message.includes("412")) {
+                throw err;
             }
-         })
+          })
       });
-      
+        
       server.get(
-         "/auth-:name(start|end).html",
-         restify.plugins.serveStatic({
-         directory: path.join(__dirname, "public"),
-         })
+          "/auth-:name(start|end).html",
+          restify.plugins.serveStatic({
+          directory: path.join(__dirname, "public"),
+          })
       );
       ```
 
-   1. Run the following command under `./` folder:
+   1. Run the following commands under `./` folder:
 
       ```bash
       npm install @microsoft/teamsfx
       ```
-
-   1. Run the following command under `./` folder:
 
       ```bash
       npm install isomorphic-fetch
@@ -439,31 +431,31 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
 
-   1. Install `copyfiles` npm packages in your TypeScript bot project, update the `build` script in `src/package.json` file as follows:
+   1. Install `copyfiles` npm packages in your TypeScript bot project and update the `build` script in `src/package.json` file as follows:
 
-      ```bash
+      ```json
       "build": "tsc --build && copyfiles ./public/*.html lib/",
       ```
 
-      The HTML pages used for auth redirect are copied when building this bot project.
+     The HTML pages used for auth redirect are copied when building this bot project.
 
    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
-      ```bash
+      ```json
       "requiredResourceAccess": [
-           {
-           "resourceAppId": "Microsoft Graph",
-           "resourceAccess": [
-                   {
-                       "id": "User.Read",
-                       "type": "Scope"
-                   }
-           ]
-           }
-       ]
+            {
+            "resourceAppId": "Microsoft Graph",
+            "resourceAccess": [
+                    {
+                        "id": "User.Read",
+                        "type": "Scope"
+                    }
+            ]
+            }
+        ]
       ```
 
-    ---
+   ---
 
 ---
 
