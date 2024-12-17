@@ -388,7 +388,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         });
         ```
 
-   # [Messaging extension](#tab/messaging-extension)
+   # [Message extension](#tab/messaging-extension)
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
