@@ -89,7 +89,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 1. For a React project, update `cli/runNpmCommand` under `deploy`.
 
-1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file and add the following environment variable:
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file and add the following environment variables:
 
     ```yaml
     env:
@@ -97,7 +97,7 @@ In the `./appPackages/manifest.json` file, add the following code:
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
-1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `teamsapp.local.yml` file and add the following environment variable:
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `teamsapp.local.yml` file and add the following environment variables:
 
     ```yaml
     envs:
