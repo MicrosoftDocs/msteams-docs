@@ -607,7 +607,7 @@ The following code snippet is an example:
 
 ### Add message extension code to project
 
-1. Your bot app contains a class that extends `TeamsActivityHandler`. Copy your message extension functions from the message extension app into this class. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
+1. Your bot app contains a class that extends `TeamsActivityHandler`. Copy your message extension functions from the message extension app into this class in Visual Studio Code. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
 
    ```javascript
      class YourHandler extends TeamsActivityHandler {
