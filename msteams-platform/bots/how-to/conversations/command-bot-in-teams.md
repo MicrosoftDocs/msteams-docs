@@ -24,7 +24,7 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 ## Command bot installation
 
-A command bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot.
+A command bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot:
 
 * To open the bot in personal scope, select **Open**.
 * To open the bot in a shared scope, select the required channel, chat, or meeting from the list, and move through the dialog to select **Go**.
