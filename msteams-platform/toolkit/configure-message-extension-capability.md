@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 12/17/2024
 ---
 
-# Configure message extension capability within Teams app
+# Add message extension capability to Teams app
 
 A message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
@@ -40,7 +40,9 @@ To create a message extension app with Teams Toolkit, see [create a message exte
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in the `appPackage/manifest.json` file. For more information on how to configure the message extension capability, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure the message extension capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions).
+
+The following code snippet is an example:
 
 ```json
 "composeExtensions": [
@@ -128,7 +130,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
 
 ### Add message extension code to your project
 
-1. Create a `bot/` folder in your tab project and copy the source code of the message extension app into the folder. Your project's folder structure looks as follows:
+1. Create a `bot/` folder in your tab project in Visual Studio Code. Copy the source code of the message extension app into the folder. Your project's folder structure looks as follows:
 
    ```
    |--.vscode/
@@ -306,7 +308,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
    ]
    ```
 
-1. Add the `botAadApp/create` and `botFramework/create` actions under `provision` in the `teamsapp.local.yml` file. Update the code of the `file/createOrUpdateEnvironmentFile` action under `deploy` as follows:
+1. Under the `teamsapp.local.yml` file:
+   1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
+   1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action as follows:
 
    ```yaml
    provision:
@@ -348,7 +352,7 @@ You can configure the message extension capability in the `appPackage/manifest.j
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -448,7 +452,9 @@ You can configure the message extension capability in the `appPackage/manifest.j
    }
    ```
 
-1. Add the `botAadApp/create` action under `provision` in the `teamsapp.yml` file. For more information, see the [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml). Add the following code under the `deploy` section:
+1. Under the `teamsapp.yml` file:
+   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
+   1. Under the `deploy` section, add the following code:
 
    ```yaml
    deploy:
@@ -511,7 +517,9 @@ To create a message extension app, see [create a message extension app with Team
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in `appPackage/manifest.json`. For more information on how to configure the message extension capability, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
+You can configure the message extension capability in `appPackage/manifest.json`. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions).
+
+The following code snippet is an example:
 
    ```json
    "composeExtensions": [

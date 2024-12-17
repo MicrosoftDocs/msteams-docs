@@ -12,7 +12,7 @@ ms.date: 12/17/2024
 
 Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app in a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-Before you start, we recommend that you create and go through a tab app. For more information on how to create a tab app, see [create tab app with Teams Toolkit](create-new-project.md).
+Before you start, we recommend that you create and go through a tab app. For more information, see [create tab app with Teams Toolkit](create-new-project.md).
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ The following steps help you to configure the tab capability in a Teams app:
 
 > [!TIP]
 > If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Teams Toolkit.
-For a complete example, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
+For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
 ### Update app manifest
 
@@ -67,7 +67,7 @@ For a complete example, see [sample app](https://github.com/OfficeDev/TeamsFx-Sa
 
 ### Setup local debug environment
 
-1. Bring your tab app code into your project. If you don't have one, you can [create a new tab app with Teams Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
+1. Bring your tab app code into your project in Visual Studio Code. If you don't have one, you can [create a new tab app with Teams Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
 
    ```
        |-- appPackage/
@@ -202,7 +202,7 @@ For a complete example, see [sample app](https://github.com/OfficeDev/TeamsFx-Sa
            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
    ```
 
-1. Select the **F5** key to debug your app locally in Visual Studio Code.
+1. Select the **F5** key to debug your app locally.
 
 ### Provision app to Azure
 
