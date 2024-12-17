@@ -1,37 +1,41 @@
 ---
-title: Develop Single Sign-on Experience in Teams
+title: Develop Single Sign-on Experience
 author: surbhigupta
-description: Learn how to develop single sign-on experience in Teams.
-ms.topic: overview
-ms.date: 11/12/2024
+description: Learn how to develop single sign-on experience in Teams app using Teams Toolkit.
+ms.topic: reference
+ms.date: 12/17/2024
 ms.localizationpriority: medium
 ---
 
-# Enable single sign-on for tab app
+# Enable single sign-on for Teams app
 
-Microsoft Teams allows an app to acquire the token of the signed-in Teams user. This token can be used to access Microsoft Graph and other APIs. Teams Toolkit streamlines the process by incorporating certain Microsoft Entra workflows and integrations into straightforward, high-level APIs. As a result, you can effortlessly incorporate single sign-on (SSO) capabilities into your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit streamlines the process by incorporating certain Microsoft Entra workflows and integrations into straightforward, high-level APIs. As a result, you can effortlessly incorporate single sign-on (SSO) capabilities into your Teams app. For more information, see [authenticate users in Microsoft Teams.](../concepts/authentication/authentication.md)
 
 ## Key configurations
 
 To enable SSO, configure as follows:
 
-* Microsoft Entra app manifest: Ensure to define URIs, including the URI that identifies the Microsoft Entra authentication app and the redirect URI that returns the token.
+* **Microsoft Entra app manifest**: Ensure to define URIs, including the URI that identifies the Microsoft Entra authentication app and the redirect URI that returns the token.
 
-* Teams app manifest: Connect your single sign-on (SSO) app to your Teams app by incorporating the correct configuration.
+* **Teams app manifest**: Connect your SSO app to your Teams app by incorporating the correct configuration.
 
-* Teams Toolkit configuration and infra files: Ensure the necessary configurations are in place to enable SSO for your Teams app.
+* **Teams Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams app.
 
-* Add SSO app information in Teams Toolkit configuration files: Ensure the authentication app registers on the backend service and the Teams Toolkit initiates it during the debugging or previewing of the Teams app.
+* **SSO app information in Teams Toolkit configuration files**: Ensure the authentication app registers on the backend service and Teams Toolkit initiates it during the debugging or previewing of the Teams app.
 
 # [Tab app](#tab/tab-app)
 
 ## Create Microsoft Entra app manifest
 
-Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
 
-## Update Teams app manifest
+1. Add the downloaded app manifest code to `./aad.manifest.json` file.
 
-In the `./appPackages/manifest.json` file, add the `webApplicationInfo` section to provide your Microsoft Entra app ID and Microsoft Graph information.
+This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+
+## Teams app manifest
+
+In the `./appPackages/manifest.json` file, add the following code:
 
 ```json
 "webApplicationInfo": {
@@ -39,6 +43,8 @@ In the `./appPackages/manifest.json` file, add the `webApplicationInfo` section 
   "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
 }
 ```
+
+`webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
 
 > [!NOTE]
 > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
@@ -77,11 +83,11 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
 
     > [!NOTE]
     > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
-    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is because `aad/update` utilizes the output from `file/createOrUpdateEnvironmentFile`.
+    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
 
 * For React project, update `cli/runNpmCommand` under `deploy`.
 
-* If you're building a tab app using the React framework, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file. Then, add the following environment variable:
+* If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file. Then, add the following environment variable:
 
     ```yml
     env:
@@ -143,17 +149,21 @@ To update your source code, follow these steps:
 
 1. Import and add `InitTeamsFx` in `Welcome.*`.
 
-For more information, see [sample.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+For more information, see [sample app.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
 # [Bot/message extension app](#tab/message-extension-app)
 
-## Create Microsoft Entra app manifest for bot/message extension app
+## Create Microsoft Entra app manifest
 
-Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json) to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
 
-## Update Teams app manifest for bot/message extension app
+1. Add the downloaded app manifest code to `./aad.manifest.json` file.
 
-* In the `./appPackages/manifest.json` file, add the `webApplicationInfo` section to provide your Microsoft Entra app ID and Microsoft Graph information.
+This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+
+## Update Teams app manifest
+
+1. In the `./appPackages/manifest.json` file, add the following code:
 
     ```json
     "webApplicationInfo": {
@@ -162,10 +172,12 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
     }
     ```
 
+    `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+
     > [!NOTE]
     > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
-* Register command in `commandLists`.
+1. Register command in `commandLists`.
 
     The `commandLists` includes commands that your bot can suggest to users. If you're using the `teamsFx` bot template, set the following values:
 
@@ -176,7 +188,7 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
     }
     ```
 
-* The `validDomains` field includes the legitimate domains for websites that the app anticipates loading within the Teams client. If you're using the `teamsFx` bot template, you can set the following values:
+1. The `validDomains` field includes the domains for websites that the app loads within the Teams client. Update the following values:
 
     ```bash
     "validDomains": [
@@ -184,11 +196,11 @@ Download the Microsoft Entra app manifest [template](https://github.com/OfficeDe
     ]
     ```
 
-## Teams Toolkit configuration files for bot/message extension app
+## Teams Toolkit configuration files
 
-Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml` Update necessary configurations related to Microsoft Entra into these files.
+1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update necessary configurations related to Microsoft Entra into these files.
 
-* Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra apps used for SSO. For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate):
+1. Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra apps used for SSO. For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate):
   
     ```yaml
     - uses: aadApp/create
@@ -208,7 +220,7 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
     > [!NOTE]
     > Replace the `name` value with the desired name for your Microsoft Teams app.
 
-* Add the following code `aadApp/update` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app. For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate):
+1. Add the following code `aadApp/update` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app. For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate):
 
     ```yaml
     - uses: aadApp/update
@@ -220,9 +232,9 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
     > [!NOTE]
     > Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
 
-* `file/createOrUpdateEnvironmentFile`: Locate the `createOrUpdateEnvironmentFile` action in `teamsapp.local.yml` file and add the following environment variables:
+1. Locate the `createOrUpdateEnvironmentFile` action in `teamsapp.local.yml` file and add the following environment variables:
 
-    ```yml
+    ```yaml
     envs:
       ...
       M365_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
@@ -235,20 +247,20 @@ Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./t
 
 ## Update Infra
 
-To set up Microsoft Teams related configurations, update in your remote service. The following example shows the config settings on an Azure Webapp.
+Update Microsoft Entra-related configurations in your remote service. The following example shows the configuration settings on an Azure web app:
 
-* M365_CLIENT_ID: Microsoft Entra app client ID.
-* M365_CLIENT_SECRET: Microsoft Entra app client secret.
-* M365_TENANT_ID: Tenant ID of Microsoft Entra app.
-* INITIATE_LOGIN_ENDPOINT: Login start page for authentication.
-* M365_AUTHORITY_HOST: Microsoft Entra app oauth authority host.
-* M365_APPLICATION_ID_URI: IdentifierUri for Microsoft Entra app.
+* `M365_CLIENT_ID`: Microsoft Entra app client ID
+* `M365_CLIENT_SECRET`: Microsoft Entra app client secret
+* `M365_TENANT_ID`: Tenant ID of Microsoft Entra app
+* `INITIATE_LOGIN_ENDPOINT`: Login start page for authentication
+* `M365_AUTHORITY_HOST`: Microsoft Entra app OAuth authority host
+* `M365_APPLICATION_ID_URI`: Identifier URI for Microsoft Entra app
 
 To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Open `infra/azure.parameters.json` file and add the following:
 
-    ```bash
+    ```json
     "m365ClientId": {
       "value": "${{AAD_APP_CLIENT_ID}}"
     },
@@ -265,7 +277,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Open `infra/azure.bicep` file, add the following code after `param location string = resourceGroup().location`:
 
-    ```bash
+    ```bicep
     param m365ClientId string
     param m365TenantId string
     param m365OauthAuthorityHost string
@@ -276,7 +288,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 1. Add the following code before output:
 
-    ```bash
+    ```bicep
     resource webAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
       name: '${webAppName}/appsettings'
       properties: {
@@ -295,19 +307,19 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
     > [!NOTE]
     >
-    > * To add additional configurations into your Azure Webapp, add the configurations in the `webAppSettings`.
+    > * To add additional configurations into your Azure web app, add the configurations in the `webAppSettings`.
     > * You might also need to define the default node version by adding the following configuration:
         ```bash
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
 
-   ## Update Source Code for bot/message extension app
+   ## Update Source Code
 
    # [Bot](#tab/bot)
 
    1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
-   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages by Microsoft Entra.
+   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
    1. Run the following command in `./` folder:
 
@@ -317,13 +329,13 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Replace the following command in `package.json` file:
 
-      ```bash
+      ```json
       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
       ```
 
       With
 
-      ```bash
+      ```json
       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
       ```
 
@@ -346,7 +358,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
       );
       ```
 
-      1. update `commandApp.requestHandler` to make auth works with the following code:
+      1. Update `commandApp.requestHandler` to ensure auth works with the following code:
 
       ```bash
       await commandApp.requestHandler(req, res).catch((err) => {
@@ -382,7 +394,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
 
-   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages by Microsoft Entra.
+   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. When initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
    1. Update your `src/index` file to add the appropriate `restify`:
 
@@ -423,7 +435,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
 
-   1. Install `copyfiles` npm packages in your TypeScript bot project, add, or update the `build` script in `src/package.json` file as follows:
+   1. Install `copyfiles` npm packages in your TypeScript bot project, update the `build` script in `src/package.json` file as follows:
 
       ```bash
       "build": "tsc --build && copyfiles ./public/*.html lib/",
@@ -451,9 +463,9 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 ---
 
-## Debug Your Application
+## Debug your app
 
-You can debug your app by pressing F5. Teams Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app For more information, see [debug your Teams app locally.](debug-local.md)
+Debug your app by pressing **F5**. Teams Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally.](debug-local.md)
 
 ## Customize Microsoft Entra apps
 
