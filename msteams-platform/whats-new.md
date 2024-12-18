@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 December**
 
+* ***December 18, 2024***: Introducing [share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) and [text customization for share to stage button](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis).
 * ***December 16, 2024***: [Introducing multi parameters for API-based message extensions which allows more than one input type for query command](messaging-extensions/create-api-message-extension.md#multi-parameters).
 * ***December 13, 2024***: [Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
 * ***December 11, 2024***: [Enhanced user experience for Teams app installed from Teams Store or custom upload.](concepts/deploy-and-publish/add-default-install-scope.md)
