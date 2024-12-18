@@ -348,7 +348,7 @@ Bot responses might contain confidential information or be accessible only to ce
 
 ### Add sensitivity label
 
-For bots built using **Teams AI library**, sensitivity label can be added through `PredictedSayCommand` action. For more information, see [SensitivityUsageInfo interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/actions/SayCommand.ts#L107).
+For bots built using **Teams AI library**, sensitivity label can be added through `PredictedSayCommand` action. For more information, see [SensitivityUsageInfo interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/types/AIEntity.ts#L46).
 
 For bots built using **Bot Framework SDK**, add a sensitivity label to your bot message by modifying the message to include `usageInfo` in the `entities` object.
 
