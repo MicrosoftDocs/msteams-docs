@@ -110,10 +110,10 @@ After you enable Share to Teams button on personal app or tab, you can share the
 
 ## Share to meeting from personal app
 
-Teams enables you to share personal apps to meeting stage quickly using the **Present now** button. This button is available by default in all personal tab apps and doesn't require any developer implementation.
+Teams enables you to share personal apps to meeting stage quickly using the **Present now** button. This button is available by default in all personal tab apps and doesn't require any developer implementation. Here are the two scenarios when you select **Present now**:
 
 * If there's an ongoing meeting, the personal app is shared on the meeting stage of the Teams desktop client.
-* If there's no ongoing meeting, a Meet now instance is launched in a new window.
+* If there's no ongoing meeting, a meet now instance is launched in a new window.
 
     :::image type="content" source="../../assets/images/personal-apps/present-now-personal-app.png" alt-text="Screenshot of the Present now button in a personal app.":::
 
