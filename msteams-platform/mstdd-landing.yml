@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
       - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
         url: messaging-extensions/build-bot-based-agent.md
       - text: New app installation flow for Teams app installed from Teams Store or custom upload
@@ -79,8 +81,6 @@ landingContent:
         url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
       - text: Build dependent inputs with typeahead search in Adaptive Cards
         url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
-      - text: Introduced Adaptive Card templates
-        url: task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection
 
     - linkListType: reference
       links:

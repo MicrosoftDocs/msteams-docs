@@ -829,7 +829,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** &ndash; String
 
-Specifies the install scope defined for this app by default. The default install scope is denoted with a Recommended option adjacent to the corresponding scope in the scope selection dialog, after the user adds the app. The options are:
+Specifies the install scope defined for this app by default. The default install scope is denoted with a **Recommended** option adjacent to the corresponding scope in the scope selection dialog, after the user adds the app. The options are:
 
 * `personal`
 * `team`
