@@ -1203,6 +1203,10 @@
       {
         "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
       }
     ]
 }
