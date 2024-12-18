@@ -61,11 +61,14 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
 1. Select **Import**.
 
-   * Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
+   * If you import an app that is already published in [Teams admin center](https://admin.teams.microsoft.com/) and registered in Developer Portal, the portal creates a duplicate app with a new, unique app ID. You can’t edit or provide an ID of your choice, which prevents duplicate app IDs for multiple apps. You're the sole owner of the duplicate app and it isn't related to the previously registered app in any way.
+   * You can't import or take ownership of an app that is already published in Teams admin center but isn't registered in Developer Portal.
    * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in Developer Portal.
    * You can import an existing app to Developer Portal that was created in App Studio. If an app in your tenant doesn't have an owner, the Teams Administrator or Global Administrator can take ownership of the app from Developer Portal for Teams.
 
      :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
+
+For more information about how admins can import and take ownership of apps in Developer Portal, see [manage Microsoft Teams app ownership in Developer Portal](/microsoftteams/app-ownership-developer-portal).
 
 #### Steps to import a published app that's not registered in Developer Portal
 
