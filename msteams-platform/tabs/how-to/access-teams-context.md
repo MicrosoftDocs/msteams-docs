@@ -48,8 +48,9 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
 
 > [!NOTE]
-> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
-> - Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
+>
+> * The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
+> * Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
@@ -225,6 +226,7 @@ async function example() {
   /*...*/
 }
 ```
+
 # [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
 ## TypeScript
