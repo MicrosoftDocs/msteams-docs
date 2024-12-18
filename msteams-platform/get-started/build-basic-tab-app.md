@@ -2,7 +2,7 @@
 title: Create Basic Tab App
 description: Learn how to build your basic tab app in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: high
-ms.date: 06/07/2023
+ms.date: 12/11/2024
 ms.topic: reference
 ---
 
@@ -61,11 +61,17 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
    GitHub Codespaces builds your tab app, loads it to Teams client, and opens it in a separate browser tab.
 
-1. When the app dialog appears, select **Add** to install your tab app in Teams.
+1. Select **Add** to install your tab app in Teams.
 
-   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows you the tab app loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot of the app details dialog to install the tab app in Teams.":::
 
-   The tab app is installed in the Teams client and opens.
+   When the tab app is added, a dialog appears where you can select the scope to use your app.
+
+1. Select **Open** to open the app in personal scope. 
+
+    Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../assets/images/get-started/tab-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog with the options to open the app from the list of suggested scopes.":::
 
    You've successfully created the tab app and loaded in the Teams client.
 
