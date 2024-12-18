@@ -21,7 +21,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
-* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#configuration-response).
+* [Request the user to provide additional configuration](~/messaging-extensions/how-to/search-commands/respond-to-search.md#config-response-type).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
