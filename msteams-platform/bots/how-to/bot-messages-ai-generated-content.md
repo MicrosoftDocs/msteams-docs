@@ -64,6 +64,7 @@ The following screenshots show how bot messages can be enhanced with AI label, c
 
 > [!NOTE]
 >
+> * AI label, citation, feedback button, and sensitivity label are available for bots in personal chats, group chats, and channels.
 > * AI label, citation, feedback button, and sensitivity label are available in Teams web, desktop, and mobile clients.
 > * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
@@ -111,7 +112,24 @@ After you add an AI label, your bot's message shows an **AI generated** label ne
 
 Citing sources in bot messages helps users ask follow-up questions or conduct independent research. Cite data sources like files, messages, emails, and work items to provide valuable insights. Citations are crucial for bots using techniques like Retrieval-Augmented Generation (RAG).
 
-:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI-powered bot response with in-text citation.":::
+:::row:::
+:::column span="2":::
+
+**Citations**
+
+::::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI-powered bot response with citations." lightbox="../../assets/images/bots/ai-bot-inline-citation.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**Modal window with additional content**
+
+:::image type="content" source="../../assets/images/bots/ai-bot-citation-adaptive-card.png" border="false" alt-text="Screenshot shows a modal window pop-up from a citation in an AI-powered bot message." lightbox="../../assets/images/bots/ai-bot-citation-adaptive-card.png":::
+
+:::column-end:::
+
+:::row-end:::
 
 Citations in your bot's messages can include the following:
 
