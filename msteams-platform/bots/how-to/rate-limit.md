@@ -95,7 +95,7 @@ The following code shows an example of exponential backoff:
 * The second parameter specifies the minimum and maximum backoff time respectively.
 * The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
 */
-var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSeconds(2),
+var exponentialBackoffRetryStrategy = new ExponentialBackoffRetryStrategy(3, TimeSpan.FromSeconds(2),
                         TimeSpan.FromSeconds(20), TimeSpan.FromSeconds(1));
 
 
@@ -122,7 +122,7 @@ The per bot per thread limit controls the traffic that a bot is allowed to gener
 >
 > * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user.
 > * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
-> * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
+> * Message splitting at the service level results in higher than expected RPS. If you're concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
 The following table provides the per bot per thread limits:
 
@@ -146,7 +146,7 @@ The following table provides the per bot per thread limits:
 | Get conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They are throttled to five requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
+> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They're throttled to five requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
 
 You can also handle rate limit using the per thread limit for all bots.
 
