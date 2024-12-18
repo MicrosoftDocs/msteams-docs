@@ -1211,6 +1211,10 @@
       {
         "source_path": "msteams-platform/bots/bot-basics.md",
         "redirect_url": "/microsoftteams/platform/platform/bots/bot-concepts"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
       }
     ]
 }
