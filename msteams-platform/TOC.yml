@@ -199,7 +199,7 @@
           items:    
           - name: Provision cloud resources
             href: toolkit/provision.md
-          - name: Deploy to the cloud
+          - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
             href: toolkit/deploy-Teams-app-to-container-service.md           
@@ -227,44 +227,44 @@
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Install Teams Toolkit
+      - name: Teams Toolkit Installation
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
-      - name: Explore Teams Toolkit
+      - name: Know about Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Get started with Toolkit for VS
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create your app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
-        - name: Create a new Teams app project
+        - name: New Teams app project using VS
           href: toolkit/toolkit-v4/create-new-project-vs.md
-        - name: Develop your Teams app
+        - name: Develop your app using VS
           items: 
-          - name: Add single sign-on to Teams app
+          - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
-        - name: Customize Manifest
+        - name: Customize app manifest
           items:
-          - name: Customize Teams app Manifest
+          - name: Customize app manifest for VS
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-          - name: Debug bot using Teams App Test Tool
+          - name: Debug bot with Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
             displayName: Mock activity, custom activity, predefined activity
-          - name: Debug your Teams app locally
+          - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
-        - name: Host your app on Azure
+        - name: Host your app in Azure
           items:    
-          - name: Provision cloud resources
+          - name: Provision cloud resources in VS
             href: toolkit/toolkit-v4/provision-vs.md
-          - name: Deploy to the cloud
+          - name: Deploy to cloud with VS
             href: toolkit/toolkit-v4/deploy-vs.md            
       - name: Migrate Teams Toolkit project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
