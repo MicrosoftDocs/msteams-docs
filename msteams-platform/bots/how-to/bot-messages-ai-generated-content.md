@@ -18,13 +18,47 @@ AI label, citation, feedback buttons, and sensitivity label in your bot’s mess
 
 The following screenshots show how bot messages can be enhanced with AI label, citation, feedback buttons, and sensitivity label:
 
-# [Before](#tab/before)
+# [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/bots/ai-bot-no-features.png" border="false" alt-text="Screenshot shows a bot message with no AI label, citation, feedback buttons, and sensitivity label.":::
+:::row:::
+:::column span="2":::
 
-# [After](#tab/after)
+**Before**
 
-:::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows a bot message with AI label, citation, feedback buttons, and sensitivity label.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-no-features-desktop.png" border="false" alt-text="Screenshot shows a bot message with no AI label, citation, feedback buttons, and sensitivity label." lightbox="../../assets/images/bots/ai-bot-no-features-desktop.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**After**
+
+:::image type="content" source="../../assets/images/bots/ai-bot-message-desktop.png" border="false" alt-text="Screenshot shows a bot message with AI label, citation, feedback buttons, and sensitivity label in Teams desktop client." lightbox="../../assets/images/bots/ai-bot-message-desktop.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+# [Mobile](#tab/mobile)
+
+:::row:::
+:::column span="2":::
+
+**Before**
+
+:::image type="content" source="../../assets/images/bots/ai-bot-no-features-mobile.png" border="false" alt-text="Screenshot shows a bot message with no AI label, citation, feedback buttons, and sensitivity label in Teams mobile client." lightbox="../../assets/images/bots/ai-bot-no-features-mobile.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**After**
+
+:::image type="content" source="../../assets/images/bots/ai-bot-message-mobile.png" border="false" alt-text="Screenshot shows a bot message with AI label, citation, feedback buttons, and sensitivity label in Teams mobile client." lightbox="../../assets/images/bots/ai-bot-message-mobile.png":::
+
+:::column-end:::
+
+:::row-end:::
 
 ---
 
@@ -89,12 +123,12 @@ Citations in your bot's messages can include the following:
 > [!NOTE]
 >
 > * A maximum of 20 citations are displayed in a message.
-> * Citations with Adaptive Cards are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Citations with Adaptive Cards are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the bot's message or in the citation's modal window accessible from the pop-up window.
 
 ### Add citations
 
-If you're using **Teams AI library** to build your bot, citations are added to an AI-powered bot message automatically through `PredictedSayCommand` action. You can also modify the `PredictedSayCommand` action to add citations to your bot message. For more information, see [ClientCitation interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/actions/SayCommand.ts#L46).
+If you're using **Teams AI library** to build your bot, citations are added to an AI-powered bot message automatically through `PredictedSayCommand` action. You can also modify the `PredictedSayCommand` action to add citations to your bot message. For more information, see [ClientCitation interface](https://github.com/microsoft/teams-ai/blob/main/js/packages/teams-ai/src/actions/SayCommand.ts#L42).
 
 If you're using **Bot Framework SDK** to build your bot, include `citation` under the `entities` array. Following is an example code snippet:
 
@@ -168,9 +202,12 @@ Feedback buttons in bot messages are essential for tracking user engagement, ide
 
 When the user selects a feedback button, a feedback form appears based on the user's selection. You can either use the default feedback form or customize it to suit your app's needs.
 
+> [!NOTE]
+> Customizable feedback forms are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
-Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user chooses. You can collect feedback on bot responses from one-on-one and group chats.
+Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user chooses. You can collect feedback on bot responses from one-on-one and group chats.
 
 ### Add feedback buttons
 
@@ -228,12 +265,12 @@ You must respond to this invoke call with a dialog (referred to as task modules 
 The bot receives user input from the feedback form through a bot invoke flow. For bots built using **Teams AI library**, the bot invoke request is automatically handled. To handle feedback, use the `app.feedbackLoop` method to register a feedback loop handler to be called when the user provides feedback.
 
 ```javascript
-app.feedbackLoop(async (context, state, feedbackLoopData) => {
+app.feedbackLoop(async (_context: TurnContext, _state: TurnState, feedbackLoopData: FeedbackLoopData) => {
   // custom logic here...
 });
 ```
 
-For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L95).
+For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L111).
 
 For a bot built using **Bot Framework SDK**, you must have an `onInvokeActivity` handler to process the feedback. Ensure that you return a status code `200` with an empty JSON object as a response.
 
