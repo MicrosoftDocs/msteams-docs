@@ -98,9 +98,9 @@
     - name: Personal apps
       href: concepts/design/personal-apps.md
       displayName: logo
-    - name: Tabs
+    - name: Design tab for Teams
       href: tabs/design/tabs.md
-    - name: Bots
+    - name: Design bot for Teams
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
@@ -141,20 +141,20 @@
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
-      - name: Install Teams Toolkit
+      - name: Install Toolkit for VSC
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
-      - name: Explore Teams Toolkit
+      - name: Explore Toolkit for VSC
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Prepare to build apps
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create apps
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
-        - name: Create a new Teams app project
+        - name: New Teams app project using VSC
           href: toolkit/create-new-project.md
-        - name: Develop your Teams app
+        - name: Develop your app using VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
@@ -164,40 +164,40 @@
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
-          - name: Add single sign-on to Teams app
+          - name: Add SSO for Teams app using VSC
             href: toolkit/add-single-sign-on.md
           - name: Using existing Microsoft Entra app in TeamsFx project
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
             displayName: MSI, certificate, bot, message extension, authentication
-        - name: Customize Manifest
+        - name: Customize Teams app manifest
           items:
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
-        - name: Debug your Teams app
+        - name: Debug your app
           items:
           - name: Overview
             href: toolkit/debug-overview.md
-          - name: Debug bot using Teams App Test Tool
+          - name: Debug using Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
             href: toolkit/debug-message-extension-app-in-test-tool.md            
-          - name: Debug your Teams app locally
+          - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
             displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
-          - name: Debug background process
+          - name: Debug process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
             href: toolkit/debug-mobile.md        
-        - name: Host your app on Azure
+        - name: Host your Teams app in Azure
           items:    
-          - name: Provision cloud resources
+          - name: Provision cloud resources in VSC
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
@@ -352,7 +352,7 @@
           href: resources/bot-v3/bots-test.md
       - name: Message extensions SDK (v3)
         items:
-        - name: Message extensions SDK (v3)
+        - name: Message extensions SDK overview
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
@@ -612,11 +612,11 @@
       displayName: Loop, Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets
     - name: Getting started
       items:
-      - name: Quick start guide
+      - name: Get started with Actions in Microsoft 365
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
-    - name: Core capabilities
+    - name: Live share capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
       displayName: Live Share data structures, broadcast
     - name: Media synchronization
@@ -729,10 +729,10 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Configure your tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Add code to enable SSO
+      - name: Add code to enable SSO for tab
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
-      - name: Update app manifest for SSO and preview app
+      - name: Preview and update app manifest for SSO
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
@@ -744,7 +744,7 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest for SSO and preview app
+      - name: SSO app manifest update and preview
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
@@ -892,7 +892,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Quick start guide
+      - name: Live Share quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
@@ -913,11 +913,11 @@
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
     displayName: Allow users to upload apps
-  - name: Tabs
+  - name: Test yout tab
     items:
     - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
-  - name: Bots
+  - name: Test your bot
     items:
     - name: Test and debug your bot locally with IDE
       displayName: Bot Emulator
