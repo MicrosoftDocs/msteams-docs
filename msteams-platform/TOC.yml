@@ -158,9 +158,9 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create How-to Guides
+          - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app 
+            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
@@ -575,7 +575,7 @@
       displayName: anonymous
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
+      displayName: apps for meeting, share content, share to stage APIs, in-meeting document signing, meeting side panel, customize share button
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification and app icon badging
@@ -1092,6 +1092,7 @@
       displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      displayName: share to meeting, personal app
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
