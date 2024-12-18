@@ -157,9 +157,9 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create How-to Guides
+          - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app 
+            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint

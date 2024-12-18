@@ -113,7 +113,7 @@ From the task pane, you can see the following sections:
         
         * **Deploy**: Deploy the source code to Azure.
        
-        * **Publish**: Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
+        * **Publish**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
    :::column-end:::
 :::row-end:::
 
