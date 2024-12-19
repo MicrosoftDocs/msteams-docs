@@ -96,7 +96,7 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `additionalType` | Array | Yes | Enables the AI label in the bot message. <br> Allowed value: `AIGeneratedContent`. |
+| `additionalType` | Array | Yes | Enables AI label in the bot message.<br>Allowed value: `AIGeneratedContent` |
 
 After you add an AI label, your bot's message shows an **AI generated** label next to the bot's name. When you hover over the AI label, a disclaimer appears stating, **AI-generated content may be incorrect.**. The AI label and disclaimer can't be customized for AI-powered bots.
 
@@ -104,8 +104,8 @@ After you add an AI label, your bot's message shows an **AI generated** label ne
 
 | Error code | Description |
 | --- | --- |
-| 400 | Multiple root message entities found under `entities` array |
-| 400 | Error parsing message entity from `entities` array |
+| 400 | Multiple root message entities found under `entities` array. |
+| 400 | Error parsing message entity from `entities` array. |
 
 ## Citations
 
@@ -205,11 +205,11 @@ After you enable citations, the bot message includes in-text citations and refer
 
 | Error code | Description |
 | --- | --- |
-| 400 | Multiple root message entities found under `entities` array |
-| 400 | Error parsing message entity from `entities` array |
-| 400 | Bot message with more than 20 citations |
-| 400 | The `appearance` object is empty |
-| 400 | Error while parsing citation entity with ID: X |
+| 400 | Multiple root message entities found under `entities` array. |
+| 400 | Error parsing message entity from `entities` array. |
+| 400 | Bot message with more than 20 citations. |
+| 400 | The `appearance` object is empty. |
+| 400 | Error while parsing citation entity with ID: X. |
 
 ## Feedback buttons
 
@@ -219,12 +219,12 @@ Feedback buttons in bot messages are essential for tracking user engagement, ide
 
 When the user selects a feedback button, a feedback form appears based on the user's selection. You can either use the default feedback form or customize it to suit your app's needs.
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the default feedback form in a bot.":::
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user chooses.
+Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user selects.
 
 ### Add feedback buttons
 
@@ -335,7 +335,7 @@ If a user uninstalls your bot and still has access to the bot chat, Teams remove
 
 | Error code | Description |
 | --- | --- |
-| 400 | `message/submitAction` invoke response isn't empty |
+| 400 | `message/submitAction` invoke response isn't empty. |
 
 ## Sensitivity label
 
@@ -428,10 +428,10 @@ After you add the sensitivity label, your bot message displays a shield icon. Us
 
 | Error code | Description |
 | --- | --- |
-| 400 | Multiple root message entities found under `entities` array |
-| 400 | Error parsing message entity from `entities` array |
-| 400 | Citation level `usageInfo.@id` value doesn't match the message level `usageInfo.@id` in at least one instance |
-| 400 | There are multiple citation-level `usageInfo` properties with the same `@id`, but their `name` and `description` properties are different |
+| 400 | Multiple root message entities found under `entities` array. |
+| 400 | Error parsing message entity from `entities` array. |
+| 400 | Citation level `usageInfo.@id` value doesn't match the message level `usageInfo.@id` in at least one instance. |
+| 400 | There are multiple citation-level `usageInfo` properties with the same `@id`, but their `name` and `description` properties are different. |
 
 ## Modify `PredictedSayCommand`
 
