@@ -102,12 +102,12 @@ for (const target of await notificationApp.notification.installations()) {
 
 ## Notification bot installation
 
-A notification bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot.
+A notification bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot:
 
 * To open the bot in personal scope, select **Open**.
 * To open the bot in a shared scope, select the required channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-:::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
+    :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
