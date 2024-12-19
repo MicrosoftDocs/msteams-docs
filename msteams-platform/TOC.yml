@@ -33,7 +33,6 @@
     href: get-started/build-message-extension.md
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
- 
 - name: Plan your app
   items:
   - name: Overview
@@ -570,11 +569,14 @@
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
-  - name: Enable and configure apps for Teams meetings
+  - name: Enable and configure apps for Teams meetings and calls
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
       displayName: anonymous
+    - name: Build tabs for calling
+      href: apps-in-teams-meetings/build-tabs-for-calling.md
+      displayName: PSTN, calling extensibility, calls in Teams
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: apps for meeting, share content, share to stage APIs, in-meeting document signing, meeting side panel, customize share button
