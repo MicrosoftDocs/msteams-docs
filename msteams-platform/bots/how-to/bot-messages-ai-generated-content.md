@@ -335,7 +335,7 @@ If a user uninstalls your bot and still has access to the bot chat, Teams remove
 
 | Error code | Description |
 | --- | --- |
-| 400 | `message/submitAction` invoke response isn't empty. |
+| 400 | `message/submitAction` invoke response isn't empty |
 
 ## Sensitivity label
 
@@ -431,7 +431,7 @@ After you add the sensitivity label, your bot message displays a shield icon. Us
 | 400 | Multiple root message entities found under `entities` array |
 | 400 | Error parsing message entity from `entities` array |
 | 400 | Citation level `usageInfo.@id` value doesn't match the message level `usageInfo.@id` in at least one instance |
-| 400 | There are multiple citation-level `usageInfo` properties with the same `@id`, but their `name` and `description` properties are different. |
+| 400 | There are multiple citation-level `usageInfo` properties with the same `@id`, but their `name` and `description` properties are different |
 
 ## Modify `PredictedSayCommand`
 
