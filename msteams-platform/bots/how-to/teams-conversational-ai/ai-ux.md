@@ -15,7 +15,7 @@ A custom engine agent transforms system interactions. For developers, creating a
 - **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.
 - **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
 
-To achieve this, you must follow mandatory requirements and best practices.
+To achieve this, you must follow mandatory requirements and best practices. For more information, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
 ## Ensure mandatory requirements for custom engine agent
 
