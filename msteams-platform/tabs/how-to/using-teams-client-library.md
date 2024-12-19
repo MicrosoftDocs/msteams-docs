@@ -7,7 +7,7 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
-ms.date: 12/12/2024
+ms.date: 12/19/2024
 ---
 
 # Teams JavaScript client library
@@ -31,11 +31,11 @@ TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run acro
 
 ### Improve load time performance with JavaScript tree shaking
 
-Starting with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
+From version 2.31.0 and later, the TeamsJS library is fully tree-shakable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
 
 #### How to use tree shaking with TeamsJS
 
-Taking advantage of tree shaking when you bundle your app package just requires a bundler, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking), that supports tree shaking. When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
+To take advantage of tree shaking when you bundle your app package, use a bundler that supports tree shaking, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking). When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
 
 ```typescript
 export function scanBarCode(barCodeConfig: BarCodeConfig): Promise<string> {
@@ -60,7 +60,7 @@ Assume the **barCode** module in TeamsJS contains the four functions `hasPermiss
 > [!IMPORTANT]
 > When using tree shaking, keep in mind the following considerations:
 >
-> 1. If your app uses the CDN to consume the TeamsJS library, then the library version used is not tree shakable.
+> 1. If your app uses CDN to consume the TeamsJS library, then the library version used isn't tree-shakable.
 > 1. The TeamsJS library type was changed from UMD (Universal Module Definition) to ESM (ECMAScript Modules) in order to support tree shaking. However, the UMD version is still offered. If a bundler supports ESM the tree-shakable ESM package of TeamsJS is used, otherwise the UMD package is used.
 
 ## What's new in TeamsJS version 2.x.x
