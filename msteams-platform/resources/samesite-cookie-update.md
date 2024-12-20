@@ -127,13 +127,27 @@ The following screenshot represents the cookies accessible in the embedded `ifra
 
 ### Actions required for cookies set by iframe
 
-Embedded `iframes` must set cookies with the partitioned attribute as false. Chromium-based browsers enable CHIPS (Cookies Having Independent Partitioned State), so they won't set cookies that are missing the partitioned attribute.
+The following table helps you to configure the value of partitioned attributes to set cookies for embedded `iframes`:
+
+| When to set cookies for embedded `iframes` | Value of the `partitioned` attribute |
+| ---- | ---- |
+| If the cookies need to be set outside the `iframes` but they need to be accessible within the iframe. | Set it to `false`. |
+| If the cookies need to be set inside the `iframes` | You can set it to either `false` or `true`, depending on whether you want to opt into CHIPS (Cookies Having Independent Partitioned State) for these cookies. |
+
+> [!NOTE]
+> You must set the partitioned attribute with either `true` or `false` to ensure that the cookie is set.
 
 ### Storage partitioning
 
 Storage partitioning is fully implemented in Google Chrome. It implies that any local storage set in the first-party context won't be accessible in the third-party context within iframes, and vice versa.
 
 This change might disrupt scenarios like external authentication in browsers. It can happen if they rely on storing data in the first-party context's local storage. After, accessing this data in the third-party context can also be affected. For more information, see [storage partitioning](https://developers.google.com/privacy-sandbox/cookies/storage-partitioning).
+
+## Code sample
+
+| Sample name | Description | Node.js |
+| --- | --- | --- |
+| Teams cookie app | This sample app demonstrates key web storage features, including managing cookies, SameSite cookies, and partitioned cookies. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-cookie/js) |
 
 ## See also
 
