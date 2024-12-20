@@ -158,9 +158,9 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create How-to Guides
+          - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app 
+            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
@@ -449,6 +449,8 @@
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
+    - name: Conversation Messages with RSC
+      href: bots/how-to/conversations/channel-messages-with-rsc.md  
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
@@ -575,7 +577,7 @@
       displayName: anonymous
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
+      displayName: apps for meeting, share content, share to stage APIs, in-meeting document signing, meeting side panel, customize share button
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification and app icon badging
@@ -1077,25 +1079,22 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-      displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps
+      displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
       displayName: OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
-    - name: Partner apps for Moodle
-      href: resources/partner-apps-for-moodle.md
     - name: Install Moodle LMS
       href: resources/moodleInstructions.md  
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
     items:
-    - name: Overview
-      href: concepts/build-and-test/share-to-teams-overview.md
     - name: Share to Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
       displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      displayName: share to meeting, personal app
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
