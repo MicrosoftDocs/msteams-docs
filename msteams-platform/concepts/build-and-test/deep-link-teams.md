@@ -12,16 +12,6 @@ ms.date: 01/31/2023
 
 You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
-In this article, you’ll learn to create:
-
-- [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
-- [Deep link to navigate to a chat](#deep-link-to-navigate-to-a-chat)<br>
-- [Deep link to navigate to channel conversation](#deep-link-to-navigate-to-channel-conversation)<br>
-- [Deep link to navigate to chat messages](#deep-link-to-navigate-to-chat-messages)<br>
-- [Deep link to navigate to a team](#deep-link-to-navigate-to-a-team)<br>
-- [Deep link to navigate to channel](#deep-link-to-navigate-to-channel)<br>
-- [Generate deep link to a file in a channel](#generate-deep-link-to-a-file-in-a-channel)
-
 ## Deep link to start a new chat
 
 You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
@@ -112,7 +102,7 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
-You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:` in place of an email address. The format of the deep link is: 
+You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:` in place of an email address. The format of the deep link is:
 
 `https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
 
@@ -133,7 +123,7 @@ The query parameters are:
 * `channelId`: Channel ID of the conversation (URL encoded). For example, 19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2.
 * `groupId`: Group ID of the file. For example, 72602e12-78ac-474c-99d6-f619710353a9.
 * `tenantId`: Tenant ID, such as 72f988bf-86f1-41af-91ab-2d7cd011db47.
- 
+
 > [!Note]
 > You can get `channelId` and `groupId` in the URL from the team.
 
