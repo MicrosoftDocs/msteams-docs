@@ -127,15 +127,15 @@ The following screenshot represents the cookies accessible in the embedded `ifra
 
 ### Actions required for cookies set by iframe
 
-The following table helps you to configure the value of partitioned attributes to set cookies for embedded `iframes`:
+The following table helps you to configure the value of partitioned attributes to set cookies for embedded `iframe`:
 
-| When to set cookies for embedded `iframes` | Value of the `partitioned` attribute |
+| Set cookies for embedded `iframe` | Value of the `partitioned` attribute |
 | ---- | ---- |
-| If the cookies need to be set outside the `iframes` but they need to be accessible within the iframe. | Set it to `false`. |
-| If the cookies need to be set inside the `iframes` | You can set it to either `false` or `true`, depending on whether you want to opt into CHIPS (Cookies Having Independent Partitioned State) for these cookies. |
+| If cookies need to be set outside the `iframe` but they need to be accessible within the iframe. | Set it to `false`. |
+| If cookies need to be set inside the `iframe` | You can set it to either `false` or `true`, depending on whether you want to opt into CHIPS (Cookies Having Independent Partitioned State) for cookies. |
 
 > [!NOTE]
-> You must set the partitioned attribute with either `true` or `false` to ensure that the cookie is set.
+> You must set the `partitioned` attribute to either `true` or `false` to ensure that the cookie is set.
 
 ### Storage partitioning
 
