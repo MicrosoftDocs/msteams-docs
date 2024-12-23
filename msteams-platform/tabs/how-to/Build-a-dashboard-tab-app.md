@@ -47,7 +47,7 @@ import { BaseDashboard } from "@microsoft/teamsfx-react";
 export default class SampleDashboard extends BaseDashboard { }
 ```
 
-# [Typescript](#tab/typescript1)
+# [TypeScript](#tab/typescript1)
 
 ```typescript
 //YourDashboard.tsx
@@ -101,7 +101,7 @@ export default class YourDashboard extends BaseDashboard {
 }
 ```
 
-# [Typescript](#tab/typescript5)
+# [TypeScript](#tab/typescript5)
 
 ```typescript
 import { BaseDashboard } from "@microsoft/teamsfx-react";
@@ -144,7 +144,7 @@ export default function App() {
 }
 ```
 
-# [Typescript](#tab/typescript6)
+# [TypeScript](#tab/typescript6)
 
 ```typescript
 import YourDashboard from "./dashboards/YourDashboard";
@@ -205,7 +205,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       }
     ```
 
-    # [Typescript](#tab/typescript2)
+    # [TypeScript](#tab/typescript2)
 
     ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
@@ -259,7 +259,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
-    # [Typescript](#tab/typescript3)
+    # [TypeScript](#tab/typescript3)
 
     ```typescript
         export default class SampleDashboard extends Dashboard {
@@ -309,7 +309,7 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
-    # [Typescript](#tab/typescript4)
+    # [TypeScript](#tab/typescript4)
 
     ```typescript
       export default class SampleDashboard extends BaseDashboard<any, any> {
