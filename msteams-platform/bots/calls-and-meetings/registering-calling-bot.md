@@ -30,7 +30,7 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 ## Create new bot or add calling capabilities
 
-For information on creating bots, see [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
+For information on creating bots, see [create a bot for Teams](../../sbs-gs-bot.yml).
 
 To create a new bot for Teams:
 
