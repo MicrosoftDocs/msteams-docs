@@ -89,7 +89,7 @@ Your app's name (specifically, its *[short name](~/resources/schema/manifest-sch
 
 :::row-end:::
 
-Make sure your short name adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+Make sure your short name adheres to the [Teams Store validation guidelines](teams-store-validation-guidelines.md).
 
 ### Write descriptions
 
@@ -126,7 +126,7 @@ Ensure that you provide the following information in your app's long description
 
 Your Partner Center account allows you to add a long description of up to 4000 characters. However, for better readability, we recommended to keep your app's long description concise.
 
-Make sure your long description adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
+Make sure your long description adheres to the [Teams Store validation guidelines](teams-store-validation-guidelines.md).
 
 ### Adhere to icon design guidelines
 
@@ -157,7 +157,7 @@ Remember the following best practices about screenshots:
 
 For best practices, see the following resources:
 
-* [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams Store validation guidelines](teams-store-validation-guidelines.md)
 * [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video
