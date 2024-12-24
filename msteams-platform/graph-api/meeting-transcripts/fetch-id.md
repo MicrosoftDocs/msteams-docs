@@ -162,7 +162,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts and recordings across the tenant. Subscribe your app to be notified for events when transcription and recording starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript and recording.
 
-For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage).
 
 When your app is notified about subscribed meeting events, it searches through the notifications for:
 

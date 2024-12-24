@@ -29,13 +29,13 @@ Your Teams app must include required and expected collaborative features. To wor
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
 |Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)<br/> [Tabs extended across Microsoft 365](../m365-apps/overview.md)  |
-|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/overview.md)  |
+|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/extend-m365-teams-message-extension.md#build-a-message-extension-app-for-outlooktabttk)  |
 |Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors-for-microsoft-365-groups) |
-|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)  |
 |Modals  |[Dialogs (referred as task modules in TeamsJS v1.x)](../task-modules-and-cards/what-are-task-modules.md)  |
-|Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
+|Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)  |
 
 ## Determine a subset of functionality
 
