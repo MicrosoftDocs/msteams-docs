@@ -1,11 +1,11 @@
 ---
-title: Design your app - Layout and scaling
+title: Design App Layout and Scaling
 description: Learn about the layout and scaling for Microsoft Teams app such as layout design, scaling and responsive, and page orientation.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.date: 05/23/2023
+ms.date: 12/26/2024
 ---
 # Layout and scaling for your Microsoft Teams app
 
