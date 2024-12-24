@@ -1,11 +1,11 @@
 ---
 title: How-to Guides for Teams Apps
 author: surbhigupta
-description: Learn about the How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook Add-in capabilities.
+description: Learn about the How-to guides from Teams Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook add-in capabilities.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 12/17/2024
+ms.date: 12/19/2024
 ---
 
 # How-to guides for Microsoft Teams apps
@@ -19,7 +19,7 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
 | Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
 | Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
 | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
-| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
+| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
 ## Open the guides from Teams Toolkit
 
