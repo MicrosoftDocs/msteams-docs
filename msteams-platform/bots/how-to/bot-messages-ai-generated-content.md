@@ -4,7 +4,7 @@ description: Learn how to add an AI label, sensitivity labels, citations, and fe
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.date: 12/20/2024
+ms.date: 12/24/2024
 ---
 
 # Enhance AI-generated bot messages
