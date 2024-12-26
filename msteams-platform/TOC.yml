@@ -485,7 +485,7 @@
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Optimize bots with rate limits in Teams 
+  - name: Optimize bots with rate limits
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Explore advanced bot capabilities
@@ -570,7 +570,7 @@
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
-  - name: Configure apps for Team meetings
+  - name: Configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
@@ -601,7 +601,7 @@
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
-    - name: Notification of transcripts and recordings
+    - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
