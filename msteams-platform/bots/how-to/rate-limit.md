@@ -95,7 +95,7 @@ The following code shows an example of exponential backoff:
 * The second parameter specifies the minimum and maximum backoff time respectively.
 * The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
 */
-var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSeconds(2),
+var exponentialBackoffRetryStrategy = new ExponentialBackoffRetryStrategy(3, TimeSpan.FromSeconds(2),
                         TimeSpan.FromSeconds(20), TimeSpan.FromSeconds(1));
 
 
