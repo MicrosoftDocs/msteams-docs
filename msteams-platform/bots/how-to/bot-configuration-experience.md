@@ -242,9 +242,9 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 ## Code sample
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
-|-----------------|-----------------|----------------|----------------|
-| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat with `continue` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This sample code describes the configuration and reconfiguration for bots in team and group chat with `auth` and `message` response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+|----------------|-----------------|--------------|--------------|--------------|
+| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring adaptive cards in team and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## Step-by-step guide
 

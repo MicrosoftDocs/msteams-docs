@@ -1319,7 +1319,7 @@ Here are the properties of the `data` array:
 
 | Name | Description |.Node.js | .NET |
 |---|---|---|---|
-| Cards Formatting | This sample app demonstrates the various charts in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) |
+| Cards Formatting | Sample which demonstrates different formatting supported in cards using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) |
 
 ## See also
 

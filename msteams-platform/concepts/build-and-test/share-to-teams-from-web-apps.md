@@ -350,7 +350,7 @@ The following are the launcher.js definitions:
 
 | **Sample name** | **Description** | **Node.js** |
 |-----------------|-----------------|----------------|
-| Share to Teams | This sample app displays a webpage as a tab and includes a Share to Teams button with a Present now option. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
+| Share to Teams | This Teams sample application illustrates how to use deeplinks for initiating calls, video chats, and navigating within various app tabs. It includes detailed setup instructions and supports interactions with bots and tabs to enhance user experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
 
 ## See also
 

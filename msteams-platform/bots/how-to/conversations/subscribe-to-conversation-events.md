@@ -1638,7 +1638,7 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
 |---------------|--------------|--------|-------------|--------|--------|
-| Conversation bot | This sample shows how to use different bot conversation events available in Bot Framework v4 for personal and teams scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+| Conversation bot |  This app demonstrates using bot conversation events in Microsoft Teams, supporting adaptive cards, read receipts, and message update events. It includes immersive reader support for enhanced accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 
 ## Next step
 

@@ -34,7 +34,7 @@ Create the preview offer ID from the **AppSource preview** link in Microsoft Par
     > [!NOTE]
     > Unlike a public offer ID, you can recognize the preview offer ID with the *-preview* suffix, for example, **publisherId.offerId-preview**.
 
-    If the preview offer is limited to the non-US regions, Developer Portal for Teams might not be able to find your offer. You can either add United States to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or ignore the error and select **Preview in Teams** to upload a custom app to Microsoft Teams.
+    If the preview offer is limited to the non-US regions, Developer Portal for Teams might not be able to find your offer. You can either add United States to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or ignore the error and select **Preview in Teams** to upload a custom app to Microsoft Teams.  
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/us-region.png" alt-text="Screenshot shows the user can select United States region.":::
 
@@ -86,7 +86,7 @@ For more information, see [upload your app in Teams](../../apps-upload.md).
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows that no plans found with preview warning." :::
 
 1. If `offerId` is specified in the app manifest isn't a preview offer, the app shows the following warning message to the user and custom app upload is disabled:
-
+  
     This isn't a preview offer. Be sure to append the **-preview** to the offer ID.
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows that it's not a preview offer warning." :::
@@ -96,8 +96,8 @@ Upon successful testing, you can push the offer to go live where app validations
 ## Code sample
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
-|-----------------|-----------------|----------------|----------------|----------------|
-| Tab app monetization | This is a sample tab application that shows how to open a purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+|-----------------|-----------------|----------------|----------------|
+| Tab app monetization | This sample demonstrates a Teams tab application that opens a purchase dialog and triggers a monetization flow through the Teams JS SDK. Users can experience app monetization features seamlessly integrated within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 

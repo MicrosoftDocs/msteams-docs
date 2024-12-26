@@ -187,7 +187,7 @@ To remove or configure your app in the scheduling window, select the dropdown me
 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
-| HelloWorld In-meeting app| Simple meeting app demonstrating meeting details view, chat view, and side panel. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-in-meeting)  |
+| HelloWorld In-meeting app| A template for apps using only in the context of a Teams meeting. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-in-meeting)  |
 
 ## See also
 

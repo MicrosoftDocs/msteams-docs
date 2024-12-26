@@ -240,8 +240,8 @@ Sample code showing the tab authentication process using Microsoft Entra ID:
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|--------------|
-| Tab SSO |This sample app shows Microsoft Entra SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
-| Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME- search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
+| Tab SSO |This sample app showcases Azure Active Directory Single Sign-On (SSO) within a Microsoft Teams tab, utilizing the On-Behalf-Of flow to call Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
+| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension and Azure AD for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
 
 ## See also
 

@@ -144,7 +144,7 @@ Follow instructions to preinstall your app for entire organization or user group
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample code describes the actions implemented in Microsoft 365 apps, specifically focusing on two actions within a To Do app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
+| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
 
 ## Next step
 

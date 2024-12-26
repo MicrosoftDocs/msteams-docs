@@ -243,7 +243,7 @@ server.get('/api/notify', async (req, res) => {
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## Additional code samples
 >

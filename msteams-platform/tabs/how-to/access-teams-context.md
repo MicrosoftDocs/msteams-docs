@@ -372,7 +372,7 @@ The following image shows the dark theme option in the Teams:
 
 | Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
-|Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
+|Tab channel context| This sample illustrates the capabilities of a tab application that shows the tab context object specifically for private and shared channels in Microsoft Teams. Users can expand and copy JSON slices from the context object, providing valuable insights based on the channel type. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
 ## See also
 
