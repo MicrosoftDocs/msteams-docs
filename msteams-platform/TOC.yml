@@ -224,7 +224,7 @@
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
       items:
-      - name: Use Teams Toolkit for Visual Studio
+      - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
       - name: Install Teams Toolkit
@@ -763,7 +763,7 @@
       displayName: Caching
   - name: Use third party IdP authentication
     items:
-    - name: Third party OAuth IdP Overview
+    - name: Third party OAuth IdP overview
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Add third party IdP authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
@@ -959,7 +959,7 @@
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams Store
     items:
-    - name: Publish app to Teams Store
+    - name: Publish your app
       href: concepts/deploy-and-publish/appsource/publish.md
       displayName: AppSource, Rapid app approval, approve, publisher verification, what to expect after you submit your app, SaaS offer, concierge service, must fix, good-to-fix, blocker, test instructions
     - name: Review Teams Store validation guidelines
