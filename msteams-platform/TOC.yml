@@ -11,13 +11,13 @@
   items:
   - name: Teams app that fits
     href: overview.md
-    displayName: Build teams app, Build apps with Teams
+    displayName: build teams app, why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
     href: overview-story.md
-    displayName: App ideations, Teams app summary, Teams user experience
+    displayName: Teams app user experience
   - name: Explore Teams platform features
     href: overview-explore.md
-    displayName: Teams capabilities, Explore teams
+    displayName: Teams capabilities, explore Teams
   - name: The Teams solution
     href: overview-solution.md
     displayName: Tools to support Teams
@@ -26,16 +26,16 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, quick start to build app, build new Teams app
+    displayName: first Teams app, quick start to build app, build new Teams app
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-    displayName: New codespace, build tab app, basic teams app, build teams app, install teams app
+    displayName: new codespace, build basic tab app, build teams app, install teams app
   - name: Build an interactive notification bot app
     href: get-started/build-interactive-notification-bot.md
-    displayName: Interactive notification app, create codespace, notification bot, install notification bot
+    displayName: interactive notification app, create codespace, install notification bot
   - name: Build a message extension app
     href: get-started/build-message-extension.md
-    displayName: Build message extension, Install message extension app, search based extension
+    displayName: build message extension, install message extension app, search based extension
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams Toolkit, Teams app tutorial, Microsoft Teams samples, build teams with Toolkit
@@ -44,27 +44,27 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: Build tab app, Teams app features, app plan, App development
+    displayName: build tab app, Teams app features, app plan, app development
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
     displayName: interactive notification bot, Teams use case
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
-    displayName: App capabilities, Teams capabilities, Teams app planning
+    displayName: app capabilities, Teams capabilities, Teams app planning
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
-    displayName: App planning, app planning checklist, app's lifecycle extends
+    displayName: app planning, app planning checklist, app's lifecycle extends
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    displayName: App functionalities, stages to build apps, responsive tabs for teams
+    displayName: app functionalities, stages to build apps, responsive tabs for teams
   - name: Plan analytics for your Teams app
     items:
       - name: Overview
         href: concepts/design/overview-analytics.md
-        displayName: Apps for analytics, data instrumentation, core SaaS product, user-specific insights
+        displayName: apps for analytics, data instrumentation, core SaaS product, user-specific insights
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
-        displayName: Monitor events, task success, user engagement, user retention, measure your products
+        displayName: monitor events, task success, user engagement, user retention, measure your products
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
         displayName: plan code instrumentation, Azure application insights, Azure insights, monitor apps
