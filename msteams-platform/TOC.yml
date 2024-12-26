@@ -227,12 +227,12 @@
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Teams Toolkit Installation
+      - name: Teams Toolkit installation
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
       - name: Know about Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Get started with Toolkit for VS
+      - name: Get started with Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create your app
@@ -246,7 +246,7 @@
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
         - name: Customize app manifest
           items:
-          - name: Customize app manifest for VS
+          - name: Customize manifest for VS
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
@@ -262,9 +262,9 @@
             displayName: DevTunnel
         - name: Host your app in Azure
           items:    
-          - name: Provision cloud resources in VS
+          - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
-          - name: Deploy to cloud with VS
+          - name: Deploy to cloud using VS
             href: toolkit/toolkit-v4/deploy-vs.md            
       - name: Migrate Teams Toolkit project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
