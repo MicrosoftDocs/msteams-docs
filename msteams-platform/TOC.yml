@@ -149,7 +149,7 @@
       - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites to create Teams App
+        - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -166,7 +166,7 @@
             displayName: application, endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
-          - name: Use a Microsoft Entra App in TeamsFx
+          - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
@@ -232,10 +232,10 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Build apps with Teams Toolkit 
+      - name: Build apps with Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
-        - name: Prerequisites to create Teams app using VSC
+        - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -266,7 +266,7 @@
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
-      - name: Migrate Project from 17.9 to 17.10+
+      - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, migration
     - name: Teams Toolkit CLI
@@ -734,7 +734,7 @@
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
-      - name: Update  app manifest and preview app
+      - name: Update app manifest and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
@@ -746,9 +746,9 @@
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Preview app manifest schema
+      - name: Update app manifest and preview app
         href: bots/how-to/authentication/bot-sso-manifest.md
-      - name: Microsoft Graph permissions for tab app
+      - name: Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Enable SSO for your Adaptive Cards Universal Actions in bot
       items:
@@ -1030,7 +1030,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Duplicate of line 61
+      - name: Gain traction for your collaborative app in the market
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
@@ -1048,7 +1048,7 @@
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Preview app manifest schema
+        - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Integrate with Teams
