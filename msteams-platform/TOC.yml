@@ -729,7 +729,7 @@
       items:
       - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure your tab app in Microsoft Entra ID
+      - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -742,7 +742,7 @@
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure an app in Microsoft Entra ID
+      - name: Configure bot app in Microsoft Entra ID
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
@@ -772,7 +772,7 @@
       displayName: Loop, validDomain, valid domain, validdomain
     - name: Add authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Add authentication for Adaptive Cards Universal Actions
+    - name: Add authentication for Adaptive Cards
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
@@ -875,7 +875,7 @@
       - name: Design your Loop component
         href: m365-apps/design-loop-components.md
         displayName: loop component
-      - name: Build your Loop component
+      - name: Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
   - name: Combine Teams apps and Outlook Add-ins
@@ -926,7 +926,7 @@
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug a calling and meeting bot locally
+    - name: Debug calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
   - name: Microsoft Graph
