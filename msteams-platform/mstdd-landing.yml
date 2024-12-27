@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.date: 12/11/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -51,8 +51,8 @@ landingContent:
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
-      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+      - text: Build apps with Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
@@ -61,26 +61,26 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Analyze your third-party app usage metrics in Developer Portal
-        url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
-      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
-        url: concepts/authentication/nested-authentication.md
-      - text: New purchase experience for Teams app subscriptions bought from Teams Store
-        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
-        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
-      - text: Screen share content to meetings
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings
-      - text: Extend bot-based message extension plugins to Teams meetings
-        url: messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings
-      - text: Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages
-        url: bots/how-to/format-ai-bot-messages.md 
-      - text: Static tabs are generally available for chats, channels, and meetings
-        url: tabs/what-are-tabs.md
-      - text: Preapproval of RSC permissions (Developer preview)
-        url: graph-api/rsc/preapproval-instruction-docs.md
-      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
-        url: concepts/build-and-test/apps-package.md#outline-icon
+      - text: Introducing share to meeting from personal app
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+      - text: Text customization for share to stage button
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
+      - text: New app installation flow for Teams app installed from Teams Store or custom upload
+        url: concepts/deploy-and-publish/add-default-install-scope.md
+      - text: Introducing default landing capability for tab and bot apps
+        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
+      - text: Build responsive Container layouts in Adaptive Cards
+        url: task-modules-and-cards/container-layouts.md
+      - text: Visually represent data with charts in Adaptive Cards
+        url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
+      - text: Add conditionally enabled action buttons on Adaptive Cards
+        url: task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons
+      - text: Add YouTube, Dailymotion, or Vimeo videos in Adaptive Cards.
+        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
 
     - linkListType: reference
       links:
@@ -88,6 +88,7 @@ landingContent:
         url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
 
 
 - title: Get started
@@ -239,20 +240,18 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
 
-- title: Publish and distribute
+- title: Publish Teams app
   linkLists:
   - linkListType: concept
     links:
     - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Distribution
+    - text: Publish your Teams apps
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
