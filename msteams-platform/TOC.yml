@@ -240,19 +240,19 @@
           displayName: Accounts to build your Teams app    
         - name: New Teams app project using VS
           href: toolkit/toolkit-v4/create-new-project-vs.md
-        - name: Develop your app using VS
+        - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
-        - name: Customize app manifest
+        - name: Customize manifest
           items:
-          - name: Customize manifest for VS
+          - name: Customize app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-          - name: Debug bot with Test Tool
+          - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug Teams app locally
