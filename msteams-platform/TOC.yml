@@ -69,7 +69,7 @@
     href: concepts/design/design-teams-app-process.md
   - name: Design system
     items:
-    - name: Fundamentals of app design system
+    - name: App design system fundamentals
       href: concepts/design/design-teams-app-fundamentals.md
       displayName: icons, Font, Color 
     - name: Layout and scaling
@@ -273,7 +273,7 @@
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
-      - name: Configure Developer Portal
+      - name: Overview
         href: concepts/build-and-test/teams-developer-portal.md
         displayName: App Studio, Changelog for Developer Portal, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
@@ -959,7 +959,7 @@
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams Store
     items:
-    - name: Publish your app
+    - name: Overview
       href: concepts/deploy-and-publish/appsource/publish.md
       displayName: AppSource, Rapid app approval, approve, publisher verification, what to expect after you submit your app, SaaS offer, concierge service, must fix, good-to-fix, blocker, test instructions
     - name: Teams Store validation guidelines
