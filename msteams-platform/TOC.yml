@@ -596,7 +596,7 @@
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
       displayName: OnMessageActivityAsync, payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
-  - name: Meeting transcripts and recordings using Graph APIs
+  - name: Get meeting transcripts and recordings using Graph APIs
     items:
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
