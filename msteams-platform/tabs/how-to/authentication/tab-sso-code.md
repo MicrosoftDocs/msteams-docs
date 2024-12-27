@@ -224,8 +224,7 @@ The following code is a typical decoded payload of an access token:
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|-----|
 | Tab SSO |This sample app showcases Azure Active Directory Single Sign-On (SSO) within a Microsoft Teams tab, utilizing the On-Behalf-Of flow to call Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
-| Tab, bot, and message extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension and Azure AD for secure authentication.
- |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
+| Tab, bot, and message extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension and Azure AD for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
 
 ## Next step
 
