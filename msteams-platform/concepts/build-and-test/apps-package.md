@@ -70,12 +70,11 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
 ### Outline icon
 
-An outline icon displays in two scenarios:
-
 * When your app is in use.
 * When your app is pinned to the app bar on the left side of Teams.
-
-Ensure that the ouline icon size must be in 32x32 pixels. It must be either white with a transparent background or transparent with a white background. No other colors are allowed. The outline icon mustn't contain any additional padding around the symbol.
+* Ensure that the ouline icon size must be in 32x32 pixels.
+* It must be either white with a transparent background or transparent with a white background. No other colors are allowed.
+* The outline icon mustn't contain any additional padding around the symbol.
 
 ### Best practices
 
