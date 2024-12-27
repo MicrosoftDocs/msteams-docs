@@ -5,11 +5,12 @@ author: v-ypalikila
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
+ms.date: 12/31/2024
 ---
 # Introducing the new Microsoft Teams client
 
 > [!IMPORTANT]
-> The Classic Teams client is expected to be deprecated by March 31, 2024.
+> The Classic Teams client was deprecated on March 31, 2024.
 
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside Classic Teams, the app likely runs in the new Teams client without any issues.
 
@@ -25,7 +26,7 @@ You can use the following property to identify your app usage in the new Teams o
 * For TeamsJS v2.x: [`AppHostInfo`](/javascript/api/@microsoft/teams-js/app.appinfo?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-appinfo-host)
 
 > [!NOTE]
-> If hostName isn't defined, then assume that your app is running in the Classic Teams client.
+> If `hostName` isn't defined, then assume that your app is running in the Classic Teams client.
 
 The Classic Teams client is represented using the `teams` field and the new Teams client is represented using the `teamsModern` field.
 
@@ -33,7 +34,7 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned.
 
-**Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [limitations](#limitations) are now available.
+**Availability of all platform features from Classic Teams**: All apps are available in the new Teams client. All platform features except the features listed under [limitations](#limitations) are now available.
 
 ## Limitations
 
@@ -50,9 +51,9 @@ The following Teams features aren't supported in the new Teams client:
 
 The following Teams features are deprecated and aren't supported in the new Teams client:
 
-* [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+* [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client was deprecated on March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
 
