@@ -36,7 +36,7 @@
  
 - name: Plan your app
   items:
-  - name: Plan Teams app lifecycle
+  - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
   - name: Understand use case
@@ -62,7 +62,7 @@
     displayName: notification, activity feed, message, alert, notify
 - name: Design your app
   items:
-  - name: Personalize your Teams app
+  - name: Overview
     href: concepts/design/design-teams-app-overview.md
     displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
