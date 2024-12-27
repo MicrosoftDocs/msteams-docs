@@ -510,13 +510,13 @@
         displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
 - name: Build message extensions
   items:
-  - name: Overview
+  - name: What are message extensions?
     href: messaging-extensions/what-are-messaging-extensions.md
     displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
     expanded: false 
     items:
-    - name: Overview
+    - name: API-based message extensions
       href: messaging-extensions/api-based-overview.md
       displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
@@ -524,9 +524,9 @@
       displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
-    - name: Overview
+    - name: Bot-based message extensions
       href: messaging-extensions/build-bot-based-message-extension.md
-      displayName:  one-on-one conversation, search command, action command, search based message extension, action based message extension
+      displayName: one-on-one conversation, search command, action command, search based message extension, action based message extension
     - name: Action commands
       items:
       - name: Define action commands
@@ -567,7 +567,7 @@
       displayName: App less link unfurling  
 - name: Build apps for Teams meetings and calls
   items:
-  - name: Overview
+  - name: Apps for meetings and calls
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
   - name: Configure apps for Teams meetings
@@ -598,7 +598,7 @@
       displayName: OnMessageActivityAsync, payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts and recordings using Graph APIs
     items:
-    - name: Overview
+    - name: Meeting transcripts and recordings
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
     - name: Get change notifications
@@ -609,7 +609,7 @@
       href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
   - name: Enhanced collaboration with Live Share
     items:
-    - name: Overview
+    - name: Live Share SDK
       href: apps-in-teams-meetings/teams-live-share-overview.md
       displayName: Loop, Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets
     - name: Getting started
@@ -659,11 +659,11 @@
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
 - name: Build cards and dialogs
   items:
-  - name: Overview
+  - name: What are cards and dialogs?
     href: task-modules-and-cards/cards-and-task-modules.md
   - name: Build cards
     items:
-    - name: Overview
+    - name: Cards overview
       href: task-modules-and-cards/what-are-cards.md
       displayName: People picker, type-ahead, people icon
     - name: Types of cards
@@ -692,7 +692,7 @@
       displayName: media elements, media files, Adaptive Card, command bot        
     - name: Universal Actions for Adaptive Cards
       items:
-      - name: Overview
+      - name: Universal Actions overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
       - name: Build Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
@@ -707,7 +707,7 @@
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
   - name: Build dialogs
     items:
-    - name: Overview
+    - name: Dialogs overview
       href: task-modules-and-cards/what-are-task-modules.md
       displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
     - name: Invoke and dismiss dialogs
@@ -720,7 +720,7 @@
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
-  - name: Overview
+  - name: User authentication in Teams
     href: concepts/authentication/authentication.md
     displayName: Single sign-on, OAuth provider
   - name: Enable SSO for your Teams app
@@ -824,7 +824,7 @@
     href: graph-api/App-permissions/Teams-app-permissions.md
   - name: Resource-specific consent
     items:
-    - name: Overview
+    - name: RSC permissions
       href: graph-api/rsc/resource-specific-consent.md
     - name: Preapproval of RSC permissions
       href: graph-api/rsc/preapproval-instruction-docs.md
@@ -888,7 +888,7 @@
         displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
   - name: Actions in Microsoft 365
     items:
-      - name: Overview
+      - name: What are Actions?
         href: m365-apps/actions-in-m365.md
         displayName: actions design
       - name: Build Actions in Microsoft 365
@@ -1064,7 +1064,7 @@
     displayname: OnMessageActivityAsync
   - name: Power Platform apps
     items:
-    - name: Overview
+    - name: Low-code custom apps
       href: samples/teams-low-code-solutions.md
       displayName: Power BI, Power Apps, Power Automate, Project Oakdale
     - name: Add Power Virtual Agents chatbot
@@ -1077,7 +1077,7 @@
     displayName: Teams Shifts Workforce management (WFM)
   - name: Moodle LMS
     items:
-    - name: Overview
+    - name: What is Moodle LMS?
       href: resources/moodle-overview.md
       displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
     - name: Microsoft 365 plugins
@@ -1099,7 +1099,7 @@
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     items:
-    - name: Overview
+    - name: Deep links overview
       href: concepts/build-and-test/deep-links.md
       displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
