@@ -98,9 +98,9 @@
     - name: Personal apps
       href: concepts/design/personal-apps.md
       displayName: logo
-    - name: Design tab for Teams
+    - name: Tabs
       href: tabs/design/tabs.md
-    - name: Design bot for Teams
+    - name: Bots
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
@@ -164,20 +164,20 @@
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
-          - name: Add SSO for Teams app
+          - name: Add SSO to Teams app
             href: toolkit/add-single-sign-on.md
           - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
             displayName: MSI, certificate, bot, message extension, authentication
-        - name: Customize Teams app manifest
+        - name: Customize app manifest
           items:
           - name: Customize app manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
-        - name: Debug your app
+        - name: Debug your Teams app
           items:
           - name: Overview
             href: toolkit/debug-overview.md
@@ -195,7 +195,7 @@
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
             href: toolkit/debug-mobile.md        
-        - name: Host your app in Azure
+        - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/provision.md
@@ -352,7 +352,7 @@
           href: resources/bot-v3/bots-test.md
       - name: Message extensions SDK (v3)
         items:
-        - name: Overview
+        - name: Message extensions SDK (v3)
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
@@ -618,7 +618,7 @@
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
-    - name: Live Share capabilities
+    - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
       displayName: Live Share data structures, broadcast
     - name: Media synchronization
