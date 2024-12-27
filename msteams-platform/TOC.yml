@@ -1064,7 +1064,7 @@
     displayname: OnMessageActivityAsync
   - name: Power Platform apps
     items:
-    - name: Custom app for Teams
+    - name: Low-code custom apps
       href: samples/teams-low-code-solutions.md
       displayName: Power BI, Power Apps, Power Automate, Project Oakdale
     - name: Add Power Virtual Agents chatbot
