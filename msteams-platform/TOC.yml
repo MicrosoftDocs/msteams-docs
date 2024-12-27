@@ -485,12 +485,12 @@
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Optimize your bot with rate limiting in Teams
+  - name: Optimize bots with rate limits
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Explore advanced bot capabilities
     items:
-    - name: Teams bot API changes to fetch team or chat members
+    - name: Modify Teams bot API to fetch team or chat members
       href: resources/team-chat-member-api-changes.md
     - name: Calls and meetings bots
       items:
@@ -570,7 +570,7 @@
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
-  - name: Enable and configure apps for Teams meetings
+  - name: Configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
@@ -582,13 +582,13 @@
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification and app icon badging
       items:
-      - name: Build in-meeting notification for meeting
+      - name: Build in-meeting notifications
         href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         displayName: bubble, targeted meeting, in-meeting, notification
-      - name: Enable app icon badging for your Teams app
+      - name: Enable app icon badging for Teams app
         href: apps-in-teams-meetings/app-icon-badging-for-your-app.md
         displayName: app icon badging
-    - name: Build extensible conversations for meeting chat
+    - name: Extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
@@ -601,7 +601,7 @@
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
-    - name: Get notified when transcripts and recordings are available
+    - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
@@ -638,7 +638,7 @@
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
     displayName: Single virtual scene, scene studio
-  - name: Integrate Teams meetings and calls in external apps
+  - name: Integrate meetings and calls in external apps
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
 - name: Build webhooks and connectors
@@ -694,7 +694,7 @@
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
-      - name: Work with Universal Actions for Adaptive Cards
+      - name: Build Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
@@ -738,7 +738,7 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-    - name: Enable SSO for your bot and message extension app
+    - name: Enable SSO for bot and message extension app
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
