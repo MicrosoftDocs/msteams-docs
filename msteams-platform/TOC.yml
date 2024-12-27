@@ -27,7 +27,7 @@
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build an interactive notification bot 
+  - name: Build an interactive notification bot app
     href: get-started/build-interactive-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
@@ -55,7 +55,7 @@
         href: concepts/design/overview-analytics.md
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
-      - name: Plan code instrumentation using analytics
+      - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
@@ -736,7 +736,7 @@
         displayName: getAuthToken
       - name: Update app manifest and preview tab app
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Microsoft Graph permissions and scopes
+      - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
     - name: Enable SSO for bot and message extension app
       items:
@@ -748,7 +748,7 @@
         href: bots/how-to/authentication/bot-sso-code.md
       - name: Update app manifest and preview bot app
         href: bots/how-to/authentication/bot-sso-manifest.md
-      - name: Microsoft Graph permissions and scopes
+      - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Enable SSO for Adaptive Cards
       items:
