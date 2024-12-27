@@ -227,26 +227,26 @@
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Teams Toolkit installation
+      - name: Install Teams Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
-      - name: Know about Teams Toolkit
+      - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Build apps with Teams Toolkit
+      - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
-        - name: New Teams app project using VS
+        - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
-        - name: Customize manifest
+        - name: Customize app manifest
           items:
-          - name: Customize app manifest
+          - name: Customize Teams app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
@@ -260,7 +260,7 @@
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
-        - name: Host your app in Azure
+        - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
