@@ -146,10 +146,10 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites for creating your Teams app
+        - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
@@ -166,7 +166,7 @@
             displayName: application, endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
-          - name: Using existing Microsoft Entra app in TeamsFx project
+          - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
@@ -209,7 +209,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-          - name: Test app behavior in different environment
+          - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
@@ -232,10 +232,10 @@
         displayName: download
       - name: Know about Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Get started with Teams Toolkit
+      - name: Build apps with Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
-        - name: Prerequisites to create your app
+        - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
           displayName: Accounts to build your Teams app    
         - name: New Teams app project using VS
@@ -266,7 +266,7 @@
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to cloud using VS
             href: toolkit/toolkit-v4/deploy-vs.md            
-      - name: Migrate Teams Toolkit project from 17.9 to 17.10+
+      - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, migration
     - name: Teams Toolkit CLI
@@ -282,10 +282,10 @@
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
-      - name: Analyze your apps usage in Developer Portal
+      - name: Analyze apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
-    - name: Adaptive Card Previewer for Visual Studio Code
+    - name: Adaptive Card Previewer for VSC
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
@@ -293,7 +293,7 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
-    - name: Adaptive Card Previewer for Visual Studio
+    - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md
       displayName: ACP 
     - name: Yeoman generator for Teams (GitHub)
@@ -485,12 +485,12 @@
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Optimize your bot with rate limiting in Teams
+  - name: Optimize bots with rate limits
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Explore advanced bot capabilities
     items:
-    - name: Teams bot API changes to fetch team or chat members
+    - name: Modify Teams bot API to fetch team or chat members
       href: resources/team-chat-member-api-changes.md
     - name: Calls and meetings bots
       items:
@@ -570,7 +570,7 @@
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
-  - name: Enable and configure apps for Teams meetings
+  - name: Configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
@@ -582,13 +582,13 @@
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification and app icon badging
       items:
-      - name: Build in-meeting notification for meeting
+      - name: Build in-meeting notifications
         href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         displayName: bubble, targeted meeting, in-meeting, notification
-      - name: Enable app icon badging for your Teams app
+      - name: Enable app icon badging for Teams app
         href: apps-in-teams-meetings/app-icon-badging-for-your-app.md
         displayName: app icon badging
-    - name: Build extensible conversations for meeting chat
+    - name: Extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
@@ -601,7 +601,7 @@
     - name: Overview
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
-    - name: Get notified when transcripts and recordings are available
+    - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
@@ -638,7 +638,7 @@
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
     displayName: Single virtual scene, scene studio
-  - name: Integrate Teams meetings and calls in external apps
+  - name: Integrate meetings and calls in external apps
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
 - name: Build webhooks and connectors
@@ -694,7 +694,7 @@
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
-      - name: Work with Universal Actions for Adaptive Cards
+      - name: Build Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
@@ -729,33 +729,33 @@
       items:
       - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure your tab app in Microsoft Entra ID
+      - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
-      - name: Update app manifest for SSO and preview app
+      - name: Update app manifest and preview tab app
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-    - name: Enable SSO for your bot and message extension app
+    - name: Enable SSO for bot and message extension app
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure your app in Microsoft Entra ID
+      - name: Configure bot app in Microsoft Entra ID
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest for SSO and preview app
+      - name: Update app manifest and preview bot app
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
-    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+    - name: Enable SSO for Adaptive Cards
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+      - name: Add code to enable SSO
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
@@ -765,14 +765,14 @@
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Add third party IdP authentication to tab app
+    - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add third party IdP authentication to bot app
+    - name: Add authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
-    - name: Add third party IdP authentication to message extension app
+    - name: Add authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+    - name: Add authentication to Adaptive Cards
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
@@ -796,7 +796,7 @@
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
     displayName: Camera, microphone, gallery, QR, barcode scanner, location
-  - name: Request device permissions for Teams app
+  - name: Device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
@@ -832,7 +832,7 @@
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
       displayName: Permissions, delegated, user, team, chat, application
-  - name: Proactive installation of apps using Graph API to send messages
+  - name: Proactive app installation to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
@@ -854,17 +854,17 @@
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
-    - name: Enable a Teams personal tab for Microsoft 365
+    - name: Enable Teams personal tab for Microsoft 365
       href: m365-apps/extend-m365-teams-personal-tab.md
       displayName: Microsoft 365, Office 365
-    - name: TeamsJS capability support across Microsoft 365
+    - name: TeamsJS capability across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
   - name: Teams meeting apps in Outlook
     href: m365-apps/extend-m365-meeting-app.md
     displayName: Microsoft 365, Office 365, meeting app
   - name: Teams message extensions in Outlook
     items:
-      - name: Enable a Teams message extension for Outlook
+      - name: Enable Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
         displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
@@ -875,7 +875,7 @@
       - name: Design your Loop component
         href: m365-apps/design-loop-components.md
         displayName: loop component
-      - name: Build Adaptive Card-based Loop component
+      - name: Build your Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
   - name: Combine Teams apps and Outlook Add-ins
@@ -921,17 +921,17 @@
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
-    - name: Test and debug your bot locally with IDE
+    - name: Test and debug locally with IDE
       displayName: Bot Emulator
       href: bots/how-to/debug/locally-with-an-ide.md
-    - name: Debug your bot with inspection middleware
+    - name: Debug with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug your calling and meeting bot locally
+    - name: Debug calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
   - name: Microsoft Graph
     items:
-    - name: Test resource-specific consent permissions
+    - name: Test RSC permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
       displayName: Postman app
     - name: Resource-specific consent for team JSON test file
@@ -1016,7 +1016,7 @@
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Grow your app
   items:
-    - name: Strategize and execute growth for your app
+    - name: Strategize and execute app growth
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       displayName: growth, investment, monetize, market
     - name: Guide to grow your app
@@ -1030,7 +1030,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Gain traction for your collaborative app in the market
+      - name: Gain traction for collaborative apps
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
@@ -1136,7 +1136,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-  - name: Introducing the new Microsoft Teams client
+  - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
