@@ -729,7 +729,7 @@
       items:
       - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure your tab app in Microsoft Entra ID
+      - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -742,7 +742,7 @@
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure your app in Microsoft Entra ID
+      - name: Configure bot app in Microsoft Entra ID
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
@@ -750,12 +750,12 @@
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
-    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+    - name: Enable SSO for Adaptive Cards
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+      - name: Add code to enable SSO
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
         displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
@@ -765,14 +765,14 @@
     items:
     - name: Overview
       href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Add third party IdP authentication to tab app
+    - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add third party IdP authentication to bot app
+    - name: Add authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
-    - name: Add third party IdP authentication to message extension app
+    - name: Add authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+    - name: Add authentication to Adaptive Cards
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
       displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Enable authentication for API-based message extensions
@@ -796,7 +796,7 @@
   - name: Overview
     href: concepts/device-capabilities/device-capabilities-overview.md
     displayName: Camera, microphone, gallery, QR, barcode scanner, location
-  - name: Request device permissions for Teams app
+  - name: Device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
@@ -832,7 +832,7 @@
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
       displayName: Permissions, delegated, user, team, chat, application
-  - name: Proactive installation of apps using Graph API to send messages
+  - name: Proactive app installation to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
@@ -854,17 +854,17 @@
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
-    - name: Enable a Teams personal tab for Microsoft 365
+    - name: Enable Teams personal tab for Microsoft 365
       href: m365-apps/extend-m365-teams-personal-tab.md
       displayName: Microsoft 365, Office 365
-    - name: TeamsJS capability support across Microsoft 365
+    - name: TeamsJS capability across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
   - name: Teams meeting apps in Outlook
     href: m365-apps/extend-m365-meeting-app.md
     displayName: Microsoft 365, Office 365, meeting app
   - name: Teams message extensions in Outlook
     items:
-      - name: Enable a Teams message extension for Outlook
+      - name: Enable Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
         displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
@@ -875,7 +875,7 @@
       - name: Design your Loop component
         href: m365-apps/design-loop-components.md
         displayName: loop component
-      - name: Build Adaptive Card-based Loop component
+      - name: Build your Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
   - name: Combine Teams apps and Outlook Add-ins
@@ -921,17 +921,17 @@
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
-    - name: Test and debug your bot locally with IDE
+    - name: Test and debug locally with IDE
       displayName: Bot Emulator
       href: bots/how-to/debug/locally-with-an-ide.md
-    - name: Debug your bot with inspection middleware
+    - name: Debug with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug your calling and meeting bot locally
+    - name: Debug calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
   - name: Microsoft Graph
     items:
-    - name: Test resource-specific consent permissions
+    - name: Test RSC permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
       displayName: Postman app
     - name: Resource-specific consent for team JSON test file
@@ -1030,7 +1030,7 @@
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
         displayName: social media, blog post, press release, freemium, marketing, banners
-      - name: Gain traction for your collaborative app in the market
+      - name: Gain traction for collaborative apps
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
         displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
