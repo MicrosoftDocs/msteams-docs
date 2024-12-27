@@ -199,7 +199,7 @@
           items:    
           - name: Provision cloud resources
             href: toolkit/provision.md
-          - name: Deploy to the cloud
+          - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
             href: toolkit/deploy-Teams-app-to-container-service.md           
@@ -232,7 +232,7 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Build apps with Teams Toolkit
+      - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create Teams app
@@ -240,22 +240,22 @@
           displayName: Accounts to build your Teams app    
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
-        - name: Develop your Teams app
+        - name: Develop your app in VS
           items: 
-          - name: Add single sign-on to Teams app
+          - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
-        - name: Customize Manifest
+        - name: Customize app manifest
           items:
-          - name: Customize Teams app Manifest
+          - name: Customize Teams app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-          - name: Debug bot using Teams App Test Tool
+          - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
             displayName: Mock activity, custom activity, predefined activity
-          - name: Debug your Teams app locally
+          - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
@@ -264,7 +264,7 @@
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
-          - name: Deploy to the cloud
+          - name: Deploy to cloud using VS
             href: toolkit/toolkit-v4/deploy-vs.md            
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
