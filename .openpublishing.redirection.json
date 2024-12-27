@@ -1205,8 +1205,20 @@
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
       },
       {
-        "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-with-rsc.md",
-        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#receive-conversation-messages-with-rsc"
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-basics.md",
+        "redirect_url": "/microsoftteams/platform/platform/bots/bot-concepts"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/what-are-bots.md",
+        "redirect_url": "/microsoftteams/platform/bots/overview"
       }
     ]
 }
