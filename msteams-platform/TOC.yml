@@ -197,7 +197,7 @@
             href: toolkit/debug-mobile.md        
         - name: Host your app in Azure
           items:    
-          - name: Provision cloud resources in VSC
+          - name: Provision cloud resources
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
