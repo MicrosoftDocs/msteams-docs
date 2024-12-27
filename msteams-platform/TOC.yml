@@ -152,9 +152,9 @@
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
           displayName: Accounts to build your Teams app    
-        - name: Create a new Teams app project
+        - name: Create new Teams app project
           href: toolkit/create-new-project.md
-        - name: Develop your Teams app
+        - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
@@ -164,16 +164,16 @@
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint
-          - name: Add single sign-on to Teams app
+          - name: Add SSO to Teams app
             href: toolkit/add-single-sign-on.md
           - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
             displayName: MSI, certificate, bot, message extension, authentication
-        - name: Customize Manifest
+        - name: Customize app manifest
           items:
-          - name: Customize Teams app Manifest
+          - name: Customize app manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
@@ -181,12 +181,12 @@
           items:
           - name: Overview
             href: toolkit/debug-overview.md
-          - name: Debug bot using Teams App Test Tool
+          - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
             href: toolkit/debug-message-extension-app-in-test-tool.md            
-          - name: Debug your Teams app locally
+          - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
@@ -731,7 +731,7 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Add code to enable SSO
+      - name: Add code to enable SSO for tab
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken
       - name: Update app manifest and preview tab app
@@ -894,7 +894,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Quick start guide
+      - name: Live Share quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
@@ -915,11 +915,11 @@
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
     displayName: Allow users to upload apps
-  - name: Tabs
+  - name: Test your tab
     items:
     - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
-  - name: Bots
+  - name: Test your bot
     items:
     - name: Test and debug locally with IDE
       displayName: Bot Emulator
