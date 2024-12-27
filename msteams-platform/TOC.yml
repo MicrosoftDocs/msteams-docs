@@ -173,7 +173,7 @@
             displayName: MSI, certificate, bot, message extension, authentication
         - name: Customize Teams app manifest
           items:
-          - name: Customize Teams app Manifest
+          - name: Customize app manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
