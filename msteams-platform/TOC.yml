@@ -19,25 +19,25 @@
     href: overview-explore.md
   - name: The Teams solution
     href: overview-solution.md
-    displayName: Tools to support Teams
+    displayName: develop Teams app, app development, tools used
 - name: Get started
   expanded: false
   items:
   - name: Build your Teams app
     href: get-started/get-started-overview.md
-    displayName: first Teams app, quick start to build app, build new Teams app
+    displayName: build new Teams app, GitHub Codespaces, tutorials
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-    displayName: new codespace, build basic tab app, build teams app, install teams app
+    displayName: build Teams tab app
   - name: Build an interactive notification bot app
     href: get-started/build-interactive-notification-bot.md
-    displayName: interactive notification app, create codespace, install notification bot
+    displayName: build Teams bot app, build interactive bot
   - name: Build a message extension app
     href: get-started/build-message-extension.md
-    displayName: build message extension, install message extension app, search based extension
+    displayName: search-based message extension app
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
-    displayName: Teams Toolkit, Teams app tutorial, Microsoft Teams samples, build teams with Toolkit
+    displayName: Teams app samples, tools to build Teams app
  
 - name: Plan your app
   items:
