@@ -5,7 +5,7 @@ description: Learn how to create or build an API-based message extension using D
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 12/05/2024
+ms.date: 12/30/2024
 ---
 # Create an API-based message extension
 
@@ -130,7 +130,7 @@ Ensure that you adhere to following guidelines for app manifest:
 * Each command must have a link to the response rendering template. This connects each command to its corresponding response format.
 * The `Commands.id` property in the app manifest must match the `operationId` in the OpenAPI Description.
 * If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
-* If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
+* If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
 * A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
@@ -205,12 +205,12 @@ Ensure that you adhere to following guidelines for app manifest:
 |`composeExtensions.authorization`|Authorization related information for the API-based message extension|
 |`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
-|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submits the API key through Developer Portal for Teams.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submit the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
 |`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
-|`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer's API to Adaptive Card response. *[Mandatory]* |
+|`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
 For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
 
@@ -341,9 +341,9 @@ The following code is an example of a Response rendering template: <br/>
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
-#### JSON path
+#### Json path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for an Adaptive Card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the Adaptive Card template and returns as separate results.
+The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
 Let's say you have the following JSON for a list of products and you want to create a card result for each entry.
@@ -362,7 +362,7 @@ Let's say you have the following JSON for a list of products and you want to cre
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
+Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
 Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
 
 #### Schema mapping
@@ -505,8 +505,6 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
   </details>
 
 </details>
-
-## Build an API-based message extension
 
 You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
@@ -690,7 +688,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer Portal. For more information on API key registration, see [Register an API key](api-based-secret-service-auth.md#register-an-api-key).
+           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer Portal. For more information on API key registration, see [register an API key](api-based-secret-service-auth.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 
@@ -724,7 +722,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams Toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response.
+     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response.
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
@@ -1114,7 +1112,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
 
 1. Select **Custom Search Results**.
 
