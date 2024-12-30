@@ -43,10 +43,10 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: plan your Teams app, app lifecycle, government cloud
+    displayName: plan Teams app, app lifecycle, government cloud
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
-    displayName: user requirements, app functionalities
+    displayName: user requirements, app functionalities, app scope, capabilities
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
     displayName: user scenarios, Teams app features
@@ -60,7 +60,7 @@
     items:
       - name: Get started with app analytics
         href: concepts/design/overview-analytics.md
-        displayName: data instrumentation, user-specific insights, constructs, conversational constructs, hosted web canvas constructs
+        displayName: data instrumentation, user-specific insights, constructs, conversational, hosted web canvas 
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
         displayName: measure your products, monitor events, product satisfaction, customer values
