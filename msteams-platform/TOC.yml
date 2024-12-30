@@ -49,27 +49,27 @@
     displayName: user requirements, app functionalities
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
-    displayName: user scenarios, 
+    displayName: user scenarios, Teams app features
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
-    displayName: app planning, app planning checklist, app's lifecycle extends
+    displayName: checklist to build Teams app, HTTPs, localhost
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    displayName: app functionalities, stages to build apps, responsive tabs for teams
+    displayName: tab app in Teams mobile, Teams mobile apps
   - name: Plan analytics for your Teams app
     items:
       - name: Get started with app analytics
         href: concepts/design/overview-analytics.md
-        displayName: apps for analytics, data instrumentation, core SaaS product, user-specific insights
+        displayName: data instrumentation, user-specific insights, constructs, conversational constructs, hosted web canvas constructs
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
-        displayName: monitor events, task success, user engagement, user retention, measure your products
+        displayName: measure your products, monitor events, product satisfaction, customer values
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-        displayName: plan code instrumentation, Azure application insights, Azure insights, monitor apps
+        displayName: track events, monitor, Azure Applications Insights
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
-    displayName: Send app notification, interactive notification bot, notification types, notification framework, activity notification
+    displayName: notification framework, notification, activity feed, message, alert, notify
 - name: Design your app
   items:
   - name: Overview
