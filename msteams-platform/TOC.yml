@@ -43,13 +43,13 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: build tab app, Teams app features, app plan, app development
+    displayName: plan your Teams app, app lifecycle, government cloud
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
-    displayName: interactive notification bot, Teams use case
+    displayName: user requirements, app functionalities
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
-    displayName: app capabilities, Teams capabilities, Teams app planning
+    displayName: user scenarios, 
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
     displayName: app planning, app planning checklist, app's lifecycle extends
