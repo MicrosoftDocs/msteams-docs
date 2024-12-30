@@ -14,10 +14,10 @@
     displayName: build teams app, why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
     href: overview-story.md
-    displayName: Teams app user experience
+    displayName: Teams app user experience, user scenario
   - name: Explore Teams platform features
     href: overview-explore.md
-    displayName: Teams capabilities, explore Teams
+    displayName: Teams capabilities, Teams features
   - name: The Teams solution
     href: overview-solution.md
     displayName: Tools to support Teams
