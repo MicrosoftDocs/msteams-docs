@@ -17,7 +17,6 @@
     displayName: Teams app user experience, user scenario
   - name: Explore Teams platform features
     href: overview-explore.md
-    displayName: Teams capabilities, Teams features
   - name: The Teams solution
     href: overview-solution.md
     displayName: Tools to support Teams
