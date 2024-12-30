@@ -22,7 +22,7 @@
 - name: Get started
   expanded: false
   items:
-  - name: Overview
+  - name: Build your Teams app
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
   - name: Build a tab app
@@ -51,7 +51,7 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan analytics for your Teams app
     items:
-      - name: Overview
+      - name: Get started with app analytics
         href: concepts/design/overview-analytics.md
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
@@ -69,7 +69,7 @@
     href: concepts/design/design-teams-app-process.md
   - name: Design system
     items:
-    - name: Overview
+    - name: App design system fundamentals
       href: concepts/design/design-teams-app-fundamentals.md
       displayName: icons, Font, Color 
     - name: Layout and scaling
@@ -179,7 +179,7 @@
             href: toolkit/aad-manifest-customization.md
         - name: Debug your Teams app
           items:
-          - name: Overview
+          - name: App debug overview
             href: toolkit/debug-overview.md
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
@@ -250,7 +250,7 @@
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
-          - name: Overview
+          - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
@@ -361,7 +361,7 @@
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
   items:
-  - name: Overview
+  - name: Tabs overview
     href: tabs/what-are-tabs.md
     displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
   - name: Prerequisites
@@ -763,7 +763,7 @@
       displayName: Caching
   - name: Use third party IdP authentication
     items:
-    - name: Overview
+    - name: Third party OAuth IdP overview
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
@@ -793,7 +793,7 @@
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
   items:
-  - name: Overview
+  - name: What are device capabilities?
     href: concepts/device-capabilities/device-capabilities-overview.md
     displayName: Camera, microphone, gallery, QR, barcode scanner, location
   - name: Device permissions for Teams app
@@ -996,7 +996,7 @@
     displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Monetize your app
   items:
-  - name: Overview
+  - name: App monetization
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
   - name: SaaS offer for your Teams app
@@ -1053,7 +1053,7 @@
           displayName: properties
 - name: Integrate with Teams
   items:
-  - name: Overview
+  - name: Web app integration
     href: samples/integrate-web-apps-overview.md
     displayName: application, Low code platforms
   - name: Considerations for Teams Integration
