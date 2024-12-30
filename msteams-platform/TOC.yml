@@ -34,7 +34,7 @@
     displayName: build Teams bot app, build interactive bot
   - name: Build a message extension app
     href: get-started/build-message-extension.md
-    displayName: search-based message extension app
+    displayName: search based message extension app
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
