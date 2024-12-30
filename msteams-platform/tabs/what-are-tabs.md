@@ -28,7 +28,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png"
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
 ---
 
 # [Channel](#tab/channel)
@@ -39,7 +39,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png"
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
 ---
 
 # [Meeting](#tab/meeting)
@@ -53,6 +53,7 @@ The following images show tabs added to different contexts in Teams:
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
 ***
 
+-
 Following are a few benefits of static tabs in chats, channels, and meetings:
 
 * **Pinnable and instant**: You can pin apps with static tabs from the add a tab **+** icon in chats, channels, and meetings. These tabs can be unpinned and don't have the mandatory configuration dialog, which allows you to create tabs that function more like apps.
@@ -106,11 +107,11 @@ The tab features are as follows:
 You can use one of the following methods to create tabs:
 
 * [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
-* [Use Adaptive Card to build tabs](../sbs-tab-with-adaptive-cards.yml)
+* [Use Adaptive Card to build tabs](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ### Declare custom tab in app manifest
 
-A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&tabs=npm) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
+A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
 
 Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For static tabs, the content URL is set directly in your Teams [app manifest](../resources/schema/manifest-schema.md#statictabs) by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
 
