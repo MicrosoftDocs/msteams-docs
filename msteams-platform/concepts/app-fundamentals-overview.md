@@ -106,5 +106,3 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
 * [Plan responsive tabs for Teams mobile](design/plan-responsive-tabs-for-teams-mobile.md)
-* [Device capabilities](device-capabilities/device-capabilities-overview.md)
-* [Authenticate users in Microsoft Teams](authentication/authentication.md)
