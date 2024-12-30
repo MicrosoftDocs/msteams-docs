@@ -57,7 +57,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
-| Concise individual interactions | @mention to bot  | Q&A bots |
+| Concise individual interactions | @mention to bot | Q&A bots |
 | @mention to bot | Similar to channel | Bots that tell jokes and take notes |
 
 ### In a channel
@@ -75,7 +75,7 @@ Bots work better in a channel in the following cases:
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
 
-In the cases where bots work better in a channel also work better in a group chat.
+Bots that work better in a channel also work better in a group chat.
 
 ### In a one-to-one chat
 
@@ -123,7 +123,7 @@ If you're unable to create a bot in Developer Portal, ensure the following:
 
 * **Give permissions to specific users to register new apps**:
 
-  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the tenant admin adds Microsoft Entra ID to a user with the following roles:
+  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the admin adds Microsoft Entra ID to a user with the following roles:
 
     * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
     * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
@@ -131,7 +131,7 @@ If you're unable to create a bot in Developer Portal, ensure the following:
 
     For information about how to assign roles, see [Assign Microsoft Entra roles to users](/azure/active-directory/roles/manage-roles-portal).
 
-  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the tenant admin adds Microsoft Entra ID  to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the admin adds Microsoft Entra ID to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
 
     * `microsoft.directory/applications/create`
     * `microsoft.directory/applications/createAsOwner`
@@ -228,7 +228,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```javascript
 this.onMessage(async (context, next) => {
     // MessageFactory.text(): Specifies the type of text data in a message attachment.
-    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await context.sendActivity(MessageFactory.text("Your message is: " + context.activity.text));
     await next();
 });
 ```
@@ -237,10 +237,10 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python| Manifest
-|----------------|-----------------|--------------|----------------|-------|-------|
-| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
-| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Sample name | Description | .NETCore | Node.js | Python| Manifest |
+| --- | --- | --- | --- | --- | --- |
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Bot samples | Set of bot framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Next step
 

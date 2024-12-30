@@ -3,7 +3,8 @@ title: Package your app
 description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 09/28/2022
+ms.author: surbhigupta
+ms.date: 12/19/2024
 ---
 
 # Teams app package
@@ -13,13 +14,16 @@ An app package is a file format that has the required resources to install and r
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
 
-To distribute your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
+To publish your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 
 ## Teams doesn't host your app
 
 When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Microsoft Azure for production. Teams accesses these resources via HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
+
+> [!NOTE]
+> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must be aware that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
 
 ## App manifest
 
@@ -116,7 +120,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 ## Next step
 
-Choose how you plan to distribute your app:
+Choose how you plan to publish your app:
 
 > [!div class="nextstepaction"]
 > [Upload your custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)

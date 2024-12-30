@@ -7,7 +7,7 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
-ms.date: 05/05/2023
+ms.date: 12/19/2024
 ---
 
 # Teams JavaScript client library
@@ -28,6 +28,40 @@ The remainder of this article walks you through the structure and latest updates
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+
+### Improve load time performance with JavaScript tree shaking
+
+From version 2.31.0 and later, the TeamsJS library is fully tree-shakable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
+
+#### How to use tree shaking with TeamsJS
+
+To take advantage of tree shaking when you bundle your app package, use a bundler that supports tree shaking, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking). When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
+
+```typescript
+export function scanBarCode(barCodeConfig: BarCodeConfig): Promise<string> {
+   //implementation omitted
+}
+
+export function hasPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function requestPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function isSupported(): boolean {
+   //implementation omitted
+}
+```
+
+Assume the **barCode** module in TeamsJS contains the four functions `hasPermission()`, `isSupported()`, `requestPermission()`, and `scanBarCode(BarCodeConfig)`. If an app only uses the `hasPermission()` function, then after tree shaking the other three functions would be excluded from the app bundle. This ensures that apps stay as lightweight as possible and only include the code they need.
+
+> [!IMPORTANT]
+> When using tree shaking, keep in mind the following considerations:
+>
+> 1. If your app uses CDN to consume the TeamsJS library, then the library version used isn't tree-shakable.
+> 1. The TeamsJS library type was changed from UMD (Universal Module Definition) to ESM (ECMAScript Modules) in order to support tree shaking. However, the UMD version is still offered. If a bundler supports ESM the tree-shakable ESM package of TeamsJS is used, otherwise the UMD package is used.
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -173,6 +207,9 @@ The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-b
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
 * **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Microsoft 365* when running in Microsoft 365 on the web, and *Manage your tasks in Teams* when running in Teams.
+
+> [!TIP]
+> The best practice is to specify the runtime requirements and dependencies of your app in a host-agnostic way, rather than special casing your app code with host-specific logic. For more information, see [how to specify Microsoft 365 host runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 #### Namespaces
 

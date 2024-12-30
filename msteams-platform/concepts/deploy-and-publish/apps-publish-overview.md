@@ -1,5 +1,5 @@
 ---
-title: Overview - Distribute your app
+title: Overview - Publish your app
 description: Learn to publish app to Teams Store or to your org. Understand how app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 02/22/2023
 ---
 
-# Distribute your Microsoft Teams app
+# Publish your Microsoft Teams app
 
-You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the app.
 
 ## Configure default install options
 
@@ -22,7 +22,7 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 
 ## Create Teams app package
 
-To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To publish your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
