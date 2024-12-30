@@ -1,6 +1,6 @@
 ---
-title: Prepare your Microsoft 365 tenant
-description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
+title: Get Started with Microsoft 365 Tenant
+description: Learn how to get started with Teams in Microsoft 365, enable Teams for your organization and custom app upload, and create your development environment.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 01/31/2023
@@ -72,6 +72,4 @@ For complete information on how these settings interact, see [manage custom app 
 
 ## See also
 
-* [Test your app](test-app-overview.md)
-* [Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
-* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)
+[Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

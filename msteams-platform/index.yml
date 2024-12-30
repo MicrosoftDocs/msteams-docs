@@ -6,8 +6,8 @@ summary: "Get documentation, sample code, tutorials, and more to help you build 
 brand: teams
 
 metadata:
-  title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft Teams platform makes it easy for developers to build apps on Teams. Developers can integrate their own apps and services to improve productivity. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
@@ -19,7 +19,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new?
+    - title: What's new
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
@@ -77,6 +77,9 @@ conceptualContent:
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
+        - url: /microsoft-365-copilot/extensibility/
+          itemType: concept
+          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities
@@ -104,10 +107,10 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: messaging-extensions/build-bot-based-plugin.md
+        - url: messaging-extensions/build-bot-based-agent.md
           itemType: concept
-          text: Build bot-based search message extension plugin
-        - url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+          text: Build bot-based search message extension agent
+        - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library
         - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
@@ -124,7 +127,7 @@ conceptualContent:
           text: Monetize your Teams app with a transactable SaaS offer
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
-          text: User authentication and SSO
+          text: User authentication and single sign-on (SSO)
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
@@ -167,15 +170,18 @@ conceptualContent:
     # Card
     - title: Community
       links:
+        - url: https://aka.ms/M365PlatformAnnouncement
+          itemType: whats-new
+          text: Microsoft Teams announcements
         - url: https://developer.microsoft.com/microsoft-teams/blogs/
           itemType: overview
           text: Microsoft Teams developer blog
+        - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
+          itemType: overview
+          text: Microsoft Learn Blog
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
-          itemType: whats-new
-          text: Announcements
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams Developer Community and response

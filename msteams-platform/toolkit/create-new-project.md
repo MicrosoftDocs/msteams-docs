@@ -1,7 +1,7 @@
 ---
-title: Create a new Teams app
+title: Create New Teams App in Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit using Visual Studio Code.
+description: Learn how to create basic and scenario-based Teams app in Visual Studio Code, its directory structure, and Teams app template available in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -93,7 +93,7 @@ The following example shows a basic Teams tab app directory structure:
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
-| `src/app.js` | Application entry point and `restify` handlers for website. |
+| `src/app.js` | Application entry point and `express` handlers for website. |
 | `src/views/hello.html`| An HTML template that is bind to the tab endpoint. |
 | `src/static` | The web server can serve static assets such as CSS and JavaScript files. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |

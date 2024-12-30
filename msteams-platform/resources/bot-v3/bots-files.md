@@ -1,6 +1,6 @@
 ---
 title: Send and receive files from a bot
-description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes. Use Teams bot APIs using code samples based on the v3 Bot Framework SDK.
+description: Learn send and receive files from bot using Graph APIs for personal, channel, groupchat scopes. Use Teams bot APIs using code samples based on v3 Bot Framework SDK.
 keywords: teams bots files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -40,7 +40,7 @@ The definition will look like this: `"supportsFiles": true`. If your bot doesn't
 
 ### Receiving files in personal chat
 
-When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
+When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity contains file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
 
 #### Message activity with file attachment example
 
@@ -75,7 +75,7 @@ As a best practice, you should acknowledge the file upload by sending back a mes
 Uploading a file to a user involves the following steps:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
-2. If the user accepts the file download, your bot will receive an *Invoke* activity with a location URL.
+2. If the user accepts the file download, your bot receives an *Invoke* activity with a location URL.
 3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, you can remove the original consent card if you don't want to allow the user to accept further uploads of the same file.
 
@@ -111,15 +111,15 @@ The following table describes the content properties of the attachment:
 | Property | Purpose |
 | --- | --- |
 | `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
-| `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it will take in OneDrive. |
+| `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it takes in OneDrive. |
 | `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
 | `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
-The following example shows an abridged version of the invoke activity that your bot will receive:
+The following example shows an abridged version of the invoke activity that your bot receives:
 
 ```json
 {
@@ -143,7 +143,7 @@ The following example shows an abridged version of the invoke activity that your
 }
 ```
 
-Similarly, if the user declines the file, your bot will receive the following event, with the same overall activity name:
+Similarly, if the user declines the file, your bot receives the following event, with the same overall activity name:
 
 ```json
 {

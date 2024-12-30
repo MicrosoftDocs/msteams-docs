@@ -1,5 +1,5 @@
 ---
-title: Update and delete messages sent from your bot
+title: Update & Delete Bot Messages
 author: WashingtonKayaker
 description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview
@@ -12,6 +12,9 @@ ms.author: anclear
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+
+> [!NOTE]
+> A bot can't update or delete messages sent by the user in Microsoft Teams.
 
 ## Update messages
 
@@ -92,7 +95,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |Request |Response |
 |----|----|
-| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
+| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 ---
 ---
@@ -164,7 +167,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |Request |Response |
 |----|----|
-| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
+| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 ---
 

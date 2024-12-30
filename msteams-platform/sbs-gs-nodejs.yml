@@ -16,7 +16,7 @@ items:
   content: |
     Start Microsoft Teams app development by building your first app with a tab, a bot, and a message extension capability.
 
-    > This app will have all capabilities and each has its own UI and UX:
+    > This app has all capabilities and each has its own UI and UX:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Screenshot of diagram showing this app has three features.":::
 
@@ -46,7 +46,7 @@ items:
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Browser tools for tabs development with JavaScript. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
@@ -56,7 +56,7 @@ items:
     Use the following commands to verify that the installed versions for the tools are as needed.
 
     > [!NOTE]
-    > Use the terminal window that you're most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts will run on most platforms.
+    > Use the terminal window that you're most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts can run on most platforms.
 
     To verify the version numbers of tools installed:
 
@@ -126,7 +126,7 @@ items:
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can upload a custom apps in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
@@ -256,7 +256,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Screenshot of image showing ngrok tunnel.":::
 
-        *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
+        *Ngrok* listens to requests from the internet and routes them to your app running on port 3333.
 
     To verify the app's local deployment:
 
@@ -279,10 +279,10 @@ items:
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
         
         > [!TIP]
-        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
+        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session returns useful debugging information in this window. The paid version of *ngrok* allows persistent names.
 
         >[!IMPORTANT] 
-        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
+        > If you use the free version of ngrok, your app is available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
     <a name="DeployToTeams"></a>
 
@@ -632,7 +632,7 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
+    > External developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
 

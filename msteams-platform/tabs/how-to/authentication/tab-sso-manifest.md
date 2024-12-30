@@ -1,5 +1,5 @@
 ---
-title: Update manifest for enabling SSO for tabs
+title: Update Manifest to Enable SSO for Tabs
 description: Update Teams app manifest for enabling single sign-on (SSO) for tabs and upload it into Teams client for testing SSO authentication.
 ms.topic: how-to
 ms.localizationpriority: high

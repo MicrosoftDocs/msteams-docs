@@ -1,10 +1,11 @@
 ---
-title: Create conversation bots for channel or group chat
+title: Channel/Group Conversation Chat Bot
 author: surbhigupta
-description: Learn how to create new conversation threads, work on user and tag mentions, and send message on install. Explore Teams file upload sample (.NET, JavaScript, Python).
+description: Learn how to create new conversation threads, user and tag mentions, and send message on installation. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 11/14/2024
 ---
 # Channel and group chat conversations with a bot
 
@@ -17,8 +18,8 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 > [!NOTE]
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
-> * Posting a message or Adaptive Card to a private channel is currently not supported.
+> * Using resource-specific consent (RSC), a bot can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+> * Posting a message or Adaptive Card to a private channel isn't supported.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
@@ -40,7 +41,7 @@ Next, you can retrieve mentions using the `entities` object and add mentions to 
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
+Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
 
 You must also strip out the @mentions from the content of the message your bot receives.
 
@@ -54,7 +55,7 @@ The following code shows an example of retrieving mentions:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable#microsoft-bot-schema-activity-getmentions&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
@@ -80,7 +81,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript](#tab/typescript)
 
-[SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getmentions&preserve-view=true)
+[SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getmentions)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -146,7 +147,7 @@ this.onMessage(async (turnContext, next) => {
 
 # [Python](#tab/python)
 
-[SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest#botbuilder-schema-activity-get-mentions&preserve-view=true)
+[SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest&preserve-view=true#botbuilder-schema-activity-get-mentions)
 
 ```python
 @staticmethod
@@ -168,6 +169,9 @@ There are two types of mentions:
 
 * [User mention](#user-mention)
 * [Tag mention](#tag-mention)
+
+> [!NOTE]
+> User mention and tag mention is supported for both text message and Adaptive Card.
 
 #### User mention
 
@@ -297,12 +301,44 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 Now you can send an introduction message when your bot is first installed or added to a group or team.
 
+##### Support for Microsoft Entra Object ID and UPN in user mention
+
+[!INCLUDE [<User Mention>](../../../includes/bots/user-mention.md)]
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in a text message:
+
+```C#
+var userId = "Adele@microsoft.com"; //User Principle Name
+var mention = new ChannelAccount(userId, "Adele"); 
+var mentionObj = new Mention 
+{
+    Mentioned = mention,
+    Text = $"<at>{mention.Name}</at>" ,
+    Type = "mention"
+}; 
+
+// Returns a simple text message.var replyActivity = MessageFactory.Text($"Hello {mentionObj.Text}.");replyActivity.Entities = new List<Entity> { mentionObj };
+
+// Sends an activity to the sender of the incoming activity.await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+
+```
+
+The following code snippet shows an example of mentioning users with Entra Object Id and UPN in an Adaptive Card:
+
+```JSON
+{
+    "type": "mention",
+    "text": "<at>Adele</at>",
+    "mentioned": {
+            "id": "Adele@microsoft.com" ,// User Principle Name
+            "name": "Adele"
+    }
+} 
+```
+
 #### Tag mention
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
-
-> [!NOTE]
-> Tag mentions aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DoD) tenants.
 
 ##### Mention tags in a text message
 
@@ -366,7 +402,7 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tags mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
 
 The following table lists the throttling limits for tag mentions in a bot:
 

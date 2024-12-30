@@ -1,9 +1,9 @@
 ---
-title: Facilitate adoption of your app and help customers promote your app
+title: Facilitate App Adoption
 author: ashishguptaiitb
 ms.author: guptaashish
 manager: prkosh
-description: Learn about the best practices and guidance for app adoption and promotion.
+description: Learn about the best practices and guidance for app adoption and promotion, understand how to drive app adoption and track app usage analytics.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 01/04/2024
@@ -286,7 +286,7 @@ Champions help:
 * Identify business challenges and possible solutions.
 * Provide feedback to the project team and sponsors.
 
-You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program).
+You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program). For best practices on app adoption, see [app growth and adoption](concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md#best-practices-for-app-growth-and-adoption).
 
 > [!div class="nextstepaction"]
 > [Back to top](#understand-how-you-can-drive-app-adoption)
@@ -323,7 +323,7 @@ To learn more about how your customers access the support information for your a
 
 ## Step 5: Track app adoption and usage using analytics
 
-You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the Teams Store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
+You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you publish it using the options available on the Teams Store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
 
 ### Track app usage in Partner Center
 

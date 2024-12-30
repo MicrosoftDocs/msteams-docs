@@ -1,14 +1,14 @@
 ---
-title: Open content in Stageview
+title: Multi-window Experience for App Content
 author: Rajeshwari-v
-description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
+description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Open content in Stageview
+# Open content in multi-window
 
 Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
@@ -131,7 +131,7 @@ The following JSON code is an example to create an action button in an Adaptive 
 * The `invoke` workflow must be similar to the `appLinking` workflow.
 * The `Action.Submit` must be configured as `Open` to maintain consistency.
 
-If your app isn't optimized to work in Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
+If your app isn't optimized to work in Teams mobile client, Stageview for apps published through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
 ### Invoke from stageView API
 
@@ -304,6 +304,12 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 </br>
 
 </details>
+
+## Code sample
+
+|Sample name | Description | .NET | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Teams tab Stageview | This sample app demonstrates a tab in Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 
 ## See also
 

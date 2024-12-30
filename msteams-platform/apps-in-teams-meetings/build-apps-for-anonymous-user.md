@@ -43,7 +43,7 @@ Anonymous users can't be authenticated through Microsoft Entra authentication or
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If your app needs to be accessed by anonymous users, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Admins can use Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
@@ -134,7 +134,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
 | `tenantId` | Tenant ID of the meeting organizer. |
-| `userRole` | `anonymous`, represents anonymous user. |
+| `userRole` | `anonymous` represents anonymous user. |
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
@@ -231,7 +231,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * Apps for anonymous users aren't supported in Teams channel meetings.
 
-* Currently, the `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
+* The `getContext` API doesn't return a user ID for the anonymous user, though the bot APIs do, and it's not possible to correlate the anonymous user between these two APIs.
 
 * Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 

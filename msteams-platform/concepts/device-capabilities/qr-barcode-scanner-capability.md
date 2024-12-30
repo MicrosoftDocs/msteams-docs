@@ -1,5 +1,5 @@
 ---
-title: Integrate QR or barcode scanner capability
+title: Enable QR/Barcode Scanner Capability
 author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
@@ -25,7 +25,7 @@ To integrate QR or barcode scanner capability, you must update the app manifest 
 It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
-> Currently, Microsoft Teams support for QR or barcode scanner capability is only available for mobile clients.
+> Microsoft Teams support for QR or barcode scanner capability is only available for mobile clients.
 
 ## Update manifest
 

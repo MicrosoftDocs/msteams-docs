@@ -1,7 +1,7 @@
 ---
-title: Integrate web apps
+title: Integrate Web App Experience in Teams
 author: Rajeshwari-v
-description: In this article, you get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
+description: Learn to integrate device capabilities. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -89,9 +89,7 @@ You can also integrate Microsoft 365 identity to build external applications tha
 
 ## See also
 
-* [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
 * [Determine your app's entry points](~/concepts/extensibility-points.md)
-* [Considerations for Teams integration](~/samples/integrating-web-apps.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
@@ -102,5 +100,4 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
-* [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
 * [People picker control](~/concepts/device-capabilities/people-picker-capability.md)

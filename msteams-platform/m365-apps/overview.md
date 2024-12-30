@@ -1,10 +1,10 @@
 ---
-title: Extend Teams apps across Microsoft 365
-description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, and Microsoft 365 as application hosts).
-ms.date: 02/02/2024
+title: Use Teams Apps across Microsoft 365
+description: Learn how to extend Teams apps across Microsoft 365 that runs in Teams, Outlook, and Microsoft 365 as application hosts.
+ms.date: 11/12/2024
 ms.author: mosdevdocs
 author: erikadoyle
-ms.topic: Conceptual
+ms.topic: overview
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
@@ -30,9 +30,10 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
 > [!NOTE]
-> For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+> Apps with app manifest version below 1.13 are limited to Teams. However, apps with app manifest version 1.13 or above are compatible with Teams, Outlook, and Microsoft 365 app.
 
-For guidance about the app manifest and TeamsJS versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
+* For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+* For more information on app manifest, TeamsJS versioning, and Teams platform capability support across Microsoft 365, see [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
 ## Personal tabs in Outlook and Microsoft 365 app
 

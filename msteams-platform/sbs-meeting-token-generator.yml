@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title: Generate meeting token
+title:  Generate meeting token
 metadata:
-  title: Generate meeting token
+  title: Generate Meeting Token for Participants
   description: With this learning module, learn how to generate a meeting token for all the participants to interact in the meeting for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 11/24/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
@@ -289,7 +289,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png" alt-text="Screenshot of Meeting Token App with Add option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png" alt-text="Screenshot of the app details dialog to add the meeting token app.":::
+
+    1. Search and select the required scope or select a chat or meeting from the list, and move through the dialog to select **Go**.
+
+         :::image type="content" source="~/assets/images/meeting-token-generator/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the meeting token app scope.":::
 
        The **Manage apps** section displays the list of applications.
 

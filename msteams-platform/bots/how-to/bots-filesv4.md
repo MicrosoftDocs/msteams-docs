@@ -1,6 +1,6 @@
 ---
-title: Send and receive files using bot
-description: Learn how to send and receive files through the bot using Graph APIs for personal, channel and groupchat scopes.
+title: Bots to Send and Receive Files
+description: Learn how to send and receive files through the bot using Microsoft Graph APIs for personal, channel and groupchat scopes. Code samples (.NET, Node.js, Python).
 ms.date: 04/17/2023
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.topic: how-to
 > [!IMPORTANT]
 >
 > * This article is based on the v4 Bot Framework SDK.
-> * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
+> * Bots don't support sending and receiving files in Government Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
 
 There are two ways to send files to and receive files from a bot:
 
@@ -21,6 +21,12 @@ There are two ways to send files to and receive files from a bot:
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
 
+The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
+
 ## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
@@ -28,7 +34,7 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 * A user's OneDrive folder for `personal` and `groupchat` files.
 * The files in a team's channel for `channel` files.
 
-Graph APIs work in all Teams scopes. For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
+Graph APIs work in all Teams scopes. For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&preserve-view=true&tabs=http#example-4-file-attachments).
 
 Alternately, you can send files to and receive files from a bot using the Teams bot APIs.
 
@@ -127,7 +133,7 @@ The following table describes the content properties of the attachment:
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to the bot when a user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following code shows an example of a concise version of the invoke activity that the bot receives:
 

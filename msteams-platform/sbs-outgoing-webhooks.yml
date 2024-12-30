@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Build Outgoing Webhooks
 metadata:
-  title: Build Outgoing Webhooks
-  description: With this learning module, learn how to set up Outgoing Webhooks for Microsoft Teams to integrate with external apps.
+  title: Integrate External Apps using Webhooks
+  description: In this module, learn how to create, set up, and run Outgoing Webhooks from Visual Studio for Microsoft Teams to integrate with external apps.
   audience: Developer
   level: Beginner
   ms.date: 14/01/2022
@@ -14,6 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
+    > [!Important]
+    > The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+    
     Webhooks help Microsoft Teams to integrate with external apps. In Teams, the Outgoing Webhooks act as bot and search for messages in channels using **@mention**. The Outgoing Webhooks allow users to send messages to web services without performing the entire process of creating bots through Microsoft Bot Framework. The Outgoing Webhooks post data from Teams to any service capable of accepting JSON payload. 
     
     **Key features of Outgoing Webhooks**
@@ -25,7 +28,7 @@ items:
     
      > [!NOTE]
      > The Outgoing Webhooks can't access any other APIs, such as retrieve the roster or list of channels in a team.
-    
+
     This step-by-step guide helps you to create Outgoing Webhooks in Teams. You'll see the following output:
 
     :::image type="content" source="./assets/images/sbs-outgoing-webhooks/complete-challenge.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::

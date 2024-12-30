@@ -1,11 +1,11 @@
 ---
-title: Build message extensions using Bot Framework
+title: Build Bot-based Message Extensions
 author: v-ypalikila
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 09/16/2024
 ---
 
 # Build message extensions using Bot Framework
@@ -16,7 +16,7 @@ Bot-based message extension takes advantage of the Bot Framework's messaging sch
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the the way for a developer to select between action commands and search commands.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands.":::
 
 # [Search commands](#tab/search-commands)
 
@@ -76,7 +76,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 | `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-|`semanticDescription`|Semantic description of the command for consumption by the large language model.|No|1.17|
+|`semanticDescription`|Semantic description of the command for consumption by the Large Language Models (LLMs).|No|1.17|
 | `type` | Type of command. Default is `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
@@ -88,12 +88,35 @@ You must add the following search parameter details that define the text visible
 | `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
-|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the large language model.|No|1.17|
+|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+
+## Message extension as plugin for Copilot for Teams meetings
+
+Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows you to enhance the Copilot for Teams meetings. Copilot for Teams meetings can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
+
+Copilot for Teams meetings is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. Users can ask natural language questions to Copilot for Teams meetings and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both Microsoft 365 Copilot and Copilot for Teams meetings.
+
+:::image type="content" source="../assets/images/Copilot/meeting-copilot-extensibility.png" alt-text="Screenshot shows the plugins flyout menu in Copilot for Teams meetings.":::
+
+| Benefits          | Description                                                                                                            |
+|-------------------|------------------------------------------------------------------------------------------------------------------------|
+| User Empowerment  | Extending Copilot for Teams meetings empowers users with various actions to enhance their meeting experience.                      |
+| UI Commands       | Users can easily access features like opening a task module or sharing an app to the stage.                             |
+| Search Commands   | Efficient data retrieval from app databases is made possible, streamlining the search process.                          |
+
+| Scenarios         | Description                                                                                                            |
+|-------------------|------------------------------------------------------------------------------------------------------------------------|
+| Reactive Commands | Users can directly command Copilot for Teams meetings to perform specific actions or provide information.                                  |
+|                   | - Natural Language Prompts: Users can instruct Copilot for Teams meetings to carry out search commands.                         |
+|                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot for Teams meetings to execute.                                |
+| Proactive Assistance | Copilot for Teams meetings proactively listens to meeting signals and assists users by:                                                   |
+|                   | - Suggesting prompts from apps: Contextually relevant suggestions based on the discussion topics.                      |
+|                   | - Providing assistance without explicit prompts: Copilot for Teams meetings can automatically suggest actions based on the discussion.    |
 
 ## Next step
 

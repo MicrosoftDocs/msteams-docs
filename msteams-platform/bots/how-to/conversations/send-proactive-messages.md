@@ -4,6 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 11/14/2024
 ---
 # Proactive messages
 
@@ -19,7 +20,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 >
 > * To send proactive message, it's recommended to start with [building notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. For more information, see [Teams Toolkit documents](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
+> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages, the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 
@@ -63,7 +64,7 @@ Create the conversation, after you have the user or channel information.
 
 ## Create the conversation
 
-You can create the conversation if it doesn't exist or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
+You can create the conversation if it doesn't exist, or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
 To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#create-conversation), you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
@@ -141,7 +142,7 @@ Cache-Control: no-store, must-revalidate, no-cache
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it marks their first interaction with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 ### Welcome messages
 
@@ -157,13 +158,13 @@ A good welcome message can include the following:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 
 * What was the result? It must be clear, what item is updated to get the notification.
 
-* Who or what triggered it? Who or what took action, which caused the notification to be sent.
+* Who or what triggered it? Who or what took action which caused the notification to be sent.
 
 * What can users do in response? Make it easy for your users to take actions based on your notifications.
 
@@ -171,9 +172,15 @@ To send notifications using proactive messaging, ensure your users have a clear 
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
+To update or delete a proactive message sent by a notification only bot:
+
+1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
+
+1. Use `UpdateActivityAsync` or `DeleteActivityAsync` methods to update or delete the original message.
+
 ### Scheduled messages
 
-When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
+When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages include:
 
 * Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
 
@@ -189,7 +196,7 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 ### Examples
 
-Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
+Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true&tabs=multitenant) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
 
 * [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
 * [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
@@ -222,7 +229,7 @@ The following code shows how to send proactive messages:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
@@ -300,7 +307,7 @@ Example of a code snippet to demonstrate creating conversation reference.
 
 # [JavaScript](#tab/javascript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getconversationreference)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
@@ -325,7 +332,7 @@ async SendNotificationToAllUsersAsync(context) {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-botframeworkadapter-create-conversation)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
@@ -429,5 +436,5 @@ The following table provides a simple code sample that incorporates basic conver
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
-* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true)
 * [Implement custom storage for bot](/azure/bot-service/bot-builder-custom-storage)

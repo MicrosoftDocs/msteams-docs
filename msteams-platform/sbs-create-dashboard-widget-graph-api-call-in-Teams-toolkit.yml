@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: Build a dashboard in Teams
 metadata:
-  title: Build a dashboard in Teams
-  description: Learn how to create a dashboard tab, add a new widget, and implement Graph API in Teams toolkit.
+  title: Build Dashboard Tab App - Tutorial
+  description: Learn how to create a dashboard tab app using Teams Toolkit in Visual Studio Code. Learn to add a new widget and implement Graph API call.
   audience: Developer
   level: Beginner
-  ms.date: 01/06/2023
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/build-a-dashboard-tab-app.md
   nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
@@ -25,7 +25,7 @@ items:
     | Install | For using |
     | --- | --- |    
     | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
+    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
@@ -34,11 +34,11 @@ items:
 - title: Create a new dashboard
   content: |
 
-    Teams Toolkit supports scaffolding and dashboard creation.
+   Teams Toolkit supports to create a dashboard and scaffolding.
 
-    To create a new dashboard:
+   To create a new dashboard:
 
-     1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
+     1. Select the Teams Toolkit icon in the Visual Studio Code **Activity Bar**.
 
      1. Select **Create a New App**.
 
@@ -47,11 +47,11 @@ items:
      1. Select **Tab** to create a new tab project. 
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
-
+        
      1. Select **Dashboard**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
-
+        
      1. Select **TypeScript** as the programming language.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
@@ -64,15 +64,17 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        Teams Toolkit creates tab app in few seconds and message appears.
+        The Teams tab app is created in few seconds.
       
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in Visual Studio Code.":::
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
+        After your app is created, Teams Toolkit displays the following message:
+
+        :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar.
 
-     1. Select **Sign in to Microsoft 365**. A prompt appears.
+     1. Select **Sign in to Microsoft 365**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
@@ -80,37 +82,41 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select the **F5** key to run the application in debug mode.
+     1. Select **F5** to run the application in debug mode.
 
      1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
 
-        Teams app successfully creates the tab app dashboard.
+     1.  Select **Open**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-add-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
-        Teams app also supports different themes, including dark and high contrast themes.
+         Tab app dashboard is successfully created in Teams.
 
-        # [Dark theme](#tab/darktheme)
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
-        The following image shows the use of Dark theme in the Teams desktop client:
+         Teams also supports different themes, including dark and high contrast themes.
 
-           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
+          # [Dark theme](#tab/darktheme)
 
-        # [High contrast theme](#tab/highcontrasttheme)
+          The following image shows the use of Dark theme in the Teams desktop client:
 
-        The following image shows the use of High contrast theme in the Teams desktop client:
+            :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
-           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+          # [High contrast theme](#tab/highcontrasttheme)
 
-        ---
+          The following image shows the use of High contrast theme in the Teams desktop client:
 
-      In TeamsFX CLI,
+            :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
 
-      * If you prefer interactive mode, execute `teamsfx new` command, then use the keyboard to go through the same flow as in Visual Studio Code.
+         ---
 
-      * If you prefer non-interactive mode, enter all required parameters in one command:
+      In TeamsFx CLI,
+
+      * If you prefer an interactive mode, execute `teamsfx new` command and then use the keyboard to go through the same flow as in Visual Studio Code.
+
+      * If you prefer non-interactive mode, enter all the required parameters in one command:
 
         `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
@@ -118,17 +124,17 @@ items:
   durationInMinutes: 2
   content: |       
 
-      The core dashboard implementation is in the tabs folder. This section walks you through the generated code.
+      After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code. The core implementation of the dashboard is in the tabs folder.
 
       | Folder | Contents |
       | ----- | ----- |
-      | `.vscode` | VS Code files for debugging. |
+      | `.vscode` | Visual Studio Code files for debugging. |
       | `appPackage` | Templates for the Teams application manifest. |
       | `env` | Environment files. |
       | `infra` | Templates for provisioning Azure resources. |
       | `src` | The source code for the dashboard Teams application. |
 
-      The following files provide the business logic for the dashboard tab. You can update them to fit your business logic requirements. The default implementation provides a starting point to help you get started.
+      The following files provide the business logic for the dashboard tab. You can update the files to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
       | File | Contents |
       | ----- | ----- |
@@ -172,7 +178,7 @@ items:
      1. Create a **sampleModel.ts** file.
      1. Add the following code in the **sampleModel.ts** file:
 
-        ```typescript
+        ```TypeScript
           export interface SampleModel {
           content: string;
           }
@@ -189,7 +195,7 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts** file:
 
-        ```typescript
+        ```TypeScript
         import { SampleModel } from "../models/sampleModel";
 
         export const getSampleData = (): SampleModel => {
@@ -204,29 +210,31 @@ items:
      1. Create a **SampleWidget.tsx** file.
      1. Add the following code in the **SampleWidget.tsx** file:
 
-        ```typescript
+        ```TypeScript
         import { Button, Text } from "@fluentui/react-components";
         import { BaseWidget } from "@microsoft/teamsfx-react";
         import { SampleModel } from "../models/sampleModel";
         import { getSampleData } from "../services/sampleService";
-        
-        interface SampleWidgetState {
+        interface SampleWidgetState 
+        {
           data?: SampleModel;
         }
-        
-        export class SampleWidget extends BaseWidget<any, SampleWidgetState> {
-          override async getData(): Promise<SampleWidgetState> {
+        export class SampleWidget extends BaseWidget<any, SampleWidgetState>
+        {
+          override async getData(): Promise<SampleWidgetState>
+          {
             return { data: getSampleData() };
           }
-          
-          override header(): JSX.Element | undefined {
+          override header(): JSX.Element | undefined
+          {
             return <Text>Sample Widget</Text>;
           }
-          
-          override body(): JSX.Element | undefined {
+          override body(): JSX.Element | undefined
+          {
             return <div>{this.state.data?.content}</div>;
           }
-          override footer(): JSX.Element | undefined {
+          override footer(): JSX.Element | undefined
+          {
             return <Button>View Details</Button>;
           }
         }
@@ -239,12 +247,11 @@ items:
       To add a widget to the dashboard, follow these steps:
 
       1. In Visual Studio Code, go to **Explorer** > **src** > **dashboards** > **SampleDashboard.tsx**.
-      1. Update the `override layout()` method to add the widget to the dashboard:
+      1. Add the widget to the dashboard by updating the `override layout()` method:
 
-          ```typescript
+          ```TypeScript
           override layout(): JSX.Element | undefined {
-            return (
-           <>
+            return (<>
                 <ListWidget />
                 <ChartWidget />
                 <SampleWidget />
@@ -266,10 +273,9 @@ items:
             }
             ```
 
-            ```typescript
+            ```TypeScript
             override layout(): JSX.Element | undefined {
-              return (
-              <>
+              return (<>
                   <ListWidget />
                   <div className="one-column">
                     <ChartWidget />
@@ -309,7 +315,7 @@ items:
             {
               "id": "${{AAD_APP_OBJECT_ID}}",
               "appId": "${{AAD_APP_CLIENT_ID}}",
-              "name": "dashboardV5Demo",
+              "name": "dashboardDemo",
               "accessTokenAcceptedVersion": 2,
               "signInAudience": "AzureADMyOrg",
               "optionalClaims": {
@@ -350,56 +356,47 @@ items:
               "preAuthorizedApplications": [
                   {
                       "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "00000002-0000-0ff1-ce00-000000000000",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "4345a7b9-9a63-4910-a426-35363201d503",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   }
               ],
-              "identifierUris": [
-                "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-              ],
+              "identifierUris": 
+              ["api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"],
               "replyUrlsWithType": [
                 {
                   "url": "${{TAB_ENDPOINT}}/auth-end.html",
@@ -487,6 +484,7 @@ items:
         1. Add the code under `provision`.
         
             ```yaml 
+
               - uses: aadApp/create
                 with:
                     name: "YOUR_AAD_APP_NAME"
@@ -503,7 +501,7 @@ items:
               - uses: aadApp/update
                 with:
                   manifestPath: "./aad.manifest.json"
-                  outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+                  outputFilePath: ./build/aad.manifest.${{TEAMSFX_ENV}}.json
             ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::  
@@ -512,7 +510,7 @@ items:
  
             ```yaml
               REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html 
             ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
@@ -570,7 +568,6 @@ items:
                             cacheLocation: "sessionStorage",
                           },
                         }
-
                         const msalInstance = new msal.PublicClientApplication(msalConfig);
                         const scopesArray = scope.split(" ");
                         const scopesRequest = {
@@ -623,19 +620,20 @@ items:
                             cacheLocation: "sessionStorage",
                           },
                         }
-
                         const msalInstance = new window.msal.PublicClientApplication(msalConfig);
                         msalInstance.handleRedirectPromise()
-                          .then((tokenResponse) => {
-                            if (tokenResponse !== null) {
+                          .then((tokenResponse) => 
+                          {
+                            if (tokenResponse !== null) 
+                            {
                               microsoftTeams.authentication.notifySuccess(JSON.stringify({
                                 sessionStorage: sessionStorage
                               }));
                             } else {
                               microsoftTeams.authentication.notifyFailure("Get empty response.");
                             }
-                          })
-                          .catch((error) => {
+                          }).catch((error) => 
+                          {
                             microsoftTeams.authentication.notifyFailure(JSON.stringify(error));
                           });
                       });
@@ -661,7 +659,7 @@ items:
 
      1. Update the following code in the **listService.ts**:        
 
-        ```typescript
+        ```TypeScript
         /**
           * Retrieve sample data
           * @returns data for list widget
@@ -673,12 +671,11 @@ items:
           } from "@microsoft/teamsfx";
           import { ListModel } from "../models/listModel";
           import { loginAction } from "../internal/login";
-                
         export const getListData = async (): Promise<ListModel[]> => {
           await loginAction(["User.Read"]);
           let credential = TeamsUserCredentialContext.getInstance().getCredential();
-          const graphClient = createMicrosoftGraphClientWithCredential(credential, [
-            "User.Read",
+          const graphClient = createMicrosoftGraphClientWithCredential(credential, 
+          ["User.Read",
           ]);
           const me = await graphClient.api("/me").get();
           return [
@@ -688,7 +685,6 @@ items:
               content: me.mail,
             },
           ];
-
           // {
           //   id: "id1",
           //   title: "Sample title",
@@ -711,7 +707,7 @@ items:
 
       1. Update the `export default class ListWidget()` to add user profile widget.
 
-         ```typescript
+         ```TypeScript
           export default class ListWidget extends BaseWidget<any, IListWidgetState> {
             async getData(): Promise<IListWidgetState> {
               return { data: await getListData() };

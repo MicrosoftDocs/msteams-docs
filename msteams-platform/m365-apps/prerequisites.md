@@ -1,6 +1,6 @@
 ---
-title: Set up your dev environment for extending Teams apps across Microsoft 365
-description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft 365 applications.
+title: Extend Apps Across Microsoft 365
+description: Requirements to set up dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Teams and Microsoft 365 apps.
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 author: erikadoyle
@@ -35,17 +35,17 @@ You also need to enable custom app upload for your tenant:
 
  1. Go to **Teams apps** > **Manage apps**.
 
- 1. At the top right, select **Org-wide app settings**.
+ 1. In the upper-right corner of the Manage apps page, select **Actions** dropdown menu > **Org-wide app settings**.
 
- 1. Under Custom apps, turn on the **Interaction with custom apps** toggle and **Save**.
+ 1. Under **Custom apps**, turn on the **Let users interact with custom apps in preview** toggle and select **Save**.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables custom app upload from the Teams Admin Center":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Screenshot shows how to enable custom app upload option from Teams admin center.":::
 
- 1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+    Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
- 1. In the Teams admin center, go to **Teams apps** > **Setup policies**, and then select **Global (Org-wide default) policy**.
+ 1. Go to **Teams apps** > **Setup policies** and select **Global (Org-wide default)** policy.
 
- 1. Turn on **Upload custom apps**, and select **Save**.
+ 1. Turn on **Upload custom apps** and select **Save**.
 
 ## Enroll your developer tenant for Microsoft 365 Targeted Releases (Optional)
 

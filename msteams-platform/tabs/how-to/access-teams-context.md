@@ -1,5 +1,5 @@
 ---
-title: Get context for your tab
+title: Get Contextual Information for Tabs
 description: Learn to context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to
@@ -48,8 +48,8 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
 
 > [!NOTE]
-> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{user.loginHint}`.
-> - Mobile (Android and iOS) versions of Microsoft Teams currently support only TeamsJS v1.x.x placeholders.
+> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
+> - Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
@@ -295,7 +295,7 @@ For more information, see [Updates to the *Context* interface](using-teams-clien
 ## Retrieve context in private channels
 
 > [!NOTE]
-> Private channels are currently in private developer preview only.
+> Private channels are in private developer preview only.
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel.
 
@@ -373,11 +373,6 @@ The following image shows the dark theme option in the Teams:
 | Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
 |Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ## See also
 

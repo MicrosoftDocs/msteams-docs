@@ -1,7 +1,7 @@
 ---
 title: Analytics overview
 author: heath-hamilton
-description: Learn to plan and build analytics for your Teams app.
+description: Learn to plan and build analytics for your Teams app, instrumentation markers for app specific analytics, and aggregate and user-specific insights.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -94,9 +94,9 @@ Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microso
 
 These webpages often have the instrumentation done for core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. It's handy for your analytics needs that tabs are “Teams-aware” webpages.
 
-When you build a tab following [prerequisites defined here](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
+When you build a tab following [prerequisites defined here](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Microsoft Entra tenant) for the current user (`tid`). In Microsoft 365 or Microsoft Entra ID, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
+- Microsoft 365 tenant ID (Microsoft Entra tenant) for the current user (`tid`). In Microsoft 365 or Microsoft Entra ID, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required admin permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (`licenseType`) and enterprise, free, edu, and unknown for (`tenantSKU`).
 - The context where the tab URL is loaded. Some possible values can be content page, dialog, tab settings dialog, tab remove dialog, meeting sidePanel, and so on. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, and so on. (`hostClientType`). You can slice your analytics data.

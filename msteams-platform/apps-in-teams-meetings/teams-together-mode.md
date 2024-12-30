@@ -1,10 +1,10 @@
 ---
 title: Custom Together Mode Scenes
 author: surbhigupta
-description: Work with custom Together Mode scenes
+description: Learn how to work with custom Together Mode scenes in Microsoft Teams, build scene using Scene studio, share scene using Scene studio, and its sample.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
@@ -25,7 +25,7 @@ Get started and transform your Teams meetings with Custom Together Mode scenes.
 
 ## Custom Together Mode scene
 
-Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene only app. We recommend you to use scene only apps for better experience.
+Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene-only app. We recommend you to use scene-only apps for better experience.
 
 > [!NOTE]
   >
@@ -160,13 +160,16 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
 
     :::image type="content" source="~/assets/images/apps-in-meetings/save-view-in-teams.png" alt-text="Screenshot shows the options to save the scene and view in teams.":::
 
-   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. A screen opens in your Teams to add the scene app created.
+   A scene-only app is created and you can view the app and its `package.json` file in the **Apps** page in Developer Portal. A screen opens in your Teams to add the scene app created.
+
+   > [!NOTE]
+   > The app capabilities used by scene-only apps are focused on creating immersive Together Mode scenes. Admins can manage the behavior of scene-only apps through app setup policies in Teams admin center.
 
 1. Select **Preview in Teams**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/preview-teams.png" alt-text="Screenshot shows the options to preview the scene in teams.":::
 
-   Teams page appears to add the scene only app created in Scene studio.
+   Teams page appears to add the scene-only app created in Scene studio.
 
 1. Select **Add**.
 
@@ -177,8 +180,7 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
 Before you start, you must create a new Teams meeting to test and launch Custom Together Mode scenes in Teams.
 
 > [!NOTE]
->
-> You can apply a Custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+> You can apply a Custom Together Mode scene that is deployed by your Teams Administrator only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
 Join the Teams meeting and follow these steps to test the Custom Together Mode:
 

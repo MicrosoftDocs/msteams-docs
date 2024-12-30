@@ -1,6 +1,6 @@
 ---
-title: Create a content page
-description: Learn about webpage within Teams client, and is part of personal, channel, or group custom tab. Create content page and embed it as webview inside dialog (task module).
+title: Build a Content Page for Tab
+description: Learn about webpage within Teams client in personal, channel, or group custom tab. Create content page and embed it as webview inside dialog (task module).
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/23/2022
@@ -28,7 +28,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
+To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
@@ -85,7 +85,7 @@ The following code is an example of how your page and the Teams client communica
 
 ***
 
-For more information on how to create and add a content page to a personal tab, see [add a content page to personal tab](../create-personal-tab.md#add-a-content-page-to-the-personal-tab).
+For more information on how to create and add a content page to a personal tab, see [add a content page to the tab](../create-personal-tab.md#add-a-content-page-to-the-tab).
 
 The following images show the configuration of an HTML content page and the output of content page in tab:
 
@@ -136,7 +136,7 @@ Use the following steps to show the native loading indicator:
 
 1. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`. *[Optional]*
 
-1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure. The `message` property is currently not used, therefore the failure message doesn't appear in the UI, and a generic error screen appears to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
+1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure. The `message` property isn't used, therefore the failure message doesn't appear in the UI, and a generic error screen appears to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
     ```typescript
     /* List of failure reasons */
@@ -158,4 +158,4 @@ Use the following steps to show the native loading indicator:
 * [Create a personal tab](../create-personal-tab.md)
 * [Create a channel tab or group tab](../create-channel-group-tab.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
-* [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
+* [Dev Tools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)

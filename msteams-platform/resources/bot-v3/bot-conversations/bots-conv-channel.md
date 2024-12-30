@@ -1,6 +1,6 @@
 ---
-title: Channel and Group chat conversations with bots
-description: In this module, learn end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
+title: Channel/Group Chat Bot Conversations
+description: Learn about end-to-end scenario and @ mentions in bot conversation for channel or group chat within Microsoft Teams and design bots for channels or groups.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/02/2023

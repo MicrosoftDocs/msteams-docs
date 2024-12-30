@@ -1,7 +1,8 @@
 ---
-title: Overview to authentication using SSO in Teams with Microsoft Entra ID
-description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension.
+title: Enable SSO with Microsoft Entra ID
+description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, and SSO in Teams at runtime.
 ms.topic: conceptual
+ms.date: 11/12/2024
 ms.localizationpriority: high
 ---
 # Enable SSO for your app
@@ -23,13 +24,13 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user can access the app on web, desktop, or mobile client.
 
 > [!NOTE]
-> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the tenant administrator can grant consent on an app user's behalf.
+> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the admin can grant consent on an app user's behalf.
 
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 

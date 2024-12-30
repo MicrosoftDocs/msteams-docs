@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: SSO for tabs and message extension
 metadata:
-  title: SSO for tabs and message extension
-  description: In this module, learn how to set up Microsoft Entra Single sign-on (Microsoft Entra SSO) for tabs.
+  title: Add SSO to Tab & Message Extension App
+  description: In this module, learn how to set up Microsoft Entra single sign-on (SSO) authentication for tabs and message extensions.
   audience: Developer
   level: Beginner
-  ms.date: 12/07/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on SSO authentication for tabs.
@@ -230,9 +230,12 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of app details dialog to add tab SSO app.":::
     
-    1. Send a message to the bot. 
+    1. Select **Open** and send a message to the bot.
+
+       :::image type="content" source="./assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted."::: 
+    
     1. The bot performs SSO and displays profile card along with option prompt to view token.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::

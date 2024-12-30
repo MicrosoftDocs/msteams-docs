@@ -1,7 +1,7 @@
 ---
-title: Overview for planning, strategizing, and executing growth for your app
+title: Plan & Strategize App Growth
 author: heath-hamilton
-description: Learn to plan, strategize and execute growth for your app.
+description: Learn to plan, strategize, and execute growth for your app, understand growth model, and grow and succeed on Teams marketplace.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -202,7 +202,6 @@ Monetization investments encompass defining role of Teams app in your business a
 ## See also
 
 - [Distribute your Microsoft Teams app](../../../apps-publish-overview.md)
-- [Monetize your app](../../prepare/monetize-overview.md)
 - [Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
 - [Build your collaborative app](build-app.md)
 - [Gain traction for your collaborative app in the market](gain-traction.md)

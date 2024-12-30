@@ -1,6 +1,6 @@
 ---
-title: Overview - Distribute your app
-description: Learn to distribute, publish your app to Microsoft Teams Store or to your org. Understand how app's endpoints must comply with your Government Community Cloud(GCC) organization's requirements.
+title: Overview - Publish your app
+description: Learn to publish app to Teams Store or to your org. Understand how app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 02/22/2023
 ---
 
-# Distribute your Microsoft Teams app
+# Publish your Microsoft Teams app
 
-You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the app.
 
 ## Configure default install options
 
@@ -22,7 +22,7 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 
 ## Create Teams app package
 
-To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To publish your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
@@ -64,4 +64,4 @@ For more information, see [publish to the Teams Store](~/concepts/deploy-and-pub
 * [Publish to org](/microsoftteams/upload-custom-apps)
 * [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
 * [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
-* [Enable customization for your Microsoft Teams app](../design/enable-app-customization.md)
+

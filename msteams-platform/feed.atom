@@ -1,12 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2024-04-09T04:15:01+05:30</updated>
+	<updated>2024-10-01T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Ensure a secure and user-friendly experience for app users with Nested App Authentication]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11548</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Excited to introduce Nested app authentication (NAA) for single-page applications that are embedded in host environment. NAA ensures that users can seamlessly interact with integrated apps within a primary app. It offers all this while maintaining security and enhancing user experience without requiring multiple logins. Use NAA to enable Single Sign-On (SSO) for apps embedded within supported Microsoft apps. NAA improves security by offering better security and flexibility. This allows for the creation of rich, client-driven apps while ensuring a secure and user-friendly experience for app users.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Introduced App analytics for third-party apps in Developer Portal]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11610</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you're an ISV developer, you now have the capability to access and analyze your app's usage metrics, including monthly, daily, and weekly data, through the Developer Portal. Additionally, you can import your existing or published apps to the Developer Portal to view detailed usage data, such as trends over time, usage by region or country, app usage across different host products and Microsoft 365 (M365) workloads, and the usage of various app capabilities. This enhancement aims to provide full visibility and explore app usage metrics to build better apps and to provide detailed insights into your app performance.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Be proactive in following validation guidelines for your Copilot agent and publish it swiftly!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11611</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed"/>
+		<updated>2024-10-01T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We’ve introduced comprehensive validation guidelines to help publish your Copilot agents swiftly. By following these guidelines, developers can significantly improve their chances of getting their agents approved and published to the Store faster. Be sure to refer to the updated page for all the details.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Announcing the launch of the enhanced App validation tool in Developer Portal!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11459</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed"/>
+		<updated>2024-07-31T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you're an ISV developer, our updated App validation tool lets you evaluate your app packages using the same test cases Microsoft uses for reviews. It identifies errors or warnings in app manifests, basic info, and bot capabilities, providing clear guidelines for resolution. Developers now get detailed success, error, and warning statuses based on new bot capability scenarios, helping them fix issues before submission.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Common reasons for app validation failure]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10819</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10819?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-14T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We've highlighted some of the most common reasons for app validation failure in this article to help you better prepare before you submit your app. This checklist consists of over 70% of bugs reported during validation. By avoiding these common reasons, you can boost your app's chances of passing the Microsoft Teams Store submission process.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10819?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Share code snippets as richly formatted Adaptive Cards]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10818</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10818?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-14T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[The CodeBlock element enables you to share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings. Adaptive Cards with the CodeBlock element make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the programming language.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10818?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Teams AI Library for Python in Public Preview]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10817</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10817?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-14T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[You can focus on writing your business logic, while Teams handles the complexities of conversational bots, making it effortless for you to extract and apply user intent within your apps.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10817?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing Dashboardcards that can be pinned to a dashboard]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10816</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10816?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-13T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[The dashboardCards property in the app manifest defines a list of cards that can be pinned to a dashboard such as Microsoft Viva Connections, providing a summarized view of app details.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10816?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>	
+	
+	<entry>
+		<title type="html"><![CDATA[Platform update: Authentication in API-based search message extensions]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10815</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10815?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-13T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[You can now implement authentication in API-based message extensions to provide secure and seamless access to the applications. If your message extension requires authentication, add the authorization property under composeExtensions.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10815?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Bot configuration is GA Feedback]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10801</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10801?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-13T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Users can now tailor the bot to their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot's ongoing relevance and value.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10801?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Inadequate app description ]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure#inadequate-app-description</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure#inadequate-app-description?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-30T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[ A great app description highlights your app's benefits and encourages customers to download it. Avoid the common mistakes in the app descriptions that prevent apps from passing Teams Store submission process.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure&pageQueryParams=&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure.md&documentVersionIndependentId=7f3962a8-c69a-a971-7a94-0ed5b164344a&feedback=%0A%0A%5BEnter+feedback+here%5D%0A&author=%40v-ypalikila&metadata=*+ID%3A+7f3962a8-c69a-a971-7a94-0ed5b164344a+%0A*+Service%3A+**msteams**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Open content in Stageview]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/open-content-in-stageview?tabs=withchat</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/open-content-in-stageview?tabs=withchat?referrer=whats.new.rssfeed"/>
@@ -33,91 +121,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-api-based-message-extension?tabs=developer-portal-for-teams%2Cnew-api%2Cnew-api2?referrer=whats.new.rssfeed"/>
 		<updated>2024-02-16T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience. You can now build API-based message extension using Developer Portal for Teams.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Version%20Independent%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Content%3A%20%5BBuild%20API-based%20message%20extension%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fbuild-api-based-message-extension%3Ftabs%3Ddeveloper-portal-for-teams%252Cnew-api%252Cnew-api2)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-ypalikila%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introduced Teams Toolkit CLI v3]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three?referrer=whats.new.rssfeed"/>
-		<updated>2024-01-22T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. We recommend that you use Teams Toolkit CLI v3 to build your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Version%20Independent%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Content%3A%20%5BTeams%20Toolkit%20Command%20Line%20Interface%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-cli%3Fpivots%3Dversion-three)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40MuyangAmigo%0A*%20Microsoft%20Alias%3A%20**zhany**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Extend a Teams message extension across Microsoft 365]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-27T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Message extensions allow users to interact with your web service using buttons and forms. Users can search or initiate actions in an external system from Microsoft Teams and Outlook by extending your Teams apps across Microsoft 365. There are two types of message extensions:Search-based and Action-based message extensions.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%202f0e2f61-c2b6-13c5-c367-283c55ae1be0%0A*%20Version%20Independent%20ID%3A%202f0e2f61-c2b6-13c5-c367-283c55ae1be0%0A*%20Content%3A%20%5BExtend%20a%20Teams%20message%20extension%20across%20Microsoft%20365%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dttk%252Csearch-based-message-extension)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md)%0A*%20Service%3A%20**msteams**%0A*%20Sub-service%3A%20**m365apps**%0A*%20GitHub%20Login%3A%20%40erikadoyle%0A*%20Microsoft%20Alias%3A%20**mosdevdocs**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: The captureImage API]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/media-capabilities?tabs=mobile#media-capability-apis</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/media-capabilities?tabs=mobile#media-capability-apis?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[The captureImage API enables users to activate the camera and capture an image or select media from the gallery. When the captureImage callback is triggered, the image is shared as a file. The API restricts users to either select or capture a single image for sharing and is compatible only with mobile clients.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Version%20Independent%20ID%3A%20c0c97e33-0168-1302-440b-0c77b2796fc4%0A*%20Content%3A%20%5BIntegrate%20media%20capabilities%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities%3Ftabs%3Dmobile)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmedia-capabilities.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/debug-your-teams-app-test-tool?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Version%20Independent%20ID%3A%206fa9130b-1aa5-b068-4211-a5a4cc32effa%0A*%20Content%3A%20%5BDebug%20bot%20using%20Teams%20App%20Test%20Tool%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Use callRecording API to fetch meeting recording from all meetings]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-14T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Version%20Independent%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Content%3A%20%5BUse%20Microsoft%20Graph%20to%20fetch%20transcripts%20and%20recordings%20for%20a%20Teams%20meeting%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Sample code: New sample to show how to use callRecording API to fetch meeting recording from all meetings]]></title>
-		<id>https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording</id>
-		<link href="https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp?referrer=whats.new.rssfeed"/>
-		<updated>2023-11-14T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Sample code which shows how your app can fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. This sample uses Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Version%20Independent%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Content%3A%20%5BUse%20Microsoft%20Graph%20to%20fetch%20transcripts%20and%20recordings%20for%20a%20Teams%20meeting%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Build message extensions using API]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/api-based-overview</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/api-based-overview?referrer=whats.new.rssfeed"/>
-		<updated>2023-10-25T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. This is currently in developer preview. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20f1e3d44d-9e64-8332-dff8-26595726898c%0A*%20Version%20Independent%20ID%3A%20f1e3d44d-9e64-8332-dff8-26595726898c%0A*%20Content%3A%20%5BBuild%20message%20extensions%20using%20API%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-overview)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fmessaging-extensions%2Fapi-based-overview.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-overview.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-ypalikila%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Use callTranscript API to fetch meeting transcript from all meetings]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts?referrer=whats.new.rssfeed"/>
-		<updated>2023-10-05T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a Teams meeting that has been scheduled beforehand. Get meeting recordings using Graph API are available only in public developer preview. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Version%20Independent%20ID%3A%2023fb5403-f29d-1479-0899-83a470f4fa05%0A*%20Content%3A%20%5BUse%20Microsoft%20Graph%20to%20fetch%20transcripts%20and%20recordings%20for%20a%20Teams%20meeting%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fmeeting-transcripts%2Foverview-transcripts.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-		<entry>
-		<title type="html"><![CDATA[Platform update: Ratings and review for Teams apps]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview#ratings-and-review-for-teams-apps</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview#ratings-and-review-for-teams-apps?referrer=whats.new.rssfeed"/>
-		<updated>2023-10-05T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d29cfd09-9067-d939-960a-b33931707c4d%0A*%20Version%20Independent%20ID%3A%206c0b95fa-b5b4-5ace-15e7-55d2b007b792%0A*%20Content%3A%20%5BMaintain%20and%20support%20your%20published%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview%23ratings-and-review-for-teams-apps)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpost-publish%2Foverview.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Teams store search experience]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish#teams-store-search-experience</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish#teams-store-search-experience?referrer=whats.new.rssfeed"/>
-		<updated>2023-08-29T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209f071593-9440-5115-242d-488cf25e9256%0A*%20Version%20Independent%20ID%3A%20746b1c6e-1bcc-21fe-e2be-149e7c10f1d5%0A*%20Content%3A%20%5BOverview%20-%20Publish%20your%20app%20to%20the%20Microsoft%20Teams%20store%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish%23teams-store-search-experience)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Teams app manifest is now referred to as app manifest]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema?referrer=whats.new.rssfeed"/>
-		<updated>2023-08-28T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200f94a488-d636-92b3-21eb-c88744c8f272%0A*%20Version%20Independent%20ID%3A%207b3413f4-9ade-accf-5cb2-83fead11a32a%0A*%20Content%3A%20%5BManifest%20schema%20reference%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fschema%2Fmanifest-schema)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fresources%2Fschema%2Fmanifest-schema.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fresources%2Fschema%2Fmanifest-schema.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>

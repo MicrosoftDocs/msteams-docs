@@ -2,10 +2,10 @@
 title: Share meeting stage in Teams 
 metadata:
   title: Share meeting stage in Team
-  description: With this learning module, learn how to set up a Meeting Stageview for Teams to add status details for collaboration.
+  description: Learn how to set up and share meeting stage in Microsoft Teams to enhance collaboration and interact by adding status details of tasks.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
@@ -172,11 +172,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-meetings-stage-view/add-the-app.png" alt-text="Screenshot shows the option to add the side panel app."::: 
+        :::image type="content" source="~/assets/images/sbs-meetings-stage-view/add-the-app.png" alt-text="Screenshot of meeting app details dialog with the Add option highlighted."::: 
 
-    1. Select **Set up a tab**.
-    
-        :::image type="content" source="~/assets/images/sbs-meetings-stage-view/set-up-tab.png" alt-text="Screenshot shows the option to set up a tab.":::
+    1. Search and select the required meeting or select a meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/sbs-meetings-stage-view/add-meeting-scope.png" alt-text="Screenshot shows the option to select the meeting.":::
 
        The **Manage apps** section displays the list of applications.
    

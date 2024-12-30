@@ -1,7 +1,7 @@
 ---
-title: The traction stage for your collaborative app
+title: Accelerate Market Traction for App
 author: heath-hamilton
-description: Learn what you can do during the traction stage of your app to grow your app.
+description: Learn what you can do during the traction stage of your app to grow your app such as plan, build readiness, and drive adoption among customers.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -33,7 +33,7 @@ As soon as your collaborative app is published and customers are made aware of i
 
 - To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. They must also monitor value realization metrics or milestones for customers using the app, so that performing outreach and intervention at the right time becomes possible to be able to assist users in their journey.
 
-- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It's a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will benefit from their expertise in these areas.
+- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It's a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers benefit from their expertise in these areas.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -205,7 +205,3 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 
 > [!div class="nextstepaction"]
 > [Scaling your collaborative app](scale-app.md)
-
-## See also
-
-[Strategize and execute growth for your app](overview-app-growth.md)

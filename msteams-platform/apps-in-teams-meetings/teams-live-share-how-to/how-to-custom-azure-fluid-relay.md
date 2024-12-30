@@ -1,7 +1,7 @@
 ---
-title: How to use custom Azure Fluid Relay service
+title: Custom Azure Fluid Relay Service
 author: surbhigupta
-description: In this module, learn how to use a custom Azure Fluid Relay service with Live Share.
+description: Learn how to use a custom Azure Fluid Relay service with Live Share, Live Share without LiveShareClient, Live Share with your custom service, and container mapping.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila

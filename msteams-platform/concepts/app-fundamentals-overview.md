@@ -1,7 +1,7 @@
 ---
 title: Plan your app overview
 author: heath-hamilton
-description: Understand use cases and Microsoft Teams app features, map use cases, and plan responsive tabs for mobile. Learn about Teams features, availability, and app supports for GCC, GCC-High, and DOD.
+description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 03/20/2023
@@ -46,7 +46,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
-* **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
+* **Design your app UI**: Use Teams UI Toolkit and Fluent UI React components to design your app's layout.
 
 * **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
@@ -75,7 +75,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and admins use their own discretion to enable it. | ❌ | ❌ |
 | Custom apps built for your org (LOB apps)| ✔️ | ✔️ | ✔️ |
 | Upload custom apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |

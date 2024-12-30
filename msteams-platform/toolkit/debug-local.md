@@ -1,11 +1,11 @@
 ---
-title: Debug your Teams app locally
+title: Teams Toolkit - Debug your Apps Locally
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app locally in Teams Toolkit.
+description: Learn how to set up Teams Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/21/2022
+ms.date: 12/11/2024
 ---
 
 # Debug your Teams app locally
@@ -92,6 +92,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     devtunnel user login
     ```
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
 
 1. Run the following command to start your local tunnel service:
@@ -106,6 +107,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     BOT_DOMAIN=sample-id-3978.devtunnels.ms
     BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
     ```
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
 
 1. Run the following command to provision the app to Teams:
@@ -113,6 +115,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     teamsapp provision --env local
     ```
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
 
 1. Run the following command to deploy the app to Teams:
@@ -120,6 +123,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```cmd
     teamsapp deploy --env local
     ```
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
 
 1. Run the following command to preview your application locally:
@@ -133,6 +137,7 @@ If you want to preview a notification bot hosted on Azure Functions, run the fol
 ```cmd
 npm run prepare-storage:teamsapp
 ```
+
 ---
 
 ## Debug your app
@@ -249,9 +254,19 @@ The following table lists the debug configuration names and types for project wi
 
 ### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). 
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot shows the Add local debug." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
+When Teams client opens in the web browser, perform the following steps:
+
+1. Select **Add** to upload the app in Teams.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to add the app.":::
+
+1. Select **Open** to open the app in personal scope.
+
+    Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/local-debug-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    Your app is added to Teams!
 
@@ -265,6 +280,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env.md)

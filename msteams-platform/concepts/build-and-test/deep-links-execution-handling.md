@@ -1,7 +1,7 @@
 ---
 title: Execution and handling of deep links
 author: v-npaladugu
-description: Learn how to execute and handle deep links in your Microsoft Teams.
+description: Learn how to execute deep links in your Microsoft Teams personal tab, shared tab, chat message, and bot, handle deep links, and consume a deep link from a tab.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -17,9 +17,9 @@ It's possible to navigate within an app using TeamsJS. The following code demons
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-You can trigger the navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
+You can trigger the navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
 
-```javascript
+```TypeScript / JavaScript
 if (pages.isSupported()) {
   const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
   navPromise.
@@ -29,7 +29,7 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it's also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true) function.
+For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-pages-navigatetoapp) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it's also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-openlink) function.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -49,7 +49,7 @@ You can configure your app to post messages to a chat and add deep links to them
 
 When you add a deep link to a hyperlinked Markdown text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [App ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
+Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772).
 
@@ -57,7 +57,7 @@ For more information, see [use Markdown formatting in Teams](https://support.mic
 
 When you add a deep link to a raw text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. To know more about different app IDs used see, [App ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
+Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 ### Adaptive Card
 
@@ -96,4 +96,4 @@ When a deep link to a tab app is triggered, ensure that all parameters are set i
 
 When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v2 library, the subpage ID is named as `subPageId`, and in v1, it's `subEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-getcontext) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v2 library, the subpage ID is named as `subPageId`, and in v1, it's `subEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-app-pageinfo).

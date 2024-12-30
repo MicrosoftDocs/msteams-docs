@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: Grant tab device permission
 metadata:
-  title: Grant tab device permission
-  description: Learn how to give tab device permissions such as location, camera and microphone access for Microsoft Teams apps.
+  title: Integrate Tab Device Permission
+  description: Learn how to create and add a tab device permission app to Microsoft Teams that allows you to grant and manage device permissions.
   audience: Developer
   level: Beginner
-  ms.date: 12/24/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
   nextTutorialTitle: Read more on Device permissions for browser
@@ -148,6 +148,10 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="Screenshot shows the add tab device permission":::               
 
+    1. Select **Open** to open the app in personal scope.
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-add-scope.png" alt-text="Screenshot of scope selection dialog to open the app in personal scope.":::
+
     1. Select **Device permission tab** to see the following output:
      
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-in-teams.png" alt-text="Screenshot shows the device permission tab." lightbox="../msteams-platform/assets/images/tab-device-permission/device-permission-tab.png"::: 
@@ -184,7 +188,11 @@ items:
   
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="add the app tab device permission":::               
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="Screenshot of app details dialog to add the app in Teams.":::               
+
+    1. Select **Open** to open the app in personal scope.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-add-scope.png" alt-text="Screenshot of scope selection dialog to open the app in personal scope.":::
 
     1. Select **Device Permission Tab** to see the following output:
 

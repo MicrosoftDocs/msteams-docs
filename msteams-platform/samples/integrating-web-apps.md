@@ -1,24 +1,24 @@
 ---
 author: heath-hamilton
-description: Learn best practices or considerations for integrating existing web apps with Microsoft Teams. It gives information on API requirements, authentication, and deep-linking of your app with Teams.
+description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep linking of your app with Teams.
 ms.author: surbhigupta
 ms.date: 04/02/2023
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerations for Teams integration
+title: Factors to Consider for App Integration
 ---
 # Considerations for Teams integration
 
-You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
+You can make web apps suitable with Microsoft Teams' social and collaborative features, by properly integrating them with Teams.
   
 The different types of apps, which you can integrate with Teams are as follows:
 
 * **Standalone apps**: A standalone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
-* **SharePoint**: A SharePoint page you want to surface in Teams.
+* **Microsoft SharePoint**: A SharePoint page you want to surface in Teams.
 
 You can map and follow the appropriate guideline applicable to your integration scenario.
-This document gives an overview of Teams capabilities, share-point requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
+This document gives an overview of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
 
 ## Get to know Teams platform capabilities
 
@@ -82,7 +82,7 @@ Microsoft Entra ID is the identity provider for Teams. If your app uses a differ
 Teams has single sign-on (SSO) mechanisms with Microsoft Entra ID for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and OpenID Connect, known as OIDC.
 
 > [!IMPORTANT]
-> Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+> The third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 For SharePoint pages, you can only use SSO and can't add another Microsoft Entra ID if you want SSO to work for another app as the ID is the SharePoint app.
 
@@ -124,7 +124,6 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 * [Integrate web apps](integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)

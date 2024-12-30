@@ -1,7 +1,7 @@
 ---
-title: Extend a Teams meeting app to Outlook
-description: Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook
-ms.date: 2/28/2024
+title: Build & Extend Meeting App to Outlook
+description: Learn how to build and extend Teams meeting app for Outlook and ensure your Teams meeting app experience works seamlessly in Outlook.
+ms.date: 12/11/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial
@@ -35,7 +35,7 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with uploading enabled.
 * A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
-* [TeamsFx CLI v2](../toolkit/TeamsFx-CLI.md) library installed from npm.
+* [TeamsFx CLI v2](~/toolkit/teams-toolkit-cli.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 
@@ -57,11 +57,15 @@ You can build a Teams meeting app for Outlook through the Teams Toolkit extensio
 
     :::image type="content" source="images/toolkit-meeting-app-sample.png" alt-text="My First Meeting App sample in Teams Toolkit":::
 
-1. Press the **F5** key to debug and run the sample locally in Teams. Teams prompts you to install the app.
+1. Select **F5** to debug and run the sample locally in Teams. Teams prompts you to install the app.
 
-1. Select **Add to a meeting** from the dropdown and select the meeting that you've scheduled earlier.
+1. Select **Add**.
 
-    :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Add app to meeting option in Microsoft Teams":::
+    :::image type="content" source="images/teams-add-to-meeting.png" alt-text="Screenshot of the app details dialog with the Add option to add meeting app in Microsoft Teams.":::
+
+1. Search and select the meeting that you've scheduled earlier and move through the dialog to select **Go**.
+
+    :::image type="content" source="images/teams-add-to-meeting-scope.png" alt-text="Screenshot of the scope selection dialog to select the required meeting.":::
 
 1. Select the sample tab configuration and select **Save**. The app is available in the meeting chat view.
 
@@ -187,5 +191,4 @@ To remove or configure your app in the scheduling window, select the dropdown me
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](overview.md)
-* [Support and feedback](~/feedback.md)
+[Support and feedback](~/feedback.md)
