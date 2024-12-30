@@ -205,7 +205,7 @@ Ensure that you adhere to following guidelines for app manifest:
 |`composeExtensions.authorization`|Authorization related information for the API-based message extension|
 |`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
-|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submit the API key through Developer Portal.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
@@ -346,7 +346,7 @@ The following code is an example of a Response rendering template: <br/>
 The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
-Let's say you have the following JSON for a list of products and you want to create a card result for each entry.
+Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
 
 ```json
 {
