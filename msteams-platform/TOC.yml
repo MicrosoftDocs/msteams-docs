@@ -397,7 +397,7 @@
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications
-      href: /graph/teams-send-activityfeednotifications
+      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: activity feed, notification, customize notification
     - name: App caching for your tab app
       href: tabs/how-to/app-caching.md
