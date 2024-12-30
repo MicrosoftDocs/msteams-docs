@@ -1162,15 +1162,19 @@
       },
       {
         "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
-        "redirect_url": "/microsoftteams/platformtabs/what-are-tabs"
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq#microsoft-365-copilot"
+        "redirect_url": "/microsoftteams/platform/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/resources/partner-apps-for-moodle.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodle-overview#partner-apps-for-moodle"
       },
       {
         "source_path": "msteams-platform/resources/media-formats.md",
@@ -1190,7 +1194,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
-        "redirect_url": "/microsoftteams/platformtabs/teams-faq#teams-ai-library"
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-ai-library"
       },
       {  
         "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
@@ -1199,6 +1203,22 @@
       {
         "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-basics.md",
+        "redirect_url": "/microsoftteams/platform/platform/bots/bot-concepts"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/what-are-bots.md",
+        "redirect_url": "/microsoftteams/platform/bots/overview"
       }
     ]
 }
