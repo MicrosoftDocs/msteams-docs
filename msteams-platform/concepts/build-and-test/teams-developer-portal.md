@@ -63,7 +63,7 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
    * If you import an app that is already published in [Teams admin center](https://admin.teams.microsoft.com/) and registered in Developer Portal, the portal prompts you to replace the app. Select **Replace** and the app gets replaced by the newly imported app.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-import-replace-app.png" alt-text="Screenshot shows the option to replace an existing app when you import an app in Developer Portal.":::
+     :::image type="content" source="../../assets/images/tdp/tdp-import-replace-app.png" alt-text="Screenshot shows the option to replace an existing app when you import an app in Developer Portal.":::
 
    * You can't import or take ownership of an app that is already published in Teams admin center but isn't registered in Developer Portal.
    * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in Developer Portal.
