@@ -14,7 +14,7 @@ Content page is the base level webpage that is rendered within Microsoft Teams c
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
-If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](../../../resources/schema/manifest-schema.md).
+If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
