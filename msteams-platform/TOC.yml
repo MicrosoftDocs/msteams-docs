@@ -25,7 +25,7 @@
   items:
   - name: Build your Teams app
     href: get-started/get-started-overview.md
-    displayName: build new Teams app, GitHub Codespaces, tutorials
+    displayName: new Teams app, GitHub Codespaces, tutorials
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
     displayName: build Teams tab app
