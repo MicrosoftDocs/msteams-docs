@@ -9,9 +9,7 @@ ms.date: 10/11/2024
 # Adaptive Card-based Loop components
 
 > [!NOTE]
->
-> * Adaptive Card-based Loop components require Adaptive Card schema version 1.6 or later.
-> * Adaptive Card-based Loop components aren't available in Microsoft Teams and Microsoft Outlook on macOS and mobile clients.
+> Adaptive Card-based Loop components aren't available in Microsoft Teams and Microsoft Outlook on macOS and mobile clients.
 
 Adaptive Card-based Loop components enable you to build collaborative experiences within your Teams message extensions that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch contexts between Microsoft 365 apps, such as Teams and Outlook.
 
