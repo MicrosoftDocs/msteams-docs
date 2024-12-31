@@ -77,7 +77,7 @@ An outline icon displays in two scenarios:
 
   Follow these specifications for the outline icon design:
 
-   * Ensure that the ouline icon size is 32x32 pixels.
+   * Ensure that the outline icon size is 32x32 pixels.
    * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
    * The outline icon mustn't contain any additional padding around the symbol.
 
