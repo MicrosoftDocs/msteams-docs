@@ -604,9 +604,9 @@
     - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get transcripts
-      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      href: /graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get recordings
-      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      href: /graph/api/resources/callrecording?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
