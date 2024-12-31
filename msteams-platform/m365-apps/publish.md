@@ -11,7 +11,7 @@ ms.subservice: m365apps
 
 # Publish Teams apps for Microsoft 365
 
-Microsoft Teams supports Microsoft 365 enabled Teams apps for production. You can distribute these apps to users who use the following clients:
+Microsoft Teams supports Microsoft 365 enabled Teams apps for production. You can publish these apps to users who use the following clients:
 
 * Web: *Current Channel* version of microsoft365.com (formerly office.com) and outlook.com.
 * Desktop: *Current Channel* builds of Outlook and Microsoft 365 (Office) app for Windows desktop.

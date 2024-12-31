@@ -447,6 +447,133 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 &nbsp;
 </details>
 
+## Monetize your app
+
+<details>
+
+<summary>Do we support in-app purchases?</summary>
+
+Yes, we support in-app purchases. For more information, see [in-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>How the flow is handled by CSP who makes the purchase for enterprise?</summary>
+
+CSP can make purchases for enterprise from Microsoft Teams Store. For more information, see [third-party app purchase](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience).
+
+</br>
+
+</details>
+<details>
+
+<summary>What's the percentage fee that is taken by Microsoft?</summary>
+
+Microsoft charges a 3% transaction fee whenever a payment is processed. So, if it's a monthly subscription, then the 3% is applied on a monthly basis. This charge applies for both credit card transactions and invoice billing.
+
+</br>
+
+</details>
+<details>
+
+<summary>Can I test the offer before publishing?</summary>
+
+Yes, you can test the offer before publishing. For more information, see [test your SaaS offer](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>Is it mandatory to link existing Teams app to my monetization module listed on AppSource?</summary>
+
+It's not mandatory but a good practice to implement it.
+
+</br>
+
+</details>
+<details>
+
+<summary>If the app is transactable on Azure Marketplace, is it also available in Microsoft AppSource or Teams by default?</summary>
+
+No. Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource. It must have a linked transactable offer and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy a subscription** button.
+
+</br>
+
+</details>
+<details>
+
+<summary>What are the additional steps to get Buy a subscription option on Teams Store?</summary>
+
+You must add the IDs to the manifest (and uploading through PC to validate) that shows the **Buy a subscription** button in Teams. Partners can continue to have apps available in Teams and require customers to purchase through AppSource. Going through a few additional steps brings the purchase option into the Teams Store.​
+
+</br>
+
+</details>
+<details>
+
+<summary>Can ISV set different pricing per country per region?</summary>
+
+Yes. For more information, see [pricing and offers](/partner-center/pricing/pricing-and-offers).
+
+</br>
+
+</details>
+<details>
+
+<summary>What are the possible scenarios my partner may face when submitting their Teams app for validation?</summary>
+
+* Scenario 1: Partner has an existing Teams app and an existing transactable SaaS offer​.
+* Scenario 2: Partner has an existing Teams app and NO existing transactable SaaS offer.
+* Scenario 3: Partner has NO existing Teams app and an existing transactable SaaS offer.
+* Scenario 4: Partner has NO existing Teams app and NO existing transactable SaaS offer.
+
+</br>
+
+</details>
+<details>
+
+<summary>What are CSPs looking for when matching with ISVs?</summary>
+
+To be channel ready places, ISVs in the best position to be successfully matched as CSPs must look for:​
+
+1. Complementary apps to add to their bundles solutions and services​.
+1. An attractive margin, balancing their effort with potential revenue​.
+1. Materials that are easy to consume and ready to use with customers.
+
+</br>
+
+</details>
+<details>
+
+<summary>Are partners able to provide a minimum number of licenses available to purchase as part of a subscription?</summary>
+
+Yes. For more information, see [subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions? Can they upgrade from monthly to annual?</summary>
+
+Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#license-and-subscriptions-management-experience).
+
+</br>
+
+</details>
+<details>
+
+<summary>Does Teams app support metered billing?</summary>
+
+Yes. Metered billing is available for SaaS offer. For more information, see [metered billing for SaaS offers](/partner-center/marketplace-offers/partner-center-portal/saas-metered-billing).
+
+</br>
+
+</details>
+
 ## Moodle
 
 <details>

@@ -18,7 +18,7 @@ ms.date: 10/19/2023
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration. API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With API-based message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma
+* Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
 </br>
