@@ -14,8 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    > [!Important]
-    > The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+    [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
     
     Webhooks help Microsoft Teams to integrate with external apps. In Teams, the Outgoing Webhooks act as bot and search for messages in channels using **@mention**. The Outgoing Webhooks allow users to send messages to web services without performing the entire process of creating bots through Microsoft Bot Framework. The Outgoing Webhooks post data from Teams to any service capable of accepting JSON payload. 
     
