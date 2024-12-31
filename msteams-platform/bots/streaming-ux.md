@@ -276,7 +276,7 @@ The following are the properties for streaming bot messages:
 | --- | --- | --- |
 | `type` | ✔️ | Supported values are either `typing` or `message`. </br> • `typing`: Use when streaming the message. </br> • `message`: Use for the final streamed message. |
 | `text` | ✔️ | The contents of the message that is to be streamed. |
-| `entities.type` | ✔️ | Must be `streamInfo`|
+| `entities.type` | ✔️ | Must be `streamInfo`, `start streaming`, `continue streaming`, `end streaming` depending on different cases.|
 | `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
 | `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. `final` is used only in the final message. |
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
@@ -422,7 +422,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
   "text ": "A brown fox", // (required) first streaming content.
   "entities":[
     {
-      "type": "streaminfo",
+      "type": "start streaming",
       "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
       "streamType": "streaming", // informative or streaming; default= streaming.
       "streamSequence": 3 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
@@ -459,7 +459,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
   "text ": "A brown fox jumped over the fence", // (required) first streaming content.
   "entities":[
     {
-      "type": "streaminfo",
+      "type": "continue streaming",
       "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
       "streamType": "streaming", // informative or streaming; default= streaming.
       "streamSequence": 4 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
@@ -503,7 +503,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
   "text ": "A brown fox jumped over the fence.", // (required) first streaming content.
   "entities":[
     {
-      "type": "streaminfo",
+      "type": "end streaming",
       "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
       "streamType": "final", // (required) final is only allowed for the last message of the streaming.
     }
