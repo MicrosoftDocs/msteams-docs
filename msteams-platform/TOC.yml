@@ -818,7 +818,7 @@
     href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Access, routing
   - name: Get started
-    href: /graph/toolkit/get-started/build-a-microsoft-teams-tabhttps://learn.microsoft.com/en-us/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Access, report, MSAL2
   - name: Teams app permissions
     href: graph-api/App-permissions/Teams-app-permissions.md
