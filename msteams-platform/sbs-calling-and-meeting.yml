@@ -2,10 +2,10 @@
 title: Teams calling and meeting bot
 metadata:
   title: Teams bot with calling and meeting
-  description: In this module, learn how to create and set up a calling and meeting bot with basic features using Microsoft Graph API.
+  description: In this learning module, learn how to create and set up a calling and meeting bot with basic features using Microsoft Graph API.
   audience: Developer
   level: Beginner
-  ms.date: 02/08/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
   nextTutorialTitle: Register a calling bot
@@ -125,7 +125,7 @@ items:
         > [!NOTE]
         > If you're using the Windows PowerShell PSI for the first time, execute the following commands:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-        >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
+        >   * Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
      1. Replace the following fields in **Windows PowerShell** script:
 
@@ -289,9 +289,15 @@ items:
        
        :::image type="content" source="./assets/images/calls-and-meetings/select-zip.png" alt-text="Screenshot shows the location of the manifest zip file in file explorer.":::
 
-    1. Select **Add** to install the **Calling bot** app in Teams.
+    1. Select **Add** to install the calling bot app in Teams.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of the app details dialog to add the calling bot app.":::
+
+    1. Select **Open** to open the app in personal scope. 
+
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-add-scope.png" alt-text="Screenshot of the scope selection dialog to add the calling bot in the required scope."::: 
 
 - title: Interact with calling and meeting bot
   durationInMinutes: 2

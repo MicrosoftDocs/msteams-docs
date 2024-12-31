@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to build, configure, and test Connectors for Microsoft Teams app in Visual Studio and to enable developer preview in Teams admin center.
   audience: Developer
   level: Beginner
-  ms.date: 02/14/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
   nextTutorialTitle: Read more on Webhooks and Connectors
@@ -195,15 +195,13 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-connector/open-1.png" alt-text="Screenshot of TeamsAppPackages folder with Teams connector zip file highlighted in red.":::
 
-    1. Select **Add to a team**.
+    1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/addtoteam-1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Add to a team highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam-1.png" alt-text="Screenshot of app details dialog with the Add option highlighted.":::
 
-    1. Select the team or channel name from the list.
+    1. Search and select the required channel or select a channel from the list, and move through the dialog to select **Go**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/channel-1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# to a team with Type a team or channel name highlighted in red.":::
-
-    1. Select **Set up a connector**.
+       :::image type="content" source="~/assets/images/sbs-connector/channel-1.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     1. In the left pane, search **Teams ToDo** connector in the search bar and select **Configure**.
 
