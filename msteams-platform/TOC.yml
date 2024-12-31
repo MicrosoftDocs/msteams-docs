@@ -812,10 +812,10 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/?toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
-    href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /graph/toolkit/overview?toc=/microsoftteams/platform/?toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Access, routing
   - name: Get started
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
