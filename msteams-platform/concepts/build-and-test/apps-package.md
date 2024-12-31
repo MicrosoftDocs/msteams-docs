@@ -3,7 +3,8 @@ title: Package your app
 description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 09/28/2022
+ms.author: surbhigupta
+ms.date: 12/19/2024
 ---
 
 # Teams app package
@@ -20,6 +21,9 @@ To publish your Microsoft Teams app, you need to zip the files in the app packag
 When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Microsoft Azure for production. Teams accesses these resources via HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
+
+> [!NOTE]
+> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must be aware that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
 
 ## App manifest
 
