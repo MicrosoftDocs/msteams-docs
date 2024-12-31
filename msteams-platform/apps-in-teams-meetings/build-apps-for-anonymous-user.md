@@ -1,7 +1,7 @@
 ---
 title: Build apps for anonymous user
 author: v-sdhakshina
-description: 	This sample app enables anonymous user support in Microsoft Teams meeting apps using Azure AD, Bot Framework, and tunneling setup, allowing guest users to interact seamlessly through features like meeting tabs and stage views.
+description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
