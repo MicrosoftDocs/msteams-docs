@@ -573,7 +573,7 @@ An extensive dialog between your bot and the user is a slow and complex way to g
   One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 > [!NOTE]
-> Teams platform supports TLS versions 1.0, 1.1, and 1.2, but not TLS 1.3. Ensure you configure your bot environment accordingly.
+> Teams platform supports Transport Layer Security (TLS) versions 1.0, 1.1, and 1.2, but not TLS 1.3. Ensure you configure your bot environment accordingly.
 
 ## Explore other bot features
 
