@@ -554,7 +554,7 @@
         href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
       - name: Debug an agent for Microsoft 365 Copilot with developer mode
-        href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
+        href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
@@ -602,11 +602,11 @@
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
     - name: Get change notifications
-      href: /graph/teams-changenotifications-callrecording-and-calltranscript
+      href: /graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get transcripts
-      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
+      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get recordings
-      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
+      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
