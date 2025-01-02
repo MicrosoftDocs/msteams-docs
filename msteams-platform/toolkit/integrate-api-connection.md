@@ -194,7 +194,7 @@ const responseBody = response.data;
 
 ### Add configuration for local debug
 
-Based on the authentication method you've selected in the previous step, use the corresponding code snippet to configure your API for local debug. Add your API connection configuration code under `env/.env.local`.
+Based on the authentication method you select in the previous step, use the corresponding code snippet to configure your API for local debug. Add your API connection configuration code under `env/.env.local`.
 
 # [Basic authentication](#tab/basic)
 
