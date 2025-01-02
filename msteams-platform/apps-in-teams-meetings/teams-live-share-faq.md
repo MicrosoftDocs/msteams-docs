@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn more about Live Share SDK frequently asked questions related to Azure Fluid Relay service, data stored in Live Share, fluid containers, and government clouds.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 

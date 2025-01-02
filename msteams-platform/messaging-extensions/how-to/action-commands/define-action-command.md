@@ -5,6 +5,7 @@ description: Learn to define message extension action commands with app manifest
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 01/03/2025
 ---
 
 # Define message extension action commands
