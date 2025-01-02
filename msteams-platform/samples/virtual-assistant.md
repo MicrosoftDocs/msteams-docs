@@ -578,8 +578,8 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 
 | **Sample name** | **Description** |**.NET** |
 |----------|-----------------|---------------------------|
-| Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
-| Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
+| Updated visual studio template | This sample showcases a customizable virtual assistant template that integrates seamlessly with Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Book-a-room bot skill code | Book-a-room bot lets you quickly find and book a meeting room on the go. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 ## See also
 
