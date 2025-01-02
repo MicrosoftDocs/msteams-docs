@@ -33,9 +33,9 @@ You can create an app and configure the app manifest through one of the followin
 
 * **Teams Toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
 
-* **Teams Developer Portal**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Teams Developer Portal, see [create and register an app](teams-developer-portal.md).
+* **Developer Portal for Teams**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Developer Portal for Teams, see [create and register an app](teams-developer-portal.md).
 
-You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md).
+You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md#build-your-first-teams-app).
 
 When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](~/resources/schema/manifest-schema.md). For sample app manifest, see [Hello world sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
