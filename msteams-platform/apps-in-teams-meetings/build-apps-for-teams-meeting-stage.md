@@ -89,6 +89,7 @@ If you use an advanced share to stage API, you can customize the text on the but
   
 * Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users as **Share** consistently means **Share to stage** in Teams meetings.
 * Use more specific text to provide meaningful context of the scenario. For example, you can use text such as **Watch together** or **Play together** if your app offers videos or casual games.
+
 Use the following APIs to share specific part of the app:
 
 | Method| Description | Source |
