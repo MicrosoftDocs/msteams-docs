@@ -335,10 +335,6 @@ items:
 
         The app opens in the command box and you can use it to run a query.
 
-        > [!NOTE]
-        > * Using **/** to open your message extension app from the command box only works in the new Teams client.
-        > * Use **@** to open your message extension app from the command box in the classic Teams client.
-
    </details>
 
    <br>
