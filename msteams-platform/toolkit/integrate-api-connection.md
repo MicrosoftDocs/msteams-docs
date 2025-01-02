@@ -10,7 +10,7 @@ ms.date: 01/03/2025
 
 # Integrate API connection with your Teams app
 
-Microsoft Teams Toolkit helps you seamlessly integrate existing APIs with Microsoft Teams apps. You can integrate APIs built by your organization or third-party providers. Before your begin, ensure that your Teams app contains a backend service, such as [Microsoft Azure Functions](/azure/azure-functions/functions-overview?pivots=programming-language-javascript) or [Azure Bot Service](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0) to host your API connection.
+Microsoft Teams Toolkit helps you seamlessly integrate existing APIs with Microsoft Teams apps. You can integrate APIs built by your organization or third-party providers. Before your begin, ensure that your Teams app contains a backend service, such as [Microsoft Azure Functions](/azure/azure-functions/functions-overview?pivots=programming-language-javascript) or [Azure Bot Service](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true) to host your API connection.
 
 ## Add API connection to your Teams app
 
