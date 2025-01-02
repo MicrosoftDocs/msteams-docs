@@ -101,14 +101,7 @@ The tab features are as follows:
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-## Understand how tabs work
-
-You can use one of the following methods to create tabs:
-
-* [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
-* [Use Adaptive Card to build tabs](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-### Declare custom tab in app manifest
+## Declare custom tab in app manifest
 
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
 
