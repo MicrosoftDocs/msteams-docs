@@ -11,7 +11,7 @@
   items:
   - name: Teams app that fits
     href: overview.md
-    displayName: build teams app, why build apps with Microsoft Teams platform
+    displayName: why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
     href: overview-story.md
     displayName: Teams app user experience, user scenario
@@ -43,7 +43,7 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: plan Teams app, app lifecycle, government cloud
+    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
@@ -52,7 +52,7 @@
     displayName: user scenarios, Teams app features
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
-    displayName: checklist to build Teams app, HTTPs, localhost
+    displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     displayName: tab app in Teams mobile, Teams mobile apps
@@ -69,7 +69,7 @@
         displayName: track events, monitor, Azure Applications Insights
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
-    displayName: notification framework, notification, activity feed, message, alert, notify
+    displayName: notification framework, activity feed, message, alert, notify
 - name: Design your app
   items:
   - name: Overview
