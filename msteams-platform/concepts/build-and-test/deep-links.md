@@ -31,7 +31,7 @@ You can use deep links in Teams in the following ways:
 
     :::image type="content" source="~/assets/images/deeplink-chat.gif" alt-text="Graphical representation shows the user experience of deep links in chat.":::
 
-* **Deep link to teams and channels**: Use a deep link to navigate to a particular team or channel. For more information, see [deep link to a channel](~/concepts/build-and-test/deep-link-teams.md).
+* **Deep link to teams and channels**: Use a deep link to navigate to a particular team or channel. For more information, see [deep link to a channel](deep-link-teams.md#deep-link-to-navigate-to-channel).
 
     :::image type="content" source="~/assets/images/deeplink-teams-and-channels.gif" alt-text="Graphical representation that shows the user experience of deep links in group chat.":::
 
