@@ -5,35 +5,33 @@ description: Learn how to integrate an API connection into your Teams app with M
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 01/02/2025
+ms.date: 01/03/2025
 ---
 
-# Integrate API Connection with your Teams app
+# Integrate API connection with your Teams app
 
-Microsoft Teams Toolkit helps you access existing APIs for building Microsoft Teams apps. You can integrate APIs from your organization or third-party developers.
-
-## Prerequisites
-
-Ensure that your Teams app project contains a backend service, such as Microsoft Azure Functions or Azure Bot Service to host your API connection.
+Microsoft Teams Toolkit helps you seamlessly integrate existing APIs with Microsoft Teams apps. You can integrate APIs built by your organization or third-party providers. Before your begin, ensure that your Teams app contains a backend service, such as [Microsoft Azure Functions](/azure/azure-functions/functions-overview?pivots=programming-language-javascript) or [Azure Bot Service](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0) to host your API connection.
 
 ## Add API connection to your Teams app
 
-You can manually configure an API connection to your app with the following steps:
+You can configure an API connection to your app with the following steps:
 
-* Add SDK to project
-* Provide API client for project
-* Add configuration for local debug
-* Add configuration for Azure
+* [Add TeamsFx SDK to project](#add-teamsfx-sdk-to-project)
+* [Create an `apiClient` instance](#create-an-apiclient-instance)
+* [Add configuration for local debug](#add-configuration-for-local-debug)
+* [Add configuration for Azure](#add-configuration-for-azure)
 
-### Add SDK to project
+### Add TeamsFx SDK to project
 
-Go to your project and add a reference to the `@microsoft/teamsfx` package in `package.json`.
+Go to `package.json` in your project and add a reference to the `@microsoft/teamsfx` package.
 
-### Provide API client for project
+### Create an `apiClient` instance
 
-The TeamsFx SDK supports five ways to connect your app to an API. Create a module to connect your API and export the API client to provide for the project. The following code snippets provide various examples to provide an API client:
+TeamsFx SDK supports five methods to connect your app to an API. Create a new module to handle the API connection. The module must export an `apiClient` instance that you can use throughout your project.
 
-# [Basic auth](#tab/basic)
+# [Basic authentication](#tab/basic)
+
+The following code snippet uses a basic authentication method, such as username and password, to connect your app to an API:
 
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
@@ -51,6 +49,8 @@ module.exports.apiClient = apiClient;
 ```
 
 # [Certification](#tab/certification)
+
+The following code snippet shows how to use a certificate to connect your app to an API:
 
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
@@ -72,10 +72,12 @@ module.exports.apiClient = apiClient;
 
 # [Microsoft Entra](#tab/entra)
 
-There are 2 scenarios here, please choose one of them.
+You can use a Microsoft Entra app to connect your app to an API in the following ways:
 
-* Scenario 1 is reusing the project Microsoft Entra app, make sure your project contains an existing Microsoft Entra app.
-* Scenario 2 is using an existing Microsoft Entra App.
+* Reuse your project's Microsoft Entra app, if your project contains an existing Microsoft Entra app.
+* Use a separate Microsoft Entra app.
+
+The following code snippet shows both scenarios:
 
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
@@ -109,6 +111,8 @@ module.exports.apiClient= apiClient;
 
 # [API key](#tab/apikey)
 
+The following code snippet shows how to use an API key to connect your app to an API:
+
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
 
@@ -131,7 +135,9 @@ const apiClient = teamsfxSdk.createApiClient(
 module.exports.apiClient = apiClient;
 ```
 
-# [Custom auth](#tab/custom)
+# [Custom authentication](#tab/custom)
+
+The following code snippet shows how to implement a custom authentication logic to connect your app to an API:
 
 ```javascript
 const teamsfxSdk = require("@microsoft/teamsfx");
@@ -174,9 +180,7 @@ module.exports.apiClient = apiClient;
 
 ---
 
-You can import the API client (an Axios instance) in another file and call the APIs. Teams handles the authentication for you automatically.
-
-Here's an example for a GET request to `relative_path_of_target_api`:
+You can import the `apiclient` instance in another file to make a call to an API. Teams handles the authentication for you automatically. The following code snippet is an example of a GET request to an API:
 
 ```javascript
 const { apiClient } = require("relative_path_to_this_file");
@@ -188,11 +192,11 @@ const response = await apiClient.get("relative_path_of_target_api");
 const responseBody = response.data;
 ```
 
-## Add configuration for local debug
+### Add configuration for local debug
 
-According to the API client created in the previous step, select the corresponding type to configure your API for local debugging. Append your API connection configuration to `env/.env.local`.
+Based on the authentication method you've selected in the previous step, use the corresponding code snippet to configure your API for local debug. Add your API connection configuration code under `env/.env.local`.
 
-# [Basic auth](#tab/basic)
+# [Basic authentication](#tab/basic)
 
 ```javascript
 ...
@@ -211,11 +215,6 @@ TEAMSFX_API_ENDPOINT =
 ```
 
 # [Microsoft Entra](#tab/entra)
-
-There are 2 scenarios here, please choose one of them.
-
-* Scenario 1 is reusing the project Microsoft Entra app, make sure your project contains an existing Microsoft Entra app.
-* Scenario 2 is using an existing Microsoft Entra App.
 
 ```javascript
 ...
@@ -241,7 +240,7 @@ TEAMSFX_API_ENDPOINT =
 TEAMSFX_API_API_KEY =
 ```
 
-# [Custom auth](#tab/custom)
+# [Custom authentication](#tab/custom)
 
 ```javascript
 ...
@@ -251,15 +250,15 @@ TEAMSFX_API_ENDPOINT=
 
 ---
 
-## Add configuration for Azure
+### Add configuration for Azure
 
-Before provision, ensure that the project has Azure Functions or Bot Service to host your API connection. Add the API client to the corresponding service according to your design.
+Before provision, ensure that the project has Azure Functions or Bot Service to host your API connection. Add the `apiClient` instance to the corresponding service based on the authentication method you previously selected.
 
 * If you're hosting your app in Azure Functions, add an `appSettings` array under `infra/azure.bicep`.
 
 * If you're hosting in the Bot Service, add an `appSettings` array under `infra/botRegistration/azurebot.bicep`.
 
-# [Basic auth](#tab/basic)
+# [Basic authentication](#tab/basic)
 
 * **Azure Functions**
 
@@ -332,71 +331,71 @@ Before provision, ensure that the project has Azure Functions or Bot Service to 
 
 * **Azure Functions**
 
-```bicep
-    ...
-// Azure Functions that hosts your function code
-resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
-  ...
-      appSettings: [
-        {
-          name: 'TEAMSFX_API_ENDPOINT',
-          value: ''
-        }
-        // Scenario 1
-        {
-          name: 'TEAMSFX_API_TENANT_ID',
-          value: ''
-        }
-        {
-          name: 'TEAMSFX_API_CLIENT_ID',
-          value: ''
-        }
-        {
-          name: 'TEAMSFX_API_CLIENT_SECRET',
-          value: ''
-        }
-        {
-          name: 'AAD_APP_OAUTH_AUTHORITY_HOST',
-          value: ''
-        }
-
-        // Scenario 2
-        {
-          name: 'TEAMSFX_API_TENANT_ID',
-          value: ''
-        }
-        {
-          name: 'TEAMSFX_API_CLIENT_ID'
-          value: '' 
-        }
-        {
-          name: 'TEAMSFX_API_CLIENT_SECRET',
-          value: ''
-        }
+    ```bicep
         ...
-```
+    // Azure Functions that hosts your function code
+    resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
+      ...
+          appSettings: [
+            {
+              name: 'TEAMSFX_API_ENDPOINT',
+              value: ''
+            }
+            // Scenario 1
+            {
+              name: 'TEAMSFX_API_TENANT_ID',
+              value: ''
+            }
+            {
+              name: 'TEAMSFX_API_CLIENT_ID',
+              value: ''
+            }
+            {
+              name: 'TEAMSFX_API_CLIENT_SECRET',
+              value: ''
+            }
+            {
+              name: 'AAD_APP_OAUTH_AUTHORITY_HOST',
+              value: ''
+            }
+    
+            // Scenario 2
+            {
+              name: 'TEAMSFX_API_TENANT_ID',
+              value: ''
+            }
+            {
+              name: 'TEAMSFX_API_CLIENT_ID'
+              value: '' 
+            }
+            {
+              name: 'TEAMSFX_API_CLIENT_SECRET',
+              value: ''
+            }
+            ...
+    ```
 
 * **Bot Service**
 
-```bicep
-    ...
-// Register your web service as a bot with the Bot Framework
-resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
-  ...
-  properties: {
-    TEAMSFX_API_ENDPOINT: ''
-    // Scenario 1
-    TEAMSFX_API_TENANT_ID = 
-    TEAMSFX_API_CLIENT_ID = 
-    TEAMSFX_API_CLIENT_SECRET = 
-    AAD_APP_OAUTH_AUTHORITY_HOST = 
-    // Scenario 2
-    TEAMSFX_API_TENANT_ID =
-    TEAMSFX_API_CLIENT_ID =
-    TEAMSFX_API_CLIENT_SECRET =
-    ...
-  }
-```
+    ```bicep
+        ...
+    // Register your web service as a bot with the Bot Framework
+    resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
+      ...
+      properties: {
+        TEAMSFX_API_ENDPOINT: ''
+        // Scenario 1
+        TEAMSFX_API_TENANT_ID = 
+        TEAMSFX_API_CLIENT_ID = 
+        TEAMSFX_API_CLIENT_SECRET = 
+        AAD_APP_OAUTH_AUTHORITY_HOST = 
+        // Scenario 2
+        TEAMSFX_API_TENANT_ID =
+        TEAMSFX_API_CLIENT_ID =
+        TEAMSFX_API_CLIENT_SECRET =
+        ...
+      }
+    ```
 
 > [!TIP]
 > You can use `common` as the value for `TEAMSFX_API_TENANT_ID`, if needed.
@@ -405,66 +404,66 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
 
 * **Azure Functions**
 
-```bicep
-    ...
-// Azure Functions that hosts your function code
-resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
-  ...
-      appSettings: [
-        {
-          name: 'TEAMSFX_API_ENDPOINT',
-          value: ''
-        }
-        {
-          name: 'TEAMSFX_API_API_KEY',
-          value: ''
-        }
+    ```bicep
         ...
-```
+    // Azure Functions that hosts your function code
+    resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
+      ...
+          appSettings: [
+            {
+              name: 'TEAMSFX_API_ENDPOINT',
+              value: ''
+            }
+            {
+              name: 'TEAMSFX_API_API_KEY',
+              value: ''
+            }
+            ...
+    ```
 
 * **Bot Service**
 
-```bicep
-    ...
-// Register your web service as a bot with the Bot Framework
-resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
-  ...
-  properties: {
-    TEAMSFX_API_ENDPOINT: ''
-    TEAMSFX_API_API_KEY: ''
-    ...
-  }
-```
+    ```bicep
+        ...
+    // Register your web service as a bot with the Bot Framework
+    resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
+      ...
+      properties: {
+        TEAMSFX_API_ENDPOINT: ''
+        TEAMSFX_API_API_KEY: ''
+        ...
+      }
+    ```
 
-# [Custom auth](#tab/custom)
+# [Custom authentication](#tab/custom)
 
 * **Azure Functions**
 
-```bicep
-    ...
-// Azure Functions that hosts your function code
-resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
-  ...
-      appSettings: [
-        {
-          name: 'TEAMSFX_API_ENDPOINT',
-          value: ''
-        }
+    ```bicep
         ...
-```
+    // Azure Functions that hosts your function code
+    resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
+      ...
+          appSettings: [
+            {
+              name: 'TEAMSFX_API_ENDPOINT',
+              value: ''
+            }
+            ...
+    ```
 
 * **Bot Service**
 
-```bicep
-...
-// Register your web service as a bot with the Bot Framework
-resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
-  ...
-  properties: {
-    TEAMSFX_API_ENDPOINT: ''
+    ```bicep
     ...
-  }
-```
+    // Register your web service as a bot with the Bot Framework
+    resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
+      ...
+      properties: {
+        TEAMSFX_API_ENDPOINT: ''
+        ...
+      }
+    ```
 
 ---
 
