@@ -49,24 +49,24 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
-  For more information, see how to [build a custom engine agent](../Teams-AI-library-tutorial.yml).
+  For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
 
 * **Conventional bots**:
 
   * **Conversational bot**:
     A conversational bot simulates interactions with users, allowing them to engage with a web service through text, interactive cards, and dialogs. It understands user input and responds accordingly, making it useful for virtual assistance, customer service, and more.
 
-    For more information, see how to [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+    For more information, see [how to create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 
   * **Notification bot**:
     A notification bot is an automated tool that sends alerts to users in Teams channels, group chats, or personal chats. Use a notification bot for sending reminders, alerts, or updates. Users can also interact with the bot by responding to options or links within the notification or by providing feedback.
 
-    For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
+    For more information, see [how to build notification bot with JavaScript](../sbs-gs-notificationbot.yml).
 
   * **Workflow bot**:
     A workflow bot automates and streamlines business processes by interacting with users, applications, and data to manage tasks and workflows. Use a workflow bot to automate repetitive tasks, assign work, track progress, and more to improve efficiency by reducing manual effort.
 
-    For more information, see [build workflow bot with JavaScript](../sbs-gs-workflow-bot.yml).
+    For more information, see [how to build workflow bot with JavaScript](../sbs-gs-workflow-bot.yml).
 
   * **Command bot**:
     Use a command bot to automate responses for simple commands in a chat. With Teams Toolkit, you can create a command bot template that displays the UI using an Adaptive Card.
