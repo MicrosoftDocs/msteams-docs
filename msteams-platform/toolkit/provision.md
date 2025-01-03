@@ -370,7 +370,7 @@ The `arm/deploy` action support ARM templates written in bicep and json format. 
 
 ### Customize Teams apps
 
-You can customize your bot or the Teams app by adding environment variables to use a Microsoft Entra app created by you. Perform the following ways to customize the Teams app:
+You can customize your bot or the Teams app by adding environment variables to use a Microsoft Entra app created by you. Ways to customize the Teams app are:
 
 * [Use an existing Microsoft Entra app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
 * [Use an existing Microsoft Entra app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
