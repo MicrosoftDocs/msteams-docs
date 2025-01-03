@@ -67,49 +67,50 @@
     displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
-    displayName: Teams app design stages, Teams design kit
+    displayName: design phases, design kit
   - name: Design system
     items:
     - name: App design system fundamentals
       href: concepts/design/design-teams-app-fundamentals.md
-      displayName: app design principles, icons, font, color
+      displayName: design principles
     - name: Layout and scaling
       href: concepts/design/design-teams-app-layout-scaling.md
-      displayName: types of Teams layout, Teams grid layout 
+      displayName: layout, scaling 
     - name: App icons for Teams Store and app bar
       href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: guidelines for icon design, do's and don'ts of app icons 
+      displayName: icon design, icon guidelines 
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork, app templates, fluent and Teams icon
+      displayName: image template
     - name: Type
       href: concepts/design/design-teams-app-type.md
-      displayName: Teams typography standards, Teams font styles
+      displayName: font design, font style
     - name: Color
       href: concepts/design/design-teams-app-color.md
-      displayName: App color themes, color guidelines, color tokens in design
+      displayName: app color, themes, primary colors
     - name: Shape and elevation
       href: concepts/design/design-teams-app-shape-elevation.md
-      displayName: shape, elevation, how to use shape in Teams
+      displayName: shape, elevation
   - name: App capabilities
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
-      displayName: customize app structure, Teams wireframes
+      displayName: best practices, customize app structure, wireframes
     - name: Personal apps
       href: concepts/design/personal-apps.md
       displayName: illustration to manage personal apps in Teams, manage personal apps, components to design personal tab
     - name: Tabs
       href: tabs/design/tabs.md
-      displayName: configure tabs, design tabs
+      displayName: design personal app
     - name: Bots
       href: bots/design/bots.md
-      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot design guidelines, bot authentication
+      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: manage message extensions in Teams, guide to set up extensions, commands     
+      displayName: set up extensions, commands     
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+      displayName: meeting stage
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
     displayName: data visualization, ui templates and use cases
@@ -117,21 +118,21 @@
     items:
     - name: Basic UI components
       href: concepts/design/design-teams-app-basic-ui-components.md
-      displayName: Teams themes, UI kit to build Teams app, dropdown
+      displayName: dropdown
     - name: Advanced UI components
       href: concepts/design/design-teams-app-advanced-ui-components.md
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
-      displayName: Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards, adaptive card framework
+      displayName: Adaptive Cards, Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
-      displayname: Forms, launch dialogs in app
+      displayname: Forms, launch dialogs
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
       displayName: hide page layout  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
-      displayName: notify, notification, Teams notification, notification cards
+      displayName: notify, notification
 - name: Tools and SDKs
   items:
   - name: Overview
