@@ -367,6 +367,13 @@
           displayName: Loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
+- name: Build tabs-revamp
+  items:
+  - name: Tabs overview
+    href: tabs/what-are-tabs.md
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs, clickjacking, device permissions for tabs
+  - name: Create a tab App
+    href: tabs/how-to/create-a-tab-app.md
 - name: Build tabs
   items:
   - name: Tabs overview
@@ -377,7 +384,7 @@
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes    
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes, user context, tab context
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab    
