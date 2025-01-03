@@ -134,8 +134,11 @@ Following are the steps to create a tab:
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
     
+
+
+
 > [!div class="nextstepaction"]
-> [I ran](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=~/tabs/how-to/create-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+Issue%5D+Generate+your+application+with+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Add a content page to the tab
 
@@ -211,7 +214,7 @@ Create a content page and update the existing files of the tab application:
 1. Save the updated file. Your tab code is complete.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+content+page+to+the+tab&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23add-a-content-page-to-the-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23add-a-content-page-to-the-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Create your app package
 
@@ -226,9 +229,6 @@ Enter the following command at the command prompt to transpile your solution int
 ```cmd
 gulp build
 ```
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 #### Run your application
 
@@ -247,7 +247,7 @@ gulp build
     :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+application&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23build-and-run-your-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23build-and-run-your-application&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Establish a secure tunnel to your tab
 
@@ -318,9 +318,6 @@ Following are the steps to create a tab:
 
 <details>
 <summary><b>Review the source code</b></summary>
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 #### Startup.cs
 
@@ -395,8 +392,6 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Establish a secure tunnel to your tab
 
@@ -405,9 +400,6 @@ At the command prompt in the root of your project directory, run the following c
 ```cmd
 ngrok http 3978 --host-header=localhost
 ```
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Update your app package with Developer Portal
 
@@ -446,8 +438,6 @@ ngrok http 3978 --host-header=localhost
 
    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ::: zone-end
 
@@ -486,9 +476,6 @@ Following are the steps to create a tab:
 
 <details>
 <summary><b>Review the source code</b></summary>
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 #### Startup.cs
 
@@ -575,9 +562,6 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
-
 ### Establish a secure tunnel to your tab
 
 At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
@@ -585,9 +569,6 @@ At the command prompt in the root of your project directory, run the following c
 ```cmd
 ngrok http 3978 --host-header=localhost
 ```
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ### Update your app package with Developer Portal
 
@@ -617,9 +598,6 @@ ngrok http 3978 --host-header=localhost
 
 1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
-
 ### Preview your app in Teams
 
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
@@ -630,8 +608,6 @@ ngrok http 3978 --host-header=localhost
   
     Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ::: zone-end
 
@@ -683,8 +659,6 @@ To install the Microsoft Teams Toolkit extension:
 
     Your Visual Studio is installed in a few minutes.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 # [Command line](#tab/cli)
 
@@ -732,9 +706,6 @@ Verify if you can upload a custom app in Teams:
     > [!NOTE]
     > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
-
 ### Create a free Teams developer tenant (optional)
 
 If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
@@ -748,8 +719,6 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ## Get a free Azure account
 
@@ -983,8 +952,6 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     Your resources are provisioned in the Azure portal!
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 #### **To deploy your tab app to cloud**
 
@@ -1169,8 +1136,6 @@ Before you get started with building an offline tab, ensure that you meet the [p
 
 Congratulations! You've successfully created a Teams tab with offline functionality.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=Issue+while+creating+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2FWajeed-msft-ran-into-issues%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&feedback=%3CAdd+your+feedback%3E&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
 ## Code sample
 
