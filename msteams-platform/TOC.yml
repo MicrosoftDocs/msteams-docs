@@ -289,75 +289,84 @@
       items:
       - name: Overview
         href: concepts/build-and-test/teams-developer-portal.md
-        displayName: App Studio, Changelog for Developer Portal, Import an existing app, Import published app
+        displayName: Teams collaboration, setup runtime environment, App Studio, Changelog, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
+        displayName: visual studio code, teams toolkit, react web app, publish react app, debug
       - name: Analyze apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
-        displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
+        displayName: metrics, usage, analytics, insights, telemetry, import an existing app
     - name: Adaptive Card Previewer for VSC
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
-        displayName: preview, Adaptive Card, ACP 
+        displayName: installation of ACP, Toolkit integration 
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md
-      displayName: ACP 
+      displayName: Preview of ACP, Explore ACP 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
-      displayName: getUserinfo
+      displayName: getUserinfo, TeamsFx core functionalities
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
-      displayName: execute URL, getTabInstances
+      displayName: iFrame, execute URL, getTabInstances
     - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
     - name: Bot Framework SDK for .NET
       href: https://github.com/Microsoft/botbuilder-dotnet
     - name: Microsoft Graph SDKs
       href: /graph/sdks/sdks-overview
+      displayName: service, core library
     - name: Legacy SDKs
       items:
       - name: Bots SDK (v3)
         href: resources/bot-v3/bots-overview.md
+        displayName: build Teams bot, v3 Bot Framework
         items:
         - name: Conversations
           href: resources/bot-v3/bot-conversations/bots-conversations.md
+          displayName: handle Bot events, proactive message
           items:
           - name: Personal conversations with bots
             href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+            displayName: Microsoft Bot Framework, personal bot
           - name: Channel and group chat conversation bot
             href: resources/bot-v3/bot-conversations/bots-conv-channel.md
-            displayName: payload
+            displayName: create channel conversation, payload
           - name: Starting a conversation
             href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
-            displayName: Caching
+            displayName: caching, proactive messages
         - name: Cards and card actions
           href: resources/bot-v3/bots-cards.md
+          displayName: Teams support cards, Teams card reference
         - name: Message formatting
           href: resources/bot-v3/bots-message-format.md
+          displayName: Support for text formatting
         - name: Bot events
           href: resources/bot-v3/bots-notifications.md
-          displayName: anonymous
+          displayName: anonymous, conversation update
         - name: Context for bots
           href: resources/bot-v3/bots-context.md
           displayName: getContext
         - name: Send and receive files
           href: resources/bot-v3/bots-files.md
+          displayName: Microsoft Graph APIs, Teams Bot APIs
         - name: Notification-only bots
           href: resources/bot-v3/bots-notification-only.md
+          displayName: app Manifest
         - name: Bot menus
           href: resources/bot-v3/bots-menus.md
+          displayName: menu items
         - name: Bots with tabs
           href: resources/bot-v3/bots-with-tabs.md
         - name: Format bot messages
