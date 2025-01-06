@@ -285,13 +285,16 @@
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
+            displayName: integrate with Azure Resource Manager
           - name: Deploy to cloud using VS
-            href: toolkit/toolkit-v4/deploy-vs.md            
+            href: toolkit/toolkit-v4/deploy-vs.md 
+            displayName: deploy to Azure functions, deploy lifecycle           
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
-        displayName: migrate Teams toolkit, new project structure, migration
+        displayName: new project structure, migration, YAML configuration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
+      displayName: command line interface, manage Teams application
     - name: Developer Portal for Teams
       items:
       - name: Overview
