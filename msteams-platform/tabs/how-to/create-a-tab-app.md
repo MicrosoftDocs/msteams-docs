@@ -26,6 +26,8 @@ This tutorial provides a comprehensive guide to build a Teams tab apps. You'll l
 
 ### Use Teams Toolkit to create a tab app
 
+If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. To start building your basic tab app, see the [step-by-step guide](../../sbs-gs-javascript.yml).
+
 ### Get context for your tab app
 
 Your tab requires contextual information to display relevant content:
