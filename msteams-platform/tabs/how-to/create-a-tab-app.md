@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.date: 01/03/2025
 ---
 
-# Create a tab
+# Create a Teams tab app
 
 Microsoft Teams, with its vast user base and rich set of APIs, offers a compelling opportunity to build tab with extensive features. Microsoft Teams enables you to embed your web apps directly within Teams. You can provide your app users with a seamless and integrated experience.
 
-## Create a Teams tab app
+## Create a tab
 
 [TBD: Add a section for creating a Teams tab app using Teams Toolkit - JavaScript.]
 
