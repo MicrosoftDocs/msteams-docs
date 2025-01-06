@@ -98,10 +98,10 @@
       displayName: best practices, customize app structure, wireframes
     - name: Personal apps
       href: concepts/design/personal-apps.md
-      displayName: illustration to manage personal apps in Teams, manage personal apps, components to design personal tab
+      displayName: design personal app, manage , logo
     - name: Tabs
       href: tabs/design/tabs.md
-      displayName: design personal app
+      displayName: design, tab
     - name: Bots
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
@@ -113,7 +113,7 @@
       displayName: meeting stage
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
-    displayName: data visualization, ui templates and use cases
+    displayName: data visualization, UI templates, use cases
   - name: UI components
     items:
     - name: Basic UI components
