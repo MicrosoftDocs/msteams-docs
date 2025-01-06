@@ -81,7 +81,7 @@
       displayName: icon design, icon guidelines 
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork
+      displayName: app artwork, image template
     - name: Type
       href: concepts/design/design-teams-app-type.md
       displayName: font design, font style
@@ -98,7 +98,7 @@
       displayName: best practices, customize app structure, wireframes
     - name: Personal apps
       href: concepts/design/personal-apps.md
-      displayName: design personal app, manage , logo
+      displayName: design personal app, manage, logo
     - name: Tabs
       href: tabs/design/tabs.md
       displayName: design, tab
