@@ -376,8 +376,10 @@
   - name: Tabs overview
     href: tabs/what-are-tabs.md
     displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs, clickjacking, device permissions for tabs
-  - name: Create a tab App
+  - name: Create a tab app
     href: tabs/how-to/create-a-tab-app.md
+  - name: Tab features
+    href: tabs/tab-features.md
 - name: Build tabs
   items:
   - name: Tabs overview
