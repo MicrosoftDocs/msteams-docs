@@ -219,54 +219,65 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
+            displayName: collaborate on Teams, collaborate with Toolkit
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
+            displayName: upload app to Teams, different environment, cloud hosted environment
       - name: Publish your Teams app
         items:
         - name: Publish Teams apps using Teams Toolkit 
           href: toolkit/publish.md
-          displayName: license
+          displayName: build app package, approve to admin centre
         - name: Publish Teams apps using Developer Portal 
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
+          displayName: Update Manifest file
         - name: Teams app tutorials and code samples
           href: toolkit/teams-toolkit-tutorial.md
+          displayName: app capabilities and scenarios
         - name: FAQ
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
       items:
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
-        displayName: TTK, version, 17.7
+        displayName: Teams for VS, TTK, version, 17.7
       - name: Install Teams Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
-        displayName: download
+        displayName: dinstall Teams with VS, Build apps
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
+        displayName: explore Teams Toolkit, using Visual Studio
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
+        displayName: create Teams, Azure Function, support Azure Functions
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: Accounts to build your Teams app    
+          displayName: prerequisites for Teams, build teams app, accounts to build your Teams app   
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
+          displayName: Teams template, template in Toolkit, Teams app project
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
-            href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
+            href: toolkit/toolkit-v4/add-single-sign-on-vs.md 
+            displayName: add SSO for VS, aab application, Teams bot application, SSO app 
         - name: Customize app manifest
           items:
           - name: Customize Teams app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
+            displayName: preview app Manifest, developer portal
         - name: Debug your Teams app
           items: 
           - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
+            displayName: load configured app
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
+            displayName: DevTunnel setup, Teams app dependencies 
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
