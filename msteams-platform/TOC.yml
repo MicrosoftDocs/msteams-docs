@@ -143,7 +143,7 @@
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
-    displayName: Tools and SDKs
+    displayName: tools and libraries
   - name: Tools 
     items:
     - name: Teams Toolkit for Visual Studio Code
@@ -153,68 +153,84 @@
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
-        displayName: download
+        displayName: Installation guide for VSC
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
+        displayName: Toolkit task pane
       - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: create developer account, app permission   
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
+          displayName: create Teams project using VSC
         - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
+            displayName: local environment, create environment manually
           - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
+            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability, guides from Teams, add capabilities
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
-            displayName: application, endpoint
+            displayName: application, endpoint, add cloud resources, API connection, create capability
           - name: Add SSO to Teams app
             href: toolkit/add-single-sign-on.md
+            displayName: SSO Support
           - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
+            displayName: create access in TeamsFx
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
-            displayName: MSI, certificate, bot, message extension, authentication
+            displayName: authentication certification, MSI, certificate, bot, message extension, authentication
         - name: Customize app manifest
           items:
           - name: Customize app manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+            displayName: app validation
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
+            displayName: customize Entra manifest, application CodeLens, development lifecycle
         - name: Debug your Teams app
           items:
           - name: App debug overview
             href: toolkit/debug-overview.md
+            displayName: debug features, multi-target debugging, customize debug
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md            
+            href: toolkit/debug-message-extension-app-in-test-tool.md 
+            displayName:  build sample app           
           - name: Debug your app locally
             href: toolkit/debug-local.md
+            displayName: debug app locally, dev tunnel
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
-            displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
+            displayName: debug teams, debug targets, Copilot agent, custom engine agent       
           - name: Debug background process
             href: toolkit/debug-background-process.md
+            displayName: validate prerequisites
           - name: Debug for mobile
-            href: toolkit/debug-mobile.md        
+            href: toolkit/debug-mobile.md 
+            displayName: debug tab app, test bot and tab app, test on mobile client,        
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/provision.md
+            displayName: cloud resources, provision actions, validate manifest, validate app package
           - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
+            displayName: deploy the app, deploy to Azure
           - name: Deploy Teams app to container service
-            href: toolkit/deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md   
+            displayName: deploy teams bot, Azure container apps, Azure Kubernetes Service        
           - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md            
+            href: toolkit/use-CICD-template.md 
+            displayName: pipelines for teams app, generate Teams app           
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
