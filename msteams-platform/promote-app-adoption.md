@@ -33,7 +33,7 @@ If you're a Microsoft Partner, you can work with your Microsoft counterpart to f
 Ensure that the users have access to and appropriate licenses for your app on Teams. There are two types of apps available for your users:
 
 * **Custom apps**: Custom apps are developed specifically for an organization and are made available by admins in Teams within their organization.
-* **Third-party apps**: [Teams apps in AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) are created by third-party software developers and by Microsoft. For the apps created by third-party providers, Microsoft does testing and validation. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
+* **Third-party apps**: [Teams apps in AppSource](https://appsource.microsoft.com) are created by third-party software developers and by Microsoft. For the apps created by third-party providers, Microsoft does testing and validation. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
 
 Admins can set up an app governance process that manages your organization's IT policies, standards, and risk profiles. For more information. For more information, see [Create policies for app access](#create-policies-to-give-permission-to-use-apps-and-pin-it).
 
@@ -104,7 +104,7 @@ To learn and understand how an IT admin can configure your app, see [Help IT adm
 
 Provide a user guide for your app and cover the following articles:
 
-* Instructions to install your app from the [Microsoft Teams Store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams).
+* Instructions to install your app from the Microsoft Teams Store.
 * Key features and use cases of your app. For more information, see [Provide your app's use cases](#provide-a-feature-guide-for-the-users-of-your-app).
 * How can users reach you for support?
 * What are the user configuration settings, for example, profile setup?
@@ -119,10 +119,9 @@ A campaign must be at the correct time in the adoption life cycle. Contextual re
 
 Post-adoption, there's a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interactive sessions with the community such as support webinars and office hours. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and do other similar activities.
 
-For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
+For help on creating these assets, register for the ISV success program overview.
 
 > [!div class="nextstepaction"]
-> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 2: Help admins to do app configuration and rollout for their users
 
@@ -177,7 +176,7 @@ If your app accesses any data outside Teams, it does that using Microsoft Graph 
 
 ### Buy and manage licenses and subscriptions for paid apps
 
-Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through [Microsoft AppSource](https://appsource.microsoft.com/) and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
+Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through Microsoft AppSource and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
 
 ### Allow custom apps in an organization
 
@@ -209,7 +208,6 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * List of supported languages.
 
 > [!div class="nextstepaction"]
-> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 3: Educate users and drive adoption change management for your app
 
@@ -286,10 +284,9 @@ Champions help:
 * Identify business challenges and possible solutions.
 * Provide feedback to the project team and sponsors.
 
-You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program). For best practices on app adoption, see [app growth and adoption](concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md#best-practices-for-app-growth-and-adoption).
+You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see Create your champions program for Microsoft Teams. For best practices on app adoption, see [app growth and adoption](concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md#best-practices-for-app-growth-and-adoption).
 
 > [!div class="nextstepaction"]
-> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 4: Provide support information for IT admins and users
 
@@ -316,10 +313,9 @@ To learn more about how your customers access the support information for your a
 | [Manifest file](resources/schema/manifest-schema.md)                    | `privacyUrl`       | The URL to the page that provides privacy information for the app.                                                         | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
 | [Manifest file](resources/schema/manifest-schema.md)                    | `termsOfUseUrl`    | The URL to the page that provides the terms of use for the app.                                                            | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
 | [Manifest file](resources/schema/manifest-schema.md)                    | `publisherDocsUrl` | The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | Teams admin center displays the URL if the app developer provides it in the manifest file. |
-| [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.      |
+| [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in Microsoft AppSource, in the **Details + support** tab.      |
 
 > [!div class="nextstepaction"]
-> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 5: Track app adoption and usage using analytics
 
