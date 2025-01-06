@@ -77,26 +77,27 @@
     displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
+    displayName: design phases, design kit
   - name: Design system
     items:
     - name: App design system fundamentals
       href: concepts/design/design-teams-app-fundamentals.md
-      displayName: icons, Font, Color 
+      displayName: design principles
     - name: Layout and scaling
       href: concepts/design/design-teams-app-layout-scaling.md
       displayName: layout, scaling 
     - name: App icons for Teams Store and app bar
       href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: icons, Font, Color 
+      displayName: icon design, icon guidelines 
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork 
+      displayName: app artwork, image template
     - name: Type
       href: concepts/design/design-teams-app-type.md
-      displayName: type 
+      displayName: font design, font style
     - name: Color
       href: concepts/design/design-teams-app-color.md
-      displayName: Color 
+      displayName: app color, themes, primary colors
     - name: Shape and elevation
       href: concepts/design/design-teams-app-shape-elevation.md
       displayName: shape, elevation
@@ -104,22 +105,25 @@
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
-      displayName: best practices
+      displayName: best practices, customize app structure, wireframes
     - name: Personal apps
       href: concepts/design/personal-apps.md
-      displayName: logo
+      displayName: design personal app, manage, logo
     - name: Tabs
       href: tabs/design/tabs.md
+      displayName: design, tab
     - name: Bots
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: commands      
+      displayName: set up extensions, commands     
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+      displayName: meeting stage
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
+    displayName: data visualization, UI templates, use cases
   - name: UI components
     items:
     - name: Basic UI components
@@ -132,7 +136,7 @@
       displayName: Adaptive Cards, Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
-      displayname: Forms
+      displayname: Forms, launch dialogs
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
       displayName: hide page layout  
