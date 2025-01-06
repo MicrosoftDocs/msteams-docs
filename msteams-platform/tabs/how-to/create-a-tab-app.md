@@ -15,6 +15,13 @@ Microsoft Teams, with its vast user base and rich set of APIs, offers a compelli
 
 [TBD: Add a section for creating a Teams tab app using Teams Toolkit - JavaScript.]
 
+This tutorial provides a comprehensive guide to build a Teams tab apps. You'll learn how to:
+
+- Register your app with Azure AD
+- Create a new Teams app project using Teams Toolkit
+- Build the tab app
+- Deploy and run your app to Azure
+
 ### Prerequisites
 
 ### Use Teams Toolkit to create a tab app
@@ -22,6 +29,12 @@ Microsoft Teams, with its vast user base and rich set of APIs, offers a compelli
 ### Add features to your Teams app
 
 [TBD: Add details on tab app features and related APIs]
+
+By building a Teams tab app, you can:
+
+- Integrate your tab app with advanced features
+- Enable your app to reach a vast user base and enhance app visibility
+- Enhance user engagement and productivity
 
 | # | To ... | Try ... | Here's how |
 | --- | --- | --- | --- |
