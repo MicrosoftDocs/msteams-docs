@@ -29,7 +29,7 @@ Prompt starters help users start a conversation with your bot.
 
 :::column span="2":::
 
-##### [Suggested actions](#suggested-actions-1)
+##### [Suggested action](#suggested-actions-1)
 
 Suggested actions help users continue conversations with your bot.
 
@@ -39,10 +39,10 @@ Suggested actions help users continue conversations with your bot.
 
 :::row-end:::
 
-## Prompt starters
+## Prompt starter
 
 >[!NOTE]
-> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
+> * Your bot either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
