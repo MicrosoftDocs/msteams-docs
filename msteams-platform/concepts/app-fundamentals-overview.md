@@ -67,7 +67,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### Plan for Government clouds
 
-If you're planning to extend Teams app in a Government cloud platform, it's essential to understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in Government cloud platforms, see [plan for Government clouds](cloud-overview.md).
+If you're planning to extend Teams app in a Government cloud platform, it's essential to understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in Government cloud platforms, see plan for [Government clouds](cloud-overview.md) and [sovereign cloud](sovereign-cloud.md).
 
 ## Next step
 
