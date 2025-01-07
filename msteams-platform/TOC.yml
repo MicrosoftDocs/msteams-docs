@@ -379,7 +379,7 @@
   - name: Create a tab app
     href: tabs/how-to/create-a-tab-app.md
   - name: Tab features
-    href: tabs/tab-features.md
+    href: tabs/how-to/tab-features.md
 - name: Build tabs
   items:
   - name: Tabs overview
