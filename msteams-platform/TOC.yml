@@ -732,33 +732,6 @@
       displayName: payload
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
-- name: Integrate sharing and navigation
-  items:
-  - name: Share to Teams
-    items:
-    - name: Share to Teams from web apps
-      href: concepts/build-and-test/share-to-teams-from-web-apps.md
-      displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
-    - name: Share to Teams from personal app or tab
-      href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
-      displayName: share to meeting, personal app
-  - name: Deep links for navigation
-    items:
-    - name: Deep links overview
-      href: concepts/build-and-test/deep-links.md
-      displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
-    - name: Deep link to an application
-      href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
-    - name: Deep link to Teams chat
-      href: concepts/build-and-test/deep-link-teams.md
-      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
-    - name: Deep link to a workflow in Teams
-      href: concepts/build-and-test/deep-link-workflow.md
-      displayName: create deep link for workflow, deeplink for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
-    - name: Execution and handling of deeplinks
-      href: concepts/build-and-test/deep-links-execution-handling.md
-      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -832,6 +805,33 @@
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
+- name: Integrate sharing and navigation
+  items:
+  - name: Share to Teams
+    items:
+    - name: Share to Teams from web apps
+      href: concepts/build-and-test/share-to-teams-from-web-apps.md
+      displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
+    - name: Share to Teams from personal app or tab
+      href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      displayName: share to meeting, personal app
+  - name: Deep links for navigation
+    items:
+    - name: Deep links overview
+      href: concepts/build-and-test/deep-links.md
+      displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
+    - name: Deep link to an application
+      href: concepts/build-and-test/deep-link-application.md
+      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
+    - name: Deep link to Teams chat
+      href: concepts/build-and-test/deep-link-teams.md
+      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
+    - name: Deep link to a workflow in Teams
+      href: concepts/build-and-test/deep-link-workflow.md
+      displayName: create deep link for workflow, deeplink for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
+    - name: Execution and handling of deeplinks
+      href: concepts/build-and-test/deep-links-execution-handling.md
+      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
