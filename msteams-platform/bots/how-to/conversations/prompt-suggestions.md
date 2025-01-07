@@ -14,7 +14,7 @@ Prompt suggestions are commands that are presented to the users in the Microsoft
 
 Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
-There are two types of prompt suggestions that you can use:
+Following are the two types of prompt suggestions that you can use:
 
 :::row:::
 :::column span="2":::
