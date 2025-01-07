@@ -38,7 +38,6 @@
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
- 
 - name: Plan your app
   items:
   - name: Overview
@@ -915,6 +914,18 @@
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
+- name: App manifest
+  items:
+    - name: App manifest
+      href: resources/schema/manifest-schema.md
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
+    - name: Public developer preview
+      items:
+        - name: Overview
+          href: resources/dev-preview/developer-preview-intro.md          
+        - name: Public developer preview app manifest
+          href: resources/schema/manifest-schema-dev-preview.md
+          displayName: properties
 - name: Test your app
   items:
   - name: Overview
@@ -1053,18 +1064,6 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-- name: App manifest
-  items:
-    - name: App manifest
-      href: resources/schema/manifest-schema.md
-      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
 - name: Integrate with Teams
   items:
   - name: Web app integration
