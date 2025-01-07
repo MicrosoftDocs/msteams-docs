@@ -1139,23 +1139,25 @@
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
-      displayname: localizationInfo 
+      displayname: localizationInfo, Marketplace listings, Partner Center, AppSource Webpage 
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-      displayname: meetingExtensionDefinition
+      displayname: meetingExtensionDefinition, schema versions, schema properties
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
-    displayName: Cookies
+    displayName: cookies types
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
+    displayName: Microsoft learn, Teams articles, Docs Authoring Pack
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+    displayName:  Dev Tools, Cache-Control, user authentication error
   - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
-    displayName: Classic Teams, new Teams client, Teams 2.1
+    displayName: classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
+    displayName: message extension, plugin, Copilot
 - name: Support and feedback
   href: feedback.md
-  displayName: Developer community help, questions, suggestions, contact, issues
+  displayName: developer community help, questions, suggestions, contact, issues
