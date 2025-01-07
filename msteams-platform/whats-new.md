@@ -536,7 +536,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***December 11, 2024***: Copilot plugin as a message extension in Teams meeting is deprecated.
+* ***January 15, 2025***: Copilot plugin as a message extension in Teams meeting is deprecated.
 
 * ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
 
