@@ -373,14 +373,14 @@
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs-revamp
   items:
-  - name: Tabs overview
+  - name: Overview
     href: tabs/what-are-tabs.md
     displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs, clickjacking, device permissions for tabs
   - name: Create a tab app
     href: tabs/how-to/create-a-tab-app.md
   - name: Advanced tab features
     items:
-    - name: Overview
+    - name: Tab features overview
       href: tabs/how-to/advanced-tab-features.md  
     - name: Open content in stage view
       href: tabs/open-content-in-stageview.md
