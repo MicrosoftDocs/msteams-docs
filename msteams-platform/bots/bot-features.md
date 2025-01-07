@@ -133,7 +133,7 @@ If you're unable to create a bot in Developer Portal, ensure the following:
 
     For information about how to assign roles, see [assign Microsoft Entra roles to users](/azure/active-directory/roles/manage-roles-portal).
 
-  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the admin assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions in Microsoft Entra admin center:
+  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the admin assigns a [custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions in Microsoft Entra admin center:
 
     * `microsoft.directory/applications/create`
     * `microsoft.directory/applications/createAsOwner`
