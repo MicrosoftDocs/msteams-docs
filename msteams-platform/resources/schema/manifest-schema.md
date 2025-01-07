@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 11/27/2024
+ms.date: 12/11/2024
 ---
 
 # App manifest
@@ -642,7 +642,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|||Type of the command. One of `query` or `action`. <br>Default value: `query` |
-|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the plugin to the user.|
+|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the agent to the user.|
 |`samplePrompts.text`|String|128 characters|✔️|Content of the sample prompt.|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
 |`context`|Array of strings|3 ||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
@@ -829,7 +829,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** &ndash; String
 
-Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The default install scope is denoted with a **Recommended** option adjacent to the corresponding scope in the scope selection dialog, after the user adds the app. The options are:
 
 * `personal`
 * `team`

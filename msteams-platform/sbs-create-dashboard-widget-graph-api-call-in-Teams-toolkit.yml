@@ -2,10 +2,10 @@
 title: Build a dashboard in Teams
 metadata:
   title: Build Dashboard Tab App - Tutorial
-  description: Learn how to create a dashboard tab app using Teams Toolkit in Visual Studio Code, add a new widget, and implement Graph API call.
+  description: Learn how to create a dashboard tab app using Teams Toolkit in Visual Studio Code. Learn to add a new widget and implement Graph API call.
   audience: Developer
   level: Beginner
-  ms.date: 01/06/2023
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/build-a-dashboard-tab-app.md
   nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
@@ -82,31 +82,35 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select the **F5** to run the application in debug mode.
+     1. Select **F5** to run the application in debug mode.
 
      1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
 
-        Tab app dashboard is successfully created in Teams.
+     1.  Select **Open**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-add-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
-        Teams also supports different themes, including dark and high contrast themes.
+         Tab app dashboard is successfully created in Teams.
 
-        # [Dark theme](#tab/darktheme)
+         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
-        The following image shows the use of Dark theme in the Teams desktop client:
+         Teams also supports different themes, including dark and high contrast themes.
 
-           :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
+          # [Dark theme](#tab/darktheme)
 
-        # [High contrast theme](#tab/highcontrasttheme)
+          The following image shows the use of Dark theme in the Teams desktop client:
 
-        The following image shows the use of High contrast theme in the Teams desktop client:
+            :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
-           :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+          # [High contrast theme](#tab/highcontrasttheme)
 
-        ---
+          The following image shows the use of High contrast theme in the Teams desktop client:
+
+            :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+
+         ---
 
       In TeamsFx CLI,
 

@@ -5,12 +5,16 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/18/2024
+ms.date: 12/11/2024
 ---
 
 # Bot configuration experience
 
-The bot configuration experience simplifies the process of setting up and adjusting bot settings directly within a channel or group chat after installation. This enhances operational efficiency from the start by eliminating the need for repeated user interventions. Users can customize the bot to fit their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot remains relevant and valuable.
+Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. Bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
+
+With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
+* Tailor the bot to their specific workflows and preferences during installation.
+* Reconfigure settings to adapt to changing requirements post installation.
 
 For example, a bot that tracks and shares news topics or monitors GitHub repositories can initially be set up to match user workflows. Later, it can be easily reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
 
@@ -18,11 +22,11 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphical representation that shows adding a bot to a group chat and configuring the bot settings during installation.":::
 
 **Reconfigure**
 
-:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the bot in the message compose area.":::
 
 To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
