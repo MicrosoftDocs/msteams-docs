@@ -381,7 +381,7 @@
   - name: Advanced tab features
     items:
     - name: Tab features overview
-      href: tabs/how-to/advanced-tab-features.md  
+      href: tabs/how-to/tab-features.md
     - name: Open content in stage view
       href: tabs/open-content-in-stageview.md
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
