@@ -1069,23 +1069,24 @@
   items:
   - name: Web app integration
     href: samples/integrate-web-apps-overview.md
-    displayName: application, Low code platforms
+    displayName: application, Low code platforms, integrate device capabilities
   - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
-    displayName: Multitenancy, SharePoint
+    displayName: Multitenancy, SharePoint, identity mapping
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
-    displayname: OnMessageActivityAsync
+    displayname: OnMessageActivityAsync, conversational solution, language support
   - name: Power Platform apps
     items:
     - name: Low-code custom apps
       href: samples/teams-low-code-solutions.md
-      displayName: Power BI, Power Apps, Power Automate, Project Oakdale
+      displayName: build custom applications, Power BI, Power Apps, Power Platform apps
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+      displayName: interface solutions, publish intelligent virtual agents
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
-    displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
+    displayName: Attendance, Adoption, FAQ Plus, Icebreaker, Tournaments of Teams
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
     displayName: Teams Shifts Workforce management (WFM)
@@ -1096,40 +1097,44 @@
       displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
-      displayName: OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
+      displayName: OpenID Connect, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
     - name: Install Moodle LMS
-      href: resources/moodleInstructions.md  
+      href: resources/moodleInstructions.md 
+      displayName: current stable version of Moodle, configure Microsoft plugin and Entra ID 
     - name: Moodle FAQ
       href: resources/faqs.md
+      displayName: Moodle LMS queries
   - name: Share to Teams
     items:
     - name: Share to Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
-      displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
+      displayName: share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       displayName: share to meeting, personal app
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
+    displayName: existing Teams tab, access the context
   - name: Create deep links
     items:
     - name: Deep links overview
       href: concepts/build-and-test/deep-links.md
-      displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: protocol handlers, chat, app, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
+      displayName: invoke Stageview, navigate within your app, protocol handlers, deep link meeting sidepanel, share content in meeting
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
-      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
+      displayName: create deep link for new chat,  navigate to chat, channel conversation   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
-      displayName: create deep link for workflow, deeplink for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
+      displayName: deeplink for meeting schedule dialog, audio video call, deep link to join meeting 
     - name: Execution and handling of deeplinks
       href: concepts/build-and-test/deep-links-execution-handling.md
-      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
+      displayName: execute deep link, deeplink API, hyperlink text    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
+    displayName: JavaScript client library, input control, API response errors
   - name: Use Fluid with Teams
     href: tabs/how-to/using-fluid-msteam.md
     displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
