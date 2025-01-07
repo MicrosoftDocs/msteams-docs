@@ -85,6 +85,11 @@ The following image shows the share to stage option in the Teams mobile client:
 
 ---
 
+If you use an advanced share to stage API, you can customize the text on the button. Here are the guidelines for customization:
+  
+* Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users as **Share** consistently means **Share to stage** in Teams meetings.
+* Use more specific text to provide meaningful context of the scenario. For example, you can use text such as **Watch together** or **Play together** if your app offers videos or casual games.
+
 Use the following APIs to share specific part of the app:
 
 | Method| Description | Source |
@@ -199,6 +204,7 @@ The following table includes the query parameter:
 >
 > * Only In-tenant or guest and external users with presenter or organizer role can initiate a sharing session.
 > * Share to stage using screen share isn't supported on Mac, classic Teams, mobile, web and VDI.
+> * In Teams, you can't share your screen and share to the stage at the same time.
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, all the participants can view the content, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 

@@ -18,7 +18,7 @@ Webhooks and connectors help to connect the web services to channels and teams i
 >
 > * Webhooks and connectors are available only in Government Community Cloud (GCC) and aren't available in GCC High, Department of Defense (DOD), and Teams operated by 21Vianet environments.
 >
-> * Only Incoming Webhook connector type are available in GCC High environment and the [tenant admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) need to manually upload to display the app in the connectors page.
+> * Only Incoming Webhook connector type are available in GCC High environment and the [admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) need to manually upload to display the app in the connectors page.
 >
 > * You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
 
@@ -64,7 +64,7 @@ Before you start to learn how to build Incoming Webhooks, you may also want to k
 Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using connector cards for Microsoft 365 Groups and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level. For more information, see [create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md).
 
 > [!NOTE]
-> You can distribute the connector for Microsoft 365 Groups Teams app to our AppStore.
+> You can publish the connector for Microsoft 365 Groups Teams app to our AppStore.
 
 ## Create and send messages
 

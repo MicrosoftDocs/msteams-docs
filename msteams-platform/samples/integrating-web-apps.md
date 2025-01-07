@@ -22,6 +22,8 @@ This document gives an overview of Teams capabilities, SharePoint requirements f
 
 ## Get to know Teams platform capabilities
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 Your Teams app must include required and expected collaborative features. To work with app integration, it's important to familiarize with Teams development terminology.

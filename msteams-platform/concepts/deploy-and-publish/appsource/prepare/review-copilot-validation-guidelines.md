@@ -212,7 +212,7 @@ You must implement the following:
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
     * We recommend that you set the width of the image, though some scenarios might allow for exceptions.
 
-For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
+For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-agent.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
 
 [Back to top](#validation-guidelines-for-agents)
 

@@ -10,7 +10,7 @@ ms.date: 02/22/2023
 
 # Publish your Microsoft Teams app
 
-You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the app.
 
 ## Configure default install options
 
