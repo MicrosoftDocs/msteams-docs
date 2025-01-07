@@ -11,7 +11,7 @@ ms.date: 12/02/2024
 # Build tabs for calling
 
 > [!NOTE]
-> Calling extensibility is available only for one-on-one chats and in [public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
+> Calling extensibility is available only for one-on-one calls and in [public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
@@ -44,7 +44,7 @@ To enable personal tab app for one-to-one calls:
 Teams uses the meeting side panel context for adding calling context in the manifest schema.
 Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema#statictabs) with the relevant scope and context arrays under the `staticTabs` section. To configure your  personal tab app for one-on-one calls, update the `staticTabs` section as follows:
 
-1. Set the `scope` as `personal` to make your app available in a personal scope and enables the app to make a call.
+1. Set the `scope` as `personal` to make your app available in a personal scope and enables the app to be in a call.
 1. Set the `context` as `meetingSidePanel` to enable the tab app to be supported
 
     Here's an example of the update in the `staticTabs` section of app manifest:
@@ -126,7 +126,7 @@ Here's an example of the app manifest file:
 
 </details>
 
-### Pin your personal tab app to enable calling
+### Pin your personal tab app to calling extensions 
 
 Teams client users can access your personal tab app only if it's pinned by the Teams administrator. Administrators can leverage **Calling extensions** to pin personal calling tab apps. To pin an app for calling:
 
