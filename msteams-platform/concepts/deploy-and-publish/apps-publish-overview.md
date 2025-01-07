@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 02/22/2023
+ms.date: 01/07/2025
 ---
 
 # Publish your Microsoft Teams app

@@ -4,7 +4,7 @@ description: Learn how to configure, develop, publish, manage, validate against 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 02/28/2023
+ms.date: 01/07/2025
 ---
 
 # Manage your apps in Developer Portal

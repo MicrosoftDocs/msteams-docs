@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 05/04/2023
+ms.date: 01/07/2025
 ---
 
 # Build tabs for Teams

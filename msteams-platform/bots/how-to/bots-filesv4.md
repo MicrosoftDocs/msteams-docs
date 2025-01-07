@@ -1,7 +1,7 @@
 ---
 title: Bots to Send and Receive Files
 description: Learn how to send and receive files through the bot using Microsoft Graph APIs for personal, channel and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 04/17/2023
+ms.date: 01/07/2025
 ms.localizationpriority: medium
 ms.topic: how-to
 ---

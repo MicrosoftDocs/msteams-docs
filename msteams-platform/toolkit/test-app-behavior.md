@@ -5,7 +5,7 @@ description: Learn about the prerequisites and how to test app behavior in local
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 01/07/2025
 ---
 # Test app behavior in different environment
 

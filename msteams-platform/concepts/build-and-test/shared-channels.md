@@ -5,7 +5,7 @@ description:  Learn about Teams Connect shared channels to securely collaborate 
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 11/02/2022
+ms.date: 01/07/2025
 ---
 
 # Microsoft Teams Connect shared channels

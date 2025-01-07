@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 01/06/2023
+ms.date: 01/07/2025
 ---
 
 # Prepare your Teams Store submission

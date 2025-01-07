@@ -4,7 +4,7 @@ author: surbhigupta
 description: In this article, learn how apps works in Microsoft Teams meeting based on participant and user role and app extensibility.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/07/2022
+ms.date: 01/07/2025
 ---
 
 # Build apps for Teams meetings and calls

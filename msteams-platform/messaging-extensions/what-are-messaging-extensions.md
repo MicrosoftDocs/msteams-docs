@@ -5,7 +5,7 @@ description: Learn how to build message extensions and the scenarios where they 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/16/2024
+ms.date: 01/07/2025
 ---
 # Build message extensions
 

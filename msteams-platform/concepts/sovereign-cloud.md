@@ -4,7 +4,7 @@ author: v-preethah
 description: Understand Teams features and capabilities available for Teams operated by 21Vianet tenants.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 06/24/2024
+ms.date: 01/07/2025
 ---
 
 # Plan for sovereign clouds

@@ -125,7 +125,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Geo-filtering](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#distribute-your-app-to-specific-countries-or-regions) | A Teams feature where you can cater your app to a specific audience from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. |
+| [Geo-filtering](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#publish-your-app-to-specific-countries-or-regions) | A Teams feature where you can cater your app to a specific audience from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. |
 | [Government Community Cloud (GCC)](~/concepts/cloud-overview.md)| GCC environment provides compliance with federal requirements for cloud services. It includes FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types).|
 | [Government Community Cloud (GCC) High](../concepts/cloud-overview.md#plan-for-government-clouds)|GCC High environment delivers compliance with Department of Defense (DOD) Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).<br>**See also**: [Department of Defense (DOD)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |

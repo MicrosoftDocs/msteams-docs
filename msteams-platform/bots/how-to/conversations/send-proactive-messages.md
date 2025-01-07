@@ -4,7 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/14/2024
+ms.date: 01/07/2025
 ---
 # Proactive messages
 
