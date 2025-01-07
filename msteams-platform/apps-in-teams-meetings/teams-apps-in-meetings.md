@@ -115,7 +115,7 @@ Teams supports user types, such as in-tenant, guest, federated or external, and 
 
 > [!NOTE]
 >
-> When a third person is added to a one-on-one call, the call is elevated to a group call , which starts a new session. Apps added to the one-on-one call aren't available in the group call. However, they can be added again.
+> When a third person is added to a one-on-one call, the call is elevated to a group call, which starts a new session. Apps added to the one-on-one call aren't available in the group call. However, they can be added again.
 
 The following list details the various user types along with their accessibility:
 
@@ -124,7 +124,7 @@ The following list details the various user types along with their accessibility
 * **Federated or external**: A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your Teams or other shared resources from your organization. Guest access is a better option for external users to have access to Teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
-    > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization will be in effect.
+    > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization are in effect.
 
 * **Anonymous**: Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
 
