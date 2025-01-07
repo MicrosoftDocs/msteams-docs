@@ -444,7 +444,8 @@ You can invoke Stageview through a deep link from your tab by wrapping the deep 
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js|
+| Sample name | Description | .NET |Node.js| TypeScript|
 |-------------|-------------|------|----|
-| Deep link consuming `subEntityId` | This sample shows how to use a deep link from a bot chat to a tab consuming the `subEntityId`. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
-| Tab app navigation | This sample shows how to navigate between tabs within the app. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) |
+| Deep link consuming `subEntityId` | This sample shows how to use a deep link from a bot chat to a tab consuming the `subEntityId`. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) | NA|
+| Tab app navigation | This sample shows how to navigate between tabs within the app. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) | NA|
+| Tab deep link pass values | This sample shows how to use a dynamic deep links for transmitting values to both tab and standalone web apps. | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink-pass-values/ts)|
