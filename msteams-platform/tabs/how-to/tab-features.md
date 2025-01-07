@@ -7,9 +7,46 @@ ms.topic: quickstart
 ms.date: 01/03/2025
 ---
 
-# Tab features
+# Teams tab app features
 
-### Add features to your Teams app
+## Developer experience for building a Teams tab app
+
+Step-by-step to a Dev’s progress in building a Teams tab app and important information they may need:
+
+1. Understand key concepts and prerequisites:
+    - Introduction to Tabs, authentication and permissions for access to Graph APIs, and User authentication with AAD.
+2. Set up Environment:
+    - M365 Dev account
+    - AAD app
+    - TTK for VSC: Install TTK and set up project using the toolkit
+3. Create a basic tab app – how-to guide
+4. Set up Web app
+    - Set up SPA or HTML content of the tab
+    - Design for desktop and mobile
+    - Use support for AC, deep links, etc. to structure content, format, navigation in the app
+5. Configure app in Teams using app manifest
+    - Define tab ID, scope, and website and content URLs
+    - Example of app manifest code snippet
+6. Add authentication (optional step)
+    - Cross-link to authentication module
+    - Code snippet or examples, if and as needed
+7. Add support for building tabs for Teams Meetings
+    - Cross-link to Build tabs for meetings page
+    - Code snippet or examples, if and as needed
+8. Test and debug app
+9. Publish app
+
+### Information required during app building
+
+1. AAD registration
+2. Teams app manifest understanding
+3. Teams APIs: Teams specific APIs (JS SDK, Graph APIs)
+4. Authentication types/methods
+5. Dev tools such as VSC and TTK
+6. Web app development for desktop, mobile
+7. Debugging tools
+
+## Add features to your Teams app
 
 [TBD: Add details on tab app features and related APIs]
 
