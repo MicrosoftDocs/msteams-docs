@@ -19,11 +19,11 @@ Step-by-step to a Dev’s progress in building a Teams tab app and important inf
     - M365 Dev account
     - AAD app
     - TTK for VSC: Install TTK and set up project using the toolkit
-3. Create a basic tab app – how-to guide
+3. Create a basic tab app [Add link to how-to guide]
 4. Set up Web app
     - Set up SPA or HTML content of the tab
     - Design for desktop and mobile
-    - Use support for AC, deep links, etc. to structure content, format, navigation in the app
+    - Use support for Adaptor Card, deep links, and more to structure content, format, navigation in the app
 5. Configure app in Teams using app manifest
     - Define tab ID, scope, and website and content URLs
     - Example of app manifest code snippet
