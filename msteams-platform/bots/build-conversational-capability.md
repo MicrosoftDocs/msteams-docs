@@ -108,10 +108,10 @@ The following table lists the activity that your bot can receive and take action
 
 | Message type | Payload object | Scope |
 | --- | --- | --- |
-| Receive a message activity | Message activity | All |
-| Receive edit message activity | Message edit activity | All |
-| Receive undelete message activity | Message undelete activity | All |
-| Receive soft delete message activity | Message soft delete activity | All |
+| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
+| [Receive edit message activity](#receive-edit-message-activity) | Message edit activity | All |
+| [Receive undelete message activity](#receive-undelete-message-activity) | Message undelete activity | All |
+| [Receive soft delete message activity](#receive-soft-delete-message-activity) | Message soft delete activity | All |
 
 ### Receive a message activity
 
@@ -919,7 +919,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |Request |Response |
 |----|----|
-| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A ResourceResponse object. |
+| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 ---
 
@@ -1030,7 +1030,7 @@ The `channelData` object isn't included in messages in personal conversations, a
 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
-- `eventType`: Teams event type passed only in cases of conversation events in your Teams bot.
+- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
@@ -1067,14 +1067,14 @@ The `channelData` object isn't included in messages in personal conversations, a
 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
-- `eventType`: Teams event type passed only in cases of channel modification events.
+- `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
   - `name`: Name of the team passed only in cases of (how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
 - `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
   - `id`: GUID for the channel.
-  - `name`: Channel name passed only in cases of channel modification events.
+  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
@@ -1118,9 +1118,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the bot. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
 | 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](~/feedback.md#developer-community-help). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in developer community. |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in developer community. |
-| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in developer community. |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
 
 ### Status codes retry guidance
 
