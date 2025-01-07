@@ -5,7 +5,7 @@ description: Learn how Incoming and Outgoing webhooks and connectors for Microso
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.date: 11/23/2022
+ms.date: 01/07/2025
 ---
 
 # Build webhooks and connectors

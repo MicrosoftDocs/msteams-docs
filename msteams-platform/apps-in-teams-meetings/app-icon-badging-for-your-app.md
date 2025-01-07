@@ -5,6 +5,7 @@ description: Learn how to enable app icon badging for your Microsoft Teams app i
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.date: 01/07/2025
 ---
 
 # Enable app icon badging for your Teams app

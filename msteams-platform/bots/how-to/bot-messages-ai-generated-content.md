@@ -3,7 +3,7 @@ title: Bot Messages with AI-generated Content
 description: Learn how to format your bot with an AI label, sensitivity labels, citations, and feedback buttons built using Teams AI library or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 12/16/2024
+ms.date: 01/07/2025
 ---
 
 # Enhance AI-generated bot messages
@@ -31,7 +31,7 @@ The following screenshots show how bot messages can be enhanced with AI label, c
 >
 > * AI label, citation, feedback button, and sensitivity label are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
 > * AI label, citation, feedback button, and sensitivity label are available only Teams web, desktop, and mobile clients.
-> * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/cloud-overview.md) environments.
 
 ## AI label
 
