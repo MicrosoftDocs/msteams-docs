@@ -31,7 +31,7 @@ The following images show tabs added to different contexts in Teams:
 :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
 ---
 
-# [Channels](#tab/channel)
+# [Channel](#tabs/channel)
 
 **Teams desktop**
 
