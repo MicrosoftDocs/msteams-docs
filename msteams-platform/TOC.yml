@@ -478,8 +478,10 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Format the bot messages
       href: bots/how-to/format-your-bot-messages.md
+      displayName: format messaging, cross-platform support
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md  
+      displayName: receive files using bot
   - name: Send notifications
     items:
     - name: Build notification capability
@@ -490,6 +492,7 @@
       displayName: conversationId, send message, bot framework, notification,
   - name: Command bot in Teams
     href: bots/how-to/conversations/command-bot-in-teams.md
+    displayName: bot initialization, installation
   - name: Create prompt suggestions
     href: bots/how-to/conversations/prompt-suggestions.md
     displayName: prompt starter, suggested actions
@@ -501,6 +504,7 @@
     displayName: Fetch roster or user profile
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md  
+    displayName: sample JSON, TypeScript or Node.js APIs
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
