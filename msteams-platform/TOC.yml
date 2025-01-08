@@ -370,11 +370,13 @@
         items:
         - name: Message extensions SDK (v3)
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
+          displayName: types of message extensions
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
-          displayName: Loop
+          displayName: add extensions to the app, loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
+          displayName: initiate action type extensions
 - name: Build tabs
   items:
   - name: Tabs overview
@@ -396,19 +398,19 @@
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
     - name: Create a configurable tab
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+      displayName: create a channel tab or group tab, create a custom channel or group tab with ASP.NET Core, build app using Blazor
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
     - name: Create a configuration page
       href: tabs/how-to/create-tab-pages/configuration-page.md
-      displayName: configurationUrl
+      displayName: modify tab, configurationUrl
     - name: Create a removal page
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: Reconfigure tab, register remove handler
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
-      displayName: Teams Store apps approved by Microsoft for mobile 
+      displayName: apps on Teams store 
     - name: Build apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
@@ -448,6 +450,7 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
+      displayName: engine agent tutorial
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
