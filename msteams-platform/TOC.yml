@@ -635,8 +635,10 @@
       items:
       - name: Quick start guide
         href: apps-in-teams-meetings/teams-live-share-quick-start.md
+        displayName: developer environment, dice roller app
       - name: Dice Roller tutorial
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        displayName: fluid container
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
       displayName: Live Share data structures, broadcast
@@ -650,10 +652,13 @@
       items:
       - name: Agile Poker tutorial
         href: sbs-teams-live-share.yml
+        displayName: step-by-step guide to Agile Poker
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+        displayName: access token, container mapping
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
+      displayName: FAQs
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
     displayName: Single virtual scene, scene studio
@@ -680,6 +685,7 @@
   items:
   - name: What are cards and dialogs?
     href: task-modules-and-cards/cards-and-task-modules.md
+    displayName: dynamic search
   - name: Build cards
     items:
     - name: Cards overview
@@ -687,7 +693,7 @@
       displayName: People picker, type-ahead, people icon
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, Adaptive Card, command bot
+      displayName: MessageCard, correlationId, markdown, what-are-webhooks-and-connectors button, flexible layout
     - name: Format cards in Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock, borders, rounded corners
@@ -696,23 +702,24 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
     - name: Container layouts in Adaptive Cards
       href: task-modules-and-cards/container-layouts.md
-      displayName: Container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout
+      displayName: container layout, stack elements
     - name: Charts in Adaptive Cards
       href: task-modules-and-cards/cards/charts-in-adaptive-cards.md
-      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart  
+      displayName: chart, graph, visual representations  
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
-      displayName: Setting, channel, static typeahead, persona, persona set
+      displayName: schema updates, Setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: Static and dynamic typeahead search, Input.ChoiceSet, dependent inputs, valueChangedAction, Action.ResetInputs, associatedInputs   
+      displayName: static and dynamic typeahead search, dependent inputs, valueChangedAction, associatedInputs, dropdown list   
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      displayName: media elements, media files, Adaptive Card, command bot        
+      displayName: media elements, media files, command bot        
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Universal Actions overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
+        displayName: action models
       - name: Build Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
@@ -728,15 +735,16 @@
     items:
     - name: Dialogs overview
       href: task-modules-and-cards/what-are-task-modules.md
-      displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
+      displayName: task module, open dialog, command bot, Bot Framework Web Chat
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
+      displayName: JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
     - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
+      displayName: create dialogue box, developer-defined payload
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -748,21 +756,27 @@
       items:
       - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
+        displayName: access app on web, SSO for tab app
       - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
+        displayName: configure app for scope
       - name: Add code to enable SSO for tab
         href: tabs/how-to/authentication/tab-sso-code.md
-        displayName: getAuthToken
+        displayName: getAuthToken, client and server side code
       - name: Update app manifest and preview tab app
         href: tabs/how-to/authentication/tab-sso-manifest.md
+        displayName: access token, application ID URI
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
+        displayName: app permissions, configure authentications
     - name: Enable SSO for bot and message extension app
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
+        displayName: app users access to the bot
       - name: Configure bot app in Microsoft Entra ID
         href: bots/how-to/authentication/bot-sso-register-aad.md
+        displayName: API scope for app
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
       - name: Update app manifest and preview bot app
@@ -784,6 +798,7 @@
     items:
     - name: Third party OAuth IdP overview
       href: tabs/how-to/authentication/auth-flow-tab.md
+      displayName: OAuth Identity Providers, authentication using IdP
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Add authentication to bot app
