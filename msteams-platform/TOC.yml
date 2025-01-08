@@ -11,28 +11,33 @@
   items:
   - name: Teams app that fits
     href: overview.md
-    displayName: Why build apps with Microsoft Teams platform
+    displayName: why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
     href: overview-story.md
-    displayName: Teams app user experience
+    displayName: Teams app user experience, user scenario
   - name: Explore Teams platform features
     href: overview-explore.md
   - name: The Teams solution
     href: overview-solution.md
+    displayName: develop Teams app, app development, tools used
 - name: Get started
   expanded: false
   items:
-  - name: Overview
+  - name: Build your Teams app
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js, get started
+    displayName: new Teams app, GitHub Codespaces, tutorials
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
+    displayName: build Teams tab app
   - name: Build an interactive notification bot app
     href: get-started/build-interactive-notification-bot.md
+    displayName: build Teams bot app, build interactive bot
   - name: Build a message extension app
     href: get-started/build-message-extension.md
+    displayName: search based message extension app
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
+    displayName: Teams app samples, tools to build Teams app
  
 - name: Plan your app
   items:
@@ -41,25 +46,30 @@
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
-    displayName: App scope, Teams app features, capabilities
+    displayName: user requirements, app functionalities, app scope, capabilities
   - name: Map use case to Teams features
     href: concepts/design/map-use-cases.md
+    displayName: user scenarios, Teams app features
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
     displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    displayName: tab app in Teams mobile, Teams mobile apps
   - name: Plan analytics for your Teams app
     items:
-      - name: Overview
+      - name: Get started with app analytics
         href: concepts/design/overview-analytics.md
+        displayName: data instrumentation, user-specific insights, constructs, conversational, hosted web canvas 
       - name: Strategize and decide what to measure
         href: concepts/design/strategize-measure.md
+        displayName: measure your products, monitor events, product satisfaction, customer values
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
+        displayName: track events, monitor, Azure Applications Insights
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
-    displayName: notification, activity feed, message, alert, notify
+    displayName: notification framework, activity feed, message, alert, notify
 - name: Design your app
   items:
   - name: Overview
@@ -67,26 +77,27 @@
     displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
   - name: Understand design process
     href: concepts/design/design-teams-app-process.md
+    displayName: design phases, design kit
   - name: Design system
     items:
-    - name: Overview
+    - name: App design system fundamentals
       href: concepts/design/design-teams-app-fundamentals.md
-      displayName: icons, Font, Color 
+      displayName: design principles
     - name: Layout and scaling
       href: concepts/design/design-teams-app-layout-scaling.md
       displayName: layout, scaling 
     - name: App icons for Teams Store and app bar
       href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: icons, Font, Color 
+      displayName: icon design, icon guidelines 
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork 
+      displayName: app artwork, image template
     - name: Type
       href: concepts/design/design-teams-app-type.md
-      displayName: type 
+      displayName: font design, font style
     - name: Color
       href: concepts/design/design-teams-app-color.md
-      displayName: Color 
+      displayName: app color, themes, primary colors
     - name: Shape and elevation
       href: concepts/design/design-teams-app-shape-elevation.md
       displayName: shape, elevation
@@ -94,22 +105,25 @@
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
-      displayName: best practices
+      displayName: best practices, customize app structure, wireframes
     - name: Personal apps
       href: concepts/design/personal-apps.md
-      displayName: logo
+      displayName: design personal app, manage, logo
     - name: Tabs
       href: tabs/design/tabs.md
+      displayName: design, tab
     - name: Bots
       href: bots/design/bots.md
       displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
-      displayName: commands      
+      displayName: set up extensions, commands     
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+      displayName: meeting stage
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
+    displayName: data visualization, UI templates, use cases
   - name: UI components
     items:
     - name: Basic UI components
@@ -122,7 +136,7 @@
       displayName: Adaptive Cards, Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
-      displayname: Forms
+      displayname: Forms, launch dialogs
     - name: Lightbox view
       href: concepts/design/design-teams-app-light-box-view.md
       displayName: hide page layout  
@@ -179,7 +193,7 @@
             href: toolkit/aad-manifest-customization.md
         - name: Debug your Teams app
           items:
-          - name: Overview
+          - name: App debug overview
             href: toolkit/debug-overview.md
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
@@ -250,7 +264,7 @@
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
         - name: Debug your Teams app
           items: 
-          - name: Overview
+          - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
@@ -361,7 +375,7 @@
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
   items:
-  - name: Overview
+  - name: Tabs overview
     href: tabs/what-are-tabs.md
     displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
   - name: Prerequisites
@@ -763,7 +777,7 @@
       displayName: Caching
   - name: Use third party IdP authentication
     items:
-    - name: Overview
+    - name: Third party OAuth IdP overview
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
@@ -793,7 +807,7 @@
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
   items:
-  - name: Overview
+  - name: What are device capabilities?
     href: concepts/device-capabilities/device-capabilities-overview.md
     displayName: Camera, microphone, gallery, QR, barcode scanner, location
   - name: Device permissions for Teams app
@@ -894,7 +908,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Live Share quick start guide
+      - name: Actions in Microsoft 365 quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
@@ -996,7 +1010,7 @@
     displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Monetize your app
   items:
-  - name: Overview
+  - name: App monetization
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
   - name: SaaS offer for your Teams app
@@ -1053,7 +1067,7 @@
           displayName: properties
 - name: Integrate with Teams
   items:
-  - name: Overview
+  - name: Web app integration
     href: samples/integrate-web-apps-overview.md
     displayName: application, Low code platforms
   - name: Considerations for Teams Integration
