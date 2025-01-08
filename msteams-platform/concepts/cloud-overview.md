@@ -31,7 +31,9 @@ GCC, GCC High, and DOD are limited for use within the United States. This articl
 
 ## Teams app capabilities
 
-Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Due to security and compliance restrictions, not all features available in commercial tenants are accessible in government tenants and other features take time to roll out. We recommend that you have a clear understanding of the Teams apps and its capabilities supported in government tenants to ensure effective utilization.
+Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Due to security and compliance restrictions, all the features available in commercial tenants might not be accessible in government tenants while other features take time to roll out in government tenant. We recommend that you have the understanding of the Teams apps and its capabilities supported in government tenants to ensure effective utilization.
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 The following table details the Teams apps and its capabilities for GCC, GCC High, and DOD:
 
@@ -80,7 +82,7 @@ Here are few pointers to consider while connecting with third-party services fro
 >
 > * Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft.
 > * Understand that enabling bots extend your system boundary beyond this tenant, and is based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR.
-> * Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service.
+> * Understand that Microsoft doesn't endorse and makes no warranties concerning the security of third parties that the customer allows to connect with their service.
 > * Mitigate risks associated with connecting to third-party bots in their services.
 > * Evaluate the risk and compliance of any endpoint and URL that the users connect to.
 

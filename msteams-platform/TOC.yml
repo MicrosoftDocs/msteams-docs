@@ -69,15 +69,15 @@
         displayName: track events, monitor, Azure Applications Insights
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
-    displayName: notification, activity feed, message, alert, notify
+    displayName: notification framework, activity feed, message, alert, notify
   - name: Plan for special clouds
     items:
     - name: Plan for government clouds
       href: concepts/cloud-overview.md
-      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government cloud
+      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), Teams for government tenant
     - name: Plan for sovereign clouds
       href: concepts/sovereign-cloud.md
-      displayName: Teams operated by 21Vianet, sovereign cloud
+      displayName: Teams operated by 21Vianet, gallatin
 - name: Design your app
   items:
   - name: Overview

@@ -11,7 +11,7 @@ ms.date: 01/07/2025
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
-> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet](../../concepts/cloud-overview.md) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD)](../../concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
