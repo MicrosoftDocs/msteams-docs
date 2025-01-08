@@ -949,9 +949,10 @@
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug with inspection middleware
       href: /azure/bot-service/bot-service-debug-inspection-middleware
+      displayName: SDK v4, EchoBot built, create a bot quickstart
     - name: Debug calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-      displayName: signaling
+      displayName: signaling, create bot transcript files, activity type
   - name: Microsoft Graph
     items:
     - name: Test RSC permissions
@@ -1070,10 +1071,11 @@
     - name: Public developer preview
       items:
         - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
+          href: resources/dev-preview/developer-preview-intro.md  
+          displayName: custom app upload        
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+          displayName: schema properties, developer app manifest
 - name: Integrate with Teams
   items:
   - name: Web app integration
