@@ -4,7 +4,7 @@ description: Learn about new Microsoft Teams developer features and updates to e
 ms.topic: reference
 ms.date: 12/11/2024
 ms.localizationpriority: high
-pmowner: washaik
+pmowner: Ankit Govil, Swarathmika
 zone_pivot_groups: What-new-features
 ---
 
