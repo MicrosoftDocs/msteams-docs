@@ -916,7 +916,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Live Share quick start guide
+      - name: Actions in Microsoft 365 quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
