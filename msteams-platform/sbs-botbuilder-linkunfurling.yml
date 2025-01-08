@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create and set up bot for Teams link unfurling to get card response and receive an invoke activity.
   audience: Developer
   level: Beginner
-  ms.date: 01/20/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/link-unfurling.md
   nextTutorialTitle: Read more on link unfurling
@@ -205,8 +205,12 @@ items:
       
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot shows the adding of app.":::
-         
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot of app details dialog with Add option highlighted.":::
+
+    1. Select **Open**.
+
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/openapp.png" alt-text="Screenshot of scope option dialogue with Open option highlighted.":::
+
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
        The link unfurls as shown in the following image:

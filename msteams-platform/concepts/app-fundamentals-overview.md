@@ -67,6 +67,8 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### Government Community Cloud
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
@@ -75,7 +77,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and admins use their own discretion to enable it. | ❌ | ❌ |
 | Custom apps built for your org (LOB apps)| ✔️ | ✔️ | ✔️ |
 | Upload custom apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
