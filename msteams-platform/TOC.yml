@@ -519,9 +519,10 @@
       items:
       - name: Overview
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+        displayName: online meeting bot functions
       - name: Real-time media calls and meetings
         href: bots/calls-and-meetings/real-time-media-concepts.md
-        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+        displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
       - name: Register calls and meetings bot
         href: bots/calls-and-meetings/registering-calling-bot.md
         displayName: How Bot can create call, join meeting and transfer call
@@ -565,26 +566,28 @@
       items:
       - name: Define search commands
         href: messaging-extensions/how-to/search-commands/define-search-command.md
+        displayName: resulting cards, bot-based message extensions
       - name: Respond to search commands
         href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        displayName: user requests, response card types, tap actions, default query
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for agents
         href: messaging-extensions/dev-guidelines-agents.md
-        displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
+        displayName: criteria, extend message extension, agent, customize Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
+        displayName: extend message extension, search based message extension, M365
       - name: Debug an agent for Microsoft 365 Copilot with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
-        displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
+        displayName: selected functions for execution, function execution details, plugin, enabled agents
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
         displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot, plugins
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
-      displayName: Domain listings can include wildcards, cache
+      displayName: wildcards, cache, domain listing
     - name: Micro-capabilities for website links
       href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       displayName: App less link unfurling  
