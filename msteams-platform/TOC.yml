@@ -837,10 +837,12 @@
     displayName: Access, report, MSAL2
   - name: Teams app permissions
     href: graph-api/App-permissions/Teams-app-permissions.md
+    displayName: RSC permissions
   - name: Resource-specific consent
     items:
     - name: RSC permissions
       href: graph-api/rsc/resource-specific-consent.md
+      displayName: mode of data access, types od RSC
     - name: Preapproval of RSC permissions
       href: graph-api/rsc/preapproval-instruction-docs.md
       displayName: User, team, chat, application, delegated
@@ -855,8 +857,10 @@
     displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
+    displayName: prepare message data
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
+    displayName: graph api samples
 - name: Extend your app across Microsoft 365
   items:
   - name: Overview
@@ -871,25 +875,26 @@
     items:
     - name: Enable Teams personal tab for Microsoft 365
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: Microsoft 365, Office 365
+      displayName: Office 365, personal tab for upgrade
     - name: TeamsJS capability across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
+      displayName: enable types of Teams app
   - name: Teams meeting apps in Outlook
     href: m365-apps/extend-m365-meeting-app.md
-    displayName: Microsoft 365, Office 365, meeting app
+    displayName: configurableTabs.context
   - name: Teams message extensions in Outlook
     items:
       - name: Enable Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
-        displayName: mail, Microsoft 365, Office 365Microsoft 365 
+        displayName: build message extensions, upload custom app 
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
-        displayName: mail, Microsoft 365, Office 365, Outlook add-in
+        displayName: link unfurling
   - name: Adaptive Card-based Loop components
     items:
       - name: Design your Loop component
         href: m365-apps/design-loop-components.md
-        displayName: loop component
+        displayName: Card-based Loop component
       - name: Build your Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
@@ -897,10 +902,10 @@
     items:
       - name: Overview
         href: m365-apps/overview-combining-add-in-and-teams-app.md
-        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+        displayName: integrate Outlook Add-in to Teams, Teams app Outlook Add-in
       - name: Add an Outlook Add-in to a Teams app
         href: m365-apps/combine-office-add-in-and-teams-app.md
-        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+        displayName: add Outlook to Teams
   - name: Actions in Microsoft 365
     items:
       - name: What are Actions?
@@ -914,8 +919,10 @@
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+    displayName: single-tenant distribution
 - name: Teams developer documentation FAQs
   href: teams-faq.md
+  displayName: FAQs
 - name: Test your app
   items:
   - name: Overview
@@ -934,6 +941,7 @@
     items:
     - name: Dev Tools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
+      displayName: access Dev tools
   - name: Test your bot
     items:
     - name: Test and debug locally with IDE
