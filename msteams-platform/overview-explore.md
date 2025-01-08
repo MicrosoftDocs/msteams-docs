@@ -15,6 +15,8 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 ## Teams app features
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 | Feature | Description | Useful for |
 | --- | --- | --- |
 |Tabs | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, Stage View, and link unfurling. |

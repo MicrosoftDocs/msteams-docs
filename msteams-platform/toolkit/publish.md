@@ -9,7 +9,7 @@ ms.date: 11/29/2021
 
 # Publish Teams apps using Teams Toolkit
 
-After creating the app, you can distribute your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
+After creating the app, you can publish your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-flow_1.png" alt-text="Screenshot shows the publish flow.":::
 
@@ -129,7 +129,7 @@ The following steps help you to approve from admin center:
 
 ## Publish to Teams Store
 
-You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. The apps published to the Teams Store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
+You can publish your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. The apps published to the Teams Store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
 For more information, see [how to publish to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-teams-store).
 

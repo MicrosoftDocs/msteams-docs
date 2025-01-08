@@ -102,12 +102,12 @@ for (const target of await notificationApp.notification.installations()) {
 
 ## Notification bot installation
 
-A notification bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot.
+A notification bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot:
 
 * To open the bot in personal scope, select **Open**.
 * To open the bot in a shared scope, select the required channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-:::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
+    :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
@@ -166,7 +166,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-  # [TypeScript](#tab/ts2)
+    # [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
@@ -179,7 +179,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp2)
+    # [C#](#tab/csharp2)
 
     ```C#
     // list all installation targets
@@ -197,7 +197,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a group chat:
 
-  # [TypeScript](#tab/ts3)
+    # [TypeScript](#tab/ts3)
 
     ```TypeScript
     // list all installation targets
@@ -217,7 +217,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp3)
+    # [C#](#tab/csharp3)
 
     ```C#
     // list all installation targets
@@ -240,7 +240,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a channel:
 
-  # [TypeScript](#tab/ts4)
+    # [TypeScript](#tab/ts4)
 
     ```TypeScript
     // list all installation targets
@@ -265,7 +265,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp4)
+    # [C#](#tab/csharp4)
 
     ```C#
     // list all installation targets
@@ -505,6 +505,8 @@ In the following table, you can see the comparison of the two different ways:
 |Require Azure resource     |Azure Bot Service         | ❌ |
 
 ### Incoming Webhook notification
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:

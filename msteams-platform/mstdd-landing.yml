@@ -63,6 +63,12 @@ landingContent:
       links:
       - text: Tab app caching is generally available for chats, meetings, and channels
         url: tabs/how-to/app-caching.md
+      - text: Introducing share to meeting from personal app
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+      - text: Text customization for share to stage button
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
       - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
         url: messaging-extensions/build-bot-based-agent.md
       - text: New app installation flow for Teams app installed from Teams Store or custom upload
@@ -75,12 +81,6 @@ landingContent:
         url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
       - text: Add conditionally enabled action buttons on Adaptive Cards
         url: task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons
-      - text: Add YouTube, Dailymotion, or Vimeo videos in Adaptive Cards.
-        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      - text: Add borders, rounded corners, scrollable containers, compound buttons, Fluent icons, and star ratings in Adaptive Cards
-        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
-      - text: Build dependent inputs with typeahead search in Adaptive Cards
-        url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
 
     - linkListType: reference
       links:
