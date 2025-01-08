@@ -61,7 +61,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Tab app caching is generally available for chats, meetings, and channels
+      - text: Tab app caching is generally available
         url: tabs/how-to/app-caching.md
       - text: Introducing share to meeting from personal app
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
