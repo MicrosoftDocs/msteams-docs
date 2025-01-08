@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-***January 08, 2024***: [Tab app caching is generally available for chats, meetings, and channels](tabs/how-to/app-caching.md).
+***January 08, 2024***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
 
 :::column-end:::
 :::row-end:::
@@ -48,7 +48,7 @@ Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 | 18/12/2024 | Introducing text customization for share to stage button. | Build apps for Teams meetings and calls > Configure apps for Teams meetings > Build apps for meeting stage > [Advanced share to stage APIs](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis) |
-| 18/12/2024 | Introducing share to meeting from personal app. | Integrate with Teams > Share to Teams > Share to Teams from personal app or tab > [share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) |
+| 18/12/2024 | Introducing share to meeting from personal app. | Integrate with Teams > Share to Teams > Share to Teams from personal app or tab > [Share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) |
 | 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
 | 13/12/2024 | Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) |
 | 11/12/2024 | Enhanced user experience for Teams app installed from Teams Store or custom upload. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md) |
