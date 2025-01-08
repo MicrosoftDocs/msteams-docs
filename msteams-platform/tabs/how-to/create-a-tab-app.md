@@ -1,25 +1,47 @@
 ---
-title: Get Contextual Information for Tabs
-description: Learn to context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
+title: Get Started with Tab Apps
+author: surbhigupta
+description: Learn to build a static tab app using Teams Toolkit
 ms.localizationpriority: high
-ms.topic: how-to
-ms.date: 03/02/2023
+ms.topic: quickstart
+ms.date: 01/03/2025
 ---
 
-# Get context for your tab
+# Create a Teams tab app
+
+Microsoft Teams, with its vast user base and rich set of APIs, offers a compelling opportunity to build tab with extensive features. Microsoft Teams enables you to embed your web apps directly within Teams. You can provide your app users with a seamless and integrated experience.
+
+## Create a tab
+
+[TBD: Add a section for creating a Teams tab app using Teams Toolkit - JavaScript.]
+
+This tutorial provides a comprehensive guide to build a Teams tab apps. You'll learn how to:
+
+- Register your app with Azure AD
+- Create a new Teams app project using Teams Toolkit
+- Build the tab app
+- Deploy and run your app to Azure
+
+### Prerequisites
+
+### Use Teams Toolkit to create a tab app
+
+If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. To start building your basic tab app, see the [step-by-step guide](../../sbs-gs-javascript.yml).
+
+### Get context for your tab app
 
 Your tab requires contextual information to display relevant content:
 
-* Basic information about the user, team, or company.
-* Locale and theme information.
-* The `page.id` and `page.subPageId` that identify what is in this tab (known as `entityId` and `subEntityId` before TeamsJS v2.0.0).
+- Basic information about the user, team, or company.
+- Locale and theme information.
+- The `page.id` and `page.subPageId` that identify what is in this tab (known as `entityId` and `subEntityId` before TeamsJS v2.0.0).
 
 ## User context
 
 Context about the user, team, or company can be especially useful when:
 
-* You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Microsoft Entra ID or other identity provider, and you don't require the user to enter their username again.
+- You create or associate resources in your app with the specified user or team.
+- You initiate an authentication flow from Microsoft Entra ID or other identity provider, and you don't require the user to enter their username again.
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -30,34 +52,34 @@ For more information, see [authenticate a user in your Microsoft Teams](~/concep
 
 You can access context information in two ways:
 
-* Using [URL placeholder values](#get-context-by-inserting-url-placeholder-values).
-* From the Microsoft Teams JavaScript client library [context](/javascript/api/@microsoft/teams-js/app.context) object.
+- Using [URL placeholder values](#get-context-by-inserting-url-placeholder-values).
+- From the Microsoft Teams JavaScript client library [context](/javascript/api/@microsoft/teams-js/app.context) object.
 
 ### Get context by inserting URL placeholder values
 
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
-* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` before TeamsJS v2.0.0).
-* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` before TeamsJS v2.0.0).
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the sign in name of the current user in their home tenant. (Known as `{loginHint}` before TeamsJS v2.0.0).
-* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` before TeamsJS v2.0.0).
-* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` before TeamsJS v2.0.0).
-* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` before TeamsJS v2.0.0).
-* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` before TeamsJS v2.0.0)
-* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` before TeamsJS v2.0.0).
-* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
+- [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` before TeamsJS v2.0.0).
+- [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` before TeamsJS v2.0.0).
+- [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the sign in name of the current user in their home tenant. (Known as `{loginHint}` before TeamsJS v2.0.0).
+- [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` before TeamsJS v2.0.0).
+- [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` before TeamsJS v2.0.0).
+- [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` before TeamsJS v2.0.0).
+- [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` before TeamsJS v2.0.0)
+- [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` before TeamsJS v2.0.0).
+- [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
 
 > [!NOTE]
 >
-> * The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
-> * Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
+> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
+> - Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
-* Their username is **<user@example.com>**.
-* Their company tenant ID is **e2653c-etc**.
-* They're a member of the Microsoft 365 group with ID **00209384-etc**.
-* The user has set their Teams theme to **dark**.
+- Their username is **<user@example.com>**.
+- Their company tenant ID is **e2653c-etc**.
+- They're a member of the Microsoft 365 group with ID **00209384-etc**.
+- The user has set their Teams theme to **dark**.
 
 Teams calls the following URL when configuring the tab:
 
@@ -303,13 +325,13 @@ When your content page is loaded in a private channel, the data you receive from
 
 The following fields are changed when your content page is in a private channel:
 
-* `team.groupId`: Undefined for private channels
-* `team.internalId`: Set to the threadId of the private channel
-* `team.displayName`: Set to the name of the private channel
-* `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
-* `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
-* `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
-* `channel.ownerGroupId`: Set to the host team groupId of the private channel
+- `team.groupId`: Undefined for private channels
+- `team.internalId`: Set to the threadId of the private channel
+- `team.displayName`: Set to the name of the private channel
+- `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
+- `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
+- `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
+- `channel.ownerGroupId`: Set to the host team groupId of the private channel
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
@@ -349,8 +371,8 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 > [!IMPORTANT]
 >
-> * By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
-> * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings.
+> - By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
+> - Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings.
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
@@ -378,10 +400,4 @@ The following image shows the dark theme option in the Teams:
 
 ## See also
 
-* [Build tabs for Teams](../what-are-tabs.md)
-* [Design your tab for Microsoft Teams](../design/tabs.md)
-* [Enable SSO for tab app](authentication/tab-sso-overview.md)
-* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Use dialogs in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
-* [Introducing the new Teams client](../../resources/teams-updates.md)
+## Next step
