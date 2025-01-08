@@ -44,6 +44,13 @@ Ensure that you have the following accounts before you start building your Teams
 |[Azure account](#azure-account)|Back-end resources on Azure.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
 |[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
 
+> [!NOTE]
+> If your Microsoft 365 account has multiple tenants, you could switch to either tenant to develop Teams app. But there're several known limitations that should be aware of:
+>
+> * Multi-tenant is not supported by TDP yet. You may not be able to see your Teams app provisioned in non-home tenants from Teams Dev portal.
+> * Publishing Teams app of non-home tenants is not well supported in Teams.
+> * Multi-tenant is only supported for Teams app. Extending Teams app to other hubs(Outlook, Office.com) is not supported under non-home tenants.
+
 ### Microsoft 365 developer program
 
 > [!NOTE]

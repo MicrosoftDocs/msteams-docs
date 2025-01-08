@@ -54,6 +54,7 @@ From the task pane, you can see the following sections:
 :::row:::
    :::column span="":::
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts1_1.png" alt-text="Screenshot shows the Accounts section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/switchTenants.png" alt-text="Screenshot shows the switch tenant button.":::
    :::column-end:::
    :::column span="":::
 
@@ -62,6 +63,8 @@ From the task pane, you can see the following sections:
          * **Sign in to Microsoft 365**: Use your Microsoft 365 work or school account with a valid E5 subscription for building your app. If you don't have a valid account, you can join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a free account before you start.
 
         * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+
+        Note: When you sign in to Microsoft 365 or Azure account, your signed in tenant is your home tenant by default. You can switch to other tenants manually by clicking the switch button on signed in account item.
    :::column-end:::
 :::row-end:::
 
