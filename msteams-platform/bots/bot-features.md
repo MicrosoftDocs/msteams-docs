@@ -48,6 +48,8 @@ You can develop Teams apps in any web programming technology and call the [Bot F
 
 ## Bots with webhooks and connectors
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a bot for basic interaction, such as creating a workflow or other simple commands. They're available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Advantages of bots
@@ -123,15 +125,15 @@ If you're unable to create a bot in Developer Portal, ensure the following:
 
 * **Give permissions to specific users to register new apps**:
 
-  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the tenant admin adds Microsoft Entra ID to a user with the following roles:
+  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the admin adds the following roles to a user in Microsoft Entra admin center:
 
     * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
     * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
     * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
 
-    For information about how to assign roles, see [Assign Microsoft Entra roles to users](/azure/active-directory/roles/manage-roles-portal).
+    For information about how to assign roles, see [assign Microsoft Entra roles to users](/azure/active-directory/roles/manage-roles-portal).
 
-  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the tenant admin adds Microsoft Entra ID  to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the admin assigns a [custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions in Microsoft Entra admin center:
 
     * `microsoft.directory/applications/create`
     * `microsoft.directory/applications/createAsOwner`

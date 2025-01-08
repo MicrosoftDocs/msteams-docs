@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/18/2024 #Required; mm/dd/yyyy format.
+  ms.date: 12/11/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -61,6 +61,16 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introducing share to meeting from personal app
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+      - text: Text customization for share to stage button
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
+      - text: New app installation flow for Teams app installed from Teams Store or custom upload
+        url: concepts/deploy-and-publish/add-default-install-scope.md
       - text: Introducing default landing capability for tab and bot apps
         url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
       - text: Build responsive Container layouts in Adaptive Cards
@@ -71,17 +81,6 @@ landingContent:
         url: task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons
       - text: Add YouTube, Dailymotion, or Vimeo videos in Adaptive Cards.
         url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      - text: Add borders, rounded corners, scrollable containers, compound buttons, Fluent icons, and star ratings in Adaptive Cards
-        url: task-modules-and-cards/cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards
-      - text: Build dependent inputs with typeahead search in Adaptive Cards
-        url: task-modules-and-cards/cards/dynamic-search.md#dependent-inputs
-      - text: Introduced Adaptive Card templates
-        url: task-modules-and-cards/cards/design-effective-cards.md#adaptive-card-starter-collection
-      - text: Share content to live and upcoming meetings with Share to Teams
-        url: concepts/build-and-test/share-to-teams-from-web-apps.md
-      - text: Authentication for your API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md
-
 
     - linkListType: reference
       links:

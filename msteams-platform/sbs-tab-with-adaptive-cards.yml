@@ -5,7 +5,7 @@ metadata:
   description: Learn how to build tab with Adaptive Cards on desktop and mobile for Microsoft Teams, set up local environment, and register the app.
   audience: Developer
   level: Beginner
-  ms.date: 12/23/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on tab authentication
@@ -17,7 +17,7 @@ items:
     Adaptive Card tabs in Teams provide a unique method to display information. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot handles accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
     > [!WARNING]
-    > Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
+    > Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client has been deprecated on March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
     You can build your tabs with relevant user interface (UI) building blocks, which are native to desktop, web, and mobile.
 
@@ -202,7 +202,7 @@ items:
 
            :::image type="content" source="~/assets/images/adaptive-cards/project-solution-file.png" alt-text="Screenshot shows the cloned repository with the side panel project file.":::
 
-       1. Press **F5** to run the project. You can run the project using Visual Studio or .NET in the appropriate folder.
+       1. Select **F5** to run the project. You can run the project using Visual Studio or .NET in the appropriate folder.
     
           A webpage appears with a message, **Your bot is ready!**
 
@@ -235,7 +235,11 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/tab-in-teams.png" alt-text="Screenshot of TabAdaptiveCard with Add option highlighted in red.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/tab-in-teams.png" alt-text="Screenshot of the app details dialog to add the tab app in Teams.":::
+
+    1. Select **Open** to open the app in personal scope.
+
+        :::image type="content" source="~/assets/images/adaptive-cards/add-scope-tab-in-teams.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
         You can interact with this tab by signing in.
    
