@@ -809,20 +809,21 @@
   items:
   - name: What are device capabilities?
     href: concepts/device-capabilities/device-capabilities-overview.md
-    displayName: Camera, microphone, gallery, QR, barcode scanner, location
+    displayName: enhance developer capabilities, integrate media capabilities, camera, microphone, gallery, QR, barcode scanner, location
   - name: Device permissions for Teams app
     href: concepts/device-capabilities/native-device-permissions.md
+    displayName: Teams app permission
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
-    displayName: web apps 
+    displayName: web apps, browser permission
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
-    displayName: camera
+    displayName: native device capabilities
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
-    displayName: Attendance
+    displayName: attendance, scanBarCode API
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
