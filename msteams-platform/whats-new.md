@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-***January 08, 2024***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
+***January 09, 2024***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
 
 :::column-end:::
 :::row-end:::
