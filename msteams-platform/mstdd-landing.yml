@@ -61,6 +61,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Tab app caching is generally available
+        url: tabs/how-to/app-caching.md
       - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
         url: bots/how-to/bot-messages-ai-generated-content.md
       - text: Introducing share to meeting from personal app
@@ -79,8 +81,6 @@ landingContent:
         url: task-modules-and-cards/container-layouts.md
       - text: Visually represent data with charts in Adaptive Cards
         url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
-      - text: Add conditionally enabled action buttons on Adaptive Cards
-        url: task-modules-and-cards/cards/cards-actions.md#conditional-enablement-of-action-buttons
 
     - linkListType: reference
       links:

@@ -31,9 +31,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 January**
+**2025 January**
 
-***January 09, 2024***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
+* ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
+* ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
 
 :::column-end:::
 :::row-end:::
