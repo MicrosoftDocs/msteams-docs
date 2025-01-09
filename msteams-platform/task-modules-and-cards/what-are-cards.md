@@ -32,6 +32,8 @@ Teams uses cards in three different places:
 
 ## Cards in connectors
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 Cards were first defined as part of Outlook and Microsoft 365 and are now used as part of connectors for Microsoft 365 Groups. Like many Microsoft 365 applications, Teams supports connectors. For more information, see [create connectors for Microsoft 365 Groups](../webhooks-and-connectors/how-to/connectors-creating.md). You can find the specification for cards in connectors in [actionable message card reference](/outlook/actionable-messages/card-reference).
 
 ## Cards in bots
