@@ -77,7 +77,7 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
-You can get the conversation when the app is installed for the first time. After the conversation is created, get the conversation ID. The `conversationId` is available in the conversation update events.
+You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
 The conversation ID is unique for each bot within a specific channel, even in a multitenant environment. This ID ensures that the bot's messages are directed to the appropriate channel and doesn't interrupt with other bots or channels within the same or across different organizations.
 

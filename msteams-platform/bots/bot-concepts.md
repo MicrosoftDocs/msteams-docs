@@ -93,9 +93,9 @@ In the Teams activity handler class, there are two primary Teams activity handle
 * `OnConversationUpdateActivityAsync` routes all conversation update activities.
 * `OnInvokeActivityAsync` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the bot logic section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
-To set up your logic for Teams-specific activity handlers, you must override the methods in your bot as shown in the bot logic section. There's no default implementation for these handlers, so just add the logic you want in your override.
+To set up your logic for Teams-specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no default implementation for these handlers, so just add the logic you want in your override.
 
 The code snippets for Teams activity handlers:
 
@@ -192,7 +192,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the bot logic section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
 
 The code snippets for Teams activity handlers:
 
@@ -262,7 +262,7 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the bot logic section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
 ---
 

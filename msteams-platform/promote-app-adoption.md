@@ -122,6 +122,7 @@ Post-adoption, there's a need for continuous engagement to help existing users w
 For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
 > [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 2: Help admins to do app configuration and rollout for their users
 
@@ -208,6 +209,7 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * List of supported languages.
 
 > [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 3: Educate users and drive adoption change management for your app
 
@@ -287,6 +289,7 @@ Champions help:
 You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program). For best practices on app adoption, see [app growth and adoption](concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md#best-practices-for-app-growth-and-adoption).
 
 > [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 4: Provide support information for IT admins and users
 
@@ -316,6 +319,7 @@ To learn more about how your customers access the support information for your a
 | [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.      |
 
 > [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 5: Track app adoption and usage using analytics
 
