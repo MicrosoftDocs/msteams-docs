@@ -363,7 +363,7 @@ items:
 
    1. Select the dropdown for your app from the list of apps and select **Personal app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the custom uploaded apps in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the uploaded apps in Teams.":::
 
    1. A dialog box appears suggesting you to try out your app. If you select **Got it**, the dialog box disappears. Select **Try it**.
 
