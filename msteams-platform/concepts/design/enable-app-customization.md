@@ -23,12 +23,13 @@ Some possible uses of this feature are:
 You can enable admins to customize apps by defining the app properties. The customers can customize the [`configurableProperties` section](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties) in the app manifest (previously called Teams app manifest), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the app manifest of your app.
 
 > [!IMPORTANT]
-> You can't test this feature during development. App customization isn't supported when uploading or publishing to an org's app catalog.
+> You can't test this feature during development. App customization isn't supported when publishing to an org's app catalog.
 
 ### User considerations
 
-Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/microsoftteams/customize-apps).
+Provide guidelines for customers (Teams admins) who want to customize your app. For more information on how admins can customize, see [customize apps in Teams](/microsoftteams/customize-apps).
 
 ## See also
 
-[Customize apps in the Teams admin center](/microsoftteams/customize-apps)
+[Customize your organization's app store](/microsoftteams/customize-your-app-store)
+
