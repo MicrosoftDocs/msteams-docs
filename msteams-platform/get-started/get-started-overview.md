@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Get started
 
-Get started with building apps for Microsoft Teams and beyond!
+Get started with building apps and agents for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
