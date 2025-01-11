@@ -77,7 +77,8 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
                 {"name" : "composeExtensions", "id" : "composeExtension-id"},
                 {"name" : "configurableTabs", "id": "configurableTab-id"}
         ]
-      ],
+      ]
+    },
     "copilotAgents": {
         "declarativeAgents": [
             {
