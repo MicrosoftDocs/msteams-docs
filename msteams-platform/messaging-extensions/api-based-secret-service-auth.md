@@ -130,7 +130,7 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 
   Your key's security is still maintained through the **Home Tenant** and **Base URL**. When you're ready to release your app to the world, you need to change the Teams app ID setting to **Existing Teams app** and enter your Teams app ID. Finally, submit your app manifest to the Partner Center for inclusion in the Teams Store. Your API key registration is now tied to your specific Teams app and can't be used with others.
 
-  For a custom app built for your org (LOB) or custom app, limit the configuration to the tenant where the app is used because the internal app ID is difficult to access. For other apps, link the API key registration with your published app ID after publishing it to the store.
+  For a custom app built for your org (LOB) or custom app, there is an internal app ID which is difficult to access. In this scenario, limit the configuration to the tenant where the app is used. For other apps, link the API key registration with your published app ID after publishing it to the Teams Store.
 
 ## See also
 
