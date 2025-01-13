@@ -45,11 +45,11 @@ Ensure that you have the following accounts before you start building your Teams
 |[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
 
 > [!NOTE]
-> If your Microsoft 365 account has multiple tenants, you could switch to either tenant to develop Teams app. But there're several known limitations that should be aware of:
+> In case your Microsoft 365 account has multiple tenants, you could switch to any tenant in Teams Toolkit to deploy Teams app. Known limitations that you should keep in mind:
 >
-> * Multi-tenant is not supported by TDP yet. You may not be able to see your Teams app provisioned in non-home tenants from Teams Dev portal.
+> * You can use Teams Toolkit to deploy Teams app to guest tenant of M365 account, while you may not be able to see your Teams app deployed to non-home tenants in Teams Developer Portal. This is a limitation of Teams Developer Portal now.
 > * Publishing Teams app of non-home tenants is not well supported in Teams.
-> * Multi-tenant is only supported for Teams app. Extending Teams app to other hubs(Outlook, Office.com) is not supported under non-home tenants.
+> * Deploy app to non-home tenant is only supported for app running in Teams. Apps running in other platform like Outlook, Office.com can not deploy to non-home tenants.
 
 ### Microsoft 365 developer program
 
