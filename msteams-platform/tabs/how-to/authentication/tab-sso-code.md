@@ -1,6 +1,6 @@
 ---
 title: Add Code to Enable SSO for Tabs
-description: Update code in your tab app for requesting and receiving access token using app user's Teams identity for enabling Single sign-on (SSO).
+description: Update code in your tab app for requesting, receiving and passing access token using app user's Teams identity for enabling single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API

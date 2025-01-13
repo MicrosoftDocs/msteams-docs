@@ -1,6 +1,6 @@
 ---
 title: SSO for Adaptive Cards Universal Action
-description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in Adaptive Cards Universal Action in bots.
+description: Learn about single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, & SSO in Teams at runtime.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium

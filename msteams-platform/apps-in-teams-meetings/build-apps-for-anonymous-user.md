@@ -1,7 +1,7 @@
 ---
 title: Build apps for anonymous user
 author: v-sdhakshina
-description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
+description: Learn how to build apps for anonymous users and test the experience in meeting apps with admin settings, and about conversation API and Adaptive Cards.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium

@@ -1,7 +1,7 @@
 ---
 title: Live Share overview
 author: surbhigupta
-description: Learn about Live Share SDK, Live share core, Live share media, and Live share canva, apps with Live Share, Live Share collaborative contexts, and React integration.
+description: Learn about Live Share SDK, its core and media, Live Share Canva, apps and contexts, and React integration.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
