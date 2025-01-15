@@ -9,7 +9,7 @@ ms.subservice: m365apps
 ---
 # Actions in Microsoft 365 Quick start guide
 
-> [!NOTE]
+> [!NOTE] 
 >
 > * Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Actions are supported for Microsoft 365 (Office) app for web and desktop.
