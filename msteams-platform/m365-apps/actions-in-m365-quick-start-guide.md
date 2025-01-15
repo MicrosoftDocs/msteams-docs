@@ -61,4 +61,6 @@ You can try your Actions in the Microsoft 365 home page, right-click a Word, Exc
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 If you want to run Actions in the Microsoft 365 on Azure, see [sample.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/m365-actions-preview/nodejs/README.md#optional-deploy-the-app-to-azure)
