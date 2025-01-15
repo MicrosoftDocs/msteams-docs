@@ -14,6 +14,8 @@ With the latest releases of [Microsoft Teams JavaScript client library](../tabs/
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, and Microsoft 365 as application hosts):
 
 | Teams app features| App manifest element | Teams support |Outlook support | Microsoft 365 app support | Notes |
