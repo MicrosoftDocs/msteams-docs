@@ -76,10 +76,7 @@
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "msteams-platform/TOC.yml",
-      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
-    },
-    {
-      "ConceptualTOC": "msteams-platform/TOC.yml",
+      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest",
       "ReferenceTOCUrl": "/microsoft-365/extensibility/schema/toc.json"
     }
   ],
