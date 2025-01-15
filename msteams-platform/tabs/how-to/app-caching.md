@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 01/09/2025
+ms.date: 01/19/2025
 ---
 
 # App caching for your tab app
@@ -51,7 +51,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
-* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
+* If the number of cached apps exceeds the maximum cache size, the oldest cached app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app caching in meetings.
@@ -77,9 +77,24 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 });
 ```
 
+## Debugger tool
+
+> [!NOTE]
+> The debugger tool for a cached app is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+
+You can enable the Proto Task Manager in Teams, a debugger tool that shows the status of your cached apps. Open the Proto Task Manager using the **Ctrl+Alt+Shift+8** keys on Windows or **Cmd+Opt+Shift+8** on Mac and go to the **Caching** tab. The tab contains the following details:
+
+* **state**: Shows the app's cached or uncached state
+* **isActive**: Shows the active or inactive status of the cached app
+* **timeElapsed**: Shows the time elapsed since the app was cached
+* **supportsLoad**: Shows if the app has registered the `registerOnLoadHandler` and is automatically set to `true` if app caching is enabled
+* **supportsBeforeUnload**: Shows if the app has registered the `registerBeforeUnloadHandler` and is automatically set to `true` if app caching is enabled
+* **memory**: Shows the memory usage of the app
+* **cpu**: Shows the CPU usage of the app
+
 ## Best practices
 
-It's recommended that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
+We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
 ## Limitations
 
