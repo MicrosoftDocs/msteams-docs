@@ -1,6 +1,6 @@
 ---
 title: Preapproval of RSC permissions
-description: In this article, learn more about to create, manage, and delete preapprovals of RSC enabled app in Microsoft Teams.
+description: Learn how to create, manage, and delete preapprovals of RSC enabled app in Microsoft Teams.
 ms.localizationpriority: medium
 author: MSFTRickyCastaneda
 ms.author: rcastaneda
