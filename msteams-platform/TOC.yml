@@ -222,12 +222,12 @@
             displayName: collaborate on Teams, remove collaboration
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
-            displayName: upload app to Teams, different environment, cloud hosted environment
+            displayName: upload app to Teams, different environment, test in cloud-hosted, locally hosted environment
       - name: Publish your Teams app
         items:
         - name: Publish Teams apps using Teams Toolkit 
           href: toolkit/publish.md
-          displayName: build app package, approve to admin centre
+          displayName: build app package, approve to admin centre, submit your app
         - name: Publish Teams apps using Developer Portal 
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
           displayName: Update Manifest file
