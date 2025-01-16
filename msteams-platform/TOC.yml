@@ -184,20 +184,19 @@
             displayName: create access in TeamsFx
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
-            displayName: authentication certification, MSI, certificate, bot, message extension, authentication
+            displayName: authentication certificate, MSI, certificate, bot, message extension, authentication
         - name: Customize app manifest
           items:
           - name: Customize app manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-            displayName: app validation
           - name: Edit Microsoft Entra manifest
             href: toolkit/aad-manifest-customization.md
-            displayName: customize Entra manifest, application CodeLens, development lifecycle
+            displayName: Entra manifest template, application CodeLens, development lifecycle
         - name: Debug your Teams app
           items:
           - name: App debug overview
             href: toolkit/debug-overview.md
-            displayName: debug features, multi-target debugging, customize debug
+            displayName: multi-target debugging
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
