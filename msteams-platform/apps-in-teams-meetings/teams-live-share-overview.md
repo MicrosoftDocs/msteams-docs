@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about Live Share SDK, its core and media, Live Share Canva, apps and contexts, and React integration.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 

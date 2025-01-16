@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about Live Share media installation & capabilities, suspensions and wait points, audio ducking, and synchronizing video and audio.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
