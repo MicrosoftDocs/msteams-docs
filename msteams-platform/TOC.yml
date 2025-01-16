@@ -175,13 +175,13 @@
             displayName: Multiple capabilities app, add tab, bot, message extension capability
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
-            displayName: application, endpoint, add cloud resources, API connection, create capability
+            displayName: application, endpoint
           - name: Add SSO to Teams app
             href: toolkit/add-single-sign-on.md
-            displayName: SSO Support
+            displayName: Azure admin centre
           - name: Use Microsoft Entra app in TeamsFx
             href: toolkit/use-existing-aad-app.md
-            displayName: create access in TeamsFx
+            displayName: upload Entra app manifest, upload to Azure portal
           - name: Use certificate or MSI for app authentication
             href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md  
             displayName: authentication certificate, MSI, certificate, bot, message extension, authentication
@@ -199,27 +199,25 @@
             displayName: multi-target debugging
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
-            displayName: Mock activity, custom activity, predefined activity
+            displayName: custom, predefined activity triggers
           - name: Debug message extension app in Test Tool
             href: toolkit/debug-message-extension-app-in-test-tool.md 
-            displayName:  build sample app           
+            displayName: build sample app           
           - name: Debug your app locally
             href: toolkit/debug-local.md
-            displayName: debug app locally, dev tunnel
           - name: Debug in Teams desktop client
             href: toolkit/debug-apps-in-teams-desktop-client.md
-            displayName: debug teams, debug targets, Copilot agent, custom engine agent       
+            displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
           - name: Debug background process
             href: toolkit/debug-background-process.md
-            displayName: validate prerequisites
           - name: Debug for mobile
             href: toolkit/debug-mobile.md 
-            displayName: debug tab app, test bot and tab app, test on mobile client,        
+            displayName: debug tab app, test bot, test on mobile client       
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/provision.md
-            displayName: cloud resources, provision actions, validate manifest, validate app package
+            displayName: provision action, validateManifest, validateAppPackage
           - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
             displayName: deploy the app, deploy to Azure
@@ -228,7 +226,7 @@
             displayName: deploy teams bot, Azure container apps, Azure Kubernetes Service        
           - name: Set up CI/CD pipelines
             href: toolkit/use-CICD-template.md 
-            displayName: pipelines for teams app, generate Teams app           
+            displayName: pipelines for teams app, generate Teams app package, certificate-based, password-based authentication         
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
