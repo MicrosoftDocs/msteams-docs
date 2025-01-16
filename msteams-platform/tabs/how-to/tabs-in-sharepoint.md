@@ -105,7 +105,7 @@ After you publish your page, explore [single part app pages in SharePoint](/shar
 
 | **Sample name** | **Description** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
+| SPFx web part | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
 
 ## See also
 
