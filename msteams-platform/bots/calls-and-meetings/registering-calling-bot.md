@@ -30,8 +30,6 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 ## Create new bot or add calling capabilities
 
-For information on creating bots, see [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
-
 To create a new bot for Teams:
 
 1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.

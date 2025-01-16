@@ -31,12 +31,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 December**
+**2025 January**
 
-* ***December 18, 2024***: Introducing [share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) and [text customization for share to stage button](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis).
-* ***December 16, 2024***: [Introducing multi parameters for API-based message extensions which allows more than one input type for query command](messaging-extensions/create-api-message-extension.md#multi-parameters).
-* ***December 13, 2024***: [Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot.](messaging-extensions/build-bot-based-agent.md)
-* ***December 11, 2024***: [Enhanced user experience for Teams app installed from Teams Store or custom upload.](concepts/deploy-and-publish/add-default-install-scope.md)
+* ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
+* ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
 
 :::column-end:::
 :::row-end:::
@@ -50,6 +48,11 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 18/12/2024 | Introducing text customization for share to stage button. | Build apps for Teams meetings and calls > Configure apps for Teams meetings > Build apps for meeting stage > [Advanced share to stage APIs](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis) |
+| 18/12/2024 | Introducing share to meeting from personal app. | Integrate with Teams > Share to Teams > Share to Teams from personal app or tab > [Share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) |
+| 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
+| 13/12/2024 | Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) |
+| 11/12/2024 | Enhanced user experience for Teams app installed from Teams Store or custom upload. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md) |
 | 27/11/2024 | Terminology update. **Copilot agent** is referred to as **agent**. |  |
 | 19/11/2024 | Terminology update. **Plugin** is referred to as **agent** for Microsoft 365 Copilot. |  |
 | 18/11/2024 | Configure default landing capability for your bot or tab app to open your app with the default capability. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability) |
