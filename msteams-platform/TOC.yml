@@ -219,7 +219,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-            displayName: collaborate on Teams, collaborate with Toolkit
+            displayName: collaborate on Teams, remove collaboration
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
             displayName: upload app to Teams, different environment, cloud hosted environment
