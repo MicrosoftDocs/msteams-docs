@@ -143,7 +143,7 @@
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
-    displayName: SDKs and libraries, Teams Toolkit v4
+    displayName: Tools and SDKs
   - name: Tools 
     items:
     - name: Teams Toolkit for Visual Studio Code
@@ -153,27 +153,26 @@
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
-        displayName: installation guide
+        displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-        displayName: Toolkit task pane
       - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: create developer account, app permission   
+          displayName: accounts to build your Teams app 
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
-          displayName: create Teams project using VSC
+          displayName: create Teams app project
         - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-            displayName: local environment, create environment manually
+            displayName: local, prod and dev environment
           - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
-            displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability, guides from Teams, add capabilities
+            displayName: Multiple capabilities app, add tab, bot, message extension capability
           - name: Add cloud resources and API connection
             href: toolkit/add-resource.md  
             displayName: application, endpoint, add cloud resources, API connection, create capability
