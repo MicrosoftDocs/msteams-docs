@@ -540,27 +540,28 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
-
-* ***July 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
-* ***July 16, 2024***: The existing [Microsoft 365 (previously called Office 365) connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
-
-* ***April 30, 2024***: In tab experiences, tab margins are deprecated.
-
-* ***April 12, 2024***: The `packageName` property is deprecated as part of app manifest v1.17.
-
-* ***April 10, 2024***: [Location](concepts/device-capabilities/location-capability.md#location-apis) and [Media](concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
-
-* ***April 10, 2024***: The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame.
-
-* ***April 01, 2024***: Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
-
-* ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
-
-* ***February 02, 2024***: The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming [Collaboration controls](~/samples/collaboration-control.md) retirement.
+***January 16, 2025***: [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation)
 
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 02/08/2024| The Collaboration controls for model-driven applications are retired. |  |
+| 25/07/2024| Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before September 2024 to ensure continued functionality. | Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) |
+| 16/07/2024| The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/). | [Build webhooks and connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) |
+| 30/04/2024| In tab experiences, tab margins are deprecated. | |
+| 12/04/2024| The `packageName` property is deprecated as part of app manifest v1.17. | |
+| 10/04/2024| Location and Media APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md#location-apis) and [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#media-capability-apis) |
+| 10/04/2024| The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame. | Resources > [Know about New Microsoft Teams client](resources/teams-updates.md#limitations)|
+| 01/04/2024| Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to Microsoft Graph PowerShell. | [Microsoft Graph PowerShell overview](/powershell/microsoftgraph/overview)|
+| 02/02/2024 | Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before June 2024 to ensure continued functionality. |Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers)|
+| 02/02/2024 | The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming Collaboration controls retirement. | |
+
+</details>
 
 <details>
 <summary><b>2023</b></summary>
