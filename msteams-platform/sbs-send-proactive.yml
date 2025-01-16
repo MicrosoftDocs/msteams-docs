@@ -52,7 +52,7 @@ items:
 
     1. In the left pane, select **View Samples**.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-sample-1.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-samples.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
 
     1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
