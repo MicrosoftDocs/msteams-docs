@@ -1069,21 +1069,20 @@
   items:
   - name: Web app integration
     href: samples/integrate-web-apps-overview.md
-    displayName: application, Low code platforms, integrate device capabilities
+    displayName: application, Low code platforms
   - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
     displayName: Multitenancy, SharePoint, identity mapping
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
-    displayname: OnMessageActivityAsync, conversational solution, language support
+    displayname: OnMessageActivityAsync, multi-language support
   - name: Power Platform apps
     items:
     - name: Low-code custom apps
       href: samples/teams-low-code-solutions.md
-      displayName: build custom applications, Power BI, Power Apps, Power Platform apps
+      displayName: build custom applications, Power BI, Power Platform apps, Project Oakdale
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-      displayName: interface solutions, publish intelligent virtual agents
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
     displayName: Attendance, Adoption, FAQ Plus, Icebreaker, Tournaments of Teams
@@ -1125,19 +1124,17 @@
       displayName: invoke Stageview, navigate within your app, protocol handlers, deep link meeting sidepanel, share content in meeting
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
-      displayName: create deep link for new chat,  navigate to chat, channel conversation   
+      displayName: channel conversation   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
       displayName: deeplink for meeting schedule dialog, audio video call, deep link to join meeting 
     - name: Execution and handling of deeplinks
       href: concepts/build-and-test/deep-links-execution-handling.md
-      displayName: execute deep link, deeplink API, hyperlink text    
+      displayName: deeplink API, hyperlink text    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
-    displayName: JavaScript client library, input control, API response errors
   - name: Use Fluid with Teams
     href: tabs/how-to/using-fluid-msteam.md
-    displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
 - name: Resources
   items:
   - name: Localization
