@@ -77,7 +77,7 @@ Add a connection to an existing API, developed by your organization or a third p
 
       |**Development** | **How-to Guide** |
       |----------|----------|
-      | Connect to an API | [How to integrate API Connection with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-API-Connection-with-your-Teams-app) |
+      | Connect to an API | [How to integrate API Connection with your Teams app](integrate-api-connection.md) |
 
 ## See also
 
