@@ -82,7 +82,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 A custom engine agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
 
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming bot messages":::
+:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming bot messages" border="false":::
 
 Use the following types of updates while streaming responses:
 
