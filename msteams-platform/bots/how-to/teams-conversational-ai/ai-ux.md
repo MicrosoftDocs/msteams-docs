@@ -80,7 +80,9 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 ### Stream the custom engine agent response to the user
 
-A custom engine agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast. Use the following types of updates while streaming responses:
+A custom engine agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
+
+Use the following types of updates while streaming responses:
 
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
@@ -93,6 +95,8 @@ You can use one of the following to stream the response:
 ### Ensure the custom engine agent response contains citations
 
 Users must know the sources a custom engine agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
+
+:::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in custom engine agents":::
 
 You can use one of the following to include citations for the resources used by the agent:
 
