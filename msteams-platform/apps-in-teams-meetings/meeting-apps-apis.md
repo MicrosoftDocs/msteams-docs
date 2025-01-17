@@ -965,7 +965,7 @@ The meeting details API must have a bot registration and bot ID. It requires Bot
 
 **Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
 
-The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. Ensure that the optional parameter `shouldGetVerboseDetails` is set to `true`. It returns the `IMeetingDetailsResponse` interface with additional call details.
+The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. It returns the `IMeetingDetailsResponse` interface with additional call details.
 
 For more information, see [build tabs for calling](build-tabs-for-calling.md).
 
@@ -1318,7 +1318,6 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
-| **shouldGetVerboseDetails** | Optional boolean indicating that the host must return additional call details in the response if it's set to `true`. |
 | **originalCaller** | MRI for the original caller of a call. |
 | **dialedEntity** | MRI that the original called dialed |
 | **trackingId** | A persistent ID that references a call and all of its related calls. |
