@@ -153,6 +153,8 @@ The following best practices can help enhance the overall effectiveness of a cus
 
 Develop the capability in the custom engine agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
 
+:::image type="content" source="../../../assets/images/bots/ai-feedback-loop.png" alt-text="Image shows an example of feedback loop.":::
+
 To collect the user feedback, you must:
 
 - Provide feedback buttons with every response.
