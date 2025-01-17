@@ -289,37 +289,36 @@
       items:
       - name: Overview
         href: concepts/build-and-test/teams-developer-portal.md
-        displayName: Teams collaboration, setup runtime environment, App Studio, Changelog, Import an existing app, Import published app
+        displayName: setup runtime environment, App Studio, Changelog, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
-        displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
+        displayName: validate your app
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, teams toolkit, react web app, publish react app, debug
+        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
       - name: Analyze apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
-        displayName: metrics, usage, analytics, insights, telemetry, import an existing app
+        displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
     - name: Adaptive Card Previewer for VSC
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
-        displayName: installation of ACP, Toolkit integration 
+        displayName: installation of ACP, preview, Adaptive Card, ACP
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
     - name: Adaptive Card Previewer for VS
-      href: concepts/build-and-test/adaptive-card-previewer-vs.md
-      displayName: Preview of ACP, Explore ACP 
+      href: concepts/build-and-test/adaptive-card-previewer-vs.md 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
-      displayName: getUserinfo, TeamsFx core functionalities
+      displayName: getUserinfo
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
-      displayName: iFrame, execute URL, getTabInstances
+      displayName: execute URL, getTabInstances
     - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
     - name: Bot Framework SDK for .NET
