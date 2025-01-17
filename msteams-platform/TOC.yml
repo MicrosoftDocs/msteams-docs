@@ -268,30 +268,29 @@
           items: 
           - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-            displayName: load configured app
+            displayName: debug message extension, Teams app using VS
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-            displayName: Mock activity, custom activity, predefined activity
           - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
-            displayName: DevTunnel setup, Teams app dependencies 
+            displayName: DevTunnel setup 
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
-            displayName: DevTunnel
+            displayName: create debug resource
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
-            displayName: integrate with Azure Resource Manager
+            displayName: Azure Resource Manager
           - name: Deploy to cloud using VS
             href: toolkit/toolkit-v4/deploy-vs.md 
-            displayName: deploy to Azure functions, deploy lifecycle           
+            displayName: deploy to Azure functions          
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
-        displayName: new project structure, migration, YAML configuration
+        displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
-      displayName: command line interface, manage Teams application
+      displayName: Teams Toolkit CLI v3
     - name: Developer Portal for Teams
       items:
       - name: Overview
