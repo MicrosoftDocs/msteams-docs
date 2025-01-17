@@ -244,27 +244,26 @@
         displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-        displayName: explore Teams Toolkit, using Visual Studio
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
-        displayName: create Teams, Azure Function, support Azure Functions
+        displayName: support Azure Functions
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: prerequisites for Teams, build teams app, accounts to build your Teams app   
+          displayName: accounts to build your Teams app   
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
-          displayName: Teams template, template in Toolkit, Teams app project
+          displayName: Teams app templates for Teams app types
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md 
-            displayName: add SSO for VS, aab application, Teams bot application, SSO app 
+            displayName: authentication 
         - name: Customize app manifest
           items:
           - name: Customize Teams app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
-            displayName: preview app Manifest, developer portal
+            displayName: preview app Manifest
         - name: Debug your Teams app
           items: 
           - name: Debug overview
