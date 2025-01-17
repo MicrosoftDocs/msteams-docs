@@ -1872,7 +1872,7 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
 
-## Get meeting details verbose
+## Toggle Incoming Audio
 
 The toggleIncomingClientAudio API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
 
