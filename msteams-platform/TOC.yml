@@ -219,31 +219,29 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-            displayName: collaborate on Teams, remove collaboration
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
-            displayName: upload app to Teams, different environment, test in cloud-hosted, locally hosted environment
+            displayName: test apps in cloud-hosted, locally hosted environment
       - name: Publish your Teams app
         items:
         - name: Publish Teams apps using Teams Toolkit 
           href: toolkit/publish.md
-          displayName: build app package, approve to admin centre, submit your app
+          displayName: license
         - name: Publish Teams apps using Developer Portal 
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
-          displayName: Update Manifest file
         - name: Teams app tutorials and code samples
           href: toolkit/teams-toolkit-tutorial.md
-          displayName: app capabilities and scenarios
+          displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
       items:
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
-        displayName: Teams for VS, TTK, version, 17.7
+        displayName: TTK, version, 17.7
       - name: Install Teams Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
-        displayName: dinstall Teams with VS, Build apps
+        displayName: download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
         displayName: explore Teams Toolkit, using Visual Studio
