@@ -1005,7 +1005,7 @@ You've completed the tutorial to build a tab app with Blazor.
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array. 
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array.
 
 ``` JSON
 
@@ -1024,6 +1024,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
+
 > [!NOTE]
 > In mobile, tabs are reordered as defined in `staticTabs`.
 
@@ -1078,6 +1079,12 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
    "meetingStage" 
 ]
 ```
+
+## Enable personal tab apps for calling extensibility
+
+You can create personal scope apps that integrate with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. Use the right scope and context to build apps that utilize tab type, static scope, personal context, and meeting side panels.
+
+For more information, see [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
 
 ## Customizing your static tab in chats or meetings
 
