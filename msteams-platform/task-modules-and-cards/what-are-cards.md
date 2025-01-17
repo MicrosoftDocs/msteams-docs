@@ -32,6 +32,8 @@ Teams uses cards in three different places:
 
 ## Cards in connectors
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 Cards were first defined as part of Outlook and Microsoft 365 and are now used as part of connectors for Microsoft 365 Groups. Like many Microsoft 365 applications, Teams supports connectors. For more information, see [create connectors for Microsoft 365 Groups](../webhooks-and-connectors/how-to/connectors-creating.md). You can find the specification for cards in connectors in [actionable message card reference](/outlook/actionable-messages/card-reference).
 
 ## Cards in bots
@@ -69,9 +71,13 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a typeahead static search within a list with limited number of choices. The mobile and desktop clients support typeahead dynamic search experience.
 
+### Dependent inputs in Adaptive Cards
+
+You can design Adaptive Cards in Teams where the value of an input depends on the value of another. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown must filter the cities displayed in the second dropdown. This can be achieved by creating an `Input.ChoiceSet` dropdown with dynamic typeahead search that depends on one or more other inputs in the card. For more information, see [dependent inputs](cards/dynamic-search.md#dependent-inputs).
+
 ### Media elements in Adaptive Cards
 
-Media elements in Adaptive Card provide enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card. For more information, see [Media elements in Adaptive Card](cards/media-elements-in-adaptive-cards.md).
+Media elements in Adaptive Card provide enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips, YouTube, Vimeo, or Dailymotion videos to your Adaptive Card. For more information, see [Media elements in Adaptive Card](cards/media-elements-in-adaptive-cards.md).
 
 ### Adaptive Cards and Incoming Webhooks
 
@@ -90,6 +96,30 @@ Share code snippets as richly formatted Adaptive Cards in Teams chats, channels,
 
 You must design your Adaptive Cards to look great on any device to provide an enhanced user experience across chat, channels, and meeting chat. Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).
 
+### Borders and rounded corners
+
+You can add borders to the `Container`, `ColumnSet`, `Column`, and `Table` elements in Adaptive Cards to delineate different sections of the card. You can add rounded corners to the `Container`, `ColumnSet`, `Column`, `Table`, and `Image` elements in Adaptive Cards to make the card design look modern and visually appealing. For more information, see [borders and rounded corners in Adaptive Cards](cards/cards-format.md#borders-and-rounded-corners-in-adaptive-cards).
+
+### Scrollable containers
+
+A container with many elements might lead to a long, unreadable card. Use the `maxHeight` property to define the maximum height of the container. When the container has a maximum height and its content exceeds that height, a vertical scrollbar appears. For more information, see [scrollable containers in Adaptive Cards](cards/cards-format.md#scrollable-containers-in-adaptive-cards).
+
+### Compound button
+
+Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.  For more information, see [Compound button in Adaptive Cards](cards/cards-format.md#compound-button-in-adaptive-cards).
+
+### Fluent icons
+
+Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com/community/file/836835755999342788) library using the `Icon` element. For more information, see [icons in Adaptive Card](cards/cards-format.md#icons-in-adaptive-card).
+
+### Star ratings
+
+You can add a star rating input to your Adaptive Card using the `Input.Rating` element. You can also include a read-only star rating using the `Rating` element. For more information, see [ratings in Adaptive Cards](cards/cards-format.md#ratings-in-adaptive-cards).
+
+### Conditional enablement of action buttons
+
+You can use the `conditionallyEnabled` property to disable action buttons until the user changes the value of at least one of the required inputs. This property can only be used with `Action.Submit` and `Action.Execute` actions. For more information, see [conditional enablement of action buttons](cards/cards-actions.md#conditional-enablement-of-action-buttons).
+
 ## Overflow menu on Adaptive Cards
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
@@ -99,6 +129,14 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 ## Support for Microsoft Entra Object ID and UPN in user mention
 
 Bots with Adaptive Cards support user mention IDs, such as Microsoft Entra Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Microsoft Entra Object ID and UPN.
+
+## Charts in Adaptive Cards
+
+[!INCLUDE [<User Mention>](../includes/bots/user-mention.md)]
+
+## Container layouts in Adaptive Cards
+
+You can design responsive containers for different Adaptive Card widths with the `Layout.Stack`, `Layout.Flow`, and `Layout.AreaGrid` layouts. For more information, see [Container layouts](container-layouts.md).
 
 ## Next step
 

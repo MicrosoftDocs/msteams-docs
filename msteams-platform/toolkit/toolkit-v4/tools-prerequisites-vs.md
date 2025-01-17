@@ -28,7 +28,7 @@ Ensure that the following tools are installed on the device where you’ll creat
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
 | &nbsp; | [Azure development workload for Visual Studio](/dotnet/azure/configure-visual-studio) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | C# and Blazor |
 | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. |  C# and Blazor |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store.| C# and Blazor |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store.| C# and Blazor |
 
 It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
@@ -133,8 +133,8 @@ If custom app upload option isn’t visible in Teams Toolkit extension in Visual
 
 You must enable custom app upload for your app in Teams:
 
-* If you're a tenant admin, enable the custom app upload setting for your tenant or organization in the Teams admin center.
-* If you aren't a tenant admin, contact your tenant admin to enable custom app upload.
+* If you're a Teams Administrator, enable the custom app upload setting for your tenant or organization in Teams admin center.
+* If you aren't a Teams Administrator, contact your admin to enable custom app upload.
 
 If you have admin rights, you can enable custom app upload:
 
