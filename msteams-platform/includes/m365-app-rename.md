@@ -1,0 +1,2 @@
+> [!NOTE]
+> The Microsoft 365 (Office) app is being renamed to [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/blog/2025/01/15/copilot-for-all-introducing-microsoft-365-copilot-chat/) app. The app icon is also changing, from :::image type="content" source="~/m365-apps/images/microsoft-365-icon.png" alt-text="Icon for Microsoft 365 (Office) app"::: to :::image type="content" source="~/m365-apps/images/m365-copilot-icon.png" alt-text="App icon for Microsoft 365 Copilot":::. Updates to the app UI and icon are in the process of rolling out.

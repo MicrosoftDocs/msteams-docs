@@ -185,6 +185,8 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 Here's how to preview your app running in Microsoft 365 and Outlook, web and Windows desktop clients.
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 > [!NOTE]
 > If you use the Teams Toolkit sample app and uninstall it from Teams, it is removed from the **More Apps** catalogs in Outlook and Microsoft 365 app.
 
