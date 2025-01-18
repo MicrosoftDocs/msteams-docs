@@ -1,5 +1,5 @@
 > [!WARNING]
-> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains, are migrating to the `*.cloud.microsoft` domain. Perform the following steps before September 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
+> Microsoft's cloud services, including web versions of Teams, Outlook, and Microsoft 365 domains, are migrating to the `*.cloud.microsoft` domain. Perform the following steps as soon as possible to ensure your app continues to render on supported Microsoft 365 web client hosts:
 >
 > 1. Update TeamsJS library to v.2.19.0 or later. For more information about the latest release of TeamsJS, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
