@@ -1,7 +1,7 @@
 ---
 title: Succeed Stage for Collaborative Apps
 author: heath-hamilton
-description: Learn what you can do during the final stage to grow your app, widen TAM coverage, convert PQLs from app, app metrics and data-backed insights.
+description: Learn about the final stage to grow your app, widen TAM coverage, convert PQLs from app, app metrics and data-backed insights.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta

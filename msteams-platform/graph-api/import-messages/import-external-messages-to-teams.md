@@ -1,6 +1,6 @@
 ---
 title: Import External Platform Messages
-description: Learn how to use Microsoft Graph to create a team or channel & add team members, about Teams migration mode & importing messages to Teams.
+description: Learn how to use Microsoft Graph to create a channel and import messages such as message history and data from an third-party platform to Teams.
 ms.localizationpriority: high
 author: "akjo"
 ms.topic: overview
