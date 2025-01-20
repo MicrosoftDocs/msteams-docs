@@ -1178,7 +1178,7 @@ this.onMessage(async(context, next) =>{
   }
      ```
 
-* **Validate email**
+* **Validate email**:
 
   * **Represents a validated email**:
 
