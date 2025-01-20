@@ -28,6 +28,10 @@ The following requirements are mandatory for building the custom engine agent UX
 - [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
 - [Ensure that the custom engine agent offers prompt starters or a welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-a-welcome-card).
 
+> [!NOTE]
+>
+> - AI label, citation, feedback buttons, and sensitivity label are available for bots in personal chats, group chats, and channels.
+
 ### Update the app manifest for custom engine agent
 
 You must update the app manifest for the custom engine agent to define specific properties and configurations that characterize its capabilities and behavior.
@@ -94,6 +98,10 @@ You can use one of the following to stream the response:
 - Use Teams AI library to add streaming to the agent.
 - Call the Bot Framework APIs directly for streaming.
 
+>[!NOTE]
+>
+> - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+
 ### Ensure the custom engine agent response contains citations
 
 Users must know the sources a custom engine agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
@@ -104,6 +112,10 @@ You can use one of the following to include citations for the resources used by 
 
 - Use Teams AI library citations module.
 - Incorporate citations into the Bot Framework API calls.
+
+> [!NOTE]
+>
+> - Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the custom engine agent response contains an AI label
 
@@ -173,6 +185,9 @@ You can use one of the following to enable feedback collection and usage:
 
 - Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 - Use the feedback flag in the Bot Framework API to add the feedback button for each message.
+
+> [!NOTE]
+> Customizable feedback forms are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 ### Enable Teams Azure AD single sign-on
 
