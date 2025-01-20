@@ -93,9 +93,7 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-The configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. A `config` response is used when a user configures the message extension for the first time.
-
-It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
+The configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a config response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
 The following code is an example of message extension configuration:
 
@@ -158,9 +156,9 @@ The following code is an example of message extension configuration:
 
 #### onQuerySettingsUrl handler
 
-The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. The `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the message extension.
+The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler manages the response from the configuration page. The `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension.
 
-If a message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
+If a message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration. For more information, see [handle onQuery events](../../../resources/messaging-extension-v3/search-extensions.md).
 
 The following image shows the `config` command workflow:
 
