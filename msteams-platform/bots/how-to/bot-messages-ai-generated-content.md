@@ -126,7 +126,7 @@ Citing sources in bot messages helps users ask follow-up questions or conduct in
 
 **Citations**
 
-:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI-powered bot response with citations in Teams desktop client." lightbox="../../assets/images/bots/ai-bot-inline-citation.png":::
+:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI-powered bot response with citations in the Teams desktop client." lightbox="../../assets/images/bots/ai-bot-inline-citation.png":::
 
 :::column-end:::
 
@@ -134,7 +134,7 @@ Citing sources in bot messages helps users ask follow-up questions or conduct in
 
 **Modal window**
 
-:::image type="content" source="../../assets/images/bots/ai-bot-citation-adaptive-card.png" border="false" alt-text="Screenshot shows a modal window pop-up from a citation in an AI-powered bot message in Teams desktop client." lightbox="../../assets/images/bots/ai-bot-citation-adaptive-card.png":::
+:::image type="content" source="../../assets/images/bots/ai-bot-citation-adaptive-card.png" border="false" alt-text="Screenshot shows a modal window pop-up from a citation in an AI-powered bot message in the Teams desktop client." lightbox="../../assets/images/bots/ai-bot-citation-adaptive-card.png":::
 
 :::column-end:::
 
