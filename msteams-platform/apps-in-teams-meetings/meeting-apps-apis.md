@@ -1184,7 +1184,6 @@ this.onMessage(async(context, next) =>{
   * **Represents a validated email**:
 
     ```JavaScript
-
         class EmailAddress {
           /**Represents the input email address string*/
           private readonly val: string;
