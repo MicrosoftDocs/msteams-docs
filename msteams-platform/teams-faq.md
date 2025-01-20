@@ -1227,24 +1227,24 @@ You can call Graph API to get the app user's profile photo.
 <details>
 <summary>How can I support Zoom in Teams?</summary>
 
-Publisher Verification is not supported for applications registered with Personal/Consumer (MSA) User accounts. In order to complete the process, a new App Registration will need to be created with your Organizational account in an Entra (Azure AD) tenant. In order for the app to become eligible while minimizing disruption, the following steps are recommended. We are happy to support Zoom throughout this process which will need cross engineering coordination. However, as a caution, Zoom must note that there is no way available currently to do this without existing end users having to re-consent to the app once this update is published.
+Publisher Verification is not supported for applications registered with Personal or Consumer (MSA) User accounts. In order to complete the process, a new App Registration will need to be created with your Organizational account in an Entra (Azure AD) tenant. In order for the app to become eligible while minimizing disruption, the following steps are recommended. We are happy to support Zoom throughout this process which will need cross engineering coordination. However, as a caution, Zoom must note that there is no way available currently to do this without existing end users having to re-consent to the app once this update is published.
 
 | Step # | Action for Zoom | MSFT PoC |
 | --- | --- | --- |
 | 1 | Zoom to contact with Microsoft (M365 CAPE Store Ops) - [Rajarshi Mandal](mailto:rmandal@microsoft.com) while performing the steps for any clarification or guidance required. | M365 CAPE Store Ops |
-| 2 | Create a business account in Partner Center: Create a new organizational Partner Center/MCPP account and go through the OneVet vetting process | Vetting (for OneVet process) |
-| 3 | Create a new [Entra OAuth App Registration](/entra/identity-platform/quickstart-register-app?tabs=certificate) (which will generate a new App Id) using a User account within an organizationally owned Entra tenant | Entra Engineering |
+| 2 | Create a business account in Partner Center: Create a new organizational Partner Center or MCPP account and go through the OneVet vetting process. | Vetting (for OneVet process) |
+| 3 | Create a new [Entra OAuth App Registration](/entra/identity-platform/quickstart-register-app?tabs=certificate) (which will generate a new App Id) using a User account within an organizationally owned Entra tenant. | Entra Engineering |
 | 4 | Go through the Entra [Publisher verification](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fentra%2Fidentity-platform%2Fpublisher-verification-overview&data=05%7C02%7Crmandal%40microsoft.com%7Cabeca4d2db9140aba52e08dd357a7fa2%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638725522430992100%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=0UznYXv0uobW66NwtqwVoIWJ9590ZN9aDuX1NB8ZjrI%3D&reserved=0) process to add a verified publisher to the App Registration created in Step 3, using the MCPP account from Step 2. | Entra Engineering |
 | 5 | Update the manifest of the existing Teams app with the new Entra AppId in the [WebApplicationInfo](/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo) section of the Teams app manifest, replace the old Entra Id with the new one generated in Step3. Do not replace the BotId or the Appid in the manifest. | OMEX |
-| 6 | Submit this manifest and app package over [email](mailto:teamsubm@microsoft.com) to M365 CAPE Store Ops | M365 CAPE Store Ops |
-| 7 | Microsoft Teams Engineering (App Ingestion Services) will analyze this app package along-with the existing app package, and share guidance back to Zoom on steps to ensure backward compatibility for their app. |
+| 6 | Submit this manifest and app package over [email](mailto:teamsubm@microsoft.com) to M365 CAPE Store Ops. | M365 CAPE Store Ops |
+| 7 | Microsoft Teams Engineering (App Ingestion Services) will analyze this app package along-with the existing app package, and share guidance back to Zoom on steps to ensure backward compatibility for their app. | App Ingestion Services |
 | 8 | Rename existing app in Partner Center: Using the Consumer account in Partner Center - rename the app to **Zoom For Teams - Legacy**. (This will help unreserve the app name, while submitting the app in step 10.) | Partner Center Engineering |
 | 9 | Partner Center App publishing team to work with PC engineering to release the app name (with an SLA of 24h) | Partner Center Engineering |
 | 10 | Once Zoom has confirmation from M365 CAPE Store Ops that the app name is released, Zoom [should submit this manifest and app package from the Partner Center](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) account created in Step 2 above. | Partner Center Engineering |
-| 11 | M365 CAPE Store Ops validates the app by manually overriding an error/conflict in OMEX to allow ingestion into AppSource | M365 CAPE Store Ops |
-| 12 | M365 CAPE Store Ops approves the app on Partner Center | M365 CAPE Store Ops |
+| 11 | M365 CAPE Store Ops validates the app by manually overriding an error/conflict in OMEX to allow ingestion into AppSource. | M365 CAPE Store Ops |
+| 12 | M365 CAPE Store Ops approves the app on Partner Center. | M365 CAPE Store Ops |
 | 13 | App Ingestion Services manually overrides the error or conflict to allow ingestion. | App Ingestion Services |
-| 14 | App is published to store as an update to the existing app | App Ingestion Services |
-| 15 | Users see an update of the existing app | App Ingestion Services |
-| 16 | Upgraded and new users see a Consent trigger in the app | App Ingestion Services |
+| 14 | App is published to store as an update to the existing app. | App Ingestion Services |
+| 15 | Users see an update of the existing app. | App Ingestion Services |
+| 16 | Upgraded and new users see a Consent trigger in the app. | App Ingestion Services |
 | 17 | Once the app is published, M365 CAPE Store Ops to work with AppSource engineering to migrate the Ratings and Reviews of the existing app onZoom’s current appsource.microsoft.com page to the AppSource page for the new app. | AppSource engineering |
