@@ -1119,7 +1119,7 @@ this.onMessage(async(context, next) =>{
     });
     ```
 
-* **`getMeetingDetailsVerbose()` to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls**:
+* **`getMeetingDetailsVerbose()` to enable PSTN and Teams-to-Teams calls**:
 
     ```JavaScript
     interface IMeetingOrCallDetailsBase <T> {
