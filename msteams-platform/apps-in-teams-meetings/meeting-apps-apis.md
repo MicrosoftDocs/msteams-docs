@@ -1165,7 +1165,8 @@ this.onMessage(async(context, next) =>{
 
 * **Call Participant Identifier**
 
-    ``` interface ICallParticipantIdentifiers {
+    ```JavaScript
+    interface ICallParticipantIdentifiers {
     /**
      * Phone number of a caller
      */
@@ -1182,7 +1183,7 @@ this.onMessage(async(context, next) =>{
 
   * **Represents a validated email**:
 
-    ``` */
+    ```JavaScript
 
         class EmailAddress {
           /**Represents the input email address string*/
@@ -1196,7 +1197,7 @@ this.onMessage(async(context, next) =>{
 
   * **Retrieve the validated email address as a string**:
 
-    ``` */
+    ```JavaScript
           public toString(): string {
             return this.val;
           }
