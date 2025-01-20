@@ -1223,6 +1223,7 @@ You can call Graph API to get the app user's profile photo.
 
 ## Zoom for Teams
 
+<br>
 <details>
 <summary>How can I support Zoom in Teams?</summary>
 
