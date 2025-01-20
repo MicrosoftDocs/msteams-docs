@@ -986,7 +986,7 @@ For more information, see [build tabs for calling](build-tabs-for-calling.md).
 
 <summary><b>For app manifest version 1.12 and later</b></summary>
 
-Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
+Use the following example to configure your app manifest's `webApplicationInfo` and `authorization` properties for any private meeting:
 
 ```json
 "webApplicationInfo": {
@@ -1161,6 +1161,45 @@ this.onMessage(async(context, next) =>{
       conversation: IConversation;
       organizer: IOrganizer;
     }
+    ```
+
+* **Call Participant Identifier**
+
+    ``` interface ICallParticipantIdentifiers {
+    /**
+     * Phone number of a caller
+     */
+    phoneNumber?: string;
+
+    /**
+     * Email of a caller
+     */
+    email?: EmailAddress;
+  }
+     ```
+
+* **Validate email**
+
+    ```/**
+* Represents a validated email.
+*/
+class EmailAddress {
+  /**Represents the input email address string*/
+  private readonly val: string;
+
+  public constructor(val: string) {
+    this.val = val;
+    validateEmailAddress(val);
+  }
+
+  /**
+  * Retrieve the validated email address as a string.
+   */
+  public toString(): string {
+    return this.val;
+  }
+}
+
     ```
 
 # [JSON](#tab/json)
