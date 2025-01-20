@@ -1180,9 +1180,9 @@ this.onMessage(async(context, next) =>{
 
 * **Validate email**
 
-    ```/**
-    * **Represents a validated email**:
-        */
+  * **Represents a validated email**:
+
+        ``` */
 
         class EmailAddress {
           /**Represents the input email address string*/
@@ -1192,16 +1192,16 @@ this.onMessage(async(context, next) =>{
             this.val = val;
             validateEmailAddress(val);
           }
+        ```
 
-  /**
-      * **Retrieve the validated email address as a string**:
-       */
+    * **Retrieve the validated email address as a string**:
+
+        ``` */
           public toString(): string {
             return this.val;
           }
         }
-
-    ```
+        ```
 
 # [JSON](#tab/json)
 
