@@ -1163,7 +1163,7 @@ this.onMessage(async(context, next) =>{
     }
     ```
 
-* **Call Participant Identifier**
+* **Call Participant Identifier to identify the phone number of the caller**:
 
     ```JavaScript
     interface ICallParticipantIdentifiers {
@@ -1179,7 +1179,7 @@ this.onMessage(async(context, next) =>{
   }
      ```
 
-* **Validate email**: Represents a validated email and retrieve it as a string
+* **Validate email to retrieve it as a string**:
 
   ```JavaScript
     class EmailAddress {
