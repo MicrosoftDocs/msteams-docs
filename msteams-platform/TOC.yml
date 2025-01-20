@@ -223,7 +223,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-            displayName: collaborate on Teams, collaborate with Toolkit
+            displayName: add app owners, collaborate on Teams, collaborate with Toolkit
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
             displayName: upload app to Teams, different environment, cloud hosted environment
@@ -250,7 +250,6 @@
         displayName: install Teams with VS, Build apps, download
       - name: Explore Teams Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-        displayName: explore Teams Toolkit, using Visual Studio
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         displayName: create Teams, Azure Function, support Azure Functions
