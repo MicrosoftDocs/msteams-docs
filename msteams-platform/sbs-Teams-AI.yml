@@ -143,7 +143,7 @@ items:
 
     Let's create your first bot app.
     
-    The custom engine agent capability of a Teams app creates an AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. An custom engine agent talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using the custom engine agent.
+    The custom engine agent capability of a Teams app creates an AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. A custom engine agent talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using the custom engine agent.
  
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the custom engine agent.
 
@@ -533,7 +533,7 @@ items:
 
         The `actions.json` file contains the actions that the custom engine agent can perform. The `ActionPlanner` from the `index.ts` file uses the actions defined in the `actions.json` file to perform the actions.
 
-    This sample uses OpenAI or Azure OpenAI for all its natural language modelling, the user can talk to the custom engine agent in any language of their choosing. The custom engine agent understands and responds appropriately without extra code.
+    This sample uses OpenAI or Azure OpenAI for all its natural language modeling, the user can talk to the custom engine agent in any language of their choosing. The custom engine agent understands and responds appropriately without extra code.
 
     ## Build and run your custom engine agent locally
 
@@ -686,7 +686,7 @@ items:
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs ma be incurred when running resources in Azure.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs incurred when running resources in Azure.":::
 
         The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
