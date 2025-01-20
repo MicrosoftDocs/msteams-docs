@@ -1164,10 +1164,10 @@
     displayName: Microsoft learn, Teams articles, Docs Authoring Pack
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-    displayName:  Dev Tools, Cache-Control, user authentication error
+    displayName:  Dev Tools, Cache-Control, user authentication issues, app uploading error
   - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
-    displayName: classic Teams, new Teams client, Teams 2.1
+    displayName: classic Teams, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
     displayName: message extension, plugin, Copilot
