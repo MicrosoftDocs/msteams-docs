@@ -256,7 +256,7 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: prerequisites for Teams, build teams app, accounts to build your Teams app  
+          displayName: build teams app, accounts to build your Teams app  
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
           displayName: Teams template, template in Toolkit, Teams app project
@@ -264,7 +264,7 @@
           items: 
           - name: Add SSO for Teams app using VS
             href: toolkit/toolkit-v4/add-single-sign-on-vs.md 
-            displayName: add SSO for VS, aab application, Teams bot application, SSO app 
+            displayName: tab application, Teams bot application, SSO app 
         - name: Customize app manifest
           items:
           - name: Customize Teams app manifest
