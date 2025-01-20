@@ -1181,24 +1181,25 @@ this.onMessage(async(context, next) =>{
 * **Validate email**
 
     ```/**
-* Represents a validated email.
-*/
-class EmailAddress {
-  /**Represents the input email address string*/
-  private readonly val: string;
+    * **Represents a validated email**:
+        */
 
-  public constructor(val: string) {
-    this.val = val;
-    validateEmailAddress(val);
-  }
+        class EmailAddress {
+          /**Represents the input email address string*/
+          private readonly val: string;
+        
+          public constructor(val: string) {
+            this.val = val;
+            validateEmailAddress(val);
+          }
 
   /**
-  * Retrieve the validated email address as a string.
-   */
-  public toString(): string {
-    return this.val;
-  }
-}
+      * **Retrieve the validated email address as a string**:
+       */
+          public toString(): string {
+            return this.val;
+          }
+        }
 
     ```
 
