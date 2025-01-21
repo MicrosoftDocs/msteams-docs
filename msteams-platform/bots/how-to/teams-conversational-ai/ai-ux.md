@@ -187,7 +187,7 @@ You can use one of the following to enable feedback collection and usage:
 - Use the feedback flag in the Bot Framework API to add the feedback button for each message.
 
 > [!NOTE]
-> Customizable feedback forms are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Enable Teams Azure AD single sign-on
 
