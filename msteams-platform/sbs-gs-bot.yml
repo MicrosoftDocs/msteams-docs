@@ -78,7 +78,7 @@ items:
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
     > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet](concepts/cloud-overview.md#teams-app-capabilities) environments.
+    > Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD)](concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
 
     ## Create your bot project workspace
 

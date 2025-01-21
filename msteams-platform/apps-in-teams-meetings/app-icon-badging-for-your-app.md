@@ -22,7 +22,7 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](../concepts/cloud-overview.md) environments and isn't supported in Teams operated by 21Vianet.
+> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](../concepts/cloud-overview.md) environments and isn't supported in [Teams operated by 21Vianet](../concepts/sovereign-cloud.md).
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
 

@@ -17,7 +17,7 @@ ms.date: 01/07/2025
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 > [!IMPORTANT]
-> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet](../../concepts/cloud-overview.md#teams-app-capabilities) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD)](../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
 
 :::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user":::
 
