@@ -1,7 +1,7 @@
 ---
 title: Teams for sovereign clouds
 author: v-preethah
-description: Understand Teams features and capabilities available for Teams operated by 21Vianet tenants.
+description: Learn about sovereign clouds and the Teams features and capabilities available for Teams operated by 21Vianet, a cloud service specific to China.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 01/07/2025
@@ -28,7 +28,8 @@ The following table details the apps and its capabilities supported for Teams op
 | Upload a custom app | ❌ |
 | **App capabilities** | &nbsp; |
 | Tabs | ✔️ |
-| Bots and message extensions | ❌ |
+| Bots | ❌ |
+| Message extensions | ❌ |
 | Message actions | ❌ |
 | Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ❌ |
 | Dialogs (referred as task modules in TeamsJS v1.x) | ✔️ |

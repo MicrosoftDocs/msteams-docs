@@ -91,7 +91,7 @@ The following articles guide you through the process of creating a great bot for
 > [!NOTE]
 > If you don't wish to create your bot in Azure, you **must** use this link to create a new bot: [Bot Framework](https://dev.botframework.com/bots/new). If you select **Create a bot** in the Bot Framework portal instead, you'll [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
 
-2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the  [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
+2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 
 3. Test the bot using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 

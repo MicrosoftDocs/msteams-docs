@@ -1,7 +1,7 @@
 ---
 title: Teams for government clouds
 author: v-preethah
-description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) environments. Get an overview on how to deploy Teams in government clouds.
+description: Learn about the Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) environments. Get an overview on how to deploy Teams in government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 01/07/2025
@@ -23,11 +23,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
    :::column-end:::
 :::row-end:::
 
-GCC, GCC High, and DOD are limited for use within the United States. This article provides:
-
-* Overview on Teams compatibility across different government cloud services
-* Details on the capabilities of each tenant
-* Guidance on deployment
+Government Community Cloud (GCC), GCC High, Department of Defense (DOD) are limited for use within the United States.
 
 ## Teams app capabilities
 
