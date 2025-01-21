@@ -9,7 +9,7 @@ ms.date: 02/28/2023
 
 # Manage your apps in Developer Portal
 
-After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides a comprehensive guidance on app configuration, analytics, and validation for developers aiming to enhance their Teams app experience.
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation for developers aiming to enhance their Teams app experience.
 
 ## Overview
 

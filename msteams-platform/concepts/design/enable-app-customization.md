@@ -10,7 +10,7 @@ ms.date: 12/10/2022
 
 # Enable customization for your Microsoft Teams app
 
-You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store. Custom apps that is apps published within an org can't be customized.
+You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store. Custom apps published within an organization can't be customized.
 
 Some possible uses of this feature are:
 
@@ -27,7 +27,7 @@ You can enable admins to customize apps by defining the app properties. The cust
 
 ### User considerations
 
-Provide guidelines for customers (Teams admins) who want to customize your app. For more information on how admins can customize, see [customize apps in Teams](/microsoftteams/customize-apps).
+Provide guidelines for Teams Administrators who want to customize your app. For more information on how admins can customize, see [customize apps in Teams](/microsoftteams/customize-apps).
 
 ## See also
 
