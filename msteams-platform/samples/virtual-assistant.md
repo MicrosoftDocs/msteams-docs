@@ -1,6 +1,6 @@
 ---
 title: Create Virtual Assistant Bot in Teams
-description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
+description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as Adaptive cards, handling interruptions and more.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 12/21/2022
