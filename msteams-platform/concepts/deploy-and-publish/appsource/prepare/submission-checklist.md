@@ -15,7 +15,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 See the following video to learn more about publishing your app to the Microsoft Teams Store:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO a9ad8a8e-1dcf-4e65-88e5-58998ec91c99]
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
