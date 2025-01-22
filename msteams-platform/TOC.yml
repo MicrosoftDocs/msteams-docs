@@ -348,6 +348,7 @@
           href: resources/bot-v3/bots-notifications.md
         - name: Context for bots
           href: resources/bot-v3/bots-context.md
+          displayName: getContext
         - name: Send and receive files
           href: resources/bot-v3/bots-files.md
         - name: Notification-only bots
