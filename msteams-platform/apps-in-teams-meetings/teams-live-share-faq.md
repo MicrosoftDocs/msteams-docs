@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn more about Live Share SDK frequently asked questions related to Azure Fluid Relay service, data stored in Live Share, fluid containers, and government clouds.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
@@ -71,7 +71,7 @@ Yes! Live Share supports chat and channel content contexts, including configurab
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. The classic Teams client doesn't support DRM. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
+Yes, DRM is supported in Teams desktop, web, iOS, and Android clients. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
 
 <br>
 
