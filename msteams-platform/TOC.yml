@@ -321,7 +321,7 @@
       displayName: getUserinfo
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
-      displayName: execute URL, getTabInstances
+      displayName: iFrame, execute URL, getTabInstances
     - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
     - name: Bot Framework SDK for .NET
@@ -372,7 +372,7 @@
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
-          displayName: Loop
+          displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
@@ -396,7 +396,7 @@
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
     - name: Create a configurable tab
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+      displayName: create a channel tab or group tab, create a custom channel or group tab with ASP.NET Core, build app using Blazor
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
@@ -408,7 +408,7 @@
       displayName: Reconfigure tab, register remove handler
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
-      displayName: Teams Store apps approved by Microsoft for mobile 
+      displayName: Teams Store apps approved by Microsoft for mobile
     - name: Build apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
@@ -448,6 +448,7 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
+      displayName: custom engine agent
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
@@ -475,8 +476,10 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Format the bot messages
       href: bots/how-to/format-your-bot-messages.md
+      displayName: cross-platform support
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md  
+      displayName: receive files using bot
   - name: Send notifications
     items:
     - name: Build notification capability
@@ -487,6 +490,7 @@
       displayName: conversationId, send message, bot framework, notification,
   - name: Command bot in Teams
     href: bots/how-to/conversations/command-bot-in-teams.md
+    displayName: bot initialization
   - name: Create prompt suggestions
     href: bots/how-to/conversations/prompt-suggestions.md
     displayName: prompt starter, suggested actions
@@ -514,7 +518,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media calls and meetings
         href: bots/calls-and-meetings/real-time-media-concepts.md
-        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+        displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
       - name: Register calls and meetings bot
         href: bots/calls-and-meetings/registering-calling-bot.md
         displayName: How Bot can create call, join meeting and transfer call
@@ -558,17 +562,19 @@
       items:
       - name: Define search commands
         href: messaging-extensions/how-to/search-commands/define-search-command.md
+        displayName: bot-based message extensions
       - name: Respond to search commands
         href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        displayName: response card types
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for agents
         href: messaging-extensions/dev-guidelines-agents.md
-        displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
+        displayName: criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
+        displayName: extend message extension, search based message extension, M365, Microsoft 365 Copilot
       - name: Debug an agent for Microsoft 365 Copilot with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
@@ -577,7 +583,7 @@
         displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot, plugins
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
-      displayName: Domain listings can include wildcards, cache
+      displayName: domain listing, wildcards, cache
     - name: Micro-capabilities for website links
       href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       displayName: App less link unfurling  
