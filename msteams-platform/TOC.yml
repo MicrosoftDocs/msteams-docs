@@ -338,14 +338,17 @@
             href: resources/bot-v3/bot-conversations/bots-conv-personal.md
           - name: Channel and group chat conversation bot
             href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+            displayName: payload
           - name: Starting a conversation
             href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+            displayName: Caching
         - name: Cards and card actions
           href: resources/bot-v3/bots-cards.md
         - name: Message formatting
           href: resources/bot-v3/bots-message-format.md
         - name: Bot events
           href: resources/bot-v3/bots-notifications.md
+          displayName: anonymous
         - name: Context for bots
           href: resources/bot-v3/bots-context.md
           displayName: getContext
