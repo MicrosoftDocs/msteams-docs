@@ -234,6 +234,7 @@
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
         - name: Teams app tutorials and code samples
           href: toolkit/teams-toolkit-tutorial.md
+          displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
@@ -251,13 +252,14 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: Accounts to build your Teams app    
+          displayName: Accounts to build your Teams app   
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
-            href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
+            href: toolkit/toolkit-v4/add-single-sign-on-vs.md 
+            displayName: authentication 
         - name: Customize app manifest
           items:
           - name: Customize Teams app manifest
@@ -268,9 +270,9 @@
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-            displayName: Mock activity, custom activity, predefined activity
           - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
+            displayName: DevTunnel
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
@@ -279,10 +281,10 @@
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to cloud using VS
-            href: toolkit/toolkit-v4/deploy-vs.md            
+            href: toolkit/toolkit-v4/deploy-vs.md         
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
-        displayName: migrate Teams toolkit, new project structure, migration
+        displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
