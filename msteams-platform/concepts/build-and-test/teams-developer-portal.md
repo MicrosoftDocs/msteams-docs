@@ -61,11 +61,17 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
 1. Select **Import**.
 
-   * Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
+   * If you import an app that is already published in [Teams admin center](https://admin.teams.microsoft.com/) and registered in Developer Portal, the portal prompts you to replace the app. Select **Replace** and the app gets replaced by the newly imported app.
+
+     :::image type="content" source="../../assets/images/tdp/tdp-import-replace-app.png" alt-text="Screenshot shows the option to replace an existing app when you import an app in Developer Portal.":::
+
+   * You can't import or take ownership of an app that is already published in Teams admin center but isn't registered in Developer Portal.
    * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in Developer Portal.
    * You can import an existing app to Developer Portal that was created in App Studio. If an app in your tenant doesn't have an owner, the Teams Administrator or Global Administrator can take ownership of the app from Developer Portal for Teams.
 
      :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
+
+For more information about how admins can import and take ownership of apps in Developer Portal, see [manage Microsoft Teams app ownership in Developer Portal](/microsoftteams/app-ownership-developer-portal).
 
 #### Steps to import a published app that's not registered in Developer Portal
 
@@ -73,11 +79,11 @@ You might have published apps in Teams Store that wasn't registered in Developer
 
 :::image type="content" source="../../assets/images/tdp/error-message.png" alt-text="Screenshot shows an example of error message when you import an existing app in Teams Developer Portal."::: 
 
-To resolve this error, we recommend that you raise a [support ticket](../../feedback.md) to Microsoft with the following details:
+To resolve this error, we recommend that you ask a Teams Administrator or Global Administrator in your organization to raise a [support ticket](../../feedback.md) to Microsoft with the following details:
 
 * App ID
 * Tenant ID
-* Your email ID
+* App owner's email ID
 * Screenshot of the email from Partner Center when the app was published.
 
 This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app.

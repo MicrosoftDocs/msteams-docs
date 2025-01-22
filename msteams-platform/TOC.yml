@@ -921,7 +921,7 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Live Share quick start guide
+      - name: Actions in Microsoft 365 quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
@@ -1155,10 +1155,10 @@
       displayname: localizationInfo, Marketplace listings, Partner Center, AppSource Webpage 
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-      displayname: meetingExtensionDefinition, schema versions, schema properties
-  - name: SameSite cookie attribute 
+      displayname: meetingExtensionDefinition
+  - name: Cookies and local storage
     href: resources/samesite-cookie-update.md
-    displayName: cookies types
+    displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
     displayName: Microsoft learn, Teams articles, Docs Authoring Pack
