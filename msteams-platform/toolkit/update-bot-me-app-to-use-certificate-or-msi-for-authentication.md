@@ -202,7 +202,7 @@ To update the bot app code for MSI, follow these steps:
     ```csharp
         builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
         builder.Configuration["MicrosoftAppId"] = "{your MSI’s client ID}";
-        builder.Configuration["MicrosoftAppPass"] = "{your MSI’s tenant ID}";
+        builder.Configuration["MicrosoftAppTenantId"] = "{your MSI’s tenant ID}";
         builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
     ```
 
