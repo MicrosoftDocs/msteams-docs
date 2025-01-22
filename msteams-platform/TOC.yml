@@ -980,7 +980,7 @@
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /microsoftteams/upload-custom-apps?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/upload-custom-apps
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams Store
     items:
