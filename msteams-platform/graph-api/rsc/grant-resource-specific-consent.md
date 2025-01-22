@@ -14,9 +14,9 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 
 In this section, you learn to:
 
-1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app).
-1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user).
-1. [Verify app RSC permission granted to your app](#verify-app-rsc-permission-granted-to-your-app).
+1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
+1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user)
+1. [Verify app RSC permission granted to your app](#verify-app-rsc-permission-granted-to-your-app)
 
 ## Add RSC permissions to your Teams app
 
