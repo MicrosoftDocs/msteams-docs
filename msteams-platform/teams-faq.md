@@ -1249,4 +1249,4 @@ To enable the app to become eligible while minimizing disruption, the following 
 | 14 | App is published to store as an update to the existing app. | App Ingestion Services |
 | 15 | Users see an update of the existing app. | App Ingestion Services |
 | 16 | Upgraded and new users see a Consent trigger in the app. | App Ingestion Services |
-| 17 | Once the app is published, M365 CAPE Store Ops works with AppSource engineering to migrate ratings and reviews of the existing app on the current [appsource.microsoft.com](appsource.microsoft.com) page to the AppSource page for the new app. | AppSource engineering |
+| 17 | Once the app is published, M365 CAPE Store Ops works with AppSource engineering to migrate ratings and reviews of the existing app on the current appsource.microsoft.com page to the AppSource page for the new app. | AppSource engineering |
