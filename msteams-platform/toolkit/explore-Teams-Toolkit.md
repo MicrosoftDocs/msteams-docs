@@ -64,8 +64,7 @@ From the task pane, you can see the following sections:
 
         * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
-        > [!NOTE]
-        > that Teams Toolkit by default will sign in home tenant of your Microsoft 365 account and Azure account. If you want to deploy your Teams app to guest tenant of your Microsoft 365 account, or you want to deploy Azure resources to the guest tenant of your Azure account, Teams Toolkit allow you to switch tenant for both account by clicking the switch button besides that account.
+        Note that Teams Toolkit by default will sign in home tenant of your Microsoft 365 account and Azure account. If you want to deploy your Teams app to guest tenant of your Microsoft 365 account, or you want to deploy Azure resources to the guest tenant of your Azure account, Teams Toolkit allow you to switch tenant for both account by clicking the switch button besides that account.
    :::column-end:::
 :::row-end:::
 
