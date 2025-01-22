@@ -292,7 +292,7 @@
         displayName: setup runtime environment, App Studio, Changelog for Developer Portal, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
-        displayName: validate your app
+        displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
