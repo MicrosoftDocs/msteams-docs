@@ -52,7 +52,8 @@ Here's how files are uploaded to third-party storage app:
       let inputthreadId = "19:8c24b2ac42924ca3b8e220b3a48d8f9a@thread.v2";
       let replyChainIdforChats = "";
       const uniqueIdForChats = replyChainIdforChats + inputthreadId;
-    
+      let mediaData = [];
+
       microsoftTeams.thirdPartyCloudStorage.getDragAndDropFiles(inputthreadId, (medias, err) => {
         document.getElementById("hubState").innerText = JSON.stringify(inputthreadId);
         console.log("inside getDragAndDropFiles");
@@ -67,11 +68,21 @@ Here's how files are uploaded to third-party storage app:
         console.log("no error");
         const media = medias;
         console.log(media);
-        const fileBlob = medias.slice(0, medias.size, medias.type);
-        console.log(fileBlob);
-        const blobUrl = URL.createObjectURL(fileBlob);
-        console.log(blobUrl); // this url can be used to download the file
-        document.getElementById("getDragAndDropFiles").innerText = blobUrl;
+        
+        medias.forEach((media) => {
+            console.log(`Name: ${media.name}`);
+            console.log(`Type: ${media.type}`);
+            console.log(`Size: ${media.size}`);
+        
+            mediaData.push({
+                name: media.name,
+                type: media.type,
+                size: media.size,
+            });
+        
+            // Example 1: Bind mediaData to HTML (e.g., create a table row for each file)
+            // Example 2: Add blob storage functionality for downloading the file
+        });
       });
     });
     ```
