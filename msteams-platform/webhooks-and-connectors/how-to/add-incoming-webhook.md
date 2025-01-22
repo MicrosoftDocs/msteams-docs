@@ -1,6 +1,6 @@
 ---
 title: Create an Incoming Webhook
-description: Learn to create an Incoming Webhook to Teams app, its key features & how to remove Incoming Webhook and code sample code (C#, Node.js).
+description: Learn to create and remove Incoming Webhooks in Teams, know about the key features, send cards, and check the code samples on C#, Node.js.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 01/25/2023

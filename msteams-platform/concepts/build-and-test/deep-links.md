@@ -1,6 +1,6 @@
 ---
 title: Deep links overview
-description: Learn how to configure Teams deep links to an app, chat, teams and channels, and workflows. Also about the types of deep links & protocol handlers.
+description: Learn how to configure Teams deep links to an app, chat, teams and channels, and workflows. Know about the types of deep links and protocol handlers.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 12/11/2024

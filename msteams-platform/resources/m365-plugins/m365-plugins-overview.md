@@ -1,6 +1,6 @@
 ---
 title: Introduction to Microsoft 365 Plugins
-description: In this article, get an understanding about Microsoft 365 plugins, plugin list and labels, Microsoft 365, One Note interaction and more.
+description: Learn about Microsoft 365 plugins in Moodle website, plugins to install, GitHub labels used, and details on plugins such as OpenID Connect, One Note interaction.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
