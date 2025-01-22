@@ -197,9 +197,9 @@
             href: toolkit/debug-overview.md
           - name: Debug using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
-            displayName: custom, predefined activity triggers
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md          
+            href: toolkit/ydebug-message-extension-app-in-test-tool.md          
           - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
