@@ -131,5 +131,5 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 * [Design your tab for Microsoft Teams](design/tabs.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
-* [Microsoft Teams update](../resources/teams-updates.md)
+* [Microsoft Teams updates](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
