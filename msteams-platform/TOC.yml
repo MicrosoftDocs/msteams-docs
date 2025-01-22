@@ -164,13 +164,14 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: accounts to build your Teams app 
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
         - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
+            displayName: local, prod, and dev environment
           - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
@@ -198,7 +199,7 @@
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md            
+            href: toolkit/debug-message-extension-app-in-test-tool.md          
           - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
@@ -207,7 +208,7 @@
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
-            href: toolkit/debug-mobile.md        
+            href: toolkit/debug-mobile.md     
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
@@ -215,9 +216,9 @@
           - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
-            href: toolkit/deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md          
           - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md            
+            href: toolkit/use-CICD-template.md          
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
@@ -233,6 +234,7 @@
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
         - name: Teams app tutorials and code samples
           href: toolkit/teams-toolkit-tutorial.md
+          displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
     - name: Teams Toolkit for Visual Studio
@@ -250,13 +252,14 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: Accounts to build your Teams app    
+          displayName: Accounts to build your Teams app   
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
-            href: toolkit/toolkit-v4/add-single-sign-on-vs.md  
+            href: toolkit/toolkit-v4/add-single-sign-on-vs.md 
+            displayName: authentication 
         - name: Customize app manifest
           items:
           - name: Customize Teams app manifest
@@ -267,9 +270,9 @@
             href: toolkit/toolkit-v4/debug-overview-vs.md
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-            displayName: Mock activity, custom activity, predefined activity
           - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
+            displayName: DevTunnel
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
             displayName: DevTunnel
@@ -278,17 +281,17 @@
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to cloud using VS
-            href: toolkit/toolkit-v4/deploy-vs.md            
+            href: toolkit/toolkit-v4/deploy-vs.md         
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
-        displayName: migrate Teams toolkit, new project structure, migration
+        displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
         href: concepts/build-and-test/teams-developer-portal.md
-        displayName: App Studio, Changelog for Developer Portal, Import an existing app, Import published app
+        displayName: setup runtime environment, App Studio, Changelog for Developer Portal, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
@@ -302,13 +305,13 @@
       items:
       - name: Overview
         href: concepts/build-and-test/adaptive-card-previewer.md
-        displayName: preview, Adaptive Card, ACP 
+        displayName: preview, Adaptive Card, ACP
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
     - name: Adaptive Card Previewer for VS
-      href: concepts/build-and-test/adaptive-card-previewer-vs.md
-      displayName: ACP 
+      href: concepts/build-and-test/adaptive-card-previewer-vs.md 
+      displayName: ACP
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
@@ -318,7 +321,7 @@
       displayName: getUserinfo
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
-      displayName: execute URL, getTabInstances
+      displayName: iFrame, execute URL, getTabInstances
     - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
     - name: Bot Framework SDK for .NET
@@ -369,7 +372,7 @@
           href: resources/messaging-extension-v3/messaging-extensions-overview.md
         - name: Search extensions
           href: resources/messaging-extension-v3/search-extensions.md
-          displayName: Loop
+          displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
@@ -393,7 +396,7 @@
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
     - name: Create a configurable tab
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
+      displayName: create a channel tab or group tab, create a custom channel or group tab with ASP.NET Core, build app using Blazor
     - name: Create a content page
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
@@ -405,7 +408,7 @@
       displayName: Reconfigure tab, register remove handler
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
-      displayName: Teams Store apps approved by Microsoft for mobile 
+      displayName: Teams Store apps approved by Microsoft for mobile
     - name: Build apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
@@ -445,6 +448,7 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
+      displayName: custom engine agent
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
@@ -472,8 +476,10 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Format the bot messages
       href: bots/how-to/format-your-bot-messages.md
+      displayName: cross-platform support
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md  
+      displayName: receive files using bot
   - name: Send notifications
     items:
     - name: Build notification capability
@@ -484,6 +490,7 @@
       displayName: conversationId, send message, bot framework, notification,
   - name: Command bot in Teams
     href: bots/how-to/conversations/command-bot-in-teams.md
+    displayName: bot initialization
   - name: Create prompt suggestions
     href: bots/how-to/conversations/prompt-suggestions.md
     displayName: prompt starter, suggested actions
@@ -511,7 +518,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media calls and meetings
         href: bots/calls-and-meetings/real-time-media-concepts.md
-        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+        displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
       - name: Register calls and meetings bot
         href: bots/calls-and-meetings/registering-calling-bot.md
         displayName: How Bot can create call, join meeting and transfer call
@@ -555,17 +562,19 @@
       items:
       - name: Define search commands
         href: messaging-extensions/how-to/search-commands/define-search-command.md
+        displayName: bot-based message extensions
       - name: Respond to search commands
         href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        displayName: response card types
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines for agents
         href: messaging-extensions/dev-guidelines-agents.md
-        displayName: Criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot, customize Microsoft 365 Copilot, Copilot agents, plugins
+        displayName: criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot agents, plugins
       - name: Extend bot-based message extension as agent
         href: messaging-extensions/build-bot-based-agent.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
+        displayName: extend message extension, search based message extension, M365, Microsoft 365 Copilot
       - name: Debug an agent for Microsoft 365 Copilot with developer mode
         href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
@@ -574,7 +583,7 @@
         displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot, plugins
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
-      displayName: Domain listings can include wildcards, cache
+      displayName: domain listing, wildcards, cache
     - name: Micro-capabilities for website links
       href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       displayName: App less link unfurling  
@@ -1074,12 +1083,12 @@
     displayName: Multitenancy, SharePoint
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
-    displayname: OnMessageActivityAsync
+    displayname: OnMessageActivityAsync, multi-language support
   - name: Power Platform apps
     items:
     - name: Low-code custom apps
       href: samples/teams-low-code-solutions.md
-      displayName: Power BI, Power Apps, Power Automate, Project Oakdale
+      displayName: Power BI, Power Platform apps, Project Oakdale
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
   - name: App templates for Microsoft Teams
@@ -1095,16 +1104,16 @@
       displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
-      displayName: OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
+      displayName: OpenID Connect, Microsoft 365 Repository, Microsoft 365 integration, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
     - name: Install Moodle LMS
-      href: resources/moodleInstructions.md  
+      href: resources/moodleInstructions.md 
     - name: Moodle FAQ
       href: resources/faqs.md
   - name: Share to Teams
     items:
     - name: Share to Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
-      displayName: Share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
+      displayName: share to Teams for Education, share to meeting, side panel content, auto populate content, live meeting, on-going meeting
     - name: Share to Teams from personal app or tab
       href: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       displayName: share to meeting, personal app
@@ -1114,19 +1123,19 @@
     items:
     - name: Deep links overview
       href: concepts/build-and-test/deep-links.md
-      displayName: create deep link, protocol handlers, deeplink, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: deep link meeting sidepanel, share content in meeting, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL, deep link meeting sidepanel, share content in meeting
+      displayName:  custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers,create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
-      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
+      displayName: channel conversation   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
-      displayName: create deep link for workflow, deeplink for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
+      displayName: deeplink for meeting schedule dialog, audio video call, deep link to join meeting 
     - name: Execution and handling of deeplinks
       href: concepts/build-and-test/deep-links-execution-handling.md
-      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
+      displayName: execute deep link, deeplink API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL   
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
   - name: Use Fluid with Teams
