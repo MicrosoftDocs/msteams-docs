@@ -116,7 +116,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
    1. Add below environment variables and their values to `env\.env.{env}` file.
    
-      * `AAD_APP_OAUTH_AUTHORITY_HOST` represents the authority URL of your Microsoft Entra tenant, for example, https://login.microsoftonline.com. Your bot uses this URL to authenticate users via OAuth 2.0.
+    * `AAD_APP_OAUTH_AUTHORITY_HOST` represents the authority URL of your Microsoft Entra tenant, for example, https://login.microsoftonline.com. Your bot uses this URL to authenticate users via OAuth 2.0.
 
       ```yml
       AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
