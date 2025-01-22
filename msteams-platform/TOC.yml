@@ -164,13 +164,14 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: accounts to build your Teams app 
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
         - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
+            displayName: local, prod, and dev environment
           - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
@@ -198,7 +199,7 @@
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md            
+            href: toolkit/debug-message-extension-app-in-test-tool.md          
           - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
@@ -207,7 +208,7 @@
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
-            href: toolkit/debug-mobile.md        
+            href: toolkit/debug-mobile.md     
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
@@ -215,9 +216,9 @@
           - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
-            href: toolkit/deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md          
           - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md            
+            href: toolkit/use-CICD-template.md          
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
