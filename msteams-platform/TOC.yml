@@ -38,7 +38,6 @@
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
- 
 - name: Plan your app
   items:
   - name: Overview
@@ -165,13 +164,14 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/tools-prerequisites.md
-          displayName: Accounts to build your Teams app    
+          displayName: accounts to build your Teams app 
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
         - name: Develop your app in VSC
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
+            displayName: local, prod, and dev environment
           - name: How-to guides
             href: toolkit/add-how-to-guides-vsc.md
             displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
@@ -199,7 +199,7 @@
             href: toolkit/debug-your-teams-app-test-tool.md
             displayName: Mock activity, custom activity, predefined activity
           - name: Debug message extension app in Test Tool
-            href: toolkit/debug-message-extension-app-in-test-tool.md            
+            href: toolkit/debug-message-extension-app-in-test-tool.md          
           - name: Debug your app locally
             href: toolkit/debug-local.md
           - name: Debug in Teams desktop client
@@ -208,7 +208,7 @@
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Debug for mobile
-            href: toolkit/debug-mobile.md        
+            href: toolkit/debug-mobile.md     
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
@@ -216,9 +216,9 @@
           - name: Deploy to cloud using VSC
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
-            href: toolkit/deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md          
           - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md            
+            href: toolkit/use-CICD-template.md          
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
@@ -411,7 +411,7 @@
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications
-      href: /graph/teams-send-activityfeednotifications
+      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/?toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: activity feed, notification, customize notification
     - name: App caching for your tab app
       href: tabs/how-to/app-caching.md
@@ -568,7 +568,7 @@
         href: messaging-extensions/build-bot-based-agent.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Copilot, customize Microsoft 365 Copilot
       - name: Debug an agent for Microsoft 365 Copilot with developer mode
-        href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin
+        href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
       - name: Copilot handoff
         href: bots/how-to/conversations/bot-copilot-handoff.md
@@ -616,11 +616,11 @@
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
     - name: Get change notifications
-      href: /graph/teams-changenotifications-callrecording-and-calltranscript
+      href: /graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get transcripts
-      href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
+      href: /graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get recordings
-      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
+      href: /graph/api/resources/callrecording?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
@@ -826,13 +826,13 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: /graph/teams-concept-overview
+    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Permissions, communication, channels, delegated, reports, extensions
   - name: Microsoft Graph Toolkit
-    href: /graph/toolkit/overview
+    href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Access, routing
   - name: Get started
-    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Access, report, MSAL2
   - name: Teams app permissions
     href: graph-api/App-permissions/Teams-app-permissions.md
@@ -850,7 +850,7 @@
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
-    href: /graph/approvals-app-api
+    href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -908,13 +908,25 @@
       - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
-      - name: Live Share quick start guide
+      - name: Actions in Microsoft 365 quick start guide
         href: m365-apps/actions-in-m365-quick-start-guide.md
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
+- name: App manifest
+  items:
+    - name: App manifest
+      href: resources/schema/manifest-schema.md
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
+    - name: Public developer preview
+      items:
+        - name: Overview
+          href: resources/dev-preview/developer-preview-intro.md          
+        - name: Public developer preview app manifest
+          href: resources/schema/manifest-schema-dev-preview.md
+          displayName: properties
 - name: Test your app
   items:
   - name: Overview
@@ -939,7 +951,7 @@
       displayName: Bot Emulator
       href: bots/how-to/debug/locally-with-an-ide.md
     - name: Debug with inspection middleware
-      href: /azure/bot-service/bot-service-debug-inspection-middleware
+      href: /azure/bot-service/bot-service-debug-inspection-middleware?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Debug calling and meeting bot locally
       href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       displayName: signaling
@@ -969,7 +981,7 @@
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /microsoftteams/upload-custom-apps
+    href: /microsoftteams/upload-custom-apps?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams Store
     items:
@@ -1053,18 +1065,6 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-- name: App manifest
-  items:
-    - name: App manifest
-      href: resources/schema/manifest-schema.md
-      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
 - name: Integrate with Teams
   items:
   - name: Web app integration
@@ -1143,9 +1143,9 @@
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
       displayname: meetingExtensionDefinition
-  - name: SameSite cookie attribute 
+  - name: Cookies and local storage
     href: resources/samesite-cookie-update.md
-    displayName: Cookies
+    displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
