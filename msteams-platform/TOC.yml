@@ -221,7 +221,6 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
-            displayName: test apps in cloud-hosted, locally hosted environment
       - name: Publish your Teams app
         items:
         - name: Publish Teams apps using Teams Toolkit 
@@ -246,14 +245,12 @@
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
-        displayName: support Azure Functions
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: accounts to build your Teams app   
+          displayName: Accounts to build your Teams app   
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
-          displayName: Teams app templates for Teams app types
         - name: Develop your app in VS
           items: 
           - name: Add SSO for Teams app using VS
@@ -263,34 +260,29 @@
           items:
           - name: Customize Teams app manifest
             href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
-            displayName: preview app Manifest
         - name: Debug your Teams app
           items: 
           - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-            displayName: debug message extension, Teams app using VS
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
           - name: Debug Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
-            displayName: DevTunnel setup 
+            displayName: DevTunnel
           - name: Debug background process
             href: toolkit/toolkit-v4/debug-background-process-vs.md            
-            displayName: create debug resource
+            displayName: DevTunnel
         - name: Host your app on Azure
           items:    
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
-            displayName: Azure Resource Manager
           - name: Deploy to cloud using VS
-            href: toolkit/toolkit-v4/deploy-vs.md 
-            displayName: deploy to Azure functions          
+            href: toolkit/toolkit-v4/deploy-vs.md         
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
-      displayName: Teams Toolkit CLI v3
     - name: Developer Portal for Teams
       items:
       - name: Overview
