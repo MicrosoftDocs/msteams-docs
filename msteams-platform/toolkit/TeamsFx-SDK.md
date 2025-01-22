@@ -2,10 +2,10 @@
 title: Explore TeamsFx SDK and its Functions
 author: surbhigupta
 description: Learn about core functionalities of TeamsFx SDK and its prerequisites, code structure, advanced customizing, Graph scenarios, Bot SSO, and latest SDK version.
-ms.author: v-npaladugu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/16/2023
+ms.date: 01/24/2025
 ---
 
 # TeamsFx SDK

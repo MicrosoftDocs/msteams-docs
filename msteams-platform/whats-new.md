@@ -11,7 +11,7 @@ zone_pivot_groups: What-new-features
 
 ::: zone pivot="ga-feature"
 
-Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://learn.microsoft.com/en-us/microsoftteams/platform/feed.atom). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 <!------
 
@@ -424,7 +424,7 @@ Explore updates from the previous GA releases listed here.
 
 ::: zone pivot="dev-preview"
 
-Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://learn.microsoft.com/en-us/microsoftteams/platform/feed.atom). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Developer preview
 
@@ -525,7 +525,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ::: zone pivot="dep-feature"
 
-Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://learn.microsoft.com/en-us/microsoftteams/platform/feed.atom). For more information, see [configure RSS feed](#get-latest-updates).
+Discover Microsoft Teams platform features that are deprecated. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Deprecated
 
@@ -595,7 +595,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 ## Get latest updates
 
-You can get the latest Teams platform updates by configuring to the [RSS feed](https://learn.microsoft.com/en-us/microsoftteams/platform/feed.atom).
+You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
 
 ### To configure RSS feed
 
