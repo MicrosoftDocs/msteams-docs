@@ -1115,10 +1115,10 @@
     items:
     - name: Deep links overview
       href: concepts/build-and-test/deep-links.md
-      displayName: protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
+      displayName: deep link meeting sidepanel, share content in meeting, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL
+      displayName:  custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers,create deep link for specific chat, deeplink for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
       displayName: channel conversation   
