@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2024-10-01T04:15:01+05:30</updated>
+	<updated>2025-01-16T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing New App Installation flow on Microsoft Teams]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12093</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12093?referrer=whats.new.rssfeed"/>
+		<updated>2025-01-16T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We are excited to announce the enhanced user experience for Teams apps installed from Teams Store or via custom upload. With this update, the UI gets more intuitive, user-friendly, straightforward, and easy-to-navigate. Now, adding Teams app in the required scope is just a click away. Key features of this update include the ability to view the available scopes and the scope that gives the best usage experience of that app.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12093?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing 10 BRAND NEW Adaptive Card features in Microsoft Teams]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12056</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed"/>
+		<updated>2025-01-16T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We're thrilled to announce 10 NEW Adaptive Card features now available in Microsoft Teams! These exciting updates empower you to create interactive, dynamic, and visually captivating Adaptive Cards. Supercharge your app development with these powerful new features today. These features are applicable in a wide variety of organizational scenarios - from creating intelligent forms in cards that avoid data entry errors through dependent inputs and conditionally-enabled buttons to visualize business trends through charts.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[App validation update: Ensure a secure and user-friendly experience for app users with Nested App Authentication]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11548</id>
@@ -107,20 +123,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure?referrer=whats.new.rssfeed"/>
 		<updated>2024-04-09T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Boost your app's chances of passing the Microsoft Teams Store submission process by 70% by avoiding the common failures listed in this article.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure&pageQueryParams=&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure.md&documentVersionIndependentId=7f3962a8-c69a-a971-7a94-0ed5b164344a&feedback=%0A%0A%5BEnter+feedback+here%5D%0A&author=%40v-ypalikila&metadata=*+ID%3A+7f3962a8-c69a-a971-7a94-0ed5b164344a+%0A*+Service%3A+**msteams**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Use Adaptive Card-based Loop components to build collaborative experiences]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/cards-loop-component</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/cards-loop-component?referrer=whats.new.rssfeed"/>
-		<updated>2024-02-16T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams message extensions that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook. Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20a614d296-7303-d8b1-4b1a-af422a244dc8%0A*%20Version%20Independent%20ID%3A%20a614d296-7303-d8b1-4b1a-af422a244dc8%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card-based%20Loop%20component%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcards-loop-component)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fm365-apps%2Fcards-loop-component.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcards-loop-component.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Build API-based message extension using Developer Portal for Teams]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-api-based-message-extension?tabs=developer-portal-for-teams%2Cnew-api%2Cnew-api2</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/build-api-based-message-extension?tabs=developer-portal-for-teams%2Cnew-api%2Cnew-api2?referrer=whats.new.rssfeed"/>
-		<updated>2024-02-16T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience. You can now build API-based message extension using Developer Portal for Teams.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Version%20Independent%20ID%3A%201455fcc8-8370-33f9-7e40-643261d98d87%0A*%20Content%3A%20%5BBuild%20API-based%20message%20extension%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fbuild-api-based-message-extension%3Ftabs%3Ddeveloper-portal-for-teams%252Cnew-api%252Cnew-api2)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fbuild-api-based-message-extension.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-ypalikila%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
