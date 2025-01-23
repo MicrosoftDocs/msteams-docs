@@ -818,7 +818,7 @@
     displayName: web apps, browser permission
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
-    displayName: native device capabilities
+    displayName: camera, native device capabilities
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
   - name: Integrate location capabilities
@@ -875,21 +875,21 @@
     items:
     - name: Enable Teams personal tab for Microsoft 365
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: Office 365, personal tab for upgrade
+      displayName: Microsoft 365, Office 365,
     - name: TeamsJS capability across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
       displayName: enable types of Teams app
   - name: Teams meeting apps in Outlook
     href: m365-apps/extend-m365-meeting-app.md
-    displayName: configurableTabs.context
+    displayName: Microsoft 365, Office 365, meeting app
   - name: Teams message extensions in Outlook
     items:
       - name: Enable Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
-        displayName: build message extensions, upload custom app 
+        displayName: mail, Microsoft 365, Office 365Microsoft 365  
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
-        displayName: link unfurling
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in, link unfurling
   - name: Adaptive Card-based Loop components
     items:
       - name: Design your Loop component
@@ -902,10 +902,10 @@
     items:
       - name: Overview
         href: m365-apps/overview-combining-add-in-and-teams-app.md
-        displayName: integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
       - name: Add an Outlook Add-in to a Teams app
         href: m365-apps/combine-office-add-in-and-teams-app.md
-        displayName: add Outlook to Teams
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in, add Outlook to Teams
   - name: Actions in Microsoft 365
     items:
       - name: What are Actions?
@@ -922,7 +922,6 @@
     displayName: single-tenant distribution
 - name: Teams developer documentation FAQs
   href: teams-faq.md
-  displayName: FAQs
 - name: Test your app
   items:
   - name: Overview
