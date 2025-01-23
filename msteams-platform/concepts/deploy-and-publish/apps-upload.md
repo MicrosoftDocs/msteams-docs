@@ -5,7 +5,7 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 01/23/2025
 ---
 
 # Upload your app in Teams
@@ -18,7 +18,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 
 > [!IMPORTANT]
 >
-> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 > * App installation is supported only on Teams desktop client.
 > * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
