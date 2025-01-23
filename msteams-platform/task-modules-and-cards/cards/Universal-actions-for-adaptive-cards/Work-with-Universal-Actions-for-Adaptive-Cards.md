@@ -1,6 +1,6 @@
 ---
 title: Use Universal Actions for Adaptive Card
-description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
+description: Learn how Universal Actions for Adaptive Cards work, and know about the schema, refresh models and user IDs, backward compatibility.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 12/20/2022
