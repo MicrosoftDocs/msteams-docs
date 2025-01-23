@@ -1159,7 +1159,7 @@
     displayName: classic Teams, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot
+    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: developer community help, questions, suggestions, contact, issues
