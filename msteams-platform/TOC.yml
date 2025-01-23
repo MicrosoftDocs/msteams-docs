@@ -605,7 +605,6 @@
         displayName: app icon badging
     - name: Extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
-      displayName: feature compactability 
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
       displayName: supportsAnonymousGuestUsers, guest, meetingExtensionDefinition
@@ -619,13 +618,10 @@
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
     - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript
-      displayName: transcripts and recordings
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
-      displayName: transcripts with online meeting
     - name: Get recordings
       href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
-      displayName: recording with online meeting
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
@@ -652,13 +648,11 @@
       items:
       - name: Agile Poker tutorial
         href: sbs-teams-live-share.yml
-        displayName: step-by-step guide to Agile Poker
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
         displayName: access token, container mapping
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
-      displayName: FAQs
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
     displayName: Single virtual scene, scene studio
@@ -685,7 +679,6 @@
   items:
   - name: What are cards and dialogs?
     href: task-modules-and-cards/cards-and-task-modules.md
-    displayName: dynamic search
   - name: Build cards
     items:
     - name: Cards overview
@@ -693,7 +686,7 @@
       displayName: People picker, type-ahead, people icon
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: MessageCard, correlationId, markdown, what-are-webhooks-and-connectors button, flexible layout
+      displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, Adaptive Card, command bot
     - name: Format cards in Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock, borders, rounded corners
@@ -702,16 +695,16 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
     - name: Container layouts in Adaptive Cards
       href: task-modules-and-cards/container-layouts.md
-      displayName: container layout, stack elements
+      displayName: container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout stack elements
     - name: Charts in Adaptive Cards
       href: task-modules-and-cards/cards/charts-in-adaptive-cards.md
-      displayName: chart, graph, visual representations  
+      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart, visual representations  
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
-      displayName: schema updates, Setting, channel, static typeahead, persona, persona set
+      displayName: setting, channel, static typeahead, persona, persona set, schema updates
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: static and dynamic typeahead search, dependent inputs, valueChangedAction, associatedInputs, dropdown list   
+      displayName: static and dynamic typeahead search, Input.ChoiceSet, dependent inputs, valueChangedAction, Action.ResetInputs, associatedInputs
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       displayName: media elements, media files, command bot        
@@ -735,7 +728,7 @@
     items:
     - name: Dialogs overview
       href: task-modules-and-cards/what-are-task-modules.md
-      displayName: task module, open dialog, command bot, Bot Framework Web Chat
+      displayName: task module, open dialog, command bot, Bot Framework Web Chat, Adaptive Card
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
@@ -759,7 +752,6 @@
         displayName: access app on web, SSO for tab app
       - name: Configure tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-        displayName: configure app for scope
       - name: Add code to enable SSO for tab
         href: tabs/how-to/authentication/tab-sso-code.md
         displayName: getAuthToken, client and server side code
