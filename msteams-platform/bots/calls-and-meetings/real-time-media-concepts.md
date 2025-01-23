@@ -66,6 +66,24 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 |---------------|----------|--------|
 | Policy recording bot | This sample demonstrates how a bot can receive media streams for recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
 
+## FAQ
+
+<br>
+
+<details>
+
+<summary><b>What does the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'" typically indicate?</b></summary>
+
+* Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions granted and admin consented.
+* Enable detailed logging in your application to capture more information about the error.
+* Ensure that the joinParams being passed to the AddAsync method are correctly formed and contain all required information.
+* Double-check the values for JoinUrl, MeetingId, and other parameters.
+* Ensure that the scenarioId being used is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
+<br>
+
+</details>
+
 ## Next step
 
 > [!div class="nextstepaction"]
