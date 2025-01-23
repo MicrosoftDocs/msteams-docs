@@ -1,7 +1,7 @@
 ---
 title: CI/CD templates
 author: MuyangAmigo
-description:  In this module, learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates.
+description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile client in both Visual Studio Code and command line.
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview

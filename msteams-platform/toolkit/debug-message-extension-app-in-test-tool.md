@@ -1,7 +1,7 @@
 ---
 title: Debug message extension app in Test Tool
 author: surbhigupta 
-description: Learn how to emulate the Teams experience for your message extension app in Teams App Test Tool.
+description: Learn about Teams app Test Tool in Teams Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview

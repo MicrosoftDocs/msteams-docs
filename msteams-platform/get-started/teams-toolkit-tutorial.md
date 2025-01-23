@@ -1,6 +1,6 @@
 ---
 title: Teams toolkit tutorial
-description: Learn to build Teams app with different capabilities using the tutorials and code samples based on languages or frameworks and prepare your development environment.
+description: Learn to build Teams app with different capabilities using the tutorials and code samples based on languages or frameworks also prepare the development environment.
 ms.localizationpriority: medium
 ms.date: 06/07/2023
 ms.topic: reference
