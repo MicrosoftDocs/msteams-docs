@@ -1,7 +1,7 @@
 ---
 title: Enable Customization for App
 author: heath-hamilton
-description: Learn how Teams admins can customize your Teams app for their org by changing the app's accent color, description, logo and its outline, and app name.
+description: Learn how Teams Administrators can customize your Teams app for their org by changing the app's accent color, description, logo and its outline, and app name.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 12/10/2022
 
 # Enable customization for your Microsoft Teams app
 
-You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store. Custom apps published within an organization can't be customized.
+You can allow admins to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store. Custom apps published within an organization can't be customized.
 
 Some possible uses of this feature are:
 
@@ -20,7 +20,7 @@ Some possible uses of this feature are:
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 * Changing the app's accent color to match an org's brand.
 
-You can enable admins to customize apps by defining the app properties, that is, the [`configurableProperties`](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties) section in the app manifest (previously called Teams app manifest), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the app manifest of your app.
+You can enable admins to customize apps by defining the app properties that is, the [`configurableProperties`](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties) section in the app manifest (previously called Teams app manifest), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the app manifest of your app.
 
 > [!IMPORTANT]
 > You can't test this feature during development. App customization isn't supported when publishing to an org's app catalog.
