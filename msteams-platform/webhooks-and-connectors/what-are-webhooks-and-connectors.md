@@ -5,7 +5,7 @@ description: Learn how Incoming and Outgoing webhooks and connectors for Microso
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Build webhooks and connectors
@@ -16,7 +16,7 @@ Webhooks and connectors help to connect the web services to channels and teams i
 
 > [!IMPORTANT]
 >
-> * Webhooks and connectors are available only in Government Community Cloud (GCC) and aren't available in GCC High, Department of Defense (DOD), and Teams operated by 21Vianet environments.
+> * Webhooks and connectors are available only in Government Community Cloud (GCC) and aren't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 >
 > * Only Incoming Webhook connectors type are available in GCC High environment and the [admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) need to manually upload to display the app in the connectors page.
 >

@@ -5,7 +5,7 @@ description: In this module, learn how to use Input.ChoiceSet to implement stati
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Typeahead search in Adaptive Cards
@@ -416,7 +416,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ## Dependent inputs
 
 > [!NOTE]
-> Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
+> Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
 
 You can design Adaptive Cards in Teams where the value of an input depends on the value of another. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown must filter the cities displayed in the second dropdown. This can be achieved by creating an `Input.ChoiceSet` dropdown with dynamic typeahead search that depends on one or more other inputs in the card.
 

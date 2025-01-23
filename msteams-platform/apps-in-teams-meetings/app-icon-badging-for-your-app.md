@@ -5,7 +5,7 @@ description: Learn how to enable app icon badging for your Microsoft Teams app i
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Enable app icon badging for your Teams app
@@ -22,7 +22,7 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](../concepts/cloud-overview.md) environments and isn't supported in [Teams operated by 21Vianet](../concepts/sovereign-cloud.md).
+> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../concepts/cloud-overview.md) environments and isn't supported in [Teams operated by 21Vianet](../concepts/sovereign-cloud.md).
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
 

@@ -5,7 +5,7 @@ author: v-ypalikila
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 # Introducing the new Microsoft Teams client
 

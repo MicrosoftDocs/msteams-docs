@@ -1,10 +1,10 @@
 ---
 title: Teams for government clouds
 author: v-preethah
-description: Learn about the Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) environments. Get an overview on how to deploy Teams in government clouds.
+description: Learn about the Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DoD) environments. Get an overview on how to deploy Teams in government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Plan for government clouds
@@ -23,7 +23,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
    :::column-end:::
 :::row-end:::
 
-Government Community Cloud (GCC), GCC High, Department of Defense (DOD) are limited for use within the United States.
+Government Community Cloud (GCC), GCC High, Department of Defense (DoD) are limited for use within the United States.
 
 ## Teams app capabilities
 
@@ -31,9 +31,9 @@ Teams is compatible with all Microsoft 365 Government environments, but the capa
 
 [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
-The following table details the Teams apps and its capabilities for GCC, GCC High, and DOD:
+The following table details the Teams apps and its capabilities for GCC, GCC High, and DoD:
 
-| &nbsp; | GCC | GCC High | DOD |
+| &nbsp; | GCC | GCC High | DoD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Apps built by Microsoft | ✔️ | ✔️ | ✔️ |
@@ -63,12 +63,12 @@ For more information on Graph API, see [Graph API for Government clouds](/graph/
 
 > [!NOTE]
 >
-> * Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
+> * Third-party apps are turned off by default for GCC and aren't available for GCC High and DoD. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
 > * GCC High supports Incoming Webhooks only.
 
 ### Plan to deploy Teams in government clouds
 
-To deploy Teams in GCC, GCC High, or DOD, you must purchase a suitable [Microsoft 365 Government plan](https://products.office.com/government/compare-office-365-government-plans). US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+To deploy Teams in GCC, GCC High, or DoD, you must purchase a suitable [Microsoft 365 Government plan](https://products.office.com/government/compare-office-365-government-plans). US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
 ### Compliance with third-party services
 

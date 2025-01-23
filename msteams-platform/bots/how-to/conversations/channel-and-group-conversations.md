@@ -5,7 +5,7 @@ description: Learn how to create new conversation threads, user and tag mentions
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 # Channel and group chat conversations with a bot
 

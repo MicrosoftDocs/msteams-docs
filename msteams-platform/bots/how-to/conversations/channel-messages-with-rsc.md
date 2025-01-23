@@ -4,7 +4,7 @@ author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Receive conversation messages with RSC
@@ -12,7 +12,7 @@ ms.date: 01/07/2025
 The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
 > [!NOTE]
-> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DOD), and Teams operated by 21Vianet](../../../concepts/cloud-overview.md#teams-app-capabilities) environments.
+> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet](../../../concepts/cloud-overview.md#teams-app-capabilities) environments.
 
 ## Enable bots to receive all channel or chat messages
 

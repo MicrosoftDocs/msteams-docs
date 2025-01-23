@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Plan your app with Teams features
@@ -67,7 +67,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### Plan for government and sovereign clouds
 
-If you're planning to extend Teams app in a Government cloud platform, it's essential to understand the capabilities of each Government tenant and plan for purchase and deployment. To extend your Teams app in Government cloud platforms, see plan for [government clouds](cloud-overview.md) and [sovereign cloud](sovereign-cloud.md).
+If you're planning to extend Teams app in a government cloud platform, it's essential to understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in government cloud platforms, see plan for [government clouds](cloud-overview.md) and [sovereign cloud](sovereign-cloud.md).
 
 ## Next step
 

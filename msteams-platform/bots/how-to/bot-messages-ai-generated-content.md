@@ -4,7 +4,7 @@ description: Learn how to add an AI label, sensitivity labels, citations, and fe
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.date: 01/09/2025
+ms.date: 01/23/2025
 ---
 
 # Enhance AI-generated bot messages
@@ -65,7 +65,7 @@ The following screenshots show how bot messages can be enhanced with AI label, c
 > [!NOTE]
 >
 > * AI label, citation, feedback buttons, and sensitivity label are available for bots in personal chats, group chats, and channels.
-> * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](../../concepts/cloud-overview.md) environments.
+> * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../../concepts/cloud-overview.md) environments.
 
 ## AI label
 

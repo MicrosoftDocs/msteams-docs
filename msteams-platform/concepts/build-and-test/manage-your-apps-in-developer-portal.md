@@ -4,7 +4,7 @@ description: Learn how to configure, develop, publish, manage, validate against 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Manage your apps in Developer Portal
@@ -56,7 +56,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DOD), and Teams operated by 21Vianet environments.
+  > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
   > The maximum limit for RSC permissions is 16.

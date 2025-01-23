@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Publish your Microsoft Teams app
@@ -29,7 +29,7 @@ To publish your Teams app, you must have a valid app package.  An app package is
 Upload a custom app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
 > [!IMPORTANT]
-> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DOD), and Teams operated by 21Vianet.
+> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 
 For more information, see [upload your app in Teams](apps-upload.md).
 

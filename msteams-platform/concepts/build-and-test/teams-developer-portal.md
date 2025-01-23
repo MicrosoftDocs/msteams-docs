@@ -4,7 +4,7 @@ description: Learn how to create a brand new app, import an existing or publishe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 01/07/2025
+ms.date: 01/23/2025
 ---
 
 # Developer Portal for Teams
@@ -16,7 +16,7 @@ ms.date: 01/07/2025
 > [!NOTE]
 >
 > * Developer Portal for Government Community Cloud (GCC) is supported only as an app in Teams and not as a standalone website.
-> * Developer Portal isn't available for GCC High, Department of Defense (DOD), and Teams operated by 21Vianet tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
+> * Developer Portal isn't available for GCC High, Department of Defense (DoD), and Teams operated by 21Vianet tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
 
 ## Register an app
 

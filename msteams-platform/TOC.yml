@@ -42,7 +42,7 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC High (GCCH), Teams operated by 21Vianet
+    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
@@ -73,7 +73,7 @@
     items:
     - name: Plan for government clouds
       href: concepts/cloud-overview.md
-      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), Teams for government tenant
+      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DoD), Teams for government tenant
     - name: Plan for sovereign clouds
       href: concepts/sovereign-cloud.md
       displayName: Teams operated by 21Vianet, gallatin
