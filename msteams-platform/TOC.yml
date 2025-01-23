@@ -281,6 +281,10 @@
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to cloud using VS
+            href: toolkit/toolkit-v4/deploy-vs.md
+          - name: Migrate project from 17.9 to 17.10+
+            href: toolkit/teams-toolkit-migration-guide.md
+            displayName: migrate Teams toolkit, new project structure, YAML configuration       
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
