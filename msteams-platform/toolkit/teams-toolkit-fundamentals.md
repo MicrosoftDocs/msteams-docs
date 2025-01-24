@@ -5,13 +5,13 @@ description: Learn about Teams Toolkit, its installation, navigation, and user j
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/24/2022
+ms.date: 01/23/2025
 ---
 # Microsoft Teams Toolkit Overview
 
 > [!IMPORTANT]
 >
-> Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
+> Teams Toolkit isn't supported in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
 

@@ -4,7 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, get conve
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 11/14/2024
+ms.date: 01/23/2025
 ---
 # Proactive messages
 
@@ -20,7 +20,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 >
 > * To send proactive message, it's recommended to start with [building notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. For more information, see [Teams Toolkit documents](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages, the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
+> * Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments. For proactive messages, the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCC High: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DoD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 
@@ -72,8 +72,8 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 * Public: `https://smba.trafficmanager.net/teams/`
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`
-* GCCH: `https://smba.infra.gov.teams.microsoft.us/teams`
-* DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
+* GCC High: `https://smba.infra.gov.teams.microsoft.us/teams`
+* DoD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
@@ -107,13 +107,13 @@ See the following video to learn how to send proactive message from bots:
 
 ### Understand who blocked, muted, or uninstalled a bot
 
-As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information may help your organization's admins to broadcast org-wide messages or drive app usage.
+As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
 
 Using Teams, you can send a proactive message to the bot to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the bot isn't delivered to the user.
 
 The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the bot.
 
-An example of a 403 response code is below.
+The following code sample is an example of a 403 response code:
 
 ```http
 
@@ -148,7 +148,7 @@ Sending proactive messages to the users is an effective way to communicate with 
 
 When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
 
-A good welcome message can include the following:
+A good welcome message can include the following information:
 
 * Reason for the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
