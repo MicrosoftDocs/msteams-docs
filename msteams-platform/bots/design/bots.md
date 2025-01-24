@@ -4,14 +4,14 @@ description: Learn how to design, add, introduce, and manage a Microsoft Teams b
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 04/13/2023
+ms.date: 01/23/2025
 ---
 # Designing your Microsoft Teams bot
 
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
-> Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
@@ -72,7 +72,7 @@ Your bot's introduction should be slightly different in channels and group chats
 
 ### Bot authentication with single sign-on
 
-When a person messages a bot, sign in may be required use all its features. You can simplify the authentication process using single sign-on (SSO).
+When a person messages a bot, sign in might be required use all its features. You can simplify the authentication process using single sign-on (SSO).
 
 Don’t forget: In the bot command menu (**What can I do?**), you must also provide a command to sign out.
 
@@ -105,7 +105,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 ### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 #### Mobile
 
@@ -203,7 +203,7 @@ The following examples outline the user intent and data in messages sent to bots
 
 ### Analyze and improve
 
-Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
+Learn what users say when chatting with your bot. This is an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
 
 * [Understanding LUIS](/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.
@@ -238,7 +238,7 @@ In the following examples, the bot responds to each message with options for wha
 
 ### Reach out to users
 
-With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
+With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot might send a message when something has changed in a document or a work item is closed.
 
 #### Mobile
 
@@ -274,7 +274,7 @@ In personal apps, a tab can complement what your bot can do. For example, if you
 
 ## Manage a bot
 
-Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
+Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's more efficient to include all settings in a [dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a dialog for configuring a bot's settings." lightbox="../../assets/images/bots/manage-bot-task-module.png":::
 
@@ -306,7 +306,7 @@ Welcome messages and tours help people understand what they can do with your bot
 
 #### Don't: Obscure your bot's features
 
-First impressions matter. People will likely be confused or suspicious when presented with a nondescript sign-in message.
+First impressions matter. People likely get confused or suspicious when presented with a nondescript sign-in message.
 
    :::column-end:::
 :::row-end:::
@@ -395,7 +395,7 @@ Your bot shouldn’t reveal sensitive information to a group of people.
 
 ## See also
 
-These other guidelines may help with your bot design:
+These guidelines further help with your bot design:
 
 * [Designing your personal app](../../concepts/design/personal-apps.md)
 * [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
