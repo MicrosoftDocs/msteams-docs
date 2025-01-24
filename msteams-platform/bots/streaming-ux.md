@@ -68,9 +68,11 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
     :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI-powered bot." border="false":::
 
-    The following example shows the final streamed response in an AI-powered bot:
+    The formatting is applied after the final message is complete:
 
     :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI-powered bot." border="false":::
+
+    The following example shows the final streamed response in an AI-powered bot:
 
 4. **Enable AI-powered features for final message**:
 
