@@ -231,7 +231,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-            displayName: add app owners, collaborate on Teams
+            displayName: collaborate on Teams
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
@@ -261,7 +261,7 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: Accounts to build your Teams app
+          displayName: accounts to build your Teams app
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your app in VS
@@ -277,7 +277,6 @@
           items: 
           - name: Debug overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-            displayName: load configured app
           - name: Debug with Teams App Test Tool
             href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
           - name: Debug Teams app locally
@@ -1157,7 +1156,7 @@
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
-      displayname: localizationInfo, Marketplace listings, Partner Center, AppSource Webpage 
+      displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
       displayname: meetingExtensionDefinition
@@ -1166,16 +1165,15 @@
     displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
-    displayName: Microsoft learn, Teams articles, Docs Authoring Pack
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
-    displayName:  Dev Tools, Cache-Control, user authentication issues, app uploading error
+    displayName:  DevTools, Cache-Control, authentication issues, app uploading error
   - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
-    displayName: classic Teams, Teams 2.1
+    displayName: Classic Teams, new Teams client, Teams 2.1
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
     displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Support and feedback
   href: feedback.md
-  displayName: developer community help, questions, suggestions, contact, issues
+  displayName: Developer community help, questions, suggestions, contact, issues
