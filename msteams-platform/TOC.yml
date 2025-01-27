@@ -231,6 +231,7 @@
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
+            displayName: collaborate on Teams
           - name: Test apps in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
@@ -260,7 +261,7 @@
         items:
         - name: Prerequisites to create Teams app
           href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: Accounts to build your Teams app   
+          displayName: accounts to build your Teams app
         - name: Create a new Teams app project
           href: toolkit/toolkit-v4/create-new-project-vs.md
         - name: Develop your app in VS
@@ -289,7 +290,7 @@
           - name: Provision cloud resources
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to cloud using VS
-            href: toolkit/toolkit-v4/deploy-vs.md         
+            href: toolkit/toolkit-v4/deploy-vs.md
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
@@ -1178,7 +1179,7 @@
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
-      displayname: localizationInfo 
+      displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
       displayname: meetingExtensionDefinition
@@ -1189,6 +1190,7 @@
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
     href: resources/troubleshoot.md
+    displayName:  DevTools, Cache-Control, authentication issues, app uploading error
   - name: Know about New Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
