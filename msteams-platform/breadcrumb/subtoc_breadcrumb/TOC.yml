@@ -1,8 +1,0 @@
-- name: 'Microsoft 365'
-  tocHref: /microsoft-365/
-  topicHref: /microsoft-365/index
-  items:
-  - name: Extensibility
-    tocHref: /microsoft-365/extensibility/schemas
-    topicHref: /microsoft-365/extensibility/index
-        
