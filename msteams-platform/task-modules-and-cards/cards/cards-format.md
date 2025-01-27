@@ -73,7 +73,7 @@ On Android, Adaptive Card Markdown formatting appears as shown in the following 
 
 :::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams Android platform.":::
 
-For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
+For more information about date and time formatting and localization according to the target device where the Adaptive Card is rendered, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures.md#date-time-formatting-and-localization).
 
 ### Adaptive Cards format sample
 
