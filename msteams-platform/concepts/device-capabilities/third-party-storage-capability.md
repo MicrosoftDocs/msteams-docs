@@ -89,7 +89,7 @@ Here's how files are uploaded to third-party cloud storage app:
 
 1. The third-party cloud storage app then uploads the files to their storage.
 
-For more information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage). For more TeamsJS SDK information, see [@microsoft/teams-js package](/javascript/api/@microsoft/teams-js).
+For more information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage) and [microsoft/teams-js package](/javascript/api/@microsoft/teams-js).
 
 
 ## Code sample
