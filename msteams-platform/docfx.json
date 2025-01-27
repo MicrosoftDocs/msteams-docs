@@ -37,6 +37,7 @@
       "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
         "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
+        "breadcrumb_path": "/microsoft-365/extensibility/schema/breadcrumb/TOC.json",
         "manager": "billbl",
         "author": "surbhigupta",
         "ms.suite": "office365",
