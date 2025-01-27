@@ -609,6 +609,7 @@
       displayName: apps for meeting, share content, share to stage APIs, in-meeting document signing, meeting side panel, customize share button
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
+      displayName: generate a deep link
     - name: Build in-meeting notification and app icon badging
       items:
       - name: Build in-meeting notifications
@@ -662,6 +663,7 @@
         href: sbs-teams-live-share.yml
       - name: Custom Azure Fluid Relay service
         href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+        displayName: access token
     - name: Live Share FAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
   - name: Custom Together Mode scenes in Teams
@@ -706,16 +708,16 @@
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
     - name: Container layouts in Adaptive Cards
       href: task-modules-and-cards/container-layouts.md
-      displayName: Container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout
+      displayName: container layout, Layout.Stack, Layout.Flow, Layout.AreaGrid, responsive layout, stack elements
     - name: Charts in Adaptive Cards
       href: task-modules-and-cards/cards/charts-in-adaptive-cards.md
-      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart  
+      displayName: chart, graph, Adaptive Card, donut chart, gauge chart, vertical bar chart, horizontal bar chart, line chart, pie chart, visual representations  
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
-      displayName: Setting, channel, static typeahead, persona, persona set
+      displayName: setting, channel, static typeahead, persona, persona set
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
-      displayName: Static and dynamic typeahead search, Input.ChoiceSet, dependent inputs, valueChangedAction, Action.ResetInputs, associatedInputs   
+      displayName: static and dynamic typeahead search, Input.ChoiceSet, dependent inputs, valueChangedAction, Action.ResetInputs, associatedInputs
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       displayName: media elements, media files, Adaptive Card, command bot        
@@ -738,7 +740,7 @@
     items:
     - name: Dialogs overview
       href: task-modules-and-cards/what-are-task-modules.md
-      displayName: Task module, open dialog, Adaptive Card, command bot, Bot Framework Web Chat
+      displayName: Task module, open dialog, command bot, Bot Framework Web Chat, Adaptive Card
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
@@ -747,6 +749,7 @@
       displayName: payload
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
+      displayName: create dialogue box
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -765,8 +768,10 @@
         displayName: getAuthToken
       - name: Update app manifest and preview tab app
         href: tabs/how-to/authentication/tab-sso-manifest.md
+        displayName: application ID URI
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
+        displayName: Graph permissions
     - name: Enable SSO for bot and message extension app
       items:
       - name: Overview
@@ -794,6 +799,7 @@
     items:
     - name: Third party OAuth IdP overview
       href: tabs/how-to/authentication/auth-flow-tab.md
+      displayName: OAuth Identity Providers, authentication using IdP
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Add authentication to bot app
