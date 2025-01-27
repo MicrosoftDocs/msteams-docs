@@ -75,9 +75,6 @@ On Android, Adaptive Card Markdown formatting appears as shown in the following 
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
-> [!NOTE]
-> The date and localization features mentioned in this section aren't supported in Teams.
-
 ### Adaptive Cards format sample
 
 The following code shows an example of Adaptive Cards formatting:
