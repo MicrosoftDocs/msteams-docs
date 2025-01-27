@@ -507,9 +507,7 @@
     displayname: Jira, jira
   - name: Get Teams-specific context
     href: bots/how-to/get-teams-context.md
-    displayName: Fetch roster or user profile
-  - name: Teams bot API changes to fetch team or chat members
-    href: resources/team-chat-member-api-changes.md  
+    displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
@@ -520,6 +518,7 @@
     items:
     - name: Modify Teams bot API to fetch team or chat members
       href: resources/team-chat-member-api-changes.md
+      displayName: team, chat, member, API, bot, fetch, team or chat members
     - name: Calls and meetings bots
       items:
       - name: Overview
