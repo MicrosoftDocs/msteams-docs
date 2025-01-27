@@ -1086,8 +1086,6 @@
     - name: App manifest
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: App manifest reference root
-      href: /microsoft-365/extensibility/schema/?view=m365-app-1.19&preserve-view=true
     - name: Public developer preview
       items:
         - name: Overview
@@ -1095,6 +1093,10 @@
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
+- name: App manifest reference node
+  items:
+  - name: App manifest reference
+    href: /microsoft-365/extensibility/TOC.yml
 - name: Integrate with Teams
   items:
   - name: Web app integration
