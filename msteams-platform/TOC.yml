@@ -1097,6 +1097,8 @@
   items:
   - name: App manifest reference
     href: /microsoft-365/extensibility/schema/TOC.yml
+  - name: App manifest root
+    href: /microsoft-365/extensibility/schema/root?view=m365-app-1.19
 - name: Integrate with Teams
   items:
   - name: Web app integration
