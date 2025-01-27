@@ -1096,7 +1096,7 @@
 - name: App manifest reference node
   items:
   - name: App manifest reference
-    href: /microsoft-365/extensibility/TOC.yml
+    href: /microsoft-365/extensibility/schema/TOC.yml
 - name: Integrate with Teams
   items:
   - name: Web app integration
