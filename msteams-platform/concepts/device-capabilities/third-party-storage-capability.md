@@ -35,7 +35,7 @@ Here's how files are uploaded to third-party cloud storage app:
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
         > [!NOTE]
-        > All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage apps to determine that their app is opened programmatically, and they need to call `getDragAndDropFiles` API to get the files that were dropped in the compose area of a chat or channel.
+        > All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that their app is opened programmatically, and they need to call `getDragAndDropFiles` API to get the files that were dropped in the compose area of a chat or channel.
 
 1. The third-party cloud storage app calls the `getDragAndDropFiles` API in Teams SDK to fetch the files that were drag-dropped. 
 
