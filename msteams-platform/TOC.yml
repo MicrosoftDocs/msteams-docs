@@ -1087,7 +1087,7 @@
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: App manifest reference root
-      href: /microsoft-365/extensibility/schema/?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      href: /microsoft-365/extensibility/schema/?view=m365-app-1.19&tabs=new-teams-client?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Public developer preview
       items:
         - name: Overview
