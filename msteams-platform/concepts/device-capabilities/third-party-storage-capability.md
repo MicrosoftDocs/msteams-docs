@@ -59,7 +59,7 @@ Here's how files are uploaded to third-party storage app:
         console.log("inside getDragAndDropFiles");
     
         if (err) {
-          console.log("err while calling");
+          console.log("error while calling getDragAndDropFiles API");
           document.getElementById("getDragAndDropFiles").innerText = JSON.stringify(err);
           console.log(err);
           return;
