@@ -42,7 +42,7 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
+    displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
   - name: Understand use case
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
@@ -69,6 +69,14 @@
   - name: Plan to send app notifications
     href: concepts/design/design-app-notification.md
     displayName: notification framework, activity feed, message, alert, notify
+  - name: Plan for special clouds
+    items:
+    - name: Plan for government clouds
+      href: concepts/cloud-overview.md
+      displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DoD), Teams for government tenant
+    - name: Plan for sovereign clouds
+      href: concepts/sovereign-cloud.md
+      displayName: Teams operated by 21Vianet, gallatin
 - name: Design your app
   items:
   - name: Overview
@@ -413,7 +421,7 @@
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications
-      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/?toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: activity feed, notification, customize notification
     - name: App caching for your tab app
       href: tabs/how-to/app-caching.md
@@ -499,9 +507,7 @@
     displayname: Jira, jira
   - name: Get Teams-specific context
     href: bots/how-to/get-teams-context.md
-    displayName: Fetch roster or user profile
-  - name: Teams bot API changes to fetch team or chat members
-    href: resources/team-chat-member-api-changes.md  
+    displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
   - name: Configure bot scope
     href: bots/how-to/bot-configuration-experience.md
     displayName: configuration settings, fetchTask, config/fetch, config/submit
@@ -512,6 +518,7 @@
     items:
     - name: Modify Teams bot API to fetch team or chat members
       href: resources/team-chat-member-api-changes.md
+      displayName: team, chat, member, API, bot, fetch, team or chat members
     - name: Calls and meetings bots
       items:
       - name: Overview
@@ -989,7 +996,7 @@
   - name: Upload your app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /microsoftteams/upload-custom-apps?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/teams-custom-app-policies-and-settings?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
   - name: Publish to the Teams Store
     items:
