@@ -175,7 +175,6 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing dialogs](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)

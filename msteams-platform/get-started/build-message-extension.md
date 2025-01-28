@@ -6,7 +6,7 @@ ms.date: 12/11/2024
 ms.topic: reference
 ---
 
-# Build message extension
+# Build a message extension app
 
 A message extension allows the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 

@@ -1,5 +1,5 @@
 ---
-title: Plan your app overview
+title: Plan your App - Overview
 author: heath-hamilton
 description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
@@ -77,8 +77,6 @@ If you're planning to extend Teams app in a government cloud platform, it's esse
 ## See also
 
 * [Get started](../get-started/get-started-overview.md)
-* [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Plan responsive tabs for Teams mobile](design/plan-responsive-tabs-for-teams-mobile.md)
 * [Device capabilities](device-capabilities/device-capabilities-overview.md)
 * [Authenticate users in Microsoft Teams](authentication/authentication.md)

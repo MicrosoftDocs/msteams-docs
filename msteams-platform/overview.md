@@ -1,7 +1,7 @@
 ---
 title: Build Apps for Teams Platform
 author: heath-hamilton
-description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
+description: Learn about Microsoft Teams and associated organizational goals, why should you build apps on Teams platform, and how does Teams app help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 05/24/2021
