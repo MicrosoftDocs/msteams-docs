@@ -1,5 +1,5 @@
 ---
-title: Qualities to Measure App Performance
+title: Measure App Performance
 author: heath-hamilton
 description: Learn to strategize and decide what to measure using instrumentation data for your Microsoft Teams app analytics and monitor events for your app.
 ms.topic: conceptual

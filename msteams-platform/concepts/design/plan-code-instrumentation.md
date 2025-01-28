@@ -32,6 +32,10 @@ Analyzing your solution usage and insights on features that your end users value
 ## See also
 
 - [Plan your app with Teams features](../app-fundamentals-overview.md)
+- [Get started](../../get-started/get-started-overview.md)
 - [Explore Teams platform features](../../overview-explore.md)
 - [Get context for your tab](../../tabs/how-to/access-teams-context.md)
 - [Get Teams specific context for your bot](../../bots/how-to/get-teams-context.md)
+- [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+- [Build dialogs](../../task-modules-and-cards/what-are-task-modules.md)
+- [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)

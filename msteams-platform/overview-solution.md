@@ -1,5 +1,5 @@
 ---
-title: Teams solution for building apps
+title: Teams Solution for Building Apps
 author: heath-hamilton
 description: Learn about Teams platform user story that helps map requirements to app functionalities to create app, development environments, tools required, and customization.
 ms.topic: overview
