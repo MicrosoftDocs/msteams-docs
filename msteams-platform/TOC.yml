@@ -1086,7 +1086,7 @@
   - name: App manifest GA reference
     href: /microsoft-365/extensibility/schema?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: App manifest Dev Preview reference
-    href: /microsoft-365/extensibility/schema/root?view=m365-app-prev?context=/microsoft-365/extensibility/schema/context
+    href: /microsoft-365/extensibility/schema?view=m365-app-prev?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
 - name: Integrate with Teams
   items:
   - name: Web app integration
