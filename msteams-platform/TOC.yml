@@ -944,7 +944,7 @@
 - name: App manifest
   items:
     - name: App manifest
-      href: /graph/api/overview?context=/microsoftteams/platform/context
+      href: /microsoft-365/extensibility/schema
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
