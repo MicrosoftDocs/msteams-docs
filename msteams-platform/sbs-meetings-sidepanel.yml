@@ -48,7 +48,8 @@ items:
   durationInMinutes: 1
   content: | 
 
-   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]   
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+           
       > [!NOTE]
       > If you encounter the error **Filename too long**, apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
