@@ -39,7 +39,7 @@
   - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
-  - name: Understand use case
+  - name: Understand use cases
     href: concepts/design/understand-use-cases.md
     displayName: App scope, Teams app features, capabilities
   - name: Map use case to Teams features

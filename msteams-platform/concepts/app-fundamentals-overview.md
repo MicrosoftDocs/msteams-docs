@@ -1,5 +1,5 @@
 ---
-title: Plan your app overview
+title: Plan your App - Overview
 author: heath-hamilton
 description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
