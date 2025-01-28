@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 05/04/2023
+ms.date: 01/23/2025
 ---
 
 # Build tabs for Teams
@@ -12,7 +12,7 @@ ms.date: 05/04/2023
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
 > [!IMPORTANT]
-> Custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 
 There are two types of tabs, static and configurable tabs. These tabs can be utilized in three distinct scopes: `personal`, `groupchat`, and `teams`. [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) to group chats, channels, or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
 
@@ -51,8 +51,7 @@ The following images show tabs added to different contexts in Teams:
 **Teams mobile**
 
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
-***
-
+---
 
 Following are a few benefits of static tabs in chats, channels, and meetings:
 
@@ -102,14 +101,7 @@ The tab features are as follows:
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-## Understand how tabs work
-
-You can use one of the following methods to create tabs:
-
-* [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
-* [Use Adaptive Card to build tabs](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-### Declare custom tab in app manifest
+## Declare custom tab in app manifest
 
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
 
@@ -127,7 +119,7 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 ### Tools to build tabs
 
 * [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
+* [Teams Toolkit for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
 
 ## Next step
 
@@ -137,10 +129,7 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 ## See also
 
 * [Design your tab for Microsoft Teams](design/tabs.md)
-* [Device capabilities](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
-* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
 * [Microsoft Teams update](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
