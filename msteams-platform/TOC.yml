@@ -944,14 +944,14 @@
 - name: App manifest
   items:
     - name: App manifest
-      href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      href: /microsoft-365/extensibility/schema
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview app manifest
-          href: /microsoft-365/extensibility/schema/?view=m365-app-prev?context=/microsoftteams/platform/context
+          href: /microsoft-365/extensibility/schema/?view=m365-app-prev
           displayName: properties
 - name: Test your app
   items:
