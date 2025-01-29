@@ -1,7 +1,7 @@
 ---
 title: Universal Actions for Message Extension
 author: v-ypalikila
-description: In this article, learn about Universal Actions and automatic refresh for Adaptive Cards in search based message extensions.
+description: Learn about Universal Actions and automatic refresh for Adaptive Cards in search based message extensions, and know about Just-in-time (JIT) installation.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
