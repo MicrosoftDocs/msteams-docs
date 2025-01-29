@@ -337,8 +337,8 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
-|----------------|-----------------|--------------|----------------|-----------|-----------|
-| Hello world | This sample demonstrates how to configure default landing capability for an app that supports both bot and tab capabilities in personal scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
+|----------------|-----------------|--------------|----------------|-----------|
+| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
 
 
 ## Next step

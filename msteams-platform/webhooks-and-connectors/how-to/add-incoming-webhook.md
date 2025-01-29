@@ -291,7 +291,7 @@ The webhook is now removed from the Teams channel.
 
 | Sample name | Description | .NET | Node.js |
 |---------------------|--------------|---------|--------|
-| Incoming Webhook |This sample shows how to implement and use an Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
+| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
 
 ## See also
 
