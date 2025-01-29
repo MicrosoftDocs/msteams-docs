@@ -158,12 +158,14 @@ items:
   content: |
 
     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L140&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L140&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up app settings, manifest and env files
   durationInMinutes: 1
@@ -184,7 +186,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-settings.png" alt-text="App settings"::: 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+settings&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+settings&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L150&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **To configure app manifest file**
 
@@ -200,7 +202,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the changes in the manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
      > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+manifest+file&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+manifest+file&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L150&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **To configure env file**
 
@@ -215,8 +217,8 @@ items:
           * Set `REACT_APP_MSA_ONLY_SCOPE` to your app's client secret **Value**..
   
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/env-file.png" alt-text="Screenshot shows the env file.":::
-     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+env+file&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+env+file&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L150&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 
 - title: Build and run the service
@@ -243,6 +245,9 @@ items:
           The following webpage opens.
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-ready.png" alt-text="Screenshot shows a webpage with a message to install the app in Teams.":::
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+services&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml%23L198&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
