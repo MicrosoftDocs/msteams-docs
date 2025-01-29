@@ -42,7 +42,6 @@ items:
     > [!NOTE]
     > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-
     
 - title: Set up local environment
   durationInMinutes: 1
