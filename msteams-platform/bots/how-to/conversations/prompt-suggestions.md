@@ -14,7 +14,7 @@ Prompt suggestions are commands that are presented to the users in the Microsoft
 
 Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
-There are two types of prompt suggestions that you can use:
+Following are the two types of prompt suggestions that you can use:
 
 :::row:::
 :::column span="2":::
@@ -39,10 +39,10 @@ Suggested actions help users continue conversations with your bot.
 
 :::row-end:::
 
-## Prompt starters
+## Prompt starter
 
 >[!NOTE]
-> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
+> * Your bot either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
