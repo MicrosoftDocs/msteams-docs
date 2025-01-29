@@ -418,7 +418,7 @@
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
       displayName: Teams Store apps approved by Microsoft for mobile
-    - name: Build apps for shared channels
+    - name: Apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications

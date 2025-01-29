@@ -1,7 +1,7 @@
 ---
 title: Implement SameSite Cookie Attribute
 author: laujan
-description: Learn types of cookies, SameSite cookies and attributes, their impacts on Teams tabs, dialogs (task modules), message extensions, and their authentication in Teams.
+description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation and storage partitioning.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
