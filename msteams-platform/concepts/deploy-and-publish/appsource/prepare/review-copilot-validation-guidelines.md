@@ -135,6 +135,11 @@ You must ensure to meet the following guidelines for agents:
 
 Agents must support atleast three unique compound utterances by handling three or more parameters.
 
+* Parameter description should explain the requirements of the system in a natural language with output format.
+* Parameter description should be clearly defined to get accurate response from Agents as Copilot tries to select the best command and predict the parameter values for the parameters listed in that command for the given user query.
+* Parameter description should not have Grammar and punctuation errors.
+* Parameters defined in the manifest mustn't be identical.
+
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 [Back to top](#validation-guidelines-for-agents)
