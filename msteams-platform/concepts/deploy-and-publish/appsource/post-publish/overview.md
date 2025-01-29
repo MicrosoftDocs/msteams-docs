@@ -131,6 +131,8 @@ To discontinue your app:
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
+After discontinuing your app, ensure to delete the app and partner data within a six-month period.
+
 ## Ratings and review for Teams apps
 
 Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. As a developer, you can interact and respond to these reviews from Partner Center, and the responses are shown on AppSource along with Teams experience, helping users find and use the app more easily. This feedback improves app visibility, keeps users engaged, and encourages more downloads on Teams Store.
