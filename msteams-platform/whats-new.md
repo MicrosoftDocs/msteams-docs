@@ -29,7 +29,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::column-end:::
 :::column span="2":::
 
-Teams platform features that are available to all app developers.
+Teams platform features that are available to all app developers
 
 **2025 January**
 
