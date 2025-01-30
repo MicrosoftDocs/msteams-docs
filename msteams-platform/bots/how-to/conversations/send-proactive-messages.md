@@ -102,7 +102,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO 5238e1f4-0e38-45f0-af64-a73d6f9fe174]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
