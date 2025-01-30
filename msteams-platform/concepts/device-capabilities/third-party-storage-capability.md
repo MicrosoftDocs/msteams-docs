@@ -1,47 +1,132 @@
 ---
 title: Enable Third-party Cloud Storage
-description: Learn how to set third-party app storage for your app for the files that are dragged and dropped in a message compose space of a Teams chat or channel.
+description: Learn how to set third-party storage app for your Teams app for the files that are dragged and dropped in a message compose area of a Teams chat or channel.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 11/28/2024
+ms.date: 01/30/2025
 ---
 
 # Third-party cloud storage capability
 
-Microsoft Teams provides the flexibility to change the default storage from OneDrive and SharePoint to a preferred third-party cloud storage provider app. When a file is drag-dropped to the message compose area of a Teams chat, it's possible to store the file in a third-party cloud storage using Microsoft Teams JavaScript client library (TeamsJS).
+Microsoft Teams provides the flexibility to change the default storage from OneDrive and SharePoint to a preferred third-party cloud storage provider app. When a file is drag-dropped into the message compose area of a Teams chat or channel, you can allow the file to be stored in a third-party cloud storage using the Microsoft Teams JavaScript client library (TeamsJS).
 
 ## Prerequisites
 
 For Teams app to support third-party cloud storage for drag-dropped files:
 
-* Use the latest version of TeamsJS SDK.
-* The app manifest (previously called Teams app manifest) must have the first action as `Upload`. This action automatically opens the app in upload mode when files are drag-dropped in the compose message area.
-* Admins must configure the app manifest with the app ID of the third-party cloud storage app. Search for the property named `defaultFilesUploadAppId` and configure the app ID. It must be a plain string and must not use inverted commas. For more information, see [admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
+* Use the latest version of the TeamsJS SDK.
+* The app manifest (previously called Teams app manifest) must be configured with the app ID of the third-party storage app. Search for the property named `defaultFilesUploadAppId` and configure the app ID. It must be a plain string and must not use inverted commas. <br>
+    Alternatively, admins can also configure the third-party cloud storage app ID. For more information, see [admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
+* The app manifest must have the first action as `Upload`. This action automatically opens the app in upload mode when files are drag-dropped into the message compose area.
+
+    Following code sample shows the first action added as `Upload` under `composeExtensions`:
+
+    ```javascript
+    {
+        "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.9",
+        "version": "2.3.1",
+        "id": "id",
+        "packageName": "com.testApp.partners.testAppforteams",
+        "developer": {
+            "name": "testApp",
+            "websiteUrl": "https://www.testApp.com",
+            "privacyUrl": "https://www.testApp.com/legal/privacypolicy",
+            "termsOfUseUrl": "https://www.testApp.com/legal/termsofservice"
+        },
+        "composeExtensions": [
+            {
+                "botId": "botid",
+                "canUpdateConfiguration": false,
+                "commands": [
+                    {
+                        "id": "getUpload",
+                        "type": "action",
+                        "title": "Upload file to testApp",
+                        "description": "Upload file to testApp",
+                        "initialRun": false,
+                        "fetchTask": true,
+                        "context": [
+                            "compose"
+                        ],
+                        "parameters": [
+                            {
+                                "name": "param",
+                                "title": "param",
+                                "description": ""
+                            }
+                        ],
+                        "taskInfo": {
+                            "title": "Upload File",
+                            "width": "880",
+                            "height": "550",
+                            "url": "https://account.testApp.com/app-api/microsoft-teams/sandtestApp_NWCqGLjTs0k/message-extension/uploader"
+                        }
+                    },
+                    {
+                        "id": "getShare",
+                        "type": "action",
+                        "title": "Share file from testApp",
+                        "description": "Share file from testApp",
+                        "initialRun": false,
+                        "fetchTask": true,
+                        "context": [
+                            "compose"
+                        ],
+                        "parameters": [
+                            {
+                                "name": "param",
+                                "title": "param",
+                                "description": ""
+                            }
+                        ],
+                        "taskInfo": {
+                            "title": "Share File",
+                            "width": "880",
+                            "height": "550",
+                            "url": "https://account.testApp.com/app-api/microsoft-teams/sandtestApp_NWCqGLjTs0k/message-extension/shared-link"
+                        }
+                    }
+                ],
+                "messageHandlers": [
+                    {
+                        "type": "link",
+                        "value": {
+                            "domains": [
+                                "*.testApp.com"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    ```
+
 
 ## Drag-drop files to third-party cloud storage
 
-If you want to have a storage of your preference, you must use `getDragAndDropFiles` API of `thirdPartyCloudStorage` in TeamsJS SDK to upload files that are drag-dropped in the message compose area of a Teams chat. 
+If you want your Teams app to have a third-party storage of your preference, you must use `getDragAndDropFiles` API of `thirdPartyCloudStorage` in TeamsJS SDK. This API enables to upload files from the message compose area of a Teams chat or channel to third-party storage app.
 
 Here's how files are uploaded to third-party cloud storage app:
 
-1. When files are drag-dropped in the compose message area, the files are temporarily stored in Teams cache.
+1. When the files are drag-dropped in the message compose area, the files are temporarily stored in Teams cache.
 
-1. When the files are in the compose message area, the following values are obtained to call the `thirdPartyCloudStorage` API:
+1. The following parameters are obtained to call the `thirdPartyCloudStorage` API:
 
-   * `const uniqueId` = `replyToId` + `id` (that is, `threadId`).
+   * `const uniqueIdForChats` = `replyToId` + `id` (that is, `threadId`).
 
-        If `replyToId` isn't present in the context, then the unique ID is ""+threadId.
+      All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
 
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
-        > [!NOTE]
-        > All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that their app is opened programmatically, and they need to call `getDragAndDropFiles` API to get the files that were dropped in the compose area of a chat or channel.
-
-1. The third-party cloud storage app calls the `getDragAndDropFiles` API in Teams SDK to fetch the files that were drag-dropped. 
+1. The third-party cloud storage app calls the `getDragAndDropFiles` API in TeamsJS SDK to fetch the files that were drag-dropped.
 
 1. The files are received in the third-party cloud storage app through the callback.
 
-    Callback: (files: FilesFor3PStorage[], error?: SdkError): void;** 
+    Callback: `(files: FilesFor3PStorage[], error?: SdkError): void;**`
+
+    The following code sample shows the callback:
 
     ```javascript
     microsoftTeams.initialize(() => {
