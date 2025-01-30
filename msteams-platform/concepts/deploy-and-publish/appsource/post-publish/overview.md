@@ -131,7 +131,7 @@ To discontinue your app:
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
-After discontinuing your app, ensure to delete the app and partner data within a six-month period.
+After discontinuing your app, ensure to delete the app and partner's data after six-month.
 
 ## Ratings and review for Teams apps
 
