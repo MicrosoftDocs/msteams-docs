@@ -108,15 +108,18 @@ For Teams app to support third-party cloud storage for drag-dropped files:
 
 If you want your Teams app to have a third-party storage of your preference, you must use `getDragAndDropFiles` API of `thirdPartyCloudStorage` in TeamsJS SDK. This API enables to upload files from the message compose area of a Teams chat or channel to third-party storage app.
 
-Here's how files are uploaded to third-party cloud storage app:
+> ![NOTE]
+> The `thirdPartyCloudStorage` API must be called only when the files are drag-dropped and must not be called when the files are added using the plus icon in the message compose toolbar.
 
-1. When the files are drag-dropped in the message compose area, the files are temporarily stored in Teams cache.
+Here's how the files are uploaded to third-party cloud storage app:
 
-1. The following parameters are obtained to call the `thirdPartyCloudStorage` API:
+1. When the files are drag-dropped in the message compose area, the files are temporarily stored in the Teams cache.
+
+1. To call the `thirdPartyCloudStorage` API, the following parameters are obtained from the application context:
 
    * `const uniqueIdForChats` = `replyToId` + `id` (that is, `threadId`).
 
-      All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
+      All the above values are present in the application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
 
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
@@ -175,7 +178,6 @@ Here's how files are uploaded to third-party cloud storage app:
 1. The third-party cloud storage app then uploads the files to their storage.
 
 For more information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage) and [microsoft/teams-js package](/javascript/api/@microsoft/teams-js).
-
 
 ## Code sample
 

@@ -846,9 +846,6 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-  - name: Third-party storage capability
-    href: concepts/device-capabilities/third-party-storage-capability.md
-    displayName: third party storage, drag drop, cloud storage
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
@@ -1142,6 +1139,9 @@
       displayName: share to meeting, personal app
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
+  - name: Third-party storage app
+    href: concepts/device-capabilities/third-party-storage-capability.md
+    displayName: third party storage, drag drop, cloud storage
   - name: Create deep links
     items:
     - name: Deep links overview
