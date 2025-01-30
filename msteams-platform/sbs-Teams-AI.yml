@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build a custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit
+title: Build a custom engine agent using Teams AI library and Teams Toolkit
 metadata:
-  title: Build a custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit
-  description: In this learn module, you'll learn how to build a bot with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  title: Build a custom engine agent using Teams AI library and Teams Toolkit
+  description: In this learn module, you'll learn how to build a custom engine agent with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
   audience: Developer
   level: Advanced
   ms.date: 07/23/2024
@@ -14,8 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: | 
-   Start Microsoft Teams app development with your custom engine agent to gain control over light operations using Teams AI library and Teams Toolkit. 
-    
+   
    You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the Language Model in accurately understanding and executing user intent, aligning it with app actions.
     
    In this tutorial, you'll learn:
