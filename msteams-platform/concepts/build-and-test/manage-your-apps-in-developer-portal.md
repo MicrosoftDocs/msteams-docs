@@ -125,7 +125,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
     > App validation is supported only for the apps with bot capability.
 
     <br>
-    <details.open>
+    <details id="details-section">
     <summary><b>Validate your app package</b></summary><br>
 
     To ensure that your app functions as expected in Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
