@@ -14,7 +14,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 
 </br>
 
-<details open>
+<details>
 
 <summary>How to troubleshoot?</summary>
 
