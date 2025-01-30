@@ -13,8 +13,7 @@ metadata:
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
-  content: | 
-   
+  content: |
    You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the Language Model in accurately understanding and executing user intent, aligning it with app actions.
     
    In this tutorial, you'll learn:
