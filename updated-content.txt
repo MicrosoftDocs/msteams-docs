@@ -1,0 +1,57 @@
+# Turning Ideas into Teams Apps
+
+Discover how to effectively utilize apps to assist your users within the Teams environment.
+
+Consider the following scenario:
+
+![Developing an app that shares weather forecasts with customers so they can plan their travel dates accordingly](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/developer-scenario.png)
+
+As a developer, you want to present useful and relevant information to your users. This is a common user story. Is it relatable? So, where does Teams come into play in this situation? Let's delve into this story to find out.
+
+## The Process of App Ideation
+
+![As a travel agency developer, you're creating apps for travelers](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/developer-scenario-01.png)
+
+### Understanding Your User
+
+Get to know your user to determine how they utilize Teams. 
+
+Key questions to ask:
+- Are most users predominantly using mobile clients?
+- What is the technical savvy of your primary users?
+
+### Understanding the Problem
+
+Recognize the user issue that your app aims to address. 
+
+Key questions to ask:
+- What are the strengths and weaknesses of your users' current system?
+- What problems are you aiming to solve?
+
+![Developing an app that sends users the destination's weather forecast](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/developer-scenario-02.png)
+
+### Listing App Requirements and Benefits
+
+Determine the features of your app and how it will solve the user's problem.
+
+Key questions to ask:
+- Do users require regular updates without having to manually check?
+- Is user authentication necessary?
+
+![Customers can now stay informed about weather conditions and plan in advance](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/developer-scenario-03.png)
+
+### User-centric Solutions
+
+Design an ideal app experience that meets your users' needs. 
+
+Key questions to ask:
+- Should only registered users receive regular assistance
+- What features would most benefit and enhance user experience?
+
+![Screenshot shows that customers are well-prepared for travelling!](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/developer-scenario-04.png)
+
+Moving forward, we will explore some Teams features that aid in building app solutions.
+
+## Next Steps
+
+[Explore Teams features](overview-explore.md)
