@@ -1,135 +1,88 @@
----
-title: Microsoft Teams tabs
-author: surbhigupta
-description: Learn to build tabs, webpages embedded in Microsoft Teams. Create a content page as part of personal, channel, or group tab.
-ms.localizationpriority: high
-ms.topic: overview
-ms.date: 01/23/2025
----
+# Microsoft Teams Tabs
 
-# Build tabs for Teams
+Microsoft Teams tabs are client-aware webpages that are embedded within Microsoft Teams, Outlook, and Microsoft 365. They utilize simple HTML `<iframe/>` elements that link to specified domains in the app manifest. Tabs can serve a variety of applications, such as enhancing content pages or providing Teams-specific functionalities.
 
-Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
+## Key Features
 
-> [!IMPORTANT]
-> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+- **Types of Tabs**:
+  - **Static Tabs**: Pinned for ease of access; no configuration required during addition.
+  - **Configurable Tabs**: Allow the specification of configurations during tab creation.
 
-There are two types of tabs, static and configurable tabs. These tabs can be utilized in three distinct scopes: `personal`, `groupchat`, and `teams`. [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) to group chats, channels, or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
+- **Scopes**:
+  - Personal
+  - Group Chat
+  - Teams
 
-Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app. For example, you can only pin a single YouTube app tab in a meeting. Static tabs in meetings can also be prepinned in meetings by IT Admins.
+See detailed documentation on creating personal tabs and extensions:
 
-The following images show tabs added to different contexts in Teams:
+- [Create a Personal Tab](~/tabs/how-to/create-personal-tab.md)
+- [Channel or Group Tabs](~/tabs/how-to/create-channel-group-tab.md)
 
-# [Personal](#tab/personal)
+## Benefits of Static Tabs
 
-**Teams desktop**
+- **Pinnable and Instant**: Easy addition and removal without configuration.
+- **Unified**: Versatile static tabs available across personal, group, and meeting scopes.
+- **Optional Configuration**: Flexibly modify tab `contentUrl` post-deployment.
 
-:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
+## Real-World Scenarios
 
-**Teams mobile**
+- **Corporate Website Access**: Embed information-rich sites within tabs for easy user access.
+- **Support Integration**: Add static tabs for support pages within Teams to complement bots or messaging extensions.
+- **Collaborative Access**: Provide users with access to shared resources or items through tabs that offer deep linkage.
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
----
+### Tab Demonstrations on Different Platforms
 
-# [Channel](#tab/channel)
+#### Personal Context
 
-**Teams desktop**
+**Desktop Preview**
 
-:::image type="content" source="~/assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="~/assets/images/tabs/tabs.png":::
+![Personal Tab in Teams Desktop](~/assets/images/tabs/personal-tab-configure.png)
 
-**Teams mobile**
+**Mobile Preview**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
----
+![Personal Tab in Teams Mobile](~/assets/images/tabs/mobile-design-access-tab.png)
 
-# [Meeting](#tab/meeting)
+#### Channel Context
 
-**Teams desktop**
+**Desktop Preview**
 
-:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting." lightbox="~/assets/images/tabs/personal-tab-meeting.png":::
+![Channel Tab in Teams Desktop](~/assets/images/tabs/tabs.png)
 
-**Teams mobile**
+**Mobile Preview**
 
-:::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
----
+![Channel Tab in Teams Mobile](~/assets/images/tabs/mobile-design-static-tab.png)
 
-Following are a few benefits of static tabs in chats, channels, and meetings:
+#### Meeting Context
 
-* **Pinnable and instant**: You can pin apps with static tabs from the add a tab **+** icon in chats, channels, and meetings. These tabs can be unpinned and don't have the mandatory configuration dialog, which allows you to create tabs that function more like apps.
+**Desktop Preview**
 
-* **Unified**: You can create one static tab that work in personal and group scopes such as chat, channel, and meeting tabs.
+![Meeting Tab in Teams Desktop](~/assets/images/tabs/personal-tab-meeting.png)
 
-* **Optional configuration**: You can change the default URL in your tab instance by changing the `contentUrl` property of your app after it's pinned in Teams.
+**Mobile Preview**
 
-[Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) also known as configurable tabs, deliver content to channels and group chats and is a way to create collaborative spaces around dedicated web-based content.
+![Meeting Tab in Teams Mobile](~/assets/images/tabs/mobile-personal-tab-meeting.png)
 
-The following table helps you determine best fit for your app:
+## Implementation Guide
 
-| &nbsp; | Personal | Channels | Group chat | Meetings |
-|---|---|---|
-|[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
+1. **Declare Custom Tabs**:
+   - Define URL and scope in the app manifest.
+   - Add the Teams JavaScript client library to incorporate specialized Teams features.
 
->[!NOTE]
-> If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific scope, Teams pins the static tab by default.
+2. **Use Tools for Tab Development**:
+   - Utilize Teams Toolkit in Visual Studio Code or Visual Studio for guided development.
 
-You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal static tab, channel or group tab, or dialog (referred as task module in TeamsJS v1.x). You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a personal, channel, or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
+3. **Configure Tabs**:
+   - Use the `configurableTabs` array for channel or group tabs by setting a configuration URL for custom content display.
 
-> [!NOTE]
-> **Posts** and **Files** can't be moved from their positions.
+For further details, explore how to [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) or [configure tabs](~/tabs/how-to/create-tab-pages/configuration-page.md).
 
-## Tab features
+## Next Steps
 
-The tab features are as follows:
+- **[Prerequisites](~/tabs/how-to/tab-requirements.md)**
+- Understand **[Tab Design Principles](design/tabs.md)**
+- Explore **[Mobile Tab Usability](design/tabs-mobile.md#tabs-on-mobile)**
+- Extend with **[Graph Permissions](how-to/authentication/tab-sso-graph-api.md)**
 
-* If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Microsoft Entra ID of the current user.
-* Locale awareness for the user to indicate language that is `en-us`.
-* Single sign-on (SSO) capability, if supported.
-* Ability to use bots or app notifications to deep link to the tab or to a subentity within the service, for example an individual work item.
-* The ability to open a modal dialog from links within a tab.
-* Reuse of SharePoint web parts within the tab.
+## Conclusion
 
-## Tabs user scenarios
-
-**Scenario:** Bring an existing web-based resource inside Teams.
-**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
-
-**Scenario:** Add support pages to a Teams bot or messaging extension.
-**Example:** You create static tabs that provide **about** and **help** webpage content to users.
-
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
-**Example:** You create a channel or group tab with deep linking to individual items.
-
-## Declare custom tab in app manifest
-
-A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
-
-Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For static tabs, the content URL is set directly in your Teams [app manifest](../resources/schema/manifest-schema.md#statictabs) by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
-
-> [!NOTE]
-> Teams apps can't use native plugins because they run inside sandboxed iframes.
-
-For channel or group tabs, you can also create an extra configuration page. This page allows you to configure content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple teams or group chats. On each subsequent install, your users can configure the tab, allowing you to tailor the experience as required. When users add or configure a tab, a URL is associated with the tab that is presented in the Teams user interface (UI). Configuring a tab simply adds more parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose, which board the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs).
-
-For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
-
-You can have multiple channels or group tabs, and up to 16 static tabs per app.
-
-### Tools to build tabs
-
-* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Prerequisites](~/tabs/how-to/tab-requirements.md)
-
-## See also
-
-* [Design your tab for Microsoft Teams](design/tabs.md)
-* [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
-* [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
-* [Microsoft Teams update](../resources/teams-updates.md)
-* [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
+By understanding and utilizing Teams tabs, developers can create more interactive and integrated experiences for users directly within Microsoft Teams.
