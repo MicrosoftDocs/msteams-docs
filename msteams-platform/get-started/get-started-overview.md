@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Get started
 
-Get started with building apps for Microsoft Teams and beyond!
+Get started with building apps and agents for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
@@ -43,7 +43,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
 If you want to build a basic tab app, select the following:
 
 > [!div class="nextstepaction"]
-> [Build your basic tab app](build-basic-tab-app.md)
+> [Build your basic tab apps](build-basic-tab-app.md)
 
 If a bot is what you're interested in, select the following:
 
