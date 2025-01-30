@@ -156,7 +156,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
 
-1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/) to certain incoming activities.
+1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app#bring-bot-code-to-your-project) to certain incoming activities.
 
 1. **Retrieve DataSource**: Teams AI library provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and Teams AI library calls it on demand.
 
