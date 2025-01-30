@@ -123,11 +123,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     If your app fails any test case, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report. For more information on Microsoft test cases, see [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Commercial marketplace certification policies](/legal/marketplace/certification-policies).
 
-    > [!NOTE]
-    >
-    > * App validation is supported only for the apps with bot capability.
-    > * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
-
     <br>
     <details>
     <summary><b>Validate your app package</b></summary><br>
@@ -173,6 +168,11 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
 
     </details>
+
+    > [!NOTE]
+    >
+    > * App validation is supported only for the apps with bot capability.
+    > * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
 * **Publish to org**:
 
