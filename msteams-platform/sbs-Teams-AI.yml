@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the Language Model in accurately understanding and executing user intent, aligning it with app actions.
+   You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the language model in accurately understanding and executing user intent, aligning it with app actions.
     
    In this tutorial, you'll learn:
 
@@ -30,7 +30,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you need for building and deploying your apps.
+   Here's a list of tools you need for building and deploying your custom engine agent.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
@@ -48,9 +48,10 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+   Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
+   You can use the toolkit with Visual Studio Code.
+   You can also use CLI (command-line interface), called `teamsapp`.
 
    # [Visual Studio Code](#tab/vscode)
 
@@ -93,7 +94,7 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
    ### Check for custom app upload option
 
@@ -133,17 +134,17 @@ items:
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   Now you’ve got all the tools to set up your account. The development environment is ready to start building the app project.
 
-- title: Create project workspace for your bot app
+- title: Create project workspace for your custom engine agent app
   durationInMinutes: 1
   content: |
 
-    Let's create your first bot app.
+    Let's create your first custom engine agent app.
     
     The custom engine agent capability of a Teams app creates an AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. A custom engine agent talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using the custom engine agent.
  
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the custom engine agent.
+    As you've already prepared for creating the app or the custom engine agent, you can set up a new Teams project for creating the custom engine agent.
 
     In this tutorial, you'll learn:
 
@@ -317,7 +318,7 @@ items:
 
     Teams Toolkit is the easiest way to scaffold and get a custom engine agent running. Teams Toolkit creates the basic structure for you to get started with configuring your custom engine agent. 
     
-    Let's get started to configure Teams AI library capabilities.
+    Let's get started to configure Teams AI library capabilities:
 
     1. Go to Visual Studio Code and open a terminal window.
     
@@ -330,7 +331,7 @@ items:
        ```
 
        > [!NOTE]
-       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
+       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
 
     1. Go to the `app.ts` file:
 
@@ -350,7 +351,7 @@ items:
                 
             ```
 
-        1. After "@microsoft/teams-ai"; add the following:
+        1. After "@microsoft/teams-ai", add the following:
 
             ```typescript
             // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -447,7 +448,7 @@ items:
             console.log('\nTo test your bot in Teams, sideload the app manifest.json within Teams Apps.');
             ```
    
-    1. In the root folder, create new folders **prompts** > **sequence**.
+    1. In the root folder, create new folder structure: **prompts** > **sequence**.
 
     1. Under **sequence**, create the following files:
        * config.json
@@ -480,7 +481,7 @@ items:
         }
         ```
 
-       The custom engine agent uses OpenAI or Azure OpenAI for its natural language modelling, the `config.json` file handles the language processing for the custom engine agent. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the agent's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
+       The custom engine agent uses OpenAI or Azure OpenAI for its natural language modelling. The `config.json` file handles the language processing for the custom engine agent. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the agent's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
 
     1. Go to the `skprompt.txt` file. Add the following instructions for OpenAI or Azure OpenAI to conduct and facilitate conversation:
 
@@ -780,7 +781,7 @@ items:
 
     You've done it!
 
-    You've created a custom engine agent.
+    You've created a custom engine agent to control the lights.
 
     :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
