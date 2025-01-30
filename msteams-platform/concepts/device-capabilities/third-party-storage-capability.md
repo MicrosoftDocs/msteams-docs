@@ -114,9 +114,9 @@ Here's how files are uploaded to third-party cloud storage app:
 
 1. The following parameters are obtained to call the `thirdPartyCloudStorage` API:
 
-   * `const uniqueIdForChats` = `replyToId` + `id` (that is, `threadId`).
+   * `const uniqueIdForChats` = `replyToId` + `id` (that is, `threadId`).
 
-      All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
+      All the above values are present in application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
 
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
@@ -174,7 +174,7 @@ Here's how files are uploaded to third-party cloud storage app:
 
 1. The third-party cloud storage app then uploads the files to their storage.
 
-For more information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage) and [microsoft/teams-js package](/javascript/api/@microsoft/teams-js).
+For more information, see [thirdPartyCloudStorage module](/javascript/api/@microsoft/teams-js/thirdpartycloudstorage) and [microsoft/teams-js package](/javascript/api/@microsoft/teams-js).
 
 
 ## Code sample
