@@ -46,6 +46,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Advanced step-by-step guide to build custom engine agent
+        url: sbs-Teams-AI.yml      
       - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
         url: bots/how-to/format-ai-bot-messages.md
       - text: Copilot handoff
