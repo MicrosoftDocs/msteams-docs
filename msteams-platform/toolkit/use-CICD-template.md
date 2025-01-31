@@ -1,7 +1,7 @@
 ---
 title: CI/CD templates
 author: MuyangAmigo
-description: In this module, learn how to use CI/CD pipeline templates in GitHub, set up pipeline with Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates.
+description: Learn how to use CI/CD pipeline templates in GitHub, set up pipeline with Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates.
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
