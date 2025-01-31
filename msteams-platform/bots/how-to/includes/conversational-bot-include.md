@@ -24,7 +24,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO a22d3980-2cf0-45fe-89a2-02a13cf8640e]
 <br>
 
 ## Design guidelines
@@ -303,7 +303,7 @@ Now you can send an introduction message when your bot is first installed or add
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
 
 > [!NOTE]
-> Tag mentions aren't supported in Government Community Cloud (GCC), GCC-High, and Department of Defense (DoD) tenants.
+> Tag mentions aren't supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
 >
 ##### Mention tags in a text message
 

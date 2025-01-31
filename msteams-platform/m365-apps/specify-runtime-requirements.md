@@ -35,6 +35,8 @@ The following Microsoft 365 host applications support the ability to specify run
 | Microsoft 365 (Office)| | | |
 | Microsoft 365 Copilot | | | |
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 ## Specify relationships between app capabilities (`elementRelationshipSet`)
 
 You can specify relationships among the individual capabilities of your app by including an `elementRelationshipSet` in your app manifest. Use this object to specify both [one-way dependencies](#one-way-dependencies) and [mutual dependencies](#mutual-dependencies) among app capabilities.

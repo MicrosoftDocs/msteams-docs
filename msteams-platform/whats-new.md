@@ -33,6 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 January**
 
+* ***January 31, 2025***: [Create a scenario based custom engine agent using Teams Toolkit and Teams AI library](sbs-Teams-AI.yml).
+* ***January 23, 2025***: Plan for [government](concepts/cloud-overview.md) and [sovereign](concepts/sovereign-cloud.md) clouds.
 * ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
 * ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
 
@@ -77,7 +79,6 @@ Teams platform features that are available to all app developers.
 | 21/08/2024 | Use sample prompts to guide the users for using various plugins within Microsoft 365 Copilot. | Publish your app > Publish to the Teams Store > Review Copilot validation guidelines > [Sample prompts](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md#sample-prompts) |
 | 31/07/2024 | Use app validation tool to validate your Teams app in Developer Portal for Teams. | Tools and SDKs > Tools > Developer Portal for Teams > [Publish](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish) |
 | 03/07/2024 | share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Share to stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#screen-share-content-to-meetings) |
-| 02/07/2024 | Extend bot-based message extension plugins to Teams meetings. | Build message extensions > Build message extensions using Bot Framework > Search Commands > [Enable message extension as a plugin for Copilot for meetings](messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings) |
 | 26/06/2024 | Introduced AI label, citations, feedback buttons, and sensitivity labels in bot messages. | Build bots > Build conversations > [Bot messages with AI-generated content](bots/how-to/format-ai-bot-messages.md)|
 | 26/06/2024 | Debug message extension app in Test Tool. |Tools and SDKs > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug message extension app in Test Tool](bots/how-to/format-ai-bot-messages.md)|
 | 24/06/2024 | Static tabs are generally available for chats, channels, and meetings. | Build tabs > [Build tabs for Teams](tabs/what-are-tabs.md)|
@@ -108,7 +109,7 @@ Teams platform features that are available to all app developers.
 |25/01/2024|Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams.|Build message extension > Build message extensions using Bot Framework > [Micro-capabilities for website links](messaging-extensions/how-to/micro-capabilities-for-website-links.md)|
 |24/01/2024|Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.|[Debug your AI chat bot using Teams App Test Tool](sbs-teams-app-test-tool.yml)|
 |19/01/2024|Use / to invoke message extensions from command box in the new Teams client.|Build message extension > [Build message extensions using Bot Framework](messaging-extensions/build-bot-based-message-extension.md)|
-|04/01/2024|Apps for Teams meetings are available in Department of Defense (DOD) environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|04/01/2024|Apps for Teams meetings are available in Department of Defense (DoD) environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 
 <br/>
 </details>
@@ -121,7 +122,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|20/12/2023|Incoming Webhooks are available in GCC-High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
+|20/12/2023|Incoming Webhooks are available in GCC High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
 |20/12/2023|Introduced RSC permissions for users to access different resources.| Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access) |
 |18/12/2023|App caching in chat, channel, and meeting tab scopes is available for iOS.| Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 |15/12/2023|Bots can mention tags in text messages and Adaptive Cards posted in Teams channels.| Build bots > Bot conversation > [Channel and group chat conversations with a bot](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) |
@@ -132,7 +133,7 @@ Teams platform features that are available to all app developers.
 |17/11/2023|Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Teams app Test Tool](toolkit/debug-your-Teams-app-test-tool.md) |
 |14/11/2023|Use callRecording API to fetch meeting recording from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
 |14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.||
-|03/11/2023|Apps for Teams meetings are available in GCC-High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|03/11/2023|Apps for Teams meetings are available in GCC High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |25/10/2023|Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
 |11/10/2023|Introduced the new Microsoft Teams client to provide better experience for your apps and users. | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
 |05/10/2023|Use callTranscript API to fetch meeting transcript from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
@@ -159,10 +160,10 @@ Teams platform features that are available to all app developers.
 | 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
 | 14/04/2023 | App update in any one context where the app is installed automatically updates the app in all the related contexts (chats, channels, and meetings). | Publish your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
 | 06/04/2023 | Set up Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing that allows easy management and tracking of licenses for third-party app subscriptions within Teams. | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
-| 04/04/2023 | Tab apps in shared channels are available in Department of Defense (DOD) environment. | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
+| 04/04/2023 | Tab apps in shared channels are available in Department of Defense (DoD) environment. | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
 | 23/03/2023 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 20/03/2023 | Bots are available in Department of Defense (DOD) environment. | Build bots > [Overview](bots/what-are-bots.md)|
-| 20/03/2023 | Message extensions are available in Department of Defense (DOD) environment. | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
+| 20/03/2023 | Bots are available in Department of Defense (DoD) environment. | Build bots > [Overview](bots/what-are-bots.md)|
+| 20/03/2023 | Message extensions are available in Department of Defense (DoD) environment. | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
 | 28/02/2023 | Use the resources and best practices to support the rollout of your Teams app in your customers’ organizations and facilitate adoption of your app. | Publish your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
 | 27/02/2023 | Use Changelog to view the latest updates on Developer Portal about features, recent changes in APIs, and important bug fixes. | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
 | 23/02/2023 | Enable single sign-on (SSO) authentication to access Adaptive Cards Universal Actions in a bot. | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
@@ -220,7 +221,7 @@ Teams platform features that are available to all app developers.
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams Store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
-| 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
+| 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/cloud-overview.md#teams-app-capabilities) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 | 04/22/2022 | Test preview for monetized apps | Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 | 04/22/2022 | In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
@@ -439,15 +440,12 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 November**
-
-* ***November 19, 2024***: [Introduced optional `abbreviated` property for app display name on the app bar.](./resources/schema/manifest-schema-dev-preview.md#name)
-* ***November 18, 2024***: [Stream bot messages to deliver the bot's response to users in real-time.](bots/streaming-ux.md)
-
 :::column-end:::
 :::row-end:::
 
-<br>
+<br/>
+
+</br>
 
 <details>
 
@@ -455,6 +453,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 19/11/2024 | Introduced optional `abbreviated` property for app display name on the app bar. | App manifest > Public developer preview > Public developer preview app manifest > [name](~/resources/schema/manifest-schema-dev-preview.md#name) |
+| 18/11/2024 | Stream bot messages to deliver the bot's response to users in real-time. | Build bots > Build custom engine agent > [Stream bot messages](bots/streaming-ux.md) |
 | 17/10/2024 | Learn about runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | Extend your app across Microsoft 365 > [Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
 | 17/10/2024 | Learn about copilotExtensions renamed to copilotAgents in developer preview app manifest. | App manifest > Public developer preview app manifest > [copilotAgents](resources/schema/manifest-schema-dev-preview.md#copilotagents) |
 | 16/09/2024 | Learn about requirements for the validation of your agent to increase its chances of being listed on Teams Store. | Publish to the Teams Store > [Validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) |
@@ -540,27 +540,29 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***August 02, 2024***: The Collaboration controls for model-driven applications are retired.
-
-* ***July 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before September 2024 to ensure continued functionality.
-* ***July 16, 2024***: The existing [Microsoft 365 (previously called Office 365) connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
-
-* ***April 30, 2024***: In tab experiences, tab margins are deprecated.
-
-* ***April 12, 2024***: The `packageName` property is deprecated as part of app manifest v1.17.
-
-* ***April 10, 2024***: [Location](concepts/device-capabilities/location-capability.md#location-apis) and [Media](concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
-
-* ***April 10, 2024***: The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame.
-
-* ***April 01, 2024***: Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
-
-* ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
-
-* ***February 02, 2024***: The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming [Collaboration controls](~/samples/collaboration-control.md) retirement.
+* ***January 17, 2025***: Copilot plugin as a message extension in Teams meeting is deprecated.
+* ***January 16, 2025***: [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation)
 
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 02/08/2024| The Collaboration controls for model-driven applications are retired. |  |
+| 25/07/2024| Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before September 2024 to ensure continued functionality. | Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) |
+| 16/07/2024| The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/). | [Build webhooks and connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) |
+| 30/04/2024| In tab experiences, tab margins are deprecated. | |
+| 12/04/2024| The `packageName` property is deprecated as part of app manifest v1.17. | |
+| 10/04/2024| Location and Media APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md#location-apis) and [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md#media-capability-apis) |
+| 10/04/2024| The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame. | Resources > [Know about New Microsoft Teams client](resources/teams-updates.md#limitations)|
+| 01/04/2024| Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to Microsoft Graph PowerShell. | [Microsoft Graph PowerShell overview](/powershell/microsoftgraph/overview)|
+| 02/02/2024 | Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before June 2024 to ensure continued functionality. |Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers)|
+| 02/02/2024 | The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming Collaboration controls retirement. | |
+
+</details>
 
 <details>
 <summary><b>2023</b></summary>
