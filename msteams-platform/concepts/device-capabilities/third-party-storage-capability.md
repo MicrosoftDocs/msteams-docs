@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.date: 01/31/2025
 ---
 
-# Third-party cloud storage capability
+# Third-party cloud storage app
 
 Microsoft Teams provides the flexibility to change the default storage from OneDrive and SharePoint to a preferred third-party cloud storage provider app. When a file is drag-dropped into the message compose area of a Teams chat or channel, you can allow the file to be stored in a third-party cloud storage using the Microsoft Teams JavaScript client library (TeamsJS).
 
