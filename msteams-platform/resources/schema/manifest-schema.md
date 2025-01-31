@@ -1104,7 +1104,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the menu item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
+|`tabs.groups.controls.items.actionId`| String | 64 characters | | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
 |`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))). This API installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
