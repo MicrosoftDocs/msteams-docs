@@ -1,0 +1,788 @@
+### YamlMime:Tutorial
+title: Build a custom engine agent using Teams AI library and Teams Toolkit
+metadata:
+  title: Build a custom engine agent using Teams AI library and Teams Toolkit
+  description: Learn how to build a custom engine agent with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  audience: Developer
+  level: Advanced
+  ms.date: 07/23/2024
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+  nextTutorialTitle: Teams AI library
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+   You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the language model in accurately understanding and executing user intent, aligning it with app actions.
+    
+   In this tutorial, you'll learn:
+
+   - How to set up a new project with Teams Toolkit.
+   - How to import Teams AI library capabilities.
+   - How to deploy your custom engine agent in Teams and control over light operations.
+
+   You can see the following output:
+
+   :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+
+   Here's a list of tools you need for building and deploying your custom engine agent.
+
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | &nbsp; |[Teams Toolkit](#install-the-teams-toolkit) |	Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with apps for chat, meetings, and call all in one place.|
+   | &nbsp; |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
+   | &nbsp; |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) or [Azure OpenAI](https://azure.microsoft.com/free/)|First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
+   | &nbsp; |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
+   
+   ## Prepare development environment
+
+   After you've installed the required tools, set up the development environment.
+
+   ### Install the Teams Toolkit
+
+   Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+    
+   You can use the toolkit with Visual Studio Code.
+   You can also use CLI (command-line interface), called `teamsapp`.
+
+   # [Visual Studio Code](#tab/vscode)
+
+   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+   1. In the search box, enter **Teams Toolkit**.
+   1. Select **Install** next to the Teams Toolkit.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+
+   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+   # [Command line](#tab/cli)
+
+   To install the Teamsapp CLI, use the `npm` package manager:
+
+   ``` bash
+   npm install -g @microsoft/teamsapp-cli
+   ```
+
+   Depending on your configuration, you might need to use `sudo` to install the CLI:
+
+   ``` bash
+   sudo npm install -g --unsafe-perm @microsoft/teamsapp-cli
+   ```
+
+   This condition is more common on Linux and macOS systems.
+
+   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
+
+   You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
+
+   > [!CAUTION]
+   > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
+
+   ---
+
+   ## Set up your Teams development tenant
+
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+   ### Check for custom app upload option
+
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+
+   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+   Verify if you can upload a custom app in Teams:
+
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+   ### Create a free Teams developer tenant (optional)
+
+   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+   1. Select **Join Now** and follow the onscreen instructions.
+   1. In the welcome screen, select **Set up E5 subscription**.
+   1. Set up your administrator account. After you finish, the following screen appears.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+   ## Get a free Azure account
+
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+   Now you’ve got all the tools to set up your account. The development environment is ready to start building the app project.
+
+- title: Create project workspace for your custom engine agent app
+  durationInMinutes: 1
+  content: |
+
+    Let's create your first custom engine agent app.
+    
+    The custom engine agent capability of a Teams app creates an AI chatbot. You use it to run simple and automated tasks, for example, providing customer service. A custom engine agent talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using the custom engine agent.
+ 
+    As you've already prepared for creating the app or the custom engine agent, you can set up a new Teams project for creating the custom engine agent.
+
+    In this tutorial, you'll learn:
+
+    1. [How to set up a new custom engine agent project with Teams Toolkit.](#create-your-custom-engine-agent-project-workspace)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-app-source-code)
+
+    ## Create your custom engine agent project workspace
+
+    If the prerequisites are in place, let's begin!
+
+    # [Visual Studio Code](#tab/vscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+
+    1. Select **Create a New App**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+
+    1. Select **Custom Engine Agent**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-project.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+
+    1. Select **Basic AI chatbot**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/basic-ai-chatbot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+   
+    1. Select **TypeScript** as the programming language.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/typescript-programming-language.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+
+    1. Select **OpenAI** or **Azure OpenAI**.
+    
+        :::image type="content" source="assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+
+     
+    1. Enter **OpenAI Key** or **Azure OpenAI key and Azure OpenAI Endpoint**.
+
+    1. Select **Default folder** to store your project root folder in default location.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+       You can also change the default location by the following steps:
+
+       1. Select **Browse**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+
+       1. Select the location for project workspace.
+       1. Select the **Select Folder**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+
+    1. Enter a suitable name for your app and then select **Enter**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+
+        A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
+    
+        Your custom engine agent is created in a few seconds.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
+
+        After your app is created, the Teams Toolkit displays the following message:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
+    
+       
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/typescript-bot-app.gif)
+    </details>
+
+    # [Command line](#tab/cli)
+
+    Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
+
+    ``` bash
+    teamsapp new
+    ```
+
+    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
+    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+
+    1. Select **Create a new Teams app**.
+    1. Select **Bot** and deselect **Tab**.
+    1. Select **JavaScript** as the programming language.
+    1. Select **Enter** to select the default workspace folder.
+    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+
+    After you've answered all questions, your project is created.
+
+    ---
+
+    ## Take a tour of the app source code
+
+    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+
+    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+
+    | Folder name | Contents |
+    | --- | --- |
+    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
+    | `index.ts` |  Main entry point for the app. |
+    | `teamsBot.ts` | Teams activity handler. |
+    | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
+    | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
+    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
+    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
+    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
+
+
+- title: Build and run your first custom engine agent
+  durationInMinutes: 1
+  content: |
+
+    After you set up your project workspace with Teams Toolkit, build your project. Ensure that you've signed in to your Microsoft 365 account.
+
+    ## Sign in to your Microsoft 365 account
+
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    # [Visual Studio Code](#tab/viscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
+
+        Your default web browser opens to let you sign in to the account.
+
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+
+        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+
+        Now you're ready to build the app and run it locally!
+
+    # [Command line](#tab/cline)
+
+    1. Sign in to Microsoft 365 with the Teamsapp CLI:
+
+        ``` bash
+        teamsapp account login m365
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+    2. Sign in to Azure with the Teamsapp CLI:
+
+        ``` bash
+        teamsapp account login azure
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
+
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    ---
+
+    ## Update your custom engine agent with Teams AI library capabilities
+
+    Teams Toolkit is the easiest way to scaffold and get a custom engine agent running. Teams Toolkit creates the basic structure for you to get started with configuring your custom engine agent. 
+    
+    Let's get started to configure Teams AI library capabilities:
+
+    1. Go to Visual Studio Code and open a terminal window.
+    
+    1. Run the following command in the terminal to install `yarn`:
+
+       ```bash
+       npm install
+       npm install @microsoft/teams-ai
+       
+       ```
+
+       > [!NOTE]
+       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
+
+    1. Go to the `app.ts` file:
+
+
+       1. Add `TurnContext` to the import statement as follows:
+
+          ```typescript
+
+          import { MemoryStorage, TurnContext} from 'botbuilder';
+          ```
+
+       1. Add `DefaultConversationState, Memory, TurnState` to the `"@microsoft/teams-ai"` import statement as follows:       
+     
+           ```typescript
+                // See https://aka.ms/teams-ai-library to learn more about the Teams AI library.
+                import { Application, ActionPlanner, DefaultConversationState, Memory, TurnState, OpenAIModel, PromptManager } from "@microsoft/teams-ai";
+                
+            ```
+
+        1. After "@microsoft/teams-ai", add the following:
+
+            ```typescript
+            // eslint-disable-next-line @typescript-eslint/no-empty-interface
+            interface ConversationState extends DefaultConversationState {
+              lightsOn: boolean;
+            }
+            type ApplicationTurnState = TurnState<ConversationState>;
+
+            if (!process.env.OPENAI_API_KEY) {
+            throw new Error('Missing environment variables - please check that OPENAI_KEY or AZURE_OPENAI_KEY is set.');
+            }
+            ```
+
+        1. After `Define storage and application code`, add the following:
+
+            ```typescript
+            // Define a prompt function for getting the current status of the lights
+            planner.prompts.addFunction('getLightStatus', async (context: TurnContext, memory: Memory) => {
+            return memory.getValue('conversation.lightsOn') ? 'on' : 'off';
+            });
+            ```
+
+        1. After `return memory.getValue('conversation.lightsOn') ? 'on' : 'off';`, add the following:
+
+           ```typescript
+           // Register action handlers
+           app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
+               state.conversation.lightsOn = true;
+               await context.sendActivity(`[lights on]`);
+               return `the lights are now on`;
+           });
+
+           app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
+               state.conversation.lightsOn = false;
+               await context.sendActivity(`[lights off]`);
+               return `the lights are now off`;
+           });
+
+           interface PauseParameters {
+               time: number;
+           }
+
+           app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
+               await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
+               await new Promise((resolve) => setTimeout(resolve, parameters.time));
+               return `done pausing`;
+           });
+           ```
+
+    1. Go to the `adapter.ts` file:
+
+       1. Under `Import required bot services.`, remove the existing code and update the following:
+
+          ```typescript
+          // Import required bot services.
+          // See https://aka.ms/bot-services to learn more about the different parts of a bot.
+          import { TeamsAdapter } from '@microsoft/teams-ai';
+          import { ConfigurationServiceClientCredentialFactory } from 'botbuilder';
+          ```
+
+        1. Remove the following code under `This bot's main dialog.`:
+
+            ```typescript
+            // This bot's main dialog.
+            import config from "./config";
+
+            const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
+            {},
+            new ConfigurationServiceClientCredentialFactory(config)
+            );
+            ```
+
+        1. After `import { ConfigurationServiceClientCredentialFactory } from 'botbuilder';`, replace the code under `Create adapter.` with the following:
+
+            ```typescript
+            // Create adapter.
+            // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+            const adapter = new TeamsAdapter(
+                {},
+                new ConfigurationServiceClientCredentialFactory({
+                    MicrosoftAppId: process.env.BOT_ID,
+                    MicrosoftAppPassword: process.env.BOT_PASSWORD,
+                    MicrosoftAppType: 'MultiTenant'
+                })
+            );
+            ```
+
+    1. Go to the `index.ts` file:
+        
+        1. In the `Create HTTP server.`, after `console.log(`\nBot Started, ${server.name} listening to ${server.url}`);` add the following:
+
+            ```typescript
+            console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
+            console.log('\nTo test your bot in Teams, sideload the app manifest.json within Teams Apps.');
+            ```
+   
+    1. In the root folder, create new folder structure: **prompts** > **sequence**.
+
+    1. Under **sequence**, create the following files:
+       * config.json
+       * skprompt.txt
+       * actions.json
+
+    1. Go to the `config.json` file and add the following code to create the prompt model settings:
+    
+        ```config.json
+        {
+            "schema": 1.1,
+            "description": "A bot that can turn the lights on and off",
+            "type": "completion",
+            "completion": {
+                "model": "gpt-3.5-turbo",
+                "completion_type": "chat",
+                "include_history": true,
+                "include_input": true,
+                "max_input_tokens": 2800,
+                "max_tokens": 1000,
+                "temperature": 0.2,
+                "top_p": 0.0,
+                "presence_penalty": 0.6,
+                "frequency_penalty": 0.0,
+                "stop_sequences": []
+            },
+            "augmentation": {
+                "augmentation_type": "sequence"
+            }
+        }
+        ```
+
+       The custom engine agent uses OpenAI or Azure OpenAI for its natural language modelling. The `config.json` file handles the language processing for the custom engine agent. This file, initiated by the `PromptManager` from the `index.ts` file, oversees the agent's language processing. On initiating a prompt, the prompt manager searches for the prompt config file (sequence/config.json) and passes the prompt settings to OpenAI or Azure OpenAI.
+
+    1. Go to the `skprompt.txt` file. Add the following instructions for OpenAI or Azure OpenAI to conduct and facilitate conversation:
+
+        ```text
+        The following is a conversation with an AI assistant.
+        The assistant can turn a light on or off.
+
+        context:
+       The lights are currently {{getLightStatus}}.
+
+        ```
+
+        The `skprompt.txt` file contains text prompts with which the users interact with OpenAI or Azure OpenAI. OpenAI or Azure OpenAI attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
+
+    1. Go to the `actions.json` file. Add the following code to define the actions for the custom engine agent:
+
+        ```json
+        {
+        
+            {
+                "name": "LightsOn",
+                "description": "Turn the lights on",
+                "parameters": []
+            },
+            {
+                "name": "LightsOff",
+                "description": "Turn the lights off",
+                "parameters": []
+            },
+            {
+                "name": "Pause",
+                "description": "Delays for a period of time",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "time": {
+                            "type": "number",
+                            "description": "The amount of time to delay in milliseconds"
+                        }
+                    },
+                    "required": [
+                        "time"
+                    ]
+                }
+            }
+        }
+        ```
+
+        The `actions.json` file contains the actions that the custom engine agent can perform. The `ActionPlanner` from the `index.ts` file uses the actions defined in the `actions.json` file to perform the actions.
+
+    This sample uses OpenAI or Azure OpenAI for all its natural language modeling, the user can talk to the custom engine agent in any language of their choosing. The custom engine agent understands and responds appropriately without extra code.
+
+    ## Build and run your custom engine agent locally
+
+    To build and run your app in the local environment:
+
+    1. Select the **F5** key to run your app in debug mode.
+
+        > [!NOTE]
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+
+        <!-- markdownlint-disable MD033 -->
+
+        <details>
+        <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+
+        1. Checks all the following prerequisites:
+          - You're logged in with a Microsoft 365 account.
+          - Custom app upload is enabled for your Microsoft 365 account.
+          - Supported Node.js version is installed.
+          - Port required by bot app is available.
+          
+        2. Install npm packages.
+        3. Starts Dev Tunnel to create an HTTP tunnel.
+        4. Registers the app in Microsoft Entra ID and configures the app.
+        5. Registers the app in Bot Framework SDK and configures the app.
+        6. Registers the app in Teams Developer Portal and configures the app.
+        7. Starts the app.
+        8. Starts Teams in a web browser and uploads the app.
+
+
+        </details>
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
+
+        > [!NOTE]
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
+
+        Teams runs your app in a web browser.
+
+    1. Sign in with your Microsoft 365 account, if prompted.
+
+    1. Select **Add** when prompted to upload your app onto Teams on your local machine.
+
+        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
+
+        Now the custom engine agent is successfully running on Teams! After the app is loaded, a chat session with the custom engine agent opens.
+
+        :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+
+        You can type `LightsOn` to start interacting with the custom engine agent.
+
+      <!-- markdownlint-disable MD033 -->
+      <details>
+      <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
+
+      > [!IMPORTANT]
+      > Uploading custom apps are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](concepts/app-fundamentals-overview.md) environments.
+
+      > [!TIP]
+      > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
+      </details> 
+      
+- title: Deploy your custom engine agent
+  durationInMinutes: 1
+  content: |
+
+    You've learned to create, build, and run custom engine agent. The final step is to deploy your app on Azure.
+
+    Let's deploy the custom engine agent on Azure using Teams Toolkit.
+
+    ## Sign in to your Azure account
+
+    Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
+
+    # [Visual Studio Code](#tab/viscode)
+
+    1. Open Visual Studio Code.
+    1. Open the project folder in which you created the app.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select **Sign in to Azure**.
+
+        > [!TIP]
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+
+        Your default web browser opens to let you sign in to the account.
+    1. Sign in to your Azure account using your credentials.
+    1. Close the browser when prompted and return to Visual Studio Code.
+
+        The **ACCOUNTS** section in the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+        Now you're ready to deploy your app to Azure!
+
+        Congratulations, you've created a custom engine agent! 
+
+    # [Command line](#tab/cline)
+
+    1. Sign in to Microsoft 365 with the Teamsapp CLI:
+
+        ``` bash
+        teamsapp account login m365
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+    2. Sign in to Azure with the Teamsapp CLI:
+
+        ``` bash
+        teamsapp account login azure
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
+
+        Congratulations, you've signed in your Azure account!
+
+    ---
+
+    ## Deploy your app to Azure
+
+    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the custom engine agent.
+    <br>
+    <br>
+    <details>
+    <summary>What's the difference between Provision and Deploy?</summary>
+    <br>
+    The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+    </details>
+    <br>
+
+    # [Visual Studio Code](#tab/vscode)
+
+    Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
+
+    1. Select **Provision**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+
+    1. Select a subscription to use for the Azure resources.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+
+        Your app is hosted using Azure resources.
+
+        A dialog warns you that costs might be incurred when running resources in Azure.
+
+    1. Select **Provision**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs incurred when running resources in Azure.":::
+
+        The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
+
+        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+
+        The provisioned resource appears in the **ENVIRONMENT** section.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
+
+    1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
+
+        As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+
+        Now, you can use the same process to deploy your custom engine agent to Azure.
+
+    # [Command Line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsapp provision`.
+
+        ``` bash
+        teamsapp provision
+        ```
+
+    When prompted, select an Azure subscription to use Azure resources.
+
+    Your app is hosted using Azure resources.
+
+    1. Run `teamsapp deploy`.
+
+        ``` bash
+        teamsapp deploy
+        ```
+
+    ---
+
+    ## Run the deployed app
+
+    After the provisioning and deployment steps are complete:
+
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
+    1. Select the **Start debugging (F5)** to launch your app from Azure.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+
+    1. Select **Add**.
+        
+        The toolkit displays a message to indicate that the app is added to Teams.
+
+        :::image type="content" source="assets/images/bots/conversational-AI-add-sample-bot.png" alt-text="Screenshot shows an example of the add option to add a sample bot to the local machine.":::
+
+        Your app is loaded on Teams client.
+
+        :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn what happens when you deployed your app to Azure</summary>
+
+    Before deployment, the application has been running locally:
+
+     * The backend runs using **Azure Functions Core Tools**.
+     * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+     * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+     * The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+    </details>
+
+    Before deployment, the application has been running locally:
+
+      * The backend runs using **Azure Functions Core Tools**.
+      * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+      Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+      * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+      </details>
+
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
+
+    You've done it!
+
+    You've created a custom engine agent to control the lights.
+
+    :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
+
+    You've completed the tutorial.
