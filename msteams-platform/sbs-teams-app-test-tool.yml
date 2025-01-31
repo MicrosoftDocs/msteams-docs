@@ -2,7 +2,7 @@
 title: Debug your AI chat bot using Teams App Test Tool
 metadata:
   title: Teams App Test Tool to Debug AI Chatbot
-  description: In this module, learn how to create project workspace, build, run, and debug AI chat bot using Teams App Test Tool and about activity triggers.
+  description: Learn how to create project workspace, build, run, and debug AI chat bot using Teams App Test Tool and about activity triggers.
   audience: Developer
   level: Advanced
   ms.date: 10/21/2021
@@ -121,8 +121,8 @@ items:
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     |`src/app.js`| Handles business logics for the AI chat bot.|
     |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
-    |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Test Tool.|
+    |`teamsapp.local.yml`|This override `teamsapp.yml` with actions that enable local execution and debugging.|
+    |`teamsapp.testtool.yml`|This override `teamsapp.yml` with actions that enable local execution and debugging in Test Tool.|
 
 - title: Build and run your AI chat bot app
   durationInMinutes: 1
