@@ -510,8 +510,8 @@ Describes relationships between individual app capabilities, including `staticTa
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components (each represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element)).|
-| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities. Each relationship is represented by a `mutualDependency` array of [`element` objects](#element). |
+| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components. Each relationship is represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element) object.|
+| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities. Each relationship is represented by a `mutualDependency` array of [`element`](#element) objects. |
 
 ### element
 
@@ -527,9 +527,9 @@ Describes an app capability (`element`) in an `elementRelationshipSet`.
 
 ### elementRelationshipSet.oneWayDependency
 
-Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
-
 **Optional** &ndash; Object
+
+Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -538,9 +538,9 @@ Describes the unidirectional dependency of one app capability (X) to another (Y)
 
 ### elementRelationshipSet.mutualDependencies
 
-Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
-
 **Optional** &ndash; Array of arrays (each containing two or more [`element` objects](#element))
+
+Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
 ## copilotAgents
 
