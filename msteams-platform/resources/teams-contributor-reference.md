@@ -1,6 +1,6 @@
 ---
-title: Guidelines- Teams Content Contribution
-description: Learn how to set up workspace and publish Teams documentation, and explore contributor guides, content and style guides, markdown references, and code samples.
+title: Guidelines - Teams Content Contribution
+description: Learn how to set up workspace and publish Teams documentation, explore contributor guides, content and style guides, markdown references, and code samples.
 ms.localizationpriority: medium
 ms.topic: contributor-guide
 ms.date: 07/27/2022

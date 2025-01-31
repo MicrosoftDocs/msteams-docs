@@ -1,6 +1,6 @@
 ---
 title: Requirements for Building Tabs
-description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
+description: Learn about the permissions, compatibility, and other prerequisites, and tools required to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 03/28/2023
