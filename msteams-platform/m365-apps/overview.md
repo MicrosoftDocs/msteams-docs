@@ -93,7 +93,7 @@ To get started with apps extended across Microsoft 365, see [app playbooks](/mic
 
 Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
-For more information, see [Actions in Microsoft 365](actions-in-m365.md)
+For more information, see [Actions in Microsoft 365](actions-in-m365.md).
 
 ## Microsoft commercial marketplace submission
 
