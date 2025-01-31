@@ -9,15 +9,15 @@ ms.date: 12/11/2024
 
 # Create a configurable tab
 
-<!--
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your configurable tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
-## Create a configurable tab with Node.js
+## Create a configurable tab with JavaScript
 
+<!--
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
     ```cmd
