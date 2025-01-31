@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Environments in Teams Toolkit
 author: surbhigupta
-description: Learn about TeamsFX multi-environment such as, create a new environment manually in Visual Studio Code, and select target environment.
+description: Learn about TeamsFX multiple environment, use env files with Teams Toolkit, create a new environment manually in Visual Studio Code, and select target environment.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
