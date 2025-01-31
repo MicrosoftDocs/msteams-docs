@@ -27,7 +27,7 @@ Message extension search commands allow users to search external systems and ins
 
 See the following video to learn how to define message extension search commands:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
 <br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
