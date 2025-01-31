@@ -122,7 +122,7 @@ Here's how the files are uploaded to third-party cloud storage app:
 
       All the above values are present in the application context. If `"commandContext" = "thirdParty"`, it helps third-party cloud storage app to determine that the app is opened programmatically. If `replyToId` isn't present in the context, then the unique ID is `""+threadId`.
 
-      Tha following image shows the sample of the application context with the values to create the unique ID highlighted:
+      The following image shows the sample of the application context with the values to create the unique ID highlighted:
 
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
