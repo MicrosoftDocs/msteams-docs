@@ -33,7 +33,6 @@ Teams platform features that are available to all app developers.
 
 **2025 January**
 
-* ***January 21, 2025***: [Specify Microsoft 365 host runtime requirements in your production app manifest](m365-apps/specify-runtime-requirements.md).
 * ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
 * ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
 
