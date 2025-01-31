@@ -549,16 +549,12 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 
 ### customEngineAgents
 
-> [!NOTE]
-> Custom engine agents support in Microsoft 365 Copilot is currently in limited private preview and not all developers have access during the staged rollout.
-
 Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
-
 
 ## configurableTabs
 
