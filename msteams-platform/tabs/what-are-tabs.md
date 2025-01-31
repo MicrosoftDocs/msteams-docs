@@ -28,7 +28,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png"
 ---
 
 # [Channel](#tab/channel)
@@ -39,7 +39,7 @@ The following images show tabs added to different contexts in Teams:
 
 **Teams mobile**
 
-:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png"
 ---
 
 # [Meeting](#tab/meeting)
@@ -51,7 +51,7 @@ The following images show tabs added to different contexts in Teams:
 **Teams mobile**
 
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
----
+***
 
 Following are a few benefits of static tabs in chats, channels, and meetings:
 
@@ -116,10 +116,36 @@ For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. T
 
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
-### Tools to build tabs
+## Build a tab app
 
-* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
+
+For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
+
+<!--
+## Tools to build tabs
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
+| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+
+### Build your Teams tab
+-->
+
+Now let's build your tab. But first select your choice of tab to build:
+
+> [!div class="nextstepaction"]
+> [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Build a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 
 ## Next step
 
@@ -133,3 +159,5 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
 * [Microsoft Teams update](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
+* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
