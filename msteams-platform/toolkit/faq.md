@@ -19,10 +19,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 <summary>How to troubleshoot?</summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
-
-</br>
-
-</details>
+</details >
 
 <details>
 
