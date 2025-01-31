@@ -1,48 +1,45 @@
----
-title: Use Teams Platform to Build Apps 
-author: heath-hamilton
-description: Learn about Teams platform capabilities such as tabs, bots, message extensions, webhooks, connectors, Microsoft Graph, Adaptive Card, and Copilot extensibility.
-ms.topic: overview
-ms.localizationpriority: high
-ms.date: 10/11/2024
----
+# Introduction to Microsoft Teams Platform Features
 
-# Explore Teams platform features
+Microsoft Teams is a versatile platform designed to enhance communication and productivity within organizations. With Teams, you can develop applications tailored to address specific organizational needs, while leveraging the platform's extensive capabilities. Be it desktop or mobile applications, Teams offers a multitude of features to enhance the design and operation of your application.
 
-With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
+![Graphic shows the conceptual representation of Teams as a platform and its capabilities.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/what-is-m365-dev-plat.png)
 
-:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Graphic shows the conceptual representation of Teams as a platform and its capabilities." lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
+## Detailed Features of Teams Applications
 
-## Teams app features
+Below is a rundown of some of the core features offered by Microsoft Teams, and how they can be utilized in your application development process:
 
-[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+- **Tabs:** These are Teams-aware webpages which can be embedded in Microsoft Teams. You can include them as part of a channel in a team, group chat, or within a personal app for individual users. They're useful for personal tabs, channel or group tabs, Stage View, and link unfurling.
 
-| Feature | Description | Useful for |
-| --- | --- | --- |
-|Tabs | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, Stage View, and link unfurling. |
-| Bots | A bot, also known as a chatbot or conversational bot, has evolved with artificial intelligence to understand and respond to users in natural language for dynamic conversations. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. | Customer service, content generation such as new sales presentations or code, personalized guidance for your app, complex financial analysis, and automation of tasks. |
-| Message extension | Message extensions let the users interact with your web service Teams client. They search or start actions in an external system. You can send the result of the interaction to the Teams client as a richly formatted card. | Reserve a resource and allow the channel to know the reserved time slot. Search for a work item, and share it with the group as an Adaptive Card. Create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details. |
-| Meeting extensions | You can create apps to make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
-| Personal app | A personal app is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them. | OneNote is a personal app that gives you a private workspace within Teams. Planner offers a bird's eye view of all your tasks, across boards that you or your team have added as channel tabs. |
-| Webhooks and connectors | Communicate with external apps, and send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
-| Microsoft Graph | Microsoft Graph APIs enable Teams apps to build collaborative features with the intelligence of Microsoft 365 data and engage users regularly through activity feed notifications. | Send activity feed notifications, export or import messages, get meeting transcripts and recordings, use resource-specific consent (RSC) permissions, CRUD (create, read, update, and delete) users, chats, channels, and apps. |
-| Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
-| Dialogs (referred as task modules in TeamsJS v1.x) | Dialogs permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
-| Copilot extensibility | The ability to customize and extend Microsoft 365 Copilot with additional knowledge and skills. Agents help integrate your organization's knowledge, skills, and process automation into Microsoft 365 Copilot. | Generate unique insights and automate functions such as customer support, content creation, and data analysis using data specific to your organization. |
+- **Bots:** Bots, also known as chatbots, use artificial intelligence to understand and respond to users in natural language, facilitating dynamic conversations. They can be used in customer service, content generation, personalized guidance, complex financial analysis, and automated tasks.
 
-For more information about how to extend Microsoft 365 Copilot, see [Microsoft 365 Copilot extensibility](/microsoft-365-copilot/extensibility/).
+- **Message Extensions:** These allow users to interact with your web service through the Teams client, enabling them to start actions in an external system. Message extensions are practicable for resource reservation, work item searches, creation of a bug tracking system based on Teams messages, and more.
 
-### Extend your Teams app across Microsoft 365
+- **Meeting Extensions:** By using these, you can create apps to make meetings more effective. For example, you can use them to ask attendees to complete a survey during a call, or to send reminders that don’t disrupt the flow of the meeting.
 
-If you've already built some Teams apps, you can now extend your apps across Microsoft 365 and configure them to be accessible over Outlook and Microsoft 365.
+- **Personal Apps:** Personal apps provide a dedicated space (tab) or bot to help users focus on their personal tasks or activities. They offer a private workspace within Teams, giving users an overview of all tasks across boards in a channel tab.
 
-:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in app manifest." lightbox="assets/images/overview/app-manifest.png":::
+- **Webhooks and Connectors:** These facilitate communication with external apps, enabling you to send and receive notifications and messages from other apps.
 
-## Next step
+- **Microsoft Graph:** This API enables Teams apps to build collaborative features, utilizing the intelligence of Microsoft 365 data and engaging users regularly through activity feed notifications.
 
-You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app.
+- **Adaptive Cards:** These help to organize information into groups, providing users with interactive spaces for specific data parts. They're useful for sharing information using text and images, and gathering information through input forms.
 
-Let's head towards the solution for the user story.
+- **Dialogs:** Also known as task modules in TeamsJS v1.x, these allow for the creation of modal pop-up experiences in your Teams application. They might contain custom HTML or JavaScript code, alongside an iframe-based widget, such as a YouTube or Microsoft Stream video.
 
-> [!div class="nextstepaction"]
-> [The Teams solution](overview-solution.md)
+- **Copilot Extensibility:** This functionality lets you customize and extend Microsoft 365 Copilot with your organization's knowledge and skillsets. Copilot extensibility is perfect for generating unique insights and automating functions like customer support, content creation, and data analysis.
+
+For more information on how to extend Microsoft 365 Copilot, see [Microsoft 365 Copilot extensibility](/microsoft-365-copilot/extensibility/).
+
+## Extending Applications Across Microsoft 365
+
+If you've already developed some Teams apps, you can now extend your apps across Microsoft 365 and make them accessible through Outlook and Microsoft 365.
+
+![Screenshot shows you the configuration of properties in app manifest.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/app-manifest.png)
+
+## What's Next?
+
+Now that you're familiar with some of the Teams platform features, you're ready to implement them in your app development. 
+
+Continue your journey to building the perfect solution to meet your users' needs:
+
+[Explore the Teams solution further](overview-solution.md)
