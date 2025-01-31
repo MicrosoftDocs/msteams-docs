@@ -82,7 +82,7 @@ items:
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registrations&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **Create a tunnel**
 
@@ -91,14 +91,14 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+dev+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+Ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meeting-token-generator%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meeting-token-generator.yml&documentVersionIndependentId=285d700c-17c0-24fe-d74e-fa717a812ce3&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       ---     
 
