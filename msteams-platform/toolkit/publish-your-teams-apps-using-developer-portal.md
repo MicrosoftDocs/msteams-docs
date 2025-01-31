@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 07/29/2022
 ---
 
-# Integrate with Developer Portal
+# Publish Teams app with Developer Portal
 
 You can configure and manage your app in Developer Portal within Microsoft Teams Toolkit.
 
