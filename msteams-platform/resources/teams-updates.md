@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 01/27/2025
+ms.date: 02/04/2025
 ---
 # Introducing the new Microsoft Teams client
 
 > [!IMPORTANT]
-> The Classic Teams client has been deprecated on March 31, 2024. For more information, see [end of availability for Classic Teams client](/microsoftteams/teams-classic-client-end-of-availability).
+> The Classic Teams client reaches end of availability on July 1, 2025. For more information, see [end of availability for Classic Teams client](/microsoftteams/teams-classic-client-end-of-availability).
 
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside Classic Teams, the app likely runs in the new Teams client without any issues.
 
@@ -38,18 +38,13 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 
 ## Limitations
 
-> [!NOTE]
->
-> * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC High environments.
-> * We recommend you to test the functionality of apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC High environments after switching from the Classic Teams client to the new Teams client.
-
 The following Teams features are deprecated and aren't supported in the new Teams client:
 
-* [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client has been deprecated on March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+* **Adaptive Card tabs**: If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+* **`window.alert`, `window.confirm`, and `window.prompt` APIs**: We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
-* [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
+* **[Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs**: We recommend using HTML5 Geolocation and Media.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
@@ -61,4 +56,3 @@ If your app is working fine in the Classic Teams client but has issues in the ne
 * [Get context for your tab](../tabs/how-to/access-teams-context.md#handle-theme-change)
 * [New Teams for Web - Overview and prerequisites](/microsoftteams/new-teams-web)
 * [Features that are changing in the new Microsoft Teams](/microsoftteams/new-teams-whats-changing)
-* [The new Microsoft Teams](/microsoftteams/new-teams-desktop-admin)
