@@ -82,11 +82,11 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 > [!NOTE]
 > The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. Open the Proto Task Manager using the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac, and go to the **Caching** tab.
+You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. Open the Proto Task Manager using the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac.
 
 :::image type="content" source="../../assets/images/tabs/app-cache-debug-tool.png" alt-text="Screenshot shows the caching tab in the Proto Task Manager in Teams." lightbox="../../assets/images/tabs/app-cache-debug-tool.png":::
 
-The **Caching** tab contains the following details:
+The **AppCaching** tab contains the following details:
 
 * **state**: Shows the app's cached or uncached state.
 * **isActive**: Shows the active or inactive status of the cached app.
