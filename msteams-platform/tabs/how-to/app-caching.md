@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 01/19/2025
+ms.date: 02/04/2025
 ---
 
 # App caching for your tab app
@@ -82,17 +82,17 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 > [!NOTE]
 > The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. Open the Proto Task Manager using the **Control+Alt+Shift+8** keys on Windows or **Command+Option+Shift+8** on Mac, and go to the **Caching** tab.
+You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. Open the Proto Task Manager using the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac, and go to the **Caching** tab.
 
-:::image type="content" source="../../assets/images/tabs/app-cache-debugger-tool.png" alt-text="Screenshot shows the caching tab in the Proto Task Manager in Teams." lightbox="../../assets/images/tabs/app-cache-debugger-tool.png":::
+:::image type="content" source="../../assets/images/tabs/app-cache-debug-tool.png" alt-text="Screenshot shows the caching tab in the Proto Task Manager in Teams." lightbox="../../assets/images/tabs/app-cache-debug-tool.png":::
 
 The **Caching** tab contains the following details:
 
 * **state**: Shows the app's cached or uncached state.
 * **isActive**: Shows the active or inactive status of the cached app.
 * **timeElapsed**: Shows the time elapsed since the app was cached.
-* **supportsLoad**: Shows if the app has registered the `Load` handler and is automatically set to `true` if app caching is enabled.
-* **supportsBeforeUnload**: Shows if the app has registered the `BeforeUnload` handler and is automatically set to `true` if app caching is enabled.
+* **supportsLoad**: Shows if the app has registered the `Load` handler if app caching is enabled.
+* **supportsBeforeUnload**: Shows if the app has registered the `BeforeUnload` handler if app caching is enabled.
 * **memory**: Shows the memory usage of the app.
 * **cpu**: Shows the CPU usage of the app.
 
