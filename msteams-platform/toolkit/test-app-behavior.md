@@ -5,7 +5,7 @@ description: Learn about the prerequisites and how to test app behavior in local
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 01/23/2025
 ---
 # Test app behavior in different environment
 
@@ -19,7 +19,7 @@ You can upload your Microsoft Teams app to Teams without having to publish to yo
 
 > [!IMPORTANT]
 >
-> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * Custom app upload is supported only in Government Community Cloud (GCC) and isn't supported in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites

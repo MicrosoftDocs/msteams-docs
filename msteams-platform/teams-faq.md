@@ -2,7 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
-ms.date: 09/16/2024
+ms.date: 01/23/2025
 ms.localizationpriority: high
 ---
 
@@ -184,9 +184,9 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 </details>
 
 <details>
-<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+<summary>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments?</summary>
 
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+Live Share is supported only in GCC environment.
 
 <br>
 
