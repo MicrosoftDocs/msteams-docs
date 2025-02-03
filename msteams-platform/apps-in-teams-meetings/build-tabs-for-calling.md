@@ -135,6 +135,8 @@ Teams client users can access your personal tab app only if it's pinned by the T
 
 :::image type="content" source="../assets/images/tab-images/pin-tab-calling.png" alt-text="Image shows how to enable calling extensions to pin apps for calling." lightbox="../assets/images/tab-images/pin-tab-calling.png":::
 
+For more information, see [how to use app setup policies to pin and install apps for users](/microsoftteams/teams-app-setup-policies).
+
 ## See also
 
 [Create a tab](../tabs/how-to/create-personal-tab.md)
