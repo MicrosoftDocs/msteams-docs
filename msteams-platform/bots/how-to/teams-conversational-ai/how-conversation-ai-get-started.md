@@ -898,5 +898,12 @@ Use one of the following to migrate your bot app to use Teams AI library:
 
 ## Next step
 
+Choose one of the following as a next step:
+
 > [!div class="nextstepaction"]
+> If you want to try creating a scenario based custom engine agent using Teams Toolkit and Teams AI library, select the following: <br>
+> [Advanced step-by-step guide](../../../sbs-Teams-AI.yml)
+>
+> [!div class="nextstepaction"]
+> If you want to learn about the core capabilities of Teams AI library, select the following: <br>
 > [Understand Teams AI library](how-conversation-ai-core-capabilities.md)
