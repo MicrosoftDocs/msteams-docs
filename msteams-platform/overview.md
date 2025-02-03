@@ -1,90 +1,98 @@
 ---
-title: Build Apps for Teams Platform
-author: heath-hamilton
-description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
-ms.topic: overview
-ms.localizationpriority: high
-ms.date: 05/24/2021
+title: API Documentation for Teams Apps
+description: Learn how to effectively use the API for Teams apps development.
+author: Software Development Team
+date: 05/24/2021
 ---
-# Teams app that fits
 
-Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users.
+# API Documentation for Teams Apps
 
-Apps can be personal or shared. A personal app enables a one-on-one communication and a shared app lets multiple users share app space to collaborate.
+## Authentication
 
-## Driving organizational goals
+Every request to our API needs to be authenticated. We use the OAuth 2.0 protocol for authentication. You will need to provide an access_token in the Authorization header for each request.
 
-Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
+## Endpoints 
 
-Organizations use it to connect with their customers, provide services, and share information. But that's not all! Apps are the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
+We have various API endpoints that you can use to interact with Teams Apps. Below are the main endpoints:
 
-Let's look at some areas where an app helps to meet a business need.
+### Get Teams Apps
 
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows you why should you build Teams app.":::
+The Get Teams Apps endpoint can be used to retrieve information about all Teams Apps.
 
-| **Development options** | **Business opportunities** |
-| --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
-| **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
+- Endpoint: `/api/teamsapps`
+- Method: `GET`
+- Status Codes: `200 OK`, `401 Unauthorized`, `403 Forbidden`
 
-You can build apps with Teams platform by extending app capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
+### Create Teams Apps
 
-Take a look at these example developer personas and app scenarios:
+You can use this endpoint to create a new Teams App.
 
-:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories."lightbox="assets/images/overview/dev-persona.png":::
+- Endpoint: `/api/teamsapps`
+- Method: `POST`
+- Status Codes: `201 Created`, `400 Bad Request`, `401 Unauthorized`
 
-You can meet all of these scenarios with Teams apps and enhance collaboration within your Teams across Microsoft 365.
+### Update Teams Apps
 
-## Build apps with Microsoft Teams platform
+This endpoint allows you to update an existing Teams App.
 
-Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Teams platform for your particular business needs.
+- Endpoint: `/api/teamsapps/{appId}`
+- Method: `PUT`
+- Status Codes: `200 OK`, `400 Bad Request`, `401 Unauthorized`, `403 Forbidden`, `404 Not Found`
 
-The benefits of building apps span from meeting organizational goals to increasing internal productivity.
+### Delete Teams Apps
 
-Here's why Teams is best suited for your app needs:
+You can delete an existing Teams App using this endpoint.
 
-* **Communication and collaboration**
+- Endpoint: `/api/teamsapps/{appId}`
+- Method: `DELETE`
+- Status Codes: `204 No Content`, `400 Bad Request`, `401 Unauthorized`, `403 Forbidden`, `404 Not Found`
 
-    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
+## Request and Response Format
 
-* **Social interactions**
+Requests and responses are formatted as JSON (JavaScript Object Notation). Below is an example of a request to the Create Teams Apps endpoint:
 
-    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
+```json
+{
+  "name": "Sample App",
+  "description": "This is a sample app.",
+  "version": "1.0.0"
+}
+```
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-social.png" alt-text="Screenshot shows you the Teams app for building team culture.":::
+Here's an example of a standard response:
 
-* **Common business processes**
+```json
+{
+  "app_id": "123",
+  "name": "Sample App",
+  "description": "This is a sample app.",
+  "version": "1.0.0"
+}
+```
 
-    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests, expense reports are repetitive tasks. They make for effective Teams apps.
+## Error Handling
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Screenshot shows you the Teams app for internal use.":::
+When an error occurs, the API returns an HTTP status code indicating the type of error. The body of the response includes more details about the error.
 
-* **Personal apps with tabs and bots**
+Here's an example of an error response:
 
-    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including dialogs (referred as task modules in TeamsJS v1.x) to simplify complex sets of information.
+```json
+{
+  "error": "Bad Request",
+  "message": "Invalid data."
+}
+```
 
-    For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
+## Examples and Use Cases
 
-    Additionally, a chat bot can be an easy replacement for emails and phone calls to IT or HR departments.
+To demonstrate how the API can be used, here are some practical examples:
 
-* **Surface existing app**
+- You can use the Get Teams Apps endpoint to retrieve information about all Teams Apps. This can be useful, for example, if you want to display a list of available apps in a user interface.
+  
+- If you want to add a new Teams App, you can use the Create Teams App endpoint. You just need to provide the necessary information in the request body, such as the name and description of the new app.
+  
+- To update an app, you can use the Update Teams Apps endpoint. Just provide the new information in the request body and include the app's ID in the URL.
+  
+- If you want to delete an app, you can use the Delete Teams Apps endpoint. You only need to include the app's ID in the URL.
 
-    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
-
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the SharePoint site ported as a Teams tab.":::
-
-* **Teams Store advantage**
-
-    Push your app on Teams Store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great platform for large audiences to discover your app.
-
-* **Build once, run everywhere**
-
-    Extend your Teams app across Microsoft 365, which provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
-
-    Use the latest app manifest and Teams JavaScript client library versions to enable your personal tab and message extension apps to run in other Microsoft 365 experiences in addition to Teams. You can reach users on platforms such as Outlook and Microsoft 365 app all with the same codebase, broadening the reach of your app and streamlining your development and distribution processes.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [From ideas to Teams app](overview-story.md)
+Please make sure the request and response examples are well-formatted and that there are no syntax errors in the JSON.
