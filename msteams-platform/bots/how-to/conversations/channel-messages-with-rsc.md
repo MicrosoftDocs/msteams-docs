@@ -11,6 +11,8 @@ ms.date: 01/23/2025
 
 Getting all messages, even without @mentions, helps both bots and human agents. With full context, agents can address user concerns proactively, give more personalized responses, and solve issues faster. This also makes it easier for bots and human agents to work together, ensuring smooth transitions and quicker resolutions.
 
+You can filter messages and handle only those messages that @mention the bot. This method can help with performance by reducing the number of messages to process. Focusing on @mentions lets the bot address specific user requests, ensuring timely and relevant responses. By doing this, developers can customize the bot's behavior to fit specific needs or use cases.
+
 ---
 
 The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
