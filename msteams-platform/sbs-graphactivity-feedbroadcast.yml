@@ -95,6 +95,8 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
+   >
+
 - title: Register your Teams Auth SSO with Microsoft Entra ID
   durationInMinutes: 1
   content: |
