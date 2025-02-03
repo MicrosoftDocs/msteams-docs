@@ -46,7 +46,9 @@ items:
   durationInMinutes: 1
   content: | 
 
-   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
+   > 
 
 - title: Register Microsoft Entra app 
   durationInMinutes: 5
