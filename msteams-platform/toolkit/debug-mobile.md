@@ -1,7 +1,7 @@
 ---
 title: Debug Tab or Bot Apps in Mobile
 author: surbhigupta 
-description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile clients in both Visual Studio Code and command line.
+description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile clients in both Visual Studio Code and Command Line.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
