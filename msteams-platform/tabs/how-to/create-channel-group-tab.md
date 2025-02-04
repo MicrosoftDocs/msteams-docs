@@ -1,6 +1,6 @@
 ---
 title: How to Create Configurable Tab
-description: Learn how to create custom configurable tabs with Node.js, ASP.NET Core, MVC. To develop your first tab app, build the app, deploy, package, and upload to Teams.
+description: Learn how to create custom configurable tabs with Node.js, ASP.NET Core, MVC and to develop or build your first tab app, deploy, package, and upload to Teams.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor

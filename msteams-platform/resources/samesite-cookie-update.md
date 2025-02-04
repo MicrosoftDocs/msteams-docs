@@ -1,7 +1,7 @@
 ---
 title: Implement SameSite Cookie Attribute
 author: laujan
-description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation and storage partitioning.
+description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation, and storage partitioning.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
