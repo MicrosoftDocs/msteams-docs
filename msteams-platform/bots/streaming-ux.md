@@ -1,6 +1,6 @@
 ---
 title: Stream bot messages
-description: Learn how to enhance the user experience in bots using streaming techniques. Learn to stream message through Teams AI library, configure streaming bot messages. 
+description: Learn how to enhance the user experience in bots using streaming techniques. Learn to stream message through Teams AI library and configure streaming bot messages. 
 ms.date: 11/18/2024
 ms.topic: conceptual
 author: surbhigupta12
