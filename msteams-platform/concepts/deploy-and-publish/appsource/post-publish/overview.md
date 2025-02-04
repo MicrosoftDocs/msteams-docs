@@ -131,7 +131,7 @@ To discontinue your app:
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
-After the app is discontinued, Microsoft AppSource stores the app and partner's data for six months. After this duration this data is deleted.
+After the app is discontinued, Microsoft AppSource stores the app and partner's data for six months. After this duration, the data is permanently deleted.
 
 ## Ratings and review for Teams apps
 
