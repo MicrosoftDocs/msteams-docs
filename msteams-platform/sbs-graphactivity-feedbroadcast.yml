@@ -306,9 +306,9 @@ items:
           A webpage opens with a message, **Your bot is ready!**
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="Screenshot shows a webpage with a message that your bot is ready." border="true":::
-          
+
        > [!div class="nextstepaction"]
-       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-graphactivity-feedbroadcast%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-graphactivity-feedbroadcast.yml&documentVersionIndependentId=232aa364-3f3c-2470-d46a-bc92ec424550&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-graphactivity-feedbroadcast%3Ftabs%3Ddev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-graphactivity-feedbroadcast.yml&documentVersionIndependentId=232aa364-3f3c-2470-d46a-bc92ec424550&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
@@ -343,6 +343,9 @@ items:
     1. Select **Open**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-app-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+activity+feed+broadcast+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-graphactivity-feedbroadcast%3Ftabs%3Ddev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-graphactivity-feedbroadcast.yml&documentVersionIndependentId=232aa364-3f3c-2470-d46a-bc92ec424550&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
@@ -366,6 +369,9 @@ items:
     1. The message details appear on selecting the message.  
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/message-members.png" alt-text="Final output" border="true":::
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-graphactivity-feedbroadcast%3Ftabs%3Ddev%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-graphactivity-feedbroadcast.yml&documentVersionIndependentId=232aa364-3f3c-2470-d46a-bc92ec424550&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
      
 - title: Complete challenge
   durationInMinutes: 1
