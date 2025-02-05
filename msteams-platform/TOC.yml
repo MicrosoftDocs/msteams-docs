@@ -1145,7 +1145,7 @@
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Third-party storage app
     href: concepts/device-capabilities/third-party-storage-capability.md
-    displayName: third party storage, drag drop, cloud storage
+    displayName: third party storage, drag drop files, cloud storage app
   - name: Create deep links
     items:
     - name: Deep links overview

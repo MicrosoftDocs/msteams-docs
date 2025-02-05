@@ -4,12 +4,12 @@ description: Learn how to set third-party storage app for your Teams app for the
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.author: surbhigupta
-ms.date: 01/31/2025
+ms.date: 02/05/2025
 ---
 
 # Third-party cloud storage app
 
-Microsoft Teams provides the flexibility to change the default storage from OneDrive and SharePoint to a preferred third-party cloud storage provider app. When a file is drag-dropped into the message compose area of a Teams chat or channel, you can allow the file to be stored in a third-party cloud storage using the Microsoft Teams JavaScript client library (TeamsJS).
+Microsoft Teams provides the flexibility to change the default storage from OneDrive and SharePoint to a preferred third-party cloud storage provider app. When a file is drag-dropped into the message compose area of a Teams chat or channel, you can allow the file to be stored in a third-party cloud storage using Microsoft Teams JavaScript client library (TeamsJS).
 
 ## Prerequisites
 
@@ -110,7 +110,7 @@ For Teams app to support third-party cloud storage for drag-dropped files:
 If you want your Teams app to have a third-party storage of your preference, you must use the `getDragAndDropFiles` API of `thirdPartyCloudStorage` in TeamsJS SDK. This API enables uploading files from the message compose area of a Teams chat or channel to third-party storage app.
 
 > [!NOTE]
-> The `thirdPartyCloudStorage` API is used only in scenarios when the files are drag-dropped. It isn't used when the files are added using the plus icon in the message compose toolbar.
+> The `thirdPartyCloudStorage` API is used only in scenarios when the files are drag-dropped. It's not used when the files are added using the plus icon in the message compose toolbar.
 
 Here's how the files are uploaded to third-party cloud storage app:
 
