@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2025 February**
 
-***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files](concepts/device-capabilities/third-party-storage-capability.md)
+***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to update the default storage from OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md)
 
 :::column-end:::
 :::row-end:::
