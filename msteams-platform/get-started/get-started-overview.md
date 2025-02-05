@@ -1,62 +1,62 @@
 ---
-title: Get started - Overview
-description: In this module, learn how to create your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
+title: Get Started - Overview
+description: This module guides you in creating your first Microsoft Teams app based on language and development environment, understanding app capabilities, and SDKs.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
 ---
 
-# Get started
+# Get Started
 
-Get started with building apps for Microsoft Teams and beyond!
+Begin your journey in building applications for Microsoft Teams and beyond!
 
-Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Choose between using GitHub Codespaces or following a step-by-step guide to build a fundamental, real-world Teams app. This module provides an introduction to essential tools, foundational concepts, and more advanced features.
 
-Here's an idea of what you'll learn:
+## Learning Objectives:
 
-* Get started quickly with the Microsoft Teams Toolkit.
-* Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
-* Learn about tutorials and code samples available for building your Teams app.
-* Learn about various tools and SDKs available for building your Teams app.
+- Quickly get started with the Microsoft Teams Toolkit.
+- Build different apps, such as tab apps, scenario-based apps, and message extensions using GitHub Codespaces or the step-by-step guide.
+- Access tutorials and code samples for building Teams apps.
+- Explore various tools and SDKs available for Teams app development.
 
-## Build your first Teams app
+## Build Your First Teams App
 
-In this section, learn how to build a Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
+Explore how to build a Teams app with diverse capabilities, including tabs, scenario-based bot apps, and message extensions.
 
-1. Select the type of Teams app that you want to build:
+### Steps to Build Your Teams App:
 
-   * **Build a basic Teams tab app**: Get started with building a Teams app with a basic tab app.
+1. **Select the Type of Teams App to Build:**
 
-   * **Build a scenario-based Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
+   - **Build a Basic Teams Tab App**: Start with creating a basic tab app for Teams.
+   - **Build a Scenario-Based Teams Bot App**: Develop a Teams app for specific scenarios, such as notification bots, which are ideal for sending notifications rather than chatting.
+   - **Build a Message Extension Teams App**: Create a search-based message extension app for Teams.
 
-   * **Build message extension Teams app**: Build a search-based message extension Teams app.
+2. **Choose Your Development Path:**
 
-2. Choose your path to build your selected app.
+   - **GitHub Codespaces**: Provides an environment to run, test, and debug your app without additional setup.
+   - **Step-by-Step Guide**: Guides you through creating a Teams app from scratch, including setting up your development environment.
 
-   * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
-   * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
+   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Options for building a Teams app using GitHub Codespaces or the step-by-step guide." lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
-   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+## Next Steps
 
-## Next step
+- To build a basic tab app, proceed here:
 
-If you want to build a basic tab app, select the following:
+  > [!div class="nextstepaction"]
+  > [Build your basic tab app](build-basic-tab-app.md)
 
-> [!div class="nextstepaction"]
-> [Build your basic tab app](build-basic-tab-app.md)
+- Interested in bots? Start here:
 
-If a bot is what you're interested in, select the following:
+  > [!div class="nextstepaction"]
+  > [Start building a bot](build-notification-bot.md)
 
-> [!div class="nextstepaction"]
-> [Start building a bot](build-notification-bot.md)
+- To create a message extension app, head here:
 
-If you want to build a message extension app, select the following:
+  > [!div class="nextstepaction"]
+  > [Build message extension](build-message-extension.md)
 
-> [!div class="nextstepaction"]
-> [Build message extension](build-message-extension.md)
+## See Also
 
-## See also
-
-* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git and GitHub resources](/contribute/additional-resources)
-* [Teams app tutorials and code samples](teams-toolkit-tutorial.md)
+- [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git and GitHub Resources](/contribute/additional-resources)
+- [Teams App Tutorials and Code Samples](teams-toolkit-tutorial.md)
