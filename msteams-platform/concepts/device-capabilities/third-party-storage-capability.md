@@ -116,11 +116,11 @@ If you want your Teams app to have a third-party storage of your preference, you
 > [!NOTE]
 > The `thirdPartyCloudStorage` API is used only in scenarios when the files are drag-dropped. It's not used when the files are added using the plus icon in the message compose toolbar.
 
-Here's how the files are uploaded to third-party cloud storage app:
+To implement third-party cloud storage for the drag-dropped files in Teams, follow these steps:
 
-1. When the files are drag-dropped in the message compose area, the files are temporarily stored in the Teams cache.
+1. Ensure the property `defaultFilesUploadAppId` is configured with the third-party storage app ID and the first action is set as `Upload` in the app manifest.
 
-1. To call the `thirdPartyCloudStorage` API, the following parameters are obtained from the application context:
+1. Create the unique ID using the following parameters from the application context:
 
    * `const uniqueIdForChats` = `replyToId` + `id` (that is, `threadId`).
 
@@ -130,9 +130,9 @@ Here's how the files are uploaded to third-party cloud storage app:
 
         :::image type="content" source="../../assets/images/personal-apps/third-party-storage.png" alt-text="Screenshot shows the sample context where the two values to create the unique ID are present." lightbox="../../assets/images/personal-apps/third-party-storage.png":::
 
-1. The third-party cloud storage app calls the `getDragAndDropFiles` API in TeamsJS SDK to fetch the files that were drag-dropped.
+1. Use the `getDragAndDropFiles` API from the `thirdPartyCloudStorage` in TeamsJS SDK for the third-party storage app to fetch the drag-dropped files.
 
-1. The files are received in the third-party cloud storage app through the callback.
+1. A callback function is implemented to receive and handle the files.
 
     Callback: `(files: FilesFor3PStorage[], error?: SdkError): void;**`
 
@@ -182,13 +182,25 @@ Here's how the files are uploaded to third-party cloud storage app:
     });
     ```
 
+1. The third-party cloud storage app then uploads the files received to their storage.
+
+Here's how the files are uploaded to third-party cloud storage app:
+
+1. When the files are drag-dropped in the message compose area, the files are temporarily stored in the Teams cache.
+
+1. The third-party cloud storage app calls the `getDragAndDropFiles` API using the `uniqueID` to fetch the files that were drag-dropped.
+
+1. The thirdPartyCloudStorage API returns the files that were drag-dropped.
+
+1. The files are received in the third-party cloud storage app through the callback function.
+
 1. The third-party cloud storage app then uploads the files to their storage.
 
 ## Code sample
 
 Sample name | Description | Node.js | .NET | Python |
 |----------------|-----------------|--------------|----------------|----------------|
-| Third-party storage | Demonstrates how to implement third-party cloud storage app for files that are drag-dropped in the message compose area. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/python) |
+| Third-party cloud storage | Demonstrates how to implement third-party cloud storage app for files that are drag-dropped in the message compose area. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/python) |
 
 ## See also
 
