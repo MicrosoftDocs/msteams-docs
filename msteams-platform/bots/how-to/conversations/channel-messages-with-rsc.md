@@ -1,5 +1,5 @@
 ---
-title: Get All Conversation Messages with RSC
+title: Get All Conversation Messages for Bot and Agents
 author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.date: 01/23/2025
 ---
 
-# Receive All Channel or Chat Messages for Bots and Agents
+# Receive all channel or chat messages for bots and agents
 
 Getting all messages, even without @mentions, helps both bots and human agents. With full context, agents can address user concerns proactively, give more personalized responses, and solve issues faster. This also makes it easier for bots and human agents to work together, ensuring smooth transitions and quicker resolutions.
 
