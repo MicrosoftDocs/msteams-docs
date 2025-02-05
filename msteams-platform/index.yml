@@ -241,9 +241,4 @@ tools:
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_net.png
       url: https://github.com/Microsoft/botbuilder-dotnet/
-    # Card
-    - title: Yeoman generator for Microsoft Teams
-    # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)
