@@ -448,7 +448,7 @@ ngrok http 3978 --host-header=localhost
 
 Following are the steps to create a tab:
 
-1. [Generate your application with a tab](#generate-your-application-with-a-tab-2)
+1. [Generate your application with a tab](#generate-your-application-with-a-tab)
 1. [Update and run application](#update-and-run-your-application-1)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
