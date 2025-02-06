@@ -321,8 +321,6 @@
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md 
       displayName: ACP
-    - name: Yeoman generator for Teams (GitHub)
-      href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
     - name: TeamsFx SDK
