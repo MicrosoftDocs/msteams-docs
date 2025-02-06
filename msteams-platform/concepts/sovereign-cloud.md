@@ -4,7 +4,7 @@ author: v-preethah
 description: Learn about sovereign clouds and the Teams features and capabilities available for Teams operated by 21Vianet, a cloud service specific to China.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/23/2025
+ms.date: 02/06/2025
 ---
 
 # Plan for sovereign clouds

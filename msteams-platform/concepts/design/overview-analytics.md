@@ -5,7 +5,7 @@ description: Learn to plan and build analytics for your Teams app, instrumentati
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
 # Overview

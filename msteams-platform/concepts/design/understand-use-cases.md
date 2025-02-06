@@ -5,7 +5,7 @@ description: Learn Teams app capabilities such as tabs, bots, meeting extensions
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
 # Understand use cases

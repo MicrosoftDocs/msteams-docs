@@ -2,7 +2,7 @@
 title: Explore Tools and Code Samples
 description: Learn about tools, SDKs, tutorials, and code samples to build apps with various capabilities such as AI, UI, and various languages, to prepare your environment.
 ms.localizationpriority: high
-ms.date: 06/07/2023
+ms.date: 02/06/2025
 ms.topic: reference
 ---
 

@@ -5,7 +5,7 @@ description: Learn to strategize and decide what to measure using instrumentatio
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
 # Strategize and decide what to measure

@@ -5,7 +5,7 @@ description: Learn to identify how your app's use cases can work within the Team
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.date: 12/01/2022
+ms.date: 02/06/2025
 ---
 # Map your use cases to Teams app features
 

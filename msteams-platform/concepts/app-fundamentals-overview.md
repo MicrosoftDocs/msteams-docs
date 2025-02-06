@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/23/2025
+ms.date: 02/06/2025
 ---
 
 # Plan your app with Teams features
