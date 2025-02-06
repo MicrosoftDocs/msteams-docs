@@ -99,7 +99,7 @@
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
       displayName: app artwork, image template
-    - name: Type
+    - name: Typography
       href: concepts/design/design-teams-app-type.md
       displayName: font design, font style
     - name: Color
