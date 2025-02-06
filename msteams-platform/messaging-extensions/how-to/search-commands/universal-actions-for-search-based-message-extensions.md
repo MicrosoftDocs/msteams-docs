@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 Adaptive Cards in search based message extensions now support Universal Actions. To enable Universal Actions for search based message extensions, the app must conform to the [schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 
-1. The app must have a [conversational](https://learn.microsoft.com/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conversations) or [notification-only](https://learn.microsoft.com/microsoftteams/platform/resources/bot-v3/bots-notification-only) bot defined in the app manifest.
+1. The app must have a [conversational](../../../bots/build-conversational-capability.md) or [notification-only](../../../bots/build-notification-capability.md) bot defined in the app manifest.
 1. If you already have a bot, you must use the same bot that is used in your message extension.
 1. If the card is sent in a group, the app must specify `team` or `groupchat` scope on their bot in the manifest.
 
