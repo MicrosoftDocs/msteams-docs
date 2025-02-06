@@ -19,9 +19,6 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
