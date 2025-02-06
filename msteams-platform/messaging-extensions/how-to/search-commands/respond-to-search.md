@@ -96,7 +96,7 @@ Your service must respond with the results matching the user query. The response
 
 The configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a config response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
-The following code is an example of message extension configuration:
+The following JSON response is an example of a config response received from the app:
 
 ```json
 {
@@ -154,71 +154,6 @@ The following code is an example of message extension configuration:
     "localTimezone": "Asia/Calcutta"
 }
 ```
-
-#### onQuerySettingsUrl handler
-
-The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler manages the response from the configuration page. The `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension.
-
-If a message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration. For more information, see [handle onQuery events](../../../resources/messaging-extension-v3/search-extensions.md).
-
-The following image shows the `config` command workflow:
-
-:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
-
-The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
-
-```csharp
-
-protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
-{
-    // The user has requested the Messaging Extension Configuration page.
-    var escapedSettings = string.Empty;
-    var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
-    if (!string.IsNullOrEmpty(userConfigSettings))
-    {
-        escapedSettings = Uri.EscapeDataString(userConfigSettings);
-    }
-    return new MessagingExtensionResponse
-    {
-        ComposeExtension = new MessagingExtensionResult
-            {
-                Type = "config",
-                SuggestedActions = new MessagingExtensionSuggestedAction
-                    {
-                        Actions = new List<CardAction>
-                            {
-                                new CardAction
-                                {
-                                    Type = ActionTypes.OpenUrl,
-                                    Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",
-                                },
-                            },
-                    },
-            },
-    };
-}
-
-```
-
-The following response is the configuration response that appears when the user interacts with the compose extension:
-
-```json
-{
-    "composeExtension": {
-        "type": "config",
-        "suggestedActions": {
-            "actions": [
-                {
-                    "type": "openUrl",
-                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
-                }
-            ]
-        }
-    }
-}
-```
-
-:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="Screenshot shows the configuration response for message extension.":::
 
 ### `auth` response type
 
