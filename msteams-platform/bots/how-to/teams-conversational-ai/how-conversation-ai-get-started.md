@@ -4,7 +4,7 @@ description: Learn how to create an app using Teams AI library with AI component
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 11/27/2023
+ms.date: 02/06/2025
 ---
 
 # Build with Teams AI library
