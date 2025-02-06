@@ -195,12 +195,6 @@ Ensure that the OAuth implementation in your app can handle error cases, such as
   * Entered all endpoints correctly.
   * Added `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the allowed redirect URLs.
 
-## Limitations and best practices
-
-* Once you save an OAuth configuration, it becomes read-only. However, you can still update the allowed app ID, allowed tenant, description, and domain.
-* You mustn't update the OAuth configuration frequently, even during the initial development process.
-* If you want to make any changes to configuration such as, adding a scope or authorization URL, you must register a new OAuth configuration, which generates a new unique ID.
-
 Implementing OAuth 2.0 for API message extensions and plugins in Teams significantly enhances the security of your app. You can ensure secure data access and protection of user credentials.
 
 ## See also
