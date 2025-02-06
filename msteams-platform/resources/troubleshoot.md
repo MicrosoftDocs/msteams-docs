@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot your app
+title: Troubleshoot your App
 description: Learn about different issues or error scenarios while building apps for Microsoft Teams and how to troubleshoot the issues for bots, tabs, and app package.
 keywords: teams apps development troubleshooting
 ms.localizationpriority: medium
 ms.topic: troubleshooting
-ms.date: 07/09/2018
+ms.date: 02/06/2025
 ---
 
 # Troubleshoot your Microsoft Teams app
