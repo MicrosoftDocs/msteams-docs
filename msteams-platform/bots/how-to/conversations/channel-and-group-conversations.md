@@ -5,7 +5,7 @@ description: Learn how to create new conversation threads, user and tag mentions
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.date: 11/14/2024
+ms.date: 01/23/2025
 ---
 # Channel and group chat conversations with a bot
 
@@ -24,7 +24,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO a22d3980-2cf0-45fe-89a2-02a13cf8640e]
 <br>
 
 ## Design guidelines
@@ -339,6 +339,9 @@ The following code snippet shows an example of mentioning users with Entra Objec
 #### Tag mention
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+
+> [!NOTE]
+> Tag mentions aren't supported in [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md).
 
 ##### Mention tags in a text message
 
