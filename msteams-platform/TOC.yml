@@ -43,7 +43,7 @@
   - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
-  - name: Understand use case
+  - name: Understand use cases
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
   - name: Map use case to Teams features
@@ -99,7 +99,7 @@
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
       displayName: app artwork, image template
-    - name: Type
+    - name: Typography
       href: concepts/design/design-teams-app-type.md
       displayName: font design, font style
     - name: Color
@@ -418,7 +418,7 @@
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
       displayName: Teams Store apps approved by Microsoft for mobile
-    - name: Build apps for shared channels
+    - name: Apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications
