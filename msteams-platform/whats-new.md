@@ -33,6 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2025 January**
 
+* ***January 31, 2025***: [Create a scenario based custom engine agent using Teams Toolkit and Teams AI library](sbs-Teams-AI.yml).
 * ***January 23, 2025***: Plan for [government](concepts/cloud-overview.md) and [sovereign](concepts/sovereign-cloud.md) clouds.
 * ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
 * ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
@@ -438,6 +439,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+* ***February 3, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
 
 :::column-end:::
 :::row-end:::
