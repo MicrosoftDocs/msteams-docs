@@ -543,7 +543,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***February 06, 2025***: Support for Yeoman generator is deprecated from Teams developer documentation.
+* ***February 07, 2025***: Support for Yeoman generator is deprecated from Teams developer documentation.
 
 :::column-end:::
 :::row-end:::
