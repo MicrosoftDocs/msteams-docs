@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.date: 12/26/2024
+ms.date: 02/06/2025
 ---
 # Layout and scaling for your Microsoft Teams app
 

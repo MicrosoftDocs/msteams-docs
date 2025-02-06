@@ -5,7 +5,7 @@ description: Learn about TeamsFX multiple environment, use env files with Teams 
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 11/29/2021
+ms.date: 02/06/2025
 ---
 
 # Environments in Microsoft Teams Toolkit

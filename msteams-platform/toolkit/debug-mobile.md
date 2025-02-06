@@ -5,7 +5,7 @@ description: Learn how to debug and test your Teams app with tab and bot capabil
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 02/06/2025
 ---
 
 # Debug for mobile

@@ -5,7 +5,7 @@ description: Learn how to edit, customize, preview, and manage Microsoft Entra m
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/20/2022
+ms.date: 02/06/2025
 ---
 
 # Edit Microsoft Entra manifest

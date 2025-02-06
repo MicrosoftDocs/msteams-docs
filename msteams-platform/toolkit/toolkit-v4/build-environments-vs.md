@@ -5,7 +5,7 @@ description: Learn about build environments such as C# and Blazor of Teams Toolk
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 02/06/2025
 ---
 
 # Prepare to build apps using Teams Toolkit in Visual Studio
