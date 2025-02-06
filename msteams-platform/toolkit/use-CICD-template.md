@@ -5,7 +5,7 @@ description: Learn how to use CI/CD pipeline templates in GitHub, set up pipelin
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/20/2022
+ms.date: 02/06/2025
 ---
 
 # Set up CI/CD pipelines
