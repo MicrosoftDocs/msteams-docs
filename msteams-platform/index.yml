@@ -31,6 +31,9 @@ highlightedContent:
     - title: Build your app 
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
+    - title: Manage your app with Developer Portal
+      itemType: how-to-guide
+      url:  /microsoftteams/platform/concepts/build-and-test/teams-developer-portal      
     - title: Enhance your app with Microsoft Graph
       itemType: how-to-guide
       url:  /graph/teams-concept-overview
