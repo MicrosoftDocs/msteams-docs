@@ -131,9 +131,6 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
-        - url:  https://dev.teams.microsoft.com/home
-          itemType: reference
-          text: Developer Portal for Teams
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
