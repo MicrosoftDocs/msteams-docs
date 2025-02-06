@@ -39,41 +39,18 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 ```json
     "bots": [
-
         { 
-    
           "botId": "bd5b01bf-03ac-4909-99dc-41c6e88451ff", 
-    
-          // ... existing bot node fields 
-    
-          "registrationInfo": { 
-    
-            "source": "microsoftCopilotStudio", 
-    
-            "environment": "7211551f-2b82-e1af-9013-002025094241", 
-    
-            "schemaName": "cr4c9_copilot", // New, specific to copilot studio bots 
-    
-            "clusterCategory": "preprod" // New, specific to copilot studio bots 
-    
-          } 
-    
+          // ... existing bot node fields
         } 
-    
       ],
-    
       "copilotAgents": {
-    
         "customEngineAgents": [{ // New 
-    
           "type": "bot", // Only option 
-    
           "id": "bd5b01bf-03ac-4909-99dc-41c6e88451ff"  // Validated against bots node 
-    
         }] 
-    
       },
-    
+
 ```
 
 </details>
