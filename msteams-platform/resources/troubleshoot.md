@@ -4,7 +4,7 @@ description: Learn about different issues or error scenarios while building apps
 keywords: teams apps development troubleshooting
 ms.localizationpriority: medium
 ms.topic: troubleshooting
-ms.date: 07/09/2018
+ms.date: 02/06/2025
 ---
 
 # Troubleshoot your Microsoft Teams app

@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about types of tabs, different tab context and it's benefits, tab features and user scenarios, custom tabs, and tools used to build tabs.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 01/23/2025
+ms.date: 02/06/2025
 ---
 
 # Build tabs for Teams

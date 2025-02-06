@@ -3,7 +3,7 @@ title: Get Contextual Information for Tabs
 description: Learn to get context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.date: 03/02/2023
+ms.date: 02/06/2025
 ---
 
 # Get context for your tab

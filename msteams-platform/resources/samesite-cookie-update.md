@@ -5,7 +5,7 @@ description: Learn about types of cookies, SameSite cookies and attributes, Team
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.date: 05/18/2022
+ms.date: 02/06/2025
 ---
 
 # Cookies and local storage
