@@ -8,6 +8,8 @@ ms.topic: reference
 
 # Build your Teams app
 
+[What's new for developers in Microsoft Teams](../whats-new.md)
+
 Get started with building apps for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
