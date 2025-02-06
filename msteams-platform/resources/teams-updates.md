@@ -5,9 +5,10 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 02/04/2025
+ms.date: 02/06/2025
 ---
-# Introducing the new Microsoft Teams client
+
+# Know about New Microsoft Teams client
 
 > [!IMPORTANT]
 > The Classic Teams client reaches end of availability on July 1, 2025. For more information, see [end of availability for Classic Teams client](/microsoftteams/teams-classic-client-end-of-availability).
