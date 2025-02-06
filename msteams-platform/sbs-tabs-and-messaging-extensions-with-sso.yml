@@ -187,6 +187,9 @@ items:
          * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+app+settings&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -231,6 +234,9 @@ items:
           A webpage appears with a message **Your bot is ready!**
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+      
+       > [!div class="nextstepaction"]
+       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
         
     # [Command line](#tab/cli)
@@ -242,6 +248,9 @@ items:
     ```
    
     ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Ccli2019%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
       
 - title: Upload SSO App to Teams
   durationInMinutes: 1
