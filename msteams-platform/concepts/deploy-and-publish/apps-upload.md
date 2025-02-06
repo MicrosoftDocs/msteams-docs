@@ -5,7 +5,7 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 04/16/2023
+ms.date: 01/23/2025
 ---
 
 # Upload your app in Teams
@@ -18,7 +18,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 
 > [!IMPORTANT]
 >
-> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 > * App installation is supported only on Teams desktop client.
 > * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
@@ -47,12 +47,15 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
    :::image type="content" source="~/assets/images/publish-app/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app.":::
 
 1. Select your app package .zip file.
-1. Add your app to Teams as per your requirement:</br>
+1. Select **Add**.
 
-   a. Select **Add** to add your personal app.</br>
-   b. Use the dropdown menu to add your app to a Team or chat.
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of the custom app dialog with the Add option highlighted.":::
 
-    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the custom app to add in Teams or chat.":::
+1. Select **Open** to open the app in personal scope. 
+
+    Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+    
+    :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 ## Troubleshoot
 
@@ -136,4 +139,4 @@ To remove app from Teams, follow the steps:
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)
-* [Manage custom and uploaded apps](/microsoftteams/teams-custom-app-policies-and-settings)
+* [Manage custom apps](/microsoftteams/teams-custom-app-policies-and-settings)

@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 02/22/2023
+ms.date: 01/23/2025
 ---
 
 # Publish your Microsoft Teams app
 
-You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the app.
 
 ## Configure default install options
 
@@ -29,7 +29,7 @@ To publish your Teams app, you must have a valid app package.  An app package is
 Upload a custom app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
 > [!IMPORTANT]
-> Uploading custom apps are available in Government Community Cloud (GCC), but are not available for GCC-High and Department of Defense (DOD).
+> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 
 For more information, see [upload your app in Teams](apps-upload.md).
 
@@ -41,10 +41,10 @@ For more information, see [manage your apps in the Teams admin center](/microsof
 
 ### Government Community Cloud (GCC) organizations
 
-In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud).
+In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../cloud-overview.md#teams-app-capabilities).
 
 > [!IMPORTANT]
->If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+> If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## Publish your app to the Teams Store
 
@@ -64,4 +64,3 @@ For more information, see [publish to the Teams Store](~/concepts/deploy-and-pub
 * [Publish to org](/microsoftteams/upload-custom-apps)
 * [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
 * [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
-
