@@ -49,6 +49,9 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue]
+
 - title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
