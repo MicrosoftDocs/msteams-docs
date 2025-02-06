@@ -43,7 +43,7 @@
   - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
-  - name: Understand use case
+  - name: Understand use cases
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
   - name: Map use case to Teams features
