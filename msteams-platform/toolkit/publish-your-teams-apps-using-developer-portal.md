@@ -5,7 +5,7 @@ description: Learn how to publish the app using Developer Portal in Teams Toolki
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 07/29/2022
+ms.date: 02/06/2025
 ---
 
 # Publish Teams app with Developer Portal
