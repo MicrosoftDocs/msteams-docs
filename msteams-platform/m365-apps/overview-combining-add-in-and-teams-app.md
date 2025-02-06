@@ -24,17 +24,17 @@ There can be no algorithmic procedure for merging an add-in and a Teams app for 
 - An algorithm will have to make an assumption about which language, TypeScript or JavaScript, was used for the client-side source code of the web application.
 
 > [!NOTE]
-> In addition to these bullets, note also that there are two basic families of web application frameworks on which either the add-in or the Teams app might have been created. 
+> In addition to these bullets, note also that there are two basic families of web application frameworks on which either the add-in or the Teams app might have been created.
 >
-> - **IIS/.NET**: 
+> - **IIS/.NET**:
 >
->      - Add-in projects can be created in Visual Studio with the [Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/), in which case the web application portion is built on ASP.NET and Internet Information Server (IIS).
->      - Teams app projects can be created in Visual Studio with the [Teams Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
+>   - Add-in projects can be created in Visual Studio with the [Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/), in which case the web application portion is built on ASP.NET and Internet Information Server (IIS).
+>   - Teams app projects can be created in Visual Studio with the [Teams Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
 >
 > - **Node.js server/JavaScript or TypeScript**:
 >
->      - Add-in projects can be created in the [Office Yeoman Generator](/office/dev/add-ins/develop/yeoman-generator-overview) or with [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
->      - Teams app projects can be created in Visual Studio Code with [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Add-in projects can be created using [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Teams app projects can be created in Visual Studio Code with [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
 >
 > Visual Studio doesn't currently support the unified manifest in add-in projects, so this article assumes that both the add-in and Teams apps projects are Node.js-based and *not* created with Visual Studio.
 
@@ -72,9 +72,9 @@ When the update has been published, how the update becomes available to end user
 
 - If the Microsoft 365 administrator consents to the update, then:
 
-   - The updated version of the Teams app is available immediately from **Apps** or **More Apps** in Outlook and the Microsoft 365 application, but not the Teams **Apps**, to users who had previously acquired the Teams app. 
-   - The Outlook add-in is also available immediately to users who had previously acquired the Teams app, regardless of whether they had also previously acquired the add-in.
-   - If a Teams Administrator allows the update, then users can individually install it to Teams from the Teams **Apps**.
+  - The updated version of the Teams app is available immediately from **Apps** or **More Apps** in Outlook and the Microsoft 365 application, but not the Teams **Apps**, to users who had previously acquired the Teams app.
+  - The Outlook add-in is also available immediately to users who had previously acquired the Teams app, regardless of whether they had also previously acquired the add-in.
+  - If a Teams Administrator allows the update, then users can individually install it to Teams from the Teams **Apps**.
 
 - If the administrator doesn't consent, then each user who had previously acquired the Teams app must consent to the update and it can only be made available in Teams if the Teams Administrator has allowed it.
 - Users who had previously acquired only the Office add-in must acquire the new combined app from the Teams store. It cannot be acquired through **All Apps** button in the Outlook ribbon.
@@ -85,7 +85,7 @@ When the update has been published, how the update becomes available to end user
 > - The user's Microsoft 365 administrator deploys the add-in for all users.
 > - The user installs the add-in in Outlook on the web, [new Outlook for Windows](https://support.microsoft.com/office/new-and-classic-outlook-for-windows-feature-comparison-de453583-1e76-48bf-975a-2e9cd2ee16dd), or in another Microsoft 365 desktop client app that *is* Version 2307 (Build 16626.20132) or later. This makes the add-in available on the same user's other Office clients, including older or perpetual license clients.
 
-In the future, you only need to update the new version of the app. 
+In the future, you only need to update the new version of the app.
 
 ## See also
 
