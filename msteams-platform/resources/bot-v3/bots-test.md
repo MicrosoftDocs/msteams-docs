@@ -3,7 +3,7 @@ title: Test and debug your bot
 description: Learn how to test, debug, disable bots in Microsoft Teams, test your bot without uploading to Teams using Bot Emulator, remove or disable bots from AppSource.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 04/02/2023
+ms.date: 02/06/2025
 ---
 # Test and debug your Microsoft Teams bot
 
