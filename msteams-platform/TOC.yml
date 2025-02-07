@@ -685,12 +685,12 @@
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token, message in channel, Teams message
-  - name: Create Incoming Webhooks
+  - name: Create Incoming Webhooks (Deprecated)
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
-  - name: Create connectors for Microsoft 365 Groups
+  - name: Create connectors for Microsoft 365 Groups (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Create and send messages
+  - name: Create and send messages (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
 - name: Build cards and dialogs
