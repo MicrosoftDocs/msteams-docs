@@ -107,17 +107,13 @@ The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable t
 
 :::image type="content" source="../../assets/images/compose-extensions/compose-extension-settings-menu-item.png" alt-text="Screenshot shows the locations of Settings menu item.":::
 
-Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
+The [`onQuerySettingsUrl`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler returns the URL for the configuration page when a user clicks on the settings button. After the configuration page is closed, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
-### How it works
-
-The [`onQuerySettingsUrl`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler provides the URL for the configuration page when a user clicks on the settings button. After the configuration page is closed, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension.
-
-If a message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration. For more information, see [handle onQuery events](../../../resources/messaging-extension-v3/search-extensions.md).
+If a message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
 
 The following image shows the `config` command workflow:
 
-:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
+:::image type="content" source="~/assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the config command workflow and how it works.":::
 
 The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
 
