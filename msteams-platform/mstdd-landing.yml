@@ -63,6 +63,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introducing third-party cloud storage capability for drag-dropped files
+        url: concepts/device-capabilities/third-party-storage-capability.md
+      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
+        url: concepts/device-capabilities/third-party-storage-capability.md
       - text: Tab app caching is generally available
         url: tabs/how-to/app-caching.md
       - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
@@ -79,10 +83,6 @@ landingContent:
         url: concepts/deploy-and-publish/add-default-install-scope.md
       - text: Introducing default landing capability for tab and bot apps
         url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
-      - text: Build responsive Container layouts in Adaptive Cards
-        url: task-modules-and-cards/container-layouts.md
-      - text: Visually represent data with charts in Adaptive Cards
-        url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
 
     - linkListType: reference
       links:
