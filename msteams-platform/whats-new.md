@@ -31,12 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2025 January**
+**2025 February**
 
-* ***January 31, 2025***: [Create a scenario based custom engine agent using Teams Toolkit and Teams AI library](sbs-Teams-AI.yml).
-* ***January 23, 2025***: Plan for [government](concepts/cloud-overview.md) and [sovereign](concepts/sovereign-cloud.md) clouds.
-* ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
-* ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
+***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
 
 :::column-end:::
 :::row-end:::
@@ -50,9 +47,13 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
+| 23/01/2025 | Plan for government and sovereign clouds. | Plan your app > Plan for special clouds > [Plan for government clouds](concepts/cloud-overview.md) |
+| 09/01/2025 | Tab app caching is generally available. | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md) |
+| 09/01/2025 | AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available. | Build bots > Bot user experience > [Enhance AI-generated bot messages](bots/how-to/bot-messages-ai-generated-content.md) |
 | 18/12/2024 | Introducing text customization for share to stage button. | Build apps for Teams meetings and calls > Configure apps for Teams meetings > Build apps for meeting stage > [Advanced share to stage APIs](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis) |
 | 18/12/2024 | Introducing share to meeting from personal app. | Integrate with Teams > Share to Teams > Share to Teams from personal app or tab > [Share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) |
-| 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
+| 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command. | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
 | 13/12/2024 | Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) |
 | 11/12/2024 | Enhanced user experience for Teams app installed from Teams Store or custom upload. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md) |
 | 27/11/2024 | Terminology update. **Copilot agent** is referred to as **agent**. |  |
@@ -439,6 +440,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+* ***February 3, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
 
 :::column-end:::
 :::row-end:::
