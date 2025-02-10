@@ -34,9 +34,9 @@ Streaming bot messages has two types of updates:
 
 ### Stop generating bot response
 
-While the bot generates and streams the response, the user might want to update the prompt or start a new search. You can enable the user to stop generating the bot response midway using a stop generating button. When the user selects the **Stop** button, the bot stops generating the message immediately. It considers the previous response as incomplete or discarded in the conversation's context.
+While the bot generates and streams the response, the user can update the prompt or start a new search. The **Stop** button allows the user to halt the bot's response midway. When selected, the bot stops generating its response immediately, and the previous streamed response is considered incomplete or discarded.
 
-The bot handles this functionality of stopping generation, and the bot app doesn't need to handle it. It receives the 403 error when the user selects the **Stop** button.
+The bot manages this stopping functionality, and the bot app doesn't need to handle it. It receives a 403 error when the stop button is selected.
 
 You can implement streaming bot messages in your app in one of the following ways:
 
