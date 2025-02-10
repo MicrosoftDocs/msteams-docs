@@ -32,11 +32,23 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-### Stop generating bot response
+### Stop streaming bot response
 
+The stop streaming button :::image type="icon" source="../assets/icons/stop-button.png" border="false"::: provides users with control over streaming responses, allowing them to interrupt and refine their prompts or send new ones without delay. This feature has key implications for bot development and conversation management.
+
+The stop streaming button is available by default during streaming, enabling users to stop a response early. When a user selects this button, the bot immediately stops the stream, without requiring any additional handling by the bot. It receives a 403 error when a response is stopped, indicating that the response was indicated.
+
+**Implication for bot development**
+
+- Bots can consider stopped responses as incomplete or discarded in the context of the conversation.
+- Bots can't change content previously send in-between streaming requests.
+
+Understanding the working of the stop streaming button can help design more effective and user-friendly conversational interfaces.
+
+---
 While the bot generates and streams the response, the user can update the prompt or start a new search. The **Stop** button allows the user to halt the bot's response midway. When selected, the bot stops generating its response immediately, and the previous streamed response is considered incomplete or discarded.
 
-The bot manages this stopping functionality, and the bot app doesn't need to handle it. It receives a 403 error when the stop button is selected.
+The bot manages this functionality, and the bot app doesn't need to handle it. It receives a 403 error when the stop button is selected.
 
 You can implement streaming bot messages in your app in one of the following ways:
 
