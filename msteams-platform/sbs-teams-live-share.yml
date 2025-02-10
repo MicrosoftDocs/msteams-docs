@@ -80,6 +80,9 @@ items:
         
           :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
+    >
+    >
+
 - title: Set up manifest file and upload your app
   durationInMinutes: 1
   content: |
