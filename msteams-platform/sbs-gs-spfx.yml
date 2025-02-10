@@ -156,7 +156,7 @@ items:
        Your project is created after all the questions are answered.
     
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20your%20first%20app%20with%20SPFx&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     ---
 
@@ -211,6 +211,8 @@ items:
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
         Now you're ready to build the app and run it locally!
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     # [Command line](#tab/cline)
 
@@ -226,7 +228,9 @@ items:
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+    
      ---
 
     ## Build and run your app locally in Visual Studio Code
@@ -311,6 +315,8 @@ items:
     
     1. Close the browser window to stop local workbench debugging when you're ready.
     </details>
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Take%20a%20tour%20of%20the%20source%20code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D3%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3%23take-a-tour-of-the-source-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
