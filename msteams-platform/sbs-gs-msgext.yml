@@ -135,6 +135,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
 
+   > 
+   > 
+   
    # [Command Line](#tab/cli1)
 
    Use the `teamsfx` CLI to create your first project.
