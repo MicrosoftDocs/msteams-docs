@@ -34,15 +34,13 @@ Streaming bot messages has two types of updates:
 
 ### Stop streaming bot response
 
-The stop streaming button :::image type="icon" source="../assets/icons/stop-button.png" border="false"::: lets users control streaming responses. They can interrupt and refine their prompts or send new ones without delay. This feature is important for bot development and conversation management.
-
-The stop streaming button is available by default during streaming, allowing users to stop a response early. When a user clicks this button, the bot stops the stream immediately and receives a 403 error, indicating the response was stopped.
+The stop streaming button (:::image type="icon" source="../assets/icons/stop-button.png" border="false":::) lets users control streaming responses. They can interrupt and refine their prompts or send new ones without delay. This feature is important for bot development and conversation management. The stop streaming button is available by default during streaming, allowing users to stop a response early.
 
 **Implications for bot development**
 
 - Bots can treat stopped responses as incomplete or discarded in the conversation.
 - Bots can't change content already sent during streaming.
-- When a bot continues streaming on a message that is stopped by a user:
+- When a bot continues streaming on a message that is stopped by a user, the following error is generated:
 
     | Error detail | Description |
     | --- | --- |
