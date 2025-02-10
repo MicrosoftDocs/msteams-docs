@@ -20,6 +20,8 @@ You can stream bot messages to deliver a bot's responses to the user as small up
 
 When users observe the bot processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the bot.
 
+## Stream messages user experience
+
 Streaming bot messages has two types of updates:
 
 - **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat. It informs the user about the bot's ongoing actions while a response is being generated.
@@ -29,6 +31,12 @@ Streaming bot messages has two types of updates:
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
+
+### Stop generating bot response
+
+While the bot generates and streams the response, the bot can stop generating messages
+
+You can enable the developer to stop generating the bot response midway using a stop generating button. You can make add this functionality in the bot by default, where the bot doesn't need to handle it.
 
 You can implement streaming bot messages in your app in one of the following ways:
 
