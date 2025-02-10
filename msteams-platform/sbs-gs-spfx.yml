@@ -154,7 +154,7 @@ items:
 
        Your project is created after all the questions are answered.
     > [!div class="nextstepaction"]
-    > [I ran into an issue](title=I%20ran%20into%20an%20issue%20Build%20your%20first%20app%20with%20SPFx&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=I%20ran%20into%20an%20issue%20Build%20your%20first%20app%20with%20SPFx&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     ---
 
@@ -179,7 +179,7 @@ items:
     - `SPFx/src/webparts/{webpart}`: contains your SPFx web part.
     - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
     > [!div class="nextstepaction"]
-    > [I ran into an issue](title=I%20ran%20into%20an%20issue%20Take%20a%20tour%20of%20the%20source%20code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2%23take-a-tour-of-the-source-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=I%20ran%20into%20an%20issue%20Take%20a%20tour%20of%20the%20source%20code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2%23take-a-tour-of-the-source-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
 - title: Build your tab app
   durationInMinutes: 1
