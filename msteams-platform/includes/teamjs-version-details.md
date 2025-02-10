@@ -4,4 +4,4 @@
 |**Existing Teams-only apps**| Update to TeamsJS v2.19.0 or later*  | v1.12 | [Understand TeamsJS backwards compatibility](../tabs/how-to/using-teams-client-library.md#backwards-compatibility) and [Update to TeamsJS v2.0](../tabs/how-to/using-teams-client-library.md#updating-to-teamsjs-version-20)|
 |**New Teams-only apps**| TeamsJS v2.19.0 or later | v1.12 | [Create a new Teams app using Teams Toolkit](../toolkit/create-new-project.md)|
 
-**Use the latest TeamsJS to take advantage of the latest improvements and new feature support including Teams-only apps. No new features or improvements will be added to TeamsJS v1.13, and new app submissions and updates now require TeamsJS v2.19 or later. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md).*
+**Use the latest TeamsJS to take advantage of the latest improvements and new feature support including Teams-only apps. No new features or improvements will be added to TeamsJS v1.13.0. New app submissions and updates now require TeamsJS v2.19.0 or later. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md).*
