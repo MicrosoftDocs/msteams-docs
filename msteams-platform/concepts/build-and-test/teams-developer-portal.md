@@ -88,7 +88,7 @@ To resolve this error, we recommend that you ask a Teams Administrator or Global
 
 This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app. 
 
-Once the ticket is resolved, the Teams Administrator or Global Administrator can [import an existing app](#import-an-existing-app). To share access of the app, the admin or existing owner can [add an owner](manage-your-apps-in-developer-portal.md#advanced) in Developer Portal.
+After the ticket is resolved, the Teams Administrator or Global Administrator can [import an existing app](#import-an-existing-app). To share access of the app, the admin or existing owner can [add an owner](manage-your-apps-in-developer-portal.md#advanced) in Developer Portal.
 
 ## Changelog for Developer Portal
 
