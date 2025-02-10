@@ -8,8 +8,7 @@ ms.topic: reference
 
 # Build your Teams app
 
-> [!div class="nextstepaction"]
-> [What's new for developers in Microsoft Teams](../whats-new.md)
+:::image type="icon" source="../assets/images/bullhorn-blue.png" link="../whats-new.md" border="false":::
 
 Get started with building apps for Microsoft Teams and beyond!
 
