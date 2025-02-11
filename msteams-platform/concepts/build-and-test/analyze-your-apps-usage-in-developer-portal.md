@@ -15,6 +15,7 @@ Whether you’re tracking active users, retention rates, or usage patterns acros
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
+
 # [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
 
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
@@ -104,6 +105,8 @@ After you have selected your desired filters, you can explore the following indi
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
 # [Third-party apps](#tab/thirdpartyapps)
+
+To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The markeplace account owner or manager can [assign user roles and permissions](https://learn.microsoft.com/en-us/partner-center/account-settings/user-roles).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
