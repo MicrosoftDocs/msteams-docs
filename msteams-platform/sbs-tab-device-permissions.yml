@@ -263,8 +263,9 @@ items:
     Did you come up with something like this?
 
     :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-grant-tab.png" alt-text="Screenshot shows the final output screen for grant tab device permission.":::                   
-   > [!div class="nextstepaction"]
-   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Complete%20challenge&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Complete%20challenge&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
 
