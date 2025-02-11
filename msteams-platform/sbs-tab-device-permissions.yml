@@ -52,6 +52,9 @@ items:
 
      1. Select **Clone**.
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20local%20environment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+
 
 - title: Set up tunnel for local web server
   durationInMinutes: 1
@@ -65,6 +68,8 @@ items:
        > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3000` command.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device_1.png" alt-text=" ngrok tunnelling":::
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20tunnel%20for%20local%20web%20server&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -80,7 +85,9 @@ items:
           - Replace `<<BASE_URI_DOMAIN>>` with your ngrok URL excluding `https://` in `validDomains`.
 
           :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1_1.png" alt-text="update ngrok in visual studio":::
-               
+         > [!div class="nextstepaction"]
+         > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20manifest%20file&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      
 - title: Build and run client app using npm
   durationInMinutes: 1
   content: |
@@ -111,6 +118,8 @@ items:
      1. You can see the following output in the browser:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-react_1.png" alt-text="Browser output":::     
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20client%20app%20using%20npm&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Add tab device permission to Teams
   durationInMinutes: 1
@@ -254,7 +263,8 @@ items:
     Did you come up with something like this?
 
     :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-grant-tab.png" alt-text="Screenshot shows the final output screen for grant tab device permission.":::                   
-
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Complete%20challenge&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
 
