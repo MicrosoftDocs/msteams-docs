@@ -40,14 +40,14 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 ```json
     "bots": [
         { 
-          "botId": "bd5b01bf-03ac-4909-99dc-41c6e88451ff", 
+          "botId": "00001111-aaaa-2222-bbbb-3333cccc4444", 
           // ... existing bot node fields
         } 
       ],
       "copilotAgents": {
         "customEngineAgents": [{ // New 
           "type": "bot", // Only option 
-          "id": "bd5b01bf-03ac-4909-99dc-41c6e88451ff"  // Validated against bots node 
+          "id": "00001111-aaaa-2222-bbbb-3333cccc4444"  // Validated against bots node 
         }] 
       },
 
