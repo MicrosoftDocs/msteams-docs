@@ -1,10 +1,10 @@
 ---
-title: Teams solution for building apps
+title: Teams Solution for Building Apps
 author: heath-hamilton
-description: Understand how to plan, design, build, extend to Microsoft 365, test, distribute, monetize, and integrate your app with Teams.
+description: Learn about Teams platform user story that helps map requirements to app functionalities to create app, development environments, tools required, and customization.
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 11/02/2021
+ms.date: 02/06/2025
 ---
 # The Teams solution
 
@@ -49,7 +49,7 @@ Let's go through Teams Developer Documentation based on your requirements for bu
 | --------| --------|
 | If you're new to Teams app development and want to create a new Teams app | [Get started](get-started/get-started-overview.md) |
 |If you've created app with Teams before and want to learn more about app functionalities | Build modules for [tabs](tabs/what-are-tabs.md), [bots](bots/what-are-bots.md), [message extensions](messaging-extensions/what-are-messaging-extensions.md), [meeting app](apps-in-teams-meetings/teams-apps-in-meetings.md), and more. |
-| If you want to find more information about the tools and SDKs options that are available with Teams | [Explore SDKs](get-started/choose-what-suits-you.md#explore-sdks) and [Explore Tools](get-started/choose-what-suits-you.md#explore-tools) |
+| If you want to find more information about the tools and SDKs options that are available with Teams | [Explore SDKs](get-started/tool-options-and-code-samples.md#explore-sdks) and [Explore Tools](get-started/tool-options-and-code-samples.md#explore-tools) |
 
 ## See also
 

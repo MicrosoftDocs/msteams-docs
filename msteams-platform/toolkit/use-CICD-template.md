@@ -1,11 +1,11 @@
 ---
 title: CI/CD templates
 author: MuyangAmigo
-description:  In this module, learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Jenkins for Teams Application DevelopersCI/CD templates.
+description: Learn how to use CI/CD pipeline templates in GitHub, set up pipeline with Azure DevOps, and Jenkins for Teams Application Developers CI/CD templates.
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/20/2022
+ms.date: 02/06/2025
 ---
 
 # Set up CI/CD pipelines
@@ -501,7 +501,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
 ## Generate Teams app package
 
-To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
+To publish your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
 
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
