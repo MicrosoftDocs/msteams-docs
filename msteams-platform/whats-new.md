@@ -33,8 +33,10 @@ Teams platform features that are available to all app developers.
 
 **2025 February**
 
-***February 19, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
-***February 19, 2025***: [Describe Intune Mobile App Management (MAM) support in app manifest for Outlook add-ins to comply with organizational data protection policies](/javascript/api/outlook/office.mailbox).
+***February 28, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
+
+***February 28, 2025***: [Describe Intune Mobile App Management (MAM) support in app manifest for Outlook add-ins to comply with organizational data protection policies](/javascript/api/outlook/office.mailbox).
+
 ***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
 
 :::column-end:::
