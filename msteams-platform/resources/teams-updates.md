@@ -5,7 +5,7 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 02/06/2025
+ms.date: 02/12/2025
 ---
 
 # Know about New Microsoft Teams client
@@ -45,7 +45,7 @@ The following Teams features are deprecated and aren't supported in the new Team
 
 * **`window.alert`, `window.confirm`, and `window.prompt` APIs**: We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
-* **[Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs**: We recommend using HTML5 Geolocation and Media.
+* **[Location](../concepts/device-capabilities/location-capability.md#location-apis) APIs**: We recommend using HTML5 Geolocation APIs instead.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
