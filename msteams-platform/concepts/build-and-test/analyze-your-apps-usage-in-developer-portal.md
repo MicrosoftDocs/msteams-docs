@@ -106,7 +106,7 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The markeplace account owner or manager can [assign user roles and permissions](https://learn.microsoft.com/en-us/partner-center/account-settings/user-roles).
+To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The markeplace account owner or manager can [assign user roles and permissions](../../../partner-center/account-settings/user-roles.md).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
