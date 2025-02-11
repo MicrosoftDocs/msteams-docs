@@ -4,6 +4,7 @@ description: Learn to test and revoke resource-specific consent (RSC) permission
 ms.localizationpriority: medium
 author: akjo
 ms.topic: tutorial
+ms.owner: rcastaneda
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
 ms.date: 03/28/2023
 ---
