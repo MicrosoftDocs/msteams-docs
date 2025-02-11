@@ -1,7 +1,7 @@
 ---
 title: Bots to Send and Receive Files
 description: Learn how to send and receive files through the bot using Microsoft Graph APIs for personal, channel and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 04/17/2023
+ms.date: 01/23/2025
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
@@ -10,7 +10,7 @@ ms.topic: how-to
 > [!IMPORTANT]
 >
 > * This article is based on the v4 Bot Framework SDK.
-> * Bots don't support sending and receiving files in Government Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
+> * Bots don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send files to and receive files from a bot:
 

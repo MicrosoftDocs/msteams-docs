@@ -1,7 +1,7 @@
 ---
 title: Stream bot messages
-description: Learn how to enhance the user experience in bots using streaming techniques.
-ms.date: 11/18/2024
+description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams AI library and configure streaming bot messages. 
+ms.date: 02/06/2025
 ms.topic: conceptual
 author: surbhigupta12
 ms.author: surbhigupta
@@ -68,7 +68,11 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
     :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI-powered bot." border="false":::
 
-    The following example shows the final streamed response in an AI-powered bot:
+    The following example shows the AI-powered bot formatting the streamed response:
+
+    :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Image shows the AI-powered bot applying formatting on the streamed response." border="false":::
+
+    The following example shows the final streamed response in an AI-powered bot after the formatting is completed:
 
     :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI-powered bot." border="false":::
 
@@ -268,7 +272,7 @@ Bot messages can be streamed through REST API. Streaming messages support rich t
 
 When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
-When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
+When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
 The following are the properties for streaming bot messages:
 
