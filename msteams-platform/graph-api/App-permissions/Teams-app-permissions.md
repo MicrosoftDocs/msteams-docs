@@ -5,6 +5,7 @@ description: Learn how Teams apps are managed in Microsoft Entra ID and resource
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
+ms.owner: rcastaneda
 ms.date: 10/31/2022
 ---
 
