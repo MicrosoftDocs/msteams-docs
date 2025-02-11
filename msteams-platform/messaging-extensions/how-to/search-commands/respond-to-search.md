@@ -94,7 +94,7 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-The configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a config response is used to prompt the user to set up the message extension and provide any necessary configuration.
+The config response is the data returned by the server or application to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a config response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
 The following JSON response is an example of a config response received from the app:
 
