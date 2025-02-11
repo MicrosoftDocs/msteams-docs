@@ -43,7 +43,7 @@
   - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
-  - name: Understand use case
+  - name: Understand use cases
     href: concepts/design/understand-use-cases.md
     displayName: user requirements, app functionalities, app scope, capabilities
   - name: Map use case to Teams features
@@ -99,7 +99,7 @@
     - name: App artwork for Teams Store
       href: concepts/design/design-teams-app-artwork-store.md
       displayName: app artwork, image template
-    - name: Type
+    - name: Typography
       href: concepts/design/design-teams-app-type.md
       displayName: font design, font style
     - name: Color
@@ -418,7 +418,7 @@
     - name: Tabs on mobile
       href: tabs/design/tabs-mobile.md
       displayName: Teams Store apps approved by Microsoft for mobile
-    - name: Build apps for shared channels
+    - name: Apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Send activity feed notifications
@@ -451,22 +451,23 @@
       displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams Toolkit
     - name: Build with Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent,
+      displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent, AI library
     - name: Understand Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
-      displayName: custom engine agent
+  - name: Bot user experience
+    items:
+    - name: Custom engine agent user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
     - name: Enhance AI-generated bot messages
       href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit, 
-    - name: Custom engine agent user experience
-      href: bots/how-to/teams-conversational-ai/ai-ux.md
-      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
   - name: Understand bot concepts
     href: bots/bot-concepts.md
     displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
@@ -600,11 +601,14 @@
   - name: Apps for meetings and calls
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
     displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
-  - name: Configure apps for Teams meetings
+  - name: Enable and configure apps for Teams meetings and calls
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
       displayName: anonymous
+    - name: Build tabs for calling
+      href: apps-in-teams-meetings/build-tabs-for-calling.md
+      displayName: PSTN, calling extensibility, calls in Teams
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: apps for meeting, share content, share to stage APIs, in-meeting document signing, meeting side panel, customize share button
@@ -1139,6 +1143,9 @@
       displayName: share to meeting, personal app
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
+  - name: Third-party storage app
+    href: concepts/device-capabilities/third-party-storage-capability.md
+    displayName: third party storage, drag drop files, cloud storage app
   - name: Create deep links
     items:
     - name: Deep links overview
