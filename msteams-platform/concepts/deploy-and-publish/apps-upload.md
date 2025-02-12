@@ -51,10 +51,10 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of the custom app dialog with the Add option highlighted.":::
 
-1. Select **Open** to open the app in personal scope.
+1. Select **Open** to open the app in personal scope. 
 
     Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
-
+    
     :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 ## Troubleshoot
