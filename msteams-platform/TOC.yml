@@ -477,7 +477,7 @@
       href: bots/build-conversational-capability.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
     - name: Receive all messages for bots and agents
-      href: bots/how-to/conversations/channel-messages-with-rsc.md  
+      href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md  
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention

@@ -1350,7 +1350,6 @@ The following code shows an example of reactions removed from bot message:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
 
-
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -1652,6 +1651,6 @@ In the development phase, it's always helpful to send meaningful messages in con
 * [Build bots for Teams](../../what-are-bots.md)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
-* [Receive all conversation messages with RSC](channel-messages-with-rsc.md)
+* [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
 * [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
 * [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
