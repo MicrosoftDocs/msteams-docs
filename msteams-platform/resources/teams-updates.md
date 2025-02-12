@@ -5,9 +5,10 @@ author: v-ypalikila
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 12/31/2024
+ms.date: 02/06/2025
 ---
-# Introducing the new Microsoft Teams client
+
+# Know about New Microsoft Teams client
 
 > [!IMPORTANT]
 > The Classic Teams client has been deprecated on March 31, 2024.
@@ -40,8 +41,8 @@ To ensure a smooth transition, a phased rollout of the new platform is planned.
 
 > [!NOTE]
 >
-> * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
-> * We recommend you to test the functionality of apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
+> * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC High environments.
+> * We recommend you to test the functionality of apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC High environments after switching from the Classic Teams client to the new Teams client.
 
 The following Teams features aren't supported in the new Teams client:
 

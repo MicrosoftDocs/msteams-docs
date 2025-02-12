@@ -120,6 +120,8 @@ You can now preview your Actions in the Microsoft 365 home page, right-click a f
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 ## Preinstall Actions for users in Microsoft 365 Admin Center
 
 > [!NOTE]

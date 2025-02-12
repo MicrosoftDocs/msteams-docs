@@ -69,7 +69,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 ### Typeahead search in Adaptive Cards  
 
-Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a typeahead static search within a list with limited number of choices. The mobile and desktop clients support typeahead dynamic search experience.
+Typeahead search added as an input control in Adaptive Cards enable [dynamic search](cards/dynamic-search.md#dynamic-typeahead-search) experience from a dynamically loaded dataset. It also allows users to do a typeahead static search within a list with limited number of choices. The mobile and desktop clients support typeahead dynamic search experience.
 
 ### Dependent inputs in Adaptive Cards
 

@@ -15,7 +15,7 @@ With Microsoft Teams apps, you can add your existing connector for Microsoft 365
 See the following video to learn how to create an connectors for Microsoft 365 Groups:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO 7e9a36c0-fbb7-4848-9591-b98925696cfd]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]

@@ -4,7 +4,7 @@ description: Learn how to create a brand new app, import an existing or publishe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 02/27/2023
+ms.date: 01/23/2025
 ---
 
 # Developer Portal for Teams
@@ -16,7 +16,7 @@ ms.date: 02/27/2023
 > [!NOTE]
 >
 > * Developer Portal for Government Community Cloud (GCC) is supported only as an app in Teams and not as a standalone website.
-> * Developer Portal isn't available for GCC-High and Department of Defense (DOD) tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
+> * Developer Portal isn't available for GCC High, Department of Defense (DoD), and Teams operated by 21Vianet tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
 
 ## Register an app
 
@@ -86,7 +86,9 @@ To resolve this error, we recommend that you ask a Teams Administrator or Global
 * App owner's email ID
 * Screenshot of the email from Partner Center when the app was published.
 
-This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app.
+This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app. 
+
+After the ticket is resolved, the Teams Administrator or Global Administrator can [import an existing app](#import-an-existing-app). To share access of the app, the admin or existing owner can [add an owner](manage-your-apps-in-developer-portal.md#advanced) in Developer Portal.
 
 ## Changelog for Developer Portal
 
