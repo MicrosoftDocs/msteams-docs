@@ -62,6 +62,9 @@ Teams calls the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+inserting+URL+placeholder+values&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-inserting-url-placeholder-values&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-inserting-url-placeholder-values&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ### Get context by using the Microsoft Teams JavaScript library
 
 You can also retrieve the context information using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
@@ -291,6 +294,9 @@ The following table lists commonly used context properties of the *context* obje
 | page.isMultiWindow | isMultiWindow |
 
 For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+the+Microsoft+Teams+JavaScript+library&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Retrieve context in private channels
 
