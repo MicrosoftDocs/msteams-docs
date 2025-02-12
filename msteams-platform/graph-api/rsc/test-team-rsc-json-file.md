@@ -4,7 +4,7 @@ description: In this module, learn how to test resource-specific consent (RSC) f
 ms.localizationpriority: medium
 author: akjo
 ms.topic: how-to
-ms.owner: rcastaneda
+ms.owner: vishachadha
 ms.date: 12/15/2022
 ---
 
