@@ -11,7 +11,7 @@ ms.topic: reference
 > [!div class="nextstepaction"]
 > [What's new for developers in Teams](../whats-new.md)
 
-::::image type="content" source="../assets/icons/whats-new-button.png" alt-text="link to what's new page" link="../whats-new.md" border="false":::
+:::image type="content" source="../assets/icons/whats-new-button.png" alt-text="link to what's new page" link="../whats-new.md" border="false":::
 
 Get started with building apps for Microsoft Teams and beyond!
 
