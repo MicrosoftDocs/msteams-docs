@@ -311,16 +311,16 @@ items:
         </details>
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
-       1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
+       1. Go to [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer/).
        1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
        1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
        1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
-          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card Designer with the Adaptive Card template and the sample data."::: 
        
-       1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
+       1. Select **Preview mode**. The Adaptive Card Designer displays an Adaptive Card with the data that binds the response to the template.
           
-          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::   
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card Designer with the Adaptive Card template and the sample data.":::   
     
     **Create a preview card template**
     

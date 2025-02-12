@@ -155,12 +155,12 @@ You can upload a sample app to see how apps should look and behave in the Teams 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-### Adaptive Cards designer
+### Adaptive Card Designer
 
 Design Adaptive Cards in our web-based tool.
 
 > [!div class="nextstepaction"]
-> [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+> [Try the Adaptive Card Designer](https://adaptivecards.microsoft.com/designer/)
 
 ## See also
 
