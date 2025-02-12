@@ -65,7 +65,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
->[!NOTE]
+> [!NOTE]
 > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
 The following scenario provides the details to add an Outgoing Webhook:
@@ -93,7 +93,7 @@ To ensure that your service is receiving calls only from actual Teams clients, T
 
 Your code must always validate the HMAC signature included in the request as follows:
 
-* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
 * Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
