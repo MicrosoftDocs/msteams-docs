@@ -4,6 +4,7 @@ description: Install app proactively using Graph APIs. Check if your bot is curr
 ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
+ms.owner: vishachadha
 ms.date: 12/15/2022
 ---
 
