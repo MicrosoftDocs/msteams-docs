@@ -4,6 +4,7 @@ description: Learn how to analyze your app's usage metrics for your custom apps 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.owner: luywang
 ms.date: 12/15/2022
 ---
 
@@ -104,6 +105,8 @@ After you have selected your desired filters, you can explore the following indi
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
 # [Third-party apps](#tab/thirdpartyapps)
+
+To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The markeplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 

@@ -4,6 +4,7 @@ description: Learn how to use Microsoft Graph to import messages such as message
 ms.localizationpriority: high
 author: "akjo"
 ms.topic: overview
+ms.owner: vishachadha
 ms.date: 09/02/2022
 ---
 
