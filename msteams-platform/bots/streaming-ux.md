@@ -540,7 +540,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of the bot's final response:
 
-:::image type="content" source="../assets/images/bots/streaming_final.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/streaming_final.png" border="false":::
+:::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/ai-stream-message-formatting.png" border="false":::
 
 ## Response codes
 
