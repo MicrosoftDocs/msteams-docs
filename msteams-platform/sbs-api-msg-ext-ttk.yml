@@ -451,8 +451,8 @@ items:
         
         Select **Local debug** to preview your project.
         
-  > [!div class="nextstepaction"]
-  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-msg-ext-ttk%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-msg-ext-ttk.yml&documentVersionIndependentId=69e20fa9-b7e1-feae-1ce6-a0b1da9756a7&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-msg-ext-ttk%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-msg-ext-ttk.yml&documentVersionIndependentId=69e20fa9-b7e1-feae-1ce6-a0b1da9756a7&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     After scaffolding is done, view the project directories and files under **Explorer** in Visual Studio Code.
 
