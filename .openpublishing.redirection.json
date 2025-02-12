@@ -1223,6 +1223,10 @@
       {
         "source_path": "msteams-platform/sbs-tab-with-adaptive-cards.yml",
         "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-with-rsc.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/channel-messages-with-rsc"
       }
     ]
 }
