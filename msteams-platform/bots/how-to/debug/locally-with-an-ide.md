@@ -5,7 +5,7 @@ description: Learn about testing and debugging your bot locally with an IDE with
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.date: 02/11/2025
+ms.date: 02/12/2025
 ---
 
 # Test and debug your bot locally with IDE
