@@ -11,11 +11,13 @@ ms.topic: reference
 > [!div class="nextstepaction"]
 > [What's new for developers in Teams](../whats-new.md)
 
+::::image type="content" source="../assets/icons/whats-new-button.png" alt-text="link to what's new page" link="../whats-new.md" border="false":::
+
 Get started with building apps for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
-Here's an idea of what you'll learn:
+Here's an idea of what you'll learn
 
 * Get started quickly with the Microsoft Teams Toolkit.
 * Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
