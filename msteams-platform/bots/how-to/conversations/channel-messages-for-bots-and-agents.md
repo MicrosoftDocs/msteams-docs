@@ -32,6 +32,15 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 
 ### Filtering at mention messages
 
+You can enable the developer to filter bot messages and process those that @mention the bots or the agent. This can be useful for several reasons:
+
+- **Ensure contextual relevance**: Messages that are directed at the bot likely have higher relevance for the users of bots or the agents. It can help the bot respond accurately and engage in meaningful responses.
+- **Better bot performance**: Filtering messages can the reduce the need for unnecessary processing for the bot or the agent. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
+- **Enhance user experience**: The developer can create a more seamless and intuitive user experience. Users are more likely to engage with the bot if it responds only when it's addressed.
+- **Efficient message handling**: It enables the bot to handle larger volume of conversations well, and make it more useful and relatable.
+
+The developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
+
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
 // This code snippet allows the bot to ignore all messages that do not @mention the bot.
