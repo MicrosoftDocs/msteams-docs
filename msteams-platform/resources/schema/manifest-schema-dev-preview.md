@@ -560,7 +560,6 @@ Represents a conversational Teams bot that uses custom AI language models and or
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 
-
 ## configurableTabs
 
 **Optional** &ndash; Array
@@ -700,9 +699,6 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 **Optional** &ndash; Array
 
 Defines a message extension for the app.
-
-> [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
