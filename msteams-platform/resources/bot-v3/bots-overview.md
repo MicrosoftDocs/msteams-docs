@@ -101,7 +101,7 @@ The following articles guide you through the process of creating a great bot for
 >
 > ### Bots and Microsoft Azure
 >
-> As of December 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
+> The Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
 >
 > * The Microsoft Teams channel for bots registered on Azure is free. Messages sent over the Teams channel won't count towards the consumed messages for the bot.
 > * While it's possible to [create a new Bot Framework bot](https://dev.botframework.com/bots/new) without using Azure, you must use [create a new Bot Framework bot](https://dev.botframework.com/bots/new), which is no longer exposed in the Bot Framework portal.
