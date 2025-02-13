@@ -341,10 +341,12 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * For Graph connector capabilities, the nodes in the declarative agent manifest must be left blank to ensure that the agent is anchored in the tenant's available Graph connectors table. [*Must fix*]
 
-   **Pass example**: The Graph connector node is empty. <br> 
+   **Pass example**: The Graph connector node is empty. <br>
+
     :::image type="content" source="../../../../assets/images/Copilot/da-pass-scenario-graph-connector.png" alt-text="Screenshot of the pass scenario.":::
 
     **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
+
     :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario."::: |
 
 [Back to top](#validation-guidelines-for-agents)
