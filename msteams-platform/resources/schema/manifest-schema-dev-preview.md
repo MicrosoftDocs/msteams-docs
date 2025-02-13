@@ -1060,8 +1060,8 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|String||✔️| The type of resource-specific consent (RSC) permission. <br>Options: `Application` and `Delegated`.|
-|`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
+|`type`|String||✔️| The type of resource-specific consent (RSC) or resource-specific Office permission. <br>Options: `Application` and `Delegated`.|
+|`name`|String|128 characters|✔️|The name of the RSC or Office permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions).|
 
 #### RSC application permissions
 
@@ -1107,6 +1107,10 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OutgoingVideoStream.Write.User`| Allows the app to modify the user's outgoing video.|
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
+
+* **Office delegated permissions for users**
+
+For the permissions and their meaning, see [Requesting permissions for API use in Office add-ins](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) and [Permission model for Outlook add-ins](/office/dev/add-ins/outlook/privacy-and-security#permissions-model).
 
 ## extensions
 
