@@ -83,6 +83,7 @@ You can now define and deploy Outlook Add-ins in [version 1.17 and later](../res
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### Word, Excel, PowerPoint Add-ins (preview)
+
 You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [developer preview](../resources/schema/manifest-schema-dev-preview.md) unified manifest for Microsoft 365.
 
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
@@ -97,7 +98,7 @@ To get started with apps extended across Microsoft 365, see [app playbooks](/mic
 
 Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
-For more information, see [Actions in Microsoft 365](actions-in-m365.md)
+For more information, see [Actions in Microsoft 365](actions-in-m365.md).
 
 ## Microsoft commercial marketplace submission
 

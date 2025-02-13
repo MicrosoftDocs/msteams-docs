@@ -1,7 +1,7 @@
 ---
 title: Stream bot messages
-description: Learn how to enhance the user experience in bots using streaming techniques.
-ms.date: 11/18/2024
+description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams AI library and configure streaming bot messages. 
+ms.date: 02/06/2025
 ms.topic: conceptual
 author: surbhigupta12
 ms.author: surbhigupta
@@ -37,14 +37,14 @@ You can implement streaming bot messages in your app in one of the following way
 
 ## Stream message through Teams AI library
 
-The Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
+Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
 > [!NOTE]
 > Streaming bot messages is not available with function calling.
 
-Through streaming, your AI bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app::
+Through streaming, your AI-powered bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app::
 
-1. **Enable streaming for AI bot**:
+1. **Enable streaming for AI-powered bot**:
 
     Bot messages can be streamed through AI SDK. The AI-powered bot sends chunks to the user as the model generates the response. Streaming messages support text. However, attachment, AI-label, feedback loop, and sensitivity labels are available only for the final streaming message.
 
@@ -58,7 +58,7 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
     The following example shows the information updates in an AI-powered bot:
 
-    :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI bot." border="false":::
+    :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI-powered bot." border="false":::
 
 3. **Format the final streamed message**:
 
@@ -66,29 +66,33 @@ Through streaming, your AI bot can offer an experience that is engaging and resp
 
     The following example shows the streaming response in an AI-powered bot:
 
-    :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI bot." border="false":::
+    :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI-powered bot." border="false":::
 
-    The following example shows the final streamed response in an AI-powered bot:
+    The following example shows the AI-powered bot formatting the streamed response:
 
-    :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI bot." border="false":::
+    :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Image shows the AI-powered bot applying formatting on the streamed response." border="false":::
+
+    The following example shows the final streamed response in an AI-powered bot after the formatting is completed:
+
+    :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI-powered bot." border="false":::
 
 4. **Enable AI-powered features for final message**:
 
     You can enable the following AI-powered features for the final message sent by the bot:
 <br>
 
-    - **Citations**: The Teams AI library automatically includes citations in the bot's responses. It provides references for the sources that the bot used to generate the response. It allows users to refer to the source through in-text citations and references.
+    - **Citations**: Teams AI library automatically includes citations in the bot's responses. It provides references for the sources that the bot used to generate the response. It allows users to refer to the source through in-text citations and references.
     - **Sensitivity Label**: Use sensitivity label to help users understand the confidentiality of a message.
     - **Feedback loop**: This allows users to provide positive or negative feedback on the bot messages.
-    - **Generated by AI**: The Teams AI library automatically includes a **Generated by AI** label in the bot's responses. This label helps users identify that a message was generated using AI.
+    - **Generated by AI**: Teams AI library automatically includes a **Generated by AI** label in the bot's responses. This label helps users identify that a message was generated using AI.
 
-    For more information about formatting AI bot messages, see [bot messages with AI-generated content](how-to/bot-messages-ai-generated-content.md).
+    For more information about formatting AI-powered bot messages, see [bot messages with AI-generated content](how-to/bot-messages-ai-generated-content.md).
 
 ### Configure streaming bot messages
 
 Follow these steps to configure streaming bot messages:
 
-1. **Enable streaming for AI bot**:
+1. **Enable streaming for AI-powered bot**:
 
     a. Use the `DefaultAugmentation` class in the `config.json` file, and in one of the following main application classes of your bot app:
       - For a C# bot app: Update `Program.cs`.
@@ -268,7 +272,7 @@ Bot messages can be streamed through REST API. Streaming messages support rich t
 
 When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
-When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
+When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
 The following are the properties for streaming bot messages:
 
