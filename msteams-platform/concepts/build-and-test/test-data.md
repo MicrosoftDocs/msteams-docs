@@ -20,16 +20,16 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true#installing-the-azure-ad-module).
 
 > [!NOTE]
-> You must have global admin permissions in the tenant to run the scripts.
+> You must have Global Administrator permissions in the tenant to run the scripts.
 
 ## Allow users to upload apps
 
-By default, only global admins or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
+By default, only Global Administrator or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels for testing
 
 > [!NOTE]
-> Azure AD PowerShell is deprecated on March 30, 2024. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview). Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For more information, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
+> Azure AD PowerShell is deprecated. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview). Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For more information, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
@@ -162,7 +162,7 @@ By default, only global admins or Teams service admins can upload the custom app
 
         try {
 
-            # 1. Login with the global administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the Global Administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 

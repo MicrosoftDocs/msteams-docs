@@ -221,6 +221,10 @@
           "redirect_url": "/microsoftteams/platform/bots/how-to/debug/locally-with-an-ide"
       },
       {
+        "source_path": "msteams-platform/concepts/bots/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
+      },
+      {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
           "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-commands-menu"
       },
@@ -927,7 +931,7 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
-      },
+      }, 
       {
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
         "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
@@ -1041,8 +1045,32 @@
         "redirect_url": "/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content"
       },
       {
-        "source_path": "msteams-platform/concepts/bots/bots-create.md",
-        "redirect_url": "/microsoftteams/platform/bots/how-to/Teams%conversational%AI/teams-conversation-ai-overview"
+        "source_path": "msteams-platform/resources/bot-v3/bots-create.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/assistants-api-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/assistants-api-quick-start"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/conversation-ai-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/conversation-ai-quick-start"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/coversational-ai-faq"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview"
       },
       {
         "source_path": "msteams-platform/toolkit/add-How-to-guides-v5.md",
@@ -1063,6 +1091,138 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/tools-prerequisites-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/tools-prerequisites-vs"
+      },
+      {
+        "source_path": "msteams-platform/samples/collaboration-control.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/install-collaboration-control.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/app-with-collaboration-controls.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/deploy-collaboration-control-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/collaboration-control-power-automate.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/configure-tasks.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/virtual-tables-for-tasks.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/virtual-tables-api.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/virtual-table-entity-references.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/collaboration-api-reference.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/samples/collaboration-controls-limitations.md",
+        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
+      },
+      {
+        "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      { 
+        "source_path": "msteams-platform/messaging-extensions/build-bot-based-plugin.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/build-bot-based-agent"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/plan-to-monetize.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/tab-navigation.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/deep-link-application"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/build-adaptive-card-tabs.md",
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/conversational-tabs.md",
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/copilot-plugin-faq.md",
+        "redirect_url": "/microsoftteams/platform/teams-faq#microsoft-365-copilot"
+      },
+      {
+        "source_path": "msteams-platform/resources/partner-apps-for-moodle.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodle-overview#partner-apps-for-moodle"
+      },
+      {
+        "source_path": "msteams-platform/resources/media-formats.md",
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/request-headers-of-the-bot.md",
+        "redirect_url": "/microsoftteams/platform/resources/platform/bots/how-to/conversations/conversation-messages"
+      },
+      {  
+        "source_path": "msteams-platform/toolkit/teams-toolkit-tutorial.md", 
+        "redirect_url": "/microsoftteams/platform/get-started/teams-toolkit-tutorial"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-api-connection.md", 
+        "redirect_url": "/microsoftteams/platform/toolkit/add-resource"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/coversational-ai-faq.md",
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-ai-library"
+      },
+      {  
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-copilot-agents.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/dev-guidelines-agents"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/share-to-teams-overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/bot-concepts"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/conversation-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/what-are-bots.md",
+        "redirect_url": "/microsoftteams/platform/bots/overview"
+      },
+      {
+        "source_path": "msteams-platform/sbs-tab-with-adaptive-cards.yml",
+        "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       }
     ]
 }
