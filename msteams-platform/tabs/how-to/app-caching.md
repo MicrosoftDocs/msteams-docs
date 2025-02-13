@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 02/04/2025
+ms.date: 02/28/2025
 ---
 
 # App caching for your tab app
@@ -96,9 +96,35 @@ The **AppCaching** tab contains the following details:
 * **memory**: Shows the memory usage of the app.
 * **cpu**: Shows the CPU usage of the app.
 
+## Precaching tab apps
+
+Precaching your tab app optimizes the load time of your app. Teams predicts users' app usage needs and preloads apps in the background. The preloading of apps occurs shortly after Teams boots up or when it goes idle for a period of time. The preloaded app persists in the cache until the user opens the app.
+
+If you want to enable precaching in your tab app, follow these steps:
+
+1. [Enable app caching](#enable-app-caching).
+
+1. Update your app manifest as follows:
+
+    1. Set the value of `showLoadingIndicator` to `true`.
+
+    1. Declare the `backgroundLoadConfiguration` object and define the `contentUrl` of your app.
+
+    ```json
+    "backgroundLoadConfiguration": {
+        "tabConfiguration": {
+          "contentUrl": "<contentUrl>"
+        }
+      }
+    ```
+
 ## Best practices
 
-We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
+The following are the best practices for app caching and precaching:
+
+* We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
+
+* Register `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs as early as possible during the app load, preferably right after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`.
 
 ## Limitations
 
