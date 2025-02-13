@@ -3,7 +3,7 @@ title: Introduction to Bots in Teams Apps
 description: In this module, learn how to get started developing bots in Microsoft Teams and what are all the requirements to add a bot in Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/02/2023
+ms.date: 01/23/2025
 ---
 # Add bots to Microsoft Teams apps
 
@@ -17,7 +17,7 @@ ms.date: 04/02/2023
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 > [!IMPORTANT]
-> Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
 
 :::image type="content" source="../../assets/images/bot_example.png" alt-text="Example of a bot assisting a user":::
 
@@ -33,7 +33,7 @@ A bot behaves differently depending on what kind of conversation it's involved i
 
 For more information, see [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-With Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+With Teams apps, you can make the bot the star of your experience, or just a helper. Bots are published as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## Bot APIs
 
@@ -54,14 +54,14 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 
 ## Outgoing webhooks
 
-Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. For more information, see [outgoing webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
+Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you might need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. For more information, see [outgoing webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
 ## Build a great Teams bot
 
-The following articles will guide you through the process of creating a great bot for Teams:
+The following articles guide you through the process of creating a great bot for Teams:
 
 * [Create a bot](~/resources/bot-v3/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
-* [Talk to your bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our extensions for the Bot Builder SDK to simplify your work.
+* [Talk to your bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Add basic conversation flow and use channel-specific functionality. If you develop in .NET or Node.js, use our extensions for the Bot Builder SDK to simplify your work.
 * [Using cards in your bot](~/resources/bot-v3/bots-cards.md): Design cards to communicate and accept user response.
 * [Respond to bot events](~/resources/bot-v3/bots-notifications.md)
 * [Notification-only bots](~/resources/bot-v3/bots-notification-only.md): Using bots to send notifications for your app.
@@ -89,9 +89,9 @@ The following articles will guide you through the process of creating a great bo
    ![Bot Framework registration page](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
-> If you do not wish to create your bot in Azure, you **must** use this link to create a new bot: [Bot Framework](https://dev.botframework.com/bots/new). If you click on the **Create a bot** in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
+> If you don't wish to create your bot in Azure, you **must** use this link to create a new bot: [Bot Framework](https://dev.botframework.com/bots/new). If you select **Create a bot** in the Bot Framework portal instead, you'll [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
 
-2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the  [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
+2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 
 3. Test the bot using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
@@ -101,13 +101,13 @@ The following articles will guide you through the process of creating a great bo
 >
 > ### Bots and Microsoft Azure
 >
-> As of December, 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
+> As of December 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
 >
-> * The Microsoft Teams channel for bots registered on Azure is free. Messages sent over the Teams channel will not count towards the consumed messages for the bot.
+> * The Microsoft Teams channel for bots registered on Azure is free. Messages sent over the Teams channel won't count towards the consumed messages for the bot.
 > * While it's possible to [create a new Bot Framework bot](https://dev.botframework.com/bots/new) without using Azure, you must use [create a new Bot Framework bot](https://dev.botframework.com/bots/new), which is no longer exposed in the Bot Framework portal.
-> * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you will see "Migration status" column and a blue "Migrate" button that will take you into the Microsoft Azure portal. Don't click on the "Migrate" button unless that's what you want to do; instead, click on the name of the bot and you can edit its properties:</br>
+> * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you'll see "Migration status" column and a blue "Migrate" button that takes you into the Microsoft Azure portal. Don't select the "Migrate" button unless that's what you want to do; instead, select the name of the bot and you can edit its properties:</br>
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
-> * If you register your bot using Microsoft Azure, your bot code does not need to be *hosted* on Microsoft Azure.
+> * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
 > * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Teams.
 > * You can now use Developer Portal for Teams to register/update app and bot information directly within Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
 

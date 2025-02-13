@@ -173,7 +173,7 @@ items:
    | `.vscode/` | Visual Studio Code files for local debug. |
    | `appPackage/` | Templates for the Teams application manifest. |
    | `infra/` | Templates for provisioning Azure resources. |
-   | `index.js` | Application entry point and `restify` handler. |
+   | `index.js` | Application entry point and `express` handler. |
 
    > [!Tip]
    > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
@@ -363,7 +363,7 @@ items:
 
    1. Select the dropdown for your app from the list of apps and select **Personal app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the custom uploaded apps in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the uploaded apps in Teams.":::
 
    1. A dialog box appears suggesting you to try out your app. If you select **Got it**, the dialog box disappears. Select **Try it**.
 
