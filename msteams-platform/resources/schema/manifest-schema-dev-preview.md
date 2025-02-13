@@ -1060,8 +1060,8 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|String||✔️| The type of resource-specific consent (RSC) permission. <br>Options: `Application` and `Delegated`.|
-|`name`|String|128 characters|✔️|The name of the RSC permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions)|
+|`type`|String||✔️| The type of resource-specific consent (RSC) or resource-specific Office permission. <br>Options: `Application` and `Delegated`.|
+|`name`|String|128 characters|✔️|The name of the RSC or Office permission. For more information, see [RSC application permissions](#rsc-application-permissions) and [RSC delegated permissions](#rsc-delegated-permissions).|
 
 #### RSC application permissions
 
@@ -1108,22 +1108,28 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
+* **Office delegated permissions for users**
+
+For the permissions and their meaning, see [Requesting permissions for API use in Office add-ins](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) and [Permission model for Outlook add-ins](/office/dev/add-ins/outlook/privacy-and-security#permissions-model).
+
 ## extensions
 
-**Optional** &ndash; Object
+**Optional** &ndash; Array
 
 The `extensions` property specifies Office Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
-|Name| Type| Maximum size | Required | Description|
+| Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| Array | 20 | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
-|`ribbons`| Array | 20 | | Defines the ribbons extension point. |
-|`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
+|`runtimes`| Array | | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`contentRuntimes`| Array | 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document.|
+|`ribbons`| Array | | | Defines the ribbons extension point. |
+|`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
 |`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) within an open Office document. |
+|`keyboardShortcuts`| Array | 10 | | Defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts). |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1148,7 +1154,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. |
+|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| String | 2048 characters | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
@@ -1157,7 +1163,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`actions`| Array | 20 | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
+|`actions.displayName`| String | 64 characters | | Describes the action of a [custom keyboard shortcut](/office/dev/add-ins/design/keyboard-shortcuts). This description appears in a dialog when a user experiences a shortcut conflict between multiple add-ins or with Microsoft 365. If a keyboard shortcut is defined for a specific `actions` object, then the `actions.displayName` property is required. Office appends the add-in name in parentheses after the description. For instance, **Set bold (Contoso Add-in)**. For more information, see [Avoid key combinations in use by other add-ins](/office/dev/add-ins/design/keyboard-shortcuts#avoid-key-combinations-in-use-by-other-add-ins). |
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them.<br>Default value: `false`|
@@ -1196,6 +1202,21 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
+
+### extensions.contentRuntimes
+
+The `extensions.contentRuntimes` array configures pages of content that are embedded in an Excel or PowerPoint document.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
+|`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
+|`code.page`| String | 2048 charaters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
+|`code.script`| String | | | Not applicable under `extensions.contentRuntimes`.|
+|`requestedWidth`| Number | | | The desired initial width in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the width.|
+|`requestedHeight`| Number | | | The desired initial height in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the height.|
+|`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the Office application document. Set to `true` to prevent a snapshot from being saved. Default value: `false`|
+|`requirements`| Object | | | Not applicable under `extensions.contentRuntimes`. |
 
 ### extensions.ribbons
 
@@ -1384,6 +1405,30 @@ A context menu is a shortcut menu that appears when you right-click (or select a
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (PowerPoint), `document` (Word)|
 |`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+
+### extensions.keyboardShortcuts
+
+The `extensions.keyboardShortcuts` property defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts).
+
+| Name | Type | Maximum size | Required | Description |
+|---|---|---|---|---|
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the custom keyboard shortcuts to take effect. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest). |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. |
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported value: `workbook` (Excel) |
+|`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported value: `desktop` |
+|`shortcuts`| Array | 20,000 | ✔️ | Specifies the custom keyboard shortcuts and the action each one performs. |
+|`shortcuts.key`| Object | | ✔️ | Specifies custom key combinations for a single action across supported platforms. |
+|`shortcuts.key.default`| String | 32 | ✔️ | Specifies the default key combination that can be used on all supported platforms if there isn't a specific combination configured for a particular platform. |
+|`shortcuts.key.mac`| String | 32 | | Specifies the key combination of an add-in in Office on Mac. |
+|`shortcuts.key.web`| String | 32 | | Specifies the key combination of an add-in in Office on the web. |
+|`shortcuts.key.windows`| String | 32 | | Specifies the key combination of an add-in in Office on Windows. |
+|`shortcuts.actionId`| String | 64 | ✔️ | Identifies the action that is performed when a keyboard shortcut is used. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
+
+> [!NOTE]
+> Keyboard shortcuts defined for an add-in must follow the [guidelines for custom key combinations](/office/dev/add-ins/design/keyboard-shortcuts#guidelines-for-custom-key-combinations).
 
 ## actions
 
