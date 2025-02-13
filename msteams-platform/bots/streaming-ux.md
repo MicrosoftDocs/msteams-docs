@@ -34,7 +34,7 @@ Streaming bot messages has two types of updates:
 
 ### Stop streaming bot response
 
-The stop streaming button (:::image type="icon" source="../assets/icons/stop-button.png" border="false":::) lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
+The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
 
 After a user stops message generation:
 
