@@ -704,9 +704,6 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 Defines a message extension for the app.
 
-> [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
-
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
