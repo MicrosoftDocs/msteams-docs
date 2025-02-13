@@ -17,23 +17,24 @@ This section gives you a tour of Teams Toolkit and its features.
 
 Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Screenshot shows the Overview of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview-page.png" alt-text="Screenshot shows the Overview of Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview-page.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
-| 1 | **Documentation** | Access the Microsoft Teams Developer documentation. |
-| 2 | **How-to Guides** | Access the how-to guides for app scenario and app development. |
+| 1 | **Build a Notification Bot** | Build a notification bot. |
+| 2 | **Build a Declarative Agent** | Build a declarative agent. |
 | 3 | **Create a New App** | Create a new Teams app based on your requirement. |
 | 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Clone Git Repository** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Clone a Git repository of your app project. |
-| 6 | **Recent** | View the recent files. |
-| 7 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
+| 5 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
+| 6 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
+| 7 | **Recent** | View the recent files. |
+
 
 ### Explore the Teams Toolkit task pane
 
 You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you create an app project using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
-   :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
+   :::image type="content" source="../assets/videos/javascript-botapp.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
 
 After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
@@ -113,7 +114,7 @@ From the task pane, you can see the following sections:
         
         * **Deploy**: Deploy the source code to Azure.
        
-        * **Publish**: Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization.
+        * **Publish**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
    :::column-end:::
 :::row-end:::
 
