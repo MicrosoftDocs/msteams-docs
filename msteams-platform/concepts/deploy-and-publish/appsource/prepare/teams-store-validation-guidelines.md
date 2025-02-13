@@ -1683,9 +1683,11 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 <br>
 <details><summary>Microsoft Graph connector</summary>
 
-We recommend that you publish your Graph connector through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include it in your manifest.json file. For more information, see [guidelines for the declarative agent](review-copilot-validation-guidelines.md).
+We recommend that you publish your Graph connector through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include in the manifest.json file. For more information, see [guidelines for the declarative agent](review-copilot-validation-guidelines.md). [*Must fix*]
 
-Don’t include Graph connector node in the manifest.json file. [*Must fix*]
+***Example***
+
+Don’t include Graph connector node in the manifest file.
 
 :::image type="content" source="../../../../assets/images/Copilot/da-graph-connector.png" alt-text="Screenshot of the Graph connector node in the manifest file.":::
 

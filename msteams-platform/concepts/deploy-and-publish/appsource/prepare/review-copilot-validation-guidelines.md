@@ -19,7 +19,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
+> * If you want to configure a custom Microsoft Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
@@ -339,11 +339,13 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
-* For Graph Connector capabilities, the nodes in the declarative agent manifest must be left blank to ensure that the agent is anchored in the tenant's available graph connectors table. [*Must fix*]
+* For Graph connector capabilities, the nodes in the declarative agent manifest must be left blank to ensure that the agent is anchored in the tenant's available Graph connectors table. [*Must fix*]
 
-   | Pass example | Fail example |
-   | --- | --- |
-   | The Graph Connector node is empty. <br> :::image type="content" source="../../../../assets/images/Copilot/da-pass-scenario-graph-connector.png" alt-text="Screenshot of the pass scenario."::: | The Graph Connector node is not empty and has connections hardcoded. :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="m"::: |
+   **Pass example**: The Graph connector node is empty. <br> 
+    :::image type="content" source="../../../../assets/images/Copilot/da-pass-scenario-graph-connector.png" alt-text="Screenshot of the pass scenario.":::
+
+    **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
+    :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario."::: |
 
 [Back to top](#validation-guidelines-for-agents)
 
