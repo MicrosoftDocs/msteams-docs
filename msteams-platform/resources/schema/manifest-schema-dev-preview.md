@@ -1114,16 +1114,17 @@ For the permissions and their meaning, see [Requesting permissions for API use i
 
 ## extensions
 
-**Optional** &ndash; Object
+**Optional** &ndash; Array
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property configures Office Add-ins and Microsoft 365 app customizations. Each manifest supports only one extension.
 
 | Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| Array | 20 | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
-|`ribbons`| Array | 20 | | Defines the ribbons extension point. |
-|`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
+|`runtimes`| Array | | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`contentRuntimes`| Array | 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document.|
+|`ribbons`| Array | | | Defines the ribbons extension point. |
+|`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
@@ -1133,7 +1134,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, and `autoRunEvents` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, `contextMenus`, and `contentRuntimes` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1152,7 +1153,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. |
+|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| String | 2048 characters | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
@@ -1200,6 +1201,21 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
+
+### extensions.contentRuntimes
+
+The `extensions.contentRuntimes` array configures pages of content that are embedded in an Excel or PowerPoint document.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
+|`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
+|`code.page`| String | 2048 charaters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
+|`code.script`| String | | | Not applicable under `extensions.contentRuntimes`.|
+|`requestedWidth`| Number | | | The desired initial width in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the width.|
+|`requestedHeight`| Number | | | The desired initial height in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the height.|
+|`disableSnapshot` | Boolean | | | Specifies whether a snapshot image of your content add-in is saved with the Office application document. Set to `true` to prevent a snapshot from being saved. Default value: `false`|
+|`requirements`| Object | | | Not applicable under `extensions.contentRuntimes`. |
 
 ### extensions.ribbons
 
