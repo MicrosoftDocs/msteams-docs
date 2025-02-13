@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot your app
+title: Troubleshoot your App
 description: Learn about different issues or error scenarios while building apps for Microsoft Teams and how to troubleshoot the issues for bots, tabs, and app package.
 keywords: teams apps development troubleshooting
 ms.localizationpriority: medium
 ms.topic: troubleshooting
-ms.date: 07/09/2018
+ms.date: 02/06/2025
 ---
 
 # Troubleshoot your Microsoft Teams app
@@ -67,7 +67,7 @@ There's a known issue where updating an existing bot app with a new or updated s
 
 ### Can't add my bot
 
-Apps must be enabled by the Microsoft 365 tenant admin for them to be loaded by end users. In some cases, the Microsoft 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Apps must be enabled by the admin for them to be loaded by end users. In some cases, the Microsoft 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ### Can't add bot as a member of a team
 

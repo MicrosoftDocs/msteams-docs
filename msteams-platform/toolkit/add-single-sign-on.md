@@ -21,7 +21,7 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual
 
 * Tab
 * Bot
-* Notification bot: restify server
+* Notification bot: express server
 * Command bot
 * Workflow bot
 * Message extension
@@ -42,7 +42,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    |**Development** | **How-to Guide** |
    | -------- | --------|
-   |Develop Single Sign-on Experience in Teams | [How to Develop Single Sign-on Experience](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
+   |Develop Single Sign-on Experience in Teams | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
 
 > [!NOTE]
 > When SSO is enabled, Teams Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).

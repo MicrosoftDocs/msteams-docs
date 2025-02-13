@@ -111,7 +111,7 @@ This action executes `npx` commands under specified directory with parameters. Y
 
 ### azureAppService/zipDeploy
 
-This action uploads and deploys the project to Azure App Service using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions).
+This action uploads and deploys the project to Azure App Service using [the zip deploy feature](/azure/azure-functions/deployment-zip-push).
 
 #### Sample
 

@@ -7,12 +7,12 @@ metadata:
   title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
-  ms.subservice: subservice # Optional; Remove if no subservice is used.
+  ms.subservice: teams-apps # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.date: 12/11/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -46,13 +46,15 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Advanced step-by-step guide to build custom engine agent
+        url: sbs-Teams-AI.yml      
       - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
         url: bots/how-to/format-ai-bot-messages.md
       - text: Copilot handoff
         url: bots/how-to/conversations/bot-copilot-handoff.md
       - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#assistants-api
-      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+      - text: Build apps with Teams AI library
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - text: Build a custom engine agent to chat with your data
         url: teams-ai-library-tutorial.yml
@@ -61,26 +63,26 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Share content to live and upcoming meetings with Share to Teams
-        url: concepts/build-and-test/share-to-teams-from-web-apps.md
-      - text: Authentication for your API-based message extension
-        url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile.
-        url: ./resources/schema/manifest-schema.md
-      - text: Localize your Copilot agents
-        url: /microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent
-      - text: Build a personal tab with offline functionality
-        url: tabs/how-to/create-personal-tab.md#offline-tabs      
-      - text: Specify runtime requirements so your app only runs in applicable Microsoft 365 hosts (Developer preview)
-        url: m365-apps/specify-runtime-requirements.md
-      - text: Analyze your third-party app usage metrics in Developer Portal
-        url: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
-      - text: Single sign-on (SSO) authentication for nested apps (Developer preview)
-        url: concepts/authentication/nested-authentication.md
-      - text: New purchase experience for Teams app subscriptions bought from Teams Store
-        url: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-      - text: Use app validation tool to validate your Teams app in Developer Portal for Teams
-        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
+      - text: Introducing third-party cloud storage capability for drag-dropped files
+        url: concepts/device-capabilities/third-party-storage-capability.md
+      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
+        url: concepts/device-capabilities/third-party-storage-capability.md
+      - text: Tab app caching is generally available
+        url: tabs/how-to/app-caching.md
+      - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
+        url: bots/how-to/bot-messages-ai-generated-content.md
+      - text: Introducing share to meeting from personal app
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+      - text: Text customization for share to stage button
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
+      - text: New app installation flow for Teams app installed from Teams Store or custom upload
+        url: concepts/deploy-and-publish/add-default-install-scope.md
+      - text: Introducing default landing capability for tab and bot apps
+        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
 
     - linkListType: reference
       links:
@@ -88,6 +90,7 @@ landingContent:
         url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
 
 
 - title: Get started
@@ -239,8 +242,6 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
