@@ -4,6 +4,7 @@ author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 04/07/2022
 ---
 
