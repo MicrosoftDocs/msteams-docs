@@ -24,6 +24,7 @@
         "officedev",
         "outgoingwebhook",
         "preauthorizedapplications",
+        "PSTN",
         "redirections",
         "requiredresourceaccess",
         "Restify",

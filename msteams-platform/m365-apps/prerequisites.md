@@ -12,6 +12,8 @@ ms.subservice: m365apps
 
 The development environment for extending Microsoft Teams apps across Microsoft 365 is similar to Teams development. This article discusses specific configurations required to run preview builds of Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook, Microsoft 365 app, Word, Excel and PowerPoint.
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 To set up your development environment:
 
 > [!div class="checklist"]

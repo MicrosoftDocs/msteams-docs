@@ -1,19 +1,21 @@
 ---
 title: Localize JSON Schema Reference
-description: Describes the localization schema supported by the localization file for Microsoft Teams using an example schema
+description: Learn and know about the localization schema supported by the localization file for Microsoft Teams using an example schema and about schema versions.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 10/17/2024
+ms.date: 02/06/2025
 ---
 
 # Localize JSON schema reference
 
-The Microsoft Teams localization file describes language translations that are served based on the client language settings. Your file must conform to the schema hosted at [https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.Localization.schema.json).
+The Microsoft Teams localization file describes language translations that are served based on the client language settings.
 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json".`
 
-## Example
+## Localization schema v1.19
+
+Your file must conform to the schema hosted at [https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.Localization.schema.json).
 
 Example of localization JSON schema v1.19 is as follows:
 
@@ -55,7 +57,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
-|`\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]`|String|4000| Represents custom tokenized keys, for example with [localized Copilot agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).||
+|`\\[\\[[a-zA-Z_][a-zA-Z0-9_]*\\]\\]`|String|4000| Represents custom tokenized keys, for example with [localized agents](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).||
 |`meetingExtensionDefinition.scenes\\[[0-9]\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest. ||
 |`extensions\\[[0]\\]\\.audienceClaimUrl$`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.ribbons\\[[0-9]\\]\\.tabs\\[[1]?[0-9]\\]\\.label`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
@@ -78,7 +80,8 @@ The schema defines the following properties:
 |`extensions\\[[0]\\]\\.alternates\\[[0-9]\\]\\.alternateIcons\\.icon\\.url`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`extensions\\[[0]\\]\\.alternates\\[[0-9]\\]\\.alternateIcons\\.highResolutionIcon\\.url`|String|2048|Replaces the corresponding strings from the app manifest with the value provided here.||
 
-<br>
+</details>
+<br/>
 
 <details><summary>Localization schema v1.17</summary>
 

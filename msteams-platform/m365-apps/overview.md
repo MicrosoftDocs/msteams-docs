@@ -1,7 +1,7 @@
 ---
 title: Use Teams Apps across Microsoft 365
-description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, and Microsoft 365 as application hosts).
-ms.date: 02/02/2024
+description: Learn how to extend Teams apps across Microsoft 365 that runs in Teams, Outlook, and Microsoft 365 as application hosts.
+ms.date: 11/12/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: overview
@@ -13,6 +13,8 @@ ms.subservice: m365apps
 With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
+
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
 The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, and Microsoft 365 as application hosts):
 
@@ -30,9 +32,10 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
 > [!NOTE]
-> For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+> Apps with app manifest version below 1.13 are limited to Teams. However, apps with app manifest version 1.13 or above are compatible with Teams, Outlook, and Microsoft 365 app.
 
-For guidance about the app manifest and TeamsJS versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
+* For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+* For more information on app manifest, TeamsJS versioning, and Teams platform capability support across Microsoft 365, see [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
 ## Personal tabs in Outlook and Microsoft 365 app
 
@@ -90,7 +93,7 @@ To get started with apps extended across Microsoft 365, see [app playbooks](/mic
 
 Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
-For more information, see [Actions in Microsoft 365](actions-in-m365.md)
+For more information, see [Actions in Microsoft 365](actions-in-m365.md).
 
 ## Microsoft commercial marketplace submission
 

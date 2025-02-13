@@ -1,7 +1,7 @@
 ---
 title: Debug your apps in Teams Desktop Client
 author: surbhigupta
-description: Learn how to debug your bot, Copilot plugin, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
+description: Learn how to debug your bot, agent, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -23,7 +23,7 @@ The following are the advantages of Teams desktop client:
 Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by the Teams Toolkit:
 
 * Bot.
-* Copilot plugin.
+* Agent.
 * Custom engine agent.
 * Message extension.
 
@@ -34,7 +34,7 @@ Ensure you install the following tools for building and deploying your app in Te
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/source-code) | Back-end JavaScript runtime environment. For more information, see [node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
 
