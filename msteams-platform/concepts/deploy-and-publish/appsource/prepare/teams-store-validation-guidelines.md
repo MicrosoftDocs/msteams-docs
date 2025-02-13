@@ -683,7 +683,7 @@ For guidance on how to create an accurate, concise, and informative short and lo
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
 
-<br></br>
+<br>
 <details><summary>Expand to know more</summary>
 
 Remember the following:
@@ -728,6 +728,10 @@ Remember the following:
 * If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
+
+* If your Teams app is extensible across Microsoft Copilot, the screenshots provided must represent the app's functionality within Copilot. [*Must fix*]
+
+[*Image placeholder*]
 
 **Don'ts:**
 
@@ -1674,6 +1678,16 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 * Notifications must adhere to the Teams activity feed layout and experience. [*Must fix*]
 * When selecting a notification, the user must be directed to relevant content within Teams. [*Must fix*]
+
+</details>
+<br>
+<details><summary>Microsoft Graph connector</summary>
+
+We recommend that you publish your Graph connector through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include it in your manifest.json file. For more information, see [guidelines for the declarative agent](review-copilot-validation-guidelines.md).
+
+Don’t include Graph connector node in the manifest.json file. [*Must fix*]
+
+:::image type="content" source="../../../../assets/images/Copilot/da-graph-connector.png" alt-text="Screenshot of the Graph connector node in the manifest file.":::
 
 </details>
 
