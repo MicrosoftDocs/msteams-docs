@@ -731,7 +731,7 @@ Remember the following:
 
 * If your Teams app is extensible across Microsoft Copilot, the screenshots provided must represent the app's functionality within Copilot. [*Must fix*]
 
-[*Image placeholder*]
+   :::image type="content" source="../../../../assets/images/Copilot/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
 **Don'ts:**
 
