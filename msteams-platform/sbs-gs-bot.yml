@@ -54,6 +54,9 @@ items:
 
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -148,6 +151,9 @@ items:
     ![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
     </details>
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
     # [Command line](#tab/cli)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
@@ -167,6 +173,9 @@ items:
     1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
 
     After you've answered all questions, your project is created.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
 
     ---
 
@@ -218,6 +227,9 @@ items:
 
         Now you're ready to build the app and run it locally!
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
     # [Command line](#tab/cline)
 
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
@@ -239,6 +251,9 @@ items:
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
 
     ---
 
@@ -317,6 +332,9 @@ items:
       > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
       </details> 
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue]
+
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
@@ -347,6 +365,9 @@ items:
         Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
     # [Command line](#tab/cline)
 
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
@@ -370,9 +391,15 @@ items:
         Congratulations, you have signed in your Azure account!
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
     ---
 
       [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions-bot.md)]
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue]
 
       <!-- markdownlint-disable MD033 -->
       <details>
