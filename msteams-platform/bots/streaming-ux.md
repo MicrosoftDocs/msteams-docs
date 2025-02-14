@@ -39,6 +39,8 @@ You can implement streaming bot messages in your app in one of the following way
 - [Stream using Teams AI library](#stream-message-through-teams-ai-library).
 - [Stream using REST API](#stream-message-through-rest-api).
 
+In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
+
 ## Stream message through Teams AI library
 
 Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
@@ -269,6 +271,8 @@ Here's a list of other methods that you can use to customize the app experience:
   - The sequence must start with number '1'.
   - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
   - For the final message, `streamSequence` mustn't be set.
+
+[Back to top](#stream-messages-user-experience)
 
 ## Stream message through REST API
 
@@ -525,6 +529,8 @@ The following image is an example of the bot's final response:
 
 :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/ai-stream-message-formatting.png" border="false":::
 
+[Back to top](#stream-messages-user-experience)
+
 ## Stop streaming bot response
 
 The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
@@ -565,6 +571,8 @@ The following are the success and error codes:
 | `403`| `ContentStreamNotAllowed` | `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | '403' | `ContentStreamNotAllowed` | Content stream was cancelled by user. | The streaming was stopped by the user. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
+
+[Back to top](#stream-messages-user-experience)
 
 ## Code sample
 
