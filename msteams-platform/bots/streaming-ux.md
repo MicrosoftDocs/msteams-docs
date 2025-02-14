@@ -32,29 +32,7 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones
-
-<!--
-### Stop streaming bot response
-
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
-
-After a user stops message generation:
-
-- Bots treat stopped responses as incomplete or discarded in the conversation.
-- Bots can't change the content already streamed.
-- The following error is generated if a bot continues streaming on a message that is stopped by a user:
-
-    | Error detail | Description |
-    | --- | --- |
-    | Http status code | 403 |
-    | Error code | `ContentStreamNotAllowed` |
-    | Error message | Content stream was cancelled by user. |
-    | Description |  The streaming was stopped by the user. |
-
--->
-
-Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
 
 You can implement streaming bot messages in your app in one of the following ways:
 
