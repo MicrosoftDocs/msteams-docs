@@ -98,9 +98,12 @@ The **AppCaching** tab contains the following details:
 
 ## Precaching tab apps
 
-Precaching your tab app optimizes the load time of your app. Teams predicts users' app usage needs and preloads apps in the background. The preloading of apps occurs shortly after Teams boots up or when it goes idle for a period of time. The preloaded app persists in the cache until the user opens the app.
+> [!NOTE]
+> Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-If you want to enable precaching in your tab app, follow these steps:
+Precaching your tab app optimizes its load time by allowing Teams to preload the app. Teams preloads apps after the client boots up or when it goes idle for a period of time. Teams predicts users' app usage needs and preloads apps in the background. The preloaded apps persist in the cache until the user opens the app.
+
+To enable precaching for your tab app, follow these steps:
 
 1. [Enable app caching](#enable-app-caching).
 
@@ -108,7 +111,7 @@ If you want to enable precaching in your tab app, follow these steps:
 
     1. Set the value of `showLoadingIndicator` to `true`.
 
-    1. Declare the `backgroundLoadConfiguration` object and define the `contentUrl` of your app.
+    1. Add the `backgroundLoadConfiguration` object and define the `contentUrl` of your app.
 
     ```json
     "backgroundLoadConfiguration": {
