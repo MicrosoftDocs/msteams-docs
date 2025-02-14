@@ -66,6 +66,9 @@ items:
     
           :::image type="content" source="~/assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Teams Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue]
+
     ## Set up your Teams development tenant
 
     A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
@@ -103,6 +106,9 @@ items:
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
 
     1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
 
     ## Get a free Azure account
 
@@ -145,6 +151,9 @@ items:
        The Teams tab app is created in few seconds.
 
         :::image type="content" source="~/assets/images/sbs-csharp/get-started.png" alt-text="Screenshot shows the Project Creation." lightbox="~/assets/images/sbs-csharp/get-started-tab-vs.png":::     
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
 
     ## Take a tour of tab app source code
       
@@ -193,6 +202,9 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
+
     ## Build and run your app locally in Visual Studio
 
     To build and run your app locally:
@@ -216,6 +228,9 @@ items:
        Congratulations, your first tab app is running on Teams!
 
         :::image type="content" source="~/assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue]
 
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
