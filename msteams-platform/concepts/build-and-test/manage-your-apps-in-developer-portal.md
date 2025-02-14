@@ -51,6 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
   > [!NOTE]
   > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
+* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
   > The maximum limit for RSC permissions is 16.
