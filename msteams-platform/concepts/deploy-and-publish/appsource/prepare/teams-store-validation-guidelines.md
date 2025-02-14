@@ -700,7 +700,7 @@ Remember the following:
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
-* At least one screenshot must depict your app’s functionality on mobile devices. [*Must fix*]
+* At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
@@ -717,7 +717,7 @@ Remember the following:
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
-* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Must fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
 
@@ -729,7 +729,7 @@ Remember the following:
 
    :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
 
-* If your Teams app is extensible across Microsoft Copilot, the screenshots provided must represent the app's functionality within Copilot. [*Must fix*]
+* If your Teams app is extensible across Microsoft Copilot, the screenshots provided must depict the app's functionality within Copilot. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/Copilot/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
@@ -1680,18 +1680,18 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 * When selecting a notification, the user must be directed to relevant content within Teams. [*Must fix*]
 
 </details>
-<br>
-<details><summary>Microsoft Graph connector</summary>
 
-We recommend that you publish your Graph connector through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include in the manifest.json file. For more information, see [guidelines for the declarative agent](review-copilot-validation-guidelines.md). [*Must fix*]
+[Back to top](#teams-store-validation-guidelines)
+
+## Microsoft Graph connector
+
+Recommended way to publish your Graph connector is through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include it within your manifest.json file. The guidelines for the declarative agent file are different, which can be found [here](review-copilot-validation-guidelines.md).
 
 ***Example***
 
 Don’t include Graph connector node in the manifest file.
 
 :::image type="content" source="../../../../assets/images/Copilot/da-graph-connector.png" alt-text="Screenshot of the Graph connector node in the manifest file.":::
-
-</details>
 
 [Back to top](#teams-store-validation-guidelines)
 

@@ -339,7 +339,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
-* For Graph connector capabilities, the nodes in the declarative agent manifest must be left blank to ensure that the agent is anchored in the tenant's available Graph connectors table. [*Must fix*]
+* Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
 
    **Pass example**: The Graph connector node is empty. <br>
 
@@ -347,7 +347,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
     **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
 
-    :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario."::: |
+    :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
 
 [Back to top](#validation-guidelines-for-agents)
 
