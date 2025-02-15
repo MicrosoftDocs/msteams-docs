@@ -101,7 +101,7 @@ The **AppCaching** tab contains the following details:
 > [!NOTE]
 > Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Precaching your tab app optimizes its load time by allowing Teams to preload the app. Teams preloads apps after the client boots up or when it goes idle for a period of time. Teams predicts users' app usage needs and preloads apps in the background. The preloaded apps persist in the cache until the user opens the app.
+While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when its idle for a period of time. Teams preloads apps based on users' recent app usage patterns and the apps' cache history. The preloaded apps persist in the cache until the user opens the app, resulting in faster loading times.
 
 To enable precaching for your tab app, follow these steps:
 
@@ -109,7 +109,7 @@ To enable precaching for your tab app, follow these steps:
 
 1. Update your app manifest as follows:
 
-    1. Set the value of `showLoadingIndicator` to `true`.
+    1. Set the value of `showLoadingIndicator` to `true`. This action ensures that Teams waits until your app sends `notifySuccess` to conclude the app load sequence during precaching.
 
     1. Add the `backgroundLoadConfiguration` object and define the `contentUrl` of your app.
 
@@ -121,13 +121,18 @@ To enable precaching for your tab app, follow these steps:
       }
     ```
 
+    > [!NOTE]
+    > 
+    > *The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
+    > * Precaching increases the traffic to your app in addition to the normal user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day along with any telemetry adjustments. 
+
 ## Best practices
 
 The following are the best practices for app caching and precaching:
 
 * We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
-* Register `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs as early as possible during the app load, preferably right after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`.
+* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`.
 
 ## Limitations
 
