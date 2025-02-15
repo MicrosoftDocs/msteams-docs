@@ -1408,6 +1408,16 @@ Defines the content source of a given dashboard card.
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
 
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the `integer.integer` format, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app does not attest to be Intune MAM compliant. |
+
 ## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
