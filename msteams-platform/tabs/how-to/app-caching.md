@@ -101,7 +101,7 @@ The **AppCaching** tab contains the following details:
 > [!NOTE]
 > Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when its idle for a period of time. Teams preloads apps based on users' recent app usage patterns and the apps' cache history. The preloaded apps persist in the cache until the user opens the app, resulting in faster loading times.
+While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in faster loading times.
 
 To enable precaching for your tab app, follow these steps:
 
@@ -122,9 +122,11 @@ To enable precaching for your tab app, follow these steps:
     ```
 
     > [!NOTE]
-    > 
-    > *The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
-    > * Precaching increases the traffic to your app in addition to the normal user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day along with any telemetry adjustments. 
+    > The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
+
+### `isBackgroundLoad` property
+
+Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day, along with any telemetry adjustments. Use the `isBackgroundLoad` context property to recognize if the app launch is initiated in the background by Teams without user interaction. The property helps guide the app towards more effective precache loading and rendering. The property also indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts.
 
 ## Best practices
 
@@ -132,7 +134,9 @@ The following are the best practices for app caching and precaching:
 
 * We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
-* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`.
+* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+
+* Avoid creating multiple apps with similar apps bundles, origin, and storage. As Teams tracks app usage numbers based on app IDs, this practice elevates your apps’ overall usage ranking and helps avoid duplicated app preloads. For example, if you have an app for personal scope and another app for group chat and channel scopes, consolidate them into a single app so that precaching benefits both areas.
 
 ## Limitations
 
@@ -143,8 +147,6 @@ The following are the limitations for app caching:
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
 * App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the `unload` sequence is completed.
-
-* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
