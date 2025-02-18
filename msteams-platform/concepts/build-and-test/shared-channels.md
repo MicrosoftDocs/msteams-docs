@@ -106,7 +106,7 @@ Apps must function cross-tenants in installation and usage. The following table 
 Teams supports the use of apps in group chats that include external users. External users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use these apps. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
 
 > [!NOTE]
-> If you’re developing an app for use in group chats that include external users, register your app as a multitenant app in Microsoft Entra ID. This allows users across multiple organizations to access your app.
+> If you’re developing an app for use in group chats that include external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
 
 ### Handling external users in a single tenant app
 
