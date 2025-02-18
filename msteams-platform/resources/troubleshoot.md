@@ -136,4 +136,4 @@ If you’re unable to resolve the errors, we recommend contacting [Microsoft Tea
 * [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [Receive all channel messages for bots and agents](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)

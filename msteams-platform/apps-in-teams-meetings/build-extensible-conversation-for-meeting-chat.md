@@ -47,6 +47,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
+>
 > * If a federated user is a participant in the meeting, the tenant user can't view the message extensions.
 > * If an anonymous user and a tenant user are participants in the meeting, the tenant user can view the message extensions.
 
@@ -55,6 +56,6 @@ The following table provides the user types and lists the features that each use
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
 * [Design dialogs for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
