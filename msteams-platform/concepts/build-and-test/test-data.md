@@ -29,7 +29,7 @@ By default, only Global Administrator or Teams service admins can upload the cus
 ## Create teams and channels for testing
 
 > [!NOTE]
-> Azure AD PowerShell is deprecated on March 30, 2024. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview). Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For more information, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
+> Azure AD PowerShell is deprecated. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview). Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For more information, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
