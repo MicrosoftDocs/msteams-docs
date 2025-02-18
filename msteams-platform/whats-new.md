@@ -31,15 +31,27 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2025 January**
-
-* ***January 23, 2025***: Plan for [government](concepts/cloud-overview.md) and [sovereign](concepts/sovereign-cloud.md) clouds.
-* ***January 09, 2025***: [Tab app caching is generally available](tabs/how-to/app-caching.md).
-* ***January 09, 2025***: [AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available](bots/how-to/bot-messages-ai-generated-content.md).
+***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
 
 :::column-end:::
 :::row-end:::
 <br/>
+
+</br>
+
+<details>
+
+<summary><b>2025</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
+| 23/01/2025 | Plan for government and sovereign clouds. | Plan your app > Plan for special clouds > [Plan for government clouds](concepts/cloud-overview.md) |
+| 09/01/2025 | Tab app caching is generally available. | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md) |
+| 09/01/2025 | AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available. | Build bots > Bot user experience > [Enhance AI-generated bot messages](bots/how-to/bot-messages-ai-generated-content.md) |
+
+<br/>
+</details>
 
 </br>
 
@@ -51,7 +63,7 @@ Teams platform features that are available to all app developers.
 | -------- | --------- | ----------------|
 | 18/12/2024 | Introducing text customization for share to stage button. | Build apps for Teams meetings and calls > Configure apps for Teams meetings > Build apps for meeting stage > [Advanced share to stage APIs](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis) |
 | 18/12/2024 | Introducing share to meeting from personal app. | Integrate with Teams > Share to Teams > Share to Teams from personal app or tab > [Share to meeting from personal app](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app) |
-| 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
+| 16/12/2024 | Introducing multi parameters for API-based message extensions which allows more than one input type for query command. | Build message extensions > Build message extensions using API > Create API-based message extensions > [Multi parameters](messaging-extensions/create-api-message-extension.md#multi-parameters) |
 | 13/12/2024 | Learn to extend bot-based message extension as an agent for Microsoft 365 Copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > [Extend bot-based message extension as agent](messaging-extensions/build-bot-based-agent.md) |
 | 11/12/2024 | Enhanced user experience for Teams app installed from Teams Store or custom upload. | Publish your app > [Configure default options for Teams app](concepts/deploy-and-publish/add-default-install-scope.md) |
 | 27/11/2024 | Terminology update. **Copilot agent** is referred to as **agent**. |  |
@@ -439,6 +451,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
+* ***February 3, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
+
 :::column-end:::
 :::row-end:::
 
@@ -539,8 +553,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***January 17, 2025***: Copilot plugin as a message extension in Teams meeting is deprecated.
-* ***January 16, 2025***: [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation)
+* ***February 07, 2025***: Support for Yeoman generator is deprecated from Teams developer documentation.
 
 :::column-end:::
 :::row-end:::
@@ -550,6 +563,8 @@ Teams platform features that aren't available.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+| 01/17/2025 | Copilot plugin as a message extension in Teams meeting is deprecated. |
+| 01/16/1015 | [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation) |
 | 02/08/2024| The Collaboration controls for model-driven applications are retired. |  |
 | 25/07/2024| Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before September 2024 to ensure continued functionality. | Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) |
 | 16/07/2024| The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/). | [Build webhooks and connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md) |

@@ -4,6 +4,7 @@ author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 04/07/2022
 ---
 
@@ -20,9 +21,9 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
-|Method| Description| Source|
-|---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
+| Method | Description | Source |
+| --- | --- | --- |
+| [**Get user context**](#get-user-context-api) | Get contextual information to display relevant content in a Microsoft Teams tab. | [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -963,12 +964,22 @@ The meeting details API enables your app to get a meeting's static metadata. The
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
+**Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
+
+The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. It returns the `IMeetingDetailsResponse` interface with additional call details.
+
+For more information, see [build tabs for calling](build-tabs-for-calling.md).
+
 > [!NOTE]
 > The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
 
-### Prerequisite
+### Prerequisites
 
-To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+* To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+* To enable calling, ensure that you've obtained the `OnlineMeetingParticipant.Read.Chat` RSC permission.
+
+* Teams JS SDK required: [TeamsJS SDK release latest release](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0).
 
 <br>
 
@@ -976,7 +987,7 @@ To use the meeting details API, you must obtain different RSC permission based o
 
 <summary><b>For app manifest version 1.12 and later</b></summary>
 
-Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
+Use the following example to configure your app manifest's `webApplicationInfo` and `authorization` properties for any private meeting:
 
 ```json
 "webApplicationInfo": {
@@ -1061,9 +1072,9 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 The following table lists the query parameter:
 
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library.|
+| Value | Type | Required | Description |
+| --- | --- | --- | --- |
+| **meetingId** | String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library. |
 
 ### Example
 
@@ -1092,6 +1103,100 @@ this.onMessage(async(context, next) =>{
 });
 
 ```
+
+**Calling extensibility**:
+
+* **Example for enabling personal tab for calling extensibility**:
+
+    ```JavaScript
+    const GetMeetingDetailsVerbose = (): React.ReactElement =>
+        ApiWithoutInput ({
+            name: 'getMeetingDetailsVerbose'
+            title: 'Get Meeting Details Verbose'
+            onClick: async () => {
+                const result = await meeting.getMeetingDetailsVerbose();
+                return JSON.stringify (result);
+            };
+    });
+    ```
+
+* **`getMeetingDetailsVerbose()` to enable PSTN and Teams-to-Teams calls**:
+
+    ```JavaScript
+    interface IMeetingOrCallDetailsBase <T> {
+      /**
+       * Scheduled start time of the meeting or start time of the call
+       */
+      scheduledStartTime: string;
+    
+      /**
+       * url to join the current call or meeting
+       */
+      joinUrl?: string;
+    
+      /**
+       * type of the meeting or call
+       */
+      type?: T;
+    }
+    
+    interface ICallDetails
+      extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
+      originalCallerInfo?: ICallParticipantIdentifiers;
+      dialedEntityInfo?: ICallParticipantIdentifiers;
+      trackingID?: string;
+      callID?: string;
+    }
+    
+    interface iConversation {
+      id: string;
+    }
+    
+    interface IOrganizer {
+      id?: string;
+      tenantId?: string;
+    }
+    
+    export interface IMeetingDetailsResponse {
+      details: IMeetingDetails | ICallDetails;
+      conversation: IConversation;
+      organizer: IOrganizer;
+    }
+    ```
+
+* **Identify the phone number and email of the caller**:
+
+    ```JavaScript
+    interface ICallParticipantIdentifiers {
+    /**
+     * Phone number of a caller
+     */
+    phoneNumber?: string;
+
+    /**
+     * Email of a caller
+     */
+    email?: EmailAddress;
+    }
+     ```
+
+* **Validate email and retrieve it as a string**:
+
+  ```JavaScript
+    class EmailAddress {
+    /**Represents the input email address string*/
+    private readonly val: string;
+    
+    public constructor(val: string) {
+      this.val = val;
+      validateEmailAddress(val);
+      }
+
+    public toString(): string {
+      return this.val;
+      }
+    }
+    ```
 
 # [JSON](#tab/json)
 
@@ -1248,6 +1353,9 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
+| **originalCaller** | MRI for the original caller of a call. |
+| **dialedEntity** | MRI that the original called dialed |
+| **trackingId** | A persistent ID that references a call and all of its related calls. |
 
 In case of recurring meeting type:
 
@@ -1551,9 +1659,9 @@ The following examples show how to capture the participant join and leave events
 
 # [Participant join event](#tab/participant-join-event)
 
- * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
- * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 //Invoked on participant join a meeting
@@ -1566,9 +1674,9 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 
 # [Participant leave event](#tab/participant-leave-event)
 
- * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
- * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 //Invoked on participant leave a meeting
@@ -1798,6 +1906,10 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
+
+## Toggle Incoming Audio
+
+The toggleIncomingClientAudio API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
 
 ## Code sample
 

@@ -222,6 +222,11 @@ tools:
       imageSrc: ./assets/icons/devp-logo.png
       url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
     # Card
+    - title: Microsoft Copilot Studio
+    # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/copilot-studio-icon.png
+      url: https://copilotstudio.preview.microsoft.com/
+    # Card
     - title: Microsoft Graph SDKs
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/graph-icon-1.png
@@ -241,9 +246,4 @@ tools:
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_net.png
       url: https://github.com/Microsoft/botbuilder-dotnet/
-    # Card
-    - title: Yeoman generator for Microsoft Teams
-    # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)
