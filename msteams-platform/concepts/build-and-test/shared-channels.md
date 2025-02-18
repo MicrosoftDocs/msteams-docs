@@ -38,7 +38,7 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 > [!NOTE]
 >
 > * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
-> * Your app may need to account for the unique properties of each of these channel types in order to function properly.
+> * Your app might need to account for the unique properties of each of these channel types in order to function properly.
 
 ## Get context for shared channels
 
