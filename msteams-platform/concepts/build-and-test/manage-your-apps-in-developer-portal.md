@@ -81,7 +81,7 @@ In the **Configure** section, you can see the following components to manage and
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-da.png" alt-text="Screenshot shows you how to declarative agents into your app package." lightbox="../../assets/images/tdp/app-package-editor-da.png":::
 
-    1. Select **New file** and add new **.json** file to define your agent's behavior.
+    1. Select **New file** > **JSON file** to add `.json` file to define your agent's behavior.
 
         :::image type="content" source="../../assets/images/tdp/package-editor-da-json.png" alt-text="Screenshot shows you how to declarative agents behavior into your app package." lightbox="../../assets/images/tdp/package-editor-da-json.png":::
 
