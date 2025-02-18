@@ -99,7 +99,9 @@ The **AppCaching** tab contains the following details:
 ## Precaching tab apps
 
 > [!NOTE]
-> Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+>
+> * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day, along with any telemetry adjustments.
 
 While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in faster loading times.
 
@@ -126,7 +128,7 @@ To enable precaching for your tab app, follow these steps:
 
 ### `isBackgroundLoad` property
 
-Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day, along with any telemetry adjustments. Use the `isBackgroundLoad` context property to recognize if the app launch is initiated in the background by Teams without user interaction. The property helps guide the app towards more effective precache loading and rendering. The property also indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts.
+Use the `isBackgroundLoad` context property to recognize if the app launch is initiated in the background by Teams without user interaction. The property helps guide the app towards more effective precache loading and rendering. The property also indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts.
 
 ## Best practices
 
