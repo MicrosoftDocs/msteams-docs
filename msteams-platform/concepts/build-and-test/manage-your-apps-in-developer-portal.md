@@ -51,7 +51,7 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
   > [!NOTE]
   > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
-* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add new files such as declarative agent or the new folder into your app package.
+* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add declarative agent and its related files into your app package.
 
     :::image type="content" source="../../assets/images/tdp/package-editor.png" alt-text="Screenshot shows you the App package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor.png":::
 
@@ -61,6 +61,37 @@ In the **Configure** section, you can see the following components to manage and
 
     > [!NOTE]
     > If your app manifest version is v1.19, you can add a declarative agent through this app package editor. To create declarative agents, add a JSON file that defines the agent's behavior. You can also create a YAML file to define custom APIs and connect them to the declarative agents.
+
+    <br>
+    <details>
+    <summary><b>Add declarative agents to your app Package using Developer Portal</b></summary><br>
+
+    Before you add declarative agent to your app package, ensure your app package is update to the latest version v1.19.
+
+    1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
+    1. Go to **Configure** > **App package editor**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-tdp.png" alt-text="Screenshot shows you the app package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-tdp.png":::
+
+    1. Select the ellipses (**...**) under **Actions** of **manifest.json** file.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-edit.png" alt-text="Screenshot shows you the app package editor to edit your app package.":::
+
+    1. Add manifest property `copilotAgents` and sub property `declarativeAgents`, and define required details. Select **Save**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-da.png" alt-text="Screenshot shows you how to declarative agents into your app package." lightbox="../../assets/images/tdp/app-package-editor-da.png":::
+
+    1. Select **New file** and add new **.json** file to define your agent's behavior.
+
+        :::image type="content" source="../../assets/images/tdp/package-editor-da-json.png" alt-text="Screenshot shows you how to declarative agents behavior into your app package." lightbox="../../assets/images/tdp/package-editor-da-json.png":::
+
+    1. Select **Update** from the upper right corner.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-update.png" alt-text="Screenshot shows you how to update declarative agents behavior into your app package." lightbox="../../assets/images/tdp/app-package-update.png":::
+
+       Now, the Developer Portal reviews the files and identifies any errors. You can save the package with errors, but you must resolve them before you publish.
+
+    </details>
 
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
