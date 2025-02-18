@@ -269,8 +269,22 @@ this.onMessage(async (context, next) => {
 - [SDK reference]
 - [Sample code reference]
 
-```
+```python
 
+ # Event handler for when new members are added to a team
+    async def on_teams_members_added(
+        self,
+        teams_members_added: list[TeamsChannelAccount],  # List of new members added
+        team_info: TeamInfo,  # Information about the team
+        turn_context: TurnContext,  # Context for the current turn
+    ):
+        # Welcome message for new members
+        welcome_text = "Hello and welcome! With this sample, your bot can receive user messages across standard channels in a team without being @mentioned."
+        
+        for member in teams_members_added:
+            # Ensure the bot does not send a welcome message to itself
+            if member.id != turn_context.activity.recipient.id:
+                await turn_context.send_activity(MessageFactory.text(welcome_text))
 
 ```
 
@@ -278,9 +292,9 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js| Python | App manifest |
-|-------------|-------------|------|----|----|
-|Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
+| Sample name | Description | .NET | Node.js | Python | App manifest |
+| --- | --- | --- | --- | --- |
+|Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) | Python sample link | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 
 ## See also
 
