@@ -266,8 +266,8 @@ this.onMessage(async (context, next) => {
 
 # [Python](#tab/python)
 
-- [SDK reference](add-link)
-- [Sample code reference](add-link)
+- [SDK reference]
+- [Sample code reference]
 
 ```
 
@@ -278,7 +278,7 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js| App manifest
+| Sample name | Description | .NET |Node.js| Python | App manifest |
 |-------------|-------------|------|----|----|
 |Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 
