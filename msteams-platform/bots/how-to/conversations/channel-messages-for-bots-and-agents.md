@@ -25,13 +25,13 @@ Conversation owners can grant consent during the app installation or upgrade pro
 
 ## Enable bots to receive all channel or chat messages
 
-The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions:
+The RSC permissions are being extended to bots. With user consent and app installation, these permissions:
 
 - Allow a specified graph application to get all messages in channels and chats, respectively.
 - Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the following permissions apply:
 
-- `ChannelMessage.Read.Group`
-- `ChatMessage.Read.Chat`
+  - `ChannelMessage.Read.Group`
+  - `ChatMessage.Read.Chat`
 
 ### Filtering at mention messages
 
