@@ -125,7 +125,7 @@ placeholderFunction();
 
 ### Handling external users in a multitenant app
 
-If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs can’t be resolved in your own directory. You must ask for additional permissions from the external user to resolve their Microsoft Entra object ID, or obtain consent to access the user’s email address for authentication.
+If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs can’t be resolved in your own directory. You must ask for extra permissions from the external user to resolve their Microsoft Entra object ID, or obtain consent to access the user’s email address for authentication.
 
 To learn how to retrieve the details of a user's Microsoft Entra object ID for a bot, see [get single member details](../../bots/how-to/get-teams-context.md#get-single-member-details). To learn how to retrieve the details of a user's Microsoft Entra object ID for a tab, see [Get context by using the Microsoft Teams JavaScript library](../../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). If you're unable to authenticate a user or resolve their Microsoft Entra object ID, provide a fallback experience, such as a guest experience or other types of unauthenticated experiences.
 The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for users in the home tenant and external users:
