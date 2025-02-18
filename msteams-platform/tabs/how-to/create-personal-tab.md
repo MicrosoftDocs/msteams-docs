@@ -14,7 +14,6 @@ Tabs in chats, channels, or meetings behave more like apps, as you can pin only 
 
 > [!IMPORTANT]
 >
-> * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 > * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your tab.
@@ -23,8 +22,11 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 ::: zone pivot="node-java-script"
 
-## Create a tab with Node.js
+## Create a tab with JavaScript
 
+Follow the step-by-step guide to [build your tab app using JavaScript](../../sbs-gs-javascript.yml).
+
+<!--
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
     ```cmd
@@ -133,9 +135,8 @@ Following are the steps to create a tab:
     > [!NOTE]
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
-    
 
-
+-->
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+Issue%5D+Generate+your+application+with+a+tab&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23generate-your-application-with-a-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
@@ -389,7 +390,6 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-
 ### Establish a secure tunnel to your tab
 
 At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
@@ -432,7 +432,6 @@ ngrok http 3978 --host-header=localhost
 
    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
@@ -449,7 +448,7 @@ ngrok http 3978 --host-header=localhost
 
 Following are the steps to create a tab:
 
-1. [Generate your application with a tab](#generate-your-application-with-a-tab-2)
+1. [Generate your application with a tab](#generate-your-application-with-a-tab)
 1. [Update and run application](#update-and-run-your-application-1)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
@@ -602,7 +601,6 @@ ngrok http 3978 --host-header=localhost
   
     Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-
 ::: zone-end
 
 ::: zone pivot="blazor-app"
@@ -652,7 +650,6 @@ To install the Microsoft Teams Toolkit extension:
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
     Your Visual Studio is installed in a few minutes.
-
 
 # [Command line](#tab/cli)
 
@@ -712,7 +709,6 @@ If you don't have a Teams developer account, you can get it for free. Join the M
     :::image type="content" source="../../assets/images/build-your-first-app/dev-program-subscription.PNG" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions for the Blazor app.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
-
 
 ## Get a free Azure account
 
@@ -945,7 +941,6 @@ You've learned to create, build, and run Teams app with tab capability. The foll
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.PNG" alt-text="Screenshot of Blazorapp-dev-rg displaying the Resources provisioned in the Azure portal.":::
 
     Your resources are provisioned in the Azure portal!
-
 
 #### **To deploy your tab app to cloud**
 
