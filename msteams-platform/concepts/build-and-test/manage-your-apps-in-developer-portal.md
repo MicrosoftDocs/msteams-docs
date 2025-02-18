@@ -60,11 +60,7 @@ In the **Configure** section, you can see the following components to manage and
     :::image type="content" source="../../assets/images/tdp/app-package-editor-update.png" alt-text="Screenshot shows you the App package editor to update the new files in Teams developer portal.":::
 
     > [!NOTE]
-    > You can add declarative agent through this app package editor if your app manifest version is v1.19.
-
-    <br>
-    <details>
-    <summary><b>Validate your app package</b></summary><br>
+    > If your app manifest version is v1.19, you can add a declarative agent through this app package editor. To create declarative agents, add a JSON file that defines the agent's behavior. You can also create a YAML file to define custom APIs and connect them to the declarative agents.
 
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
