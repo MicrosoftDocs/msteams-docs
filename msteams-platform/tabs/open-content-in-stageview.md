@@ -87,6 +87,10 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 > * The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
 > * When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
 
+`stage.close`
+
+Trigger stage.close API to close the respective stageview (stage, dialog or multi-window). It's an optional function that you can add. It is supported only in Microsoft built apps.
+
 </details>
 
 ### Invoke Collaborative Stageview from Adaptive Card
