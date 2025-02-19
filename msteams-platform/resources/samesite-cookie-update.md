@@ -1,11 +1,11 @@
 ---
 title: Implement SameSite Cookie Attribute
 author: laujan
-description: Learn types of cookies, SameSite cookies and attributes, their impacts on Teams tabs, dialogs (task modules), message extensions, and their authentication in Teams.
+description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation, and storage partitioning.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.date: 05/18/2022
+ms.date: 02/06/2025
 ---
 
 # Cookies and local storage
@@ -34,7 +34,7 @@ You can opt out of adding the SameSite cookie attribute to the `SetCookie` heade
 
 ## SameSite cookie attribute: 2020 release
 
-Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
+Chrome 80 introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
 
 SameSite cookie attributes are as follows:
 
@@ -48,7 +48,7 @@ SameSite cookie attributes are as follows:
 
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
-1. Microsoft internal partners can join the following team for more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
+1. Microsoft internal partners can join the following team for more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee>.
 
 > [!NOTE]
 > You must set SameSite attributes to reflect the intended use for your cookies. Do not rely on default browser behavior. For more information, see [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).

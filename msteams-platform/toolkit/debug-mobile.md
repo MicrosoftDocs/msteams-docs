@@ -1,11 +1,11 @@
 ---
 title: Debug Tab or Bot Apps in Mobile
 author: surbhigupta 
-description: Learn how to debug and test your Teams app with tab and bot capability on mobile client in both Visual Studio Code and command line.
+description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile clients in both Visual Studio Code and Command Line.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 02/06/2025
 ---
 
 # Debug for mobile
@@ -14,7 +14,7 @@ When you're building a Microsoft Teams app that includes a tab, bot, or message 
 
 See the following video to learn how to debug your Teams app in mobile clients:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW1aEur]
+> [!VIDEO 0137be57-10fc-4605-a47e-d7f6c6111600]
 
 ## Debug your tab app
 
@@ -113,7 +113,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    4. Select **Add** to upload the custom app to Teams.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
-   
+
    5. Select **Open**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::

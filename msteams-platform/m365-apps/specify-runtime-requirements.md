@@ -1,7 +1,7 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 10/17/2024
+ms.date: 1/21/2025
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -9,10 +9,6 @@ ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
 # Specify Microsoft 365 host runtime requirements in app manifest
-
-> [!NOTE]
->
-> The ability to specify Microsoft 365 host runtime requirements in app manifest (previously called Teams app manifest) is in [public developer preview](../resources/schema/manifest-schema-dev-preview.md).
 
 When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences.
 
@@ -38,6 +34,8 @@ The following Microsoft 365 host applications support the ability to specify run
 | Outlook| ✔️| ✔️ (New Outlook only)| ✔️|
 | Microsoft 365 (Office)| | | |
 | Microsoft 365 Copilot | | | |
+
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
 ## Specify relationships between app capabilities (`elementRelationshipSet`)
 
