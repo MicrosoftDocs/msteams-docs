@@ -1,7 +1,7 @@
 ---
 title: Micro-Capability & Schema for Web Links
 author: v-ypalikila
-description: In this article, learn how to use micro-capability templates and schema.org metadata to unfurl rich previews for your links in Microsoft Teams.
+description: Learn how to use micro-capability templates and schema.org metadata to unfurl rich previews for your links in Microsoft Teams and validate your links.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: v-ypalikila
