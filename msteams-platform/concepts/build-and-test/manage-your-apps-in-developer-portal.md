@@ -51,16 +51,16 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
   > [!NOTE]
   > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
-* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add declarative agent and its related files into your app package.
+* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package.
 
     :::image type="content" source="../../assets/images/tdp/package-editor.png" alt-text="Screenshot shows you the App package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor.png":::
 
     After you edit or add new files to your app package, you can either discard or update the package. If you select **Update**, the Developer Portal reviews the files and identifies errors. You can save the package with errors, but you must resolve them before you publish.
 
-    :::image type="content" source="../../assets/images/tdp/app-package-editor-update.png" alt-text="Screenshot shows you the App package editor to update the new files in Teams developer portal.":::
+    :::image type="content" source="../../assets/images/tdp/app-package-editor-update.png" alt-text="Screenshot shows you the App package editor to update the new files in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-update.png":::
 
     > [!NOTE]
-    > If your app manifest version is v1.19, you can add a declarative agent through this app package editor. To create declarative agent, add a JSON file that defines the agent's behavior. You can also create a YAML file to define custom APIs and connect them to the declarative agent.
+    > If your app manifest version is v1.19, you can add a declarative agent through this app package editor. To create a declarative agent, add a JSON file that defines the agent's behavior. You can also create a YAML file to define custom APIs and connect them to the declarative agent.
 
     <br>
     <details>
