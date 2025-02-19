@@ -64,16 +64,16 @@ In the **Configure** section, you can see the following components to manage and
 
     <br>
     <details>
-    <summary><b>Add declarative agent to your app Package using Developer Portal</b></summary><br>
+    <summary><b>Add a declarative agent to your app Package using Developer Portal</b></summary><br>
 
-    Before you add declarative agent to your app package, ensure your app package is update to the latest version v1.19.
+    Before you add a declarative agent to your app package, ensure your app package is update to the latest version v1.19.
 
     1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
     1. Go to **Configure** > **App package editor**.
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-tdp.png" alt-text="Screenshot shows you the app package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-tdp.png":::
 
-    1. Select the ellipses (**...**) under **Actions** of **manifest.json** file.
+    1. Select the ellipses (**...**) under **Actions** of **manifest.json** file and select **Edit**.
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-edit.png" alt-text="Screenshot shows you the app package editor to edit your app package.":::
 
@@ -81,15 +81,15 @@ In the **Configure** section, you can see the following components to manage and
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-da.png" alt-text="Screenshot shows you how to declarative agents into your app package." lightbox="../../assets/images/tdp/app-package-editor-da.png":::
 
-    1. Select **New file** > **JSON file** to add `.json` file to define your agent's behavior.
+    1. Select **New file** > **JSON file** and define your agent's behavior.
 
-        :::image type="content" source="../../assets/images/tdp/package-editor-da-json.png" alt-text="Screenshot shows you how to declarative agents behavior into your app package." lightbox="../../assets/images/tdp/package-editor-da-json.png":::
+        :::image type="content" source="../../assets/images/tdp/package-editor-da-json.png" alt-text="Screenshot shows you how to add a declarative agents behavior into your app package." lightbox="../../assets/images/tdp/package-editor-da-json.png":::
 
-    1. Select **Update** from the upper right corner.
+    1. Select **Update**.
 
         :::image type="content" source="../../assets/images/tdp/app-package-update.png" alt-text="Screenshot shows you how to update declarative agents behavior into your app package." lightbox="../../assets/images/tdp/app-package-update.png":::
 
-       Now, the Developer Portal reviews the files and identifies any errors. You can save the package with errors, but you must resolve them before you publish.
+       Now, the Developer Portal reviews the files and identifies any errors, which you must resolve before you publish.
 
     </details>
 
