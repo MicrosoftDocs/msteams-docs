@@ -1226,7 +1226,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/update-and-delete-bot-messages.md",
-        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability"
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#update-and-delete-messages-sent-from-bot"
       }
     ]
 }
