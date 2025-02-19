@@ -1,7 +1,6 @@
 ---
 title: Microsoft Entra ID for Teams Apps
-author: surbhigupta
-description: Learn about Microsoft Entra ID, how to host your Teams app on Microsoft Entra ID helps you create reliable, scalable, and easy-to-maintain apps.
+description: Learn about Microsoft Entra ID and how to host your Teams app on Microsoft Entra ID helps you create reliable, scalable, and easy-to-maintain apps.
 author: surbhigupta12
 ms.author: surbhigupta
 ms.topic: overview
