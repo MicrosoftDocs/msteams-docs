@@ -28,7 +28,7 @@ For Teams app to support third-party cloud storage for drag-dropped files:
 
     Following code sample shows the first action added as `Upload` under `composeExtensions`:
 
-    ```javascript
+    ```json
     {
       "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
       "manifestVersion": "1.9",
