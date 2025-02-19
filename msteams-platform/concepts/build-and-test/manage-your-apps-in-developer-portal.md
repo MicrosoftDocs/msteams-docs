@@ -64,7 +64,7 @@ In the **Configure** section, you can see the following components to manage and
 
     <br>
     <details>
-    <summary><b>Add a declarative agent to your app Package using Developer Portal</b></summary><br>
+    <summary><b>Add a declarative agent to your app package using Developer Portal</b></summary><br>
 
     Before you add a declarative agent to your app package, ensure your app package is update to the latest version v1.19.
 
