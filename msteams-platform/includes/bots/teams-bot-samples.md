@@ -7,8 +7,6 @@ ms.author: surbhigupta12
 ms.date: 02/20/2023
 ---
 
-## Teams bot samples
-
 ## Code sample
 
 For complete working samples demonstrating the functionality, see the following Teams samples for Bot Framework:
