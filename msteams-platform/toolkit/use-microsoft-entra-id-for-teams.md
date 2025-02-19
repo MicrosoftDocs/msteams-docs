@@ -14,9 +14,9 @@ ms.date: 02/19/2025
 
 Microsoft Entra ID is a cloud-based Identity and Access Management (IAM) service that provides secure authentication for Teams apps and their users. The platform also offers access to various resources, including Microsoft Azure and Microsoft 365.
 
-You can use the following services for your Teams app:
+You can use the following Entra ID-secured services for your Teams app:
 
-* **Single sign-on (SSO)**: You can enable SSO for Teams apps, allowing users to sign in once and access multiple apps without the need to reenter their credentials.
+* **Single sign-on (SSO)**: You can enable SSO for Teams apps, allowing users to sign in once and access your app on multiple devices without the need to reenter their credentials.
 * **App registration**: You can register your Teams app in Microsoft Entra ID to enable authentication and authorization. You can create an app ID, define API scopes, and configure app permissions.
 * **Bot and message extensions**: You can use Microsoft Entra ID to configure a bot resource, messaging endpoint, and OAuth connections.
 * **Tabs**: You can register a tab app, enable SSO, and configure access tokens and permissions.
@@ -29,9 +29,9 @@ A tenant is an administrative boundary for managing users, apps, and group ident
 
 You can register your app under two types of tenancy:
 
-* **Single tenant**: An app registered under the single tenant is restricted to the users in the organizational directory of its home tenant. This type of tenant is suitable for apps that are simple and prioritize security, privacy, and collaboration within an organization.
+* **Single tenant**: An app registered as a single tenant app is restricted to the users in the organizational directory of its home tenant. This type of tenant is suitable for apps that are simple and prioritize security, privacy, and collaboration within an organization.
 
-* **Multitenant**: An app registered under the multitenant is accessible to users both inside and outside the home tenant. This type of tenancy promotes better scalability and reach for the app, and offers collaboration within and across organizations.
+* **Multitenant**: An app registered as a multitenant app is accessible to users both inside and outside the home tenant. This type of tenancy promotes better scalability and reach for the app, and offers collaboration within and across organizations.
 
 When you register your app on Azure portal, you have the following tenancy options:
 
