@@ -1,6 +1,6 @@
 ---
 title: Register App in Microsoft Entra ID
-description: Learn how to register your Teams app in Microsoft Entra ID to access Azure resources and enable Azure-related functions.
+description: Learn how to register your Teams app in Microsoft Entra ID to access Entra ID-secured services, such as single sign-on (SSO).
 author: surbhigupta12
 ms.author: surbhigupta
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 02/19/2025
 
 # Register Teams app in Microsoft Entra ID
 
-Registering your Teams app in Microsoft Entra ID allows the app to access Azure resources and enables Azure-related functions, such as single sign-on (SSO) or multitenancy.
+Registering your Teams app in Microsoft Entra ID allows the app to access Entra ID-secured services, such as single sign-on (SSO).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Registering your Teams app in Microsoft Entra ID allows the app to access Azure 
 
 ## Before you register your app
 
-It's helpful if you learn about the configuration for [registering your app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) beforehand. Ensure that you're prepared to configure the following details prior to registering your app:
+It's helpful if you learn about the configuration for [registering your app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) beforehand. Ensure that you're prepared to configure the following details before you register your app:
 
 * **Single or multitenant options**: Choose single tenant if your app is only used in its home tenant, or choose multitenant if many Microsoft 365 tenants use it regularly. For example, apps created for a single organization are typically single tenant. On the other hand, apps created by an independent software publisher that is used by many customers need to be multitenant so each customer's tenant can access the app.
 
@@ -67,7 +67,7 @@ To register a new app in Microsoft Entra ID:
 
     :::image type="content" source="../assets/images/authentication/teams-app-created-message.png" alt-text="Screenshot shows a message stating that the app was created.":::
 
-    When your app is registered in Microsoft Entra ID, the app overview page appears displaying the following details:
+    When your app is registered in Microsoft Entra ID, the app overview page appears with the following details:
 
     :::image type="content" source="../assets/images/authentication/teams-app-overview-page.png" alt-text="Screenshot shows the app registration overview page.":::
 

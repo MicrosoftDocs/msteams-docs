@@ -12,7 +12,7 @@ ms.date: 02/19/2025
 
 # Create a bot resource in Microsoft Entra ID
 
-For your Teams bot app to access resources available in Microsoft Entra ID, you'll need to create a bot resource with Microsoft Entra ID. The following process registers your bot app with Azure AI Bot Service and enables the app to connect to Teams channels.
+For your Teams bot app to access resources available in Microsoft Entra ID, you need to create a bot resource with Microsoft Entra ID. The following process registers your bot app with Azure AI Bot Service and enables the app to connect to Teams channels.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     4. Select the data residency option. Your choice defines the regions where data is stored and processed and the channels available for your bot.
 
-        :::image type="content" source="../assets/images/authentication/create-azure-bot-screen.png" alt-text="Screenshot shows the project details tab of the create Azure bot screen.":::
+        :::image type="content" source="../assets/images/authentication/create-azure-bot-screen.png" alt-text="Screenshot shows the project details tab of the Azure bot creation screen.":::
 
         You can also create a new resource group.
 
@@ -86,7 +86,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     3. If you already have a registered app that you want to link the bot resource to, select **Use existing app registration** as the creation type.
 
-        :::image type="content" source="../assets/images/authentication/select-existing-app-registration.png" alt-text="Screenshot shows the option to enter an existing app ID in the create Azure bot screen. ":::
+        :::image type="content" source="../assets/images/authentication/select-existing-app-registration.png" alt-text="Screenshot shows the option to enter an existing app ID in the Azure bot creation screen. ":::
 
         The fields for entering the app ID details appear.
 
@@ -96,7 +96,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
 7. The **Tags** tab opens. This step is optional and you can configure tags from the bot resource's overview page anytime. Enter the name and value tags for categorizing resources you provisioned.
 
-    :::image type="content" source="../assets/images/authentication/name-value-tag-azure-bot.png" alt-text="Screenshot shows the tags tab in the create an Azure bot screen.":::
+    :::image type="content" source="../assets/images/authentication/name-value-tag-azure-bot.png" alt-text="Screenshot shows the tags tab in the Azure bot creation screen.":::
 
 8. Select **Review + create**. Microsoft Entra ID validates the entered details.
 
@@ -108,7 +108,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     :::image type="content" source="../assets/images/authentication/initialize-deployment-message.png" alt-text="Screenshot shows a message stating the deployment of the resource is initializing.":::
 
-    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, a **Deployment succeeded** message is displayed. This message confirms that the bot resource has been created successfully and the selected resources are provisioned.
+    The **Overview** page opens as the deployment is in progress. After the deployment is complete, a **Deployment succeeded** message is displayed. This message confirms that the bot resource has been created successfully and the selected resources are provisioned.
 
 10. Under **Next steps** dropdown, select **Go to resource**.
 
@@ -157,7 +157,7 @@ A client secret is a string that the bot app uses to prove its identity when req
     :::image type="content" source="../assets/images/authentication/client-secret-updated.png" alt-text="Screenshot shows the client secret of the bot resource.":::
 
 > [!TIP]
-> Note down the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+> Note down the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed later.
 
 ### Enable bot for Teams
 
@@ -198,7 +198,7 @@ You must enable the bot to interact with Microsoft Teams. Without this permissio
     The bot is now enabled to work with Teams.
 
     > [!NOTE]
-    > If you want to change channel settings, you need to delete the channel and apply it again with new settings.
+    > If you want to change the channel settings, you must delete the channel and apply it again with new settings.
 
 ## See also
 
