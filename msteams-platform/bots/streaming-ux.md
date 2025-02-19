@@ -1,7 +1,7 @@
 ---
 title: Stream bot messages
 description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams AI library and configure streaming bot messages. 
-ms.date: 02/17/2025
+ms.date: 02/19/2025
 ms.topic: conceptual
 author: surbhigupta12
 ms.author: surbhigupta
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 >
 > - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > - Streaming bot messages isn't available with function calling and the OpenAI `o1` model.
-> - Streaming bot messages is supported on web, desktop, and mobile (Android). It isn't supported on iOS.
+> - Streaming bot messages is supported on web, desktop, and mobile.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
