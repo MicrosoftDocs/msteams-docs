@@ -1,11 +1,15 @@
 ---
-title: Create bot resource in Microsoft Entra ID
-author: surbhigupta
-description: Create an Azure bot resource in Microsoft Entra ID to add your bot app to Teams
-ms.topic: how-to
+title: Create Bot in Microsoft Entra ID
+description: Learn how to create an Azure bot resource in Microsoft Entra ID and add the bot app to Teams.
+author: surbhigupta12
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.topic: article
+audience: developer
+ms.service: msteams
+ms.subservice: teams-apps
+ms.date: 02/19/2025
 ---
+
 # Create a bot resource in Microsoft Entra ID
 
 For your Teams bot app to access resources available in Microsoft Entra ID, you'll need to create a bot resource with Microsoft Entra ID. The following process registers your bot app with Azure AI Bot Service and enables the app to connect to Teams channels.

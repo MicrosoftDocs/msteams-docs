@@ -1,14 +1,19 @@
 ---
-title: Microsoft Entra ID for Teams apps
+title: Microsoft Entra ID for Teams Apps
 author: surbhigupta
-description: Hosting your Teams app on Microsoft Entra ID helps you create reliable, scalable, and easy-to-maintain apps.
-ms.topic: overview
+description: Learn about Microsoft Entra ID, how to host your Teams app on Microsoft Entra ID helps you create reliable, scalable, and easy-to-maintain apps.
+author: surbhigupta12
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.topic: overview
+audience: developer
+ms.service: msteams
+ms.subservice: teams-apps
+ms.date: 02/19/2025
 ---
+
 # Microsoft Entra ID for Teams apps
 
-Microsoft Entra ID is a cloud platform that simplifies the process of building Teams apps. You can host your Teams apps entirely on Microsoft Entra ID or extend your app with Azure services. Hosting your Teams app on Microsoft Entra ID helps you create apps that are reliable, scalable, and easily maintainable. Microsoft Entra ID supports popular programming languages, including C#, Java, JavaScript, TypeScript, PowerShell, Python, and .NET.
+Microsoft Entra ID is an identity platform that simplifies the process of building Teams apps. You can host your Teams apps entirely on Microsoft Entra ID or extend your app with Azure services. Hosting your Teams app on Microsoft Entra ID helps you create apps that are reliable, scalable, and easily maintainable. Microsoft Entra ID supports popular programming languages, including C#, Java, JavaScript, TypeScript, PowerShell, Python, and .NET.
 
 You must have an Azure account to use Azure resources or to host your Teams app on Microsoft Entra ID.
 For more information, see [Microsoft Entra ID subscription](/azure/developer/intro/azure-developer-billing#what-is-an-azure-subscription).

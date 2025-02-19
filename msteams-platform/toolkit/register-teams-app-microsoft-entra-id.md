@@ -1,11 +1,15 @@
 ---
-title: Register Teams app in Microsoft Entra ID
-author: surbhigupta
-description: Registering your Teams app in Microsoft Entra ID helps you access Azure resources and enable Azure-related functions.
-ms.topic: how-to
+title: Register App in Microsoft Entra ID
+description: Learn how to register your Teams app in Microsoft Entra ID to access Azure resources and enable Azure-related functions.
+author: surbhigupta12
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.topic: article
+audience: developer
+ms.service: msteams
+ms.subservice: teams-apps
+ms.date: 02/19/2025
 ---
+
 # Register Teams app in Microsoft Entra ID
 
 Registering your Teams app in Microsoft Entra ID allows the app to access Azure resources and enables Azure-related functions, such as single sign-on (SSO) or multitenancy.
