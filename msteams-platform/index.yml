@@ -107,6 +107,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: whats-new.md
+          itemType: whats-new
+          text: What's new in Teams development
         - url: messaging-extensions/build-bot-based-agent.md
           itemType: concept
           text: Build bot-based search message extension agent

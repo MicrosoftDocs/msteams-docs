@@ -8,8 +8,6 @@ ms.topic: reference
 
 # Build your Teams app
 
-:::image type="content" source="../assets/icons/whats-new-button.png" alt-text="link to what's new page" link="../whats-new.md" border="false":::
-
 Get started with building apps for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
