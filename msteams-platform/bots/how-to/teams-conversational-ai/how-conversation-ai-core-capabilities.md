@@ -775,118 +775,118 @@ All entities are required parameters for actions.
 
 - AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinction between actions and the prompts serves as a powerful tool as it guides AI to execute the actions and prompts.
 
-# [.NET](#tab/dotnet1)
-
-- [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
-
-- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
-
-```csharp
-        [Action("AddItem")]
-        public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
-        {
-            ArgumentNullException.ThrowIfNull(turnState);
-            ArgumentNullException.ThrowIfNull(parameters);
-
-            string listName = GetParameterString(parameters, "list");
-            string item = GetParameterString(parameters, "item");
-
-            IList<string> items = GetItems(turnState, listName);
-            items.Add(item);
-            SetItems(turnState, listName, items);
-
-            return "item added. think about your next action";
-        }
-
-        [Action("RemoveItem")]
-        public async Task<string> RemoveItem([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
-        {
-            ArgumentNullException.ThrowIfNull(turnContext);
-            ArgumentNullException.ThrowIfNull(turnState);
-            ArgumentNullException.ThrowIfNull(parameters);
-
-            string listName = GetParameterString(parameters, "list");
-            string item = GetParameterString(parameters, "item");
-
-            IList<string> items = GetItems(turnState, listName);
-
-            if (!items.Contains(item))
+    # [.NET](#tab/dotnet1)
+    
+    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
+    
+    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
+    
+    ```csharp
+            [Action("AddItem")]
+            public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
             {
-                await turnContext.SendActivityAsync(ResponseBuilder.ItemNotFound(listName, item)).ConfigureAwait(false);
-                return "item not found. think about your next action";
+                ArgumentNullException.ThrowIfNull(turnState);
+                ArgumentNullException.ThrowIfNull(parameters);
+    
+                string listName = GetParameterString(parameters, "list");
+                string item = GetParameterString(parameters, "item");
+    
+                IList<string> items = GetItems(turnState, listName);
+                items.Add(item);
+                SetItems(turnState, listName, items);
+    
+                return "item added. think about your next action";
             }
-
-            items.Remove(item);
-            SetItems(turnState, listName, items);
-            return "item removed. think about your next action";
-        }
-```
-
-# [JavaScript](#tab/javascript1)
-
-- [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
-
-- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
-
-```typescript
-    app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-    const items = getItems(state, parameters.list);
-    items.push(...(parameters.items ?? []));
-    setItems(state, parameters.list, items);
-    return `items added. think about your next action`;
-    });
-
-    app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    
+            [Action("RemoveItem")]
+            public async Task<string> RemoveItem([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+            {
+                ArgumentNullException.ThrowIfNull(turnContext);
+                ArgumentNullException.ThrowIfNull(turnState);
+                ArgumentNullException.ThrowIfNull(parameters);
+    
+                string listName = GetParameterString(parameters, "list");
+                string item = GetParameterString(parameters, "item");
+    
+                IList<string> items = GetItems(turnState, listName);
+    
+                if (!items.Contains(item))
+                {
+                    await turnContext.SendActivityAsync(ResponseBuilder.ItemNotFound(listName, item)).ConfigureAwait(false);
+                    return "item not found. think about your next action";
+                }
+    
+                items.Remove(item);
+                SetItems(turnState, listName, items);
+                return "item removed. think about your next action";
+            }
+    ```
+    
+    # [JavaScript](#tab/javascript1)
+    
+    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
+    
+    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
+    
+    ```typescript
+        app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
         const items = getItems(state, parameters.list);
-        (parameters.items ?? []).forEach((item: string) => {
-            const index = items.indexOf(item);
-            if (index >= 0) {
-                items.splice(index, 1);
-            }
-        });
+        items.push(...(parameters.items ?? []));
         setItems(state, parameters.list, items);
-        return `items removed. think about your next action`;
-    });
-```
-
-# [Python](#tab/python1)
-
-- [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
-
-- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
-
-```python
-@app.ai.action("addItems")
-async def on_add_items(
-    context: ActionTurnContext[Dict[str, Any]],
-    state: AppTurnState,
-):
-    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
-    state.ensure_list_exists(parameters.list)
-    items = state.conversation.lists[parameters.list]
-    if parameters.items is not None:
-        for item in parameters.items:
-            items.append(item)
-        state.conversation.lists[parameters.list] = items
-    return "items added. think about your next action"
-
-@app.ai.action("removeItems")
-async def on_remove_items(
-    context: ActionTurnContext[Dict[str, Any]],
-    state: AppTurnState,
-):
-    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
-    state.ensure_list_exists(parameters.list)
-    items = state.conversation.lists[parameters.list]
-    if parameters.items is not None and len(parameters.items) > 0:
-        for item in parameters.items:
-            if item in items:
-                items.remove(item)
-        state.conversation.lists[parameters.list] = items
-    return "items removed. think about your next action"
-```
-
----
+        return `items added. think about your next action`;
+        });
+    
+        app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+            const items = getItems(state, parameters.list);
+            (parameters.items ?? []).forEach((item: string) => {
+                const index = items.indexOf(item);
+                if (index >= 0) {
+                    items.splice(index, 1);
+                }
+            });
+            setItems(state, parameters.list, items);
+            return `items removed. think about your next action`;
+        });
+    ```
+    
+    # [Python](#tab/python1)
+    
+    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
+    
+    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
+    
+    ```python
+    @app.ai.action("addItems")
+    async def on_add_items(
+        context: ActionTurnContext[Dict[str, Any]],
+        state: AppTurnState,
+    ):
+        parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+        state.ensure_list_exists(parameters.list)
+        items = state.conversation.lists[parameters.list]
+        if parameters.items is not None:
+            for item in parameters.items:
+                items.append(item)
+            state.conversation.lists[parameters.list] = items
+        return "items added. think about your next action"
+    
+    @app.ai.action("removeItems")
+    async def on_remove_items(
+        context: ActionTurnContext[Dict[str, Any]],
+        state: AppTurnState,
+    ):
+        parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+        state.ensure_list_exists(parameters.list)
+        items = state.conversation.lists[parameters.list]
+        if parameters.items is not None and len(parameters.items) > 0:
+            for item in parameters.items:
+                if item in items:
+                    items.remove(item)
+            state.conversation.lists[parameters.list] = items
+        return "items removed. think about your next action"
+    ```
+    
+    ---
 
 ## Next step
 
