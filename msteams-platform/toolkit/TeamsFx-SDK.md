@@ -2,10 +2,10 @@
 title: Explore TeamsFx SDK and its Functions
 author: surbhigupta
 description: Learn about core functionalities of TeamsFx SDK and its prerequisites, code structure, advanced customizing, Graph scenarios, Bot SSO, and latest SDK version.
-ms.author: v-npaladugu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/16/2023
+ms.date: 01/24/2025
 ---
 
 # TeamsFx SDK
@@ -37,7 +37,7 @@ You must have working knowledge of:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
-* [API reference documentation](https://aka.ms/teamsfx-sdk-help)
+* [API reference documentation](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ## Get started
@@ -360,7 +360,7 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
 
-    The [Microsoft Graph Toolkit](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
+    The [Microsoft Graph Toolkit](https://github.com/microsoftgraph/microsoft-graph-toolkit) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
 
     The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
 
@@ -496,7 +496,7 @@ This section provides several code snippets for common scenarios that are relate
      }    
     ```
 
-    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample).
+    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
     </details>
 
     <details>

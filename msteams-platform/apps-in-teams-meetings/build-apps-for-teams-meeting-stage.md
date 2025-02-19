@@ -5,6 +5,7 @@ description: Learn how to build apps for Teams meeting stage, share to stage API
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 10/29/2024
 ---
 

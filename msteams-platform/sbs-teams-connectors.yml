@@ -14,6 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
+    [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
     Microsoft Teams connector is Model-View-Controller (MVC) sample task management application and generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing connector for Microsoft 365 Groups or build a new one within Teams.
     
     **Types of connector codes**
@@ -52,7 +54,10 @@ items:
   durationInMinutes: 1
   content: |  
 
-    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
+    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Ddev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -95,6 +100,9 @@ items:
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-enable.png" alt-text="Screenshot shows the dropdown list with about and developer preview options.":::
    
     1.   Select **Switch to developer preview**.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+developer+preview&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
    
 
 - title: Configure your connector
@@ -111,9 +119,15 @@ items:
 
         [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
+        > [!div class="nextstepaction"]
+        > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
         # [ngrok](#tab/ngrok)
         
         [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+        > [!div class="nextstepaction"]
+        > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Dngrok%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     1. Select **New Connector**.
@@ -168,7 +182,11 @@ items:
     1. Press **F5** to run the project.
        A web page opens. 
 
-       :::image type="content" source="~/assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks.":::   
+       :::image type="content" source="~/assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks."::: 
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+your+connector&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     
 
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
@@ -237,6 +255,9 @@ items:
 
         > [!TIP]
         > You can try the actionable buttons available on the message card.
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+connector+in+Microsoft+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-connectors%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-connectors.yml&documentVersionIndependentId=da41fa98-51cc-5819-68b7-54502bc6ca12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Complete challenge
   durationInMinutes: 1
