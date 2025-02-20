@@ -33,7 +33,7 @@ The following image shows the media element in Adaptive Card:
 
 ## Add media elements to your Adaptive Card
 
-Add media files into an existing or new Adaptive Card either through [Developer Portal for Teams](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer). To incorporate media files into your Adaptive Card, follow these steps:
+Add media files into an existing or new Adaptive Card either through [Developer Portal for Teams](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html). To incorporate media files into your Adaptive Card, follow these steps:
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -75,7 +75,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 # [Adaptive Card Designer](#tab/adaptive-card-designer)
 
-1. Go to [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer).
+1. Go to [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
 
 1. Select an existing card or create a new Adaptive Card:
     * To select an existing card paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.

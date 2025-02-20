@@ -160,7 +160,7 @@ You can upload a sample app to see how apps should look and behave in the Teams 
 Design Adaptive Cards in our web-based tool.
 
 > [!div class="nextstepaction"]
-> [Try the Adaptive Card Designer](https://adaptivecards.microsoft.com/designer/)
+> [Try the Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html)
 
 ## See also
 
