@@ -4,7 +4,7 @@ description: Learn about resource-specific consent (RSC) permissions, types of R
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.owner: vishachadha
-ms.date: 03/20/2023
+ms.date: 02/20/2025
 ---
 
 # Resource-specific consent for your Teams app
