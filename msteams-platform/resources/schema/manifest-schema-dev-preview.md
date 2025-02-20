@@ -117,7 +117,7 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
             }
             "backgroundLoadConfiguration": {
             "tabConfiguration": {
-                "contentUrl": "https://www.contoso.com/content?host=msteams",
+                "contentUrl": "https://www.contoso.com/content?host=msteams"
                 }
             }
         }
