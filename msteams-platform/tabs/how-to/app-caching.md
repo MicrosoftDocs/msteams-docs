@@ -130,7 +130,7 @@ To enable precaching for your tab app, follow these steps:
 
 ### `isBackgroundLoad` property
 
-Use the `isBackgroundLoad` property in the app context to identify if Teams initiated the app launch in the background without user interaction. This action helps you optimize the app for effective precache loading and rendering. If Teams loads the app in the background, it indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload).
+Use the `isBackgroundLoad` property in the app context to identify if Teams initiated the app launch in the background without user interaction. This action helps you optimize the app for effective precache loading and rendering. If Teams loads the app in the background, it indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
 
 ## Best practices
 
