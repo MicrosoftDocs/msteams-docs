@@ -115,13 +115,13 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
                   {"name": "dialogUrlBot"}
                 ]
             }
-            "backgroundLoadConfiguration": {
-            "tabConfiguration": {
-                "contentUrl": "https://www.contoso.com/content?host=msteams"
-                }
-            }
         }
     ],
+    "backgroundLoadConfiguration": {
+        "tabConfiguration": {
+            "contentUrl": "https://www.contoso.com/content?host=msteams"
+        }
+    },
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
@@ -609,7 +609,6 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. <br>Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
 |`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab.|
-| `backgroundLoadConfiguration` | Object | | | Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching. |
 
 ### staticTabs.requirementSet
 
@@ -619,12 +618,13 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
-### staticTabs.backgroundLoadConfiguration
+## backgroundLoadConfiguration
 
 **Optional** &ndash; Object
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+| `backgroundLoadConfiguration` | Object | | | Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching. |
 | `backgroundLoadConfiguration.tabBackgroundLoadConfiguration` | Object | | | Contains the tab settings to specify if the app supports background preloading of tabs. |
 | `contentUrl` | String | | ✔️ | Required URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 

@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 02/28/2025
+ms.date: 02/25/2025
 ---
 
 # App caching for your tab app
@@ -82,7 +82,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 > [!NOTE]
 > The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. Open the Proto Task Manager using the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac.
+You can enable the Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. In your Teams client, select the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac to open the Proto Task Manager.
 
 :::image type="content" source="../../assets/images/tabs/app-cache-debug-tool.png" alt-text="Screenshot shows the caching tab in the Proto Task Manager in Teams." lightbox="../../assets/images/tabs/app-cache-debug-tool.png":::
 
@@ -93,17 +93,18 @@ The **AppCaching** tab contains the following details:
 * **timeElapsed**: Shows the time elapsed since the app was cached.
 * **supportsLoad**: Shows if the app has registered the `Load` handler if app caching is enabled.
 * **supportsBeforeUnload**: Shows if the app has registered the `BeforeUnload` handler if app caching is enabled.
-* **memory**: Shows the memory usage of the app.
-* **cpu**: Shows the CPU usage of the app.
+* **totalFrameMemory**: Shows the memory usage of the app.
+* **totalFrameCommitMemory**: Shows the CPU usage of the app.
 
 ## Precaching tab apps
 
 > [!NOTE]
 >
-> * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide can handle background requests multiple times for each user in a day, along with any telemetry adjustments.
+> Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in faster loading times.
+While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in a faster loading time.
+
+### Enable precaching for tab app
 
 To enable precaching for your tab app, follow these steps:
 
@@ -111,26 +112,35 @@ To enable precaching for your tab app, follow these steps:
 
 1. Update your app manifest as follows:
 
-    1. Set the value of `showLoadingIndicator` to `true`. This action ensures that Teams waits until your app sends `notifySuccess` to conclude the app load sequence during precaching.
+    1. Set the value of `showLoadingIndicator` to `true`. This action ensures that Teams waits until your app sends `notifySuccess` to conclude the app load sequence during precaching. For more information, see [showLoadingIndicator](../../resources/schema/manifest-schema-dev-preview.md#showloadingindicator).
 
     1. Add the `backgroundLoadConfiguration` object and define the `contentUrl`.
 
-    ```json
-    "backgroundLoadConfiguration": {
-        "tabConfiguration": {
-          "contentUrl": "<contentUrl>"
+        ```json
+        {
+            //...
+            "staticTabs": [
+            {
+                "contentUrl": "https://www.contoso.com/content?host=msteams"
+            }
+        ],
+        "backgroundLoadConfiguration": {
+            "tabConfiguration": {
+                "contentUrl": "https://www.contoso.com/content?host=msteams"
+                }
+            }
+            //...
         }
-      }
-    ```
+        ```
 
-    > [!NOTE]
-    > The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
+        > [!NOTE]
+        > The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
 
-    For more information, see [staticTabs.backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#statictabsbackgroundloadconfiguration).
+        For more information, see [staticTabs.backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#backgroundloadconfiguration).
 
 ### `isBackgroundLoad` property
 
-Use the `isBackgroundLoad` property in the app context to identify if Teams initiated the app launch in the background without user interaction. This action helps you optimize the app for effective precache loading and rendering. If Teams loads the app in the background, it indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
+`isBackgroundLoad` is a boolean property to identify if Teams preloaded the app in the background without user interaction. If the property's state is set to `true`, it indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts. Monitor this property in the app context to optimize the app for effective precache loading and rendering. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
 
 ## Best practices
 
@@ -138,9 +148,11 @@ The following are the best practices for app caching and precaching:
 
 * We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
 
-* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize`. For precaching to work correctly, you must register these handlers before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
 * Avoid creating multiple apps with similar apps bundles, origin, and storage. As Teams tracks app usage numbers based on app IDs, this practice elevates your apps’ overall usage ranking and helps avoid duplicated app preloads. For example, if you have an app for personal scope and another app for group chat and channel scopes, consolidate them into a single app so that precaching benefits both areas.
+
+* Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day, along with any telemetry adjustments.
 
 ## Limitations
 
