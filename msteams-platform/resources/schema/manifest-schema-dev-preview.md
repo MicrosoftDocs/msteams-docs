@@ -623,6 +623,8 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 **Optional** &ndash; Object
 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
 | `backgroundLoadConfiguration.tabBackgroundLoadConfiguration` | Object | | | Contains the tab settings to specify if the app supports background preloading of tabs. |
 | `contentUrl` | String | | ✔️ | Required URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 
