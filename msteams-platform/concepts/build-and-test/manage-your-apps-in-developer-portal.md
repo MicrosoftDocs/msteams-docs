@@ -66,7 +66,7 @@ In the **Configure** section, you can see the following components to manage and
     <details>
     <summary><b>Add a declarative agent to your app package using Developer Portal</b></summary><br>
 
-    Before you add a declarative agent to your app package, ensure your app package is update to the latest version v1.19.
+    Before you add a declarative agent to your app package, ensure your app package is updated to the latest version v1.19.
 
     1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
     1. Go to **Configure** > **App package editor**.
@@ -77,7 +77,7 @@ In the **Configure** section, you can see the following components to manage and
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-edit.png" alt-text="Screenshot shows you the app package editor to edit your app package.":::
 
-    1. Add manifest property `copilotAgents` and sub property `declarativeAgents`, and define required details. Select **Save**.
+    1. Add the manifest property `copilotAgents` and the sub property `declarativeAgents`, and define required details. Select **Save**.
 
         :::image type="content" source="../../assets/images/tdp/app-package-editor-da.png" alt-text="Screenshot shows you how to declarative agents into your app package." lightbox="../../assets/images/tdp/app-package-editor-da.png":::
 
