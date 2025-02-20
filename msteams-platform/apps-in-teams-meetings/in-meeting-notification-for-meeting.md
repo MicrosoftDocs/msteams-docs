@@ -5,6 +5,7 @@ description: Learn how to build in-meeting and targeted in-meeting notifications
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 02/02/2023
 ---
 
