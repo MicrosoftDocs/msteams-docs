@@ -121,7 +121,7 @@ To enable precaching for your tab app, follow these steps:
         {
         "backgroundLoadConfiguration": {
             "tabConfiguration": {
-                "contentUrl": "https://www.contoso.com/content?host=msteams&backgroundload=true"
+                "contentUrl": "https://www.contoso.com/content?host=msteams"
                 }
             }
         }
