@@ -121,7 +121,7 @@ To enable precaching for your tab app, follow these steps:
         {
         "backgroundLoadConfiguration": {
             "tabConfiguration": {
-                "contentUrl": "https://www.contoso.com/content?host=msteams"
+                "contentUrl": "https://www.contoso.com/content?host=msteams&isBackgroundLoad=true"
                 }
             }
         }
@@ -146,8 +146,6 @@ The following are the best practices for app caching and precaching:
 * We recommend that you implement web storage or service worker capabilities to store the data or webview locally. This helps to load the app faster in subsequent launches.
 
 * Register the `beforeUnload` and `onLoad` handlers right after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
-
-* Avoid creating multiple apps with similar apps bundles, origin, and storage. As Teams tracks app usage numbers based on app IDs, this practice elevates your apps’ overall usage ranking and helps avoid duplicated app preloads. For example, if you have an app for personal scope and another app for group chat and channel scopes, consolidate them into a single app so that precaching benefits both areas.
 
 * Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Ensure that you make telemetry adjustments needed to accommodate the background loading of the app.
 
