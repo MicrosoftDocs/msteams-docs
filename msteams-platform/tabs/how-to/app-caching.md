@@ -20,7 +20,7 @@ App caching is supported for the following:
 | Chat | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Channel | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Meeting tab | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
-| Meeting side panel or In-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
+| Meeting side panel or in-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
 
 ## Enable app caching
 
@@ -43,10 +43,10 @@ The following is the flow diagram of the launch of cached app:
 
 :::image type="content" source="../../assets/images/saas-offer/cached-launch-app.png" alt-text="Screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app.
+When you opt into app caching, the iframe or webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The iframe or webview used to host the app is hidden when the users leave the app and shown when the users return to the app.
 
 > [!NOTE]
-> If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+> If the app caching isn't enabled, the iframe or webview is recreated every time the user launches the app.
 
 There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
 
@@ -100,7 +100,8 @@ The **AppCaching** tab contains the following details:
 
 > [!NOTE]
 >
-> Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Precaching tab apps is supported only in Teams web and desktop clients.
 
 While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in a faster loading time.
 
@@ -118,25 +119,19 @@ To enable precaching for your tab app, follow these steps:
 
         ```json
         {
-            //...
-            "staticTabs": [
-            {
-                "contentUrl": "https://www.contoso.com/content?host=msteams"
-            }
-        ],
         "backgroundLoadConfiguration": {
             "tabConfiguration": {
-                "contentUrl": "https://www.contoso.com/content?host=msteams"
+                "contentUrl": "https://www.contoso.com/content?host=msteams&backgroundload=true"
                 }
             }
-            //...
         }
         ```
 
         > [!NOTE]
-        > The `contentUrl` shouldn't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
+        > * The `contentUrl` can't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
+        > * The `contentUrl` must be generic enough to load in the background without any user interaction.
 
-        For more information, see [staticTabs.backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#backgroundloadconfiguration).
+        For more information, see [backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#backgroundloadconfiguration).
 
 ### `isBackgroundLoad` property
 
@@ -146,13 +141,13 @@ To enable precaching for your tab app, follow these steps:
 
 The following are the best practices for app caching and precaching:
 
-* We recommend that you implement web storage or service worker capabilities to store the data or web view locally in iOS and Android. This helps to load the app faster in subsequent launches.
+* We recommend that you implement web storage or service worker capabilities to store the data or webview locally. This helps to load the app faster in subsequent launches.
 
-* Register the `beforeUnload` and `onLoad` handlers after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+* Register the `beforeUnload` and `onLoad` handlers right after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
 * Avoid creating multiple apps with similar apps bundles, origin, and storage. As Teams tracks app usage numbers based on app IDs, this practice elevates your apps’ overall usage ranking and helps avoid duplicated app preloads. For example, if you have an app for personal scope and another app for group chat and channel scopes, consolidate them into a single app so that precaching benefits both areas.
 
-* Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day, along with any telemetry adjustments.
+* Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Make any telemetry adjustments needed to accommodate the background loading of the app.
 
 ## Limitations
 
@@ -162,13 +157,11 @@ The following are the limitations for app caching:
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
-* App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the `unload` sequence is completed.
-
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* App caching isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the dialog.
+* App caching isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same iframe or webview can't be used to render the content in the tab and the dialog.
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the `unload` flow completes.
 
