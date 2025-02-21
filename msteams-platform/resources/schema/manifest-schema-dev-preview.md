@@ -626,8 +626,8 @@ Specifies if the app is eligible to be preloaded in the background in any Micros
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `tabBackgroundLoadConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
-| `tabBackgroundLoadConfiguration.contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
+| `tabConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
+| `tabConfiguration.contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 
 ## bots
 
