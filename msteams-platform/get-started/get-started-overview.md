@@ -38,6 +38,9 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+your+first+Teams+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fget-started%2Fget-started-overview%23build-your-first-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fget-started%2Fget-started-overview.md&documentVersionIndependentId=dac10c25-1625-4f0d-b113-a1fdd7a7a900&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Next step
 
 If you want to build a basic tab app, select the following:
