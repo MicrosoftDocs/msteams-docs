@@ -133,9 +133,11 @@ To enable precaching for your tab app, follow these steps:
 
         For more information, see [backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#backgroundloadconfiguration).
 
-### `isBackgroundLoad` property
+### Monitor background loading
 
-`isBackgroundLoad` is a boolean property that identifies if Teams preloaded the app in the background without user interaction. If the property's state is `true`, it indicates that the app isn't able to interact with the user, so the app doesn't need to render UI elements such as sign-in prompts. Monitor this property in the app context to optimize the app for effective precache loading and rendering. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
+You can identify if Teams loaded the app in the background without user interaction if you monitor the `isBackgroundLoad` property. If the property's state is `true`, it indicates that Teams has loaded the app in the background and isn't able to interact with the user. Hence, the app doesn't need to render UI elements such as sign-in prompts.
+
+Monitor the `isBackgroundLoad` property in the app context to optimize the app for effective precache loading and rendering. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
 
 ## Best practices
 
@@ -147,7 +149,7 @@ The following are the best practices for app caching and precaching:
 
 * Avoid creating multiple apps with similar apps bundles, origin, and storage. As Teams tracks app usage numbers based on app IDs, this practice elevates your apps’ overall usage ranking and helps avoid duplicated app preloads. For example, if you have an app for personal scope and another app for group chat and channel scopes, consolidate them into a single app so that precaching benefits both areas.
 
-* Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Make any telemetry adjustments needed to accommodate the background loading of the app.
+* Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Ensure that you make telemetry adjustments needed to accommodate the background loading of the app.
 
 ## Limitations
 
