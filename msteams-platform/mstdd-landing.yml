@@ -63,6 +63,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Precache your tab app and optimize it's initial load time
+        url: tabs/how-to/app-caching.md#precaching-tab-apps
       - text: Introducing third-party cloud storage capability for drag-dropped files
         url: concepts/device-capabilities/third-party-storage-capability.md
       - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
