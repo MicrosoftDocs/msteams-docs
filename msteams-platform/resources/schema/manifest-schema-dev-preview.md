@@ -622,11 +622,12 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 **Optional** &ndash; Object
 
+Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching.
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `backgroundLoadConfiguration` | Object | | | Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching. |
-| `backgroundLoadConfiguration.tabBackgroundLoadConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
-| `contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
+| `tabBackgroundLoadConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
+| `tabBackgroundLoadConfiguration.contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 
 ## bots
 
