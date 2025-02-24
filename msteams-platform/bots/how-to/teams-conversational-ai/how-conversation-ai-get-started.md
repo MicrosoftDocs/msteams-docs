@@ -790,10 +790,10 @@ If you already have a bot on Teams, follow these guidelines to upgrade your exis
 > [!NOTE]
 > Bizchat will automatically add an AI-generated label to every response that the custom engine agent sends.
 
-|||
+| To-Do List | Supporting docs |
 | ---- | ---- |
 | Update the AI SDK versions |  • If you are using JavaScript, update the version to [v1.6.1](https://www.npmjs.com/package/@microsoft/teams-ai).  <br> • If you are using Csharp, update the version to [v1.8.1](https://www.nuget.org/packages/Microsoft.Teams.AI/1.8.1). <br> • If you are using Python, update the version to [v1.5.0](https://pypi.org/project/teams-ai/1.5.0/). |
-| Stream bot messages to deliver a bot's responses. | Response streaming.](../../streaming-ux.md) |
+| Stream bot messages to deliver a bot's responses. | [Response streaming](../../streaming-ux.md) |
 | Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
 | Use Citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
 
