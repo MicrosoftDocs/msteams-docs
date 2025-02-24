@@ -29,14 +29,6 @@ The Teams Tab App lets developers embed web content right into Microsoft Teams, 
 
 Teams tabs offer several key features that help enhance collaboration and productivity:
 
-* If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Microsoft Entra ID of the current user.
-* Locale awareness for the user to indicate language that is `en-us`.
-* Single sign-on (SSO) capability, if supported.
-* Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
-* The ability to open a modal dialog from links within a tab.
-* Reuse of SharePoint web parts within the tab.
-
 * Embedded web content: With custom tabs, organizations can embed their own web content, applications, or dashboards directly into Teams.
 * Single app tab limit: In channels or meetings, you can pin only one instance of an app per tab. For example, a YouTube tab can only be pinned once per meeting, ensuring a clean and focused experience.
 * Pre-pinned tabs: IT admins can pre-pin tabs in meetings or channels, ensuring that necessary tools and resources are easily accessible to users.
