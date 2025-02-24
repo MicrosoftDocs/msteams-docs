@@ -61,6 +61,10 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
 You can preview app manifest file under `appPackage/build` in Visual Studio.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Preview+app+manifest+file&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fteamsfx-preview-and-customize-app-manifest-vs%23preview-app-manifest-file&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2FTeamsFx-preview-and-customize-app-manifest-vs.md&documentVersionIndependentId=e94ba1c6-ac19-53ac-f5c0-aa47186af2a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+
 ### Sync local changes to Developer Portal
 
 After you've previewed the app manifest file in Visual Studio, you can sync the local changes to Developer Portal. To sync changes to Developer Portal follow these steps:
