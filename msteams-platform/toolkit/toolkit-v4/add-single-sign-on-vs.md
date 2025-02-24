@@ -28,6 +28,9 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 * In the app manifest file, add the SSO application to link it with Teams application.
 * Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Teams Toolkit when you're debugging or previewing Teams application.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+Single+Sign-on+in+Teams+Toolkit+for+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23enable-single-sign-on-in-teams-toolkit-for-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Teams tab application
 
 1. Update Microsoft Entra app manifest:
@@ -346,6 +349,9 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. To check the SSO app works as expected, run the `Local Debug` in Visual Studio.
 
 1. You can also run the app in cloud by selecting the `Provision in the cloud` and then `Deploy to the cloud`.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Teams+tab+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23teams-bot-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Teams bot application
 
@@ -767,6 +773,9 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. To check if SSO app works as expected, run the `Local Debug` in Visual Studio.
 
 1. You can also run the app in cloud by selecting `Provision in the cloud` and then select `Deploy to the cloud` to update your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Teams+bot+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23teams-bot-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## See also
 
