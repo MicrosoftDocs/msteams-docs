@@ -98,6 +98,9 @@ To create a free Microsoft 365 developer account:
 
     :::image type="content" source="images/m365-account_1-v4.png" alt-text="M365 Account":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Microsoft+365+developer+account&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Ftools-prerequisites-vs%23create-a-free-microsoft-365-developer-account&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Ftools-prerequisites-vs.md&documentVersionIndependentId=19455d92-6e47-abd8-7cc6-8585f9bb6eea&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Azure account
 
 An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
@@ -166,6 +169,9 @@ If you have admin rights, you can enable custom app upload:
      > It can take up to 24 hours for custom app upload to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
      Ensure that you have the custom app upload permission using the steps mentioned in [verify custom app upload permission using Visual Studio Code or Teams client](#verify-custom-app-upload-permission).
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+custom+app+upload+using+admin+center&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Ftools-prerequisites-vs%23enable-custom-app-upload-using-admin-center&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Ftools-prerequisites-vs.md&documentVersionIndependentId=19455d92-6e47-abd8-7cc6-8585f9bb6eea&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 </details>
 
