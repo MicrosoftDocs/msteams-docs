@@ -9,6 +9,21 @@ ms.date: 02/06/2025
 
 # Build tabs for Teams
 
+| - Introduce tab apps in Team
+
+    | - Key features/benefits and scopes
+    | - Usage of tab apps
+    | - Examples/scenarios of tab apps
+
+| - How APIs and SDKs work together
+
+    | - Introduce the SDKs
+    | - Add example
+
+| - Types of tab apps
+
+    | - Examples of tab apps
+----
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
 > [!IMPORTANT]
