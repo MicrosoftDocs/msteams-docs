@@ -97,8 +97,10 @@ To install Microsoft 365 applications in your test environment:
 
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
-1. Open Outlook, Word, Excel and PowerPoint (desktop client) and set up the mail account using your test tenant credentials.
-1. If you're testing in Outlook, open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build. If you're testing in Word, Excel, or PowerPoint, open **File** > **Account** > **Update Channel** to confirm you're running a Microsoft 365 *Beta Channel* build.
+1. If you are testing in Outlook, take the following steps:
+    1. Open the Outlook desktop client and set up the mail account using your test tenant credentials.
+    1. In Outlook, open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build. 
+1. If you're testing in Word, Excel, or PowerPoint, open **File** > **Account** > **Update Channel** to confirm you're running a Microsoft 365 *Beta Channel* build.
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
