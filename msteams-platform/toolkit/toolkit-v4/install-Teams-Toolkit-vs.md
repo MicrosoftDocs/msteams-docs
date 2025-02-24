@@ -32,6 +32,9 @@ You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experien
 
 The Visual Studio 2022 window appears.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Teams+Toolkit+for+Visual+Studio&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Finstall-teams-toolkit-vs%23install-teams-toolkit-for-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Finstall-Teams-Toolkit-vs.md&documentVersionIndependentId=5a0afd58-5f42-8a89-856e-9d66ffa2fcce&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Next step
 
 > [!div class="nextstepaction"]
