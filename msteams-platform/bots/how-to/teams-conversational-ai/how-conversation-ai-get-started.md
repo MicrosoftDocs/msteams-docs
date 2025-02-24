@@ -801,49 +801,49 @@ If you want to your custom engine agent to support for Bizchat, add the followin
 
 1. Add the app manifest property `copilotAgents` and its sub propoerty `customEngineAgents` into your app manifest:
 
-```json
-"copilotAgents": { 
-    "customEngineAgents": [ 
-      { 
-        "type": "bot", 
-        "id": "<Bot-Id-Guid>" 
-      } 
-    ] 
-  }
-
-```
+    ```json
+    "copilotAgents": { 
+        "customEngineAgents": [ 
+          { 
+            "type": "bot", 
+            "id": "<Bot-Id-Guid>" 
+          } 
+        ] 
+      }
+    
+    ```
 
 1. Update the commands are scoped to "personal" as follows:
 
-```json
-"bots": [ 
-    { 
-      "botId": "<Bot-Id-Guid>", 
-      "scopes": ["groupChat"], 
-      "commandLists": [ 
+    ```json
+    "bots": [ 
         { 
-          "scopes": ["personal"], 
-          "commands": [ 
+          "botId": "<Bot-Id-Guid>", 
+          "scopes": ["groupChat"], 
+          "commandLists": [ 
             { 
-              "title": "Sample prompt title", 
-              "description": "Description of sample prompt" 
-            } 
-          ] 
-        }, 
-        { 
-          "scopes": ["personal"], 
-          "commands": [ 
+              "scopes": ["personal"], 
+              "commands": [ 
+                { 
+                  "title": "Sample prompt title", 
+                  "description": "Description of sample prompt" 
+                } 
+              ] 
+            }, 
             { 
-              "title": "Sample prompt title", 
-              "description": "Description of sample prompt" 
+              "scopes": ["personal"], 
+              "commands": [ 
+                { 
+                  "title": "Sample prompt title", 
+                  "description": "Description of sample prompt" 
+                } 
+              ] 
             } 
-          ] 
+          ], 
         } 
       ], 
-    } 
-  ], 
-
-```
+    
+    ```
 
 ## Elevate your conventional bot to use AI
 
