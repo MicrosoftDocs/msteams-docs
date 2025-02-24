@@ -24,6 +24,22 @@ ms.date: 02/06/2025
 
     | - Examples of tab apps
 ----
+
+The Teams Tab App lets developers embed web content right into Microsoft Teams, making it interactive. Tabs are HTML elements pointing to external sites, and you can add them to channels, group chats, or personal apps. This means you can show custom web apps or content directly in Teams, boosting productivity and collaboration. Tabs are great for embedding tools, services, or dashboards, so users don't have to leave Teams to access external content.
+
+## Tab features
+
+The tab features are as follows:
+
+* If a tab is added to an app that also has a bot, the bot is also added to the team.
+* Awareness of Microsoft Entra ID of the current user.
+* Locale awareness for the user to indicate language that is `en-us`.
+* Single sign-on (SSO) capability, if supported.
+* Ability to use bots or app notifications to deep link to the tab or to a subentity within the service, for example an individual work item.
+* The ability to open a modal dialog from links within a tab.
+* Reuse of SharePoint web parts within the tab.
+
+<!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
 > [!IMPORTANT]
@@ -136,7 +152,6 @@ You can build a personal tab app or a configurable tab app using Teams Toolkit o
 
 For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
 
-<!--
 ## Tools to build tabs
 
 | &nbsp; | Install | For using... |
