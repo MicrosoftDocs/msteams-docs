@@ -96,11 +96,11 @@ App registration is disabled for the user or the user doesn't have enough permis
 
 <summary>What does the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'" indicate?</summary>
 
-* Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions granted and admin consented.
-* Enable detailed logging in your application to capture more information about the error.
-* Ensure that the joinParams being passed to the AddAsync method are correctly formed and contain all required information.
-* Double-check the values for JoinUrl, MeetingId, and other parameters.
-* Ensure that the scenarioId being used is unique for each call. Reusing scenario IDs can sometimes cause issues.
+* Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions and admin consent.
+* Sign in to your app to capture more information about the error.
+* Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
+* Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
+* Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
 
 </details>
 
