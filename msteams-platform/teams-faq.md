@@ -94,7 +94,7 @@ App registration is disabled for the user or the user doesn't have enough permis
 </details>
 <details>
 
-<summary>What does the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'" indicate?</summary>
+<summary>How can I resolve the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'"?</summary>
 
 * Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions and admin consent.
 * Sign in to your app to capture more information about the error.
