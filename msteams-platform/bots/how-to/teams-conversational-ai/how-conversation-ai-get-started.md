@@ -783,16 +783,65 @@ A feedback loop helps monitor and improve the bot’s interactions, leading to m
 * **Learn from Mistakes**: The model learns from correct behavior examples to avoid similar mistakes in the future.
 * **Handle Complex Commands**: The model becomes capable of handling more complex commands after learning from its mistakes.
 
-## Upgrade your bot to custom engine agent
+## Upgrade your conventional bot to custom engine agent
 
-If you already have a bot on Teams, follow these guidelines to upgrade your existing bots to support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents. Note that Bizchat will automatically add an AI-generated label to every response that the custom engine agent sends.
+If you already have a bot on Teams, follow these guidelines to upgrade your existing bots to support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents.
 
-* Update the following AI SDK version:
-  * JavaScript v1.6.1
-  * CSharp v1.8.1
-  * Python v1.5.0
-* [Response streaming.](../../streaming-ux.md)
-* [Responses contain citations and AI labels when needed (UX is hub based)](../bot-messages-ai-generated-content.md)
+> [!NOTE]
+> Bizchat will automatically add an AI-generated label to every response that the custom engine agent sends.
+
+| Update the AI SDK versions |  • If you are using JavaScript, update the version to [v1.6.1](https://www.npmjs.com/package/@microsoft/teams-ai).  <br> • If you are using Csharp, update the version to [v1.8.1](https://www.nuget.org/packages/Microsoft.Teams.AI/1.8.1). <br> • If you are using Python, update the version to [v1.5.0](https://pypi.org/project/teams-ai/1.5.0/). |
+| Stream bot messages to deliver a bot's responses. | Response streaming.](../../streaming-ux.md) |
+| Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
+| Use Citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
+
+If you want to your custom engine agent to support for Bizchat, add the following into your app manifest:
+
+1. Add the app manifest property `copilotAgents` and its sub propoerty `customEngineAgents` into your app manifest:
+
+```json
+"copilotAgents": { 
+    "customEngineAgents": [ 
+      { 
+        "type": "bot", 
+        "id": "<Bot-Id-Guid>" 
+      } 
+    ] 
+  }
+
+```
+
+1. Update the commands are scoped to "personal" as follows:
+
+```json
+"bots": [ 
+    { 
+      "botId": "<Bot-Id-Guid>", 
+      "scopes": ["groupChat"], 
+      "commandLists": [ 
+        { 
+          "scopes": ["personal"], 
+          "commands": [ 
+            { 
+              "title": "Sample prompt title", 
+              "description": "Description of sample prompt" 
+            } 
+          ] 
+        }, 
+        { 
+          "scopes": ["personal"], 
+          "commands": [ 
+            { 
+              "title": "Sample prompt title", 
+              "description": "Description of sample prompt" 
+            } 
+          ] 
+        } 
+      ], 
+    } 
+  ], 
+
+```
 
 ## Elevate your conventional bot to use AI
 
