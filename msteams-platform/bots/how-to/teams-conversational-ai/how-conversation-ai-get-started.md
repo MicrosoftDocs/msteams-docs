@@ -783,6 +783,17 @@ A feedback loop helps monitor and improve the bot’s interactions, leading to m
 * **Learn from Mistakes**: The model learns from correct behavior examples to avoid similar mistakes in the future.
 * **Handle Complex Commands**: The model becomes capable of handling more complex commands after learning from its mistakes.
 
+## Upgrade your bot to custom engine agent
+
+If you already have a bot on Teams, follow these guidelines to upgrade your existing bots to support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents. Note that Bizchat will automatically add an AI-generated label to every response that the custom engine agent sends.
+
+* Update the following AI SDK version:
+  * JavaScript v1.6.1
+  * CSharp v1.8.1
+  * Python v1.5.0
+* [Response streaming.](../../streaming-ux.md)
+* [Responses contain citations and AI labels when needed (UX is hub based)](../bot-messages-ai-generated-content.md)
+
 ## Elevate your conventional bot to use AI
 
 You can elevate your existing conventional bot to be powered by AI. After you build your bot, you can add an AI layer to enable AI-powered features for your bot.

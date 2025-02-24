@@ -24,6 +24,8 @@ items:
     * How to interact with your LLMs and data.
     * The directory structure of your custom engine agent.
 
+    Once you have a working custom engine agent on Teams, signal the intent to participate in Microsoft 365 Copilot by explicitly declaring CustomEngineAgent in the manifest.
+
 
 - title: Prerequisites
   durationInMinutes: 1
