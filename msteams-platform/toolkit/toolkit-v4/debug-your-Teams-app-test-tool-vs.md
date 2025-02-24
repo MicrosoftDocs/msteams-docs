@@ -101,6 +101,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Tool+experience+in+Visual+Studio&&author=%40v-ganr&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23test-tool-experience-in-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-Teams-app-test-tool-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Activity triggers
 
 You can mock an activity in Test Tool using activity triggers. There are two types of activity triggers:
