@@ -46,6 +46,20 @@ Teams tabs offer several key features that help enhance collaboration and produc
   * Single sign-on (SSO) capability, if supported.
   * Awareness of Microsoft Entra ID of the current user.
 
+Here’s a breakdown of how the various applications of Microsoft Teams tab apps can be used:
+
+* Enhance collaboration
+* Access web apps and content
+* Tab customization
+* Real-time collaboration
+
+Examples of Tab Apps:
+
+* Planner: Add a Planner tab to manage tasks and projects.
+* Power BI: Embed a Power BI report or dashboard for easy access to analytics.
+* Trello: Bring your Trello boards into Teams for seamless project management.
+* OneNote: Create a shared space for notes within the team.
+
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
