@@ -845,6 +845,9 @@ If you want to your custom engine agent to support for Bizchat, add the followin
     
     ```
 
+> [!NOTE]
+> If you have built your conventional bot using Teams Toolkit and you want to add support for bizchat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+
 ## Elevate your conventional bot to use AI
 
 You can elevate your existing conventional bot to be powered by AI. After you build your bot, you can add an AI layer to enable AI-powered features for your bot.

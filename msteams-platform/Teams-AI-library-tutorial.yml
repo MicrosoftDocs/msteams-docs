@@ -40,6 +40,14 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
+   > [!NOTE]
+   > If you want to add support bizchat in your custom engine agent, you must use pre-release version of Teams Toolkit (Add link to install pre release version).
+   > After you install the pre release version, follow these steps:
+   > 1. Add that environment variable `TEAMSFX_CEA_ENABLED=true`.
+   > 2. Follow the steps given in this guide to build the custom engine agent. Select the Basic AI chat works in Teams and Microsoft 365 Copilot. (add the Screenshot)
+   > 3. Ensure that the app manifest contains Copilot properties and sample prompts. (Add code snippets)
+   > 4. Remove the `validateManifest` from yaml file.
+
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
