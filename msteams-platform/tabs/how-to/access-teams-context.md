@@ -137,7 +137,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
 ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20context%20by%20using%20TeamsJS%20v2&pageUrl=https%3A//learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A//github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/tabs/how-to/access-teams-context.md%23teamsjs-v2&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 # [TeamsJS v1.x.x](#tab/Json-v1)
 
@@ -187,7 +187,7 @@ The following code provides an example of context variable:
 ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20context%20by%20using%20TeamsJS%20v1.x.x&pageUrl=https%3A//learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context%3Ftabs%3DJson-v1%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A//github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/tabs/how-to/access-teams-context.md%23teamsjs-v1xx&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ---
 
@@ -327,7 +327,7 @@ If your page makes use of any of these values, the value of `channel.membershipT
 >`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Retrieve%20context%20in%20private%20channels&pageUrl=https%3A//learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context%3Ftabs%3DJson-v1%252Cteamsjs-v2%252Cdefault%23retrieve-context-in-private-channels&contentSourceUrl=https%3A//github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/tabs/how-to/access-teams-context.md%23retrieve-context-in-private-channels&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Get context in shared channels
 
@@ -359,7 +359,7 @@ Use the following `getContext` properties in shared channels:
 For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 > [!div class="nextstepaction"]
-> [I ran into an issue]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20context%20in%20shared%20channels&pageUrl=https%3A//learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context%3Ftabs%3DJson-v1%252Cteamsjs-v2%252Cdefault%23get-context-in-shared-channels&contentSourceUrl=https%3A//github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/tabs/how-to/access-teams-context.md%23get-context-in-shared-channels&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Handle theme change
 
