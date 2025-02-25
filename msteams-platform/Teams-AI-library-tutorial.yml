@@ -44,10 +44,10 @@ items:
    > ## Add support for bizchat in your custom engine agent
    > If you want your custom engine agent to support bizchat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
-   > 2. [Set up your data on Azure OpenAI](#set-up-your-data-on-azure-openai).
-   > 3. Perform the step 1. to step 4. from [create your custom engine agent](#create-your-custom-engine-agent) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
+   > 2. [Set up your data on Azure OpenAI](#create-an-azure-ai-search-endpoint-and-openai-key).
+   > 3. Perform the step 1. to step 4. from [create your custom engine agent](#create-a-new-custom-engine-agent-using-teams-toolkit) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
    >    :::image type="content" source="../msteams-platform/assets/images/Copilot/basic-ai-chat.png" alt-text="Screenshot shows the basic AI chatbot in Teams Toolkit."::: <br>
-   > 4. [Configure your custom engine agent](#configure-your-custom-engine-agent). Ensure you perform the following steps before your debug:
+   > 4. [Configure your custom engine agent](#configure-and-debug-your-custom-engine-agent). Ensure you perform the following steps before your debug:
    >     * Ensure that the app manifest contains `copilotAgents` and its sub property `customEngineAgents`:
    >
    >        ```json
@@ -97,6 +97,11 @@ items:
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
+
+   After you set up your project workspace with Teams Toolkit, you need to create a Azure OpenAI key using Azure portal.
+
+  ## Create an Azure AI Search endpoint and OpenAI key
+
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
      1. Select the Azure OpenAI service that you created.
@@ -154,6 +159,10 @@ items:
 - title: Create your custom engine agent
   durationInMinutes: 1
   content: |
+
+      Now that you have created your Azure OpenAI key and endpoints, let's create a new custom engine agent using Teams Toolkit.
+
+   ## Create a new custom engine agent using Teams Toolkit
 
      1. Go to **Visual Studio Code**.
 
@@ -220,6 +229,10 @@ items:
 - title: Configure your custom engine agent
   durationInMinutes: 1
   content: |
+
+      After you create your custom engine agent, let's configure it to interact with your data on Azure OpenAI.
+
+     ## Configure and debug your custom engine agent
 
      Let's customize the prompt for your custom engine agent.
 
