@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 >[!NOTE]
 >
-> - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> - Streaming bot message is available only for one-on-one chats.
 > - Streaming bot messages isn't available with function calling and the OpenAI `o1` model.
 > - Streaming bot messages is supported on web, desktop, and mobile.
 
