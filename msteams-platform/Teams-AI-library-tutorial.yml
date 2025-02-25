@@ -92,7 +92,7 @@ items:
    >         ], 
    >      
    >      ```
-   > 5. Remove the `validateManifest` from your app.
+   > 5. Remove the `validateManifest` and `validateAppPackage` from teamsapp.local.yml and teqamsapp.yml file in your app.
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
