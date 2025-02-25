@@ -40,59 +40,57 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
-   ## Build custom engine agent for bizchat
-
-   If you want your custom engine agent to support bizchat, you must use pre-release version of Teams Toolkit (Add link to install pre release version). After you install the pre release version, follow these steps:
-      1. Add that environment variable as `TEAMSFX_CEA_ENABLED=true`.
-      2. Follow the steps given in this guide to build the custom engine agent. Ensure you select the **Basic AI chat works in Teams and Microsoft 365 Copilot** in Teams Toolkit.
-
-         :::image type="content" source="../msteams-platform/assets/images/Copilot/basic-ai-chat.png" alt-text="Screenshot shows the basic AI chatbot in Teams Toolkit.":::
-
-      3. Ensure that the app manifest contains `copilotAgents` and its sub property `customEngineAgents`:
-
-         ```json
-         "copilotAgents": { 
-            "customEngineAgents": [ 
-               { 
-                  "type": "bot", 
-                  "id": "<Bot-Id-Guid>" 
-               } 
-            ] 
-            }
-         
-         ```
-      4. Ensure that the `Copilot` as a scope into your bot.
-
-         ```json
-         "bots": [ 
-            { 
-               "botId": "<Bot-Id-Guid>", 
-               "scopes": ["groupChat"], 
-               "commandLists": [ 
-                  { 
-                  "scopes": ["Copilot"], 
-                  "commands": [ 
-                     { 
-                        "title": "Sample prompt title", 
-                        "description": "Description of sample prompt" 
-                     } 
-                  ] 
-                  }, 
-                  { 
-                  "scopes": ["personal"], 
-                  "commands": [ 
-                     { 
-                        "title": "Sample prompt title", 
-                        "description": "Description of sample prompt" 
-                     } 
-                  ] 
-                  } 
-               ], 
-            } 
-            ], 
-         
-         ```
-      4. Remove the `validateManifest` from your app.
+   > [!NOTE]
+   > ## Build custom engine agent for bizchat
+   > If you want your custom engine agent to support bizchat, you must use pre-release version of Teams Toolkit (Add link to install pre release version). After you install the pre release version, follow these steps:
+   > 1. Add that environment variable as `TEAMSFX_CEA_ENABLED=true`.
+   > 2. Follow the steps given in this guide to build the custom engine agent. Ensure you select the **Basic AI chat works in Teams and Microsoft 365 Copilot** in Teams Toolkit.
+   >      :::image type="content" source="../msteams-platform/assets/images/Copilot/basic-ai-chat.png" alt-text="Screenshot shows the basic AI chatbot in Teams Toolkit.":::
+   > 3. Ensure that the app manifest contains `copilotAgents` and its sub property `customEngineAgents`:
+   >
+   >      ```json
+   >      "copilotAgents": { 
+   >         "customEngineAgents": [ 
+   >            { 
+   >               "type": "bot", 
+   >               "id": "<Bot-Id-Guid>" 
+   >            } 
+   >         ] 
+   >         }
+   >      
+   >      ```
+   > 4. Ensure that the `Copilot` as a scope into your bot.
+   >
+   >      ```json
+   >      "bots": [ 
+   >         { 
+   >            "botId": "<Bot-Id-Guid>", 
+   >            "scopes": ["groupChat"], 
+   >            "commandLists": [ 
+   >               { 
+   >               "scopes": ["Copilot"], 
+   >               "commands": [ 
+   >                  { 
+   >                     "title": "Sample prompt title", 
+   >                     "description": "Description of sample prompt" 
+   >                  } 
+   >               ] 
+   >               }, 
+   >               { 
+   >               "scopes": ["personal"], 
+   >               "commands": [ 
+   >                  { 
+   >                     "title": "Sample prompt title", 
+   >                     "description": "Description of sample prompt" 
+   >                  } 
+   >               ] 
+   >               } 
+   >            ], 
+   >         } 
+   >         ], 
+   >      
+   >      ```
+   > 5. Remove the `validateManifest` from your app.
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
