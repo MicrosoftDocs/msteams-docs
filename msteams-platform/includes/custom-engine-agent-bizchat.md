@@ -2,7 +2,7 @@
 >
 > ## Add support for BizChat in your custom engine agent
    >
-   > If you want your custom engine agent to support BizChat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
+   > If you want your custom engine agent to support BizChat, you must [install a prerelease version of Teams Toolkit](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version). After you install the prerelease version, follow these steps:
    >
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
    > 2. [Set up your data on Azure OpenAI](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=2)
