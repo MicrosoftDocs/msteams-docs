@@ -79,10 +79,9 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. Select an existing card or create a new Adaptive Card:
     * To select an existing card paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
-    * To create a new card, select **New card** and choose one of the following:
-        * **Blank Card**
-        * **From JSON Schema**
-        * Select a card template from **Explore**
+    * To create a new card, select **New card** and select one of the following:
+        * Select a card template
+        * **Empty card**
 
 1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
@@ -92,7 +91,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. In **ELEMENT PROPERTIES**, update the following fields:
 
-   * Under the **Sources** section, enter your media file URL in the **URL**. </br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
+   * Under the **Sources** section, select **mediaAddNewSource** and enter your media file URL in the **url**. </br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
 
      1. Upload your media files to OneDrive or SharePoint.
 
