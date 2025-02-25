@@ -792,11 +792,11 @@ Here are the required to-do list to upgrade your bot to custom engine agent:
 | To-Do List | Supporting docs |
 | ---- | ---- |
 | Update the AI SDK versions |  • If you are using JavaScript, update the version to [v1.6.1](https://www.npmjs.com/package/@microsoft/teams-ai).  <br> • If you are using Csharp, update the version to [v1.8.1](https://www.nuget.org/packages/Microsoft.Teams.AI/1.8.1). <br> • If you are using Python, update the version to [v1.5.0](https://pypi.org/project/teams-ai/1.5.0/). |
-| Stream bot messages to deliver a bot's responses. | [Response streaming](../../streaming-ux.md) |
+| Enable streaming for bot. | [Stream bot messages](../../streaming-ux.md) |
 | Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
-| Use Citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
+| Use citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
 
-If you want to your custom engine agent to support for Bizchat, add the following into your app manifest:
+If you want your custom engine agent to support bizchat, add the following into your app manifest:
 
 1. Add the app manifest property `copilotAgents` and its sub propoerty `customEngineAgents` into your app manifest:
 
@@ -812,7 +812,7 @@ If you want to your custom engine agent to support for Bizchat, add the followin
     
     ```
 
-1. In your app manifest, add `Copilot` as a scope into your bot.
+1. In your app manifest, set the `scopes` as `Copilot`:
 
     ```json
     "bots": [ 
