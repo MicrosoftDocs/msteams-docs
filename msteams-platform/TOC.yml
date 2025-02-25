@@ -321,8 +321,6 @@
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md 
       displayName: ACP
-    - name: Yeoman generator for Teams (GitHub)
-      href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
     - name: TeamsFx SDK
@@ -760,7 +758,7 @@
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
     displayName: Single sign-on, OAuth provider
-  - name: Enable SSO for your Teams app
+  - name: Enable SSO for your Teams app with Entra ID
     items: 
     - name: Enable SSO for your tab app
       items:
