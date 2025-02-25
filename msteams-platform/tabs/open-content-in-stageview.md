@@ -247,6 +247,9 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 
 Whether you want to facilitate multitasking, enhance collaboration, or provide focused user experience, Stageview has a mode to suit your requirements.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Invoke+from+deep+link&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fopen-content-in-stageview%3Ftabs%3Dwithchat%23invoke-from-deep-link&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fopen-content-in-stageview.md%23invoke-from-deep-link&documentVersionIndependentId=7b685a2e-18e0-a401-e44f-905a47d2415d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ## FAQs
 
 </br>
