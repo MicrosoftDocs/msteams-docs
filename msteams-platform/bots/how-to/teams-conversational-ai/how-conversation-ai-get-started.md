@@ -787,7 +787,7 @@ A feedback loop helps monitor and improve the bot’s interactions, leading to m
 
 If you already have a bot on Teams, you can upgrade your existing bots to custom engine agent that support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents.
 
-Here are the required to-do list to upgrade your bot to custom engine agent:
+Here is the required to-do list to upgrade your bot to custom engine agent:
 
 | To-Do List | Supporting docs |
 | ---- | ---- |
