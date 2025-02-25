@@ -5,6 +5,7 @@ description: Learn how to execute deep links in your Microsoft Teams personal ta
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 04/30/2024
 ---
 
 # Configuration and handling of deep links
