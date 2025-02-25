@@ -26,6 +26,7 @@ items:
 
     Once you have a working custom engine agent on Teams, signal the intent to participate in Microsoft 365 Copilot by explicitly declaring CustomEngineAgent in the manifest.
 
+    [!INCLUDE [Set up prerequisites](includes/custom-engine-agent-bizchat.md)]
 
 - title: Prerequisites
   durationInMinutes: 1
