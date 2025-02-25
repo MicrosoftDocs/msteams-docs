@@ -785,10 +785,9 @@ A feedback loop helps monitor and improve the bot’s interactions, leading to m
 
 ## Upgrade your conventional bot to custom engine agent
 
-If you already have a bot on Teams, follow these guidelines to upgrade your existing bots to support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents.
+If you already have a bot on Teams, you can upgrade your existing bots to custom engine agent that support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents.
 
-> [!NOTE]
-> Bizchat will automatically add an AI-generated label to every response that the custom engine agent sends.
+Here are the required to-do list to upgrade your bot to custom engine agent:
 
 | To-Do List | Supporting docs |
 | ---- | ---- |
@@ -813,7 +812,7 @@ If you want to your custom engine agent to support for Bizchat, add the followin
     
     ```
 
-1. Update the commands are scoped to `personal` as follows:
+1. In your app manifest, add `Copilot` as a scope into your bot.
 
     ```json
     "bots": [ 
@@ -822,7 +821,7 @@ If you want to your custom engine agent to support for Bizchat, add the followin
           "scopes": ["groupChat"], 
           "commandLists": [ 
             { 
-              "scopes": ["personal"], 
+              "scopes": ["Copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -846,7 +845,9 @@ If you want to your custom engine agent to support for Bizchat, add the followin
     ```
 
 > [!NOTE]
-> If you have built your conventional bot using Teams Toolkit and you want to add support for bizchat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+>
+> * Bizchat adds an AI-generated label to every response that the custom engine agent sends.
+> * If you have built your conventional bot using Teams Toolkit and you want to add support for bizchat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
 
 ## Elevate your conventional bot to use AI
 
