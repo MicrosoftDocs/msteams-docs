@@ -44,8 +44,8 @@ items:
    > ## Add support for bizchat in your custom engine agent
    > If you want your custom engine agent to support bizchat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
-   > 2. [Set up your data on Azure OpenAI](../#set-up-your-data-on-azure-openai).
-   > 3. Perform the step 1. to step 4. from [create your custom engine agent](../teams-ai-library-tutorial.yml#create-your-custom-engine-agent) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps.<br>
+   > 2. [Set up your data on Azure OpenAI](#set-up-your-data-on-azure-openai).
+   > 3. Perform the step 1. to step 4. from [create your custom engine agent](#create-your-custom-engine-agent) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
    >    :::image type="content" source="../msteams-platform/assets/images/Copilot/basic-ai-chat.png" alt-text="Screenshot shows the basic AI chatbot in Teams Toolkit."::: <br>
    > 4. [Configure your custom engine agent](#configure-your-custom-engine-agent). Ensure you perform the following steps before your debug:
    >     * Ensure that the app manifest contains `copilotAgents` and its sub property `customEngineAgents`:
@@ -92,7 +92,7 @@ items:
    >           ], 
    >      
    >        ```
-   >     * Remove the `validateManifest` and `validateAppPackage` from teamsapp.local.yml and teqamsapp.yml file in your app.
+   >     * Remove the `validateManifest` and `validateAppPackage` from teamsapp.local.yml and teamsapp.yml file in your app.
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
