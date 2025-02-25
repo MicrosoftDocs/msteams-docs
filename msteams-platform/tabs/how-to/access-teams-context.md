@@ -187,7 +187,7 @@ The following code provides an example of context variable:
 ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20context%20by%20using%20TeamsJS%20v1.x.x&pageUrl=https%3A//learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context%3Ftabs%3DJson-v1%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A//github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/tabs/how-to/access-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v1.x.x&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
 
 ---
 
