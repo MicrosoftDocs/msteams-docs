@@ -136,6 +136,9 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
 }
 ```
 
+> [!div class="nextstepaction"]
+> [I ran into an issue]
+
 # [TeamsJS v1.x.x](#tab/Json-v1)
 
 The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
@@ -182,6 +185,9 @@ The following code provides an example of context variable:
     "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
+
+> [!div class="nextstepaction"]
+> [I ran into an issue]
 
 ---
 
@@ -320,6 +326,9 @@ If your page makes use of any of these values, the value of `channel.membershipT
 > [!NOTE]
 >`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue]
+
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
@@ -348,6 +357,9 @@ Use the following `getContext` properties in shared channels:
 |`userPrincipalName`| The property describes the current user’s UPN.|
 
 For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue]
 
 ## Handle theme change
 
