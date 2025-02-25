@@ -34,7 +34,11 @@ To deploy Teams app using Microsoft Teams Toolkit, follow these steps:
 1. In the pop-up window that appears, select **Deploy**.
 
       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
+
 The app is deployed to Azure cloud.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+Microsoft+Teams+app+to+the+cloud+using+Microsoft+Visual+Studio&&author=%40MuyangAmigo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdeploy-vs&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdeploy-vs.md&documentVersionIndependentId=7e88d36c-df94-5af6-0ea0-183f7d182046&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Customize deploy lifecycle in Teams using Visual Studio
 
