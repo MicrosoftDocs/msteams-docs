@@ -40,7 +40,7 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
-   > [!NOTE]
+   > [!NOTE]   
    > ## Add support for BizChat in your custom engine agent
    > If you want your custom engine agent to support BizChat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
@@ -108,7 +108,7 @@ items:
 
      1. Select **Go to Azure OpenAI Studio**.
         
-        :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
+         :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
 
      1. Select **Chat** > **Create new deployment**.
         
