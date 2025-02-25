@@ -12,11 +12,6 @@ ms.localizationpriority: high
 
 >[!NOTE]
 >
-> - Streaming bot message is available only for one-on-one chats.
-> - Streaming bot message is generally available only on web and desktop client.
-> - Streaming bot message is available in public developer preview on Android and iOS.
-> - Streaming bot messages is available in public developer preview on Android and iOS.
->
 > Streaming bot message is available:
 >
 > - only for one-on-one chats.
