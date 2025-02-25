@@ -18,7 +18,7 @@ ms.localizationpriority: high
 > - is generally available only on web and desktop client.
 > - is available in public developer preview on Android and iOS.
 >
-> - Streaming bot message isn't available with function calling and the OpenAI `o1` model.
+> Streaming bot message isn't available with function calling and the OpenAI `o1` model.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
