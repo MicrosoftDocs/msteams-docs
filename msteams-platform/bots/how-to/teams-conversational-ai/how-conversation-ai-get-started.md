@@ -798,7 +798,7 @@ Here are the required to-do list to upgrade your bot to custom engine agent:
 
 If you want your custom engine agent to support BizChat, add the following into your app manifest:
 
-1. Add the app manifest property `copilotAgents` and its sub propoerty `customEngineAgents` into your app manifest:
+1. Add the app manifest property `copilotAgents` and its sub property `customEngineAgents` into your app manifest:
 
     ```json
     "copilotAgents": { 
