@@ -160,7 +160,7 @@ items:
   durationInMinutes: 1
   content: |
 
-      Now that you have created your Azure OpenAI key and endpoints, let's create a new custom engine agent using Teams Toolkit.
+   Now that you have created your Azure OpenAI key and endpoints, let's create a new custom engine agent using Teams Toolkit.
 
     ## Create a new custom engine agent using Teams Toolkit
 
@@ -230,7 +230,7 @@ items:
   durationInMinutes: 1
   content: |
 
-      After you create your custom engine agent, let's configure it to interact with your data on Azure OpenAI.
+   After you create your custom engine agent, let's configure it to interact with your data on Azure OpenAI.
 
     ## Configure and debug your custom engine agent
 
