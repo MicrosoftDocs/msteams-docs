@@ -41,8 +41,8 @@ items:
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
    > [!NOTE]
-   > ## Add support for bizchat in your custom engine agent
-   > If you want your custom engine agent to support bizchat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
+   > ## Add support for BizChat in your custom engine agent
+   > If you want your custom engine agent to support BizChat, you must use pre-release version of Teams Toolkit. After you install the pre release version, follow these steps:
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
    > 2. [Set up your data on Azure OpenAI](#create-an-azure-ai-search-endpoint-and-openai-key).
    > 3. Perform the step 1. to step 4. from [create your custom engine agent](#create-a-new-custom-engine-agent-using-teams-toolkit) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
