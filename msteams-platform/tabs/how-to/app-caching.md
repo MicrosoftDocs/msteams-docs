@@ -105,7 +105,7 @@ The **AppCaching** tab contains the following details:
 
 While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in a faster loading time.
 
-If you enable precaching, your app utilizes resources, and telemetry data is tracked while in the precached state. To learn how to optimze your app for precaching, see [best practices](#best-practices).
+If you enable precaching, your app utilizes resources, and telemetry data is tracked while in the precached state. To learn how to optimize your app for precaching, see [best practices](#best-practices).
 
 ### Enable precaching for tab app
 
@@ -151,7 +151,7 @@ The following are the best practices for app caching and precaching:
 
 * Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Ensure that you make telemetry adjustments needed to accommodate the background loading of the app.
 
-* Ensure that your app has less than or equal to 130 MB memory footprint in the precached state.
+* Ensure that your app uses less than or equal to 130 MB of memory in the precached state.
 
 ## Limitations
 
