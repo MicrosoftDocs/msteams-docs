@@ -45,7 +45,7 @@ items:
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the prerelease version.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/source-code) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
@@ -75,7 +75,8 @@ items:
    1. Select **Install Pre-Release Version**.
 
       The Teams Toolkit :::image type="icon" source="assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Teams%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
    ## Set up your Teams development tenant
 
@@ -102,7 +103,9 @@ items:
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
-
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Check%20for%20upload%20an%20app%20option&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+   
    ### Create a free Teams developer tenant (optional)
 
    If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
@@ -115,7 +118,9 @@ items:
       :::image type="content" source="assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+   
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -215,7 +220,10 @@ items:
 
       ![Create a Teams app](~/assets/videos/create-bot-based-message-extension.gif)
       </details>
-
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20message%20extension%20project%20workspace&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+    
     ## Take a tour of the message extension app source code
 
     A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
@@ -235,7 +243,7 @@ items:
 
     > [!Tip]
     > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
-
+    
 - title: Build and run your first bot-based message extension agent
   durationInMinutes: 1
   content: |
@@ -260,7 +268,8 @@ items:
         :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Microsoft%20365%20account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     
 
     ## Build and run your app in the local environment
@@ -316,6 +325,8 @@ items:
 
         > [!NOTE]
         > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20app%20locally&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
     ### Test your app
 
@@ -334,8 +345,9 @@ items:
     1. Select Send. The Adaptive Card is sent.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-send-adaptive-card.png" alt-text="Screenshot shows an example of a product sent in the chat as an Adaptive Card.":::
-    
-
+      
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20run%20a%20search%20query&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     <br>
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -366,7 +378,8 @@ items:
 
     > [!NOTE]
     > This prompt might not always ensure a response from your message extension in Microsoft 365 Copilot. If this occurs, try different prompts or provide feedback by downvoting the Microsoft 365 Copilot response and leaving a message.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Trigger%20your%20bot-based%20message%20extension%20agent%20in%20Microsoft%20365%20Copilot&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -395,7 +408,8 @@ items:
 
         Congratulations, you have signed in your Azure account! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Azure%20account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     
     ## Deploy your app to Azure
 
@@ -442,6 +456,8 @@ items:
       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
     Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
     ## Run the deployed app
 
@@ -472,6 +488,9 @@ items:
       * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20deployed%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Congratulations!
   durationInMinutes: 1
