@@ -825,11 +825,11 @@ All entities are required parameters for actions.
 
   # [JavaScript](#tab/javascript1)
 
-    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
+  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
 
-    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
+  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
 
-    ```typescript
+  ```typescript
         app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
         const items = getItems(state, parameters.list);
         items.push(...(parameters.items ?? []));
@@ -856,7 +856,7 @@ All entities are required parameters for actions.
 
   - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
 
-    ```python
+  ```python
     @app.ai.action("addItems")
     async def on_add_items(
         context: ActionTurnContext[Dict[str, Any]],
