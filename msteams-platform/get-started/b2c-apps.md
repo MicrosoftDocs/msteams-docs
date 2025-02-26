@@ -4,6 +4,7 @@ description: Learn how to integrate Teams meetings and calls in an external busi
 ms.localizationpriority: high
 ms.date: 03/01/2024
 ms.topic: reference
+ms.owner: kanchankaur
 ---
 
 # Integrate Teams meetings and calls in external apps
