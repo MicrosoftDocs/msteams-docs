@@ -309,7 +309,7 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 
 |Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Teams tab Stageview | This sample app demonstrates a tab in Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
+| Teams tab Stageview | This sample app demonstrates the use of Teams tab in stage view using C#, showcasing collaborative features and interactive elements. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 
 ## See also
 

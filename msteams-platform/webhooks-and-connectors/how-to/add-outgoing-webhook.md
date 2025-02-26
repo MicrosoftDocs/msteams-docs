@@ -275,7 +275,7 @@ var responseMsg = JSON.stringify({
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | This sample shows how to  implement and use outgoing webhook.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## Step-by-step guide
 

@@ -188,7 +188,7 @@ To add a deep link to share content in meetings, see [deep link to share content
 
 | **Sample name** | **Description** | **.NET** |**Node.js** | Manifest |
 |-----------------|-----------------|----------------|----------------|----------------|
-| Meeting Stageview | This app helps to enable and configure your apps for Teams meetings. It also demonstrates use of share in meeting feature.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest)|
+| Meeting Stageview | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest)|
 
 ## See also
 
