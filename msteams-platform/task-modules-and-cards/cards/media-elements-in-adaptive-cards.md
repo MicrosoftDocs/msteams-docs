@@ -130,7 +130,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     { 
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png"
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg"
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -145,7 +145,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png"
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg"
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -160,7 +160,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png" 
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg" 
       "sources": [
         {
           "mimeType": "video/mp4",
