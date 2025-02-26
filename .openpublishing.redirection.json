@@ -1231,6 +1231,10 @@
       {
         "source_path": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams.md",
         "redirect_url": "/microsoftteams/platform/bots/build-notification-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-features.md",
+        "redirect_url": "microsoftteams/platform/bots/overview"
       }
     ]
 }
