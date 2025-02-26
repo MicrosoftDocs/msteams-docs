@@ -5,7 +5,7 @@ description: Learn how to create or build an API-based message extension using D
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 12/30/2024
+ms.date: 02/26/2025
 ---
 # Create an API-based message extension
 

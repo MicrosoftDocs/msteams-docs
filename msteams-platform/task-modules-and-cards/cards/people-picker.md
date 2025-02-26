@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.date: 01/19/2023
+ms.date: 02/26/2025
 ---
 
 # People Picker in Adaptive Cards

@@ -5,7 +5,7 @@ description: Learn to build a message extension from OpenAPI description documen
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 02/26/2025
 ---
 
 # API-based message extension
