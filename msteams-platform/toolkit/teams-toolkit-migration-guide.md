@@ -172,7 +172,7 @@ You've successfully migrated your project and your folder structure is updated a
 ---
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+Microsoft+Teams+app+to+the+cloud+using+Microsoft+Visual+Studio&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fteams-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+Migration+process&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fteams-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ##### Project Type File
 
