@@ -4,7 +4,7 @@ description: Learn about sending and receiving messages using a bot app
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 10/03/2024
+ms.date: 02/26/2025
 ---
 
 # Send and receive messages
@@ -239,47 +239,47 @@ To receive read receipts events for your bot, ensure the following:
 
 - Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
 
-# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
-
-```json
+    # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
     
-"webApplicationInfo": {
-    
-     "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
-     "resource": ""
-},
-"authorization": {
-    "permissions": {
-    "orgwide": [],
-     "resourceSpecific": [
-        {
-        "name": "ChatMessageReadReceipt.Read.Chat",
-        "type": "Application"
-        }
-        ]
+    ```json
+        
+    "webApplicationInfo": {
+        
+         "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+         "resource": ""
+    },
+    "authorization": {
+        "permissions": {
+        "orgwide": [],
+         "resourceSpecific": [
+            {
+            "name": "ChatMessageReadReceipt.Read.Chat",
+            "type": "Application"
+            }
+            ]
+         }
      }
- }
+        
+    ```
     
-```
-
-# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-
-```json
+    # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
     
- “webApplicationInfo”: {
-
-     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-     "resource": "https: //AnyString",
-     "applicationPermissions": [
-     "ChatMessageReadReceipt.Read.Chat"
-     ]
- }
+    ```json
+        
+     “webApplicationInfo”: {
     
-```
-
----
-
-You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
+         "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+         "resource": "https: //AnyString",
+         "applicationPermissions": [
+         "ChatMessageReadReceipt.Read.Chat"
+         ]
+     }
+        
+    ```
+    
+    ---
+    
+    You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 - Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
 
