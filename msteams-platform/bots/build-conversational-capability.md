@@ -43,7 +43,7 @@ A conversational bot can include Adaptive Cards that simplify business workflows
 
 For more information, see:
 
-- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) for.
+- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 - [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
 
 The following code shows an example of sending a simple Adaptive Card:
