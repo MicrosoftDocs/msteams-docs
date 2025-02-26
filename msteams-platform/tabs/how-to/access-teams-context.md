@@ -384,10 +384,10 @@ The following image shows the dark theme option in the Teams:
 
 :::image type="content" source="../../assets/images/tabs/dark-theme-teams.png" alt-text="Screenshot shows the dark theme in Teams desktop client.":::
 
+---
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+theme+change&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23handle-theme-change&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23handle-theme-change&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
-
----
 
 ## Code sample
 
