@@ -775,12 +775,12 @@ All entities are required parameters for actions.
 
 - AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinction between actions and the prompts serves as a powerful tool as it guides AI to execute the actions and prompts.
 
-    # [.NET](#tab/dotnet1)
-    
-    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
-    
-    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
-    
+  # [.NET](#tab/dotnet1)
+  
+  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
+  
+  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
+
     ```csharp
             [Action("AddItem")]
             public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
@@ -820,14 +820,15 @@ All entities are required parameters for actions.
                 SetItems(turnState, listName, items);
                 return "item removed. think about your next action";
             }
-    ```
-    
-    # [JavaScript](#tab/javascript1)
-    
+
+  ```
+
+  # [JavaScript](#tab/javascript1)
+
     - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
-    
+
     - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
-    
+
     ```typescript
         app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
         const items = getItems(state, parameters.list);
@@ -847,14 +848,14 @@ All entities are required parameters for actions.
             setItems(state, parameters.list, items);
             return `items removed. think about your next action`;
         });
-    ```
-    
-    # [Python](#tab/python1)
-    
-    - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
-    
-    - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
-    
+  ```
+
+  # [Python](#tab/python1)
+
+  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
+
+  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
+
     ```python
     @app.ai.action("addItems")
     async def on_add_items(
@@ -884,9 +885,9 @@ All entities are required parameters for actions.
                     items.remove(item)
             state.conversation.lists[parameters.list] = items
         return "items removed. think about your next action"
-    ```
-    
-    ---
+  ```
+
+  ---
 
 ## Next step
 
