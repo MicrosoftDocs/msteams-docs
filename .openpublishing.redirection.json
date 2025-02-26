@@ -1229,7 +1229,7 @@
         "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#update-and-delete-messages-sent-from-bot"
       },
       {
-        "source_path": "msteams-platform/bots/how-to/interactive-notification-bot-in-teams.md",
+        "source_path": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams.md",
         "redirect_url": "/microsoftteams/platform/bots/build-notification-capability"
       }
     ]
