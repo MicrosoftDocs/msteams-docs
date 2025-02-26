@@ -66,7 +66,7 @@ The following code is an example of how your page and the Teams client communica
 <html>
 <head>
 ...
-    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js" 
       integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
       crossorigin="anonymous" >
     </script>
