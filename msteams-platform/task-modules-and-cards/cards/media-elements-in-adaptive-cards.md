@@ -4,7 +4,7 @@ author: surbhigupta12
 description: Learn how the media files are added and supported in the Adaptive Card, and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 11/07/2024
+ms.date: 02/26/2025
 ---
 
 # Media elements in Adaptive Card
@@ -78,14 +78,14 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 1. Go to [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
 
 1. Select an existing card or create a new Adaptive Card:
-    * To select an existing card paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
+    * To select an existing card, paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
     * To create a new card, select **New card** and select one of the following:
         * Select a card template
         * **Empty card**
 
 1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements." lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png":::
 
 1. Under **CARD STRUCTURE**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
@@ -129,7 +129,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     { 
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png"
+      "poster": "https://adaptivecards.io/content/poster-video.png",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -144,7 +144,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png"
+      "poster": "https://adaptivecards.io/content/poster-video.png",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -159,7 +159,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png" 
+      "poster": "https://adaptivecards.io/content/poster-video.png",
       "sources": [
         {
           "mimeType": "video/mp4",

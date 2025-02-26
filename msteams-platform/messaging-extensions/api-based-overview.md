@@ -5,7 +5,7 @@ description: Learn to build a message extension from OpenAPI description documen
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 02/26/2025
 ---
 
 # API-based message extension
@@ -286,10 +286,6 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 ### Response rendering template
 
-> [!NOTE]
->
-> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
-
 Response rendering template is a predefined format that dictates how the results from your API are displayed within Teams. It uses templates to create Adaptive Cards or other UI elements from the API’s response, ensuring a seamless and integrated user experience within Teams. The template defines the layout and style of the information presented, which can include text, images, and interactive components. Ensure that you adhere to following guidelines for response rendering template:
 
 * Define the schema reference URL in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
@@ -433,7 +429,7 @@ Let's say you have the following JSON for a list of products and you want to cre
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) to preview the Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking. Teams supports cards up to version 1.5 while the designer supports 1.6.
+Use [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
 
 ## OpenAPI schema conversion
 
