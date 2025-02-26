@@ -3,7 +3,8 @@ title: Resource-specific Consent for Apps
 description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 03/20/2023
+ms.owner: vishachadha
+ms.date: 02/20/2025
 ---
 
 # Resource-specific consent for your Teams app
@@ -53,6 +54,7 @@ A limited set of RSC permissions have been reviewed by Microsoft privacy and sec
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+| `TeamsActivity.Send.Chat` | Send activity feed notifications to users in this chat. |NA |Supported |
 |`TeamsActivity.Send.User`|Send activity feed notifications to the user. | NA | Supported |
 
 ### RSC-based data access APIs
