@@ -1350,6 +1350,7 @@ The following code shows an example of reactions removed from bot message:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
 
+
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -1367,6 +1368,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onreactionsremoved)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
@@ -1632,7 +1634,7 @@ When a bot encounters an error while handling different events or activities, do
 
 :::image type="content" source="../../../assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
 
-In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [Add telemetry to your bot](https://aka.ms/bottelemetry).
+In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Code sample
 

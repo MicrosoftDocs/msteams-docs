@@ -337,7 +337,7 @@ The `Context` interface is moved to the `app` namespace and updated to group sim
 
 A new property `app.Context.app.host.name` is added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app/app.ts)  (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |

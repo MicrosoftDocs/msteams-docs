@@ -2,7 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
-ms.date: 09/16/2024
+ms.date: 01/23/2025
 ms.localizationpriority: high
 ---
 
@@ -91,6 +91,17 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
 
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
+</details>
+<details>
+
+<summary>How can I resolve the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'"?</summary>
+
+* Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions and admin consent.
+* Sign in to your app to capture more information about the error.
+* Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
+* Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
+* Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
 </details>
 
 ## Live share
@@ -184,9 +195,9 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 </details>
 
 <details>
-<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+<summary>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments?</summary>
 
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+Live Share is supported only in GCC environment.
 
 <br>
 

@@ -31,7 +31,7 @@ The content outlined here guides you on how to create and embed Share to Teams f
 
 The following video provides the basic steps on how to embed Share to Teams:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
+> [!VIDEO dd13e3d5-aefd-4dce-bd6d-1736d63de566]
 <br>
 
 <!--## Steps

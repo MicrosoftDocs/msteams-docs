@@ -122,12 +122,12 @@ The query parameters are:
 
 * `channelId`: Channel ID of the conversation (URL encoded). For example, 19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2.
 * `groupId`: Group ID of the file. For example, 72602e12-78ac-474c-99d6-f619710353a9.
-* `tenantId`: Tenant ID, such as 72f988bf-86f1-41af-91ab-2d7cd011db47.
+* `tenantId`: Tenant ID, such as aaaabbbb-0000-cccc-1111-dddd2222eeee.
 
 > [!Note]
 > You can get `channelId` and `groupId` in the URL from the team.
 
-Example: `https://teams.microsoft.com/l/team/19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2/conversations?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+Example: `https://teams.microsoft.com/l/team/19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2/conversations?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 ## Deep link to navigate to channel
 
@@ -135,22 +135,22 @@ You can use the following deep link formats to navigate to particular channels:
 
 * **Standard channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 * **Private channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee&ngc=true`
 
 * **Shared channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true&allowXTenantAccess=true`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true&allowXTenantAccess=true`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee&ngc=true&allowXTenantAccess=true`
 
 The query parameters are:
 
 * `channelId`: Channel ID of the conversation (URL encoded). For example, `19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2`.
 * `channelName`: Name of the team's channel (URL encoded). For example, `My%20example%20channel`.
 * `groupId`: Group ID of the team. For example, `72602e12-78ac-474c-99d6-f619710353a9`.
-* `tenantId`: Tenant ID, such as `72f988bf-86f1-41af-91ab-2d7cd011db47`.
+* `tenantId`: Tenant ID, such as `aaaabbbb-0000-cccc-1111-dddd2222eeee`.
 * `ngc`: Indicates a next-generation channel. For private channels needs to be set to `true`.
 * `allowXTenantAccess`: Indicates a channel that can be accessed across tenant boundaries. For shared channels needs to be set to `true`.
 

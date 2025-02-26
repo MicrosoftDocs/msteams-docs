@@ -73,10 +73,7 @@ On Android, Adaptive Card Markdown formatting appears as shown in the following 
 
 :::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams Android platform.":::
 
-For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
-
-> [!NOTE]
-> The date and localization features mentioned in this section aren't supported in Teams.
+For more information about date and time formatting and localization in Adaptive Cards, see [text features in Adaptive Cards](/adaptive-cards/authoring-cards/text-features#datetime-formatting-and-localization).
 
 ### Adaptive Cards format sample
 
@@ -1687,7 +1684,6 @@ You can test formatting in your own cards by modifying this code.
 ## See also
 
 * [Cards and dialogs](../cards-and-task-modules.md)
-* [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
 * [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)

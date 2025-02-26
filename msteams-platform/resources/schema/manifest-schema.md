@@ -58,6 +58,28 @@ The following is the sample app manifest schema:
         "color": "A relative path to a full color .png icon — 192px X 192px"
     },
     "accentColor": "A valid HTML color code.",
+    "elementRelationshipSet": {
+      "oneWayDependencies" : [
+        {
+          "element" : {
+            "name" : "composeExtensions",
+            "id" : "composeExtension-id",
+            "commandIds": ["exampleCmd1", "exampleCmd2"]
+          },
+          "dependsOn" : [
+              {"name" : "bots", "id" : "bot-id"}
+          ]
+        }
+      ],
+      "mutualDependencies" : [
+        [
+                {"name" : "bots", "id" : "bot-id"}, 
+                {"name" : "staticTabs", "id" : "staticTab-id"},
+                {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
+        ]
+      ],
+    },
     "copilotAgents": {
         "declarativeAgents": [
             {
@@ -68,6 +90,7 @@ The following is the sample app manifest schema:
     },
     "configurableTabs": [
         {
+            "id": "configurableTab-id",
             "configurationUrl": "https://contoso.com/teamstab/configure",
             "scopes": [
                 "team",
@@ -91,7 +114,7 @@ The following is the sample app manifest schema:
     ],
     "staticTabs": [
         {
-            "entityId": "unique Id for the page entity",
+            "entityId": "idForPage",
             "scopes": [
                 "personal"
             ],
@@ -102,7 +125,13 @@ The following is the sample app manifest schema:
             "name": "Display name of tab",
             "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
             "websiteUrl": "https://contoso.com/content (displayed in web browser)",
-            "searchUrl": "https://contoso.com/content (displayed in web browser)"
+            "searchUrl": "https://contoso.com/content (displayed in web browser)",
+            "requirementSet": {
+                "hostMustSupportFunctionalities": [
+                  {"name": "dialogUrl"},
+                  {"name": "dialogUrlBot"}
+                ]
+            }
         }
     ],
     "supportedChannelTypes": [
@@ -169,6 +198,7 @@ The following is the sample app manifest schema:
     ],
     "composeExtensions": [
         {
+            "id": "composeExtension-id",
             "canUpdateConfiguration": true,
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
             "commands": [
@@ -248,7 +278,13 @@ The following is the sample app manifest schema:
                         "supportsAnonymizedPayloads": false
                     }
                 }
-            ]
+            ],
+            "requirementSet": {
+                "hostMustSupportFunctionalities": [
+                  {"name": "dialogUrl"},
+                  {"name": "dialogUrlBot"}
+                ]
+            }
         }
     ],
     "permissions": [
@@ -466,6 +502,46 @@ A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`. For more information, see [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups).
 
+## elementRelationshipSet
+
+**Optional** &ndash; Object
+
+Describes relationships between individual app capabilities, including `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app launches only in applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components. Each relationship is represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element) object.|
+| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities. Each relationship is represented by a `mutualDependency` array of [`element`](#element) objects. |
+
+### element
+
+**Optional** &ndash; Object
+
+Describes an app capability (`element`) in an `elementRelationshipSet`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name`| String enum|| ✔️| The type of app capability. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. It maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
+| `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` capability. Use only for message extensions. |
+
+### elementRelationshipSet.oneWayDependency
+
+**Optional** &ndash; Object
+
+Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element)) that has a one-way runtime dependency on another capability being loaded. |
+| `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element)) required for the specified `element` to load.|
+
+### elementRelationshipSet.mutualDependencies
+
+**Optional** &ndash; Array of arrays (each containing two or more [`element` objects](#element))
+
+Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
+
 ## copilotAgents
 
 **Optional** &ndash; Object
@@ -493,6 +569,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for configurable tab. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`scopes`|Array of enums|2|✔️|The configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true` |
@@ -521,6 +598,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`searchUrl`|String|2048 characters||The https:// URL to point to for a user's search queries.|
 |`scopes`|Array of enums|3|✔️|Specifies whether the tab offers an experience in the context of a channel in a team, or an experience scoped to an individual user or group chat. The static tabs support `personal` scope only.|
 |`context` | Array of enums| 8|| The set of `contextItem` contexts where a [tab is supported](../../tabs/how-to/access-teams-context.md). </br> Accepted values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingStage`, `meetingSidepanel`, `teamLevelApp`. </br> Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`. |
+|`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab.|
 
 > [!NOTE]
 >
@@ -528,6 +606,14 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
 > * If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
+
+### staticTabs.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 ## bots
 
@@ -546,6 +632,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`requirementSet`|Object|||Runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot.|
 
 ### bots.configuration
 
@@ -589,6 +676,14 @@ A list of commands that your bot can recommend to users. The object is an array 
 |`title`|String|32|✔️|The bot command name.|
 |`description`|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
+### bots.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
 ## connectors
 
 **Optional** &ndash; Array
@@ -609,13 +704,11 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 Defines a message extension for the app.
 
-> [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
-
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for the message extension. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`composeExtensionType`|String||✔️|Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||Authorization related information for the API-based message extension.|
@@ -631,6 +724,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`messageHandlers.type`|String|||The type of message handler. Must be `link`.|
 |`messageHandlers.value.domains`|Array of strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`|
+|`requirementSet`|Object|||Runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension.|
 
 ### composeExtensions.commands
 
@@ -666,6 +760,14 @@ Each command item is an object with the following structure:
 |`parameters.choices`|Array of objects|10 items||The choice options for the `choiceset`. Use only when `parameters.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
+
+### composeExtensions.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 ## permissions
 

@@ -40,7 +40,7 @@ When an app link is pasted into the Teams compose message area, the link unfurls
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO c1c13e1e-23fc-4ca4-91c6-026c5776506b]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -423,14 +423,14 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-    # [Advantages](#tab/advantages)
-    
+   # [Advantages](#tab/advantages)
+
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
-    
+
     * Unfurl previews for your links that users share in Teams even before they've installed your app.
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-    # [Limitations](#tab/limitations)
+   # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
