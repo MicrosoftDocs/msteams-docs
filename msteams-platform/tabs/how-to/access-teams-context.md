@@ -137,7 +137,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
 ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v1.x.x&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v2&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
 
 # [TeamsJS v1.x.x](#tab/Json-v1)
 
@@ -234,6 +234,9 @@ async function example() {
   /*...*/
 }
 ```
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v2+function&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 # [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
 ## TypeScript
@@ -255,6 +258,8 @@ microsoftTeams.getContext((context) => {
   /* ... */ 
 });
 ```
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v1.x.x+function&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ---
 
@@ -300,9 +305,6 @@ The following table lists commonly used context properties of the *context* obje
 | page.isMultiWindow | isMultiWindow |
 
 For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+the+Microsoft+Teams+JavaScript+library&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Retrieve context in private channels
 
