@@ -362,7 +362,7 @@ Let's say you have the below JSON for a list of products and you want to create 
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview Aaptive Card by inserting the template into the Card Payload Editor. Take a sample response entry from your array or for your object and insert it into the Sample Data Editor on the right. Ensure that the card renders properly and is to your liking.
+Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into the Card Payload Editor. Take a sample response entry from your array or for your object and insert it into the Sample Data Editor on the right. Ensure that the card renders properly and is to your liking.
 Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
 
 #### Schema mapping
