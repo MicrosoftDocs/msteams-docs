@@ -197,7 +197,7 @@ items:
 
     You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
-    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
     1. Save the OpenAPI Description document.
     1. Go to [Swagger Editor](https://editor.swagger.io/).
     1. In the left pane, paste the OpenAPI Description in the editor.
