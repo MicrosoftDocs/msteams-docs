@@ -288,7 +288,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 > [!NOTE]
 >
-> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card Designer, ensure that you change the target version to 1.5.
+> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
 
 Response rendering template is a predefined format that dictates how the results from your API are displayed within Teams. It uses templates to create Adaptive Cards or other UI elements from the API’s response, ensuring a seamless and integrated user experience within Teams. The template defines the layout and style of the information presented, which can include text, images, and interactive components. Ensure that you adhere to following guidelines for response rendering template:
 
