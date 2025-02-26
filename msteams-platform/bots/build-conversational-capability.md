@@ -241,43 +241,43 @@ To receive read receipts events for your bot, ensure the following:
 
         # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
-    ```json
+        ```json
         
-    "webApplicationInfo": {
+        "webApplicationInfo": {
         
-         "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
-         "resource": ""
-    },
-    "authorization": {
-        "permissions": {
-        "orgwide": [],
-         "resourceSpecific": [
-            {
-            "name": "ChatMessageReadReceipt.Read.Chat",
-            "type": "Application"
-            }
-            ]
+             "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+             "resource": ""
+        },
+        "authorization": {
+            "permissions": {
+            "orgwide": [],
+             "resourceSpecific": [
+                {
+                "name": "ChatMessageReadReceipt.Read.Chat",
+                "type": "Application"
+                }
+                ]
+             }
          }
-     }
-        
-    ```
-
-  # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-
-    ```json
-        
-     “webApplicationInfo”: {
+            
+        ```
     
-         "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-         "resource": "https: //AnyString",
-         "applicationPermissions": [
-         "ChatMessageReadReceipt.Read.Chat"
-         ]
-     }
+      # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+    
+        ```json
+            
+         “webApplicationInfo”: {
         
-    ```
-
-    ---
+             "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+             "resource": "https: //AnyString",
+             "applicationPermissions": [
+             "ChatMessageReadReceipt.Read.Chat"
+             ]
+         }
+            
+        ```
+    
+        ---
 
     You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
