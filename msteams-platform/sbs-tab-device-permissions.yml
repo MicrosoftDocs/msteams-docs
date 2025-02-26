@@ -161,11 +161,11 @@ items:
     1. Select **Device permission tab** to see the following output:
      
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-in-teams.png" alt-text="Screenshot shows the device permission tab." lightbox="../msteams-platform/assets/images/tab-device-permission/device-permission-tab.png"::: 
+
       > [!div class="nextstepaction"]
       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Add%20tab%20device%20permission%20to%20Teams%20using%20Desktop&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
     # [Browser](#tab/Browser)
-
     
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
@@ -205,18 +205,17 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab.png" alt-text="screenshot shows the browser tab device permission." lightbox="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab-device.png":::
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Add%20tab%20device%20permission%20to%20Teams%20using%20Browser&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Add%20tab%20device%20permission%20to%20Teams%20using%20Mobile&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Dmobile%252CBrowser%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
   
     # [Mobile](#tab/mobile)
-
-     
+    
       Open Teams in mobile to see the following outputs:
 
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1_1.png" alt-text="mobile tab device":::                   
       
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Add%20tab%20device%20permission%20to%20Teams%20using%20Mobile&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Add%20tab%20device%20permission%20to%20Teams%20using%20Mobile&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Dmobile%252CMobile%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
      
 - title: Test your app
   durationInMinutes: 1
@@ -246,7 +245,7 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-window.png" alt-text="Screenshot shows the browser tab device permission.":::
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20your%20app%20using%20Browser&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20your%20app%20using%20Browser&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CBrowser%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
      
      # [Mobile](#tab/Mobile)
 
@@ -259,7 +258,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="mobile output":::                  
       
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20your%20app%20using%20Mobile&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CDesktop%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20your%20app%20using%20Mobile&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tab-device-permissions%3Ftabs%3Ddesktop%252CMobile%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tab-device-permissions.yml&documentVersionIndependentId=ac47142b-7185-708b-9af1-fb88aea051a8&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
       
       --- 
     
