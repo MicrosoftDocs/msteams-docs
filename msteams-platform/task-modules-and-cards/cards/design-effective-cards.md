@@ -20,7 +20,7 @@ You can find more comprehensive design guidelines for Adaptive Cards in Teams, i
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## Adaptive Cards designer
+## Adaptive Card Designer
 
 You also can start designing your Adaptive Cards directly in the browser.
 
