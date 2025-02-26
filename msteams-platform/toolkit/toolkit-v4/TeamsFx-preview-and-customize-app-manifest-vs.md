@@ -96,6 +96,9 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-dev-portal-app-features.png" alt-text="Screenshot shows overwrite and update in teams developer portal.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sync+local+changes+to+Developer+Portal&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fteamsfx-preview-and-customize-app-manifest-vs%23sync-local-changes-to-developer-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2FTeamsFx-preview-and-customize-app-manifest-vs.md&documentVersionIndependentId=e94ba1c6-ac19-53ac-f5c0-aa47186af2a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
