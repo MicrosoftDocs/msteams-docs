@@ -27,6 +27,9 @@ To view the Teams Toolkit from the **Project** menu, follow these steps:
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Explore+Teams+Toolkit+in+Visual+Studio+using+Project&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fexplore-teams-toolkit-vs%3Ftabs%3Dprj&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fexplore-Teams-Toolkit-vs.md&documentVersionIndependentId=58c22237-ad50-5cee-45fe-bcfe8cbc7238&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 # [Solution Explorer](#tab/solutionexplorer)
 
    To view Teams Toolkit under **Solution Explorer**, follow these steps:
@@ -39,6 +42,9 @@ To view the Teams Toolkit from the **Project** menu, follow these steps:
    > In this scenario the project name is **MyTeamsApp14**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/ttk-solution explorer.png" alt-text="Screenshots the Teams toolkit operations from Project":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Explore+Teams+Toolkit+in+Visual+Studio+using+Solution+Explorer&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fexplore-teams-toolkit-vs%3Ftabs%3Dprj&contentSourceUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fexplore-teams-toolkit-vs%3Ftabs%3Dsolutionexplorer&documentVersionIndependentId=58c22237-ad50-5cee-45fe-bcfe8cbc7238&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
   
 ---
 

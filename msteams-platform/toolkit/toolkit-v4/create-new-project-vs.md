@@ -80,6 +80,9 @@ You have created the app project scaffolding for your Teams app using Teams Tool
 
 The steps to create the other apps are similar except notification bot.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+new+Teams+app&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fcreate-new-project-vs%23create-a-new-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fcreate-new-project-vs.md&documentVersionIndependentId=636eddbd-a2e1-03a3-6bd3-eb6b2b39ef68&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Directory Structure
 
 Teams Toolkit provides all components for building an app. After you're created the project, you can view the project folders and files under **Solution Explorer**.

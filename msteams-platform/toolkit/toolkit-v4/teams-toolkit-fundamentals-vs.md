@@ -78,6 +78,9 @@ To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
 
 A browser window opens to view the documentation.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Teams+Toolkit+documentation&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fteams-toolkit-fundamentals-vs%23teams-toolkit-documentation&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fteams-toolkit-fundamentals-vs.md&documentVersionIndependentId=b7d584e3-db7e-35b7-0617-856fdaea63b1&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Agent for Microsoft 365 Copilot
 
 The latest version of Teams Toolkit incorporates numerous preview features designed to support agent for Microsoft 365 Copilot development. To enable and activate the preview feature, follow these steps:
@@ -97,6 +100,9 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of agent from preview feature.":::
 
 Enhance the capabilities of Microsoft 365 Copilot by converting your app into an agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Agent+for+Microsoft+365+Copilot&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fteams-toolkit-fundamentals-vs%23agent-for-microsoft-365-copilot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fteams-toolkit-fundamentals-vs.md&documentVersionIndependentId=b7d584e3-db7e-35b7-0617-856fdaea63b1&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 #### TeamsFx .NET SDK reference
 
