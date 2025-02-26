@@ -4,7 +4,7 @@ description: Learn about sending and receiving messages using a bot app
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 10/03/2024
+ms.date: 02/26/2025
 ---
 
 # Send and receive messages

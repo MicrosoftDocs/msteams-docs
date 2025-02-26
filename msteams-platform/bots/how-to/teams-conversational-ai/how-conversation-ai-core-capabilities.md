@@ -4,7 +4,7 @@ description: In this article, learn more about Teams AI library capabilities, bo
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 05/24/2023
+ms.date: 02/26/2025
 ---
 
 # Understand Teams AI library

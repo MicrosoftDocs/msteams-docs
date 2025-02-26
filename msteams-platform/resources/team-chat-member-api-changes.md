@@ -5,7 +5,7 @@ description: Learn about upcoming API changes, deprecating features, and limitat
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: surbhigupta
-ms.date: 08/30/2022
+ms.date: 02/26/2025
 ---
 
 # Teams bot API changes to fetch team or chat members

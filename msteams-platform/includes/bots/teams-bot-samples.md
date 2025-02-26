@@ -4,7 +4,7 @@ description: With this learning module, learn about Teams samples for Bot Framew
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
-ms.date: 02/20/2023
+ms.date: 02/26/2025
 ---
 
 ## Code sample

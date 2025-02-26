@@ -4,7 +4,7 @@ description: Learn how to set third-party storage app for your Teams app for the
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.author: surbhigupta
-ms.date: 02/05/2025
+ms.date: 02/26/2025
 ---
 
 # Third-party cloud storage app
