@@ -4,7 +4,7 @@ author: surbhigupta12
 description: Learn how the media files are added and supported in the Adaptive Card, and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 11/07/2024
+ms.date: 02/26/2025
 ---
 
 # Media elements in Adaptive Card
@@ -78,7 +78,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer).
 
 1. Select an existing card or create a new Adaptive Card:
-    * To select an existing card paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
+    * To select an existing card, paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
     * To create a new card, select **New card** and choose one of the following:
         * **Blank Card**
         * **From JSON Schema**
@@ -130,7 +130,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     { 
       "type": "Media",
-      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg"
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -145,7 +145,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg"
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -160,7 +160,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg" 
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
