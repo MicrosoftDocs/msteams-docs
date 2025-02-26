@@ -698,7 +698,7 @@ For more information on how to design an Adaptive Card, see [designing Adaptive 
 
 ### Typeahead support
 
-Within the [`Input.Choiceset`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
+Within the [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
 
 To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.
 
