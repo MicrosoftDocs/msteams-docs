@@ -781,7 +781,7 @@ All entities are required parameters for actions.
   
   - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
 
-    ```csharp
+  ```csharp
             [Action("AddItem")]
             public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
             {
