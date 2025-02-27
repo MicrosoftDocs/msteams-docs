@@ -45,6 +45,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 05/02/2025 | Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint | Integrate with Teams > [Third-party cloud storage apps](concepts/device-capabilities/third-party-storage-capability.md) |
 | 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
 | 23/01/2025 | Plan for government and sovereign clouds. | Plan your app > Plan for special clouds > [Plan for government clouds](concepts/cloud-overview.md) |
 | 09/01/2025 | Tab app caching is generally available. | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md) |
