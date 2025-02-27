@@ -1,9 +1,9 @@
 ---
 title: Rate limiting for bots
-description: Learn how to optimize bot with rate limiting. Detect transient exceptions, per bot thread limit. You can also perform an exponential backoff.
+description: Learn how to optimize bot with rate limiting, detect transient exceptions, perform an exponential backoff, and know about add per bot thread limit for all bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/13/2024
+ms.date: 02/06/2025
 ---
 
 # Optimize your bot with rate limiting in Teams
