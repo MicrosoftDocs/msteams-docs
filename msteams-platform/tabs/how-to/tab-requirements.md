@@ -62,7 +62,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
 
-For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
+For more information, see [build your basic tab app](../../get-started/build-basic-tab-app.md).
 
 ### Next step
 
