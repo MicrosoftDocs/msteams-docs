@@ -34,7 +34,7 @@ Tabs are great for embedding tools, services, or dashboards, so users don't have
 * Tab customization
 * Real-time collaboration
 
-Examples of Tab Apps:
+Here are a few examples of a tab app:
 
 * Planner: Add a Planner tab to manage tasks and projects.
 * Power BI: Embed a Power BI report or dashboard for easy access to analytics.
