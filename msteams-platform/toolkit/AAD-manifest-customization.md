@@ -31,8 +31,8 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
      If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
 
     ```JSON
-            "requiredResourceAccess": [
-    {
+    "requiredResourceAccess": [
+        {
             "resourceAppId": "Microsoft Graph",
             "resourceAccess": [
                 {
@@ -75,16 +75,19 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
      You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls exposed API. You can see the following example for this property:
 
      ```JSON
-
-           "preAuthorizedApplications": [
-           {
-               "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-               "permissionIds": [
+     "api": {
+        ...
+        "preAuthorizedApplications": [
+            {
+                "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+                "delegatedPermissionIds": [
                     "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
                 ]
-           }
-           ...
-       ]
+            }
+        ]
+        ...
+     }
+
      ```
 
      `preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
@@ -101,16 +104,25 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Update redirect URL for authentication response</summary>
 
-     Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
+     Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `redirectUris` inside `web`, `spa`, `publicClient`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
 
       ``` JSON
-          "replyUrlsWithType": [
-             ...
-           {
-               "url": "https://www.examples.com/auth-end.html",
-               "type": "Spa"
-           }
-      ]
+     "publicClient": {
+        "redirectUris": [
+            "https://www.examples.com/auth-end.html"
+        ]
+     },
+     "web": {
+        "redirectUris": [
+            "https://www.examples.com/auth-end.html"
+        ],
+        "implicitGrantSettings": {}
+     },
+     "spa": {
+        "redirectUris": [
+            "https://www.examples.com/auth-end.html",
+        ]
+     }
       ```
 
     </details>
@@ -174,7 +186,7 @@ Microsoft Entra manifest template in Teams Toolkit also supports user readable s
 
 ### Preauthorized applications CodeLens
 
-CodeLens shows the application name for the preauthorized application ID for the `preAuthorizedApplications` property.
+CodeLens shows the application name for the preauthorized application ID for the `preAuthorizedApplications` property inside api property.
 
 <a name='view-azure-ad-application-on-the-azure-portal'></a>
 
@@ -198,7 +210,7 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 1. Select Microsoft Entra application from search result to view the detailed information.
   
-1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest).
+1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](https://learn.microsoft.com/en-us/entra/identity-platform/reference-microsoft-graph-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
@@ -208,7 +220,7 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 ## Use an existing Microsoft Entra application
 
-You can use the existing Microsoft Entra application for the Teams project. For more information, see [use an existing Microsoft Entra application for your Teams application](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app).
+You can use the existing Microsoft Entra application for the Teams project. For more information, see [use an existing Microsoft Entra application for your Teams application](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/use-existing-aad-app).
 
 <a name='azure-ad-application-in-teams-application-development-lifecycle'></a>
 
@@ -232,9 +244,9 @@ You need to interact with Microsoft Entra application during various stages of y
 
     - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Teams Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
-    - Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Microsoft Entra application with the manifest file.
+    - Initially ignores some properties in the manifest file that requires more context, such as `redirectUris` property that requires a local development endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
-    - After the local dev environment starts successfully, the Microsoft Entra application's `identifierUris`, `replyUrls`, and other properties that aren't available during creation stage are updated accordingly.
+    - After the local dev environment starts successfully, the Microsoft Entra application's `identifierUris`, `redirectUris`, and other properties that aren't available during creation stage are updated accordingly.
 
     - The changes you've done to your Microsoft Entra application are loaded during next local development session. You can see [Microsoft Entra application changes](https://github.com/OfficeDev/TeamsFx/wiki/) applied manually.
 
@@ -244,9 +256,9 @@ You need to interact with Microsoft Entra application during various stages of y
 
       - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Teams Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
-      - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra application with the manifest file.
+      - Ignores some properties in the manifest file initially that requires more context such as `redirectUris` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
-      - Completes other resources provision, then Microsoft Entra application's `identifierUris`, and `replyUrls` are updated according to the correct endpoints.
+      - Completes other resources provision, then Microsoft Entra application's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
 
 1. **To build application**
 
@@ -266,11 +278,6 @@ You need to interact with Microsoft Entra application during various stages of y
       |`createdDateTime`|Read-only and can't change|
       |`logoUrl`|Read-only and can't change|
       |`publisherDomain`|Read-only and can't change|
-      |`oauth2RequirePostResponse`|Doesn't exist in Graph API|
-      |`oauth2AllowUrlPathMatching`|Doesn't exist in Graph API|
-      |`samlMetadataUrl`|Doesn't exist in Graph API|
-      |`orgRestrictions`|Doesn't exist in Graph API|
-      |`certification`|Doesn't exist in Graph API|
 
 2. The `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
 
