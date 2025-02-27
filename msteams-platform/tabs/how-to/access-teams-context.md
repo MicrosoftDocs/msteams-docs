@@ -62,9 +62,6 @@ Teams calls the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+inserting+URL+placeholder+values&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-inserting-url-placeholder-values&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-inserting-url-placeholder-values&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Get context by using the Microsoft Teams JavaScript library
 
 You can also retrieve the context information using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
@@ -136,9 +133,6 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
 }
 ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v2&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
-
 # [TeamsJS v1.x.x](#tab/Json-v1)
 
 The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
@@ -186,9 +180,6 @@ The following code provides an example of context variable:
 }
 ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v1.x.x&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
-
 ---
 
 # [TeamsJS v2](#tab/teamsjs-v2)
@@ -234,8 +225,6 @@ async function example() {
   /*...*/
 }
 ```
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v2+function&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
@@ -258,8 +247,6 @@ microsoftTeams.getContext((context) => {
   /* ... */ 
 });
 ```
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+by+using+TeamsJS+v1.x.x+function&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v2%252Cteamsjs-v2%252Cdefault%23get-context-by-using-the-microsoft-teams-javascript-library&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-by-using-the-microsoft-teams-javascript-library&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ---
 
@@ -328,9 +315,6 @@ If your page makes use of any of these values, the value of `channel.membershipT
 > [!NOTE]
 >`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Retrieve+context+in+private+channels&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23retrieve-context-in-private-channels&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23retrieve-context-in-private-channels&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
-
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
@@ -360,9 +344,6 @@ Use the following `getContext` properties in shared channels:
 
 For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+context+in+shared+channels&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23get-context-in-shared-channels&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23get-context-in-shared-channels&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
-
 ## Handle theme change
 
 > [!IMPORTANT]
@@ -387,9 +368,6 @@ The following image shows the dark theme option in the Teams:
 :::image type="content" source="../../assets/images/tabs/dark-theme-teams.png" alt-text="Screenshot shows the dark theme in Teams desktop client.":::
 
 ---
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+theme+change&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Faccess-teams-context%3Ftabs%3DJson-v1%2Cteamsjs-v2%2Cdefault%23handle-theme-change&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Faccess-teams-context.md%23handle-theme-change&documentVersionIndependentId=c68181e1-151b-fc78-2671-fe9b397b702e&author=surbhigupta&metadata=*%2BID%3Ae473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%3A%2B**msteams**)
 
 ## Code sample
 

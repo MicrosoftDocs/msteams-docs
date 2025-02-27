@@ -133,9 +133,6 @@ The following JSON code is an example to create an action button in an Adaptive 
 
 If your app isn't optimized to work in Teams mobile client, Stageview for apps published through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Invoke+Collaborative+Stageview+from+Adaptive+Card&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fopen-content-in-stageview%3Ftabs%3Dwithchat%23invoke-collaborative-stageview-from-adaptive-card&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fopen-content-in-stageview.md%23invoke-collaborative-stageview-from-adaptive-card&documentVersionIndependentId=7b685a2e-18e0-a401-e44f-905a47d2415d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Invoke from stageView API
 
 The stageView API from TeamsJS allows you to open the Teams window in a Stageview experience based on the `openMode` defined. If the `openMode` property isn't defined, the default response is a Collaborative Stageview with an associated side panel conversation. In a Collaborative Stageview experience, the side panel conversation is the same thread from where the Stageview was invoked such as chat or group chat.
@@ -206,9 +203,6 @@ For more information on stageView API, see [stageView module](/javascript/api/@m
 
 [!INCLUDE [stageView API parameters](../includes/stageview-deep-link-query.md)]
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Invoke+from+stageView+API&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fopen-content-in-stageview%3Ftabs%3Dwithchat%23invoke-from-stageview-api&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fopen-content-in-stageview.md%23invoke-from-stageview-api&documentVersionIndependentId=7b685a2e-18e0-a401-e44f-905a47d2415d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Invoke from deep link
 
 To invoke Stageview through deep link from your tab or personal app, wrap the deep link URL in the [app.openLink(url) API](/javascript/api/%40microsoft/teams-js/app#@microsoft-teams-js-app-openlink) and define the `openMode` property for the chat content to open. When the openMode property isn't specified, Stageview response from a deep link defaults to Collaborative Stageview.
@@ -246,9 +240,6 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 [!INCLUDE [Deep link query parameters](../includes/stageview-deep-link-query.md)]
 
 Whether you want to facilitate multitasking, enhance collaboration, or provide focused user experience, Stageview has a mode to suit your requirements.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Invoke+from+deep+link&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fopen-content-in-stageview%3Ftabs%3Dwithchat%23invoke-from-deep-link&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fopen-content-in-stageview.md%23invoke-from-deep-link&documentVersionIndependentId=7b685a2e-18e0-a401-e44f-905a47d2415d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## FAQs
 
