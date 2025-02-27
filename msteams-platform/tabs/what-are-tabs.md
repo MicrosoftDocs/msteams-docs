@@ -41,7 +41,7 @@ Examples of Tab Apps:
 * Trello: Bring your Trello boards into Teams for seamless project management.
 * OneNote: Create a shared space for notes within the team.
 
-## Features, benefits, and scope of Teams tab apps
+## Features and benefits of Teams tab app
 
 Teams tabs offer several key features that help enhance collaboration and productivity:
 
@@ -65,6 +65,23 @@ Using tab apps in Teams has the following benefits:
 • **Improved Collaboration**: Receive live updates, chat integration, and shared data, all within Teams.
 • **Customization**: Design custom tabs to fit your business needs, embedding both internal tools and third-party services.
 • **Consistency Across Platforms**: Access tabs across Teams, Outlook, and Microsoft 365 for a seamless experience.
+
+## Types and scope of Teams tab app
+
+There are two main types of tabs you can use:
+
+* Static Tabs: These show fixed content, perfect for dashboards, reports, or documents. They can be added in:
+  * **Personal Scope**: For individual users, pinned to the left navigation bar.
+  * **Group Chat, Channel, or Meeting Scope**: For group chats, channels, or meetings, extending the same user experience for collaboration.
+  * **Configurable Tabs**: These adjust content based on user input or settings, ideal for apps like project management tools or customer service applications.
+
+These tabs in Teams can be used in three scopes:
+
+* **Personal**: Scoped to individual users, usually pinned to the left navigation bar.
+* **Group Chat**: Behave like apps and can be pinned to each chat.
+* **Teams**: Serve a similar function as apps in team channels, with one instance per app.
+
+Static tabs in meetings can also be pre-pinned by IT admins for a consistent experience.
 
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
