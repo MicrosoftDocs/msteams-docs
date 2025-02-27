@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 02/25/2025
 ---
 # Teams Store validation guidelines
 
@@ -62,16 +62,19 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/notifications.png" link="#notifications" border="false":::
    :::column-end:::
    :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/ms-graph-connectors.png" link="#microsoft-graph-connector" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/microsoft-365.png" link="#microsoft-365-app-compliance-program" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/advertising.png" link="#advertising" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
    :::column-end:::
@@ -683,7 +686,7 @@ For guidance on how to create an accurate, concise, and informative short and lo
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
 
-<br></br>
+<br>
 <details><summary>Expand to know more</summary>
 
 Remember the following:
@@ -700,7 +703,7 @@ Remember the following:
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
-* At least one screenshot must depict your app’s functionality on mobile devices. [*Must fix*]
+* At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
@@ -717,7 +720,7 @@ Remember the following:
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
-* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Must fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
 
@@ -728,6 +731,10 @@ Remember the following:
 * If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
+
+* If your Teams app is extensible across Microsoft Copilot, the screenshots provided must depict the app's functionality within Copilot. [*Must fix*]
+
+   :::image type="content" source="../../../../assets/images/Copilot/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
 **Don'ts:**
 
@@ -1676,6 +1683,18 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 * When selecting a notification, the user must be directed to relevant content within Teams. [*Must fix*]
 
 </details>
+
+[Back to top](#teams-store-validation-guidelines)
+
+## Microsoft Graph connector
+
+Recommended way to publish your Graph connector is through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include it within your manifest.json file. The guidelines for the declarative agent file are different, which can be found [here](review-copilot-validation-guidelines.md).
+
+***Example***
+
+Don’t include Graph connector node in the manifest file.
+
+:::image type="content" source="../../../../assets/images/Copilot/da-graph-connector.png" alt-text="Screenshot of the Graph connector node in the manifest file.":::
 
 [Back to top](#teams-store-validation-guidelines)
 
