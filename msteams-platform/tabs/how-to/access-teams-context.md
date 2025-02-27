@@ -225,7 +225,6 @@ async function example() {
   /*...*/
 }
 ```
-
 # [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
 ## TypeScript
