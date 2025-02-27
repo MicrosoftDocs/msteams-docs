@@ -169,6 +169,7 @@ gulp build
 1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
+    
 
 ## Establish a secure tunnel to your tab
 
