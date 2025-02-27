@@ -35,7 +35,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
   [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
   > [!NOTE]
-  > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
+  > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. Your nested frame acts as a proxy to Teams.
 
 * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
 
