@@ -31,7 +31,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-* ***February 20, 2025***: [Introducing the app package editor in the Developer Portal for Teams, which allows you to create, manage, and customize app packages, and also add a declarative agent and its related files.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
+* ***February 27, 2025***: [Introducing the app package editor in the Developer Portal for Teams, which allows you to create, manage, and customize app packages, and also add a declarative agent and its related files.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * ***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
 
 :::column-end:::
