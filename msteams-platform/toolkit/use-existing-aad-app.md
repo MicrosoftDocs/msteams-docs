@@ -5,7 +5,7 @@ description: Learn how to use an existing Microsoft Entra app in TeamsFx or crea
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/09/2023
+ms.date: 02/27/2025
 ---
 
 # Use existing Entra app in TeamsFx
