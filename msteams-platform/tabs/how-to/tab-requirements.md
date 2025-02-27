@@ -58,7 +58,13 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [ngrok](https://ngrok.com/downloads) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
 
-### Build your Teams tab
+## Build a tab app
+
+You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
+
+For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
+
+### Next step
 
 Now let's build your tab. But first select your choice of tab to build:
 
