@@ -41,6 +41,40 @@ Examples of Tab Apps:
 * Trello: Bring your Trello boards into Teams for seamless project management.
 * OneNote: Create a shared space for notes within the team.
 
+The following images show tabs added to different contexts in Teams:
+
+# [Personal](#tab/personal)
+
+**Teams desktop**
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
+
+**Teams mobile**
+
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+
+# [Channel](#tab/channel)
+
+**Teams desktop**
+
+:::image type="content" source="~/assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="~/assets/images/tabs/tabs.png":::
+
+**Teams mobile**
+
+:::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
+
+# [Meeting](#tab/meeting)
+
+**Teams desktop**
+
+:::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting." lightbox="~/assets/images/tabs/personal-tab-meeting.png":::
+
+**Teams mobile**
+
+:::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
+
+---
+
 ## Features and benefits of Teams tab app
 
 Teams tabs offer several key features that help enhance collaboration and productivity:
@@ -78,8 +112,8 @@ There are two main types of tabs you can use:
 These tabs in Teams can be used in three scopes:
 
 * **Personal**: Scoped to individual users, usually pinned to the left navigation bar.
-* **Group Chat**: Behave like apps and can be pinned to each chat.
-* **Teams**: Serve a similar function as apps in team channels, with one instance per app.
+* **Group Chat**: Behaves like apps and can be pinned to each chat.
+* **Teams**: Serves a similar function as apps in team channels, with one instance per app.
 
 Static tabs in meetings can also be pre-pinned by IT admins for a consistent experience.
 
