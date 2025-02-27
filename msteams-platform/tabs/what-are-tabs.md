@@ -61,10 +61,10 @@ Teams tabs offer several key features that help enhance collaboration and produc
 
 Using tab apps in Teams has the following benefits:
 
-• **Streamlined Workflows**: Keep all your important tools and content in one place, so you don't have to switch between apps.
-• **Improved Collaboration**: Receive live updates, chat integration, and shared data, all within Teams.
-• **Customization**: Design custom tabs to fit your business needs, embedding both internal tools and third-party services.
-• **Consistency Across Platforms**: Access tabs across Teams, Outlook, and Microsoft 365 for a seamless experience.
+* **Streamlined Workflows**: Keep all your important tools and content in one place, so you don't have to switch between apps.
+* **Improved Collaboration**: Receive live updates, chat integration, and shared data, all within Teams.
+* **Customization**: Design custom tabs to fit your business needs, embedding both internal tools and third-party services.
+* **Consistency Across Platforms**: Access tabs across Teams, Outlook, and Microsoft 365 for a seamless experience.
 
 ## Types and scope of Teams tab app
 
