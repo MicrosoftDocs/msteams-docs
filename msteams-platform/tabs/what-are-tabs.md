@@ -101,14 +101,16 @@ Scenario 1: A project manager needs to track the progress of multiple ongoing pr
 * Add, remove, assign tasks to the team
 * View project timeline, and deadline
 
-Teams tab app solution: The PM can do all the tasks in one app without having to switch between multiple apps
+Teams tab app solution: You create a dashboard tab app so that the manager can do all the tasks in one app without having to switch between multiple apps
 
-• A manager needs to review and approve leave requests
-o Leave management
-o calendar with leaves for employees/team, approve/reject status, etc.
-o Leave types available
-o Messages or notification for leaves or approvals
-• Manage team leaves streamline approval process/workflow, maintain communication in real time.
+Scenario 2: A manager needs to review and approve leave requests:
+
+* Leave management
+* Calendar with leaves for employees, and approve or reject status
+* Leave types available
+* Messages or notification for leaves or approvals
+
+Teams tab app solution: You create a channel or group tab to enable management of team leaves, streamline approval process, and maintain communication in real time.
 
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
