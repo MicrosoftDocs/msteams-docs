@@ -83,6 +83,33 @@ These tabs in Teams can be used in three scopes:
 
 Static tabs in meetings can also be pre-pinned by IT admins for a consistent experience.
 
+## User scenarios
+
+**Scenario:** Bring an existing web-based resource inside Teams.<br>
+**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
+
+**Scenario:** Add support pages to a Teams bot or messaging extension.<br>
+**Example:** You create static tabs that provide **about** and **help** webpage content to users.
+
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
+**Example:** You create a channel or group tab with deep linking to individual items.
+
+Scenario 1: A project manager needs to track the progress of multiple ongoing projects and collaborate with her team in real-time:
+
+* Monitor progress
+* Manage dashboard
+* Add, remove, assign tasks to the team
+* View project timeline, and deadline
+
+Teams tab app solution: The PM can do all the tasks in one app without having to switch between multiple apps
+
+• A manager needs to review and approve leave requests
+o Leave management
+o calendar with leaves for employees/team, approve/reject status, etc.
+o Leave types available
+o Messages or notification for leaves or approvals
+• Manage team leaves streamline approval process/workflow, maintain communication in real time.
+
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
