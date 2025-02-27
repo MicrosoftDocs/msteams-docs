@@ -60,7 +60,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 </details>
 
 > [!NOTE]
-> The `copilotAgents` node is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Custom engine agent is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Stream the custom engine agent response to the user
 
