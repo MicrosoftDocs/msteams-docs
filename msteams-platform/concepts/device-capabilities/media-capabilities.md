@@ -40,8 +40,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
     "media",
 ],
 ```
-> [!NOTE]
-> The Media API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `media`.
 
 ## Media capability APIs
 

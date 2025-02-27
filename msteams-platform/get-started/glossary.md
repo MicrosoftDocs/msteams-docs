@@ -304,9 +304,3 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using VS Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
 | Webview | A webview is a control that displays web content inside an application. |
 | [Workbench](../sbs-gs-spfx.yml) | Overall VS Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
-
-## Y
-
-| Term | Definition |
-| --- | --- |
-| [Yeoman generator for Teams](https://github.com/pnp/generator-teams)| Yeoman generator for Teams or YoTeams allows you to create Teams apps using TypeScript and JavaScript on your terms, in your preferred editor, and without any external or online dependencies. |
