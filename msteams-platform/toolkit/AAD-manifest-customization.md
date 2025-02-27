@@ -210,7 +210,7 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 1. Select Microsoft Entra application from search result to view the detailed information.
   
-1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](https://learn.microsoft.com/en-us/entra/identity-platform/reference-microsoft-graph-app-manifest).
+1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/entra/identity-platform/reference-microsoft-graph-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
@@ -220,7 +220,7 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 ## Use an existing Microsoft Entra application
 
-You can use the existing Microsoft Entra application for the Teams project. For more information, see [use an existing Microsoft Entra application for your Teams application](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/use-existing-aad-app).
+You can use the existing Microsoft Entra application for the Teams project. For more information, see [use an existing Microsoft Entra application for your Teams application](/microsoftteams/platform/toolkit/use-existing-aad-app).
 
 <a name='azure-ad-application-in-teams-application-development-lifecycle'></a>
 
