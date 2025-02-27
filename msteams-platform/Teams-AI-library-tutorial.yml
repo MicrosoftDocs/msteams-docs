@@ -24,7 +24,7 @@ items:
     * How to interact with your LLMs and data.
     * The directory structure of your custom engine agent.
 
-    Once you have a working custom engine agent on Teams, signal the intent to participate in Microsoft 365 Copilot by explicitly declaring CustomEngineAgent in the manifest.
+    Once you have a working custom engine agent on Teams, signal the intent to participate in Microsoft 365 Copilot by explicitly declaring `customEngineAgents` in the app manifest.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -38,14 +38,14 @@ items:
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
-   
-    [!INCLUDE [Set up prerequisites](includes/custom-engine-agent-bizchat.md)]
+
+    [!INCLUDE [Set up prerequisites](includes/custom-engine-agent.md)]
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
 
-   After you set up your project workspace with Teams Toolkit, you need to create a Azure OpenAI key using Azure portal.
+   /**After you set up your project workspace with Teams Toolkit, you need to create a Azure OpenAI key using Azure portal./
 
     ## Create an Azure AI Search endpoint and OpenAI key
 

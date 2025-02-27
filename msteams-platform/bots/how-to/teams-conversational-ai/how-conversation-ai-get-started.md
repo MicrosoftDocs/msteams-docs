@@ -796,7 +796,7 @@ Here is the required to-do list to upgrade your bot to custom engine agent:
 | Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
 | Use citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
 
-If you want your custom engine agent to support BizChat, add the following into your app manifest:
+If you want your custom engine agent to support Microsoft 365 Copilot chat, add the following into your app manifest:
 
 1. Add the app manifest property `copilotAgents` and its sub property `customEngineAgents` into your app manifest:
 
@@ -812,7 +812,7 @@ If you want your custom engine agent to support BizChat, add the following into 
     
     ```
 
-1. In your app manifest, set the `scopes` as `Copilot`:
+1. In your app manifest, set the `scopes` as `copilot`:
 
     ```json
     "bots": [ 
@@ -821,7 +821,7 @@ If you want your custom engine agent to support BizChat, add the following into 
           "scopes": ["groupChat"], 
           "commandLists": [ 
             { 
-              "scopes": ["Copilot"], 
+              "scopes": ["copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -846,8 +846,8 @@ If you want your custom engine agent to support BizChat, add the following into 
 
 > [!NOTE]
 >
-> * BizChat adds an AI-generated label to every response that the custom engine agent sends.
-> * If you have built your conventional bot using Teams Toolkit and you want to add support for BizChat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+> * Microsoft 365 Copilot chat adds an AI-generated label to every response that the custom engine agent sends.
+> * If you have built your conventional bot using Teams Toolkit and you want to add support for Microsoft 365 Copilot chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
 
 ## Elevate your conventional bot to use AI
 
