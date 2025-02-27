@@ -479,6 +479,9 @@
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Create a commands menu
+      href: bots/how-to/create-a-bot-commands-menu.md
+      displayName: compose
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
@@ -683,12 +686,12 @@
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token, message in channel, Teams message
-  - name: Create Incoming Webhooks
+  - name: Create Incoming Webhooks (Deprecated)
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
-  - name: Create connectors for Microsoft 365 Groups
+  - name: Create connectors for Microsoft 365 Groups (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Create and send messages
+  - name: Create and send messages (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
 - name: Build cards and dialogs
