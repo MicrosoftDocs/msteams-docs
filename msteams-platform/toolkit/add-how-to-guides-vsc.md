@@ -38,9 +38,6 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities listed.":::
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Use%20Teams%20Toolkit%20pane&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fadd-how-to-guides-vsc&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fadd-how-to-guides-vsc.md&documentVersionIndependentId=4e0f3b70-518a-d0ba-356e-dbc8be258714&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Use the Command Palette
 
    1. Open your app project in **Visual Studio Code**.
@@ -56,9 +53,6 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
    1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities list.":::
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Use%20the%20Command%20Palette&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fadd-how-to-guides-vsc&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fadd-how-to-guides-vsc.md&documentVersionIndependentId=4e0f3b70-518a-d0ba-356e-dbc8be258714&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## See also
 

@@ -50,9 +50,6 @@ To create a new environment:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/environment-name.png" alt-text="Screenshot shows where to enter the environment name.":::
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20new%20environment%20manually%20in%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteamsfx-multi-env&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FTeamsFx-multi-env.md&documentVersionIndependentId=dec10bbd-ff27-d687-088b-67294d0b42d8&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ## Targeting an environment
 
 When you have multiple environments and select the Production, dev, or local menu items, Teams Toolkit prompts you to select a target environment.
