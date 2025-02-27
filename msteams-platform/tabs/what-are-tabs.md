@@ -73,7 +73,7 @@ There are two main types of tabs you can use:
 * Static Tabs: These show fixed content, perfect for dashboards, reports, or documents. They can be added in:
   * **Personal Scope**: For individual users, pinned to the left navigation bar.
   * **Group Chat, Channel, or Meeting Scope**: For group chats, channels, or meetings, extending the same user experience for collaboration.
-  * **Configurable Tabs**: These adjust content based on user input or settings, ideal for apps like project management tools or customer service applications.
+* **Configurable Tabs**: These adjust content based on user input or settings, ideal for apps like project management tools or customer service applications.
 
 These tabs in Teams can be used in three scopes:
 
