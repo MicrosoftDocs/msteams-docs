@@ -41,7 +41,7 @@ Examples of Tab Apps:
 * Trello: Bring your Trello boards into Teams for seamless project management.
 * OneNote: Create a shared space for notes within the team.
 
-## Tab features
+## Features, benefits, and scope of Teams tab apps
 
 Teams tabs offer several key features that help enhance collaboration and productivity:
 
@@ -53,14 +53,18 @@ Teams tabs offer several key features that help enhance collaboration and produc
 * Multi-capability apps: If a tab is added to an app that also has a bot, the bot is also added to the team.
 * Locale awareness: The users can indicate language that is `en-us`.
 * Deep links:
-
   * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
   * The ability to open a modal dialog from links within a tab.
-
 * Authentication:
-
   * Single sign-on (SSO) capability, if supported.
   * Awareness of Microsoft Entra ID of the current user.
+
+Using tab apps in Teams has the following benefits:
+
+• **Streamlined Workflows**: Keep all your important tools and content in one place, so you don't have to switch between apps.
+• **Improved Collaboration**: Receive live updates, chat integration, and shared data, all within Teams.
+• **Customization**: Design custom tabs to fit your business needs, embedding both internal tools and third-party services.
+• **Consistency Across Platforms**: Access tabs across Teams, Outlook, and Microsoft 365 for a seamless experience.
 
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
