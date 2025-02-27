@@ -60,7 +60,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 </details>
 
 > [!NOTE]
-> Custom engine agent is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> The `customEngineAgents` node is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Stream the custom engine agent response to the user
 
