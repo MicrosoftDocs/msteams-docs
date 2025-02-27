@@ -31,7 +31,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
+***March 04, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
 
 :::column-end:::
 :::row-end:::
