@@ -11,18 +11,18 @@ ms.date: 02/06/2025
 
 | - Introduce tab apps in Team
 
-    | - Key features/benefits and scopes
-    | - Usage of tab apps
-    | - Examples/scenarios of tab apps
+  | - Key features/benefits and scopes
+  | - Usage of tab apps
+  | - Examples/scenarios of tab apps
 
 | - How APIs and SDKs work together
 
-    | - Introduce the SDKs
-    | - Add example
+  | - Introduce the SDKs
+  | - Add example
 
 | - Types of tab apps
 
-    | - Examples of tab apps
+| - Examples of tab apps
 ----
 
 The Teams Tab App lets developers embed web content right into Microsoft Teams, making it interactive. Tabs are HTML elements pointing to external sites, and you can add them to channels, group chats, or personal apps. This means you can show custom web apps or content directly in Teams, boosting productivity and collaboration.
