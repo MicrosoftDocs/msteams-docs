@@ -137,18 +137,19 @@ To make your Teams tab even better, Microsoft offers some handy development tool
   
   For example, you can use it to retrieve information like the user’s identity, the current team or channel, or the meeting details.
 
-    <details>
-    <summary><b>Example:</b></summary>
+  <details>
+  <summary><b>Example:</b></summary>
 
-    ```JavaScript
+  ```JavaScript
     
       microsoftTeams.initialize(() => {
       microsoftTeams.getContext((context) => {
       console.log(context);
     });
     });
-    ```
-    </details>
+  ```
+
+  </details>
 
 1. **Teams SDK**: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
 1. **Microsoft Graph REST APIs**: This API offers a unified endpoint for accessing Microsoft 365 data. You can query Teams, users, channels, and more, making your app context-aware and fully integrated with Microsoft 365 services.
