@@ -392,7 +392,7 @@
     displayName: clickjacking, device permissions for tabs
   - name: Create a tab app
     href: tabs/how-to/create-a-tab-app.md
-  - name: Tab features overview
+  - name: Tab features
     href: tabs/how-to/tab-features.md
   - name: Advanced tab features
     items:

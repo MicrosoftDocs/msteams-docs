@@ -133,7 +133,23 @@ Teams tab app solution: You create a channel or group tab to enable management o
 
 To make your Teams tab even better, Microsoft offers some handy development tools:
 
-1. **JavaScript SDK**: This lets you add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
+1. **JavaScript SDK**: The [Teams JavaScript SDK](@microsoft/teams-js) enables you to add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
+  
+  For example, you can use it to retrieve information like the user’s identity, the current team or channel, or the meeting details.
+
+    <details>
+    <summary><b>Example:</b></summary>
+
+    ```JavaScript
+    
+      microsoftTeams.initialize(() => {
+      microsoftTeams.getContext((context) => {
+      console.log(context);
+    });
+    });
+    ```
+    </details>
+
 1. **Teams SDK**: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
 1. **Microsoft Graph REST APIs**: This API offers a unified endpoint for accessing Microsoft 365 data. You can query Teams, users, channels, and more, making your app context-aware and fully integrated with Microsoft 365 services.
 
@@ -264,20 +280,6 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
 
 For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
-
-## Tools to build tabs
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
-| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
-| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab
 -->
