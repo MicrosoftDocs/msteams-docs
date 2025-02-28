@@ -78,6 +78,9 @@ The following images show tabs added to different contexts in Teams:
 
 ## Types and scope of Teams tab app
 
+> [!IMPORTANT]
+> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+
 There are two main types of tabs you can use:
 
 * Static Tabs: These show fixed content, perfect for dashboards, reports, or documents. They can be added in:
@@ -91,7 +94,9 @@ These tabs in Teams can be used in three scopes:
 * **Group Chat**: Behaves like apps and can be pinned to each chat.
 * **Teams**: Serves a similar function as apps in team channels, with one instance per app.
 
-Static tabs in meetings can also be pre-pinned by IT admins for a consistent experience.
+These tabs can be utilized in three distinct scopes: `personal`, `groupchat`, and `teams`. [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) to group chats, channels, or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
+
+Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app. For example, you can only pin a single YouTube app tab in a meeting. Static tabs in meetings can also be prepinned in meetings by IT Admins.
 
 The following table helps you determine the best fit for your app:
 
