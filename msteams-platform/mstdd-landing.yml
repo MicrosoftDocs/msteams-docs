@@ -65,8 +65,8 @@ landingContent:
       links:
       - text: Precache your tab app to optimize its initial load time
         url: tabs/how-to/app-caching.md#precaching-tab-apps
-      - text: Introducing third-party cloud storage capability for drag-dropped files
-        url: concepts/device-capabilities/third-party-storage-capability.md
+      - text: App package editor in Developer Portal for Teams
+        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure
       - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
         url: concepts/device-capabilities/third-party-storage-capability.md
       - text: Tab app caching is generally available
