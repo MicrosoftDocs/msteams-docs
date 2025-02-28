@@ -1234,7 +1234,7 @@
       },
       {
         "source_path": "msteams-platform/bots/bot-features.md",
-        "redirect_url": "microsoftteams/platform/bots/overview"
+        "redirect_url": "/microsoftteams/platform/bots/overview"
       }
     ]
 }
