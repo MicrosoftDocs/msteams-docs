@@ -133,26 +133,37 @@ Teams tab app solution: You create a channel or group tab to enable management o
 
 To make your Teams tab even better, Microsoft offers some handy development tools:
 
-1. **JavaScript SDK**: The [Teams JavaScript SDK](@microsoft/teams-js) enables you to add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
+1. **JavaScript SDK**:
+    The [Teams JavaScript SDK](@microsoft/teams-js) enables you to add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
   
-  For example, you can use it to retrieve information like the user’s identity, the current team or channel, or the meeting details.
+    For example, you can use it to retrieve information like the user’s identity, the current team or channel, or the meeting details.
 
-  <details>
-  <summary><b>Example:</b></summary>
+    <details>
+    <summary><b>Example:</b></summary>
 
-  ```JavaScript
+    ```JavaScript
     
       microsoftTeams.initialize(() => {
       microsoftTeams.getContext((context) => {
       console.log(context);
-    });
-    });
-  ```
+      });
+      });
+    ```
 
-  </details>
+    </details>
 
 1. **Teams SDK**: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
-1. **Microsoft Graph REST APIs**: This API offers a unified endpoint for accessing Microsoft 365 data. You can query Teams, users, channels, and more, making your app context-aware and fully integrated with Microsoft 365 services.
+1. **Microsoft Graph REST APIs**:
+    Microsoft Graph enables you to interact with various Microsoft 365 services like Teams, SharePoint, Outlook, OneDrive, and more. For Teams tab apps, it helps you access, manipulate, and interact with Teams data, users, and resources.
+
+    For example, you can manage Teams, channels, and the associated members. This is useful if your tab app needs to integrate with specific Teams or channels dynamically.
+
+    <details>
+    <summary><b>Example:</b></summary>
+
+    GET <https://graph.microsoft.com/v1.0/teams/{team-id}/channels>
+
+    </details>
 
 ## Declare custom tab in app manifest
 
