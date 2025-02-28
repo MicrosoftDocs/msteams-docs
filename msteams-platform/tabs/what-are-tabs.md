@@ -152,7 +152,22 @@ To make your Teams tab even better, Microsoft offers some handy development tool
 
     </details>
 
-1. **Teams SDK**: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
+1. **Teams SDK**:
+    The Teams SDK is a set of libraries that helps you build awesome experiences in Microsoft Teams. It lets your web app talk to Teams, provides context about the environment, and allows interactions with Teams features. Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
+
+    <details>
+    <summary><b>Example:</b></summary>
+
+    ```JavaScript
+
+      microsoftTeams.initialize();
+      microsoftTeams.getContext(function(context) {
+      console.log("Team Name: " + context.teamName);
+      });
+    ```
+
+    </details>
+
 1. **Microsoft Graph REST APIs**:
     Microsoft Graph enables you to interact with various Microsoft 365 services like Teams, SharePoint, Outlook, OneDrive, and more. For Teams tab apps, it helps you access, manipulate, and interact with Teams data, users, and resources.
 
