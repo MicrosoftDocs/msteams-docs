@@ -5,7 +5,7 @@ description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NE
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 12/11/2024
+ms.date: 02/28/2025
 ---
 
 # Create a tab
