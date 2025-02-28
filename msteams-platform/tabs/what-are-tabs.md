@@ -200,6 +200,8 @@ To build a comprehensive Teams tab app, you will likely combine all three tools:
 2. Use Microsoft Graph API to pull relevant data, such as team details, files, or messages, and display this information in your tab.
 3. Handle authentication and user-specific data with the Teams SDK, ensuring that your app complies with security and permission requirements.
 
+The Teams JS SDK, Microsoft Graph REST API, and Teams SDK are essential for creating powerful and interactive Teams tab apps. They help your app access data, provide a smooth user experience, and integrate seamlessly with the Microsoft ecosystem, all while staying tightly connected within the Teams client.
+
 ### Declare custom tab in app manifest
 
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. This informs Teams that your app has loaded.
