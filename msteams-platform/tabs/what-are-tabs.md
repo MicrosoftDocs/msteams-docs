@@ -139,7 +139,7 @@ Teams tab app solution: You create a channel or group tab to enable management o
 To make your Teams tab even better, Microsoft offers some handy development tools:
 
 1. **JavaScript SDK**:
-    The [Teams JavaScript SDK](@microsoft/teams-js) enables you to add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
+    The [Teams JavaScript SDK](/javascript/api/%40microsoft/teams-js/?view=msteams-client-js-latest) enables you to add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
   
     For example, you can use it to retrieve information like the user’s identity, the current team or channel, or the meeting details.
 
@@ -218,7 +218,7 @@ For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. T
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
 <details>
-<summar><b>Example of app manifest update:</b></summary>
+<summary><b>Example of app manifest update:</b></summary>
 
 Ensure that you have correctly configured the tab section of the manifest to link to the URL of your tab:
 
