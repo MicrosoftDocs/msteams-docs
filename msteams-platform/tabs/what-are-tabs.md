@@ -217,6 +217,23 @@ For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. T
 
 You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
+<details>
+<summar><b>Example of app manifest update:</b></summary>
+
+Ensure that you have correctly configured the tab section of the manifest to link to the URL of your tab:
+
+```manifest
+{
+ "type": "tab",
+ "name": "Your Tab Name",
+ "entityId": "your-tab-entity-id",
+ "contentUrl": "<https://your-tab-url>",
+ "websiteUrl": "<https://your-website-url>",
+ "scopes": ["team", "personal"]
+ }
+```
+
+</details>
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
