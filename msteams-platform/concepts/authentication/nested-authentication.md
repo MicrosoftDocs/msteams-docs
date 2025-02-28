@@ -23,18 +23,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
-The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
+    The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps required for development | Traditional Teams Entra SSO | NAA |
-| --- |:---:|:---:|
-| Expose redirect URI | Required | Required |
-| Register API in Microsoft Entra ID | Required |  |
-| Define a custom scope in Microsoft Entra ID | Required |  |
-| Authorize Teams client apps | Required |  |
-| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
-| Acquire access token through TeamsJS SDK | Required |  |
-| Solicit user consent for more permissions | Required |  |
-| Conduct an OBO exchange on the server | Required |  |
+    | Steps required for development | Traditional Teams Entra SSO | NAA |
+    | --- |:---:|:---:|
+    | Expose redirect URI | Required | Required |
+    | Register API in Microsoft Entra ID | Required |  |
+    | Define a custom scope in Microsoft Entra ID | Required |  |
+    | Authorize Teams client apps | Required |  |
+    | Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
+    | Acquire access token through TeamsJS SDK | Required |  |
+    | Solicit user consent for more permissions | Required |  |
+    | Conduct an OBO exchange on the server | Required |  |
 
 * The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -100,8 +100,6 @@ For more information on upgrading your Teams app to run in Outlook and Microsoft
 
 Initialize MSAL and get an instance of the public client app to get access tokens, when needed.
 
-# [JavaScript](#tab/js1)
-
 ```javascript
 import {
   AccountInfo,
@@ -130,8 +128,6 @@ export function initializePublicClient() {
   );
 }
 ```
-
----
 
 ### Acquire your first token
 
