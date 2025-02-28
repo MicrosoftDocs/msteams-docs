@@ -48,19 +48,21 @@ Step-by-step to a Dev’s progress in building a Teams tab app and important inf
 
 ## Features and benefits of Teams tab app
 
+A tab is a specific area in a channel or chat that displays content or functionality from an integrated app or website. These apps can be either built-in apps (like Planner, SharePoint, or Excel) or custom apps created by your organization or third-party developers.
+
 Teams tabs offer several key features that help enhance collaboration and productivity:
 
-- Embedded web content: With custom tabs, organizations can embed their own web content, applications, or dashboards directly into Teams.
-- Single app tab limit: In channels or meetings, you can pin only one instance of an app per tab. For example, a YouTube tab can only be pinned once per meeting, ensuring a clean and focused experience.
-- Pre-pinned tabs: IT admins can pre-pin tabs in meetings or channels, ensuring that necessary tools and resources are easily accessible to users.
-- Adaptive and responsive: Tabs are designed to adapt to the user’s environment, ensuring content fits seamlessly into the Teams experience.
-- Collaboration: Reuse of SharePoint web parts within the tab.
-- Multi-capability apps: If a tab is added to an app that also has a bot, the bot is also added to the team.
-- Locale awareness: The users can indicate language that is `en-us`.
-- Deep links:
+- **Embedded web content**: With custom tabs, organizations can embed their own web content, applications, or dashboards directly into Teams.
+- **Single app tab limit**: In channels or meetings, you can pin only one instance of an app per tab. For example, a YouTube tab can only be pinned once per meeting, ensuring a clean and focused experience.
+- **Pre-pinned tabs**: IT admins can pre-pin tabs in meetings or channels, ensuring that necessary tools and resources are easily accessible to users.
+- **Adaptive and responsive**: Tabs are designed to adapt to the user’s environment, ensuring content fits seamlessly into the Teams experience.
+- **Collaboration**: Reuse of SharePoint web parts within the tab.
+- **Multi-capability apps**: If a tab is added to an app that also has a bot, the bot is also added to the team.
+- **Locale awareness**: The users can indicate language that is `en-us`.
+- **Deep links**:
   - Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
   - The ability to open a modal dialog from links within a tab.
-- Authentication:
+- **Authentication**:
   - Single sign-on (SSO) capability, if supported.
   - Awareness of Microsoft Entra ID of the current user.
 

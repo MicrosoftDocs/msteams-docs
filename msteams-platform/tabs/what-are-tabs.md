@@ -133,9 +133,9 @@ Teams tab app solution: You create a channel or group tab to enable management o
 
 To make your Teams tab even better, Microsoft offers some handy development tools:
 
-1. JavaScript SDK: This lets you add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
-1. Teams SDK: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
-1. Microsoft Graph REST APIs: This API offers a unified endpoint for accessing Microsoft 365 data. You can query Teams, users, channels, and more, making your app context-aware and fully integrated with Microsoft 365 services.
+1. **JavaScript SDK**: This lets you add Teams-specific features to your tabs. You can access Teams data and customize your tabs with cool functionalities like authentication, deep linking, and context-specific UI elements.
+1. **Teams SDK**: Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
+1. **Microsoft Graph REST APIs**: This API offers a unified endpoint for accessing Microsoft 365 data. You can query Teams, users, channels, and more, making your app context-aware and fully integrated with Microsoft 365 services.
 
 ## Declare custom tab in app manifest
 
