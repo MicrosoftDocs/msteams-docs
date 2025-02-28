@@ -148,8 +148,6 @@ To acquire a token, follow these steps:
 
 The following code snippet shows an example to access a token:
 
-# [JavaScript](#tab/js2)
-
 ```javascript
 
   // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
@@ -189,15 +187,11 @@ The following code snippet shows an example to access a token:
 
 ```
 
----
-
 ### Call an API
 
 After you receive the token, use it to call the API. This ensures that the API is called with a valid token to make authenticated requests to the server.
 
 The following example shows how to make an authenticated request to Microsoft Graph API to access Microsoft 365 data:
-
-# [JavaScript](#tab/js3)
 
 ```javascript
 
@@ -217,8 +211,6 @@ fetch(graphEndpoint, options)
     });
 
 ```
-
----
 
 ### Best practices
 
