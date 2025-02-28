@@ -1,10 +1,11 @@
 ---
 title: Tools and SDKs to Build Teams App
 author: v-sdhakshina
-description: Learn more about the tools such as Teams Toolkit, Yeoman generator for Teams, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
+description: Learn more about the tools such as Teams Toolkit, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 11/28/2024
 ---
 
 # Tools and SDKs
@@ -21,26 +22,25 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | Tools | Why do you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
 | [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Yeoman generator for Teams](https://github.com/pnp/generator-teams) | Yeoman generator or YoTeams allows you to create Teams apps using TypeScript and JavaScript on your terms, in your preferred editor, and without any external or online dependencies. | TypeScript and JavaScript | NA |
 | [Teams Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) | TeamsFx CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
-| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and distribute the app to Teams.  | Supports all languages | Developer Portal for Teams |
+| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
 
 </br>
 
 <details>
-<summary><b>More information on building Teams app with Teams Toolkit and Yeoman Teams Project.</b></summary>
+<summary><b>More information on building Teams app with Teams Toolkit.</b></summary>
 
-| &nbsp; | Teams Toolkit | Yeoman Teams project |
-| -------- | ------------- | ----------------- |
-| Environment variables | Use `.env` file | Use `.env` file |
-| Generate manifest | Teams Toolkit autogenerates when creating projects. | gulp manifest |
-| Deploy Teams app | Automatically update use command `Teams: Update Teams App` |gulp tenant: deploy |
-| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. | Manual |
-| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual |
-| Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. | Manual (Azure Bot) |
-| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel | gulp ngrok-serve |
-| Run Node.js app | npm run teamsfx:dev | gulp serve |
-| One-click debug | F5 or debug in Visual Studio Code and Visual Studio | N/A |
+| &nbsp; | Teams Toolkit |
+| -------- | ------------- |
+| Environment variables | Use `.env` file |
+| Generate manifest | Teams Toolkit autogenerates when creating projects. |
+| Deploy Teams app | Automatically update use command `Teams: Update Teams App` |
+| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. |
+| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
+| Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
+| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel |
+| Run Node.js app | npm run teamsfx:dev |
+| One-click debug | F5 or debug in Visual Studio Code and Visual Studio |
 
 </details>
 
@@ -50,7 +50,7 @@ Teams Platform brings you different SDKs, libraries, and APIs to build and devel
 
 The following flow diagram explains the different SDKs, libraries, and its relations:
 
-:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps."lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
+:::image type="content" source="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Screenshot shows you the list of all tools and SDKs that are available for you to build Teams apps." lightbox="../../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
 :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Library that requires another library to build apps. Your project automatically pulls into another library.</br>
 :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: Library that passes your app a reference to another library. </br>

@@ -5,13 +5,13 @@ description: Learn about Teams Toolkit, its installation, navigation, and user j
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/24/2022
+ms.date: 01/23/2025
 ---
 # Microsoft Teams Toolkit Overview
 
 > [!IMPORTANT]
 >
-> Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
+> Teams Toolkit isn't supported in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
 
@@ -60,7 +60,7 @@ You can create different groupings of cloud resources to run and test your app. 
 
 ### Quick access to Teams Developer Portal
 
-You can access Teams Developer Portal where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
+You can access Teams Developer Portal where you can configure, publish, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-dev-portal.png" alt-text="Screenshot shows the Developer Portal option.":::
 

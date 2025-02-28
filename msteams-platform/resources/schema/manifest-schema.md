@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 10/17/2024
+ms.date: 12/11/2024
 ---
 
 # App manifest
@@ -58,6 +58,28 @@ The following is the sample app manifest schema:
         "color": "A relative path to a full color .png icon — 192px X 192px"
     },
     "accentColor": "A valid HTML color code.",
+    "elementRelationshipSet": {
+      "oneWayDependencies" : [
+        {
+          "element" : {
+            "name" : "composeExtensions",
+            "id" : "composeExtension-id",
+            "commandIds": ["exampleCmd1", "exampleCmd2"]
+          },
+          "dependsOn" : [
+              {"name" : "bots", "id" : "bot-id"}
+          ]
+        }
+      ],
+      "mutualDependencies" : [
+        [
+                {"name" : "bots", "id" : "bot-id"}, 
+                {"name" : "staticTabs", "id" : "staticTab-id"},
+                {"name" : "composeExtensions", "id" : "composeExtension-id"},
+                {"name" : "configurableTabs", "id": "configurableTab-id"}
+        ]
+      ],
+    },
     "copilotAgents": {
         "declarativeAgents": [
             {
@@ -68,6 +90,7 @@ The following is the sample app manifest schema:
     },
     "configurableTabs": [
         {
+            "id": "configurableTab-id",
             "configurationUrl": "https://contoso.com/teamstab/configure",
             "scopes": [
                 "team",
@@ -91,7 +114,7 @@ The following is the sample app manifest schema:
     ],
     "staticTabs": [
         {
-            "entityId": "unique Id for the page entity",
+            "entityId": "idForPage",
             "scopes": [
                 "personal"
             ],
@@ -102,7 +125,13 @@ The following is the sample app manifest schema:
             "name": "Display name of tab",
             "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
             "websiteUrl": "https://contoso.com/content (displayed in web browser)",
-            "searchUrl": "https://contoso.com/content (displayed in web browser)"
+            "searchUrl": "https://contoso.com/content (displayed in web browser)",
+            "requirementSet": {
+                "hostMustSupportFunctionalities": [
+                  {"name": "dialogUrl"},
+                  {"name": "dialogUrlBot"}
+                ]
+            }
         }
     ],
     "supportedChannelTypes": [
@@ -169,6 +198,7 @@ The following is the sample app manifest schema:
     ],
     "composeExtensions": [
         {
+            "id": "composeExtension-id",
             "canUpdateConfiguration": true,
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
             "commands": [
@@ -248,7 +278,13 @@ The following is the sample app manifest schema:
                         "supportsAnonymizedPayloads": false
                     }
                 }
-            ]
+            ],
+            "requirementSet": {
+                "hostMustSupportFunctionalities": [
+                  {"name": "dialogUrl"},
+                  {"name": "dialogUrlBot"}
+                ]
+            }
         }
     ],
     "permissions": [
@@ -379,7 +415,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
-The ID stored in Teams Admin Center is the **External App ID** and it's visible as **ExternalID** on the traces.
+The ID stored in Teams admin center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
 > [!NOTE]
 > If you are submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
@@ -436,7 +472,7 @@ Allows the specification of a default language, and pointers to additional langu
 |Name| Type | Maximum size | Required | Description|
 |---|---|---|---|
 |`defaultLanguageTag`| String | |✔️|The language tag for the strings in this top-level app manifest file. Default is `en-us`.|
-|`defaultLanguageFile`| String | 2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [Copilot agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
+|`defaultLanguageFile`| String | 2048 characters|| A relative file path to the .json file that contains the strings. If unspecified, strings are taken directly from the app manifest file. A default language file is required for [agents that support multiple languages](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent).|
 
 ### localizationInfo.additionalLanguages
 
@@ -466,6 +502,46 @@ A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`. For more information, see [accentColor](../../task-modules-and-cards/cards/cards-reference.md#properties-of-the-connector-card-for-microsoft-365-groups).
 
+## elementRelationshipSet
+
+**Optional** &ndash; Object
+
+Describes relationships between individual app capabilities, including `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. It's used to specify runtime dependencies to ensure that the app launches only in applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `oneWayDependencies`| Array|||Defines one or more unidirectional dependency relationships among app components. Each relationship is represented by a `oneWayDependency` object with a *dependent* `element` and a `dependsOn` [`element`](#element) object.|
+| `mutualDependencies`| Array|||Defines one or more mutual dependency relationships among app capabilities. Each relationship is represented by a `mutualDependency` array of [`element`](#element) objects. |
+
+### element
+
+**Optional** &ndash; Object
+
+Describes an app capability (`element`) in an `elementRelationshipSet`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name`| String enum|| ✔️| The type of app capability. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `id` | String | | ✔️| If there are multiple instances of a bot, tab, or message extension, this property defines a specific instance of the capability. It maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. |
+| `commandIds` | Array of strings||| List of one or more message extension commands that are dependent on the specified `dependsOn` capability. Use only for message extensions. |
+
+### elementRelationshipSet.oneWayDependency
+
+**Optional** &ndash; Object
+
+Describes the unidirectional dependency of one app capability (X) to another (Y). If a Microsoft 365 runtime host doesn't support a required capability (Y), the dependent capability (X) won't load or surface to the user.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `element`| Object||✔️| Represents an individual app capability (represented by [`element`](#element)) that has a one-way runtime dependency on another capability being loaded. |
+| `dependsOn`| Array|| ✔️| Defines one or more app capabilities (each represented by [`element`](#element)) required for the specified `element` to load.|
+
+### elementRelationshipSet.mutualDependencies
+
+**Optional** &ndash; Array of arrays (each containing two or more [`element` objects](#element))
+
+Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
+
 ## copilotAgents
 
 **Optional** &ndash; Object
@@ -493,6 +569,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for configurable tab. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`scopes`|Array of enums|2|✔️|The configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true` |
@@ -505,7 +582,9 @@ Used when your app experience has a team channel tab experience that requires ex
 
 **Optional** &ndash; Array
 
-Defines a set of tabs that can be pinned by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience.
+Defines a set of tabs that can be pinned by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. However, the pinned tabs can be reordered by adding the details of the tab in the same desired order. For more information, see [reorder static personal tabs](../../tabs/how-to/create-personal-tab.md#reorder-tabs).
+
+This property also enables you to set the default landing capability for an app supporting both tab and bot capabilities in personal scope. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 This item is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
@@ -519,6 +598,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`searchUrl`|String|2048 characters||The https:// URL to point to for a user's search queries.|
 |`scopes`|Array of enums|3|✔️|Specifies whether the tab offers an experience in the context of a channel in a team, or an experience scoped to an individual user or group chat. The static tabs support `personal` scope only.|
 |`context` | Array of enums| 8|| The set of `contextItem` contexts where a [tab is supported](../../tabs/how-to/access-teams-context.md). </br> Accepted values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingStage`, `meetingSidepanel`, `teamLevelApp`. </br> Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`. |
+|`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab.|
 
 > [!NOTE]
 >
@@ -526,6 +606,14 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
 > * If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
+
+### staticTabs.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 ## bots
 
@@ -544,6 +632,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. <br>Default value: `false`|
+|`requirementSet`|Object|||Runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the bot.|
 
 ### bots.configuration
 
@@ -587,6 +676,14 @@ A list of commands that your bot can recommend to users. The object is an array 
 |`title`|String|32|✔️|The bot command name.|
 |`description`|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
+### bots.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
 ## connectors
 
 **Optional** &ndash; Array
@@ -607,13 +704,11 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 Defines a message extension for the app.
 
-> [!NOTE]
-> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
-
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for the message extension. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`composeExtensionType`|String||✔️|Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||Authorization related information for the API-based message extension.|
@@ -624,11 +719,12 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`|String|128 characters||Registration ID returned when developer submits the API key through Developer Portal.|
 |`apiSpecificationFile`|String|2048 characters||A relative file path to the API specification file in the manifest package.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `false`|
-|`commands`|Array of objects|10|✔️|Array of commands the message extension supports.|
+|`commands`|Array of objects|10||Array of commands the message extension supports.|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `link`.|
 |`messageHandlers.value.domains`|Array of strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`|
+|`requirementSet`|Object|||Runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the message extension.|
 
 ### composeExtensions.commands
 
@@ -640,7 +736,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|||Type of the command. One of `query` or `action`. <br>Default value: `query` |
-|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the plugin to the user.|
+|`samplePrompts`|Array|5 ||Property used by Microsoft 365 Copilot to display prompts supported by the agent to the user.|
 |`samplePrompts.text`|String|128 characters|✔️|Content of the sample prompt.|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
 |`context`|Array of strings|3 ||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
@@ -664,6 +760,14 @@ Each command item is an object with the following structure:
 |`parameters.choices`|Array of objects|10 items||The choice options for the `choiceset`. Use only when `parameters.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
+
+### composeExtensions.requirementSet
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
 ## permissions
 
@@ -827,7 +931,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** &ndash; String
 
-Specifies the install scope defined for this app by default. The defined scope is the option displayed on the button when a user tries to add the app. Options are:
+Specifies the install scope defined for this app by default. The default install scope is denoted with a **Recommended** option adjacent to the corresponding scope in the scope selection dialog, after the user adds the app. The options are:
 
 * `personal`
 * `team`
@@ -850,7 +954,7 @@ When a group install scope is selected, it defines the default capability when t
 
 **Optional** &ndash; Array
 
-The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom apps or custom apps built for your org (LOB apps).
+The `configurableProperties` block defines the app properties that Teams Administrators can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom apps or custom apps built for your org (LOB apps).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
@@ -882,7 +986,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 **Optional** &ndash; Boolean
 
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The Teams Administrators can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
@@ -890,7 +994,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 2048 characters
 
-The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Tenant admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page. The documentation may include the instructions for admins to facilitate app adoption and app rollout. In the app documentation, you can also include instructions or information about the app that is useful for the tenant admin, users, and other business stakeholders.
+The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Teams Administrators get documentation about the app at this URL. Teams admin center displays the URL in the app details page. The documentation may include the instructions for admins to facilitate app adoption and app rollout. In the app documentation, you can also include instructions or information about the app that is useful for the Teams Administrator, users, and other business stakeholders.
 
 ## subscriptionOffer
 
@@ -1018,7 +1122,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", and "autoRunEvents" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, and `autoRunEvents` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1051,7 +1155,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them. <br>Default value: `false` |
 |`actions.supportsNoItemContext`| Boolean | | | Allows task pane add-ins to activate without the reading pane enabled or a message selected. <br>Default value: `false` |
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -1070,7 +1174,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`contexts`| Array | 7 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -1146,7 +1250,7 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`events.actionId`| String | 64 characters | ✔️ | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. <br>Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the event handling code to run. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the event handling code to run. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -1171,7 +1275,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| Object | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
-|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the "hide", "prefer", or "alternateIcons" properties to take effect. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the `hide`, `prefer`, or `alternateIcons` properties to take effect. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |

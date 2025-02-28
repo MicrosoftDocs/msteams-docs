@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to build Hello World app with C# by setting up a new project, build and deploy tab, bot and message extension apps.
   audience: Developer
   level: Beginner
-  ms.date: 01/07/2024
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
@@ -66,6 +66,9 @@ items:
     
           :::image type="content" source="~/assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Teams Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Teams+Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     ## Set up your Teams development tenant
 
     A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
@@ -103,6 +106,9 @@ items:
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
 
     1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+your+Teams+development+tenant&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Get a free Azure account
 
@@ -145,6 +151,9 @@ items:
        The Teams tab app is created in few seconds.
 
         :::image type="content" source="~/assets/images/sbs-csharp/get-started.png" alt-text="Screenshot shows the Project Creation." lightbox="~/assets/images/sbs-csharp/get-started-tab-vs.png":::     
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+project+workspace+for+your+tab+app+using+C%23&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Take a tour of tab app source code
       
@@ -193,11 +202,14 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     ## Build and run your app locally in Visual Studio
 
     To build and run your app locally:
 
-    1. Select **Debug** > **Start Debugging** or enter **F5**.
+    1. Select **Debug** > **Start Debugging** or select **F5**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/start-debugging.png" alt-text="Screenshot shows the selection of start debugging action.":::
 
@@ -205,11 +217,20 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot shows the selection of Add.":::
+        :::image type="content" source="~/assets/images/sbs-csharp/select-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+
+    1. Select **Open** to open the app in personal scope.
+
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
        Congratulations, your first tab app is running on Teams!
 
         :::image type="content" source="~/assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally+in+Visual+Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>

@@ -66,7 +66,7 @@ The following code is an example of how your page and the Teams client communica
 <html>
 <head>
 ...
-    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js" 
       integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
       crossorigin="anonymous" >
     </script>
@@ -85,7 +85,7 @@ The following code is an example of how your page and the Teams client communica
 
 ***
 
-For more information on how to create and add a content page to a personal tab, see [add a content page to personal tab](../create-personal-tab.md#add-a-content-page-to-the-personal-tab).
+For more information on how to create and add a content page to a personal tab, see [add a content page to the tab](../create-personal-tab.md#add-a-content-page-to-the-tab).
 
 The following images show the configuration of an HTML content page and the output of content page in tab:
 
