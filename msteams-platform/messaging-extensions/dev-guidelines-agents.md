@@ -680,7 +680,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Microsoft 365 Copilot.":::
 
 * If a user can change information on the card through a dialog, Stageview, or directly from the card, we recommend that Adaptive Card support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.microsoft.com/?topic=CardMetadata), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Message extension agents in Microsoft 365 Copilot apps
