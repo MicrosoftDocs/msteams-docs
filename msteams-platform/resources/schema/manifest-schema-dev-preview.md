@@ -117,6 +117,11 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
             }
         }
     ],
+    "backgroundLoadConfiguration": {
+        "tabConfiguration": {
+            "contentUrl": "https://www.contoso.com/content?host=msteams&isBackgroundLoad=true"
+        }
+    },
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
@@ -612,6 +617,17 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
+## backgroundLoadConfiguration
+
+**Optional** &ndash; Object
+
+Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `tabConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
+| `tabConfiguration.contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 
 ## bots
 
