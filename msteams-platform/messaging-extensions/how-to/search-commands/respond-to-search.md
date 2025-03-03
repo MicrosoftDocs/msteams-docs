@@ -94,9 +94,9 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-The config response is the data returned by the server or application to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a config response is used to prompt the user to set up the message extension and provide any necessary configuration.
+The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
-The following JSON response is an example of a config response received from the app:
+The following JSON response is an example of a `config` response received from the app:
 
 ```json
 {
@@ -161,7 +161,9 @@ If your service requires user authentication, the users must sign in before they
 
 ### `message` response type
 
-`message` is used when your extension needs to display a plain text message. The `message` response type doesn't support formatting.
+A `message` response is used when your extension needs to display a plain text message. The `message` response type doesn't support formatting.
+
+The following code snippet is an example of a `message` response returned by the app:
 
 ```csharp
 
