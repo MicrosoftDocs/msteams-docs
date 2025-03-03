@@ -50,7 +50,7 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 > [!NOTE]
 >
-> * NAA isn't supported by all host environments (specialized government clouds or Mac systems), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
+> * NAA isn't supported by all host environments (specialized government clouds or Microsoft 365 admin centre), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
 > * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:
