@@ -1344,7 +1344,7 @@ Properties related to app support for Microsoft Intune.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the `integer.integer` format, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app does not attest to be Intune MAM compliant. |
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## Create an app manifest file
 
