@@ -86,6 +86,7 @@ If an app is configured with personal and shared scopes along with a default ins
     >
     > * The **Recommended** button indicates the scope in which the app provides best usage experience.
     > * The **View more** option lists the respective channel, chat, or meeting options available for the user.
+    > * When adding an app to a meeting, upcoming scheduled meetings might not appear. To add an app to an upcoming meeting, see [tabs in Teams meetings](../../apps-in-teams-meetings/build-tabs-for-meeting.md#tabs-in-teams-meetings).
 
 </details>
 </br>
