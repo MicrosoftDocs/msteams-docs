@@ -5,7 +5,7 @@ description: Learn how to enable app caching for tab app in Teams, improve app's
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 02/25/2025
+ms.date: 03/05/2025
 ---
 
 # App caching for your tab app
