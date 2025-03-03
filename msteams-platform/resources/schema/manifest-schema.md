@@ -546,11 +546,11 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
+|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
 
 ### declarativeAgents
 
@@ -1206,7 +1206,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the menu item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
+|`tabs.groups.controls.items.actionId`| String | 64 characters | | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
 |`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))). This API installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
@@ -1335,6 +1335,16 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.|
+
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## Create an app manifest file
 
