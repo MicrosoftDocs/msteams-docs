@@ -5,24 +5,25 @@ description: Learn how to respond to the search command from a message extension
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
+ms.date: 01/20/2025
 ---
 # Respond to search command
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered with the following conditions:
+After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
+This document guides you on how to respond to user requests in the form of cards and previews and the conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
 | Property name | Purpose |
 |---|---|
 | `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
-| `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
+| `parameters` | Array of parameters. Each parameter object contains the parameter name along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
@@ -91,9 +92,11 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
-### Configuration response
+### `config` response type
 
-Configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. The following code is an example for message extension configuration:
+The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
+
+The following JSON response is an example of a `config` response received from the app:
 
 ```json
 {
@@ -152,27 +155,32 @@ Configuration response is the data returned by the server or application to conf
 }
 ```
 
-The following response is the configuration response that appears when the user interacts with the compose extension:
+### `auth` response type
 
-```json
-{
-    "composeExtension": {
-        "type": "config",
-        "suggestedActions": {
-            "actions": [
-                {
-                    "type": "openUrl",
-                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
-                }
-            ]
-        }
-    }
-}
+If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication).
+
+### `message` response type
+
+A `message` response is used when your extension needs to display a plain text message. The `message` response type doesn't support formatting.
+
+The following code snippet is an example of a `message` response returned by the app:
+
+```csharp
+
+return new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "message",
+                Text = "Here is the message you want to show!"
+            }
+    };
+
 ```
 
-:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+:::image type="content" source="../../../assets/images/messaging-extension/message-response-type.png" alt-text="Screenshot shows the `message` response type.":::
 
-### Response card types and previews
+### Response card types for `result` and previews
 
 > [!NOTE]
 > Message extension search results don't support padding.
@@ -192,14 +200,14 @@ For more information about the connector card for Microsoft 365 Groups, see [Usi
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
 
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
+* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a hero or a thumbnail card.
 * Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
 
-For Hero or Thumbnail card, except the invoke action other actions such as button and tap aren't supported in the preview card.
+For the hero or thumbnail card, except for the invoke action, other actions such as button and tap aren't supported in the preview card.
 
-To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a Hero or Thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
+To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a hero or thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
 
-For Hero and Thumbnail cards, you don't need to specify a preview property, a preview is generated by default.
+For hero and thumbnail cards, you don't need to specify a preview property, a preview is generated by default.
 
 ### Response example
 
@@ -475,7 +483,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of prepopulated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
-The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
+The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and the `value` set to `true`, as shown in the following object:
 
 ```json
 {
@@ -502,7 +510,7 @@ The default query has the same structure as any regular user query, with the `na
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+| Teams message extension search | This sample shows how to build a search-based message extension. It searches NuGet packages and displays the results in search-based message extension.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 |Teams message extension auth and config | This sample shows a message extension that has a configuration page, accepts search requests, and returns results after the user signs in. It also showcases zero app install link unfurling along with normal link unfurling |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
