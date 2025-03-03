@@ -82,6 +82,10 @@ When the sign in request completes and redirects back to your page, it must perf
 1. Generate a security code, a random number. You must cache this code on your service, with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
 1. Call `authentication.notifySuccess` and pass the security code.
 
+    > [!IMPORTANT]
+    >
+    > Be aware that there are security considerations for the `notifySuccess()` **result** parameter. For additional information, refer to the remarks section of the TeamsJS reference documentation for the [notifySuccess()](/javascript/api/%40microsoft/teams-js/authentication#@microsoft-teams-js-authentication-notifysuccess) function.
+
 At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 
 #### Reissued request example
