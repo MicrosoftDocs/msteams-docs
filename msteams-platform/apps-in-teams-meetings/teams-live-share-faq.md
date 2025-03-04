@@ -5,7 +5,7 @@ description: Learn more about Live Share SDK frequently asked questions related 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 04/07/2022
+ms.date: 01/23/2025
 ---
 
 ---
@@ -137,9 +137,9 @@ While there aren't any enforced limits, you must be mindful of how many messages
 </details>
 
 <details>
-<summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environment?</b></summary>
 
-Live Share is only supported in Government Community Cloud (GCC) tenants.
+Live Share is supported only in GCC environment.
 
 <br>
 

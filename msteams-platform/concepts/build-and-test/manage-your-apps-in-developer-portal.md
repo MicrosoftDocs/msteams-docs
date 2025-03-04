@@ -4,18 +4,12 @@ description: Learn how to configure, develop, publish, manage, validate against 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 02/28/2023
+ms.date: 01/23/2025
 ---
 
 # Manage your apps in Developer Portal
 
-After you create or upload your app, you can manage your apps in Developer Portal with the following:
-
-* [Overview](#overview)
-* [Configure](#configure)
-* [Advanced](#advanced)
-* [Develop](#develop)
-* [Publish](#publish)
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.
 
 ## Overview
 
@@ -56,7 +50,49 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Connector isn't available for Government Community Cloud (GCC) tenants.
+  > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
+* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package.
+
+    :::image type="content" source="../../assets/images/tdp/package-editor.png" alt-text="Screenshot shows you the App package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor.png":::
+
+    After you edit or add new files to your app package, you can either discard or update the package. If you select **Update**, the Developer Portal reviews the files and identifies errors. You can save the package with errors, but you must resolve them before you publish.
+
+    :::image type="content" source="../../assets/images/tdp/app-package-editor-update.png" alt-text="Screenshot shows you the App package editor to update the new files in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-update.png":::
+
+    > [!NOTE]
+    > If your app manifest version is v1.19, you can add a declarative agent through this app package editor. To create a declarative agent, add a JSON file that defines the agent's behavior. You can also create a YAML file to define custom APIs and connect them to the declarative agent.
+
+    <br>
+    <details>
+    <summary><b>Add a declarative agent to your app package using Developer Portal</b></summary><br>
+
+    Before you add a declarative agent to your app package, ensure your app package is updated to the latest version v1.19.
+
+    1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
+    1. Go to **Configure** > **App package editor**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-tdp.png" alt-text="Screenshot shows you the app package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-tdp.png":::
+
+    1. Select the ellipses (**...**) under **Actions** of **manifest.json** file and select **Edit**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-edit.png" alt-text="Screenshot shows you the app package editor to edit your app package.":::
+
+    1. Add the manifest property `copilotAgents` and the sub property `declarativeAgents`, and define required details. Select **Save**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-editor-da.png" alt-text="Screenshot shows you how to declarative agents into your app package." lightbox="../../assets/images/tdp/app-package-editor-da.png":::
+
+    1. Select **New file** > **JSON file** and define your agent's behavior.
+
+        :::image type="content" source="../../assets/images/tdp/package-editor-da-json.png" alt-text="Screenshot shows you how to add a declarative agents behavior into your app package." lightbox="../../assets/images/tdp/package-editor-da-json.png":::
+
+    1. Select **Update**.
+
+        :::image type="content" source="../../assets/images/tdp/app-package-update.png" alt-text="Screenshot shows you how to update declarative agents behavior into your app package." lightbox="../../assets/images/tdp/app-package-update.png":::
+
+       Now, the Developer Portal reviews the files and identifies any errors, which you must resolve before you publish.
+
+    </details>
+
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
   > The maximum limit for RSC permissions is 16.
@@ -123,12 +159,11 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
-* **App validation**: Evaluate your app package based on the test cases that Microsoft uses to review your app, app manifest, basic information of your app, and bot capability. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution. For more information on Microsoft test cases, see [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Commercial marketplace certification policies](/legal/marketplace/certification-policies).
+* **App validation**: Evaluate your app package based on the test cases that Microsoft uses to review your app, app manifest, basic information of your app, and bot capability. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
-    If your app fails any test case, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
+    :::image type="content" source="../../assets/images/tdp/app-validation-home-get-started.png" alt-text="Screenshot shows you the App validation with get started in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-home-get-started.png":::
 
-    > [!NOTE]
-    > App validation is supported only for the apps with bot capability.
+    If your app fails any test case, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report. For more information on Microsoft test cases, see [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Commercial marketplace certification policies](/legal/marketplace/certification-policies).
 
     <br>
     <details>
@@ -176,8 +211,10 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     </details>
 
-   > [!NOTE]
-   > The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
+    > [!NOTE]
+    >
+    > * App validation is supported only for the apps with bot capability.
+    > * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
 * **Publish to org**:
 
