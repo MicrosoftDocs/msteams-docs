@@ -160,25 +160,7 @@ To make your Teams tab even better, Microsoft offers some handy development tool
 
 ### User scenarios
 
-**Scenario:** Bring an existing web-based resource inside Teams.<br>
-**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
-
-**Scenario:** Add support pages to a Teams bot or messaging extension.<br>
-**Example:** You create static tabs that provide **about** and **help** webpage content to users.
-
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
-**Example:** You create a channel or group tab with deep linking to individual items.
-
-**Scenario 1**: A project manager needs to track the progress of multiple ongoing projects and collaborate with her team in real-time:
-
-* Monitor progress
-* Manage dashboard
-* Add, remove, assign tasks to the team
-* View project timeline, and deadline
-
-Teams tab app solution: You create a dashboard tab app so that the manager can do all the tasks in one app without having to switch between multiple apps
-
-**Scenario 2**: A manager needs to review and approve leave requests:
+**Scenario**: A manager needs to review and approve leave requests:
 
 * Leave management
 * Calendar with leaves for employees, and approve or reject status
@@ -191,10 +173,9 @@ Teams tab app solution: You create a channel or group tab to enable management o
 
 To build a comprehensive Teams tab app, you will likely combine all three tools:
 
-* Teams JS SDK: For accessing Teams-specific features and interacting with the Teams client, such as initializing the app and getting user context.
-* Microsoft Graph REST API: For accessing broader Microsoft 365 data (e.g., user profiles, teams, channels, messages, calendar data) to display or manipulate this data in your app.
-* Teams SDK: For advanced functionality like handling authentication, working with Teams’ UI elements, and implementing task modules or dialogs.
-*
+* **Teams JS SDK**: For accessing Teams-specific features and interacting with the Teams client, such as initializing the app and getting user context.
+* **Microsoft Graph REST API**: For accessing broader Microsoft 365 data (e.g., user profiles, teams, channels, messages, calendar data) to display or manipulate this data in your app.
+* **Teams SDK**: For advanced functionality like handling authentication, working with Teams’ UI elements, and implementing task modules or dialogs.
 
 *Example Workflow*:
 
@@ -203,6 +184,17 @@ To build a comprehensive Teams tab app, you will likely combine all three tools:
 3. Handle authentication and user-specific data with the Teams SDK, ensuring that your app complies with security and permission requirements.
 
 The Teams JS SDK, Microsoft Graph REST API, and Teams SDK are essential for creating powerful and interactive Teams tab apps. They help your app access data, provide a smooth user experience, and integrate seamlessly with the Microsoft ecosystem, all while staying tightly connected within the Teams client.
+
+**Some more scenarios**:
+
+**Scenario:** Bring an existing web-based resource inside Teams.<br>
+**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
+
+**Scenario:** Add support pages to a Teams bot or messaging extension.<br>
+**Example:** You create static tabs that provide **about** and **help** webpage content to users.
+
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
+**Example:** You create a channel or group tab with deep linking to individual items.
 
 ### Declare custom tab in app manifest
 
