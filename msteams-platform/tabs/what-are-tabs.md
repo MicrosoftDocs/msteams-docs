@@ -26,7 +26,7 @@ ms.date: 02/06/2025
 
 ----
 
-The Teams tab app capability enables developers to embed web content directly within Microsoft Teams providing a rich and interactive users experience. Tabs are client-aware webpages that can be embedded in Microsoft Teams, Outlook, and Microsoft 365. They are simple HTML <iframe/> tags that point to external domains declared in the app manifest. You can integrate tabs into various areas within Teams, such as channels, group chats, or personal apps. With tabs, organizations can seamlessly display their custom web-based applications or content within the Teams environment to enhance productivity and collaboration.
+The Teams tab app capability enables developers to embed web content directly within Microsoft Teams providing a rich and interactive users experience. Tabs are client-aware webpages that can be embedded in Microsoft Teams, Outlook, and Microsoft 365. They are simple HTML elements that point to external domains declared in the app manifest. You can integrate tabs into various areas within Teams, such as channels, group chats, or personal apps. With tabs, organizations can seamlessly display their custom web-based applications or content within the Teams environment to enhance productivity and collaboration.
 
 Tabs are great to improve existing workflows by embedding tools, services, or dashboards, so users don't have to leave Teams to access external content. Here’s a breakdown of how the various applications of Microsoft Teams tab apps can be used:
 
