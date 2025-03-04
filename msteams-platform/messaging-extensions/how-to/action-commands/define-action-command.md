@@ -5,6 +5,7 @@ description: Learn to define message extension action commands with app manifest
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 01/03/2025
 ---
 
 # Define message extension action commands
@@ -23,7 +24,7 @@ First, you must decide the location from where your action command must be invok
 
     Commands context = `compose`
 
-* Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams, action command is invoked by @mentioning in the command box. For example, **@your-app-name**.
+* Command box: By using / in the command box. For example, **/your-app-name**.
 
     Commands context = `commandBox`
 
