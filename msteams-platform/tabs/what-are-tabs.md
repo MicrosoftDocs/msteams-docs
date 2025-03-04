@@ -44,8 +44,23 @@ Here are a few examples of a tab app:
 * Trello: Bring your Trello boards into Teams for seamless project management.
 * OneNote: Create a shared space for notes within the team.
 
+## Types and scope of Teams tab app
+
+There are two main types of tabs you can use:
+
+* Static Tabs: These show fixed content, perfect for dashboards, reports, or documents. They can be added in:
+  * **Personal Scope**: For individual users, pinned to the left navigation bar.
+  * **Group Chat, Channel, or Meeting Scope**: For group chats, channels, or meetings, extending the same user experience for collaboration.
+* **Configurable Tabs**: These adjust content based on user input or settings, ideal for apps like project management tools or customer service applications.
+
 > [!IMPORTANT]
 > Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+
+These tabs in Teams can be used in three scopes:
+
+* **Personal**: Scoped to individual users, usually pinned to the left navigation bar.
+* **Group Chat**: Behaves like apps and can be pinned to each chat.
+* **Teams**: Serves a similar function as apps in team channels, with one instance per app.
 
 The following images show tabs added to different contexts in Teams:
 
@@ -80,21 +95,6 @@ The following images show tabs added to different contexts in Teams:
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
 
 ---
-
-## Types and scope of Teams tab app
-
-There are two main types of tabs you can use:
-
-* Static Tabs: These show fixed content, perfect for dashboards, reports, or documents. They can be added in:
-  * **Personal Scope**: For individual users, pinned to the left navigation bar.
-  * **Group Chat, Channel, or Meeting Scope**: For group chats, channels, or meetings, extending the same user experience for collaboration.
-* **Configurable Tabs**: These adjust content based on user input or settings, ideal for apps like project management tools or customer service applications.
-
-These tabs in Teams can be used in three scopes:
-
-* **Personal**: Scoped to individual users, usually pinned to the left navigation bar.
-* **Group Chat**: Behaves like apps and can be pinned to each chat.
-* **Teams**: Serves a similar function as apps in team channels, with one instance per app.
 
 These tabs can be utilized in three distinct scopes: `personal`, `groupchat`, and `teams`. [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) to group chats, channels, or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
 
