@@ -35,6 +35,8 @@ Tabs are great to improve existing workflows by embedding tools, services, or da
 * Tab customization
 * Real-time collaboration
 
+Include custom tabs in your app, enabling a richer, more integrated experience within Teams. For detailed information on how to enhance your app with Teams-specific features, see the [Teams JavaScript client library](/javascript/api/overview/msteams-client).
+
 Here are a few examples of a tab app:
 
 * Planner: Add a Planner tab to manage tasks and projects.
