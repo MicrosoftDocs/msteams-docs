@@ -107,35 +107,6 @@ The following table helps you determine the best fit for your app:
 |[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️| ✔️ |
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ❌ |
 
-## User scenarios
-
-**Scenario:** Bring an existing web-based resource inside Teams.<br>
-**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
-
-**Scenario:** Add support pages to a Teams bot or messaging extension.<br>
-**Example:** You create static tabs that provide **about** and **help** webpage content to users.
-
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
-**Example:** You create a channel or group tab with deep linking to individual items.
-
-**Scenario 1**: A project manager needs to track the progress of multiple ongoing projects and collaborate with her team in real-time:
-
-* Monitor progress
-* Manage dashboard
-* Add, remove, assign tasks to the team
-* View project timeline, and deadline
-
-Teams tab app solution: You create a dashboard tab app so that the manager can do all the tasks in one app without having to switch between multiple apps
-
-**Scenario 2**: A manager needs to review and approve leave requests:
-
-* Leave management
-* Calendar with leaves for employees, and approve or reject status
-* Leave types available
-* Messages or notification for leaves or approvals
-
-Teams tab app solution: You create a channel or group tab to enable management of team leaves, streamline approval process, and maintain communication in real time.
-
 ## Enhance Your Teams Tab with These Tools
 
 To make your Teams tab even better, Microsoft offers some handy development tools:
@@ -186,6 +157,35 @@ To make your Teams tab even better, Microsoft offers some handy development tool
     GET <https://graph.microsoft.com/v1.0/teams/{team-id}/channels>
 
     </details>
+
+### User scenarios
+
+**Scenario:** Bring an existing web-based resource inside Teams.<br>
+**Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
+
+**Scenario:** Add support pages to a Teams bot or messaging extension.<br>
+**Example:** You create static tabs that provide **about** and **help** webpage content to users.
+
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
+**Example:** You create a channel or group tab with deep linking to individual items.
+
+**Scenario 1**: A project manager needs to track the progress of multiple ongoing projects and collaborate with her team in real-time:
+
+* Monitor progress
+* Manage dashboard
+* Add, remove, assign tasks to the team
+* View project timeline, and deadline
+
+Teams tab app solution: You create a dashboard tab app so that the manager can do all the tasks in one app without having to switch between multiple apps
+
+**Scenario 2**: A manager needs to review and approve leave requests:
+
+* Leave management
+* Calendar with leaves for employees, and approve or reject status
+* Leave types available
+* Messages or notification for leaves or approvals
+
+Teams tab app solution: You create a channel or group tab to enable management of team leaves, streamline approval process, and maintain communication in real time.
 
 ### How These APIs and SDKs Work Together
 
