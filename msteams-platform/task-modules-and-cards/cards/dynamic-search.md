@@ -75,7 +75,7 @@ The following image illustrates mobile experience of typeahead search:
 
 ### Schema properties
 
-The following properties are the new additions to the [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable typeahead search:
+The following properties are the new additions to the [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) schema to enable typeahead search:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
