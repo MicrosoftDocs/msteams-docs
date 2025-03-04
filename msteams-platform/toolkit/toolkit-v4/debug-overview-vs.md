@@ -80,6 +80,9 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-disable-deploy.png" alt-text="Screenshot shows the uncheck deploy in configuration properties." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-disable-deploy.png":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Launch+Teams+app+as+a+web+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-overview-vs%23launch-teams-app-as-a-web-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-overview-vs.md&documentVersionIndependentId=38af336b-e729-8ca9-f2dd-10d20f062584&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Next
 
 > [!div class="nextstepaction"]
