@@ -42,6 +42,9 @@ Here are a few examples of a tab app:
 * Trello: Bring your Trello boards into Teams for seamless project management.
 * OneNote: Create a shared space for notes within the team.
 
+> [!IMPORTANT]
+> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+
 The following images show tabs added to different contexts in Teams:
 
 # [Personal](#tab/personal)
@@ -77,9 +80,6 @@ The following images show tabs added to different contexts in Teams:
 ---
 
 ## Types and scope of Teams tab app
-
-> [!IMPORTANT]
-> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 
 There are two main types of tabs you can use:
 
