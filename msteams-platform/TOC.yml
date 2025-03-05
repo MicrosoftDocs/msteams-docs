@@ -437,7 +437,7 @@
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking, device permissions for tabs
   - name: Create a tab
-    href: tabs/how-to/create-personal-tab.md
+    href: tabs/how-to/create-a-tab-app.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
