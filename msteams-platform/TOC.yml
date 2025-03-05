@@ -38,6 +38,9 @@
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
+  - name: Preview Teams platform features in development
+    href: resources/dev-preview/developer-preview-intro.md 
+    displayName: developer preview, preview features
 - name: Plan your app
   items:
   - name: Overview
