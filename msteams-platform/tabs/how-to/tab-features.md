@@ -13,6 +13,11 @@ ms.date: 01/03/2025
 
 Step-by-step to a Dev’s progress in building a Teams tab app and important information they may need:
 
+:::image type="content" source="../../assets/images/tab-images/tab-progress-1.png" alt-text="tab-progress-1":::
+
+:::image type="content" source="../../assets/images/tab-images/tab-progress-2.png" alt-text="tab progress 2":::
+
+<!--
 1. Understand key concepts and prerequisites:
     - Introduction to Tabs, authentication and permissions for access to Graph APIs, and User authentication with AAD.
 2. Set up Environment:
@@ -35,6 +40,7 @@ Step-by-step to a Dev’s progress in building a Teams tab app and important inf
     - Code snippet or examples, if and as needed
 8. Test and debug app
 9. Publish app
+-->
 
 ### Information required during app building
 
