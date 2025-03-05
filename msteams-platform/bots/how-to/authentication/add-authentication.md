@@ -444,15 +444,15 @@ and when for these, and just reference that from here, along with the set of ste
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
 
+   > [!NOTE]
+   > OAuth isn't supported in the group chat or channel scopes. If you enable and install your bot in group chats or channels, users must authenticate in their personal scopes before they can use the bot in the group chat or channel.
+
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list
 that you can use to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
-
-> [!NOTE]
-> OAuth isn't supported in the group chat or channel scopes. If you enable and install your bot in group chats or channels, users must authenticate in their personal scopes before they can use the bot in the group chat or channel.
 
 Teams is an entirely cloud-based product. It requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 To set up ngrok in preparation for running your Teams app locally, follow these steps:
