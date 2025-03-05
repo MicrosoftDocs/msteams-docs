@@ -41,8 +41,8 @@ To update the development environment variables:
     - For `MicrosoftAppPassword`, update the client secret.
     - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
-    - > [!NOTE]
-      > The `OAuth redirect URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure.
+    > [!NOTE]
+    > The `OAuth URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure.
 
 1. Save the file.
 

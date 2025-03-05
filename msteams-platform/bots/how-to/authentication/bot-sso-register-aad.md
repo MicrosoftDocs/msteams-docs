@@ -379,7 +379,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
-        > The `OAuth redirect URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet.
+        The `OAuth redirect URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet.
 
     1. Enter the front-channel logout URL.
     1. Select the tokens you want Microsoft Entra ID to send for your app.
@@ -739,7 +739,8 @@ You can configure authentication for multiple platforms as long as the URL is un
     1. Enter the redirect URI. The URI should be unique.
 
         > [!NOTE]
-        > The URL mentioned in **Redirect URIs** is an example.
+        - The URL mentioned in **Redirect URIs** is an example.
+        - The `OAuth redirect URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure.
 
     1. Enter the front-channel logout URL.
     1. Select the tokens you want Microsoft Entra ID to send for your app.
