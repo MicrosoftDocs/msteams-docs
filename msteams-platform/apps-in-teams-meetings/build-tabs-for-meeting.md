@@ -19,7 +19,7 @@ Tabs allow the meeting participants to access services and content in a specific
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stageview.
 
 > [!NOTE]
-> When adding an app from Microsoft Teams store to a meeting, upcoming scheduled meetings might not appear.
+> When adding an app from Microsoft Teams Store to a meeting, upcoming scheduled meetings might not appear.
 
 ### Meeting details view
 
