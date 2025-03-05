@@ -73,7 +73,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
+   > [!NOTE]
+   > To handle authentication and token exchange, it's necessary to add `token.botframework.com` to the `validDomains` property for bots using the Bot Framework.
+
+1. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>
 <details>
