@@ -218,6 +218,9 @@ items:
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 
     1. Select **Debug in Test Tool (Preview)**.
+
+       > [!NOTE]
+       > If you want to debug in either Teams or Copilot, select **"Debug in Teams** or **Debug in Copilot**.
      
     1. Select the **F5** key.   
 

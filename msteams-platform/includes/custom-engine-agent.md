@@ -54,5 +54,3 @@
    >           ], 
    >      
    >        ```
-   >
-   >     * Remove the `validateManifest` and `validateAppPackage` from `teamsapp.local.yml` and `teamsapp.yml` file in your app.
