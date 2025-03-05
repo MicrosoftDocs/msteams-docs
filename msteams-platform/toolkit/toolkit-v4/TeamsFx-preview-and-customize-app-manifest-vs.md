@@ -35,7 +35,7 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. Select **Prepare Teams App Dependencies** or **Provision in the Cloud...** to generate environment variables for local or remote Teams app.
+1. Click F5 or select **Provision in the Cloud...** to generate environment variables for local or remote Teams app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/provision-in-the-cloud.png" alt-text="Screenshot shows the app trigger in local or remote.":::
 
