@@ -23,7 +23,7 @@
    >      
    >        ```
 >
-   >     * Ensure that the `scopes` is set as `copilot`:
+   >     * Ensure that the `scopes` is set as `personal`:
    >
    >        ```json
    >        "bots": [ 
@@ -32,7 +32,7 @@
    >              "scopes": ["groupChat"], 
    >              "commandLists": [ 
    >                 { 
-   >                 "scopes": ["copilot"], 
+   >                 "scopes": ["personal"], 
    >                 "commands": [ 
    >                    { 
    >                       "title": "Sample prompt title", 
