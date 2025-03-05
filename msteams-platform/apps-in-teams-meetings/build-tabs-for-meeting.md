@@ -5,7 +5,7 @@ description: Learn to build a tab for a meeting chat, meeting side panel, and me
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 12/05/2023
+ms.date: 03/05/2025
 ---
 
 # Build tabs for meeting
@@ -19,7 +19,7 @@ Tabs allow the meeting participants to access services and content in a specific
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stageview.
 
 > [!NOTE]
-> When adding an app from Microsoft Teams store to a meeting, future scheduled meetings might not appear.
+> When adding an app from Microsoft Teams store to a meeting, upcoming scheduled meetings might not appear.
 
 ### Meeting details view
 
