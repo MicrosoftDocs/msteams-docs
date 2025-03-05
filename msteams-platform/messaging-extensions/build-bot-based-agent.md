@@ -163,11 +163,9 @@ To create a bot-based search message extension agent using Visual Studio, follow
     The tunnel you created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
-1. Right-click the project menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click the project menu and select **Teams Toolkit** > **Select Microsoft 365 Account**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
-
-   If prompted, sign in with a Microsoft 365 account.
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Select Microsoft 365 Account option under Teams Toolkit in Visual Studio app project.":::
 
 1. In the debug dropdown menu, select **Microsoft Teams (browser)**. Visual Studio launches Teams web client.
 1. Select **Add**. The message extension is added to Teams.

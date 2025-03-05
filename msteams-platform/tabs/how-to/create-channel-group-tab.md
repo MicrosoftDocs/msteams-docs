@@ -873,9 +873,9 @@ After you set up your project workspace with Teams Toolkit, build your tab proje
 
 To build and run your app:
 
-1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Project** > **Teams Toolkit** > **Select Microsoft 365 Account**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to prepare Teams app dependencies for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to select Microsoft 365 account for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 

@@ -185,7 +185,7 @@ items:
 
     1. In the **Solution Explorer**, under **Solution MyTeamsApp**, right-click on **MyTeamsApp**.
 
-    1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+    1. Select **Teams Toolkit** > **Select Microsoft 365 Account**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="~/assets/images/sbs-csharp/teams-app-dependencies.png":::
     

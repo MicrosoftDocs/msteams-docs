@@ -850,9 +850,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
        The tunnel you created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
-
-      If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
+   1. Right-click the menu and select **Teams Toolkit** > **Select Microsoft 365 Account**.
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 

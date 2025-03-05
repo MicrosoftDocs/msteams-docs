@@ -1,7 +1,7 @@
 ---
 title: Debug Teams App Locally 
 author: surbhigupta 
-description: Learn how to set up dev tunnel for bots and message extensions and prepare Teams Toolkit to debug your Teams app locally using Visual Studio.
+description: Learn how to set up dev tunnel for bots and message extensions to debug your Teams app locally using Visual Studio.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -32,7 +32,7 @@ In the debug dropdown menu:
 To debug your app after you create a project, perform the following steps:
 
 1. Right-click on your project.
-1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Teams Toolkit** > **Select Microsoft 365 Account**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
 
@@ -69,7 +69,7 @@ To debug your app after you create a project, perform the following steps:
    > [!NOTE]
    > When you debug a notification bot app, ensure that you post HTTP request to `http://localhost:5130/api/notification` in order to trigger notification. If you've selected HTTP trigger when creating the project, you can use any API tools such as, cURL (Windows Command Prompt), Postman, or any other API tool.
 
-   Before you try to run the Teams app locally, if you make any changes to the app manifest (previously called Teams app manifest) file `/appPackage/manifest.json`, ensure that you perform the **Prepare Teams App Dependencies** command.
+   Before you try to run the Teams app locally, if you make any changes to the app manifest (previously called Teams app manifest) file `/appPackage/manifest.json`, ensure that you choose the debug profile with prepare dependencies.
 
 ## Next step
 
