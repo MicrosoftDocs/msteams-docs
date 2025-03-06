@@ -166,7 +166,7 @@ Example of the response:
       
 ```
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
  protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -231,6 +231,36 @@ attachment.preview = {
 contentType: "application/vnd.microsoft.card.thumbnail",
 }
 
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_app_based_link_query(self, turn_context: TurnContext, query):
+    """
+    Handles unfurling links when a user pastes them in a conversation.
+    """
+    # Create a ThumbnailCard for the unfurled link
+    attachment = ThumbnailCard(
+        title="Thumbnail Card",  # Title for the card
+        text=query.url,  # Display the URL that was pasted
+        images=[
+            # Add an image for the card (example image from GitHub)
+            CardImage(
+                url="https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png"
+            )
+        ],
+    ).to_attachment()
+
+    # Prepare a MessagingExtensionResult with the unfurled link
+    result = MessagingExtensionResult(
+        type="result",  # Indicates this is a result
+        attachment_layout="list",  # Use list layout
+        attachments=[attachment],  # Include the attachment
+    )
+
+    # Return the response with the unfurled link
+    return MessagingExtensionResponse(compose_extension=result)
 ```
 
 ---

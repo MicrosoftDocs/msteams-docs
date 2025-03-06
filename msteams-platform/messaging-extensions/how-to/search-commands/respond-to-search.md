@@ -203,7 +203,7 @@ For Hero and Thumbnail cards, you don't need to specify a preview property, a pr
 
 ### Response example
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -398,11 +398,78 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_messaging_extension_query(self, context, query):
+    search_query = query.parameters[0].value
+
+    response = requests.get(
+        "http://registry.npmjs.com/-/v1/search",
+        params={"text": search_query, "size": 8},  # Limit results to top 8
+    )
+    response.raise_for_status()  # Raise an error if the API call fails
+    data = response.json()  # Parse the JSON response from the API
+
+    attachments = []
+    for obj in data["objects"][:8]:  # Iterate through the first 5 search results
+        package = obj.get("package", {})
+        package_name = package.get("name", "Unknown Package")  # Fallback if name is missing
+        description = package.get("description", "No description available")  # Fallback for missing description
+        homepage = package.get("links", {}).get("homepage", "https://www.npmjs.com")  # Default link
+
+        thumbnail_card = ThumbnailCard(
+            title=package_name,  # Package name as card title
+            text=description,  # Package description
+            buttons=[
+                # Button to view the package on NPM
+                CardAction(
+                    type="openUrl",
+                    title="View on NPM",
+                    value=f"https://www.npmjs.com/package/{package_name}",
+                ),
+                # Button to visit the package's homepage
+                CardAction(
+                    type="openUrl",
+                    title="Homepage",
+                    value=homepage,
+                ),
+            ],
+        )
+
+        preview_card = ThumbnailCard(
+            title=package_name,
+            text=description,
+        )
+        preview_attachment = CardFactory.thumbnail_card(preview_card)
+
+        preview_attachment.content.tap = CardAction(
+            type="invoke",  # Invoke action triggers a bot command
+            value={"title": package_name, "description": description},
+        )
+
+        attachment = MessagingExtensionAttachment(
+            content=thumbnail_card,
+            content_type=CardFactory.content_types.thumbnail_card,
+            preview=preview_attachment,
+        )
+
+        attachments.append(attachment)
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",  # Indicates this is a list of results
+            attachment_layout="list",  # Layout style for results
+            attachments=attachments,
+        )
+    )
+```
+
 * * *
 
 ### Enable and handle tap actions
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
@@ -467,6 +534,32 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
     .
     .
 }
+```
+
+# [Python](#tab/python1)
+
+```python
+async def on_teams_messaging_extension_select_item(
+    self, turn_context: TurnContext, query
+) -> MessagingExtensionResponse:
+    
+    thumbnail_card = ThumbnailCard(
+        title=query.get("title"),  # Extract title from the query
+        text=query.get("description"),  # Extract description from the query
+    )
+
+    attachment = MessagingExtensionAttachment(
+        content_type=CardFactory.content_types.thumbnail_card,
+        content=thumbnail_card,
+    )
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",  # Indicates this is a single result
+            attachment_layout="list",  # Use list layout
+            attachments=[attachment],  # Include the single attachment
+        )
+    )
 ```
 
 * * *

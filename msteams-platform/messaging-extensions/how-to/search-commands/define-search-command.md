@@ -120,7 +120,7 @@ Microsoft 365 agents provide integration with various Microsoft 365 products, su
 
 The following code provides an example of search-based for message extensions:
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
@@ -194,6 +194,50 @@ async handleTeamsMessagingExtensionQuery(context, query) {
                 };
             }       
         }
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_messaging_extension_query(self, context, query):
+    faker = Faker()
+    title = query.command_id
+    random_image_url = "https://loremflickr.com/200/200"
+
+    if query.command_id == "getRandomText":
+        attachments = []
+        # Generate 5 results with fake text and fake images
+        for i in range(5):
+            text = faker.paragraph()
+            images = [f"{random_image_url}?random={i}"]
+
+            # Create a thumbnail card using ThumbnailCard
+            thumbnail_card = self.create_thumbnail_card(title, text, images)
+
+            # Create a preview card and add the tap action
+            preview_card = self.create_thumbnail_card(title, text, images)
+            tap_action = CardAction(
+                type="invoke",
+                value={"title": title, "text": text, "images": images},
+            )
+            preview_attachment = CardFactory.thumbnail_card(preview_card)
+            preview_attachment.content.tap = tap_action
+
+            # Combine the thumbnail card and the preview
+            attachment = MessagingExtensionAttachment(
+                content=thumbnail_card,
+                content_type=CardFactory.content_types.thumbnail_card,
+                preview=preview_attachment,
+            )
+            attachments.append(attachment)
+
+        return MessagingExtensionResponse(
+            compose_extension=MessagingExtensionResult(
+                type="result",
+                attachment_layout="list",
+                attachments=attachments,
+            )
+        )
 ```
 
 ---
