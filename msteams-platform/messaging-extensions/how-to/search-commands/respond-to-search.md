@@ -204,7 +204,7 @@ For Hero and Thumbnail cards, you don't need to specify a preview property, a pr
 
 ### Response example
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -470,7 +470,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
 ### Enable and handle tap actions
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/csharp)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
