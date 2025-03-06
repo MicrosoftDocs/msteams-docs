@@ -3,8 +3,8 @@ title: Teams Store Ranking Parameters
 description: Learn Teams Store ranking parameters like historical usage, user engagement data, app quality and values, audience relevance, and app update or new release.
 ms.topic: reference
 ms.localizationpriority: high
-author: v-ypalikila
-ms.author: v-ypalikila
+author: surbhigupta
+ms.author: surbhigupta
 ms.date: 01/09/2023
 ---
 # Teams Store ranking parameters
