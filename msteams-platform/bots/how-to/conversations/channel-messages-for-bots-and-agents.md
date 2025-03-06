@@ -62,11 +62,21 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ### RSC permission
 
-Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
+Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions appropriately to build and enhance engaging experience for users to pass the Microsoft Teams Store approval. The app description must include how the bot uses the data it reads:
 
 - The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 - The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
 - If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installations.
+
+> [!Note]
+>
+> When you submit your app to the Teams Store, it's crucial to explain how your app uses the data it reads in the app description. It's especially important for Teams Store approval as Microsoft prioritizes privacy and security. Ensure that you include the following in the app description:
+>
+> - The app reads only necessary information for its core functions.
+> - Explain how the app addresses the specific business needs using the data it reads to increase productivity and collaboration.
+> - Explain how bot handles user data with transparency and compliance for data protection.
+
+that your app description clearly spells out the how your app uses the data it reads
 
 ## Update app manifest
 
