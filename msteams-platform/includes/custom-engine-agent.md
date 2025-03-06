@@ -29,7 +29,11 @@
    >        "bots": [ 
    >           { 
    >              "botId": "<Bot-Id-Guid>", 
-   >              "scopes": ["groupChat"], 
+   >              "scopes": [
+   >                  "personal",
+   >                  "team",
+   >                  "groupChat"
+   >              ],
    >              "commandLists": [ 
    >                 { 
    >                 "scopes": ["personal"], 

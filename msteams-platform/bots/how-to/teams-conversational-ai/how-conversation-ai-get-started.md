@@ -821,7 +821,11 @@ If you want your custom engine agent to support Microsoft 365 Copilot Chat, add 
     "bots": [ 
         { 
           "botId": "<Bot-Id-Guid>", 
-          "scopes": ["groupChat"], 
+          "scopes": [
+              "personal",
+              "team",
+              "groupChat"
+          ], 
           "commandLists": [ 
             { 
               "scopes": ["personal"], 
