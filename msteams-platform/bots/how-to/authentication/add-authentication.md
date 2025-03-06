@@ -445,7 +445,7 @@ and when for these, and just reference that from here, along with the set of ste
    :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
 
    > [!NOTE]
-   > OAuth isn't supported in the group chat or channel scopes. If you enable and install your bot in group chats or channels, users must authenticate in their personal scopes before they can use the bot in the group chat or channel.
+   > OAuth isn't supported in the group chat or channel scopes directly. If you enable authentication and install your bot in group chats or channels, users must authenticate in their personal scopes before they can use the bot in the group chat or channel.
 
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
