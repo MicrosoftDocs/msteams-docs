@@ -63,7 +63,6 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-
       - text: Custom Engine Agents support for Microsoft 365 Copilot Chat
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
       - text: App package editor in Developer Portal for Teams
