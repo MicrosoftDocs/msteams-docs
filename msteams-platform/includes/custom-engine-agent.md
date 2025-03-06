@@ -1,8 +1,8 @@
 > [!NOTE]
 >
-> ## Add support for Microsoft 365 Copilot chat in your custom engine agent
+> ## Add support for Microsoft 365 Copilot Chat in your custom engine agent
    >
-   > If you want your custom engine agent to support Microsoft 365 Copilot chat, you must [install a prerelease version of Teams Toolkit](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version). After you install the prerelease version, follow these steps:
+   > If you want your custom engine agent to support Microsoft 365 Copilot Chat, you must [install a prerelease version of Teams Toolkit](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version). After you install the prerelease version, follow these steps:
    >
    > 1. Add the environment variable, `TEAMSFX_CEA_ENABLED=true`.
    > 2. [Set up your data on Azure OpenAI](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=2)

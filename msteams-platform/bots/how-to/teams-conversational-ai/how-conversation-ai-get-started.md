@@ -788,7 +788,7 @@ A feedback loop helps monitor and improve the bot’s interactions, leading to m
 If you already have a bot on Teams, you can upgrade your existing bots to custom engine agent that support streaming, citations, and AI labels. This is required for the agent to align with the conversational AI UX paradigm and provide a consistent experience with declarative agents.
 
 > [!NOTE]
-> Custom engine agent support for Microsoft 365 Copilot chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 Here is the required to-do list to upgrade your bot to custom engine agent:
 
@@ -799,7 +799,7 @@ Here is the required to-do list to upgrade your bot to custom engine agent:
 | Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
 | Use citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
 
-If you want your custom engine agent to support Microsoft 365 Copilot chat, add the following into your app manifest:
+If you want your custom engine agent to support Microsoft 365 Copilot Chat, add the following into your app manifest:
 
 1. Add the app manifest property `copilotAgents` and its sub property `customEngineAgents` into your app manifest:
 
@@ -849,8 +849,8 @@ If you want your custom engine agent to support Microsoft 365 Copilot chat, add 
 
 > [!NOTE]
 >
-> * Microsoft 365 Copilot chat adds an AI-generated label to every response that the custom engine agent sends.
-> * If you have built your conventional bot using Teams Toolkit and you want to add support for Microsoft 365 Copilot chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+> * Microsoft 365 Copilot Chat adds an AI-generated label to every response that the custom engine agent sends.
+> * If you have built your conventional bot using Teams Toolkit and you want to add support for Microsoft 365 Copilot Chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
 
 ## Elevate your conventional bot to use AI
 
