@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 03/06/2025
 ms.localizationpriority: medium
 ---
 # Respond to search command
@@ -203,7 +204,7 @@ For Hero and Thumbnail cards, you don't need to specify a preview property, a pr
 
 ### Response example
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet1)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
