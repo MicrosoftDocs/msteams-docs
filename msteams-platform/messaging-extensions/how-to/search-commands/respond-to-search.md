@@ -470,7 +470,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
 ### Enable and handle tap actions
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet2)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
