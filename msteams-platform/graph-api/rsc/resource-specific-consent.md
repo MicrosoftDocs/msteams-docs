@@ -1,9 +1,10 @@
 ---
-title: Overview resource-specific consent in Teams
-description: In this article, learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions.
+title: Resource-specific Consent for Apps
+description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.localizationpriority: medium
-ms.topic: Conceptual
-ms.date: 03/20/2023
+ms.topic: conceptual
+ms.owner: vishachadha
+ms.date: 02/20/2025
 ---
 
 # Resource-specific consent for your Teams app
@@ -48,11 +49,12 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 ### Basic RSC Permissions
 
-A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation.
+A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions are always consented to upon installation.
 
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+| `TeamsActivity.Send.Chat` | Send activity feed notifications to users in this chat. |NA |Supported |
 |`TeamsActivity.Send.User`|Send activity feed notifications to the user. | NA | Supported |
 
 ### RSC-based data access APIs
@@ -103,12 +105,12 @@ The following table provides RSC application permissions for a team and their ap
 |`TeamsTab.Delete.Group`|Delete this team's tabs. | NA | Supported |
 |`TeamsTab.Read.Group`|Read this team's tabs.| NA | Supported |
 |`TeamsTab.ReadWrite.Group`|Manage this team's tabs. | NA | Supported |
-|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are sending audio into the channel meetings associated with this team.| Supported | NA |
 |`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content of channel meetings associated with this team.| Supported | NA |
 |`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
 |`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.| Supported | NA |
 |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.| Supported | NA |
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|`LiveShareSession.ReadWrite.Group`| Allows the app to create and synchronize Live Share sessions for the team and get access related information, such as name and role, about the team's roster and any associated meetings. | Supported | NA |
 |`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.| Supported | NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
@@ -143,11 +145,11 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `OnlineMeetingRecording.Read.Chat` | Read the recordings of the meetings associated with this chat. |NA |Supported |
 | `OnlineMeetingNotification.Send.Chat` | Send notifications in the meetings associated with this chat. |NA |Supported |
 | `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |Supported |NA |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |Supported |NA |
+| `LiveShareSession.ReadWrite.Chat` | Allows the app to create and synchronize Live Share sessions for the chat and get access related information, such as name and role, about the chat's roster and any associated meetings. |Supported |NA |
 | `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |Supported |NA |
 | `MeetingParticipantReaction.Read.Chat` | Read the reactions of participants in meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |Supported |NA |
-| `OnlineMeetingActiveSpeaker.Read.Chat` | Read the participants who are currently sending audio into the meetings associated with this chat. |Supported |NA |
+| `OnlineMeetingActiveSpeaker.Read.Chat` | Read the participants who are sending audio into the meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content of meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat.|Supported |Supported |
 | `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |Supported |NA |
@@ -169,6 +171,7 @@ The following table provides RSC permissions for a user and their applicable dat
 | `MeetingParticipantReaction.Read.User` | Read the user's reactions while participating in a meeting. |Supported |NA |
 | `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |Supported |NA |
 | `TeamsActivity.Send.User` | Send activity notifications to the user. |NA |Supported |
+| `TeamsAppInstallation.Read.User` | Read the apps that are installed in the user's personal scope. | NA | Supported |
 
 ## Next step
 

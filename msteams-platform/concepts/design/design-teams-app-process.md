@@ -1,7 +1,7 @@
 ---
 title: App design process
 author: heath-hamilton
-description: Learn how and when you might use Microsoft tools and resources to design an effective Microsoft Teams app.
+description: Learn how and when to use Microsoft Teams design tools such as Teams UI Kit, resources, choose capabilities and UX flows to design an effective Microsoft Teams app.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
@@ -40,7 +40,7 @@ The UI kit also has prebuilt templates and components that you can copy and modi
 > **Is the UI kit for me?** If you have any part in creating a Teams app, yes. Understanding how to craft a Teams app is not only helpful to designers but product managers, developers using IDEs, and makers building with low-code tools (such as the Microsoft Power Platform).
 
 1. Go to the [Microsoft Teams UI Kit Figma page](https://www.figma.com/community/file/916836509871353159).
-1. Select **Duplicate** to open the UI kit. (You may have to first create a Figma account.)
+1. Select **Duplicate** to open the UI kit. (You might have to first create a Figma account.)
 
 ### Try the sample app
 
@@ -73,7 +73,7 @@ UI templates are complex, high-fidelity designs for common Teams use cases and w
 
 1. In the UI kit’s left nav, go to **UI templates**.
 1. Copy templates that make sense for your app design.<br />
-   For example, if you’re designing a personal app, you may want to use a Dashboard template.
+   For example, if you’re designing a personal app, you might want to use a Dashboard template.
 
 ### Design with basic UI components
 
@@ -84,23 +84,11 @@ Based on Fluent UI, these are the core elements for creating familiar Teams inte
 
 ## Implement your design
 
-The design is done and you’re ready to start building. The following tools can help simplify the front-end development of your app.
-
-### Build with UI templates
-
-If you used UI templates in your design, you can implement these templates with the Microsoft Teams UI Library (a React component library based on Fluent UI).
-
-Currently, not all templates listed in the UI kit are available in the library.
-
-> [!div class="nextstepaction"]
-> [Get the library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+The design is done and you’re ready to start building. The following tool can help simplify the front-end development of your app.
 
 ### Build with basic UI components
 
-Not unlike the design phase, you can use these Fluent UI components in your app project if a UI template is missing something you need, or you just want to build the app from scratch.
-
-> [!NOTE]
-> If you notice something missing or have an idea for a template, consider contributing to the Teams UI Library repo.
+Not unlike the design phase, you can use Fluent UI React components in your app project if a UI template is missing something you need, or you just want to build the app from scratch.
 
 > [!div class="nextstepaction"]
 > [Get the library (Fluent UI)](https://react.fluentui.dev/?path=/docs/)

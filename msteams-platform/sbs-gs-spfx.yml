@@ -2,10 +2,10 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable custom app upload.
+  description: In this tutorial, learn to build Hello World app with SPFx, install Teams Toolkit, setup development tenant, and enable custom app upload.
   audience: Developer
   level: Beginner
-  ms.date: 05/09/2022
+  ms.date: 02/24/2025
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
@@ -24,7 +24,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
+    > Teams Toolkit offers only the tab capability in a Teams app built with SharePoint Framework. The bot and message extension capabilities aren't available.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -40,20 +40,23 @@ items:
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
 
     > [!TIP]
     > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
     </details>
 
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+development+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## SharePoint Collection Site Administrator account
 
     Ensure that you have an Administrator account for a SharePoint Site Collection. You need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
     Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
-
+    
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
@@ -125,13 +128,15 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" lightbox="~/assets/images/teams-toolkit-v2/sbs-share-point.png":::
           
-
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
     
     ![Create a Teams app](~/assets/videos/spfx-tabapp-preview.gif)
     </details>
-
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20project%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+    
     # [Command line](#tab/cli)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
@@ -151,10 +156,12 @@ items:
 
 
        Your project is created after all the questions are answered.
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20project%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     ---
-
-  
+ 
     ## Take a tour of the source code
 
     After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
@@ -173,7 +180,7 @@ items:
     As you selected an SPFx Web part project, the following files are relevant to your UI:
 
     - `SPFx/src/webparts/{webpart}`: contains your SPFx web part.
-    - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
+    - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.   
 
 - title: Build your tab app
   durationInMinutes: 1
@@ -203,6 +210,8 @@ items:
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
         Now you're ready to build the app and run it locally!
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Microsoft%20365%20account%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     # [Command line](#tab/cline)
 
@@ -218,6 +227,11 @@ items:
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+
 
      ---
 
@@ -246,10 +260,16 @@ items:
 
         Teams web client opens in a browser window.
 
-    1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
+    1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams" lightbox="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the tab app in Teams.":::
    
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
     1. Select **Load debug scripts**, if you're prompted to load debug scripts before your custom app is uploaded in Teams.
@@ -297,6 +317,10 @@ items:
     
     1. Close the browser window to stop local workbench debugging when you're ready.
     </details>
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20app%20locally%20in%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D3%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3%23take-a-tour-of-the-source-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
+
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -370,7 +394,13 @@ items:
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the tab app in Teams.":::
+   
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
         Congratulations! Your app is now added to Teams.
 
@@ -378,10 +408,12 @@ items:
 
     ### Select the link of the SharePoint site
 
-
     1. Select the link of the SharePoint site.
 
         The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20SharePoint%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)
 
     # [Command line](#tab/cli)
 
@@ -402,6 +434,10 @@ items:
     1. When prompted, select **Build SharePoint Package**.
 
         Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20SharePoint%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+    
     ---
 
     ## Distribute the app package on SharePoint
@@ -434,8 +470,17 @@ items:
 
     1. Select your app, and then select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the tab app in Teams.":::
+   
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
         Congratulations! Your app is now added to Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png":::
+        
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Distribute%20the%20app%20package%20on%20SharePoint&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dcli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2Amsteams)

@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: Send Proactive Messages
 metadata:
-  title: Send Proactive Messages
+  title: Create Bot to Send Proactive Messages
   description: In this module, learn how to send proactive messages, such as welcome messages, scheduled messages, and notifications from a bot.
   audience: Developer
   level: Beginner
-  ms.date: 06/23/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
   nextTutorialTitle: Read more on proactive messages
@@ -35,10 +35,13 @@ items:
     | &nbsp; | [Microsoft Teams Toolkit](#install-teams-toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
     
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20development%20environment&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Build Proactive Message bot
   durationInMinutes: 3
@@ -52,7 +55,7 @@ items:
 
     1. In the left pane, select **View Samples**.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-sample-1.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-samples.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
 
     1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
@@ -90,14 +93,14 @@ items:
 
         When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
-    1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat** or **Add to a meeting**.
+    1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension details dialog with the Add option highlighted.":::
 
-    1. Enter the name of a chat or team in the search field and select **Set up a bot**. 
-    
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
-        
+    1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+ 
         The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
@@ -109,6 +112,9 @@ items:
     1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
         :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20Proactive%20Message%20bot&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Take a tour of the source code
 
@@ -210,14 +216,14 @@ items:
 
        When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
 
-    1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat** or **Add to a meeting**.
+    1.  Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension app dialog with the Add option highlighted.":::
 
-    1. Enter the name of a chat or team in the search field and select **Set up a bot**.
-    
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
-        
+    1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+ 
         The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
@@ -229,7 +235,10 @@ items:
     1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
         :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
-        
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Visual+Studio+Code&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     # [Command Line](#tab/cli)
 
     In your terminal window:
@@ -257,6 +266,9 @@ items:
        ``` bash
        teamsfx preview
        ```
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Command+line&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dcli%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ---
   

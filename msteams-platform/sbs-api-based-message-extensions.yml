@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title:  Build API-based message extension
+title:  Advanced tutorial to build API-based message extension
 metadata:
-  title: Build API-based message extension
-  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
+  title: API-based Message Extension - Tutorial
+  description: In this learn module, learn to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
-  ms.date: 10/16/2023
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   nextTutorialTitle: Build message extension using Bot Framework
@@ -17,12 +17,11 @@ items:
 
     > [!NOTE]
     >
-    > * API-based message extensions only support search commands.
-    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+    > API-based message extensions only support search commands.
 
     Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -48,11 +47,11 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can upload a custom app in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
@@ -77,11 +76,14 @@ items:
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   You have all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -105,12 +107,12 @@ items:
     * Only one required parameter without a default value is allowed.
     * Only POST and GET HTTP methods are supported.
     * The OpenAPI Description document must have an `operationId`.
-    * The operation must not have required Header or Cookie parameters without default values.
+    * The operation mustn't require Header or Cookie parameters without default values.
     * A command must have exactly one parameter.
     * Ensure that there are no remote references in the OpenAPI Description document.
     * A required parameter with a default value is considered optional.
 
-    We've used the following OpenAPI Description as an example for this tutorial:
+    We used the following OpenAPI Description as an example for this tutorial:
 
     <details><summary>OpenAPI Description</summary>
     
@@ -133,7 +135,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, a search for "tool to create music" provides a list of tools that can create music.
           responses:
             "200":
               description: OK
@@ -198,7 +200,7 @@ items:
 
     You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
-    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
     1. Save the OpenAPI Description document.
     1. Go to [Swagger Editor](https://editor.swagger.io/).
     1. In the left pane, paste the OpenAPI Description in the editor.
@@ -213,6 +215,9 @@ items:
     1. Under `products`, copy the first product from the list and save it for future reference.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create response rendering template
   durationInMinutes: 5
@@ -280,7 +285,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
             "wrap": true
             },
             {
@@ -313,9 +318,9 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. At the upper-left, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
-       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
+       1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
+       1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
@@ -337,9 +342,17 @@ items:
             "subtitle": "$${if(price, price, 'N/A')}"
         } 
     ```
-    Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+    Create an if condition for the `title` and `subtitle`, where:
+
+    * If name exists, the bot uses the name.
+    * If name doesn't exist, the bot uses NA.
+    
+    For example, `"title": "Name: ${if(name, name, 'N/A')}"`. 
+    Save the preview card template for future reference.
     </details>
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Adaptive+Card+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ### Response rendering template
 
@@ -370,7 +383,7 @@ items:
        
        1. `"jsonPath"`: `"tools"`
 
-          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+          `jsonPath` is the path to one or more results in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is tools. For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
 
        1. `"responseLayout"`: `"list"`
 
@@ -459,6 +472,9 @@ items:
 
     </details>
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Response+rendering+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Create app manifest
   durationInMinutes: 3
   content: |
@@ -497,8 +513,8 @@ items:
             "full": "Search ME API full"
         },
         "description": {
-            "short": "product app for testing API MEs",
-            "full": "product app for testing API MEs"
+            "short": "product app for testing API Message Extensions",
+            "full": "product app for testing API Message Extensions"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
@@ -557,6 +573,9 @@ items:
           * Outline icon 
 
     
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+app+manifest&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Upload a custom app to Teams
   durationInMinutes: 1
   content: |
@@ -567,24 +586,31 @@ items:
     1. Go to **Apps** > **Manage your app** > **Upload an app**.
     1. Select **Upload a customized app**.
     1. Select the zip file created and select **Open**.
-    1. Select **Add**. The app is added to Teams.
+    1. Select **Add**.
 
-       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
 
-    1. Go to a chat and from the message compose area, select **+** and search for your app.
+    1. Select **Open**.
+
+       :::image type="content" source="assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
+
+    1. Go to a chat, then select **+** from the message compose area, and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
 
        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+to+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Congratulations!
   durationInMinutes: 1
   content: |
 
-    You've done it! 
-    You've learned to create a API-based message extension using OpenAPI Description document.
+    You did it! 
+    You learned to create a API-based message extension using OpenAPI Description document.
 

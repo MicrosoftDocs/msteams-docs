@@ -1,7 +1,7 @@
 ---
-title: Customize app manifest in Teams Toolkit using Visual Studio
+title: Customize App Manifest in Teams Toolkit
 author: surbhigupta
-description: In this module, learn how to edit, preview, and customize app manifest in different environment in Teams Toolkit.
+description: Learn how to customize and preview the app manifest for different environments in Teams Toolkit for Visual Studio, and sync local changes in Developer Portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -99,4 +99,4 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
-* [Deploy Teams app to the cloud using Visual Studio][Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio](deploy-vs.md)
+* [Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio](deploy-vs.md)

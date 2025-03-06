@@ -1,6 +1,6 @@
 ---
 title: Develop message extensions
-description: In this module, learn how to get started with message extensions in Microsoft Teams
+description: In this module, learn about the types of message extensions, user scenarios, and how to develop message extensions for Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 04/02/2023

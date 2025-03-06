@@ -59,7 +59,7 @@ Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to t
 In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [!TIP]
-> You need to have both your application in Visual Studio and ngrok running. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service, it will return a new URL and you will have to update your application with the new URL.
+> You need to have both your application in Visual Studio and ngrok running. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It continues to listen and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service, it returns a new URL and you have to update your application with the new URL.
 
 ## Upload your tab
 

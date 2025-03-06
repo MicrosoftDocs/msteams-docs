@@ -1,5 +1,5 @@
 ---
-title: Resolve issues with your Microsoft Teams Store submission
+title: Fix Store Submission Issues/Failures
 description: Troubleshoot and correct problems with your Microsoft Teams Store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
 ms.topic: how-to
 author: heath-hamilton
@@ -107,4 +107,4 @@ Once your app is approved, publishing usually takes 1-2 business days depending 
 
 ## See also
 
-[Distribute your Microsoft Teams app](../apps-publish-overview.md)
+[Publish your Microsoft Teams app](../apps-publish-overview.md)

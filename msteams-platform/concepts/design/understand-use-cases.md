@@ -1,14 +1,14 @@
 ---
-title: Understanding your app's use cases and Teams features
+title: Understand App Use Cases & Features
 author: heath-hamilton
-description: Learn about Microsoft Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
+description: Learn Teams app capabilities such as tabs, bots, meeting extensions, message extensions, and webhook connectors and scopes such as personal and shared app experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
-# Understand your use cases
+# Understand use cases
 
 In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration is a great fit.
 
@@ -130,6 +130,8 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Webhooks and connectors
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 [Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
 
    :::column-end:::
@@ -147,7 +149,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that help you to create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app. The notification APIs provides a simple way to send notifications from your app to the Teams activity.
 
    :::column-end:::
 
@@ -184,7 +186,6 @@ A user can interact with an app on a canvas tab to do an activity or might choos
 
 ## See also
 
-* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
 * [Build meeting extensions for Teams](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

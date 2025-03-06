@@ -1,7 +1,7 @@
 ---
 title: Live Share getting started
 author: surbhigupta
-description: In this module, learn more about live share SDK capabilities, RSC permissions and live data structures.
+description: Learn about Live Share SDK capabilities, data structure, join a session, RSC permissions, role verification for live Share and fluid distribution data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -12,7 +12,10 @@ ms.date: 04/07/2022
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting, which showcases the Live share capability.":::
 
-The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort.
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. You can also use the SDK in chat and channel `content` contexts like configurable tabs, static tabs, and collaborative stageview.
+
+> [!NOTE]
+> Live Share `content` contexts in chat and channels is only supported on Teams desktop and web clients.
 
 This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
@@ -20,9 +23,9 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.23.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
-#### npm
+#### NPM
 
 ```bash
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
@@ -30,7 +33,7 @@ npm install @microsoft/teams-js --save
 npm install @fluidframework/test-client-utils start-server-and-test --save-dev
 ```
 
-#### yarn
+#### Yarn
 
 ```bash
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
@@ -40,7 +43,7 @@ yarn add @fluidframework/test-client-utils -dev
 
 ### Register RSC permissions
 
-To enable the Live Share SDK for your meeting extension, you must first add the following RSC permissions into your app manifest:
+To enable the Live Share SDK for your tab extension, you must first add the following RSC permissions into your app manifest:
 
 ```json
 {
@@ -54,8 +57,13 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
             "team"
         ],
         "context": [
+            // meeting contexts
             "meetingSidePanel",
-            "meetingStage"
+            "meetingStage",
+            // content contexts
+            "privateChatTab",
+            "channelTab",
+            "meetingChatTab"
         ]
     }
   ],
@@ -88,9 +96,9 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 }
 ```
 
-## Join a meeting session
+## Join a session
 
-Follow the steps to join a session that's associated with a user's meeting:
+Follow the steps to join a session that's associated with a user's meeting, chat, or channel:
 
 1. Initialize `LiveShareClient`.
 2. Define the data structures you want to synchronize. For example, `LiveState` or `SharedMap`.
@@ -144,49 +152,52 @@ const { container } = await liveShare.joinContainer(schema);
 
 ```jsx
 import { LiveShareHost } from "@microsoft/teams-js";
-import { LiveShareProvider, useLiveShareContext } from "@microsoft/live-share-react";
+import {
+  LiveShareProvider,
+  useLiveShareContext,
+} from "@microsoft/live-share-react";
 import { useState } from "react";
 
 export const App = () => {
-    // Create the host as React state so that it doesn't get reset on mount
-    const [host] = useState(LiveShareHost.create());
+  // Create the host as React state so that it doesn't get reset on mount
+  const [host] = useState(LiveShareHost.create());
 
-    // Live Share for React does not require that you define a custom Fluid schema
-    return (
-        <LiveShareProvider host={host} joinOnLoad>
-            <LiveShareLoading />
-        </LiveShareProvider>
-    );
-}
+  // Live Share for React does not require that you define a custom Fluid schema
+  return (
+    <LiveShareProvider host={host} joinOnLoad>
+      <LiveShareLoading />
+    </LiveShareProvider>
+  );
+};
 
 const LiveShareLoading = () => {
-    // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
-    const { joined } = useLiveShareContext();
-    if (joined) {
-        return <p>{"Loading..."}</p>;
-    }
-    return <p>{"Your app here..."}</p>;
-}
+  // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
+  const { joined } = useLiveShareContext();
+  if (joined) {
+    return <p>{"Loading..."}</p>;
+  }
+  return <p>{"Your app here..."}</p>;
+};
 ```
 
 ---
 
-That's all it took to setup your container and join the meeting's session. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
+That's all it took to set up your container and join the session mapped to the meeting, chat, or channel. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
 > Ensure that the Teams Client SDK is initialized before calling `LiveShareHost.create()`.
 
 ## Live Share data structures
 
-The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `DataObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `LiveDataObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
+The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `DataObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `LiveDataObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common scenarios in Teams meetings, chats, and channels. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the session, or displaying a countdown timer.
 
-| Live Object                                                            | Description                                                                                                                             |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [LivePresence](/javascript/api/@microsoft/live-share/livepresence)     | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)           | Synchronize any JSON serializable `state` value. |
-| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)           | Synchronize a countdown timer for a given interval.                                                            |
-| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)           | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start or end suspensions.                                  |
+| Live Object                                                            | Description                                                                                               |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [LivePresence](/javascript/api/@microsoft/live-share/livepresence)     | See which users are online, set custom properties for each user, and broadcast changes to their presence. |
+| [LiveState](/javascript/api/@microsoft/live-share/livestate)           | Synchronize any JSON serializable `state` value.                                                          |
+| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)           | Synchronize a countdown timer for a given interval.                                                       |
+| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)           | Broadcast individual events with any custom data attributes in the payload.                               |
+| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start or end suspensions.                  |
 
 ### LivePresence example
 
@@ -226,7 +237,7 @@ const presence = container.initialObjects.presence;
 // Register listener for changes to each user's presence.
 // This should be done before calling `.initialize()`.
 presence.on("presenceChanged", (user, local) => {
-  console.log("A user presence changed:")
+  console.log("A user presence changed:");
   console.log("- display name:", user.displayName);
   console.log("- state:", user.state);
   console.log("- custom data:", user.data);
@@ -358,16 +369,16 @@ export const MyCustomPresence = () => {
 
 Users joining a session from a single device have a single `LivePresenceUser` record that is shared to all their devices. To access the latest `data` and `state` for each of their active connections, you can use the `getConnections()` API from the `LivePresenceUser` class. This returns a list of `LivePresenceConnection` objects. You can see if a given `LivePresenceConnection` instance is from the local device using the `isLocalConnection` property.
 
-Each `LivePresenceUser` and `LivePresenceConnection` instance has a `state` property, which can be either `online`, `offline`, or `away`. An `presenceChanged` event is emitted when a user's state changes. For example, if a user leaves a meeting, their state changes to `offline`.
+Each `LivePresenceUser` and `LivePresenceConnection` instance has a `state` property, which can be either `online`, `offline`, or `away`. An `presenceChanged` event is emitted when a user's state changes. For example, if a user disconnects from the session or closes the application, their state changes to `offline`.
 
 > [!NOTE]
-> It can take up to 20 seconds for an `LivePresenceUser`'s `state` to update to `offline` after leaving a meeting.
+> It can take up to 20 seconds for an `LivePresenceUser`'s `state` to update to `offline` after a user disconnects from the session.
 
 ### LiveState example
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
 
-The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes a single `state` value, allowing you to synchronize any JSON serializable value, such as a `string`, `number`, or `object`.
+The `LiveState` class enables synchronizing simple application state for connected participants. `LiveState` synchronizes a single `state` value, allowing you to synchronize any JSON serializable value, such as a `string`, `number`, or `object`.
 
 The following are a few examples in which `LiveState` can be used in your application:
 
@@ -378,7 +389,7 @@ The following are a few examples in which `LiveState` can be used in your applic
 - Keeping a scroll position in sync for a **follow me** feature.
 
 > [!NOTE]
-> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
+> Unlike `SharedMap`, the `state` value in `LiveState` is reset after all the users disconnect from a session.
 
 Example:
 
@@ -484,23 +495,26 @@ const MY_UNIQUE_KEY = "selected-planet-key";
 
 // Example component for using useLiveState
 export const MyCustomState = () => {
-    const [planet, setPlanet] = useLiveState(MY_UNIQUE_KEY, planets[0]);
+  const [planet, setPlanet] = useLiveState(MY_UNIQUE_KEY, planets[0]);
 
-    // Render UI
-    return (
-        <div>
-            {`Current planet: ${planet}`}
-            {'Select a planet below:'}
-            {planets.map((planet) => (
-                <button key={planet} onClick={() => {
-                    setPlanet(planet);
-                }}>
-                    {planet}
-                </button>
-            ))}
-        </div>
-    );
-}
+  // Render UI
+  return (
+    <div>
+      {`Current planet: ${planet}`}
+      {"Select a planet below:"}
+      {planets.map((planet) => (
+        <button
+          key={planet}
+          onClick={() => {
+            setPlanet(planet);
+          }}
+        >
+          {planet}
+        </button>
+      ))}
+    </div>
+  );
+};
 ```
 
 ---
@@ -509,7 +523,7 @@ export const MyCustomState = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
 
-`LiveEvent` is a great way to send simple events to other clients in a meeting that are only needed at the time of delivery. It's useful for scenarios like sending session notifications or implementing custom reactions.
+`LiveEvent` is a great way to send simple events to other connected clients that are only needed at the time of delivery. It's useful for scenarios like sending session notifications or implementing custom reactions.
 
 # [JavaScript](#tab/javascript)
 
@@ -598,38 +612,33 @@ await customReactionEvent.send(kudosReaction);
 ```jsx
 import { useLiveEvent } from "@microsoft/live-share-react";
 
-const emojis = [
-  "❤️",
-  "😂",
-  "👍",
-  "👎",
-];
+const emojis = ["❤️", "😂", "👍", "👎"];
 
 // Define a unique key that differentiates this usage of `useLiveEvent` from others in your app
 const MY_UNIQUE_KEY = "event-key";
 
 // Example component for using useLiveEvent
 export const MyCustomEvent = () => {
-    const {
-        latestEvent,
-        sendEvent,
-    } = useLiveEvent(MY_UNIQUE_KEY);
+  const { latestEvent, sendEvent } = useLiveEvent(MY_UNIQUE_KEY);
 
-    // Render UI
-    return (
-        <div>
-            {`Latest event: ${latestEvent?.value}, from local user: ${latestEvent?.local}`}
-            {'Select a planet below:'}
-            {emojis.map((emoji) => (
-                <button key={emoji} onClick={() => {
-                    sendEvent(emoji);
-                }}>
-                    {emoji}
-                </button>
-            ))}
-        </div>
-    );
-}
+  // Render UI
+  return (
+    <div>
+      {`Latest event: ${latestEvent?.value}, from local user: ${latestEvent?.local}`}
+      {"Select a planet below:"}
+      {emojis.map((emoji) => (
+        <button
+          key={emoji}
+          onClick={() => {
+            sendEvent(emoji);
+          }}
+        >
+          {emoji}
+        </button>
+      ))}
+    </div>
+  );
+};
 ```
 
 ---
@@ -638,7 +647,7 @@ export const MyCustomEvent = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` provides a simple countdown timer that is synchronized for all participants in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
+`LiveTimer` provides a simple countdown timer that is synchronized for all connected participants. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
 
 # [JavaScript](#tab/javascript)
 
@@ -777,7 +786,8 @@ const MY_UNIQUE_KEY = "timer-key";
 
 // Example component for using useLiveTimer
 export function CountdownTimer() {
-  const { milliRemaining, timerConfig, start, pause, play } = useLiveTimer("TIMER-ID");
+  const { milliRemaining, timerConfig, start, pause, play } =
+    useLiveTimer("TIMER-ID");
 
   return (
     <div>
@@ -786,9 +796,9 @@ export function CountdownTimer() {
           start(60 * 1000);
         }}
       >
-        { timerConfig === undefined ? "Start" : "Reset" }
+        {timerConfig === undefined ? "Start" : "Reset"}
       </button>
-      { timerConfig !== undefined && (
+      {timerConfig !== undefined && (
         <button
           onClick={() => {
             if (timerConfig.running) {
@@ -798,12 +808,14 @@ export function CountdownTimer() {
             }
           }}
         >
-          {timerConfig.running ? "Pause" : "Play" }
+          {timerConfig.running ? "Pause" : "Play"}
         </button>
       )}
-      { milliRemaining !== undefined && (
+      {milliRemaining !== undefined && (
         <p>
-          { `${Math.round(milliRemaining / 1000)} / ${Math.round(timerConfig.duration) / 1000}` }
+          {`${Math.round(milliRemaining / 1000)} / ${
+            Math.round(timerConfig.duration) / 1000
+          }`}
         </p>
       )}
     </div>
@@ -816,9 +828,6 @@ export function CountdownTimer() {
 ### LiveFollowMode example
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image shows three clients with three separate views: a presenter, a user who follows the presenter, and a user with their own private view with the option to sync back to the presenter.":::
-
-> [!NOTE]
-> `LiveFollowMode` is in Beta and provided as a preview only. Don't use this API in a production environment.
 
 The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps such as PowerPoint Live, Excel Live, and Whiteboard. Unlike screen sharing, `LiveFollowMode` allows you to render content with high quality, improved accessibility, and enhanced performance. Users can easily switch between their private views and follow other users.
 
@@ -867,76 +876,82 @@ followMode.on("stateChanged", (state, local, clientId) => {
   console.log("- state value:", state.value);
   console.log("- follow mode type:", state.type);
   console.log("- following user id:", state.followingUserId);
-  console.log("- count of other users also following user", state.otherUsersCount);
-  console.log("- state.value references local user's stateValue", state.isLocalValue);
+  console.log(
+    "- count of other users also following user",
+    state.otherUsersCount
+  );
+  console.log(
+    "- state.value references local user's stateValue",
+    state.isLocalValue
+  );
   // Can optionally get the relevant user's presence object
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user is not currently following anyone and there is no presenter.
-        infoText.innerHTML = "";
-        // Show a "Start presenting" button in your app.
-        button.innerHTML = "Start presenting";
-        button.onclick = followMode.startPresenting;
-        // Note: state.isLocalValue will be true.
-        break;
+      // Update app to reflect that the user isn't following anyone and there is no presenter.
+      infoText.innerHTML = "";
+      // Show a "Start presenting" button in your app.
+      button.innerHTML = "Start presenting";
+      button.onclick = followMode.startPresenting;
+      // Note: state.isLocalValue will be true.
+      break;
     }
     case FollowModeType.activeFollowers: {
-        // Update app to reflect that the local user is being followed by other users.
-        infoText.innerHTML = `${state.otherUsersCount} users are following you`;
-        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
-        button.innerHTML = "Present to all";
-        button.onclick = followMode.startPresenting;
-        // Note: state.isLocalValue will be true.
-        break;
+      // Update app to reflect that the local user is being followed by other users.
+      infoText.innerHTML = `${state.otherUsersCount} users are following you`;
+      // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+      button.innerHTML = "Present to all";
+      button.onclick = followMode.startPresenting;
+      // Note: state.isLocalValue will be true.
+      break;
     }
     case FollowModeType.activePresenter: {
-        // Update app to reflect that the local user is actively presenting to everyone.
-        infoText.innerHTML = `You are actively presenting to everyone`;
-        // Show a "Stop presenting" button in your app.
-        button.innerHTML = "Stop presenting";
-        button.onclick = followMode.stopPresenting;
-        // Note: state.isLocalValue will be true.
-        break;
+      // Update app to reflect that the local user is actively presenting to everyone.
+      infoText.innerHTML = `You are actively presenting to everyone`;
+      // Show a "Stop presenting" button in your app.
+      button.innerHTML = "Stop presenting";
+      button.onclick = followMode.stopPresenting;
+      // Note: state.isLocalValue will be true.
+      break;
     }
     case FollowModeType.followPresenter: {
-        // The local user is following a remote presenter.
-        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
-        // Show a "Take control" button in your app.
-        button.innerHTML = "Take control";
-        button.onclick = followMode.startPresenting;
-        // Note: state.isLocalValue will be false.
-        break;
+      // The local user is following a remote presenter.
+      infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+      // Show a "Take control" button in your app.
+      button.innerHTML = "Take control";
+      button.onclick = followMode.startPresenting;
+      // Note: state.isLocalValue will be false.
+      break;
     }
     case FollowModeType.suspendFollowPresenter: {
-        // The local user is following a remote presenter but has an active suspension.
-        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
-        // Show a "Sync to presenter" button in your app.
-        button.innerHTML = "Sync to presenter";
-        button.onclick = followMode.endSuspension;
-        // Note: state.isLocalValue will be true.
-        break;
+      // The local user is following a remote presenter but has an active suspension.
+      infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+      // Show a "Sync to presenter" button in your app.
+      button.innerHTML = "Sync to presenter";
+      button.onclick = followMode.endSuspension;
+      // Note: state.isLocalValue will be true.
+      break;
     }
     case FollowModeType.followUser: {
-        // The local user is following a specific remote user.
-        infoText.innerHTML = `You are following ${followingUser?.displayName}`;
-        // Show a "Stop following" button in your app.
-        button.innerHTML = "Stop following";
-        button.onclick = followMode.stopFollowing;
-        // Note: state.isLocalValue will be false.
-        break;
+      // The local user is following a specific remote user.
+      infoText.innerHTML = `You are following ${followingUser?.displayName}`;
+      // Show a "Stop following" button in your app.
+      button.innerHTML = "Stop following";
+      button.onclick = followMode.stopFollowing;
+      // Note: state.isLocalValue will be false.
+      break;
     }
     case FollowModeType.suspendFollowUser: {
-        // The local user is following a specific remote user but has an active suspension.
-        infoText.innerHTML = `You were following ${followingUser?.displayName}`;
-        // Show a "Resume following" button in your app.
-        button.innerHTML = "Resume following";
-        button.onclick = followMode.endSuspension;
-        // Note: state.isLocalValue will be true.
-        break;
+      // The local user is following a specific remote user but has an active suspension.
+      infoText.innerHTML = `You were following ${followingUser?.displayName}`;
+      // Show a "Resume following" button in your app.
+      button.innerHTML = "Resume following";
+      button.onclick = followMode.endSuspension;
+      // Note: state.isLocalValue will be true.
+      break;
     }
     default: {
-        break;
+      break;
     }
   }
   const newCameraPosition = state.value;
@@ -974,23 +989,23 @@ await followMode.initialize(startingCameraPosition);
 // For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
 // Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
 function onCameraPositionChanged(position, isUserAction) {
-    // Broadcast change to other users so that they have their latest camera position
-    followMode.update(position);
-    // If the local user changed the position while following another user, we want to suspend.
-    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
-    if (!isUserAction) return;
-    switch (state.type) {
-      case FollowModeType.followPresenter:
-      case FollowModeType.followUser: {
-        // This will trigger a "stateChanged" event update for the local user only.
-        followMode.beginSuspension();
-        break;
-      }
-      default: {
-        // No need to suspend for other types
-        break;
-      }
+  // Broadcast change to other users so that they have their latest camera position
+  followMode.update(position);
+  // If the local user changed the position while following another user, we want to suspend.
+  // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+  if (!isUserAction) return;
+  switch (state.type) {
+    case FollowModeType.followPresenter:
+    case FollowModeType.followUser: {
+      // This will trigger a "stateChanged" event update for the local user only.
+      followMode.beginSuspension();
+      break;
     }
+    default: {
+      // No need to suspend for other types
+      break;
+    }
+  }
 }
 ```
 
@@ -1045,7 +1060,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        // Update app to reflect that the user isn't following anyone and there is no presenter.
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
@@ -1186,123 +1201,257 @@ const startingCameraPosition = {
 
 // Example component for using useLiveFollowMode
 export const MyLiveFollowMode = () => {
-    const {
-      state,
-      localUser,
-      otherUsers,
-      allUsers,
-      liveFollowMode,
-      update,
-      startPresenting,
-      stopPresenting,
-      beginSuspension,
-      endSuspension,
-      followUser,
-      stopFollowing,
-    } = useLiveFollowMode(MY_UNIQUE_KEY, startingCameraPosition);
+  const {
+    state,
+    localUser,
+    otherUsers,
+    allUsers,
+    liveFollowMode,
+    update,
+    startPresenting,
+    stopPresenting,
+    beginSuspension,
+    endSuspension,
+    followUser,
+    stopFollowing,
+  } = useLiveFollowMode(MY_UNIQUE_KEY, startingCameraPosition);
 
-    // Example of an event listener for a camera position changed event.
-    // For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
-    // Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
-    function onCameraPositionChanged(position, isUserAction) {
-        // Broadcast change to other users so that they have their latest camera position
-        update(position);
-        // If the local user changed the position while following another user, we want to suspend.
-        // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
-        if (!isUserAction) return;
-        switch (state.type) {
-          case FollowModeType.followPresenter:
-          case FollowModeType.followUser: {
-            // This will trigger a "stateChanged" event update for the local user only.
-            followMode.beginSuspension();
-            break;
-          }
-          default: {
-            // No need to suspend for other types
-            break;
-          }
-        }
+  // Example of an event listener for a camera position changed event.
+  // For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+  // Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+  function onCameraPositionChanged(position, isUserAction) {
+    // Broadcast change to other users so that they have their latest camera position
+    update(position);
+    // If the local user changed the position while following another user, we want to suspend.
+    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    if (!isUserAction) return;
+    switch (state.type) {
+      case FollowModeType.followPresenter:
+      case FollowModeType.followUser: {
+        // This will trigger a "stateChanged" event update for the local user only.
+        followMode.beginSuspension();
+        break;
+      }
+      default: {
+        // No need to suspend for other types
+        break;
+      }
     }
+  }
 
-    // Can optionally get the relevant user's presence object
-    const followingUser = liveFollowMode?.getUser(state.followingUserId);
+  // Can optionally get the relevant user's presence object
+  const followingUser = liveFollowMode?.getUser(state.followingUserId);
 
-    // Render UI
-    return (
+  // Render UI
+  return (
+    <div>
+      {state.type === FollowModeType.local && (
         <div>
-            {state.type === FollowModeType.local && (
-                <div>
-                    <p>{""}</p>
-                    <button onClick={startPresenting}>
-                        {"Start presenting"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.activeFollowers && (
-                <div>
-                    <p>{`${state.otherUsersCount} users are following you`}</p>
-                    <button onClick={startPresenting}>
-                        {"Present to all"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.activePresenter && (
-                <div>
-                    <p>{`You are actively presenting to everyone`}</p>
-                    <button onClick={stopPresenting}>
-                        {"Stop presenting"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.followPresenter && (
-                <div>
-                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
-                    <button onClick={startPresenting}>
-                        {"Take control"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.suspendFollowPresenter && (
-                <div>
-                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
-                    <button onClick={endSuspension}>
-                        {"Sync to presenter"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.followUser && (
-                <div>
-                    <p>{`You are following ${followingUser?.displayName}`}</p>
-                    <button onClick={stopFollowing}>
-                        {"Stop following"}
-                    </button>
-                </div>
-            )}
-            {state.type === FollowModeType.suspendFollowUser && (
-                <div>
-                    <p>{`You were following ${followingUser?.displayName}`}</p>
-                    <button onClick={stopFollowing}>
-                        {"Resume following"}
-                    </button>
-                </div>
-            )}
-            <div>
-                <p>{"Follow a specific user:"}</p>
-                {otherUsers.map((user) => (
-                    <button onClick={() => {
-                        followUser(user.userId);
-                    }} key={user.userId}>
-                        {user.displayName}
-                    </button>
-                ))}
-            </div>
-            <Example3DModelViewer
-                cameraPosition={state.value}
-                onCameraPositionChanged={onCameraPositionChanged}
-            />
+          <p>{""}</p>
+          <button onClick={startPresenting}>{"Start presenting"}</button>
         </div>
-    );
+      )}
+      {state.type === FollowModeType.activeFollowers && (
+        <div>
+          <p>{`${state.otherUsersCount} users are following you`}</p>
+          <button onClick={startPresenting}>{"Present to all"}</button>
+        </div>
+      )}
+      {state.type === FollowModeType.activePresenter && (
+        <div>
+          <p>{`You are actively presenting to everyone`}</p>
+          <button onClick={stopPresenting}>{"Stop presenting"}</button>
+        </div>
+      )}
+      {state.type === FollowModeType.followPresenter && (
+        <div>
+          <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+          <button onClick={startPresenting}>{"Take control"}</button>
+        </div>
+      )}
+      {state.type === FollowModeType.suspendFollowPresenter && (
+        <div>
+          <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+          <button onClick={endSuspension}>{"Sync to presenter"}</button>
+        </div>
+      )}
+      {state.type === FollowModeType.followUser && (
+        <div>
+          <p>{`You are following ${followingUser?.displayName}`}</p>
+          <button onClick={stopFollowing}>{"Stop following"}</button>
+        </div>
+      )}
+      {state.type === FollowModeType.suspendFollowUser && (
+        <div>
+          <p>{`You were following ${followingUser?.displayName}`}</p>
+          <button onClick={stopFollowing}>{"Resume following"}</button>
+        </div>
+      )}
+      <div>
+        <p>{"Follow a specific user:"}</p>
+        {otherUsers.map((user) => (
+          <button
+            onClick={() => {
+              followUser(user.userId);
+            }}
+            key={user.userId}
+          >
+            {user.displayName}
+          </button>
+        ))}
+      </div>
+      <Example3DModelViewer
+        cameraPosition={state.value}
+        onCameraPositionChanged={onCameraPositionChanged}
+      />
+    </div>
+  );
+};
+```
+
+---
+
+In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it's best to let users opt into real-time collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+} from "@microsoft/live-share";
+import {
+  app,
+  meeting,
+  FrameContexts,
+  LiveShareHost,
+} from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const followMode = container.initialObjects.followMode;
+
+// Get teamsJs context
+const context = await app.getContext();
+// Take control if in meetingStage context and local user is initial presenter
+if (context.page?.frameContext === FrameContexts.meetingStage) {
+  // Take control if in meetingStage context and local user is initial presenter
+  meeting.getAppContentStageSharingState((error, state) => {
+    const isShareInitiator = state?.isShareInitiator;
+    if (!isShareInitiator) return;
+    // The user is the initial presenter, so we "take control"
+    await followMode.startPresenting();
+  });
 }
+// TODO: rest of app logic
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+  IFollowModeState,
+  FollowModePresenceUser,
+} from "@microsoft/live-share";
+import {
+  app,
+  meeting,
+  FrameContexts,
+  LiveShareHost,
+} from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const followMode = container.initialObjects.followMode as unknown as LiveFollowMode;
+
+// Get teamsJs context
+const context: app.Context = await app.getContext();
+// Take control if in meetingStage context and local user is initial presenter
+if (context.page?.frameContext === FrameContexts.meetingStage) {
+  // Check if user is initial presenter
+  meeting.getAppContentStageSharingState((error, state) => {
+    // isShareInitiator isn't declared in the typedocs in the SDK, so we cast as any
+    const isShareInitiator = (state as any)?.isShareInitiator;
+    if (!isShareInitiator) return;
+    // The user is the initial presenter, so we "take control"
+    await followMode.startPresenting();
+  });
+}
+// TODO: rest of app logic
+```
+
+# [React](#tab/react)
+
+```jsx
+import { FollowModeType, LiveDataObjectInitializeState } from "@microsoft/live-share";
+import { useLiveFollowMode } from "@microsoft/live-share-react";
+import { useRef, useEffect, useState } from "react";
+// As an example, we will use a fake component to denote what a 3D viewer might look like in an app
+import { Example3DModelViewer } from "./components";
+
+// Define a unique key that differentiates this usage of `useLiveFollowMode` from others in your app
+const MY_UNIQUE_KEY = "follow-mode-key";
+
+// Example component for using useLiveFollowMode
+export const MyLiveFollowMode = () => {
+  const {
+    liveFollowMode,
+    startPresenting,
+  } = useLiveFollowMode(MY_UNIQUE_KEY, undefined);
+
+  const [isShareInitiator, setIsShareInitiator] = useState(false);
+
+  // Check if user is using app in meeting stage and is the initial presenter
+  useEffect(() => {    
+    // Get teamsJs context
+    app.getContext()
+      .then(async (context: app.Context) => {
+        if (context.page?.frameContext !== FrameContexts.meetingStage) return;
+        meeting.getAppContentStageSharingState((error, state) => {
+          // isShareInitiator isn't declared in the typedocs in the SDK, so we cast as any
+          const isShareInitiator = (state as any)?.isShareInitiator;
+          if (!isShareInitiator) return;
+          setIsShareInitiator(true);
+        });
+      });
+  }, []);
+
+  // Take control if in meetingStage context and local user is initial presenter
+  useEffect(() => {
+    // Wait for liveFollowMode to be initialized
+    if (liveFollowMode?.initializeState !== LiveDataObjectInitializeState.succeeded) return;
+    // Skip if user is not the initial presenter
+    if (!isShareInitiator) return;
+    startPresenting();
+  }, [liveFollowMode, startPresenting, isShareInitiator])
+
+  // TODO: proceed with rest of app setup
+  return (
+    <></>
+  );
+};
 ```
 
 ---
@@ -1310,6 +1459,9 @@ export const MyLiveFollowMode = () => {
 ## Role verification for live data structures
 
 Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you've selected the option that permits only meeting presenters and organizers to control video playback. However, guests and attendees can still request the next videos to watch.
+
+> [!NOTE]
+> When accessing Live Share from a `content` chat or channel context, all users will have the `Organizer` and `Presenter` roles.
 
 In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
@@ -1439,30 +1591,32 @@ const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 
 // Example component for using useLiveState
 export const MyCustomState = () => {
-    const [state, setState] = useLiveState(MY_UNIQUE_KEY, INITIAL_STATE, ALLOWED_ROLES);
+  const [state, setState] = useLiveState(
+    MY_UNIQUE_KEY,
+    INITIAL_STATE,
+    ALLOWED_ROLES
+  );
 
-    const onTakeControl = async () => {
-        try {
-            await setState({
-                ...state,
-                presentingUserId: "<LOCAL_USER_ID>",
-            });
-        } catch (error) {
-            console.error(error);
-        }
-    };
+  const onTakeControl = async () => {
+    try {
+      await setState({
+        ...state,
+        presentingUserId: "<LOCAL_USER_ID>",
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-    // Render UI
-    return (
-        <div>
-            {`Current document: ${state.documentId}`}
-            {`Current presenter: ${state.presentingUserId}`}
-            <button onClick={onTakeControl}>
-                Take control
-            </button>
-        </div>
-    );
-}
+  // Render UI
+  return (
+    <div>
+      {`Current document: ${state.documentId}`}
+      {`Current presenter: ${state.presentingUserId}`}
+      <button onClick={onTakeControl}>Take control</button>
+    </div>
+  );
+};
 ```
 
 ---
@@ -1478,7 +1632,7 @@ In some cases, a user might have multiple roles. For example, an **Organizer** i
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
 
-Unlike the `LiveDataObject` classes mentioned in this article, Fluid data structures don't reset after your application is closed. This is ideal for scenarios such as the meeting side panel, where users frequently close and reopen your app while using other tabs in the meeting, such as chat.
+Unlike the `LiveDataObject` classes mentioned in this article, Fluid data structures don't reset after your application is closed. This is ideal for scenarios such as the meeting `sidePanel` and `content` contexts, where users frequently close and reopen your app.
 
 Fluid Framework officially supports the following types of distributed data structures:
 
@@ -1486,7 +1640,7 @@ Fluid Framework officially supports the following types of distributed data stru
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
-| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | A distributed-string sequence optimized for editing the text of documents or text areas.                                                  |
+| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | A distributed-string sequence optimized for editing the text of documents or text areas.                                                |
 
 Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a playlist feature.
 
@@ -1560,7 +1714,7 @@ import { useSharedMap } from "@microsoft/live-share-react";
 import { v4 as uuid } from "uuid";
 
 // Unique key that distinguishes this useSharedMap from others in your app
-const UNIQUE_KEY = "CUSTOM-MAP-ID"
+const UNIQUE_KEY = "CUSTOM-MAP-ID";
 
 export function PlaylistMapExample() {
   const { map, setEntry, deleteEntry } = useSharedMap(UNIQUE_KEY);
@@ -1581,9 +1735,7 @@ export function PlaylistMapExample() {
       </button>
       <div>
         {[...map.values()].map((video) => (
-          <div key={video.id}>
-            {video.title}
-          </div>
+          <div key={video.id}>{video.title}</div>
         ))}
       </div>
     </div>
@@ -1605,7 +1757,11 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, TestLiveShareHost, LiveState } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  TestLiveShareHost,
+  LiveState,
+} from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
@@ -1615,9 +1771,7 @@ import { SharedMap } from "fluid-framework";
  */
 const inTeams = process.env.IN_TEAMS;
 // Join the Fluid container
-const host = inTeams
-  ? LiveShareHost.create()
-  : TestLiveShareHost.create();
+const host = inTeams ? LiveShareHost.create() : TestLiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
@@ -1668,7 +1822,10 @@ const { container } = await liveShare.joinContainer(schema);
 ```jsx
 import { TestLiveShareHost } from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
-import { LiveShareProvider, useLiveShareContext } from "@microsoft/live-share-react";
+import {
+  LiveShareProvider,
+  useLiveShareContext,
+} from "@microsoft/live-share-react";
 import { useState } from "react";
 
 /**
@@ -1678,27 +1835,27 @@ import { useState } from "react";
 const inTeams = process.env.IN_TEAMS;
 
 export const App = () => {
-    // Create the host as React state so that it doesn't get reset on mount
-    const [host] = useState(
-        inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
-    );
+  // Create the host as React state so that it doesn't get reset on mount
+  const [host] = useState(
+    inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
+  );
 
-    // Live Share for React does not require that you define a custom Fluid schema
-    return (
-        <LiveShareProvider host={host} joinOnLoad>
-            <LiveShareLoading />
-        </LiveShareProvider>
-    );
-}
+  // Live Share for React does not require that you define a custom Fluid schema
+  return (
+    <LiveShareProvider host={host} joinOnLoad>
+      <LiveShareLoading />
+    </LiveShareProvider>
+  );
+};
 
 const LiveShareLoading = () => {
-    // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
-    const { joined } = useLiveShareContext();
-    if (joined) {
-        return <p>{"Loading..."}</p>;
-    }
-    return <p>{"Your app here..."}</p>;
-}
+  // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
+  const { joined } = useLiveShareContext();
+  if (joined) {
+    return <p>{"Loading..."}</p>;
+  }
+  return <p>{"Your app here..."}</p>;
+};
 ```
 
 ---
@@ -1707,15 +1864,15 @@ The `TestLiveShareHost` class utilizes `tinylicious` test server from Fluid Fram
 
 ```json
 {
-    "scripts": {
-        "start": "start-server-and-test start:server 7070 start:client",
-        "start:client": "{YOUR START CLIENT COMMAND HERE}",
-        "start:server": "npx tinylicious@latest"
-    },
-    "devDependencies": {
-        "@fluidframework/test-client-utils": "^1.3.6",
-        "start-server-and-test": "^2.0.0"
-    }
+  "scripts": {
+    "start": "start-server-and-test start:server 7070 start:client",
+    "start:client": "{YOUR START CLIENT COMMAND HERE}",
+    "start:server": "npx tinylicious@latest"
+  },
+  "devDependencies": {
+    "@fluidframework/test-client-utils": "^1.3.6",
+    "start-server-and-test": "^2.0.0"
+  }
 }
 ```
 
@@ -1726,13 +1883,13 @@ When you start your application this way, the `LiveShareClient` adds `#{containe
 
 ## Code samples
 
-| Sample name |    Description    |  JavaScript  |  TypeScript  |
-| ----------- | --------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
-| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) | [View](https://aka.ms/liveshare-diceroller-ts) |
-| Agile Poker | Enable all connected clients to play Agile Poker. | [View](https://aka.ms/liveshare-agilepoker) | NA |
-| 3D Model    | Enable all connected clients to view a 3D model together. |    NA | [View](https://aka.ms/liveshare-3dviewer-ts) |
-| Timer | Enable all connected clients to view a countdown timer. |  NA | [View](https://aka.ms/liveshare-timer-ts) |
-| Presence avatars | Display presence avatars for all connected clients. |    NA | [View](https://aka.ms/liveshare-presence-ts) |
+| Sample name      | Description                                                     | JavaScript                                  | TypeScript                                     |
+| ---------------- | --------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
+| Dice Roller      | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) | [View](https://aka.ms/liveshare-diceroller-ts) |
+| Agile Poker      | Enable all connected clients to play Agile Poker.               | [View](https://aka.ms/liveshare-agilepoker) | NA                                             |
+| 3D Model         | Enable all connected clients to view a 3D model together.       | NA                                          | [View](https://aka.ms/liveshare-3dviewer-ts)   |
+| Timer            | Enable all connected clients to view a countdown timer.         | NA                                          | [View](https://aka.ms/liveshare-timer-ts)      |
+| Presence avatars | Display presence avatars for all connected clients.             | NA                                          | [View](https://aka.ms/liveshare-presence-ts)   |
 
 ## Next step
 

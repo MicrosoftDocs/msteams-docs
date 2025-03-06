@@ -1,6 +1,6 @@
 ---
-title: Prepare your Microsoft 365 tenant
-description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
+title: Get Started with Microsoft 365 Tenant
+description: Learn how to get started with Teams in Microsoft 365, enable Teams for your organization and custom app upload, and create your development environment.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 01/31/2023
@@ -23,9 +23,9 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 
 ## Create your development environment
 
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
+If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aex.dev.azure.com/profile/create). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
-If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://aka.ms/m365devprogram); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-g).
+If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-g).
 
 ## Enable Teams for your organization
 
@@ -72,6 +72,4 @@ For complete information on how these settings interact, see [manage custom app 
 
 ## See also
 
-* [Test your app](test-app-overview.md)
-* [Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
-* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)
+[Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

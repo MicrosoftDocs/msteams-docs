@@ -1,11 +1,11 @@
 ---
-title: Build message extensions using Bot Framework
+title: Build Bot-based Message Extensions
 author: v-ypalikila
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 09/16/2024
 ---
 
 # Build message extensions using Bot Framework
@@ -16,7 +16,7 @@ Bot-based message extension takes advantage of the Bot Framework's messaging sch
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the the way for a developer to select between action commands and search commands.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands.":::
 
 # [Search commands](#tab/search-commands)
 
@@ -27,7 +27,7 @@ Message extension search commands allow users to search external systems and ins
 
 See the following video to learn how to define message extension search commands:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
 <br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
@@ -76,7 +76,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 | `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-|`semanticDescription`|Semantic description of the command for consumption by the large language model.|No|1.17|
+|`semanticDescription`|Semantic description of the command for consumption by the Large Language Models (LLMs).|No|1.17|
 | `type` | Type of command. Default is `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
@@ -88,10 +88,10 @@ You must add the following search parameter details that define the text visible
 | `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
-|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the large language model.|No|1.17|
+|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 

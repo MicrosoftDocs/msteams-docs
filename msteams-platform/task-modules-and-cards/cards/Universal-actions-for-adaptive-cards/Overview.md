@@ -1,5 +1,5 @@
 ---
-title: Overview of Universal Actions for Adaptive Cards
+title: Universal Actions for Cards - Overview
 description: Learn Universal Actions for Adaptive Cards, such as user-specific views, sequential workflow support, and more for desktop and mobile environments
 ms.topic: overview
 ms.localizationpriority: medium
@@ -121,6 +121,5 @@ You can get started by updating scenarios using the [quick start guide](Work-wit
 * [Build bots for Teams](../../../bots/what-are-bots.md)
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
 * [Universal Actions for search based message extensions](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)]
 * [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)

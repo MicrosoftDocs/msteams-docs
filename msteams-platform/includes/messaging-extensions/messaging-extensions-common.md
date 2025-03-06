@@ -6,9 +6,9 @@ A message extension is a cloud-hosted service that listens to user requests and 
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+You must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, is used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
-Take note of your bot app ID and app password, you'll need to provide the app ID in your app manifest.
+Take note of your bot app ID and app password, you need to provide the app ID in your app manifest.
 
 ### Update your app manifest
 
@@ -16,7 +16,7 @@ As with bots and tabs, you update the [manifest](~/resources/schema/manifest-sch
 
 #### Declare your message extension
 
-To add a message extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you're limited to creating a single message extension for your app.
+To add a message extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. You're limited to creating a single message extension for your app.
 
 > [!NOTE]
 > The manifest refers to message extensions as `composeExtensions`. This is to maintain backward compatibility.
@@ -30,6 +30,9 @@ The extension definition is an object that has the following structure:
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
 | `commands` | Array of commands that this message extension supports. You're limited to 10 commands. | Yes |
 
+> [!Note]
+> If you set the `canUpdateConfiguration` property to `true` in the app manifest, you can display the **Settings** menu item for your message extension. To enable **Settings**, you must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
+
 #### Define commands
 
 Your message extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
@@ -40,7 +43,7 @@ In the app manifest, your command item is an object with the following structure
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
+| `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | Set the type of command. Possible values include `query` and `action`. If not present, the default value is set to `query`. | No | 1.4 |

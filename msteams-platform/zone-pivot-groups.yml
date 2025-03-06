@@ -94,3 +94,5 @@ groups:
     title: JavaScript
   - id: qs-csharp
     title: C#
+  - id: qs-python
+    title: Python   

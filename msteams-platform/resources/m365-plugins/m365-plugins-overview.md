@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 plugins
+title: Introduction to Microsoft 365 Plugins
 description: In this article, you'll have Microsoft 365 plugins, plugin list and labels, Microsoft 365, and One Note interaction and more.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -158,6 +158,5 @@ The following image shows inclusion of external HTML content within Moodle:
 
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Partner apps for Moodle](../partner-apps-for-moodle.md)
 * [Moodle FAQ](../faqs.md)

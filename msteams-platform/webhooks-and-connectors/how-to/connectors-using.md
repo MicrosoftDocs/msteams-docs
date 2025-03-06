@@ -1,13 +1,15 @@
 ---
-title: Create and send messages
+title: Create & Send Actionable Messages
 author: laujan
-description: Create actionable messages, send message through Incoming Webhook, connectors for Microsoft 365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
+description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 12/09/2022
 ---
 
 # Create and send messages
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
@@ -192,12 +194,14 @@ To post a message to the webhook with PowerShell, follow these steps:
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-To send Adaptive Cards through an Incoming Webhook, follow these steps:
+To send Adaptive Cards with text or a Base64 encoded image through an Incoming Webhook, follow these steps:
 
 1. [Set up a custom webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 1. Create Adaptive Card JSON file using the following code:
 
-    ```json
+# [Text](#tab/text1)
+
+```json
     {
        "type":"message",
        "attachments":[
@@ -218,26 +222,61 @@ To send Adaptive Cards through an Incoming Webhook, follow these steps:
           }
        ]
     }
-    ```
+```
 
-    The properties for Adaptive Card JSON file are as follows:
+The properties for Adaptive Card JSON file are as follows:
 
-    * The `"type"` field must be `"message"`.
-    * The `"attachments"` array contains a set of card objects.
-    * The `"contentType"` field must be set to Adaptive Card type.
-    * The `"content"` object is the card formatted in JSON.
+* The `"type"` field must be `"message"`.
+* The `"attachments"` array contains a set of card objects.
+* The `"contentType"` field must be set to Adaptive Card type.
+* The `"content"` object is the card formatted in JSON.
+
+# [Base64 encoded image](#tab/image1)
+
+```json
+    {
+      "type": "message",
+      "attachments": [
+        {
+          "contentType": "application/vnd.microsoft.card.adaptive",
+          "content": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "Image",
+                "url": "data&colon;image/jpeg;base64,/xxxxxxxx"
+              }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0"
+          }
+        }
+      ]
+    }
+```
+
+In this example, the image is included as an attachment of type `Image` with the URL set to the Base64 encoded image data. Ensure that you replace `/xxxxxxxx` with the actual Base64 encoded image data.
+
+The properties for Adaptive Card JSON file are as follows:
+
+* The `"type"` field must be `"message"`.
+* The `"attachments"` array contains a set of card objects.
+* The `"contentType"` field must be set to Adaptive Card type.
+* The `"content"` object is the card formatted in JSON.
+
+---
 
 1. Test your Adaptive Card with Postman:
 
-    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
-    * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
+    1. Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
+    1. Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
 
 > [!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams tracks requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
 
@@ -278,7 +317,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
 * [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

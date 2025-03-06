@@ -1,27 +1,34 @@
 ---
-title: Bot configuration experience
+title: Configure & Customize Bot Settings
 author: surbhigupta
-description: Learn about bot configuration experience.
+description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 12/11/2024
 ---
 
 # Bot configuration experience
 
-Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat post-installation, enhancing operational efficiency from the start. This functionality eliminates the need for repeated user interventions that previously hampered timely benefits realization from apps. Users can now tailor the bot to their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot's ongoing relevance and value.
+Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. Bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
 
-For instance, consider a bot that tracks and shares news topics, or monitors GitHub repositories. Initially configured to align with user workflows, these bots can easily be reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management, and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
+With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
+* Tailor the bot to their specific workflows and preferences during installation.
+* Reconfigure settings to adapt to changing requirements post installation.
 
-Here's an example, where a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status. 
+For example, a bot that tracks and shares news topics or monitors GitHub repositories can initially be set up to match user workflows. Later, it can be easily reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
+
+Here's an example, where a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status.
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphical representation that shows adding a bot to a group chat and configuring the bot settings during installation.":::
 
 **Reconfigure**
 
-:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the bot in the message compose area.":::
+
+To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Build bot configuration experience
 
@@ -88,7 +95,7 @@ The following table lists the response type associated with the invoke requests:
 
    When the user submits the configuration, the `config/submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
-   # [C#](#tab/teams-bot-sdk1)
+  # [C#](#tab/teams-bot-sdk1)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
@@ -100,7 +107,7 @@ The following table lists the response type associated with the invoke requests:
    }
    ```
 
-   # [JavaScript](#tab/JS1)
+  # [JavaScript](#tab/JS1)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
@@ -130,7 +137,7 @@ The following table lists the response type associated with the invoke requests:
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-   # [C#](#tab/teams-bot-sdk2)
+  # [C#](#tab/teams-bot-sdk2)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
@@ -153,7 +160,7 @@ The following table lists the response type associated with the invoke requests:
    };
    ```
 
-   # [JavaScript](#tab/JS2)
+  # [JavaScript](#tab/JS2)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
@@ -180,7 +187,7 @@ The following table lists the response type associated with the invoke requests:
 
 * `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-   # [C#](#tab/teams-bot-sdk3)
+  # [C#](#tab/teams-bot-sdk3)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
@@ -199,7 +206,7 @@ The following table lists the response type associated with the invoke requests:
    }
    ```
 
-   # [JavaScript](#tab/JS3)
+  # [JavaScript](#tab/JS3)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 

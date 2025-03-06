@@ -1,5 +1,5 @@
 ---
-title: Enable authentication using third-party OAuth provider
+title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -50,7 +50,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
 
 ## Treat tab context as hints
 
-Although the tab context provides helpful information regarding the user, don't use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+Although the tab context provides helpful information regarding the user, don't use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. For more information, see [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 ## Code sample
 

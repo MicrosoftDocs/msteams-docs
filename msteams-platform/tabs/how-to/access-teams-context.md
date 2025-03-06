@@ -1,9 +1,9 @@
 ---
-title: Get context for your tab
-description: Learn to context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
+title: Get Contextual Information for Tabs
+description: Learn to get context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.date: 03/02/2023
+ms.date: 02/06/2025
 ---
 
 # Get context for your tab
@@ -12,7 +12,7 @@ Your tab requires contextual information to display relevant content:
 
 * Basic information about the user, team, or company.
 * Locale and theme information.
-* The `page.id` and `page.subPageId` that identify what is in this tab (known as `entityId` and `subEntityId` before TeamsJS v.2.0.0).
+* The `page.id` and `page.subPageId` that identify what is in this tab (known as `entityId` and `subEntityId` before TeamsJS v2.0.0).
 
 ## User context
 
@@ -37,18 +37,19 @@ You can access context information in two ways:
 
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
-* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` before TeamsJS v.2.0.0).
-* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` before TeamsJS v.2.0.0).
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the sign in name of the current user in their home tenant. (Known as `{loginHint}` before TeamsJS v.2.0.0).
-* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` before TeamsJS v.2.0.0).
-* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` before TeamsJS v.2.0.0).
-* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` before TeamsJS v.2.0.0).
-* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` before TeamsJS v.2.0.0)
-* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` before TeamsJS v.2.0.0).
-* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v.2.0.0).
+* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` before TeamsJS v2.0.0).
+* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` before TeamsJS v2.0.0).
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the sign in name of the current user in their home tenant. (Known as `{loginHint}` before TeamsJS v2.0.0).
+* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` before TeamsJS v2.0.0).
+* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` before TeamsJS v2.0.0).
+* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` before TeamsJS v2.0.0).
+* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` before TeamsJS v2.0.0)
+* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` before TeamsJS v2.0.0).
+* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
 
 > [!NOTE]
-> The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{user.loginHint}`.
+> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
+> - Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
@@ -132,7 +133,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
 }
 ```
 
-# [TeamsJS v1](#tab/Json-v1)
+# [TeamsJS v1.x.x](#tab/Json-v1)
 
 The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
@@ -224,8 +225,7 @@ async function example() {
   /*...*/
 }
 ```
-
-# [TeamsJS v1](#tab/teamsjs-v1)
+# [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
 ## TypeScript
 
@@ -295,7 +295,7 @@ For more information, see [Updates to the *Context* interface](using-teams-clien
 ## Retrieve context in private channels
 
 > [!NOTE]
-> Private channels are currently in private developer preview only.
+> Private channels are in private developer preview only.
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel.
 
@@ -373,11 +373,6 @@ The following image shows the dark theme option in the Teams:
 | Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
 |Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ## See also
 

@@ -1,10 +1,11 @@
 ---
-title: Link unfurling
+title: Add Link Unfurling to App Manifest
 author: surbhigupta
-description: Add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually. Add link unfurling using Developer Portal. How to update your web service code to handle the invoke request.
+description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.date: 11/06/2024
 ---
 # Link unfurling
 
@@ -18,7 +19,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Link unfurling supports Adaptive Cards version 1.3 and earlier.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
+> * Link unfurling doesn't require message extension commands. If you define `messagehandlers` within `composeExtensions` in the app manifest, there's no need to add `commands`. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 > * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
@@ -39,7 +40,7 @@ When an app link is pasted into the Teams compose message area, the link unfurls
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO c1c13e1e-23fc-4ca4-91c6-026c5776506b]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -422,14 +423,14 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-    # [Advantages](#tab/advantages)
-    
+   # [Advantages](#tab/advantages)
+
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
-    
+
     * Unfurl previews for your links that users share in Teams even before they've installed your app.
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-    # [Limitations](#tab/limitations)
+   # [Limitations](#tab/limitations)
 
     The following are the limitations:
 

@@ -1,11 +1,11 @@
 ---
-title: Strategize and decide what to measure
+title: Measure App Performance
 author: heath-hamilton
-description: Learn about deciding what to measure using instrumentation data for your Teams app analytics
+description: Learn to strategize and decide what to measure using instrumentation data for your Microsoft Teams app analytics and monitor events for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
 # Strategize and decide what to measure
@@ -88,11 +88,11 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users repeatedly use your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
-> - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
+> - Users using multiple Teams platform capabilities are 20 to 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.

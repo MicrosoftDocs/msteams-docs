@@ -1,6 +1,6 @@
 ---
 title: Up to date views
-description: In this module, learn about up to date cards views using Universal Bot with Code samples in Microsoft Teams
+description: Learn about up to date card views within Adaptive Card in Teams with code samples and approval base card with approve or reject buttons.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium

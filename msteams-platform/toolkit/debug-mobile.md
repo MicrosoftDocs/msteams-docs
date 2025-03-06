@@ -1,11 +1,11 @@
 ---
-title: Debug for mobile
+title: Debug Tab or Bot Apps in Mobile
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app in mobile clients.
+description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile clients in both Visual Studio Code and Command Line.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 06/14/2023
+ms.date: 02/06/2025
 ---
 
 # Debug for mobile
@@ -14,7 +14,7 @@ When you're building a Microsoft Teams app that includes a tab, bot, or message 
 
 See the following video to learn how to debug your Teams app in mobile clients:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW1aEur]
+> [!VIDEO 0137be57-10fc-4605-a47e-d7f6c6111600]
 
 ## Debug your tab app
 
@@ -108,11 +108,15 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    2. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
    3. Select the Start debugging (F5) button.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
-   4. You'll be prompted to upload a custom app into Teams. Select **Add**.
+   4. Select **Add** to upload the custom app to Teams.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+
+   5. Select **Open**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
         The app opens as a personal tab.
 
@@ -150,17 +154,17 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
 # [iOS](#tab/ios1)
 
-  To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="Screenshot shows how to clear the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="Screenshot shows how to clear the app data in iOS mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
 # [Android](#tab/android1)
 
-  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="Screenshot shows how to clear the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="Screenshot shows how to clear the app data in android mobile client for tab." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
 
-  ---
+---
 
 1. If you're accessing the dev tunnel for the first time, sign in to Microsoft 365 account and select **continue**.
 
@@ -173,7 +177,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
     :::image type="content" source="../assets/images/debug-mobile/mobile-tab-app.PNG" alt-text="Screenshot shows the mobile tab app.":::
 
-1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-an-android-device) to debug your tab while it's running.
+1. For Android devices, use [DevTools](../tabs/how-to/developer-tools.md#access-devtools-from-teams-android-client) to debug your tab while it's running.
 
 ## Test your bot app on mobile client
 
@@ -184,17 +188,17 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
 # [iOS](#tab/ios2)
 
-  To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
+To clear the Teams app data, go to **Settings** > **Teams** > **Clear App Data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="Screenshot shows how to clear the app data in iOS mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-ios-option.PNG" alt-text="Screenshot shows how to clear the app data in iOS mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-ios.PNG":::
 
 # [Android](#tab/android2)
 
-  To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
+To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage** > **Clear app data** > **Clear data**.
 
-  :::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="Screenshot shows how to clear the app data in android mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
+:::image type="content" source="../assets/images/debug-mobile/clear-app-data-android-option.PNG" alt-text="Screenshot shows how to clear the app data in android mobile client for bot." lightbox="../assets/images/debug-mobile/clear-app-data-android.PNG":::
 
-  ---
+---
 
 1. Your first mobile bot app is created.
 
