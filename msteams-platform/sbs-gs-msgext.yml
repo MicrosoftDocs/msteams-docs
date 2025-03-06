@@ -48,6 +48,10 @@ items:
 
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+development+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -135,6 +139,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+your+message+extension+project+workspace+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+   
    # [Command Line](#tab/cli1)
 
    Use the `teamsfx` CLI to create your first project.
@@ -157,6 +164,9 @@ items:
       1. Enter a suitable name for your app. The name of the app must consist only of alphanumeric characters.
 
     CLI creates the project after you answer all the questions.
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+your+message+extension+project+workspace+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Ccli1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ---
 
@@ -208,6 +218,9 @@ items:
 
    Now you're ready to build the app and run it locally!
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
    # [Command Line](#tab/cli2)
 
    1. Go to the project folder of your message extension app and open Command Prompt.
@@ -219,6 +232,9 @@ items:
         ```
 
         Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Ccli1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ---
 
@@ -274,6 +290,9 @@ items:
 
         - If you created a bot app before you created the message extension app, Teams loads the message extension in the bot app you created. Previous chat messages of the bot app are visible.
         - If you created a message extension first, Teams loads your app in the most recent chat that is open on Teams.
+     
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ### Test your app
 
@@ -295,6 +314,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+How+to+run+a+search+query+using+Message+Extension&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     
    # [Command Box](#tab/cmdbox)
 
    1. Enter **/** followed by your message extension app's name in the command box.
@@ -318,6 +340,9 @@ items:
    1. Select **Enter**. The message extension app sends the Adaptive Card with the search result in the most recent chat.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result sent in a chat.":::
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+How+to+run+a+search+query+using+Command+Box&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Ccmdbox%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ---
 
@@ -371,7 +396,7 @@ items:
 
    1. A list of your message extension apps appears in your most recent Teams chat. Select your message extension app from the list.
 
-   </details>
+     </details>
 
    ### Learn how to troubleshoot if your app doesn't run locally
 
@@ -404,6 +429,9 @@ items:
 
    The **ACCOUNTS** section of the sidebar lists the number of usable Azure subscriptions available to you. Ensure that you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
    # [Command Line](#tab/cli3)
 
    1. Go to the project folder of your message extension app and open Command Prompt.
@@ -418,9 +446,15 @@ items:
 
    Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Ccli2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
    ---
 
    [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
+   
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Ccli2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ### Learn what happens when you deployed your app to Azure
 

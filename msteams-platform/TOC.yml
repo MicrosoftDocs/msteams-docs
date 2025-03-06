@@ -479,6 +479,9 @@
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Create a commands menu
+      href: bots/how-to/create-a-bot-commands-menu.md
+      displayName: compose
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
@@ -683,12 +686,12 @@
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token, message in channel, Teams message
-  - name: Create Incoming Webhooks
+  - name: Create Incoming Webhooks (Deprecated)
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
-  - name: Create connectors for Microsoft 365 Groups
+  - name: Create connectors for Microsoft 365 Groups (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Create and send messages
+  - name: Create and send messages (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
 - name: Build cards and dialogs
@@ -758,46 +761,44 @@
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
     displayName: Single sign-on, OAuth provider
-  - name: Enable SSO for your Teams app
-    items: 
-    - name: Enable SSO for your tab app
-      items:
-      - name: Overview for tab SSO
-        href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure tab app in Microsoft Entra ID
-        href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Add code to enable SSO for tab
-        href: tabs/how-to/authentication/tab-sso-code.md
-        displayName: getAuthToken
-      - name: Update app manifest and preview tab app
-        href: tabs/how-to/authentication/tab-sso-manifest.md
-        displayName: application ID URI
-      - name: Grant Microsoft Graph permissions and scopes
-        href: tabs/how-to/authentication/tab-sso-graph-api.md
-        displayName: Graph permissions
-    - name: Enable SSO for bot and message extension app
-      items:
-      - name: Overview
-        href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure bot app in Microsoft Entra ID
-        href: bots/how-to/authentication/bot-sso-register-aad.md
-      - name: Add code to enable SSO
-        href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest and preview bot app
-        href: bots/how-to/authentication/bot-sso-manifest.md
-      - name: Grant Microsoft Graph permissions and scopes
-        href: bots/how-to/authentication/bot-sso-graph-api.md
-    - name: Enable SSO for Adaptive Cards
-      items:
-      - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Add code to enable SSO
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
-        displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
-    - name: Troubleshoot SSO authentication
-      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-      displayName: Caching
+  - name: Enable SSO for tab app using Entra ID
+    items:
+     - name: Overview for tab SSO
+       href: tabs/how-to/authentication/tab-sso-overview.md
+     - name: Configure tab app in Microsoft Entra ID
+       href: tabs/how-to/authentication/tab-sso-register-aad.md
+     - name: Add code to enable SSO for tab
+       href: tabs/how-to/authentication/tab-sso-code.md
+       displayName: getAuthToken
+     - name: Update app manifest and preview tab app
+       href: tabs/how-to/authentication/tab-sso-manifest.md
+       displayName: application ID URI
+     - name: Grant Microsoft Graph permissions and scopes
+       href: tabs/how-to/authentication/tab-sso-graph-api.md
+       displayName: Graph permissions
+  - name: Enable SSO for bot and message extension app using Entra ID
+    items:
+     - name: Overview
+       href: bots/how-to/authentication/bot-sso-overview.md
+     - name: Configure bot app in Microsoft Entra ID
+       href: bots/how-to/authentication/bot-sso-register-aad.md
+     - name: Add code to enable SSO
+       href: bots/how-to/authentication/bot-sso-code.md
+     - name: Update app manifest and preview bot app
+       href: bots/how-to/authentication/bot-sso-manifest.md
+     - name: Grant Microsoft Graph permissions and scopes
+       href: bots/how-to/authentication/bot-sso-graph-api.md
+  - name: Enable SSO for Adaptive Cards using Entra ID
+    items:
+     - name: Overview
+       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
+       displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+     - name: Add code to enable SSO
+       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
+       displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
+  - name: Troubleshoot SSO authentication
+    href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    displayName: Caching
   - name: Use third party IdP authentication
     items:
     - name: Third party OAuth IdP overview

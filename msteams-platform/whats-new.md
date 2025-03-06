@@ -31,7 +31,8 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
+* ***February 27, 2025***: [Introducing the app package editor in the Developer Portal for Teams, which allows you to create, manage, and customize app packages, and also add a declarative agent and its related files.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
+* ***February 05, 2025***: [Introducing third-party cloud storage capability for drag-dropped files that allows you to use a storage app of your preference other than OneDrive and SharePoint](concepts/device-capabilities/third-party-storage-capability.md).
 
 :::column-end:::
 :::row-end:::
@@ -452,6 +453,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 * ***February 3, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
+* ***February 19, 2025***: [Introducing stop stream generation button for streaming bot messages](bots/streaming-ux.md)
 
 :::column-end:::
 :::row-end:::
