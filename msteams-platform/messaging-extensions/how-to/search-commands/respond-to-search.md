@@ -26,7 +26,7 @@ The request parameters are found in the `value` object in the request, which inc
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
@@ -238,7 +238,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript/Node.js](#tab/typescript2)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
@@ -267,7 +267,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -399,7 +399,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 ```python
 async def on_teams_messaging_extension_query(self, context, query):
@@ -470,7 +470,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
 ### Enable and handle tap actions
 
-# [.NET](#tab/csharp)
+# [.NET](#tab/csharp3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
@@ -504,7 +504,7 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript/Node.js](#tab/typescript3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
@@ -520,7 +520,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
     } 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
 {
@@ -537,7 +537,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 }
 ```
 
-# [Python](#tab/python1)
+# [Python](#tab/python3)
 
 ```python
 async def on_teams_messaging_extension_select_item(
