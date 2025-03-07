@@ -799,7 +799,7 @@ Here is the required to-do list to upgrade your bot to custom engine agent:
 | Use AI labels to identify that the message was generated using AI. | [AI labels](../bot-messages-ai-generated-content.md#ai-label)|
 | Use citations to refer to the source of the bot message through in-text citations and references.| [Citations](../bot-messages-ai-generated-content.md#citations)|
 
-### Add support for Microsoft 365 Copilot Chat
+## Add support for Microsoft 365 Copilot Chat
 
 You can now add support for custom engine agents in Microsoft 365 Copilot Chat, which is currently in public developer preview. Additionally, you can preview support for asynchronous patterns, including follow-up messages and long-running tasks. For more information, see [asynchronous patterns](/microsoft-365-copilot/extensibility/ux-custom-engine-agent).
 
