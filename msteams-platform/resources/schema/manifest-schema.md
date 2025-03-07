@@ -8,7 +8,7 @@ ms.date: 12/11/2024
 
 # App manifest
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.17, and the current version is 1.19 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.19, and the current version is 1.20 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -24,8 +24,8 @@ The following is the sample app manifest schema:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.19",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.20",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
@@ -546,11 +546,12 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models (formerly known as `declarativeCopilots`). [Custom engine agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) are conversational Teams bots that use custom AI language models and orchestration, yet are selectable (along with installed declarative agents) as **Agents** from the Microsoft 365 Copilot side panel.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
+|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
+|`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
 
 ### declarativeAgents
 
@@ -560,6 +561,18 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
 |`file`| String | 2048 characters |✔️| Relative file path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+
+### customEngineAgents
+
+Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
+
+> [!NOTE]
+> Custom engine agents support in Microsoft 365 Copilot is currently in public preview.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 
 ## configurableTabs
 
@@ -1335,6 +1348,16 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.|
+
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## Create an app manifest file
 

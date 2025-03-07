@@ -550,9 +550,6 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 
 ### customEngineAgents
 
-> [!NOTE]
-> Custom engine agents support in Microsoft 365 Copilot is currently in limited private preview and not all developers have access during the staged rollout.
-
 Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
 
 |Name| Type| Maximum size | Required | Description|
@@ -1521,6 +1518,16 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
+
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## See also
 
