@@ -72,11 +72,10 @@ Services that need access to all Teams message data must use the Graph APIs that
 >
 > When you submit your app to the Teams Store, it's crucial to explain how your app uses the data it reads in the app description. It's especially important for Teams Store approval as Microsoft prioritizes privacy and security. Ensure that you include the following in the app description:
 >
-> - The app reads only necessary information for its core functions.
-> - Explain how the app addresses the specific business needs using the data it reads to increase productivity and collaboration.
-> - Explain how bot handles user data with transparency and compliance for data protection.
+> - The app reads the necessary information for its core functions.
+> - The app uses the data relevant to the specific business that it addresses to increase productivity and collaboration.
 >
-> For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions)
+> For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
 ## Update app manifest
 
