@@ -75,8 +75,8 @@ Services that need access to all Teams message data must use the Graph APIs that
 > - The app reads only necessary information for its core functions.
 > - Explain how the app addresses the specific business needs using the data it reads to increase productivity and collaboration.
 > - Explain how bot handles user data with transparency and compliance for data protection.
-
-that your app description clearly spells out the how your app uses the data it reads
+>
+> For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions)
 
 ## Update app manifest
 
