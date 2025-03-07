@@ -1,6 +1,6 @@
 ---
 title: Deep link to a Teams chat
-author: v-npaladugu
+author: surbhigupta
 description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
 ms.topic: conceptual
 ms.author: surbhigupta

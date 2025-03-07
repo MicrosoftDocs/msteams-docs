@@ -4,7 +4,7 @@ author: surbhigupta
 description: In this module, learn more about Live Share canvas, an extension enabling inking, laser pointers, and cursors for meeting apps.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 10/04/2022
 ---
 

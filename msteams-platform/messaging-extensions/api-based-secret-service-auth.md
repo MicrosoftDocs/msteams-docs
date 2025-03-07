@@ -1,6 +1,6 @@
 ---
 title: API secret service auth
-author: v-ypalikila
+author: surbhigupta
 description: Learn how to enable API key authentication and register an API key for API_based message extensions.
 ms.localizationpriority: medium
 ms.topic: concept-article
