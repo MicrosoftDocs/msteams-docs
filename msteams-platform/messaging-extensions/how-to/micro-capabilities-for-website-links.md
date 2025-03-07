@@ -5,6 +5,7 @@ description: In this article, learn how to use micro-capability templates and sc
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.date: 03/07/2025
 ---
 # Micro-capabilities for website links
 
