@@ -33,11 +33,11 @@ Teams platform features that are available to all app developers.
 
 **2025 March**
 
-* ***March 06, 2025***: [Introducing app manifest v1.20 with customEngineAgents and intuneInfo.](resources/schema/manifest-schema.md)
+* ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties.](resources/schema/manifest-schema.md)
 
-* ***March 03, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
+* ***March 07, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
 
-* ***March 03, 2025***: [Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies](/javascript/api/outlook/office.mailbox).
+* ***March 07, 2025***: [Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies](/javascript/api/outlook/office.mailbox).
 
 :::column-end:::
 :::row-end:::
