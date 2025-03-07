@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about Live Share SDK, Live share core, Live share media, and Live share canvas, apps with Live Share, Live Share collaborative contexts, and React integration.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
