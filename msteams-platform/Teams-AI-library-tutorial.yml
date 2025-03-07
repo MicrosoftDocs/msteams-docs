@@ -43,7 +43,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-   /**After you set up your project workspace with Teams Toolkit, you need to create an Azure OpenAI key using Azure portal./
+    After you set up your project workspace with Teams Toolkit, you need to create an Azure OpenAI key using Azure portal.
 
     ## Create an Azure AI Search endpoint and OpenAI key
 
@@ -53,7 +53,7 @@ items:
 
     1. Select **Go to Azure OpenAI Studio**.
         
-      :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
+        :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
 
     1. Select **Chat** > **Create new deployment**.
         
