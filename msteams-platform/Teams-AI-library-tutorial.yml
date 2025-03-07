@@ -47,7 +47,7 @@ items:
 
     ## Create an Azure AI Search endpoint and OpenAI key
 
-    1. Go to [**Azure portal**](https://ms.portal.azure.com/) and create an Azure OpenAI service resource. For more information, see [create a resource](/azure/ai-services/openai/how-to/create-resource.md#create-a-resource).
+    1. Go to [**Azure portal**](https://ms.portal.azure.com/) and create an Azure OpenAI service resource. For more information, see [create a resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource).
 
     1. Go to home page and select the Azure OpenAI service that you created.
 
