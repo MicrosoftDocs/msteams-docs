@@ -859,6 +859,7 @@ If you want your custom engine agent to support Microsoft 365 Copilot Chat, add 
 >
 > * Microsoft 365 Copilot Chat adds an AI-generated label to every response that the custom engine agent sends.
 > * If you have built your conventional bot using Teams Toolkit and you want to add support for Microsoft 365 Copilot Chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+> * If you want to add single-sign on (SSO) authentication for your custom engine agent, see [update Microsoft Entra app registration for SSO](../../../m365-apps/extend-m365-teams-personal-tab.md#update-microsoft-entra-app-registration-for-sso). However, SSO authentication for custom engine agent isn't supported for Outlook client.
 
 ## Elevate your conventional bot to use AI
 
