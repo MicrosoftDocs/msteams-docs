@@ -471,8 +471,6 @@ Developer preview is a public program that provides early access to unreleased T
 </details>
 </br>
 
-</br>
-
 <details>
 
 <summary><b>2024</b></summary>
