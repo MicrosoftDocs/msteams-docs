@@ -78,6 +78,10 @@ Services that need access to all Teams message data must use the Graph APIs that
 >
 > For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
+## Use RSC permissions to enhance AI agents in Teams
+
+[TBD - AI Agents: Include a section on how RSC can be used to enhance AI agents in Teams. This could include examples of how AI agents can use the additional context from RSC to provide more relevant and helpful responses.]
+
 ## Update app manifest
 
 For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
