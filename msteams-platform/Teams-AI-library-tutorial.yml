@@ -43,13 +43,16 @@ items:
   durationInMinutes: 1
   content: | 
 
-    After you set up your project workspace with Teams Toolkit, you need to create an Azure OpenAI key using Azure portal.
+    After you set up your project workspace with Teams Toolkit, you need to create an Azure AI Search endpoint and OpenAI key in Azure Portal.
+    
+      > [!NOTE]
+      > To create an Azure AI Search endpoint and OpenAI key, you need to have an Azure OpenAI Service resource. If you don't have an Azure OpenAI service resource, see [create a resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource). If you already have an Azure OpenAI Service resource, follow the steps below to create an Azure AI Search endpoint and OpenAI key.
 
     ## Create an Azure AI Search endpoint and OpenAI key
 
-    1. Go to [**Azure portal**](https://ms.portal.azure.com/) and create an Azure OpenAI service resource. For more information, see [create a resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource).
+    1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
-    1. Go to home page and select the Azure OpenAI service that you created.
+    1. Select the Azure OpenAI service that you created.
 
     1. Select **Go to Azure OpenAI Studio**.
         
