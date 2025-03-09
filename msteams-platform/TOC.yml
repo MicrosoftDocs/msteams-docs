@@ -300,7 +300,7 @@
       items:
       - name: Overview
         href: concepts/build-and-test/teams-developer-portal.md
-        displayName: setup runtime environment, App Studio, Changelog for Developer Portal, Import an existing app, Import published app
+        displayName: setup runtime environment, Changelog for Developer Portal, Import an existing app, Import published app
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
