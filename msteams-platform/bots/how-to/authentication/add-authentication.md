@@ -15,12 +15,12 @@ OAuth 2.0 is an open standard for authentication and authorization used by Micro
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
-For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
+For more information about how the Azure Bot Service handles authentication, see [user authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
 In this article you'll learn:
 
 - **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
@@ -444,6 +444,9 @@ and when for these, and just reference that from here, along with the set of ste
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
 
+   > [!NOTE]
+   > OAuth isn't supported in the group chat or channel scopes directly. If you enable authentication and users install your bot in group chats or channels, they must authenticate in their personal scopes before they can use the bot in the group chat or channel.
+
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list
@@ -511,6 +514,7 @@ This manifest contains information needed by Teams to connect with the bot:
     {
       "botId": "",
       "scopes": [
+        "personal",
         "groupchat",
         "team"
       ],
