@@ -52,6 +52,9 @@ This tutorial requires familiarity with the following concepts and resources:
     npm install @fluidframework/azure-client fluid-framework @fluidframework/test-client-utils
     ```
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+the+project&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23create-the-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Code the project
 
 1. Open the file `/src/client/<your tab name>` in your code editor.
@@ -64,6 +67,9 @@ This tutorial requires familiarity with the following concepts and resources:
     import { AzureClient, AzureClientProps } from "@fluidframework/azure-client";
     import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
     ```
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Code+the+project&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23code-the-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Defining Fluid functions and parameters
 
@@ -146,6 +152,9 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
 
     When you fetch the Fluid container, you need to return the container as your application must interact with the container and the DDSes inside it, in the content page.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Defining+Fluid+functions+and+parameters&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23defining-fluid-functions-and-parameters&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Create Fluid container in the configuration page
 
 1. Open the file `src/client/<your tab name>/<your tab name>Config.tsx` in your code editor.
@@ -180,6 +189,9 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     > [!WARNING]
     > As the content page URL is used to store the container ID, this record gets removed if the Teams tab is deleted.
     > Additionally, every content page can only support one container ID.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Fluid+container+in+the+configuration+page&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23create-fluid-container-in-the-configuration-page&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Refactor content page to reflect Fluid application
 
@@ -288,6 +300,9 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     > [!NOTE]
     > It's important to ensure that the content page is loaded inside Teams and that the Fluid container is defined before passing it into the      React component (defined as `FluidComponent`, see below).
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Refactor+content+page+to+reflect+Fluid+application&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23create-fluid-container-in-the-configuration-page&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Create React component for Fluid view and data
 
 You've integrated the basic creation flow of Teams and Fluid. You can now create your own React component that handles the interactions between the application view and Fluid data. From now, the logic and flow behaves just like other Fluid-powered application. With the basic structure set up, you can create any of the [Fluid examples](https://github.com/microsoft/FluidExamples) as a Teams application by changing the `ContainerSchema` and the application view's interaction with the DDSes/data objects in the content page.
@@ -307,6 +322,9 @@ To run and start the Teams application, open another terminal, and follow the [i
 
 > [!NOTE]
 > Install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Start+the+Fluid+server+and+run+the+application&&author=%40timtwang&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam%23create-fluid-container-in-the-configuration-page&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fusing-fluid-msteam.md&documentVersionIndependentId=3fb7e3be-90de-3611-a18d-ce9e024811d4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Next steps
 
