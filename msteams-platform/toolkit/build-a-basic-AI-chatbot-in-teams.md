@@ -330,7 +330,7 @@ You can add customizations on top of the basic app to build complex scenarios as
         ```
         ---
     
-    * Maximum number of history tokens. Configure `max_conversation_history_tok`ens when initializing `PromptManager`.
+    * Maximum number of history tokens. Configure `max_conversation_history_tokens` when initializing `PromptManager`.
     
         # [JavaScript](#tab/javaScript4)
         

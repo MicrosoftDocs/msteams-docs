@@ -52,7 +52,7 @@ Teams AI library provides the capability to stream messages for AI-powered bots.
 > [!NOTE]
 > Streaming bot messages is not available with function calling.
 
-Through streaming, your AI-powered bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app::
+Through streaming, your AI-powered bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app:
 
 1. **Enable streaming for AI-powered bot**:
 
@@ -549,7 +549,7 @@ After a user stops message generation:
     | --- | --- |
     | Http status code | 403 |
     | Error code | `ContentStreamNotAllowed` |
-    | Error message | Content stream was cancelled by user. |
+    | Error message | Content stream was canceled by user. |
     | Description |  The streaming was stopped by the user. |
 
 ## Response codes
@@ -573,7 +573,7 @@ The following are the success and error codes:
 | `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
 | `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
 | `403`| `ContentStreamNotAllowed` | `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
-| '403' | `ContentStreamNotAllowed` | Content stream was cancelled by user. | The streaming was stopped by the user. |
+| '403' | `ContentStreamNotAllowed` | Content stream was canceled by user. | The streaming was stopped by the user. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
 
 [Back to top](#stream-messages-user-experience)
