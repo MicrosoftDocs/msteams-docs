@@ -1182,15 +1182,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-   * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
-   * Prompt starters or commands must be functional and return responses. [*Must fix*]
-   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
-   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
-   * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * Prompt starters or commands must be functional and return responses. [*Must fix*]
+  * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+  * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+  * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
    If your app sends a welcome message, ensure the following guidelines are met:
 
-   * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
+  * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
@@ -1882,7 +1882,6 @@ The long description of an app must clearly call out the following:
 * Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
 * Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
 * Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up.
-* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Copilot.
 
 [Back to top](#teams-store-validation-guidelines)
 
