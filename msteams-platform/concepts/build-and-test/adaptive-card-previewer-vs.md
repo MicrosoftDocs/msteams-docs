@@ -1,6 +1,6 @@
 ---
 title: Adaptive Card Previewer - Visual Studio
-author: v-ganr
+author: surbhigupta
 description: In this article, learn more about the Microsoft Adaptive Card previewer using Teams Toolkit for Visual Studio, features, advantages, limitations.
 ms.localizationpriority: medium
 ms.topic: overview
