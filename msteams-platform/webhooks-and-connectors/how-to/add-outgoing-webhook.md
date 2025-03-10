@@ -269,6 +269,41 @@ var responseMsg = JSON.stringify({
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+received_msg = json.loads(payload)
+response_msg = json.dumps({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": None,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": f"Request sent by: {received_msg['from']['name']}"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": None,
+            "thumbnailUrl": None
+        }
+    ]
+})
+```
+
 ---
 
 ## Code sample
