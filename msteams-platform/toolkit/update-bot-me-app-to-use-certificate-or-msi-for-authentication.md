@@ -236,7 +236,7 @@ To delete the bot secret:
 Your bot app now uses MSI for authentication.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20MSI-based%20authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20MSI-based%20authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dmsi%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ---
 
