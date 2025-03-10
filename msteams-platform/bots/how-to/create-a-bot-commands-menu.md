@@ -5,7 +5,7 @@ description: Learn how to create and handle a command menu for your Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.date: 03/07/2025
+ms.date: 03/11/2025
 ---
 
 # Create a commands menu
