@@ -1125,6 +1125,7 @@ The `extensions` property specifies Office Add-ins within an app manifest and si
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
+|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in the callout that opens in the Office application (such as Excel, Outlook, PowerPoint, or Word) when an Office Add-in is installed. |
 |`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) within an open Office document. |
 |`keyboardShortcuts`| Array | 10 | | Defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts). |
 
@@ -1132,7 +1133,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, and `contextMenus` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, `contextMenus`, `contentRuntimes`, and `getStartedMessages` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 | Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
@@ -1359,6 +1360,23 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensions.getStartedMessages
+
+The `extensions.getStartedMessages` array provides information about an Office Add-in that appears in the callout that opens in Office when an Office Add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`title`|String| 125 characters | ✔️ | The title used for the heading of the callout. |
+|`description`|String| 250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
+|`learnMoreUrl`|String| 2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. |
+|`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (PowerPoint), `document` (Word) |
+|`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.contextMenus
 
