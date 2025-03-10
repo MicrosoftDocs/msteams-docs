@@ -3,7 +3,7 @@ title: Enable SSO for Bot & Message Extension
 description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/07/2025
+ms.date: 03/11/2025
 ---
 # Update app manifest for SSO and preview your app
 
