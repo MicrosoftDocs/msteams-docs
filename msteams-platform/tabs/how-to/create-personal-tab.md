@@ -288,12 +288,6 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ]
 ```
 
-## Enable personal tab apps for calling extensibility
-
-You can create personal scope apps that integrate with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. Use the right scope and context to build apps that utilize tab type, static scope, personal context, and meeting side panels.
-
-For more information, see [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
-
 ## Customizing your static tab in chats or meetings
 
 To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:

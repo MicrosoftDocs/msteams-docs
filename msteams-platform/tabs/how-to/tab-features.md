@@ -66,6 +66,12 @@ Teams tabs offer several key features that help enhance collaboration and produc
   - Single sign-on (SSO) capability, if supported.
   - Awareness of Microsoft Entra ID of the current user.
 
+## Enable personal tab apps for calling extensibility
+
+You can create personal scope apps that integrate with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. Use the right scope and context to build apps that utilize tab type, static scope, personal context, and meeting side panels.
+
+For more information, see [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
+
 Using tab apps in Teams has the following benefits:
 
 - **Streamlined Workflows**: Keep all your important tools and content in one place, so you don't have to switch between apps.

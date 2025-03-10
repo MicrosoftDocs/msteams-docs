@@ -196,39 +196,6 @@ The Teams JS SDK, Microsoft Graph REST API, and Teams SDK are essential for crea
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.<br>
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-### Declare custom tab in app manifest
-
-A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. This informs Teams that your app has loaded.
-
-Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For static tabs, the content URL is set directly in your Teams [app manifest](../resources/schema/manifest-schema.md#statictabs) by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
-
-> [!NOTE]
-> Teams apps can't use native plugins because they run inside sandboxed iframes.
-
-For channel or group tabs, you can also create an extra configuration page. This page allows you to configure content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple teams or group chats. On each subsequent install, your users can configure the tab, allowing you to tailor the experience as required. When users add or configure a tab, a URL is associated with the tab that is presented in the Teams user interface (UI). Configuring a tab simply adds more parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose, which board the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs).
-
-For static tabs, you can pin a `contentUrl` to chat, channel, or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
-
-You can have multiple channels or group tabs, and up to 16 static tabs per app.
-
-<details>
-<summary><b>Example of app manifest update:</b></summary>
-
-Ensure that you have correctly configured the tab section of the manifest to link to the URL of your tab:
-
-```manifest
-{
- "type": "tab",
- "name": "Your Tab Name",
- "entityId": "your-tab-entity-id",
- "contentUrl": "<https://your-tab-url>",
- "websiteUrl": "<https://your-website-url>",
- "scopes": ["team", "personal"]
- }
-```
-
-</details>
-
 <!--
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
