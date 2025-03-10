@@ -5,6 +5,7 @@ description: Learn how to format and style your bot messages such as strikethrou
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.date: 03/11/2025
 ---
 # Format your bot messages
 

@@ -5,6 +5,7 @@ description: Learn to respond to message extension action commands with Proactiv
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 03/11/2025
 ---
 
 # Respond to the dialog submit action

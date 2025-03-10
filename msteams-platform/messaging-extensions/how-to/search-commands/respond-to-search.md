@@ -5,6 +5,7 @@ description: Learn how to respond to the search command from a message extension
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
+ms.date: 03/11/2025
 ---
 # Respond to search command
 
