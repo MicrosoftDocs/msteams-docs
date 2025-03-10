@@ -209,36 +209,23 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+your+application+to+Teams&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23upload-your-application-to-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23upload-your-application-to-teams&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
-## Reorder tabs
+## Static and personal tab apps
 
-Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
+You can build two types of tabs within your Microsoft Teams tab app:
 
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+* **Static tabs**:
 
-``` JSON
+  Static tabs are shared tabs that can be available to members of a channel or team. Teams owners or administrators can configure the tab's content. It's suitable for shared resources like dashboard or knowledge base.
 
-{
-   "staticTabs":[
-      {
-         
-      },
-      {
-         "entityId":"conversations",
-         "scopes":[
-            "personal"
-         ]
-      }
-   ]
-}
+* **Personal tabs**:
 
-```
+  Personal tabs are visible only to individuals who add the tab app. The user can configure their own personalized content and configuration. It's suitable for to-do lists or personal note taking apps.
 
-> [!NOTE]
-> In mobile, tabs are reordered as defined in `staticTabs`.
+* [Extend static tabs to group chat, channels, and meetings](#extend-static-tabs-to-group-chat-channels-and-meetings)
+* [Customizing your static tab in chats or meetings](#customizing-your-static-tab-in-chats-or-meetings)
+* [Personal offline tabs](#personal-offline-tabs)
 
-This property also enables you to set the default landing capability for your app. You can configure the app to open as a tab or a bot by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
-
-## Extend static tabs to group chat, channels, and meetings
+### Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
 > To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
@@ -288,7 +275,7 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 ]
 ```
 
-## Customizing your static tab in chats or meetings
+### Customizing your static tab in chats or meetings
 
 To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
 
@@ -301,7 +288,7 @@ pages.config.setConfig({
 
 Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
 
-## Offline tabs
+### Personal offline tabs
 
 > [!NOTE]
 > Personal tabs with offline functionality are only supported on Teams in Android devices.
@@ -315,7 +302,7 @@ When the user's device reconnects to the internet, the tab automatically synchro
 
 :::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
 
-### Build an offline tab
+#### Build an offline tab
 
 Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
 
@@ -340,6 +327,35 @@ Before you get started with building an offline tab, ensure that you meet the [p
 Congratulations! You've successfully created a Teams tab with offline functionality.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+offline+tab&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23build-an-offline-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23build-an-offline-tab&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
+
+## Reorder tabs
+
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
+
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web and desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+
+``` JSON
+
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+
+```
+
+> [!NOTE]
+> In mobile, tabs are reordered as defined in `staticTabs`.
+
+This property also enables you to set the default landing capability for your app. You can configure the app to open as a tab or a bot by default. For more information, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Code sample
 
