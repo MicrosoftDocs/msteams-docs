@@ -39,6 +39,8 @@ Teams Toolkit is available as a free extension for Visual Studio Code. To get st
 
 ## Features
 
+The following list provides the key features of Teams Toolkit:
+
 ### Project templates
 
 Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
