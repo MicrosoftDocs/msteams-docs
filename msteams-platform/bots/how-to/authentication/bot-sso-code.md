@@ -42,7 +42,7 @@ To update the development environment variables:
     - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
     > [!NOTE]
-    > The `OAuth URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure.
+    > The `OAuth URL` for your bot and identity provider can be customized based on your data residency requirements, whether your bot is in the public cloud, the Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure. For the OAuth URLs and the Data residency list, see [OAuth URL support in Azure AI Bot Service](https://learn.microsoft.com/en-us/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0).
 
 1. Save the file.
 
