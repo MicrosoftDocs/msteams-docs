@@ -1,10 +1,11 @@
 ---
-title: Command bot in Teams
+title: Build & Explore Command Bot in Teams
 author: surbhigupta
-description: Learn how a command bot works in Teams, and to add command and responses.
+description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 12/11/2024
 ---
 
 # Command bot in Teams
@@ -23,11 +24,14 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 ## Command bot installation
 
-A command bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
+A command bot needs to be installed into a team or a group chat or as a personal app, depending on the required scope. During installation, you can select the scope where you want to add and use the bot:
 
-:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
+* To open the bot in personal scope, select **Open**.
+* To open the bot in a shared scope, select the required channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+    :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="Screenshot of the scope selection dialog to add installation scope.":::
+
+For more install options, see [configure default install options](../../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
 ## Command and response
@@ -42,7 +46,7 @@ You need to create `ConversationBot` to respond to the command in a chat. You ca
 
 # [JavaScript/TypeScript](#tab/jsts1)
 
-```js(ts)
+```Javascript / Typescript
 /** JavaScript/TypeScript: src/internal/initialize.js(ts) **/
 const commandApp = new ConversationBot({
   // The bot id and password to create CloudAdapter.
@@ -406,7 +410,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 You can perform the following steps to build command and response using Adaptive Card with dynamic content:
 
 1. Add your Adaptive Card template JSON file under `bot/adaptiveCards` folder.
-1. In the code file where the commnad handler exists, for example `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
+1. In the code file where the command handler exists, for example, `myCommandHandler.ts`. Import the Adaptive Card template JSON file.
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
@@ -466,6 +470,14 @@ For more information on how to add Adaptive Card actions to command bot, see [Wo
 <br>
 
 </details>
+
+## Code sample
+
+The following table provides a simple code sample for building a command capability for a bot:
+
+| **Sample Name** | **Description** | **JavaScript** |
+| --- | --- | --- |
+| Teams Search Command Message Extension | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand) |
 
 ## Step-by-step guide
 

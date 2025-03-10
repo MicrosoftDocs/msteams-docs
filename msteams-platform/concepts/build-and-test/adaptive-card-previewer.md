@@ -1,5 +1,5 @@
 ---
-title: Microsoft Adaptive Card Previewer
+title: Adaptive Card Previewer Overview
 author: v-vanv
 description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, and k=limitations of the Adaptive Card Previewer.
 ms.localizationpriority: medium
@@ -71,7 +71,7 @@ The Adaptive Card Previewer doesn't support the following Adaptive Card features
 * [People Picker](../../task-modules-and-cards/cards/people-picker.md)
 * [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
 * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-* [Stage View](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+* [Stageview](../../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
 * [Full width control](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 ## FAQs
@@ -87,13 +87,6 @@ Adaptive Card Previewer is a standalone extension because it uses a closed-sourc
 <summary>Does this extension support all Adaptive Card features in the Teams platform?</summary>
 
 No. There are several [limitations](adaptive-card-previewer.md#limitations) that Adaptive Card Previewer extension doesn't support.
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Will Visual Studio be integrated into Adaptive Card Previewer?</summary>
-
-No, Adaptive Card Previewer is available in Visual Studio Code only.
 <br>
 &nbsp;
 </details>

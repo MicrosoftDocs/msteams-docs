@@ -4,15 +4,15 @@ title: Microsoft Teams developer documentation # < 60 chars
 summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
-  ms.subservice: subservice # Optional; Remove if no subservice is used.
+  ms.subservice: teams-apps # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: msauthor #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.author: surbhigupta #Required; microsoft alias of author; optional team alias.
+  ms.date: 12/11/2024 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -42,36 +42,56 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
+- title: What's new
+  linkLists:
+    - linkListType: whats-new
+      links:
+      - text: Advanced step-by-step guide to build custom engine agent
+        url: sbs-Teams-AI.yml      
+      - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
+        url: bots/how-to/format-ai-bot-messages.md
+      - text: Copilot handoff
+        url: bots/how-to/conversations/bot-copilot-handoff.md
+      - text: Assistants API to create powerful AI assistants
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+      - text: Build apps with Teams AI library
+        url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+      - text: Build a custom engine agent to chat with your data
+        url: teams-ai-library-tutorial.yml
 
 - title: What's new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Share to Teams from personal app or tab for Teams mobile clients
-        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
-      - text: Build API-based message extension using Developer Portal for Teams
-        url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
-        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
-      - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
-        url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
-      - text: Build Adaptive Card-based Loop components
-        url: m365-apps/cards-loop-component.md
-      - text: Application RSC permissions for chat scope are now generally available
-        url: graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting
-      - text: Micro-capabilities for website links
-        url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-      - text: Actions in Microsoft 365
-        url: m365-apps/actions-in-m365.md    
-      - text: Use / to invoke message extensions from command box in the new Teams client
-        url: messaging-extensions/build-bot-based-message-extension.md
-      - text: Teams Toolkit command line interface v3
-        url: toolkit/Teams-Toolkit-CLI.md
+      - text: App package editor in Developer Portal for Teams
+        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure
+      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
+        url: concepts/device-capabilities/third-party-storage-capability.md
+      - text: Tab app caching is generally available
+        url: tabs/how-to/app-caching.md
+      - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
+        url: bots/how-to/bot-messages-ai-generated-content.md
+      - text: Introducing share to meeting from personal app
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+      - text: Text customization for share to stage button
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+      - text: Multi parameters for API-based message extensions
+        url: messaging-extensions/create-api-message-extension.md#multi-parameters
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
+      - text: New app installation flow for Teams app installed from Teams Store or custom upload
+        url: concepts/deploy-and-publish/add-default-install-scope.md
+      - text: Introducing default landing capability for tab and bot apps
+        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
 
     - linkListType: reference
       links:
+      - text: Extend Microsoft 365 Copilot
+        url: /microsoft-365-copilot/extensibility/
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
+
+
 
 - title: Get started
   linkLists:
@@ -222,20 +242,18 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/ 
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
 
-- title: Publish and distribute
+- title: Publish Teams app
   linkLists:
   - linkListType: concept
     links:
     - text: Publish Teams apps in Microsoft Teams Store
       url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Distribution
+    - text: Publish your Teams apps
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md

@@ -1,16 +1,16 @@
 ---
-title: Edit Microsoft Entra manifest in Teams Toolkit
+title: Customize Microsoft Entra Manifest
 author: zyxiaoyuer
-description: In this module, learn how to edit, customize, and preview the Microsoft Entra manifest with CodeLens in Teams Toolkit.
+description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Teams Toolkit, app development lifecycle, and view app in Azure portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/20/2022
+ms.date: 02/06/2025
 ---
 
 # Edit Microsoft Entra manifest
 
-Teams Toolkit now manages Microsoft Entra application with the manifest file as the source of truth during your Teams application development lifecycle.
+Microsoft Teams Toolkit now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
@@ -70,7 +70,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <details>
 
-    <summary>Pre-authorize a client application</summary>
+    <summary>Preauthorize a client application</summary>
 
      You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls exposed API. You can see the following example for this property:
 
@@ -144,7 +144,7 @@ The Microsoft Entra manifest file contains placeholder arguments with {{...}} st
 
 ### Reference environment variable in Microsoft Entra manifest template
 
-You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
+You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the environment variable values.
 
 <a name='edit-and-preview-azure-ad-manifest-with-codelens'></a>
 
@@ -172,9 +172,9 @@ Microsoft Entra manifest template in Teams Toolkit also supports user readable s
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Screenshot shows the add resource to required resource access.":::
 
-### Pre-authorized applications CodeLens
+### Preauthorized applications CodeLens
 
-CodeLens shows the application name for the pre-authorized application ID for the `preAuthorizedApplications` property.
+CodeLens shows the application name for the preauthorized application ID for the `preAuthorizedApplications` property.
 
 <a name='view-azure-ad-application-on-the-azure-portal'></a>
 
@@ -272,7 +272,7 @@ You need to interact with Microsoft Entra application during various stages of y
       |`orgRestrictions`|Doesn't exist in Graph API|
       |`certification`|Doesn't exist in Graph API|
 
-2. Currently, `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
+2. The `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
 
     1. Register a new Microsoft Entra application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
     1. Select `API permissions` from the Microsoft Entra application page.

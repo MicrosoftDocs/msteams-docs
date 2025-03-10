@@ -1,15 +1,16 @@
 ---
-title: Questions to help plan Teams app development
+title: App Planning Checklist
 author: heath-hamilton
-description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle. Plan to host your Teams app.
+description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle and to host your Teams app.
 ms.localizationpriority: high
+ms.topic: conceptual
 ms.author: surbhigupta
-ms.date: 07/28/2022
+ms.date: 02/06/2025
 ---
 
 # Teams app planning checklist
 
-An app's lifecycle extends from planning your app to eventually deploying it, and beyond. It takes more than knowing your user and requirements to plan your app. Depending on your app needs, you may also consider planning for future updates.
+An app's lifecycle extends from planning your app to eventually deploying it, and beyond. It takes more than knowing your users and requirements to plan your app. Depending on your app needs, you might also consider planning for future updates.
 
 Let's take a practical look at planning for an app's lifecycle.
 
@@ -118,7 +119,7 @@ Suggestion: Options that help select the correct environment based on app needs.
 <details>
 <summary>Plan analytics for your app</summary>
 
-As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you, you will be interested to measure how your app is performing in the real-world once published. You will also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
+As a developer who’s building an app for millions of Microsoft Teams users to achieve specific business or customer goals and distributing it using one or more of the many distribution options available to you, you are interested to measure how your app is performing in the real-world once published. You'll also be interested in monitoring who is interested in your app, which users and organizations are using your app, how are users engaging with your app, which users have churned away after using your app for some time and many such data points. Once you know this, you can analyze the data against your business goals, take corrective action by fixing issues and intervening in the user journey or plan further enhancements to your app.
 
 For more information, see [planning analytics](overview-analytics.md).
 </details>
@@ -139,6 +140,13 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 Suggestion: Options that help determine the best distribution model.
 
 </details>
+<br>
+<details>
+<summary>Plan for app notifications</summary>
+
+You can send notifications to Teams users in multiple ways. Notifications are a simple way to engage users regularly. For more information, see [plan to send app notifications](design-app-notification.md).
+
+</details>
 
 ## Plan for hosting your Teams app
 
@@ -152,7 +160,7 @@ Teams doesn't host your app. When a user installs your app in Teams, they instal
 
 - **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. How you introduce a chat bot installed in a channel with a thousand people, is different when it's installed in a one-to-one chat.
 
-- **Plan for the future**: Identify new features the user will prefer in the current solution. Any new features may impact app design and architecture.
+- **Plan for the future**: Identify new features the user prefers in the current solution. Any new features might impact app design and architecture.
 
 ## See also
 

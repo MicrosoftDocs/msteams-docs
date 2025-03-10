@@ -1,17 +1,22 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code.
+description: Learn about Teams Toolkit, its installation, navigation, and user journey. Teams Toolkit is available for Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 02/05/2024
+ms.date: 01/23/2025
 ---
-# Teams Toolkit Overview
+
+# Microsoft Teams Toolkit Overview
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams, Outlook, and the M365 app using Visual Studio Code.
 
 * Create new apps from project templates for common app scenarios.
+
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
+
+* Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams, Outlook, and the M365 app directly from VS Code.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -23,10 +28,10 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 Teams Toolkit is available as a free extension for VS Code. To get started, see [Install Teams Toolkit](install-Teams-Toolkit.md).
 
-| Teams Toolkit | Visual Studio Code | Visual Studio 2022 |
-| - | ------------------ | ------------------ |
-| Installation | Available in the VS Code Marketplace | Available in the VS Installer |
-| Build with | JavaScript, TypeScript, React, SPFx | C#, ASP.NET, Blazor |
+| Teams Toolkit | Visual Studio Code |
+| ------------------ | ------------------ |
+| Installation | Available in the VS Code Marketplace |
+| Build with | JavaScript, TypeScript, React, SPFx |
 
 > [!IMPORTANT]
 >
@@ -38,7 +43,7 @@ Teams Toolkit is available as a free extension for VS Code. To get started, see 
 
 Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Screenshot shows the create new Teams app menu in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
 
 ### Composable automation tasks
 
@@ -50,22 +55,18 @@ Test your app with different groupings of hosted resources by creating unique co
 
 ### Debug tunneling for bots
 
-Run and debug your bot projects using VS Code and the included Dev Tunnels features.
+You can access Teams Developer Portal where you can configure, publish, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
-### App test tool
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-dev-portal.png" alt-text="Screenshot shows the Developer Portal option.":::
 
-Run and debug your bot projects in the test tool debug configuration to launch in a simulator-like experience for Teams without the need for an account or custom app permissions.
+### Debug tunneling for bots
 
-### Infrastructure templates
+Run and debug your bot projects using Visual Studio Code and the included Dev Tunnels features.
 
-Optionally use any of our smart defaults for hosting your app project in Azure using Bicep templates included with every project template. 
+### Teams App Test Tool
 
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Install Teams Toolkit for VS Code](install-Teams-Toolkit.md)
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. For more information, see [Test Tool](debug-your-Teams-app-test-tool.md).
 
 ## See also
 
-* [Explore Teams Toolkit for VS Code](~/toolkit/explore-teams-toolkit.md)
-* [Teams Toolkit for Visual Studio 2022](~/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md)
+[Install Teams Toolkit](install-Teams-Toolkit.md)

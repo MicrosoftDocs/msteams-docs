@@ -1,5 +1,5 @@
 ---
-title: Prepare to build apps with Teams Toolkit
+title: Build Apps with Teams Toolkit - Prepare
 author: surbhigupta
 description: Learn about build environments such as SPFx of Teams Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
@@ -10,13 +10,13 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Teams Toolkit
 
-Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
+Microsoft Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
 
-:::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Illustration shows the steps to prepare to build apps using Teams Toolkit." lightbox="../assets/images/buildapps-TTK_1.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png":::
 
 ## Build environments
 
-Teams Toolkit in Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
+Teams Toolkit in Microsoft Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
 
 * JavaScript or TypeScript
 * SharePoint Framework (SPFx)
@@ -38,7 +38,7 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 * Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
 * Workflow bot: You can interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.
-* Message extension: You can interact with your web service through buttons and forms in the Microsoft Teams client.
+* Message extension: You can interact with your web service through buttons and forms in the Teams client.
 
 ### Create your Teams app using SPFx
 

@@ -1,21 +1,16 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code.
+description: Learn how to deploy and customize Teams app to cloud resources such as Azure App Services, Azure Storage, or SharePoint using Teams Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-zone_pivot_groups: teams-toolkit-platform
 ---
 
-# Deploy Teams app to the cloud using Microsoft Visual Studio Code
+# Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio Code
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
-
-::: zone pivot="visual-studio-code-v5"
+Microsoft Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 You can deploy to the following types of cloud resources:
 
@@ -257,54 +252,7 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Add capabilities to your Teams apps](toolkit-v4/add-capability-v4.md)
-* [Add cloud resources to Microsoft Teams app](add-resource.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-
-::: zone-end
-
-::: zone pivot="visual-studio-code-v4"
-
-Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
-
-## Deploy Teams app to the cloud using Microsoft Visual Studio Code
-
-You can deploy the following to the cloud:
-
-* The tab, such as front-end apps are deployed to Azure Storage and configured for static web hosting or a SharePoint site.
-* The back-end APIs are deployed to Azure Functions.
-* The bot or message extension is deployed to Azure App Service.
-
-  > [!NOTE]
-  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](/microsoftteams/platform/toolkit/provision?pivots=visual-studio-code-v4).
-
-## Deploy Teams apps using Teams Toolkit
-
-The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
-
-* [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
-* [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
-
-## Details on Teams app workload
-
-| Teams app workload                                      | Source code              | Build artifact             | Target resource        |
-| ------------------------------------------------------- | ------------------------ | -------------------------- | ---------------------- |
-| Tabs with React </br> The front-end workload            | `yourProjectFolder/tabs` | `tabs/build`               | Azure Storage          |
-| Tabs with SharePoint </br> The front-end workload       | `yourProjectFolder/SPFx` | `SPFx/sharepoint/solution` | SharePoint app catalog |
-| APIs on Azure Functions </br> The back-end workload     | `yourProjectFolder/api`  | Not applicable             | Azure Functions        |
-| Bots and message extensions </br> The back-end workload | `yourProjectFolder/bot`  | Not applicable             | Azure App Service      |
-
-> [!NOTE]
-> When you include Azure API Management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API Management service.
-
-## See also
-
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Add capabilities to your Teams apps](toolkit-v4/add-capability-v4.md)
-* [Add cloud resources to Microsoft Teams app](add-resource.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-
-::: zone-end
+* [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
+* [Add cloud resources to Teams app](add-resource.md)
+* [Provision cloud resources](provision.md)
+* [Edit app manifest](TeamsFx-preview-and-customize-app-manifest.md)

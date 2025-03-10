@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to build Hello World app with Blazor, build interactive web UIs using C#, and create tab app and bot app. 
   audience: Developer
   level: Beginner
-  ms.date: 04/03/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/teams-toolkit-tutorial.md
   nextTutorialTitle: Teams app tutorials
@@ -19,10 +19,10 @@ items:
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit doesn't support the message extension capability.
+    > Teams Toolkit doesn't support the message extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -33,7 +33,7 @@ items:
     | &nbsp;    | Install   | For using... |
     | --- | --- | --- |
     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)| You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
@@ -58,10 +58,13 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option ASP.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png":::  
        
      Your Visual Studio is installed in a few minutes.
     
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Visual%20Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     # [Command line](#tab/cli)
 
     To install the TeamsFx CLI, use the `npm` package manager:
@@ -85,6 +88,9 @@ items:
     > [!CAUTION]
     > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     ---
 
     ## Set up your Teams development tenant
@@ -105,6 +111,9 @@ items:
         > [!NOTE]
         > Contact Teams administrator, if you don't have the option to upload a custom app.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Enable%20custom%20app%20upload&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     ### Create a free Teams developer tenant (optional)
 
     If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
@@ -117,6 +126,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Get a free Azure account
 
@@ -142,15 +154,15 @@ items:
  
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Screenshot shows to create a new project with Next option.":::
         
-    1.  Enter **Project name** and select **Create**. 
+    1. Enter **Project name** and select **Create**. 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Screenshot shows to configure your new project with Create option.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Screenshot shows how to configure your new project with Create option.":::
 
-    1.  Select the **Tab** as the capability for your app.
+    1. Select **Tab** as the capability for your app.
 
-    1.  Select **Create**.    
+    1. Select **Create**.    
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tabapp.png" alt-text="Screenshot shows to create a new Teams application with Tab.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tabapp.png" alt-text="Screenshot shows how to create a new Teams application with Tab.":::
         
         Your Teams tab app is created in a few seconds.
         
@@ -181,6 +193,9 @@ items:
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20project%20workspace%20for%20your%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Build and run your first Teams tab app
   durationInMinutes: 1
   content: |
@@ -204,7 +219,13 @@ items:
         
     1. Select **Add** to install your app in Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp.png" alt-text="Screenshot shows BlazorApp local debug.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazortabapp-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
        Congratulations, your first tab app is running in your local environment!
 
@@ -222,9 +243,12 @@ items:
      
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
 
-        You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+        You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page reloads.
 
     1. Stop debugging in Visual Studio.
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20Teams%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Preview your first Teams tab app
   durationInMinutes: 1
@@ -273,6 +297,9 @@ items:
 
         Your resources are provisioned in the Azure portal.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20tab%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     #### **To deploy your tab app to cloud**
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud...**.
@@ -284,6 +311,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Teams Toolkit with OK option.":::
 
         Your tab app is successfully deployed to the cloud!
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20tab%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     #### **To preview your tab app in Teams**    
 
@@ -311,6 +341,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20tab%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Create project workspace for your bot app
   durationInMinutes: 1
   content: |
@@ -336,15 +369,15 @@ items:
 
           The **Configure your new project** window appears.
 
-    1.  Enter **Project name** and select **Create**.
+    1. Enter **Project name** and select **Create**.
         
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** window appears.  
 
-    1.  Select Teams app feature. 
+    1. Select Teams app feature. 
 
-    1.  Select the **Command Bot** app as the capability for your app.
+    1. Select the **Command Bot** app as the capability for your app.
 
     1. Select **Create**.     
 
@@ -378,6 +411,9 @@ items:
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20bot%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Build and run your first bot app
   durationInMinutes: 1
   content: |
@@ -390,9 +426,15 @@ items:
 
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20dev%20tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       ---     
 
@@ -408,7 +450,13 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of the app details dialog to add the Blazor app.":::
+
+    1. Select **Open** to open the app in personal scope.
+       
+        Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
@@ -418,13 +466,16 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
-         You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+         You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
          
       <!-- markdownlint-disable MD033 -->
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
       To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20bot%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Preview your first bot app
   durationInMinutes: 1
@@ -469,6 +520,9 @@ items:
 
         Your resources are provisioned in the Azure portal!
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20bot%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     #### **To deploy your bot app to cloud**
 
      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
@@ -481,11 +535,14 @@ items:
 
         Your bot app is successfully deployed to the cloud!
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20bot%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     #### **To preview your bot app in Teams** 
 
      1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
 
      1. Select **Add**.
 
@@ -498,6 +555,9 @@ items:
      1. You can type `helloworld` to show an introduction card for an Adaptive Card.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20bot%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Congratulations!
   durationInMinutes: 1

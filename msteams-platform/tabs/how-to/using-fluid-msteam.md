@@ -1,8 +1,8 @@
 ---
-title: Use Fluid with Teams
+title: Fluid-powered Tab App in Teams
 author: timtwang
 ms.author: mobajemu
-description: Tutorial for integrating Fluid-powered real-time collaboration features into a Microsoft Teams tab application.
+description: Learn how to integrate Fluid-powered real-time collaboration features into a Microsoft Teams tab app, its functions and parameters, and Fluid containers.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 12/13/2022
@@ -24,7 +24,7 @@ For more information on building complex applications, see [FluidExamples](https
 
 This tutorial requires familiarity with the following concepts and resources:
 
-- [Fluid Framework Overview](https://fluidframework.com/docs/)
+- [Fluid Framework Overview](https://fluidframework.com/docs)
 - [Fluid Framework QuickStart](https://fluidframework.com/docs/start/quick-start/)
 - The basics of [React](https://reactjs.org/) and [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - How to build a [Microsoft Teams Tab](/microsoftteams/platform/tabs/what-are-tabs)
@@ -35,11 +35,7 @@ This tutorial requires familiarity with the following concepts and resources:
 ## Create the project
 
 1. Open a Command Prompt and navigate to the parent folder where you want to create the project, for example, `/My Microsoft Teams Projects`.
-1. Create a Teams tab application by running the following command and [creating a channel tab](create-channel-group-tab.md#create-a-custom-channel-or-group-tab-with-nodejs):
-
-    ```cmd
-    yo teams
-    ```
+1. Create a Teams tab application. For more information, see [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
 
 1. After creating, navigate to the project, with the following command `cd <your project name>`.
 1. The project uses the following libraries:
@@ -307,7 +303,7 @@ npx @fluidframework/azure-local-service@latest
 To run and start the Teams application, open another terminal, and follow the [instructions to run the application server](create-channel-group-tab.md#upload-your-application-to-teams).
 
 > [!WARNING]
-> HostNames with `ngrok`'s free tunnels are not preserved. Each run will generate a different URL. When a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, see [use AzureClient with Azure Fluid Relay](#use-azureclient-with-azure-fluid-relay).
+> HostNames with `ngrok`'s free tunnels are not preserved. Each run generates a different URL. When a new `ngrok` tunnel is created, the older container will no longer be accessible. For production scenarios, see [use AzureClient with Azure Fluid Relay](#use-azureclient-with-azure-fluid-relay).
 
 > [!NOTE]
 > Install an additional dependency to make this demo compatible with Webpack 5. If you receive a compilation error related to a "buffer" package, run `npm install -D buffer` and try again. This will be resolved in a future release of Fluid Framework.
@@ -362,5 +358,5 @@ tokenProvider: new InsecureTokenProvider(JSON.parse(process.env.REACT_APP_TENANT
 
 - [Azure Fluid Relay documentation](/azure/azure-fluid-relay)
 
-- [Fluid Framework documentation](https://fluidframework.com/docs/)
+- [Fluid Framework documentation](https://fluidframework.com/docs)
 - [Fluid examples GitHub Repo](https://github.com/microsoft/FluidExamples)

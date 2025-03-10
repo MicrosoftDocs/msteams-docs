@@ -1,11 +1,11 @@
 ---
 title: Plan for Teams mobile
 author: surbhigupta
-description: In this module, learn how to plan for creating an app on Teams mobile and understand different stages to build app.
+description: Learn how to plan responsive tabs for Teams mobile which includes app functionalities and user roles, and understand different stages to build app.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 # Plan responsive tabs for Teams mobile
 
@@ -175,7 +175,6 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing dialogs](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)

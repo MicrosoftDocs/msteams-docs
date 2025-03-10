@@ -1,16 +1,14 @@
 ---
-title: FAQ
+title: FAQ Teams Toolkit in Visual Studio Code
 author: MuyangAmigo
-description:  In this module, see FAQ for Teams Toolkit using Visual Studio Code.
+description: In this article, check the FAQs on provision using Teams Toolkit in Visual Studio Code, troubleshoot errors, switch Azure subscription, and change resource group.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# FAQ for Teams Toolkit
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+# FAQ for Teams Toolkit in Visual Studio Code
 
 Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
 
@@ -20,11 +18,8 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
-
-</br>
-
-</details>
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
+</details >
 
 <details>
 
@@ -55,7 +50,7 @@ Before provision, the tool asks you if you want to create a new resource group o
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
+> Teams app built with SharePoint framework and Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
 
 </br>
 

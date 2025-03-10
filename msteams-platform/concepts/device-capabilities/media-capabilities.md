@@ -1,5 +1,5 @@
 ---
-title: Integrate media capabilities 
+title: Add Media Capabilities to Teams App 
 author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client library to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
@@ -27,7 +27,7 @@ The advantage of integrating device capabilities into your Teams apps is that it
 
 > [!NOTE]
 >
-> * Currently, Teams doesn't support device permissions in pop out chat window, tabs, and the meeting side panel.</br>
+> * Teams doesn't support device permissions in pop out chat window, tabs, and the meeting side panel.</br>
 > * The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 > * The request permissions prompt is automatically displayed on mobile when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 
@@ -40,8 +40,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
     "media",
 ],
 ```
-> [!NOTE]
-> The Media API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `media`.
 
 ## Media capability APIs
 

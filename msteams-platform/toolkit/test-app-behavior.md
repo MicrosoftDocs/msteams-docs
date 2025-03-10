@@ -1,17 +1,17 @@
 ---
-title: Test app behavior in different environment
+title: Test App in Local & Cloud Environments
 author: surbhigupta
-description: In this module, learn how to test app behavior in different environment.
+description: Learn about the prerequisites and how to test app behavior in local and cloud environments using Teams Toolkit after integration with Teams.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/03/2022
+ms.date: 01/23/2025
 ---
 # Test app behavior in different environment
 
 ## Upload your app to Teams
 
-You can upload your Teams app to Microsoft Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+You can upload your Microsoft Teams app to Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally or on your testing cloud environment.
 * You built an app for yourself to automate a workflow.
@@ -19,7 +19,7 @@ You can upload your Teams app to Microsoft Teams without having to publish to yo
 
 > [!IMPORTANT]
 >
-> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * Custom app upload is supported only in Government Community Cloud (GCC) and isn't supported in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
@@ -46,12 +46,17 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 
 1. Add your app to Teams as per your requirement:
 
-    1. Select **Add** to add your personal app.
-    1. Use the dropdown menu to add your app to a Team or chat.
+    1. Select **Add** to install your personal app to Teams.
+        
+        :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of custom app installation to Teams with the Add option highlighted.":::
 
-   :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the App description.":::
+    1.  Select **Open** to open the app in personal scope.
 
-You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
+        Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+You can test your Teams app after integrating with Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Microsoft Teams Toolkit for testing your Teams app:
 
 * **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
 
@@ -66,7 +71,7 @@ Teams is a cloud-based product that requires all services it accesses, to be ava
 
 ## Cloud-hosted environment
 
-To host your development and production code and their HTTPS endpoints, you need to remotely test your teams app using provisioning and deploying on Microsoft Entra ID. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
+To host your development and production code and their HTTPS endpoints, you need to remotely test your Teams app using provisioning and deploying on Microsoft Entra ID. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.

@@ -1,14 +1,14 @@
 ---
-title: Use existing Microsoft Entra app in TeamsFx project
+title: Use Existing Microsoft Entra App
 author: surbhigupta
-description:  In this module, learn how to use the existing Microsoft Entra app or manually create Microsoft Entra app for TeamsFx.
+description: Learn how to use an existing Microsoft Entra app in TeamsFx or create a new app for TeamsFx, set up info in TeamsFx project, and upload the app to Azure.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/09/2023
+ms.date: 02/27/2025
 ---
 
-# Use existing Microsoft Entra app in TeamsFx project
+# Use existing Entra app in TeamsFx
 
 This section provides information for using existing Microsoft Entra app or manually creates Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required info is properly set in your TeamsFx project.
 
@@ -62,7 +62,7 @@ This section provides information for using existing Microsoft Entra app or manu
    * Select **Add scope**.
 
 1. On the same page, select **Add a client application** under **Authorized client applications**.
-   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Teams on mobile and client.
+   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
    * **Authorized scopes**: Choose the existing **access_as_user** scope.
    * Select **Add application**.
 
@@ -125,6 +125,8 @@ This section provides information for using existing Microsoft Entra app or manu
       AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
       ```
 
+      `AAD_APP_OAUTH_AUTHORITY_HOST` represents the host of the authority URL of your Microsoft Entra tenant, for example, https://login.microsoftonline.com. Your bot uses this URL to authenticate users via OAuth 2.0. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
+
    1. If your application requires a Microsoft Entra app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
 
       ```yml
@@ -140,7 +142,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 ## Upload Microsoft Entra app manifest to Azure portal
 
-If Teams Toolkit failed to update Microsoft Entra app, there will be an error that says:
+If Teams Toolkit fails to update Microsoft Entra app, an error message appears:
 
 ```yml
 Insufficient privileges to complete the operation.

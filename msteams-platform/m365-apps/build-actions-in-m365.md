@@ -1,10 +1,10 @@
 ---
-title: Build Actions in Microsoft 365
-description: In this article, learn more how to build Actions and its use cases.
+title: Create Actions in Microsoft 365
+description: Learn how to build Actions, configure app manifest, retrieve Actions information through context object, access content through Graph API, preinstall Actions.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 
@@ -25,14 +25,7 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following:
-
-| &nbsp; | Install | Description |
-| --- | --- | --- |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
-| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+[!INCLUDE [prerequisites-actions-m365](../includes/get-started/prerequisites-actions-m365.md)]
 
 ## Configure app manifest
 
@@ -82,7 +75,7 @@ When a user selects Add option from the app's context menu, a personal tab opens
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a tab from an Action and the content that initiated the Action.
 
 ```javascript
-app.getContext().then((context: app.Context) => {
+app.getContext().then((context) => {
     const actionInfo = context.actionInfo;
     if (actionInfo) {
         // App was launched using an action    
@@ -127,7 +120,9 @@ You can now preview your Actions in the Microsoft 365 home page, right-click a f
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
-## Preinstall Actions for users in Microsoft365 Admin Center
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
+## Preinstall Actions for users in Microsoft 365 Admin Center
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
@@ -150,7 +145,3 @@ Follow instructions to preinstall your app for entire organization or user group
 
 > [!div class="nextstepaction"]
 > [Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)
-
-## See also
-
-[Actions in Microsoft 365](actions-in-m365.md)

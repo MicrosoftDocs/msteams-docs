@@ -1,7 +1,7 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to implement the design guidelines and use the UI templates to design a meeting extension for Teams.
+description: Learn to implement the design guidelines, use UI templates to design a meeting extension for Teams. Use in-meeting tab, in-meeting dialog and share meeting stage.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
@@ -43,7 +43,7 @@ In a meeting, users can select **More** :::image type="icon" source="../../asset
 
 ## Before a meeting
 
-Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
+Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people can answer during the meeting:
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." lightbox="../../assets/images/apps-in-meetings/before-meeting-tab.png":::
 
@@ -252,7 +252,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 |Counter|Description|
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
-|2|**Share to meeting button**: The entry point to share the app to the meeting. For a consistent experience, always use the standard Teams share icon. **Share to meeting** is the recommended default text, but you can also customize it for your use cases. For example, **Play together** for a gaming app or **Watch together** for a video app. Either way, make it clear that the action will create a shared, interactive experience with everyone in the meeting.|
+|2|**Share to meeting button**: The entry point to share the app to the meeting. For a consistent experience, always use the standard Teams share icon. **Share to meeting** is the recommended default text, but you can also customize it for your use cases. For example, **Play together** for a gaming app or **Watch together** for a video app. Either way, make it clear that the action creates a shared, interactive experience with everyone in the meeting.|
 |3|**iframe**: Displays your app content.|
 |4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
 |5|**Presenter attribution**: Displays the name of the participant who shared the app.|

@@ -1,6 +1,6 @@
 ---
-title: Share to Teams from personal app or tab
-description: Learn how to enable the Share to Teams button on your personal app or tab, limitations, and end user experience.
+title: Share Content from Personal App or Tab
+description: Learn how to enable the Share to Teams button on your personal app or tab, limitations, response codes, and end user experience.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 12/13/2022
@@ -62,6 +62,11 @@ The following image shows the Share to Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
+Share to Teams button can be hosted or embedded in an app running inside Teams. You can add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
+
+> [!NOTE]
+> Share to Teams isn't supported inside a [modal dialog](~/task-modules-and-cards/what-are-task-modules.md) (referred as task modules in TeamsJS v1.x) or [Stageview](../../tabs/tabs-link-unfurling.md) in Teams web client. You can't open a modal on top of another modal.
+
 ## Response codes
 
 The following table provides the response codes:
@@ -83,12 +88,6 @@ The following table provides the response codes:
 | **9000** | Platform code is old and doesn't implement this API. |
 | **10000** | The return value is too large and has exceeded our size boundaries. |
 
-## Limitations
-
-* The Share to Teams is available for the Teams desktop and mobile clients, but it isn't supported on Teams web client.
-* The Share to Teams button can be hosted or embedded in an app running inside Teams.
-* You can add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
-
 ## End user Share to Teams experience
 
 After you enable Share to Teams button on personal app or tab, you can share the content. To access, follow the steps:
@@ -108,6 +107,17 @@ After you enable Share to Teams button on personal app or tab, you can share the
 4. Select **View** to reach the conversation where the link was shared.
 
    :::image type="content" source="../../assets/images/share-to-teams/link-shared.PNG" alt-text="share-to-teams-link-shared":::
+
+## Share to meeting from personal app
+
+Teams enables you to share personal apps to meeting stage quickly using the **Present now** button. This button is available by default in all personal tab apps and doesn't require any developer implementation. Here are the two scenarios when you select **Present now**:
+
+* If there's an ongoing meeting, the personal app is shared on the meeting stage of the Teams desktop client.
+* If there's no ongoing meeting, a meet now instance is launched in a new window.
+
+    :::image type="content" source="../../assets/images/personal-apps/present-now-personal-app.png" alt-text="Screenshot of the Present now button in a personal app.":::
+
+The content is presented in a view-only mode. The presenter can interact with the content while attendees have a view-only mode experience, enabling them to track the presenter's actions.
 
 ## See also
 

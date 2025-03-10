@@ -1,0 +1,28 @@
+name: Bug report 🐛
+description: Report errors or unexpected behavior 🤔
+body:
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: >
+      List of steps, sample code, failing test or link to a project that reproduces the behavior.
+      Make sure you place a stack trace inside a code (```) block to avoid linking unrelated issues.
+    placeholder: >
+      I am experiencing a problem with X.
+      I think Y should be happening but Z is actually happening.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected behavior
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Actual behavior
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Error details
+    description: Paste the error your are getting in console or your output window.

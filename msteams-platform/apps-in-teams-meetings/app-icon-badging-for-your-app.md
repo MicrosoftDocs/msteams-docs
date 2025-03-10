@@ -1,17 +1,18 @@
 ---
-title: Enable app icon badging for your Teams app
+title: App Icon Badges for Meetings
 author: v-sdhakshina
-description: In this article, learn how to enable app icon badging for your Microsoft Teams app in meeting.
+description: Learn how to enable app icon badging for your Microsoft Teams app in meeting, app manifest setting, and its code samples to enable app icon badging (Node.js, .NET).
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.date: 01/23/2025
 ---
 
 # Enable app icon badging for your Teams app
 
 App icon badging helps a meeting participant identify any app activity during a meeting. Participants get activity notification for the meeting apps.
 
-When there's new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
+When there's a new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
 
 For example, during a real time collaboration in a meeting, if a participant adds a comment in a file added to the meeting, the app calls the `targetedMeetingNotification` API from the participant's meeting side panel. The API triggers a badge on the app icon to make other participants aware of the comment activity.
 
@@ -21,7 +22,7 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging isn't available for [Government Community Cloud (GCC)-High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../concepts/cloud-overview.md) environments and isn't supported in [Teams operated by 21Vianet](../concepts/sovereign-cloud.md).
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
 

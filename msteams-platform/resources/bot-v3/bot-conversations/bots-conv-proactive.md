@@ -1,5 +1,5 @@
 ---
-title:  Proactive messaging for bots
+title: Proactive Messages & Event Notification
 description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -59,7 +59,7 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 ### Proactively install your app using Graph
 
 > [!NOTE]
-> Proactively installing apps using graph is currently in beta.
+> Proactively installing apps using graph is in beta.
 
 Occasionally it may be necessary to proactively message users that haven't installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario, you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
 
@@ -168,7 +168,7 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 # [C#](#tab/csharp)
 
-The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
+The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/AppCompleteSample/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

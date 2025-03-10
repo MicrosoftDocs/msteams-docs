@@ -1,11 +1,11 @@
 ---
-title: Prepare your Microsoft Teams Store submission  
-description: Final steps before you submit your Microsoft Teams app to be listed on the Microsoft Teams Store. Validate app package and complete publisher verification and attestation.
+title: Prepare for Teams Store Submission
+description: Learn final steps before you submit your Teams app to be listed on the Teams Store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 01/06/2023
+ms.date: 01/23/2025
 ---
 
 # Prepare your Teams Store submission
@@ -15,7 +15,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 See the following video to learn more about publishing your app to the Microsoft Teams Store:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO a9ad8a8e-1dcf-4e65-88e5-58998ec91c99]
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
@@ -47,15 +47,14 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
         * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.
         * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
         * Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
-    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The validation team tests your app fully, including first-run user experience.
+    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team uses the sign up process as described.
 
 3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to understand your app better and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
@@ -163,7 +162,7 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo in the format `https://www.example.com/123456789`.
+A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos in the format `https://www.youtube.com/watch?v=:id` or `https://youtu.be/:id` for YouTube and `https://vimeo.com/:id` for Vimeo.
 
 For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
@@ -221,7 +220,7 @@ During submission, you're asked to categorize your app. App category helps impro
 | Maps and feeds |
 | Other |
 
-### Distribute your app to specific countries or regions
+### Publish your app to specific countries or regions
 
 If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams Store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams Store for the users in the US and Canada.
 
@@ -240,7 +239,7 @@ The following image shows the use of Geo-filtering for apps in the Teams mobile 
 ---
 
 > [!NOTE]
-> Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
+> Geo-filtering isn't supported in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 Geo-filtering helps you improve your app's visibility in the Teams Store. When you publish your app to the Teams Store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 
@@ -278,6 +277,4 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-* [Publish your app to the Microsoft Teams Store](../publish.md)
-* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
-* [Resolve issues if your Microsoft Teams Store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)

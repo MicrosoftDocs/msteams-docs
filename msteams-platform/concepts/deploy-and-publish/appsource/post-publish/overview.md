@@ -1,11 +1,11 @@
 ---
 title: Maintain and support your published app
-description: Maintain your published Microsoft Teams app. Analyze app usage, publish updates, promote your app, check Teams Store marketing guidelines, and complete Microsoft 365 Certification.
+description: Learn to maintain your published app such as analyze usage, publish update, promote, check Teams Store marketing guidelines and complete Microsoft 365 Certification.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 10/19/2022
+ms.date: 02/10/2025
 ---
 # Maintain your published Microsoft Teams app
 
@@ -66,7 +66,7 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 *Microsoft Marks* means the *Microsoft badge* described on the [badge generator](https://apps.microsoft.com/store/app-badge) page. To use these badges, you must:
 
-* Have your app or other content available in the Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
+* Have your app or other content available in the Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-affiliate-program?ms.officeurl=affiliate).
 
 * If you're registered as an app developer in Partner Center, comply with the [“License to Microsoft Marks”](/legal/windows/agreements/app-developer-agreement#license_to_mark) section of the App Developer Agreement.
 
@@ -131,11 +131,13 @@ To discontinue your app:
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
+After the app is discontinued, Microsoft AppSource stores the partner communication data for six months. After this duration, the data is permanently deleted.
+
 ## Ratings and review for Teams apps
 
 Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. As a developer, you can interact and respond to these reviews from Partner Center, and the responses are shown on AppSource along with Teams experience, helping users find and use the app more easily. This feedback improves app visibility, keeps users engaged, and encourages more downloads on Teams Store.
 
-:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphical representation that shows rating and review submission for an app.":::
 
 > [!NOTE]
 > Ratings and reviews aren't available for custom apps that are built for your organization.

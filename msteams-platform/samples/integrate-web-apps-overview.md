@@ -1,7 +1,7 @@
 ---
-title: Integrate web apps
+title: Integrate Web App Experience in Teams
 author: Rajeshwari-v
-description: In this article, you'll get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
+description: Learn to integrate device capabilities. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -10,8 +10,7 @@ ms.date: 12/15/2022
 
 # Integrate web apps
 
-You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow [Teams design guidelines](~/concepts/design/understand-use-cases.md) to make your app native to Teams.
-This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Teams tab in SharePoint, creating deep links, and integrating device capabilities.
+You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, create a Share-to-Teams button for your website, adding a Teams tab in SharePoint, creating deep links, and integrate device capabilities. Ensure that you follow the [Teams design guidelines](../concepts/design/design-teams-app-overview.md) to make your app native to Teams.
 
 ## Prerequisites
 
@@ -45,7 +44,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. Built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -53,7 +52,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## App templates
 
-You can use app template to create custom made apps to suit your organizational needs. These are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
+You can use app template to create custom made apps to suit your organizational needs. App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
 
 ## Install Moodle LMS
 
@@ -69,9 +68,7 @@ You can get a rich integration experience between Teams and SharePoint by adding
 
 ## Create deep link
 
-You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
-
-For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
+You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience. For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
 
 ## Integrate device capabilities
 
@@ -91,9 +88,7 @@ You can also integrate Microsoft 365 identity to build external applications tha
 
 ## See also
 
-* [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
 * [Determine your app's entry points](~/concepts/extensibility-points.md)
-* [Considerations for Teams integration](~/samples/integrating-web-apps.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
@@ -104,5 +99,4 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
-* [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
 * [People picker control](~/concepts/device-capabilities/people-picker-capability.md)

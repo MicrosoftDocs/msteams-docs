@@ -1,11 +1,11 @@
 ---
-title: Strategize and decide what to measure
+title: Measure App Performance
 author: heath-hamilton
-description: Learn about deciding what to measure using instrumentation data for your Teams app analytics
+description: Learn to strategize and decide what to measure using instrumentation data for your Microsoft Teams app analytics and monitor events for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 
 # Strategize and decide what to measure
@@ -76,7 +76,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 | • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Microsoft Entra profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
 | • % of users using key features in Teams app vs. using the same feature in a web or native app. | • Indicates discoverability, ease of use, and value of using the feature within Teams app. <br> • Report at app feature level. |
 | • #, % users using the app across different scopes (R28). | • Engagement penetration. <br> • Report by scope. <br> • Ability to drill down by capability. |
-| • #, % users using the app in different platform capabilities (R28). <br> • #, % Interacting with tab. <br> • #, % Interacting with Messaging extension. <br> • #, % Interacting with bot. <br> • #, % Interacting with side panel in a meeting. <br> • #, % Interacting with Stage View. | • Engagement and value prop of app capabilities. <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use and value add. |
+| • #, % users using the app in different platform capabilities (R28). <br> • #, % Interacting with tab. <br> • #, % Interacting with Messaging extension. <br> • #, % Interacting with bot. <br> • #, % Interacting with side panel in a meeting. <br> • #, % Interacting with Stageview. | • Engagement and value prop of app capabilities. <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use and value add. |
 | **Task success** |  |
 | • % of users completing core action. | • Ease of performing core task. <br> • Report at a week level. |
 | • User journey in a Teams app – Funnel view with user drop offs. | • Friction points in user journey. <br> • Drill down at a tenant level. |
@@ -88,11 +88,11 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users repeatedly use your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
-> - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
+> - Users using multiple Teams platform capabilities are 20 to 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.

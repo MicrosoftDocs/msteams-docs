@@ -1,11 +1,11 @@
 ---
-title: Build tabs for meeting
+title: Create Customized Tab Apps for Meetings
 author: surbhigupta
-description: Learn how to build a tab for a meeting chat, meeting side panel, and meeting stage in Microsoft Teams meeting.
+description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 04/07/2022
+ms.date: 12/05/2023
 ---
 
 # Build tabs for meeting
@@ -16,7 +16,7 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
-Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stage View.
+Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stageview.
 
 ### Meeting details view
 
@@ -27,18 +27,18 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
-# [Desktop](#tab/desktop)
-
-   The following image shows a tab added to the meeting details page in the Teams desktop client:
-
-   :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
-
-# [Mobile](#tab/mobile)
-
-   The following image shows a tab added to the meeting details page in the Teams mobile client:
-
-   :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
-
+   # [Desktop](#tab/desktop)
+    
+     The following image shows a tab added to the meeting details page in the Teams desktop client:
+    
+     :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+    
+   # [Mobile](#tab/mobile)
+    
+     The following image shows a tab added to the meeting details page in the Teams mobile client:
+    
+     :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
+    
    ---
 
 ### Meeting chat view
@@ -49,18 +49,18 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
-
-   The following image shows an app added to the meeting chat in the Teams desktop client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-
-# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-
-   The following image shows an app added to the meeting chat in the Teams mobile client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-
+   # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+    
+     The following image shows an app added to the meeting chat in the Teams desktop client:
+    
+     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+    
+   # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+    
+     The following image shows an app added to the meeting chat in the Teams mobile client:
+    
+     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+    
    ---
 
 ### Meeting side panel view
@@ -110,23 +110,23 @@ Pre or post-meeting tab behavior isn't supported in channel meetings.
 
 For deep link format, see [deep links](~/concepts/build-and-test/deep-link-workflow.md#deep-link-to-meeting-side-panel).
 
-### Meeting stage view
+### Meeting Stageview
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-# [Meeting Stage View desktop](#tab/meeting-stage-view-desktop)
+# [Meeting Stageview desktop](#tab/meeting-stage-view-desktop)
 
    The following image shows a tab added to the meeting stage in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="Screenshot shows meeting Stage View of the app you shared to meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="Screenshot shows meeting Stageview of the app you shared to meeting in Teams desktop.":::
 
-# [Meeting Stage View mobile](#tab/meeting-stage-view-mobile)
+# [Meeting Stageview mobile](#tab/meeting-stage-view-mobile)
 
    The following image shows a tab added to the meeting stage in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="Screenshot shows meeting Stage View of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="Screenshot shows meeting Stageview of the app you shared to meeting in Teams mobile.":::
 
 ---
 
@@ -156,6 +156,10 @@ In public scheduled channel meetings, after a meeting tab is added, you can sele
 
 > [!NOTE]
 > On mobile, anonymous users can't access apps in scheduled public channel meetings.
+
+### Meeting apps in Outlook
+
+Tabs in Teams meetings are also supported in Microsoft Outlook from app manifest version 1.13 or later. You can build meeting tab apps that can be configured and added to Teams meetings scheduled from Outlook for Windows. For more information, see [extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md).
 
 ### Advanced tab APIs
 
@@ -270,8 +274,8 @@ The following table provides the user types and lists the features that each use
 | Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-stage-view/csharp/demo-manifest/Meeting-stage-view.zip) |
 | Meeting side panel | Sample app to show how to add agenda in a meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs) | NA |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
-| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific Stage View. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-| Meeting tabs | This sample shows app Stage View, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meeting-tabs/csharp/demo-manifest/meeting-tabs.zip) |
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific Stageview. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
+| Meeting tabs | This sample shows app Stageview, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meeting-tabs/csharp/demo-manifest/meeting-tabs.zip) |
 
 > [!NOTE]
 >
@@ -282,7 +286,7 @@ The following table provides the user types and lists the features that each use
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting side panel in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting Stage View in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting Stageview in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
 ## See also
@@ -290,6 +294,6 @@ The following table provides the user types and lists the features that each use
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&preserve-view=true&tabs=http)
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
 * [Enable app icon badging for your Teams app](app-icon-badging-for-your-app.md)

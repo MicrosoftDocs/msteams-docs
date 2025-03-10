@@ -1,13 +1,13 @@
 ---
 title: Teams JavaScript client library SDK
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (previously called Office), and Outlook.
+description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.author: mosdevdocs
 author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
-ms.date: 05/05/2023
+ms.date: 12/19/2024
 ---
 
 # Teams JavaScript client library
@@ -19,7 +19,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
-Here's the current versioning guidance for various app scenarios:
+Here's the versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
@@ -27,7 +27,41 @@ The remainder of this article walks you through the structure and latest updates
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
+
+### Improve load time performance with JavaScript tree shaking
+
+From version 2.31.0 and later, the TeamsJS library is fully tree-shakable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
+
+#### How to use tree shaking with TeamsJS
+
+To take advantage of tree shaking when you bundle your app package, use a bundler that supports tree shaking, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking). When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
+
+```typescript
+export function scanBarCode(barCodeConfig: BarCodeConfig): Promise<string> {
+   //implementation omitted
+}
+
+export function hasPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function requestPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function isSupported(): boolean {
+   //implementation omitted
+}
+```
+
+Assume the **barCode** module in TeamsJS contains the four functions `hasPermission()`, `isSupported()`, `requestPermission()`, and `scanBarCode(BarCodeConfig)`. If an app only uses the `hasPermission()` function, then after tree shaking the other three functions would be excluded from the app bundle. This ensures that apps stay as lightweight as possible and only include the code they need.
+
+> [!IMPORTANT]
+> When using tree shaking, keep in mind the following considerations:
+>
+> 1. If your app uses CDN to consume the TeamsJS library, then the library version used isn't tree-shakable.
+> 1. The TeamsJS library type was changed from UMD (Universal Module Definition) to ESM (ECMAScript Modules) in order to support tree shaking. However, the UMD version is still offered. If a bundler supports ESM the tree-shakable ESM package of TeamsJS is used, otherwise the UMD package is used.
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -46,41 +80,6 @@ Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existi
 
 An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
 
-#### Teams-only apps
-
-Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). We recommend you to use TeamsJS v.1.13.1 as it's supported, but no new features or improvements are added.
-
-Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
-
-To implement logic that runs your app in Teams, use the following code snippet:
-
-```js
-
-// Ensure that you initialize the TeamsJS once, regardless of how often this is called.
-let teamsInitPromise;
-export function ensureTeamsJSInitialized(){
-    if (!teamsInitPromise) {
-        teamsInitPromise = microsoftTeams.app.initialize();
-    }
-    return teamsInitPromise;
-}
-
-// Function returns a promise which resolves to true if we're running in Teams
-export async function inTeams(){
-  try {
-    await ensureTeamsJSInitialized();
-    const context = await microsoftTeams.app.getContext();
-    return (context.app.host.name === microsoftTeams.HostName.teams);
-  }
-  catch (e) {
-    console.log(`${e} from Teams SDK, may be running outside of Teams`);
-    return false;
-  }
-}                                                                                                                                
-```
-
-You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed only for Teams might not function correctly on other Microsoft 365 applications. To ensure the smooth operation of your app across Microsoft 365, make provisions for the logic handling of other Microsoft 365 applications.
-
 #### Authentication
 
 In `TeamsJS` version 2.11.0 or later, apps must provide a third url parameter, `hostRedirectUrl`, in the [authenticate API](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate), to redirect users to the correct client after the completion of authentication. The `hostRedirectUrl` authentication parameter is necessary to enable your client to be supported across Microsoft 365 host applications. Apps implemented on older versions of `TeamsJS` only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters are passed to the third-party app server.
@@ -89,22 +88,22 @@ For more information regarding the authentication parameter, see [use external O
 
 #### Teams apps running across Microsoft 365
 
-Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all of the following:
+Following are the requirements to enable an existing Teams app to run in Outlook and Microsoft 365:
 
-1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later,
+1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later.
 
-2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article, and
+2. [Modify existing application code](#2-update-teamsjs-references) according to the required changes described in this article.
 
-3. [Updating your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
+3. [Update your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
 
-For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+For more information, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Callbacks converted to promises
 
 > [!NOTE]
 > The `getTabInstances` API isn't implemented on Teams mobile.
 
-Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
+Teams APIs that previously took a callback parameter are updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
@@ -175,11 +174,17 @@ async function example() {
           }
 ```
 
-
 ---
 
 > [!TIP]
 > When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
+
+Cross-cloud communication through SDK is restricted for security reasons; hence, Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, specify the Teams operated by 21Vianet domain during the SDK initialization in your app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
+
+```js
+import { app } from '@microsoft/teams-js';
+app.initialize(["https://teams.microsoftonline.cn"]);
+```
 
 ### APIs organized into capabilities
 
@@ -194,7 +199,7 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It returns `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
-The host name where your app operates is revealed as a *hostName* property on the Context interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the previous Teams client, this value might return as *unknown* or *undefined*. In such cases, map these values to old Teams.
+The host name where your app operates is displayed as a [HostName](/javascript/api/%40microsoft/teams-js/hostname) enum value of the `Context` interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the Classic Teams client, this value might return as *unknown* or *undefined*. In this case, map these values to Classic Teams.
 
 The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values) is also available. However, we recommend using the *hostName* mechanism with discretion.
 
@@ -202,6 +207,9 @@ The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-b
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
 * **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Microsoft 365* when running in Microsoft 365 on the web, and *Manage your tasks in Teams* when running in Teams.
+
+> [!TIP]
+> The best practice is to specify the runtime requirements and dependencies of your app in a host-agnostic way, rather than special casing your app code with host-specific logic. For more information, see [how to specify Microsoft 365 host runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 #### Namespaces
 
@@ -297,6 +305,9 @@ The `pages` namespace includes functionality for running and navigating webpages
 
 ##### *dialog* namespace
 
+> [!NOTE]
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](~/tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
 | Original namespace `tasks` | New namespace `dialog`  |
@@ -307,11 +318,11 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) is moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -322,11 +333,11 @@ To generalize the TeamsJS library to run other Microsoft 365 hosts such as Micro
 
 #### Updates to the *Context* interface
 
-The `Context` interface has been moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Microsoft 365 app, in addition to Teams.
+The `Context` interface is moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Microsoft 365 app, in addition to Teams.
 
 A new property `app.Context.app.host.name` is added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app/app.ts)  (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |
@@ -391,9 +402,10 @@ To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm pa
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
-After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility updates your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` are updated with:
 
 > [!div class="checklist"]
+>
 > * `package.json` references to TeamsJS version 2.x.x
 > * Import statements for TeamsJS version 2.x.x
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
@@ -401,7 +413,7 @@ After completion, the utility will have updated your `package.json` file with th
 > * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code inside html files is not supported by the upgrade tooling and will require manual changes.
+> Code inside html files is not supported by the upgrade tooling and requires manual changes.
 
 ### 3. Update the app manifest (optional)
 
@@ -422,7 +434,6 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
     "manifestVersion" : "1.13"
 }
 ```
-
 
 ---
 

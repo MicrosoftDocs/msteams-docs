@@ -1,11 +1,11 @@
 ---
-title: Create a configuration page
+title: Create Configuration Page in Tabs
 author: surbhigupta
-description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+description: Learn to create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: v-npaladugu
-ms.date: 01/31/2023
+ms.author: surbhigupta
+ms.date: 02/06/2025
 ---
 # Create a configuration page
 
@@ -19,7 +19,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configuration page for tabs
 
-The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -47,8 +47,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveGray = () => {
             microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/gray",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/gray",
                     entityId: "grayIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -61,8 +61,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveRed = () => {
             microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/red",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/red",
                     entityId: "redIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -109,8 +109,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveGray = () => {
             microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/gray",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://example.com/gray",
                     entityId: "grayIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -120,8 +120,8 @@ The following code is an example of corresponding code for the configuration pag
         let saveRed = () => {
             microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/red",
+                    websiteUrl: "https://example.com",
+                    contentUrl: "https://exampe.com/red",
                     entityId: "redIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
@@ -180,11 +180,11 @@ The configuration page code informs Teams that the configuration requirements ar
 
 Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
+For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context). Collect the values of context data variables in the following two ways:
 
 * Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
 
-* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
+* Use the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 

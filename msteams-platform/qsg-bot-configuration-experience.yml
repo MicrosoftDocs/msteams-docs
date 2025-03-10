@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: Bot configuration experience quick start guide
 metadata:
-  title: Bot configuration experience quick start guide
-  description: In this module, learn how to quickly try the bot configuration.
+  title: Guide to Create Configurable Bot
+  description: In this module, learn how to build and run the configurable bot for Teams using Teams Toolkit in Visual Studio Code and reconfigure the bot.
   audience: Developer
   level: Beginner
-  ms.date: 04/07/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/bot-configuration-experience.md
   nextTutorialTitle: Bot configuration experience
@@ -16,8 +16,7 @@ items:
   content: |
     > [!NOTE]
     >
-    > * Bot configuration experience is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-    > * Bot configuration experience is supported in channel or group chat scopes only.
+    > Bot configuration experience is supported in channel or group chat scopes only.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
@@ -34,15 +33,14 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | &nbsp; | [Teams Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).|
 
     > [!NOTE]
     > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-
 
     
 - title: Set up local environment
@@ -58,11 +56,16 @@ items:
 
      1. Select **Clone**.
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fi-ran-into-issue%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |    
      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+tunnel+for+local+web+server&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
 - title: Build and run your app
   durationInMinutes: 1
@@ -81,19 +84,22 @@ items:
 
         A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-     1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
+     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot shows add your bot to chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-configuration-app.png" alt-text="Screenshot of app details dialog to add bot configuration sample app.":::
 
-     1. Enter the name of a chat in the search field.
+     1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
+        :::image type="content" source="~/assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
-     1. Select **Set up a bot**.
+     1. Configure the bot settings and select **Submit**.
 
-        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot shows set up a bot in chat.":::
+        :::image type="content" source="~/assets/images/bots/set-up-a-bot-groupchat.png" alt-text="Screenshot of configuration options for Bot configuration sample app.":::
 
          The bot is installed in the chat.
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)   
 
 - title: Reconfigure the bot
   durationInMinutes: 1
@@ -116,7 +122,9 @@ items:
    1. The bot sends a response message.
 
       :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
-  
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Reconfigure+the+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)  
 
 - title: Complete challenge
   durationInMinutes: 1

@@ -1,10 +1,10 @@
 ---
-title: Actions in Microsoft 365
-description: In this article, learn more about the function of Actions and its use cases. 
+title: Introduction - Actions in Microsoft 365
+description: In this article, learn more about the function of Actions in Microsoft 365, how Actions work, design guidelines, and its use cases. 
 ms.date: 11/16/2023
 ms.author: mosdevdocs
 author: v-bvishnu
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 # Actions in Microsoft 365

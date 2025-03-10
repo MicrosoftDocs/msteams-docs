@@ -1,9 +1,10 @@
 ---
-title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
+title: Authorize Proactive Bot Installation
 description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
 author: akjo
-ms.topic: Overview
+ms.topic: overview
+ms.owner: vishachadha
 ms.date: 12/15/2022
 ---
 
@@ -40,7 +41,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
+> * A Microsoft Entra admin must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
@@ -110,9 +111,9 @@ You can retrieve the `teamsAppId` in the following ways:
     > [!TIP]
     > To narrow the list of results, you can filter any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object.
 
-### Determine whether your bot is currently installed for a message recipient
+### Determine whether your bot is installed for a message recipient
 
-You can determine whether your bot is currently installed for a message recipient as follows:
+You can determine whether your bot is installed for a message recipient as follows:
 
 **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -190,7 +191,7 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
@@ -218,7 +219,7 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest#botbuilder-cloudadapter-continueconversationasync&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest&preserve-view=true#botbuilder-cloudadapter-continueconversationasync)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
 ```javascript

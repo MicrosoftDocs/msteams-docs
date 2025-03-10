@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams developer community support and feedback
-description: Learn about Developer community and help required to raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
+title: Developer Community Support & Feedback
+description: Learn about developer community help, raise issues, and general questions. Questions related to SDK and samples, documentation feedback, and feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 09/28/2022
@@ -22,6 +22,8 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 
 Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
+📢 Read our latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
+
 ### Developer community forums
 
 Post your questions and help other community members by sharing and responding to Teams App Development questions.
@@ -37,7 +39,7 @@ Submit issues and ask general questions related to SDK and samples using the com
 
 | **Community channel** | **Contact** |
 |:----------------------|:------------|
-| **Platform outages** | Check if your issue is already raised on [Teams platform outages](https://aka.ms/TeamsPlatform/Outages) before you raise one. |
+| **Platform outages** | Check if your issue is already raised on [Teams platform outages](https://github.com/MicrosoftDocs/msteams-docs/labels/outage) before you raise one. |
 | **Samples** | Submit issues with samples to respective  [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
 |  **Teams Toolkit or TeamsFx SDK and CLI issues** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [TeamsFx (Microsoft Teams Framework) GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and to receive community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/teams-toolkit): Use the `teams-toolkit` tag to post questions. Follow the Stack Overflow guidelines such as provide a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. </li> </ul> |
 | **Bot and Message extension SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). Post How-to questions at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework` and `microsoft-teams` tag. |
@@ -50,7 +52,7 @@ Submit documentation feedback or updates using the community help channels.
 
 | **Community channel** | **Contact** |
 |:--------------------------|:--------------------------|
-| **Documentation issues** |   Select **This page** in the **Submit and view feedback** section available at the footer of the documentation, to open an [issue](https://github.com/MicrosoftDocs/msteams-docs/issues) on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository.<br/><br/>:::image type="icon" source="assets/icons/alert-icon.png" border="false"::: **This page** option will be deprecated by May 31, 2024.  <br/><br/>:::image type="content" source="assets/images/community-feedback-this-page.png" alt-text="This page feedback"::: <br><br/> You can also select whether the article was helpful or not on the article’s page. Select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article. Select **Yes** or **No**, provide additional context in the text field and select **Submit**. <br/>:::image type="content" source="assets/images/community-feedback.png" alt-text="Screenshot shows the feedback option in the article.":::<br> If you want to provide additional feedback, you can reach out to the community help through [Microsoft Q&A](#developer-community-forums).|
+| **Documentation issues** | To open an issue on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository, select **Open a documentation issue** in the **Platform Docs feedback** section available at the footer of the documentation.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platfrom docs."::: <br><br/> You can also select whether the article was helpful or not on the article’s page. Select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article. Select **Yes** or **No**, provide additional context in the text field and select **Submit**. <br/>:::image type="content" source="assets/images/community-feedback.png" alt-text="Screenshot shows the feedback option in the article.":::<br> If you want to provide additional feedback, you can reach out to the community help through [Microsoft Q&A](#developer-community-forums).|
 |**Documentation updates**|Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
 
 ### Feature request and general help

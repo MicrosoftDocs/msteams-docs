@@ -1,7 +1,7 @@
 ---
 title: Debug bot using Teams App Test Tool
 author: surbhigupta 
-description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool.
+description: Learn about Teams app Test Tool in Teams Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -12,13 +12,13 @@ ms.date: 11/16/2023
 
 > [!NOTE]
 >
-> Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of the Teams Toolkit.
+> Teams App Test Tool is available in the latest prerelease version of the Microsoft Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of the Teams Toolkit.
 
-Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows Teams App Test Tool Adaptive Card.":::
 
 The following are the advantages of Test Tool:
 
@@ -55,11 +55,13 @@ Test Tool is an npm package that has a CLI command called `teamsapptester`. When
 To use a Teams bot on Test Tool, you need to provide:
 
 * Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
 
 Test Tool offers a faster debug experience for bot applications when compared to the Teams client.
+
+# [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
 
@@ -111,6 +113,104 @@ Test Tool offers a faster debug experience for bot applications when compared to
 1. Test Tool opens the bot in a webpage.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+# [Command line](#tab/cli)
+
+1. You can use command line for JavaScript and TypeScript or C# to debug your app in Test Tool. To get started select the following language:
+
+   # [JavaScript/TypeScript](#tab/clijs)
+
+   1. Run the following command to install Teams app Test Tool CLI from `npm`:
+
+      ```cmd
+      npm install -g @microsoft/teams-app-test-tool
+      ```
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
+
+   1. Use the `teamsapp` command from [Teams Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
+
+      ```cmd
+      teamsapp new   
+      ```
+
+      You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Use the arrow keys to select an option. After you make a choice, select **Enter** to confirm. After you enter a suitable name for your app, your project is created.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-new.png" alt-text="Screenshot shows the process of creating a new app on Teams.":::
+
+   1. Run the following command to deploy your app and install the required dependencies and npm packages:
+
+      ```cmd
+      teamsapp deploy --env=testtool
+      ```
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
+
+   1. Run the following command to start your bot app:
+
+      ```cmd
+      npm run dev:teamsapp:testtool
+      ```
+
+   1. Run the following command in a separate terminal to launch Teams App Test Tool:
+
+      ```cmd
+      npm run dev:teamsapp:launch-testtool
+      ```
+
+   # [C#](#tab/clicsharp)
+
+   1. [Create a new Teams app](toolkit-v4/create-new-project-vs.md).
+
+   1. Download Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
+
+   1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
+
+   1. Copy the `teamsapptester.exe` file to the folder where you've created your app.
+
+   1. Open command prompt and go to the folder where you've created your app.
+
+   1. Run the following command to launch profile:
+
+      ```cmd
+      dotnet run --launch-profile "Teams App Test Tool (browser)"
+      ```
+
+   1. Run the following command in a separate terminal to define your bot message endpoint:
+
+      1. For Command Prompt:
+
+          ```cmd
+             set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
+          ```
+
+      1. For PowerShell:
+
+         ```powershell
+            $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
+         ```
+
+   1. Run the following command to initiate Teams App Test Tool:
+
+      1. For Command Prompt:
+
+         ```cmd
+            teamsapptester.exe start
+         ```
+
+      1. For PowerShell:
+
+         ```powershell
+            teamsapptester.exe start
+         ```
+
+      If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+     ---
+   1. Test Tool opens the bot in a webpage.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+---
 
 ## Activity triggers
 
@@ -267,7 +367,7 @@ If your bot code uses Bot Framework APIs, you can modify the configuration file 
 
 To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
-1. Go to the `teamsapptesttool.yml` file in the project's root folder.
+1. Go to the `.teamsapptesttool.yml` file in the project's root folder.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
@@ -303,7 +403,7 @@ It's vital to recognize that updating the configuration file has three major imp
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-  * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Stageview](../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Test Tool doesn't support the following experiences:

@@ -1,9 +1,10 @@
 ---
-title: Use Microsoft Graph to import external platform messages to Teams
-description: Describes how to use Microsoft Graph to import messages from an external platform to Teams.
+title: Import External Platform Messages
+description: Learn how to use Microsoft Graph to import messages such as message history and data from an third-party platform to Teams.
 ms.localizationpriority: high
 author: "akjo"
-ms.topic: Overview
+ms.topic: overview
+ms.owner: vishachadha
 ms.date: 09/02/2022
 ---
 
@@ -28,7 +29,7 @@ At a high level, the import process consists of the following:
 
 ### Analyze and prepare message data
 
-* Review the third-party data to decide what will be migrated.  
+* Review the third-party data to decide what is migrated.  
 * Extract the selected data from the third-party chat system.  
 * Map the third-party chat structure to the Teams structure.  
 * Convert import data into format needed for migration.  
@@ -45,7 +46,7 @@ Since you're migrating existing data, maintaining the original message timestamp
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
 > [!NOTE]
-> The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
+> The `createdDateTime` field is only populated for instances of a team or channel that are migrated.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -357,13 +358,13 @@ HTTP/1.1 204 No Content
 * If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
-> Currently, inline images are the only type of media supported by the import message API schema.
+> Inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
 
 The following table provides the content scope:
 
-|In-scope | Currently out-of-scope|
+|In-scope | Out-of-scope|
 |----------|--------------------------|
 |Team and channel messages|1:1 and group chat messages|
 |Created time of the original message|Private channels|
