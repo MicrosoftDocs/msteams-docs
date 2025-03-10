@@ -209,7 +209,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+your+application+to+Teams&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23upload-your-application-to-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%23upload-your-application-to-teams&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
-## Static and personal tab apps
+## Static and personal tabs
 
 You can build two types of tabs within your Microsoft Teams tab app:
 
@@ -220,6 +220,8 @@ You can build two types of tabs within your Microsoft Teams tab app:
 * **Personal tabs**:
 
   Personal tabs are visible only to individuals who add the tab app. The user can configure their own personalized content and configuration. It's suitable for to-do lists or personal note taking apps.
+
+Here's how you can add and configure tabs:
 
 * [Extend static tabs to group chat, channels, and meetings](#extend-static-tabs-to-group-chat-channels-and-meetings)
 * [Customizing your static tab in chats or meetings](#customizing-your-static-tab-in-chats-or-meetings)
