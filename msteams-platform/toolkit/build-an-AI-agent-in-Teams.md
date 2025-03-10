@@ -250,7 +250,7 @@ Teams AI library provides a comprehensive flow that simplifies the process of bu
 
 ### Build with Assistants API
 
-Assistants API from OpenAI simplify the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval, and Function Calling that simplifies the code you need to write for common scenarios.
+Assistants API from OpenAI simplifies the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval, and Function Calling that simplifies the code you need to write for common scenarios.
 
    | Comparison | Build new | Build with Assistants API |
    | - | - | - |
