@@ -396,6 +396,9 @@
     href: tabs/how-to/tab-features.md
   - name: Advanced tab features
     items:
+    - name: Build a tab app
+      href: tabs/how-to/create-personal-tab.md
+      displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
     - name: Open content in stage view
       href: tabs/open-content-in-stageview.md
       displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
