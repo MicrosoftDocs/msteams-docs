@@ -9,12 +9,6 @@ ms.date: 01/03/2025
 
 # Teams tab app features
 
-## Developer experience for building a Teams tab app
-
-Step-by-step to a Dev’s progress in building a Teams tab app and important information they may need:
-
-:::image type="content" source="../../assets/images/tab-images/tab-progress-1.png" alt-text="Developer progress for building tab apps":::
-
 <!--
 :::image type="content" source="../../assets/images/tab-images/tab-progress-2.png" alt-text="tab progress 2":::
 

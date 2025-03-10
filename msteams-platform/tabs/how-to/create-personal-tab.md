@@ -11,6 +11,12 @@ ms.date: 12/11/2024
 
 Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
 
+## Developer experience for building a Teams tab app
+
+Step-by-step to a Dev’s progress in building a Teams tab app and important information they may need:
+
+:::image type="content" source="../../assets/images/tab-images/tab-progress-1.png" alt-text="Developer progress for building tab apps":::
+
 > [!IMPORTANT]
 >
 > * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
