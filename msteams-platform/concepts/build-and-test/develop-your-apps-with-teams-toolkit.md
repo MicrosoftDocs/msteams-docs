@@ -65,6 +65,9 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in Visual Studio Code. ":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Open+your+app+in+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fdevelop-your-apps-with-teams-toolkit%23open-your-app-in-visual-studio-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fdevelop-your-apps-with-teams-toolkit.md&documentVersionIndependentId=e5466611-d905-be1e-b4d5-8071c7ac037c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Open your app in Visual Studio
 
 You can open your project in Visual Studio and scaffold your project in Visual Studio with Teams Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
@@ -99,6 +102,9 @@ After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/
 
   > [!NOTE]
   > You can work in Teams Toolkit through Developer Portal in preview version only.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Open+your+app+in+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fdevelop-your-apps-with-teams-toolkit%23open-your-app-in-visual-studio-code&contentSourceUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fdevelop-your-apps-with-teams-toolkit%23open-your-app-in-visual-studio&documentVersionIndependentId=e5466611-d905-be1e-b4d5-8071c7ac037c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## See also
 
