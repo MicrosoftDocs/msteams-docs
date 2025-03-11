@@ -87,9 +87,30 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 > * The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
 > * When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
 
-`stage.close`
+</details>
 
-Trigger stage.close API to close the respective stageview (stage, dialog or multi-window). It's an optional function that you can add. It is supported only in Microsoft built apps.
+<br>
+<details>
+<summary id="closestage" ><b>`closeStageView` API</b></summary>
+
+When you have a Stageview opened, `stage.close` API allows you to programmatically close a Stageview after user action. This is an optional function and you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
+
+Initialize your app using `microsoftTeams.app.initialize()` and implement `closeStageView` API:
+
+```typescript
+// App Initialize
+microsoftTeams.app.initialize();
+
+function closeStageView() {
+    microsoftTeams.stageView.self.close()
+        .then(() => {
+            console.log("Stage view closed successfully.");
+        })
+        .catch((error) => {
+            console.error("Error closing stage view:", error);
+        });
+}
+```
 
 </details>
 
