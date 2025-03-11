@@ -42,7 +42,6 @@ items:
     > [!NOTE]
     > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-
     
 - title: Set up local environment
   durationInMinutes: 1
@@ -57,11 +56,16 @@ items:
 
      1. Select **Clone**.
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fi-ran-into-issue%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |    
      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+tunnel+for+local+web+server&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
 - title: Build and run your app
   durationInMinutes: 1
@@ -94,6 +98,9 @@ items:
 
          The bot is installed in the chat.
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)   
+
 - title: Reconfigure the bot
   durationInMinutes: 1
   content: |
@@ -115,7 +122,9 @@ items:
    1. The bot sends a response message.
 
       :::image type="content" source="~/assets/images/bots/configurable-card-reponse-message.png" alt-text="Screenshot shows the response message from the bot.":::
-  
+
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Reconfigure+the+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fqsg-bot-configuration-experience%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fqsg-bot-configuration-experience.yml%23&documentVersionIndependentId=c2ff51a0-e012-ef6c-9eb2-5e74e8ec7a4a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)  
 
 - title: Complete challenge
   durationInMinutes: 1

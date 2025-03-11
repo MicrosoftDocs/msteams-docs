@@ -1,9 +1,9 @@
 ---
 title: Rate limiting for bots
-description: Learn how to optimize bot with rate limiting. Detect transient exceptions, per bot thread limit. You can also perform an exponential backoff.
+description: Learn how to optimize bot with rate limiting, detect transient exceptions, perform an exponential backoff, and know about add per bot thread limit for all bots.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/13/2024
+ms.date: 02/06/2025
 ---
 
 # Optimize your bot with rate limiting in Teams
@@ -95,7 +95,7 @@ The following code shows an example of exponential backoff:
 * The second parameter specifies the minimum and maximum backoff time respectively.
 * The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
 */
-var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSeconds(2),
+var exponentialBackoffRetryStrategy = new ExponentialBackoffRetryStrategy(3, TimeSpan.FromSeconds(2),
                         TimeSpan.FromSeconds(20), TimeSpan.FromSeconds(1));
 
 

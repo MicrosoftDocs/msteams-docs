@@ -5,7 +5,7 @@ description: Learn to build a message extension from OpenAPI description documen
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 10/19/2023
+ms.date: 02/26/2025
 ---
 
 # API-based message extension
@@ -18,7 +18,7 @@ ms.date: 10/19/2023
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration. API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With API-based message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
-* Retrieve knowledge-based information, for example, my team’s design files in Figma
+* Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
 </br>
@@ -286,10 +286,6 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 ### Response rendering template
 
-> [!NOTE]
->
-> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
-
 Response rendering template is a predefined format that dictates how the results from your API are displayed within Teams. It uses templates to create Adaptive Cards or other UI elements from the API’s response, ensuring a seamless and integrated user experience within Teams. The template defines the layout and style of the information presented, which can include text, images, and interactive components. Ensure that you adhere to following guidelines for response rendering template:
 
 * Define the schema reference URL in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
@@ -433,7 +429,7 @@ Let's say you have the following JSON for a list of products and you want to cre
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview the Adaptive Card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking. Teams supports cards up to version 1.5 while the designer supports 1.6.
+Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
 
 ## OpenAPI schema conversion
 

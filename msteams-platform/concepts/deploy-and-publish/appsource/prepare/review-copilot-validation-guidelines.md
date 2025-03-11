@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 09/16/2024
+ms.date: 02/25/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -19,7 +19,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
+> * If you want to configure a custom Microsoft Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
@@ -191,31 +191,6 @@ Agents must be fully responsive and functional on the latest versions of these c
 * copilot.microsoft.com on web
 * Microsoft 365 Copilot in Word
 
-### Ensure your Copilot plugins work in Teams meetings
-
-You must implement the following:
-
-* Adaptive Cards mustn't display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width: [*Must fix*]
-
-  * **ColumnSets**
-
-    * Don't define `ColumnSets` with more than three columns.
-    * Don’t use explicit pixel width on more than one column in the set.
-    * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Microsoft 365 Copilot.
-    * Generally, an explicit width mustn't exceed 48 pixels, though some scenarios might allow for exceptions.
-
-  * **Sizing images**
-
-    * When using an image inside a `ColumnSet` with more than one column, specify the size of the column containing an image rather than the image itself.
-    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
-    * If you want to define an explicit width in pixels, ensure that it doesn’t exceed three-fourths of the narrowest card width.
-    * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
-    * We recommend that you set the width of the image, though some scenarios might allow for exceptions.
-
-For more information to create plugins for teams meetings, see [enable message extension as a plugin for Copilot for meetings](../../../../messaging-extensions/build-bot-based-plugin.md#enable-message-extension-as-a-plugin-for-copilot-for-meetings).
-
-[Back to top](#validation-guidelines-for-agents)
-
 ### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
 
 You must ensure to meet the following guidelines for agents:
@@ -363,6 +338,16 @@ A custom engine agent is a conversational Teams bot that must meet the following
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+
+* Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
+
+   **Pass example**: The Graph connector node is empty. <br>
+
+    :::image type="content" source="../../../../assets/images/Copilot/da-pass-scenario-graph-connector.png" alt-text="Screenshot of the pass scenario.":::
+
+    **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
+
+    :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
 
 [Back to top](#validation-guidelines-for-agents)
 

@@ -4,7 +4,7 @@ description: Learn about sending and receiving messages using a bot app
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 10/03/2024
+ms.date: 02/26/2025
 ---
 
 # Send and receive messages
@@ -43,7 +43,7 @@ A conversational bot can include Adaptive Cards that simplify business workflows
 
 For more information, see:
 
-- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) for.
+- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 - [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
 
 The following code shows an example of sending a simple Adaptive Card:
@@ -239,47 +239,47 @@ To receive read receipts events for your bot, ensure the following:
 
 - Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
 
-# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+  # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
-```json
-    
-"webApplicationInfo": {
-    
-     "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
-     "resource": ""
-},
-"authorization": {
-    "permissions": {
-    "orgwide": [],
-     "resourceSpecific": [
-        {
-        "name": "ChatMessageReadReceipt.Read.Chat",
-        "type": "Application"
-        }
-        ]
+    ```json
+        
+    "webApplicationInfo": {
+        
+         "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+         "resource": ""
+    },
+    "authorization": {
+        "permissions": {
+        "orgwide": [],
+         "resourceSpecific": [
+            {
+            "name": "ChatMessageReadReceipt.Read.Chat",
+            "type": "Application"
+            }
+            ]
+         }
      }
- }
+            
+    ```
+
+  # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
+    ```json
+        
+     “webApplicationInfo”: {
     
-```
+         "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+         "resource": "https: //AnyString",
+         "applicationPermissions": [
+         "ChatMessageReadReceipt.Read.Chat"
+         ]
+     }
+            
+    ```
 
-# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+    ---
 
-```json
-    
- “webApplicationInfo”: {
-
-     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-     "resource": "https: //AnyString",
-     "applicationPermissions": [
-     "ChatMessageReadReceipt.Read.Chat"
-     ]
- }
-    
-```
-
----
-
-You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
+    You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 - Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
 
@@ -1151,195 +1151,6 @@ Two non-standard request header fields are added to all the requests sent to bot
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
 :::image type="content" source="../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
-
-## Receive conversation messages with RSC
-
-With the resource-specific consent (RSC) permissions model, conversation owners can allow a bot to receive all user messages in standard channels and chats without needing to be @mentioned. They can give consent during the app installation or upgrade process after the app updates are published. Originally made for Microsoft Teams Graph APIs, the RSC model is now expanded to include bot scenarios. You can enable this by adding the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (formerly known as the Teams app manifest).
-
-> [!NOTE]
-> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-
-Ensure that the services needing access to all Teams message data use the Graph APIs to get access to archived data in channels and chats. A bot must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to create engaging experience for users so it can get approved by the Microsoft Teams Store. Additionally, the app description must explain how the bot uses the data it reads. Here are some tips to help you use the RSC permissions correctly for your bot:
-
-- A bot mustn't use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions to pull a large amount of customer data.
-- A bot must be able to get all chat messages using `ChatMessage.Read.Chat` only after they've been re-installed or newly installed into a chat.
-- If your app uses the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, ensure that you test the app using the steps in [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and adjust it before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
-
-If your app uses RSC permissions to receive all channel or chat message, you can:
-
-- [Receive all channel or chat messages](#receive-all-channel-or-chat-messages).
-- [Receive only at-mentioned messages](#receive-only-at-mentioned-messages).
-
-### Receive all channel or chat messages
-
-The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are available for bots. With user consent and app installation, these permissions:
-
-- Enable a specified graph application access all messages in channels and chats.
-- Enable a bot to get all messages without needing to be @mentioned by defining in its app manifest to receive all conversation messages in the relevant contexts where these permissions apply.
-
-If these RSC permissions are defined for a bot in its app manifest, it can receive all messages from a channel or a chat where it's installed. To receive all channel or chat messages, you must:
-
-- [Update app manifest](#update-app-manifest).
-- [Upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation).
-
-#### Update app manifest
-
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
-
-:::image type="content" source="../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
-
-The following code provides an example of the app manifest:
-
-- **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
-- **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
-- **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
-
-The following code provides an example of the app manifest version 1.12 or later:
-
-```json
-{
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
-    "version": "1.0.0",
-    "id": "8239c8f3-ed78-4512-933e-babfd28856f1",
-    "packageName": "com.contoso.rscechobot",
-    "developer": {
-        "name": "Contoso",
-        "websiteUrl": "https://www.contoso.com",
-        "privacyUrl": "https://www.contoso.com/privacy",
-        "termsOfUseUrl": "https://www.contoso.com/tos"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "RscEchoBot",
-        "full": "Echo bot with RSC configured for all conversation messages"
-    },
-    "description": {
-        "short": "Echo bot with RSC configured for all channel and chat messages",
-        "full": "Echo bot configured with all channel and chat messages RSC permission in manifest"
-    },
-    "accentColor": "#FFFFFF",
-    "staticTabs": [
-        {
-            "entityId": "conversations",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId": "about",
-            "scopes": [
-                "personal"
-            ]
-        }
-    ],
-    "webApplicationInfo": {
-        "id": "07338883-af76-47b3-86e4-2603c50be638",
-        "resource": "https://AnyString"
-    },
-    "authorization": {
-        "permissions": {
-            "resourceSpecific": [
-                {
-                    "type": "Application",
-                    "name": "ChannelMessage.Read.Group"
-                },
-                {
-                    "type": "Application",
-                    "name": "ChatMessage.Read.Chat"
-                }
-            ]
-        }
-    },
-    "bots": [
-        {
-            "botId": "07338883-af76-47b3-86e4-2603c50be638",
-            "scopes": [
-                "personal",
-                "team",
-                "groupchat"
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": false
-        }
-    ],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": []
-}
-```
-
----
-
-#### Upload a custom app in a conversation
-
-# [Channel messages](#tab/channel)
-
-The following steps guide you to upload and validate bot that receives all channel messages in a Team without being @mentioned:
-
-1. Select or create a team.
-1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
-1. Select **Manage team** from the dropdown menu.
-
-   :::image type="content" source="how-to/conversations/Media/managing-team.png" alt-text="Screenshot shows the managing team option in Teams application.":::
-
-1. Select **Apps**. Multiple apps appear.
-
-1. Select **Upload a custom app** from the lower right corner.
-
-      :::image type="content" source="how-to/conversations/Media/uploading-custom-app.png" alt-text="Screenshot shows the upload a custom app option.":::
-  
-1. Select **Open**.
-
-      :::image type="content" source="how-to/conversations/Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="how-to/conversations/Media/select-apppackage.png":::
-
-1. Select **Add** from the app details pop-up, to add the bot to your selected team.
-
-      :::image type="content" source="how-to/conversations/Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="how-to/conversations/Media/adding-bot.png":::
-
-1. Select a channel and enter a message in the channel for your bot.
-
-    The bot receives the message without being @mentioned.
-
-      :::image type="content" source="how-to/conversations/Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="how-to/conversations/Media/bot-receiving-message.png":::
-
-# [Chat messages](#tab/chat)
-
-The following steps guide you to upload and validate bot that receives all chat messages in a chat without being @mentioned:
-
-1. Select or create a group chat.
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
-1. Select **Manage apps** from the dropdown menu.
-
-   :::image type="content" source="../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat."  lightbox="../assets/images/bots/chats-manage-apps-entry.png":::
-
-1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
-
-   :::image type="content" source="../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option." lightbox="../assets/images/bots/Chats_Manage_Apps_Page.png":::
-
-1. Select the app package from the **Open** dialog box.
-1. Select **Open**.
-
-   :::image type="content" source="../assets/images/bots/Chats_Sideload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
-
-1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
-
-   :::image type="content" source="../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the bot to the group chat.":::
-
-1. Enter a message in the group chat for your bot.
-
-   :::image type="content" source="../assets/images/bots/Bot_ReceiveMessage.png" alt-text="Screenshot shows the bot replying to a message.":::
-
-   The bot receives the message without being @mentioned.
-
-   :::image type="content" source="../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the bot replying to a message without a mention.":::
-
----
 
 ### Receive only at-mentioned messages
 

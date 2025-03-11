@@ -10,7 +10,9 @@ ms.subservice: m365apps
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
-The development environment for extending Microsoft Teams apps across Microsoft 365 is similar to Teams development. This article discusses specific configurations required to run preview builds of Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
+The development environment for extending Microsoft Teams apps across Microsoft 365 is similar to Teams development. This article discusses specific configurations required to run preview builds of Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook, Microsoft 365 app, Word, Excel and PowerPoint.
+
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
 To set up your development environment:
 
@@ -87,10 +89,18 @@ To install Microsoft 365 applications in your test environment:
     |Outlook Add-ins | `BetaChannel` |
     |Meeting apps in Outlook | `Current` |
 
+   | **Word, Excel, PowerPoint scenario** | **Update channel** |
+    |---------------|--------------|
+   |Word, Excel, PowerPoint Add-ins | `BetaChannel` |
+   
+   
+
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
-1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
-1. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build of Outlook.
+1. If you are testing in Outlook, take the following steps:
+    1. Open the Outlook desktop client and set up the mail account using your test tenant credentials.
+    1. In Outlook, open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Current Channel* build. 
+1. If you're testing in Word, Excel, or PowerPoint, open **File** > **Account** > **Update Channel** to confirm you're running a Microsoft 365 *Beta Channel* build.
 
 1. Verify that *Microsoft Edge WebView2 Runtime* is installed. Open Windows **Start** > **Apps & features**, and search for **webview**:
 
@@ -133,6 +143,8 @@ You can preview Teams personal tabs running in Outlook and Microsoft 365 app for
 Optionally, you can use [Visual Studio Code](https://code.visualstudio.com/) to extend Teams apps into Microsoft 365 and Outlook.
 
 The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Microsoft 365. For more information, see [enable Teams personal tab for Microsoft 365 and Outlook](extend-m365-teams-personal-tab.md).
+
+For Word, Excel and PowerPoint Add-ins development, see [Create Office Add-in projects using Teams Toolkit](/office/dev/add-ins/develop/teams-toolkit-overview).
 
 ## Next step
 
