@@ -226,6 +226,9 @@ To set up the pipeline with GitHub, follow these steps:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/artifact.png" alt-text="Screenshot shows the `appPackage` is generated in the artifacts.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20pipeline%20with%20GitHub&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-cicd-template%3Ftabs%3Dcertificate&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-CICD-template.md&documentVersionIndependentId=d56615f7-9333-d20c-8c83-0effb602995a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ### Set up pipeline with Azure DevOps
 
 To set up the pipeline with Azure DevOps, follow these steps:
@@ -395,6 +398,9 @@ To set up the pipeline with Azure DevOps, follow these steps:
     After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/published.png" alt-text="Screenshot shows the pipeline runs successfully.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20pipeline%20with%20Azure%20DevOps&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-cicd-template%3Ftabs%3Dcertificate&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-CICD-template.md&documentVersionIndependentId=d56615f7-9333-d20c-8c83-0effb602995a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Set up CI/CD pipelines using your own workflow
 
