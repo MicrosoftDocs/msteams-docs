@@ -1223,6 +1223,18 @@
       {
         "source_path": "msteams-platform/sbs-tab-with-adaptive-cards.yml",
         "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/update-and-delete-bot-messages.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#update-and-delete-messages-sent-from-bot"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/bots/build-notification-capability"
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-features.md",
+        "redirect_url": "/microsoftteams/platform/bots/overview"
       }
     ]
 }
