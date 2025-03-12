@@ -9,7 +9,7 @@ ms.date: 01/23/2025
 
 # Receive all channel or chat messages for bots and agents
 
-Getting all messages, even without @mentions, is helpful for both bots and human agents. With the full context, agents can address user concerns proactively, give more personalized responses, and solve issues faster. Additionally, it’s easier for bots and human agents to work together, ensuring smooth transitions and quicker resolutions.
+Getting all messages, even without @mentions, is helpful for both bots and human agents. With the full context, it allows them to proactively address user concerns, provide personalized responses, and solve issues faster. This approach also ensures smooth transitions and quicker resolutions.
 
 You can filter messages and handle only those that @mention the bot. This method can help with performance by reducing the number of messages to process. Focusing on @mention messages lets the bot address specific user requests, ensuring timely and relevant responses. Developers can customize the bot's behavior to fit specific needs or use cases.
 
