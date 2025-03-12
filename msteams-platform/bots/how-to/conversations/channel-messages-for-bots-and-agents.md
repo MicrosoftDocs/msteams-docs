@@ -18,7 +18,7 @@ Filter messages to handle only those that @mention the bot. This improves perfor
 
 ## Enable bots to receive all channel or chat messages
 
-The RSC permissions are being extended to bots. With user consent and app installation, these permissions:
+The RSC permissions are extended to bots, and with user consent and app installation, these permissions:
 
 - Allow a specified graph application to get all messages in channels and chats, respectively.
 - Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the following permissions apply:
@@ -109,6 +109,9 @@ The following code provides an example of the app manifest:
 - **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 - **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
+<details>
+<summrary>Select to view an example of the app manifest version 1.12 or later</summary>
+
 The following code provides an example of the app manifest version 1.12 or later:
 
 ```json
@@ -188,6 +191,8 @@ The following code provides an example of the app manifest version 1.12 or later
     "validDomains": []
 }
 ```
+
+</details>
 
 ## Upload a custom app in a conversation
 
