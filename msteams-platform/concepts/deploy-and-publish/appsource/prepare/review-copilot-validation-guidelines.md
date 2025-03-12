@@ -134,16 +134,9 @@ You must ensure to meet the following guidelines for agents:
 
 ## Compound utterances
 
-Agents must support atleast three unique compound utterances by handling three or more parameters. Here are the best practices you can adapt when defining the parameters:
-
-* Parameter description must explain the system's requirements in a natural language with an output format.
-* Parameters must be clearly defined to ensure accurate responses from Agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
-* Parameter description must not contain grammar and punctuation errors.
-* Parameters defined in the manifest must not be identical.
+Agents must support atleast three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
-
-For more information, see [parameter description](../../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and [enhance message extension to retrieve information through compound utterances](../../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
 
 [Back to top](#validation-guidelines-for-agents)
 

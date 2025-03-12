@@ -398,6 +398,15 @@ A good parameter description explains the requirements of the system in a natura
 
 ---
 
+Here are the best practices you can adapt when defining the parameters:
+
+* Parameter description must explain the system's requirements in a natural language with an output format.
+* Parameters must be clearly defined to ensure accurate responses from Agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
+* Parameter description must not contain grammar and punctuation errors.
+* Parameters defined in the manifest must not be identical.
+
+To define and handle parameters outside manifest, see [dialogs with Adaptive Cards](how-to/action-commands/define-action-command.md).
+
 ## Enhance message extension to retrieve information through compound utterances
 
 [*Must fix*]
