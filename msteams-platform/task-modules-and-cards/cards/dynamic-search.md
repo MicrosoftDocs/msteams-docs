@@ -1,6 +1,6 @@
 ---
 title: Search Types & Usage in Adaptive Cards
-author: Rajeshwari-v
+author: surbhigupta
 description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent inputs in Adaptive Cards.
 ms.topic: conceptual
 ms.localizationpriority: medium
