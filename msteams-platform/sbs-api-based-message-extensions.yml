@@ -356,7 +356,7 @@ items:
 
    ### Response rendering template
 
-    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
     To create a response rendering template, follow these steps:
 
@@ -364,7 +364,7 @@ items:
 
        ```json
        { 
-         "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
+         "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
          "version": "1.0", 
          "jsonPath": "", 
          "responseLayout": "", 
@@ -376,7 +376,7 @@ items:
         ```
     1. Update the properties in the response rendering template as follows:
 
-       1. `"$schema"`: `"https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json"`
+       1. `"$schema"`: `"https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json"`
        1. `"version"`: `"1.0"`
 
           `version` is the version of the rendering template to use
@@ -405,7 +405,7 @@ items:
 
     ```json
     {
-        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
         "version": "1.0",
         "jsonPath": "tools",
         "responseLayout": "list",
@@ -485,7 +485,7 @@ items:
     
     To create the manifest, follow these steps: 
     
-    1. Create a new JSON file. Your app manifest must conform to the 1.17 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
+    1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
     1. Add the following code to the JSON file:
 
@@ -493,8 +493,8 @@ items:
 
        ```json
        {
-        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
-        "manifestVersion": "1.17",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.20",
         "version": "1.0.3",
         "id": "<<YOUR-MICROSOFT-APP-ID>>",
         "packageName": "com.microsoft.teams.extension",
@@ -612,5 +612,5 @@ items:
   content: |
 
     You did it! 
-    You learned to create a API-based message extension using OpenAPI Description document.
+    You learned to create an API-based message extension using OpenAPI Description document.
 
