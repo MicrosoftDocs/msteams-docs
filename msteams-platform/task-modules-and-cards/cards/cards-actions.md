@@ -419,10 +419,10 @@ CardFactory.actions([
 
 Adaptive Cards support the following six action types:
 
-* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Opens the specified url.
-* [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
-* [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
-* [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
+* [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl): Opens the specified url.
+* [Action.Submit](https://adaptivecards.microsoft.com/?topic=Action.Submit): Sends the result of the submit action to the bot.
+* [Action.ShowCard](https://adaptivecards.microsoft.com/?topic=Action.ShowCard): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
+* [Action.ToggleVisibility](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility): Shows or hides one or more elements in the card.
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
 * [Action.ResetInputs](dynamic-search.md#actionresetinputs): Resets the values of the inputs in an Adaptive Card.
 

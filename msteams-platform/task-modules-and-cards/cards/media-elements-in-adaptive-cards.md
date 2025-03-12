@@ -61,7 +61,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
     </details>
 
-   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.microsoft.com/?topic=Media).
 
      :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
@@ -103,7 +103,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
     </details>
 
-   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.microsoft.com/?topic=Media).
 
      :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
@@ -129,7 +129,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     { 
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -144,7 +144,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -159,7 +159,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -179,7 +179,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
 | `sources.url`| The URL to a media file. Supports data URI in version 1.2+. |
 | `sources.mimeType`| Mime type of associated media, such as `video/mp4`. `mimeType` is a required field for Teams web and desktop clients.|
 
-For more information, see [Adaptive Cards `media`](https://www.adaptivecards.io/explorer/Media.html).
+For more information, see [Adaptive Cards `media`](https://adaptivecards.microsoft.com/?topic=Media).
 
 ## Limitations
 

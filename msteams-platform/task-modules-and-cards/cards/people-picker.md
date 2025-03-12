@@ -73,7 +73,7 @@ The following image shows the reassignment scenario:
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following selections:
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) control. The input control includes the following selections:
 
 * Dropdown, such as an expanded selection.
 * Radio button, such as a single selection.
