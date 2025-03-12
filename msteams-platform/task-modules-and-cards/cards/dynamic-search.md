@@ -10,6 +10,8 @@ ms.date: 01/23/2025
 
 # Typeahead search in Adaptive Cards
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Typeahead search functionality in Adaptive Cards gives an enhanced search experience on `Input.ChoiceSet` component. It provides a list of choices to enter text in the search field. You can incorporate typeahead search with Adaptive Cards to search and select data.
 
 You can use typeahead search for the following searches:

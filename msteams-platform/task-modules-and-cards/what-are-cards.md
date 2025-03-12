@@ -52,6 +52,8 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 ## Adaptive Cards
 
+[!INCLUDE [adaptive-card-redirect](../includes/adaptive-card-redirect.md)]
+
 [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They're the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Microsoft 365 cards, and thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:

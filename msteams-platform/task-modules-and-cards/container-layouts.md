@@ -10,6 +10,8 @@ ms.date: 11/07/2024
 
 # Container layouts
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself support three different types of layouts:
 
 * [Layout.Stack](#layoutstack) stacks elements on top of each other and is the default layout.

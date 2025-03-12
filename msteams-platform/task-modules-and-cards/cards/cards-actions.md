@@ -8,6 +8,8 @@ ms.date: 11/07/2024
 
 # Card actions
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]

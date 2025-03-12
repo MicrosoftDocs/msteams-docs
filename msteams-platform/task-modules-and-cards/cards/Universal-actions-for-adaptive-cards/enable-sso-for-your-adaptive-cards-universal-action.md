@@ -9,6 +9,8 @@ ms.date: 01/24/2023
 
 # Enable SSO for Adaptive Cards Universal Actions in your bot
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in a bot. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
 
 For more information about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).

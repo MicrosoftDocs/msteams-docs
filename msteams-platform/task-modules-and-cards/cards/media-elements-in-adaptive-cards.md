@@ -9,6 +9,8 @@ ms.date: 02/26/2025
 
 # Media elements in Adaptive Card
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Adaptive Card media element is a component that is used to embed audio and video files directly into your Adaptive Card. Media elements enhance the user experience by making the cards more interactive and engaging. Your app users can view and play media files directly within Adaptive Cards in Teams. Here are few benefits about media elements in Adaptive Card:
 
 * ***Enhanced engagement***: Adding media elements makes the cards more effective and can capture app users attention more effectively.
