@@ -33,7 +33,7 @@ The following image shows the media element in Adaptive Card:
 
 ## Add media elements to your Adaptive Card
 
-Add media files into an existing or new Adaptive Card either through [Developer Portal for Teams](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer). To incorporate media files into your Adaptive Card, follow these steps:
+Add media files into an existing or new Adaptive Card either through [Developer Portal for Teams](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html). To incorporate media files into your Adaptive Card, follow these steps:
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -61,7 +61,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
     </details>
 
-   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.microsoft.com/?topic=Media).
 
      :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
@@ -75,24 +75,23 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 # [Adaptive Card Designer](#tab/adaptive-card-designer)
 
-1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer).
+1. Go to [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
 
 1. Select an existing card or create a new Adaptive Card:
     * To select an existing card, paste the existing card's JSON payload in the **CARD PAYLOAD EDITOR**.
-    * To create a new card, select **New card** and choose one of the following:
-        * **Blank Card**
-        * **From JSON Schema**
-        * Select a card template from **Explore**
+    * To create a new card, select **New card** and select one of the following:
+        * Select a card template
+        * **Empty card**
 
 1. From the left pane, under **Elements**, select **Media**, and add it to your Adaptive Card.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements." lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png":::
 
 1. Under **CARD STRUCTURE**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
 1. In **ELEMENT PROPERTIES**, update the following fields:
 
-   * Under the **Sources** section, enter your media file URL in the **URL**. </br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
+   * Under the **Sources** section, select **mediaAddNewSource** and enter your media file URL in the **url**. </br> <details><summary>Get media URL for OneDrive or SharePoint</summary>As Adaptive Card doesn't support media file URLs copied from the address bar of OneDrive or SharePoint, you must get a media URL. For SharePoint or OneDrive media files, ensure app users have access to the media files available in SharePoint or OneDrive. To get URL for your media files in OneDrive or SharePoint, follow the steps:
 
      1. Upload your media files to OneDrive or SharePoint.
 
@@ -104,7 +103,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
     </details>
 
-   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under the **Media** section, enter image URL in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.microsoft.com/?topic=Media).
 
      :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Card schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
@@ -130,7 +129,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     { 
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -145,7 +144,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -160,7 +159,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
     },
     {
       "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "poster": "https://adaptivecards.microsoft.com/images/adaptivecards1.jpeg",
       "sources": [
         {
           "mimeType": "video/mp4",
@@ -180,7 +179,7 @@ The following code shows an example of an Adaptive Card payload with media eleme
 | `sources.url`| The URL to a media file. Supports data URI in version 1.2+. |
 | `sources.mimeType`| Mime type of associated media, such as `video/mp4`. `mimeType` is a required field for Teams web and desktop clients.|
 
-For more information, see [Adaptive Cards `media`](https://www.adaptivecards.io/explorer/Media.html).
+For more information, see [Adaptive Cards `media`](https://adaptivecards.microsoft.com/?topic=Media).
 
 ## Limitations
 

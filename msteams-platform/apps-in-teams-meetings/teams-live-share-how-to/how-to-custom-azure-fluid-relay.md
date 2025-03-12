@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to use a custom Azure Fluid Relay service with Live Share, Live Share without LiveShareClient, Live Share with your custom service, and container mapping.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 07/21/2022
 ---
 
