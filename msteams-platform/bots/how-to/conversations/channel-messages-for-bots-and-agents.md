@@ -88,11 +88,11 @@ You must determine what resources your AI agent needs access to within Microsoft
 - Accessing user's details or data
 - Accessing shared documents
 
-**For example**: Use RSC permissions for AI bot to manage channel content
+**For example**: Use RSC permissions for AI agent to manage channel content
 
-A team lead may need to use a Teams channel for their team to collaborate on an upcoming project. The requirement is however to include only relevant and approved content in the channel.
+A team lead who needs their team to collaborate on an upcoming project wants to utilize an AI agent on a Teams channel. The catch is that they want to ensure only relevant and approved content is included in the channel conversation.
 
-**Goal**: to use an AI-powered bot to manage conversation content. The bot may use the following permissions:
+**Goal**: To use an AI-powered agent to manage conversation content. The agent can use the following permissions:
 
 - `ChannelMessage.Read.All`
 - `ChannelMessage.Delete.All`
