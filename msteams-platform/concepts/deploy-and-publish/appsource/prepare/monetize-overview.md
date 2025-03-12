@@ -1,7 +1,7 @@
 ---
 title: Monetize your App
 description: Learn about monetizing your app through SaaS offers and other supported options such as free trials, in-app purchases, test drives, and private plans.
-author: v-npaladugu
+author: surbhigupta
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
