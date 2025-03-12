@@ -1,6 +1,6 @@
 ---
 title: Search Types & Usage in Adaptive Cards
-author: Rajeshwari-v
+author: surbhigupta
 description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent inputs in Adaptive Cards.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -75,7 +75,7 @@ The following image illustrates mobile experience of typeahead search:
 
 ### Schema properties
 
-The following properties are the new additions to the [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable typeahead search:
+The following properties are the new additions to the [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) schema to enable typeahead search:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|

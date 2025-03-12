@@ -3,7 +3,7 @@ title: Copilot Handoffs for Bots
 description: Learn how to allow users to continue their conversation with custom engine agent from Microsoft 365 Copilot to your bot service.
 ms.date: 09/16/2024
 ms.topic: conceptual
-author: v-ypalikila
+author: surbhigupta
 ms.author: surbhigupta
 ---
 
