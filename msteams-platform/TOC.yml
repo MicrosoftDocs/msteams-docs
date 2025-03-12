@@ -761,46 +761,44 @@
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
     displayName: Single sign-on, OAuth provider
-  - name: Enable SSO for your Teams app with Entra ID
-    items: 
-    - name: Enable SSO for your tab app
-      items:
-      - name: Overview for tab SSO
-        href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure tab app in Microsoft Entra ID
-        href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Add code to enable SSO for tab
-        href: tabs/how-to/authentication/tab-sso-code.md
-        displayName: getAuthToken
-      - name: Update app manifest and preview tab app
-        href: tabs/how-to/authentication/tab-sso-manifest.md
-        displayName: application ID URI
-      - name: Grant Microsoft Graph permissions and scopes
-        href: tabs/how-to/authentication/tab-sso-graph-api.md
-        displayName: Graph permissions
-    - name: Enable SSO for bot and message extension app
-      items:
-      - name: Overview
-        href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure bot app in Microsoft Entra ID
-        href: bots/how-to/authentication/bot-sso-register-aad.md
-      - name: Add code to enable SSO
-        href: bots/how-to/authentication/bot-sso-code.md
-      - name: Update app manifest and preview bot app
-        href: bots/how-to/authentication/bot-sso-manifest.md
-      - name: Grant Microsoft Graph permissions and scopes
-        href: bots/how-to/authentication/bot-sso-graph-api.md
-    - name: Enable SSO for Adaptive Cards
-      items:
-      - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
-      - name: Add code to enable SSO
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
-        displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
-    - name: Troubleshoot SSO authentication
-      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-      displayName: Caching
+  - name: Enable SSO for tab app using Entra ID
+    items:
+     - name: Overview for tab SSO
+       href: tabs/how-to/authentication/tab-sso-overview.md
+     - name: Configure tab app in Microsoft Entra ID
+       href: tabs/how-to/authentication/tab-sso-register-aad.md
+     - name: Add code to enable SSO for tab
+       href: tabs/how-to/authentication/tab-sso-code.md
+       displayName: getAuthToken
+     - name: Update app manifest and preview tab app
+       href: tabs/how-to/authentication/tab-sso-manifest.md
+       displayName: application ID URI
+     - name: Grant Microsoft Graph permissions and scopes
+       href: tabs/how-to/authentication/tab-sso-graph-api.md
+       displayName: Graph permissions
+  - name: Enable SSO for bot and message extension app using Entra ID
+    items:
+     - name: Overview
+       href: bots/how-to/authentication/bot-sso-overview.md
+     - name: Configure bot app in Microsoft Entra ID
+       href: bots/how-to/authentication/bot-sso-register-aad.md
+     - name: Add code to enable SSO
+       href: bots/how-to/authentication/bot-sso-code.md
+     - name: Update app manifest and preview bot app
+       href: bots/how-to/authentication/bot-sso-manifest.md
+     - name: Grant Microsoft Graph permissions and scopes
+       href: bots/how-to/authentication/bot-sso-graph-api.md
+  - name: Enable SSO for Adaptive Cards using Entra ID
+    items:
+     - name: Overview
+       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
+       displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+     - name: Add code to enable SSO
+       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
+       displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
+  - name: Troubleshoot SSO authentication
+    href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    displayName: Caching
   - name: Use third party IdP authentication
     items:
     - name: Third party OAuth IdP overview
