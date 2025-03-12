@@ -529,4 +529,4 @@ The elements in the card's body are assigned a grid area through the `grid.area`
 ## See also
 
 * [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout)
-* [Schema Explorer](https://adaptivecards.io/explorer/AdaptiveCard.html)
+* [Schema Explorer](https://adaptivecards.microsoft.com/?topic=AdaptiveCard)
