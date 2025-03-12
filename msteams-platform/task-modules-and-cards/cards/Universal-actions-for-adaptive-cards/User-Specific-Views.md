@@ -9,7 +9,7 @@ ms.date: 12/14/2022
 
 # User Specific Views
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
 
 Earlier if Adaptive Cards were sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 

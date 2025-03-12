@@ -9,7 +9,7 @@ ms.date: 12/14/2022
 
 # Up to date cards
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
 
 You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. Update the User Specific Views dynamically to its latest state as and when there's a change on your service. For example, for project management or ticketing cards, update comments and the task status. For approvals, the latest state is reflected while also providing differentiated information and actions.
 

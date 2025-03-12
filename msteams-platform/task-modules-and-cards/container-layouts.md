@@ -10,7 +10,7 @@ ms.date: 11/07/2024
 
 # Container layouts
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../includes/adaptive-card-redirect.md)]
 
 Containers such as `Container`, `Column`, `TableCell`, or an Adaptive Card itself support three different types of layouts:
 

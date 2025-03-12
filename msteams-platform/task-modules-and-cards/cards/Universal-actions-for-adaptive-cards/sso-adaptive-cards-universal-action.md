@@ -9,7 +9,7 @@ ms.date: 02/06/2023
 
 # Add code to enable SSO for Adaptive Cards Universal Actions
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
 
 Authentication steps for single sign-on (SSO) are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action.
 

@@ -9,7 +9,7 @@ ms.date: 12/14/2022
 
 # Sequential Workflows
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
 
 Adaptive Cards now support Sequential Workflows that are updated on user action. Using Sequential Workflows, Adaptive Cards are updated on user action and user can progress through a series of cards that require user input. `Action.Execute` supports Sequential Workflows, which allows bot developers to return Adaptive Cards in response to a user action.
 

@@ -8,7 +8,7 @@ ms.date: 12/20/2022
 
 # Work with Universal Actions for Adaptive Cards
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
 
 Universal Actions for Adaptive Cards provide a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following topics:
 
