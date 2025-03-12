@@ -10,3 +10,16 @@ ms.date: 03/12/2025
 # Enable users to delete bot messages
 
 You can now enable bot users to delete bot messages in a group chat. As a developer, when you enable deleting bot messages for users, they'll be able to delete Group Copilot bot messages in chat threads to remove unintended or sensitive content. All users in any chat can delete messages using the ‘Delete’ option in the overflow menu.
+
+Here are some use cases for enabling the users of a bot app to delete bot messages:
+
+| Use case | How the ability to delete the message helps |
+| --- | --- |
+| **Context**: A group chat user initially shared confidential information intended only for the original group members. However, over time, other users have added external participants to the group chat who should not have access to this confidential information. <br>
+**Problem**: When searching for related information within the chat, the confidential information also appears for the external users who do not have permission to view it. This poses a risk of unauthorized access to sensitive data. | **Solution**: To address this issue, any valid user who notices this concern should be able to delete the information that is not meant for all group chat members. This ensures that confidential information remains protected and only accessible to authorized users. <br> **Steps**: <br> 1. A user shares confidential information in a group chat. <br> 2. Over time, external users are added to the group chat. <br> 3.The confidential information becomes visible to these external users during searches. <br> 4.A valid user identifies the unauthorized access and deletes the confidential information from the chat. <br> 5.The deletion prevents external users from viewing the confidential information, maintaining data security. |
+
+## Delete bot message user experience
+
+All users in any chat containing Group Copilot should have the ability to delete messages from Chat Copilot using the overflow **Delete** option. After a user deletes a bot message, it is removed for all users. The deleted message is replaced with an indication that the message has been deleted along with the name of the user who deleted it.
+
+The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
