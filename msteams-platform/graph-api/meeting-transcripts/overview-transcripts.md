@@ -65,7 +65,7 @@ For more information about how your app can know when a transcript or recording 
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support only scheduled meetings.
+> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support scheduled meetings, private chat meetings and channel meetings. Note that the last two options are currently available only in beta APIs.
 
 ## Next step
 
