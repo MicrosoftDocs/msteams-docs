@@ -4,6 +4,7 @@ description: Learn how to design, add, introduce, and manage a Microsoft Teams b
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.owner: ginobuzz
 ms.date: 01/23/2025
 ---
 # Designing your Microsoft Teams bot

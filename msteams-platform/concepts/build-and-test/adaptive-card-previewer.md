@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Previewer Overview
-author: v-vanv
-description: In this article, learn about the Microsoft Adaptive Card previewer in Visual Studio Code, its features, advantages, and limitations.
+author: surbhigupta
+description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, and k=limitations of the Adaptive Card Previewer.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
