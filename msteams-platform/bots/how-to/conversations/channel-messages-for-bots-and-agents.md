@@ -112,7 +112,7 @@ The following code provides an example of the app manifest:
 <details>
 <summary>Select to view an example of the app manifest version 1.12 or later</summary>
 
-The following code provides an example of the app manifest version 1.12 or later:
+The following code provides an example of declaring RSC permissions in the app manifest:
 
 ```json
 {
