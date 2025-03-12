@@ -80,8 +80,6 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 ## Use RSC permissions to enhance AI agents in Teams
 
-[TBD - AI Agents: Include a section on how RSC can be used to enhance AI agents in Teams. This could include examples of how AI agents can use the additional context from RSC to provide more relevant and helpful responses.]
-
 You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files in a granular manner. Instead of broad permissions, RSC allows permissions specific to the context of a resource, such as a document. This improves security and user trust by enabling AI agents to interact only with the necessary resources.
 
 You must determine what resources your AI agent needs access to within Microsoft Teams or Microsoft 365. These resources can include:
@@ -89,6 +87,22 @@ You must determine what resources your AI agent needs access to within Microsoft
 - Reading messages in Teams channels
 - Accessing user's details or data
 - Accessing shared documents
+
+**For example**: Use RSC permissions for AI bot to manage channel content
+
+A team lead may need to use a Teams channel for their team to collaborate on an upcoming project. The requirement is however to include only relevant and approved content in the channel.
+
+**Goal**: to use an AI-powered bot to manage conversation content. The bot may use the following permissions:
+
+- `ChannelMessage.Read.All`
+- `ChannelMessage.Delete.All`
+- `ChannelMessage.Send`
+
+**Expected outcome**:
+
+- Removing irrelevant or sensitive content
+- Members receive timely updates
+- Conversation is organized and focused on relevant topics
 
 ## Update app manifest
 
