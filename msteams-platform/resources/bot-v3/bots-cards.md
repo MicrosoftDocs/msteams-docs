@@ -3,6 +3,7 @@ title: Using cards in bots
 description: In this article, learn how to get started with cards and how they're used in bot messages in the Microsoft Teams, Teams card references, and card actions.
 ms.topic: reference
 ms.localizationpriority: medium
+ms.owner: skakivaya
 ms.date: 04/02/2023
 ---
 # Cards in bot conversations
