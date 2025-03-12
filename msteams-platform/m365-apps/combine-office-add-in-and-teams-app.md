@@ -263,9 +263,6 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
 1. Copy the entire "extensions" property from the add-in's manifest into the Teams app manifest template as a top-level property.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Merge%20the%20manifest&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ### Copy the Outlook Add-in files to the Teams app project
 
 1. Create a top-level folder called **add-in** in the Teams app project.
