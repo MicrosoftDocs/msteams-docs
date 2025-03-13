@@ -8,6 +8,8 @@ ms.date: 11/07/2024
 
 # Format cards in Teams
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Following are the two ways to add rich text formatting to your cards:
 
 * [Markdown](#format-cards-with-markdown)
