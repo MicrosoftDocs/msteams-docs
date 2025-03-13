@@ -156,7 +156,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
     :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows the more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
 
     > [!NOTE]
-    > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > If you've debugged the app previously, we recommend that you clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
 # [iOS](#tab/ios1)
 
@@ -190,7 +190,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 1. To test your bot in mobile client, follow the steps listed in [Test your tab app on mobile client](#test-your-tab-app-on-mobile-client) for your bot.
 
     > [!NOTE]
-    > If a you have debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > If you've debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
 # [iOS](#tab/ios2)
 

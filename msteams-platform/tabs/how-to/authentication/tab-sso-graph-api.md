@@ -223,7 +223,7 @@ To implement SSO authentication in a personal tab, follow these steps:
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra OBO flow to get access to those other Graph APIs. Ensure that you use the Microsoft Entra v2 endpoint for this exchange.
 1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multifactor authentication or corporate device enrollment is required.
-1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
+1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers a [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Microsoft Entra ID.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
@@ -251,7 +251,7 @@ This approach helps reduce the possibility of user being prompted for consent mo
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Tabs Microsoft Entra SSO | Microsoft Teams sample app for tabs Microsoft Entra SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
+| Tabs Microsoft Entra SSO | Microsoft Teams sample app for tabs Microsoft Entra SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
 
 ## See also
 
