@@ -83,19 +83,19 @@ You must determine what resources your AI agent needs access to within Microsoft
 
 **For example**: Use RSC permissions for AI agent to manage channel content
 
-A team lead who needs their team to collaborate on an upcoming project wants to utilize an AI agent on a Teams channel. The catch is that they want to ensure only relevant and approved content is included in the channel conversation.
+  A team lead who needs their team to collaborate on an upcoming project wants to utilize an AI agent on a Teams channel. The catch is that they want to ensure only relevant and approved content is included in the channel conversation.
 
-**Goal**: To use an AI-powered agent to manage conversation content. The agent can use the following permissions:
+  **Goal**: Use an AI-powered agent to manage conversation content. The agent can use the following permissions:
 
-- `ChannelMessage.Read.All`
-- `ChannelMessage.Delete.All`
-- `ChannelMessage.Send`
+    - `ChannelMessage.Read.All`
+    - `ChannelMessage.Delete.All`
+    - `ChannelMessage.Send`
 
-**Expected outcome**:
+  **Expected outcome**:
 
-- Removing irrelevant or sensitive content
-- Members receive timely updates
-- Conversation is organized and focused on relevant topics
+    - Removing irrelevant or sensitive content
+    - Members receive timely updates
+    - Conversation is organized and focused on relevant topics
 
 ## Update app manifest
 
@@ -249,7 +249,7 @@ The following steps guide you to upload and validate bot that receives all chat 
 
    :::image type="content" source="../../../assets/images/bots/Chats_Sideload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
+1. Select **Add** from the app details pop-up to add the bot to your selected group chat.
 
    :::image type="content" source="../../../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the bot to the group chat.":::
 
