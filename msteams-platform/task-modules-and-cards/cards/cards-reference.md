@@ -119,14 +119,14 @@ To explore Adaptive Card templates, see [Adaptive Card starter collection](desig
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Tabs | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔️ | ✔️ | ❌ | ✔️ |
+| ✔️ | ❌ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
 > * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), and dialogs.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 > * Adaptive Cards within Teams don't provide support for file or image uploads.
@@ -370,7 +370,7 @@ The following code shows an example of a hero card:
        },
       {
         "type": "openUrl",
-        "title": "Wikipeda page",
+        "title": "Wikipedia page",
         "value": "https://en.wikipedia.org/wiki/Seattle_Center_Monorail"
        }
      ]
