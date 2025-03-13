@@ -59,29 +59,25 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 - The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 - The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
-- If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installations.
-- Note that `ChatMessage.Read.Chat` allows the app to read a chat's messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
 
-> [!Note]
->
-> When you submit your app to the Teams Store, it's crucial to explain how your app uses the data it reads in the app description. It's especially important for Teams Store approval as Microsoft prioritizes privacy and security. Ensure that you include the following in the app description:
->
-> - The app reads the necessary information for its core functions.
-> - The app uses the data relevant to the specific business that it addresses to increase productivity and collaboration.
->
-> For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
+  - If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, use the [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installation.
+  - Note that `ChatMessage.Read.Chat` allows the app to read a chat's messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
+- The app reads the necessary information for its core functions.
+- The app uses the data relevant to the specific business that it addresses to increase productivity and collaboration.
+
+For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
 ## Use RSC permissions to enhance AI agents in Teams
 
 You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files in a granular manner. Instead of broad permissions, RSC allows permissions specific to the context of a resource, such as a document. This improves security and user trust by enabling AI agents to interact only with the necessary resources.
 
-You must determine what resources your AI agent needs access to within Microsoft Teams or Microsoft 365. These resources can include:
+You must determine what resources your AI agent needs access to within Microsoft Teams or Microsoft 365. These permissions can be for:
 
 - Reading messages in Teams channels
 - Accessing user's details or data
 - Accessing shared documents
 
-**For example**: Use RSC permissions for AI agent to manage channel content
+**For example**: Use RSC permissions for an AI agent to manage channel content
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
