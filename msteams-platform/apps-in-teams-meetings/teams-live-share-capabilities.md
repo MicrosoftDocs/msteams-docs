@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about Live Share SDK capabilities, data structure, join a session, RSC permissions, role verification for live Share and fluid distribution data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Designing Adaptive Cards for your app
-description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card designer, Microsoft Teams UI Kit, and Adaptive Card templates.
+description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card Designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/07/2024
@@ -20,12 +20,12 @@ You can find more comprehensive design guidelines for Adaptive Cards in Teams, i
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## Adaptive Cards designer
+## Adaptive Card Designer
 
 You also can start designing your Adaptive Cards directly in the browser.
 
 > [!div class="nextstepaction"]
-> [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+> [Try the Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html)
 
 ## Adaptive Card starter collection
 
@@ -180,7 +180,7 @@ Cards designed for a narrow screen scale well on wider screens (the opposite isn
 
 ### Column layouts
 
-Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
+Use [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) to format your card content into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
 * `"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
   * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
@@ -482,7 +482,7 @@ Here's the code for implementing the design example.
       ],
       "selectAction": {
         "type": "Action.OpenUrl",
-        "url": "https://www.AdaptiveCards.io"
+        "url": "https://adaptivecards.microsoft.com/?topic=welcome"
       }
     },
     {
@@ -541,7 +541,7 @@ Here's the code for implementing the design example.
 
 ### Text
 
-Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), or [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
+Whether you're using [`TextBlock`](https://adaptivecards.microsoft.com/?topic=TextBlock), [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet), or [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
 
 #### Example: Making sure text don't truncate
 
