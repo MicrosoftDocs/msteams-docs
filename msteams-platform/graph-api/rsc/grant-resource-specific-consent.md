@@ -380,7 +380,7 @@ The following are the available states for the PowerShell settings and each sect
 
 > [!NOTE]
 >
-> It is recommended that you leave your RSC consent settings in the default ManagedByMicrosoft state unless your organization requires a customized consent policy for RSC enabled applications
+> We recommend that you leave your RSC consent settings in the default `ManagedByMicrosoft` state unless your organization requires a customized consent policy for RSC-enabled applications.
 
 <br>
 <details>
