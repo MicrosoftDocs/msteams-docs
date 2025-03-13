@@ -34,7 +34,7 @@ The lightbox view includes a header, center stage, and carousel.
 
 |Counter|Description|
 |----------|-----------|
-|1|**Back**: Button to navigate to the previoius screen|
+|1|**Back**: Button to navigate to the previous screen|
 |2|**Open in**: Button (basic or split) to navigate to the external window|
 |3|Buttons with content actions: Zoom in or out, Share, Download, or open chat panel|
 |4|Chevrons for slide show|

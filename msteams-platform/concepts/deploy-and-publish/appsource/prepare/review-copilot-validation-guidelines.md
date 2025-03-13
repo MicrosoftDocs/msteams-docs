@@ -98,7 +98,7 @@ You must ensure to meet the following guidelines for agents:
 
   > [!NOTE]
   > * In case of declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
-  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
+  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
 * App long description must clearly call out that the agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
@@ -116,7 +116,7 @@ You must ensure to meet the following guidelines for agents:
 You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
-* Apps with agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
+* Apps with agent functionality must have at least one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -134,7 +134,7 @@ You must ensure to meet the following guidelines for agents:
 
 ## Compound utterances
 
-Agents must support atleast three unique compound utterances by handling three or more parameters.
+Agents must support at least three unique compound utterances by handling three or more parameters.
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
