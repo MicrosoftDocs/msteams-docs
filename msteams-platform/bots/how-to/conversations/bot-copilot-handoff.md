@@ -4,6 +4,7 @@ description: Learn how to allow users to continue their conversation with custom
 ms.date: 09/16/2024
 ms.topic: conceptual
 author: v-ypalikila
+ms.owner: ginobuzz
 ms.author: surbhigupta
 ---
 
