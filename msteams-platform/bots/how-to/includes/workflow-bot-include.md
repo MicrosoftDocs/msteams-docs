@@ -144,7 +144,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 ```
 
 > [!NOTE]
-> You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
+> You can design your card layout according to your business need. See, [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
 <br>
 
 </details>

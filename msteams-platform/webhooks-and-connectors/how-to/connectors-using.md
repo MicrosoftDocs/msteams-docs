@@ -4,6 +4,7 @@ author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.owner: hantony
 ms.date: 12/09/2022
 ---
 
@@ -192,7 +193,7 @@ To post a message to the webhook with PowerShell, follow these steps:
 > [!NOTE]
 >
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> * The supported actions are [**Action.OpenURL**](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl), [**Action.ShowCard**](https://adaptivecards.microsoft.com/?topic=Action.ShowCard), and [**Action.ToggleVisibility**](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility).
 
 To send Adaptive Cards with text or a Base64 encoded image through an Incoming Webhook, follow these steps:
 
