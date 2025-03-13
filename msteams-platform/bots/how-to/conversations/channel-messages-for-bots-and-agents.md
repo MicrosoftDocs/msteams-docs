@@ -99,20 +99,22 @@ A team lead who needs their team to collaborate on an upcoming project wants to 
 
 ## Update app manifest
 
-For your bot to receive all conversation messages, the relevant RSC permission strings must be specified in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
+For your bot or agent to receive all conversation messages, you must specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
+
+The following code provides an example of the app manifest:
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
 
-The following code provides an example of the app manifest:
+In this code example:
 
 - **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
 - **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 - **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 <details>
-<summary>Select to view an example of the app manifest version 1.12 or later</summary>
+<summary>Select to view an app manifest version 1.12 or later example</summary>
 
-The following code provides an example of declaring RSC permissions in the app manifest:
+The following code snippet provides an example for declaring RSC permissions in the app manifest:
 
 ```json
 {
