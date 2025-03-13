@@ -1215,7 +1215,7 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
+> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center.
 
 <br>
 &nbsp;
